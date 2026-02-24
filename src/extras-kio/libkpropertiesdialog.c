@@ -75,8 +75,8 @@ void k_propertiesdialog_on_meta_object(void* self, const QMetaObject* (*callback
     KPropertiesDialog_OnMetaObject((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_propertiesdialog_qbase_meta_object(void* self) {
-    return KPropertiesDialog_QBaseMetaObject((KPropertiesDialog*)self);
+const QMetaObject* k_propertiesdialog_super_meta_object(void* self) {
+    return KPropertiesDialog_SuperMetaObject((KPropertiesDialog*)self);
 }
 
 void* k_propertiesdialog_metacast(void* self, const char* param1) {
@@ -87,8 +87,8 @@ void k_propertiesdialog_on_metacast(void* self, void* (*callback)(void*, const c
     KPropertiesDialog_OnMetacast((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-void* k_propertiesdialog_qbase_metacast(void* self, const char* param1) {
-    return KPropertiesDialog_QBaseMetacast((KPropertiesDialog*)self, param1);
+void* k_propertiesdialog_super_metacast(void* self, const char* param1) {
+    return KPropertiesDialog_SuperMetacast((KPropertiesDialog*)self, param1);
 }
 
 int32_t k_propertiesdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -99,8 +99,8 @@ void k_propertiesdialog_on_metacall(void* self, int32_t (*callback)(void*, int32
     KPropertiesDialog_OnMetacall((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_propertiesdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPropertiesDialog_QBaseMetacall((KPropertiesDialog*)self, param1, param2, param3);
+int32_t k_propertiesdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPropertiesDialog_SuperMetacall((KPropertiesDialog*)self, param1, param2, param3);
 }
 
 const char* k_propertiesdialog_tr(const char* s) {
@@ -185,8 +185,8 @@ void k_propertiesdialog_on_accept(void* self, void (*callback)()) {
     KPropertiesDialog_OnAccept((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-void k_propertiesdialog_qbase_accept(void* self) {
-    KPropertiesDialog_QBaseAccept((KPropertiesDialog*)self);
+void k_propertiesdialog_super_accept(void* self) {
+    KPropertiesDialog_SuperAccept((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_reject(void* self) {
@@ -197,8 +197,8 @@ void k_propertiesdialog_on_reject(void* self, void (*callback)()) {
     KPropertiesDialog_OnReject((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-void k_propertiesdialog_qbase_reject(void* self) {
-    KPropertiesDialog_QBaseReject((KPropertiesDialog*)self);
+void k_propertiesdialog_super_reject(void* self) {
+    KPropertiesDialog_SuperReject((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_properties_closed(void* self) {
@@ -1776,8 +1776,8 @@ void k_propertiesdialog_set_visible(void* self, bool visible) {
     KPropertiesDialog_SetVisible((KPropertiesDialog*)self, visible);
 }
 
-void k_propertiesdialog_qbase_set_visible(void* self, bool visible) {
-    KPropertiesDialog_QBaseSetVisible((KPropertiesDialog*)self, visible);
+void k_propertiesdialog_super_set_visible(void* self, bool visible) {
+    KPropertiesDialog_SuperSetVisible((KPropertiesDialog*)self, visible);
 }
 
 void k_propertiesdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1788,8 +1788,8 @@ QSize* k_propertiesdialog_size_hint(void* self) {
     return KPropertiesDialog_SizeHint((KPropertiesDialog*)self);
 }
 
-QSize* k_propertiesdialog_qbase_size_hint(void* self) {
-    return KPropertiesDialog_QBaseSizeHint((KPropertiesDialog*)self);
+QSize* k_propertiesdialog_super_size_hint(void* self) {
+    return KPropertiesDialog_SuperSizeHint((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1800,8 +1800,8 @@ QSize* k_propertiesdialog_minimum_size_hint(void* self) {
     return KPropertiesDialog_MinimumSizeHint((KPropertiesDialog*)self);
 }
 
-QSize* k_propertiesdialog_qbase_minimum_size_hint(void* self) {
-    return KPropertiesDialog_QBaseMinimumSizeHint((KPropertiesDialog*)self);
+QSize* k_propertiesdialog_super_minimum_size_hint(void* self) {
+    return KPropertiesDialog_SuperMinimumSizeHint((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1812,8 +1812,8 @@ void k_propertiesdialog_open(void* self) {
     KPropertiesDialog_Open((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_qbase_open(void* self) {
-    KPropertiesDialog_QBaseOpen((KPropertiesDialog*)self);
+void k_propertiesdialog_super_open(void* self) {
+    KPropertiesDialog_SuperOpen((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_open(void* self, void (*callback)()) {
@@ -1824,8 +1824,8 @@ int32_t k_propertiesdialog_exec(void* self) {
     return KPropertiesDialog_Exec((KPropertiesDialog*)self);
 }
 
-int32_t k_propertiesdialog_qbase_exec(void* self) {
-    return KPropertiesDialog_QBaseExec((KPropertiesDialog*)self);
+int32_t k_propertiesdialog_super_exec(void* self) {
+    return KPropertiesDialog_SuperExec((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1836,8 +1836,8 @@ void k_propertiesdialog_done(void* self, int param1) {
     KPropertiesDialog_Done((KPropertiesDialog*)self, param1);
 }
 
-void k_propertiesdialog_qbase_done(void* self, int param1) {
-    KPropertiesDialog_QBaseDone((KPropertiesDialog*)self, param1);
+void k_propertiesdialog_super_done(void* self, int param1) {
+    KPropertiesDialog_SuperDone((KPropertiesDialog*)self, param1);
 }
 
 void k_propertiesdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1848,8 +1848,8 @@ void k_propertiesdialog_key_press_event(void* self, void* param1) {
     KPropertiesDialog_KeyPressEvent((KPropertiesDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_key_press_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseKeyPressEvent((KPropertiesDialog*)self, (QKeyEvent*)param1);
+void k_propertiesdialog_super_key_press_event(void* self, void* param1) {
+    KPropertiesDialog_SuperKeyPressEvent((KPropertiesDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_propertiesdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_propertiesdialog_close_event(void* self, void* param1) {
     KPropertiesDialog_CloseEvent((KPropertiesDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_close_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseCloseEvent((KPropertiesDialog*)self, (QCloseEvent*)param1);
+void k_propertiesdialog_super_close_event(void* self, void* param1) {
+    KPropertiesDialog_SuperCloseEvent((KPropertiesDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_propertiesdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_propertiesdialog_show_event(void* self, void* param1) {
     KPropertiesDialog_ShowEvent((KPropertiesDialog*)self, (QShowEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_show_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseShowEvent((KPropertiesDialog*)self, (QShowEvent*)param1);
+void k_propertiesdialog_super_show_event(void* self, void* param1) {
+    KPropertiesDialog_SuperShowEvent((KPropertiesDialog*)self, (QShowEvent*)param1);
 }
 
 void k_propertiesdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_propertiesdialog_resize_event(void* self, void* param1) {
     KPropertiesDialog_ResizeEvent((KPropertiesDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_resize_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseResizeEvent((KPropertiesDialog*)self, (QResizeEvent*)param1);
+void k_propertiesdialog_super_resize_event(void* self, void* param1) {
+    KPropertiesDialog_SuperResizeEvent((KPropertiesDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_propertiesdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_propertiesdialog_context_menu_event(void* self, void* param1) {
     KPropertiesDialog_ContextMenuEvent((KPropertiesDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_context_menu_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseContextMenuEvent((KPropertiesDialog*)self, (QContextMenuEvent*)param1);
+void k_propertiesdialog_super_context_menu_event(void* self, void* param1) {
+    KPropertiesDialog_SuperContextMenuEvent((KPropertiesDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_propertiesdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ bool k_propertiesdialog_event_filter(void* self, void* param1, void* param2) {
     return KPropertiesDialog_EventFilter((KPropertiesDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_propertiesdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KPropertiesDialog_QBaseEventFilter((KPropertiesDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_propertiesdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KPropertiesDialog_SuperEventFilter((KPropertiesDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_propertiesdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1920,8 +1920,8 @@ int32_t k_propertiesdialog_dev_type(void* self) {
     return KPropertiesDialog_DevType((KPropertiesDialog*)self);
 }
 
-int32_t k_propertiesdialog_qbase_dev_type(void* self) {
-    return KPropertiesDialog_QBaseDevType((KPropertiesDialog*)self);
+int32_t k_propertiesdialog_super_dev_type(void* self) {
+    return KPropertiesDialog_SuperDevType((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1932,8 +1932,8 @@ int32_t k_propertiesdialog_height_for_width(void* self, int param1) {
     return KPropertiesDialog_HeightForWidth((KPropertiesDialog*)self, param1);
 }
 
-int32_t k_propertiesdialog_qbase_height_for_width(void* self, int param1) {
-    return KPropertiesDialog_QBaseHeightForWidth((KPropertiesDialog*)self, param1);
+int32_t k_propertiesdialog_super_height_for_width(void* self, int param1) {
+    return KPropertiesDialog_SuperHeightForWidth((KPropertiesDialog*)self, param1);
 }
 
 void k_propertiesdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1944,8 +1944,8 @@ bool k_propertiesdialog_has_height_for_width(void* self) {
     return KPropertiesDialog_HasHeightForWidth((KPropertiesDialog*)self);
 }
 
-bool k_propertiesdialog_qbase_has_height_for_width(void* self) {
-    return KPropertiesDialog_QBaseHasHeightForWidth((KPropertiesDialog*)self);
+bool k_propertiesdialog_super_has_height_for_width(void* self) {
+    return KPropertiesDialog_SuperHasHeightForWidth((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1956,8 +1956,8 @@ QPaintEngine* k_propertiesdialog_paint_engine(void* self) {
     return KPropertiesDialog_PaintEngine((KPropertiesDialog*)self);
 }
 
-QPaintEngine* k_propertiesdialog_qbase_paint_engine(void* self) {
-    return KPropertiesDialog_QBasePaintEngine((KPropertiesDialog*)self);
+QPaintEngine* k_propertiesdialog_super_paint_engine(void* self) {
+    return KPropertiesDialog_SuperPaintEngine((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1968,8 +1968,8 @@ bool k_propertiesdialog_event(void* self, void* event) {
     return KPropertiesDialog_Event((KPropertiesDialog*)self, (QEvent*)event);
 }
 
-bool k_propertiesdialog_qbase_event(void* self, void* event) {
-    return KPropertiesDialog_QBaseEvent((KPropertiesDialog*)self, (QEvent*)event);
+bool k_propertiesdialog_super_event(void* self, void* event) {
+    return KPropertiesDialog_SuperEvent((KPropertiesDialog*)self, (QEvent*)event);
 }
 
 void k_propertiesdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ void k_propertiesdialog_mouse_press_event(void* self, void* event) {
     KPropertiesDialog_MousePressEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
-void k_propertiesdialog_qbase_mouse_press_event(void* self, void* event) {
-    KPropertiesDialog_QBaseMousePressEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
+void k_propertiesdialog_super_mouse_press_event(void* self, void* event) {
+    KPropertiesDialog_SuperMousePressEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
 void k_propertiesdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_propertiesdialog_mouse_release_event(void* self, void* event) {
     KPropertiesDialog_MouseReleaseEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
-void k_propertiesdialog_qbase_mouse_release_event(void* self, void* event) {
-    KPropertiesDialog_QBaseMouseReleaseEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
+void k_propertiesdialog_super_mouse_release_event(void* self, void* event) {
+    KPropertiesDialog_SuperMouseReleaseEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
 void k_propertiesdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ void k_propertiesdialog_mouse_double_click_event(void* self, void* event) {
     KPropertiesDialog_MouseDoubleClickEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
-void k_propertiesdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KPropertiesDialog_QBaseMouseDoubleClickEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
+void k_propertiesdialog_super_mouse_double_click_event(void* self, void* event) {
+    KPropertiesDialog_SuperMouseDoubleClickEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
 void k_propertiesdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2016,8 +2016,8 @@ void k_propertiesdialog_mouse_move_event(void* self, void* event) {
     KPropertiesDialog_MouseMoveEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
-void k_propertiesdialog_qbase_mouse_move_event(void* self, void* event) {
-    KPropertiesDialog_QBaseMouseMoveEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
+void k_propertiesdialog_super_mouse_move_event(void* self, void* event) {
+    KPropertiesDialog_SuperMouseMoveEvent((KPropertiesDialog*)self, (QMouseEvent*)event);
 }
 
 void k_propertiesdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_propertiesdialog_wheel_event(void* self, void* event) {
     KPropertiesDialog_WheelEvent((KPropertiesDialog*)self, (QWheelEvent*)event);
 }
 
-void k_propertiesdialog_qbase_wheel_event(void* self, void* event) {
-    KPropertiesDialog_QBaseWheelEvent((KPropertiesDialog*)self, (QWheelEvent*)event);
+void k_propertiesdialog_super_wheel_event(void* self, void* event) {
+    KPropertiesDialog_SuperWheelEvent((KPropertiesDialog*)self, (QWheelEvent*)event);
 }
 
 void k_propertiesdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_propertiesdialog_key_release_event(void* self, void* event) {
     KPropertiesDialog_KeyReleaseEvent((KPropertiesDialog*)self, (QKeyEvent*)event);
 }
 
-void k_propertiesdialog_qbase_key_release_event(void* self, void* event) {
-    KPropertiesDialog_QBaseKeyReleaseEvent((KPropertiesDialog*)self, (QKeyEvent*)event);
+void k_propertiesdialog_super_key_release_event(void* self, void* event) {
+    KPropertiesDialog_SuperKeyReleaseEvent((KPropertiesDialog*)self, (QKeyEvent*)event);
 }
 
 void k_propertiesdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_propertiesdialog_focus_in_event(void* self, void* event) {
     KPropertiesDialog_FocusInEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
 }
 
-void k_propertiesdialog_qbase_focus_in_event(void* self, void* event) {
-    KPropertiesDialog_QBaseFocusInEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
+void k_propertiesdialog_super_focus_in_event(void* self, void* event) {
+    KPropertiesDialog_SuperFocusInEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
 }
 
 void k_propertiesdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ void k_propertiesdialog_focus_out_event(void* self, void* event) {
     KPropertiesDialog_FocusOutEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
 }
 
-void k_propertiesdialog_qbase_focus_out_event(void* self, void* event) {
-    KPropertiesDialog_QBaseFocusOutEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
+void k_propertiesdialog_super_focus_out_event(void* self, void* event) {
+    KPropertiesDialog_SuperFocusOutEvent((KPropertiesDialog*)self, (QFocusEvent*)event);
 }
 
 void k_propertiesdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2076,8 +2076,8 @@ void k_propertiesdialog_enter_event(void* self, void* event) {
     KPropertiesDialog_EnterEvent((KPropertiesDialog*)self, (QEnterEvent*)event);
 }
 
-void k_propertiesdialog_qbase_enter_event(void* self, void* event) {
-    KPropertiesDialog_QBaseEnterEvent((KPropertiesDialog*)self, (QEnterEvent*)event);
+void k_propertiesdialog_super_enter_event(void* self, void* event) {
+    KPropertiesDialog_SuperEnterEvent((KPropertiesDialog*)self, (QEnterEvent*)event);
 }
 
 void k_propertiesdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_propertiesdialog_leave_event(void* self, void* event) {
     KPropertiesDialog_LeaveEvent((KPropertiesDialog*)self, (QEvent*)event);
 }
 
-void k_propertiesdialog_qbase_leave_event(void* self, void* event) {
-    KPropertiesDialog_QBaseLeaveEvent((KPropertiesDialog*)self, (QEvent*)event);
+void k_propertiesdialog_super_leave_event(void* self, void* event) {
+    KPropertiesDialog_SuperLeaveEvent((KPropertiesDialog*)self, (QEvent*)event);
 }
 
 void k_propertiesdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2100,8 +2100,8 @@ void k_propertiesdialog_paint_event(void* self, void* event) {
     KPropertiesDialog_PaintEvent((KPropertiesDialog*)self, (QPaintEvent*)event);
 }
 
-void k_propertiesdialog_qbase_paint_event(void* self, void* event) {
-    KPropertiesDialog_QBasePaintEvent((KPropertiesDialog*)self, (QPaintEvent*)event);
+void k_propertiesdialog_super_paint_event(void* self, void* event) {
+    KPropertiesDialog_SuperPaintEvent((KPropertiesDialog*)self, (QPaintEvent*)event);
 }
 
 void k_propertiesdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2112,8 +2112,8 @@ void k_propertiesdialog_move_event(void* self, void* event) {
     KPropertiesDialog_MoveEvent((KPropertiesDialog*)self, (QMoveEvent*)event);
 }
 
-void k_propertiesdialog_qbase_move_event(void* self, void* event) {
-    KPropertiesDialog_QBaseMoveEvent((KPropertiesDialog*)self, (QMoveEvent*)event);
+void k_propertiesdialog_super_move_event(void* self, void* event) {
+    KPropertiesDialog_SuperMoveEvent((KPropertiesDialog*)self, (QMoveEvent*)event);
 }
 
 void k_propertiesdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2124,8 +2124,8 @@ void k_propertiesdialog_tablet_event(void* self, void* event) {
     KPropertiesDialog_TabletEvent((KPropertiesDialog*)self, (QTabletEvent*)event);
 }
 
-void k_propertiesdialog_qbase_tablet_event(void* self, void* event) {
-    KPropertiesDialog_QBaseTabletEvent((KPropertiesDialog*)self, (QTabletEvent*)event);
+void k_propertiesdialog_super_tablet_event(void* self, void* event) {
+    KPropertiesDialog_SuperTabletEvent((KPropertiesDialog*)self, (QTabletEvent*)event);
 }
 
 void k_propertiesdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2136,8 +2136,8 @@ void k_propertiesdialog_action_event(void* self, void* event) {
     KPropertiesDialog_ActionEvent((KPropertiesDialog*)self, (QActionEvent*)event);
 }
 
-void k_propertiesdialog_qbase_action_event(void* self, void* event) {
-    KPropertiesDialog_QBaseActionEvent((KPropertiesDialog*)self, (QActionEvent*)event);
+void k_propertiesdialog_super_action_event(void* self, void* event) {
+    KPropertiesDialog_SuperActionEvent((KPropertiesDialog*)self, (QActionEvent*)event);
 }
 
 void k_propertiesdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ void k_propertiesdialog_drag_enter_event(void* self, void* event) {
     KPropertiesDialog_DragEnterEvent((KPropertiesDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_propertiesdialog_qbase_drag_enter_event(void* self, void* event) {
-    KPropertiesDialog_QBaseDragEnterEvent((KPropertiesDialog*)self, (QDragEnterEvent*)event);
+void k_propertiesdialog_super_drag_enter_event(void* self, void* event) {
+    KPropertiesDialog_SuperDragEnterEvent((KPropertiesDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_propertiesdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2160,8 +2160,8 @@ void k_propertiesdialog_drag_move_event(void* self, void* event) {
     KPropertiesDialog_DragMoveEvent((KPropertiesDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_propertiesdialog_qbase_drag_move_event(void* self, void* event) {
-    KPropertiesDialog_QBaseDragMoveEvent((KPropertiesDialog*)self, (QDragMoveEvent*)event);
+void k_propertiesdialog_super_drag_move_event(void* self, void* event) {
+    KPropertiesDialog_SuperDragMoveEvent((KPropertiesDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_propertiesdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2172,8 +2172,8 @@ void k_propertiesdialog_drag_leave_event(void* self, void* event) {
     KPropertiesDialog_DragLeaveEvent((KPropertiesDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_propertiesdialog_qbase_drag_leave_event(void* self, void* event) {
-    KPropertiesDialog_QBaseDragLeaveEvent((KPropertiesDialog*)self, (QDragLeaveEvent*)event);
+void k_propertiesdialog_super_drag_leave_event(void* self, void* event) {
+    KPropertiesDialog_SuperDragLeaveEvent((KPropertiesDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_propertiesdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2184,8 +2184,8 @@ void k_propertiesdialog_drop_event(void* self, void* event) {
     KPropertiesDialog_DropEvent((KPropertiesDialog*)self, (QDropEvent*)event);
 }
 
-void k_propertiesdialog_qbase_drop_event(void* self, void* event) {
-    KPropertiesDialog_QBaseDropEvent((KPropertiesDialog*)self, (QDropEvent*)event);
+void k_propertiesdialog_super_drop_event(void* self, void* event) {
+    KPropertiesDialog_SuperDropEvent((KPropertiesDialog*)self, (QDropEvent*)event);
 }
 
 void k_propertiesdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2196,8 +2196,8 @@ void k_propertiesdialog_hide_event(void* self, void* event) {
     KPropertiesDialog_HideEvent((KPropertiesDialog*)self, (QHideEvent*)event);
 }
 
-void k_propertiesdialog_qbase_hide_event(void* self, void* event) {
-    KPropertiesDialog_QBaseHideEvent((KPropertiesDialog*)self, (QHideEvent*)event);
+void k_propertiesdialog_super_hide_event(void* self, void* event) {
+    KPropertiesDialog_SuperHideEvent((KPropertiesDialog*)self, (QHideEvent*)event);
 }
 
 void k_propertiesdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2208,8 +2208,8 @@ bool k_propertiesdialog_native_event(void* self, char* eventType, void* message,
     return KPropertiesDialog_NativeEvent((KPropertiesDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_propertiesdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPropertiesDialog_QBaseNativeEvent((KPropertiesDialog*)self, qstring(eventType), message, result);
+bool k_propertiesdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPropertiesDialog_SuperNativeEvent((KPropertiesDialog*)self, qstring(eventType), message, result);
 }
 
 void k_propertiesdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2220,8 +2220,8 @@ void k_propertiesdialog_change_event(void* self, void* param1) {
     KPropertiesDialog_ChangeEvent((KPropertiesDialog*)self, (QEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_change_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseChangeEvent((KPropertiesDialog*)self, (QEvent*)param1);
+void k_propertiesdialog_super_change_event(void* self, void* param1) {
+    KPropertiesDialog_SuperChangeEvent((KPropertiesDialog*)self, (QEvent*)param1);
 }
 
 void k_propertiesdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2232,8 +2232,8 @@ int32_t k_propertiesdialog_metric(void* self, int32_t param1) {
     return KPropertiesDialog_Metric((KPropertiesDialog*)self, param1);
 }
 
-int32_t k_propertiesdialog_qbase_metric(void* self, int32_t param1) {
-    return KPropertiesDialog_QBaseMetric((KPropertiesDialog*)self, param1);
+int32_t k_propertiesdialog_super_metric(void* self, int32_t param1) {
+    return KPropertiesDialog_SuperMetric((KPropertiesDialog*)self, param1);
 }
 
 void k_propertiesdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2244,8 +2244,8 @@ void k_propertiesdialog_init_painter(void* self, void* painter) {
     KPropertiesDialog_InitPainter((KPropertiesDialog*)self, (QPainter*)painter);
 }
 
-void k_propertiesdialog_qbase_init_painter(void* self, void* painter) {
-    KPropertiesDialog_QBaseInitPainter((KPropertiesDialog*)self, (QPainter*)painter);
+void k_propertiesdialog_super_init_painter(void* self, void* painter) {
+    KPropertiesDialog_SuperInitPainter((KPropertiesDialog*)self, (QPainter*)painter);
 }
 
 void k_propertiesdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2256,8 +2256,8 @@ QPaintDevice* k_propertiesdialog_redirected(void* self, void* offset) {
     return KPropertiesDialog_Redirected((KPropertiesDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_propertiesdialog_qbase_redirected(void* self, void* offset) {
-    return KPropertiesDialog_QBaseRedirected((KPropertiesDialog*)self, (QPoint*)offset);
+QPaintDevice* k_propertiesdialog_super_redirected(void* self, void* offset) {
+    return KPropertiesDialog_SuperRedirected((KPropertiesDialog*)self, (QPoint*)offset);
 }
 
 void k_propertiesdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2268,8 +2268,8 @@ QPainter* k_propertiesdialog_shared_painter(void* self) {
     return KPropertiesDialog_SharedPainter((KPropertiesDialog*)self);
 }
 
-QPainter* k_propertiesdialog_qbase_shared_painter(void* self) {
-    return KPropertiesDialog_QBaseSharedPainter((KPropertiesDialog*)self);
+QPainter* k_propertiesdialog_super_shared_painter(void* self) {
+    return KPropertiesDialog_SuperSharedPainter((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2280,8 +2280,8 @@ void k_propertiesdialog_input_method_event(void* self, void* param1) {
     KPropertiesDialog_InputMethodEvent((KPropertiesDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_propertiesdialog_qbase_input_method_event(void* self, void* param1) {
-    KPropertiesDialog_QBaseInputMethodEvent((KPropertiesDialog*)self, (QInputMethodEvent*)param1);
+void k_propertiesdialog_super_input_method_event(void* self, void* param1) {
+    KPropertiesDialog_SuperInputMethodEvent((KPropertiesDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_propertiesdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2292,8 +2292,8 @@ QVariant* k_propertiesdialog_input_method_query(void* self, int32_t param1) {
     return KPropertiesDialog_InputMethodQuery((KPropertiesDialog*)self, param1);
 }
 
-QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KPropertiesDialog_QBaseInputMethodQuery((KPropertiesDialog*)self, param1);
+QVariant* k_propertiesdialog_super_input_method_query(void* self, int32_t param1) {
+    return KPropertiesDialog_SuperInputMethodQuery((KPropertiesDialog*)self, param1);
 }
 
 void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2304,8 +2304,8 @@ bool k_propertiesdialog_focus_next_prev_child(void* self, bool next) {
     return KPropertiesDialog_FocusNextPrevChild((KPropertiesDialog*)self, next);
 }
 
-bool k_propertiesdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPropertiesDialog_QBaseFocusNextPrevChild((KPropertiesDialog*)self, next);
+bool k_propertiesdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KPropertiesDialog_SuperFocusNextPrevChild((KPropertiesDialog*)self, next);
 }
 
 void k_propertiesdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2316,8 +2316,8 @@ void k_propertiesdialog_timer_event(void* self, void* event) {
     KPropertiesDialog_TimerEvent((KPropertiesDialog*)self, (QTimerEvent*)event);
 }
 
-void k_propertiesdialog_qbase_timer_event(void* self, void* event) {
-    KPropertiesDialog_QBaseTimerEvent((KPropertiesDialog*)self, (QTimerEvent*)event);
+void k_propertiesdialog_super_timer_event(void* self, void* event) {
+    KPropertiesDialog_SuperTimerEvent((KPropertiesDialog*)self, (QTimerEvent*)event);
 }
 
 void k_propertiesdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2328,8 +2328,8 @@ void k_propertiesdialog_child_event(void* self, void* event) {
     KPropertiesDialog_ChildEvent((KPropertiesDialog*)self, (QChildEvent*)event);
 }
 
-void k_propertiesdialog_qbase_child_event(void* self, void* event) {
-    KPropertiesDialog_QBaseChildEvent((KPropertiesDialog*)self, (QChildEvent*)event);
+void k_propertiesdialog_super_child_event(void* self, void* event) {
+    KPropertiesDialog_SuperChildEvent((KPropertiesDialog*)self, (QChildEvent*)event);
 }
 
 void k_propertiesdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2340,8 +2340,8 @@ void k_propertiesdialog_custom_event(void* self, void* event) {
     KPropertiesDialog_CustomEvent((KPropertiesDialog*)self, (QEvent*)event);
 }
 
-void k_propertiesdialog_qbase_custom_event(void* self, void* event) {
-    KPropertiesDialog_QBaseCustomEvent((KPropertiesDialog*)self, (QEvent*)event);
+void k_propertiesdialog_super_custom_event(void* self, void* event) {
+    KPropertiesDialog_SuperCustomEvent((KPropertiesDialog*)self, (QEvent*)event);
 }
 
 void k_propertiesdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2352,8 +2352,8 @@ void k_propertiesdialog_connect_notify(void* self, void* signal) {
     KPropertiesDialog_ConnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_propertiesdialog_qbase_connect_notify(void* self, void* signal) {
-    KPropertiesDialog_QBaseConnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
+void k_propertiesdialog_super_connect_notify(void* self, void* signal) {
+    KPropertiesDialog_SuperConnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_propertiesdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2364,8 +2364,8 @@ void k_propertiesdialog_disconnect_notify(void* self, void* signal) {
     KPropertiesDialog_DisconnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_propertiesdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KPropertiesDialog_QBaseDisconnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
+void k_propertiesdialog_super_disconnect_notify(void* self, void* signal) {
+    KPropertiesDialog_SuperDisconnectNotify((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_propertiesdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2376,8 +2376,8 @@ KPageWidget* k_propertiesdialog_page_widget(void* self) {
     return KPropertiesDialog_PageWidget((KPropertiesDialog*)self);
 }
 
-KPageWidget* k_propertiesdialog_qbase_page_widget(void* self) {
-    return KPropertiesDialog_QBasePageWidget((KPropertiesDialog*)self);
+KPageWidget* k_propertiesdialog_super_page_widget(void* self) {
+    return KPropertiesDialog_SuperPageWidget((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_page_widget(void* self, KPageWidget* (*callback)()) {
@@ -2388,8 +2388,8 @@ void k_propertiesdialog_set_page_widget(void* self, void* widget) {
     KPropertiesDialog_SetPageWidget((KPropertiesDialog*)self, (KPageWidget*)widget);
 }
 
-void k_propertiesdialog_qbase_set_page_widget(void* self, void* widget) {
-    KPropertiesDialog_QBaseSetPageWidget((KPropertiesDialog*)self, (KPageWidget*)widget);
+void k_propertiesdialog_super_set_page_widget(void* self, void* widget) {
+    KPropertiesDialog_SuperSetPageWidget((KPropertiesDialog*)self, (KPageWidget*)widget);
 }
 
 void k_propertiesdialog_on_set_page_widget(void* self, void (*callback)(void*, void*)) {
@@ -2400,8 +2400,8 @@ QDialogButtonBox* k_propertiesdialog_button_box(void* self) {
     return KPropertiesDialog_ButtonBox((KPropertiesDialog*)self);
 }
 
-QDialogButtonBox* k_propertiesdialog_qbase_button_box(void* self) {
-    return KPropertiesDialog_QBaseButtonBox((KPropertiesDialog*)self);
+QDialogButtonBox* k_propertiesdialog_super_button_box(void* self) {
+    return KPropertiesDialog_SuperButtonBox((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_button_box(void* self, QDialogButtonBox* (*callback)()) {
@@ -2412,8 +2412,8 @@ void k_propertiesdialog_set_button_box(void* self, void* box) {
     KPropertiesDialog_SetButtonBox((KPropertiesDialog*)self, (QDialogButtonBox*)box);
 }
 
-void k_propertiesdialog_qbase_set_button_box(void* self, void* box) {
-    KPropertiesDialog_QBaseSetButtonBox((KPropertiesDialog*)self, (QDialogButtonBox*)box);
+void k_propertiesdialog_super_set_button_box(void* self, void* box) {
+    KPropertiesDialog_SuperSetButtonBox((KPropertiesDialog*)self, (QDialogButtonBox*)box);
 }
 
 void k_propertiesdialog_on_set_button_box(void* self, void (*callback)(void*, void*)) {
@@ -2424,8 +2424,8 @@ void k_propertiesdialog_adjust_position(void* self, void* param1) {
     KPropertiesDialog_AdjustPosition((KPropertiesDialog*)self, (QWidget*)param1);
 }
 
-void k_propertiesdialog_qbase_adjust_position(void* self, void* param1) {
-    KPropertiesDialog_QBaseAdjustPosition((KPropertiesDialog*)self, (QWidget*)param1);
+void k_propertiesdialog_super_adjust_position(void* self, void* param1) {
+    KPropertiesDialog_SuperAdjustPosition((KPropertiesDialog*)self, (QWidget*)param1);
 }
 
 void k_propertiesdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2436,8 +2436,8 @@ void k_propertiesdialog_update_micro_focus(void* self) {
     KPropertiesDialog_UpdateMicroFocus((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_qbase_update_micro_focus(void* self) {
-    KPropertiesDialog_QBaseUpdateMicroFocus((KPropertiesDialog*)self);
+void k_propertiesdialog_super_update_micro_focus(void* self) {
+    KPropertiesDialog_SuperUpdateMicroFocus((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2448,8 +2448,8 @@ void k_propertiesdialog_create(void* self) {
     KPropertiesDialog_Create((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_qbase_create(void* self) {
-    KPropertiesDialog_QBaseCreate((KPropertiesDialog*)self);
+void k_propertiesdialog_super_create(void* self) {
+    KPropertiesDialog_SuperCreate((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_create(void* self, void (*callback)()) {
@@ -2460,8 +2460,8 @@ void k_propertiesdialog_destroy(void* self) {
     KPropertiesDialog_Destroy((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_qbase_destroy(void* self) {
-    KPropertiesDialog_QBaseDestroy((KPropertiesDialog*)self);
+void k_propertiesdialog_super_destroy(void* self) {
+    KPropertiesDialog_SuperDestroy((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_destroy(void* self, void (*callback)()) {
@@ -2472,8 +2472,8 @@ bool k_propertiesdialog_focus_next_child(void* self) {
     return KPropertiesDialog_FocusNextChild((KPropertiesDialog*)self);
 }
 
-bool k_propertiesdialog_qbase_focus_next_child(void* self) {
-    return KPropertiesDialog_QBaseFocusNextChild((KPropertiesDialog*)self);
+bool k_propertiesdialog_super_focus_next_child(void* self) {
+    return KPropertiesDialog_SuperFocusNextChild((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2484,8 +2484,8 @@ bool k_propertiesdialog_focus_previous_child(void* self) {
     return KPropertiesDialog_FocusPreviousChild((KPropertiesDialog*)self);
 }
 
-bool k_propertiesdialog_qbase_focus_previous_child(void* self) {
-    return KPropertiesDialog_QBaseFocusPreviousChild((KPropertiesDialog*)self);
+bool k_propertiesdialog_super_focus_previous_child(void* self) {
+    return KPropertiesDialog_SuperFocusPreviousChild((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2496,8 +2496,8 @@ QObject* k_propertiesdialog_sender(void* self) {
     return KPropertiesDialog_Sender((KPropertiesDialog*)self);
 }
 
-QObject* k_propertiesdialog_qbase_sender(void* self) {
-    return KPropertiesDialog_QBaseSender((KPropertiesDialog*)self);
+QObject* k_propertiesdialog_super_sender(void* self) {
+    return KPropertiesDialog_SuperSender((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2508,8 +2508,8 @@ int32_t k_propertiesdialog_sender_signal_index(void* self) {
     return KPropertiesDialog_SenderSignalIndex((KPropertiesDialog*)self);
 }
 
-int32_t k_propertiesdialog_qbase_sender_signal_index(void* self) {
-    return KPropertiesDialog_QBaseSenderSignalIndex((KPropertiesDialog*)self);
+int32_t k_propertiesdialog_super_sender_signal_index(void* self) {
+    return KPropertiesDialog_SuperSenderSignalIndex((KPropertiesDialog*)self);
 }
 
 void k_propertiesdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2520,8 +2520,8 @@ int32_t k_propertiesdialog_receivers(void* self, const char* signal) {
     return KPropertiesDialog_Receivers((KPropertiesDialog*)self, signal);
 }
 
-int32_t k_propertiesdialog_qbase_receivers(void* self, const char* signal) {
-    return KPropertiesDialog_QBaseReceivers((KPropertiesDialog*)self, signal);
+int32_t k_propertiesdialog_super_receivers(void* self, const char* signal) {
+    return KPropertiesDialog_SuperReceivers((KPropertiesDialog*)self, signal);
 }
 
 void k_propertiesdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2532,8 +2532,8 @@ bool k_propertiesdialog_is_signal_connected(void* self, void* signal) {
     return KPropertiesDialog_IsSignalConnected((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_propertiesdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KPropertiesDialog_QBaseIsSignalConnected((KPropertiesDialog*)self, (QMetaMethod*)signal);
+bool k_propertiesdialog_super_is_signal_connected(void* self, void* signal) {
+    return KPropertiesDialog_SuperIsSignalConnected((KPropertiesDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_propertiesdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2544,8 +2544,8 @@ double k_propertiesdialog_get_decoded_metric_f(void* self, int32_t metricA, int3
     return KPropertiesDialog_GetDecodedMetricF((KPropertiesDialog*)self, metricA, metricB);
 }
 
-double k_propertiesdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPropertiesDialog_QBaseGetDecodedMetricF((KPropertiesDialog*)self, metricA, metricB);
+double k_propertiesdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPropertiesDialog_SuperGetDecodedMetricF((KPropertiesDialog*)self, metricA, metricB);
 }
 
 void k_propertiesdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

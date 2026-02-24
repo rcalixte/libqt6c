@@ -32,8 +32,8 @@ void k_keysequencewidget_on_meta_object(void* self, const QMetaObject* (*callbac
     KKeySequenceWidget_OnMetaObject((KKeySequenceWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_keysequencewidget_qbase_meta_object(void* self) {
-    return KKeySequenceWidget_QBaseMetaObject((KKeySequenceWidget*)self);
+const QMetaObject* k_keysequencewidget_super_meta_object(void* self) {
+    return KKeySequenceWidget_SuperMetaObject((KKeySequenceWidget*)self);
 }
 
 void* k_keysequencewidget_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_keysequencewidget_on_metacast(void* self, void* (*callback)(void*, const 
     KKeySequenceWidget_OnMetacast((KKeySequenceWidget*)self, (intptr_t)callback);
 }
 
-void* k_keysequencewidget_qbase_metacast(void* self, const char* param1) {
-    return KKeySequenceWidget_QBaseMetacast((KKeySequenceWidget*)self, param1);
+void* k_keysequencewidget_super_metacast(void* self, const char* param1) {
+    return KKeySequenceWidget_SuperMetacast((KKeySequenceWidget*)self, param1);
 }
 
 int32_t k_keysequencewidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_keysequencewidget_on_metacall(void* self, int32_t (*callback)(void*, int3
     KKeySequenceWidget_OnMetacall((KKeySequenceWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_keysequencewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KKeySequenceWidget_QBaseMetacall((KKeySequenceWidget*)self, param1, param2, param3);
+int32_t k_keysequencewidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KKeySequenceWidget_SuperMetacall((KKeySequenceWidget*)self, param1, param2, param3);
 }
 
 const char* k_keysequencewidget_tr(const char* s) {
@@ -1574,8 +1574,8 @@ int32_t k_keysequencewidget_dev_type(void* self) {
     return KKeySequenceWidget_DevType((KKeySequenceWidget*)self);
 }
 
-int32_t k_keysequencewidget_qbase_dev_type(void* self) {
-    return KKeySequenceWidget_QBaseDevType((KKeySequenceWidget*)self);
+int32_t k_keysequencewidget_super_dev_type(void* self) {
+    return KKeySequenceWidget_SuperDevType((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1586,8 +1586,8 @@ void k_keysequencewidget_set_visible(void* self, bool visible) {
     KKeySequenceWidget_SetVisible((KKeySequenceWidget*)self, visible);
 }
 
-void k_keysequencewidget_qbase_set_visible(void* self, bool visible) {
-    KKeySequenceWidget_QBaseSetVisible((KKeySequenceWidget*)self, visible);
+void k_keysequencewidget_super_set_visible(void* self, bool visible) {
+    KKeySequenceWidget_SuperSetVisible((KKeySequenceWidget*)self, visible);
 }
 
 void k_keysequencewidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1598,8 +1598,8 @@ QSize* k_keysequencewidget_size_hint(void* self) {
     return KKeySequenceWidget_SizeHint((KKeySequenceWidget*)self);
 }
 
-QSize* k_keysequencewidget_qbase_size_hint(void* self) {
-    return KKeySequenceWidget_QBaseSizeHint((KKeySequenceWidget*)self);
+QSize* k_keysequencewidget_super_size_hint(void* self) {
+    return KKeySequenceWidget_SuperSizeHint((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1610,8 +1610,8 @@ QSize* k_keysequencewidget_minimum_size_hint(void* self) {
     return KKeySequenceWidget_MinimumSizeHint((KKeySequenceWidget*)self);
 }
 
-QSize* k_keysequencewidget_qbase_minimum_size_hint(void* self) {
-    return KKeySequenceWidget_QBaseMinimumSizeHint((KKeySequenceWidget*)self);
+QSize* k_keysequencewidget_super_minimum_size_hint(void* self) {
+    return KKeySequenceWidget_SuperMinimumSizeHint((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1622,8 +1622,8 @@ int32_t k_keysequencewidget_height_for_width(void* self, int param1) {
     return KKeySequenceWidget_HeightForWidth((KKeySequenceWidget*)self, param1);
 }
 
-int32_t k_keysequencewidget_qbase_height_for_width(void* self, int param1) {
-    return KKeySequenceWidget_QBaseHeightForWidth((KKeySequenceWidget*)self, param1);
+int32_t k_keysequencewidget_super_height_for_width(void* self, int param1) {
+    return KKeySequenceWidget_SuperHeightForWidth((KKeySequenceWidget*)self, param1);
 }
 
 void k_keysequencewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1634,8 +1634,8 @@ bool k_keysequencewidget_has_height_for_width(void* self) {
     return KKeySequenceWidget_HasHeightForWidth((KKeySequenceWidget*)self);
 }
 
-bool k_keysequencewidget_qbase_has_height_for_width(void* self) {
-    return KKeySequenceWidget_QBaseHasHeightForWidth((KKeySequenceWidget*)self);
+bool k_keysequencewidget_super_has_height_for_width(void* self) {
+    return KKeySequenceWidget_SuperHasHeightForWidth((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1646,8 +1646,8 @@ QPaintEngine* k_keysequencewidget_paint_engine(void* self) {
     return KKeySequenceWidget_PaintEngine((KKeySequenceWidget*)self);
 }
 
-QPaintEngine* k_keysequencewidget_qbase_paint_engine(void* self) {
-    return KKeySequenceWidget_QBasePaintEngine((KKeySequenceWidget*)self);
+QPaintEngine* k_keysequencewidget_super_paint_engine(void* self) {
+    return KKeySequenceWidget_SuperPaintEngine((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1658,8 +1658,8 @@ void k_keysequencewidget_mouse_press_event(void* self, void* event) {
     KKeySequenceWidget_MousePressEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_keysequencewidget_qbase_mouse_press_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseMousePressEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
+void k_keysequencewidget_super_mouse_press_event(void* self, void* event) {
+    KKeySequenceWidget_SuperMousePressEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_keysequencewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1670,8 +1670,8 @@ void k_keysequencewidget_mouse_release_event(void* self, void* event) {
     KKeySequenceWidget_MouseReleaseEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_keysequencewidget_qbase_mouse_release_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseMouseReleaseEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
+void k_keysequencewidget_super_mouse_release_event(void* self, void* event) {
+    KKeySequenceWidget_SuperMouseReleaseEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_keysequencewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ void k_keysequencewidget_mouse_double_click_event(void* self, void* event) {
     KKeySequenceWidget_MouseDoubleClickEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_keysequencewidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseMouseDoubleClickEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
+void k_keysequencewidget_super_mouse_double_click_event(void* self, void* event) {
+    KKeySequenceWidget_SuperMouseDoubleClickEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_keysequencewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void k_keysequencewidget_mouse_move_event(void* self, void* event) {
     KKeySequenceWidget_MouseMoveEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_keysequencewidget_qbase_mouse_move_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseMouseMoveEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
+void k_keysequencewidget_super_mouse_move_event(void* self, void* event) {
+    KKeySequenceWidget_SuperMouseMoveEvent((KKeySequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_keysequencewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void k_keysequencewidget_wheel_event(void* self, void* event) {
     KKeySequenceWidget_WheelEvent((KKeySequenceWidget*)self, (QWheelEvent*)event);
 }
 
-void k_keysequencewidget_qbase_wheel_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseWheelEvent((KKeySequenceWidget*)self, (QWheelEvent*)event);
+void k_keysequencewidget_super_wheel_event(void* self, void* event) {
+    KKeySequenceWidget_SuperWheelEvent((KKeySequenceWidget*)self, (QWheelEvent*)event);
 }
 
 void k_keysequencewidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void k_keysequencewidget_key_press_event(void* self, void* event) {
     KKeySequenceWidget_KeyPressEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
 }
 
-void k_keysequencewidget_qbase_key_press_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseKeyPressEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
+void k_keysequencewidget_super_key_press_event(void* self, void* event) {
+    KKeySequenceWidget_SuperKeyPressEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
 }
 
 void k_keysequencewidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_keysequencewidget_key_release_event(void* self, void* event) {
     KKeySequenceWidget_KeyReleaseEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
 }
 
-void k_keysequencewidget_qbase_key_release_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseKeyReleaseEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
+void k_keysequencewidget_super_key_release_event(void* self, void* event) {
+    KKeySequenceWidget_SuperKeyReleaseEvent((KKeySequenceWidget*)self, (QKeyEvent*)event);
 }
 
 void k_keysequencewidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void k_keysequencewidget_focus_in_event(void* self, void* event) {
     KKeySequenceWidget_FocusInEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
 }
 
-void k_keysequencewidget_qbase_focus_in_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseFocusInEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
+void k_keysequencewidget_super_focus_in_event(void* self, void* event) {
+    KKeySequenceWidget_SuperFocusInEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
 }
 
 void k_keysequencewidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void k_keysequencewidget_focus_out_event(void* self, void* event) {
     KKeySequenceWidget_FocusOutEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
 }
 
-void k_keysequencewidget_qbase_focus_out_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseFocusOutEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
+void k_keysequencewidget_super_focus_out_event(void* self, void* event) {
+    KKeySequenceWidget_SuperFocusOutEvent((KKeySequenceWidget*)self, (QFocusEvent*)event);
 }
 
 void k_keysequencewidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void k_keysequencewidget_enter_event(void* self, void* event) {
     KKeySequenceWidget_EnterEvent((KKeySequenceWidget*)self, (QEnterEvent*)event);
 }
 
-void k_keysequencewidget_qbase_enter_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseEnterEvent((KKeySequenceWidget*)self, (QEnterEvent*)event);
+void k_keysequencewidget_super_enter_event(void* self, void* event) {
+    KKeySequenceWidget_SuperEnterEvent((KKeySequenceWidget*)self, (QEnterEvent*)event);
 }
 
 void k_keysequencewidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void k_keysequencewidget_leave_event(void* self, void* event) {
     KKeySequenceWidget_LeaveEvent((KKeySequenceWidget*)self, (QEvent*)event);
 }
 
-void k_keysequencewidget_qbase_leave_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseLeaveEvent((KKeySequenceWidget*)self, (QEvent*)event);
+void k_keysequencewidget_super_leave_event(void* self, void* event) {
+    KKeySequenceWidget_SuperLeaveEvent((KKeySequenceWidget*)self, (QEvent*)event);
 }
 
 void k_keysequencewidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void k_keysequencewidget_paint_event(void* self, void* event) {
     KKeySequenceWidget_PaintEvent((KKeySequenceWidget*)self, (QPaintEvent*)event);
 }
 
-void k_keysequencewidget_qbase_paint_event(void* self, void* event) {
-    KKeySequenceWidget_QBasePaintEvent((KKeySequenceWidget*)self, (QPaintEvent*)event);
+void k_keysequencewidget_super_paint_event(void* self, void* event) {
+    KKeySequenceWidget_SuperPaintEvent((KKeySequenceWidget*)self, (QPaintEvent*)event);
 }
 
 void k_keysequencewidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void k_keysequencewidget_move_event(void* self, void* event) {
     KKeySequenceWidget_MoveEvent((KKeySequenceWidget*)self, (QMoveEvent*)event);
 }
 
-void k_keysequencewidget_qbase_move_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseMoveEvent((KKeySequenceWidget*)self, (QMoveEvent*)event);
+void k_keysequencewidget_super_move_event(void* self, void* event) {
+    KKeySequenceWidget_SuperMoveEvent((KKeySequenceWidget*)self, (QMoveEvent*)event);
 }
 
 void k_keysequencewidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void k_keysequencewidget_resize_event(void* self, void* event) {
     KKeySequenceWidget_ResizeEvent((KKeySequenceWidget*)self, (QResizeEvent*)event);
 }
 
-void k_keysequencewidget_qbase_resize_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseResizeEvent((KKeySequenceWidget*)self, (QResizeEvent*)event);
+void k_keysequencewidget_super_resize_event(void* self, void* event) {
+    KKeySequenceWidget_SuperResizeEvent((KKeySequenceWidget*)self, (QResizeEvent*)event);
 }
 
 void k_keysequencewidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void k_keysequencewidget_close_event(void* self, void* event) {
     KKeySequenceWidget_CloseEvent((KKeySequenceWidget*)self, (QCloseEvent*)event);
 }
 
-void k_keysequencewidget_qbase_close_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseCloseEvent((KKeySequenceWidget*)self, (QCloseEvent*)event);
+void k_keysequencewidget_super_close_event(void* self, void* event) {
+    KKeySequenceWidget_SuperCloseEvent((KKeySequenceWidget*)self, (QCloseEvent*)event);
 }
 
 void k_keysequencewidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void k_keysequencewidget_context_menu_event(void* self, void* event) {
     KKeySequenceWidget_ContextMenuEvent((KKeySequenceWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_keysequencewidget_qbase_context_menu_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseContextMenuEvent((KKeySequenceWidget*)self, (QContextMenuEvent*)event);
+void k_keysequencewidget_super_context_menu_event(void* self, void* event) {
+    KKeySequenceWidget_SuperContextMenuEvent((KKeySequenceWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_keysequencewidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void k_keysequencewidget_tablet_event(void* self, void* event) {
     KKeySequenceWidget_TabletEvent((KKeySequenceWidget*)self, (QTabletEvent*)event);
 }
 
-void k_keysequencewidget_qbase_tablet_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseTabletEvent((KKeySequenceWidget*)self, (QTabletEvent*)event);
+void k_keysequencewidget_super_tablet_event(void* self, void* event) {
+    KKeySequenceWidget_SuperTabletEvent((KKeySequenceWidget*)self, (QTabletEvent*)event);
 }
 
 void k_keysequencewidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void k_keysequencewidget_action_event(void* self, void* event) {
     KKeySequenceWidget_ActionEvent((KKeySequenceWidget*)self, (QActionEvent*)event);
 }
 
-void k_keysequencewidget_qbase_action_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseActionEvent((KKeySequenceWidget*)self, (QActionEvent*)event);
+void k_keysequencewidget_super_action_event(void* self, void* event) {
+    KKeySequenceWidget_SuperActionEvent((KKeySequenceWidget*)self, (QActionEvent*)event);
 }
 
 void k_keysequencewidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_keysequencewidget_drag_enter_event(void* self, void* event) {
     KKeySequenceWidget_DragEnterEvent((KKeySequenceWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_keysequencewidget_qbase_drag_enter_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseDragEnterEvent((KKeySequenceWidget*)self, (QDragEnterEvent*)event);
+void k_keysequencewidget_super_drag_enter_event(void* self, void* event) {
+    KKeySequenceWidget_SuperDragEnterEvent((KKeySequenceWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_keysequencewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_keysequencewidget_drag_move_event(void* self, void* event) {
     KKeySequenceWidget_DragMoveEvent((KKeySequenceWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_keysequencewidget_qbase_drag_move_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseDragMoveEvent((KKeySequenceWidget*)self, (QDragMoveEvent*)event);
+void k_keysequencewidget_super_drag_move_event(void* self, void* event) {
+    KKeySequenceWidget_SuperDragMoveEvent((KKeySequenceWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_keysequencewidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_keysequencewidget_drag_leave_event(void* self, void* event) {
     KKeySequenceWidget_DragLeaveEvent((KKeySequenceWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_keysequencewidget_qbase_drag_leave_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseDragLeaveEvent((KKeySequenceWidget*)self, (QDragLeaveEvent*)event);
+void k_keysequencewidget_super_drag_leave_event(void* self, void* event) {
+    KKeySequenceWidget_SuperDragLeaveEvent((KKeySequenceWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_keysequencewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_keysequencewidget_drop_event(void* self, void* event) {
     KKeySequenceWidget_DropEvent((KKeySequenceWidget*)self, (QDropEvent*)event);
 }
 
-void k_keysequencewidget_qbase_drop_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseDropEvent((KKeySequenceWidget*)self, (QDropEvent*)event);
+void k_keysequencewidget_super_drop_event(void* self, void* event) {
+    KKeySequenceWidget_SuperDropEvent((KKeySequenceWidget*)self, (QDropEvent*)event);
 }
 
 void k_keysequencewidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_keysequencewidget_show_event(void* self, void* event) {
     KKeySequenceWidget_ShowEvent((KKeySequenceWidget*)self, (QShowEvent*)event);
 }
 
-void k_keysequencewidget_qbase_show_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseShowEvent((KKeySequenceWidget*)self, (QShowEvent*)event);
+void k_keysequencewidget_super_show_event(void* self, void* event) {
+    KKeySequenceWidget_SuperShowEvent((KKeySequenceWidget*)self, (QShowEvent*)event);
 }
 
 void k_keysequencewidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_keysequencewidget_hide_event(void* self, void* event) {
     KKeySequenceWidget_HideEvent((KKeySequenceWidget*)self, (QHideEvent*)event);
 }
 
-void k_keysequencewidget_qbase_hide_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseHideEvent((KKeySequenceWidget*)self, (QHideEvent*)event);
+void k_keysequencewidget_super_hide_event(void* self, void* event) {
+    KKeySequenceWidget_SuperHideEvent((KKeySequenceWidget*)self, (QHideEvent*)event);
 }
 
 void k_keysequencewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ bool k_keysequencewidget_native_event(void* self, char* eventType, void* message
     return KKeySequenceWidget_NativeEvent((KKeySequenceWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_keysequencewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KKeySequenceWidget_QBaseNativeEvent((KKeySequenceWidget*)self, qstring(eventType), message, result);
+bool k_keysequencewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KKeySequenceWidget_SuperNativeEvent((KKeySequenceWidget*)self, qstring(eventType), message, result);
 }
 
 void k_keysequencewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1958,8 +1958,8 @@ void k_keysequencewidget_change_event(void* self, void* param1) {
     KKeySequenceWidget_ChangeEvent((KKeySequenceWidget*)self, (QEvent*)param1);
 }
 
-void k_keysequencewidget_qbase_change_event(void* self, void* param1) {
-    KKeySequenceWidget_QBaseChangeEvent((KKeySequenceWidget*)self, (QEvent*)param1);
+void k_keysequencewidget_super_change_event(void* self, void* param1) {
+    KKeySequenceWidget_SuperChangeEvent((KKeySequenceWidget*)self, (QEvent*)param1);
 }
 
 void k_keysequencewidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ int32_t k_keysequencewidget_metric(void* self, int32_t param1) {
     return KKeySequenceWidget_Metric((KKeySequenceWidget*)self, param1);
 }
 
-int32_t k_keysequencewidget_qbase_metric(void* self, int32_t param1) {
-    return KKeySequenceWidget_QBaseMetric((KKeySequenceWidget*)self, param1);
+int32_t k_keysequencewidget_super_metric(void* self, int32_t param1) {
+    return KKeySequenceWidget_SuperMetric((KKeySequenceWidget*)self, param1);
 }
 
 void k_keysequencewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1982,8 +1982,8 @@ void k_keysequencewidget_init_painter(void* self, void* painter) {
     KKeySequenceWidget_InitPainter((KKeySequenceWidget*)self, (QPainter*)painter);
 }
 
-void k_keysequencewidget_qbase_init_painter(void* self, void* painter) {
-    KKeySequenceWidget_QBaseInitPainter((KKeySequenceWidget*)self, (QPainter*)painter);
+void k_keysequencewidget_super_init_painter(void* self, void* painter) {
+    KKeySequenceWidget_SuperInitPainter((KKeySequenceWidget*)self, (QPainter*)painter);
 }
 
 void k_keysequencewidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ QPaintDevice* k_keysequencewidget_redirected(void* self, void* offset) {
     return KKeySequenceWidget_Redirected((KKeySequenceWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_keysequencewidget_qbase_redirected(void* self, void* offset) {
-    return KKeySequenceWidget_QBaseRedirected((KKeySequenceWidget*)self, (QPoint*)offset);
+QPaintDevice* k_keysequencewidget_super_redirected(void* self, void* offset) {
+    return KKeySequenceWidget_SuperRedirected((KKeySequenceWidget*)self, (QPoint*)offset);
 }
 
 void k_keysequencewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ QPainter* k_keysequencewidget_shared_painter(void* self) {
     return KKeySequenceWidget_SharedPainter((KKeySequenceWidget*)self);
 }
 
-QPainter* k_keysequencewidget_qbase_shared_painter(void* self) {
-    return KKeySequenceWidget_QBaseSharedPainter((KKeySequenceWidget*)self);
+QPainter* k_keysequencewidget_super_shared_painter(void* self) {
+    return KKeySequenceWidget_SuperSharedPainter((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2018,8 +2018,8 @@ void k_keysequencewidget_input_method_event(void* self, void* param1) {
     KKeySequenceWidget_InputMethodEvent((KKeySequenceWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_keysequencewidget_qbase_input_method_event(void* self, void* param1) {
-    KKeySequenceWidget_QBaseInputMethodEvent((KKeySequenceWidget*)self, (QInputMethodEvent*)param1);
+void k_keysequencewidget_super_input_method_event(void* self, void* param1) {
+    KKeySequenceWidget_SuperInputMethodEvent((KKeySequenceWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_keysequencewidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ QVariant* k_keysequencewidget_input_method_query(void* self, int32_t param1) {
     return KKeySequenceWidget_InputMethodQuery((KKeySequenceWidget*)self, param1);
 }
 
-QVariant* k_keysequencewidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KKeySequenceWidget_QBaseInputMethodQuery((KKeySequenceWidget*)self, param1);
+QVariant* k_keysequencewidget_super_input_method_query(void* self, int32_t param1) {
+    return KKeySequenceWidget_SuperInputMethodQuery((KKeySequenceWidget*)self, param1);
 }
 
 void k_keysequencewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2042,8 +2042,8 @@ bool k_keysequencewidget_focus_next_prev_child(void* self, bool next) {
     return KKeySequenceWidget_FocusNextPrevChild((KKeySequenceWidget*)self, next);
 }
 
-bool k_keysequencewidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KKeySequenceWidget_QBaseFocusNextPrevChild((KKeySequenceWidget*)self, next);
+bool k_keysequencewidget_super_focus_next_prev_child(void* self, bool next) {
+    return KKeySequenceWidget_SuperFocusNextPrevChild((KKeySequenceWidget*)self, next);
 }
 
 void k_keysequencewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2054,8 +2054,8 @@ bool k_keysequencewidget_event_filter(void* self, void* watched, void* event) {
     return KKeySequenceWidget_EventFilter((KKeySequenceWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_keysequencewidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KKeySequenceWidget_QBaseEventFilter((KKeySequenceWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_keysequencewidget_super_event_filter(void* self, void* watched, void* event) {
+    return KKeySequenceWidget_SuperEventFilter((KKeySequenceWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_keysequencewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_keysequencewidget_timer_event(void* self, void* event) {
     KKeySequenceWidget_TimerEvent((KKeySequenceWidget*)self, (QTimerEvent*)event);
 }
 
-void k_keysequencewidget_qbase_timer_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseTimerEvent((KKeySequenceWidget*)self, (QTimerEvent*)event);
+void k_keysequencewidget_super_timer_event(void* self, void* event) {
+    KKeySequenceWidget_SuperTimerEvent((KKeySequenceWidget*)self, (QTimerEvent*)event);
 }
 
 void k_keysequencewidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void k_keysequencewidget_child_event(void* self, void* event) {
     KKeySequenceWidget_ChildEvent((KKeySequenceWidget*)self, (QChildEvent*)event);
 }
 
-void k_keysequencewidget_qbase_child_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseChildEvent((KKeySequenceWidget*)self, (QChildEvent*)event);
+void k_keysequencewidget_super_child_event(void* self, void* event) {
+    KKeySequenceWidget_SuperChildEvent((KKeySequenceWidget*)self, (QChildEvent*)event);
 }
 
 void k_keysequencewidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ void k_keysequencewidget_custom_event(void* self, void* event) {
     KKeySequenceWidget_CustomEvent((KKeySequenceWidget*)self, (QEvent*)event);
 }
 
-void k_keysequencewidget_qbase_custom_event(void* self, void* event) {
-    KKeySequenceWidget_QBaseCustomEvent((KKeySequenceWidget*)self, (QEvent*)event);
+void k_keysequencewidget_super_custom_event(void* self, void* event) {
+    KKeySequenceWidget_SuperCustomEvent((KKeySequenceWidget*)self, (QEvent*)event);
 }
 
 void k_keysequencewidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ void k_keysequencewidget_connect_notify(void* self, void* signal) {
     KKeySequenceWidget_ConnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_keysequencewidget_qbase_connect_notify(void* self, void* signal) {
-    KKeySequenceWidget_QBaseConnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
+void k_keysequencewidget_super_connect_notify(void* self, void* signal) {
+    KKeySequenceWidget_SuperConnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencewidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ void k_keysequencewidget_disconnect_notify(void* self, void* signal) {
     KKeySequenceWidget_DisconnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_keysequencewidget_qbase_disconnect_notify(void* self, void* signal) {
-    KKeySequenceWidget_QBaseDisconnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
+void k_keysequencewidget_super_disconnect_notify(void* self, void* signal) {
+    KKeySequenceWidget_SuperDisconnectNotify((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ void k_keysequencewidget_update_micro_focus(void* self) {
     KKeySequenceWidget_UpdateMicroFocus((KKeySequenceWidget*)self);
 }
 
-void k_keysequencewidget_qbase_update_micro_focus(void* self) {
-    KKeySequenceWidget_QBaseUpdateMicroFocus((KKeySequenceWidget*)self);
+void k_keysequencewidget_super_update_micro_focus(void* self) {
+    KKeySequenceWidget_SuperUpdateMicroFocus((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2138,8 +2138,8 @@ void k_keysequencewidget_create(void* self) {
     KKeySequenceWidget_Create((KKeySequenceWidget*)self);
 }
 
-void k_keysequencewidget_qbase_create(void* self) {
-    KKeySequenceWidget_QBaseCreate((KKeySequenceWidget*)self);
+void k_keysequencewidget_super_create(void* self) {
+    KKeySequenceWidget_SuperCreate((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_create(void* self, void (*callback)()) {
@@ -2150,8 +2150,8 @@ void k_keysequencewidget_destroy(void* self) {
     KKeySequenceWidget_Destroy((KKeySequenceWidget*)self);
 }
 
-void k_keysequencewidget_qbase_destroy(void* self) {
-    KKeySequenceWidget_QBaseDestroy((KKeySequenceWidget*)self);
+void k_keysequencewidget_super_destroy(void* self) {
+    KKeySequenceWidget_SuperDestroy((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_destroy(void* self, void (*callback)()) {
@@ -2162,8 +2162,8 @@ bool k_keysequencewidget_focus_next_child(void* self) {
     return KKeySequenceWidget_FocusNextChild((KKeySequenceWidget*)self);
 }
 
-bool k_keysequencewidget_qbase_focus_next_child(void* self) {
-    return KKeySequenceWidget_QBaseFocusNextChild((KKeySequenceWidget*)self);
+bool k_keysequencewidget_super_focus_next_child(void* self) {
+    return KKeySequenceWidget_SuperFocusNextChild((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2174,8 +2174,8 @@ bool k_keysequencewidget_focus_previous_child(void* self) {
     return KKeySequenceWidget_FocusPreviousChild((KKeySequenceWidget*)self);
 }
 
-bool k_keysequencewidget_qbase_focus_previous_child(void* self) {
-    return KKeySequenceWidget_QBaseFocusPreviousChild((KKeySequenceWidget*)self);
+bool k_keysequencewidget_super_focus_previous_child(void* self) {
+    return KKeySequenceWidget_SuperFocusPreviousChild((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2186,8 +2186,8 @@ QObject* k_keysequencewidget_sender(void* self) {
     return KKeySequenceWidget_Sender((KKeySequenceWidget*)self);
 }
 
-QObject* k_keysequencewidget_qbase_sender(void* self) {
-    return KKeySequenceWidget_QBaseSender((KKeySequenceWidget*)self);
+QObject* k_keysequencewidget_super_sender(void* self) {
+    return KKeySequenceWidget_SuperSender((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2198,8 +2198,8 @@ int32_t k_keysequencewidget_sender_signal_index(void* self) {
     return KKeySequenceWidget_SenderSignalIndex((KKeySequenceWidget*)self);
 }
 
-int32_t k_keysequencewidget_qbase_sender_signal_index(void* self) {
-    return KKeySequenceWidget_QBaseSenderSignalIndex((KKeySequenceWidget*)self);
+int32_t k_keysequencewidget_super_sender_signal_index(void* self) {
+    return KKeySequenceWidget_SuperSenderSignalIndex((KKeySequenceWidget*)self);
 }
 
 void k_keysequencewidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2210,8 +2210,8 @@ int32_t k_keysequencewidget_receivers(void* self, const char* signal) {
     return KKeySequenceWidget_Receivers((KKeySequenceWidget*)self, signal);
 }
 
-int32_t k_keysequencewidget_qbase_receivers(void* self, const char* signal) {
-    return KKeySequenceWidget_QBaseReceivers((KKeySequenceWidget*)self, signal);
+int32_t k_keysequencewidget_super_receivers(void* self, const char* signal) {
+    return KKeySequenceWidget_SuperReceivers((KKeySequenceWidget*)self, signal);
 }
 
 void k_keysequencewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2222,8 +2222,8 @@ bool k_keysequencewidget_is_signal_connected(void* self, void* signal) {
     return KKeySequenceWidget_IsSignalConnected((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_keysequencewidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KKeySequenceWidget_QBaseIsSignalConnected((KKeySequenceWidget*)self, (QMetaMethod*)signal);
+bool k_keysequencewidget_super_is_signal_connected(void* self, void* signal) {
+    return KKeySequenceWidget_SuperIsSignalConnected((KKeySequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2234,8 +2234,8 @@ double k_keysequencewidget_get_decoded_metric_f(void* self, int32_t metricA, int
     return KKeySequenceWidget_GetDecodedMetricF((KKeySequenceWidget*)self, metricA, metricB);
 }
 
-double k_keysequencewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KKeySequenceWidget_QBaseGetDecodedMetricF((KKeySequenceWidget*)self, metricA, metricB);
+double k_keysequencewidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KKeySequenceWidget_SuperGetDecodedMetricF((KKeySequenceWidget*)self, metricA, metricB);
 }
 
 void k_keysequencewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

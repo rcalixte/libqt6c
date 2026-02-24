@@ -20,8 +20,8 @@ void k_onsole__filter_on_process(void* self, void (*callback)()) {
     Konsole__Filter_OnProcess((Konsole__Filter*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter_qbase_process(void* self) {
-    Konsole__Filter_QBaseProcess((Konsole__Filter*)self);
+void k_onsole__filter_super_process(void* self) {
+    Konsole__Filter_SuperProcess((Konsole__Filter*)self);
 }
 
 void k_onsole__filter_reset(void* self) {
@@ -40,8 +40,8 @@ void k_onsole__filter_on_add_hot_spot(void* self, void (*callback)(void*, void*)
     Konsole__Filter_OnAddHotSpot((Konsole__Filter*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter_qbase_add_hot_spot(void* self, void* param1) {
-    Konsole__Filter_QBaseAddHotSpot((Konsole__Filter*)self, (Konsole__Filter__HotSpot*)param1);
+void k_onsole__filter_super_add_hot_spot(void* self, void* param1) {
+    Konsole__Filter_SuperAddHotSpot((Konsole__Filter*)self, (Konsole__Filter__HotSpot*)param1);
 }
 
 const char* k_onsole__filter_buffer(void* self) {
@@ -55,8 +55,8 @@ void k_onsole__filter_on_buffer(void* self, const char* (*callback)()) {
     Konsole__Filter_OnBuffer((Konsole__Filter*)self, (intptr_t)callback);
 }
 
-const char* k_onsole__filter_qbase_buffer(void* self) {
-    libqt_string _str = Konsole__Filter_QBaseBuffer((Konsole__Filter*)self);
+const char* k_onsole__filter_super_buffer(void* self) {
+    libqt_string _str = Konsole__Filter_SuperBuffer((Konsole__Filter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -70,8 +70,8 @@ void k_onsole__filter_on_get_line_column(void* self, void (*callback)(void*, int
     Konsole__Filter_OnGetLineColumn((Konsole__Filter*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn) {
-    Konsole__Filter_QBaseGetLineColumn((Konsole__Filter*)self, position, startLine, startColumn);
+void k_onsole__filter_super_get_line_column(void* self, int position, int* startLine, int* startColumn) {
+    Konsole__Filter_SuperGetLineColumn((Konsole__Filter*)self, position, startLine, startColumn);
 }
 
 const char* k_onsole__filter_tr(const char* s) {
@@ -310,8 +310,8 @@ const QMetaObject* k_onsole__filter_meta_object(void* self) {
     return Konsole__Filter_MetaObject((Konsole__Filter*)self);
 }
 
-const QMetaObject* k_onsole__filter_qbase_meta_object(void* self) {
-    return Konsole__Filter_QBaseMetaObject((Konsole__Filter*)self);
+const QMetaObject* k_onsole__filter_super_meta_object(void* self) {
+    return Konsole__Filter_SuperMetaObject((Konsole__Filter*)self);
 }
 
 void k_onsole__filter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -322,8 +322,8 @@ void* k_onsole__filter_metacast(void* self, const char* param1) {
     return Konsole__Filter_Metacast((Konsole__Filter*)self, param1);
 }
 
-void* k_onsole__filter_qbase_metacast(void* self, const char* param1) {
-    return Konsole__Filter_QBaseMetacast((Konsole__Filter*)self, param1);
+void* k_onsole__filter_super_metacast(void* self, const char* param1) {
+    return Konsole__Filter_SuperMetacast((Konsole__Filter*)self, param1);
 }
 
 void k_onsole__filter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -334,8 +334,8 @@ int32_t k_onsole__filter_metacall(void* self, int32_t param1, int param2, void* 
     return Konsole__Filter_Metacall((Konsole__Filter*)self, param1, param2, param3);
 }
 
-int32_t k_onsole__filter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Konsole__Filter_QBaseMetacall((Konsole__Filter*)self, param1, param2, param3);
+int32_t k_onsole__filter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Konsole__Filter_SuperMetacall((Konsole__Filter*)self, param1, param2, param3);
 }
 
 void k_onsole__filter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -346,8 +346,8 @@ bool k_onsole__filter_event(void* self, void* event) {
     return Konsole__Filter_Event((Konsole__Filter*)self, (QEvent*)event);
 }
 
-bool k_onsole__filter_qbase_event(void* self, void* event) {
-    return Konsole__Filter_QBaseEvent((Konsole__Filter*)self, (QEvent*)event);
+bool k_onsole__filter_super_event(void* self, void* event) {
+    return Konsole__Filter_SuperEvent((Konsole__Filter*)self, (QEvent*)event);
 }
 
 void k_onsole__filter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ bool k_onsole__filter_event_filter(void* self, void* watched, void* event) {
     return Konsole__Filter_EventFilter((Konsole__Filter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_onsole__filter_qbase_event_filter(void* self, void* watched, void* event) {
-    return Konsole__Filter_QBaseEventFilter((Konsole__Filter*)self, (QObject*)watched, (QEvent*)event);
+bool k_onsole__filter_super_event_filter(void* self, void* watched, void* event) {
+    return Konsole__Filter_SuperEventFilter((Konsole__Filter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_onsole__filter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -370,8 +370,8 @@ void k_onsole__filter_timer_event(void* self, void* event) {
     Konsole__Filter_TimerEvent((Konsole__Filter*)self, (QTimerEvent*)event);
 }
 
-void k_onsole__filter_qbase_timer_event(void* self, void* event) {
-    Konsole__Filter_QBaseTimerEvent((Konsole__Filter*)self, (QTimerEvent*)event);
+void k_onsole__filter_super_timer_event(void* self, void* event) {
+    Konsole__Filter_SuperTimerEvent((Konsole__Filter*)self, (QTimerEvent*)event);
 }
 
 void k_onsole__filter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ void k_onsole__filter_child_event(void* self, void* event) {
     Konsole__Filter_ChildEvent((Konsole__Filter*)self, (QChildEvent*)event);
 }
 
-void k_onsole__filter_qbase_child_event(void* self, void* event) {
-    Konsole__Filter_QBaseChildEvent((Konsole__Filter*)self, (QChildEvent*)event);
+void k_onsole__filter_super_child_event(void* self, void* event) {
+    Konsole__Filter_SuperChildEvent((Konsole__Filter*)self, (QChildEvent*)event);
 }
 
 void k_onsole__filter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ void k_onsole__filter_custom_event(void* self, void* event) {
     Konsole__Filter_CustomEvent((Konsole__Filter*)self, (QEvent*)event);
 }
 
-void k_onsole__filter_qbase_custom_event(void* self, void* event) {
-    Konsole__Filter_QBaseCustomEvent((Konsole__Filter*)self, (QEvent*)event);
+void k_onsole__filter_super_custom_event(void* self, void* event) {
+    Konsole__Filter_SuperCustomEvent((Konsole__Filter*)self, (QEvent*)event);
 }
 
 void k_onsole__filter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ void k_onsole__filter_connect_notify(void* self, void* signal) {
     Konsole__Filter_ConnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__filter_qbase_connect_notify(void* self, void* signal) {
-    Konsole__Filter_QBaseConnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
+void k_onsole__filter_super_connect_notify(void* self, void* signal) {
+    Konsole__Filter_SuperConnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ void k_onsole__filter_disconnect_notify(void* self, void* signal) {
     Konsole__Filter_DisconnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__filter_qbase_disconnect_notify(void* self, void* signal) {
-    Konsole__Filter_QBaseDisconnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
+void k_onsole__filter_super_disconnect_notify(void* self, void* signal) {
+    Konsole__Filter_SuperDisconnectNotify((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ QObject* k_onsole__filter_sender(void* self) {
     return Konsole__Filter_Sender((Konsole__Filter*)self);
 }
 
-QObject* k_onsole__filter_qbase_sender(void* self) {
-    return Konsole__Filter_QBaseSender((Konsole__Filter*)self);
+QObject* k_onsole__filter_super_sender(void* self) {
+    return Konsole__Filter_SuperSender((Konsole__Filter*)self);
 }
 
 void k_onsole__filter_on_sender(void* self, QObject* (*callback)()) {
@@ -442,8 +442,8 @@ int32_t k_onsole__filter_sender_signal_index(void* self) {
     return Konsole__Filter_SenderSignalIndex((Konsole__Filter*)self);
 }
 
-int32_t k_onsole__filter_qbase_sender_signal_index(void* self) {
-    return Konsole__Filter_QBaseSenderSignalIndex((Konsole__Filter*)self);
+int32_t k_onsole__filter_super_sender_signal_index(void* self) {
+    return Konsole__Filter_SuperSenderSignalIndex((Konsole__Filter*)self);
 }
 
 void k_onsole__filter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -454,8 +454,8 @@ int32_t k_onsole__filter_receivers(void* self, const char* signal) {
     return Konsole__Filter_Receivers((Konsole__Filter*)self, signal);
 }
 
-int32_t k_onsole__filter_qbase_receivers(void* self, const char* signal) {
-    return Konsole__Filter_QBaseReceivers((Konsole__Filter*)self, signal);
+int32_t k_onsole__filter_super_receivers(void* self, const char* signal) {
+    return Konsole__Filter_SuperReceivers((Konsole__Filter*)self, signal);
 }
 
 void k_onsole__filter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -466,8 +466,8 @@ bool k_onsole__filter_is_signal_connected(void* self, void* signal) {
     return Konsole__Filter_IsSignalConnected((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
-bool k_onsole__filter_qbase_is_signal_connected(void* self, void* signal) {
-    return Konsole__Filter_QBaseIsSignalConnected((Konsole__Filter*)self, (QMetaMethod*)signal);
+bool k_onsole__filter_super_is_signal_connected(void* self, void* signal) {
+    return Konsole__Filter_SuperIsSignalConnected((Konsole__Filter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -502,8 +502,8 @@ void k_onsole__regexpfilter_on_process(void* self, void (*callback)()) {
     Konsole__RegExpFilter_OnProcess((Konsole__RegExpFilter*)self, (intptr_t)callback);
 }
 
-void k_onsole__regexpfilter_qbase_process(void* self) {
-    Konsole__RegExpFilter_QBaseProcess((Konsole__RegExpFilter*)self);
+void k_onsole__regexpfilter_super_process(void* self) {
+    Konsole__RegExpFilter_SuperProcess((Konsole__RegExpFilter*)self);
 }
 
 Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_new_hot_spot(void* self, int startLine, int startColumn, int endLine, int endColumn) {
@@ -514,8 +514,8 @@ void k_onsole__regexpfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__H
     Konsole__RegExpFilter_OnNewHotSpot((Konsole__RegExpFilter*)self, (intptr_t)callback);
 }
 
-Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_qbase_new_hot_spot(void* self, int startLine, int startColumn, int endLine, int endColumn) {
-    return Konsole__RegExpFilter_QBaseNewHotSpot((Konsole__RegExpFilter*)self, startLine, startColumn, endLine, endColumn);
+Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_super_new_hot_spot(void* self, int startLine, int startColumn, int endLine, int endColumn) {
+    return Konsole__RegExpFilter_SuperNewHotSpot((Konsole__RegExpFilter*)self, startLine, startColumn, endLine, endColumn);
 }
 
 void k_onsole__regexpfilter_reset(void* self) {
@@ -762,8 +762,8 @@ const QMetaObject* k_onsole__regexpfilter_meta_object(void* self) {
     return Konsole__RegExpFilter_MetaObject((Konsole__RegExpFilter*)self);
 }
 
-const QMetaObject* k_onsole__regexpfilter_qbase_meta_object(void* self) {
-    return Konsole__RegExpFilter_QBaseMetaObject((Konsole__RegExpFilter*)self);
+const QMetaObject* k_onsole__regexpfilter_super_meta_object(void* self) {
+    return Konsole__RegExpFilter_SuperMetaObject((Konsole__RegExpFilter*)self);
 }
 
 void k_onsole__regexpfilter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -774,8 +774,8 @@ void* k_onsole__regexpfilter_metacast(void* self, const char* param1) {
     return Konsole__RegExpFilter_Metacast((Konsole__RegExpFilter*)self, param1);
 }
 
-void* k_onsole__regexpfilter_qbase_metacast(void* self, const char* param1) {
-    return Konsole__RegExpFilter_QBaseMetacast((Konsole__RegExpFilter*)self, param1);
+void* k_onsole__regexpfilter_super_metacast(void* self, const char* param1) {
+    return Konsole__RegExpFilter_SuperMetacast((Konsole__RegExpFilter*)self, param1);
 }
 
 void k_onsole__regexpfilter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -786,8 +786,8 @@ int32_t k_onsole__regexpfilter_metacall(void* self, int32_t param1, int param2, 
     return Konsole__RegExpFilter_Metacall((Konsole__RegExpFilter*)self, param1, param2, param3);
 }
 
-int32_t k_onsole__regexpfilter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Konsole__RegExpFilter_QBaseMetacall((Konsole__RegExpFilter*)self, param1, param2, param3);
+int32_t k_onsole__regexpfilter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Konsole__RegExpFilter_SuperMetacall((Konsole__RegExpFilter*)self, param1, param2, param3);
 }
 
 void k_onsole__regexpfilter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -798,8 +798,8 @@ bool k_onsole__regexpfilter_event(void* self, void* event) {
     return Konsole__RegExpFilter_Event((Konsole__RegExpFilter*)self, (QEvent*)event);
 }
 
-bool k_onsole__regexpfilter_qbase_event(void* self, void* event) {
-    return Konsole__RegExpFilter_QBaseEvent((Konsole__RegExpFilter*)self, (QEvent*)event);
+bool k_onsole__regexpfilter_super_event(void* self, void* event) {
+    return Konsole__RegExpFilter_SuperEvent((Konsole__RegExpFilter*)self, (QEvent*)event);
 }
 
 void k_onsole__regexpfilter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -810,8 +810,8 @@ bool k_onsole__regexpfilter_event_filter(void* self, void* watched, void* event)
     return Konsole__RegExpFilter_EventFilter((Konsole__RegExpFilter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_onsole__regexpfilter_qbase_event_filter(void* self, void* watched, void* event) {
-    return Konsole__RegExpFilter_QBaseEventFilter((Konsole__RegExpFilter*)self, (QObject*)watched, (QEvent*)event);
+bool k_onsole__regexpfilter_super_event_filter(void* self, void* watched, void* event) {
+    return Konsole__RegExpFilter_SuperEventFilter((Konsole__RegExpFilter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_onsole__regexpfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -822,8 +822,8 @@ void k_onsole__regexpfilter_timer_event(void* self, void* event) {
     Konsole__RegExpFilter_TimerEvent((Konsole__RegExpFilter*)self, (QTimerEvent*)event);
 }
 
-void k_onsole__regexpfilter_qbase_timer_event(void* self, void* event) {
-    Konsole__RegExpFilter_QBaseTimerEvent((Konsole__RegExpFilter*)self, (QTimerEvent*)event);
+void k_onsole__regexpfilter_super_timer_event(void* self, void* event) {
+    Konsole__RegExpFilter_SuperTimerEvent((Konsole__RegExpFilter*)self, (QTimerEvent*)event);
 }
 
 void k_onsole__regexpfilter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -834,8 +834,8 @@ void k_onsole__regexpfilter_child_event(void* self, void* event) {
     Konsole__RegExpFilter_ChildEvent((Konsole__RegExpFilter*)self, (QChildEvent*)event);
 }
 
-void k_onsole__regexpfilter_qbase_child_event(void* self, void* event) {
-    Konsole__RegExpFilter_QBaseChildEvent((Konsole__RegExpFilter*)self, (QChildEvent*)event);
+void k_onsole__regexpfilter_super_child_event(void* self, void* event) {
+    Konsole__RegExpFilter_SuperChildEvent((Konsole__RegExpFilter*)self, (QChildEvent*)event);
 }
 
 void k_onsole__regexpfilter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -846,8 +846,8 @@ void k_onsole__regexpfilter_custom_event(void* self, void* event) {
     Konsole__RegExpFilter_CustomEvent((Konsole__RegExpFilter*)self, (QEvent*)event);
 }
 
-void k_onsole__regexpfilter_qbase_custom_event(void* self, void* event) {
-    Konsole__RegExpFilter_QBaseCustomEvent((Konsole__RegExpFilter*)self, (QEvent*)event);
+void k_onsole__regexpfilter_super_custom_event(void* self, void* event) {
+    Konsole__RegExpFilter_SuperCustomEvent((Konsole__RegExpFilter*)self, (QEvent*)event);
 }
 
 void k_onsole__regexpfilter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -858,8 +858,8 @@ void k_onsole__regexpfilter_connect_notify(void* self, void* signal) {
     Konsole__RegExpFilter_ConnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__regexpfilter_qbase_connect_notify(void* self, void* signal) {
-    Konsole__RegExpFilter_QBaseConnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
+void k_onsole__regexpfilter_super_connect_notify(void* self, void* signal) {
+    Konsole__RegExpFilter_SuperConnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__regexpfilter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -870,8 +870,8 @@ void k_onsole__regexpfilter_disconnect_notify(void* self, void* signal) {
     Konsole__RegExpFilter_DisconnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__regexpfilter_qbase_disconnect_notify(void* self, void* signal) {
-    Konsole__RegExpFilter_QBaseDisconnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
+void k_onsole__regexpfilter_super_disconnect_notify(void* self, void* signal) {
+    Konsole__RegExpFilter_SuperDisconnectNotify((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__regexpfilter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -882,8 +882,8 @@ void k_onsole__regexpfilter_add_hot_spot(void* self, void* param1) {
     Konsole__RegExpFilter_AddHotSpot((Konsole__RegExpFilter*)self, (Konsole__Filter__HotSpot*)param1);
 }
 
-void k_onsole__regexpfilter_qbase_add_hot_spot(void* self, void* param1) {
-    Konsole__RegExpFilter_QBaseAddHotSpot((Konsole__RegExpFilter*)self, (Konsole__Filter__HotSpot*)param1);
+void k_onsole__regexpfilter_super_add_hot_spot(void* self, void* param1) {
+    Konsole__RegExpFilter_SuperAddHotSpot((Konsole__RegExpFilter*)self, (Konsole__Filter__HotSpot*)param1);
 }
 
 void k_onsole__regexpfilter_on_add_hot_spot(void* self, void (*callback)(void*, void*)) {
@@ -897,8 +897,8 @@ const char* k_onsole__regexpfilter_buffer(void* self) {
     return _ret;
 }
 
-const char* k_onsole__regexpfilter_qbase_buffer(void* self) {
-    libqt_string _str = Konsole__RegExpFilter_QBaseBuffer((Konsole__RegExpFilter*)self);
+const char* k_onsole__regexpfilter_super_buffer(void* self) {
+    libqt_string _str = Konsole__RegExpFilter_SuperBuffer((Konsole__RegExpFilter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -912,8 +912,8 @@ void k_onsole__regexpfilter_get_line_column(void* self, int position, int* start
     Konsole__RegExpFilter_GetLineColumn((Konsole__RegExpFilter*)self, position, startLine, startColumn);
 }
 
-void k_onsole__regexpfilter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn) {
-    Konsole__RegExpFilter_QBaseGetLineColumn((Konsole__RegExpFilter*)self, position, startLine, startColumn);
+void k_onsole__regexpfilter_super_get_line_column(void* self, int position, int* startLine, int* startColumn) {
+    Konsole__RegExpFilter_SuperGetLineColumn((Konsole__RegExpFilter*)self, position, startLine, startColumn);
 }
 
 void k_onsole__regexpfilter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*)) {
@@ -924,8 +924,8 @@ QObject* k_onsole__regexpfilter_sender(void* self) {
     return Konsole__RegExpFilter_Sender((Konsole__RegExpFilter*)self);
 }
 
-QObject* k_onsole__regexpfilter_qbase_sender(void* self) {
-    return Konsole__RegExpFilter_QBaseSender((Konsole__RegExpFilter*)self);
+QObject* k_onsole__regexpfilter_super_sender(void* self) {
+    return Konsole__RegExpFilter_SuperSender((Konsole__RegExpFilter*)self);
 }
 
 void k_onsole__regexpfilter_on_sender(void* self, QObject* (*callback)()) {
@@ -936,8 +936,8 @@ int32_t k_onsole__regexpfilter_sender_signal_index(void* self) {
     return Konsole__RegExpFilter_SenderSignalIndex((Konsole__RegExpFilter*)self);
 }
 
-int32_t k_onsole__regexpfilter_qbase_sender_signal_index(void* self) {
-    return Konsole__RegExpFilter_QBaseSenderSignalIndex((Konsole__RegExpFilter*)self);
+int32_t k_onsole__regexpfilter_super_sender_signal_index(void* self) {
+    return Konsole__RegExpFilter_SuperSenderSignalIndex((Konsole__RegExpFilter*)self);
 }
 
 void k_onsole__regexpfilter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -948,8 +948,8 @@ int32_t k_onsole__regexpfilter_receivers(void* self, const char* signal) {
     return Konsole__RegExpFilter_Receivers((Konsole__RegExpFilter*)self, signal);
 }
 
-int32_t k_onsole__regexpfilter_qbase_receivers(void* self, const char* signal) {
-    return Konsole__RegExpFilter_QBaseReceivers((Konsole__RegExpFilter*)self, signal);
+int32_t k_onsole__regexpfilter_super_receivers(void* self, const char* signal) {
+    return Konsole__RegExpFilter_SuperReceivers((Konsole__RegExpFilter*)self, signal);
 }
 
 void k_onsole__regexpfilter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -960,8 +960,8 @@ bool k_onsole__regexpfilter_is_signal_connected(void* self, void* signal) {
     return Konsole__RegExpFilter_IsSignalConnected((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
-bool k_onsole__regexpfilter_qbase_is_signal_connected(void* self, void* signal) {
-    return Konsole__RegExpFilter_QBaseIsSignalConnected((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
+bool k_onsole__regexpfilter_super_is_signal_connected(void* self, void* signal) {
+    return Konsole__RegExpFilter_SuperIsSignalConnected((Konsole__RegExpFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__regexpfilter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -988,8 +988,8 @@ void k_onsole__urlfilter_on_meta_object(void* self, const QMetaObject* (*callbac
     Konsole__UrlFilter_OnMetaObject((Konsole__UrlFilter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_onsole__urlfilter_qbase_meta_object(void* self) {
-    return Konsole__UrlFilter_QBaseMetaObject((Konsole__UrlFilter*)self);
+const QMetaObject* k_onsole__urlfilter_super_meta_object(void* self) {
+    return Konsole__UrlFilter_SuperMetaObject((Konsole__UrlFilter*)self);
 }
 
 void* k_onsole__urlfilter_metacast(void* self, const char* param1) {
@@ -1000,8 +1000,8 @@ void k_onsole__urlfilter_on_metacast(void* self, void* (*callback)(void*, const 
     Konsole__UrlFilter_OnMetacast((Konsole__UrlFilter*)self, (intptr_t)callback);
 }
 
-void* k_onsole__urlfilter_qbase_metacast(void* self, const char* param1) {
-    return Konsole__UrlFilter_QBaseMetacast((Konsole__UrlFilter*)self, param1);
+void* k_onsole__urlfilter_super_metacast(void* self, const char* param1) {
+    return Konsole__UrlFilter_SuperMetacast((Konsole__UrlFilter*)self, param1);
 }
 
 int32_t k_onsole__urlfilter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1012,8 +1012,8 @@ void k_onsole__urlfilter_on_metacall(void* self, int32_t (*callback)(void*, int3
     Konsole__UrlFilter_OnMetacall((Konsole__UrlFilter*)self, (intptr_t)callback);
 }
 
-int32_t k_onsole__urlfilter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Konsole__UrlFilter_QBaseMetacall((Konsole__UrlFilter*)self, param1, param2, param3);
+int32_t k_onsole__urlfilter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Konsole__UrlFilter_SuperMetacall((Konsole__UrlFilter*)self, param1, param2, param3);
 }
 
 const char* k_onsole__urlfilter_tr(const char* s) {
@@ -1031,8 +1031,8 @@ void k_onsole__urlfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotS
     Konsole__UrlFilter_OnNewHotSpot((Konsole__UrlFilter*)self, (intptr_t)callback);
 }
 
-Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_qbase_new_hot_spot(void* self, int param1, int param2, int param3, int param4) {
-    return Konsole__UrlFilter_QBaseNewHotSpot((Konsole__UrlFilter*)self, param1, param2, param3, param4);
+Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_super_new_hot_spot(void* self, int param1, int param2, int param3, int param4) {
+    return Konsole__UrlFilter_SuperNewHotSpot((Konsole__UrlFilter*)self, param1, param2, param3, param4);
 }
 
 void k_onsole__urlfilter_activated(void* self, void* url, bool fromContextMenu) {
@@ -1288,8 +1288,8 @@ void k_onsole__urlfilter_process(void* self) {
     Konsole__UrlFilter_Process((Konsole__UrlFilter*)self);
 }
 
-void k_onsole__urlfilter_qbase_process(void* self) {
-    Konsole__UrlFilter_QBaseProcess((Konsole__UrlFilter*)self);
+void k_onsole__urlfilter_super_process(void* self) {
+    Konsole__UrlFilter_SuperProcess((Konsole__UrlFilter*)self);
 }
 
 void k_onsole__urlfilter_on_process(void* self, void (*callback)()) {
@@ -1300,8 +1300,8 @@ bool k_onsole__urlfilter_event(void* self, void* event) {
     return Konsole__UrlFilter_Event((Konsole__UrlFilter*)self, (QEvent*)event);
 }
 
-bool k_onsole__urlfilter_qbase_event(void* self, void* event) {
-    return Konsole__UrlFilter_QBaseEvent((Konsole__UrlFilter*)self, (QEvent*)event);
+bool k_onsole__urlfilter_super_event(void* self, void* event) {
+    return Konsole__UrlFilter_SuperEvent((Konsole__UrlFilter*)self, (QEvent*)event);
 }
 
 void k_onsole__urlfilter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1312,8 +1312,8 @@ bool k_onsole__urlfilter_event_filter(void* self, void* watched, void* event) {
     return Konsole__UrlFilter_EventFilter((Konsole__UrlFilter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_onsole__urlfilter_qbase_event_filter(void* self, void* watched, void* event) {
-    return Konsole__UrlFilter_QBaseEventFilter((Konsole__UrlFilter*)self, (QObject*)watched, (QEvent*)event);
+bool k_onsole__urlfilter_super_event_filter(void* self, void* watched, void* event) {
+    return Konsole__UrlFilter_SuperEventFilter((Konsole__UrlFilter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_onsole__urlfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1324,8 +1324,8 @@ void k_onsole__urlfilter_timer_event(void* self, void* event) {
     Konsole__UrlFilter_TimerEvent((Konsole__UrlFilter*)self, (QTimerEvent*)event);
 }
 
-void k_onsole__urlfilter_qbase_timer_event(void* self, void* event) {
-    Konsole__UrlFilter_QBaseTimerEvent((Konsole__UrlFilter*)self, (QTimerEvent*)event);
+void k_onsole__urlfilter_super_timer_event(void* self, void* event) {
+    Konsole__UrlFilter_SuperTimerEvent((Konsole__UrlFilter*)self, (QTimerEvent*)event);
 }
 
 void k_onsole__urlfilter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1336,8 +1336,8 @@ void k_onsole__urlfilter_child_event(void* self, void* event) {
     Konsole__UrlFilter_ChildEvent((Konsole__UrlFilter*)self, (QChildEvent*)event);
 }
 
-void k_onsole__urlfilter_qbase_child_event(void* self, void* event) {
-    Konsole__UrlFilter_QBaseChildEvent((Konsole__UrlFilter*)self, (QChildEvent*)event);
+void k_onsole__urlfilter_super_child_event(void* self, void* event) {
+    Konsole__UrlFilter_SuperChildEvent((Konsole__UrlFilter*)self, (QChildEvent*)event);
 }
 
 void k_onsole__urlfilter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1348,8 +1348,8 @@ void k_onsole__urlfilter_custom_event(void* self, void* event) {
     Konsole__UrlFilter_CustomEvent((Konsole__UrlFilter*)self, (QEvent*)event);
 }
 
-void k_onsole__urlfilter_qbase_custom_event(void* self, void* event) {
-    Konsole__UrlFilter_QBaseCustomEvent((Konsole__UrlFilter*)self, (QEvent*)event);
+void k_onsole__urlfilter_super_custom_event(void* self, void* event) {
+    Konsole__UrlFilter_SuperCustomEvent((Konsole__UrlFilter*)self, (QEvent*)event);
 }
 
 void k_onsole__urlfilter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1360,8 +1360,8 @@ void k_onsole__urlfilter_connect_notify(void* self, void* signal) {
     Konsole__UrlFilter_ConnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__urlfilter_qbase_connect_notify(void* self, void* signal) {
-    Konsole__UrlFilter_QBaseConnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
+void k_onsole__urlfilter_super_connect_notify(void* self, void* signal) {
+    Konsole__UrlFilter_SuperConnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__urlfilter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1372,8 +1372,8 @@ void k_onsole__urlfilter_disconnect_notify(void* self, void* signal) {
     Konsole__UrlFilter_DisconnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__urlfilter_qbase_disconnect_notify(void* self, void* signal) {
-    Konsole__UrlFilter_QBaseDisconnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
+void k_onsole__urlfilter_super_disconnect_notify(void* self, void* signal) {
+    Konsole__UrlFilter_SuperDisconnectNotify((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__urlfilter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1384,8 +1384,8 @@ void k_onsole__urlfilter_add_hot_spot(void* self, void* param1) {
     Konsole__UrlFilter_AddHotSpot((Konsole__UrlFilter*)self, (Konsole__Filter__HotSpot*)param1);
 }
 
-void k_onsole__urlfilter_qbase_add_hot_spot(void* self, void* param1) {
-    Konsole__UrlFilter_QBaseAddHotSpot((Konsole__UrlFilter*)self, (Konsole__Filter__HotSpot*)param1);
+void k_onsole__urlfilter_super_add_hot_spot(void* self, void* param1) {
+    Konsole__UrlFilter_SuperAddHotSpot((Konsole__UrlFilter*)self, (Konsole__Filter__HotSpot*)param1);
 }
 
 void k_onsole__urlfilter_on_add_hot_spot(void* self, void (*callback)(void*, void*)) {
@@ -1399,8 +1399,8 @@ const char* k_onsole__urlfilter_buffer(void* self) {
     return _ret;
 }
 
-const char* k_onsole__urlfilter_qbase_buffer(void* self) {
-    libqt_string _str = Konsole__UrlFilter_QBaseBuffer((Konsole__UrlFilter*)self);
+const char* k_onsole__urlfilter_super_buffer(void* self) {
+    libqt_string _str = Konsole__UrlFilter_SuperBuffer((Konsole__UrlFilter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1414,8 +1414,8 @@ void k_onsole__urlfilter_get_line_column(void* self, int position, int* startLin
     Konsole__UrlFilter_GetLineColumn((Konsole__UrlFilter*)self, position, startLine, startColumn);
 }
 
-void k_onsole__urlfilter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn) {
-    Konsole__UrlFilter_QBaseGetLineColumn((Konsole__UrlFilter*)self, position, startLine, startColumn);
+void k_onsole__urlfilter_super_get_line_column(void* self, int position, int* startLine, int* startColumn) {
+    Konsole__UrlFilter_SuperGetLineColumn((Konsole__UrlFilter*)self, position, startLine, startColumn);
 }
 
 void k_onsole__urlfilter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*)) {
@@ -1426,8 +1426,8 @@ QObject* k_onsole__urlfilter_sender(void* self) {
     return Konsole__UrlFilter_Sender((Konsole__UrlFilter*)self);
 }
 
-QObject* k_onsole__urlfilter_qbase_sender(void* self) {
-    return Konsole__UrlFilter_QBaseSender((Konsole__UrlFilter*)self);
+QObject* k_onsole__urlfilter_super_sender(void* self) {
+    return Konsole__UrlFilter_SuperSender((Konsole__UrlFilter*)self);
 }
 
 void k_onsole__urlfilter_on_sender(void* self, QObject* (*callback)()) {
@@ -1438,8 +1438,8 @@ int32_t k_onsole__urlfilter_sender_signal_index(void* self) {
     return Konsole__UrlFilter_SenderSignalIndex((Konsole__UrlFilter*)self);
 }
 
-int32_t k_onsole__urlfilter_qbase_sender_signal_index(void* self) {
-    return Konsole__UrlFilter_QBaseSenderSignalIndex((Konsole__UrlFilter*)self);
+int32_t k_onsole__urlfilter_super_sender_signal_index(void* self) {
+    return Konsole__UrlFilter_SuperSenderSignalIndex((Konsole__UrlFilter*)self);
 }
 
 void k_onsole__urlfilter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1450,8 +1450,8 @@ int32_t k_onsole__urlfilter_receivers(void* self, const char* signal) {
     return Konsole__UrlFilter_Receivers((Konsole__UrlFilter*)self, signal);
 }
 
-int32_t k_onsole__urlfilter_qbase_receivers(void* self, const char* signal) {
-    return Konsole__UrlFilter_QBaseReceivers((Konsole__UrlFilter*)self, signal);
+int32_t k_onsole__urlfilter_super_receivers(void* self, const char* signal) {
+    return Konsole__UrlFilter_SuperReceivers((Konsole__UrlFilter*)self, signal);
 }
 
 void k_onsole__urlfilter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1462,8 +1462,8 @@ bool k_onsole__urlfilter_is_signal_connected(void* self, void* signal) {
     return Konsole__UrlFilter_IsSignalConnected((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
-bool k_onsole__urlfilter_qbase_is_signal_connected(void* self, void* signal) {
-    return Konsole__UrlFilter_QBaseIsSignalConnected((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
+bool k_onsole__urlfilter_super_is_signal_connected(void* self, void* signal) {
+    return Konsole__UrlFilter_SuperIsSignalConnected((Konsole__UrlFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__urlfilter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1490,8 +1490,8 @@ void k_onsole__filterobject_on_meta_object(void* self, const QMetaObject* (*call
     Konsole__FilterObject_OnMetaObject((Konsole__FilterObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_onsole__filterobject_qbase_meta_object(void* self) {
-    return Konsole__FilterObject_QBaseMetaObject((Konsole__FilterObject*)self);
+const QMetaObject* k_onsole__filterobject_super_meta_object(void* self) {
+    return Konsole__FilterObject_SuperMetaObject((Konsole__FilterObject*)self);
 }
 
 void* k_onsole__filterobject_metacast(void* self, const char* param1) {
@@ -1502,8 +1502,8 @@ void k_onsole__filterobject_on_metacast(void* self, void* (*callback)(void*, con
     Konsole__FilterObject_OnMetacast((Konsole__FilterObject*)self, (intptr_t)callback);
 }
 
-void* k_onsole__filterobject_qbase_metacast(void* self, const char* param1) {
-    return Konsole__FilterObject_QBaseMetacast((Konsole__FilterObject*)self, param1);
+void* k_onsole__filterobject_super_metacast(void* self, const char* param1) {
+    return Konsole__FilterObject_SuperMetacast((Konsole__FilterObject*)self, param1);
 }
 
 int32_t k_onsole__filterobject_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1514,8 +1514,8 @@ void k_onsole__filterobject_on_metacall(void* self, int32_t (*callback)(void*, i
     Konsole__FilterObject_OnMetacall((Konsole__FilterObject*)self, (intptr_t)callback);
 }
 
-int32_t k_onsole__filterobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Konsole__FilterObject_QBaseMetacall((Konsole__FilterObject*)self, param1, param2, param3);
+int32_t k_onsole__filterobject_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Konsole__FilterObject_SuperMetacall((Konsole__FilterObject*)self, param1, param2, param3);
 }
 
 const char* k_onsole__filterobject_tr(const char* s) {
@@ -1770,8 +1770,8 @@ bool k_onsole__filterobject_event(void* self, void* event) {
     return Konsole__FilterObject_Event((Konsole__FilterObject*)self, (QEvent*)event);
 }
 
-bool k_onsole__filterobject_qbase_event(void* self, void* event) {
-    return Konsole__FilterObject_QBaseEvent((Konsole__FilterObject*)self, (QEvent*)event);
+bool k_onsole__filterobject_super_event(void* self, void* event) {
+    return Konsole__FilterObject_SuperEvent((Konsole__FilterObject*)self, (QEvent*)event);
 }
 
 void k_onsole__filterobject_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1782,8 +1782,8 @@ bool k_onsole__filterobject_event_filter(void* self, void* watched, void* event)
     return Konsole__FilterObject_EventFilter((Konsole__FilterObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_onsole__filterobject_qbase_event_filter(void* self, void* watched, void* event) {
-    return Konsole__FilterObject_QBaseEventFilter((Konsole__FilterObject*)self, (QObject*)watched, (QEvent*)event);
+bool k_onsole__filterobject_super_event_filter(void* self, void* watched, void* event) {
+    return Konsole__FilterObject_SuperEventFilter((Konsole__FilterObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_onsole__filterobject_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_onsole__filterobject_timer_event(void* self, void* event) {
     Konsole__FilterObject_TimerEvent((Konsole__FilterObject*)self, (QTimerEvent*)event);
 }
 
-void k_onsole__filterobject_qbase_timer_event(void* self, void* event) {
-    Konsole__FilterObject_QBaseTimerEvent((Konsole__FilterObject*)self, (QTimerEvent*)event);
+void k_onsole__filterobject_super_timer_event(void* self, void* event) {
+    Konsole__FilterObject_SuperTimerEvent((Konsole__FilterObject*)self, (QTimerEvent*)event);
 }
 
 void k_onsole__filterobject_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_onsole__filterobject_child_event(void* self, void* event) {
     Konsole__FilterObject_ChildEvent((Konsole__FilterObject*)self, (QChildEvent*)event);
 }
 
-void k_onsole__filterobject_qbase_child_event(void* self, void* event) {
-    Konsole__FilterObject_QBaseChildEvent((Konsole__FilterObject*)self, (QChildEvent*)event);
+void k_onsole__filterobject_super_child_event(void* self, void* event) {
+    Konsole__FilterObject_SuperChildEvent((Konsole__FilterObject*)self, (QChildEvent*)event);
 }
 
 void k_onsole__filterobject_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_onsole__filterobject_custom_event(void* self, void* event) {
     Konsole__FilterObject_CustomEvent((Konsole__FilterObject*)self, (QEvent*)event);
 }
 
-void k_onsole__filterobject_qbase_custom_event(void* self, void* event) {
-    Konsole__FilterObject_QBaseCustomEvent((Konsole__FilterObject*)self, (QEvent*)event);
+void k_onsole__filterobject_super_custom_event(void* self, void* event) {
+    Konsole__FilterObject_SuperCustomEvent((Konsole__FilterObject*)self, (QEvent*)event);
 }
 
 void k_onsole__filterobject_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_onsole__filterobject_connect_notify(void* self, void* signal) {
     Konsole__FilterObject_ConnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__filterobject_qbase_connect_notify(void* self, void* signal) {
-    Konsole__FilterObject_QBaseConnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
+void k_onsole__filterobject_super_connect_notify(void* self, void* signal) {
+    Konsole__FilterObject_SuperConnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filterobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_onsole__filterobject_disconnect_notify(void* self, void* signal) {
     Konsole__FilterObject_DisconnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__filterobject_qbase_disconnect_notify(void* self, void* signal) {
-    Konsole__FilterObject_QBaseDisconnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
+void k_onsole__filterobject_super_disconnect_notify(void* self, void* signal) {
+    Konsole__FilterObject_SuperDisconnectNotify((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filterobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ QObject* k_onsole__filterobject_sender(void* self) {
     return Konsole__FilterObject_Sender((Konsole__FilterObject*)self);
 }
 
-QObject* k_onsole__filterobject_qbase_sender(void* self) {
-    return Konsole__FilterObject_QBaseSender((Konsole__FilterObject*)self);
+QObject* k_onsole__filterobject_super_sender(void* self) {
+    return Konsole__FilterObject_SuperSender((Konsole__FilterObject*)self);
 }
 
 void k_onsole__filterobject_on_sender(void* self, QObject* (*callback)()) {
@@ -1866,8 +1866,8 @@ int32_t k_onsole__filterobject_sender_signal_index(void* self) {
     return Konsole__FilterObject_SenderSignalIndex((Konsole__FilterObject*)self);
 }
 
-int32_t k_onsole__filterobject_qbase_sender_signal_index(void* self) {
-    return Konsole__FilterObject_QBaseSenderSignalIndex((Konsole__FilterObject*)self);
+int32_t k_onsole__filterobject_super_sender_signal_index(void* self) {
+    return Konsole__FilterObject_SuperSenderSignalIndex((Konsole__FilterObject*)self);
 }
 
 void k_onsole__filterobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1878,8 +1878,8 @@ int32_t k_onsole__filterobject_receivers(void* self, const char* signal) {
     return Konsole__FilterObject_Receivers((Konsole__FilterObject*)self, signal);
 }
 
-int32_t k_onsole__filterobject_qbase_receivers(void* self, const char* signal) {
-    return Konsole__FilterObject_QBaseReceivers((Konsole__FilterObject*)self, signal);
+int32_t k_onsole__filterobject_super_receivers(void* self, const char* signal) {
+    return Konsole__FilterObject_SuperReceivers((Konsole__FilterObject*)self, signal);
 }
 
 void k_onsole__filterobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1890,8 +1890,8 @@ bool k_onsole__filterobject_is_signal_connected(void* self, void* signal) {
     return Konsole__FilterObject_IsSignalConnected((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
-bool k_onsole__filterobject_qbase_is_signal_connected(void* self, void* signal) {
-    return Konsole__FilterObject_QBaseIsSignalConnected((Konsole__FilterObject*)self, (QMetaMethod*)signal);
+bool k_onsole__filterobject_super_is_signal_connected(void* self, void* signal) {
+    return Konsole__FilterObject_SuperIsSignalConnected((Konsole__FilterObject*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__filterobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2036,8 +2036,8 @@ void k_onsole__filter__hotspot_on_activate(void* self, void (*callback)(void*, c
     Konsole__Filter__HotSpot_OnActivate((Konsole__Filter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter__hotspot_qbase_activate(void* self, const char* action) {
-    Konsole__Filter__HotSpot_QBaseActivate((Konsole__Filter__HotSpot*)self, qstring(action));
+void k_onsole__filter__hotspot_super_activate(void* self, const char* action) {
+    Konsole__Filter__HotSpot_SuperActivate((Konsole__Filter__HotSpot*)self, qstring(action));
 }
 
 libqt_list /* of QAction* */ k_onsole__filter__hotspot_actions(void* self) {
@@ -2049,8 +2049,8 @@ void k_onsole__filter__hotspot_on_actions(void* self, libqt_list /* of QAction* 
     Konsole__Filter__HotSpot_OnActions((Konsole__Filter__HotSpot*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ k_onsole__filter__hotspot_qbase_actions(void* self) {
-    libqt_list _arr = Konsole__Filter__HotSpot_QBaseActions((Konsole__Filter__HotSpot*)self);
+libqt_list /* of QAction* */ k_onsole__filter__hotspot_super_actions(void* self) {
+    libqt_list _arr = Konsole__Filter__HotSpot_SuperActions((Konsole__Filter__HotSpot*)self);
     return _arr;
 }
 
@@ -2062,8 +2062,8 @@ void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, i
     Konsole__Filter__HotSpot_OnSetType((Konsole__Filter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t type) {
-    Konsole__Filter__HotSpot_QBaseSetType((Konsole__Filter__HotSpot*)self, type);
+void k_onsole__filter__hotspot_super_set_type(void* self, int32_t type) {
+    Konsole__Filter__HotSpot_SuperSetType((Konsole__Filter__HotSpot*)self, type);
 }
 
 void k_onsole__filter__hotspot_delete(void* self) {
@@ -2086,8 +2086,8 @@ void k_onsole__regexpfilter__hotspot_on_activate(void* self, void (*callback)(vo
     Konsole__RegExpFilter__HotSpot_OnActivate((Konsole__RegExpFilter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__regexpfilter__hotspot_qbase_activate(void* self, const char* action) {
-    Konsole__RegExpFilter__HotSpot_QBaseActivate((Konsole__RegExpFilter__HotSpot*)self, qstring(action));
+void k_onsole__regexpfilter__hotspot_super_activate(void* self, const char* action) {
+    Konsole__RegExpFilter__HotSpot_SuperActivate((Konsole__RegExpFilter__HotSpot*)self, qstring(action));
 }
 
 void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]) {
@@ -2149,8 +2149,8 @@ libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_actions(void* self)
     return _arr;
 }
 
-libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_qbase_actions(void* self) {
-    libqt_list _arr = Konsole__RegExpFilter__HotSpot_QBaseActions((Konsole__RegExpFilter__HotSpot*)self);
+libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_super_actions(void* self) {
+    libqt_list _arr = Konsole__RegExpFilter__HotSpot_SuperActions((Konsole__RegExpFilter__HotSpot*)self);
     return _arr;
 }
 
@@ -2162,8 +2162,8 @@ void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t type) {
     Konsole__RegExpFilter__HotSpot_SetType((Konsole__RegExpFilter__HotSpot*)self, type);
 }
 
-void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t type) {
-    Konsole__RegExpFilter__HotSpot_QBaseSetType((Konsole__RegExpFilter__HotSpot*)self, type);
+void k_onsole__regexpfilter__hotspot_super_set_type(void* self, int32_t type) {
+    Konsole__RegExpFilter__HotSpot_SuperSetType((Konsole__RegExpFilter__HotSpot*)self, type);
 }
 
 void k_onsole__regexpfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t)) {
@@ -2191,8 +2191,8 @@ void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list /* of QActio
     Konsole__UrlFilter__HotSpot_OnActions((Konsole__UrlFilter__HotSpot*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_qbase_actions(void* self) {
-    libqt_list _arr = Konsole__UrlFilter__HotSpot_QBaseActions((Konsole__UrlFilter__HotSpot*)self);
+libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_super_actions(void* self) {
+    libqt_list _arr = Konsole__UrlFilter__HotSpot_SuperActions((Konsole__UrlFilter__HotSpot*)self);
     return _arr;
 }
 
@@ -2204,8 +2204,8 @@ void k_onsole__urlfilter__hotspot_on_activate(void* self, void (*callback)(void*
     Konsole__UrlFilter__HotSpot_OnActivate((Konsole__UrlFilter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__urlfilter__hotspot_qbase_activate(void* self, const char* action) {
-    Konsole__UrlFilter__HotSpot_QBaseActivate((Konsole__UrlFilter__HotSpot*)self, qstring(action));
+void k_onsole__urlfilter__hotspot_super_activate(void* self, const char* action) {
+    Konsole__UrlFilter__HotSpot_SuperActivate((Konsole__UrlFilter__HotSpot*)self, qstring(action));
 }
 
 void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]) {
@@ -2266,8 +2266,8 @@ void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t type) {
     Konsole__UrlFilter__HotSpot_SetType((Konsole__UrlFilter__HotSpot*)self, type);
 }
 
-void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t type) {
-    Konsole__UrlFilter__HotSpot_QBaseSetType((Konsole__UrlFilter__HotSpot*)self, type);
+void k_onsole__urlfilter__hotspot_super_set_type(void* self, int32_t type) {
+    Konsole__UrlFilter__HotSpot_SuperSetType((Konsole__UrlFilter__HotSpot*)self, type);
 }
 
 void k_onsole__urlfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t)) {

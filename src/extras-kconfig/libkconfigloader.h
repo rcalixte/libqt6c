@@ -101,13 +101,17 @@ bool k_configloader_usr_save(void* self);
 ///
 void k_configloader_on_usr_save(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_configloader_super_usr_save` instead
+///
+#define k_configloader_qbase_usr_save k_configloader_super_usr_save
+
 /// [Upstream resources](https://api.kde.org/kconfigloader.html#usrSave)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigLoader*
 ///
-bool k_configloader_qbase_usr_save(void* self);
+bool k_configloader_super_usr_save(void* self);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -1430,6 +1434,10 @@ void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 const QMetaObject* k_configloader_meta_object(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_meta_object` instead
+///
+#define k_configloader_qbase_meta_object k_configloader_super_meta_object
+
 /// Inherited from KConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#metaObject)
@@ -1438,7 +1446,7 @@ const QMetaObject* k_configloader_meta_object(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-const QMetaObject* k_configloader_qbase_meta_object(void* self);
+const QMetaObject* k_configloader_super_meta_object(void* self);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -1462,6 +1470,10 @@ void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)())
 ///
 void* k_configloader_metacast(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `k_configloader_super_metacast` instead
+///
+#define k_configloader_qbase_metacast k_configloader_super_metacast
+
 /// Inherited from KConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#qt_metacast)
@@ -1471,7 +1483,7 @@ void* k_configloader_metacast(void* self, const char* param1);
 /// @param self KConfigLoader*
 /// @param param1 const char*
 ///
-void* k_configloader_qbase_metacast(void* self, const char* param1);
+void* k_configloader_super_metacast(void* self, const char* param1);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -1497,6 +1509,10 @@ void k_configloader_on_metacast(void* self, void* (*callback)(void*, const char*
 ///
 int32_t k_configloader_metacall(void* self, int32_t param1, int param2, void* param3);
 
+/// @warning DEPRECATED: Use `k_configloader_super_metacall` instead
+///
+#define k_configloader_qbase_metacall k_configloader_super_metacall
+
 /// Inherited from KConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeleton.html#qt_metacall)
@@ -1508,7 +1524,7 @@ int32_t k_configloader_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_configloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_configloader_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -1531,6 +1547,10 @@ void k_configloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 ///
 void k_configloader_set_defaults(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_set_defaults` instead
+///
+#define k_configloader_qbase_set_defaults k_configloader_super_set_defaults
+
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
@@ -1539,7 +1559,7 @@ void k_configloader_set_defaults(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-void k_configloader_qbase_set_defaults(void* self);
+void k_configloader_super_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1563,6 +1583,10 @@ void k_configloader_on_set_defaults(void* self, void (*callback)());
 ///
 bool k_configloader_use_defaults(void* self, bool b);
 
+/// @warning DEPRECATED: Use `k_configloader_super_use_defaults` instead
+///
+#define k_configloader_qbase_use_defaults k_configloader_super_use_defaults
+
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
@@ -1572,7 +1596,7 @@ bool k_configloader_use_defaults(void* self, bool b);
 /// @param self KConfigLoader*
 /// @param b bool
 ///
-bool k_configloader_qbase_use_defaults(void* self, bool b);
+bool k_configloader_super_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1596,6 +1620,10 @@ void k_configloader_on_use_defaults(void* self, bool (*callback)(void*, bool));
 ///
 bool k_configloader_usr_use_defaults(void* self, bool b);
 
+/// @warning DEPRECATED: Use `k_configloader_super_usr_use_defaults` instead
+///
+#define k_configloader_qbase_usr_use_defaults k_configloader_super_usr_use_defaults
+
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
@@ -1605,7 +1633,7 @@ bool k_configloader_usr_use_defaults(void* self, bool b);
 /// @param self KConfigLoader*
 /// @param b bool
 ///
-bool k_configloader_qbase_usr_use_defaults(void* self, bool b);
+bool k_configloader_super_usr_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1628,6 +1656,10 @@ void k_configloader_on_usr_use_defaults(void* self, bool (*callback)(void*, bool
 ///
 void k_configloader_usr_set_defaults(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_usr_set_defaults` instead
+///
+#define k_configloader_qbase_usr_set_defaults k_configloader_super_usr_set_defaults
+
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
@@ -1636,7 +1668,7 @@ void k_configloader_usr_set_defaults(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-void k_configloader_qbase_usr_set_defaults(void* self);
+void k_configloader_super_usr_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1659,6 +1691,10 @@ void k_configloader_on_usr_set_defaults(void* self, void (*callback)());
 ///
 void k_configloader_usr_read(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_usr_read` instead
+///
+#define k_configloader_qbase_usr_read k_configloader_super_usr_read
+
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
@@ -1667,7 +1703,7 @@ void k_configloader_usr_read(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-void k_configloader_qbase_usr_read(void* self);
+void k_configloader_super_usr_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1691,6 +1727,10 @@ void k_configloader_on_usr_read(void* self, void (*callback)());
 ///
 bool k_configloader_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configloader_super_event` instead
+///
+#define k_configloader_qbase_event k_configloader_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1700,7 +1740,7 @@ bool k_configloader_event(void* self, void* event);
 /// @param self KConfigLoader*
 /// @param event QEvent*
 ///
-bool k_configloader_qbase_event(void* self, void* event);
+bool k_configloader_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1725,6 +1765,10 @@ void k_configloader_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_configloader_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_configloader_super_event_filter` instead
+///
+#define k_configloader_qbase_event_filter k_configloader_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1735,7 +1779,7 @@ bool k_configloader_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_configloader_qbase_event_filter(void* self, void* watched, void* event);
+bool k_configloader_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1759,6 +1803,10 @@ void k_configloader_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void k_configloader_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configloader_super_timer_event` instead
+///
+#define k_configloader_qbase_timer_event k_configloader_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1768,7 +1816,7 @@ void k_configloader_timer_event(void* self, void* event);
 /// @param self KConfigLoader*
 /// @param event QTimerEvent*
 ///
-void k_configloader_qbase_timer_event(void* self, void* event);
+void k_configloader_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1792,6 +1840,10 @@ void k_configloader_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_configloader_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configloader_super_child_event` instead
+///
+#define k_configloader_qbase_child_event k_configloader_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1801,7 +1853,7 @@ void k_configloader_child_event(void* self, void* event);
 /// @param self KConfigLoader*
 /// @param event QChildEvent*
 ///
-void k_configloader_qbase_child_event(void* self, void* event);
+void k_configloader_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1825,6 +1877,10 @@ void k_configloader_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_configloader_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configloader_super_custom_event` instead
+///
+#define k_configloader_qbase_custom_event k_configloader_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1834,7 +1890,7 @@ void k_configloader_custom_event(void* self, void* event);
 /// @param self KConfigLoader*
 /// @param event QEvent*
 ///
-void k_configloader_qbase_custom_event(void* self, void* event);
+void k_configloader_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1858,6 +1914,10 @@ void k_configloader_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_configloader_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configloader_super_connect_notify` instead
+///
+#define k_configloader_qbase_connect_notify k_configloader_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1867,7 +1927,7 @@ void k_configloader_connect_notify(void* self, void* signal);
 /// @param self KConfigLoader*
 /// @param signal QMetaMethod*
 ///
-void k_configloader_qbase_connect_notify(void* self, void* signal);
+void k_configloader_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1891,6 +1951,10 @@ void k_configloader_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_configloader_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configloader_super_disconnect_notify` instead
+///
+#define k_configloader_qbase_disconnect_notify k_configloader_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1900,7 +1964,7 @@ void k_configloader_disconnect_notify(void* self, void* signal);
 /// @param self KConfigLoader*
 /// @param signal QMetaMethod*
 ///
-void k_configloader_qbase_disconnect_notify(void* self, void* signal);
+void k_configloader_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1923,6 +1987,10 @@ void k_configloader_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* k_configloader_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_sender` instead
+///
+#define k_configloader_qbase_sender k_configloader_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1931,7 +1999,7 @@ QObject* k_configloader_sender(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-QObject* k_configloader_qbase_sender(void* self);
+QObject* k_configloader_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1954,6 +2022,10 @@ void k_configloader_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_configloader_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_configloader_super_sender_signal_index` instead
+///
+#define k_configloader_qbase_sender_signal_index k_configloader_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1962,7 +2034,7 @@ int32_t k_configloader_sender_signal_index(void* self);
 ///
 /// @param self KConfigLoader*
 ///
-int32_t k_configloader_qbase_sender_signal_index(void* self);
+int32_t k_configloader_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1986,6 +2058,10 @@ void k_configloader_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_configloader_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_configloader_super_receivers` instead
+///
+#define k_configloader_qbase_receivers k_configloader_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1995,7 +2071,7 @@ int32_t k_configloader_receivers(void* self, const char* signal);
 /// @param self KConfigLoader*
 /// @param signal const char*
 ///
-int32_t k_configloader_qbase_receivers(void* self, const char* signal);
+int32_t k_configloader_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2019,6 +2095,10 @@ void k_configloader_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_configloader_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configloader_super_is_signal_connected` instead
+///
+#define k_configloader_qbase_is_signal_connected k_configloader_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2028,7 +2108,7 @@ bool k_configloader_is_signal_connected(void* self, void* signal);
 /// @param self KConfigLoader*
 /// @param signal QMetaMethod*
 ///
-bool k_configloader_qbase_is_signal_connected(void* self, void* signal);
+bool k_configloader_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

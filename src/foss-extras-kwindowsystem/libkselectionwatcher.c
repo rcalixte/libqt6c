@@ -67,8 +67,8 @@ void k_selectionwatcher_on_meta_object(void* self, const QMetaObject* (*callback
     KSelectionWatcher_OnMetaObject((KSelectionWatcher*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_selectionwatcher_qbase_meta_object(void* self) {
-    return KSelectionWatcher_QBaseMetaObject((KSelectionWatcher*)self);
+const QMetaObject* k_selectionwatcher_super_meta_object(void* self) {
+    return KSelectionWatcher_SuperMetaObject((KSelectionWatcher*)self);
 }
 
 void* k_selectionwatcher_metacast(void* self, const char* param1) {
@@ -79,8 +79,8 @@ void k_selectionwatcher_on_metacast(void* self, void* (*callback)(void*, const c
     KSelectionWatcher_OnMetacast((KSelectionWatcher*)self, (intptr_t)callback);
 }
 
-void* k_selectionwatcher_qbase_metacast(void* self, const char* param1) {
-    return KSelectionWatcher_QBaseMetacast((KSelectionWatcher*)self, param1);
+void* k_selectionwatcher_super_metacast(void* self, const char* param1) {
+    return KSelectionWatcher_SuperMetacast((KSelectionWatcher*)self, param1);
 }
 
 int32_t k_selectionwatcher_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -91,8 +91,8 @@ void k_selectionwatcher_on_metacall(void* self, int32_t (*callback)(void*, int32
     KSelectionWatcher_OnMetacall((KSelectionWatcher*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionwatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSelectionWatcher_QBaseMetacall((KSelectionWatcher*)self, param1, param2, param3);
+int32_t k_selectionwatcher_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSelectionWatcher_SuperMetacall((KSelectionWatcher*)self, param1, param2, param3);
 }
 
 const char* k_selectionwatcher_tr(const char* s) {
@@ -361,8 +361,8 @@ bool k_selectionwatcher_event(void* self, void* event) {
     return KSelectionWatcher_Event((KSelectionWatcher*)self, (QEvent*)event);
 }
 
-bool k_selectionwatcher_qbase_event(void* self, void* event) {
-    return KSelectionWatcher_QBaseEvent((KSelectionWatcher*)self, (QEvent*)event);
+bool k_selectionwatcher_super_event(void* self, void* event) {
+    return KSelectionWatcher_SuperEvent((KSelectionWatcher*)self, (QEvent*)event);
 }
 
 void k_selectionwatcher_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ bool k_selectionwatcher_event_filter(void* self, void* watched, void* event) {
     return KSelectionWatcher_EventFilter((KSelectionWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_selectionwatcher_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSelectionWatcher_QBaseEventFilter((KSelectionWatcher*)self, (QObject*)watched, (QEvent*)event);
+bool k_selectionwatcher_super_event_filter(void* self, void* watched, void* event) {
+    return KSelectionWatcher_SuperEventFilter((KSelectionWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_selectionwatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -385,8 +385,8 @@ void k_selectionwatcher_timer_event(void* self, void* event) {
     KSelectionWatcher_TimerEvent((KSelectionWatcher*)self, (QTimerEvent*)event);
 }
 
-void k_selectionwatcher_qbase_timer_event(void* self, void* event) {
-    KSelectionWatcher_QBaseTimerEvent((KSelectionWatcher*)self, (QTimerEvent*)event);
+void k_selectionwatcher_super_timer_event(void* self, void* event) {
+    KSelectionWatcher_SuperTimerEvent((KSelectionWatcher*)self, (QTimerEvent*)event);
 }
 
 void k_selectionwatcher_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ void k_selectionwatcher_child_event(void* self, void* event) {
     KSelectionWatcher_ChildEvent((KSelectionWatcher*)self, (QChildEvent*)event);
 }
 
-void k_selectionwatcher_qbase_child_event(void* self, void* event) {
-    KSelectionWatcher_QBaseChildEvent((KSelectionWatcher*)self, (QChildEvent*)event);
+void k_selectionwatcher_super_child_event(void* self, void* event) {
+    KSelectionWatcher_SuperChildEvent((KSelectionWatcher*)self, (QChildEvent*)event);
 }
 
 void k_selectionwatcher_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -409,8 +409,8 @@ void k_selectionwatcher_custom_event(void* self, void* event) {
     KSelectionWatcher_CustomEvent((KSelectionWatcher*)self, (QEvent*)event);
 }
 
-void k_selectionwatcher_qbase_custom_event(void* self, void* event) {
-    KSelectionWatcher_QBaseCustomEvent((KSelectionWatcher*)self, (QEvent*)event);
+void k_selectionwatcher_super_custom_event(void* self, void* event) {
+    KSelectionWatcher_SuperCustomEvent((KSelectionWatcher*)self, (QEvent*)event);
 }
 
 void k_selectionwatcher_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -421,8 +421,8 @@ void k_selectionwatcher_connect_notify(void* self, void* signal) {
     KSelectionWatcher_ConnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionwatcher_qbase_connect_notify(void* self, void* signal) {
-    KSelectionWatcher_QBaseConnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
+void k_selectionwatcher_super_connect_notify(void* self, void* signal) {
+    KSelectionWatcher_SuperConnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionwatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -433,8 +433,8 @@ void k_selectionwatcher_disconnect_notify(void* self, void* signal) {
     KSelectionWatcher_DisconnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionwatcher_qbase_disconnect_notify(void* self, void* signal) {
-    KSelectionWatcher_QBaseDisconnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
+void k_selectionwatcher_super_disconnect_notify(void* self, void* signal) {
+    KSelectionWatcher_SuperDisconnectNotify((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -445,8 +445,8 @@ QObject* k_selectionwatcher_sender(void* self) {
     return KSelectionWatcher_Sender((KSelectionWatcher*)self);
 }
 
-QObject* k_selectionwatcher_qbase_sender(void* self) {
-    return KSelectionWatcher_QBaseSender((KSelectionWatcher*)self);
+QObject* k_selectionwatcher_super_sender(void* self) {
+    return KSelectionWatcher_SuperSender((KSelectionWatcher*)self);
 }
 
 void k_selectionwatcher_on_sender(void* self, QObject* (*callback)()) {
@@ -457,8 +457,8 @@ int32_t k_selectionwatcher_sender_signal_index(void* self) {
     return KSelectionWatcher_SenderSignalIndex((KSelectionWatcher*)self);
 }
 
-int32_t k_selectionwatcher_qbase_sender_signal_index(void* self) {
-    return KSelectionWatcher_QBaseSenderSignalIndex((KSelectionWatcher*)self);
+int32_t k_selectionwatcher_super_sender_signal_index(void* self) {
+    return KSelectionWatcher_SuperSenderSignalIndex((KSelectionWatcher*)self);
 }
 
 void k_selectionwatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -469,8 +469,8 @@ int32_t k_selectionwatcher_receivers(void* self, const char* signal) {
     return KSelectionWatcher_Receivers((KSelectionWatcher*)self, signal);
 }
 
-int32_t k_selectionwatcher_qbase_receivers(void* self, const char* signal) {
-    return KSelectionWatcher_QBaseReceivers((KSelectionWatcher*)self, signal);
+int32_t k_selectionwatcher_super_receivers(void* self, const char* signal) {
+    return KSelectionWatcher_SuperReceivers((KSelectionWatcher*)self, signal);
 }
 
 void k_selectionwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -481,8 +481,8 @@ bool k_selectionwatcher_is_signal_connected(void* self, void* signal) {
     return KSelectionWatcher_IsSignalConnected((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
-bool k_selectionwatcher_qbase_is_signal_connected(void* self, void* signal) {
-    return KSelectionWatcher_QBaseIsSignalConnected((KSelectionWatcher*)self, (QMetaMethod*)signal);
+bool k_selectionwatcher_super_is_signal_connected(void* self, void* signal) {
+    return KSelectionWatcher_SuperIsSignalConnected((KSelectionWatcher*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

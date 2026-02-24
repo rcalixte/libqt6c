@@ -205,13 +205,17 @@ const QMetaObject* q_itemselectionmodel_meta_object(void* self);
 ///
 void q_itemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_meta_object` instead
+///
+#define q_itemselectionmodel_qbase_meta_object q_itemselectionmodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
 ///
-const QMetaObject* q_itemselectionmodel_qbase_meta_object(void* self);
+const QMetaObject* q_itemselectionmodel_super_meta_object(void* self);
 
 /// @param self QItemSelectionModel*
 /// @param param1 const char*
@@ -225,12 +229,16 @@ void* q_itemselectionmodel_metacast(void* self, const char* param1);
 ///
 void q_itemselectionmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_metacast` instead
+///
+#define q_itemselectionmodel_qbase_metacast q_itemselectionmodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
 /// @param param1 const char*
 ///
-void* q_itemselectionmodel_qbase_metacast(void* self, const char* param1);
+void* q_itemselectionmodel_super_metacast(void* self, const char* param1);
 
 /// @param self QItemSelectionModel*
 /// @param param1 enum QMetaObject__Call
@@ -246,6 +254,10 @@ int32_t q_itemselectionmodel_metacall(void* self, int32_t param1, int param2, vo
 ///
 void q_itemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_metacall` instead
+///
+#define q_itemselectionmodel_qbase_metacall q_itemselectionmodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
@@ -253,7 +265,7 @@ void q_itemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_itemselectionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_itemselectionmodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -376,6 +388,10 @@ void q_itemselectionmodel_set_current_index(void* self, void* index, int32_t com
 ///
 void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_set_current_index` instead
+///
+#define q_itemselectionmodel_qbase_set_current_index q_itemselectionmodel_super_set_current_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
 ///
 /// Base class method implementation
@@ -384,7 +400,7 @@ void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command);
+void q_itemselectionmodel_super_set_current_index(void* self, void* index, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -403,6 +419,10 @@ void q_itemselectionmodel_select(void* self, void* index, int32_t command);
 ///
 void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_select` instead
+///
+#define q_itemselectionmodel_qbase_select q_itemselectionmodel_super_select
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -411,7 +431,7 @@ void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, i
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_itemselectionmodel_qbase_select(void* self, void* index, int32_t command);
+void q_itemselectionmodel_super_select(void* self, void* index, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -430,6 +450,10 @@ void q_itemselectionmodel_select2(void* self, void* selection, int32_t command);
 ///
 void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_select2` instead
+///
+#define q_itemselectionmodel_qbase_select2 q_itemselectionmodel_super_select2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -438,7 +462,7 @@ void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, 
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_itemselectionmodel_qbase_select2(void* self, void* selection, int32_t command);
+void q_itemselectionmodel_super_select2(void* self, void* selection, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
 ///
@@ -455,13 +479,17 @@ void q_itemselectionmodel_clear(void* self);
 ///
 void q_itemselectionmodel_on_clear(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_clear` instead
+///
+#define q_itemselectionmodel_qbase_clear q_itemselectionmodel_super_clear
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
 ///
-void q_itemselectionmodel_qbase_clear(void* self);
+void q_itemselectionmodel_super_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
 ///
@@ -478,13 +506,17 @@ void q_itemselectionmodel_reset(void* self);
 ///
 void q_itemselectionmodel_on_reset(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_reset` instead
+///
+#define q_itemselectionmodel_qbase_reset q_itemselectionmodel_super_reset
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
 ///
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
 ///
-void q_itemselectionmodel_qbase_reset(void* self);
+void q_itemselectionmodel_super_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearSelection)
 ///
@@ -507,13 +539,17 @@ void q_itemselectionmodel_clear_current_index(void* self);
 ///
 void q_itemselectionmodel_on_clear_current_index(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_clear_current_index` instead
+///
+#define q_itemselectionmodel_qbase_clear_current_index q_itemselectionmodel_super_clear_current_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
 ///
 /// Base class method implementation
 ///
 /// @param self QItemSelectionModel*
 ///
-void q_itemselectionmodel_qbase_clear_current_index(void* self);
+void q_itemselectionmodel_super_clear_current_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectionChanged)
 ///
@@ -606,6 +642,10 @@ void q_itemselectionmodel_emit_selection_changed(void* self, void* newSelection,
 ///
 void q_itemselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_emit_selection_changed` instead
+///
+#define q_itemselectionmodel_qbase_emit_selection_changed q_itemselectionmodel_super_emit_selection_changed
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
 ///
 /// Base class method implementation
@@ -614,7 +654,7 @@ void q_itemselectionmodel_on_emit_selection_changed(void* self, void (*callback)
 /// @param newSelection QItemSelection*
 /// @param oldSelection QItemSelection*
 ///
-void q_itemselectionmodel_qbase_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
+void q_itemselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1143,6 +1183,10 @@ void q_itemselectionmodel_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_itemselectionmodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_event` instead
+///
+#define q_itemselectionmodel_qbase_event q_itemselectionmodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1152,7 +1196,7 @@ bool q_itemselectionmodel_event(void* self, void* event);
 /// @param self QItemSelectionModel*
 /// @param event QEvent*
 ///
-bool q_itemselectionmodel_qbase_event(void* self, void* event);
+bool q_itemselectionmodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1177,6 +1221,10 @@ void q_itemselectionmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_itemselectionmodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_event_filter` instead
+///
+#define q_itemselectionmodel_qbase_event_filter q_itemselectionmodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1187,7 +1235,7 @@ bool q_itemselectionmodel_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_itemselectionmodel_qbase_event_filter(void* self, void* watched, void* event);
+bool q_itemselectionmodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1211,6 +1259,10 @@ void q_itemselectionmodel_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_itemselectionmodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_timer_event` instead
+///
+#define q_itemselectionmodel_qbase_timer_event q_itemselectionmodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1220,7 +1272,7 @@ void q_itemselectionmodel_timer_event(void* self, void* event);
 /// @param self QItemSelectionModel*
 /// @param event QTimerEvent*
 ///
-void q_itemselectionmodel_qbase_timer_event(void* self, void* event);
+void q_itemselectionmodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1244,6 +1296,10 @@ void q_itemselectionmodel_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void q_itemselectionmodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_child_event` instead
+///
+#define q_itemselectionmodel_qbase_child_event q_itemselectionmodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1253,7 +1309,7 @@ void q_itemselectionmodel_child_event(void* self, void* event);
 /// @param self QItemSelectionModel*
 /// @param event QChildEvent*
 ///
-void q_itemselectionmodel_qbase_child_event(void* self, void* event);
+void q_itemselectionmodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1277,6 +1333,10 @@ void q_itemselectionmodel_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_itemselectionmodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_custom_event` instead
+///
+#define q_itemselectionmodel_qbase_custom_event q_itemselectionmodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1286,7 +1346,7 @@ void q_itemselectionmodel_custom_event(void* self, void* event);
 /// @param self QItemSelectionModel*
 /// @param event QEvent*
 ///
-void q_itemselectionmodel_qbase_custom_event(void* self, void* event);
+void q_itemselectionmodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1310,6 +1370,10 @@ void q_itemselectionmodel_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_itemselectionmodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_connect_notify` instead
+///
+#define q_itemselectionmodel_qbase_connect_notify q_itemselectionmodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1319,7 +1383,7 @@ void q_itemselectionmodel_connect_notify(void* self, void* signal);
 /// @param self QItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void q_itemselectionmodel_qbase_connect_notify(void* self, void* signal);
+void q_itemselectionmodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1343,6 +1407,10 @@ void q_itemselectionmodel_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_itemselectionmodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_disconnect_notify` instead
+///
+#define q_itemselectionmodel_qbase_disconnect_notify q_itemselectionmodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1352,7 +1420,7 @@ void q_itemselectionmodel_disconnect_notify(void* self, void* signal);
 /// @param self QItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void q_itemselectionmodel_qbase_disconnect_notify(void* self, void* signal);
+void q_itemselectionmodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1375,6 +1443,10 @@ void q_itemselectionmodel_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_itemselectionmodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_sender` instead
+///
+#define q_itemselectionmodel_qbase_sender q_itemselectionmodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1383,7 +1455,7 @@ QObject* q_itemselectionmodel_sender(void* self);
 ///
 /// @param self QItemSelectionModel*
 ///
-QObject* q_itemselectionmodel_qbase_sender(void* self);
+QObject* q_itemselectionmodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1406,6 +1478,10 @@ void q_itemselectionmodel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_itemselectionmodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_sender_signal_index` instead
+///
+#define q_itemselectionmodel_qbase_sender_signal_index q_itemselectionmodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1414,7 +1490,7 @@ int32_t q_itemselectionmodel_sender_signal_index(void* self);
 ///
 /// @param self QItemSelectionModel*
 ///
-int32_t q_itemselectionmodel_qbase_sender_signal_index(void* self);
+int32_t q_itemselectionmodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1438,6 +1514,10 @@ void q_itemselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_itemselectionmodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_receivers` instead
+///
+#define q_itemselectionmodel_qbase_receivers q_itemselectionmodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1447,7 +1527,7 @@ int32_t q_itemselectionmodel_receivers(void* self, const char* signal);
 /// @param self QItemSelectionModel*
 /// @param signal const char*
 ///
-int32_t q_itemselectionmodel_qbase_receivers(void* self, const char* signal);
+int32_t q_itemselectionmodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1471,6 +1551,10 @@ void q_itemselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 bool q_itemselectionmodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_itemselectionmodel_super_is_signal_connected` instead
+///
+#define q_itemselectionmodel_qbase_is_signal_connected q_itemselectionmodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1480,7 +1564,7 @@ bool q_itemselectionmodel_is_signal_connected(void* self, void* signal);
 /// @param self QItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-bool q_itemselectionmodel_qbase_is_signal_connected(void* self, void* signal);
+bool q_itemselectionmodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

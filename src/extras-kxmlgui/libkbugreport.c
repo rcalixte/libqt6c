@@ -31,8 +31,8 @@ void k_bugreport_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KBugReport_OnMetaObject((KBugReport*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_bugreport_qbase_meta_object(void* self) {
-    return KBugReport_QBaseMetaObject((KBugReport*)self);
+const QMetaObject* k_bugreport_super_meta_object(void* self) {
+    return KBugReport_SuperMetaObject((KBugReport*)self);
 }
 
 void* k_bugreport_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_bugreport_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     KBugReport_OnMetacast((KBugReport*)self, (intptr_t)callback);
 }
 
-void* k_bugreport_qbase_metacast(void* self, const char* param1) {
-    return KBugReport_QBaseMetacast((KBugReport*)self, param1);
+void* k_bugreport_super_metacast(void* self, const char* param1) {
+    return KBugReport_SuperMetacast((KBugReport*)self, param1);
 }
 
 int32_t k_bugreport_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_bugreport_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     KBugReport_OnMetacall((KBugReport*)self, (intptr_t)callback);
 }
 
-int32_t k_bugreport_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBugReport_QBaseMetacall((KBugReport*)self, param1, param2, param3);
+int32_t k_bugreport_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBugReport_SuperMetacall((KBugReport*)self, param1, param2, param3);
 }
 
 const char* k_bugreport_tr(const char* s) {
@@ -74,8 +74,8 @@ void k_bugreport_on_accept(void* self, void (*callback)()) {
     KBugReport_OnAccept((KBugReport*)self, (intptr_t)callback);
 }
 
-void k_bugreport_qbase_accept(void* self) {
-    KBugReport_QBaseAccept((KBugReport*)self);
+void k_bugreport_super_accept(void* self) {
+    KBugReport_SuperAccept((KBugReport*)self);
 }
 
 bool k_bugreport_send_bug_report(void* self) {
@@ -86,8 +86,8 @@ void k_bugreport_on_send_bug_report(void* self, bool (*callback)()) {
     KBugReport_OnSendBugReport((KBugReport*)self, (intptr_t)callback);
 }
 
-bool k_bugreport_qbase_send_bug_report(void* self) {
-    return KBugReport_QBaseSendBugReport((KBugReport*)self);
+bool k_bugreport_super_send_bug_report(void* self) {
+    return KBugReport_SuperSendBugReport((KBugReport*)self);
 }
 
 const char* k_bugreport_tr2(const char* s, const char* c) {
@@ -1533,8 +1533,8 @@ void k_bugreport_set_visible(void* self, bool visible) {
     KBugReport_SetVisible((KBugReport*)self, visible);
 }
 
-void k_bugreport_qbase_set_visible(void* self, bool visible) {
-    KBugReport_QBaseSetVisible((KBugReport*)self, visible);
+void k_bugreport_super_set_visible(void* self, bool visible) {
+    KBugReport_SuperSetVisible((KBugReport*)self, visible);
 }
 
 void k_bugreport_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1545,8 +1545,8 @@ QSize* k_bugreport_size_hint(void* self) {
     return KBugReport_SizeHint((KBugReport*)self);
 }
 
-QSize* k_bugreport_qbase_size_hint(void* self) {
-    return KBugReport_QBaseSizeHint((KBugReport*)self);
+QSize* k_bugreport_super_size_hint(void* self) {
+    return KBugReport_SuperSizeHint((KBugReport*)self);
 }
 
 void k_bugreport_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1557,8 +1557,8 @@ QSize* k_bugreport_minimum_size_hint(void* self) {
     return KBugReport_MinimumSizeHint((KBugReport*)self);
 }
 
-QSize* k_bugreport_qbase_minimum_size_hint(void* self) {
-    return KBugReport_QBaseMinimumSizeHint((KBugReport*)self);
+QSize* k_bugreport_super_minimum_size_hint(void* self) {
+    return KBugReport_SuperMinimumSizeHint((KBugReport*)self);
 }
 
 void k_bugreport_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1569,8 +1569,8 @@ void k_bugreport_open(void* self) {
     KBugReport_Open((KBugReport*)self);
 }
 
-void k_bugreport_qbase_open(void* self) {
-    KBugReport_QBaseOpen((KBugReport*)self);
+void k_bugreport_super_open(void* self) {
+    KBugReport_SuperOpen((KBugReport*)self);
 }
 
 void k_bugreport_on_open(void* self, void (*callback)()) {
@@ -1581,8 +1581,8 @@ int32_t k_bugreport_exec(void* self) {
     return KBugReport_Exec((KBugReport*)self);
 }
 
-int32_t k_bugreport_qbase_exec(void* self) {
-    return KBugReport_QBaseExec((KBugReport*)self);
+int32_t k_bugreport_super_exec(void* self) {
+    return KBugReport_SuperExec((KBugReport*)self);
 }
 
 void k_bugreport_on_exec(void* self, int32_t (*callback)()) {
@@ -1593,8 +1593,8 @@ void k_bugreport_done(void* self, int param1) {
     KBugReport_Done((KBugReport*)self, param1);
 }
 
-void k_bugreport_qbase_done(void* self, int param1) {
-    KBugReport_QBaseDone((KBugReport*)self, param1);
+void k_bugreport_super_done(void* self, int param1) {
+    KBugReport_SuperDone((KBugReport*)self, param1);
 }
 
 void k_bugreport_on_done(void* self, void (*callback)(void*, int)) {
@@ -1605,8 +1605,8 @@ void k_bugreport_reject(void* self) {
     KBugReport_Reject((KBugReport*)self);
 }
 
-void k_bugreport_qbase_reject(void* self) {
-    KBugReport_QBaseReject((KBugReport*)self);
+void k_bugreport_super_reject(void* self) {
+    KBugReport_SuperReject((KBugReport*)self);
 }
 
 void k_bugreport_on_reject(void* self, void (*callback)()) {
@@ -1617,8 +1617,8 @@ void k_bugreport_key_press_event(void* self, void* param1) {
     KBugReport_KeyPressEvent((KBugReport*)self, (QKeyEvent*)param1);
 }
 
-void k_bugreport_qbase_key_press_event(void* self, void* param1) {
-    KBugReport_QBaseKeyPressEvent((KBugReport*)self, (QKeyEvent*)param1);
+void k_bugreport_super_key_press_event(void* self, void* param1) {
+    KBugReport_SuperKeyPressEvent((KBugReport*)self, (QKeyEvent*)param1);
 }
 
 void k_bugreport_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1629,8 +1629,8 @@ void k_bugreport_close_event(void* self, void* param1) {
     KBugReport_CloseEvent((KBugReport*)self, (QCloseEvent*)param1);
 }
 
-void k_bugreport_qbase_close_event(void* self, void* param1) {
-    KBugReport_QBaseCloseEvent((KBugReport*)self, (QCloseEvent*)param1);
+void k_bugreport_super_close_event(void* self, void* param1) {
+    KBugReport_SuperCloseEvent((KBugReport*)self, (QCloseEvent*)param1);
 }
 
 void k_bugreport_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1641,8 +1641,8 @@ void k_bugreport_show_event(void* self, void* param1) {
     KBugReport_ShowEvent((KBugReport*)self, (QShowEvent*)param1);
 }
 
-void k_bugreport_qbase_show_event(void* self, void* param1) {
-    KBugReport_QBaseShowEvent((KBugReport*)self, (QShowEvent*)param1);
+void k_bugreport_super_show_event(void* self, void* param1) {
+    KBugReport_SuperShowEvent((KBugReport*)self, (QShowEvent*)param1);
 }
 
 void k_bugreport_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1653,8 +1653,8 @@ void k_bugreport_resize_event(void* self, void* param1) {
     KBugReport_ResizeEvent((KBugReport*)self, (QResizeEvent*)param1);
 }
 
-void k_bugreport_qbase_resize_event(void* self, void* param1) {
-    KBugReport_QBaseResizeEvent((KBugReport*)self, (QResizeEvent*)param1);
+void k_bugreport_super_resize_event(void* self, void* param1) {
+    KBugReport_SuperResizeEvent((KBugReport*)self, (QResizeEvent*)param1);
 }
 
 void k_bugreport_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1665,8 +1665,8 @@ void k_bugreport_context_menu_event(void* self, void* param1) {
     KBugReport_ContextMenuEvent((KBugReport*)self, (QContextMenuEvent*)param1);
 }
 
-void k_bugreport_qbase_context_menu_event(void* self, void* param1) {
-    KBugReport_QBaseContextMenuEvent((KBugReport*)self, (QContextMenuEvent*)param1);
+void k_bugreport_super_context_menu_event(void* self, void* param1) {
+    KBugReport_SuperContextMenuEvent((KBugReport*)self, (QContextMenuEvent*)param1);
 }
 
 void k_bugreport_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1677,8 +1677,8 @@ bool k_bugreport_event_filter(void* self, void* param1, void* param2) {
     return KBugReport_EventFilter((KBugReport*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_bugreport_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KBugReport_QBaseEventFilter((KBugReport*)self, (QObject*)param1, (QEvent*)param2);
+bool k_bugreport_super_event_filter(void* self, void* param1, void* param2) {
+    return KBugReport_SuperEventFilter((KBugReport*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_bugreport_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1689,8 +1689,8 @@ int32_t k_bugreport_dev_type(void* self) {
     return KBugReport_DevType((KBugReport*)self);
 }
 
-int32_t k_bugreport_qbase_dev_type(void* self) {
-    return KBugReport_QBaseDevType((KBugReport*)self);
+int32_t k_bugreport_super_dev_type(void* self) {
+    return KBugReport_SuperDevType((KBugReport*)self);
 }
 
 void k_bugreport_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1701,8 +1701,8 @@ int32_t k_bugreport_height_for_width(void* self, int param1) {
     return KBugReport_HeightForWidth((KBugReport*)self, param1);
 }
 
-int32_t k_bugreport_qbase_height_for_width(void* self, int param1) {
-    return KBugReport_QBaseHeightForWidth((KBugReport*)self, param1);
+int32_t k_bugreport_super_height_for_width(void* self, int param1) {
+    return KBugReport_SuperHeightForWidth((KBugReport*)self, param1);
 }
 
 void k_bugreport_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1713,8 +1713,8 @@ bool k_bugreport_has_height_for_width(void* self) {
     return KBugReport_HasHeightForWidth((KBugReport*)self);
 }
 
-bool k_bugreport_qbase_has_height_for_width(void* self) {
-    return KBugReport_QBaseHasHeightForWidth((KBugReport*)self);
+bool k_bugreport_super_has_height_for_width(void* self) {
+    return KBugReport_SuperHasHeightForWidth((KBugReport*)self);
 }
 
 void k_bugreport_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1725,8 +1725,8 @@ QPaintEngine* k_bugreport_paint_engine(void* self) {
     return KBugReport_PaintEngine((KBugReport*)self);
 }
 
-QPaintEngine* k_bugreport_qbase_paint_engine(void* self) {
-    return KBugReport_QBasePaintEngine((KBugReport*)self);
+QPaintEngine* k_bugreport_super_paint_engine(void* self) {
+    return KBugReport_SuperPaintEngine((KBugReport*)self);
 }
 
 void k_bugreport_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1737,8 +1737,8 @@ bool k_bugreport_event(void* self, void* event) {
     return KBugReport_Event((KBugReport*)self, (QEvent*)event);
 }
 
-bool k_bugreport_qbase_event(void* self, void* event) {
-    return KBugReport_QBaseEvent((KBugReport*)self, (QEvent*)event);
+bool k_bugreport_super_event(void* self, void* event) {
+    return KBugReport_SuperEvent((KBugReport*)self, (QEvent*)event);
 }
 
 void k_bugreport_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1749,8 +1749,8 @@ void k_bugreport_mouse_press_event(void* self, void* event) {
     KBugReport_MousePressEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
-void k_bugreport_qbase_mouse_press_event(void* self, void* event) {
-    KBugReport_QBaseMousePressEvent((KBugReport*)self, (QMouseEvent*)event);
+void k_bugreport_super_mouse_press_event(void* self, void* event) {
+    KBugReport_SuperMousePressEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
 void k_bugreport_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1761,8 +1761,8 @@ void k_bugreport_mouse_release_event(void* self, void* event) {
     KBugReport_MouseReleaseEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
-void k_bugreport_qbase_mouse_release_event(void* self, void* event) {
-    KBugReport_QBaseMouseReleaseEvent((KBugReport*)self, (QMouseEvent*)event);
+void k_bugreport_super_mouse_release_event(void* self, void* event) {
+    KBugReport_SuperMouseReleaseEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
 void k_bugreport_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1773,8 +1773,8 @@ void k_bugreport_mouse_double_click_event(void* self, void* event) {
     KBugReport_MouseDoubleClickEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
-void k_bugreport_qbase_mouse_double_click_event(void* self, void* event) {
-    KBugReport_QBaseMouseDoubleClickEvent((KBugReport*)self, (QMouseEvent*)event);
+void k_bugreport_super_mouse_double_click_event(void* self, void* event) {
+    KBugReport_SuperMouseDoubleClickEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
 void k_bugreport_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1785,8 +1785,8 @@ void k_bugreport_mouse_move_event(void* self, void* event) {
     KBugReport_MouseMoveEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
-void k_bugreport_qbase_mouse_move_event(void* self, void* event) {
-    KBugReport_QBaseMouseMoveEvent((KBugReport*)self, (QMouseEvent*)event);
+void k_bugreport_super_mouse_move_event(void* self, void* event) {
+    KBugReport_SuperMouseMoveEvent((KBugReport*)self, (QMouseEvent*)event);
 }
 
 void k_bugreport_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1797,8 +1797,8 @@ void k_bugreport_wheel_event(void* self, void* event) {
     KBugReport_WheelEvent((KBugReport*)self, (QWheelEvent*)event);
 }
 
-void k_bugreport_qbase_wheel_event(void* self, void* event) {
-    KBugReport_QBaseWheelEvent((KBugReport*)self, (QWheelEvent*)event);
+void k_bugreport_super_wheel_event(void* self, void* event) {
+    KBugReport_SuperWheelEvent((KBugReport*)self, (QWheelEvent*)event);
 }
 
 void k_bugreport_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1809,8 +1809,8 @@ void k_bugreport_key_release_event(void* self, void* event) {
     KBugReport_KeyReleaseEvent((KBugReport*)self, (QKeyEvent*)event);
 }
 
-void k_bugreport_qbase_key_release_event(void* self, void* event) {
-    KBugReport_QBaseKeyReleaseEvent((KBugReport*)self, (QKeyEvent*)event);
+void k_bugreport_super_key_release_event(void* self, void* event) {
+    KBugReport_SuperKeyReleaseEvent((KBugReport*)self, (QKeyEvent*)event);
 }
 
 void k_bugreport_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1821,8 +1821,8 @@ void k_bugreport_focus_in_event(void* self, void* event) {
     KBugReport_FocusInEvent((KBugReport*)self, (QFocusEvent*)event);
 }
 
-void k_bugreport_qbase_focus_in_event(void* self, void* event) {
-    KBugReport_QBaseFocusInEvent((KBugReport*)self, (QFocusEvent*)event);
+void k_bugreport_super_focus_in_event(void* self, void* event) {
+    KBugReport_SuperFocusInEvent((KBugReport*)self, (QFocusEvent*)event);
 }
 
 void k_bugreport_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1833,8 +1833,8 @@ void k_bugreport_focus_out_event(void* self, void* event) {
     KBugReport_FocusOutEvent((KBugReport*)self, (QFocusEvent*)event);
 }
 
-void k_bugreport_qbase_focus_out_event(void* self, void* event) {
-    KBugReport_QBaseFocusOutEvent((KBugReport*)self, (QFocusEvent*)event);
+void k_bugreport_super_focus_out_event(void* self, void* event) {
+    KBugReport_SuperFocusOutEvent((KBugReport*)self, (QFocusEvent*)event);
 }
 
 void k_bugreport_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1845,8 +1845,8 @@ void k_bugreport_enter_event(void* self, void* event) {
     KBugReport_EnterEvent((KBugReport*)self, (QEnterEvent*)event);
 }
 
-void k_bugreport_qbase_enter_event(void* self, void* event) {
-    KBugReport_QBaseEnterEvent((KBugReport*)self, (QEnterEvent*)event);
+void k_bugreport_super_enter_event(void* self, void* event) {
+    KBugReport_SuperEnterEvent((KBugReport*)self, (QEnterEvent*)event);
 }
 
 void k_bugreport_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1857,8 +1857,8 @@ void k_bugreport_leave_event(void* self, void* event) {
     KBugReport_LeaveEvent((KBugReport*)self, (QEvent*)event);
 }
 
-void k_bugreport_qbase_leave_event(void* self, void* event) {
-    KBugReport_QBaseLeaveEvent((KBugReport*)self, (QEvent*)event);
+void k_bugreport_super_leave_event(void* self, void* event) {
+    KBugReport_SuperLeaveEvent((KBugReport*)self, (QEvent*)event);
 }
 
 void k_bugreport_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1869,8 +1869,8 @@ void k_bugreport_paint_event(void* self, void* event) {
     KBugReport_PaintEvent((KBugReport*)self, (QPaintEvent*)event);
 }
 
-void k_bugreport_qbase_paint_event(void* self, void* event) {
-    KBugReport_QBasePaintEvent((KBugReport*)self, (QPaintEvent*)event);
+void k_bugreport_super_paint_event(void* self, void* event) {
+    KBugReport_SuperPaintEvent((KBugReport*)self, (QPaintEvent*)event);
 }
 
 void k_bugreport_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1881,8 +1881,8 @@ void k_bugreport_move_event(void* self, void* event) {
     KBugReport_MoveEvent((KBugReport*)self, (QMoveEvent*)event);
 }
 
-void k_bugreport_qbase_move_event(void* self, void* event) {
-    KBugReport_QBaseMoveEvent((KBugReport*)self, (QMoveEvent*)event);
+void k_bugreport_super_move_event(void* self, void* event) {
+    KBugReport_SuperMoveEvent((KBugReport*)self, (QMoveEvent*)event);
 }
 
 void k_bugreport_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1893,8 +1893,8 @@ void k_bugreport_tablet_event(void* self, void* event) {
     KBugReport_TabletEvent((KBugReport*)self, (QTabletEvent*)event);
 }
 
-void k_bugreport_qbase_tablet_event(void* self, void* event) {
-    KBugReport_QBaseTabletEvent((KBugReport*)self, (QTabletEvent*)event);
+void k_bugreport_super_tablet_event(void* self, void* event) {
+    KBugReport_SuperTabletEvent((KBugReport*)self, (QTabletEvent*)event);
 }
 
 void k_bugreport_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1905,8 +1905,8 @@ void k_bugreport_action_event(void* self, void* event) {
     KBugReport_ActionEvent((KBugReport*)self, (QActionEvent*)event);
 }
 
-void k_bugreport_qbase_action_event(void* self, void* event) {
-    KBugReport_QBaseActionEvent((KBugReport*)self, (QActionEvent*)event);
+void k_bugreport_super_action_event(void* self, void* event) {
+    KBugReport_SuperActionEvent((KBugReport*)self, (QActionEvent*)event);
 }
 
 void k_bugreport_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1917,8 +1917,8 @@ void k_bugreport_drag_enter_event(void* self, void* event) {
     KBugReport_DragEnterEvent((KBugReport*)self, (QDragEnterEvent*)event);
 }
 
-void k_bugreport_qbase_drag_enter_event(void* self, void* event) {
-    KBugReport_QBaseDragEnterEvent((KBugReport*)self, (QDragEnterEvent*)event);
+void k_bugreport_super_drag_enter_event(void* self, void* event) {
+    KBugReport_SuperDragEnterEvent((KBugReport*)self, (QDragEnterEvent*)event);
 }
 
 void k_bugreport_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1929,8 +1929,8 @@ void k_bugreport_drag_move_event(void* self, void* event) {
     KBugReport_DragMoveEvent((KBugReport*)self, (QDragMoveEvent*)event);
 }
 
-void k_bugreport_qbase_drag_move_event(void* self, void* event) {
-    KBugReport_QBaseDragMoveEvent((KBugReport*)self, (QDragMoveEvent*)event);
+void k_bugreport_super_drag_move_event(void* self, void* event) {
+    KBugReport_SuperDragMoveEvent((KBugReport*)self, (QDragMoveEvent*)event);
 }
 
 void k_bugreport_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1941,8 +1941,8 @@ void k_bugreport_drag_leave_event(void* self, void* event) {
     KBugReport_DragLeaveEvent((KBugReport*)self, (QDragLeaveEvent*)event);
 }
 
-void k_bugreport_qbase_drag_leave_event(void* self, void* event) {
-    KBugReport_QBaseDragLeaveEvent((KBugReport*)self, (QDragLeaveEvent*)event);
+void k_bugreport_super_drag_leave_event(void* self, void* event) {
+    KBugReport_SuperDragLeaveEvent((KBugReport*)self, (QDragLeaveEvent*)event);
 }
 
 void k_bugreport_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1953,8 +1953,8 @@ void k_bugreport_drop_event(void* self, void* event) {
     KBugReport_DropEvent((KBugReport*)self, (QDropEvent*)event);
 }
 
-void k_bugreport_qbase_drop_event(void* self, void* event) {
-    KBugReport_QBaseDropEvent((KBugReport*)self, (QDropEvent*)event);
+void k_bugreport_super_drop_event(void* self, void* event) {
+    KBugReport_SuperDropEvent((KBugReport*)self, (QDropEvent*)event);
 }
 
 void k_bugreport_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1965,8 +1965,8 @@ void k_bugreport_hide_event(void* self, void* event) {
     KBugReport_HideEvent((KBugReport*)self, (QHideEvent*)event);
 }
 
-void k_bugreport_qbase_hide_event(void* self, void* event) {
-    KBugReport_QBaseHideEvent((KBugReport*)self, (QHideEvent*)event);
+void k_bugreport_super_hide_event(void* self, void* event) {
+    KBugReport_SuperHideEvent((KBugReport*)self, (QHideEvent*)event);
 }
 
 void k_bugreport_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1977,8 +1977,8 @@ bool k_bugreport_native_event(void* self, char* eventType, void* message, intptr
     return KBugReport_NativeEvent((KBugReport*)self, qstring(eventType), message, result);
 }
 
-bool k_bugreport_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KBugReport_QBaseNativeEvent((KBugReport*)self, qstring(eventType), message, result);
+bool k_bugreport_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KBugReport_SuperNativeEvent((KBugReport*)self, qstring(eventType), message, result);
 }
 
 void k_bugreport_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1989,8 +1989,8 @@ void k_bugreport_change_event(void* self, void* param1) {
     KBugReport_ChangeEvent((KBugReport*)self, (QEvent*)param1);
 }
 
-void k_bugreport_qbase_change_event(void* self, void* param1) {
-    KBugReport_QBaseChangeEvent((KBugReport*)self, (QEvent*)param1);
+void k_bugreport_super_change_event(void* self, void* param1) {
+    KBugReport_SuperChangeEvent((KBugReport*)self, (QEvent*)param1);
 }
 
 void k_bugreport_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2001,8 +2001,8 @@ int32_t k_bugreport_metric(void* self, int32_t param1) {
     return KBugReport_Metric((KBugReport*)self, param1);
 }
 
-int32_t k_bugreport_qbase_metric(void* self, int32_t param1) {
-    return KBugReport_QBaseMetric((KBugReport*)self, param1);
+int32_t k_bugreport_super_metric(void* self, int32_t param1) {
+    return KBugReport_SuperMetric((KBugReport*)self, param1);
 }
 
 void k_bugreport_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2013,8 +2013,8 @@ void k_bugreport_init_painter(void* self, void* painter) {
     KBugReport_InitPainter((KBugReport*)self, (QPainter*)painter);
 }
 
-void k_bugreport_qbase_init_painter(void* self, void* painter) {
-    KBugReport_QBaseInitPainter((KBugReport*)self, (QPainter*)painter);
+void k_bugreport_super_init_painter(void* self, void* painter) {
+    KBugReport_SuperInitPainter((KBugReport*)self, (QPainter*)painter);
 }
 
 void k_bugreport_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2025,8 +2025,8 @@ QPaintDevice* k_bugreport_redirected(void* self, void* offset) {
     return KBugReport_Redirected((KBugReport*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_bugreport_qbase_redirected(void* self, void* offset) {
-    return KBugReport_QBaseRedirected((KBugReport*)self, (QPoint*)offset);
+QPaintDevice* k_bugreport_super_redirected(void* self, void* offset) {
+    return KBugReport_SuperRedirected((KBugReport*)self, (QPoint*)offset);
 }
 
 void k_bugreport_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2037,8 +2037,8 @@ QPainter* k_bugreport_shared_painter(void* self) {
     return KBugReport_SharedPainter((KBugReport*)self);
 }
 
-QPainter* k_bugreport_qbase_shared_painter(void* self) {
-    return KBugReport_QBaseSharedPainter((KBugReport*)self);
+QPainter* k_bugreport_super_shared_painter(void* self) {
+    return KBugReport_SuperSharedPainter((KBugReport*)self);
 }
 
 void k_bugreport_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2049,8 +2049,8 @@ void k_bugreport_input_method_event(void* self, void* param1) {
     KBugReport_InputMethodEvent((KBugReport*)self, (QInputMethodEvent*)param1);
 }
 
-void k_bugreport_qbase_input_method_event(void* self, void* param1) {
-    KBugReport_QBaseInputMethodEvent((KBugReport*)self, (QInputMethodEvent*)param1);
+void k_bugreport_super_input_method_event(void* self, void* param1) {
+    KBugReport_SuperInputMethodEvent((KBugReport*)self, (QInputMethodEvent*)param1);
 }
 
 void k_bugreport_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2061,8 +2061,8 @@ QVariant* k_bugreport_input_method_query(void* self, int32_t param1) {
     return KBugReport_InputMethodQuery((KBugReport*)self, param1);
 }
 
-QVariant* k_bugreport_qbase_input_method_query(void* self, int32_t param1) {
-    return KBugReport_QBaseInputMethodQuery((KBugReport*)self, param1);
+QVariant* k_bugreport_super_input_method_query(void* self, int32_t param1) {
+    return KBugReport_SuperInputMethodQuery((KBugReport*)self, param1);
 }
 
 void k_bugreport_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2073,8 +2073,8 @@ bool k_bugreport_focus_next_prev_child(void* self, bool next) {
     return KBugReport_FocusNextPrevChild((KBugReport*)self, next);
 }
 
-bool k_bugreport_qbase_focus_next_prev_child(void* self, bool next) {
-    return KBugReport_QBaseFocusNextPrevChild((KBugReport*)self, next);
+bool k_bugreport_super_focus_next_prev_child(void* self, bool next) {
+    return KBugReport_SuperFocusNextPrevChild((KBugReport*)self, next);
 }
 
 void k_bugreport_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2085,8 +2085,8 @@ void k_bugreport_timer_event(void* self, void* event) {
     KBugReport_TimerEvent((KBugReport*)self, (QTimerEvent*)event);
 }
 
-void k_bugreport_qbase_timer_event(void* self, void* event) {
-    KBugReport_QBaseTimerEvent((KBugReport*)self, (QTimerEvent*)event);
+void k_bugreport_super_timer_event(void* self, void* event) {
+    KBugReport_SuperTimerEvent((KBugReport*)self, (QTimerEvent*)event);
 }
 
 void k_bugreport_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2097,8 +2097,8 @@ void k_bugreport_child_event(void* self, void* event) {
     KBugReport_ChildEvent((KBugReport*)self, (QChildEvent*)event);
 }
 
-void k_bugreport_qbase_child_event(void* self, void* event) {
-    KBugReport_QBaseChildEvent((KBugReport*)self, (QChildEvent*)event);
+void k_bugreport_super_child_event(void* self, void* event) {
+    KBugReport_SuperChildEvent((KBugReport*)self, (QChildEvent*)event);
 }
 
 void k_bugreport_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2109,8 +2109,8 @@ void k_bugreport_custom_event(void* self, void* event) {
     KBugReport_CustomEvent((KBugReport*)self, (QEvent*)event);
 }
 
-void k_bugreport_qbase_custom_event(void* self, void* event) {
-    KBugReport_QBaseCustomEvent((KBugReport*)self, (QEvent*)event);
+void k_bugreport_super_custom_event(void* self, void* event) {
+    KBugReport_SuperCustomEvent((KBugReport*)self, (QEvent*)event);
 }
 
 void k_bugreport_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2121,8 +2121,8 @@ void k_bugreport_connect_notify(void* self, void* signal) {
     KBugReport_ConnectNotify((KBugReport*)self, (QMetaMethod*)signal);
 }
 
-void k_bugreport_qbase_connect_notify(void* self, void* signal) {
-    KBugReport_QBaseConnectNotify((KBugReport*)self, (QMetaMethod*)signal);
+void k_bugreport_super_connect_notify(void* self, void* signal) {
+    KBugReport_SuperConnectNotify((KBugReport*)self, (QMetaMethod*)signal);
 }
 
 void k_bugreport_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2133,8 +2133,8 @@ void k_bugreport_disconnect_notify(void* self, void* signal) {
     KBugReport_DisconnectNotify((KBugReport*)self, (QMetaMethod*)signal);
 }
 
-void k_bugreport_qbase_disconnect_notify(void* self, void* signal) {
-    KBugReport_QBaseDisconnectNotify((KBugReport*)self, (QMetaMethod*)signal);
+void k_bugreport_super_disconnect_notify(void* self, void* signal) {
+    KBugReport_SuperDisconnectNotify((KBugReport*)self, (QMetaMethod*)signal);
 }
 
 void k_bugreport_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2145,8 +2145,8 @@ void k_bugreport_adjust_position(void* self, void* param1) {
     KBugReport_AdjustPosition((KBugReport*)self, (QWidget*)param1);
 }
 
-void k_bugreport_qbase_adjust_position(void* self, void* param1) {
-    KBugReport_QBaseAdjustPosition((KBugReport*)self, (QWidget*)param1);
+void k_bugreport_super_adjust_position(void* self, void* param1) {
+    KBugReport_SuperAdjustPosition((KBugReport*)self, (QWidget*)param1);
 }
 
 void k_bugreport_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2157,8 +2157,8 @@ void k_bugreport_update_micro_focus(void* self) {
     KBugReport_UpdateMicroFocus((KBugReport*)self);
 }
 
-void k_bugreport_qbase_update_micro_focus(void* self) {
-    KBugReport_QBaseUpdateMicroFocus((KBugReport*)self);
+void k_bugreport_super_update_micro_focus(void* self) {
+    KBugReport_SuperUpdateMicroFocus((KBugReport*)self);
 }
 
 void k_bugreport_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2169,8 +2169,8 @@ void k_bugreport_create(void* self) {
     KBugReport_Create((KBugReport*)self);
 }
 
-void k_bugreport_qbase_create(void* self) {
-    KBugReport_QBaseCreate((KBugReport*)self);
+void k_bugreport_super_create(void* self) {
+    KBugReport_SuperCreate((KBugReport*)self);
 }
 
 void k_bugreport_on_create(void* self, void (*callback)()) {
@@ -2181,8 +2181,8 @@ void k_bugreport_destroy(void* self) {
     KBugReport_Destroy((KBugReport*)self);
 }
 
-void k_bugreport_qbase_destroy(void* self) {
-    KBugReport_QBaseDestroy((KBugReport*)self);
+void k_bugreport_super_destroy(void* self) {
+    KBugReport_SuperDestroy((KBugReport*)self);
 }
 
 void k_bugreport_on_destroy(void* self, void (*callback)()) {
@@ -2193,8 +2193,8 @@ bool k_bugreport_focus_next_child(void* self) {
     return KBugReport_FocusNextChild((KBugReport*)self);
 }
 
-bool k_bugreport_qbase_focus_next_child(void* self) {
-    return KBugReport_QBaseFocusNextChild((KBugReport*)self);
+bool k_bugreport_super_focus_next_child(void* self) {
+    return KBugReport_SuperFocusNextChild((KBugReport*)self);
 }
 
 void k_bugreport_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2205,8 +2205,8 @@ bool k_bugreport_focus_previous_child(void* self) {
     return KBugReport_FocusPreviousChild((KBugReport*)self);
 }
 
-bool k_bugreport_qbase_focus_previous_child(void* self) {
-    return KBugReport_QBaseFocusPreviousChild((KBugReport*)self);
+bool k_bugreport_super_focus_previous_child(void* self) {
+    return KBugReport_SuperFocusPreviousChild((KBugReport*)self);
 }
 
 void k_bugreport_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2217,8 +2217,8 @@ QObject* k_bugreport_sender(void* self) {
     return KBugReport_Sender((KBugReport*)self);
 }
 
-QObject* k_bugreport_qbase_sender(void* self) {
-    return KBugReport_QBaseSender((KBugReport*)self);
+QObject* k_bugreport_super_sender(void* self) {
+    return KBugReport_SuperSender((KBugReport*)self);
 }
 
 void k_bugreport_on_sender(void* self, QObject* (*callback)()) {
@@ -2229,8 +2229,8 @@ int32_t k_bugreport_sender_signal_index(void* self) {
     return KBugReport_SenderSignalIndex((KBugReport*)self);
 }
 
-int32_t k_bugreport_qbase_sender_signal_index(void* self) {
-    return KBugReport_QBaseSenderSignalIndex((KBugReport*)self);
+int32_t k_bugreport_super_sender_signal_index(void* self) {
+    return KBugReport_SuperSenderSignalIndex((KBugReport*)self);
 }
 
 void k_bugreport_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2241,8 +2241,8 @@ int32_t k_bugreport_receivers(void* self, const char* signal) {
     return KBugReport_Receivers((KBugReport*)self, signal);
 }
 
-int32_t k_bugreport_qbase_receivers(void* self, const char* signal) {
-    return KBugReport_QBaseReceivers((KBugReport*)self, signal);
+int32_t k_bugreport_super_receivers(void* self, const char* signal) {
+    return KBugReport_SuperReceivers((KBugReport*)self, signal);
 }
 
 void k_bugreport_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2253,8 +2253,8 @@ bool k_bugreport_is_signal_connected(void* self, void* signal) {
     return KBugReport_IsSignalConnected((KBugReport*)self, (QMetaMethod*)signal);
 }
 
-bool k_bugreport_qbase_is_signal_connected(void* self, void* signal) {
-    return KBugReport_QBaseIsSignalConnected((KBugReport*)self, (QMetaMethod*)signal);
+bool k_bugreport_super_is_signal_connected(void* self, void* signal) {
+    return KBugReport_SuperIsSignalConnected((KBugReport*)self, (QMetaMethod*)signal);
 }
 
 void k_bugreport_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2265,8 +2265,8 @@ double k_bugreport_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
     return KBugReport_GetDecodedMetricF((KBugReport*)self, metricA, metricB);
 }
 
-double k_bugreport_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KBugReport_QBaseGetDecodedMetricF((KBugReport*)self, metricA, metricB);
+double k_bugreport_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KBugReport_SuperGetDecodedMetricF((KBugReport*)self, metricA, metricB);
 }
 
 void k_bugreport_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

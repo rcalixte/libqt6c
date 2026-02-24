@@ -40,8 +40,8 @@ void q_toolbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QToolBar_OnMetaObject((QToolBar*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_toolbar_qbase_meta_object(void* self) {
-    return QToolBar_QBaseMetaObject((QToolBar*)self);
+const QMetaObject* q_toolbar_super_meta_object(void* self) {
+    return QToolBar_SuperMetaObject((QToolBar*)self);
 }
 
 void* q_toolbar_metacast(void* self, const char* param1) {
@@ -52,8 +52,8 @@ void q_toolbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QToolBar_OnMetacast((QToolBar*)self, (intptr_t)callback);
 }
 
-void* q_toolbar_qbase_metacast(void* self, const char* param1) {
-    return QToolBar_QBaseMetacast((QToolBar*)self, param1);
+void* q_toolbar_super_metacast(void* self, const char* param1) {
+    return QToolBar_SuperMetacast((QToolBar*)self, param1);
 }
 
 int32_t q_toolbar_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -64,8 +64,8 @@ void q_toolbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     QToolBar_OnMetacall((QToolBar*)self, (intptr_t)callback);
 }
 
-int32_t q_toolbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QToolBar_QBaseMetacall((QToolBar*)self, param1, param2, param3);
+int32_t q_toolbar_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QToolBar_SuperMetacall((QToolBar*)self, param1, param2, param3);
 }
 
 const char* q_toolbar_tr(const char* s) {
@@ -243,8 +243,8 @@ void q_toolbar_on_action_event(void* self, void (*callback)(void*, void*)) {
     QToolBar_OnActionEvent((QToolBar*)self, (intptr_t)callback);
 }
 
-void q_toolbar_qbase_action_event(void* self, void* event) {
-    QToolBar_QBaseActionEvent((QToolBar*)self, (QActionEvent*)event);
+void q_toolbar_super_action_event(void* self, void* event) {
+    QToolBar_SuperActionEvent((QToolBar*)self, (QActionEvent*)event);
 }
 
 void q_toolbar_change_event(void* self, void* event) {
@@ -255,8 +255,8 @@ void q_toolbar_on_change_event(void* self, void (*callback)(void*, void*)) {
     QToolBar_OnChangeEvent((QToolBar*)self, (intptr_t)callback);
 }
 
-void q_toolbar_qbase_change_event(void* self, void* event) {
-    QToolBar_QBaseChangeEvent((QToolBar*)self, (QEvent*)event);
+void q_toolbar_super_change_event(void* self, void* event) {
+    QToolBar_SuperChangeEvent((QToolBar*)self, (QEvent*)event);
 }
 
 void q_toolbar_paint_event(void* self, void* event) {
@@ -267,8 +267,8 @@ void q_toolbar_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QToolBar_OnPaintEvent((QToolBar*)self, (intptr_t)callback);
 }
 
-void q_toolbar_qbase_paint_event(void* self, void* event) {
-    QToolBar_QBasePaintEvent((QToolBar*)self, (QPaintEvent*)event);
+void q_toolbar_super_paint_event(void* self, void* event) {
+    QToolBar_SuperPaintEvent((QToolBar*)self, (QPaintEvent*)event);
 }
 
 bool q_toolbar_event(void* self, void* event) {
@@ -279,8 +279,8 @@ void q_toolbar_on_event(void* self, bool (*callback)(void*, void*)) {
     QToolBar_OnEvent((QToolBar*)self, (intptr_t)callback);
 }
 
-bool q_toolbar_qbase_event(void* self, void* event) {
-    return QToolBar_QBaseEvent((QToolBar*)self, (QEvent*)event);
+bool q_toolbar_super_event(void* self, void* event) {
+    return QToolBar_SuperEvent((QToolBar*)self, (QEvent*)event);
 }
 
 void q_toolbar_init_style_option(void* self, void* option) {
@@ -291,8 +291,8 @@ void q_toolbar_on_init_style_option(void* self, void (*callback)(void*, void*)) 
     QToolBar_OnInitStyleOption((QToolBar*)self, (intptr_t)callback);
 }
 
-void q_toolbar_qbase_init_style_option(void* self, void* option) {
-    QToolBar_QBaseInitStyleOption((QToolBar*)self, (QStyleOptionToolBar*)option);
+void q_toolbar_super_init_style_option(void* self, void* option) {
+    QToolBar_SuperInitStyleOption((QToolBar*)self, (QStyleOptionToolBar*)option);
 }
 
 const char* q_toolbar_tr2(const char* s, const char* c) {
@@ -1694,8 +1694,8 @@ int32_t q_toolbar_dev_type(void* self) {
     return QToolBar_DevType((QToolBar*)self);
 }
 
-int32_t q_toolbar_qbase_dev_type(void* self) {
-    return QToolBar_QBaseDevType((QToolBar*)self);
+int32_t q_toolbar_super_dev_type(void* self) {
+    return QToolBar_SuperDevType((QToolBar*)self);
 }
 
 void q_toolbar_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1706,8 +1706,8 @@ void q_toolbar_set_visible(void* self, bool visible) {
     QToolBar_SetVisible((QToolBar*)self, visible);
 }
 
-void q_toolbar_qbase_set_visible(void* self, bool visible) {
-    QToolBar_QBaseSetVisible((QToolBar*)self, visible);
+void q_toolbar_super_set_visible(void* self, bool visible) {
+    QToolBar_SuperSetVisible((QToolBar*)self, visible);
 }
 
 void q_toolbar_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1718,8 +1718,8 @@ QSize* q_toolbar_size_hint(void* self) {
     return QToolBar_SizeHint((QToolBar*)self);
 }
 
-QSize* q_toolbar_qbase_size_hint(void* self) {
-    return QToolBar_QBaseSizeHint((QToolBar*)self);
+QSize* q_toolbar_super_size_hint(void* self) {
+    return QToolBar_SuperSizeHint((QToolBar*)self);
 }
 
 void q_toolbar_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1730,8 +1730,8 @@ QSize* q_toolbar_minimum_size_hint(void* self) {
     return QToolBar_MinimumSizeHint((QToolBar*)self);
 }
 
-QSize* q_toolbar_qbase_minimum_size_hint(void* self) {
-    return QToolBar_QBaseMinimumSizeHint((QToolBar*)self);
+QSize* q_toolbar_super_minimum_size_hint(void* self) {
+    return QToolBar_SuperMinimumSizeHint((QToolBar*)self);
 }
 
 void q_toolbar_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1742,8 +1742,8 @@ int32_t q_toolbar_height_for_width(void* self, int param1) {
     return QToolBar_HeightForWidth((QToolBar*)self, param1);
 }
 
-int32_t q_toolbar_qbase_height_for_width(void* self, int param1) {
-    return QToolBar_QBaseHeightForWidth((QToolBar*)self, param1);
+int32_t q_toolbar_super_height_for_width(void* self, int param1) {
+    return QToolBar_SuperHeightForWidth((QToolBar*)self, param1);
 }
 
 void q_toolbar_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1754,8 +1754,8 @@ bool q_toolbar_has_height_for_width(void* self) {
     return QToolBar_HasHeightForWidth((QToolBar*)self);
 }
 
-bool q_toolbar_qbase_has_height_for_width(void* self) {
-    return QToolBar_QBaseHasHeightForWidth((QToolBar*)self);
+bool q_toolbar_super_has_height_for_width(void* self) {
+    return QToolBar_SuperHasHeightForWidth((QToolBar*)self);
 }
 
 void q_toolbar_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1766,8 +1766,8 @@ QPaintEngine* q_toolbar_paint_engine(void* self) {
     return QToolBar_PaintEngine((QToolBar*)self);
 }
 
-QPaintEngine* q_toolbar_qbase_paint_engine(void* self) {
-    return QToolBar_QBasePaintEngine((QToolBar*)self);
+QPaintEngine* q_toolbar_super_paint_engine(void* self) {
+    return QToolBar_SuperPaintEngine((QToolBar*)self);
 }
 
 void q_toolbar_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1778,8 +1778,8 @@ void q_toolbar_mouse_press_event(void* self, void* event) {
     QToolBar_MousePressEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
-void q_toolbar_qbase_mouse_press_event(void* self, void* event) {
-    QToolBar_QBaseMousePressEvent((QToolBar*)self, (QMouseEvent*)event);
+void q_toolbar_super_mouse_press_event(void* self, void* event) {
+    QToolBar_SuperMousePressEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
 void q_toolbar_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void q_toolbar_mouse_release_event(void* self, void* event) {
     QToolBar_MouseReleaseEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
-void q_toolbar_qbase_mouse_release_event(void* self, void* event) {
-    QToolBar_QBaseMouseReleaseEvent((QToolBar*)self, (QMouseEvent*)event);
+void q_toolbar_super_mouse_release_event(void* self, void* event) {
+    QToolBar_SuperMouseReleaseEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
 void q_toolbar_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void q_toolbar_mouse_double_click_event(void* self, void* event) {
     QToolBar_MouseDoubleClickEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
-void q_toolbar_qbase_mouse_double_click_event(void* self, void* event) {
-    QToolBar_QBaseMouseDoubleClickEvent((QToolBar*)self, (QMouseEvent*)event);
+void q_toolbar_super_mouse_double_click_event(void* self, void* event) {
+    QToolBar_SuperMouseDoubleClickEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
 void q_toolbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void q_toolbar_mouse_move_event(void* self, void* event) {
     QToolBar_MouseMoveEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
-void q_toolbar_qbase_mouse_move_event(void* self, void* event) {
-    QToolBar_QBaseMouseMoveEvent((QToolBar*)self, (QMouseEvent*)event);
+void q_toolbar_super_mouse_move_event(void* self, void* event) {
+    QToolBar_SuperMouseMoveEvent((QToolBar*)self, (QMouseEvent*)event);
 }
 
 void q_toolbar_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void q_toolbar_wheel_event(void* self, void* event) {
     QToolBar_WheelEvent((QToolBar*)self, (QWheelEvent*)event);
 }
 
-void q_toolbar_qbase_wheel_event(void* self, void* event) {
-    QToolBar_QBaseWheelEvent((QToolBar*)self, (QWheelEvent*)event);
+void q_toolbar_super_wheel_event(void* self, void* event) {
+    QToolBar_SuperWheelEvent((QToolBar*)self, (QWheelEvent*)event);
 }
 
 void q_toolbar_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void q_toolbar_key_press_event(void* self, void* event) {
     QToolBar_KeyPressEvent((QToolBar*)self, (QKeyEvent*)event);
 }
 
-void q_toolbar_qbase_key_press_event(void* self, void* event) {
-    QToolBar_QBaseKeyPressEvent((QToolBar*)self, (QKeyEvent*)event);
+void q_toolbar_super_key_press_event(void* self, void* event) {
+    QToolBar_SuperKeyPressEvent((QToolBar*)self, (QKeyEvent*)event);
 }
 
 void q_toolbar_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void q_toolbar_key_release_event(void* self, void* event) {
     QToolBar_KeyReleaseEvent((QToolBar*)self, (QKeyEvent*)event);
 }
 
-void q_toolbar_qbase_key_release_event(void* self, void* event) {
-    QToolBar_QBaseKeyReleaseEvent((QToolBar*)self, (QKeyEvent*)event);
+void q_toolbar_super_key_release_event(void* self, void* event) {
+    QToolBar_SuperKeyReleaseEvent((QToolBar*)self, (QKeyEvent*)event);
 }
 
 void q_toolbar_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void q_toolbar_focus_in_event(void* self, void* event) {
     QToolBar_FocusInEvent((QToolBar*)self, (QFocusEvent*)event);
 }
 
-void q_toolbar_qbase_focus_in_event(void* self, void* event) {
-    QToolBar_QBaseFocusInEvent((QToolBar*)self, (QFocusEvent*)event);
+void q_toolbar_super_focus_in_event(void* self, void* event) {
+    QToolBar_SuperFocusInEvent((QToolBar*)self, (QFocusEvent*)event);
 }
 
 void q_toolbar_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void q_toolbar_focus_out_event(void* self, void* event) {
     QToolBar_FocusOutEvent((QToolBar*)self, (QFocusEvent*)event);
 }
 
-void q_toolbar_qbase_focus_out_event(void* self, void* event) {
-    QToolBar_QBaseFocusOutEvent((QToolBar*)self, (QFocusEvent*)event);
+void q_toolbar_super_focus_out_event(void* self, void* event) {
+    QToolBar_SuperFocusOutEvent((QToolBar*)self, (QFocusEvent*)event);
 }
 
 void q_toolbar_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void q_toolbar_enter_event(void* self, void* event) {
     QToolBar_EnterEvent((QToolBar*)self, (QEnterEvent*)event);
 }
 
-void q_toolbar_qbase_enter_event(void* self, void* event) {
-    QToolBar_QBaseEnterEvent((QToolBar*)self, (QEnterEvent*)event);
+void q_toolbar_super_enter_event(void* self, void* event) {
+    QToolBar_SuperEnterEvent((QToolBar*)self, (QEnterEvent*)event);
 }
 
 void q_toolbar_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void q_toolbar_leave_event(void* self, void* event) {
     QToolBar_LeaveEvent((QToolBar*)self, (QEvent*)event);
 }
 
-void q_toolbar_qbase_leave_event(void* self, void* event) {
-    QToolBar_QBaseLeaveEvent((QToolBar*)self, (QEvent*)event);
+void q_toolbar_super_leave_event(void* self, void* event) {
+    QToolBar_SuperLeaveEvent((QToolBar*)self, (QEvent*)event);
 }
 
 void q_toolbar_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void q_toolbar_move_event(void* self, void* event) {
     QToolBar_MoveEvent((QToolBar*)self, (QMoveEvent*)event);
 }
 
-void q_toolbar_qbase_move_event(void* self, void* event) {
-    QToolBar_QBaseMoveEvent((QToolBar*)self, (QMoveEvent*)event);
+void q_toolbar_super_move_event(void* self, void* event) {
+    QToolBar_SuperMoveEvent((QToolBar*)self, (QMoveEvent*)event);
 }
 
 void q_toolbar_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void q_toolbar_resize_event(void* self, void* event) {
     QToolBar_ResizeEvent((QToolBar*)self, (QResizeEvent*)event);
 }
 
-void q_toolbar_qbase_resize_event(void* self, void* event) {
-    QToolBar_QBaseResizeEvent((QToolBar*)self, (QResizeEvent*)event);
+void q_toolbar_super_resize_event(void* self, void* event) {
+    QToolBar_SuperResizeEvent((QToolBar*)self, (QResizeEvent*)event);
 }
 
 void q_toolbar_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void q_toolbar_close_event(void* self, void* event) {
     QToolBar_CloseEvent((QToolBar*)self, (QCloseEvent*)event);
 }
 
-void q_toolbar_qbase_close_event(void* self, void* event) {
-    QToolBar_QBaseCloseEvent((QToolBar*)self, (QCloseEvent*)event);
+void q_toolbar_super_close_event(void* self, void* event) {
+    QToolBar_SuperCloseEvent((QToolBar*)self, (QCloseEvent*)event);
 }
 
 void q_toolbar_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void q_toolbar_context_menu_event(void* self, void* event) {
     QToolBar_ContextMenuEvent((QToolBar*)self, (QContextMenuEvent*)event);
 }
 
-void q_toolbar_qbase_context_menu_event(void* self, void* event) {
-    QToolBar_QBaseContextMenuEvent((QToolBar*)self, (QContextMenuEvent*)event);
+void q_toolbar_super_context_menu_event(void* self, void* event) {
+    QToolBar_SuperContextMenuEvent((QToolBar*)self, (QContextMenuEvent*)event);
 }
 
 void q_toolbar_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ void q_toolbar_tablet_event(void* self, void* event) {
     QToolBar_TabletEvent((QToolBar*)self, (QTabletEvent*)event);
 }
 
-void q_toolbar_qbase_tablet_event(void* self, void* event) {
-    QToolBar_QBaseTabletEvent((QToolBar*)self, (QTabletEvent*)event);
+void q_toolbar_super_tablet_event(void* self, void* event) {
+    QToolBar_SuperTabletEvent((QToolBar*)self, (QTabletEvent*)event);
 }
 
 void q_toolbar_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ void q_toolbar_drag_enter_event(void* self, void* event) {
     QToolBar_DragEnterEvent((QToolBar*)self, (QDragEnterEvent*)event);
 }
 
-void q_toolbar_qbase_drag_enter_event(void* self, void* event) {
-    QToolBar_QBaseDragEnterEvent((QToolBar*)self, (QDragEnterEvent*)event);
+void q_toolbar_super_drag_enter_event(void* self, void* event) {
+    QToolBar_SuperDragEnterEvent((QToolBar*)self, (QDragEnterEvent*)event);
 }
 
 void q_toolbar_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ void q_toolbar_drag_move_event(void* self, void* event) {
     QToolBar_DragMoveEvent((QToolBar*)self, (QDragMoveEvent*)event);
 }
 
-void q_toolbar_qbase_drag_move_event(void* self, void* event) {
-    QToolBar_QBaseDragMoveEvent((QToolBar*)self, (QDragMoveEvent*)event);
+void q_toolbar_super_drag_move_event(void* self, void* event) {
+    QToolBar_SuperDragMoveEvent((QToolBar*)self, (QDragMoveEvent*)event);
 }
 
 void q_toolbar_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ void q_toolbar_drag_leave_event(void* self, void* event) {
     QToolBar_DragLeaveEvent((QToolBar*)self, (QDragLeaveEvent*)event);
 }
 
-void q_toolbar_qbase_drag_leave_event(void* self, void* event) {
-    QToolBar_QBaseDragLeaveEvent((QToolBar*)self, (QDragLeaveEvent*)event);
+void q_toolbar_super_drag_leave_event(void* self, void* event) {
+    QToolBar_SuperDragLeaveEvent((QToolBar*)self, (QDragLeaveEvent*)event);
 }
 
 void q_toolbar_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ void q_toolbar_drop_event(void* self, void* event) {
     QToolBar_DropEvent((QToolBar*)self, (QDropEvent*)event);
 }
 
-void q_toolbar_qbase_drop_event(void* self, void* event) {
-    QToolBar_QBaseDropEvent((QToolBar*)self, (QDropEvent*)event);
+void q_toolbar_super_drop_event(void* self, void* event) {
+    QToolBar_SuperDropEvent((QToolBar*)self, (QDropEvent*)event);
 }
 
 void q_toolbar_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2018,8 +2018,8 @@ void q_toolbar_show_event(void* self, void* event) {
     QToolBar_ShowEvent((QToolBar*)self, (QShowEvent*)event);
 }
 
-void q_toolbar_qbase_show_event(void* self, void* event) {
-    QToolBar_QBaseShowEvent((QToolBar*)self, (QShowEvent*)event);
+void q_toolbar_super_show_event(void* self, void* event) {
+    QToolBar_SuperShowEvent((QToolBar*)self, (QShowEvent*)event);
 }
 
 void q_toolbar_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ void q_toolbar_hide_event(void* self, void* event) {
     QToolBar_HideEvent((QToolBar*)self, (QHideEvent*)event);
 }
 
-void q_toolbar_qbase_hide_event(void* self, void* event) {
-    QToolBar_QBaseHideEvent((QToolBar*)self, (QHideEvent*)event);
+void q_toolbar_super_hide_event(void* self, void* event) {
+    QToolBar_SuperHideEvent((QToolBar*)self, (QHideEvent*)event);
 }
 
 void q_toolbar_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ bool q_toolbar_native_event(void* self, char* eventType, void* message, intptr_t
     return QToolBar_NativeEvent((QToolBar*)self, qstring(eventType), message, result);
 }
 
-bool q_toolbar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QToolBar_QBaseNativeEvent((QToolBar*)self, qstring(eventType), message, result);
+bool q_toolbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QToolBar_SuperNativeEvent((QToolBar*)self, qstring(eventType), message, result);
 }
 
 void q_toolbar_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2054,8 +2054,8 @@ int32_t q_toolbar_metric(void* self, int32_t param1) {
     return QToolBar_Metric((QToolBar*)self, param1);
 }
 
-int32_t q_toolbar_qbase_metric(void* self, int32_t param1) {
-    return QToolBar_QBaseMetric((QToolBar*)self, param1);
+int32_t q_toolbar_super_metric(void* self, int32_t param1) {
+    return QToolBar_SuperMetric((QToolBar*)self, param1);
 }
 
 void q_toolbar_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2066,8 +2066,8 @@ void q_toolbar_init_painter(void* self, void* painter) {
     QToolBar_InitPainter((QToolBar*)self, (QPainter*)painter);
 }
 
-void q_toolbar_qbase_init_painter(void* self, void* painter) {
-    QToolBar_QBaseInitPainter((QToolBar*)self, (QPainter*)painter);
+void q_toolbar_super_init_painter(void* self, void* painter) {
+    QToolBar_SuperInitPainter((QToolBar*)self, (QPainter*)painter);
 }
 
 void q_toolbar_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ QPaintDevice* q_toolbar_redirected(void* self, void* offset) {
     return QToolBar_Redirected((QToolBar*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_toolbar_qbase_redirected(void* self, void* offset) {
-    return QToolBar_QBaseRedirected((QToolBar*)self, (QPoint*)offset);
+QPaintDevice* q_toolbar_super_redirected(void* self, void* offset) {
+    return QToolBar_SuperRedirected((QToolBar*)self, (QPoint*)offset);
 }
 
 void q_toolbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ QPainter* q_toolbar_shared_painter(void* self) {
     return QToolBar_SharedPainter((QToolBar*)self);
 }
 
-QPainter* q_toolbar_qbase_shared_painter(void* self) {
-    return QToolBar_QBaseSharedPainter((QToolBar*)self);
+QPainter* q_toolbar_super_shared_painter(void* self) {
+    return QToolBar_SuperSharedPainter((QToolBar*)self);
 }
 
 void q_toolbar_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2102,8 +2102,8 @@ void q_toolbar_input_method_event(void* self, void* param1) {
     QToolBar_InputMethodEvent((QToolBar*)self, (QInputMethodEvent*)param1);
 }
 
-void q_toolbar_qbase_input_method_event(void* self, void* param1) {
-    QToolBar_QBaseInputMethodEvent((QToolBar*)self, (QInputMethodEvent*)param1);
+void q_toolbar_super_input_method_event(void* self, void* param1) {
+    QToolBar_SuperInputMethodEvent((QToolBar*)self, (QInputMethodEvent*)param1);
 }
 
 void q_toolbar_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ QVariant* q_toolbar_input_method_query(void* self, int32_t param1) {
     return QToolBar_InputMethodQuery((QToolBar*)self, param1);
 }
 
-QVariant* q_toolbar_qbase_input_method_query(void* self, int32_t param1) {
-    return QToolBar_QBaseInputMethodQuery((QToolBar*)self, param1);
+QVariant* q_toolbar_super_input_method_query(void* self, int32_t param1) {
+    return QToolBar_SuperInputMethodQuery((QToolBar*)self, param1);
 }
 
 void q_toolbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2126,8 +2126,8 @@ bool q_toolbar_focus_next_prev_child(void* self, bool next) {
     return QToolBar_FocusNextPrevChild((QToolBar*)self, next);
 }
 
-bool q_toolbar_qbase_focus_next_prev_child(void* self, bool next) {
-    return QToolBar_QBaseFocusNextPrevChild((QToolBar*)self, next);
+bool q_toolbar_super_focus_next_prev_child(void* self, bool next) {
+    return QToolBar_SuperFocusNextPrevChild((QToolBar*)self, next);
 }
 
 void q_toolbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2138,8 +2138,8 @@ bool q_toolbar_event_filter(void* self, void* watched, void* event) {
     return QToolBar_EventFilter((QToolBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_toolbar_qbase_event_filter(void* self, void* watched, void* event) {
-    return QToolBar_QBaseEventFilter((QToolBar*)self, (QObject*)watched, (QEvent*)event);
+bool q_toolbar_super_event_filter(void* self, void* watched, void* event) {
+    return QToolBar_SuperEventFilter((QToolBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_toolbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2150,8 +2150,8 @@ void q_toolbar_timer_event(void* self, void* event) {
     QToolBar_TimerEvent((QToolBar*)self, (QTimerEvent*)event);
 }
 
-void q_toolbar_qbase_timer_event(void* self, void* event) {
-    QToolBar_QBaseTimerEvent((QToolBar*)self, (QTimerEvent*)event);
+void q_toolbar_super_timer_event(void* self, void* event) {
+    QToolBar_SuperTimerEvent((QToolBar*)self, (QTimerEvent*)event);
 }
 
 void q_toolbar_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2162,8 +2162,8 @@ void q_toolbar_child_event(void* self, void* event) {
     QToolBar_ChildEvent((QToolBar*)self, (QChildEvent*)event);
 }
 
-void q_toolbar_qbase_child_event(void* self, void* event) {
-    QToolBar_QBaseChildEvent((QToolBar*)self, (QChildEvent*)event);
+void q_toolbar_super_child_event(void* self, void* event) {
+    QToolBar_SuperChildEvent((QToolBar*)self, (QChildEvent*)event);
 }
 
 void q_toolbar_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2174,8 +2174,8 @@ void q_toolbar_custom_event(void* self, void* event) {
     QToolBar_CustomEvent((QToolBar*)self, (QEvent*)event);
 }
 
-void q_toolbar_qbase_custom_event(void* self, void* event) {
-    QToolBar_QBaseCustomEvent((QToolBar*)self, (QEvent*)event);
+void q_toolbar_super_custom_event(void* self, void* event) {
+    QToolBar_SuperCustomEvent((QToolBar*)self, (QEvent*)event);
 }
 
 void q_toolbar_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ void q_toolbar_connect_notify(void* self, void* signal) {
     QToolBar_ConnectNotify((QToolBar*)self, (QMetaMethod*)signal);
 }
 
-void q_toolbar_qbase_connect_notify(void* self, void* signal) {
-    QToolBar_QBaseConnectNotify((QToolBar*)self, (QMetaMethod*)signal);
+void q_toolbar_super_connect_notify(void* self, void* signal) {
+    QToolBar_SuperConnectNotify((QToolBar*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbar_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ void q_toolbar_disconnect_notify(void* self, void* signal) {
     QToolBar_DisconnectNotify((QToolBar*)self, (QMetaMethod*)signal);
 }
 
-void q_toolbar_qbase_disconnect_notify(void* self, void* signal) {
-    QToolBar_QBaseDisconnectNotify((QToolBar*)self, (QMetaMethod*)signal);
+void q_toolbar_super_disconnect_notify(void* self, void* signal) {
+    QToolBar_SuperDisconnectNotify((QToolBar*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbar_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2210,8 +2210,8 @@ void q_toolbar_update_micro_focus(void* self) {
     QToolBar_UpdateMicroFocus((QToolBar*)self);
 }
 
-void q_toolbar_qbase_update_micro_focus(void* self) {
-    QToolBar_QBaseUpdateMicroFocus((QToolBar*)self);
+void q_toolbar_super_update_micro_focus(void* self) {
+    QToolBar_SuperUpdateMicroFocus((QToolBar*)self);
 }
 
 void q_toolbar_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2222,8 +2222,8 @@ void q_toolbar_create(void* self) {
     QToolBar_Create((QToolBar*)self);
 }
 
-void q_toolbar_qbase_create(void* self) {
-    QToolBar_QBaseCreate((QToolBar*)self);
+void q_toolbar_super_create(void* self) {
+    QToolBar_SuperCreate((QToolBar*)self);
 }
 
 void q_toolbar_on_create(void* self, void (*callback)()) {
@@ -2234,8 +2234,8 @@ void q_toolbar_destroy(void* self) {
     QToolBar_Destroy((QToolBar*)self);
 }
 
-void q_toolbar_qbase_destroy(void* self) {
-    QToolBar_QBaseDestroy((QToolBar*)self);
+void q_toolbar_super_destroy(void* self) {
+    QToolBar_SuperDestroy((QToolBar*)self);
 }
 
 void q_toolbar_on_destroy(void* self, void (*callback)()) {
@@ -2246,8 +2246,8 @@ bool q_toolbar_focus_next_child(void* self) {
     return QToolBar_FocusNextChild((QToolBar*)self);
 }
 
-bool q_toolbar_qbase_focus_next_child(void* self) {
-    return QToolBar_QBaseFocusNextChild((QToolBar*)self);
+bool q_toolbar_super_focus_next_child(void* self) {
+    return QToolBar_SuperFocusNextChild((QToolBar*)self);
 }
 
 void q_toolbar_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2258,8 +2258,8 @@ bool q_toolbar_focus_previous_child(void* self) {
     return QToolBar_FocusPreviousChild((QToolBar*)self);
 }
 
-bool q_toolbar_qbase_focus_previous_child(void* self) {
-    return QToolBar_QBaseFocusPreviousChild((QToolBar*)self);
+bool q_toolbar_super_focus_previous_child(void* self) {
+    return QToolBar_SuperFocusPreviousChild((QToolBar*)self);
 }
 
 void q_toolbar_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2270,8 +2270,8 @@ QObject* q_toolbar_sender(void* self) {
     return QToolBar_Sender((QToolBar*)self);
 }
 
-QObject* q_toolbar_qbase_sender(void* self) {
-    return QToolBar_QBaseSender((QToolBar*)self);
+QObject* q_toolbar_super_sender(void* self) {
+    return QToolBar_SuperSender((QToolBar*)self);
 }
 
 void q_toolbar_on_sender(void* self, QObject* (*callback)()) {
@@ -2282,8 +2282,8 @@ int32_t q_toolbar_sender_signal_index(void* self) {
     return QToolBar_SenderSignalIndex((QToolBar*)self);
 }
 
-int32_t q_toolbar_qbase_sender_signal_index(void* self) {
-    return QToolBar_QBaseSenderSignalIndex((QToolBar*)self);
+int32_t q_toolbar_super_sender_signal_index(void* self) {
+    return QToolBar_SuperSenderSignalIndex((QToolBar*)self);
 }
 
 void q_toolbar_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2294,8 +2294,8 @@ int32_t q_toolbar_receivers(void* self, const char* signal) {
     return QToolBar_Receivers((QToolBar*)self, signal);
 }
 
-int32_t q_toolbar_qbase_receivers(void* self, const char* signal) {
-    return QToolBar_QBaseReceivers((QToolBar*)self, signal);
+int32_t q_toolbar_super_receivers(void* self, const char* signal) {
+    return QToolBar_SuperReceivers((QToolBar*)self, signal);
 }
 
 void q_toolbar_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2306,8 +2306,8 @@ bool q_toolbar_is_signal_connected(void* self, void* signal) {
     return QToolBar_IsSignalConnected((QToolBar*)self, (QMetaMethod*)signal);
 }
 
-bool q_toolbar_qbase_is_signal_connected(void* self, void* signal) {
-    return QToolBar_QBaseIsSignalConnected((QToolBar*)self, (QMetaMethod*)signal);
+bool q_toolbar_super_is_signal_connected(void* self, void* signal) {
+    return QToolBar_SuperIsSignalConnected((QToolBar*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2318,8 +2318,8 @@ double q_toolbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
     return QToolBar_GetDecodedMetricF((QToolBar*)self, metricA, metricB);
 }
 
-double q_toolbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QToolBar_QBaseGetDecodedMetricF((QToolBar*)self, metricA, metricB);
+double q_toolbar_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QToolBar_SuperGetDecodedMetricF((QToolBar*)self, metricA, metricB);
 }
 
 void q_toolbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

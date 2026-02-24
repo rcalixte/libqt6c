@@ -30,8 +30,8 @@ void k_titlewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KTitleWidget_OnMetaObject((KTitleWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_titlewidget_qbase_meta_object(void* self) {
-    return KTitleWidget_QBaseMetaObject((KTitleWidget*)self);
+const QMetaObject* k_titlewidget_super_meta_object(void* self) {
+    return KTitleWidget_SuperMetaObject((KTitleWidget*)self);
 }
 
 void* k_titlewidget_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_titlewidget_on_metacast(void* self, void* (*callback)(void*, const char*)
     KTitleWidget_OnMetacast((KTitleWidget*)self, (intptr_t)callback);
 }
 
-void* k_titlewidget_qbase_metacast(void* self, const char* param1) {
-    return KTitleWidget_QBaseMetacast((KTitleWidget*)self, param1);
+void* k_titlewidget_super_metacast(void* self, const char* param1) {
+    return KTitleWidget_SuperMetacast((KTitleWidget*)self, param1);
 }
 
 int32_t k_titlewidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_titlewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KTitleWidget_OnMetacall((KTitleWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_titlewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTitleWidget_QBaseMetacall((KTitleWidget*)self, param1, param2, param3);
+int32_t k_titlewidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTitleWidget_SuperMetacall((KTitleWidget*)self, param1, param2, param3);
 }
 
 const char* k_titlewidget_tr(const char* s) {
@@ -143,8 +143,8 @@ void k_titlewidget_on_change_event(void* self, void (*callback)(void*, void*)) {
     KTitleWidget_OnChangeEvent((KTitleWidget*)self, (intptr_t)callback);
 }
 
-void k_titlewidget_qbase_change_event(void* self, void* e) {
-    KTitleWidget_QBaseChangeEvent((KTitleWidget*)self, (QEvent*)e);
+void k_titlewidget_super_change_event(void* self, void* e) {
+    KTitleWidget_SuperChangeEvent((KTitleWidget*)self, (QEvent*)e);
 }
 
 void k_titlewidget_show_event(void* self, void* event) {
@@ -155,8 +155,8 @@ void k_titlewidget_on_show_event(void* self, void (*callback)(void*, void*)) {
     KTitleWidget_OnShowEvent((KTitleWidget*)self, (intptr_t)callback);
 }
 
-void k_titlewidget_qbase_show_event(void* self, void* event) {
-    KTitleWidget_QBaseShowEvent((KTitleWidget*)self, (QShowEvent*)event);
+void k_titlewidget_super_show_event(void* self, void* event) {
+    KTitleWidget_SuperShowEvent((KTitleWidget*)self, (QShowEvent*)event);
 }
 
 bool k_titlewidget_event_filter(void* self, void* object, void* event) {
@@ -167,8 +167,8 @@ void k_titlewidget_on_event_filter(void* self, bool (*callback)(void*, void*, vo
     KTitleWidget_OnEventFilter((KTitleWidget*)self, (intptr_t)callback);
 }
 
-bool k_titlewidget_qbase_event_filter(void* self, void* object, void* event) {
-    return KTitleWidget_QBaseEventFilter((KTitleWidget*)self, (QObject*)object, (QEvent*)event);
+bool k_titlewidget_super_event_filter(void* self, void* object, void* event) {
+    return KTitleWidget_SuperEventFilter((KTitleWidget*)self, (QObject*)object, (QEvent*)event);
 }
 
 const char* k_titlewidget_tr2(const char* s, const char* c) {
@@ -1586,8 +1586,8 @@ int32_t k_titlewidget_dev_type(void* self) {
     return KTitleWidget_DevType((KTitleWidget*)self);
 }
 
-int32_t k_titlewidget_qbase_dev_type(void* self) {
-    return KTitleWidget_QBaseDevType((KTitleWidget*)self);
+int32_t k_titlewidget_super_dev_type(void* self) {
+    return KTitleWidget_SuperDevType((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1598,8 +1598,8 @@ void k_titlewidget_set_visible(void* self, bool visible) {
     KTitleWidget_SetVisible((KTitleWidget*)self, visible);
 }
 
-void k_titlewidget_qbase_set_visible(void* self, bool visible) {
-    KTitleWidget_QBaseSetVisible((KTitleWidget*)self, visible);
+void k_titlewidget_super_set_visible(void* self, bool visible) {
+    KTitleWidget_SuperSetVisible((KTitleWidget*)self, visible);
 }
 
 void k_titlewidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1610,8 +1610,8 @@ QSize* k_titlewidget_size_hint(void* self) {
     return KTitleWidget_SizeHint((KTitleWidget*)self);
 }
 
-QSize* k_titlewidget_qbase_size_hint(void* self) {
-    return KTitleWidget_QBaseSizeHint((KTitleWidget*)self);
+QSize* k_titlewidget_super_size_hint(void* self) {
+    return KTitleWidget_SuperSizeHint((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1622,8 +1622,8 @@ QSize* k_titlewidget_minimum_size_hint(void* self) {
     return KTitleWidget_MinimumSizeHint((KTitleWidget*)self);
 }
 
-QSize* k_titlewidget_qbase_minimum_size_hint(void* self) {
-    return KTitleWidget_QBaseMinimumSizeHint((KTitleWidget*)self);
+QSize* k_titlewidget_super_minimum_size_hint(void* self) {
+    return KTitleWidget_SuperMinimumSizeHint((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1634,8 +1634,8 @@ int32_t k_titlewidget_height_for_width(void* self, int param1) {
     return KTitleWidget_HeightForWidth((KTitleWidget*)self, param1);
 }
 
-int32_t k_titlewidget_qbase_height_for_width(void* self, int param1) {
-    return KTitleWidget_QBaseHeightForWidth((KTitleWidget*)self, param1);
+int32_t k_titlewidget_super_height_for_width(void* self, int param1) {
+    return KTitleWidget_SuperHeightForWidth((KTitleWidget*)self, param1);
 }
 
 void k_titlewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1646,8 +1646,8 @@ bool k_titlewidget_has_height_for_width(void* self) {
     return KTitleWidget_HasHeightForWidth((KTitleWidget*)self);
 }
 
-bool k_titlewidget_qbase_has_height_for_width(void* self) {
-    return KTitleWidget_QBaseHasHeightForWidth((KTitleWidget*)self);
+bool k_titlewidget_super_has_height_for_width(void* self) {
+    return KTitleWidget_SuperHasHeightForWidth((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1658,8 +1658,8 @@ QPaintEngine* k_titlewidget_paint_engine(void* self) {
     return KTitleWidget_PaintEngine((KTitleWidget*)self);
 }
 
-QPaintEngine* k_titlewidget_qbase_paint_engine(void* self) {
-    return KTitleWidget_QBasePaintEngine((KTitleWidget*)self);
+QPaintEngine* k_titlewidget_super_paint_engine(void* self) {
+    return KTitleWidget_SuperPaintEngine((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1670,8 +1670,8 @@ bool k_titlewidget_event(void* self, void* event) {
     return KTitleWidget_Event((KTitleWidget*)self, (QEvent*)event);
 }
 
-bool k_titlewidget_qbase_event(void* self, void* event) {
-    return KTitleWidget_QBaseEvent((KTitleWidget*)self, (QEvent*)event);
+bool k_titlewidget_super_event(void* self, void* event) {
+    return KTitleWidget_SuperEvent((KTitleWidget*)self, (QEvent*)event);
 }
 
 void k_titlewidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ void k_titlewidget_mouse_press_event(void* self, void* event) {
     KTitleWidget_MousePressEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
-void k_titlewidget_qbase_mouse_press_event(void* self, void* event) {
-    KTitleWidget_QBaseMousePressEvent((KTitleWidget*)self, (QMouseEvent*)event);
+void k_titlewidget_super_mouse_press_event(void* self, void* event) {
+    KTitleWidget_SuperMousePressEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
 void k_titlewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void k_titlewidget_mouse_release_event(void* self, void* event) {
     KTitleWidget_MouseReleaseEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
-void k_titlewidget_qbase_mouse_release_event(void* self, void* event) {
-    KTitleWidget_QBaseMouseReleaseEvent((KTitleWidget*)self, (QMouseEvent*)event);
+void k_titlewidget_super_mouse_release_event(void* self, void* event) {
+    KTitleWidget_SuperMouseReleaseEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
 void k_titlewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void k_titlewidget_mouse_double_click_event(void* self, void* event) {
     KTitleWidget_MouseDoubleClickEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
-void k_titlewidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KTitleWidget_QBaseMouseDoubleClickEvent((KTitleWidget*)self, (QMouseEvent*)event);
+void k_titlewidget_super_mouse_double_click_event(void* self, void* event) {
+    KTitleWidget_SuperMouseDoubleClickEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
 void k_titlewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void k_titlewidget_mouse_move_event(void* self, void* event) {
     KTitleWidget_MouseMoveEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
-void k_titlewidget_qbase_mouse_move_event(void* self, void* event) {
-    KTitleWidget_QBaseMouseMoveEvent((KTitleWidget*)self, (QMouseEvent*)event);
+void k_titlewidget_super_mouse_move_event(void* self, void* event) {
+    KTitleWidget_SuperMouseMoveEvent((KTitleWidget*)self, (QMouseEvent*)event);
 }
 
 void k_titlewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_titlewidget_wheel_event(void* self, void* event) {
     KTitleWidget_WheelEvent((KTitleWidget*)self, (QWheelEvent*)event);
 }
 
-void k_titlewidget_qbase_wheel_event(void* self, void* event) {
-    KTitleWidget_QBaseWheelEvent((KTitleWidget*)self, (QWheelEvent*)event);
+void k_titlewidget_super_wheel_event(void* self, void* event) {
+    KTitleWidget_SuperWheelEvent((KTitleWidget*)self, (QWheelEvent*)event);
 }
 
 void k_titlewidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void k_titlewidget_key_press_event(void* self, void* event) {
     KTitleWidget_KeyPressEvent((KTitleWidget*)self, (QKeyEvent*)event);
 }
 
-void k_titlewidget_qbase_key_press_event(void* self, void* event) {
-    KTitleWidget_QBaseKeyPressEvent((KTitleWidget*)self, (QKeyEvent*)event);
+void k_titlewidget_super_key_press_event(void* self, void* event) {
+    KTitleWidget_SuperKeyPressEvent((KTitleWidget*)self, (QKeyEvent*)event);
 }
 
 void k_titlewidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void k_titlewidget_key_release_event(void* self, void* event) {
     KTitleWidget_KeyReleaseEvent((KTitleWidget*)self, (QKeyEvent*)event);
 }
 
-void k_titlewidget_qbase_key_release_event(void* self, void* event) {
-    KTitleWidget_QBaseKeyReleaseEvent((KTitleWidget*)self, (QKeyEvent*)event);
+void k_titlewidget_super_key_release_event(void* self, void* event) {
+    KTitleWidget_SuperKeyReleaseEvent((KTitleWidget*)self, (QKeyEvent*)event);
 }
 
 void k_titlewidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void k_titlewidget_focus_in_event(void* self, void* event) {
     KTitleWidget_FocusInEvent((KTitleWidget*)self, (QFocusEvent*)event);
 }
 
-void k_titlewidget_qbase_focus_in_event(void* self, void* event) {
-    KTitleWidget_QBaseFocusInEvent((KTitleWidget*)self, (QFocusEvent*)event);
+void k_titlewidget_super_focus_in_event(void* self, void* event) {
+    KTitleWidget_SuperFocusInEvent((KTitleWidget*)self, (QFocusEvent*)event);
 }
 
 void k_titlewidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void k_titlewidget_focus_out_event(void* self, void* event) {
     KTitleWidget_FocusOutEvent((KTitleWidget*)self, (QFocusEvent*)event);
 }
 
-void k_titlewidget_qbase_focus_out_event(void* self, void* event) {
-    KTitleWidget_QBaseFocusOutEvent((KTitleWidget*)self, (QFocusEvent*)event);
+void k_titlewidget_super_focus_out_event(void* self, void* event) {
+    KTitleWidget_SuperFocusOutEvent((KTitleWidget*)self, (QFocusEvent*)event);
 }
 
 void k_titlewidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void k_titlewidget_enter_event(void* self, void* event) {
     KTitleWidget_EnterEvent((KTitleWidget*)self, (QEnterEvent*)event);
 }
 
-void k_titlewidget_qbase_enter_event(void* self, void* event) {
-    KTitleWidget_QBaseEnterEvent((KTitleWidget*)self, (QEnterEvent*)event);
+void k_titlewidget_super_enter_event(void* self, void* event) {
+    KTitleWidget_SuperEnterEvent((KTitleWidget*)self, (QEnterEvent*)event);
 }
 
 void k_titlewidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void k_titlewidget_leave_event(void* self, void* event) {
     KTitleWidget_LeaveEvent((KTitleWidget*)self, (QEvent*)event);
 }
 
-void k_titlewidget_qbase_leave_event(void* self, void* event) {
-    KTitleWidget_QBaseLeaveEvent((KTitleWidget*)self, (QEvent*)event);
+void k_titlewidget_super_leave_event(void* self, void* event) {
+    KTitleWidget_SuperLeaveEvent((KTitleWidget*)self, (QEvent*)event);
 }
 
 void k_titlewidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void k_titlewidget_paint_event(void* self, void* event) {
     KTitleWidget_PaintEvent((KTitleWidget*)self, (QPaintEvent*)event);
 }
 
-void k_titlewidget_qbase_paint_event(void* self, void* event) {
-    KTitleWidget_QBasePaintEvent((KTitleWidget*)self, (QPaintEvent*)event);
+void k_titlewidget_super_paint_event(void* self, void* event) {
+    KTitleWidget_SuperPaintEvent((KTitleWidget*)self, (QPaintEvent*)event);
 }
 
 void k_titlewidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void k_titlewidget_move_event(void* self, void* event) {
     KTitleWidget_MoveEvent((KTitleWidget*)self, (QMoveEvent*)event);
 }
 
-void k_titlewidget_qbase_move_event(void* self, void* event) {
-    KTitleWidget_QBaseMoveEvent((KTitleWidget*)self, (QMoveEvent*)event);
+void k_titlewidget_super_move_event(void* self, void* event) {
+    KTitleWidget_SuperMoveEvent((KTitleWidget*)self, (QMoveEvent*)event);
 }
 
 void k_titlewidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void k_titlewidget_resize_event(void* self, void* event) {
     KTitleWidget_ResizeEvent((KTitleWidget*)self, (QResizeEvent*)event);
 }
 
-void k_titlewidget_qbase_resize_event(void* self, void* event) {
-    KTitleWidget_QBaseResizeEvent((KTitleWidget*)self, (QResizeEvent*)event);
+void k_titlewidget_super_resize_event(void* self, void* event) {
+    KTitleWidget_SuperResizeEvent((KTitleWidget*)self, (QResizeEvent*)event);
 }
 
 void k_titlewidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void k_titlewidget_close_event(void* self, void* event) {
     KTitleWidget_CloseEvent((KTitleWidget*)self, (QCloseEvent*)event);
 }
 
-void k_titlewidget_qbase_close_event(void* self, void* event) {
-    KTitleWidget_QBaseCloseEvent((KTitleWidget*)self, (QCloseEvent*)event);
+void k_titlewidget_super_close_event(void* self, void* event) {
+    KTitleWidget_SuperCloseEvent((KTitleWidget*)self, (QCloseEvent*)event);
 }
 
 void k_titlewidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void k_titlewidget_context_menu_event(void* self, void* event) {
     KTitleWidget_ContextMenuEvent((KTitleWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_titlewidget_qbase_context_menu_event(void* self, void* event) {
-    KTitleWidget_QBaseContextMenuEvent((KTitleWidget*)self, (QContextMenuEvent*)event);
+void k_titlewidget_super_context_menu_event(void* self, void* event) {
+    KTitleWidget_SuperContextMenuEvent((KTitleWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_titlewidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_titlewidget_tablet_event(void* self, void* event) {
     KTitleWidget_TabletEvent((KTitleWidget*)self, (QTabletEvent*)event);
 }
 
-void k_titlewidget_qbase_tablet_event(void* self, void* event) {
-    KTitleWidget_QBaseTabletEvent((KTitleWidget*)self, (QTabletEvent*)event);
+void k_titlewidget_super_tablet_event(void* self, void* event) {
+    KTitleWidget_SuperTabletEvent((KTitleWidget*)self, (QTabletEvent*)event);
 }
 
 void k_titlewidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_titlewidget_action_event(void* self, void* event) {
     KTitleWidget_ActionEvent((KTitleWidget*)self, (QActionEvent*)event);
 }
 
-void k_titlewidget_qbase_action_event(void* self, void* event) {
-    KTitleWidget_QBaseActionEvent((KTitleWidget*)self, (QActionEvent*)event);
+void k_titlewidget_super_action_event(void* self, void* event) {
+    KTitleWidget_SuperActionEvent((KTitleWidget*)self, (QActionEvent*)event);
 }
 
 void k_titlewidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_titlewidget_drag_enter_event(void* self, void* event) {
     KTitleWidget_DragEnterEvent((KTitleWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_titlewidget_qbase_drag_enter_event(void* self, void* event) {
-    KTitleWidget_QBaseDragEnterEvent((KTitleWidget*)self, (QDragEnterEvent*)event);
+void k_titlewidget_super_drag_enter_event(void* self, void* event) {
+    KTitleWidget_SuperDragEnterEvent((KTitleWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_titlewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_titlewidget_drag_move_event(void* self, void* event) {
     KTitleWidget_DragMoveEvent((KTitleWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_titlewidget_qbase_drag_move_event(void* self, void* event) {
-    KTitleWidget_QBaseDragMoveEvent((KTitleWidget*)self, (QDragMoveEvent*)event);
+void k_titlewidget_super_drag_move_event(void* self, void* event) {
+    KTitleWidget_SuperDragMoveEvent((KTitleWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_titlewidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_titlewidget_drag_leave_event(void* self, void* event) {
     KTitleWidget_DragLeaveEvent((KTitleWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_titlewidget_qbase_drag_leave_event(void* self, void* event) {
-    KTitleWidget_QBaseDragLeaveEvent((KTitleWidget*)self, (QDragLeaveEvent*)event);
+void k_titlewidget_super_drag_leave_event(void* self, void* event) {
+    KTitleWidget_SuperDragLeaveEvent((KTitleWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_titlewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_titlewidget_drop_event(void* self, void* event) {
     KTitleWidget_DropEvent((KTitleWidget*)self, (QDropEvent*)event);
 }
 
-void k_titlewidget_qbase_drop_event(void* self, void* event) {
-    KTitleWidget_QBaseDropEvent((KTitleWidget*)self, (QDropEvent*)event);
+void k_titlewidget_super_drop_event(void* self, void* event) {
+    KTitleWidget_SuperDropEvent((KTitleWidget*)self, (QDropEvent*)event);
 }
 
 void k_titlewidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void k_titlewidget_hide_event(void* self, void* event) {
     KTitleWidget_HideEvent((KTitleWidget*)self, (QHideEvent*)event);
 }
 
-void k_titlewidget_qbase_hide_event(void* self, void* event) {
-    KTitleWidget_QBaseHideEvent((KTitleWidget*)self, (QHideEvent*)event);
+void k_titlewidget_super_hide_event(void* self, void* event) {
+    KTitleWidget_SuperHideEvent((KTitleWidget*)self, (QHideEvent*)event);
 }
 
 void k_titlewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ bool k_titlewidget_native_event(void* self, char* eventType, void* message, intp
     return KTitleWidget_NativeEvent((KTitleWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_titlewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KTitleWidget_QBaseNativeEvent((KTitleWidget*)self, qstring(eventType), message, result);
+bool k_titlewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KTitleWidget_SuperNativeEvent((KTitleWidget*)self, qstring(eventType), message, result);
 }
 
 void k_titlewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1970,8 +1970,8 @@ int32_t k_titlewidget_metric(void* self, int32_t param1) {
     return KTitleWidget_Metric((KTitleWidget*)self, param1);
 }
 
-int32_t k_titlewidget_qbase_metric(void* self, int32_t param1) {
-    return KTitleWidget_QBaseMetric((KTitleWidget*)self, param1);
+int32_t k_titlewidget_super_metric(void* self, int32_t param1) {
+    return KTitleWidget_SuperMetric((KTitleWidget*)self, param1);
 }
 
 void k_titlewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1982,8 +1982,8 @@ void k_titlewidget_init_painter(void* self, void* painter) {
     KTitleWidget_InitPainter((KTitleWidget*)self, (QPainter*)painter);
 }
 
-void k_titlewidget_qbase_init_painter(void* self, void* painter) {
-    KTitleWidget_QBaseInitPainter((KTitleWidget*)self, (QPainter*)painter);
+void k_titlewidget_super_init_painter(void* self, void* painter) {
+    KTitleWidget_SuperInitPainter((KTitleWidget*)self, (QPainter*)painter);
 }
 
 void k_titlewidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ QPaintDevice* k_titlewidget_redirected(void* self, void* offset) {
     return KTitleWidget_Redirected((KTitleWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_titlewidget_qbase_redirected(void* self, void* offset) {
-    return KTitleWidget_QBaseRedirected((KTitleWidget*)self, (QPoint*)offset);
+QPaintDevice* k_titlewidget_super_redirected(void* self, void* offset) {
+    return KTitleWidget_SuperRedirected((KTitleWidget*)self, (QPoint*)offset);
 }
 
 void k_titlewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ QPainter* k_titlewidget_shared_painter(void* self) {
     return KTitleWidget_SharedPainter((KTitleWidget*)self);
 }
 
-QPainter* k_titlewidget_qbase_shared_painter(void* self) {
-    return KTitleWidget_QBaseSharedPainter((KTitleWidget*)self);
+QPainter* k_titlewidget_super_shared_painter(void* self) {
+    return KTitleWidget_SuperSharedPainter((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2018,8 +2018,8 @@ void k_titlewidget_input_method_event(void* self, void* param1) {
     KTitleWidget_InputMethodEvent((KTitleWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_titlewidget_qbase_input_method_event(void* self, void* param1) {
-    KTitleWidget_QBaseInputMethodEvent((KTitleWidget*)self, (QInputMethodEvent*)param1);
+void k_titlewidget_super_input_method_event(void* self, void* param1) {
+    KTitleWidget_SuperInputMethodEvent((KTitleWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_titlewidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ QVariant* k_titlewidget_input_method_query(void* self, int32_t param1) {
     return KTitleWidget_InputMethodQuery((KTitleWidget*)self, param1);
 }
 
-QVariant* k_titlewidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KTitleWidget_QBaseInputMethodQuery((KTitleWidget*)self, param1);
+QVariant* k_titlewidget_super_input_method_query(void* self, int32_t param1) {
+    return KTitleWidget_SuperInputMethodQuery((KTitleWidget*)self, param1);
 }
 
 void k_titlewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2042,8 +2042,8 @@ bool k_titlewidget_focus_next_prev_child(void* self, bool next) {
     return KTitleWidget_FocusNextPrevChild((KTitleWidget*)self, next);
 }
 
-bool k_titlewidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KTitleWidget_QBaseFocusNextPrevChild((KTitleWidget*)self, next);
+bool k_titlewidget_super_focus_next_prev_child(void* self, bool next) {
+    return KTitleWidget_SuperFocusNextPrevChild((KTitleWidget*)self, next);
 }
 
 void k_titlewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2054,8 +2054,8 @@ void k_titlewidget_timer_event(void* self, void* event) {
     KTitleWidget_TimerEvent((KTitleWidget*)self, (QTimerEvent*)event);
 }
 
-void k_titlewidget_qbase_timer_event(void* self, void* event) {
-    KTitleWidget_QBaseTimerEvent((KTitleWidget*)self, (QTimerEvent*)event);
+void k_titlewidget_super_timer_event(void* self, void* event) {
+    KTitleWidget_SuperTimerEvent((KTitleWidget*)self, (QTimerEvent*)event);
 }
 
 void k_titlewidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_titlewidget_child_event(void* self, void* event) {
     KTitleWidget_ChildEvent((KTitleWidget*)self, (QChildEvent*)event);
 }
 
-void k_titlewidget_qbase_child_event(void* self, void* event) {
-    KTitleWidget_QBaseChildEvent((KTitleWidget*)self, (QChildEvent*)event);
+void k_titlewidget_super_child_event(void* self, void* event) {
+    KTitleWidget_SuperChildEvent((KTitleWidget*)self, (QChildEvent*)event);
 }
 
 void k_titlewidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void k_titlewidget_custom_event(void* self, void* event) {
     KTitleWidget_CustomEvent((KTitleWidget*)self, (QEvent*)event);
 }
 
-void k_titlewidget_qbase_custom_event(void* self, void* event) {
-    KTitleWidget_QBaseCustomEvent((KTitleWidget*)self, (QEvent*)event);
+void k_titlewidget_super_custom_event(void* self, void* event) {
+    KTitleWidget_SuperCustomEvent((KTitleWidget*)self, (QEvent*)event);
 }
 
 void k_titlewidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ void k_titlewidget_connect_notify(void* self, void* signal) {
     KTitleWidget_ConnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_titlewidget_qbase_connect_notify(void* self, void* signal) {
-    KTitleWidget_QBaseConnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
+void k_titlewidget_super_connect_notify(void* self, void* signal) {
+    KTitleWidget_SuperConnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_titlewidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ void k_titlewidget_disconnect_notify(void* self, void* signal) {
     KTitleWidget_DisconnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_titlewidget_qbase_disconnect_notify(void* self, void* signal) {
-    KTitleWidget_QBaseDisconnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
+void k_titlewidget_super_disconnect_notify(void* self, void* signal) {
+    KTitleWidget_SuperDisconnectNotify((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_titlewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ void k_titlewidget_update_micro_focus(void* self) {
     KTitleWidget_UpdateMicroFocus((KTitleWidget*)self);
 }
 
-void k_titlewidget_qbase_update_micro_focus(void* self) {
-    KTitleWidget_QBaseUpdateMicroFocus((KTitleWidget*)self);
+void k_titlewidget_super_update_micro_focus(void* self) {
+    KTitleWidget_SuperUpdateMicroFocus((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2126,8 +2126,8 @@ void k_titlewidget_create(void* self) {
     KTitleWidget_Create((KTitleWidget*)self);
 }
 
-void k_titlewidget_qbase_create(void* self) {
-    KTitleWidget_QBaseCreate((KTitleWidget*)self);
+void k_titlewidget_super_create(void* self) {
+    KTitleWidget_SuperCreate((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_create(void* self, void (*callback)()) {
@@ -2138,8 +2138,8 @@ void k_titlewidget_destroy(void* self) {
     KTitleWidget_Destroy((KTitleWidget*)self);
 }
 
-void k_titlewidget_qbase_destroy(void* self) {
-    KTitleWidget_QBaseDestroy((KTitleWidget*)self);
+void k_titlewidget_super_destroy(void* self) {
+    KTitleWidget_SuperDestroy((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_destroy(void* self, void (*callback)()) {
@@ -2150,8 +2150,8 @@ bool k_titlewidget_focus_next_child(void* self) {
     return KTitleWidget_FocusNextChild((KTitleWidget*)self);
 }
 
-bool k_titlewidget_qbase_focus_next_child(void* self) {
-    return KTitleWidget_QBaseFocusNextChild((KTitleWidget*)self);
+bool k_titlewidget_super_focus_next_child(void* self) {
+    return KTitleWidget_SuperFocusNextChild((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2162,8 +2162,8 @@ bool k_titlewidget_focus_previous_child(void* self) {
     return KTitleWidget_FocusPreviousChild((KTitleWidget*)self);
 }
 
-bool k_titlewidget_qbase_focus_previous_child(void* self) {
-    return KTitleWidget_QBaseFocusPreviousChild((KTitleWidget*)self);
+bool k_titlewidget_super_focus_previous_child(void* self) {
+    return KTitleWidget_SuperFocusPreviousChild((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2174,8 +2174,8 @@ QObject* k_titlewidget_sender(void* self) {
     return KTitleWidget_Sender((KTitleWidget*)self);
 }
 
-QObject* k_titlewidget_qbase_sender(void* self) {
-    return KTitleWidget_QBaseSender((KTitleWidget*)self);
+QObject* k_titlewidget_super_sender(void* self) {
+    return KTitleWidget_SuperSender((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2186,8 +2186,8 @@ int32_t k_titlewidget_sender_signal_index(void* self) {
     return KTitleWidget_SenderSignalIndex((KTitleWidget*)self);
 }
 
-int32_t k_titlewidget_qbase_sender_signal_index(void* self) {
-    return KTitleWidget_QBaseSenderSignalIndex((KTitleWidget*)self);
+int32_t k_titlewidget_super_sender_signal_index(void* self) {
+    return KTitleWidget_SuperSenderSignalIndex((KTitleWidget*)self);
 }
 
 void k_titlewidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2198,8 +2198,8 @@ int32_t k_titlewidget_receivers(void* self, const char* signal) {
     return KTitleWidget_Receivers((KTitleWidget*)self, signal);
 }
 
-int32_t k_titlewidget_qbase_receivers(void* self, const char* signal) {
-    return KTitleWidget_QBaseReceivers((KTitleWidget*)self, signal);
+int32_t k_titlewidget_super_receivers(void* self, const char* signal) {
+    return KTitleWidget_SuperReceivers((KTitleWidget*)self, signal);
 }
 
 void k_titlewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2210,8 +2210,8 @@ bool k_titlewidget_is_signal_connected(void* self, void* signal) {
     return KTitleWidget_IsSignalConnected((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_titlewidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KTitleWidget_QBaseIsSignalConnected((KTitleWidget*)self, (QMetaMethod*)signal);
+bool k_titlewidget_super_is_signal_connected(void* self, void* signal) {
+    return KTitleWidget_SuperIsSignalConnected((KTitleWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_titlewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2222,8 +2222,8 @@ double k_titlewidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KTitleWidget_GetDecodedMetricF((KTitleWidget*)self, metricA, metricB);
 }
 
-double k_titlewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KTitleWidget_QBaseGetDecodedMetricF((KTitleWidget*)self, metricA, metricB);
+double k_titlewidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KTitleWidget_SuperGetDecodedMetricF((KTitleWidget*)self, metricA, metricB);
 }
 
 void k_titlewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

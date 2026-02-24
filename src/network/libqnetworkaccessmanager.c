@@ -33,8 +33,8 @@ void q_networkaccessmanager_on_meta_object(void* self, const QMetaObject* (*call
     QNetworkAccessManager_OnMetaObject((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_networkaccessmanager_qbase_meta_object(void* self) {
-    return QNetworkAccessManager_QBaseMetaObject((QNetworkAccessManager*)self);
+const QMetaObject* q_networkaccessmanager_super_meta_object(void* self) {
+    return QNetworkAccessManager_SuperMetaObject((QNetworkAccessManager*)self);
 }
 
 void* q_networkaccessmanager_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_networkaccessmanager_on_metacast(void* self, void* (*callback)(void*, con
     QNetworkAccessManager_OnMetacast((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-void* q_networkaccessmanager_qbase_metacast(void* self, const char* param1) {
-    return QNetworkAccessManager_QBaseMetacast((QNetworkAccessManager*)self, param1);
+void* q_networkaccessmanager_super_metacast(void* self, const char* param1) {
+    return QNetworkAccessManager_SuperMetacast((QNetworkAccessManager*)self, param1);
 }
 
 int32_t q_networkaccessmanager_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_networkaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, i
     QNetworkAccessManager_OnMetacall((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-int32_t q_networkaccessmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QNetworkAccessManager_QBaseMetacall((QNetworkAccessManager*)self, param1, param2, param3);
+int32_t q_networkaccessmanager_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QNetworkAccessManager_SuperMetacall((QNetworkAccessManager*)self, param1, param2, param3);
 }
 
 const char* q_networkaccessmanager_tr(const char* s) {
@@ -91,8 +91,8 @@ void q_networkaccessmanager_on_supported_schemes(void* self, const char** (*call
     QNetworkAccessManager_OnSupportedSchemes((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-const char** q_networkaccessmanager_qbase_supported_schemes(void* self) {
-    libqt_list _arr = QNetworkAccessManager_QBaseSupportedSchemes((QNetworkAccessManager*)self);
+const char** q_networkaccessmanager_super_supported_schemes(void* self) {
+    libqt_list _arr = QNetworkAccessManager_SuperSupportedSchemes((QNetworkAccessManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -331,8 +331,8 @@ void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callb
     QNetworkAccessManager_OnCreateRequest((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-QNetworkReply* q_networkaccessmanager_qbase_create_request(void* self, int32_t op, void* request, void* outgoingData) {
-    return QNetworkAccessManager_QBaseCreateRequest((QNetworkAccessManager*)self, op, (QNetworkRequest*)request, (QIODevice*)outgoingData);
+QNetworkReply* q_networkaccessmanager_super_create_request(void* self, int32_t op, void* request, void* outgoingData) {
+    return QNetworkAccessManager_SuperCreateRequest((QNetworkAccessManager*)self, op, (QNetworkRequest*)request, (QIODevice*)outgoingData);
 }
 
 const char** q_networkaccessmanager_supported_schemes_implementation(void* self) {
@@ -358,8 +358,8 @@ void q_networkaccessmanager_on_supported_schemes_implementation(void* self, cons
     QNetworkAccessManager_OnSupportedSchemesImplementation((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-const char** q_networkaccessmanager_qbase_supported_schemes_implementation(void* self) {
-    libqt_list _arr = QNetworkAccessManager_QBaseSupportedSchemesImplementation((QNetworkAccessManager*)self);
+const char** q_networkaccessmanager_super_supported_schemes_implementation(void* self) {
+    libqt_list _arr = QNetworkAccessManager_SuperSupportedSchemesImplementation((QNetworkAccessManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -630,8 +630,8 @@ bool q_networkaccessmanager_event(void* self, void* event) {
     return QNetworkAccessManager_Event((QNetworkAccessManager*)self, (QEvent*)event);
 }
 
-bool q_networkaccessmanager_qbase_event(void* self, void* event) {
-    return QNetworkAccessManager_QBaseEvent((QNetworkAccessManager*)self, (QEvent*)event);
+bool q_networkaccessmanager_super_event(void* self, void* event) {
+    return QNetworkAccessManager_SuperEvent((QNetworkAccessManager*)self, (QEvent*)event);
 }
 
 void q_networkaccessmanager_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -642,8 +642,8 @@ bool q_networkaccessmanager_event_filter(void* self, void* watched, void* event)
     return QNetworkAccessManager_EventFilter((QNetworkAccessManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_networkaccessmanager_qbase_event_filter(void* self, void* watched, void* event) {
-    return QNetworkAccessManager_QBaseEventFilter((QNetworkAccessManager*)self, (QObject*)watched, (QEvent*)event);
+bool q_networkaccessmanager_super_event_filter(void* self, void* watched, void* event) {
+    return QNetworkAccessManager_SuperEventFilter((QNetworkAccessManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_networkaccessmanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -654,8 +654,8 @@ void q_networkaccessmanager_timer_event(void* self, void* event) {
     QNetworkAccessManager_TimerEvent((QNetworkAccessManager*)self, (QTimerEvent*)event);
 }
 
-void q_networkaccessmanager_qbase_timer_event(void* self, void* event) {
-    QNetworkAccessManager_QBaseTimerEvent((QNetworkAccessManager*)self, (QTimerEvent*)event);
+void q_networkaccessmanager_super_timer_event(void* self, void* event) {
+    QNetworkAccessManager_SuperTimerEvent((QNetworkAccessManager*)self, (QTimerEvent*)event);
 }
 
 void q_networkaccessmanager_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -666,8 +666,8 @@ void q_networkaccessmanager_child_event(void* self, void* event) {
     QNetworkAccessManager_ChildEvent((QNetworkAccessManager*)self, (QChildEvent*)event);
 }
 
-void q_networkaccessmanager_qbase_child_event(void* self, void* event) {
-    QNetworkAccessManager_QBaseChildEvent((QNetworkAccessManager*)self, (QChildEvent*)event);
+void q_networkaccessmanager_super_child_event(void* self, void* event) {
+    QNetworkAccessManager_SuperChildEvent((QNetworkAccessManager*)self, (QChildEvent*)event);
 }
 
 void q_networkaccessmanager_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -678,8 +678,8 @@ void q_networkaccessmanager_custom_event(void* self, void* event) {
     QNetworkAccessManager_CustomEvent((QNetworkAccessManager*)self, (QEvent*)event);
 }
 
-void q_networkaccessmanager_qbase_custom_event(void* self, void* event) {
-    QNetworkAccessManager_QBaseCustomEvent((QNetworkAccessManager*)self, (QEvent*)event);
+void q_networkaccessmanager_super_custom_event(void* self, void* event) {
+    QNetworkAccessManager_SuperCustomEvent((QNetworkAccessManager*)self, (QEvent*)event);
 }
 
 void q_networkaccessmanager_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -690,8 +690,8 @@ void q_networkaccessmanager_connect_notify(void* self, void* signal) {
     QNetworkAccessManager_ConnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_networkaccessmanager_qbase_connect_notify(void* self, void* signal) {
-    QNetworkAccessManager_QBaseConnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
+void q_networkaccessmanager_super_connect_notify(void* self, void* signal) {
+    QNetworkAccessManager_SuperConnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
 void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -702,8 +702,8 @@ void q_networkaccessmanager_disconnect_notify(void* self, void* signal) {
     QNetworkAccessManager_DisconnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_networkaccessmanager_qbase_disconnect_notify(void* self, void* signal) {
-    QNetworkAccessManager_QBaseDisconnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
+void q_networkaccessmanager_super_disconnect_notify(void* self, void* signal) {
+    QNetworkAccessManager_SuperDisconnectNotify((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
 void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -714,8 +714,8 @@ QObject* q_networkaccessmanager_sender(void* self) {
     return QNetworkAccessManager_Sender((QNetworkAccessManager*)self);
 }
 
-QObject* q_networkaccessmanager_qbase_sender(void* self) {
-    return QNetworkAccessManager_QBaseSender((QNetworkAccessManager*)self);
+QObject* q_networkaccessmanager_super_sender(void* self) {
+    return QNetworkAccessManager_SuperSender((QNetworkAccessManager*)self);
 }
 
 void q_networkaccessmanager_on_sender(void* self, QObject* (*callback)()) {
@@ -726,8 +726,8 @@ int32_t q_networkaccessmanager_sender_signal_index(void* self) {
     return QNetworkAccessManager_SenderSignalIndex((QNetworkAccessManager*)self);
 }
 
-int32_t q_networkaccessmanager_qbase_sender_signal_index(void* self) {
-    return QNetworkAccessManager_QBaseSenderSignalIndex((QNetworkAccessManager*)self);
+int32_t q_networkaccessmanager_super_sender_signal_index(void* self) {
+    return QNetworkAccessManager_SuperSenderSignalIndex((QNetworkAccessManager*)self);
 }
 
 void q_networkaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -738,8 +738,8 @@ int32_t q_networkaccessmanager_receivers(void* self, const char* signal) {
     return QNetworkAccessManager_Receivers((QNetworkAccessManager*)self, signal);
 }
 
-int32_t q_networkaccessmanager_qbase_receivers(void* self, const char* signal) {
-    return QNetworkAccessManager_QBaseReceivers((QNetworkAccessManager*)self, signal);
+int32_t q_networkaccessmanager_super_receivers(void* self, const char* signal) {
+    return QNetworkAccessManager_SuperReceivers((QNetworkAccessManager*)self, signal);
 }
 
 void q_networkaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -750,8 +750,8 @@ bool q_networkaccessmanager_is_signal_connected(void* self, void* signal) {
     return QNetworkAccessManager_IsSignalConnected((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
-bool q_networkaccessmanager_qbase_is_signal_connected(void* self, void* signal) {
-    return QNetworkAccessManager_QBaseIsSignalConnected((QNetworkAccessManager*)self, (QMetaMethod*)signal);
+bool q_networkaccessmanager_super_is_signal_connected(void* self, void* signal) {
+    return QNetworkAccessManager_SuperIsSignalConnected((QNetworkAccessManager*)self, (QMetaMethod*)signal);
 }
 
 void q_networkaccessmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

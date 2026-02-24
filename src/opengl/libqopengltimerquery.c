@@ -21,8 +21,8 @@ void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback
     QOpenGLTimerQuery_OnMetaObject((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_opengltimerquery_qbase_meta_object(void* self) {
-    return QOpenGLTimerQuery_QBaseMetaObject((QOpenGLTimerQuery*)self);
+const QMetaObject* q_opengltimerquery_super_meta_object(void* self) {
+    return QOpenGLTimerQuery_SuperMetaObject((QOpenGLTimerQuery*)self);
 }
 
 void* q_opengltimerquery_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_opengltimerquery_on_metacast(void* self, void* (*callback)(void*, const c
     QOpenGLTimerQuery_OnMetacast((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-void* q_opengltimerquery_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLTimerQuery_QBaseMetacast((QOpenGLTimerQuery*)self, param1);
+void* q_opengltimerquery_super_metacast(void* self, const char* param1) {
+    return QOpenGLTimerQuery_SuperMetacast((QOpenGLTimerQuery*)self, param1);
 }
 
 int32_t q_opengltimerquery_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_opengltimerquery_on_metacall(void* self, int32_t (*callback)(void*, int32
     QOpenGLTimerQuery_OnMetacall((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
-int32_t q_opengltimerquery_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLTimerQuery_QBaseMetacall((QOpenGLTimerQuery*)self, param1, param2, param3);
+int32_t q_opengltimerquery_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLTimerQuery_SuperMetacall((QOpenGLTimerQuery*)self, param1, param2, param3);
 }
 
 const char* q_opengltimerquery_tr(const char* s) {
@@ -325,8 +325,8 @@ bool q_opengltimerquery_event(void* self, void* event) {
     return QOpenGLTimerQuery_Event((QOpenGLTimerQuery*)self, (QEvent*)event);
 }
 
-bool q_opengltimerquery_qbase_event(void* self, void* event) {
-    return QOpenGLTimerQuery_QBaseEvent((QOpenGLTimerQuery*)self, (QEvent*)event);
+bool q_opengltimerquery_super_event(void* self, void* event) {
+    return QOpenGLTimerQuery_SuperEvent((QOpenGLTimerQuery*)self, (QEvent*)event);
 }
 
 void q_opengltimerquery_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -337,8 +337,8 @@ bool q_opengltimerquery_event_filter(void* self, void* watched, void* event) {
     return QOpenGLTimerQuery_EventFilter((QOpenGLTimerQuery*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_opengltimerquery_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLTimerQuery_QBaseEventFilter((QOpenGLTimerQuery*)self, (QObject*)watched, (QEvent*)event);
+bool q_opengltimerquery_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLTimerQuery_SuperEventFilter((QOpenGLTimerQuery*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_opengltimerquery_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -349,8 +349,8 @@ void q_opengltimerquery_timer_event(void* self, void* event) {
     QOpenGLTimerQuery_TimerEvent((QOpenGLTimerQuery*)self, (QTimerEvent*)event);
 }
 
-void q_opengltimerquery_qbase_timer_event(void* self, void* event) {
-    QOpenGLTimerQuery_QBaseTimerEvent((QOpenGLTimerQuery*)self, (QTimerEvent*)event);
+void q_opengltimerquery_super_timer_event(void* self, void* event) {
+    QOpenGLTimerQuery_SuperTimerEvent((QOpenGLTimerQuery*)self, (QTimerEvent*)event);
 }
 
 void q_opengltimerquery_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -361,8 +361,8 @@ void q_opengltimerquery_child_event(void* self, void* event) {
     QOpenGLTimerQuery_ChildEvent((QOpenGLTimerQuery*)self, (QChildEvent*)event);
 }
 
-void q_opengltimerquery_qbase_child_event(void* self, void* event) {
-    QOpenGLTimerQuery_QBaseChildEvent((QOpenGLTimerQuery*)self, (QChildEvent*)event);
+void q_opengltimerquery_super_child_event(void* self, void* event) {
+    QOpenGLTimerQuery_SuperChildEvent((QOpenGLTimerQuery*)self, (QChildEvent*)event);
 }
 
 void q_opengltimerquery_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ void q_opengltimerquery_custom_event(void* self, void* event) {
     QOpenGLTimerQuery_CustomEvent((QOpenGLTimerQuery*)self, (QEvent*)event);
 }
 
-void q_opengltimerquery_qbase_custom_event(void* self, void* event) {
-    QOpenGLTimerQuery_QBaseCustomEvent((QOpenGLTimerQuery*)self, (QEvent*)event);
+void q_opengltimerquery_super_custom_event(void* self, void* event) {
+    QOpenGLTimerQuery_SuperCustomEvent((QOpenGLTimerQuery*)self, (QEvent*)event);
 }
 
 void q_opengltimerquery_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ void q_opengltimerquery_connect_notify(void* self, void* signal) {
     QOpenGLTimerQuery_ConnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLTimerQuery_QBaseConnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
+void q_opengltimerquery_super_connect_notify(void* self, void* signal) {
+    QOpenGLTimerQuery_SuperConnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ void q_opengltimerquery_disconnect_notify(void* self, void* signal) {
     QOpenGLTimerQuery_DisconnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimerquery_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLTimerQuery_QBaseDisconnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
+void q_opengltimerquery_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLTimerQuery_SuperDisconnectNotify((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -409,8 +409,8 @@ QObject* q_opengltimerquery_sender(void* self) {
     return QOpenGLTimerQuery_Sender((QOpenGLTimerQuery*)self);
 }
 
-QObject* q_opengltimerquery_qbase_sender(void* self) {
-    return QOpenGLTimerQuery_QBaseSender((QOpenGLTimerQuery*)self);
+QObject* q_opengltimerquery_super_sender(void* self) {
+    return QOpenGLTimerQuery_SuperSender((QOpenGLTimerQuery*)self);
 }
 
 void q_opengltimerquery_on_sender(void* self, QObject* (*callback)()) {
@@ -421,8 +421,8 @@ int32_t q_opengltimerquery_sender_signal_index(void* self) {
     return QOpenGLTimerQuery_SenderSignalIndex((QOpenGLTimerQuery*)self);
 }
 
-int32_t q_opengltimerquery_qbase_sender_signal_index(void* self) {
-    return QOpenGLTimerQuery_QBaseSenderSignalIndex((QOpenGLTimerQuery*)self);
+int32_t q_opengltimerquery_super_sender_signal_index(void* self) {
+    return QOpenGLTimerQuery_SuperSenderSignalIndex((QOpenGLTimerQuery*)self);
 }
 
 void q_opengltimerquery_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -433,8 +433,8 @@ int32_t q_opengltimerquery_receivers(void* self, const char* signal) {
     return QOpenGLTimerQuery_Receivers((QOpenGLTimerQuery*)self, signal);
 }
 
-int32_t q_opengltimerquery_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLTimerQuery_QBaseReceivers((QOpenGLTimerQuery*)self, signal);
+int32_t q_opengltimerquery_super_receivers(void* self, const char* signal) {
+    return QOpenGLTimerQuery_SuperReceivers((QOpenGLTimerQuery*)self, signal);
 }
 
 void q_opengltimerquery_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -445,8 +445,8 @@ bool q_opengltimerquery_is_signal_connected(void* self, void* signal) {
     return QOpenGLTimerQuery_IsSignalConnected((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
-bool q_opengltimerquery_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLTimerQuery_QBaseIsSignalConnected((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
+bool q_opengltimerquery_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLTimerQuery_SuperIsSignalConnected((QOpenGLTimerQuery*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimerquery_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callbac
     QOpenGLTimeMonitor_OnMetaObject((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_opengltimemonitor_qbase_meta_object(void* self) {
-    return QOpenGLTimeMonitor_QBaseMetaObject((QOpenGLTimeMonitor*)self);
+const QMetaObject* q_opengltimemonitor_super_meta_object(void* self) {
+    return QOpenGLTimeMonitor_SuperMetaObject((QOpenGLTimeMonitor*)self);
 }
 
 void* q_opengltimemonitor_metacast(void* self, const char* param1) {
@@ -489,8 +489,8 @@ void q_opengltimemonitor_on_metacast(void* self, void* (*callback)(void*, const 
     QOpenGLTimeMonitor_OnMetacast((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-void* q_opengltimemonitor_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLTimeMonitor_QBaseMetacast((QOpenGLTimeMonitor*)self, param1);
+void* q_opengltimemonitor_super_metacast(void* self, const char* param1) {
+    return QOpenGLTimeMonitor_SuperMetacast((QOpenGLTimeMonitor*)self, param1);
 }
 
 int32_t q_opengltimemonitor_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -501,8 +501,8 @@ void q_opengltimemonitor_on_metacall(void* self, int32_t (*callback)(void*, int3
     QOpenGLTimeMonitor_OnMetacall((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 
-int32_t q_opengltimemonitor_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLTimeMonitor_QBaseMetacall((QOpenGLTimeMonitor*)self, param1, param2, param3);
+int32_t q_opengltimemonitor_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLTimeMonitor_SuperMetacall((QOpenGLTimeMonitor*)self, param1, param2, param3);
 }
 
 const char* q_opengltimemonitor_tr(const char* s) {
@@ -788,8 +788,8 @@ bool q_opengltimemonitor_event(void* self, void* event) {
     return QOpenGLTimeMonitor_Event((QOpenGLTimeMonitor*)self, (QEvent*)event);
 }
 
-bool q_opengltimemonitor_qbase_event(void* self, void* event) {
-    return QOpenGLTimeMonitor_QBaseEvent((QOpenGLTimeMonitor*)self, (QEvent*)event);
+bool q_opengltimemonitor_super_event(void* self, void* event) {
+    return QOpenGLTimeMonitor_SuperEvent((QOpenGLTimeMonitor*)self, (QEvent*)event);
 }
 
 void q_opengltimemonitor_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -800,8 +800,8 @@ bool q_opengltimemonitor_event_filter(void* self, void* watched, void* event) {
     return QOpenGLTimeMonitor_EventFilter((QOpenGLTimeMonitor*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_opengltimemonitor_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLTimeMonitor_QBaseEventFilter((QOpenGLTimeMonitor*)self, (QObject*)watched, (QEvent*)event);
+bool q_opengltimemonitor_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLTimeMonitor_SuperEventFilter((QOpenGLTimeMonitor*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_opengltimemonitor_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -812,8 +812,8 @@ void q_opengltimemonitor_timer_event(void* self, void* event) {
     QOpenGLTimeMonitor_TimerEvent((QOpenGLTimeMonitor*)self, (QTimerEvent*)event);
 }
 
-void q_opengltimemonitor_qbase_timer_event(void* self, void* event) {
-    QOpenGLTimeMonitor_QBaseTimerEvent((QOpenGLTimeMonitor*)self, (QTimerEvent*)event);
+void q_opengltimemonitor_super_timer_event(void* self, void* event) {
+    QOpenGLTimeMonitor_SuperTimerEvent((QOpenGLTimeMonitor*)self, (QTimerEvent*)event);
 }
 
 void q_opengltimemonitor_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -824,8 +824,8 @@ void q_opengltimemonitor_child_event(void* self, void* event) {
     QOpenGLTimeMonitor_ChildEvent((QOpenGLTimeMonitor*)self, (QChildEvent*)event);
 }
 
-void q_opengltimemonitor_qbase_child_event(void* self, void* event) {
-    QOpenGLTimeMonitor_QBaseChildEvent((QOpenGLTimeMonitor*)self, (QChildEvent*)event);
+void q_opengltimemonitor_super_child_event(void* self, void* event) {
+    QOpenGLTimeMonitor_SuperChildEvent((QOpenGLTimeMonitor*)self, (QChildEvent*)event);
 }
 
 void q_opengltimemonitor_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -836,8 +836,8 @@ void q_opengltimemonitor_custom_event(void* self, void* event) {
     QOpenGLTimeMonitor_CustomEvent((QOpenGLTimeMonitor*)self, (QEvent*)event);
 }
 
-void q_opengltimemonitor_qbase_custom_event(void* self, void* event) {
-    QOpenGLTimeMonitor_QBaseCustomEvent((QOpenGLTimeMonitor*)self, (QEvent*)event);
+void q_opengltimemonitor_super_custom_event(void* self, void* event) {
+    QOpenGLTimeMonitor_SuperCustomEvent((QOpenGLTimeMonitor*)self, (QEvent*)event);
 }
 
 void q_opengltimemonitor_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -848,8 +848,8 @@ void q_opengltimemonitor_connect_notify(void* self, void* signal) {
     QOpenGLTimeMonitor_ConnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLTimeMonitor_QBaseConnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
+void q_opengltimemonitor_super_connect_notify(void* self, void* signal) {
+    QOpenGLTimeMonitor_SuperConnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -860,8 +860,8 @@ void q_opengltimemonitor_disconnect_notify(void* self, void* signal) {
     QOpenGLTimeMonitor_DisconnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-void q_opengltimemonitor_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLTimeMonitor_QBaseDisconnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
+void q_opengltimemonitor_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLTimeMonitor_SuperDisconnectNotify((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -872,8 +872,8 @@ QObject* q_opengltimemonitor_sender(void* self) {
     return QOpenGLTimeMonitor_Sender((QOpenGLTimeMonitor*)self);
 }
 
-QObject* q_opengltimemonitor_qbase_sender(void* self) {
-    return QOpenGLTimeMonitor_QBaseSender((QOpenGLTimeMonitor*)self);
+QObject* q_opengltimemonitor_super_sender(void* self) {
+    return QOpenGLTimeMonitor_SuperSender((QOpenGLTimeMonitor*)self);
 }
 
 void q_opengltimemonitor_on_sender(void* self, QObject* (*callback)()) {
@@ -884,8 +884,8 @@ int32_t q_opengltimemonitor_sender_signal_index(void* self) {
     return QOpenGLTimeMonitor_SenderSignalIndex((QOpenGLTimeMonitor*)self);
 }
 
-int32_t q_opengltimemonitor_qbase_sender_signal_index(void* self) {
-    return QOpenGLTimeMonitor_QBaseSenderSignalIndex((QOpenGLTimeMonitor*)self);
+int32_t q_opengltimemonitor_super_sender_signal_index(void* self) {
+    return QOpenGLTimeMonitor_SuperSenderSignalIndex((QOpenGLTimeMonitor*)self);
 }
 
 void q_opengltimemonitor_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -896,8 +896,8 @@ int32_t q_opengltimemonitor_receivers(void* self, const char* signal) {
     return QOpenGLTimeMonitor_Receivers((QOpenGLTimeMonitor*)self, signal);
 }
 
-int32_t q_opengltimemonitor_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLTimeMonitor_QBaseReceivers((QOpenGLTimeMonitor*)self, signal);
+int32_t q_opengltimemonitor_super_receivers(void* self, const char* signal) {
+    return QOpenGLTimeMonitor_SuperReceivers((QOpenGLTimeMonitor*)self, signal);
 }
 
 void q_opengltimemonitor_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -908,8 +908,8 @@ bool q_opengltimemonitor_is_signal_connected(void* self, void* signal) {
     return QOpenGLTimeMonitor_IsSignalConnected((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
-bool q_opengltimemonitor_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLTimeMonitor_QBaseIsSignalConnected((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
+bool q_opengltimemonitor_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLTimeMonitor_SuperIsSignalConnected((QOpenGLTimeMonitor*)self, (QMetaMethod*)signal);
 }
 
 void q_opengltimemonitor_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

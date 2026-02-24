@@ -48,13 +48,17 @@ const QMetaObject* q_window_meta_object(void* self);
 ///
 void q_window_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_meta_object` instead
+///
+#define q_window_qbase_meta_object q_window_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
 ///
-const QMetaObject* q_window_qbase_meta_object(void* self);
+const QMetaObject* q_window_super_meta_object(void* self);
 
 /// @param self QWindow*
 /// @param param1 const char*
@@ -68,12 +72,16 @@ void* q_window_metacast(void* self, const char* param1);
 ///
 void q_window_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_window_super_metacast` instead
+///
+#define q_window_qbase_metacast q_window_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QWindow*
 /// @param param1 const char*
 ///
-void* q_window_qbase_metacast(void* self, const char* param1);
+void* q_window_super_metacast(void* self, const char* param1);
 
 /// @param self QWindow*
 /// @param param1 enum QMetaObject__Call
@@ -89,6 +97,10 @@ int32_t q_window_metacall(void* self, int32_t param1, int param2, void* param3);
 ///
 void q_window_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_metacall` instead
+///
+#define q_window_qbase_metacall q_window_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QWindow*
@@ -96,7 +108,7 @@ void q_window_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_window_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_window_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -130,6 +142,10 @@ int32_t q_window_surface_type(void* self);
 ///
 void q_window_on_surface_type(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_surface_type` instead
+///
+#define q_window_qbase_surface_type q_window_super_surface_type
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// Base class method implementation
@@ -138,7 +154,7 @@ void q_window_on_surface_type(void* self, int32_t (*callback)());
 ///
 /// @return enum QSurface__SurfaceType
 ///
-int32_t q_window_qbase_surface_type(void* self);
+int32_t q_window_super_surface_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isVisible)
 ///
@@ -235,13 +251,17 @@ QSurfaceFormat* q_window_format(void* self);
 ///
 void q_window_on_format(void* self, QSurfaceFormat* (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_format` instead
+///
+#define q_window_qbase_format q_window_super_format
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#format)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
 ///
-QSurfaceFormat* q_window_qbase_format(void* self);
+QSurfaceFormat* q_window_super_format(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestedFormat)
 ///
@@ -542,13 +562,17 @@ QSize* q_window_size(void* self);
 ///
 void q_window_on_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_size` instead
+///
+#define q_window_qbase_size q_window_super_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
 ///
-QSize* q_window_qbase_size(void* self);
+QSize* q_window_super_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#position)
 ///
@@ -662,13 +686,17 @@ QAccessibleInterface* q_window_accessible_root(void* self);
 ///
 void q_window_on_accessible_root(void* self, QAccessibleInterface* (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_accessible_root` instead
+///
+#define q_window_qbase_accessible_root q_window_super_accessible_root
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
 ///
-QAccessibleInterface* q_window_qbase_accessible_root(void* self);
+QAccessibleInterface* q_window_super_accessible_root(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
@@ -685,13 +713,17 @@ QObject* q_window_focus_object(void* self);
 ///
 void q_window_on_focus_object(void* self, QObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_window_super_focus_object` instead
+///
+#define q_window_qbase_focus_object q_window_super_focus_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
 ///
-QObject* q_window_qbase_focus_object(void* self);
+QObject* q_window_super_focus_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
@@ -763,6 +795,10 @@ void* q_window_resolve_interface(void* self, const char* name, int revision);
 ///
 void q_window_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
+/// @warning DEPRECATED: Use `q_window_super_resolve_interface` instead
+///
+#define q_window_qbase_resolve_interface q_window_super_resolve_interface
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
 ///
 /// Base class method implementation
@@ -771,7 +807,7 @@ void q_window_on_resolve_interface(void* self, void* (*callback)(void*, const ch
 /// @param name const char*
 /// @param revision int
 ///
-void* q_window_qbase_resolve_interface(void* self, const char* name, int revision);
+void* q_window_super_resolve_interface(void* self, const char* name, int revision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#requestActivate)
 ///
@@ -1227,6 +1263,10 @@ void q_window_expose_event(void* self, void* param1);
 ///
 void q_window_on_expose_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_expose_event` instead
+///
+#define q_window_qbase_expose_event q_window_super_expose_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#exposeEvent)
 ///
 /// Base class method implementation
@@ -1234,7 +1274,7 @@ void q_window_on_expose_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QExposeEvent*
 ///
-void q_window_qbase_expose_event(void* self, void* param1);
+void q_window_super_expose_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
 ///
@@ -1252,6 +1292,10 @@ void q_window_resize_event(void* self, void* param1);
 ///
 void q_window_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_resize_event` instead
+///
+#define q_window_qbase_resize_event q_window_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -1259,7 +1303,7 @@ void q_window_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QResizeEvent*
 ///
-void q_window_qbase_resize_event(void* self, void* param1);
+void q_window_super_resize_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#paintEvent)
 ///
@@ -1277,6 +1321,10 @@ void q_window_paint_event(void* self, void* param1);
 ///
 void q_window_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_paint_event` instead
+///
+#define q_window_qbase_paint_event q_window_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#paintEvent)
 ///
 /// Base class method implementation
@@ -1284,7 +1332,7 @@ void q_window_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QPaintEvent*
 ///
-void q_window_qbase_paint_event(void* self, void* param1);
+void q_window_super_paint_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
 ///
@@ -1302,6 +1350,10 @@ void q_window_move_event(void* self, void* param1);
 ///
 void q_window_on_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_move_event` instead
+///
+#define q_window_qbase_move_event q_window_super_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
 ///
 /// Base class method implementation
@@ -1309,7 +1361,7 @@ void q_window_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QMoveEvent*
 ///
-void q_window_qbase_move_event(void* self, void* param1);
+void q_window_super_move_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
 ///
@@ -1327,6 +1379,10 @@ void q_window_focus_in_event(void* self, void* param1);
 ///
 void q_window_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_focus_in_event` instead
+///
+#define q_window_qbase_focus_in_event q_window_super_focus_in_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -1334,7 +1390,7 @@ void q_window_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QFocusEvent*
 ///
-void q_window_qbase_focus_in_event(void* self, void* param1);
+void q_window_super_focus_in_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
 ///
@@ -1352,6 +1408,10 @@ void q_window_focus_out_event(void* self, void* param1);
 ///
 void q_window_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_focus_out_event` instead
+///
+#define q_window_qbase_focus_out_event q_window_super_focus_out_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -1359,7 +1419,7 @@ void q_window_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QFocusEvent*
 ///
-void q_window_qbase_focus_out_event(void* self, void* param1);
+void q_window_super_focus_out_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
 ///
@@ -1377,6 +1437,10 @@ void q_window_show_event(void* self, void* param1);
 ///
 void q_window_on_show_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_show_event` instead
+///
+#define q_window_qbase_show_event q_window_super_show_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
 ///
 /// Base class method implementation
@@ -1384,7 +1448,7 @@ void q_window_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QShowEvent*
 ///
-void q_window_qbase_show_event(void* self, void* param1);
+void q_window_super_show_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
 ///
@@ -1402,6 +1466,10 @@ void q_window_hide_event(void* self, void* param1);
 ///
 void q_window_on_hide_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_hide_event` instead
+///
+#define q_window_qbase_hide_event q_window_super_hide_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
 ///
 /// Base class method implementation
@@ -1409,7 +1477,7 @@ void q_window_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QHideEvent*
 ///
-void q_window_qbase_hide_event(void* self, void* param1);
+void q_window_super_hide_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
 ///
@@ -1427,6 +1495,10 @@ void q_window_close_event(void* self, void* param1);
 ///
 void q_window_on_close_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_close_event` instead
+///
+#define q_window_qbase_close_event q_window_super_close_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
 ///
 /// Base class method implementation
@@ -1434,7 +1506,7 @@ void q_window_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QCloseEvent*
 ///
-void q_window_qbase_close_event(void* self, void* param1);
+void q_window_super_close_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#event)
 ///
@@ -1452,6 +1524,10 @@ bool q_window_event(void* self, void* param1);
 ///
 void q_window_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_event` instead
+///
+#define q_window_qbase_event q_window_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#event)
 ///
 /// Base class method implementation
@@ -1459,7 +1535,7 @@ void q_window_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QEvent*
 ///
-bool q_window_qbase_event(void* self, void* param1);
+bool q_window_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
 ///
@@ -1477,6 +1553,10 @@ void q_window_key_press_event(void* self, void* param1);
 ///
 void q_window_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_key_press_event` instead
+///
+#define q_window_qbase_key_press_event q_window_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -1484,7 +1564,7 @@ void q_window_on_key_press_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QKeyEvent*
 ///
-void q_window_qbase_key_press_event(void* self, void* param1);
+void q_window_super_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
 ///
@@ -1502,6 +1582,10 @@ void q_window_key_release_event(void* self, void* param1);
 ///
 void q_window_on_key_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_key_release_event` instead
+///
+#define q_window_qbase_key_release_event q_window_super_key_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
 ///
 /// Base class method implementation
@@ -1509,7 +1593,7 @@ void q_window_on_key_release_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QKeyEvent*
 ///
-void q_window_qbase_key_release_event(void* self, void* param1);
+void q_window_super_key_release_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
 ///
@@ -1527,6 +1611,10 @@ void q_window_mouse_press_event(void* self, void* param1);
 ///
 void q_window_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_mouse_press_event` instead
+///
+#define q_window_qbase_mouse_press_event q_window_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -1534,7 +1622,7 @@ void q_window_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QMouseEvent*
 ///
-void q_window_qbase_mouse_press_event(void* self, void* param1);
+void q_window_super_mouse_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
 ///
@@ -1552,6 +1640,10 @@ void q_window_mouse_release_event(void* self, void* param1);
 ///
 void q_window_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_mouse_release_event` instead
+///
+#define q_window_qbase_mouse_release_event q_window_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -1559,7 +1651,7 @@ void q_window_on_mouse_release_event(void* self, void (*callback)(void*, void*))
 /// @param self QWindow*
 /// @param param1 QMouseEvent*
 ///
-void q_window_qbase_mouse_release_event(void* self, void* param1);
+void q_window_super_mouse_release_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
 ///
@@ -1577,6 +1669,10 @@ void q_window_mouse_double_click_event(void* self, void* param1);
 ///
 void q_window_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_mouse_double_click_event` instead
+///
+#define q_window_qbase_mouse_double_click_event q_window_super_mouse_double_click_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -1584,7 +1680,7 @@ void q_window_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 /// @param self QWindow*
 /// @param param1 QMouseEvent*
 ///
-void q_window_qbase_mouse_double_click_event(void* self, void* param1);
+void q_window_super_mouse_double_click_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
 ///
@@ -1602,6 +1698,10 @@ void q_window_mouse_move_event(void* self, void* param1);
 ///
 void q_window_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_mouse_move_event` instead
+///
+#define q_window_qbase_mouse_move_event q_window_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -1609,7 +1709,7 @@ void q_window_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QMouseEvent*
 ///
-void q_window_qbase_mouse_move_event(void* self, void* param1);
+void q_window_super_mouse_move_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
 ///
@@ -1627,6 +1727,10 @@ void q_window_wheel_event(void* self, void* param1);
 ///
 void q_window_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_wheel_event` instead
+///
+#define q_window_qbase_wheel_event q_window_super_wheel_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -1634,7 +1738,7 @@ void q_window_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QWheelEvent*
 ///
-void q_window_qbase_wheel_event(void* self, void* param1);
+void q_window_super_wheel_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
 ///
@@ -1652,6 +1756,10 @@ void q_window_touch_event(void* self, void* param1);
 ///
 void q_window_on_touch_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_touch_event` instead
+///
+#define q_window_qbase_touch_event q_window_super_touch_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
 ///
 /// Base class method implementation
@@ -1659,7 +1767,7 @@ void q_window_on_touch_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QTouchEvent*
 ///
-void q_window_qbase_touch_event(void* self, void* param1);
+void q_window_super_touch_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
 ///
@@ -1677,6 +1785,10 @@ void q_window_tablet_event(void* self, void* param1);
 ///
 void q_window_on_tablet_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_window_super_tablet_event` instead
+///
+#define q_window_qbase_tablet_event q_window_super_tablet_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
 ///
 /// Base class method implementation
@@ -1684,7 +1796,7 @@ void q_window_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 /// @param param1 QTabletEvent*
 ///
-void q_window_qbase_tablet_event(void* self, void* param1);
+void q_window_super_tablet_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
@@ -1704,6 +1816,10 @@ bool q_window_native_event(void* self, char* eventType, void* message, intptr_t*
 ///
 void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
+/// @warning DEPRECATED: Use `q_window_super_native_event` instead
+///
+#define q_window_qbase_native_event q_window_super_native_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Base class method implementation
@@ -1713,7 +1829,7 @@ void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_window_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_window_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2217,6 +2333,10 @@ bool q_window_supports_open_g_l(void* self);
 ///
 bool q_window_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_window_super_event_filter` instead
+///
+#define q_window_qbase_event_filter q_window_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2227,7 +2347,7 @@ bool q_window_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_window_qbase_event_filter(void* self, void* watched, void* event);
+bool q_window_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2251,6 +2371,10 @@ void q_window_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_window_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_window_super_timer_event` instead
+///
+#define q_window_qbase_timer_event q_window_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2260,7 +2384,7 @@ void q_window_timer_event(void* self, void* event);
 /// @param self QWindow*
 /// @param event QTimerEvent*
 ///
-void q_window_qbase_timer_event(void* self, void* event);
+void q_window_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2284,6 +2408,10 @@ void q_window_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_window_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_window_super_child_event` instead
+///
+#define q_window_qbase_child_event q_window_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2293,7 +2421,7 @@ void q_window_child_event(void* self, void* event);
 /// @param self QWindow*
 /// @param event QChildEvent*
 ///
-void q_window_qbase_child_event(void* self, void* event);
+void q_window_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2317,6 +2445,10 @@ void q_window_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_window_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_window_super_custom_event` instead
+///
+#define q_window_qbase_custom_event q_window_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2326,7 +2458,7 @@ void q_window_custom_event(void* self, void* event);
 /// @param self QWindow*
 /// @param event QEvent*
 ///
-void q_window_qbase_custom_event(void* self, void* event);
+void q_window_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2350,6 +2482,10 @@ void q_window_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_window_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_window_super_connect_notify` instead
+///
+#define q_window_qbase_connect_notify q_window_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2359,7 +2495,7 @@ void q_window_connect_notify(void* self, void* signal);
 /// @param self QWindow*
 /// @param signal QMetaMethod*
 ///
-void q_window_qbase_connect_notify(void* self, void* signal);
+void q_window_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2383,6 +2519,10 @@ void q_window_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_window_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_window_super_disconnect_notify` instead
+///
+#define q_window_qbase_disconnect_notify q_window_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2392,7 +2532,7 @@ void q_window_disconnect_notify(void* self, void* signal);
 /// @param self QWindow*
 /// @param signal QMetaMethod*
 ///
-void q_window_qbase_disconnect_notify(void* self, void* signal);
+void q_window_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2415,6 +2555,10 @@ void q_window_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_window_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_window_super_sender` instead
+///
+#define q_window_qbase_sender q_window_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2423,7 +2567,7 @@ QObject* q_window_sender(void* self);
 ///
 /// @param self QWindow*
 ///
-QObject* q_window_qbase_sender(void* self);
+QObject* q_window_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2446,6 +2590,10 @@ void q_window_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_window_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_window_super_sender_signal_index` instead
+///
+#define q_window_qbase_sender_signal_index q_window_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2454,7 +2602,7 @@ int32_t q_window_sender_signal_index(void* self);
 ///
 /// @param self QWindow*
 ///
-int32_t q_window_qbase_sender_signal_index(void* self);
+int32_t q_window_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2478,6 +2626,10 @@ void q_window_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_window_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_window_super_receivers` instead
+///
+#define q_window_qbase_receivers q_window_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2487,7 +2639,7 @@ int32_t q_window_receivers(void* self, const char* signal);
 /// @param self QWindow*
 /// @param signal const char*
 ///
-int32_t q_window_qbase_receivers(void* self, const char* signal);
+int32_t q_window_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2511,6 +2663,10 @@ void q_window_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_window_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_window_super_is_signal_connected` instead
+///
+#define q_window_qbase_is_signal_connected q_window_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2520,7 +2676,7 @@ bool q_window_is_signal_connected(void* self, void* signal);
 /// @param self QWindow*
 /// @param signal QMetaMethod*
 ///
-bool q_window_qbase_is_signal_connected(void* self, void* signal);
+bool q_window_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

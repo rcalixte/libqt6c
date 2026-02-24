@@ -32,13 +32,17 @@ const QMetaObject* k_onsole__emulation_meta_object(void* self);
 ///
 void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_meta_object` instead
+///
+#define k_onsole__emulation_qbase_meta_object k_onsole__emulation_super_meta_object
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 ///
-const QMetaObject* k_onsole__emulation_qbase_meta_object(void* self);
+const QMetaObject* k_onsole__emulation_super_meta_object(void* self);
 
 /// @param self Konsole__Emulation*
 /// @param param1 const char*
@@ -52,12 +56,16 @@ void* k_onsole__emulation_metacast(void* self, const char* param1);
 ///
 void k_onsole__emulation_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_metacast` instead
+///
+#define k_onsole__emulation_qbase_metacast k_onsole__emulation_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 /// @param param1 const char*
 ///
-void* k_onsole__emulation_qbase_metacast(void* self, const char* param1);
+void* k_onsole__emulation_super_metacast(void* self, const char* param1);
 
 /// @param self Konsole__Emulation*
 /// @param param1 enum QMetaObject__Call
@@ -73,6 +81,10 @@ int32_t k_onsole__emulation_metacall(void* self, int32_t param1, int param2, voi
 ///
 void k_onsole__emulation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_metacall` instead
+///
+#define k_onsole__emulation_qbase_metacall k_onsole__emulation_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
@@ -80,7 +92,7 @@ void k_onsole__emulation_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_onsole__emulation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_onsole__emulation_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -123,13 +135,17 @@ char k_onsole__emulation_erase_char(void* self);
 ///
 void k_onsole__emulation_on_erase_char(void* self, char (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_erase_char` instead
+///
+#define k_onsole__emulation_qbase_erase_char k_onsole__emulation_super_erase_char
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 ///
-char k_onsole__emulation_qbase_erase_char(void* self);
+char k_onsole__emulation_super_erase_char(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -161,13 +177,17 @@ void k_onsole__emulation_clear_entire_screen(void* self);
 ///
 void k_onsole__emulation_on_clear_entire_screen(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_clear_entire_screen` instead
+///
+#define k_onsole__emulation_qbase_clear_entire_screen k_onsole__emulation_super_clear_entire_screen
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 ///
-void k_onsole__emulation_qbase_clear_entire_screen(void* self);
+void k_onsole__emulation_super_clear_entire_screen(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -184,13 +204,17 @@ void k_onsole__emulation_reset(void* self);
 ///
 void k_onsole__emulation_on_reset(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_reset` instead
+///
+#define k_onsole__emulation_qbase_reset k_onsole__emulation_super_reset
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 ///
-void k_onsole__emulation_qbase_reset(void* self);
+void k_onsole__emulation_super_reset(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -221,6 +245,10 @@ void k_onsole__emulation_set_image_size(void* self, int lines, int columns);
 ///
 void k_onsole__emulation_on_set_image_size(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_set_image_size` instead
+///
+#define k_onsole__emulation_qbase_set_image_size k_onsole__emulation_super_set_image_size
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -229,7 +257,7 @@ void k_onsole__emulation_on_set_image_size(void* self, void (*callback)(void*, i
 /// @param lines int
 /// @param columns int
 ///
-void k_onsole__emulation_qbase_set_image_size(void* self, int lines, int columns);
+void k_onsole__emulation_super_set_image_size(void* self, int lines, int columns);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -247,6 +275,10 @@ void k_onsole__emulation_send_text(void* self, const char* text);
 ///
 void k_onsole__emulation_on_send_text(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_send_text` instead
+///
+#define k_onsole__emulation_qbase_send_text k_onsole__emulation_super_send_text
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -254,7 +286,7 @@ void k_onsole__emulation_on_send_text(void* self, void (*callback)(void*, const 
 /// @param self Konsole__Emulation*
 /// @param text const char*
 ///
-void k_onsole__emulation_qbase_send_text(void* self, const char* text);
+void k_onsole__emulation_super_send_text(void* self, const char* text);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -273,6 +305,10 @@ void k_onsole__emulation_send_key_event(void* self, void* param1, bool fromPaste
 ///
 void k_onsole__emulation_on_send_key_event(void* self, void (*callback)(void*, void*, bool));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_send_key_event` instead
+///
+#define k_onsole__emulation_qbase_send_key_event k_onsole__emulation_super_send_key_event
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -281,7 +317,7 @@ void k_onsole__emulation_on_send_key_event(void* self, void (*callback)(void*, v
 /// @param param1 QKeyEvent*
 /// @param fromPaste bool
 ///
-void k_onsole__emulation_qbase_send_key_event(void* self, void* param1, bool fromPaste);
+void k_onsole__emulation_super_send_key_event(void* self, void* param1, bool fromPaste);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -302,6 +338,10 @@ void k_onsole__emulation_send_mouse_event(void* self, int buttons, int column, i
 ///
 void k_onsole__emulation_on_send_mouse_event(void* self, void (*callback)(void*, int, int, int, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_send_mouse_event` instead
+///
+#define k_onsole__emulation_qbase_send_mouse_event k_onsole__emulation_super_send_mouse_event
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -312,7 +352,7 @@ void k_onsole__emulation_on_send_mouse_event(void* self, void (*callback)(void*,
 /// @param line int
 /// @param eventType int
 ///
-void k_onsole__emulation_qbase_send_mouse_event(void* self, int buttons, int column, int line, int eventType);
+void k_onsole__emulation_super_send_mouse_event(void* self, int buttons, int column, int line, int eventType);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -331,6 +371,10 @@ void k_onsole__emulation_send_string(void* self, const char* stringVal, int leng
 ///
 void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, const char*, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_send_string` instead
+///
+#define k_onsole__emulation_qbase_send_string k_onsole__emulation_super_send_string
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -339,7 +383,7 @@ void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, cons
 /// @param stringVal const char*
 /// @param length int
 ///
-void k_onsole__emulation_qbase_send_string(void* self, const char* stringVal, int length);
+void k_onsole__emulation_super_send_string(void* self, const char* stringVal, int length);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -617,6 +661,10 @@ void k_onsole__emulation_set_mode(void* self, int mode);
 ///
 void k_onsole__emulation_on_set_mode(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_set_mode` instead
+///
+#define k_onsole__emulation_qbase_set_mode k_onsole__emulation_super_set_mode
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -624,7 +672,7 @@ void k_onsole__emulation_on_set_mode(void* self, void (*callback)(void*, int));
 /// @param self Konsole__Emulation*
 /// @param mode int
 ///
-void k_onsole__emulation_qbase_set_mode(void* self, int mode);
+void k_onsole__emulation_super_set_mode(void* self, int mode);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -642,6 +690,10 @@ void k_onsole__emulation_reset_mode(void* self, int mode);
 ///
 void k_onsole__emulation_on_reset_mode(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_reset_mode` instead
+///
+#define k_onsole__emulation_qbase_reset_mode k_onsole__emulation_super_reset_mode
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -649,7 +701,7 @@ void k_onsole__emulation_on_reset_mode(void* self, void (*callback)(void*, int))
 /// @param self Konsole__Emulation*
 /// @param mode int
 ///
-void k_onsole__emulation_qbase_reset_mode(void* self, int mode);
+void k_onsole__emulation_super_reset_mode(void* self, int mode);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -667,6 +719,10 @@ void k_onsole__emulation_set_screen(void* self, int index);
 ///
 void k_onsole__emulation_on_set_screen(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_set_screen` instead
+///
+#define k_onsole__emulation_qbase_set_screen k_onsole__emulation_super_set_screen
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -674,7 +730,7 @@ void k_onsole__emulation_on_set_screen(void* self, void (*callback)(void*, int))
 /// @param self Konsole__Emulation*
 /// @param index int
 ///
-void k_onsole__emulation_qbase_set_screen(void* self, int index);
+void k_onsole__emulation_super_set_screen(void* self, int index);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -692,6 +748,10 @@ void k_onsole__emulation_set_codec(void* self, int32_t codec);
 ///
 void k_onsole__emulation_on_set_codec(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_set_codec` instead
+///
+#define k_onsole__emulation_qbase_set_codec k_onsole__emulation_super_set_codec
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -699,7 +759,7 @@ void k_onsole__emulation_on_set_codec(void* self, void (*callback)(void*, int32_
 /// @param self Konsole__Emulation*
 /// @param codec enum Konsole__Emulation__EmulationCodec
 ///
-void k_onsole__emulation_qbase_set_codec(void* self, int32_t codec);
+void k_onsole__emulation_super_set_codec(void* self, int32_t codec);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -716,13 +776,17 @@ void k_onsole__emulation_buffered_update(void* self);
 ///
 void k_onsole__emulation_on_buffered_update(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_buffered_update` instead
+///
+#define k_onsole__emulation_qbase_buffered_update k_onsole__emulation_super_buffered_update
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
 ///
-void k_onsole__emulation_qbase_buffered_update(void* self);
+void k_onsole__emulation_super_buffered_update(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1201,6 +1265,10 @@ void k_onsole__emulation_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool k_onsole__emulation_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_event` instead
+///
+#define k_onsole__emulation_qbase_event k_onsole__emulation_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1210,7 +1278,7 @@ bool k_onsole__emulation_event(void* self, void* event);
 /// @param self Konsole__Emulation*
 /// @param event QEvent*
 ///
-bool k_onsole__emulation_qbase_event(void* self, void* event);
+bool k_onsole__emulation_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1235,6 +1303,10 @@ void k_onsole__emulation_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_onsole__emulation_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_event_filter` instead
+///
+#define k_onsole__emulation_qbase_event_filter k_onsole__emulation_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1245,7 +1317,7 @@ bool k_onsole__emulation_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_onsole__emulation_qbase_event_filter(void* self, void* watched, void* event);
+bool k_onsole__emulation_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1269,6 +1341,10 @@ void k_onsole__emulation_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_onsole__emulation_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_timer_event` instead
+///
+#define k_onsole__emulation_qbase_timer_event k_onsole__emulation_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1278,7 +1354,7 @@ void k_onsole__emulation_timer_event(void* self, void* event);
 /// @param self Konsole__Emulation*
 /// @param event QTimerEvent*
 ///
-void k_onsole__emulation_qbase_timer_event(void* self, void* event);
+void k_onsole__emulation_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1302,6 +1378,10 @@ void k_onsole__emulation_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void k_onsole__emulation_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_child_event` instead
+///
+#define k_onsole__emulation_qbase_child_event k_onsole__emulation_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1311,7 +1391,7 @@ void k_onsole__emulation_child_event(void* self, void* event);
 /// @param self Konsole__Emulation*
 /// @param event QChildEvent*
 ///
-void k_onsole__emulation_qbase_child_event(void* self, void* event);
+void k_onsole__emulation_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1335,6 +1415,10 @@ void k_onsole__emulation_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_onsole__emulation_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_custom_event` instead
+///
+#define k_onsole__emulation_qbase_custom_event k_onsole__emulation_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1344,7 +1428,7 @@ void k_onsole__emulation_custom_event(void* self, void* event);
 /// @param self Konsole__Emulation*
 /// @param event QEvent*
 ///
-void k_onsole__emulation_qbase_custom_event(void* self, void* event);
+void k_onsole__emulation_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1368,6 +1452,10 @@ void k_onsole__emulation_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void k_onsole__emulation_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_connect_notify` instead
+///
+#define k_onsole__emulation_qbase_connect_notify k_onsole__emulation_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1377,7 +1465,7 @@ void k_onsole__emulation_connect_notify(void* self, void* signal);
 /// @param self Konsole__Emulation*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__emulation_qbase_connect_notify(void* self, void* signal);
+void k_onsole__emulation_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1401,6 +1489,10 @@ void k_onsole__emulation_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_onsole__emulation_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_disconnect_notify` instead
+///
+#define k_onsole__emulation_qbase_disconnect_notify k_onsole__emulation_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1410,7 +1502,7 @@ void k_onsole__emulation_disconnect_notify(void* self, void* signal);
 /// @param self Konsole__Emulation*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__emulation_qbase_disconnect_notify(void* self, void* signal);
+void k_onsole__emulation_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1433,6 +1525,10 @@ void k_onsole__emulation_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* k_onsole__emulation_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_sender` instead
+///
+#define k_onsole__emulation_qbase_sender k_onsole__emulation_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1441,7 +1537,7 @@ QObject* k_onsole__emulation_sender(void* self);
 ///
 /// @param self Konsole__Emulation*
 ///
-QObject* k_onsole__emulation_qbase_sender(void* self);
+QObject* k_onsole__emulation_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1464,6 +1560,10 @@ void k_onsole__emulation_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_onsole__emulation_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_sender_signal_index` instead
+///
+#define k_onsole__emulation_qbase_sender_signal_index k_onsole__emulation_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1472,7 +1572,7 @@ int32_t k_onsole__emulation_sender_signal_index(void* self);
 ///
 /// @param self Konsole__Emulation*
 ///
-int32_t k_onsole__emulation_qbase_sender_signal_index(void* self);
+int32_t k_onsole__emulation_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1496,6 +1596,10 @@ void k_onsole__emulation_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_onsole__emulation_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_receivers` instead
+///
+#define k_onsole__emulation_qbase_receivers k_onsole__emulation_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1505,7 +1609,7 @@ int32_t k_onsole__emulation_receivers(void* self, const char* signal);
 /// @param self Konsole__Emulation*
 /// @param signal const char*
 ///
-int32_t k_onsole__emulation_qbase_receivers(void* self, const char* signal);
+int32_t k_onsole__emulation_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1529,6 +1633,10 @@ void k_onsole__emulation_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool k_onsole__emulation_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__emulation_super_is_signal_connected` instead
+///
+#define k_onsole__emulation_qbase_is_signal_connected k_onsole__emulation_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1538,7 +1646,7 @@ bool k_onsole__emulation_is_signal_connected(void* self, void* signal);
 /// @param self Konsole__Emulation*
 /// @param signal QMetaMethod*
 ///
-bool k_onsole__emulation_qbase_is_signal_connected(void* self, void* signal);
+bool k_onsole__emulation_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -21,8 +21,8 @@ void k_lineediturldropeventfilter_on_meta_object(void* self, const QMetaObject* 
     KLineEditUrlDropEventFilter_OnMetaObject((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_lineediturldropeventfilter_qbase_meta_object(void* self) {
-    return KLineEditUrlDropEventFilter_QBaseMetaObject((KLineEditUrlDropEventFilter*)self);
+const QMetaObject* k_lineediturldropeventfilter_super_meta_object(void* self) {
+    return KLineEditUrlDropEventFilter_SuperMetaObject((KLineEditUrlDropEventFilter*)self);
 }
 
 void* k_lineediturldropeventfilter_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_lineediturldropeventfilter_on_metacast(void* self, void* (*callback)(void
     KLineEditUrlDropEventFilter_OnMetacast((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
 }
 
-void* k_lineediturldropeventfilter_qbase_metacast(void* self, const char* param1) {
-    return KLineEditUrlDropEventFilter_QBaseMetacast((KLineEditUrlDropEventFilter*)self, param1);
+void* k_lineediturldropeventfilter_super_metacast(void* self, const char* param1) {
+    return KLineEditUrlDropEventFilter_SuperMetacast((KLineEditUrlDropEventFilter*)self, param1);
 }
 
 int32_t k_lineediturldropeventfilter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_lineediturldropeventfilter_on_metacall(void* self, int32_t (*callback)(vo
     KLineEditUrlDropEventFilter_OnMetacall((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
 }
 
-int32_t k_lineediturldropeventfilter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLineEditUrlDropEventFilter_QBaseMetacall((KLineEditUrlDropEventFilter*)self, param1, param2, param3);
+int32_t k_lineediturldropeventfilter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLineEditUrlDropEventFilter_SuperMetacall((KLineEditUrlDropEventFilter*)self, param1, param2, param3);
 }
 
 const char* k_lineediturldropeventfilter_tr(const char* s) {
@@ -64,8 +64,8 @@ void k_lineediturldropeventfilter_on_event_filter(void* self, bool (*callback)(v
     KLineEditUrlDropEventFilter_OnEventFilter((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
 }
 
-bool k_lineediturldropeventfilter_qbase_event_filter(void* self, void* object, void* event) {
-    return KLineEditUrlDropEventFilter_QBaseEventFilter((KLineEditUrlDropEventFilter*)self, (QObject*)object, (QEvent*)event);
+bool k_lineediturldropeventfilter_super_event_filter(void* self, void* object, void* event) {
+    return KLineEditUrlDropEventFilter_SuperEventFilter((KLineEditUrlDropEventFilter*)self, (QObject*)object, (QEvent*)event);
 }
 
 const char* k_lineediturldropeventfilter_tr2(const char* s, const char* c) {
@@ -297,8 +297,8 @@ bool k_lineediturldropeventfilter_event(void* self, void* event) {
     return KLineEditUrlDropEventFilter_Event((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
 }
 
-bool k_lineediturldropeventfilter_qbase_event(void* self, void* event) {
-    return KLineEditUrlDropEventFilter_QBaseEvent((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
+bool k_lineediturldropeventfilter_super_event(void* self, void* event) {
+    return KLineEditUrlDropEventFilter_SuperEvent((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
 }
 
 void k_lineediturldropeventfilter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -309,8 +309,8 @@ void k_lineediturldropeventfilter_timer_event(void* self, void* event) {
     KLineEditUrlDropEventFilter_TimerEvent((KLineEditUrlDropEventFilter*)self, (QTimerEvent*)event);
 }
 
-void k_lineediturldropeventfilter_qbase_timer_event(void* self, void* event) {
-    KLineEditUrlDropEventFilter_QBaseTimerEvent((KLineEditUrlDropEventFilter*)self, (QTimerEvent*)event);
+void k_lineediturldropeventfilter_super_timer_event(void* self, void* event) {
+    KLineEditUrlDropEventFilter_SuperTimerEvent((KLineEditUrlDropEventFilter*)self, (QTimerEvent*)event);
 }
 
 void k_lineediturldropeventfilter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -321,8 +321,8 @@ void k_lineediturldropeventfilter_child_event(void* self, void* event) {
     KLineEditUrlDropEventFilter_ChildEvent((KLineEditUrlDropEventFilter*)self, (QChildEvent*)event);
 }
 
-void k_lineediturldropeventfilter_qbase_child_event(void* self, void* event) {
-    KLineEditUrlDropEventFilter_QBaseChildEvent((KLineEditUrlDropEventFilter*)self, (QChildEvent*)event);
+void k_lineediturldropeventfilter_super_child_event(void* self, void* event) {
+    KLineEditUrlDropEventFilter_SuperChildEvent((KLineEditUrlDropEventFilter*)self, (QChildEvent*)event);
 }
 
 void k_lineediturldropeventfilter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -333,8 +333,8 @@ void k_lineediturldropeventfilter_custom_event(void* self, void* event) {
     KLineEditUrlDropEventFilter_CustomEvent((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
 }
 
-void k_lineediturldropeventfilter_qbase_custom_event(void* self, void* event) {
-    KLineEditUrlDropEventFilter_QBaseCustomEvent((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
+void k_lineediturldropeventfilter_super_custom_event(void* self, void* event) {
+    KLineEditUrlDropEventFilter_SuperCustomEvent((KLineEditUrlDropEventFilter*)self, (QEvent*)event);
 }
 
 void k_lineediturldropeventfilter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -345,8 +345,8 @@ void k_lineediturldropeventfilter_connect_notify(void* self, void* signal) {
     KLineEditUrlDropEventFilter_ConnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_lineediturldropeventfilter_qbase_connect_notify(void* self, void* signal) {
-    KLineEditUrlDropEventFilter_QBaseConnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
+void k_lineediturldropeventfilter_super_connect_notify(void* self, void* signal) {
+    KLineEditUrlDropEventFilter_SuperConnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_lineediturldropeventfilter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void k_lineediturldropeventfilter_disconnect_notify(void* self, void* signal) {
     KLineEditUrlDropEventFilter_DisconnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
-void k_lineediturldropeventfilter_qbase_disconnect_notify(void* self, void* signal) {
-    KLineEditUrlDropEventFilter_QBaseDisconnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
+void k_lineediturldropeventfilter_super_disconnect_notify(void* self, void* signal) {
+    KLineEditUrlDropEventFilter_SuperDisconnectNotify((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_lineediturldropeventfilter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ QObject* k_lineediturldropeventfilter_sender(void* self) {
     return KLineEditUrlDropEventFilter_Sender((KLineEditUrlDropEventFilter*)self);
 }
 
-QObject* k_lineediturldropeventfilter_qbase_sender(void* self) {
-    return KLineEditUrlDropEventFilter_QBaseSender((KLineEditUrlDropEventFilter*)self);
+QObject* k_lineediturldropeventfilter_super_sender(void* self) {
+    return KLineEditUrlDropEventFilter_SuperSender((KLineEditUrlDropEventFilter*)self);
 }
 
 void k_lineediturldropeventfilter_on_sender(void* self, QObject* (*callback)()) {
@@ -381,8 +381,8 @@ int32_t k_lineediturldropeventfilter_sender_signal_index(void* self) {
     return KLineEditUrlDropEventFilter_SenderSignalIndex((KLineEditUrlDropEventFilter*)self);
 }
 
-int32_t k_lineediturldropeventfilter_qbase_sender_signal_index(void* self) {
-    return KLineEditUrlDropEventFilter_QBaseSenderSignalIndex((KLineEditUrlDropEventFilter*)self);
+int32_t k_lineediturldropeventfilter_super_sender_signal_index(void* self) {
+    return KLineEditUrlDropEventFilter_SuperSenderSignalIndex((KLineEditUrlDropEventFilter*)self);
 }
 
 void k_lineediturldropeventfilter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -393,8 +393,8 @@ int32_t k_lineediturldropeventfilter_receivers(void* self, const char* signal) {
     return KLineEditUrlDropEventFilter_Receivers((KLineEditUrlDropEventFilter*)self, signal);
 }
 
-int32_t k_lineediturldropeventfilter_qbase_receivers(void* self, const char* signal) {
-    return KLineEditUrlDropEventFilter_QBaseReceivers((KLineEditUrlDropEventFilter*)self, signal);
+int32_t k_lineediturldropeventfilter_super_receivers(void* self, const char* signal) {
+    return KLineEditUrlDropEventFilter_SuperReceivers((KLineEditUrlDropEventFilter*)self, signal);
 }
 
 void k_lineediturldropeventfilter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -405,8 +405,8 @@ bool k_lineediturldropeventfilter_is_signal_connected(void* self, void* signal) 
     return KLineEditUrlDropEventFilter_IsSignalConnected((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
-bool k_lineediturldropeventfilter_qbase_is_signal_connected(void* self, void* signal) {
-    return KLineEditUrlDropEventFilter_QBaseIsSignalConnected((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
+bool k_lineediturldropeventfilter_super_is_signal_connected(void* self, void* signal) {
+    return KLineEditUrlDropEventFilter_SuperIsSignalConnected((KLineEditUrlDropEventFilter*)self, (QMetaMethod*)signal);
 }
 
 void k_lineediturldropeventfilter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

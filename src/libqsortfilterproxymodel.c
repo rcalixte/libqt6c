@@ -29,8 +29,8 @@ void q_sortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*call
     QSortFilterProxyModel_OnMetaObject((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sortfilterproxymodel_qbase_meta_object(void* self) {
-    return QSortFilterProxyModel_QBaseMetaObject((QSortFilterProxyModel*)self);
+const QMetaObject* q_sortfilterproxymodel_super_meta_object(void* self) {
+    return QSortFilterProxyModel_SuperMetaObject((QSortFilterProxyModel*)self);
 }
 
 void* q_sortfilterproxymodel_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_sortfilterproxymodel_on_metacast(void* self, void* (*callback)(void*, con
     QSortFilterProxyModel_OnMetacast((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void* q_sortfilterproxymodel_qbase_metacast(void* self, const char* param1) {
-    return QSortFilterProxyModel_QBaseMetacast((QSortFilterProxyModel*)self, param1);
+void* q_sortfilterproxymodel_super_metacast(void* self, const char* param1) {
+    return QSortFilterProxyModel_SuperMetacast((QSortFilterProxyModel*)self, param1);
 }
 
 int32_t q_sortfilterproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_sortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, i
     QSortFilterProxyModel_OnMetacall((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSortFilterProxyModel_QBaseMetacall((QSortFilterProxyModel*)self, param1, param2, param3);
+int32_t q_sortfilterproxymodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSortFilterProxyModel_SuperMetacall((QSortFilterProxyModel*)self, param1, param2, param3);
 }
 
 const char* q_sortfilterproxymodel_tr(const char* s) {
@@ -72,8 +72,8 @@ void q_sortfilterproxymodel_on_set_source_model(void* self, void (*callback)(voi
     QSortFilterProxyModel_OnSetSourceModel((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_set_source_model(void* self, void* sourceModel) {
-    QSortFilterProxyModel_QBaseSetSourceModel((QSortFilterProxyModel*)self, (QAbstractItemModel*)sourceModel);
+void q_sortfilterproxymodel_super_set_source_model(void* self, void* sourceModel) {
+    QSortFilterProxyModel_SuperSetSourceModel((QSortFilterProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
 QModelIndex* q_sortfilterproxymodel_map_to_source(void* self, void* proxyIndex) {
@@ -84,8 +84,8 @@ void q_sortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback
     QSortFilterProxyModel_OnMapToSource((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_map_to_source(void* self, void* proxyIndex) {
-    return QSortFilterProxyModel_QBaseMapToSource((QSortFilterProxyModel*)self, (QModelIndex*)proxyIndex);
+QModelIndex* q_sortfilterproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+    return QSortFilterProxyModel_SuperMapToSource((QSortFilterProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
 QModelIndex* q_sortfilterproxymodel_map_from_source(void* self, void* sourceIndex) {
@@ -96,8 +96,8 @@ void q_sortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callba
     QSortFilterProxyModel_OnMapFromSource((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_map_from_source(void* self, void* sourceIndex) {
-    return QSortFilterProxyModel_QBaseMapFromSource((QSortFilterProxyModel*)self, (QModelIndex*)sourceIndex);
+QModelIndex* q_sortfilterproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+    return QSortFilterProxyModel_SuperMapFromSource((QSortFilterProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
 QItemSelection* q_sortfilterproxymodel_map_selection_to_source(void* self, void* proxySelection) {
@@ -108,8 +108,8 @@ void q_sortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelectio
     QSortFilterProxyModel_OnMapSelectionToSource((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* q_sortfilterproxymodel_qbase_map_selection_to_source(void* self, void* proxySelection) {
-    return QSortFilterProxyModel_QBaseMapSelectionToSource((QSortFilterProxyModel*)self, (QItemSelection*)proxySelection);
+QItemSelection* q_sortfilterproxymodel_super_map_selection_to_source(void* self, void* proxySelection) {
+    return QSortFilterProxyModel_SuperMapSelectionToSource((QSortFilterProxyModel*)self, (QItemSelection*)proxySelection);
 }
 
 QItemSelection* q_sortfilterproxymodel_map_selection_from_source(void* self, void* sourceSelection) {
@@ -120,8 +120,8 @@ void q_sortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelect
     QSortFilterProxyModel_OnMapSelectionFromSource((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* q_sortfilterproxymodel_qbase_map_selection_from_source(void* self, void* sourceSelection) {
-    return QSortFilterProxyModel_QBaseMapSelectionFromSource((QSortFilterProxyModel*)self, (QItemSelection*)sourceSelection);
+QItemSelection* q_sortfilterproxymodel_super_map_selection_from_source(void* self, void* sourceSelection) {
+    return QSortFilterProxyModel_SuperMapSelectionFromSource((QSortFilterProxyModel*)self, (QItemSelection*)sourceSelection);
 }
 
 QRegularExpression* q_sortfilterproxymodel_filter_regular_expression(void* self) {
@@ -236,8 +236,8 @@ void q_sortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback)(v
     QSortFilterProxyModel_OnFilterAcceptsRow((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_filter_accepts_row(void* self, int source_row, void* source_parent) {
-    return QSortFilterProxyModel_QBaseFilterAcceptsRow((QSortFilterProxyModel*)self, source_row, (QModelIndex*)source_parent);
+bool q_sortfilterproxymodel_super_filter_accepts_row(void* self, int source_row, void* source_parent) {
+    return QSortFilterProxyModel_SuperFilterAcceptsRow((QSortFilterProxyModel*)self, source_row, (QModelIndex*)source_parent);
 }
 
 bool q_sortfilterproxymodel_filter_accepts_column(void* self, int source_column, void* source_parent) {
@@ -248,8 +248,8 @@ void q_sortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callback
     QSortFilterProxyModel_OnFilterAcceptsColumn((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_filter_accepts_column(void* self, int source_column, void* source_parent) {
-    return QSortFilterProxyModel_QBaseFilterAcceptsColumn((QSortFilterProxyModel*)self, source_column, (QModelIndex*)source_parent);
+bool q_sortfilterproxymodel_super_filter_accepts_column(void* self, int source_column, void* source_parent) {
+    return QSortFilterProxyModel_SuperFilterAcceptsColumn((QSortFilterProxyModel*)self, source_column, (QModelIndex*)source_parent);
 }
 
 bool q_sortfilterproxymodel_less_than(void* self, void* source_left, void* source_right) {
@@ -260,8 +260,8 @@ void q_sortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, voi
     QSortFilterProxyModel_OnLessThan((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_less_than(void* self, void* source_left, void* source_right) {
-    return QSortFilterProxyModel_QBaseLessThan((QSortFilterProxyModel*)self, (QModelIndex*)source_left, (QModelIndex*)source_right);
+bool q_sortfilterproxymodel_super_less_than(void* self, void* source_left, void* source_right) {
+    return QSortFilterProxyModel_SuperLessThan((QSortFilterProxyModel*)self, (QModelIndex*)source_left, (QModelIndex*)source_right);
 }
 
 void q_sortfilterproxymodel_invalidate_filter(void* self) {
@@ -272,8 +272,8 @@ void q_sortfilterproxymodel_on_invalidate_filter(void* self, void (*callback)())
     QSortFilterProxyModel_OnInvalidateFilter((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_invalidate_filter(void* self) {
-    QSortFilterProxyModel_QBaseInvalidateFilter((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_invalidate_filter(void* self) {
+    QSortFilterProxyModel_SuperInvalidateFilter((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_invalidate_rows_filter(void* self) {
@@ -284,8 +284,8 @@ void q_sortfilterproxymodel_on_invalidate_rows_filter(void* self, void (*callbac
     QSortFilterProxyModel_OnInvalidateRowsFilter((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_invalidate_rows_filter(void* self) {
-    QSortFilterProxyModel_QBaseInvalidateRowsFilter((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_invalidate_rows_filter(void* self) {
+    QSortFilterProxyModel_SuperInvalidateRowsFilter((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_invalidate_columns_filter(void* self) {
@@ -296,8 +296,8 @@ void q_sortfilterproxymodel_on_invalidate_columns_filter(void* self, void (*call
     QSortFilterProxyModel_OnInvalidateColumnsFilter((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_invalidate_columns_filter(void* self) {
-    QSortFilterProxyModel_QBaseInvalidateColumnsFilter((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_invalidate_columns_filter(void* self) {
+    QSortFilterProxyModel_SuperInvalidateColumnsFilter((QSortFilterProxyModel*)self);
 }
 
 QModelIndex* q_sortfilterproxymodel_index(void* self, int row, int column, void* parent) {
@@ -308,8 +308,8 @@ void q_sortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*,
     QSortFilterProxyModel_OnIndex((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_index(void* self, int row, int column, void* parent) {
-    return QSortFilterProxyModel_QBaseIndex((QSortFilterProxyModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* q_sortfilterproxymodel_super_index(void* self, int row, int column, void* parent) {
+    return QSortFilterProxyModel_SuperIndex((QSortFilterProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
 QModelIndex* q_sortfilterproxymodel_parent(void* self, void* child) {
@@ -320,8 +320,8 @@ void q_sortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*
     QSortFilterProxyModel_OnParent((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_parent(void* self, void* child) {
-    return QSortFilterProxyModel_QBaseParent((QSortFilterProxyModel*)self, (QModelIndex*)child);
+QModelIndex* q_sortfilterproxymodel_super_parent(void* self, void* child) {
+    return QSortFilterProxyModel_SuperParent((QSortFilterProxyModel*)self, (QModelIndex*)child);
 }
 
 QModelIndex* q_sortfilterproxymodel_sibling(void* self, int row, int column, void* idx) {
@@ -332,8 +332,8 @@ void q_sortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void
     QSortFilterProxyModel_OnSibling((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return QSortFilterProxyModel_QBaseSibling((QSortFilterProxyModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* q_sortfilterproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+    return QSortFilterProxyModel_SuperSibling((QSortFilterProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
 int32_t q_sortfilterproxymodel_row_count(void* self, void* parent) {
@@ -344,8 +344,8 @@ void q_sortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(void*, 
     QSortFilterProxyModel_OnRowCount((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sortfilterproxymodel_qbase_row_count(void* self, void* parent) {
-    return QSortFilterProxyModel_QBaseRowCount((QSortFilterProxyModel*)self, (QModelIndex*)parent);
+int32_t q_sortfilterproxymodel_super_row_count(void* self, void* parent) {
+    return QSortFilterProxyModel_SuperRowCount((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
 int32_t q_sortfilterproxymodel_column_count(void* self, void* parent) {
@@ -356,8 +356,8 @@ void q_sortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(void
     QSortFilterProxyModel_OnColumnCount((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sortfilterproxymodel_qbase_column_count(void* self, void* parent) {
-    return QSortFilterProxyModel_QBaseColumnCount((QSortFilterProxyModel*)self, (QModelIndex*)parent);
+int32_t q_sortfilterproxymodel_super_column_count(void* self, void* parent) {
+    return QSortFilterProxyModel_SuperColumnCount((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_has_children(void* self, void* parent) {
@@ -368,8 +368,8 @@ void q_sortfilterproxymodel_on_has_children(void* self, bool (*callback)(void*, 
     QSortFilterProxyModel_OnHasChildren((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_has_children(void* self, void* parent) {
-    return QSortFilterProxyModel_QBaseHasChildren((QSortFilterProxyModel*)self, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_has_children(void* self, void* parent) {
+    return QSortFilterProxyModel_SuperHasChildren((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* q_sortfilterproxymodel_data(void* self, void* index, int role) {
@@ -380,8 +380,8 @@ void q_sortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, voi
     QSortFilterProxyModel_OnData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_sortfilterproxymodel_qbase_data(void* self, void* index, int role) {
-    return QSortFilterProxyModel_QBaseData((QSortFilterProxyModel*)self, (QModelIndex*)index, role);
+QVariant* q_sortfilterproxymodel_super_data(void* self, void* index, int role) {
+    return QSortFilterProxyModel_SuperData((QSortFilterProxyModel*)self, (QModelIndex*)index, role);
 }
 
 bool q_sortfilterproxymodel_set_data(void* self, void* index, void* value, int role) {
@@ -392,8 +392,8 @@ void q_sortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, void
     QSortFilterProxyModel_OnSetData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return QSortFilterProxyModel_QBaseSetData((QSortFilterProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool q_sortfilterproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+    return QSortFilterProxyModel_SuperSetData((QSortFilterProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
@@ -404,8 +404,8 @@ void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(voi
     QSortFilterProxyModel_OnHeaderData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_sortfilterproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return QSortFilterProxyModel_QBaseHeaderData((QSortFilterProxyModel*)self, section, orientation, role);
+QVariant* q_sortfilterproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return QSortFilterProxyModel_SuperHeaderData((QSortFilterProxyModel*)self, section, orientation, role);
 }
 
 bool q_sortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
@@ -416,8 +416,8 @@ void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void
     QSortFilterProxyModel_OnSetHeaderData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return QSortFilterProxyModel_QBaseSetHeaderData((QSortFilterProxyModel*)self, section, orientation, (QVariant*)value, role);
+bool q_sortfilterproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return QSortFilterProxyModel_SuperSetHeaderData((QSortFilterProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -428,8 +428,8 @@ void q_sortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void
     QSortFilterProxyModel_OnMimeData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return QSortFilterProxyModel_QBaseMimeData((QSortFilterProxyModel*)self, indexes);
+QMimeData* q_sortfilterproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return QSortFilterProxyModel_SuperMimeData((QSortFilterProxyModel*)self, indexes);
 }
 
 bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
@@ -440,8 +440,8 @@ void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*
     QSortFilterProxyModel_OnDropMimeData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QSortFilterProxyModel_QBaseDropMimeData((QSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QSortFilterProxyModel_SuperDropMimeData((QSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_insert_rows(void* self, int row, int count, void* parent) {
@@ -452,8 +452,8 @@ void q_sortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, i
     QSortFilterProxyModel_OnInsertRows((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return QSortFilterProxyModel_QBaseInsertRows((QSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return QSortFilterProxyModel_SuperInsertRows((QSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_insert_columns(void* self, int column, int count, void* parent) {
@@ -464,8 +464,8 @@ void q_sortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*
     QSortFilterProxyModel_OnInsertColumns((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return QSortFilterProxyModel_QBaseInsertColumns((QSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return QSortFilterProxyModel_SuperInsertColumns((QSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_remove_rows(void* self, int row, int count, void* parent) {
@@ -476,8 +476,8 @@ void q_sortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, i
     QSortFilterProxyModel_OnRemoveRows((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return QSortFilterProxyModel_QBaseRemoveRows((QSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return QSortFilterProxyModel_SuperRemoveRows((QSortFilterProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_remove_columns(void* self, int column, int count, void* parent) {
@@ -488,8 +488,8 @@ void q_sortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*
     QSortFilterProxyModel_OnRemoveColumns((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return QSortFilterProxyModel_QBaseRemoveColumns((QSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return QSortFilterProxyModel_SuperRemoveColumns((QSortFilterProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void q_sortfilterproxymodel_fetch_more(void* self, void* parent) {
@@ -500,8 +500,8 @@ void q_sortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, vo
     QSortFilterProxyModel_OnFetchMore((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_fetch_more(void* self, void* parent) {
-    QSortFilterProxyModel_QBaseFetchMore((QSortFilterProxyModel*)self, (QModelIndex*)parent);
+void q_sortfilterproxymodel_super_fetch_more(void* self, void* parent) {
+    QSortFilterProxyModel_SuperFetchMore((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
 bool q_sortfilterproxymodel_can_fetch_more(void* self, void* parent) {
@@ -512,8 +512,8 @@ void q_sortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*
     QSortFilterProxyModel_OnCanFetchMore((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_sortfilterproxymodel_qbase_can_fetch_more(void* self, void* parent) {
-    return QSortFilterProxyModel_QBaseCanFetchMore((QSortFilterProxyModel*)self, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_can_fetch_more(void* self, void* parent) {
+    return QSortFilterProxyModel_SuperCanFetchMore((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
 int32_t q_sortfilterproxymodel_flags(void* self, void* index) {
@@ -524,8 +524,8 @@ void q_sortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void
     QSortFilterProxyModel_OnFlags((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sortfilterproxymodel_qbase_flags(void* self, void* index) {
-    return QSortFilterProxyModel_QBaseFlags((QSortFilterProxyModel*)self, (QModelIndex*)index);
+int32_t q_sortfilterproxymodel_super_flags(void* self, void* index) {
+    return QSortFilterProxyModel_SuperFlags((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
 QModelIndex* q_sortfilterproxymodel_buddy(void* self, void* index) {
@@ -536,8 +536,8 @@ void q_sortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*,
     QSortFilterProxyModel_OnBuddy((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_buddy(void* self, void* index) {
-    return QSortFilterProxyModel_QBaseBuddy((QSortFilterProxyModel*)self, (QModelIndex*)index);
+QModelIndex* q_sortfilterproxymodel_super_buddy(void* self, void* index) {
+    return QSortFilterProxyModel_SuperBuddy((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
 libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
@@ -549,8 +549,8 @@ void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* *
     QSortFilterProxyModel_OnMatch((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = QSortFilterProxyModel_QBaseMatch((QSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = QSortFilterProxyModel_SuperMatch((QSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -562,8 +562,8 @@ void q_sortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)
     QSortFilterProxyModel_OnSpan((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QSize* q_sortfilterproxymodel_qbase_span(void* self, void* index) {
-    return QSortFilterProxyModel_QBaseSpan((QSortFilterProxyModel*)self, (QModelIndex*)index);
+QSize* q_sortfilterproxymodel_super_span(void* self, void* index) {
+    return QSortFilterProxyModel_SuperSpan((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
 void q_sortfilterproxymodel_sort(void* self, int column, int32_t order) {
@@ -574,8 +574,8 @@ void q_sortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int
     QSortFilterProxyModel_OnSort((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_qbase_sort(void* self, int column, int32_t order) {
-    QSortFilterProxyModel_QBaseSort((QSortFilterProxyModel*)self, column, order);
+void q_sortfilterproxymodel_super_sort(void* self, int column, int32_t order) {
+    QSortFilterProxyModel_SuperSort((QSortFilterProxyModel*)self, column, order);
 }
 
 const char** q_sortfilterproxymodel_mime_types(void* self) {
@@ -601,8 +601,8 @@ void q_sortfilterproxymodel_on_mime_types(void* self, const char** (*callback)()
     QSortFilterProxyModel_OnMimeTypes((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-const char** q_sortfilterproxymodel_qbase_mime_types(void* self) {
-    libqt_list _arr = QSortFilterProxyModel_QBaseMimeTypes((QSortFilterProxyModel*)self);
+const char** q_sortfilterproxymodel_super_mime_types(void* self) {
+    libqt_list _arr = QSortFilterProxyModel_SuperMimeTypes((QSortFilterProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -628,8 +628,8 @@ void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*call
     QSortFilterProxyModel_OnSupportedDropActions((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sortfilterproxymodel_qbase_supported_drop_actions(void* self) {
-    return QSortFilterProxyModel_QBaseSupportedDropActions((QSortFilterProxyModel*)self);
+int32_t q_sortfilterproxymodel_super_supported_drop_actions(void* self) {
+    return QSortFilterProxyModel_SuperSupportedDropActions((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_dynamic_sort_filter_changed(void* self, bool dynamicSortFilter) {
@@ -1053,8 +1053,8 @@ bool q_sortfilterproxymodel_submit(void* self) {
     return QSortFilterProxyModel_Submit((QSortFilterProxyModel*)self);
 }
 
-bool q_sortfilterproxymodel_qbase_submit(void* self) {
-    return QSortFilterProxyModel_QBaseSubmit((QSortFilterProxyModel*)self);
+bool q_sortfilterproxymodel_super_submit(void* self) {
+    return QSortFilterProxyModel_SuperSubmit((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_submit(void* self, bool (*callback)()) {
@@ -1065,8 +1065,8 @@ void q_sortfilterproxymodel_revert(void* self) {
     QSortFilterProxyModel_Revert((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_revert(void* self) {
-    QSortFilterProxyModel_QBaseRevert((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_revert(void* self) {
+    QSortFilterProxyModel_SuperRevert((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_revert(void* self, void (*callback)()) {
@@ -1083,9 +1083,9 @@ libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_item_data(void* self,
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = QSortFilterProxyModel_QBaseItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+    libqt_map _out = QSortFilterProxyModel_SuperItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -1126,7 +1126,7 @@ bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* 
     return _out;
 }
 
-bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_sortfilterproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -1149,7 +1149,7 @@ bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_m
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = QSortFilterProxyModel_QBaseSetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = QSortFilterProxyModel_SuperSetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -1163,8 +1163,8 @@ bool q_sortfilterproxymodel_clear_item_data(void* self, void* index) {
     return QSortFilterProxyModel_ClearItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-bool q_sortfilterproxymodel_qbase_clear_item_data(void* self, void* index) {
-    return QSortFilterProxyModel_QBaseClearItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+bool q_sortfilterproxymodel_super_clear_item_data(void* self, void* index) {
+    return QSortFilterProxyModel_SuperClearItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
 void q_sortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -1175,8 +1175,8 @@ bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t a
     return QSortFilterProxyModel_CanDropMimeData((QSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_sortfilterproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QSortFilterProxyModel_QBaseCanDropMimeData((QSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_sortfilterproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QSortFilterProxyModel_SuperCanDropMimeData((QSortFilterProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -1187,8 +1187,8 @@ int32_t q_sortfilterproxymodel_supported_drag_actions(void* self) {
     return QSortFilterProxyModel_SupportedDragActions((QSortFilterProxyModel*)self);
 }
 
-int32_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self) {
-    return QSortFilterProxyModel_QBaseSupportedDragActions((QSortFilterProxyModel*)self);
+int32_t q_sortfilterproxymodel_super_supported_drag_actions(void* self) {
+    return QSortFilterProxyModel_SuperSupportedDragActions((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -1228,9 +1228,9 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ q_sortfilterproxymodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = QSortFilterProxyModel_QBaseRoleNames((QSortFilterProxyModel*)self);
+    libqt_map _out = QSortFilterProxyModel_SuperRoleNames((QSortFilterProxyModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -1269,8 +1269,8 @@ bool q_sortfilterproxymodel_move_rows(void* self, void* sourceParent, int source
     return QSortFilterProxyModel_MoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sortfilterproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return QSortFilterProxyModel_QBaseMoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_sortfilterproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return QSortFilterProxyModel_SuperMoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void q_sortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1281,8 +1281,8 @@ bool q_sortfilterproxymodel_move_columns(void* self, void* sourceParent, int sou
     return QSortFilterProxyModel_MoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sortfilterproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return QSortFilterProxyModel_QBaseMoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_sortfilterproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return QSortFilterProxyModel_SuperMoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void q_sortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1293,8 +1293,8 @@ void q_sortfilterproxymodel_multi_data(void* self, void* index, void* roleDataSp
     QSortFilterProxyModel_MultiData((QSortFilterProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_sortfilterproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    QSortFilterProxyModel_QBaseMultiData((QSortFilterProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void q_sortfilterproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    QSortFilterProxyModel_SuperMultiData((QSortFilterProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void q_sortfilterproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1305,8 +1305,8 @@ void q_sortfilterproxymodel_reset_internal_data(void* self) {
     QSortFilterProxyModel_ResetInternalData((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_reset_internal_data(void* self) {
-    QSortFilterProxyModel_QBaseResetInternalData((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_reset_internal_data(void* self) {
+    QSortFilterProxyModel_SuperResetInternalData((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1317,8 +1317,8 @@ bool q_sortfilterproxymodel_event(void* self, void* event) {
     return QSortFilterProxyModel_Event((QSortFilterProxyModel*)self, (QEvent*)event);
 }
 
-bool q_sortfilterproxymodel_qbase_event(void* self, void* event) {
-    return QSortFilterProxyModel_QBaseEvent((QSortFilterProxyModel*)self, (QEvent*)event);
+bool q_sortfilterproxymodel_super_event(void* self, void* event) {
+    return QSortFilterProxyModel_SuperEvent((QSortFilterProxyModel*)self, (QEvent*)event);
 }
 
 void q_sortfilterproxymodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1329,8 +1329,8 @@ bool q_sortfilterproxymodel_event_filter(void* self, void* watched, void* event)
     return QSortFilterProxyModel_EventFilter((QSortFilterProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_sortfilterproxymodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSortFilterProxyModel_QBaseEventFilter((QSortFilterProxyModel*)self, (QObject*)watched, (QEvent*)event);
+bool q_sortfilterproxymodel_super_event_filter(void* self, void* watched, void* event) {
+    return QSortFilterProxyModel_SuperEventFilter((QSortFilterProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_sortfilterproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1341,8 +1341,8 @@ void q_sortfilterproxymodel_timer_event(void* self, void* event) {
     QSortFilterProxyModel_TimerEvent((QSortFilterProxyModel*)self, (QTimerEvent*)event);
 }
 
-void q_sortfilterproxymodel_qbase_timer_event(void* self, void* event) {
-    QSortFilterProxyModel_QBaseTimerEvent((QSortFilterProxyModel*)self, (QTimerEvent*)event);
+void q_sortfilterproxymodel_super_timer_event(void* self, void* event) {
+    QSortFilterProxyModel_SuperTimerEvent((QSortFilterProxyModel*)self, (QTimerEvent*)event);
 }
 
 void q_sortfilterproxymodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1353,8 +1353,8 @@ void q_sortfilterproxymodel_child_event(void* self, void* event) {
     QSortFilterProxyModel_ChildEvent((QSortFilterProxyModel*)self, (QChildEvent*)event);
 }
 
-void q_sortfilterproxymodel_qbase_child_event(void* self, void* event) {
-    QSortFilterProxyModel_QBaseChildEvent((QSortFilterProxyModel*)self, (QChildEvent*)event);
+void q_sortfilterproxymodel_super_child_event(void* self, void* event) {
+    QSortFilterProxyModel_SuperChildEvent((QSortFilterProxyModel*)self, (QChildEvent*)event);
 }
 
 void q_sortfilterproxymodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1365,8 +1365,8 @@ void q_sortfilterproxymodel_custom_event(void* self, void* event) {
     QSortFilterProxyModel_CustomEvent((QSortFilterProxyModel*)self, (QEvent*)event);
 }
 
-void q_sortfilterproxymodel_qbase_custom_event(void* self, void* event) {
-    QSortFilterProxyModel_QBaseCustomEvent((QSortFilterProxyModel*)self, (QEvent*)event);
+void q_sortfilterproxymodel_super_custom_event(void* self, void* event) {
+    QSortFilterProxyModel_SuperCustomEvent((QSortFilterProxyModel*)self, (QEvent*)event);
 }
 
 void q_sortfilterproxymodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1377,8 +1377,8 @@ void q_sortfilterproxymodel_connect_notify(void* self, void* signal) {
     QSortFilterProxyModel_ConnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sortfilterproxymodel_qbase_connect_notify(void* self, void* signal) {
-    QSortFilterProxyModel_QBaseConnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
+void q_sortfilterproxymodel_super_connect_notify(void* self, void* signal) {
+    QSortFilterProxyModel_SuperConnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_sortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1389,8 +1389,8 @@ void q_sortfilterproxymodel_disconnect_notify(void* self, void* signal) {
     QSortFilterProxyModel_DisconnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sortfilterproxymodel_qbase_disconnect_notify(void* self, void* signal) {
-    QSortFilterProxyModel_QBaseDisconnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
+void q_sortfilterproxymodel_super_disconnect_notify(void* self, void* signal) {
+    QSortFilterProxyModel_SuperDisconnectNotify((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_sortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1401,8 +1401,8 @@ QModelIndex* q_sortfilterproxymodel_create_source_index(void* self, int row, int
     return QSortFilterProxyModel_CreateSourceIndex((QSortFilterProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return QSortFilterProxyModel_QBaseCreateSourceIndex((QSortFilterProxyModel*)self, row, col, internalPtr);
+QModelIndex* q_sortfilterproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
+    return QSortFilterProxyModel_SuperCreateSourceIndex((QSortFilterProxyModel*)self, row, col, internalPtr);
 }
 
 void q_sortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -1413,8 +1413,8 @@ QModelIndex* q_sortfilterproxymodel_create_index(void* self, int row, int column
     return QSortFilterProxyModel_CreateIndex((QSortFilterProxyModel*)self, row, column);
 }
 
-QModelIndex* q_sortfilterproxymodel_qbase_create_index(void* self, int row, int column) {
-    return QSortFilterProxyModel_QBaseCreateIndex((QSortFilterProxyModel*)self, row, column);
+QModelIndex* q_sortfilterproxymodel_super_create_index(void* self, int row, int column) {
+    return QSortFilterProxyModel_SuperCreateIndex((QSortFilterProxyModel*)self, row, column);
 }
 
 void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1425,8 +1425,8 @@ void q_sortfilterproxymodel_encode_data(void* self, libqt_list /* of QModelIndex
     QSortFilterProxyModel_EncodeData((QSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_sortfilterproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    QSortFilterProxyModel_QBaseEncodeData((QSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
+void q_sortfilterproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    QSortFilterProxyModel_SuperEncodeData((QSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
 void q_sortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1437,8 +1437,8 @@ bool q_sortfilterproxymodel_decode_data(void* self, int row, int column, void* p
     return QSortFilterProxyModel_DecodeData((QSortFilterProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool q_sortfilterproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return QSortFilterProxyModel_QBaseDecodeData((QSortFilterProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool q_sortfilterproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return QSortFilterProxyModel_SuperDecodeData((QSortFilterProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void q_sortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1449,8 +1449,8 @@ void q_sortfilterproxymodel_begin_insert_rows(void* self, void* parent, int firs
     QSortFilterProxyModel_BeginInsertRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_sortfilterproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    QSortFilterProxyModel_QBaseBeginInsertRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_sortfilterproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    QSortFilterProxyModel_SuperBeginInsertRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_sortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1461,8 +1461,8 @@ void q_sortfilterproxymodel_end_insert_rows(void* self) {
     QSortFilterProxyModel_EndInsertRows((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_insert_rows(void* self) {
-    QSortFilterProxyModel_QBaseEndInsertRows((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_insert_rows(void* self) {
+    QSortFilterProxyModel_SuperEndInsertRows((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1473,8 +1473,8 @@ void q_sortfilterproxymodel_begin_remove_rows(void* self, void* parent, int firs
     QSortFilterProxyModel_BeginRemoveRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_sortfilterproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    QSortFilterProxyModel_QBaseBeginRemoveRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_sortfilterproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    QSortFilterProxyModel_SuperBeginRemoveRows((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_sortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1485,8 +1485,8 @@ void q_sortfilterproxymodel_end_remove_rows(void* self) {
     QSortFilterProxyModel_EndRemoveRows((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_remove_rows(void* self) {
-    QSortFilterProxyModel_QBaseEndRemoveRows((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_remove_rows(void* self) {
+    QSortFilterProxyModel_SuperEndRemoveRows((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1497,8 +1497,8 @@ bool q_sortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, int 
     return QSortFilterProxyModel_BeginMoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool q_sortfilterproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return QSortFilterProxyModel_QBaseBeginMoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool q_sortfilterproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return QSortFilterProxyModel_SuperBeginMoveRows((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void q_sortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1509,8 +1509,8 @@ void q_sortfilterproxymodel_end_move_rows(void* self) {
     QSortFilterProxyModel_EndMoveRows((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_move_rows(void* self) {
-    QSortFilterProxyModel_QBaseEndMoveRows((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_move_rows(void* self) {
+    QSortFilterProxyModel_SuperEndMoveRows((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1521,8 +1521,8 @@ void q_sortfilterproxymodel_begin_insert_columns(void* self, void* parent, int f
     QSortFilterProxyModel_BeginInsertColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_sortfilterproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    QSortFilterProxyModel_QBaseBeginInsertColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_sortfilterproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    QSortFilterProxyModel_SuperBeginInsertColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_sortfilterproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1533,8 +1533,8 @@ void q_sortfilterproxymodel_end_insert_columns(void* self) {
     QSortFilterProxyModel_EndInsertColumns((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_insert_columns(void* self) {
-    QSortFilterProxyModel_QBaseEndInsertColumns((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_insert_columns(void* self) {
+    QSortFilterProxyModel_SuperEndInsertColumns((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1545,8 +1545,8 @@ void q_sortfilterproxymodel_begin_remove_columns(void* self, void* parent, int f
     QSortFilterProxyModel_BeginRemoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_sortfilterproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    QSortFilterProxyModel_QBaseBeginRemoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_sortfilterproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    QSortFilterProxyModel_SuperBeginRemoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_sortfilterproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1557,8 +1557,8 @@ void q_sortfilterproxymodel_end_remove_columns(void* self) {
     QSortFilterProxyModel_EndRemoveColumns((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_remove_columns(void* self) {
-    QSortFilterProxyModel_QBaseEndRemoveColumns((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_remove_columns(void* self) {
+    QSortFilterProxyModel_SuperEndRemoveColumns((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1569,8 +1569,8 @@ bool q_sortfilterproxymodel_begin_move_columns(void* self, void* sourceParent, i
     return QSortFilterProxyModel_BeginMoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool q_sortfilterproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return QSortFilterProxyModel_QBaseBeginMoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool q_sortfilterproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return QSortFilterProxyModel_SuperBeginMoveColumns((QSortFilterProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void q_sortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1581,8 +1581,8 @@ void q_sortfilterproxymodel_end_move_columns(void* self) {
     QSortFilterProxyModel_EndMoveColumns((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_move_columns(void* self) {
-    QSortFilterProxyModel_QBaseEndMoveColumns((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_move_columns(void* self) {
+    QSortFilterProxyModel_SuperEndMoveColumns((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1593,8 +1593,8 @@ void q_sortfilterproxymodel_begin_reset_model(void* self) {
     QSortFilterProxyModel_BeginResetModel((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_begin_reset_model(void* self) {
-    QSortFilterProxyModel_QBaseBeginResetModel((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_begin_reset_model(void* self) {
+    QSortFilterProxyModel_SuperBeginResetModel((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1605,8 +1605,8 @@ void q_sortfilterproxymodel_end_reset_model(void* self) {
     QSortFilterProxyModel_EndResetModel((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_qbase_end_reset_model(void* self) {
-    QSortFilterProxyModel_QBaseEndResetModel((QSortFilterProxyModel*)self);
+void q_sortfilterproxymodel_super_end_reset_model(void* self) {
+    QSortFilterProxyModel_SuperEndResetModel((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1617,8 +1617,8 @@ void q_sortfilterproxymodel_change_persistent_index(void* self, void* from, void
     QSortFilterProxyModel_ChangePersistentIndex((QSortFilterProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void q_sortfilterproxymodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    QSortFilterProxyModel_QBaseChangePersistentIndex((QSortFilterProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void q_sortfilterproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
+    QSortFilterProxyModel_SuperChangePersistentIndex((QSortFilterProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void q_sortfilterproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1629,8 +1629,8 @@ void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list 
     QSortFilterProxyModel_ChangePersistentIndexList((QSortFilterProxyModel*)self, from, to);
 }
 
-void q_sortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    QSortFilterProxyModel_QBaseChangePersistentIndexList((QSortFilterProxyModel*)self, from, to);
+void q_sortfilterproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    QSortFilterProxyModel_SuperChangePersistentIndexList((QSortFilterProxyModel*)self, from, to);
 }
 
 void q_sortfilterproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1642,8 +1642,8 @@ libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_persistent_index_list(vo
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = QSortFilterProxyModel_QBasePersistentIndexList((QSortFilterProxyModel*)self);
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = QSortFilterProxyModel_SuperPersistentIndexList((QSortFilterProxyModel*)self);
     return _arr;
 }
 
@@ -1655,8 +1655,8 @@ QObject* q_sortfilterproxymodel_sender(void* self) {
     return QSortFilterProxyModel_Sender((QSortFilterProxyModel*)self);
 }
 
-QObject* q_sortfilterproxymodel_qbase_sender(void* self) {
-    return QSortFilterProxyModel_QBaseSender((QSortFilterProxyModel*)self);
+QObject* q_sortfilterproxymodel_super_sender(void* self) {
+    return QSortFilterProxyModel_SuperSender((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1667,8 +1667,8 @@ int32_t q_sortfilterproxymodel_sender_signal_index(void* self) {
     return QSortFilterProxyModel_SenderSignalIndex((QSortFilterProxyModel*)self);
 }
 
-int32_t q_sortfilterproxymodel_qbase_sender_signal_index(void* self) {
-    return QSortFilterProxyModel_QBaseSenderSignalIndex((QSortFilterProxyModel*)self);
+int32_t q_sortfilterproxymodel_super_sender_signal_index(void* self) {
+    return QSortFilterProxyModel_SuperSenderSignalIndex((QSortFilterProxyModel*)self);
 }
 
 void q_sortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1679,8 +1679,8 @@ int32_t q_sortfilterproxymodel_receivers(void* self, const char* signal) {
     return QSortFilterProxyModel_Receivers((QSortFilterProxyModel*)self, signal);
 }
 
-int32_t q_sortfilterproxymodel_qbase_receivers(void* self, const char* signal) {
-    return QSortFilterProxyModel_QBaseReceivers((QSortFilterProxyModel*)self, signal);
+int32_t q_sortfilterproxymodel_super_receivers(void* self, const char* signal) {
+    return QSortFilterProxyModel_SuperReceivers((QSortFilterProxyModel*)self, signal);
 }
 
 void q_sortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1691,8 +1691,8 @@ bool q_sortfilterproxymodel_is_signal_connected(void* self, void* signal) {
     return QSortFilterProxyModel_IsSignalConnected((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
-bool q_sortfilterproxymodel_qbase_is_signal_connected(void* self, void* signal) {
-    return QSortFilterProxyModel_QBaseIsSignalConnected((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
+bool q_sortfilterproxymodel_super_is_signal_connected(void* self, void* signal) {
+    return QSortFilterProxyModel_SuperIsSignalConnected((QSortFilterProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_sortfilterproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

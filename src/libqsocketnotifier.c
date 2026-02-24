@@ -29,8 +29,8 @@ void q_socketnotifier_on_meta_object(void* self, const QMetaObject* (*callback)(
     QSocketNotifier_OnMetaObject((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_socketnotifier_qbase_meta_object(void* self) {
-    return QSocketNotifier_QBaseMetaObject((QSocketNotifier*)self);
+const QMetaObject* q_socketnotifier_super_meta_object(void* self) {
+    return QSocketNotifier_SuperMetaObject((QSocketNotifier*)self);
 }
 
 void* q_socketnotifier_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_socketnotifier_on_metacast(void* self, void* (*callback)(void*, const cha
     QSocketNotifier_OnMetacast((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-void* q_socketnotifier_qbase_metacast(void* self, const char* param1) {
-    return QSocketNotifier_QBaseMetacast((QSocketNotifier*)self, param1);
+void* q_socketnotifier_super_metacast(void* self, const char* param1) {
+    return QSocketNotifier_SuperMetacast((QSocketNotifier*)self, param1);
 }
 
 int32_t q_socketnotifier_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_socketnotifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QSocketNotifier_OnMetacall((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-int32_t q_socketnotifier_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSocketNotifier_QBaseMetacall((QSocketNotifier*)self, param1, param2, param3);
+int32_t q_socketnotifier_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSocketNotifier_SuperMetacall((QSocketNotifier*)self, param1, param2, param3);
 }
 
 const char* q_socketnotifier_tr(const char* s) {
@@ -96,8 +96,8 @@ void q_socketnotifier_on_event(void* self, bool (*callback)(void*, void*)) {
     QSocketNotifier_OnEvent((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-bool q_socketnotifier_qbase_event(void* self, void* param1) {
-    return QSocketNotifier_QBaseEvent((QSocketNotifier*)self, (QEvent*)param1);
+bool q_socketnotifier_super_event(void* self, void* param1) {
+    return QSocketNotifier_SuperEvent((QSocketNotifier*)self, (QEvent*)param1);
 }
 
 const char* q_socketnotifier_tr2(const char* s, const char* c) {
@@ -329,8 +329,8 @@ bool q_socketnotifier_event_filter(void* self, void* watched, void* event) {
     return QSocketNotifier_EventFilter((QSocketNotifier*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_socketnotifier_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSocketNotifier_QBaseEventFilter((QSocketNotifier*)self, (QObject*)watched, (QEvent*)event);
+bool q_socketnotifier_super_event_filter(void* self, void* watched, void* event) {
+    return QSocketNotifier_SuperEventFilter((QSocketNotifier*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_socketnotifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -341,8 +341,8 @@ void q_socketnotifier_timer_event(void* self, void* event) {
     QSocketNotifier_TimerEvent((QSocketNotifier*)self, (QTimerEvent*)event);
 }
 
-void q_socketnotifier_qbase_timer_event(void* self, void* event) {
-    QSocketNotifier_QBaseTimerEvent((QSocketNotifier*)self, (QTimerEvent*)event);
+void q_socketnotifier_super_timer_event(void* self, void* event) {
+    QSocketNotifier_SuperTimerEvent((QSocketNotifier*)self, (QTimerEvent*)event);
 }
 
 void q_socketnotifier_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -353,8 +353,8 @@ void q_socketnotifier_child_event(void* self, void* event) {
     QSocketNotifier_ChildEvent((QSocketNotifier*)self, (QChildEvent*)event);
 }
 
-void q_socketnotifier_qbase_child_event(void* self, void* event) {
-    QSocketNotifier_QBaseChildEvent((QSocketNotifier*)self, (QChildEvent*)event);
+void q_socketnotifier_super_child_event(void* self, void* event) {
+    QSocketNotifier_SuperChildEvent((QSocketNotifier*)self, (QChildEvent*)event);
 }
 
 void q_socketnotifier_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -365,8 +365,8 @@ void q_socketnotifier_custom_event(void* self, void* event) {
     QSocketNotifier_CustomEvent((QSocketNotifier*)self, (QEvent*)event);
 }
 
-void q_socketnotifier_qbase_custom_event(void* self, void* event) {
-    QSocketNotifier_QBaseCustomEvent((QSocketNotifier*)self, (QEvent*)event);
+void q_socketnotifier_super_custom_event(void* self, void* event) {
+    QSocketNotifier_SuperCustomEvent((QSocketNotifier*)self, (QEvent*)event);
 }
 
 void q_socketnotifier_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -377,8 +377,8 @@ void q_socketnotifier_connect_notify(void* self, void* signal) {
     QSocketNotifier_ConnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-void q_socketnotifier_qbase_connect_notify(void* self, void* signal) {
-    QSocketNotifier_QBaseConnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
+void q_socketnotifier_super_connect_notify(void* self, void* signal) {
+    QSocketNotifier_SuperConnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
 void q_socketnotifier_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -389,8 +389,8 @@ void q_socketnotifier_disconnect_notify(void* self, void* signal) {
     QSocketNotifier_DisconnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-void q_socketnotifier_qbase_disconnect_notify(void* self, void* signal) {
-    QSocketNotifier_QBaseDisconnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
+void q_socketnotifier_super_disconnect_notify(void* self, void* signal) {
+    QSocketNotifier_SuperDisconnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
 void q_socketnotifier_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -401,8 +401,8 @@ QObject* q_socketnotifier_sender(void* self) {
     return QSocketNotifier_Sender((QSocketNotifier*)self);
 }
 
-QObject* q_socketnotifier_qbase_sender(void* self) {
-    return QSocketNotifier_QBaseSender((QSocketNotifier*)self);
+QObject* q_socketnotifier_super_sender(void* self) {
+    return QSocketNotifier_SuperSender((QSocketNotifier*)self);
 }
 
 void q_socketnotifier_on_sender(void* self, QObject* (*callback)()) {
@@ -413,8 +413,8 @@ int32_t q_socketnotifier_sender_signal_index(void* self) {
     return QSocketNotifier_SenderSignalIndex((QSocketNotifier*)self);
 }
 
-int32_t q_socketnotifier_qbase_sender_signal_index(void* self) {
-    return QSocketNotifier_QBaseSenderSignalIndex((QSocketNotifier*)self);
+int32_t q_socketnotifier_super_sender_signal_index(void* self) {
+    return QSocketNotifier_SuperSenderSignalIndex((QSocketNotifier*)self);
 }
 
 void q_socketnotifier_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -425,8 +425,8 @@ int32_t q_socketnotifier_receivers(void* self, const char* signal) {
     return QSocketNotifier_Receivers((QSocketNotifier*)self, signal);
 }
 
-int32_t q_socketnotifier_qbase_receivers(void* self, const char* signal) {
-    return QSocketNotifier_QBaseReceivers((QSocketNotifier*)self, signal);
+int32_t q_socketnotifier_super_receivers(void* self, const char* signal) {
+    return QSocketNotifier_SuperReceivers((QSocketNotifier*)self, signal);
 }
 
 void q_socketnotifier_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -437,8 +437,8 @@ bool q_socketnotifier_is_signal_connected(void* self, void* signal) {
     return QSocketNotifier_IsSignalConnected((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-bool q_socketnotifier_qbase_is_signal_connected(void* self, void* signal) {
-    return QSocketNotifier_QBaseIsSignalConnected((QSocketNotifier*)self, (QMetaMethod*)signal);
+bool q_socketnotifier_super_is_signal_connected(void* self, void* signal) {
+    return QSocketNotifier_SuperIsSignalConnected((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
 void q_socketnotifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

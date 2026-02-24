@@ -32,13 +32,17 @@ void k_onsole__filter_process(void* self);
 ///
 void k_onsole__filter_on_process(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_process` instead
+///
+#define k_onsole__filter_qbase_process k_onsole__filter_super_process
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Filter*
 ///
-void k_onsole__filter_qbase_process(void* self);
+void k_onsole__filter_super_process(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -70,6 +74,10 @@ void k_onsole__filter_add_hot_spot(void* self, void* param1);
 ///
 void k_onsole__filter_on_add_hot_spot(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_add_hot_spot` instead
+///
+#define k_onsole__filter_qbase_add_hot_spot k_onsole__filter_super_add_hot_spot
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -77,7 +85,7 @@ void k_onsole__filter_on_add_hot_spot(void* self, void (*callback)(void*, void*)
 /// @param self Konsole__Filter*
 /// @param param1 Konsole__Filter__HotSpot*
 ///
-void k_onsole__filter_qbase_add_hot_spot(void* self, void* param1);
+void k_onsole__filter_super_add_hot_spot(void* self, void* param1);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -96,13 +104,17 @@ const char* k_onsole__filter_buffer(void* self);
 ///
 void k_onsole__filter_on_buffer(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_buffer` instead
+///
+#define k_onsole__filter_qbase_buffer k_onsole__filter_super_buffer
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__Filter*
 ///
-const char* k_onsole__filter_qbase_buffer(void* self);
+const char* k_onsole__filter_super_buffer(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -122,6 +134,10 @@ void k_onsole__filter_get_line_column(void* self, int position, int* startLine, 
 ///
 void k_onsole__filter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*));
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_get_line_column` instead
+///
+#define k_onsole__filter_qbase_get_line_column k_onsole__filter_super_get_line_column
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -131,7 +147,7 @@ void k_onsole__filter_on_get_line_column(void* self, void (*callback)(void*, int
 /// @param startLine int*
 /// @param startColumn int*
 ///
-void k_onsole__filter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn);
+void k_onsole__filter_super_get_line_column(void* self, int position, int* startLine, int* startColumn);
 
 /// Inherited from QObject
 ///
@@ -623,6 +639,10 @@ void k_onsole__filter_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 const QMetaObject* k_onsole__filter_meta_object(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_meta_object` instead
+///
+#define k_onsole__filter_qbase_meta_object k_onsole__filter_super_meta_object
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -631,7 +651,7 @@ const QMetaObject* k_onsole__filter_meta_object(void* self);
 ///
 /// @param self Konsole__Filter*
 ///
-const QMetaObject* k_onsole__filter_qbase_meta_object(void* self);
+const QMetaObject* k_onsole__filter_super_meta_object(void* self);
 
 /// Inherited from QObject
 ///
@@ -655,6 +675,10 @@ void k_onsole__filter_on_meta_object(void* self, const QMetaObject* (*callback)(
 ///
 void* k_onsole__filter_metacast(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_metacast` instead
+///
+#define k_onsole__filter_qbase_metacast k_onsole__filter_super_metacast
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
@@ -664,7 +688,7 @@ void* k_onsole__filter_metacast(void* self, const char* param1);
 /// @param self Konsole__Filter*
 /// @param param1 const char*
 ///
-void* k_onsole__filter_qbase_metacast(void* self, const char* param1);
+void* k_onsole__filter_super_metacast(void* self, const char* param1);
 
 /// Inherited from QObject
 ///
@@ -690,6 +714,10 @@ void k_onsole__filter_on_metacast(void* self, void* (*callback)(void*, const cha
 ///
 int32_t k_onsole__filter_metacall(void* self, int32_t param1, int param2, void* param3);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_metacall` instead
+///
+#define k_onsole__filter_qbase_metacall k_onsole__filter_super_metacall
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
@@ -701,7 +729,7 @@ int32_t k_onsole__filter_metacall(void* self, int32_t param1, int param2, void* 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_onsole__filter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_onsole__filter_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Inherited from QObject
 ///
@@ -725,6 +753,10 @@ void k_onsole__filter_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 ///
 bool k_onsole__filter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_event` instead
+///
+#define k_onsole__filter_qbase_event k_onsole__filter_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -734,7 +766,7 @@ bool k_onsole__filter_event(void* self, void* event);
 /// @param self Konsole__Filter*
 /// @param event QEvent*
 ///
-bool k_onsole__filter_qbase_event(void* self, void* event);
+bool k_onsole__filter_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -759,6 +791,10 @@ void k_onsole__filter_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_onsole__filter_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_event_filter` instead
+///
+#define k_onsole__filter_qbase_event_filter k_onsole__filter_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -769,7 +805,7 @@ bool k_onsole__filter_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_onsole__filter_qbase_event_filter(void* self, void* watched, void* event);
+bool k_onsole__filter_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -793,6 +829,10 @@ void k_onsole__filter_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_onsole__filter_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_timer_event` instead
+///
+#define k_onsole__filter_qbase_timer_event k_onsole__filter_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -802,7 +842,7 @@ void k_onsole__filter_timer_event(void* self, void* event);
 /// @param self Konsole__Filter*
 /// @param event QTimerEvent*
 ///
-void k_onsole__filter_qbase_timer_event(void* self, void* event);
+void k_onsole__filter_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -826,6 +866,10 @@ void k_onsole__filter_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void k_onsole__filter_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_child_event` instead
+///
+#define k_onsole__filter_qbase_child_event k_onsole__filter_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -835,7 +879,7 @@ void k_onsole__filter_child_event(void* self, void* event);
 /// @param self Konsole__Filter*
 /// @param event QChildEvent*
 ///
-void k_onsole__filter_qbase_child_event(void* self, void* event);
+void k_onsole__filter_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -859,6 +903,10 @@ void k_onsole__filter_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void k_onsole__filter_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_custom_event` instead
+///
+#define k_onsole__filter_qbase_custom_event k_onsole__filter_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -868,7 +916,7 @@ void k_onsole__filter_custom_event(void* self, void* event);
 /// @param self Konsole__Filter*
 /// @param event QEvent*
 ///
-void k_onsole__filter_qbase_custom_event(void* self, void* event);
+void k_onsole__filter_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -892,6 +940,10 @@ void k_onsole__filter_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void k_onsole__filter_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_connect_notify` instead
+///
+#define k_onsole__filter_qbase_connect_notify k_onsole__filter_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -901,7 +953,7 @@ void k_onsole__filter_connect_notify(void* self, void* signal);
 /// @param self Konsole__Filter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__filter_qbase_connect_notify(void* self, void* signal);
+void k_onsole__filter_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -925,6 +977,10 @@ void k_onsole__filter_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_onsole__filter_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_disconnect_notify` instead
+///
+#define k_onsole__filter_qbase_disconnect_notify k_onsole__filter_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -934,7 +990,7 @@ void k_onsole__filter_disconnect_notify(void* self, void* signal);
 /// @param self Konsole__Filter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__filter_qbase_disconnect_notify(void* self, void* signal);
+void k_onsole__filter_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -957,6 +1013,10 @@ void k_onsole__filter_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* k_onsole__filter_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_sender` instead
+///
+#define k_onsole__filter_qbase_sender k_onsole__filter_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -965,7 +1025,7 @@ QObject* k_onsole__filter_sender(void* self);
 ///
 /// @param self Konsole__Filter*
 ///
-QObject* k_onsole__filter_qbase_sender(void* self);
+QObject* k_onsole__filter_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -988,6 +1048,10 @@ void k_onsole__filter_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_onsole__filter_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_sender_signal_index` instead
+///
+#define k_onsole__filter_qbase_sender_signal_index k_onsole__filter_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -996,7 +1060,7 @@ int32_t k_onsole__filter_sender_signal_index(void* self);
 ///
 /// @param self Konsole__Filter*
 ///
-int32_t k_onsole__filter_qbase_sender_signal_index(void* self);
+int32_t k_onsole__filter_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1020,6 +1084,10 @@ void k_onsole__filter_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_onsole__filter_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_receivers` instead
+///
+#define k_onsole__filter_qbase_receivers k_onsole__filter_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1029,7 +1097,7 @@ int32_t k_onsole__filter_receivers(void* self, const char* signal);
 /// @param self Konsole__Filter*
 /// @param signal const char*
 ///
-int32_t k_onsole__filter_qbase_receivers(void* self, const char* signal);
+int32_t k_onsole__filter_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1053,6 +1121,10 @@ void k_onsole__filter_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool k_onsole__filter_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filter_super_is_signal_connected` instead
+///
+#define k_onsole__filter_qbase_is_signal_connected k_onsole__filter_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1062,7 +1134,7 @@ bool k_onsole__filter_is_signal_connected(void* self, void* signal);
 /// @param self Konsole__Filter*
 /// @param signal QMetaMethod*
 ///
-bool k_onsole__filter_qbase_is_signal_connected(void* self, void* signal);
+bool k_onsole__filter_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1126,13 +1198,17 @@ void k_onsole__regexpfilter_process(void* self);
 ///
 void k_onsole__regexpfilter_on_process(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_process` instead
+///
+#define k_onsole__regexpfilter_qbase_process k_onsole__regexpfilter_super_process
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-void k_onsole__regexpfilter_qbase_process(void* self);
+void k_onsole__regexpfilter_super_process(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1153,6 +1229,10 @@ Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_new_hot_spot(void* self, 
 ///
 void k_onsole__regexpfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotSpot* (*callback)(void*, int, int, int, int));
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_new_hot_spot` instead
+///
+#define k_onsole__regexpfilter_qbase_new_hot_spot k_onsole__regexpfilter_super_new_hot_spot
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1163,7 +1243,7 @@ void k_onsole__regexpfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__H
 /// @param endLine int
 /// @param endColumn int
 ///
-Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_qbase_new_hot_spot(void* self, int startLine, int startColumn, int endLine, int endColumn);
+Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_super_new_hot_spot(void* self, int startLine, int startColumn, int endLine, int endColumn);
 
 /// Inherited from Konsole::Filter
 ///
@@ -1673,6 +1753,10 @@ void k_onsole__regexpfilter_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 const QMetaObject* k_onsole__regexpfilter_meta_object(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_meta_object` instead
+///
+#define k_onsole__regexpfilter_qbase_meta_object k_onsole__regexpfilter_super_meta_object
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -1681,7 +1765,7 @@ const QMetaObject* k_onsole__regexpfilter_meta_object(void* self);
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-const QMetaObject* k_onsole__regexpfilter_qbase_meta_object(void* self);
+const QMetaObject* k_onsole__regexpfilter_super_meta_object(void* self);
 
 /// Inherited from QObject
 ///
@@ -1705,6 +1789,10 @@ void k_onsole__regexpfilter_on_meta_object(void* self, const QMetaObject* (*call
 ///
 void* k_onsole__regexpfilter_metacast(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_metacast` instead
+///
+#define k_onsole__regexpfilter_qbase_metacast k_onsole__regexpfilter_super_metacast
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
@@ -1714,7 +1802,7 @@ void* k_onsole__regexpfilter_metacast(void* self, const char* param1);
 /// @param self Konsole__RegExpFilter*
 /// @param param1 const char*
 ///
-void* k_onsole__regexpfilter_qbase_metacast(void* self, const char* param1);
+void* k_onsole__regexpfilter_super_metacast(void* self, const char* param1);
 
 /// Inherited from QObject
 ///
@@ -1740,6 +1828,10 @@ void k_onsole__regexpfilter_on_metacast(void* self, void* (*callback)(void*, con
 ///
 int32_t k_onsole__regexpfilter_metacall(void* self, int32_t param1, int param2, void* param3);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_metacall` instead
+///
+#define k_onsole__regexpfilter_qbase_metacall k_onsole__regexpfilter_super_metacall
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
@@ -1751,7 +1843,7 @@ int32_t k_onsole__regexpfilter_metacall(void* self, int32_t param1, int param2, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_onsole__regexpfilter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_onsole__regexpfilter_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Inherited from QObject
 ///
@@ -1775,6 +1867,10 @@ void k_onsole__regexpfilter_on_metacall(void* self, int32_t (*callback)(void*, i
 ///
 bool k_onsole__regexpfilter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_event` instead
+///
+#define k_onsole__regexpfilter_qbase_event k_onsole__regexpfilter_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1784,7 +1880,7 @@ bool k_onsole__regexpfilter_event(void* self, void* event);
 /// @param self Konsole__RegExpFilter*
 /// @param event QEvent*
 ///
-bool k_onsole__regexpfilter_qbase_event(void* self, void* event);
+bool k_onsole__regexpfilter_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1809,6 +1905,10 @@ void k_onsole__regexpfilter_on_event(void* self, bool (*callback)(void*, void*))
 ///
 bool k_onsole__regexpfilter_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_event_filter` instead
+///
+#define k_onsole__regexpfilter_qbase_event_filter k_onsole__regexpfilter_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1819,7 +1919,7 @@ bool k_onsole__regexpfilter_event_filter(void* self, void* watched, void* event)
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_onsole__regexpfilter_qbase_event_filter(void* self, void* watched, void* event);
+bool k_onsole__regexpfilter_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1843,6 +1943,10 @@ void k_onsole__regexpfilter_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void k_onsole__regexpfilter_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_timer_event` instead
+///
+#define k_onsole__regexpfilter_qbase_timer_event k_onsole__regexpfilter_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1852,7 +1956,7 @@ void k_onsole__regexpfilter_timer_event(void* self, void* event);
 /// @param self Konsole__RegExpFilter*
 /// @param event QTimerEvent*
 ///
-void k_onsole__regexpfilter_qbase_timer_event(void* self, void* event);
+void k_onsole__regexpfilter_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1876,6 +1980,10 @@ void k_onsole__regexpfilter_on_timer_event(void* self, void (*callback)(void*, v
 ///
 void k_onsole__regexpfilter_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_child_event` instead
+///
+#define k_onsole__regexpfilter_qbase_child_event k_onsole__regexpfilter_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1885,7 +1993,7 @@ void k_onsole__regexpfilter_child_event(void* self, void* event);
 /// @param self Konsole__RegExpFilter*
 /// @param event QChildEvent*
 ///
-void k_onsole__regexpfilter_qbase_child_event(void* self, void* event);
+void k_onsole__regexpfilter_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1909,6 +2017,10 @@ void k_onsole__regexpfilter_on_child_event(void* self, void (*callback)(void*, v
 ///
 void k_onsole__regexpfilter_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_custom_event` instead
+///
+#define k_onsole__regexpfilter_qbase_custom_event k_onsole__regexpfilter_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1918,7 +2030,7 @@ void k_onsole__regexpfilter_custom_event(void* self, void* event);
 /// @param self Konsole__RegExpFilter*
 /// @param event QEvent*
 ///
-void k_onsole__regexpfilter_qbase_custom_event(void* self, void* event);
+void k_onsole__regexpfilter_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1942,6 +2054,10 @@ void k_onsole__regexpfilter_on_custom_event(void* self, void (*callback)(void*, 
 ///
 void k_onsole__regexpfilter_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_connect_notify` instead
+///
+#define k_onsole__regexpfilter_qbase_connect_notify k_onsole__regexpfilter_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1951,7 +2067,7 @@ void k_onsole__regexpfilter_connect_notify(void* self, void* signal);
 /// @param self Konsole__RegExpFilter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__regexpfilter_qbase_connect_notify(void* self, void* signal);
+void k_onsole__regexpfilter_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1975,6 +2091,10 @@ void k_onsole__regexpfilter_on_connect_notify(void* self, void (*callback)(void*
 ///
 void k_onsole__regexpfilter_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_disconnect_notify` instead
+///
+#define k_onsole__regexpfilter_qbase_disconnect_notify k_onsole__regexpfilter_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1984,7 +2104,7 @@ void k_onsole__regexpfilter_disconnect_notify(void* self, void* signal);
 /// @param self Konsole__RegExpFilter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__regexpfilter_qbase_disconnect_notify(void* self, void* signal);
+void k_onsole__regexpfilter_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2008,6 +2128,10 @@ void k_onsole__regexpfilter_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 void k_onsole__regexpfilter_add_hot_spot(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_add_hot_spot` instead
+///
+#define k_onsole__regexpfilter_qbase_add_hot_spot k_onsole__regexpfilter_super_add_hot_spot
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2017,7 +2141,7 @@ void k_onsole__regexpfilter_add_hot_spot(void* self, void* param1);
 /// @param self Konsole__RegExpFilter*
 /// @param param1 Konsole__Filter__HotSpot*
 ///
-void k_onsole__regexpfilter_qbase_add_hot_spot(void* self, void* param1);
+void k_onsole__regexpfilter_super_add_hot_spot(void* self, void* param1);
 
 /// Inherited from Konsole::Filter
 ///
@@ -2042,6 +2166,10 @@ void k_onsole__regexpfilter_on_add_hot_spot(void* self, void (*callback)(void*, 
 ///
 const char* k_onsole__regexpfilter_buffer(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_buffer` instead
+///
+#define k_onsole__regexpfilter_qbase_buffer k_onsole__regexpfilter_super_buffer
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2052,7 +2180,7 @@ const char* k_onsole__regexpfilter_buffer(void* self);
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-const char* k_onsole__regexpfilter_qbase_buffer(void* self);
+const char* k_onsole__regexpfilter_super_buffer(void* self);
 
 /// Inherited from Konsole::Filter
 ///
@@ -2078,6 +2206,10 @@ void k_onsole__regexpfilter_on_buffer(void* self, const char* (*callback)());
 ///
 void k_onsole__regexpfilter_get_line_column(void* self, int position, int* startLine, int* startColumn);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_get_line_column` instead
+///
+#define k_onsole__regexpfilter_qbase_get_line_column k_onsole__regexpfilter_super_get_line_column
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2089,7 +2221,7 @@ void k_onsole__regexpfilter_get_line_column(void* self, int position, int* start
 /// @param startLine int*
 /// @param startColumn int*
 ///
-void k_onsole__regexpfilter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn);
+void k_onsole__regexpfilter_super_get_line_column(void* self, int position, int* startLine, int* startColumn);
 
 /// Inherited from Konsole::Filter
 ///
@@ -2112,6 +2244,10 @@ void k_onsole__regexpfilter_on_get_line_column(void* self, void (*callback)(void
 ///
 QObject* k_onsole__regexpfilter_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_sender` instead
+///
+#define k_onsole__regexpfilter_qbase_sender k_onsole__regexpfilter_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2120,7 +2256,7 @@ QObject* k_onsole__regexpfilter_sender(void* self);
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-QObject* k_onsole__regexpfilter_qbase_sender(void* self);
+QObject* k_onsole__regexpfilter_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2143,6 +2279,10 @@ void k_onsole__regexpfilter_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_onsole__regexpfilter_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_sender_signal_index` instead
+///
+#define k_onsole__regexpfilter_qbase_sender_signal_index k_onsole__regexpfilter_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2151,7 +2291,7 @@ int32_t k_onsole__regexpfilter_sender_signal_index(void* self);
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-int32_t k_onsole__regexpfilter_qbase_sender_signal_index(void* self);
+int32_t k_onsole__regexpfilter_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2175,6 +2315,10 @@ void k_onsole__regexpfilter_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t k_onsole__regexpfilter_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_receivers` instead
+///
+#define k_onsole__regexpfilter_qbase_receivers k_onsole__regexpfilter_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2184,7 +2328,7 @@ int32_t k_onsole__regexpfilter_receivers(void* self, const char* signal);
 /// @param self Konsole__RegExpFilter*
 /// @param signal const char*
 ///
-int32_t k_onsole__regexpfilter_qbase_receivers(void* self, const char* signal);
+int32_t k_onsole__regexpfilter_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2208,6 +2352,10 @@ void k_onsole__regexpfilter_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 bool k_onsole__regexpfilter_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter_super_is_signal_connected` instead
+///
+#define k_onsole__regexpfilter_qbase_is_signal_connected k_onsole__regexpfilter_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2217,7 +2365,7 @@ bool k_onsole__regexpfilter_is_signal_connected(void* self, void* signal);
 /// @param self Konsole__RegExpFilter*
 /// @param signal QMetaMethod*
 ///
-bool k_onsole__regexpfilter_qbase_is_signal_connected(void* self, void* signal);
+bool k_onsole__regexpfilter_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2268,13 +2416,17 @@ const QMetaObject* k_onsole__urlfilter_meta_object(void* self);
 ///
 void k_onsole__urlfilter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_meta_object` instead
+///
+#define k_onsole__urlfilter_qbase_meta_object k_onsole__urlfilter_super_meta_object
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__UrlFilter*
 ///
-const QMetaObject* k_onsole__urlfilter_qbase_meta_object(void* self);
+const QMetaObject* k_onsole__urlfilter_super_meta_object(void* self);
 
 /// @param self Konsole__UrlFilter*
 /// @param param1 const char*
@@ -2288,12 +2440,16 @@ void* k_onsole__urlfilter_metacast(void* self, const char* param1);
 ///
 void k_onsole__urlfilter_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_metacast` instead
+///
+#define k_onsole__urlfilter_qbase_metacast k_onsole__urlfilter_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self Konsole__UrlFilter*
 /// @param param1 const char*
 ///
-void* k_onsole__urlfilter_qbase_metacast(void* self, const char* param1);
+void* k_onsole__urlfilter_super_metacast(void* self, const char* param1);
 
 /// @param self Konsole__UrlFilter*
 /// @param param1 enum QMetaObject__Call
@@ -2309,6 +2465,10 @@ int32_t k_onsole__urlfilter_metacall(void* self, int32_t param1, int param2, voi
 ///
 void k_onsole__urlfilter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_metacall` instead
+///
+#define k_onsole__urlfilter_qbase_metacall k_onsole__urlfilter_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self Konsole__UrlFilter*
@@ -2316,7 +2476,7 @@ void k_onsole__urlfilter_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_onsole__urlfilter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_onsole__urlfilter_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -2345,6 +2505,10 @@ Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_new_hot_spot(void* self, int
 ///
 void k_onsole__urlfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotSpot* (*callback)(void*, int, int, int, int));
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_new_hot_spot` instead
+///
+#define k_onsole__urlfilter_qbase_new_hot_spot k_onsole__urlfilter_super_new_hot_spot
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -2355,7 +2519,7 @@ void k_onsole__urlfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotS
 /// @param param3 int
 /// @param param4 int
 ///
-Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_qbase_new_hot_spot(void* self, int param1, int param2, int param3, int param4);
+Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_super_new_hot_spot(void* self, int param1, int param2, int param3, int param4);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -2883,6 +3047,10 @@ void k_onsole__urlfilter_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 void k_onsole__urlfilter_process(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_process` instead
+///
+#define k_onsole__urlfilter_qbase_process k_onsole__urlfilter_super_process
+
 /// Inherited from Konsole::RegExpFilter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2891,7 +3059,7 @@ void k_onsole__urlfilter_process(void* self);
 ///
 /// @param self Konsole__UrlFilter*
 ///
-void k_onsole__urlfilter_qbase_process(void* self);
+void k_onsole__urlfilter_super_process(void* self);
 
 /// Inherited from Konsole::RegExpFilter
 ///
@@ -2915,6 +3083,10 @@ void k_onsole__urlfilter_on_process(void* self, void (*callback)());
 ///
 bool k_onsole__urlfilter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_event` instead
+///
+#define k_onsole__urlfilter_qbase_event k_onsole__urlfilter_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2924,7 +3096,7 @@ bool k_onsole__urlfilter_event(void* self, void* event);
 /// @param self Konsole__UrlFilter*
 /// @param event QEvent*
 ///
-bool k_onsole__urlfilter_qbase_event(void* self, void* event);
+bool k_onsole__urlfilter_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2949,6 +3121,10 @@ void k_onsole__urlfilter_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_onsole__urlfilter_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_event_filter` instead
+///
+#define k_onsole__urlfilter_qbase_event_filter k_onsole__urlfilter_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2959,7 +3135,7 @@ bool k_onsole__urlfilter_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_onsole__urlfilter_qbase_event_filter(void* self, void* watched, void* event);
+bool k_onsole__urlfilter_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2983,6 +3159,10 @@ void k_onsole__urlfilter_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_onsole__urlfilter_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_timer_event` instead
+///
+#define k_onsole__urlfilter_qbase_timer_event k_onsole__urlfilter_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2992,7 +3172,7 @@ void k_onsole__urlfilter_timer_event(void* self, void* event);
 /// @param self Konsole__UrlFilter*
 /// @param event QTimerEvent*
 ///
-void k_onsole__urlfilter_qbase_timer_event(void* self, void* event);
+void k_onsole__urlfilter_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3016,6 +3196,10 @@ void k_onsole__urlfilter_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void k_onsole__urlfilter_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_child_event` instead
+///
+#define k_onsole__urlfilter_qbase_child_event k_onsole__urlfilter_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -3025,7 +3209,7 @@ void k_onsole__urlfilter_child_event(void* self, void* event);
 /// @param self Konsole__UrlFilter*
 /// @param event QChildEvent*
 ///
-void k_onsole__urlfilter_qbase_child_event(void* self, void* event);
+void k_onsole__urlfilter_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3049,6 +3233,10 @@ void k_onsole__urlfilter_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_onsole__urlfilter_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_custom_event` instead
+///
+#define k_onsole__urlfilter_qbase_custom_event k_onsole__urlfilter_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3058,7 +3246,7 @@ void k_onsole__urlfilter_custom_event(void* self, void* event);
 /// @param self Konsole__UrlFilter*
 /// @param event QEvent*
 ///
-void k_onsole__urlfilter_qbase_custom_event(void* self, void* event);
+void k_onsole__urlfilter_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3082,6 +3270,10 @@ void k_onsole__urlfilter_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void k_onsole__urlfilter_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_connect_notify` instead
+///
+#define k_onsole__urlfilter_qbase_connect_notify k_onsole__urlfilter_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -3091,7 +3283,7 @@ void k_onsole__urlfilter_connect_notify(void* self, void* signal);
 /// @param self Konsole__UrlFilter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__urlfilter_qbase_connect_notify(void* self, void* signal);
+void k_onsole__urlfilter_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3115,6 +3307,10 @@ void k_onsole__urlfilter_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_onsole__urlfilter_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_disconnect_notify` instead
+///
+#define k_onsole__urlfilter_qbase_disconnect_notify k_onsole__urlfilter_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3124,7 +3320,7 @@ void k_onsole__urlfilter_disconnect_notify(void* self, void* signal);
 /// @param self Konsole__UrlFilter*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__urlfilter_qbase_disconnect_notify(void* self, void* signal);
+void k_onsole__urlfilter_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3148,6 +3344,10 @@ void k_onsole__urlfilter_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 void k_onsole__urlfilter_add_hot_spot(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_add_hot_spot` instead
+///
+#define k_onsole__urlfilter_qbase_add_hot_spot k_onsole__urlfilter_super_add_hot_spot
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3157,7 +3357,7 @@ void k_onsole__urlfilter_add_hot_spot(void* self, void* param1);
 /// @param self Konsole__UrlFilter*
 /// @param param1 Konsole__Filter__HotSpot*
 ///
-void k_onsole__urlfilter_qbase_add_hot_spot(void* self, void* param1);
+void k_onsole__urlfilter_super_add_hot_spot(void* self, void* param1);
 
 /// Inherited from Konsole::Filter
 ///
@@ -3182,6 +3382,10 @@ void k_onsole__urlfilter_on_add_hot_spot(void* self, void (*callback)(void*, voi
 ///
 const char* k_onsole__urlfilter_buffer(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_buffer` instead
+///
+#define k_onsole__urlfilter_qbase_buffer k_onsole__urlfilter_super_buffer
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3192,7 +3396,7 @@ const char* k_onsole__urlfilter_buffer(void* self);
 ///
 /// @param self Konsole__UrlFilter*
 ///
-const char* k_onsole__urlfilter_qbase_buffer(void* self);
+const char* k_onsole__urlfilter_super_buffer(void* self);
 
 /// Inherited from Konsole::Filter
 ///
@@ -3218,6 +3422,10 @@ void k_onsole__urlfilter_on_buffer(void* self, const char* (*callback)());
 ///
 void k_onsole__urlfilter_get_line_column(void* self, int position, int* startLine, int* startColumn);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_get_line_column` instead
+///
+#define k_onsole__urlfilter_qbase_get_line_column k_onsole__urlfilter_super_get_line_column
+
 /// Inherited from Konsole::Filter
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3229,7 +3437,7 @@ void k_onsole__urlfilter_get_line_column(void* self, int position, int* startLin
 /// @param startLine int*
 /// @param startColumn int*
 ///
-void k_onsole__urlfilter_qbase_get_line_column(void* self, int position, int* startLine, int* startColumn);
+void k_onsole__urlfilter_super_get_line_column(void* self, int position, int* startLine, int* startColumn);
 
 /// Inherited from Konsole::Filter
 ///
@@ -3252,6 +3460,10 @@ void k_onsole__urlfilter_on_get_line_column(void* self, void (*callback)(void*, 
 ///
 QObject* k_onsole__urlfilter_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_sender` instead
+///
+#define k_onsole__urlfilter_qbase_sender k_onsole__urlfilter_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3260,7 +3472,7 @@ QObject* k_onsole__urlfilter_sender(void* self);
 ///
 /// @param self Konsole__UrlFilter*
 ///
-QObject* k_onsole__urlfilter_qbase_sender(void* self);
+QObject* k_onsole__urlfilter_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3283,6 +3495,10 @@ void k_onsole__urlfilter_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_onsole__urlfilter_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_sender_signal_index` instead
+///
+#define k_onsole__urlfilter_qbase_sender_signal_index k_onsole__urlfilter_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3291,7 +3507,7 @@ int32_t k_onsole__urlfilter_sender_signal_index(void* self);
 ///
 /// @param self Konsole__UrlFilter*
 ///
-int32_t k_onsole__urlfilter_qbase_sender_signal_index(void* self);
+int32_t k_onsole__urlfilter_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3315,6 +3531,10 @@ void k_onsole__urlfilter_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_onsole__urlfilter_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_receivers` instead
+///
+#define k_onsole__urlfilter_qbase_receivers k_onsole__urlfilter_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3324,7 +3544,7 @@ int32_t k_onsole__urlfilter_receivers(void* self, const char* signal);
 /// @param self Konsole__UrlFilter*
 /// @param signal const char*
 ///
-int32_t k_onsole__urlfilter_qbase_receivers(void* self, const char* signal);
+int32_t k_onsole__urlfilter_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3348,6 +3568,10 @@ void k_onsole__urlfilter_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool k_onsole__urlfilter_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter_super_is_signal_connected` instead
+///
+#define k_onsole__urlfilter_qbase_is_signal_connected k_onsole__urlfilter_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3357,7 +3581,7 @@ bool k_onsole__urlfilter_is_signal_connected(void* self, void* signal);
 /// @param self Konsole__UrlFilter*
 /// @param signal QMetaMethod*
 ///
-bool k_onsole__urlfilter_qbase_is_signal_connected(void* self, void* signal);
+bool k_onsole__urlfilter_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3410,13 +3634,17 @@ const QMetaObject* k_onsole__filterobject_meta_object(void* self);
 ///
 void k_onsole__filterobject_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_meta_object` instead
+///
+#define k_onsole__filterobject_qbase_meta_object k_onsole__filterobject_super_meta_object
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
 ///
 /// @param self Konsole__FilterObject*
 ///
-const QMetaObject* k_onsole__filterobject_qbase_meta_object(void* self);
+const QMetaObject* k_onsole__filterobject_super_meta_object(void* self);
 
 /// @param self Konsole__FilterObject*
 /// @param param1 const char*
@@ -3430,12 +3658,16 @@ void* k_onsole__filterobject_metacast(void* self, const char* param1);
 ///
 void k_onsole__filterobject_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_metacast` instead
+///
+#define k_onsole__filterobject_qbase_metacast k_onsole__filterobject_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self Konsole__FilterObject*
 /// @param param1 const char*
 ///
-void* k_onsole__filterobject_qbase_metacast(void* self, const char* param1);
+void* k_onsole__filterobject_super_metacast(void* self, const char* param1);
 
 /// @param self Konsole__FilterObject*
 /// @param param1 enum QMetaObject__Call
@@ -3451,6 +3683,10 @@ int32_t k_onsole__filterobject_metacall(void* self, int32_t param1, int param2, 
 ///
 void k_onsole__filterobject_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_metacall` instead
+///
+#define k_onsole__filterobject_qbase_metacall k_onsole__filterobject_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self Konsole__FilterObject*
@@ -3458,7 +3694,7 @@ void k_onsole__filterobject_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_onsole__filterobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_onsole__filterobject_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -3974,6 +4210,10 @@ void k_onsole__filterobject_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 bool k_onsole__filterobject_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_event` instead
+///
+#define k_onsole__filterobject_qbase_event k_onsole__filterobject_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -3983,7 +4223,7 @@ bool k_onsole__filterobject_event(void* self, void* event);
 /// @param self Konsole__FilterObject*
 /// @param event QEvent*
 ///
-bool k_onsole__filterobject_qbase_event(void* self, void* event);
+bool k_onsole__filterobject_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4008,6 +4248,10 @@ void k_onsole__filterobject_on_event(void* self, bool (*callback)(void*, void*))
 ///
 bool k_onsole__filterobject_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_event_filter` instead
+///
+#define k_onsole__filterobject_qbase_event_filter k_onsole__filterobject_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4018,7 +4262,7 @@ bool k_onsole__filterobject_event_filter(void* self, void* watched, void* event)
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_onsole__filterobject_qbase_event_filter(void* self, void* watched, void* event);
+bool k_onsole__filterobject_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4042,6 +4286,10 @@ void k_onsole__filterobject_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void k_onsole__filterobject_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_timer_event` instead
+///
+#define k_onsole__filterobject_qbase_timer_event k_onsole__filterobject_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4051,7 +4299,7 @@ void k_onsole__filterobject_timer_event(void* self, void* event);
 /// @param self Konsole__FilterObject*
 /// @param event QTimerEvent*
 ///
-void k_onsole__filterobject_qbase_timer_event(void* self, void* event);
+void k_onsole__filterobject_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4075,6 +4323,10 @@ void k_onsole__filterobject_on_timer_event(void* self, void (*callback)(void*, v
 ///
 void k_onsole__filterobject_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_child_event` instead
+///
+#define k_onsole__filterobject_qbase_child_event k_onsole__filterobject_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4084,7 +4336,7 @@ void k_onsole__filterobject_child_event(void* self, void* event);
 /// @param self Konsole__FilterObject*
 /// @param event QChildEvent*
 ///
-void k_onsole__filterobject_qbase_child_event(void* self, void* event);
+void k_onsole__filterobject_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4108,6 +4360,10 @@ void k_onsole__filterobject_on_child_event(void* self, void (*callback)(void*, v
 ///
 void k_onsole__filterobject_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_custom_event` instead
+///
+#define k_onsole__filterobject_qbase_custom_event k_onsole__filterobject_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4117,7 +4373,7 @@ void k_onsole__filterobject_custom_event(void* self, void* event);
 /// @param self Konsole__FilterObject*
 /// @param event QEvent*
 ///
-void k_onsole__filterobject_qbase_custom_event(void* self, void* event);
+void k_onsole__filterobject_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4141,6 +4397,10 @@ void k_onsole__filterobject_on_custom_event(void* self, void (*callback)(void*, 
 ///
 void k_onsole__filterobject_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_connect_notify` instead
+///
+#define k_onsole__filterobject_qbase_connect_notify k_onsole__filterobject_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4150,7 +4410,7 @@ void k_onsole__filterobject_connect_notify(void* self, void* signal);
 /// @param self Konsole__FilterObject*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__filterobject_qbase_connect_notify(void* self, void* signal);
+void k_onsole__filterobject_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4174,6 +4434,10 @@ void k_onsole__filterobject_on_connect_notify(void* self, void (*callback)(void*
 ///
 void k_onsole__filterobject_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_disconnect_notify` instead
+///
+#define k_onsole__filterobject_qbase_disconnect_notify k_onsole__filterobject_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4183,7 +4447,7 @@ void k_onsole__filterobject_disconnect_notify(void* self, void* signal);
 /// @param self Konsole__FilterObject*
 /// @param signal QMetaMethod*
 ///
-void k_onsole__filterobject_qbase_disconnect_notify(void* self, void* signal);
+void k_onsole__filterobject_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4206,6 +4470,10 @@ void k_onsole__filterobject_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QObject* k_onsole__filterobject_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_sender` instead
+///
+#define k_onsole__filterobject_qbase_sender k_onsole__filterobject_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4214,7 +4482,7 @@ QObject* k_onsole__filterobject_sender(void* self);
 ///
 /// @param self Konsole__FilterObject*
 ///
-QObject* k_onsole__filterobject_qbase_sender(void* self);
+QObject* k_onsole__filterobject_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -4237,6 +4505,10 @@ void k_onsole__filterobject_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_onsole__filterobject_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_sender_signal_index` instead
+///
+#define k_onsole__filterobject_qbase_sender_signal_index k_onsole__filterobject_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -4245,7 +4517,7 @@ int32_t k_onsole__filterobject_sender_signal_index(void* self);
 ///
 /// @param self Konsole__FilterObject*
 ///
-int32_t k_onsole__filterobject_qbase_sender_signal_index(void* self);
+int32_t k_onsole__filterobject_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -4269,6 +4541,10 @@ void k_onsole__filterobject_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t k_onsole__filterobject_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_receivers` instead
+///
+#define k_onsole__filterobject_qbase_receivers k_onsole__filterobject_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4278,7 +4554,7 @@ int32_t k_onsole__filterobject_receivers(void* self, const char* signal);
 /// @param self Konsole__FilterObject*
 /// @param signal const char*
 ///
-int32_t k_onsole__filterobject_qbase_receivers(void* self, const char* signal);
+int32_t k_onsole__filterobject_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4302,6 +4578,10 @@ void k_onsole__filterobject_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 bool k_onsole__filterobject_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_onsole__filterobject_super_is_signal_connected` instead
+///
+#define k_onsole__filterobject_qbase_is_signal_connected k_onsole__filterobject_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -4311,7 +4591,7 @@ bool k_onsole__filterobject_is_signal_connected(void* self, void* signal);
 /// @param self Konsole__FilterObject*
 /// @param signal QMetaMethod*
 ///
-bool k_onsole__filterobject_qbase_is_signal_connected(void* self, void* signal);
+bool k_onsole__filterobject_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4584,6 +4864,10 @@ void k_onsole__filter__hotspot_activate(void* self, const char* action);
 ///
 void k_onsole__filter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__filter__hotspot_super_activate` instead
+///
+#define k_onsole__filter__hotspot_qbase_activate k_onsole__filter__hotspot_super_activate
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4591,7 +4875,7 @@ void k_onsole__filter__hotspot_on_activate(void* self, void (*callback)(void*, c
 /// @param self Konsole__Filter__HotSpot*
 /// @param action const char*
 ///
-void k_onsole__filter__hotspot_qbase_activate(void* self, const char* action);
+void k_onsole__filter__hotspot_super_activate(void* self, const char* action);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4610,6 +4894,10 @@ libqt_list k_onsole__filter__hotspot_actions(void* self);
 ///
 void k_onsole__filter__hotspot_on_actions(void* self, libqt_list (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__filter__hotspot_super_actions` instead
+///
+#define k_onsole__filter__hotspot_qbase_actions k_onsole__filter__hotspot_super_actions
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4618,7 +4906,7 @@ void k_onsole__filter__hotspot_on_actions(void* self, libqt_list (*callback)());
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_onsole__filter__hotspot_qbase_actions(void* self);
+libqt_list k_onsole__filter__hotspot_super_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4636,6 +4924,10 @@ void k_onsole__filter__hotspot_set_type(void* self, int32_t type);
 ///
 void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_onsole__filter__hotspot_super_set_type` instead
+///
+#define k_onsole__filter__hotspot_qbase_set_type k_onsole__filter__hotspot_super_set_type
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4643,7 +4935,7 @@ void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, i
 /// @param self Konsole__Filter__HotSpot*
 /// @param type enum Konsole__Filter__HotSpot__Type
 ///
-void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t type);
+void k_onsole__filter__hotspot_super_set_type(void* self, int32_t type);
 
 /// Delete this object from C++ memory.
 ///
@@ -4686,6 +4978,10 @@ void k_onsole__regexpfilter__hotspot_activate(void* self, const char* action);
 ///
 void k_onsole__regexpfilter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter__hotspot_super_activate` instead
+///
+#define k_onsole__regexpfilter__hotspot_qbase_activate k_onsole__regexpfilter__hotspot_super_activate
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4693,7 +4989,7 @@ void k_onsole__regexpfilter__hotspot_on_activate(void* self, void (*callback)(vo
 /// @param self Konsole__RegExpFilter__HotSpot*
 /// @param action const char*
 ///
-void k_onsole__regexpfilter__hotspot_qbase_activate(void* self, const char* action);
+void k_onsole__regexpfilter__hotspot_super_activate(void* self, const char* action);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4764,6 +5060,10 @@ int32_t k_onsole__regexpfilter__hotspot_type(void* self);
 ///
 libqt_list k_onsole__regexpfilter__hotspot_actions(void* self);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter__hotspot_super_actions` instead
+///
+#define k_onsole__regexpfilter__hotspot_qbase_actions k_onsole__regexpfilter__hotspot_super_actions
+
 /// Inherited from Konsole::Filter::HotSpot
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -4774,7 +5074,7 @@ libqt_list k_onsole__regexpfilter__hotspot_actions(void* self);
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_onsole__regexpfilter__hotspot_qbase_actions(void* self);
+libqt_list k_onsole__regexpfilter__hotspot_super_actions(void* self);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4798,6 +5098,10 @@ void k_onsole__regexpfilter__hotspot_on_actions(void* self, libqt_list (*callbac
 ///
 void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t type);
 
+/// @warning DEPRECATED: Use `k_onsole__regexpfilter__hotspot_super_set_type` instead
+///
+#define k_onsole__regexpfilter__hotspot_qbase_set_type k_onsole__regexpfilter__hotspot_super_set_type
+
 /// Inherited from Konsole::Filter::HotSpot
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -4807,7 +5111,7 @@ void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t type);
 /// @param self Konsole__RegExpFilter__HotSpot*
 /// @param type enum Konsole__Filter__HotSpot__Type
 ///
-void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t type);
+void k_onsole__regexpfilter__hotspot_super_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4860,6 +5164,10 @@ libqt_list k_onsole__urlfilter__hotspot_actions(void* self);
 ///
 void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list (*callback)());
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter__hotspot_super_actions` instead
+///
+#define k_onsole__urlfilter__hotspot_qbase_actions k_onsole__urlfilter__hotspot_super_actions
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4868,7 +5176,7 @@ void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list (*callback)(
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_onsole__urlfilter__hotspot_qbase_actions(void* self);
+libqt_list k_onsole__urlfilter__hotspot_super_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4886,6 +5194,10 @@ void k_onsole__urlfilter__hotspot_activate(void* self, const char* action);
 ///
 void k_onsole__urlfilter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter__hotspot_super_activate` instead
+///
+#define k_onsole__urlfilter__hotspot_qbase_activate k_onsole__urlfilter__hotspot_super_activate
+
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -4893,7 +5205,7 @@ void k_onsole__urlfilter__hotspot_on_activate(void* self, void (*callback)(void*
 /// @param self Konsole__UrlFilter__HotSpot*
 /// @param action const char*
 ///
-void k_onsole__urlfilter__hotspot_qbase_activate(void* self, const char* action);
+void k_onsole__urlfilter__hotspot_super_activate(void* self, const char* action);
 
 /// Inherited from Konsole::RegExpFilter::HotSpot
 ///
@@ -4967,6 +5279,10 @@ int32_t k_onsole__urlfilter__hotspot_type(void* self);
 ///
 void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t type);
 
+/// @warning DEPRECATED: Use `k_onsole__urlfilter__hotspot_super_set_type` instead
+///
+#define k_onsole__urlfilter__hotspot_qbase_set_type k_onsole__urlfilter__hotspot_super_set_type
+
 /// Inherited from Konsole::Filter::HotSpot
 ///
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -4976,7 +5292,7 @@ void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t type);
 /// @param self Konsole__UrlFilter__HotSpot*
 /// @param type enum Konsole__Filter__HotSpot__Type
 ///
-void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t type);
+void k_onsole__urlfilter__hotspot_super_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///

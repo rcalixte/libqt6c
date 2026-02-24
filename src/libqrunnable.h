@@ -32,13 +32,17 @@ void q_runnable_run(void* self);
 ///
 void q_runnable_on_run(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_runnable_super_run` instead
+///
+#define q_runnable_qbase_run q_runnable_super_run
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#run)
 ///
 /// Base class method implementation
 ///
 /// @param self QRunnable*
 ///
-void q_runnable_qbase_run(void* self);
+void q_runnable_super_run(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrunnable.html#autoDelete)
 ///

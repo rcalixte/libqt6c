@@ -27,8 +27,8 @@ void k_io__widgetsaskuseractionhandler_on_meta_object(void* self, const QMetaObj
     KIO__WidgetsAskUserActionHandler_OnMetaObject((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__widgetsaskuseractionhandler_qbase_meta_object(void* self) {
-    return KIO__WidgetsAskUserActionHandler_QBaseMetaObject((KIO__WidgetsAskUserActionHandler*)self);
+const QMetaObject* k_io__widgetsaskuseractionhandler_super_meta_object(void* self) {
+    return KIO__WidgetsAskUserActionHandler_SuperMetaObject((KIO__WidgetsAskUserActionHandler*)self);
 }
 
 void* k_io__widgetsaskuseractionhandler_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void k_io__widgetsaskuseractionhandler_on_metacast(void* self, void* (*callback)
     KIO__WidgetsAskUserActionHandler_OnMetacast((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void* k_io__widgetsaskuseractionhandler_qbase_metacast(void* self, const char* param1) {
-    return KIO__WidgetsAskUserActionHandler_QBaseMetacast((KIO__WidgetsAskUserActionHandler*)self, param1);
+void* k_io__widgetsaskuseractionhandler_super_metacast(void* self, const char* param1) {
+    return KIO__WidgetsAskUserActionHandler_SuperMetacast((KIO__WidgetsAskUserActionHandler*)self, param1);
 }
 
 int32_t k_io__widgetsaskuseractionhandler_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void k_io__widgetsaskuseractionhandler_on_metacall(void* self, int32_t (*callbac
     KIO__WidgetsAskUserActionHandler_OnMetacall((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-int32_t k_io__widgetsaskuseractionhandler_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__WidgetsAskUserActionHandler_QBaseMetacall((KIO__WidgetsAskUserActionHandler*)self, param1, param2, param3);
+int32_t k_io__widgetsaskuseractionhandler_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__WidgetsAskUserActionHandler_SuperMetacall((KIO__WidgetsAskUserActionHandler*)self, param1, param2, param3);
 }
 
 const char* k_io__widgetsaskuseractionhandler_tr(const char* s) {
@@ -70,8 +70,8 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_rename(void* self, void (*cal
     KIO__WidgetsAskUserActionHandler_OnAskUserRename((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
-    KIO__WidgetsAskUserActionHandler_QBaseAskUserRename((KIO__WidgetsAskUserActionHandler*)self, (KJob*)job, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest, (QDateTime*)mtimeSrc, (QDateTime*)mtimeDest);
+void k_io__widgetsaskuseractionhandler_super_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
+    KIO__WidgetsAskUserActionHandler_SuperAskUserRename((KIO__WidgetsAskUserActionHandler*)self, (KJob*)job, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest, (QDateTime*)mtimeSrc, (QDateTime*)mtimeDest);
 }
 
 void k_io__widgetsaskuseractionhandler_ask_user_skip(void* self, void* job, int32_t options, const char* error_text) {
@@ -82,8 +82,8 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_skip(void* self, void (*callb
     KIO__WidgetsAskUserActionHandler_OnAskUserSkip((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_skip(void* self, void* job, int32_t options, const char* error_text) {
-    KIO__WidgetsAskUserActionHandler_QBaseAskUserSkip((KIO__WidgetsAskUserActionHandler*)self, (KJob*)job, options, qstring(error_text));
+void k_io__widgetsaskuseractionhandler_super_ask_user_skip(void* self, void* job, int32_t options, const char* error_text) {
+    KIO__WidgetsAskUserActionHandler_SuperAskUserSkip((KIO__WidgetsAskUserActionHandler*)self, (KJob*)job, options, qstring(error_text));
 }
 
 void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent) {
@@ -94,8 +94,8 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*cal
     KIO__WidgetsAskUserActionHandler_OnAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent) {
-    KIO__WidgetsAskUserActionHandler_QBaseAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
+void k_io__widgetsaskuseractionhandler_super_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent) {
+    KIO__WidgetsAskUserActionHandler_SuperAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
@@ -106,8 +106,8 @@ void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, v
     KIO__WidgetsAskUserActionHandler_OnRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
-    KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
+void k_io__widgetsaskuseractionhandler_super_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
+    KIO__WidgetsAskUserActionHandler_SuperRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
@@ -142,7 +142,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void
     KIO__WidgetsAskUserActionHandler_OnAskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
+void k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map sslErrorData_ret;
     sslErrorData_ret.len = sslErrorData.len;
@@ -165,7 +165,7 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors(void* self, l
         sslErrorData_kdest[i] = qstring(sslErrorData_karr[i]);
         sslErrorData_vdest[i] = sslErrorData_varr[i];
     }
-    KIO__WidgetsAskUserActionHandler_QBaseAskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData_ret, (QWidget*)parent);
+    KIO__WidgetsAskUserActionHandler_SuperAskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData_ret, (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_set_window(void* self, void* window) {
@@ -441,8 +441,8 @@ bool k_io__widgetsaskuseractionhandler_event(void* self, void* event) {
     return KIO__WidgetsAskUserActionHandler_Event((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
 }
 
-bool k_io__widgetsaskuseractionhandler_qbase_event(void* self, void* event) {
-    return KIO__WidgetsAskUserActionHandler_QBaseEvent((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
+bool k_io__widgetsaskuseractionhandler_super_event(void* self, void* event) {
+    return KIO__WidgetsAskUserActionHandler_SuperEvent((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
 }
 
 void k_io__widgetsaskuseractionhandler_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -453,8 +453,8 @@ bool k_io__widgetsaskuseractionhandler_event_filter(void* self, void* watched, v
     return KIO__WidgetsAskUserActionHandler_EventFilter((KIO__WidgetsAskUserActionHandler*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__widgetsaskuseractionhandler_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__WidgetsAskUserActionHandler_QBaseEventFilter((KIO__WidgetsAskUserActionHandler*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__widgetsaskuseractionhandler_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__WidgetsAskUserActionHandler_SuperEventFilter((KIO__WidgetsAskUserActionHandler*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__widgetsaskuseractionhandler_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -465,8 +465,8 @@ void k_io__widgetsaskuseractionhandler_timer_event(void* self, void* event) {
     KIO__WidgetsAskUserActionHandler_TimerEvent((KIO__WidgetsAskUserActionHandler*)self, (QTimerEvent*)event);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_timer_event(void* self, void* event) {
-    KIO__WidgetsAskUserActionHandler_QBaseTimerEvent((KIO__WidgetsAskUserActionHandler*)self, (QTimerEvent*)event);
+void k_io__widgetsaskuseractionhandler_super_timer_event(void* self, void* event) {
+    KIO__WidgetsAskUserActionHandler_SuperTimerEvent((KIO__WidgetsAskUserActionHandler*)self, (QTimerEvent*)event);
 }
 
 void k_io__widgetsaskuseractionhandler_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void k_io__widgetsaskuseractionhandler_child_event(void* self, void* event) {
     KIO__WidgetsAskUserActionHandler_ChildEvent((KIO__WidgetsAskUserActionHandler*)self, (QChildEvent*)event);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_child_event(void* self, void* event) {
-    KIO__WidgetsAskUserActionHandler_QBaseChildEvent((KIO__WidgetsAskUserActionHandler*)self, (QChildEvent*)event);
+void k_io__widgetsaskuseractionhandler_super_child_event(void* self, void* event) {
+    KIO__WidgetsAskUserActionHandler_SuperChildEvent((KIO__WidgetsAskUserActionHandler*)self, (QChildEvent*)event);
 }
 
 void k_io__widgetsaskuseractionhandler_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -489,8 +489,8 @@ void k_io__widgetsaskuseractionhandler_custom_event(void* self, void* event) {
     KIO__WidgetsAskUserActionHandler_CustomEvent((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_custom_event(void* self, void* event) {
-    KIO__WidgetsAskUserActionHandler_QBaseCustomEvent((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
+void k_io__widgetsaskuseractionhandler_super_custom_event(void* self, void* event) {
+    KIO__WidgetsAskUserActionHandler_SuperCustomEvent((KIO__WidgetsAskUserActionHandler*)self, (QEvent*)event);
 }
 
 void k_io__widgetsaskuseractionhandler_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -501,8 +501,8 @@ void k_io__widgetsaskuseractionhandler_connect_notify(void* self, void* signal) 
     KIO__WidgetsAskUserActionHandler_ConnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_connect_notify(void* self, void* signal) {
-    KIO__WidgetsAskUserActionHandler_QBaseConnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
+void k_io__widgetsaskuseractionhandler_super_connect_notify(void* self, void* signal) {
+    KIO__WidgetsAskUserActionHandler_SuperConnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
 void k_io__widgetsaskuseractionhandler_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -513,8 +513,8 @@ void k_io__widgetsaskuseractionhandler_disconnect_notify(void* self, void* signa
     KIO__WidgetsAskUserActionHandler_DisconnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__WidgetsAskUserActionHandler_QBaseDisconnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
+void k_io__widgetsaskuseractionhandler_super_disconnect_notify(void* self, void* signal) {
+    KIO__WidgetsAskUserActionHandler_SuperDisconnectNotify((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
 void k_io__widgetsaskuseractionhandler_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -525,8 +525,8 @@ QObject* k_io__widgetsaskuseractionhandler_sender(void* self) {
     return KIO__WidgetsAskUserActionHandler_Sender((KIO__WidgetsAskUserActionHandler*)self);
 }
 
-QObject* k_io__widgetsaskuseractionhandler_qbase_sender(void* self) {
-    return KIO__WidgetsAskUserActionHandler_QBaseSender((KIO__WidgetsAskUserActionHandler*)self);
+QObject* k_io__widgetsaskuseractionhandler_super_sender(void* self) {
+    return KIO__WidgetsAskUserActionHandler_SuperSender((KIO__WidgetsAskUserActionHandler*)self);
 }
 
 void k_io__widgetsaskuseractionhandler_on_sender(void* self, QObject* (*callback)()) {
@@ -537,8 +537,8 @@ int32_t k_io__widgetsaskuseractionhandler_sender_signal_index(void* self) {
     return KIO__WidgetsAskUserActionHandler_SenderSignalIndex((KIO__WidgetsAskUserActionHandler*)self);
 }
 
-int32_t k_io__widgetsaskuseractionhandler_qbase_sender_signal_index(void* self) {
-    return KIO__WidgetsAskUserActionHandler_QBaseSenderSignalIndex((KIO__WidgetsAskUserActionHandler*)self);
+int32_t k_io__widgetsaskuseractionhandler_super_sender_signal_index(void* self) {
+    return KIO__WidgetsAskUserActionHandler_SuperSenderSignalIndex((KIO__WidgetsAskUserActionHandler*)self);
 }
 
 void k_io__widgetsaskuseractionhandler_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -549,8 +549,8 @@ int32_t k_io__widgetsaskuseractionhandler_receivers(void* self, const char* sign
     return KIO__WidgetsAskUserActionHandler_Receivers((KIO__WidgetsAskUserActionHandler*)self, signal);
 }
 
-int32_t k_io__widgetsaskuseractionhandler_qbase_receivers(void* self, const char* signal) {
-    return KIO__WidgetsAskUserActionHandler_QBaseReceivers((KIO__WidgetsAskUserActionHandler*)self, signal);
+int32_t k_io__widgetsaskuseractionhandler_super_receivers(void* self, const char* signal) {
+    return KIO__WidgetsAskUserActionHandler_SuperReceivers((KIO__WidgetsAskUserActionHandler*)self, signal);
 }
 
 void k_io__widgetsaskuseractionhandler_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -561,8 +561,8 @@ bool k_io__widgetsaskuseractionhandler_is_signal_connected(void* self, void* sig
     return KIO__WidgetsAskUserActionHandler_IsSignalConnected((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__widgetsaskuseractionhandler_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__WidgetsAskUserActionHandler_QBaseIsSignalConnected((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
+bool k_io__widgetsaskuseractionhandler_super_is_signal_connected(void* self, void* signal) {
+    return KIO__WidgetsAskUserActionHandler_SuperIsSignalConnected((KIO__WidgetsAskUserActionHandler*)self, (QMetaMethod*)signal);
 }
 
 void k_io__widgetsaskuseractionhandler_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

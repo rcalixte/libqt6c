@@ -45,8 +45,8 @@ void q_imageiohandler_on_can_read(void* self, bool (*callback)()) {
     QImageIOHandler_OnCanRead((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_can_read(void* self) {
-    return QImageIOHandler_QBaseCanRead((QImageIOHandler*)self);
+bool q_imageiohandler_super_can_read(void* self) {
+    return QImageIOHandler_SuperCanRead((QImageIOHandler*)self);
 }
 
 bool q_imageiohandler_read(void* self, void* image) {
@@ -57,8 +57,8 @@ void q_imageiohandler_on_read(void* self, bool (*callback)(void*, void*)) {
     QImageIOHandler_OnRead((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_read(void* self, void* image) {
-    return QImageIOHandler_QBaseRead((QImageIOHandler*)self, (QImage*)image);
+bool q_imageiohandler_super_read(void* self, void* image) {
+    return QImageIOHandler_SuperRead((QImageIOHandler*)self, (QImage*)image);
 }
 
 bool q_imageiohandler_write(void* self, void* image) {
@@ -69,8 +69,8 @@ void q_imageiohandler_on_write(void* self, bool (*callback)(void*, void*)) {
     QImageIOHandler_OnWrite((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_write(void* self, void* image) {
-    return QImageIOHandler_QBaseWrite((QImageIOHandler*)self, (QImage*)image);
+bool q_imageiohandler_super_write(void* self, void* image) {
+    return QImageIOHandler_SuperWrite((QImageIOHandler*)self, (QImage*)image);
 }
 
 QVariant* q_imageiohandler_option(void* self, int32_t option) {
@@ -81,8 +81,8 @@ void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int32_t
     QImageIOHandler_OnOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-QVariant* q_imageiohandler_qbase_option(void* self, int32_t option) {
-    return QImageIOHandler_QBaseOption((QImageIOHandler*)self, option);
+QVariant* q_imageiohandler_super_option(void* self, int32_t option) {
+    return QImageIOHandler_SuperOption((QImageIOHandler*)self, option);
 }
 
 void q_imageiohandler_set_option(void* self, int32_t option, void* value) {
@@ -93,8 +93,8 @@ void q_imageiohandler_on_set_option(void* self, void (*callback)(void*, int32_t,
     QImageIOHandler_OnSetOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-void q_imageiohandler_qbase_set_option(void* self, int32_t option, void* value) {
-    QImageIOHandler_QBaseSetOption((QImageIOHandler*)self, option, (QVariant*)value);
+void q_imageiohandler_super_set_option(void* self, int32_t option, void* value) {
+    QImageIOHandler_SuperSetOption((QImageIOHandler*)self, option, (QVariant*)value);
 }
 
 bool q_imageiohandler_supports_option(void* self, int32_t option) {
@@ -105,8 +105,8 @@ void q_imageiohandler_on_supports_option(void* self, bool (*callback)(void*, int
     QImageIOHandler_OnSupportsOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_supports_option(void* self, int32_t option) {
-    return QImageIOHandler_QBaseSupportsOption((QImageIOHandler*)self, option);
+bool q_imageiohandler_super_supports_option(void* self, int32_t option) {
+    return QImageIOHandler_SuperSupportsOption((QImageIOHandler*)self, option);
 }
 
 bool q_imageiohandler_jump_to_next_image(void* self) {
@@ -117,8 +117,8 @@ void q_imageiohandler_on_jump_to_next_image(void* self, bool (*callback)()) {
     QImageIOHandler_OnJumpToNextImage((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_jump_to_next_image(void* self) {
-    return QImageIOHandler_QBaseJumpToNextImage((QImageIOHandler*)self);
+bool q_imageiohandler_super_jump_to_next_image(void* self) {
+    return QImageIOHandler_SuperJumpToNextImage((QImageIOHandler*)self);
 }
 
 bool q_imageiohandler_jump_to_image(void* self, int imageNumber) {
@@ -129,8 +129,8 @@ void q_imageiohandler_on_jump_to_image(void* self, bool (*callback)(void*, int))
     QImageIOHandler_OnJumpToImage((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_jump_to_image(void* self, int imageNumber) {
-    return QImageIOHandler_QBaseJumpToImage((QImageIOHandler*)self, imageNumber);
+bool q_imageiohandler_super_jump_to_image(void* self, int imageNumber) {
+    return QImageIOHandler_SuperJumpToImage((QImageIOHandler*)self, imageNumber);
 }
 
 int32_t q_imageiohandler_loop_count(void* self) {
@@ -141,8 +141,8 @@ void q_imageiohandler_on_loop_count(void* self, int32_t (*callback)()) {
     QImageIOHandler_OnLoopCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-int32_t q_imageiohandler_qbase_loop_count(void* self) {
-    return QImageIOHandler_QBaseLoopCount((QImageIOHandler*)self);
+int32_t q_imageiohandler_super_loop_count(void* self) {
+    return QImageIOHandler_SuperLoopCount((QImageIOHandler*)self);
 }
 
 int32_t q_imageiohandler_image_count(void* self) {
@@ -153,8 +153,8 @@ void q_imageiohandler_on_image_count(void* self, int32_t (*callback)()) {
     QImageIOHandler_OnImageCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-int32_t q_imageiohandler_qbase_image_count(void* self) {
-    return QImageIOHandler_QBaseImageCount((QImageIOHandler*)self);
+int32_t q_imageiohandler_super_image_count(void* self) {
+    return QImageIOHandler_SuperImageCount((QImageIOHandler*)self);
 }
 
 int32_t q_imageiohandler_next_image_delay(void* self) {
@@ -165,8 +165,8 @@ void q_imageiohandler_on_next_image_delay(void* self, int32_t (*callback)()) {
     QImageIOHandler_OnNextImageDelay((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-int32_t q_imageiohandler_qbase_next_image_delay(void* self) {
-    return QImageIOHandler_QBaseNextImageDelay((QImageIOHandler*)self);
+int32_t q_imageiohandler_super_next_image_delay(void* self) {
+    return QImageIOHandler_SuperNextImageDelay((QImageIOHandler*)self);
 }
 
 int32_t q_imageiohandler_current_image_number(void* self) {
@@ -177,8 +177,8 @@ void q_imageiohandler_on_current_image_number(void* self, int32_t (*callback)())
     QImageIOHandler_OnCurrentImageNumber((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-int32_t q_imageiohandler_qbase_current_image_number(void* self) {
-    return QImageIOHandler_QBaseCurrentImageNumber((QImageIOHandler*)self);
+int32_t q_imageiohandler_super_current_image_number(void* self) {
+    return QImageIOHandler_SuperCurrentImageNumber((QImageIOHandler*)self);
 }
 
 QRect* q_imageiohandler_current_image_rect(void* self) {
@@ -189,8 +189,8 @@ void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)()) {
     QImageIOHandler_OnCurrentImageRect((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-QRect* q_imageiohandler_qbase_current_image_rect(void* self) {
-    return QImageIOHandler_QBaseCurrentImageRect((QImageIOHandler*)self);
+QRect* q_imageiohandler_super_current_image_rect(void* self) {
+    return QImageIOHandler_SuperCurrentImageRect((QImageIOHandler*)self);
 }
 
 bool q_imageiohandler_allocate_image(void* size, int32_t format, void* image) {
@@ -217,8 +217,8 @@ void q_imageioplugin_on_meta_object(void* self, const QMetaObject* (*callback)()
     QImageIOPlugin_OnMetaObject((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_imageioplugin_qbase_meta_object(void* self) {
-    return QImageIOPlugin_QBaseMetaObject((QImageIOPlugin*)self);
+const QMetaObject* q_imageioplugin_super_meta_object(void* self) {
+    return QImageIOPlugin_SuperMetaObject((QImageIOPlugin*)self);
 }
 
 void* q_imageioplugin_metacast(void* self, const char* param1) {
@@ -229,8 +229,8 @@ void q_imageioplugin_on_metacast(void* self, void* (*callback)(void*, const char
     QImageIOPlugin_OnMetacast((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-void* q_imageioplugin_qbase_metacast(void* self, const char* param1) {
-    return QImageIOPlugin_QBaseMetacast((QImageIOPlugin*)self, param1);
+void* q_imageioplugin_super_metacast(void* self, const char* param1) {
+    return QImageIOPlugin_SuperMetacast((QImageIOPlugin*)self, param1);
 }
 
 int32_t q_imageioplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -241,8 +241,8 @@ void q_imageioplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QImageIOPlugin_OnMetacall((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_imageioplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QImageIOPlugin_QBaseMetacall((QImageIOPlugin*)self, param1, param2, param3);
+int32_t q_imageioplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QImageIOPlugin_SuperMetacall((QImageIOPlugin*)self, param1, param2, param3);
 }
 
 const char* q_imageioplugin_tr(const char* s) {
@@ -260,8 +260,8 @@ void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void
     QImageIOPlugin_OnCapabilities((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_imageioplugin_qbase_capabilities(void* self, void* device, char* format) {
-    return QImageIOPlugin_QBaseCapabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
+int32_t q_imageioplugin_super_capabilities(void* self, void* device, char* format) {
+    return QImageIOPlugin_SuperCapabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
 QImageIOHandler* q_imageioplugin_create(void* self, void* device, char* format) {
@@ -272,8 +272,8 @@ void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, v
     QImageIOPlugin_OnCreate((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, char* format) {
-    return QImageIOPlugin_QBaseCreate((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
+QImageIOHandler* q_imageioplugin_super_create(void* self, void* device, char* format) {
+    return QImageIOPlugin_SuperCreate((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
 const char* q_imageioplugin_tr2(const char* s, const char* c) {
@@ -505,8 +505,8 @@ bool q_imageioplugin_event(void* self, void* event) {
     return QImageIOPlugin_Event((QImageIOPlugin*)self, (QEvent*)event);
 }
 
-bool q_imageioplugin_qbase_event(void* self, void* event) {
-    return QImageIOPlugin_QBaseEvent((QImageIOPlugin*)self, (QEvent*)event);
+bool q_imageioplugin_super_event(void* self, void* event) {
+    return QImageIOPlugin_SuperEvent((QImageIOPlugin*)self, (QEvent*)event);
 }
 
 void q_imageioplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -517,8 +517,8 @@ bool q_imageioplugin_event_filter(void* self, void* watched, void* event) {
     return QImageIOPlugin_EventFilter((QImageIOPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_imageioplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return QImageIOPlugin_QBaseEventFilter((QImageIOPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool q_imageioplugin_super_event_filter(void* self, void* watched, void* event) {
+    return QImageIOPlugin_SuperEventFilter((QImageIOPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_imageioplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -529,8 +529,8 @@ void q_imageioplugin_timer_event(void* self, void* event) {
     QImageIOPlugin_TimerEvent((QImageIOPlugin*)self, (QTimerEvent*)event);
 }
 
-void q_imageioplugin_qbase_timer_event(void* self, void* event) {
-    QImageIOPlugin_QBaseTimerEvent((QImageIOPlugin*)self, (QTimerEvent*)event);
+void q_imageioplugin_super_timer_event(void* self, void* event) {
+    QImageIOPlugin_SuperTimerEvent((QImageIOPlugin*)self, (QTimerEvent*)event);
 }
 
 void q_imageioplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -541,8 +541,8 @@ void q_imageioplugin_child_event(void* self, void* event) {
     QImageIOPlugin_ChildEvent((QImageIOPlugin*)self, (QChildEvent*)event);
 }
 
-void q_imageioplugin_qbase_child_event(void* self, void* event) {
-    QImageIOPlugin_QBaseChildEvent((QImageIOPlugin*)self, (QChildEvent*)event);
+void q_imageioplugin_super_child_event(void* self, void* event) {
+    QImageIOPlugin_SuperChildEvent((QImageIOPlugin*)self, (QChildEvent*)event);
 }
 
 void q_imageioplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -553,8 +553,8 @@ void q_imageioplugin_custom_event(void* self, void* event) {
     QImageIOPlugin_CustomEvent((QImageIOPlugin*)self, (QEvent*)event);
 }
 
-void q_imageioplugin_qbase_custom_event(void* self, void* event) {
-    QImageIOPlugin_QBaseCustomEvent((QImageIOPlugin*)self, (QEvent*)event);
+void q_imageioplugin_super_custom_event(void* self, void* event) {
+    QImageIOPlugin_SuperCustomEvent((QImageIOPlugin*)self, (QEvent*)event);
 }
 
 void q_imageioplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -565,8 +565,8 @@ void q_imageioplugin_connect_notify(void* self, void* signal) {
     QImageIOPlugin_ConnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_imageioplugin_qbase_connect_notify(void* self, void* signal) {
-    QImageIOPlugin_QBaseConnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
+void q_imageioplugin_super_connect_notify(void* self, void* signal) {
+    QImageIOPlugin_SuperConnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_imageioplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ void q_imageioplugin_disconnect_notify(void* self, void* signal) {
     QImageIOPlugin_DisconnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_imageioplugin_qbase_disconnect_notify(void* self, void* signal) {
-    QImageIOPlugin_QBaseDisconnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
+void q_imageioplugin_super_disconnect_notify(void* self, void* signal) {
+    QImageIOPlugin_SuperDisconnectNotify((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_imageioplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -589,8 +589,8 @@ QObject* q_imageioplugin_sender(void* self) {
     return QImageIOPlugin_Sender((QImageIOPlugin*)self);
 }
 
-QObject* q_imageioplugin_qbase_sender(void* self) {
-    return QImageIOPlugin_QBaseSender((QImageIOPlugin*)self);
+QObject* q_imageioplugin_super_sender(void* self) {
+    return QImageIOPlugin_SuperSender((QImageIOPlugin*)self);
 }
 
 void q_imageioplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -601,8 +601,8 @@ int32_t q_imageioplugin_sender_signal_index(void* self) {
     return QImageIOPlugin_SenderSignalIndex((QImageIOPlugin*)self);
 }
 
-int32_t q_imageioplugin_qbase_sender_signal_index(void* self) {
-    return QImageIOPlugin_QBaseSenderSignalIndex((QImageIOPlugin*)self);
+int32_t q_imageioplugin_super_sender_signal_index(void* self) {
+    return QImageIOPlugin_SuperSenderSignalIndex((QImageIOPlugin*)self);
 }
 
 void q_imageioplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -613,8 +613,8 @@ int32_t q_imageioplugin_receivers(void* self, const char* signal) {
     return QImageIOPlugin_Receivers((QImageIOPlugin*)self, signal);
 }
 
-int32_t q_imageioplugin_qbase_receivers(void* self, const char* signal) {
-    return QImageIOPlugin_QBaseReceivers((QImageIOPlugin*)self, signal);
+int32_t q_imageioplugin_super_receivers(void* self, const char* signal) {
+    return QImageIOPlugin_SuperReceivers((QImageIOPlugin*)self, signal);
 }
 
 void q_imageioplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -625,8 +625,8 @@ bool q_imageioplugin_is_signal_connected(void* self, void* signal) {
     return QImageIOPlugin_IsSignalConnected((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool q_imageioplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return QImageIOPlugin_QBaseIsSignalConnected((QImageIOPlugin*)self, (QMetaMethod*)signal);
+bool q_imageioplugin_super_is_signal_connected(void* self, void* signal) {
+    return QImageIOPlugin_SuperIsSignalConnected((QImageIOPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_imageioplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

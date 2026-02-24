@@ -29,8 +29,8 @@ void k_checkableproxymodel_on_meta_object(void* self, const QMetaObject* (*callb
     KCheckableProxyModel_OnMetaObject((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_checkableproxymodel_qbase_meta_object(void* self) {
-    return KCheckableProxyModel_QBaseMetaObject((KCheckableProxyModel*)self);
+const QMetaObject* k_checkableproxymodel_super_meta_object(void* self) {
+    return KCheckableProxyModel_SuperMetaObject((KCheckableProxyModel*)self);
 }
 
 void* k_checkableproxymodel_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_checkableproxymodel_on_metacast(void* self, void* (*callback)(void*, cons
     KCheckableProxyModel_OnMetacast((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-void* k_checkableproxymodel_qbase_metacast(void* self, const char* param1) {
-    return KCheckableProxyModel_QBaseMetacast((KCheckableProxyModel*)self, param1);
+void* k_checkableproxymodel_super_metacast(void* self, const char* param1) {
+    return KCheckableProxyModel_SuperMetacast((KCheckableProxyModel*)self, param1);
 }
 
 int32_t k_checkableproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_checkableproxymodel_on_metacall(void* self, int32_t (*callback)(void*, in
     KCheckableProxyModel_OnMetacall((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_checkableproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCheckableProxyModel_QBaseMetacall((KCheckableProxyModel*)self, param1, param2, param3);
+int32_t k_checkableproxymodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCheckableProxyModel_SuperMetacall((KCheckableProxyModel*)self, param1, param2, param3);
 }
 
 const char* k_checkableproxymodel_tr(const char* s) {
@@ -80,8 +80,8 @@ void k_checkableproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*
     KCheckableProxyModel_OnFlags((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_checkableproxymodel_qbase_flags(void* self, void* index) {
-    return KCheckableProxyModel_QBaseFlags((KCheckableProxyModel*)self, (QModelIndex*)index);
+int32_t k_checkableproxymodel_super_flags(void* self, void* index) {
+    return KCheckableProxyModel_SuperFlags((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
 QVariant* k_checkableproxymodel_data(void* self, void* index, int role) {
@@ -92,8 +92,8 @@ void k_checkableproxymodel_on_data(void* self, QVariant* (*callback)(void*, void
     KCheckableProxyModel_OnData((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_checkableproxymodel_qbase_data(void* self, void* index, int role) {
-    return KCheckableProxyModel_QBaseData((KCheckableProxyModel*)self, (QModelIndex*)index, role);
+QVariant* k_checkableproxymodel_super_data(void* self, void* index, int role) {
+    return KCheckableProxyModel_SuperData((KCheckableProxyModel*)self, (QModelIndex*)index, role);
 }
 
 bool k_checkableproxymodel_set_data(void* self, void* index, void* value, int role) {
@@ -104,8 +104,8 @@ void k_checkableproxymodel_on_set_data(void* self, bool (*callback)(void*, void*
     KCheckableProxyModel_OnSetData((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_checkableproxymodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KCheckableProxyModel_QBaseSetData((KCheckableProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_checkableproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KCheckableProxyModel_SuperSetData((KCheckableProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_checkableproxymodel_set_source_model(void* self, void* sourceModel) {
@@ -116,8 +116,8 @@ void k_checkableproxymodel_on_set_source_model(void* self, void (*callback)(void
     KCheckableProxyModel_OnSetSourceModel((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-void k_checkableproxymodel_qbase_set_source_model(void* self, void* sourceModel) {
-    KCheckableProxyModel_QBaseSetSourceModel((KCheckableProxyModel*)self, (QAbstractItemModel*)sourceModel);
+void k_checkableproxymodel_super_set_source_model(void* self, void* sourceModel) {
+    KCheckableProxyModel_SuperSetSourceModel((KCheckableProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
 libqt_map /* of int to char* */ k_checkableproxymodel_role_names(void* self) {
@@ -157,9 +157,9 @@ void k_checkableproxymodel_on_role_names(void* self, libqt_map /* of int to char
     KCheckableProxyModel_OnRoleNames((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_checkableproxymodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_checkableproxymodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KCheckableProxyModel_QBaseRoleNames((KCheckableProxyModel*)self);
+    libqt_map _out = KCheckableProxyModel_SuperRoleNames((KCheckableProxyModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -198,8 +198,8 @@ void k_checkableproxymodel_on_select(void* self, bool (*callback)(void*, void*, 
     KCheckableProxyModel_OnSelect((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_checkableproxymodel_qbase_select(void* self, void* selection, int32_t command) {
-    return KCheckableProxyModel_QBaseSelect((KCheckableProxyModel*)self, (QItemSelection*)selection, command);
+bool k_checkableproxymodel_super_select(void* self, void* selection, int32_t command) {
+    return KCheckableProxyModel_SuperSelect((KCheckableProxyModel*)self, (QItemSelection*)selection, command);
 }
 
 const char* k_checkableproxymodel_tr2(const char* s, const char* c) {
@@ -567,8 +567,8 @@ int32_t k_checkableproxymodel_column_count(void* self, void* parent) {
     return KCheckableProxyModel_ColumnCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_checkableproxymodel_qbase_column_count(void* self, void* parent) {
-    return KCheckableProxyModel_QBaseColumnCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
+int32_t k_checkableproxymodel_super_column_count(void* self, void* parent) {
+    return KCheckableProxyModel_SuperColumnCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
@@ -579,8 +579,8 @@ QModelIndex* k_checkableproxymodel_index(void* self, int row, int column, void* 
     return KCheckableProxyModel_Index((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KCheckableProxyModel_QBaseIndex((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_checkableproxymodel_super_index(void* self, int row, int column, void* parent) {
+    return KCheckableProxyModel_SuperIndex((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -591,8 +591,8 @@ QModelIndex* k_checkableproxymodel_map_from_source(void* self, void* sourceIndex
     return KCheckableProxyModel_MapFromSource((KCheckableProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_map_from_source(void* self, void* sourceIndex) {
-    return KCheckableProxyModel_QBaseMapFromSource((KCheckableProxyModel*)self, (QModelIndex*)sourceIndex);
+QModelIndex* k_checkableproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+    return KCheckableProxyModel_SuperMapFromSource((KCheckableProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
 void k_checkableproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ QModelIndex* k_checkableproxymodel_map_to_source(void* self, void* proxyIndex) {
     return KCheckableProxyModel_MapToSource((KCheckableProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_map_to_source(void* self, void* proxyIndex) {
-    return KCheckableProxyModel_QBaseMapToSource((KCheckableProxyModel*)self, (QModelIndex*)proxyIndex);
+QModelIndex* k_checkableproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+    return KCheckableProxyModel_SuperMapToSource((KCheckableProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
 void k_checkableproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -615,8 +615,8 @@ QModelIndex* k_checkableproxymodel_parent(void* self, void* child) {
     return KCheckableProxyModel_Parent((KCheckableProxyModel*)self, (QModelIndex*)child);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_parent(void* self, void* child) {
-    return KCheckableProxyModel_QBaseParent((KCheckableProxyModel*)self, (QModelIndex*)child);
+QModelIndex* k_checkableproxymodel_super_parent(void* self, void* child) {
+    return KCheckableProxyModel_SuperParent((KCheckableProxyModel*)self, (QModelIndex*)child);
 }
 
 void k_checkableproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -627,8 +627,8 @@ int32_t k_checkableproxymodel_row_count(void* self, void* parent) {
     return KCheckableProxyModel_RowCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_checkableproxymodel_qbase_row_count(void* self, void* parent) {
-    return KCheckableProxyModel_QBaseRowCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
+int32_t k_checkableproxymodel_super_row_count(void* self, void* parent) {
+    return KCheckableProxyModel_SuperRowCount((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
@@ -639,8 +639,8 @@ QVariant* k_checkableproxymodel_header_data(void* self, int section, int32_t ori
     return KCheckableProxyModel_HeaderData((KCheckableProxyModel*)self, section, orientation, role);
 }
 
-QVariant* k_checkableproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KCheckableProxyModel_QBaseHeaderData((KCheckableProxyModel*)self, section, orientation, role);
+QVariant* k_checkableproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KCheckableProxyModel_SuperHeaderData((KCheckableProxyModel*)self, section, orientation, role);
 }
 
 void k_checkableproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -651,8 +651,8 @@ bool k_checkableproxymodel_drop_mime_data(void* self, void* data, int32_t action
     return KCheckableProxyModel_DropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KCheckableProxyModel_QBaseDropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KCheckableProxyModel_SuperDropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -663,8 +663,8 @@ QModelIndex* k_checkableproxymodel_sibling(void* self, int row, int column, void
     return KCheckableProxyModel_Sibling((KCheckableProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KCheckableProxyModel_QBaseSibling((KCheckableProxyModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_checkableproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KCheckableProxyModel_SuperSibling((KCheckableProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_checkableproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -675,8 +675,8 @@ QItemSelection* k_checkableproxymodel_map_selection_from_source(void* self, void
     return KCheckableProxyModel_MapSelectionFromSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* k_checkableproxymodel_qbase_map_selection_from_source(void* self, void* selection) {
-    return KCheckableProxyModel_QBaseMapSelectionFromSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* k_checkableproxymodel_super_map_selection_from_source(void* self, void* selection) {
+    return KCheckableProxyModel_SuperMapSelectionFromSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
 }
 
 void k_checkableproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*)) {
@@ -687,8 +687,8 @@ QItemSelection* k_checkableproxymodel_map_selection_to_source(void* self, void* 
     return KCheckableProxyModel_MapSelectionToSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* k_checkableproxymodel_qbase_map_selection_to_source(void* self, void* selection) {
-    return KCheckableProxyModel_QBaseMapSelectionToSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* k_checkableproxymodel_super_map_selection_to_source(void* self, void* selection) {
+    return KCheckableProxyModel_SuperMapSelectionToSource((KCheckableProxyModel*)self, (QItemSelection*)selection);
 }
 
 void k_checkableproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*)) {
@@ -700,8 +700,8 @@ libqt_list /* of QModelIndex* */ k_checkableproxymodel_match(void* self, void* s
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_checkableproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KCheckableProxyModel_QBaseMatch((KCheckableProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_checkableproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KCheckableProxyModel_SuperMatch((KCheckableProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -713,8 +713,8 @@ bool k_checkableproxymodel_insert_columns(void* self, int column, int count, voi
     return KCheckableProxyModel_InsertColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KCheckableProxyModel_QBaseInsertColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KCheckableProxyModel_SuperInsertColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -725,8 +725,8 @@ bool k_checkableproxymodel_insert_rows(void* self, int row, int count, void* par
     return KCheckableProxyModel_InsertRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KCheckableProxyModel_QBaseInsertRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KCheckableProxyModel_SuperInsertRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -737,8 +737,8 @@ bool k_checkableproxymodel_remove_columns(void* self, int column, int count, voi
     return KCheckableProxyModel_RemoveColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KCheckableProxyModel_QBaseRemoveColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KCheckableProxyModel_SuperRemoveColumns((KCheckableProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -749,8 +749,8 @@ bool k_checkableproxymodel_remove_rows(void* self, int row, int count, void* par
     return KCheckableProxyModel_RemoveRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KCheckableProxyModel_QBaseRemoveRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KCheckableProxyModel_SuperRemoveRows((KCheckableProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -761,8 +761,8 @@ bool k_checkableproxymodel_move_rows(void* self, void* sourceParent, int sourceR
     return KCheckableProxyModel_MoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_checkableproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KCheckableProxyModel_QBaseMoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_checkableproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KCheckableProxyModel_SuperMoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_checkableproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -773,8 +773,8 @@ bool k_checkableproxymodel_move_columns(void* self, void* sourceParent, int sour
     return KCheckableProxyModel_MoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_checkableproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KCheckableProxyModel_QBaseMoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_checkableproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KCheckableProxyModel_SuperMoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_checkableproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -785,8 +785,8 @@ bool k_checkableproxymodel_submit(void* self) {
     return KCheckableProxyModel_Submit((KCheckableProxyModel*)self);
 }
 
-bool k_checkableproxymodel_qbase_submit(void* self) {
-    return KCheckableProxyModel_QBaseSubmit((KCheckableProxyModel*)self);
+bool k_checkableproxymodel_super_submit(void* self) {
+    return KCheckableProxyModel_SuperSubmit((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_submit(void* self, bool (*callback)()) {
@@ -797,8 +797,8 @@ void k_checkableproxymodel_revert(void* self) {
     KCheckableProxyModel_Revert((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_revert(void* self) {
-    KCheckableProxyModel_QBaseRevert((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_revert(void* self) {
+    KCheckableProxyModel_SuperRevert((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_revert(void* self, void (*callback)()) {
@@ -815,9 +815,9 @@ libqt_map /* of int to QVariant* */ k_checkableproxymodel_item_data(void* self, 
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_checkableproxymodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_checkableproxymodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KCheckableProxyModel_QBaseItemData((KCheckableProxyModel*)self, (QModelIndex*)index);
+    libqt_map _out = KCheckableProxyModel_SuperItemData((KCheckableProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -858,7 +858,7 @@ bool k_checkableproxymodel_set_item_data(void* self, void* index, libqt_map /* o
     return _out;
 }
 
-bool k_checkableproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_checkableproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -881,7 +881,7 @@ bool k_checkableproxymodel_qbase_set_item_data(void* self, void* index, libqt_ma
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KCheckableProxyModel_QBaseSetItemData((KCheckableProxyModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KCheckableProxyModel_SuperSetItemData((KCheckableProxyModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -895,8 +895,8 @@ bool k_checkableproxymodel_set_header_data(void* self, int section, int32_t orie
     return KCheckableProxyModel_SetHeaderData((KCheckableProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_checkableproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KCheckableProxyModel_QBaseSetHeaderData((KCheckableProxyModel*)self, section, orientation, (QVariant*)value, role);
+bool k_checkableproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KCheckableProxyModel_SuperSetHeaderData((KCheckableProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_checkableproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -907,8 +907,8 @@ bool k_checkableproxymodel_clear_item_data(void* self, void* index) {
     return KCheckableProxyModel_ClearItemData((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_checkableproxymodel_qbase_clear_item_data(void* self, void* index) {
-    return KCheckableProxyModel_QBaseClearItemData((KCheckableProxyModel*)self, (QModelIndex*)index);
+bool k_checkableproxymodel_super_clear_item_data(void* self, void* index) {
+    return KCheckableProxyModel_SuperClearItemData((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_checkableproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -919,8 +919,8 @@ QModelIndex* k_checkableproxymodel_buddy(void* self, void* index) {
     return KCheckableProxyModel_Buddy((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_buddy(void* self, void* index) {
-    return KCheckableProxyModel_QBaseBuddy((KCheckableProxyModel*)self, (QModelIndex*)index);
+QModelIndex* k_checkableproxymodel_super_buddy(void* self, void* index) {
+    return KCheckableProxyModel_SuperBuddy((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_checkableproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -931,8 +931,8 @@ bool k_checkableproxymodel_can_fetch_more(void* self, void* parent) {
     return KCheckableProxyModel_CanFetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KCheckableProxyModel_QBaseCanFetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_can_fetch_more(void* self, void* parent) {
+    return KCheckableProxyModel_SuperCanFetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -943,8 +943,8 @@ void k_checkableproxymodel_fetch_more(void* self, void* parent) {
     KCheckableProxyModel_FetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_checkableproxymodel_qbase_fetch_more(void* self, void* parent) {
-    KCheckableProxyModel_QBaseFetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
+void k_checkableproxymodel_super_fetch_more(void* self, void* parent) {
+    KCheckableProxyModel_SuperFetchMore((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -955,8 +955,8 @@ void k_checkableproxymodel_sort(void* self, int column, int32_t order) {
     KCheckableProxyModel_Sort((KCheckableProxyModel*)self, column, order);
 }
 
-void k_checkableproxymodel_qbase_sort(void* self, int column, int32_t order) {
-    KCheckableProxyModel_QBaseSort((KCheckableProxyModel*)self, column, order);
+void k_checkableproxymodel_super_sort(void* self, int column, int32_t order) {
+    KCheckableProxyModel_SuperSort((KCheckableProxyModel*)self, column, order);
 }
 
 void k_checkableproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -967,8 +967,8 @@ QSize* k_checkableproxymodel_span(void* self, void* index) {
     return KCheckableProxyModel_Span((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_checkableproxymodel_qbase_span(void* self, void* index) {
-    return KCheckableProxyModel_QBaseSpan((KCheckableProxyModel*)self, (QModelIndex*)index);
+QSize* k_checkableproxymodel_super_span(void* self, void* index) {
+    return KCheckableProxyModel_SuperSpan((KCheckableProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_checkableproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -979,8 +979,8 @@ bool k_checkableproxymodel_has_children(void* self, void* parent) {
     return KCheckableProxyModel_HasChildren((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_has_children(void* self, void* parent) {
-    return KCheckableProxyModel_QBaseHasChildren((KCheckableProxyModel*)self, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_has_children(void* self, void* parent) {
+    return KCheckableProxyModel_SuperHasChildren((KCheckableProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
@@ -991,8 +991,8 @@ QMimeData* k_checkableproxymodel_mime_data(void* self, libqt_list /* of QModelIn
     return KCheckableProxyModel_MimeData((KCheckableProxyModel*)self, indexes);
 }
 
-QMimeData* k_checkableproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KCheckableProxyModel_QBaseMimeData((KCheckableProxyModel*)self, indexes);
+QMimeData* k_checkableproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KCheckableProxyModel_SuperMimeData((KCheckableProxyModel*)self, indexes);
 }
 
 void k_checkableproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -1003,8 +1003,8 @@ bool k_checkableproxymodel_can_drop_mime_data(void* self, void* data, int32_t ac
     return KCheckableProxyModel_CanDropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_checkableproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KCheckableProxyModel_QBaseCanDropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_checkableproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KCheckableProxyModel_SuperCanDropMimeData((KCheckableProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_checkableproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -1030,8 +1030,8 @@ const char** k_checkableproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_checkableproxymodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KCheckableProxyModel_QBaseMimeTypes((KCheckableProxyModel*)self);
+const char** k_checkableproxymodel_super_mime_types(void* self) {
+    libqt_list _arr = KCheckableProxyModel_SuperMimeTypes((KCheckableProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -1057,8 +1057,8 @@ int32_t k_checkableproxymodel_supported_drag_actions(void* self) {
     return KCheckableProxyModel_SupportedDragActions((KCheckableProxyModel*)self);
 }
 
-int32_t k_checkableproxymodel_qbase_supported_drag_actions(void* self) {
-    return KCheckableProxyModel_QBaseSupportedDragActions((KCheckableProxyModel*)self);
+int32_t k_checkableproxymodel_super_supported_drag_actions(void* self) {
+    return KCheckableProxyModel_SuperSupportedDragActions((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -1069,8 +1069,8 @@ int32_t k_checkableproxymodel_supported_drop_actions(void* self) {
     return KCheckableProxyModel_SupportedDropActions((KCheckableProxyModel*)self);
 }
 
-int32_t k_checkableproxymodel_qbase_supported_drop_actions(void* self) {
-    return KCheckableProxyModel_QBaseSupportedDropActions((KCheckableProxyModel*)self);
+int32_t k_checkableproxymodel_super_supported_drop_actions(void* self) {
+    return KCheckableProxyModel_SuperSupportedDropActions((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -1081,8 +1081,8 @@ void k_checkableproxymodel_multi_data(void* self, void* index, void* roleDataSpa
     KCheckableProxyModel_MultiData((KCheckableProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_checkableproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KCheckableProxyModel_QBaseMultiData((KCheckableProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_checkableproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KCheckableProxyModel_SuperMultiData((KCheckableProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_checkableproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1093,8 +1093,8 @@ void k_checkableproxymodel_reset_internal_data(void* self) {
     KCheckableProxyModel_ResetInternalData((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_reset_internal_data(void* self) {
-    KCheckableProxyModel_QBaseResetInternalData((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_reset_internal_data(void* self) {
+    KCheckableProxyModel_SuperResetInternalData((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1105,8 +1105,8 @@ bool k_checkableproxymodel_event(void* self, void* event) {
     return KCheckableProxyModel_Event((KCheckableProxyModel*)self, (QEvent*)event);
 }
 
-bool k_checkableproxymodel_qbase_event(void* self, void* event) {
-    return KCheckableProxyModel_QBaseEvent((KCheckableProxyModel*)self, (QEvent*)event);
+bool k_checkableproxymodel_super_event(void* self, void* event) {
+    return KCheckableProxyModel_SuperEvent((KCheckableProxyModel*)self, (QEvent*)event);
 }
 
 void k_checkableproxymodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1117,8 +1117,8 @@ bool k_checkableproxymodel_event_filter(void* self, void* watched, void* event) 
     return KCheckableProxyModel_EventFilter((KCheckableProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_checkableproxymodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCheckableProxyModel_QBaseEventFilter((KCheckableProxyModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_checkableproxymodel_super_event_filter(void* self, void* watched, void* event) {
+    return KCheckableProxyModel_SuperEventFilter((KCheckableProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_checkableproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1129,8 +1129,8 @@ void k_checkableproxymodel_timer_event(void* self, void* event) {
     KCheckableProxyModel_TimerEvent((KCheckableProxyModel*)self, (QTimerEvent*)event);
 }
 
-void k_checkableproxymodel_qbase_timer_event(void* self, void* event) {
-    KCheckableProxyModel_QBaseTimerEvent((KCheckableProxyModel*)self, (QTimerEvent*)event);
+void k_checkableproxymodel_super_timer_event(void* self, void* event) {
+    KCheckableProxyModel_SuperTimerEvent((KCheckableProxyModel*)self, (QTimerEvent*)event);
 }
 
 void k_checkableproxymodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1141,8 +1141,8 @@ void k_checkableproxymodel_child_event(void* self, void* event) {
     KCheckableProxyModel_ChildEvent((KCheckableProxyModel*)self, (QChildEvent*)event);
 }
 
-void k_checkableproxymodel_qbase_child_event(void* self, void* event) {
-    KCheckableProxyModel_QBaseChildEvent((KCheckableProxyModel*)self, (QChildEvent*)event);
+void k_checkableproxymodel_super_child_event(void* self, void* event) {
+    KCheckableProxyModel_SuperChildEvent((KCheckableProxyModel*)self, (QChildEvent*)event);
 }
 
 void k_checkableproxymodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1153,8 +1153,8 @@ void k_checkableproxymodel_custom_event(void* self, void* event) {
     KCheckableProxyModel_CustomEvent((KCheckableProxyModel*)self, (QEvent*)event);
 }
 
-void k_checkableproxymodel_qbase_custom_event(void* self, void* event) {
-    KCheckableProxyModel_QBaseCustomEvent((KCheckableProxyModel*)self, (QEvent*)event);
+void k_checkableproxymodel_super_custom_event(void* self, void* event) {
+    KCheckableProxyModel_SuperCustomEvent((KCheckableProxyModel*)self, (QEvent*)event);
 }
 
 void k_checkableproxymodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1165,8 +1165,8 @@ void k_checkableproxymodel_connect_notify(void* self, void* signal) {
     KCheckableProxyModel_ConnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_checkableproxymodel_qbase_connect_notify(void* self, void* signal) {
-    KCheckableProxyModel_QBaseConnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
+void k_checkableproxymodel_super_connect_notify(void* self, void* signal) {
+    KCheckableProxyModel_SuperConnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_checkableproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1177,8 +1177,8 @@ void k_checkableproxymodel_disconnect_notify(void* self, void* signal) {
     KCheckableProxyModel_DisconnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_checkableproxymodel_qbase_disconnect_notify(void* self, void* signal) {
-    KCheckableProxyModel_QBaseDisconnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
+void k_checkableproxymodel_super_disconnect_notify(void* self, void* signal) {
+    KCheckableProxyModel_SuperDisconnectNotify((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_checkableproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1189,8 +1189,8 @@ void k_checkableproxymodel_set_handle_source_layout_changes(void* self, bool han
     KCheckableProxyModel_SetHandleSourceLayoutChanges((KCheckableProxyModel*)self, handleSourceLayoutChanges);
 }
 
-void k_checkableproxymodel_qbase_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges) {
-    KCheckableProxyModel_QBaseSetHandleSourceLayoutChanges((KCheckableProxyModel*)self, handleSourceLayoutChanges);
+void k_checkableproxymodel_super_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges) {
+    KCheckableProxyModel_SuperSetHandleSourceLayoutChanges((KCheckableProxyModel*)self, handleSourceLayoutChanges);
 }
 
 void k_checkableproxymodel_on_set_handle_source_layout_changes(void* self, void (*callback)(void*, bool)) {
@@ -1201,8 +1201,8 @@ void k_checkableproxymodel_set_handle_source_data_changes(void* self, bool handl
     KCheckableProxyModel_SetHandleSourceDataChanges((KCheckableProxyModel*)self, handleSourceDataChanges);
 }
 
-void k_checkableproxymodel_qbase_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
-    KCheckableProxyModel_QBaseSetHandleSourceDataChanges((KCheckableProxyModel*)self, handleSourceDataChanges);
+void k_checkableproxymodel_super_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
+    KCheckableProxyModel_SuperSetHandleSourceDataChanges((KCheckableProxyModel*)self, handleSourceDataChanges);
 }
 
 void k_checkableproxymodel_on_set_handle_source_data_changes(void* self, void (*callback)(void*, bool)) {
@@ -1213,8 +1213,8 @@ QModelIndex* k_checkableproxymodel_create_source_index(void* self, int row, int 
     return KCheckableProxyModel_CreateSourceIndex((KCheckableProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return KCheckableProxyModel_QBaseCreateSourceIndex((KCheckableProxyModel*)self, row, col, internalPtr);
+QModelIndex* k_checkableproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
+    return KCheckableProxyModel_SuperCreateSourceIndex((KCheckableProxyModel*)self, row, col, internalPtr);
 }
 
 void k_checkableproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -1225,8 +1225,8 @@ QModelIndex* k_checkableproxymodel_create_index(void* self, int row, int column)
     return KCheckableProxyModel_CreateIndex((KCheckableProxyModel*)self, row, column);
 }
 
-QModelIndex* k_checkableproxymodel_qbase_create_index(void* self, int row, int column) {
-    return KCheckableProxyModel_QBaseCreateIndex((KCheckableProxyModel*)self, row, column);
+QModelIndex* k_checkableproxymodel_super_create_index(void* self, int row, int column) {
+    return KCheckableProxyModel_SuperCreateIndex((KCheckableProxyModel*)self, row, column);
 }
 
 void k_checkableproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1237,8 +1237,8 @@ void k_checkableproxymodel_encode_data(void* self, libqt_list /* of QModelIndex*
     KCheckableProxyModel_EncodeData((KCheckableProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_checkableproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KCheckableProxyModel_QBaseEncodeData((KCheckableProxyModel*)self, indexes, (QDataStream*)stream);
+void k_checkableproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KCheckableProxyModel_SuperEncodeData((KCheckableProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_checkableproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1249,8 +1249,8 @@ bool k_checkableproxymodel_decode_data(void* self, int row, int column, void* pa
     return KCheckableProxyModel_DecodeData((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_checkableproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KCheckableProxyModel_QBaseDecodeData((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_checkableproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KCheckableProxyModel_SuperDecodeData((KCheckableProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_checkableproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1261,8 +1261,8 @@ void k_checkableproxymodel_begin_insert_rows(void* self, void* parent, int first
     KCheckableProxyModel_BeginInsertRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_checkableproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KCheckableProxyModel_QBaseBeginInsertRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_checkableproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KCheckableProxyModel_SuperBeginInsertRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_checkableproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1273,8 +1273,8 @@ void k_checkableproxymodel_end_insert_rows(void* self) {
     KCheckableProxyModel_EndInsertRows((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_insert_rows(void* self) {
-    KCheckableProxyModel_QBaseEndInsertRows((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_insert_rows(void* self) {
+    KCheckableProxyModel_SuperEndInsertRows((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1285,8 +1285,8 @@ void k_checkableproxymodel_begin_remove_rows(void* self, void* parent, int first
     KCheckableProxyModel_BeginRemoveRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_checkableproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KCheckableProxyModel_QBaseBeginRemoveRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_checkableproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KCheckableProxyModel_SuperBeginRemoveRows((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_checkableproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1297,8 +1297,8 @@ void k_checkableproxymodel_end_remove_rows(void* self) {
     KCheckableProxyModel_EndRemoveRows((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_remove_rows(void* self) {
-    KCheckableProxyModel_QBaseEndRemoveRows((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_remove_rows(void* self) {
+    KCheckableProxyModel_SuperEndRemoveRows((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1309,8 +1309,8 @@ bool k_checkableproxymodel_begin_move_rows(void* self, void* sourceParent, int s
     return KCheckableProxyModel_BeginMoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_checkableproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KCheckableProxyModel_QBaseBeginMoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_checkableproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KCheckableProxyModel_SuperBeginMoveRows((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_checkableproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1321,8 +1321,8 @@ void k_checkableproxymodel_end_move_rows(void* self) {
     KCheckableProxyModel_EndMoveRows((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_move_rows(void* self) {
-    KCheckableProxyModel_QBaseEndMoveRows((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_move_rows(void* self) {
+    KCheckableProxyModel_SuperEndMoveRows((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1333,8 +1333,8 @@ void k_checkableproxymodel_begin_insert_columns(void* self, void* parent, int fi
     KCheckableProxyModel_BeginInsertColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_checkableproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KCheckableProxyModel_QBaseBeginInsertColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_checkableproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KCheckableProxyModel_SuperBeginInsertColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_checkableproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1345,8 +1345,8 @@ void k_checkableproxymodel_end_insert_columns(void* self) {
     KCheckableProxyModel_EndInsertColumns((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_insert_columns(void* self) {
-    KCheckableProxyModel_QBaseEndInsertColumns((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_insert_columns(void* self) {
+    KCheckableProxyModel_SuperEndInsertColumns((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1357,8 +1357,8 @@ void k_checkableproxymodel_begin_remove_columns(void* self, void* parent, int fi
     KCheckableProxyModel_BeginRemoveColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_checkableproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KCheckableProxyModel_QBaseBeginRemoveColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_checkableproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KCheckableProxyModel_SuperBeginRemoveColumns((KCheckableProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_checkableproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1369,8 +1369,8 @@ void k_checkableproxymodel_end_remove_columns(void* self) {
     KCheckableProxyModel_EndRemoveColumns((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_remove_columns(void* self) {
-    KCheckableProxyModel_QBaseEndRemoveColumns((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_remove_columns(void* self) {
+    KCheckableProxyModel_SuperEndRemoveColumns((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1381,8 +1381,8 @@ bool k_checkableproxymodel_begin_move_columns(void* self, void* sourceParent, in
     return KCheckableProxyModel_BeginMoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_checkableproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KCheckableProxyModel_QBaseBeginMoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_checkableproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KCheckableProxyModel_SuperBeginMoveColumns((KCheckableProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_checkableproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1393,8 +1393,8 @@ void k_checkableproxymodel_end_move_columns(void* self) {
     KCheckableProxyModel_EndMoveColumns((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_move_columns(void* self) {
-    KCheckableProxyModel_QBaseEndMoveColumns((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_move_columns(void* self) {
+    KCheckableProxyModel_SuperEndMoveColumns((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1405,8 +1405,8 @@ void k_checkableproxymodel_begin_reset_model(void* self) {
     KCheckableProxyModel_BeginResetModel((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_begin_reset_model(void* self) {
-    KCheckableProxyModel_QBaseBeginResetModel((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_begin_reset_model(void* self) {
+    KCheckableProxyModel_SuperBeginResetModel((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1417,8 +1417,8 @@ void k_checkableproxymodel_end_reset_model(void* self) {
     KCheckableProxyModel_EndResetModel((KCheckableProxyModel*)self);
 }
 
-void k_checkableproxymodel_qbase_end_reset_model(void* self) {
-    KCheckableProxyModel_QBaseEndResetModel((KCheckableProxyModel*)self);
+void k_checkableproxymodel_super_end_reset_model(void* self) {
+    KCheckableProxyModel_SuperEndResetModel((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1429,8 +1429,8 @@ void k_checkableproxymodel_change_persistent_index(void* self, void* from, void*
     KCheckableProxyModel_ChangePersistentIndex((KCheckableProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_checkableproxymodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KCheckableProxyModel_QBaseChangePersistentIndex((KCheckableProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_checkableproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KCheckableProxyModel_SuperChangePersistentIndex((KCheckableProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_checkableproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1441,8 +1441,8 @@ void k_checkableproxymodel_change_persistent_index_list(void* self, libqt_list /
     KCheckableProxyModel_ChangePersistentIndexList((KCheckableProxyModel*)self, from, to);
 }
 
-void k_checkableproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KCheckableProxyModel_QBaseChangePersistentIndexList((KCheckableProxyModel*)self, from, to);
+void k_checkableproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KCheckableProxyModel_SuperChangePersistentIndexList((KCheckableProxyModel*)self, from, to);
 }
 
 void k_checkableproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1454,8 +1454,8 @@ libqt_list /* of QModelIndex* */ k_checkableproxymodel_persistent_index_list(voi
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_checkableproxymodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KCheckableProxyModel_QBasePersistentIndexList((KCheckableProxyModel*)self);
+libqt_list /* of QModelIndex* */ k_checkableproxymodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KCheckableProxyModel_SuperPersistentIndexList((KCheckableProxyModel*)self);
     return _arr;
 }
 
@@ -1467,8 +1467,8 @@ QObject* k_checkableproxymodel_sender(void* self) {
     return KCheckableProxyModel_Sender((KCheckableProxyModel*)self);
 }
 
-QObject* k_checkableproxymodel_qbase_sender(void* self) {
-    return KCheckableProxyModel_QBaseSender((KCheckableProxyModel*)self);
+QObject* k_checkableproxymodel_super_sender(void* self) {
+    return KCheckableProxyModel_SuperSender((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1479,8 +1479,8 @@ int32_t k_checkableproxymodel_sender_signal_index(void* self) {
     return KCheckableProxyModel_SenderSignalIndex((KCheckableProxyModel*)self);
 }
 
-int32_t k_checkableproxymodel_qbase_sender_signal_index(void* self) {
-    return KCheckableProxyModel_QBaseSenderSignalIndex((KCheckableProxyModel*)self);
+int32_t k_checkableproxymodel_super_sender_signal_index(void* self) {
+    return KCheckableProxyModel_SuperSenderSignalIndex((KCheckableProxyModel*)self);
 }
 
 void k_checkableproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1491,8 +1491,8 @@ int32_t k_checkableproxymodel_receivers(void* self, const char* signal) {
     return KCheckableProxyModel_Receivers((KCheckableProxyModel*)self, signal);
 }
 
-int32_t k_checkableproxymodel_qbase_receivers(void* self, const char* signal) {
-    return KCheckableProxyModel_QBaseReceivers((KCheckableProxyModel*)self, signal);
+int32_t k_checkableproxymodel_super_receivers(void* self, const char* signal) {
+    return KCheckableProxyModel_SuperReceivers((KCheckableProxyModel*)self, signal);
 }
 
 void k_checkableproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1503,8 +1503,8 @@ bool k_checkableproxymodel_is_signal_connected(void* self, void* signal) {
     return KCheckableProxyModel_IsSignalConnected((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_checkableproxymodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KCheckableProxyModel_QBaseIsSignalConnected((KCheckableProxyModel*)self, (QMetaMethod*)signal);
+bool k_checkableproxymodel_super_is_signal_connected(void* self, void* signal) {
+    return KCheckableProxyModel_SuperIsSignalConnected((KCheckableProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_checkableproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

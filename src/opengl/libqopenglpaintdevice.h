@@ -49,13 +49,17 @@ int32_t q_openglpaintdevice_dev_type(void* self);
 ///
 void q_openglpaintdevice_on_dev_type(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_dev_type` instead
+///
+#define q_openglpaintdevice_qbase_dev_type q_openglpaintdevice_super_dev_type
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#devType)
 ///
 /// Base class method implementation
 ///
 /// @param self QOpenGLPaintDevice*
 ///
-int32_t q_openglpaintdevice_qbase_dev_type(void* self);
+int32_t q_openglpaintdevice_super_dev_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintEngine)
 ///
@@ -72,13 +76,17 @@ QPaintEngine* q_openglpaintdevice_paint_engine(void* self);
 ///
 void q_openglpaintdevice_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_paint_engine` instead
+///
+#define q_openglpaintdevice_qbase_paint_engine q_openglpaintdevice_super_paint_engine
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#paintEngine)
 ///
 /// Base class method implementation
 ///
 /// @param self QOpenGLPaintDevice*
 ///
-QPaintEngine* q_openglpaintdevice_qbase_paint_engine(void* self);
+QPaintEngine* q_openglpaintdevice_super_paint_engine(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#context)
 ///
@@ -160,13 +168,17 @@ void q_openglpaintdevice_ensure_active_target(void* self);
 ///
 void q_openglpaintdevice_on_ensure_active_target(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_ensure_active_target` instead
+///
+#define q_openglpaintdevice_qbase_ensure_active_target q_openglpaintdevice_super_ensure_active_target
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#ensureActiveTarget)
 ///
 /// Base class method implementation
 ///
 /// @param self QOpenGLPaintDevice*
 ///
-void q_openglpaintdevice_qbase_ensure_active_target(void* self);
+void q_openglpaintdevice_super_ensure_active_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#metric)
 ///
@@ -184,6 +196,10 @@ int32_t q_openglpaintdevice_metric(void* self, int32_t metric);
 ///
 void q_openglpaintdevice_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_metric` instead
+///
+#define q_openglpaintdevice_qbase_metric q_openglpaintdevice_super_metric
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpaintdevice.html#metric)
 ///
 /// Base class method implementation
@@ -191,7 +207,7 @@ void q_openglpaintdevice_on_metric(void* self, int32_t (*callback)(void*, int32_
 /// @param self QOpenGLPaintDevice*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_openglpaintdevice_qbase_metric(void* self, int32_t metric);
+int32_t q_openglpaintdevice_super_metric(void* self, int32_t metric);
 
 /// Inherited from QPaintDevice
 ///
@@ -323,6 +339,10 @@ int32_t q_openglpaintdevice_encode_metric_f(int32_t metric, double value);
 ///
 void q_openglpaintdevice_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_init_painter` instead
+///
+#define q_openglpaintdevice_qbase_init_painter q_openglpaintdevice_super_init_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -332,7 +352,7 @@ void q_openglpaintdevice_init_painter(void* self, void* painter);
 /// @param self QOpenGLPaintDevice*
 /// @param painter QPainter*
 ///
-void q_openglpaintdevice_qbase_init_painter(void* self, void* painter);
+void q_openglpaintdevice_super_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -356,6 +376,10 @@ void q_openglpaintdevice_on_init_painter(void* self, void (*callback)(void*, voi
 ///
 QPaintDevice* q_openglpaintdevice_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_redirected` instead
+///
+#define q_openglpaintdevice_qbase_redirected q_openglpaintdevice_super_redirected
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -365,7 +389,7 @@ QPaintDevice* q_openglpaintdevice_redirected(void* self, void* offset);
 /// @param self QOpenGLPaintDevice*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_openglpaintdevice_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_openglpaintdevice_super_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -388,6 +412,10 @@ void q_openglpaintdevice_on_redirected(void* self, QPaintDevice* (*callback)(voi
 ///
 QPainter* q_openglpaintdevice_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_shared_painter` instead
+///
+#define q_openglpaintdevice_qbase_shared_painter q_openglpaintdevice_super_shared_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
@@ -396,7 +424,7 @@ QPainter* q_openglpaintdevice_shared_painter(void* self);
 ///
 /// @param self QOpenGLPaintDevice*
 ///
-QPainter* q_openglpaintdevice_qbase_shared_painter(void* self);
+QPainter* q_openglpaintdevice_super_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -421,6 +449,10 @@ void q_openglpaintdevice_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 double q_openglpaintdevice_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_openglpaintdevice_super_get_decoded_metric_f` instead
+///
+#define q_openglpaintdevice_qbase_get_decoded_metric_f q_openglpaintdevice_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -431,7 +463,7 @@ double q_openglpaintdevice_get_decoded_metric_f(void* self, int32_t metricA, int
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_openglpaintdevice_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_openglpaintdevice_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

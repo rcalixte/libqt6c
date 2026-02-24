@@ -45,8 +45,8 @@ void q_chartview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QChartView_OnMetaObject((QChartView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_chartview_qbase_meta_object(void* self) {
-    return QChartView_QBaseMetaObject((QChartView*)self);
+const QMetaObject* q_chartview_super_meta_object(void* self) {
+    return QChartView_SuperMetaObject((QChartView*)self);
 }
 
 void* q_chartview_metacast(void* self, const char* param1) {
@@ -57,8 +57,8 @@ void q_chartview_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QChartView_OnMetacast((QChartView*)self, (intptr_t)callback);
 }
 
-void* q_chartview_qbase_metacast(void* self, const char* param1) {
-    return QChartView_QBaseMetacast((QChartView*)self, param1);
+void* q_chartview_super_metacast(void* self, const char* param1) {
+    return QChartView_SuperMetacast((QChartView*)self, param1);
 }
 
 int32_t q_chartview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -69,8 +69,8 @@ void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QChartView_OnMetacall((QChartView*)self, (intptr_t)callback);
 }
 
-int32_t q_chartview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QChartView_QBaseMetacall((QChartView*)self, param1, param2, param3);
+int32_t q_chartview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QChartView_SuperMetacall((QChartView*)self, param1, param2, param3);
 }
 
 const char* q_chartview_tr(const char* s) {
@@ -104,8 +104,8 @@ void q_chartview_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QChartView_OnResizeEvent((QChartView*)self, (intptr_t)callback);
 }
 
-void q_chartview_qbase_resize_event(void* self, void* event) {
-    QChartView_QBaseResizeEvent((QChartView*)self, (QResizeEvent*)event);
+void q_chartview_super_resize_event(void* self, void* event) {
+    QChartView_SuperResizeEvent((QChartView*)self, (QResizeEvent*)event);
 }
 
 void q_chartview_mouse_press_event(void* self, void* event) {
@@ -116,8 +116,8 @@ void q_chartview_on_mouse_press_event(void* self, void (*callback)(void*, void*)
     QChartView_OnMousePressEvent((QChartView*)self, (intptr_t)callback);
 }
 
-void q_chartview_qbase_mouse_press_event(void* self, void* event) {
-    QChartView_QBaseMousePressEvent((QChartView*)self, (QMouseEvent*)event);
+void q_chartview_super_mouse_press_event(void* self, void* event) {
+    QChartView_SuperMousePressEvent((QChartView*)self, (QMouseEvent*)event);
 }
 
 void q_chartview_mouse_move_event(void* self, void* event) {
@@ -128,8 +128,8 @@ void q_chartview_on_mouse_move_event(void* self, void (*callback)(void*, void*))
     QChartView_OnMouseMoveEvent((QChartView*)self, (intptr_t)callback);
 }
 
-void q_chartview_qbase_mouse_move_event(void* self, void* event) {
-    QChartView_QBaseMouseMoveEvent((QChartView*)self, (QMouseEvent*)event);
+void q_chartview_super_mouse_move_event(void* self, void* event) {
+    QChartView_SuperMouseMoveEvent((QChartView*)self, (QMouseEvent*)event);
 }
 
 void q_chartview_mouse_release_event(void* self, void* event) {
@@ -140,8 +140,8 @@ void q_chartview_on_mouse_release_event(void* self, void (*callback)(void*, void
     QChartView_OnMouseReleaseEvent((QChartView*)self, (intptr_t)callback);
 }
 
-void q_chartview_qbase_mouse_release_event(void* self, void* event) {
-    QChartView_QBaseMouseReleaseEvent((QChartView*)self, (QMouseEvent*)event);
+void q_chartview_super_mouse_release_event(void* self, void* event) {
+    QChartView_SuperMouseReleaseEvent((QChartView*)self, (QMouseEvent*)event);
 }
 
 const char* q_chartview_tr2(const char* s, const char* c) {
@@ -2021,8 +2021,8 @@ QSize* q_chartview_size_hint(void* self) {
     return QChartView_SizeHint((QChartView*)self);
 }
 
-QSize* q_chartview_qbase_size_hint(void* self) {
-    return QChartView_QBaseSizeHint((QChartView*)self);
+QSize* q_chartview_super_size_hint(void* self) {
+    return QChartView_SuperSizeHint((QChartView*)self);
 }
 
 void q_chartview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2033,8 +2033,8 @@ QVariant* q_chartview_input_method_query(void* self, int32_t query) {
     return QChartView_InputMethodQuery((QChartView*)self, query);
 }
 
-QVariant* q_chartview_qbase_input_method_query(void* self, int32_t query) {
-    return QChartView_QBaseInputMethodQuery((QChartView*)self, query);
+QVariant* q_chartview_super_input_method_query(void* self, int32_t query) {
+    return QChartView_SuperInputMethodQuery((QChartView*)self, query);
 }
 
 void q_chartview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2045,8 +2045,8 @@ void q_chartview_setup_viewport(void* self, void* widget) {
     QChartView_SetupViewport((QChartView*)self, (QWidget*)widget);
 }
 
-void q_chartview_qbase_setup_viewport(void* self, void* widget) {
-    QChartView_QBaseSetupViewport((QChartView*)self, (QWidget*)widget);
+void q_chartview_super_setup_viewport(void* self, void* widget) {
+    QChartView_SuperSetupViewport((QChartView*)self, (QWidget*)widget);
 }
 
 void q_chartview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ bool q_chartview_event(void* self, void* event) {
     return QChartView_Event((QChartView*)self, (QEvent*)event);
 }
 
-bool q_chartview_qbase_event(void* self, void* event) {
-    return QChartView_QBaseEvent((QChartView*)self, (QEvent*)event);
+bool q_chartview_super_event(void* self, void* event) {
+    return QChartView_SuperEvent((QChartView*)self, (QEvent*)event);
 }
 
 void q_chartview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ bool q_chartview_viewport_event(void* self, void* event) {
     return QChartView_ViewportEvent((QChartView*)self, (QEvent*)event);
 }
 
-bool q_chartview_qbase_viewport_event(void* self, void* event) {
-    return QChartView_QBaseViewportEvent((QChartView*)self, (QEvent*)event);
+bool q_chartview_super_viewport_event(void* self, void* event) {
+    return QChartView_SuperViewportEvent((QChartView*)self, (QEvent*)event);
 }
 
 void q_chartview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2081,8 +2081,8 @@ void q_chartview_context_menu_event(void* self, void* event) {
     QChartView_ContextMenuEvent((QChartView*)self, (QContextMenuEvent*)event);
 }
 
-void q_chartview_qbase_context_menu_event(void* self, void* event) {
-    QChartView_QBaseContextMenuEvent((QChartView*)self, (QContextMenuEvent*)event);
+void q_chartview_super_context_menu_event(void* self, void* event) {
+    QChartView_SuperContextMenuEvent((QChartView*)self, (QContextMenuEvent*)event);
 }
 
 void q_chartview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ void q_chartview_drag_enter_event(void* self, void* event) {
     QChartView_DragEnterEvent((QChartView*)self, (QDragEnterEvent*)event);
 }
 
-void q_chartview_qbase_drag_enter_event(void* self, void* event) {
-    QChartView_QBaseDragEnterEvent((QChartView*)self, (QDragEnterEvent*)event);
+void q_chartview_super_drag_enter_event(void* self, void* event) {
+    QChartView_SuperDragEnterEvent((QChartView*)self, (QDragEnterEvent*)event);
 }
 
 void q_chartview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ void q_chartview_drag_leave_event(void* self, void* event) {
     QChartView_DragLeaveEvent((QChartView*)self, (QDragLeaveEvent*)event);
 }
 
-void q_chartview_qbase_drag_leave_event(void* self, void* event) {
-    QChartView_QBaseDragLeaveEvent((QChartView*)self, (QDragLeaveEvent*)event);
+void q_chartview_super_drag_leave_event(void* self, void* event) {
+    QChartView_SuperDragLeaveEvent((QChartView*)self, (QDragLeaveEvent*)event);
 }
 
 void q_chartview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2117,8 +2117,8 @@ void q_chartview_drag_move_event(void* self, void* event) {
     QChartView_DragMoveEvent((QChartView*)self, (QDragMoveEvent*)event);
 }
 
-void q_chartview_qbase_drag_move_event(void* self, void* event) {
-    QChartView_QBaseDragMoveEvent((QChartView*)self, (QDragMoveEvent*)event);
+void q_chartview_super_drag_move_event(void* self, void* event) {
+    QChartView_SuperDragMoveEvent((QChartView*)self, (QDragMoveEvent*)event);
 }
 
 void q_chartview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ void q_chartview_drop_event(void* self, void* event) {
     QChartView_DropEvent((QChartView*)self, (QDropEvent*)event);
 }
 
-void q_chartview_qbase_drop_event(void* self, void* event) {
-    QChartView_QBaseDropEvent((QChartView*)self, (QDropEvent*)event);
+void q_chartview_super_drop_event(void* self, void* event) {
+    QChartView_SuperDropEvent((QChartView*)self, (QDropEvent*)event);
 }
 
 void q_chartview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2141,8 +2141,8 @@ void q_chartview_focus_in_event(void* self, void* event) {
     QChartView_FocusInEvent((QChartView*)self, (QFocusEvent*)event);
 }
 
-void q_chartview_qbase_focus_in_event(void* self, void* event) {
-    QChartView_QBaseFocusInEvent((QChartView*)self, (QFocusEvent*)event);
+void q_chartview_super_focus_in_event(void* self, void* event) {
+    QChartView_SuperFocusInEvent((QChartView*)self, (QFocusEvent*)event);
 }
 
 void q_chartview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2153,8 +2153,8 @@ bool q_chartview_focus_next_prev_child(void* self, bool next) {
     return QChartView_FocusNextPrevChild((QChartView*)self, next);
 }
 
-bool q_chartview_qbase_focus_next_prev_child(void* self, bool next) {
-    return QChartView_QBaseFocusNextPrevChild((QChartView*)self, next);
+bool q_chartview_super_focus_next_prev_child(void* self, bool next) {
+    return QChartView_SuperFocusNextPrevChild((QChartView*)self, next);
 }
 
 void q_chartview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2165,8 +2165,8 @@ void q_chartview_focus_out_event(void* self, void* event) {
     QChartView_FocusOutEvent((QChartView*)self, (QFocusEvent*)event);
 }
 
-void q_chartview_qbase_focus_out_event(void* self, void* event) {
-    QChartView_QBaseFocusOutEvent((QChartView*)self, (QFocusEvent*)event);
+void q_chartview_super_focus_out_event(void* self, void* event) {
+    QChartView_SuperFocusOutEvent((QChartView*)self, (QFocusEvent*)event);
 }
 
 void q_chartview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ void q_chartview_key_press_event(void* self, void* event) {
     QChartView_KeyPressEvent((QChartView*)self, (QKeyEvent*)event);
 }
 
-void q_chartview_qbase_key_press_event(void* self, void* event) {
-    QChartView_QBaseKeyPressEvent((QChartView*)self, (QKeyEvent*)event);
+void q_chartview_super_key_press_event(void* self, void* event) {
+    QChartView_SuperKeyPressEvent((QChartView*)self, (QKeyEvent*)event);
 }
 
 void q_chartview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ void q_chartview_key_release_event(void* self, void* event) {
     QChartView_KeyReleaseEvent((QChartView*)self, (QKeyEvent*)event);
 }
 
-void q_chartview_qbase_key_release_event(void* self, void* event) {
-    QChartView_QBaseKeyReleaseEvent((QChartView*)self, (QKeyEvent*)event);
+void q_chartview_super_key_release_event(void* self, void* event) {
+    QChartView_SuperKeyReleaseEvent((QChartView*)self, (QKeyEvent*)event);
 }
 
 void q_chartview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2201,8 +2201,8 @@ void q_chartview_mouse_double_click_event(void* self, void* event) {
     QChartView_MouseDoubleClickEvent((QChartView*)self, (QMouseEvent*)event);
 }
 
-void q_chartview_qbase_mouse_double_click_event(void* self, void* event) {
-    QChartView_QBaseMouseDoubleClickEvent((QChartView*)self, (QMouseEvent*)event);
+void q_chartview_super_mouse_double_click_event(void* self, void* event) {
+    QChartView_SuperMouseDoubleClickEvent((QChartView*)self, (QMouseEvent*)event);
 }
 
 void q_chartview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void q_chartview_wheel_event(void* self, void* event) {
     QChartView_WheelEvent((QChartView*)self, (QWheelEvent*)event);
 }
 
-void q_chartview_qbase_wheel_event(void* self, void* event) {
-    QChartView_QBaseWheelEvent((QChartView*)self, (QWheelEvent*)event);
+void q_chartview_super_wheel_event(void* self, void* event) {
+    QChartView_SuperWheelEvent((QChartView*)self, (QWheelEvent*)event);
 }
 
 void q_chartview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2225,8 +2225,8 @@ void q_chartview_paint_event(void* self, void* event) {
     QChartView_PaintEvent((QChartView*)self, (QPaintEvent*)event);
 }
 
-void q_chartview_qbase_paint_event(void* self, void* event) {
-    QChartView_QBasePaintEvent((QChartView*)self, (QPaintEvent*)event);
+void q_chartview_super_paint_event(void* self, void* event) {
+    QChartView_SuperPaintEvent((QChartView*)self, (QPaintEvent*)event);
 }
 
 void q_chartview_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2237,8 +2237,8 @@ void q_chartview_scroll_contents_by(void* self, int dx, int dy) {
     QChartView_ScrollContentsBy((QChartView*)self, dx, dy);
 }
 
-void q_chartview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QChartView_QBaseScrollContentsBy((QChartView*)self, dx, dy);
+void q_chartview_super_scroll_contents_by(void* self, int dx, int dy) {
+    QChartView_SuperScrollContentsBy((QChartView*)self, dx, dy);
 }
 
 void q_chartview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
@@ -2249,8 +2249,8 @@ void q_chartview_show_event(void* self, void* event) {
     QChartView_ShowEvent((QChartView*)self, (QShowEvent*)event);
 }
 
-void q_chartview_qbase_show_event(void* self, void* event) {
-    QChartView_QBaseShowEvent((QChartView*)self, (QShowEvent*)event);
+void q_chartview_super_show_event(void* self, void* event) {
+    QChartView_SuperShowEvent((QChartView*)self, (QShowEvent*)event);
 }
 
 void q_chartview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ void q_chartview_input_method_event(void* self, void* event) {
     QChartView_InputMethodEvent((QChartView*)self, (QInputMethodEvent*)event);
 }
 
-void q_chartview_qbase_input_method_event(void* self, void* event) {
-    QChartView_QBaseInputMethodEvent((QChartView*)self, (QInputMethodEvent*)event);
+void q_chartview_super_input_method_event(void* self, void* event) {
+    QChartView_SuperInputMethodEvent((QChartView*)self, (QInputMethodEvent*)event);
 }
 
 void q_chartview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2273,8 +2273,8 @@ void q_chartview_draw_background(void* self, void* painter, void* rect) {
     QChartView_DrawBackground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_chartview_qbase_draw_background(void* self, void* painter, void* rect) {
-    QChartView_QBaseDrawBackground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
+void q_chartview_super_draw_background(void* self, void* painter, void* rect) {
+    QChartView_SuperDrawBackground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
 void q_chartview_on_draw_background(void* self, void (*callback)(void*, void*, void*)) {
@@ -2285,8 +2285,8 @@ void q_chartview_draw_foreground(void* self, void* painter, void* rect) {
     QChartView_DrawForeground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_chartview_qbase_draw_foreground(void* self, void* painter, void* rect) {
-    QChartView_QBaseDrawForeground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
+void q_chartview_super_draw_foreground(void* self, void* painter, void* rect) {
+    QChartView_SuperDrawForeground((QChartView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
 void q_chartview_on_draw_foreground(void* self, void (*callback)(void*, void*, void*)) {
@@ -2297,8 +2297,8 @@ void q_chartview_draw_items(void* self, void* painter, int numItems, void** item
     QChartView_DrawItems((QChartView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
 }
 
-void q_chartview_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
-    QChartView_QBaseDrawItems((QChartView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
+void q_chartview_super_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
+    QChartView_SuperDrawItems((QChartView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
 }
 
 void q_chartview_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*)) {
@@ -2309,8 +2309,8 @@ QSize* q_chartview_minimum_size_hint(void* self) {
     return QChartView_MinimumSizeHint((QChartView*)self);
 }
 
-QSize* q_chartview_qbase_minimum_size_hint(void* self) {
-    return QChartView_QBaseMinimumSizeHint((QChartView*)self);
+QSize* q_chartview_super_minimum_size_hint(void* self) {
+    return QChartView_SuperMinimumSizeHint((QChartView*)self);
 }
 
 void q_chartview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2321,8 +2321,8 @@ bool q_chartview_event_filter(void* self, void* param1, void* param2) {
     return QChartView_EventFilter((QChartView*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_chartview_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QChartView_QBaseEventFilter((QChartView*)self, (QObject*)param1, (QEvent*)param2);
+bool q_chartview_super_event_filter(void* self, void* param1, void* param2) {
+    return QChartView_SuperEventFilter((QChartView*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_chartview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2333,8 +2333,8 @@ QSize* q_chartview_viewport_size_hint(void* self) {
     return QChartView_ViewportSizeHint((QChartView*)self);
 }
 
-QSize* q_chartview_qbase_viewport_size_hint(void* self) {
-    return QChartView_QBaseViewportSizeHint((QChartView*)self);
+QSize* q_chartview_super_viewport_size_hint(void* self) {
+    return QChartView_SuperViewportSizeHint((QChartView*)self);
 }
 
 void q_chartview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2345,8 +2345,8 @@ void q_chartview_change_event(void* self, void* param1) {
     QChartView_ChangeEvent((QChartView*)self, (QEvent*)param1);
 }
 
-void q_chartview_qbase_change_event(void* self, void* param1) {
-    QChartView_QBaseChangeEvent((QChartView*)self, (QEvent*)param1);
+void q_chartview_super_change_event(void* self, void* param1) {
+    QChartView_SuperChangeEvent((QChartView*)self, (QEvent*)param1);
 }
 
 void q_chartview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2357,8 +2357,8 @@ void q_chartview_init_style_option(void* self, void* option) {
     QChartView_InitStyleOption((QChartView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_chartview_qbase_init_style_option(void* self, void* option) {
-    QChartView_QBaseInitStyleOption((QChartView*)self, (QStyleOptionFrame*)option);
+void q_chartview_super_init_style_option(void* self, void* option) {
+    QChartView_SuperInitStyleOption((QChartView*)self, (QStyleOptionFrame*)option);
 }
 
 void q_chartview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2369,8 +2369,8 @@ int32_t q_chartview_dev_type(void* self) {
     return QChartView_DevType((QChartView*)self);
 }
 
-int32_t q_chartview_qbase_dev_type(void* self) {
-    return QChartView_QBaseDevType((QChartView*)self);
+int32_t q_chartview_super_dev_type(void* self) {
+    return QChartView_SuperDevType((QChartView*)self);
 }
 
 void q_chartview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2381,8 +2381,8 @@ void q_chartview_set_visible(void* self, bool visible) {
     QChartView_SetVisible((QChartView*)self, visible);
 }
 
-void q_chartview_qbase_set_visible(void* self, bool visible) {
-    QChartView_QBaseSetVisible((QChartView*)self, visible);
+void q_chartview_super_set_visible(void* self, bool visible) {
+    QChartView_SuperSetVisible((QChartView*)self, visible);
 }
 
 void q_chartview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2393,8 +2393,8 @@ int32_t q_chartview_height_for_width(void* self, int param1) {
     return QChartView_HeightForWidth((QChartView*)self, param1);
 }
 
-int32_t q_chartview_qbase_height_for_width(void* self, int param1) {
-    return QChartView_QBaseHeightForWidth((QChartView*)self, param1);
+int32_t q_chartview_super_height_for_width(void* self, int param1) {
+    return QChartView_SuperHeightForWidth((QChartView*)self, param1);
 }
 
 void q_chartview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2405,8 +2405,8 @@ bool q_chartview_has_height_for_width(void* self) {
     return QChartView_HasHeightForWidth((QChartView*)self);
 }
 
-bool q_chartview_qbase_has_height_for_width(void* self) {
-    return QChartView_QBaseHasHeightForWidth((QChartView*)self);
+bool q_chartview_super_has_height_for_width(void* self) {
+    return QChartView_SuperHasHeightForWidth((QChartView*)self);
 }
 
 void q_chartview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2417,8 +2417,8 @@ QPaintEngine* q_chartview_paint_engine(void* self) {
     return QChartView_PaintEngine((QChartView*)self);
 }
 
-QPaintEngine* q_chartview_qbase_paint_engine(void* self) {
-    return QChartView_QBasePaintEngine((QChartView*)self);
+QPaintEngine* q_chartview_super_paint_engine(void* self) {
+    return QChartView_SuperPaintEngine((QChartView*)self);
 }
 
 void q_chartview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2429,8 +2429,8 @@ void q_chartview_enter_event(void* self, void* event) {
     QChartView_EnterEvent((QChartView*)self, (QEnterEvent*)event);
 }
 
-void q_chartview_qbase_enter_event(void* self, void* event) {
-    QChartView_QBaseEnterEvent((QChartView*)self, (QEnterEvent*)event);
+void q_chartview_super_enter_event(void* self, void* event) {
+    QChartView_SuperEnterEvent((QChartView*)self, (QEnterEvent*)event);
 }
 
 void q_chartview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2441,8 +2441,8 @@ void q_chartview_leave_event(void* self, void* event) {
     QChartView_LeaveEvent((QChartView*)self, (QEvent*)event);
 }
 
-void q_chartview_qbase_leave_event(void* self, void* event) {
-    QChartView_QBaseLeaveEvent((QChartView*)self, (QEvent*)event);
+void q_chartview_super_leave_event(void* self, void* event) {
+    QChartView_SuperLeaveEvent((QChartView*)self, (QEvent*)event);
 }
 
 void q_chartview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2453,8 +2453,8 @@ void q_chartview_move_event(void* self, void* event) {
     QChartView_MoveEvent((QChartView*)self, (QMoveEvent*)event);
 }
 
-void q_chartview_qbase_move_event(void* self, void* event) {
-    QChartView_QBaseMoveEvent((QChartView*)self, (QMoveEvent*)event);
+void q_chartview_super_move_event(void* self, void* event) {
+    QChartView_SuperMoveEvent((QChartView*)self, (QMoveEvent*)event);
 }
 
 void q_chartview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2465,8 +2465,8 @@ void q_chartview_close_event(void* self, void* event) {
     QChartView_CloseEvent((QChartView*)self, (QCloseEvent*)event);
 }
 
-void q_chartview_qbase_close_event(void* self, void* event) {
-    QChartView_QBaseCloseEvent((QChartView*)self, (QCloseEvent*)event);
+void q_chartview_super_close_event(void* self, void* event) {
+    QChartView_SuperCloseEvent((QChartView*)self, (QCloseEvent*)event);
 }
 
 void q_chartview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2477,8 +2477,8 @@ void q_chartview_tablet_event(void* self, void* event) {
     QChartView_TabletEvent((QChartView*)self, (QTabletEvent*)event);
 }
 
-void q_chartview_qbase_tablet_event(void* self, void* event) {
-    QChartView_QBaseTabletEvent((QChartView*)self, (QTabletEvent*)event);
+void q_chartview_super_tablet_event(void* self, void* event) {
+    QChartView_SuperTabletEvent((QChartView*)self, (QTabletEvent*)event);
 }
 
 void q_chartview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2489,8 +2489,8 @@ void q_chartview_action_event(void* self, void* event) {
     QChartView_ActionEvent((QChartView*)self, (QActionEvent*)event);
 }
 
-void q_chartview_qbase_action_event(void* self, void* event) {
-    QChartView_QBaseActionEvent((QChartView*)self, (QActionEvent*)event);
+void q_chartview_super_action_event(void* self, void* event) {
+    QChartView_SuperActionEvent((QChartView*)self, (QActionEvent*)event);
 }
 
 void q_chartview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2501,8 +2501,8 @@ void q_chartview_hide_event(void* self, void* event) {
     QChartView_HideEvent((QChartView*)self, (QHideEvent*)event);
 }
 
-void q_chartview_qbase_hide_event(void* self, void* event) {
-    QChartView_QBaseHideEvent((QChartView*)self, (QHideEvent*)event);
+void q_chartview_super_hide_event(void* self, void* event) {
+    QChartView_SuperHideEvent((QChartView*)self, (QHideEvent*)event);
 }
 
 void q_chartview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2513,8 +2513,8 @@ bool q_chartview_native_event(void* self, char* eventType, void* message, intptr
     return QChartView_NativeEvent((QChartView*)self, qstring(eventType), message, result);
 }
 
-bool q_chartview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QChartView_QBaseNativeEvent((QChartView*)self, qstring(eventType), message, result);
+bool q_chartview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QChartView_SuperNativeEvent((QChartView*)self, qstring(eventType), message, result);
 }
 
 void q_chartview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2525,8 +2525,8 @@ int32_t q_chartview_metric(void* self, int32_t param1) {
     return QChartView_Metric((QChartView*)self, param1);
 }
 
-int32_t q_chartview_qbase_metric(void* self, int32_t param1) {
-    return QChartView_QBaseMetric((QChartView*)self, param1);
+int32_t q_chartview_super_metric(void* self, int32_t param1) {
+    return QChartView_SuperMetric((QChartView*)self, param1);
 }
 
 void q_chartview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2537,8 +2537,8 @@ void q_chartview_init_painter(void* self, void* painter) {
     QChartView_InitPainter((QChartView*)self, (QPainter*)painter);
 }
 
-void q_chartview_qbase_init_painter(void* self, void* painter) {
-    QChartView_QBaseInitPainter((QChartView*)self, (QPainter*)painter);
+void q_chartview_super_init_painter(void* self, void* painter) {
+    QChartView_SuperInitPainter((QChartView*)self, (QPainter*)painter);
 }
 
 void q_chartview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2549,8 +2549,8 @@ QPaintDevice* q_chartview_redirected(void* self, void* offset) {
     return QChartView_Redirected((QChartView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_chartview_qbase_redirected(void* self, void* offset) {
-    return QChartView_QBaseRedirected((QChartView*)self, (QPoint*)offset);
+QPaintDevice* q_chartview_super_redirected(void* self, void* offset) {
+    return QChartView_SuperRedirected((QChartView*)self, (QPoint*)offset);
 }
 
 void q_chartview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2561,8 +2561,8 @@ QPainter* q_chartview_shared_painter(void* self) {
     return QChartView_SharedPainter((QChartView*)self);
 }
 
-QPainter* q_chartview_qbase_shared_painter(void* self) {
-    return QChartView_QBaseSharedPainter((QChartView*)self);
+QPainter* q_chartview_super_shared_painter(void* self) {
+    return QChartView_SuperSharedPainter((QChartView*)self);
 }
 
 void q_chartview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2573,8 +2573,8 @@ void q_chartview_timer_event(void* self, void* event) {
     QChartView_TimerEvent((QChartView*)self, (QTimerEvent*)event);
 }
 
-void q_chartview_qbase_timer_event(void* self, void* event) {
-    QChartView_QBaseTimerEvent((QChartView*)self, (QTimerEvent*)event);
+void q_chartview_super_timer_event(void* self, void* event) {
+    QChartView_SuperTimerEvent((QChartView*)self, (QTimerEvent*)event);
 }
 
 void q_chartview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2585,8 +2585,8 @@ void q_chartview_child_event(void* self, void* event) {
     QChartView_ChildEvent((QChartView*)self, (QChildEvent*)event);
 }
 
-void q_chartview_qbase_child_event(void* self, void* event) {
-    QChartView_QBaseChildEvent((QChartView*)self, (QChildEvent*)event);
+void q_chartview_super_child_event(void* self, void* event) {
+    QChartView_SuperChildEvent((QChartView*)self, (QChildEvent*)event);
 }
 
 void q_chartview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2597,8 +2597,8 @@ void q_chartview_custom_event(void* self, void* event) {
     QChartView_CustomEvent((QChartView*)self, (QEvent*)event);
 }
 
-void q_chartview_qbase_custom_event(void* self, void* event) {
-    QChartView_QBaseCustomEvent((QChartView*)self, (QEvent*)event);
+void q_chartview_super_custom_event(void* self, void* event) {
+    QChartView_SuperCustomEvent((QChartView*)self, (QEvent*)event);
 }
 
 void q_chartview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2609,8 +2609,8 @@ void q_chartview_connect_notify(void* self, void* signal) {
     QChartView_ConnectNotify((QChartView*)self, (QMetaMethod*)signal);
 }
 
-void q_chartview_qbase_connect_notify(void* self, void* signal) {
-    QChartView_QBaseConnectNotify((QChartView*)self, (QMetaMethod*)signal);
+void q_chartview_super_connect_notify(void* self, void* signal) {
+    QChartView_SuperConnectNotify((QChartView*)self, (QMetaMethod*)signal);
 }
 
 void q_chartview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2621,8 +2621,8 @@ void q_chartview_disconnect_notify(void* self, void* signal) {
     QChartView_DisconnectNotify((QChartView*)self, (QMetaMethod*)signal);
 }
 
-void q_chartview_qbase_disconnect_notify(void* self, void* signal) {
-    QChartView_QBaseDisconnectNotify((QChartView*)self, (QMetaMethod*)signal);
+void q_chartview_super_disconnect_notify(void* self, void* signal) {
+    QChartView_SuperDisconnectNotify((QChartView*)self, (QMetaMethod*)signal);
 }
 
 void q_chartview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2633,8 +2633,8 @@ void q_chartview_set_viewport_margins(void* self, int left, int top, int right, 
     QChartView_SetViewportMargins((QChartView*)self, left, top, right, bottom);
 }
 
-void q_chartview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QChartView_QBaseSetViewportMargins((QChartView*)self, left, top, right, bottom);
+void q_chartview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QChartView_SuperSetViewportMargins((QChartView*)self, left, top, right, bottom);
 }
 
 void q_chartview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -2645,8 +2645,8 @@ QMargins* q_chartview_viewport_margins(void* self) {
     return QChartView_ViewportMargins((QChartView*)self);
 }
 
-QMargins* q_chartview_qbase_viewport_margins(void* self) {
-    return QChartView_QBaseViewportMargins((QChartView*)self);
+QMargins* q_chartview_super_viewport_margins(void* self) {
+    return QChartView_SuperViewportMargins((QChartView*)self);
 }
 
 void q_chartview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -2657,8 +2657,8 @@ void q_chartview_draw_frame(void* self, void* param1) {
     QChartView_DrawFrame((QChartView*)self, (QPainter*)param1);
 }
 
-void q_chartview_qbase_draw_frame(void* self, void* param1) {
-    QChartView_QBaseDrawFrame((QChartView*)self, (QPainter*)param1);
+void q_chartview_super_draw_frame(void* self, void* param1) {
+    QChartView_SuperDrawFrame((QChartView*)self, (QPainter*)param1);
 }
 
 void q_chartview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2669,8 +2669,8 @@ void q_chartview_update_micro_focus(void* self) {
     QChartView_UpdateMicroFocus((QChartView*)self);
 }
 
-void q_chartview_qbase_update_micro_focus(void* self) {
-    QChartView_QBaseUpdateMicroFocus((QChartView*)self);
+void q_chartview_super_update_micro_focus(void* self) {
+    QChartView_SuperUpdateMicroFocus((QChartView*)self);
 }
 
 void q_chartview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2681,8 +2681,8 @@ void q_chartview_create(void* self) {
     QChartView_Create((QChartView*)self);
 }
 
-void q_chartview_qbase_create(void* self) {
-    QChartView_QBaseCreate((QChartView*)self);
+void q_chartview_super_create(void* self) {
+    QChartView_SuperCreate((QChartView*)self);
 }
 
 void q_chartview_on_create(void* self, void (*callback)()) {
@@ -2693,8 +2693,8 @@ void q_chartview_destroy(void* self) {
     QChartView_Destroy((QChartView*)self);
 }
 
-void q_chartview_qbase_destroy(void* self) {
-    QChartView_QBaseDestroy((QChartView*)self);
+void q_chartview_super_destroy(void* self) {
+    QChartView_SuperDestroy((QChartView*)self);
 }
 
 void q_chartview_on_destroy(void* self, void (*callback)()) {
@@ -2705,8 +2705,8 @@ bool q_chartview_focus_next_child(void* self) {
     return QChartView_FocusNextChild((QChartView*)self);
 }
 
-bool q_chartview_qbase_focus_next_child(void* self) {
-    return QChartView_QBaseFocusNextChild((QChartView*)self);
+bool q_chartview_super_focus_next_child(void* self) {
+    return QChartView_SuperFocusNextChild((QChartView*)self);
 }
 
 void q_chartview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2717,8 +2717,8 @@ bool q_chartview_focus_previous_child(void* self) {
     return QChartView_FocusPreviousChild((QChartView*)self);
 }
 
-bool q_chartview_qbase_focus_previous_child(void* self) {
-    return QChartView_QBaseFocusPreviousChild((QChartView*)self);
+bool q_chartview_super_focus_previous_child(void* self) {
+    return QChartView_SuperFocusPreviousChild((QChartView*)self);
 }
 
 void q_chartview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2729,8 +2729,8 @@ QObject* q_chartview_sender(void* self) {
     return QChartView_Sender((QChartView*)self);
 }
 
-QObject* q_chartview_qbase_sender(void* self) {
-    return QChartView_QBaseSender((QChartView*)self);
+QObject* q_chartview_super_sender(void* self) {
+    return QChartView_SuperSender((QChartView*)self);
 }
 
 void q_chartview_on_sender(void* self, QObject* (*callback)()) {
@@ -2741,8 +2741,8 @@ int32_t q_chartview_sender_signal_index(void* self) {
     return QChartView_SenderSignalIndex((QChartView*)self);
 }
 
-int32_t q_chartview_qbase_sender_signal_index(void* self) {
-    return QChartView_QBaseSenderSignalIndex((QChartView*)self);
+int32_t q_chartview_super_sender_signal_index(void* self) {
+    return QChartView_SuperSenderSignalIndex((QChartView*)self);
 }
 
 void q_chartview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2753,8 +2753,8 @@ int32_t q_chartview_receivers(void* self, const char* signal) {
     return QChartView_Receivers((QChartView*)self, signal);
 }
 
-int32_t q_chartview_qbase_receivers(void* self, const char* signal) {
-    return QChartView_QBaseReceivers((QChartView*)self, signal);
+int32_t q_chartview_super_receivers(void* self, const char* signal) {
+    return QChartView_SuperReceivers((QChartView*)self, signal);
 }
 
 void q_chartview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2765,8 +2765,8 @@ bool q_chartview_is_signal_connected(void* self, void* signal) {
     return QChartView_IsSignalConnected((QChartView*)self, (QMetaMethod*)signal);
 }
 
-bool q_chartview_qbase_is_signal_connected(void* self, void* signal) {
-    return QChartView_QBaseIsSignalConnected((QChartView*)self, (QMetaMethod*)signal);
+bool q_chartview_super_is_signal_connected(void* self, void* signal) {
+    return QChartView_SuperIsSignalConnected((QChartView*)self, (QMetaMethod*)signal);
 }
 
 void q_chartview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2777,8 +2777,8 @@ double q_chartview_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
     return QChartView_GetDecodedMetricF((QChartView*)self, metricA, metricB);
 }
 
-double q_chartview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QChartView_QBaseGetDecodedMetricF((QChartView*)self, metricA, metricB);
+double q_chartview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QChartView_SuperGetDecodedMetricF((QChartView*)self, metricA, metricB);
 }
 
 void q_chartview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

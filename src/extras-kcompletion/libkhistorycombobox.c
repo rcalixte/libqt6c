@@ -45,8 +45,8 @@ void k_historycombobox_on_meta_object(void* self, const QMetaObject* (*callback)
     KHistoryComboBox_OnMetaObject((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_historycombobox_qbase_meta_object(void* self) {
-    return KHistoryComboBox_QBaseMetaObject((KHistoryComboBox*)self);
+const QMetaObject* k_historycombobox_super_meta_object(void* self) {
+    return KHistoryComboBox_SuperMetaObject((KHistoryComboBox*)self);
 }
 
 void* k_historycombobox_metacast(void* self, const char* param1) {
@@ -57,8 +57,8 @@ void k_historycombobox_on_metacast(void* self, void* (*callback)(void*, const ch
     KHistoryComboBox_OnMetacast((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-void* k_historycombobox_qbase_metacast(void* self, const char* param1) {
-    return KHistoryComboBox_QBaseMetacast((KHistoryComboBox*)self, param1);
+void* k_historycombobox_super_metacast(void* self, const char* param1) {
+    return KHistoryComboBox_SuperMetacast((KHistoryComboBox*)self, param1);
 }
 
 int32_t k_historycombobox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -69,8 +69,8 @@ void k_historycombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KHistoryComboBox_OnMetacall((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_historycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KHistoryComboBox_QBaseMetacall((KHistoryComboBox*)self, param1, param2, param3);
+int32_t k_historycombobox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KHistoryComboBox_SuperMetacall((KHistoryComboBox*)self, param1, param2, param3);
 }
 
 const char* k_historycombobox_tr(const char* s) {
@@ -161,8 +161,8 @@ void k_historycombobox_on_key_press_event(void* self, void (*callback)(void*, vo
     KHistoryComboBox_OnKeyPressEvent((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-void k_historycombobox_qbase_key_press_event(void* self, void* param1) {
-    KHistoryComboBox_QBaseKeyPressEvent((KHistoryComboBox*)self, (QKeyEvent*)param1);
+void k_historycombobox_super_key_press_event(void* self, void* param1) {
+    KHistoryComboBox_SuperKeyPressEvent((KHistoryComboBox*)self, (QKeyEvent*)param1);
 }
 
 void k_historycombobox_wheel_event(void* self, void* ev) {
@@ -173,8 +173,8 @@ void k_historycombobox_on_wheel_event(void* self, void (*callback)(void*, void*)
     KHistoryComboBox_OnWheelEvent((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-void k_historycombobox_qbase_wheel_event(void* self, void* ev) {
-    KHistoryComboBox_QBaseWheelEvent((KHistoryComboBox*)self, (QWheelEvent*)ev);
+void k_historycombobox_super_wheel_event(void* self, void* ev) {
+    KHistoryComboBox_SuperWheelEvent((KHistoryComboBox*)self, (QWheelEvent*)ev);
 }
 
 void k_historycombobox_insert_items(void* self, const char* items[static 1]) {
@@ -196,7 +196,7 @@ void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const
     KHistoryComboBox_OnInsertItems((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-void k_historycombobox_qbase_insert_items(void* self, const char* items[static 1]) {
+void k_historycombobox_super_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -207,7 +207,7 @@ void k_historycombobox_qbase_insert_items(void* self, const char* items[static 1
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KHistoryComboBox_QBaseInsertItems((KHistoryComboBox*)self, items_list);
+    KHistoryComboBox_SuperInsertItems((KHistoryComboBox*)self, items_list);
 }
 
 bool k_historycombobox_use_completion(void* self) {
@@ -218,8 +218,8 @@ void k_historycombobox_on_use_completion(void* self, bool (*callback)()) {
     KHistoryComboBox_OnUseCompletion((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-bool k_historycombobox_qbase_use_completion(void* self) {
-    return KHistoryComboBox_QBaseUseCompletion((KHistoryComboBox*)self);
+bool k_historycombobox_super_use_completion(void* self) {
+    return KHistoryComboBox_SuperUseCompletion((KHistoryComboBox*)self);
 }
 
 const char* k_historycombobox_tr2(const char* s, const char* c) {
@@ -2154,8 +2154,8 @@ void k_historycombobox_set_auto_completion(void* self, bool autocomplete) {
     KHistoryComboBox_SetAutoCompletion((KHistoryComboBox*)self, autocomplete);
 }
 
-void k_historycombobox_qbase_set_auto_completion(void* self, bool autocomplete) {
-    KHistoryComboBox_QBaseSetAutoCompletion((KHistoryComboBox*)self, autocomplete);
+void k_historycombobox_super_set_auto_completion(void* self, bool autocomplete) {
+    KHistoryComboBox_SuperSetAutoCompletion((KHistoryComboBox*)self, autocomplete);
 }
 
 void k_historycombobox_on_set_auto_completion(void* self, void (*callback)(void*, bool)) {
@@ -2166,8 +2166,8 @@ void k_historycombobox_set_line_edit(void* self, void* lineEdit) {
     KHistoryComboBox_SetLineEdit((KHistoryComboBox*)self, (QLineEdit*)lineEdit);
 }
 
-void k_historycombobox_qbase_set_line_edit(void* self, void* lineEdit) {
-    KHistoryComboBox_QBaseSetLineEdit((KHistoryComboBox*)self, (QLineEdit*)lineEdit);
+void k_historycombobox_super_set_line_edit(void* self, void* lineEdit) {
+    KHistoryComboBox_SuperSetLineEdit((KHistoryComboBox*)self, (QLineEdit*)lineEdit);
 }
 
 void k_historycombobox_on_set_line_edit(void* self, void (*callback)(void*, void*)) {
@@ -2178,8 +2178,8 @@ QSize* k_historycombobox_minimum_size_hint(void* self) {
     return KHistoryComboBox_MinimumSizeHint((KHistoryComboBox*)self);
 }
 
-QSize* k_historycombobox_qbase_minimum_size_hint(void* self) {
-    return KHistoryComboBox_QBaseMinimumSizeHint((KHistoryComboBox*)self);
+QSize* k_historycombobox_super_minimum_size_hint(void* self) {
+    return KHistoryComboBox_SuperMinimumSizeHint((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2190,8 +2190,8 @@ void k_historycombobox_set_completed_text(void* self, const char* completedText)
     KHistoryComboBox_SetCompletedText((KHistoryComboBox*)self, qstring(completedText));
 }
 
-void k_historycombobox_qbase_set_completed_text(void* self, const char* completedText) {
-    KHistoryComboBox_QBaseSetCompletedText((KHistoryComboBox*)self, qstring(completedText));
+void k_historycombobox_super_set_completed_text(void* self, const char* completedText) {
+    KHistoryComboBox_SuperSetCompletedText((KHistoryComboBox*)self, qstring(completedText));
 }
 
 void k_historycombobox_on_set_completed_text(void* self, void (*callback)(void*, const char*)) {
@@ -2213,7 +2213,7 @@ void k_historycombobox_set_completed_items(void* self, const char* items[static 
     free(items_qstr);
 }
 
-void k_historycombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
+void k_historycombobox_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -2224,7 +2224,7 @@ void k_historycombobox_qbase_set_completed_items(void* self, const char* items[s
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KHistoryComboBox_QBaseSetCompletedItems((KHistoryComboBox*)self, items_list, autoSuggest);
+    KHistoryComboBox_SuperSetCompletedItems((KHistoryComboBox*)self, items_list, autoSuggest);
     free(items_qstr);
 }
 
@@ -2236,8 +2236,8 @@ void k_historycombobox_make_completion(void* self, const char* param1) {
     KHistoryComboBox_MakeCompletion((KHistoryComboBox*)self, qstring(param1));
 }
 
-void k_historycombobox_qbase_make_completion(void* self, const char* param1) {
-    KHistoryComboBox_QBaseMakeCompletion((KHistoryComboBox*)self, qstring(param1));
+void k_historycombobox_super_make_completion(void* self, const char* param1) {
+    KHistoryComboBox_SuperMakeCompletion((KHistoryComboBox*)self, qstring(param1));
 }
 
 void k_historycombobox_on_make_completion(void* self, void (*callback)(void*, const char*)) {
@@ -2248,8 +2248,8 @@ void k_historycombobox_set_model(void* self, void* model) {
     KHistoryComboBox_SetModel((KHistoryComboBox*)self, (QAbstractItemModel*)model);
 }
 
-void k_historycombobox_qbase_set_model(void* self, void* model) {
-    KHistoryComboBox_QBaseSetModel((KHistoryComboBox*)self, (QAbstractItemModel*)model);
+void k_historycombobox_super_set_model(void* self, void* model) {
+    KHistoryComboBox_SuperSetModel((KHistoryComboBox*)self, (QAbstractItemModel*)model);
 }
 
 void k_historycombobox_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -2260,8 +2260,8 @@ QSize* k_historycombobox_size_hint(void* self) {
     return KHistoryComboBox_SizeHint((KHistoryComboBox*)self);
 }
 
-QSize* k_historycombobox_qbase_size_hint(void* self) {
-    return KHistoryComboBox_QBaseSizeHint((KHistoryComboBox*)self);
+QSize* k_historycombobox_super_size_hint(void* self) {
+    return KHistoryComboBox_SuperSizeHint((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2272,8 +2272,8 @@ void k_historycombobox_show_popup(void* self) {
     KHistoryComboBox_ShowPopup((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_qbase_show_popup(void* self) {
-    KHistoryComboBox_QBaseShowPopup((KHistoryComboBox*)self);
+void k_historycombobox_super_show_popup(void* self) {
+    KHistoryComboBox_SuperShowPopup((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_show_popup(void* self, void (*callback)()) {
@@ -2284,8 +2284,8 @@ void k_historycombobox_hide_popup(void* self) {
     KHistoryComboBox_HidePopup((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_qbase_hide_popup(void* self) {
-    KHistoryComboBox_QBaseHidePopup((KHistoryComboBox*)self);
+void k_historycombobox_super_hide_popup(void* self) {
+    KHistoryComboBox_SuperHidePopup((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_hide_popup(void* self, void (*callback)()) {
@@ -2296,8 +2296,8 @@ bool k_historycombobox_event(void* self, void* event) {
     return KHistoryComboBox_Event((KHistoryComboBox*)self, (QEvent*)event);
 }
 
-bool k_historycombobox_qbase_event(void* self, void* event) {
-    return KHistoryComboBox_QBaseEvent((KHistoryComboBox*)self, (QEvent*)event);
+bool k_historycombobox_super_event(void* self, void* event) {
+    return KHistoryComboBox_SuperEvent((KHistoryComboBox*)self, (QEvent*)event);
 }
 
 void k_historycombobox_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2308,8 +2308,8 @@ QVariant* k_historycombobox_input_method_query(void* self, int32_t param1) {
     return KHistoryComboBox_InputMethodQuery((KHistoryComboBox*)self, param1);
 }
 
-QVariant* k_historycombobox_qbase_input_method_query(void* self, int32_t param1) {
-    return KHistoryComboBox_QBaseInputMethodQuery((KHistoryComboBox*)self, param1);
+QVariant* k_historycombobox_super_input_method_query(void* self, int32_t param1) {
+    return KHistoryComboBox_SuperInputMethodQuery((KHistoryComboBox*)self, param1);
 }
 
 void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2320,8 +2320,8 @@ void k_historycombobox_focus_in_event(void* self, void* e) {
     KHistoryComboBox_FocusInEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_historycombobox_qbase_focus_in_event(void* self, void* e) {
-    KHistoryComboBox_QBaseFocusInEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
+void k_historycombobox_super_focus_in_event(void* self, void* e) {
+    KHistoryComboBox_SuperFocusInEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_historycombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2332,8 +2332,8 @@ void k_historycombobox_focus_out_event(void* self, void* e) {
     KHistoryComboBox_FocusOutEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_historycombobox_qbase_focus_out_event(void* self, void* e) {
-    KHistoryComboBox_QBaseFocusOutEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
+void k_historycombobox_super_focus_out_event(void* self, void* e) {
+    KHistoryComboBox_SuperFocusOutEvent((KHistoryComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_historycombobox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2344,8 +2344,8 @@ void k_historycombobox_change_event(void* self, void* e) {
     KHistoryComboBox_ChangeEvent((KHistoryComboBox*)self, (QEvent*)e);
 }
 
-void k_historycombobox_qbase_change_event(void* self, void* e) {
-    KHistoryComboBox_QBaseChangeEvent((KHistoryComboBox*)self, (QEvent*)e);
+void k_historycombobox_super_change_event(void* self, void* e) {
+    KHistoryComboBox_SuperChangeEvent((KHistoryComboBox*)self, (QEvent*)e);
 }
 
 void k_historycombobox_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2356,8 +2356,8 @@ void k_historycombobox_resize_event(void* self, void* e) {
     KHistoryComboBox_ResizeEvent((KHistoryComboBox*)self, (QResizeEvent*)e);
 }
 
-void k_historycombobox_qbase_resize_event(void* self, void* e) {
-    KHistoryComboBox_QBaseResizeEvent((KHistoryComboBox*)self, (QResizeEvent*)e);
+void k_historycombobox_super_resize_event(void* self, void* e) {
+    KHistoryComboBox_SuperResizeEvent((KHistoryComboBox*)self, (QResizeEvent*)e);
 }
 
 void k_historycombobox_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2368,8 +2368,8 @@ void k_historycombobox_paint_event(void* self, void* e) {
     KHistoryComboBox_PaintEvent((KHistoryComboBox*)self, (QPaintEvent*)e);
 }
 
-void k_historycombobox_qbase_paint_event(void* self, void* e) {
-    KHistoryComboBox_QBasePaintEvent((KHistoryComboBox*)self, (QPaintEvent*)e);
+void k_historycombobox_super_paint_event(void* self, void* e) {
+    KHistoryComboBox_SuperPaintEvent((KHistoryComboBox*)self, (QPaintEvent*)e);
 }
 
 void k_historycombobox_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2380,8 +2380,8 @@ void k_historycombobox_show_event(void* self, void* e) {
     KHistoryComboBox_ShowEvent((KHistoryComboBox*)self, (QShowEvent*)e);
 }
 
-void k_historycombobox_qbase_show_event(void* self, void* e) {
-    KHistoryComboBox_QBaseShowEvent((KHistoryComboBox*)self, (QShowEvent*)e);
+void k_historycombobox_super_show_event(void* self, void* e) {
+    KHistoryComboBox_SuperShowEvent((KHistoryComboBox*)self, (QShowEvent*)e);
 }
 
 void k_historycombobox_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2392,8 +2392,8 @@ void k_historycombobox_hide_event(void* self, void* e) {
     KHistoryComboBox_HideEvent((KHistoryComboBox*)self, (QHideEvent*)e);
 }
 
-void k_historycombobox_qbase_hide_event(void* self, void* e) {
-    KHistoryComboBox_QBaseHideEvent((KHistoryComboBox*)self, (QHideEvent*)e);
+void k_historycombobox_super_hide_event(void* self, void* e) {
+    KHistoryComboBox_SuperHideEvent((KHistoryComboBox*)self, (QHideEvent*)e);
 }
 
 void k_historycombobox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2404,8 +2404,8 @@ void k_historycombobox_mouse_press_event(void* self, void* e) {
     KHistoryComboBox_MousePressEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
 }
 
-void k_historycombobox_qbase_mouse_press_event(void* self, void* e) {
-    KHistoryComboBox_QBaseMousePressEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
+void k_historycombobox_super_mouse_press_event(void* self, void* e) {
+    KHistoryComboBox_SuperMousePressEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
 }
 
 void k_historycombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2416,8 +2416,8 @@ void k_historycombobox_mouse_release_event(void* self, void* e) {
     KHistoryComboBox_MouseReleaseEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
 }
 
-void k_historycombobox_qbase_mouse_release_event(void* self, void* e) {
-    KHistoryComboBox_QBaseMouseReleaseEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
+void k_historycombobox_super_mouse_release_event(void* self, void* e) {
+    KHistoryComboBox_SuperMouseReleaseEvent((KHistoryComboBox*)self, (QMouseEvent*)e);
 }
 
 void k_historycombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2428,8 +2428,8 @@ void k_historycombobox_key_release_event(void* self, void* e) {
     KHistoryComboBox_KeyReleaseEvent((KHistoryComboBox*)self, (QKeyEvent*)e);
 }
 
-void k_historycombobox_qbase_key_release_event(void* self, void* e) {
-    KHistoryComboBox_QBaseKeyReleaseEvent((KHistoryComboBox*)self, (QKeyEvent*)e);
+void k_historycombobox_super_key_release_event(void* self, void* e) {
+    KHistoryComboBox_SuperKeyReleaseEvent((KHistoryComboBox*)self, (QKeyEvent*)e);
 }
 
 void k_historycombobox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2440,8 +2440,8 @@ void k_historycombobox_context_menu_event(void* self, void* e) {
     KHistoryComboBox_ContextMenuEvent((KHistoryComboBox*)self, (QContextMenuEvent*)e);
 }
 
-void k_historycombobox_qbase_context_menu_event(void* self, void* e) {
-    KHistoryComboBox_QBaseContextMenuEvent((KHistoryComboBox*)self, (QContextMenuEvent*)e);
+void k_historycombobox_super_context_menu_event(void* self, void* e) {
+    KHistoryComboBox_SuperContextMenuEvent((KHistoryComboBox*)self, (QContextMenuEvent*)e);
 }
 
 void k_historycombobox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2452,8 +2452,8 @@ void k_historycombobox_input_method_event(void* self, void* param1) {
     KHistoryComboBox_InputMethodEvent((KHistoryComboBox*)self, (QInputMethodEvent*)param1);
 }
 
-void k_historycombobox_qbase_input_method_event(void* self, void* param1) {
-    KHistoryComboBox_QBaseInputMethodEvent((KHistoryComboBox*)self, (QInputMethodEvent*)param1);
+void k_historycombobox_super_input_method_event(void* self, void* param1) {
+    KHistoryComboBox_SuperInputMethodEvent((KHistoryComboBox*)self, (QInputMethodEvent*)param1);
 }
 
 void k_historycombobox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2464,8 +2464,8 @@ void k_historycombobox_init_style_option(void* self, void* option) {
     KHistoryComboBox_InitStyleOption((KHistoryComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_historycombobox_qbase_init_style_option(void* self, void* option) {
-    KHistoryComboBox_QBaseInitStyleOption((KHistoryComboBox*)self, (QStyleOptionComboBox*)option);
+void k_historycombobox_super_init_style_option(void* self, void* option) {
+    KHistoryComboBox_SuperInitStyleOption((KHistoryComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
 void k_historycombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2476,8 +2476,8 @@ int32_t k_historycombobox_dev_type(void* self) {
     return KHistoryComboBox_DevType((KHistoryComboBox*)self);
 }
 
-int32_t k_historycombobox_qbase_dev_type(void* self) {
-    return KHistoryComboBox_QBaseDevType((KHistoryComboBox*)self);
+int32_t k_historycombobox_super_dev_type(void* self) {
+    return KHistoryComboBox_SuperDevType((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2488,8 +2488,8 @@ void k_historycombobox_set_visible(void* self, bool visible) {
     KHistoryComboBox_SetVisible((KHistoryComboBox*)self, visible);
 }
 
-void k_historycombobox_qbase_set_visible(void* self, bool visible) {
-    KHistoryComboBox_QBaseSetVisible((KHistoryComboBox*)self, visible);
+void k_historycombobox_super_set_visible(void* self, bool visible) {
+    KHistoryComboBox_SuperSetVisible((KHistoryComboBox*)self, visible);
 }
 
 void k_historycombobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2500,8 +2500,8 @@ int32_t k_historycombobox_height_for_width(void* self, int param1) {
     return KHistoryComboBox_HeightForWidth((KHistoryComboBox*)self, param1);
 }
 
-int32_t k_historycombobox_qbase_height_for_width(void* self, int param1) {
-    return KHistoryComboBox_QBaseHeightForWidth((KHistoryComboBox*)self, param1);
+int32_t k_historycombobox_super_height_for_width(void* self, int param1) {
+    return KHistoryComboBox_SuperHeightForWidth((KHistoryComboBox*)self, param1);
 }
 
 void k_historycombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2512,8 +2512,8 @@ bool k_historycombobox_has_height_for_width(void* self) {
     return KHistoryComboBox_HasHeightForWidth((KHistoryComboBox*)self);
 }
 
-bool k_historycombobox_qbase_has_height_for_width(void* self) {
-    return KHistoryComboBox_QBaseHasHeightForWidth((KHistoryComboBox*)self);
+bool k_historycombobox_super_has_height_for_width(void* self) {
+    return KHistoryComboBox_SuperHasHeightForWidth((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2524,8 +2524,8 @@ QPaintEngine* k_historycombobox_paint_engine(void* self) {
     return KHistoryComboBox_PaintEngine((KHistoryComboBox*)self);
 }
 
-QPaintEngine* k_historycombobox_qbase_paint_engine(void* self) {
-    return KHistoryComboBox_QBasePaintEngine((KHistoryComboBox*)self);
+QPaintEngine* k_historycombobox_super_paint_engine(void* self) {
+    return KHistoryComboBox_SuperPaintEngine((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2536,8 +2536,8 @@ void k_historycombobox_mouse_double_click_event(void* self, void* event) {
     KHistoryComboBox_MouseDoubleClickEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
 }
 
-void k_historycombobox_qbase_mouse_double_click_event(void* self, void* event) {
-    KHistoryComboBox_QBaseMouseDoubleClickEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
+void k_historycombobox_super_mouse_double_click_event(void* self, void* event) {
+    KHistoryComboBox_SuperMouseDoubleClickEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_historycombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2548,8 +2548,8 @@ void k_historycombobox_mouse_move_event(void* self, void* event) {
     KHistoryComboBox_MouseMoveEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
 }
 
-void k_historycombobox_qbase_mouse_move_event(void* self, void* event) {
-    KHistoryComboBox_QBaseMouseMoveEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
+void k_historycombobox_super_mouse_move_event(void* self, void* event) {
+    KHistoryComboBox_SuperMouseMoveEvent((KHistoryComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_historycombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2560,8 +2560,8 @@ void k_historycombobox_enter_event(void* self, void* event) {
     KHistoryComboBox_EnterEvent((KHistoryComboBox*)self, (QEnterEvent*)event);
 }
 
-void k_historycombobox_qbase_enter_event(void* self, void* event) {
-    KHistoryComboBox_QBaseEnterEvent((KHistoryComboBox*)self, (QEnterEvent*)event);
+void k_historycombobox_super_enter_event(void* self, void* event) {
+    KHistoryComboBox_SuperEnterEvent((KHistoryComboBox*)self, (QEnterEvent*)event);
 }
 
 void k_historycombobox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2572,8 +2572,8 @@ void k_historycombobox_leave_event(void* self, void* event) {
     KHistoryComboBox_LeaveEvent((KHistoryComboBox*)self, (QEvent*)event);
 }
 
-void k_historycombobox_qbase_leave_event(void* self, void* event) {
-    KHistoryComboBox_QBaseLeaveEvent((KHistoryComboBox*)self, (QEvent*)event);
+void k_historycombobox_super_leave_event(void* self, void* event) {
+    KHistoryComboBox_SuperLeaveEvent((KHistoryComboBox*)self, (QEvent*)event);
 }
 
 void k_historycombobox_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2584,8 +2584,8 @@ void k_historycombobox_move_event(void* self, void* event) {
     KHistoryComboBox_MoveEvent((KHistoryComboBox*)self, (QMoveEvent*)event);
 }
 
-void k_historycombobox_qbase_move_event(void* self, void* event) {
-    KHistoryComboBox_QBaseMoveEvent((KHistoryComboBox*)self, (QMoveEvent*)event);
+void k_historycombobox_super_move_event(void* self, void* event) {
+    KHistoryComboBox_SuperMoveEvent((KHistoryComboBox*)self, (QMoveEvent*)event);
 }
 
 void k_historycombobox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2596,8 +2596,8 @@ void k_historycombobox_close_event(void* self, void* event) {
     KHistoryComboBox_CloseEvent((KHistoryComboBox*)self, (QCloseEvent*)event);
 }
 
-void k_historycombobox_qbase_close_event(void* self, void* event) {
-    KHistoryComboBox_QBaseCloseEvent((KHistoryComboBox*)self, (QCloseEvent*)event);
+void k_historycombobox_super_close_event(void* self, void* event) {
+    KHistoryComboBox_SuperCloseEvent((KHistoryComboBox*)self, (QCloseEvent*)event);
 }
 
 void k_historycombobox_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2608,8 +2608,8 @@ void k_historycombobox_tablet_event(void* self, void* event) {
     KHistoryComboBox_TabletEvent((KHistoryComboBox*)self, (QTabletEvent*)event);
 }
 
-void k_historycombobox_qbase_tablet_event(void* self, void* event) {
-    KHistoryComboBox_QBaseTabletEvent((KHistoryComboBox*)self, (QTabletEvent*)event);
+void k_historycombobox_super_tablet_event(void* self, void* event) {
+    KHistoryComboBox_SuperTabletEvent((KHistoryComboBox*)self, (QTabletEvent*)event);
 }
 
 void k_historycombobox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2620,8 +2620,8 @@ void k_historycombobox_action_event(void* self, void* event) {
     KHistoryComboBox_ActionEvent((KHistoryComboBox*)self, (QActionEvent*)event);
 }
 
-void k_historycombobox_qbase_action_event(void* self, void* event) {
-    KHistoryComboBox_QBaseActionEvent((KHistoryComboBox*)self, (QActionEvent*)event);
+void k_historycombobox_super_action_event(void* self, void* event) {
+    KHistoryComboBox_SuperActionEvent((KHistoryComboBox*)self, (QActionEvent*)event);
 }
 
 void k_historycombobox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2632,8 +2632,8 @@ void k_historycombobox_drag_enter_event(void* self, void* event) {
     KHistoryComboBox_DragEnterEvent((KHistoryComboBox*)self, (QDragEnterEvent*)event);
 }
 
-void k_historycombobox_qbase_drag_enter_event(void* self, void* event) {
-    KHistoryComboBox_QBaseDragEnterEvent((KHistoryComboBox*)self, (QDragEnterEvent*)event);
+void k_historycombobox_super_drag_enter_event(void* self, void* event) {
+    KHistoryComboBox_SuperDragEnterEvent((KHistoryComboBox*)self, (QDragEnterEvent*)event);
 }
 
 void k_historycombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2644,8 +2644,8 @@ void k_historycombobox_drag_move_event(void* self, void* event) {
     KHistoryComboBox_DragMoveEvent((KHistoryComboBox*)self, (QDragMoveEvent*)event);
 }
 
-void k_historycombobox_qbase_drag_move_event(void* self, void* event) {
-    KHistoryComboBox_QBaseDragMoveEvent((KHistoryComboBox*)self, (QDragMoveEvent*)event);
+void k_historycombobox_super_drag_move_event(void* self, void* event) {
+    KHistoryComboBox_SuperDragMoveEvent((KHistoryComboBox*)self, (QDragMoveEvent*)event);
 }
 
 void k_historycombobox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2656,8 +2656,8 @@ void k_historycombobox_drag_leave_event(void* self, void* event) {
     KHistoryComboBox_DragLeaveEvent((KHistoryComboBox*)self, (QDragLeaveEvent*)event);
 }
 
-void k_historycombobox_qbase_drag_leave_event(void* self, void* event) {
-    KHistoryComboBox_QBaseDragLeaveEvent((KHistoryComboBox*)self, (QDragLeaveEvent*)event);
+void k_historycombobox_super_drag_leave_event(void* self, void* event) {
+    KHistoryComboBox_SuperDragLeaveEvent((KHistoryComboBox*)self, (QDragLeaveEvent*)event);
 }
 
 void k_historycombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2668,8 +2668,8 @@ void k_historycombobox_drop_event(void* self, void* event) {
     KHistoryComboBox_DropEvent((KHistoryComboBox*)self, (QDropEvent*)event);
 }
 
-void k_historycombobox_qbase_drop_event(void* self, void* event) {
-    KHistoryComboBox_QBaseDropEvent((KHistoryComboBox*)self, (QDropEvent*)event);
+void k_historycombobox_super_drop_event(void* self, void* event) {
+    KHistoryComboBox_SuperDropEvent((KHistoryComboBox*)self, (QDropEvent*)event);
 }
 
 void k_historycombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2680,8 +2680,8 @@ bool k_historycombobox_native_event(void* self, char* eventType, void* message, 
     return KHistoryComboBox_NativeEvent((KHistoryComboBox*)self, qstring(eventType), message, result);
 }
 
-bool k_historycombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KHistoryComboBox_QBaseNativeEvent((KHistoryComboBox*)self, qstring(eventType), message, result);
+bool k_historycombobox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KHistoryComboBox_SuperNativeEvent((KHistoryComboBox*)self, qstring(eventType), message, result);
 }
 
 void k_historycombobox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2692,8 +2692,8 @@ int32_t k_historycombobox_metric(void* self, int32_t param1) {
     return KHistoryComboBox_Metric((KHistoryComboBox*)self, param1);
 }
 
-int32_t k_historycombobox_qbase_metric(void* self, int32_t param1) {
-    return KHistoryComboBox_QBaseMetric((KHistoryComboBox*)self, param1);
+int32_t k_historycombobox_super_metric(void* self, int32_t param1) {
+    return KHistoryComboBox_SuperMetric((KHistoryComboBox*)self, param1);
 }
 
 void k_historycombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2704,8 +2704,8 @@ void k_historycombobox_init_painter(void* self, void* painter) {
     KHistoryComboBox_InitPainter((KHistoryComboBox*)self, (QPainter*)painter);
 }
 
-void k_historycombobox_qbase_init_painter(void* self, void* painter) {
-    KHistoryComboBox_QBaseInitPainter((KHistoryComboBox*)self, (QPainter*)painter);
+void k_historycombobox_super_init_painter(void* self, void* painter) {
+    KHistoryComboBox_SuperInitPainter((KHistoryComboBox*)self, (QPainter*)painter);
 }
 
 void k_historycombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2716,8 +2716,8 @@ QPaintDevice* k_historycombobox_redirected(void* self, void* offset) {
     return KHistoryComboBox_Redirected((KHistoryComboBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_historycombobox_qbase_redirected(void* self, void* offset) {
-    return KHistoryComboBox_QBaseRedirected((KHistoryComboBox*)self, (QPoint*)offset);
+QPaintDevice* k_historycombobox_super_redirected(void* self, void* offset) {
+    return KHistoryComboBox_SuperRedirected((KHistoryComboBox*)self, (QPoint*)offset);
 }
 
 void k_historycombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2728,8 +2728,8 @@ QPainter* k_historycombobox_shared_painter(void* self) {
     return KHistoryComboBox_SharedPainter((KHistoryComboBox*)self);
 }
 
-QPainter* k_historycombobox_qbase_shared_painter(void* self) {
-    return KHistoryComboBox_QBaseSharedPainter((KHistoryComboBox*)self);
+QPainter* k_historycombobox_super_shared_painter(void* self) {
+    return KHistoryComboBox_SuperSharedPainter((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2740,8 +2740,8 @@ bool k_historycombobox_focus_next_prev_child(void* self, bool next) {
     return KHistoryComboBox_FocusNextPrevChild((KHistoryComboBox*)self, next);
 }
 
-bool k_historycombobox_qbase_focus_next_prev_child(void* self, bool next) {
-    return KHistoryComboBox_QBaseFocusNextPrevChild((KHistoryComboBox*)self, next);
+bool k_historycombobox_super_focus_next_prev_child(void* self, bool next) {
+    return KHistoryComboBox_SuperFocusNextPrevChild((KHistoryComboBox*)self, next);
 }
 
 void k_historycombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2752,8 +2752,8 @@ bool k_historycombobox_event_filter(void* self, void* watched, void* event) {
     return KHistoryComboBox_EventFilter((KHistoryComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_historycombobox_qbase_event_filter(void* self, void* watched, void* event) {
-    return KHistoryComboBox_QBaseEventFilter((KHistoryComboBox*)self, (QObject*)watched, (QEvent*)event);
+bool k_historycombobox_super_event_filter(void* self, void* watched, void* event) {
+    return KHistoryComboBox_SuperEventFilter((KHistoryComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_historycombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2764,8 +2764,8 @@ void k_historycombobox_timer_event(void* self, void* event) {
     KHistoryComboBox_TimerEvent((KHistoryComboBox*)self, (QTimerEvent*)event);
 }
 
-void k_historycombobox_qbase_timer_event(void* self, void* event) {
-    KHistoryComboBox_QBaseTimerEvent((KHistoryComboBox*)self, (QTimerEvent*)event);
+void k_historycombobox_super_timer_event(void* self, void* event) {
+    KHistoryComboBox_SuperTimerEvent((KHistoryComboBox*)self, (QTimerEvent*)event);
 }
 
 void k_historycombobox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2776,8 +2776,8 @@ void k_historycombobox_child_event(void* self, void* event) {
     KHistoryComboBox_ChildEvent((KHistoryComboBox*)self, (QChildEvent*)event);
 }
 
-void k_historycombobox_qbase_child_event(void* self, void* event) {
-    KHistoryComboBox_QBaseChildEvent((KHistoryComboBox*)self, (QChildEvent*)event);
+void k_historycombobox_super_child_event(void* self, void* event) {
+    KHistoryComboBox_SuperChildEvent((KHistoryComboBox*)self, (QChildEvent*)event);
 }
 
 void k_historycombobox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2788,8 +2788,8 @@ void k_historycombobox_custom_event(void* self, void* event) {
     KHistoryComboBox_CustomEvent((KHistoryComboBox*)self, (QEvent*)event);
 }
 
-void k_historycombobox_qbase_custom_event(void* self, void* event) {
-    KHistoryComboBox_QBaseCustomEvent((KHistoryComboBox*)self, (QEvent*)event);
+void k_historycombobox_super_custom_event(void* self, void* event) {
+    KHistoryComboBox_SuperCustomEvent((KHistoryComboBox*)self, (QEvent*)event);
 }
 
 void k_historycombobox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2800,8 +2800,8 @@ void k_historycombobox_connect_notify(void* self, void* signal) {
     KHistoryComboBox_ConnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_historycombobox_qbase_connect_notify(void* self, void* signal) {
-    KHistoryComboBox_QBaseConnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
+void k_historycombobox_super_connect_notify(void* self, void* signal) {
+    KHistoryComboBox_SuperConnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_historycombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2812,8 +2812,8 @@ void k_historycombobox_disconnect_notify(void* self, void* signal) {
     KHistoryComboBox_DisconnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_historycombobox_qbase_disconnect_notify(void* self, void* signal) {
-    KHistoryComboBox_QBaseDisconnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
+void k_historycombobox_super_disconnect_notify(void* self, void* signal) {
+    KHistoryComboBox_SuperDisconnectNotify((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_historycombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2824,8 +2824,8 @@ void k_historycombobox_set_completion_object(void* self, void* completionObject,
     KHistoryComboBox_SetCompletionObject((KHistoryComboBox*)self, (KCompletion*)completionObject, handleSignals);
 }
 
-void k_historycombobox_qbase_set_completion_object(void* self, void* completionObject, bool handleSignals) {
-    KHistoryComboBox_QBaseSetCompletionObject((KHistoryComboBox*)self, (KCompletion*)completionObject, handleSignals);
+void k_historycombobox_super_set_completion_object(void* self, void* completionObject, bool handleSignals) {
+    KHistoryComboBox_SuperSetCompletionObject((KHistoryComboBox*)self, (KCompletion*)completionObject, handleSignals);
 }
 
 void k_historycombobox_on_set_completion_object(void* self, void (*callback)(void*, void*, bool)) {
@@ -2836,8 +2836,8 @@ void k_historycombobox_set_handle_signals(void* self, bool handle) {
     KHistoryComboBox_SetHandleSignals((KHistoryComboBox*)self, handle);
 }
 
-void k_historycombobox_qbase_set_handle_signals(void* self, bool handle) {
-    KHistoryComboBox_QBaseSetHandleSignals((KHistoryComboBox*)self, handle);
+void k_historycombobox_super_set_handle_signals(void* self, bool handle) {
+    KHistoryComboBox_SuperSetHandleSignals((KHistoryComboBox*)self, handle);
 }
 
 void k_historycombobox_on_set_handle_signals(void* self, void (*callback)(void*, bool)) {
@@ -2848,8 +2848,8 @@ void k_historycombobox_set_completion_mode(void* self, int32_t mode) {
     KHistoryComboBox_SetCompletionMode((KHistoryComboBox*)self, mode);
 }
 
-void k_historycombobox_qbase_set_completion_mode(void* self, int32_t mode) {
-    KHistoryComboBox_QBaseSetCompletionMode((KHistoryComboBox*)self, mode);
+void k_historycombobox_super_set_completion_mode(void* self, int32_t mode) {
+    KHistoryComboBox_SuperSetCompletionMode((KHistoryComboBox*)self, mode);
 }
 
 void k_historycombobox_on_set_completion_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -2860,8 +2860,8 @@ void k_historycombobox_virtual_hook(void* self, int id, void* data) {
     KHistoryComboBox_VirtualHook((KHistoryComboBox*)self, id, data);
 }
 
-void k_historycombobox_qbase_virtual_hook(void* self, int id, void* data) {
-    KHistoryComboBox_QBaseVirtualHook((KHistoryComboBox*)self, id, data);
+void k_historycombobox_super_virtual_hook(void* self, int id, void* data) {
+    KHistoryComboBox_SuperVirtualHook((KHistoryComboBox*)self, id, data);
 }
 
 void k_historycombobox_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
@@ -2872,8 +2872,8 @@ void k_historycombobox_update_micro_focus(void* self) {
     KHistoryComboBox_UpdateMicroFocus((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_qbase_update_micro_focus(void* self) {
-    KHistoryComboBox_QBaseUpdateMicroFocus((KHistoryComboBox*)self);
+void k_historycombobox_super_update_micro_focus(void* self) {
+    KHistoryComboBox_SuperUpdateMicroFocus((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2884,8 +2884,8 @@ void k_historycombobox_create(void* self) {
     KHistoryComboBox_Create((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_qbase_create(void* self) {
-    KHistoryComboBox_QBaseCreate((KHistoryComboBox*)self);
+void k_historycombobox_super_create(void* self) {
+    KHistoryComboBox_SuperCreate((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_create(void* self, void (*callback)()) {
@@ -2896,8 +2896,8 @@ void k_historycombobox_destroy(void* self) {
     KHistoryComboBox_Destroy((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_qbase_destroy(void* self) {
-    KHistoryComboBox_QBaseDestroy((KHistoryComboBox*)self);
+void k_historycombobox_super_destroy(void* self) {
+    KHistoryComboBox_SuperDestroy((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_destroy(void* self, void (*callback)()) {
@@ -2908,8 +2908,8 @@ bool k_historycombobox_focus_next_child(void* self) {
     return KHistoryComboBox_FocusNextChild((KHistoryComboBox*)self);
 }
 
-bool k_historycombobox_qbase_focus_next_child(void* self) {
-    return KHistoryComboBox_QBaseFocusNextChild((KHistoryComboBox*)self);
+bool k_historycombobox_super_focus_next_child(void* self) {
+    return KHistoryComboBox_SuperFocusNextChild((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2920,8 +2920,8 @@ bool k_historycombobox_focus_previous_child(void* self) {
     return KHistoryComboBox_FocusPreviousChild((KHistoryComboBox*)self);
 }
 
-bool k_historycombobox_qbase_focus_previous_child(void* self) {
-    return KHistoryComboBox_QBaseFocusPreviousChild((KHistoryComboBox*)self);
+bool k_historycombobox_super_focus_previous_child(void* self) {
+    return KHistoryComboBox_SuperFocusPreviousChild((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2932,8 +2932,8 @@ QObject* k_historycombobox_sender(void* self) {
     return KHistoryComboBox_Sender((KHistoryComboBox*)self);
 }
 
-QObject* k_historycombobox_qbase_sender(void* self) {
-    return KHistoryComboBox_QBaseSender((KHistoryComboBox*)self);
+QObject* k_historycombobox_super_sender(void* self) {
+    return KHistoryComboBox_SuperSender((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_sender(void* self, QObject* (*callback)()) {
@@ -2944,8 +2944,8 @@ int32_t k_historycombobox_sender_signal_index(void* self) {
     return KHistoryComboBox_SenderSignalIndex((KHistoryComboBox*)self);
 }
 
-int32_t k_historycombobox_qbase_sender_signal_index(void* self) {
-    return KHistoryComboBox_QBaseSenderSignalIndex((KHistoryComboBox*)self);
+int32_t k_historycombobox_super_sender_signal_index(void* self) {
+    return KHistoryComboBox_SuperSenderSignalIndex((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2956,8 +2956,8 @@ int32_t k_historycombobox_receivers(void* self, const char* signal) {
     return KHistoryComboBox_Receivers((KHistoryComboBox*)self, signal);
 }
 
-int32_t k_historycombobox_qbase_receivers(void* self, const char* signal) {
-    return KHistoryComboBox_QBaseReceivers((KHistoryComboBox*)self, signal);
+int32_t k_historycombobox_super_receivers(void* self, const char* signal) {
+    return KHistoryComboBox_SuperReceivers((KHistoryComboBox*)self, signal);
 }
 
 void k_historycombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2968,8 +2968,8 @@ bool k_historycombobox_is_signal_connected(void* self, void* signal) {
     return KHistoryComboBox_IsSignalConnected((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_historycombobox_qbase_is_signal_connected(void* self, void* signal) {
-    return KHistoryComboBox_QBaseIsSignalConnected((KHistoryComboBox*)self, (QMetaMethod*)signal);
+bool k_historycombobox_super_is_signal_connected(void* self, void* signal) {
+    return KHistoryComboBox_SuperIsSignalConnected((KHistoryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_historycombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2980,8 +2980,8 @@ double k_historycombobox_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KHistoryComboBox_GetDecodedMetricF((KHistoryComboBox*)self, metricA, metricB);
 }
 
-double k_historycombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KHistoryComboBox_QBaseGetDecodedMetricF((KHistoryComboBox*)self, metricA, metricB);
+double k_historycombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KHistoryComboBox_SuperGetDecodedMetricF((KHistoryComboBox*)self, metricA, metricB);
 }
 
 void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -3027,9 +3027,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     return _ret;
 }
 
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_historycombobox_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_historycombobox_super_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
-    libqt_map _out = KHistoryComboBox_QBaseKeyBindingMap((KHistoryComboBox*)self);
+    libqt_map _out = KHistoryComboBox_SuperKeyBindingMap((KHistoryComboBox*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -3103,7 +3103,7 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map /* of enum KCom
     free(keyBindingMap_ret.values);
 }
 
-void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
+void k_historycombobox_super_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
@@ -3131,7 +3131,7 @@ void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enu
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
-    KHistoryComboBox_QBaseSetKeyBindingMap((KHistoryComboBox*)self, keyBindingMap_ret);
+    KHistoryComboBox_SuperSetKeyBindingMap((KHistoryComboBox*)self, keyBindingMap_ret);
     free(keyBindingMap_ret.keys);
     free(keyBindingMap_ret.values);
 }
@@ -3144,8 +3144,8 @@ void k_historycombobox_set_delegate(void* self, void* delegate) {
     KHistoryComboBox_SetDelegate((KHistoryComboBox*)self, (KCompletionBase*)delegate);
 }
 
-void k_historycombobox_qbase_set_delegate(void* self, void* delegate) {
-    KHistoryComboBox_QBaseSetDelegate((KHistoryComboBox*)self, (KCompletionBase*)delegate);
+void k_historycombobox_super_set_delegate(void* self, void* delegate) {
+    KHistoryComboBox_SuperSetDelegate((KHistoryComboBox*)self, (KCompletionBase*)delegate);
 }
 
 void k_historycombobox_on_set_delegate(void* self, void (*callback)(void*, void*)) {
@@ -3156,8 +3156,8 @@ KCompletionBase* k_historycombobox_delegate(void* self) {
     return KHistoryComboBox_Delegate((KHistoryComboBox*)self);
 }
 
-KCompletionBase* k_historycombobox_qbase_delegate(void* self) {
-    return KHistoryComboBox_QBaseDelegate((KHistoryComboBox*)self);
+KCompletionBase* k_historycombobox_super_delegate(void* self) {
+    return KHistoryComboBox_SuperDelegate((KHistoryComboBox*)self);
 }
 
 void k_historycombobox_on_delegate(void* self, KCompletionBase* (*callback)()) {

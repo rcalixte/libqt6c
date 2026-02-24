@@ -39,8 +39,8 @@ void q_fontdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QFontDialog_OnMetaObject((QFontDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_fontdialog_qbase_meta_object(void* self) {
-    return QFontDialog_QBaseMetaObject((QFontDialog*)self);
+const QMetaObject* q_fontdialog_super_meta_object(void* self) {
+    return QFontDialog_SuperMetaObject((QFontDialog*)self);
 }
 
 void* q_fontdialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_fontdialog_on_metacast(void* self, void* (*callback)(void*, const char*))
     QFontDialog_OnMetacast((QFontDialog*)self, (intptr_t)callback);
 }
 
-void* q_fontdialog_qbase_metacast(void* self, const char* param1) {
-    return QFontDialog_QBaseMetacast((QFontDialog*)self, param1);
+void* q_fontdialog_super_metacast(void* self, const char* param1) {
+    return QFontDialog_SuperMetacast((QFontDialog*)self, param1);
 }
 
 int32_t q_fontdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_fontdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QFontDialog_OnMetacall((QFontDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_fontdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFontDialog_QBaseMetacall((QFontDialog*)self, param1, param2, param3);
+int32_t q_fontdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFontDialog_SuperMetacall((QFontDialog*)self, param1, param2, param3);
 }
 
 const char* q_fontdialog_tr(const char* s) {
@@ -110,8 +110,8 @@ void q_fontdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
     QFontDialog_OnSetVisible((QFontDialog*)self, (intptr_t)callback);
 }
 
-void q_fontdialog_qbase_set_visible(void* self, bool visible) {
-    QFontDialog_QBaseSetVisible((QFontDialog*)self, visible);
+void q_fontdialog_super_set_visible(void* self, bool visible) {
+    QFontDialog_SuperSetVisible((QFontDialog*)self, visible);
 }
 
 QFont* q_fontdialog_get_font(bool* ok) {
@@ -146,8 +146,8 @@ void q_fontdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
     QFontDialog_OnChangeEvent((QFontDialog*)self, (intptr_t)callback);
 }
 
-void q_fontdialog_qbase_change_event(void* self, void* event) {
-    QFontDialog_QBaseChangeEvent((QFontDialog*)self, (QEvent*)event);
+void q_fontdialog_super_change_event(void* self, void* event) {
+    QFontDialog_SuperChangeEvent((QFontDialog*)self, (QEvent*)event);
 }
 
 void q_fontdialog_done(void* self, int result) {
@@ -158,8 +158,8 @@ void q_fontdialog_on_done(void* self, void (*callback)(void*, int)) {
     QFontDialog_OnDone((QFontDialog*)self, (intptr_t)callback);
 }
 
-void q_fontdialog_qbase_done(void* self, int result) {
-    QFontDialog_QBaseDone((QFontDialog*)self, result);
+void q_fontdialog_super_done(void* self, int result) {
+    QFontDialog_SuperDone((QFontDialog*)self, result);
 }
 
 bool q_fontdialog_event_filter(void* self, void* object, void* event) {
@@ -170,8 +170,8 @@ void q_fontdialog_on_event_filter(void* self, bool (*callback)(void*, void*, voi
     QFontDialog_OnEventFilter((QFontDialog*)self, (intptr_t)callback);
 }
 
-bool q_fontdialog_qbase_event_filter(void* self, void* object, void* event) {
-    return QFontDialog_QBaseEventFilter((QFontDialog*)self, (QObject*)object, (QEvent*)event);
+bool q_fontdialog_super_event_filter(void* self, void* object, void* event) {
+    return QFontDialog_SuperEventFilter((QFontDialog*)self, (QObject*)object, (QEvent*)event);
 }
 
 const char* q_fontdialog_tr2(const char* s, const char* c) {
@@ -1637,8 +1637,8 @@ QSize* q_fontdialog_size_hint(void* self) {
     return QFontDialog_SizeHint((QFontDialog*)self);
 }
 
-QSize* q_fontdialog_qbase_size_hint(void* self) {
-    return QFontDialog_QBaseSizeHint((QFontDialog*)self);
+QSize* q_fontdialog_super_size_hint(void* self) {
+    return QFontDialog_SuperSizeHint((QFontDialog*)self);
 }
 
 void q_fontdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1649,8 +1649,8 @@ QSize* q_fontdialog_minimum_size_hint(void* self) {
     return QFontDialog_MinimumSizeHint((QFontDialog*)self);
 }
 
-QSize* q_fontdialog_qbase_minimum_size_hint(void* self) {
-    return QFontDialog_QBaseMinimumSizeHint((QFontDialog*)self);
+QSize* q_fontdialog_super_minimum_size_hint(void* self) {
+    return QFontDialog_SuperMinimumSizeHint((QFontDialog*)self);
 }
 
 void q_fontdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1661,8 +1661,8 @@ void q_fontdialog_open(void* self) {
     QFontDialog_Open((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_open(void* self) {
-    QFontDialog_QBaseOpen((QFontDialog*)self);
+void q_fontdialog_super_open(void* self) {
+    QFontDialog_SuperOpen((QFontDialog*)self);
 }
 
 void q_fontdialog_on_open(void* self, void (*callback)()) {
@@ -1673,8 +1673,8 @@ int32_t q_fontdialog_exec(void* self) {
     return QFontDialog_Exec((QFontDialog*)self);
 }
 
-int32_t q_fontdialog_qbase_exec(void* self) {
-    return QFontDialog_QBaseExec((QFontDialog*)self);
+int32_t q_fontdialog_super_exec(void* self) {
+    return QFontDialog_SuperExec((QFontDialog*)self);
 }
 
 void q_fontdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1685,8 +1685,8 @@ void q_fontdialog_accept(void* self) {
     QFontDialog_Accept((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_accept(void* self) {
-    QFontDialog_QBaseAccept((QFontDialog*)self);
+void q_fontdialog_super_accept(void* self) {
+    QFontDialog_SuperAccept((QFontDialog*)self);
 }
 
 void q_fontdialog_on_accept(void* self, void (*callback)()) {
@@ -1697,8 +1697,8 @@ void q_fontdialog_reject(void* self) {
     QFontDialog_Reject((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_reject(void* self) {
-    QFontDialog_QBaseReject((QFontDialog*)self);
+void q_fontdialog_super_reject(void* self) {
+    QFontDialog_SuperReject((QFontDialog*)self);
 }
 
 void q_fontdialog_on_reject(void* self, void (*callback)()) {
@@ -1709,8 +1709,8 @@ void q_fontdialog_key_press_event(void* self, void* param1) {
     QFontDialog_KeyPressEvent((QFontDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_fontdialog_qbase_key_press_event(void* self, void* param1) {
-    QFontDialog_QBaseKeyPressEvent((QFontDialog*)self, (QKeyEvent*)param1);
+void q_fontdialog_super_key_press_event(void* self, void* param1) {
+    QFontDialog_SuperKeyPressEvent((QFontDialog*)self, (QKeyEvent*)param1);
 }
 
 void q_fontdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1721,8 +1721,8 @@ void q_fontdialog_close_event(void* self, void* param1) {
     QFontDialog_CloseEvent((QFontDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_fontdialog_qbase_close_event(void* self, void* param1) {
-    QFontDialog_QBaseCloseEvent((QFontDialog*)self, (QCloseEvent*)param1);
+void q_fontdialog_super_close_event(void* self, void* param1) {
+    QFontDialog_SuperCloseEvent((QFontDialog*)self, (QCloseEvent*)param1);
 }
 
 void q_fontdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1733,8 +1733,8 @@ void q_fontdialog_show_event(void* self, void* param1) {
     QFontDialog_ShowEvent((QFontDialog*)self, (QShowEvent*)param1);
 }
 
-void q_fontdialog_qbase_show_event(void* self, void* param1) {
-    QFontDialog_QBaseShowEvent((QFontDialog*)self, (QShowEvent*)param1);
+void q_fontdialog_super_show_event(void* self, void* param1) {
+    QFontDialog_SuperShowEvent((QFontDialog*)self, (QShowEvent*)param1);
 }
 
 void q_fontdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1745,8 +1745,8 @@ void q_fontdialog_resize_event(void* self, void* param1) {
     QFontDialog_ResizeEvent((QFontDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_fontdialog_qbase_resize_event(void* self, void* param1) {
-    QFontDialog_QBaseResizeEvent((QFontDialog*)self, (QResizeEvent*)param1);
+void q_fontdialog_super_resize_event(void* self, void* param1) {
+    QFontDialog_SuperResizeEvent((QFontDialog*)self, (QResizeEvent*)param1);
 }
 
 void q_fontdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void q_fontdialog_context_menu_event(void* self, void* param1) {
     QFontDialog_ContextMenuEvent((QFontDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_fontdialog_qbase_context_menu_event(void* self, void* param1) {
-    QFontDialog_QBaseContextMenuEvent((QFontDialog*)self, (QContextMenuEvent*)param1);
+void q_fontdialog_super_context_menu_event(void* self, void* param1) {
+    QFontDialog_SuperContextMenuEvent((QFontDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void q_fontdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ int32_t q_fontdialog_dev_type(void* self) {
     return QFontDialog_DevType((QFontDialog*)self);
 }
 
-int32_t q_fontdialog_qbase_dev_type(void* self) {
-    return QFontDialog_QBaseDevType((QFontDialog*)self);
+int32_t q_fontdialog_super_dev_type(void* self) {
+    return QFontDialog_SuperDevType((QFontDialog*)self);
 }
 
 void q_fontdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1781,8 +1781,8 @@ int32_t q_fontdialog_height_for_width(void* self, int param1) {
     return QFontDialog_HeightForWidth((QFontDialog*)self, param1);
 }
 
-int32_t q_fontdialog_qbase_height_for_width(void* self, int param1) {
-    return QFontDialog_QBaseHeightForWidth((QFontDialog*)self, param1);
+int32_t q_fontdialog_super_height_for_width(void* self, int param1) {
+    return QFontDialog_SuperHeightForWidth((QFontDialog*)self, param1);
 }
 
 void q_fontdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1793,8 +1793,8 @@ bool q_fontdialog_has_height_for_width(void* self) {
     return QFontDialog_HasHeightForWidth((QFontDialog*)self);
 }
 
-bool q_fontdialog_qbase_has_height_for_width(void* self) {
-    return QFontDialog_QBaseHasHeightForWidth((QFontDialog*)self);
+bool q_fontdialog_super_has_height_for_width(void* self) {
+    return QFontDialog_SuperHasHeightForWidth((QFontDialog*)self);
 }
 
 void q_fontdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1805,8 +1805,8 @@ QPaintEngine* q_fontdialog_paint_engine(void* self) {
     return QFontDialog_PaintEngine((QFontDialog*)self);
 }
 
-QPaintEngine* q_fontdialog_qbase_paint_engine(void* self) {
-    return QFontDialog_QBasePaintEngine((QFontDialog*)self);
+QPaintEngine* q_fontdialog_super_paint_engine(void* self) {
+    return QFontDialog_SuperPaintEngine((QFontDialog*)self);
 }
 
 void q_fontdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1817,8 +1817,8 @@ bool q_fontdialog_event(void* self, void* event) {
     return QFontDialog_Event((QFontDialog*)self, (QEvent*)event);
 }
 
-bool q_fontdialog_qbase_event(void* self, void* event) {
-    return QFontDialog_QBaseEvent((QFontDialog*)self, (QEvent*)event);
+bool q_fontdialog_super_event(void* self, void* event) {
+    return QFontDialog_SuperEvent((QFontDialog*)self, (QEvent*)event);
 }
 
 void q_fontdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1829,8 +1829,8 @@ void q_fontdialog_mouse_press_event(void* self, void* event) {
     QFontDialog_MousePressEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
-void q_fontdialog_qbase_mouse_press_event(void* self, void* event) {
-    QFontDialog_QBaseMousePressEvent((QFontDialog*)self, (QMouseEvent*)event);
+void q_fontdialog_super_mouse_press_event(void* self, void* event) {
+    QFontDialog_SuperMousePressEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
 void q_fontdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1841,8 +1841,8 @@ void q_fontdialog_mouse_release_event(void* self, void* event) {
     QFontDialog_MouseReleaseEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
-void q_fontdialog_qbase_mouse_release_event(void* self, void* event) {
-    QFontDialog_QBaseMouseReleaseEvent((QFontDialog*)self, (QMouseEvent*)event);
+void q_fontdialog_super_mouse_release_event(void* self, void* event) {
+    QFontDialog_SuperMouseReleaseEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
 void q_fontdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void q_fontdialog_mouse_double_click_event(void* self, void* event) {
     QFontDialog_MouseDoubleClickEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
-void q_fontdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    QFontDialog_QBaseMouseDoubleClickEvent((QFontDialog*)self, (QMouseEvent*)event);
+void q_fontdialog_super_mouse_double_click_event(void* self, void* event) {
+    QFontDialog_SuperMouseDoubleClickEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
 void q_fontdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void q_fontdialog_mouse_move_event(void* self, void* event) {
     QFontDialog_MouseMoveEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
-void q_fontdialog_qbase_mouse_move_event(void* self, void* event) {
-    QFontDialog_QBaseMouseMoveEvent((QFontDialog*)self, (QMouseEvent*)event);
+void q_fontdialog_super_mouse_move_event(void* self, void* event) {
+    QFontDialog_SuperMouseMoveEvent((QFontDialog*)self, (QMouseEvent*)event);
 }
 
 void q_fontdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void q_fontdialog_wheel_event(void* self, void* event) {
     QFontDialog_WheelEvent((QFontDialog*)self, (QWheelEvent*)event);
 }
 
-void q_fontdialog_qbase_wheel_event(void* self, void* event) {
-    QFontDialog_QBaseWheelEvent((QFontDialog*)self, (QWheelEvent*)event);
+void q_fontdialog_super_wheel_event(void* self, void* event) {
+    QFontDialog_SuperWheelEvent((QFontDialog*)self, (QWheelEvent*)event);
 }
 
 void q_fontdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void q_fontdialog_key_release_event(void* self, void* event) {
     QFontDialog_KeyReleaseEvent((QFontDialog*)self, (QKeyEvent*)event);
 }
 
-void q_fontdialog_qbase_key_release_event(void* self, void* event) {
-    QFontDialog_QBaseKeyReleaseEvent((QFontDialog*)self, (QKeyEvent*)event);
+void q_fontdialog_super_key_release_event(void* self, void* event) {
+    QFontDialog_SuperKeyReleaseEvent((QFontDialog*)self, (QKeyEvent*)event);
 }
 
 void q_fontdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void q_fontdialog_focus_in_event(void* self, void* event) {
     QFontDialog_FocusInEvent((QFontDialog*)self, (QFocusEvent*)event);
 }
 
-void q_fontdialog_qbase_focus_in_event(void* self, void* event) {
-    QFontDialog_QBaseFocusInEvent((QFontDialog*)self, (QFocusEvent*)event);
+void q_fontdialog_super_focus_in_event(void* self, void* event) {
+    QFontDialog_SuperFocusInEvent((QFontDialog*)self, (QFocusEvent*)event);
 }
 
 void q_fontdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void q_fontdialog_focus_out_event(void* self, void* event) {
     QFontDialog_FocusOutEvent((QFontDialog*)self, (QFocusEvent*)event);
 }
 
-void q_fontdialog_qbase_focus_out_event(void* self, void* event) {
-    QFontDialog_QBaseFocusOutEvent((QFontDialog*)self, (QFocusEvent*)event);
+void q_fontdialog_super_focus_out_event(void* self, void* event) {
+    QFontDialog_SuperFocusOutEvent((QFontDialog*)self, (QFocusEvent*)event);
 }
 
 void q_fontdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void q_fontdialog_enter_event(void* self, void* event) {
     QFontDialog_EnterEvent((QFontDialog*)self, (QEnterEvent*)event);
 }
 
-void q_fontdialog_qbase_enter_event(void* self, void* event) {
-    QFontDialog_QBaseEnterEvent((QFontDialog*)self, (QEnterEvent*)event);
+void q_fontdialog_super_enter_event(void* self, void* event) {
+    QFontDialog_SuperEnterEvent((QFontDialog*)self, (QEnterEvent*)event);
 }
 
 void q_fontdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void q_fontdialog_leave_event(void* self, void* event) {
     QFontDialog_LeaveEvent((QFontDialog*)self, (QEvent*)event);
 }
 
-void q_fontdialog_qbase_leave_event(void* self, void* event) {
-    QFontDialog_QBaseLeaveEvent((QFontDialog*)self, (QEvent*)event);
+void q_fontdialog_super_leave_event(void* self, void* event) {
+    QFontDialog_SuperLeaveEvent((QFontDialog*)self, (QEvent*)event);
 }
 
 void q_fontdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void q_fontdialog_paint_event(void* self, void* event) {
     QFontDialog_PaintEvent((QFontDialog*)self, (QPaintEvent*)event);
 }
 
-void q_fontdialog_qbase_paint_event(void* self, void* event) {
-    QFontDialog_QBasePaintEvent((QFontDialog*)self, (QPaintEvent*)event);
+void q_fontdialog_super_paint_event(void* self, void* event) {
+    QFontDialog_SuperPaintEvent((QFontDialog*)self, (QPaintEvent*)event);
 }
 
 void q_fontdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void q_fontdialog_move_event(void* self, void* event) {
     QFontDialog_MoveEvent((QFontDialog*)self, (QMoveEvent*)event);
 }
 
-void q_fontdialog_qbase_move_event(void* self, void* event) {
-    QFontDialog_QBaseMoveEvent((QFontDialog*)self, (QMoveEvent*)event);
+void q_fontdialog_super_move_event(void* self, void* event) {
+    QFontDialog_SuperMoveEvent((QFontDialog*)self, (QMoveEvent*)event);
 }
 
 void q_fontdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void q_fontdialog_tablet_event(void* self, void* event) {
     QFontDialog_TabletEvent((QFontDialog*)self, (QTabletEvent*)event);
 }
 
-void q_fontdialog_qbase_tablet_event(void* self, void* event) {
-    QFontDialog_QBaseTabletEvent((QFontDialog*)self, (QTabletEvent*)event);
+void q_fontdialog_super_tablet_event(void* self, void* event) {
+    QFontDialog_SuperTabletEvent((QFontDialog*)self, (QTabletEvent*)event);
 }
 
 void q_fontdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void q_fontdialog_action_event(void* self, void* event) {
     QFontDialog_ActionEvent((QFontDialog*)self, (QActionEvent*)event);
 }
 
-void q_fontdialog_qbase_action_event(void* self, void* event) {
-    QFontDialog_QBaseActionEvent((QFontDialog*)self, (QActionEvent*)event);
+void q_fontdialog_super_action_event(void* self, void* event) {
+    QFontDialog_SuperActionEvent((QFontDialog*)self, (QActionEvent*)event);
 }
 
 void q_fontdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void q_fontdialog_drag_enter_event(void* self, void* event) {
     QFontDialog_DragEnterEvent((QFontDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_fontdialog_qbase_drag_enter_event(void* self, void* event) {
-    QFontDialog_QBaseDragEnterEvent((QFontDialog*)self, (QDragEnterEvent*)event);
+void q_fontdialog_super_drag_enter_event(void* self, void* event) {
+    QFontDialog_SuperDragEnterEvent((QFontDialog*)self, (QDragEnterEvent*)event);
 }
 
 void q_fontdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void q_fontdialog_drag_move_event(void* self, void* event) {
     QFontDialog_DragMoveEvent((QFontDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_fontdialog_qbase_drag_move_event(void* self, void* event) {
-    QFontDialog_QBaseDragMoveEvent((QFontDialog*)self, (QDragMoveEvent*)event);
+void q_fontdialog_super_drag_move_event(void* self, void* event) {
+    QFontDialog_SuperDragMoveEvent((QFontDialog*)self, (QDragMoveEvent*)event);
 }
 
 void q_fontdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void q_fontdialog_drag_leave_event(void* self, void* event) {
     QFontDialog_DragLeaveEvent((QFontDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_fontdialog_qbase_drag_leave_event(void* self, void* event) {
-    QFontDialog_QBaseDragLeaveEvent((QFontDialog*)self, (QDragLeaveEvent*)event);
+void q_fontdialog_super_drag_leave_event(void* self, void* event) {
+    QFontDialog_SuperDragLeaveEvent((QFontDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void q_fontdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void q_fontdialog_drop_event(void* self, void* event) {
     QFontDialog_DropEvent((QFontDialog*)self, (QDropEvent*)event);
 }
 
-void q_fontdialog_qbase_drop_event(void* self, void* event) {
-    QFontDialog_QBaseDropEvent((QFontDialog*)self, (QDropEvent*)event);
+void q_fontdialog_super_drop_event(void* self, void* event) {
+    QFontDialog_SuperDropEvent((QFontDialog*)self, (QDropEvent*)event);
 }
 
 void q_fontdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void q_fontdialog_hide_event(void* self, void* event) {
     QFontDialog_HideEvent((QFontDialog*)self, (QHideEvent*)event);
 }
 
-void q_fontdialog_qbase_hide_event(void* self, void* event) {
-    QFontDialog_QBaseHideEvent((QFontDialog*)self, (QHideEvent*)event);
+void q_fontdialog_super_hide_event(void* self, void* event) {
+    QFontDialog_SuperHideEvent((QFontDialog*)self, (QHideEvent*)event);
 }
 
 void q_fontdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ bool q_fontdialog_native_event(void* self, char* eventType, void* message, intpt
     return QFontDialog_NativeEvent((QFontDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_fontdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QFontDialog_QBaseNativeEvent((QFontDialog*)self, qstring(eventType), message, result);
+bool q_fontdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QFontDialog_SuperNativeEvent((QFontDialog*)self, qstring(eventType), message, result);
 }
 
 void q_fontdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2069,8 +2069,8 @@ int32_t q_fontdialog_metric(void* self, int32_t param1) {
     return QFontDialog_Metric((QFontDialog*)self, param1);
 }
 
-int32_t q_fontdialog_qbase_metric(void* self, int32_t param1) {
-    return QFontDialog_QBaseMetric((QFontDialog*)self, param1);
+int32_t q_fontdialog_super_metric(void* self, int32_t param1) {
+    return QFontDialog_SuperMetric((QFontDialog*)self, param1);
 }
 
 void q_fontdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2081,8 +2081,8 @@ void q_fontdialog_init_painter(void* self, void* painter) {
     QFontDialog_InitPainter((QFontDialog*)self, (QPainter*)painter);
 }
 
-void q_fontdialog_qbase_init_painter(void* self, void* painter) {
-    QFontDialog_QBaseInitPainter((QFontDialog*)self, (QPainter*)painter);
+void q_fontdialog_super_init_painter(void* self, void* painter) {
+    QFontDialog_SuperInitPainter((QFontDialog*)self, (QPainter*)painter);
 }
 
 void q_fontdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ QPaintDevice* q_fontdialog_redirected(void* self, void* offset) {
     return QFontDialog_Redirected((QFontDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_fontdialog_qbase_redirected(void* self, void* offset) {
-    return QFontDialog_QBaseRedirected((QFontDialog*)self, (QPoint*)offset);
+QPaintDevice* q_fontdialog_super_redirected(void* self, void* offset) {
+    return QFontDialog_SuperRedirected((QFontDialog*)self, (QPoint*)offset);
 }
 
 void q_fontdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ QPainter* q_fontdialog_shared_painter(void* self) {
     return QFontDialog_SharedPainter((QFontDialog*)self);
 }
 
-QPainter* q_fontdialog_qbase_shared_painter(void* self) {
-    return QFontDialog_QBaseSharedPainter((QFontDialog*)self);
+QPainter* q_fontdialog_super_shared_painter(void* self) {
+    return QFontDialog_SuperSharedPainter((QFontDialog*)self);
 }
 
 void q_fontdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2117,8 +2117,8 @@ void q_fontdialog_input_method_event(void* self, void* param1) {
     QFontDialog_InputMethodEvent((QFontDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_fontdialog_qbase_input_method_event(void* self, void* param1) {
-    QFontDialog_QBaseInputMethodEvent((QFontDialog*)self, (QInputMethodEvent*)param1);
+void q_fontdialog_super_input_method_event(void* self, void* param1) {
+    QFontDialog_SuperInputMethodEvent((QFontDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void q_fontdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ QVariant* q_fontdialog_input_method_query(void* self, int32_t param1) {
     return QFontDialog_InputMethodQuery((QFontDialog*)self, param1);
 }
 
-QVariant* q_fontdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return QFontDialog_QBaseInputMethodQuery((QFontDialog*)self, param1);
+QVariant* q_fontdialog_super_input_method_query(void* self, int32_t param1) {
+    return QFontDialog_SuperInputMethodQuery((QFontDialog*)self, param1);
 }
 
 void q_fontdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2141,8 +2141,8 @@ bool q_fontdialog_focus_next_prev_child(void* self, bool next) {
     return QFontDialog_FocusNextPrevChild((QFontDialog*)self, next);
 }
 
-bool q_fontdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return QFontDialog_QBaseFocusNextPrevChild((QFontDialog*)self, next);
+bool q_fontdialog_super_focus_next_prev_child(void* self, bool next) {
+    return QFontDialog_SuperFocusNextPrevChild((QFontDialog*)self, next);
 }
 
 void q_fontdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2153,8 +2153,8 @@ void q_fontdialog_timer_event(void* self, void* event) {
     QFontDialog_TimerEvent((QFontDialog*)self, (QTimerEvent*)event);
 }
 
-void q_fontdialog_qbase_timer_event(void* self, void* event) {
-    QFontDialog_QBaseTimerEvent((QFontDialog*)self, (QTimerEvent*)event);
+void q_fontdialog_super_timer_event(void* self, void* event) {
+    QFontDialog_SuperTimerEvent((QFontDialog*)self, (QTimerEvent*)event);
 }
 
 void q_fontdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2165,8 +2165,8 @@ void q_fontdialog_child_event(void* self, void* event) {
     QFontDialog_ChildEvent((QFontDialog*)self, (QChildEvent*)event);
 }
 
-void q_fontdialog_qbase_child_event(void* self, void* event) {
-    QFontDialog_QBaseChildEvent((QFontDialog*)self, (QChildEvent*)event);
+void q_fontdialog_super_child_event(void* self, void* event) {
+    QFontDialog_SuperChildEvent((QFontDialog*)self, (QChildEvent*)event);
 }
 
 void q_fontdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ void q_fontdialog_custom_event(void* self, void* event) {
     QFontDialog_CustomEvent((QFontDialog*)self, (QEvent*)event);
 }
 
-void q_fontdialog_qbase_custom_event(void* self, void* event) {
-    QFontDialog_QBaseCustomEvent((QFontDialog*)self, (QEvent*)event);
+void q_fontdialog_super_custom_event(void* self, void* event) {
+    QFontDialog_SuperCustomEvent((QFontDialog*)self, (QEvent*)event);
 }
 
 void q_fontdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ void q_fontdialog_connect_notify(void* self, void* signal) {
     QFontDialog_ConnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_fontdialog_qbase_connect_notify(void* self, void* signal) {
-    QFontDialog_QBaseConnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
+void q_fontdialog_super_connect_notify(void* self, void* signal) {
+    QFontDialog_SuperConnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_fontdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2201,8 +2201,8 @@ void q_fontdialog_disconnect_notify(void* self, void* signal) {
     QFontDialog_DisconnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_fontdialog_qbase_disconnect_notify(void* self, void* signal) {
-    QFontDialog_QBaseDisconnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
+void q_fontdialog_super_disconnect_notify(void* self, void* signal) {
+    QFontDialog_SuperDisconnectNotify((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_fontdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void q_fontdialog_adjust_position(void* self, void* param1) {
     QFontDialog_AdjustPosition((QFontDialog*)self, (QWidget*)param1);
 }
 
-void q_fontdialog_qbase_adjust_position(void* self, void* param1) {
-    QFontDialog_QBaseAdjustPosition((QFontDialog*)self, (QWidget*)param1);
+void q_fontdialog_super_adjust_position(void* self, void* param1) {
+    QFontDialog_SuperAdjustPosition((QFontDialog*)self, (QWidget*)param1);
 }
 
 void q_fontdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2225,8 +2225,8 @@ void q_fontdialog_update_micro_focus(void* self) {
     QFontDialog_UpdateMicroFocus((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_update_micro_focus(void* self) {
-    QFontDialog_QBaseUpdateMicroFocus((QFontDialog*)self);
+void q_fontdialog_super_update_micro_focus(void* self) {
+    QFontDialog_SuperUpdateMicroFocus((QFontDialog*)self);
 }
 
 void q_fontdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2237,8 +2237,8 @@ void q_fontdialog_create(void* self) {
     QFontDialog_Create((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_create(void* self) {
-    QFontDialog_QBaseCreate((QFontDialog*)self);
+void q_fontdialog_super_create(void* self) {
+    QFontDialog_SuperCreate((QFontDialog*)self);
 }
 
 void q_fontdialog_on_create(void* self, void (*callback)()) {
@@ -2249,8 +2249,8 @@ void q_fontdialog_destroy(void* self) {
     QFontDialog_Destroy((QFontDialog*)self);
 }
 
-void q_fontdialog_qbase_destroy(void* self) {
-    QFontDialog_QBaseDestroy((QFontDialog*)self);
+void q_fontdialog_super_destroy(void* self) {
+    QFontDialog_SuperDestroy((QFontDialog*)self);
 }
 
 void q_fontdialog_on_destroy(void* self, void (*callback)()) {
@@ -2261,8 +2261,8 @@ bool q_fontdialog_focus_next_child(void* self) {
     return QFontDialog_FocusNextChild((QFontDialog*)self);
 }
 
-bool q_fontdialog_qbase_focus_next_child(void* self) {
-    return QFontDialog_QBaseFocusNextChild((QFontDialog*)self);
+bool q_fontdialog_super_focus_next_child(void* self) {
+    return QFontDialog_SuperFocusNextChild((QFontDialog*)self);
 }
 
 void q_fontdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2273,8 +2273,8 @@ bool q_fontdialog_focus_previous_child(void* self) {
     return QFontDialog_FocusPreviousChild((QFontDialog*)self);
 }
 
-bool q_fontdialog_qbase_focus_previous_child(void* self) {
-    return QFontDialog_QBaseFocusPreviousChild((QFontDialog*)self);
+bool q_fontdialog_super_focus_previous_child(void* self) {
+    return QFontDialog_SuperFocusPreviousChild((QFontDialog*)self);
 }
 
 void q_fontdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2285,8 +2285,8 @@ QObject* q_fontdialog_sender(void* self) {
     return QFontDialog_Sender((QFontDialog*)self);
 }
 
-QObject* q_fontdialog_qbase_sender(void* self) {
-    return QFontDialog_QBaseSender((QFontDialog*)self);
+QObject* q_fontdialog_super_sender(void* self) {
+    return QFontDialog_SuperSender((QFontDialog*)self);
 }
 
 void q_fontdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2297,8 +2297,8 @@ int32_t q_fontdialog_sender_signal_index(void* self) {
     return QFontDialog_SenderSignalIndex((QFontDialog*)self);
 }
 
-int32_t q_fontdialog_qbase_sender_signal_index(void* self) {
-    return QFontDialog_QBaseSenderSignalIndex((QFontDialog*)self);
+int32_t q_fontdialog_super_sender_signal_index(void* self) {
+    return QFontDialog_SuperSenderSignalIndex((QFontDialog*)self);
 }
 
 void q_fontdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2309,8 +2309,8 @@ int32_t q_fontdialog_receivers(void* self, const char* signal) {
     return QFontDialog_Receivers((QFontDialog*)self, signal);
 }
 
-int32_t q_fontdialog_qbase_receivers(void* self, const char* signal) {
-    return QFontDialog_QBaseReceivers((QFontDialog*)self, signal);
+int32_t q_fontdialog_super_receivers(void* self, const char* signal) {
+    return QFontDialog_SuperReceivers((QFontDialog*)self, signal);
 }
 
 void q_fontdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2321,8 +2321,8 @@ bool q_fontdialog_is_signal_connected(void* self, void* signal) {
     return QFontDialog_IsSignalConnected((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_fontdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return QFontDialog_QBaseIsSignalConnected((QFontDialog*)self, (QMetaMethod*)signal);
+bool q_fontdialog_super_is_signal_connected(void* self, void* signal) {
+    return QFontDialog_SuperIsSignalConnected((QFontDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_fontdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2333,8 +2333,8 @@ double q_fontdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QFontDialog_GetDecodedMetricF((QFontDialog*)self, metricA, metricB);
 }
 
-double q_fontdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QFontDialog_QBaseGetDecodedMetricF((QFontDialog*)self, metricA, metricB);
+double q_fontdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QFontDialog_SuperGetDecodedMetricF((QFontDialog*)self, metricA, metricB);
 }
 
 void q_fontdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

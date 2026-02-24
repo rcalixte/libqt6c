@@ -31,8 +31,8 @@ void k_shortcutwidget_on_meta_object(void* self, const QMetaObject* (*callback)(
     KShortcutWidget_OnMetaObject((KShortcutWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_shortcutwidget_qbase_meta_object(void* self) {
-    return KShortcutWidget_QBaseMetaObject((KShortcutWidget*)self);
+const QMetaObject* k_shortcutwidget_super_meta_object(void* self) {
+    return KShortcutWidget_SuperMetaObject((KShortcutWidget*)self);
 }
 
 void* k_shortcutwidget_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_shortcutwidget_on_metacast(void* self, void* (*callback)(void*, const cha
     KShortcutWidget_OnMetacast((KShortcutWidget*)self, (intptr_t)callback);
 }
 
-void* k_shortcutwidget_qbase_metacast(void* self, const char* param1) {
-    return KShortcutWidget_QBaseMetacast((KShortcutWidget*)self, param1);
+void* k_shortcutwidget_super_metacast(void* self, const char* param1) {
+    return KShortcutWidget_SuperMetacast((KShortcutWidget*)self, param1);
 }
 
 int32_t k_shortcutwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_shortcutwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KShortcutWidget_OnMetacall((KShortcutWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_shortcutwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KShortcutWidget_QBaseMetacall((KShortcutWidget*)self, param1, param2, param3);
+int32_t k_shortcutwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KShortcutWidget_SuperMetacall((KShortcutWidget*)self, param1, param2, param3);
 }
 
 const char* k_shortcutwidget_tr(const char* s) {
@@ -1506,8 +1506,8 @@ int32_t k_shortcutwidget_dev_type(void* self) {
     return KShortcutWidget_DevType((KShortcutWidget*)self);
 }
 
-int32_t k_shortcutwidget_qbase_dev_type(void* self) {
-    return KShortcutWidget_QBaseDevType((KShortcutWidget*)self);
+int32_t k_shortcutwidget_super_dev_type(void* self) {
+    return KShortcutWidget_SuperDevType((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1518,8 +1518,8 @@ void k_shortcutwidget_set_visible(void* self, bool visible) {
     KShortcutWidget_SetVisible((KShortcutWidget*)self, visible);
 }
 
-void k_shortcutwidget_qbase_set_visible(void* self, bool visible) {
-    KShortcutWidget_QBaseSetVisible((KShortcutWidget*)self, visible);
+void k_shortcutwidget_super_set_visible(void* self, bool visible) {
+    KShortcutWidget_SuperSetVisible((KShortcutWidget*)self, visible);
 }
 
 void k_shortcutwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1530,8 +1530,8 @@ QSize* k_shortcutwidget_size_hint(void* self) {
     return KShortcutWidget_SizeHint((KShortcutWidget*)self);
 }
 
-QSize* k_shortcutwidget_qbase_size_hint(void* self) {
-    return KShortcutWidget_QBaseSizeHint((KShortcutWidget*)self);
+QSize* k_shortcutwidget_super_size_hint(void* self) {
+    return KShortcutWidget_SuperSizeHint((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1542,8 +1542,8 @@ QSize* k_shortcutwidget_minimum_size_hint(void* self) {
     return KShortcutWidget_MinimumSizeHint((KShortcutWidget*)self);
 }
 
-QSize* k_shortcutwidget_qbase_minimum_size_hint(void* self) {
-    return KShortcutWidget_QBaseMinimumSizeHint((KShortcutWidget*)self);
+QSize* k_shortcutwidget_super_minimum_size_hint(void* self) {
+    return KShortcutWidget_SuperMinimumSizeHint((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1554,8 +1554,8 @@ int32_t k_shortcutwidget_height_for_width(void* self, int param1) {
     return KShortcutWidget_HeightForWidth((KShortcutWidget*)self, param1);
 }
 
-int32_t k_shortcutwidget_qbase_height_for_width(void* self, int param1) {
-    return KShortcutWidget_QBaseHeightForWidth((KShortcutWidget*)self, param1);
+int32_t k_shortcutwidget_super_height_for_width(void* self, int param1) {
+    return KShortcutWidget_SuperHeightForWidth((KShortcutWidget*)self, param1);
 }
 
 void k_shortcutwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1566,8 +1566,8 @@ bool k_shortcutwidget_has_height_for_width(void* self) {
     return KShortcutWidget_HasHeightForWidth((KShortcutWidget*)self);
 }
 
-bool k_shortcutwidget_qbase_has_height_for_width(void* self) {
-    return KShortcutWidget_QBaseHasHeightForWidth((KShortcutWidget*)self);
+bool k_shortcutwidget_super_has_height_for_width(void* self) {
+    return KShortcutWidget_SuperHasHeightForWidth((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1578,8 +1578,8 @@ QPaintEngine* k_shortcutwidget_paint_engine(void* self) {
     return KShortcutWidget_PaintEngine((KShortcutWidget*)self);
 }
 
-QPaintEngine* k_shortcutwidget_qbase_paint_engine(void* self) {
-    return KShortcutWidget_QBasePaintEngine((KShortcutWidget*)self);
+QPaintEngine* k_shortcutwidget_super_paint_engine(void* self) {
+    return KShortcutWidget_SuperPaintEngine((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1590,8 +1590,8 @@ bool k_shortcutwidget_event(void* self, void* event) {
     return KShortcutWidget_Event((KShortcutWidget*)self, (QEvent*)event);
 }
 
-bool k_shortcutwidget_qbase_event(void* self, void* event) {
-    return KShortcutWidget_QBaseEvent((KShortcutWidget*)self, (QEvent*)event);
+bool k_shortcutwidget_super_event(void* self, void* event) {
+    return KShortcutWidget_SuperEvent((KShortcutWidget*)self, (QEvent*)event);
 }
 
 void k_shortcutwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1602,8 +1602,8 @@ void k_shortcutwidget_mouse_press_event(void* self, void* event) {
     KShortcutWidget_MousePressEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutwidget_qbase_mouse_press_event(void* self, void* event) {
-    KShortcutWidget_QBaseMousePressEvent((KShortcutWidget*)self, (QMouseEvent*)event);
+void k_shortcutwidget_super_mouse_press_event(void* self, void* event) {
+    KShortcutWidget_SuperMousePressEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1614,8 +1614,8 @@ void k_shortcutwidget_mouse_release_event(void* self, void* event) {
     KShortcutWidget_MouseReleaseEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutwidget_qbase_mouse_release_event(void* self, void* event) {
-    KShortcutWidget_QBaseMouseReleaseEvent((KShortcutWidget*)self, (QMouseEvent*)event);
+void k_shortcutwidget_super_mouse_release_event(void* self, void* event) {
+    KShortcutWidget_SuperMouseReleaseEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1626,8 +1626,8 @@ void k_shortcutwidget_mouse_double_click_event(void* self, void* event) {
     KShortcutWidget_MouseDoubleClickEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KShortcutWidget_QBaseMouseDoubleClickEvent((KShortcutWidget*)self, (QMouseEvent*)event);
+void k_shortcutwidget_super_mouse_double_click_event(void* self, void* event) {
+    KShortcutWidget_SuperMouseDoubleClickEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1638,8 +1638,8 @@ void k_shortcutwidget_mouse_move_event(void* self, void* event) {
     KShortcutWidget_MouseMoveEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutwidget_qbase_mouse_move_event(void* self, void* event) {
-    KShortcutWidget_QBaseMouseMoveEvent((KShortcutWidget*)self, (QMouseEvent*)event);
+void k_shortcutwidget_super_mouse_move_event(void* self, void* event) {
+    KShortcutWidget_SuperMouseMoveEvent((KShortcutWidget*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1650,8 +1650,8 @@ void k_shortcutwidget_wheel_event(void* self, void* event) {
     KShortcutWidget_WheelEvent((KShortcutWidget*)self, (QWheelEvent*)event);
 }
 
-void k_shortcutwidget_qbase_wheel_event(void* self, void* event) {
-    KShortcutWidget_QBaseWheelEvent((KShortcutWidget*)self, (QWheelEvent*)event);
+void k_shortcutwidget_super_wheel_event(void* self, void* event) {
+    KShortcutWidget_SuperWheelEvent((KShortcutWidget*)self, (QWheelEvent*)event);
 }
 
 void k_shortcutwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1662,8 +1662,8 @@ void k_shortcutwidget_key_press_event(void* self, void* event) {
     KShortcutWidget_KeyPressEvent((KShortcutWidget*)self, (QKeyEvent*)event);
 }
 
-void k_shortcutwidget_qbase_key_press_event(void* self, void* event) {
-    KShortcutWidget_QBaseKeyPressEvent((KShortcutWidget*)self, (QKeyEvent*)event);
+void k_shortcutwidget_super_key_press_event(void* self, void* event) {
+    KShortcutWidget_SuperKeyPressEvent((KShortcutWidget*)self, (QKeyEvent*)event);
 }
 
 void k_shortcutwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1674,8 +1674,8 @@ void k_shortcutwidget_key_release_event(void* self, void* event) {
     KShortcutWidget_KeyReleaseEvent((KShortcutWidget*)self, (QKeyEvent*)event);
 }
 
-void k_shortcutwidget_qbase_key_release_event(void* self, void* event) {
-    KShortcutWidget_QBaseKeyReleaseEvent((KShortcutWidget*)self, (QKeyEvent*)event);
+void k_shortcutwidget_super_key_release_event(void* self, void* event) {
+    KShortcutWidget_SuperKeyReleaseEvent((KShortcutWidget*)self, (QKeyEvent*)event);
 }
 
 void k_shortcutwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1686,8 +1686,8 @@ void k_shortcutwidget_focus_in_event(void* self, void* event) {
     KShortcutWidget_FocusInEvent((KShortcutWidget*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutwidget_qbase_focus_in_event(void* self, void* event) {
-    KShortcutWidget_QBaseFocusInEvent((KShortcutWidget*)self, (QFocusEvent*)event);
+void k_shortcutwidget_super_focus_in_event(void* self, void* event) {
+    KShortcutWidget_SuperFocusInEvent((KShortcutWidget*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1698,8 +1698,8 @@ void k_shortcutwidget_focus_out_event(void* self, void* event) {
     KShortcutWidget_FocusOutEvent((KShortcutWidget*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutwidget_qbase_focus_out_event(void* self, void* event) {
-    KShortcutWidget_QBaseFocusOutEvent((KShortcutWidget*)self, (QFocusEvent*)event);
+void k_shortcutwidget_super_focus_out_event(void* self, void* event) {
+    KShortcutWidget_SuperFocusOutEvent((KShortcutWidget*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1710,8 +1710,8 @@ void k_shortcutwidget_enter_event(void* self, void* event) {
     KShortcutWidget_EnterEvent((KShortcutWidget*)self, (QEnterEvent*)event);
 }
 
-void k_shortcutwidget_qbase_enter_event(void* self, void* event) {
-    KShortcutWidget_QBaseEnterEvent((KShortcutWidget*)self, (QEnterEvent*)event);
+void k_shortcutwidget_super_enter_event(void* self, void* event) {
+    KShortcutWidget_SuperEnterEvent((KShortcutWidget*)self, (QEnterEvent*)event);
 }
 
 void k_shortcutwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1722,8 +1722,8 @@ void k_shortcutwidget_leave_event(void* self, void* event) {
     KShortcutWidget_LeaveEvent((KShortcutWidget*)self, (QEvent*)event);
 }
 
-void k_shortcutwidget_qbase_leave_event(void* self, void* event) {
-    KShortcutWidget_QBaseLeaveEvent((KShortcutWidget*)self, (QEvent*)event);
+void k_shortcutwidget_super_leave_event(void* self, void* event) {
+    KShortcutWidget_SuperLeaveEvent((KShortcutWidget*)self, (QEvent*)event);
 }
 
 void k_shortcutwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1734,8 +1734,8 @@ void k_shortcutwidget_paint_event(void* self, void* event) {
     KShortcutWidget_PaintEvent((KShortcutWidget*)self, (QPaintEvent*)event);
 }
 
-void k_shortcutwidget_qbase_paint_event(void* self, void* event) {
-    KShortcutWidget_QBasePaintEvent((KShortcutWidget*)self, (QPaintEvent*)event);
+void k_shortcutwidget_super_paint_event(void* self, void* event) {
+    KShortcutWidget_SuperPaintEvent((KShortcutWidget*)self, (QPaintEvent*)event);
 }
 
 void k_shortcutwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1746,8 +1746,8 @@ void k_shortcutwidget_move_event(void* self, void* event) {
     KShortcutWidget_MoveEvent((KShortcutWidget*)self, (QMoveEvent*)event);
 }
 
-void k_shortcutwidget_qbase_move_event(void* self, void* event) {
-    KShortcutWidget_QBaseMoveEvent((KShortcutWidget*)self, (QMoveEvent*)event);
+void k_shortcutwidget_super_move_event(void* self, void* event) {
+    KShortcutWidget_SuperMoveEvent((KShortcutWidget*)self, (QMoveEvent*)event);
 }
 
 void k_shortcutwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1758,8 +1758,8 @@ void k_shortcutwidget_resize_event(void* self, void* event) {
     KShortcutWidget_ResizeEvent((KShortcutWidget*)self, (QResizeEvent*)event);
 }
 
-void k_shortcutwidget_qbase_resize_event(void* self, void* event) {
-    KShortcutWidget_QBaseResizeEvent((KShortcutWidget*)self, (QResizeEvent*)event);
+void k_shortcutwidget_super_resize_event(void* self, void* event) {
+    KShortcutWidget_SuperResizeEvent((KShortcutWidget*)self, (QResizeEvent*)event);
 }
 
 void k_shortcutwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1770,8 +1770,8 @@ void k_shortcutwidget_close_event(void* self, void* event) {
     KShortcutWidget_CloseEvent((KShortcutWidget*)self, (QCloseEvent*)event);
 }
 
-void k_shortcutwidget_qbase_close_event(void* self, void* event) {
-    KShortcutWidget_QBaseCloseEvent((KShortcutWidget*)self, (QCloseEvent*)event);
+void k_shortcutwidget_super_close_event(void* self, void* event) {
+    KShortcutWidget_SuperCloseEvent((KShortcutWidget*)self, (QCloseEvent*)event);
 }
 
 void k_shortcutwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1782,8 +1782,8 @@ void k_shortcutwidget_context_menu_event(void* self, void* event) {
     KShortcutWidget_ContextMenuEvent((KShortcutWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_shortcutwidget_qbase_context_menu_event(void* self, void* event) {
-    KShortcutWidget_QBaseContextMenuEvent((KShortcutWidget*)self, (QContextMenuEvent*)event);
+void k_shortcutwidget_super_context_menu_event(void* self, void* event) {
+    KShortcutWidget_SuperContextMenuEvent((KShortcutWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_shortcutwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_shortcutwidget_tablet_event(void* self, void* event) {
     KShortcutWidget_TabletEvent((KShortcutWidget*)self, (QTabletEvent*)event);
 }
 
-void k_shortcutwidget_qbase_tablet_event(void* self, void* event) {
-    KShortcutWidget_QBaseTabletEvent((KShortcutWidget*)self, (QTabletEvent*)event);
+void k_shortcutwidget_super_tablet_event(void* self, void* event) {
+    KShortcutWidget_SuperTabletEvent((KShortcutWidget*)self, (QTabletEvent*)event);
 }
 
 void k_shortcutwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_shortcutwidget_action_event(void* self, void* event) {
     KShortcutWidget_ActionEvent((KShortcutWidget*)self, (QActionEvent*)event);
 }
 
-void k_shortcutwidget_qbase_action_event(void* self, void* event) {
-    KShortcutWidget_QBaseActionEvent((KShortcutWidget*)self, (QActionEvent*)event);
+void k_shortcutwidget_super_action_event(void* self, void* event) {
+    KShortcutWidget_SuperActionEvent((KShortcutWidget*)self, (QActionEvent*)event);
 }
 
 void k_shortcutwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_shortcutwidget_drag_enter_event(void* self, void* event) {
     KShortcutWidget_DragEnterEvent((KShortcutWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_shortcutwidget_qbase_drag_enter_event(void* self, void* event) {
-    KShortcutWidget_QBaseDragEnterEvent((KShortcutWidget*)self, (QDragEnterEvent*)event);
+void k_shortcutwidget_super_drag_enter_event(void* self, void* event) {
+    KShortcutWidget_SuperDragEnterEvent((KShortcutWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_shortcutwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_shortcutwidget_drag_move_event(void* self, void* event) {
     KShortcutWidget_DragMoveEvent((KShortcutWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_shortcutwidget_qbase_drag_move_event(void* self, void* event) {
-    KShortcutWidget_QBaseDragMoveEvent((KShortcutWidget*)self, (QDragMoveEvent*)event);
+void k_shortcutwidget_super_drag_move_event(void* self, void* event) {
+    KShortcutWidget_SuperDragMoveEvent((KShortcutWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_shortcutwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_shortcutwidget_drag_leave_event(void* self, void* event) {
     KShortcutWidget_DragLeaveEvent((KShortcutWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_shortcutwidget_qbase_drag_leave_event(void* self, void* event) {
-    KShortcutWidget_QBaseDragLeaveEvent((KShortcutWidget*)self, (QDragLeaveEvent*)event);
+void k_shortcutwidget_super_drag_leave_event(void* self, void* event) {
+    KShortcutWidget_SuperDragLeaveEvent((KShortcutWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_shortcutwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_shortcutwidget_drop_event(void* self, void* event) {
     KShortcutWidget_DropEvent((KShortcutWidget*)self, (QDropEvent*)event);
 }
 
-void k_shortcutwidget_qbase_drop_event(void* self, void* event) {
-    KShortcutWidget_QBaseDropEvent((KShortcutWidget*)self, (QDropEvent*)event);
+void k_shortcutwidget_super_drop_event(void* self, void* event) {
+    KShortcutWidget_SuperDropEvent((KShortcutWidget*)self, (QDropEvent*)event);
 }
 
 void k_shortcutwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ void k_shortcutwidget_show_event(void* self, void* event) {
     KShortcutWidget_ShowEvent((KShortcutWidget*)self, (QShowEvent*)event);
 }
 
-void k_shortcutwidget_qbase_show_event(void* self, void* event) {
-    KShortcutWidget_QBaseShowEvent((KShortcutWidget*)self, (QShowEvent*)event);
+void k_shortcutwidget_super_show_event(void* self, void* event) {
+    KShortcutWidget_SuperShowEvent((KShortcutWidget*)self, (QShowEvent*)event);
 }
 
 void k_shortcutwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ void k_shortcutwidget_hide_event(void* self, void* event) {
     KShortcutWidget_HideEvent((KShortcutWidget*)self, (QHideEvent*)event);
 }
 
-void k_shortcutwidget_qbase_hide_event(void* self, void* event) {
-    KShortcutWidget_QBaseHideEvent((KShortcutWidget*)self, (QHideEvent*)event);
+void k_shortcutwidget_super_hide_event(void* self, void* event) {
+    KShortcutWidget_SuperHideEvent((KShortcutWidget*)self, (QHideEvent*)event);
 }
 
 void k_shortcutwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ bool k_shortcutwidget_native_event(void* self, char* eventType, void* message, i
     return KShortcutWidget_NativeEvent((KShortcutWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_shortcutwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KShortcutWidget_QBaseNativeEvent((KShortcutWidget*)self, qstring(eventType), message, result);
+bool k_shortcutwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KShortcutWidget_SuperNativeEvent((KShortcutWidget*)self, qstring(eventType), message, result);
 }
 
 void k_shortcutwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1902,8 +1902,8 @@ void k_shortcutwidget_change_event(void* self, void* param1) {
     KShortcutWidget_ChangeEvent((KShortcutWidget*)self, (QEvent*)param1);
 }
 
-void k_shortcutwidget_qbase_change_event(void* self, void* param1) {
-    KShortcutWidget_QBaseChangeEvent((KShortcutWidget*)self, (QEvent*)param1);
+void k_shortcutwidget_super_change_event(void* self, void* param1) {
+    KShortcutWidget_SuperChangeEvent((KShortcutWidget*)self, (QEvent*)param1);
 }
 
 void k_shortcutwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ int32_t k_shortcutwidget_metric(void* self, int32_t param1) {
     return KShortcutWidget_Metric((KShortcutWidget*)self, param1);
 }
 
-int32_t k_shortcutwidget_qbase_metric(void* self, int32_t param1) {
-    return KShortcutWidget_QBaseMetric((KShortcutWidget*)self, param1);
+int32_t k_shortcutwidget_super_metric(void* self, int32_t param1) {
+    return KShortcutWidget_SuperMetric((KShortcutWidget*)self, param1);
 }
 
 void k_shortcutwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1926,8 +1926,8 @@ void k_shortcutwidget_init_painter(void* self, void* painter) {
     KShortcutWidget_InitPainter((KShortcutWidget*)self, (QPainter*)painter);
 }
 
-void k_shortcutwidget_qbase_init_painter(void* self, void* painter) {
-    KShortcutWidget_QBaseInitPainter((KShortcutWidget*)self, (QPainter*)painter);
+void k_shortcutwidget_super_init_painter(void* self, void* painter) {
+    KShortcutWidget_SuperInitPainter((KShortcutWidget*)self, (QPainter*)painter);
 }
 
 void k_shortcutwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ QPaintDevice* k_shortcutwidget_redirected(void* self, void* offset) {
     return KShortcutWidget_Redirected((KShortcutWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_shortcutwidget_qbase_redirected(void* self, void* offset) {
-    return KShortcutWidget_QBaseRedirected((KShortcutWidget*)self, (QPoint*)offset);
+QPaintDevice* k_shortcutwidget_super_redirected(void* self, void* offset) {
+    return KShortcutWidget_SuperRedirected((KShortcutWidget*)self, (QPoint*)offset);
 }
 
 void k_shortcutwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ QPainter* k_shortcutwidget_shared_painter(void* self) {
     return KShortcutWidget_SharedPainter((KShortcutWidget*)self);
 }
 
-QPainter* k_shortcutwidget_qbase_shared_painter(void* self) {
-    return KShortcutWidget_QBaseSharedPainter((KShortcutWidget*)self);
+QPainter* k_shortcutwidget_super_shared_painter(void* self) {
+    return KShortcutWidget_SuperSharedPainter((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1962,8 +1962,8 @@ void k_shortcutwidget_input_method_event(void* self, void* param1) {
     KShortcutWidget_InputMethodEvent((KShortcutWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_shortcutwidget_qbase_input_method_event(void* self, void* param1) {
-    KShortcutWidget_QBaseInputMethodEvent((KShortcutWidget*)self, (QInputMethodEvent*)param1);
+void k_shortcutwidget_super_input_method_event(void* self, void* param1) {
+    KShortcutWidget_SuperInputMethodEvent((KShortcutWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_shortcutwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ QVariant* k_shortcutwidget_input_method_query(void* self, int32_t param1) {
     return KShortcutWidget_InputMethodQuery((KShortcutWidget*)self, param1);
 }
 
-QVariant* k_shortcutwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KShortcutWidget_QBaseInputMethodQuery((KShortcutWidget*)self, param1);
+QVariant* k_shortcutwidget_super_input_method_query(void* self, int32_t param1) {
+    return KShortcutWidget_SuperInputMethodQuery((KShortcutWidget*)self, param1);
 }
 
 void k_shortcutwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1986,8 +1986,8 @@ bool k_shortcutwidget_focus_next_prev_child(void* self, bool next) {
     return KShortcutWidget_FocusNextPrevChild((KShortcutWidget*)self, next);
 }
 
-bool k_shortcutwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KShortcutWidget_QBaseFocusNextPrevChild((KShortcutWidget*)self, next);
+bool k_shortcutwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KShortcutWidget_SuperFocusNextPrevChild((KShortcutWidget*)self, next);
 }
 
 void k_shortcutwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1998,8 +1998,8 @@ bool k_shortcutwidget_event_filter(void* self, void* watched, void* event) {
     return KShortcutWidget_EventFilter((KShortcutWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_shortcutwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KShortcutWidget_QBaseEventFilter((KShortcutWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_shortcutwidget_super_event_filter(void* self, void* watched, void* event) {
+    return KShortcutWidget_SuperEventFilter((KShortcutWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_shortcutwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_shortcutwidget_timer_event(void* self, void* event) {
     KShortcutWidget_TimerEvent((KShortcutWidget*)self, (QTimerEvent*)event);
 }
 
-void k_shortcutwidget_qbase_timer_event(void* self, void* event) {
-    KShortcutWidget_QBaseTimerEvent((KShortcutWidget*)self, (QTimerEvent*)event);
+void k_shortcutwidget_super_timer_event(void* self, void* event) {
+    KShortcutWidget_SuperTimerEvent((KShortcutWidget*)self, (QTimerEvent*)event);
 }
 
 void k_shortcutwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_shortcutwidget_child_event(void* self, void* event) {
     KShortcutWidget_ChildEvent((KShortcutWidget*)self, (QChildEvent*)event);
 }
 
-void k_shortcutwidget_qbase_child_event(void* self, void* event) {
-    KShortcutWidget_QBaseChildEvent((KShortcutWidget*)self, (QChildEvent*)event);
+void k_shortcutwidget_super_child_event(void* self, void* event) {
+    KShortcutWidget_SuperChildEvent((KShortcutWidget*)self, (QChildEvent*)event);
 }
 
 void k_shortcutwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_shortcutwidget_custom_event(void* self, void* event) {
     KShortcutWidget_CustomEvent((KShortcutWidget*)self, (QEvent*)event);
 }
 
-void k_shortcutwidget_qbase_custom_event(void* self, void* event) {
-    KShortcutWidget_QBaseCustomEvent((KShortcutWidget*)self, (QEvent*)event);
+void k_shortcutwidget_super_custom_event(void* self, void* event) {
+    KShortcutWidget_SuperCustomEvent((KShortcutWidget*)self, (QEvent*)event);
 }
 
 void k_shortcutwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_shortcutwidget_connect_notify(void* self, void* signal) {
     KShortcutWidget_ConnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutwidget_qbase_connect_notify(void* self, void* signal) {
-    KShortcutWidget_QBaseConnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
+void k_shortcutwidget_super_connect_notify(void* self, void* signal) {
+    KShortcutWidget_SuperConnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_shortcutwidget_disconnect_notify(void* self, void* signal) {
     KShortcutWidget_DisconnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KShortcutWidget_QBaseDisconnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
+void k_shortcutwidget_super_disconnect_notify(void* self, void* signal) {
+    KShortcutWidget_SuperDisconnectNotify((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_shortcutwidget_update_micro_focus(void* self) {
     KShortcutWidget_UpdateMicroFocus((KShortcutWidget*)self);
 }
 
-void k_shortcutwidget_qbase_update_micro_focus(void* self) {
-    KShortcutWidget_QBaseUpdateMicroFocus((KShortcutWidget*)self);
+void k_shortcutwidget_super_update_micro_focus(void* self) {
+    KShortcutWidget_SuperUpdateMicroFocus((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2082,8 +2082,8 @@ void k_shortcutwidget_create(void* self) {
     KShortcutWidget_Create((KShortcutWidget*)self);
 }
 
-void k_shortcutwidget_qbase_create(void* self) {
-    KShortcutWidget_QBaseCreate((KShortcutWidget*)self);
+void k_shortcutwidget_super_create(void* self) {
+    KShortcutWidget_SuperCreate((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_create(void* self, void (*callback)()) {
@@ -2094,8 +2094,8 @@ void k_shortcutwidget_destroy(void* self) {
     KShortcutWidget_Destroy((KShortcutWidget*)self);
 }
 
-void k_shortcutwidget_qbase_destroy(void* self) {
-    KShortcutWidget_QBaseDestroy((KShortcutWidget*)self);
+void k_shortcutwidget_super_destroy(void* self) {
+    KShortcutWidget_SuperDestroy((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_destroy(void* self, void (*callback)()) {
@@ -2106,8 +2106,8 @@ bool k_shortcutwidget_focus_next_child(void* self) {
     return KShortcutWidget_FocusNextChild((KShortcutWidget*)self);
 }
 
-bool k_shortcutwidget_qbase_focus_next_child(void* self) {
-    return KShortcutWidget_QBaseFocusNextChild((KShortcutWidget*)self);
+bool k_shortcutwidget_super_focus_next_child(void* self) {
+    return KShortcutWidget_SuperFocusNextChild((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2118,8 +2118,8 @@ bool k_shortcutwidget_focus_previous_child(void* self) {
     return KShortcutWidget_FocusPreviousChild((KShortcutWidget*)self);
 }
 
-bool k_shortcutwidget_qbase_focus_previous_child(void* self) {
-    return KShortcutWidget_QBaseFocusPreviousChild((KShortcutWidget*)self);
+bool k_shortcutwidget_super_focus_previous_child(void* self) {
+    return KShortcutWidget_SuperFocusPreviousChild((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2130,8 +2130,8 @@ QObject* k_shortcutwidget_sender(void* self) {
     return KShortcutWidget_Sender((KShortcutWidget*)self);
 }
 
-QObject* k_shortcutwidget_qbase_sender(void* self) {
-    return KShortcutWidget_QBaseSender((KShortcutWidget*)self);
+QObject* k_shortcutwidget_super_sender(void* self) {
+    return KShortcutWidget_SuperSender((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2142,8 +2142,8 @@ int32_t k_shortcutwidget_sender_signal_index(void* self) {
     return KShortcutWidget_SenderSignalIndex((KShortcutWidget*)self);
 }
 
-int32_t k_shortcutwidget_qbase_sender_signal_index(void* self) {
-    return KShortcutWidget_QBaseSenderSignalIndex((KShortcutWidget*)self);
+int32_t k_shortcutwidget_super_sender_signal_index(void* self) {
+    return KShortcutWidget_SuperSenderSignalIndex((KShortcutWidget*)self);
 }
 
 void k_shortcutwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2154,8 +2154,8 @@ int32_t k_shortcutwidget_receivers(void* self, const char* signal) {
     return KShortcutWidget_Receivers((KShortcutWidget*)self, signal);
 }
 
-int32_t k_shortcutwidget_qbase_receivers(void* self, const char* signal) {
-    return KShortcutWidget_QBaseReceivers((KShortcutWidget*)self, signal);
+int32_t k_shortcutwidget_super_receivers(void* self, const char* signal) {
+    return KShortcutWidget_SuperReceivers((KShortcutWidget*)self, signal);
 }
 
 void k_shortcutwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2166,8 +2166,8 @@ bool k_shortcutwidget_is_signal_connected(void* self, void* signal) {
     return KShortcutWidget_IsSignalConnected((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_shortcutwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KShortcutWidget_QBaseIsSignalConnected((KShortcutWidget*)self, (QMetaMethod*)signal);
+bool k_shortcutwidget_super_is_signal_connected(void* self, void* signal) {
+    return KShortcutWidget_SuperIsSignalConnected((KShortcutWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2178,8 +2178,8 @@ double k_shortcutwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KShortcutWidget_GetDecodedMetricF((KShortcutWidget*)self, metricA, metricB);
 }
 
-double k_shortcutwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KShortcutWidget_QBaseGetDecodedMetricF((KShortcutWidget*)self, metricA, metricB);
+double k_shortcutwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KShortcutWidget_SuperGetDecodedMetricF((KShortcutWidget*)self, metricA, metricB);
 }
 
 void k_shortcutwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

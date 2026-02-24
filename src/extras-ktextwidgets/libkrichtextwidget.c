@@ -45,8 +45,8 @@ void k_richtextwidget_on_meta_object(void* self, const QMetaObject* (*callback)(
     KRichTextWidget_OnMetaObject((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_richtextwidget_qbase_meta_object(void* self) {
-    return KRichTextWidget_QBaseMetaObject((KRichTextWidget*)self);
+const QMetaObject* k_richtextwidget_super_meta_object(void* self) {
+    return KRichTextWidget_SuperMetaObject((KRichTextWidget*)self);
 }
 
 void* k_richtextwidget_metacast(void* self, const char* param1) {
@@ -57,8 +57,8 @@ void k_richtextwidget_on_metacast(void* self, void* (*callback)(void*, const cha
     KRichTextWidget_OnMetacast((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-void* k_richtextwidget_qbase_metacast(void* self, const char* param1) {
-    return KRichTextWidget_QBaseMetacast((KRichTextWidget*)self, param1);
+void* k_richtextwidget_super_metacast(void* self, const char* param1) {
+    return KRichTextWidget_SuperMetacast((KRichTextWidget*)self, param1);
 }
 
 int32_t k_richtextwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -69,8 +69,8 @@ void k_richtextwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KRichTextWidget_OnMetacall((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_richtextwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KRichTextWidget_QBaseMetacall((KRichTextWidget*)self, param1, param2, param3);
+int32_t k_richtextwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KRichTextWidget_SuperMetacall((KRichTextWidget*)self, param1, param2, param3);
 }
 
 const char* k_richtextwidget_tr(const char* s) {
@@ -89,8 +89,8 @@ void k_richtextwidget_on_create_actions(void* self, libqt_list /* of QAction* */
     KRichTextWidget_OnCreateActions((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ k_richtextwidget_qbase_create_actions(void* self) {
-    libqt_list _arr = KRichTextWidget_QBaseCreateActions((KRichTextWidget*)self);
+libqt_list /* of QAction* */ k_richtextwidget_super_create_actions(void* self) {
+    libqt_list _arr = KRichTextWidget_SuperCreateActions((KRichTextWidget*)self);
     return _arr;
 }
 
@@ -118,8 +118,8 @@ void k_richtextwidget_on_mouse_release_event(void* self, void (*callback)(void*,
     KRichTextWidget_OnMouseReleaseEvent((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-void k_richtextwidget_qbase_mouse_release_event(void* self, void* event) {
-    KRichTextWidget_QBaseMouseReleaseEvent((KRichTextWidget*)self, (QMouseEvent*)event);
+void k_richtextwidget_super_mouse_release_event(void* self, void* event) {
+    KRichTextWidget_SuperMouseReleaseEvent((KRichTextWidget*)self, (QMouseEvent*)event);
 }
 
 const char* k_richtextwidget_tr2(const char* s, const char* c) {
@@ -2362,8 +2362,8 @@ void k_richtextwidget_key_press_event(void* self, void* event) {
     KRichTextWidget_KeyPressEvent((KRichTextWidget*)self, (QKeyEvent*)event);
 }
 
-void k_richtextwidget_qbase_key_press_event(void* self, void* event) {
-    KRichTextWidget_QBaseKeyPressEvent((KRichTextWidget*)self, (QKeyEvent*)event);
+void k_richtextwidget_super_key_press_event(void* self, void* event) {
+    KRichTextWidget_SuperKeyPressEvent((KRichTextWidget*)self, (QKeyEvent*)event);
 }
 
 void k_richtextwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2374,8 +2374,8 @@ void k_richtextwidget_set_read_only(void* self, bool readOnly) {
     KRichTextWidget_SetReadOnly((KRichTextWidget*)self, readOnly);
 }
 
-void k_richtextwidget_qbase_set_read_only(void* self, bool readOnly) {
-    KRichTextWidget_QBaseSetReadOnly((KRichTextWidget*)self, readOnly);
+void k_richtextwidget_super_set_read_only(void* self, bool readOnly) {
+    KRichTextWidget_SuperSetReadOnly((KRichTextWidget*)self, readOnly);
 }
 
 void k_richtextwidget_on_set_read_only(void* self, void (*callback)(void*, bool)) {
@@ -2386,8 +2386,8 @@ void k_richtextwidget_set_check_spelling_enabled(void* self, bool check) {
     KRichTextWidget_SetCheckSpellingEnabled((KRichTextWidget*)self, check);
 }
 
-void k_richtextwidget_qbase_set_check_spelling_enabled(void* self, bool check) {
-    KRichTextWidget_QBaseSetCheckSpellingEnabled((KRichTextWidget*)self, check);
+void k_richtextwidget_super_set_check_spelling_enabled(void* self, bool check) {
+    KRichTextWidget_SuperSetCheckSpellingEnabled((KRichTextWidget*)self, check);
 }
 
 void k_richtextwidget_on_set_check_spelling_enabled(void* self, void (*callback)(void*, bool)) {
@@ -2398,8 +2398,8 @@ bool k_richtextwidget_check_spelling_enabled(void* self) {
     return KRichTextWidget_CheckSpellingEnabled((KRichTextWidget*)self);
 }
 
-bool k_richtextwidget_qbase_check_spelling_enabled(void* self) {
-    return KRichTextWidget_QBaseCheckSpellingEnabled((KRichTextWidget*)self);
+bool k_richtextwidget_super_check_spelling_enabled(void* self) {
+    return KRichTextWidget_SuperCheckSpellingEnabled((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_check_spelling_enabled(void* self, bool (*callback)()) {
@@ -2410,8 +2410,8 @@ bool k_richtextwidget_should_block_be_spell_checked(void* self, const char* bloc
     return KRichTextWidget_ShouldBlockBeSpellChecked((KRichTextWidget*)self, qstring(block));
 }
 
-bool k_richtextwidget_qbase_should_block_be_spell_checked(void* self, const char* block) {
-    return KRichTextWidget_QBaseShouldBlockBeSpellChecked((KRichTextWidget*)self, qstring(block));
+bool k_richtextwidget_super_should_block_be_spell_checked(void* self, const char* block) {
+    return KRichTextWidget_SuperShouldBlockBeSpellChecked((KRichTextWidget*)self, qstring(block));
 }
 
 void k_richtextwidget_on_should_block_be_spell_checked(void* self, bool (*callback)(void*, const char*)) {
@@ -2422,8 +2422,8 @@ void k_richtextwidget_create_highlighter(void* self) {
     KRichTextWidget_CreateHighlighter((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_create_highlighter(void* self) {
-    KRichTextWidget_QBaseCreateHighlighter((KRichTextWidget*)self);
+void k_richtextwidget_super_create_highlighter(void* self) {
+    KRichTextWidget_SuperCreateHighlighter((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_create_highlighter(void* self, void (*callback)()) {
@@ -2434,8 +2434,8 @@ QMenu* k_richtextwidget_mouse_popup_menu(void* self) {
     return KRichTextWidget_MousePopupMenu((KRichTextWidget*)self);
 }
 
-QMenu* k_richtextwidget_qbase_mouse_popup_menu(void* self) {
-    return KRichTextWidget_QBaseMousePopupMenu((KRichTextWidget*)self);
+QMenu* k_richtextwidget_super_mouse_popup_menu(void* self) {
+    return KRichTextWidget_SuperMousePopupMenu((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_mouse_popup_menu(void* self, QMenu* (*callback)()) {
@@ -2446,8 +2446,8 @@ bool k_richtextwidget_event(void* self, void* param1) {
     return KRichTextWidget_Event((KRichTextWidget*)self, (QEvent*)param1);
 }
 
-bool k_richtextwidget_qbase_event(void* self, void* param1) {
-    return KRichTextWidget_QBaseEvent((KRichTextWidget*)self, (QEvent*)param1);
+bool k_richtextwidget_super_event(void* self, void* param1) {
+    return KRichTextWidget_SuperEvent((KRichTextWidget*)self, (QEvent*)param1);
 }
 
 void k_richtextwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2458,8 +2458,8 @@ void k_richtextwidget_focus_in_event(void* self, void* param1) {
     KRichTextWidget_FocusInEvent((KRichTextWidget*)self, (QFocusEvent*)param1);
 }
 
-void k_richtextwidget_qbase_focus_in_event(void* self, void* param1) {
-    KRichTextWidget_QBaseFocusInEvent((KRichTextWidget*)self, (QFocusEvent*)param1);
+void k_richtextwidget_super_focus_in_event(void* self, void* param1) {
+    KRichTextWidget_SuperFocusInEvent((KRichTextWidget*)self, (QFocusEvent*)param1);
 }
 
 void k_richtextwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2470,8 +2470,8 @@ void k_richtextwidget_delete_word_back(void* self) {
     KRichTextWidget_DeleteWordBack((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_delete_word_back(void* self) {
-    KRichTextWidget_QBaseDeleteWordBack((KRichTextWidget*)self);
+void k_richtextwidget_super_delete_word_back(void* self) {
+    KRichTextWidget_SuperDeleteWordBack((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_delete_word_back(void* self, void (*callback)()) {
@@ -2482,8 +2482,8 @@ void k_richtextwidget_delete_word_forward(void* self) {
     KRichTextWidget_DeleteWordForward((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_delete_word_forward(void* self) {
-    KRichTextWidget_QBaseDeleteWordForward((KRichTextWidget*)self);
+void k_richtextwidget_super_delete_word_forward(void* self) {
+    KRichTextWidget_SuperDeleteWordForward((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_delete_word_forward(void* self, void (*callback)()) {
@@ -2494,8 +2494,8 @@ void k_richtextwidget_context_menu_event(void* self, void* param1) {
     KRichTextWidget_ContextMenuEvent((KRichTextWidget*)self, (QContextMenuEvent*)param1);
 }
 
-void k_richtextwidget_qbase_context_menu_event(void* self, void* param1) {
-    KRichTextWidget_QBaseContextMenuEvent((KRichTextWidget*)self, (QContextMenuEvent*)param1);
+void k_richtextwidget_super_context_menu_event(void* self, void* param1) {
+    KRichTextWidget_SuperContextMenuEvent((KRichTextWidget*)self, (QContextMenuEvent*)param1);
 }
 
 void k_richtextwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2506,8 +2506,8 @@ QVariant* k_richtextwidget_load_resource(void* self, int type, void* name) {
     return KRichTextWidget_LoadResource((KRichTextWidget*)self, type, (QUrl*)name);
 }
 
-QVariant* k_richtextwidget_qbase_load_resource(void* self, int type, void* name) {
-    return KRichTextWidget_QBaseLoadResource((KRichTextWidget*)self, type, (QUrl*)name);
+QVariant* k_richtextwidget_super_load_resource(void* self, int type, void* name) {
+    return KRichTextWidget_SuperLoadResource((KRichTextWidget*)self, type, (QUrl*)name);
 }
 
 void k_richtextwidget_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
@@ -2518,8 +2518,8 @@ QVariant* k_richtextwidget_input_method_query(void* self, int32_t property) {
     return KRichTextWidget_InputMethodQuery((KRichTextWidget*)self, property);
 }
 
-QVariant* k_richtextwidget_qbase_input_method_query(void* self, int32_t property) {
-    return KRichTextWidget_QBaseInputMethodQuery((KRichTextWidget*)self, property);
+QVariant* k_richtextwidget_super_input_method_query(void* self, int32_t property) {
+    return KRichTextWidget_SuperInputMethodQuery((KRichTextWidget*)self, property);
 }
 
 void k_richtextwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2530,8 +2530,8 @@ void k_richtextwidget_timer_event(void* self, void* e) {
     KRichTextWidget_TimerEvent((KRichTextWidget*)self, (QTimerEvent*)e);
 }
 
-void k_richtextwidget_qbase_timer_event(void* self, void* e) {
-    KRichTextWidget_QBaseTimerEvent((KRichTextWidget*)self, (QTimerEvent*)e);
+void k_richtextwidget_super_timer_event(void* self, void* e) {
+    KRichTextWidget_SuperTimerEvent((KRichTextWidget*)self, (QTimerEvent*)e);
 }
 
 void k_richtextwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2542,8 +2542,8 @@ void k_richtextwidget_key_release_event(void* self, void* e) {
     KRichTextWidget_KeyReleaseEvent((KRichTextWidget*)self, (QKeyEvent*)e);
 }
 
-void k_richtextwidget_qbase_key_release_event(void* self, void* e) {
-    KRichTextWidget_QBaseKeyReleaseEvent((KRichTextWidget*)self, (QKeyEvent*)e);
+void k_richtextwidget_super_key_release_event(void* self, void* e) {
+    KRichTextWidget_SuperKeyReleaseEvent((KRichTextWidget*)self, (QKeyEvent*)e);
 }
 
 void k_richtextwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2554,8 +2554,8 @@ void k_richtextwidget_resize_event(void* self, void* e) {
     KRichTextWidget_ResizeEvent((KRichTextWidget*)self, (QResizeEvent*)e);
 }
 
-void k_richtextwidget_qbase_resize_event(void* self, void* e) {
-    KRichTextWidget_QBaseResizeEvent((KRichTextWidget*)self, (QResizeEvent*)e);
+void k_richtextwidget_super_resize_event(void* self, void* e) {
+    KRichTextWidget_SuperResizeEvent((KRichTextWidget*)self, (QResizeEvent*)e);
 }
 
 void k_richtextwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2566,8 +2566,8 @@ void k_richtextwidget_paint_event(void* self, void* e) {
     KRichTextWidget_PaintEvent((KRichTextWidget*)self, (QPaintEvent*)e);
 }
 
-void k_richtextwidget_qbase_paint_event(void* self, void* e) {
-    KRichTextWidget_QBasePaintEvent((KRichTextWidget*)self, (QPaintEvent*)e);
+void k_richtextwidget_super_paint_event(void* self, void* e) {
+    KRichTextWidget_SuperPaintEvent((KRichTextWidget*)self, (QPaintEvent*)e);
 }
 
 void k_richtextwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2578,8 +2578,8 @@ void k_richtextwidget_mouse_press_event(void* self, void* e) {
     KRichTextWidget_MousePressEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
-void k_richtextwidget_qbase_mouse_press_event(void* self, void* e) {
-    KRichTextWidget_QBaseMousePressEvent((KRichTextWidget*)self, (QMouseEvent*)e);
+void k_richtextwidget_super_mouse_press_event(void* self, void* e) {
+    KRichTextWidget_SuperMousePressEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
 void k_richtextwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2590,8 +2590,8 @@ void k_richtextwidget_mouse_move_event(void* self, void* e) {
     KRichTextWidget_MouseMoveEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
-void k_richtextwidget_qbase_mouse_move_event(void* self, void* e) {
-    KRichTextWidget_QBaseMouseMoveEvent((KRichTextWidget*)self, (QMouseEvent*)e);
+void k_richtextwidget_super_mouse_move_event(void* self, void* e) {
+    KRichTextWidget_SuperMouseMoveEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
 void k_richtextwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2602,8 +2602,8 @@ void k_richtextwidget_mouse_double_click_event(void* self, void* e) {
     KRichTextWidget_MouseDoubleClickEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
-void k_richtextwidget_qbase_mouse_double_click_event(void* self, void* e) {
-    KRichTextWidget_QBaseMouseDoubleClickEvent((KRichTextWidget*)self, (QMouseEvent*)e);
+void k_richtextwidget_super_mouse_double_click_event(void* self, void* e) {
+    KRichTextWidget_SuperMouseDoubleClickEvent((KRichTextWidget*)self, (QMouseEvent*)e);
 }
 
 void k_richtextwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2614,8 +2614,8 @@ bool k_richtextwidget_focus_next_prev_child(void* self, bool next) {
     return KRichTextWidget_FocusNextPrevChild((KRichTextWidget*)self, next);
 }
 
-bool k_richtextwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KRichTextWidget_QBaseFocusNextPrevChild((KRichTextWidget*)self, next);
+bool k_richtextwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KRichTextWidget_SuperFocusNextPrevChild((KRichTextWidget*)self, next);
 }
 
 void k_richtextwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2626,8 +2626,8 @@ void k_richtextwidget_drag_enter_event(void* self, void* e) {
     KRichTextWidget_DragEnterEvent((KRichTextWidget*)self, (QDragEnterEvent*)e);
 }
 
-void k_richtextwidget_qbase_drag_enter_event(void* self, void* e) {
-    KRichTextWidget_QBaseDragEnterEvent((KRichTextWidget*)self, (QDragEnterEvent*)e);
+void k_richtextwidget_super_drag_enter_event(void* self, void* e) {
+    KRichTextWidget_SuperDragEnterEvent((KRichTextWidget*)self, (QDragEnterEvent*)e);
 }
 
 void k_richtextwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2638,8 +2638,8 @@ void k_richtextwidget_drag_leave_event(void* self, void* e) {
     KRichTextWidget_DragLeaveEvent((KRichTextWidget*)self, (QDragLeaveEvent*)e);
 }
 
-void k_richtextwidget_qbase_drag_leave_event(void* self, void* e) {
-    KRichTextWidget_QBaseDragLeaveEvent((KRichTextWidget*)self, (QDragLeaveEvent*)e);
+void k_richtextwidget_super_drag_leave_event(void* self, void* e) {
+    KRichTextWidget_SuperDragLeaveEvent((KRichTextWidget*)self, (QDragLeaveEvent*)e);
 }
 
 void k_richtextwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2650,8 +2650,8 @@ void k_richtextwidget_drag_move_event(void* self, void* e) {
     KRichTextWidget_DragMoveEvent((KRichTextWidget*)self, (QDragMoveEvent*)e);
 }
 
-void k_richtextwidget_qbase_drag_move_event(void* self, void* e) {
-    KRichTextWidget_QBaseDragMoveEvent((KRichTextWidget*)self, (QDragMoveEvent*)e);
+void k_richtextwidget_super_drag_move_event(void* self, void* e) {
+    KRichTextWidget_SuperDragMoveEvent((KRichTextWidget*)self, (QDragMoveEvent*)e);
 }
 
 void k_richtextwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2662,8 +2662,8 @@ void k_richtextwidget_drop_event(void* self, void* e) {
     KRichTextWidget_DropEvent((KRichTextWidget*)self, (QDropEvent*)e);
 }
 
-void k_richtextwidget_qbase_drop_event(void* self, void* e) {
-    KRichTextWidget_QBaseDropEvent((KRichTextWidget*)self, (QDropEvent*)e);
+void k_richtextwidget_super_drop_event(void* self, void* e) {
+    KRichTextWidget_SuperDropEvent((KRichTextWidget*)self, (QDropEvent*)e);
 }
 
 void k_richtextwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2674,8 +2674,8 @@ void k_richtextwidget_focus_out_event(void* self, void* e) {
     KRichTextWidget_FocusOutEvent((KRichTextWidget*)self, (QFocusEvent*)e);
 }
 
-void k_richtextwidget_qbase_focus_out_event(void* self, void* e) {
-    KRichTextWidget_QBaseFocusOutEvent((KRichTextWidget*)self, (QFocusEvent*)e);
+void k_richtextwidget_super_focus_out_event(void* self, void* e) {
+    KRichTextWidget_SuperFocusOutEvent((KRichTextWidget*)self, (QFocusEvent*)e);
 }
 
 void k_richtextwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2686,8 +2686,8 @@ void k_richtextwidget_show_event(void* self, void* param1) {
     KRichTextWidget_ShowEvent((KRichTextWidget*)self, (QShowEvent*)param1);
 }
 
-void k_richtextwidget_qbase_show_event(void* self, void* param1) {
-    KRichTextWidget_QBaseShowEvent((KRichTextWidget*)self, (QShowEvent*)param1);
+void k_richtextwidget_super_show_event(void* self, void* param1) {
+    KRichTextWidget_SuperShowEvent((KRichTextWidget*)self, (QShowEvent*)param1);
 }
 
 void k_richtextwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2698,8 +2698,8 @@ void k_richtextwidget_change_event(void* self, void* e) {
     KRichTextWidget_ChangeEvent((KRichTextWidget*)self, (QEvent*)e);
 }
 
-void k_richtextwidget_qbase_change_event(void* self, void* e) {
-    KRichTextWidget_QBaseChangeEvent((KRichTextWidget*)self, (QEvent*)e);
+void k_richtextwidget_super_change_event(void* self, void* e) {
+    KRichTextWidget_SuperChangeEvent((KRichTextWidget*)self, (QEvent*)e);
 }
 
 void k_richtextwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2710,8 +2710,8 @@ void k_richtextwidget_wheel_event(void* self, void* e) {
     KRichTextWidget_WheelEvent((KRichTextWidget*)self, (QWheelEvent*)e);
 }
 
-void k_richtextwidget_qbase_wheel_event(void* self, void* e) {
-    KRichTextWidget_QBaseWheelEvent((KRichTextWidget*)self, (QWheelEvent*)e);
+void k_richtextwidget_super_wheel_event(void* self, void* e) {
+    KRichTextWidget_SuperWheelEvent((KRichTextWidget*)self, (QWheelEvent*)e);
 }
 
 void k_richtextwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2722,8 +2722,8 @@ QMimeData* k_richtextwidget_create_mime_data_from_selection(void* self) {
     return KRichTextWidget_CreateMimeDataFromSelection((KRichTextWidget*)self);
 }
 
-QMimeData* k_richtextwidget_qbase_create_mime_data_from_selection(void* self) {
-    return KRichTextWidget_QBaseCreateMimeDataFromSelection((KRichTextWidget*)self);
+QMimeData* k_richtextwidget_super_create_mime_data_from_selection(void* self) {
+    return KRichTextWidget_SuperCreateMimeDataFromSelection((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)()) {
@@ -2734,8 +2734,8 @@ bool k_richtextwidget_can_insert_from_mime_data(void* self, void* source) {
     return KRichTextWidget_CanInsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
 }
 
-bool k_richtextwidget_qbase_can_insert_from_mime_data(void* self, void* source) {
-    return KRichTextWidget_QBaseCanInsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
+bool k_richtextwidget_super_can_insert_from_mime_data(void* self, void* source) {
+    return KRichTextWidget_SuperCanInsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
 }
 
 void k_richtextwidget_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*)) {
@@ -2746,8 +2746,8 @@ void k_richtextwidget_insert_from_mime_data(void* self, void* source) {
     KRichTextWidget_InsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
 }
 
-void k_richtextwidget_qbase_insert_from_mime_data(void* self, void* source) {
-    KRichTextWidget_QBaseInsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
+void k_richtextwidget_super_insert_from_mime_data(void* self, void* source) {
+    KRichTextWidget_SuperInsertFromMimeData((KRichTextWidget*)self, (QMimeData*)source);
 }
 
 void k_richtextwidget_on_insert_from_mime_data(void* self, void (*callback)(void*, void*)) {
@@ -2758,8 +2758,8 @@ void k_richtextwidget_input_method_event(void* self, void* param1) {
     KRichTextWidget_InputMethodEvent((KRichTextWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_richtextwidget_qbase_input_method_event(void* self, void* param1) {
-    KRichTextWidget_QBaseInputMethodEvent((KRichTextWidget*)self, (QInputMethodEvent*)param1);
+void k_richtextwidget_super_input_method_event(void* self, void* param1) {
+    KRichTextWidget_SuperInputMethodEvent((KRichTextWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_richtextwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2770,8 +2770,8 @@ void k_richtextwidget_scroll_contents_by(void* self, int dx, int dy) {
     KRichTextWidget_ScrollContentsBy((KRichTextWidget*)self, dx, dy);
 }
 
-void k_richtextwidget_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    KRichTextWidget_QBaseScrollContentsBy((KRichTextWidget*)self, dx, dy);
+void k_richtextwidget_super_scroll_contents_by(void* self, int dx, int dy) {
+    KRichTextWidget_SuperScrollContentsBy((KRichTextWidget*)self, dx, dy);
 }
 
 void k_richtextwidget_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
@@ -2782,8 +2782,8 @@ void k_richtextwidget_do_set_text_cursor(void* self, void* cursor) {
     KRichTextWidget_DoSetTextCursor((KRichTextWidget*)self, (QTextCursor*)cursor);
 }
 
-void k_richtextwidget_qbase_do_set_text_cursor(void* self, void* cursor) {
-    KRichTextWidget_QBaseDoSetTextCursor((KRichTextWidget*)self, (QTextCursor*)cursor);
+void k_richtextwidget_super_do_set_text_cursor(void* self, void* cursor) {
+    KRichTextWidget_SuperDoSetTextCursor((KRichTextWidget*)self, (QTextCursor*)cursor);
 }
 
 void k_richtextwidget_on_do_set_text_cursor(void* self, void (*callback)(void*, void*)) {
@@ -2794,8 +2794,8 @@ QSize* k_richtextwidget_minimum_size_hint(void* self) {
     return KRichTextWidget_MinimumSizeHint((KRichTextWidget*)self);
 }
 
-QSize* k_richtextwidget_qbase_minimum_size_hint(void* self) {
-    return KRichTextWidget_QBaseMinimumSizeHint((KRichTextWidget*)self);
+QSize* k_richtextwidget_super_minimum_size_hint(void* self) {
+    return KRichTextWidget_SuperMinimumSizeHint((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2806,8 +2806,8 @@ QSize* k_richtextwidget_size_hint(void* self) {
     return KRichTextWidget_SizeHint((KRichTextWidget*)self);
 }
 
-QSize* k_richtextwidget_qbase_size_hint(void* self) {
-    return KRichTextWidget_QBaseSizeHint((KRichTextWidget*)self);
+QSize* k_richtextwidget_super_size_hint(void* self) {
+    return KRichTextWidget_SuperSizeHint((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2818,8 +2818,8 @@ void k_richtextwidget_setup_viewport(void* self, void* viewport) {
     KRichTextWidget_SetupViewport((KRichTextWidget*)self, (QWidget*)viewport);
 }
 
-void k_richtextwidget_qbase_setup_viewport(void* self, void* viewport) {
-    KRichTextWidget_QBaseSetupViewport((KRichTextWidget*)self, (QWidget*)viewport);
+void k_richtextwidget_super_setup_viewport(void* self, void* viewport) {
+    KRichTextWidget_SuperSetupViewport((KRichTextWidget*)self, (QWidget*)viewport);
 }
 
 void k_richtextwidget_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2830,8 +2830,8 @@ bool k_richtextwidget_event_filter(void* self, void* param1, void* param2) {
     return KRichTextWidget_EventFilter((KRichTextWidget*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_richtextwidget_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KRichTextWidget_QBaseEventFilter((KRichTextWidget*)self, (QObject*)param1, (QEvent*)param2);
+bool k_richtextwidget_super_event_filter(void* self, void* param1, void* param2) {
+    return KRichTextWidget_SuperEventFilter((KRichTextWidget*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_richtextwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2842,8 +2842,8 @@ bool k_richtextwidget_viewport_event(void* self, void* param1) {
     return KRichTextWidget_ViewportEvent((KRichTextWidget*)self, (QEvent*)param1);
 }
 
-bool k_richtextwidget_qbase_viewport_event(void* self, void* param1) {
-    return KRichTextWidget_QBaseViewportEvent((KRichTextWidget*)self, (QEvent*)param1);
+bool k_richtextwidget_super_viewport_event(void* self, void* param1) {
+    return KRichTextWidget_SuperViewportEvent((KRichTextWidget*)self, (QEvent*)param1);
 }
 
 void k_richtextwidget_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2854,8 +2854,8 @@ QSize* k_richtextwidget_viewport_size_hint(void* self) {
     return KRichTextWidget_ViewportSizeHint((KRichTextWidget*)self);
 }
 
-QSize* k_richtextwidget_qbase_viewport_size_hint(void* self) {
-    return KRichTextWidget_QBaseViewportSizeHint((KRichTextWidget*)self);
+QSize* k_richtextwidget_super_viewport_size_hint(void* self) {
+    return KRichTextWidget_SuperViewportSizeHint((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2866,8 +2866,8 @@ void k_richtextwidget_init_style_option(void* self, void* option) {
     KRichTextWidget_InitStyleOption((KRichTextWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_richtextwidget_qbase_init_style_option(void* self, void* option) {
-    KRichTextWidget_QBaseInitStyleOption((KRichTextWidget*)self, (QStyleOptionFrame*)option);
+void k_richtextwidget_super_init_style_option(void* self, void* option) {
+    KRichTextWidget_SuperInitStyleOption((KRichTextWidget*)self, (QStyleOptionFrame*)option);
 }
 
 void k_richtextwidget_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2878,8 +2878,8 @@ int32_t k_richtextwidget_dev_type(void* self) {
     return KRichTextWidget_DevType((KRichTextWidget*)self);
 }
 
-int32_t k_richtextwidget_qbase_dev_type(void* self) {
-    return KRichTextWidget_QBaseDevType((KRichTextWidget*)self);
+int32_t k_richtextwidget_super_dev_type(void* self) {
+    return KRichTextWidget_SuperDevType((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2890,8 +2890,8 @@ void k_richtextwidget_set_visible(void* self, bool visible) {
     KRichTextWidget_SetVisible((KRichTextWidget*)self, visible);
 }
 
-void k_richtextwidget_qbase_set_visible(void* self, bool visible) {
-    KRichTextWidget_QBaseSetVisible((KRichTextWidget*)self, visible);
+void k_richtextwidget_super_set_visible(void* self, bool visible) {
+    KRichTextWidget_SuperSetVisible((KRichTextWidget*)self, visible);
 }
 
 void k_richtextwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2902,8 +2902,8 @@ int32_t k_richtextwidget_height_for_width(void* self, int param1) {
     return KRichTextWidget_HeightForWidth((KRichTextWidget*)self, param1);
 }
 
-int32_t k_richtextwidget_qbase_height_for_width(void* self, int param1) {
-    return KRichTextWidget_QBaseHeightForWidth((KRichTextWidget*)self, param1);
+int32_t k_richtextwidget_super_height_for_width(void* self, int param1) {
+    return KRichTextWidget_SuperHeightForWidth((KRichTextWidget*)self, param1);
 }
 
 void k_richtextwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2914,8 +2914,8 @@ bool k_richtextwidget_has_height_for_width(void* self) {
     return KRichTextWidget_HasHeightForWidth((KRichTextWidget*)self);
 }
 
-bool k_richtextwidget_qbase_has_height_for_width(void* self) {
-    return KRichTextWidget_QBaseHasHeightForWidth((KRichTextWidget*)self);
+bool k_richtextwidget_super_has_height_for_width(void* self) {
+    return KRichTextWidget_SuperHasHeightForWidth((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2926,8 +2926,8 @@ QPaintEngine* k_richtextwidget_paint_engine(void* self) {
     return KRichTextWidget_PaintEngine((KRichTextWidget*)self);
 }
 
-QPaintEngine* k_richtextwidget_qbase_paint_engine(void* self) {
-    return KRichTextWidget_QBasePaintEngine((KRichTextWidget*)self);
+QPaintEngine* k_richtextwidget_super_paint_engine(void* self) {
+    return KRichTextWidget_SuperPaintEngine((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2938,8 +2938,8 @@ void k_richtextwidget_enter_event(void* self, void* event) {
     KRichTextWidget_EnterEvent((KRichTextWidget*)self, (QEnterEvent*)event);
 }
 
-void k_richtextwidget_qbase_enter_event(void* self, void* event) {
-    KRichTextWidget_QBaseEnterEvent((KRichTextWidget*)self, (QEnterEvent*)event);
+void k_richtextwidget_super_enter_event(void* self, void* event) {
+    KRichTextWidget_SuperEnterEvent((KRichTextWidget*)self, (QEnterEvent*)event);
 }
 
 void k_richtextwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2950,8 +2950,8 @@ void k_richtextwidget_leave_event(void* self, void* event) {
     KRichTextWidget_LeaveEvent((KRichTextWidget*)self, (QEvent*)event);
 }
 
-void k_richtextwidget_qbase_leave_event(void* self, void* event) {
-    KRichTextWidget_QBaseLeaveEvent((KRichTextWidget*)self, (QEvent*)event);
+void k_richtextwidget_super_leave_event(void* self, void* event) {
+    KRichTextWidget_SuperLeaveEvent((KRichTextWidget*)self, (QEvent*)event);
 }
 
 void k_richtextwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2962,8 +2962,8 @@ void k_richtextwidget_move_event(void* self, void* event) {
     KRichTextWidget_MoveEvent((KRichTextWidget*)self, (QMoveEvent*)event);
 }
 
-void k_richtextwidget_qbase_move_event(void* self, void* event) {
-    KRichTextWidget_QBaseMoveEvent((KRichTextWidget*)self, (QMoveEvent*)event);
+void k_richtextwidget_super_move_event(void* self, void* event) {
+    KRichTextWidget_SuperMoveEvent((KRichTextWidget*)self, (QMoveEvent*)event);
 }
 
 void k_richtextwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2974,8 +2974,8 @@ void k_richtextwidget_close_event(void* self, void* event) {
     KRichTextWidget_CloseEvent((KRichTextWidget*)self, (QCloseEvent*)event);
 }
 
-void k_richtextwidget_qbase_close_event(void* self, void* event) {
-    KRichTextWidget_QBaseCloseEvent((KRichTextWidget*)self, (QCloseEvent*)event);
+void k_richtextwidget_super_close_event(void* self, void* event) {
+    KRichTextWidget_SuperCloseEvent((KRichTextWidget*)self, (QCloseEvent*)event);
 }
 
 void k_richtextwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2986,8 +2986,8 @@ void k_richtextwidget_tablet_event(void* self, void* event) {
     KRichTextWidget_TabletEvent((KRichTextWidget*)self, (QTabletEvent*)event);
 }
 
-void k_richtextwidget_qbase_tablet_event(void* self, void* event) {
-    KRichTextWidget_QBaseTabletEvent((KRichTextWidget*)self, (QTabletEvent*)event);
+void k_richtextwidget_super_tablet_event(void* self, void* event) {
+    KRichTextWidget_SuperTabletEvent((KRichTextWidget*)self, (QTabletEvent*)event);
 }
 
 void k_richtextwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2998,8 +2998,8 @@ void k_richtextwidget_action_event(void* self, void* event) {
     KRichTextWidget_ActionEvent((KRichTextWidget*)self, (QActionEvent*)event);
 }
 
-void k_richtextwidget_qbase_action_event(void* self, void* event) {
-    KRichTextWidget_QBaseActionEvent((KRichTextWidget*)self, (QActionEvent*)event);
+void k_richtextwidget_super_action_event(void* self, void* event) {
+    KRichTextWidget_SuperActionEvent((KRichTextWidget*)self, (QActionEvent*)event);
 }
 
 void k_richtextwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -3010,8 +3010,8 @@ void k_richtextwidget_hide_event(void* self, void* event) {
     KRichTextWidget_HideEvent((KRichTextWidget*)self, (QHideEvent*)event);
 }
 
-void k_richtextwidget_qbase_hide_event(void* self, void* event) {
-    KRichTextWidget_QBaseHideEvent((KRichTextWidget*)self, (QHideEvent*)event);
+void k_richtextwidget_super_hide_event(void* self, void* event) {
+    KRichTextWidget_SuperHideEvent((KRichTextWidget*)self, (QHideEvent*)event);
 }
 
 void k_richtextwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -3022,8 +3022,8 @@ bool k_richtextwidget_native_event(void* self, char* eventType, void* message, i
     return KRichTextWidget_NativeEvent((KRichTextWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_richtextwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KRichTextWidget_QBaseNativeEvent((KRichTextWidget*)self, qstring(eventType), message, result);
+bool k_richtextwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KRichTextWidget_SuperNativeEvent((KRichTextWidget*)self, qstring(eventType), message, result);
 }
 
 void k_richtextwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -3034,8 +3034,8 @@ int32_t k_richtextwidget_metric(void* self, int32_t param1) {
     return KRichTextWidget_Metric((KRichTextWidget*)self, param1);
 }
 
-int32_t k_richtextwidget_qbase_metric(void* self, int32_t param1) {
-    return KRichTextWidget_QBaseMetric((KRichTextWidget*)self, param1);
+int32_t k_richtextwidget_super_metric(void* self, int32_t param1) {
+    return KRichTextWidget_SuperMetric((KRichTextWidget*)self, param1);
 }
 
 void k_richtextwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -3046,8 +3046,8 @@ void k_richtextwidget_init_painter(void* self, void* painter) {
     KRichTextWidget_InitPainter((KRichTextWidget*)self, (QPainter*)painter);
 }
 
-void k_richtextwidget_qbase_init_painter(void* self, void* painter) {
-    KRichTextWidget_QBaseInitPainter((KRichTextWidget*)self, (QPainter*)painter);
+void k_richtextwidget_super_init_painter(void* self, void* painter) {
+    KRichTextWidget_SuperInitPainter((KRichTextWidget*)self, (QPainter*)painter);
 }
 
 void k_richtextwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -3058,8 +3058,8 @@ QPaintDevice* k_richtextwidget_redirected(void* self, void* offset) {
     return KRichTextWidget_Redirected((KRichTextWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_richtextwidget_qbase_redirected(void* self, void* offset) {
-    return KRichTextWidget_QBaseRedirected((KRichTextWidget*)self, (QPoint*)offset);
+QPaintDevice* k_richtextwidget_super_redirected(void* self, void* offset) {
+    return KRichTextWidget_SuperRedirected((KRichTextWidget*)self, (QPoint*)offset);
 }
 
 void k_richtextwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -3070,8 +3070,8 @@ QPainter* k_richtextwidget_shared_painter(void* self) {
     return KRichTextWidget_SharedPainter((KRichTextWidget*)self);
 }
 
-QPainter* k_richtextwidget_qbase_shared_painter(void* self) {
-    return KRichTextWidget_QBaseSharedPainter((KRichTextWidget*)self);
+QPainter* k_richtextwidget_super_shared_painter(void* self) {
+    return KRichTextWidget_SuperSharedPainter((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -3082,8 +3082,8 @@ void k_richtextwidget_child_event(void* self, void* event) {
     KRichTextWidget_ChildEvent((KRichTextWidget*)self, (QChildEvent*)event);
 }
 
-void k_richtextwidget_qbase_child_event(void* self, void* event) {
-    KRichTextWidget_QBaseChildEvent((KRichTextWidget*)self, (QChildEvent*)event);
+void k_richtextwidget_super_child_event(void* self, void* event) {
+    KRichTextWidget_SuperChildEvent((KRichTextWidget*)self, (QChildEvent*)event);
 }
 
 void k_richtextwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -3094,8 +3094,8 @@ void k_richtextwidget_custom_event(void* self, void* event) {
     KRichTextWidget_CustomEvent((KRichTextWidget*)self, (QEvent*)event);
 }
 
-void k_richtextwidget_qbase_custom_event(void* self, void* event) {
-    KRichTextWidget_QBaseCustomEvent((KRichTextWidget*)self, (QEvent*)event);
+void k_richtextwidget_super_custom_event(void* self, void* event) {
+    KRichTextWidget_SuperCustomEvent((KRichTextWidget*)self, (QEvent*)event);
 }
 
 void k_richtextwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3106,8 +3106,8 @@ void k_richtextwidget_connect_notify(void* self, void* signal) {
     KRichTextWidget_ConnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_richtextwidget_qbase_connect_notify(void* self, void* signal) {
-    KRichTextWidget_QBaseConnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
+void k_richtextwidget_super_connect_notify(void* self, void* signal) {
+    KRichTextWidget_SuperConnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_richtextwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3118,8 +3118,8 @@ void k_richtextwidget_disconnect_notify(void* self, void* signal) {
     KRichTextWidget_DisconnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_richtextwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KRichTextWidget_QBaseDisconnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
+void k_richtextwidget_super_disconnect_notify(void* self, void* signal) {
+    KRichTextWidget_SuperDisconnectNotify((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_richtextwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3130,8 +3130,8 @@ void k_richtextwidget_slot_do_replace(void* self) {
     KRichTextWidget_SlotDoReplace((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_do_replace(void* self) {
-    KRichTextWidget_QBaseSlotDoReplace((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_do_replace(void* self) {
+    KRichTextWidget_SuperSlotDoReplace((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_do_replace(void* self, void (*callback)()) {
@@ -3142,8 +3142,8 @@ void k_richtextwidget_slot_replace_next(void* self) {
     KRichTextWidget_SlotReplaceNext((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_replace_next(void* self) {
-    KRichTextWidget_QBaseSlotReplaceNext((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_replace_next(void* self) {
+    KRichTextWidget_SuperSlotReplaceNext((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_replace_next(void* self, void (*callback)()) {
@@ -3154,8 +3154,8 @@ void k_richtextwidget_slot_do_find(void* self) {
     KRichTextWidget_SlotDoFind((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_do_find(void* self) {
-    KRichTextWidget_QBaseSlotDoFind((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_do_find(void* self) {
+    KRichTextWidget_SuperSlotDoFind((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_do_find(void* self, void (*callback)()) {
@@ -3166,8 +3166,8 @@ void k_richtextwidget_slot_find(void* self) {
     KRichTextWidget_SlotFind((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_find(void* self) {
-    KRichTextWidget_QBaseSlotFind((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_find(void* self) {
+    KRichTextWidget_SuperSlotFind((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_find(void* self, void (*callback)()) {
@@ -3178,8 +3178,8 @@ void k_richtextwidget_slot_find_next(void* self) {
     KRichTextWidget_SlotFindNext((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_find_next(void* self) {
-    KRichTextWidget_QBaseSlotFindNext((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_find_next(void* self) {
+    KRichTextWidget_SuperSlotFindNext((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_find_next(void* self, void (*callback)()) {
@@ -3190,8 +3190,8 @@ void k_richtextwidget_slot_find_previous(void* self) {
     KRichTextWidget_SlotFindPrevious((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_find_previous(void* self) {
-    KRichTextWidget_QBaseSlotFindPrevious((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_find_previous(void* self) {
+    KRichTextWidget_SuperSlotFindPrevious((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_find_previous(void* self, void (*callback)()) {
@@ -3202,8 +3202,8 @@ void k_richtextwidget_slot_replace(void* self) {
     KRichTextWidget_SlotReplace((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_replace(void* self) {
-    KRichTextWidget_QBaseSlotReplace((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_replace(void* self) {
+    KRichTextWidget_SuperSlotReplace((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_replace(void* self, void (*callback)()) {
@@ -3214,8 +3214,8 @@ void k_richtextwidget_slot_speak_text(void* self) {
     KRichTextWidget_SlotSpeakText((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_slot_speak_text(void* self) {
-    KRichTextWidget_QBaseSlotSpeakText((KRichTextWidget*)self);
+void k_richtextwidget_super_slot_speak_text(void* self) {
+    KRichTextWidget_SuperSlotSpeakText((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_slot_speak_text(void* self, void (*callback)()) {
@@ -3226,8 +3226,8 @@ void k_richtextwidget_zoom_in_f(void* self, float range) {
     KRichTextWidget_ZoomInF((KRichTextWidget*)self, range);
 }
 
-void k_richtextwidget_qbase_zoom_in_f(void* self, float range) {
-    KRichTextWidget_QBaseZoomInF((KRichTextWidget*)self, range);
+void k_richtextwidget_super_zoom_in_f(void* self, float range) {
+    KRichTextWidget_SuperZoomInF((KRichTextWidget*)self, range);
 }
 
 void k_richtextwidget_on_zoom_in_f(void* self, void (*callback)(void*, float)) {
@@ -3238,8 +3238,8 @@ void k_richtextwidget_set_viewport_margins(void* self, int left, int top, int ri
     KRichTextWidget_SetViewportMargins((KRichTextWidget*)self, left, top, right, bottom);
 }
 
-void k_richtextwidget_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    KRichTextWidget_QBaseSetViewportMargins((KRichTextWidget*)self, left, top, right, bottom);
+void k_richtextwidget_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    KRichTextWidget_SuperSetViewportMargins((KRichTextWidget*)self, left, top, right, bottom);
 }
 
 void k_richtextwidget_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -3250,8 +3250,8 @@ QMargins* k_richtextwidget_viewport_margins(void* self) {
     return KRichTextWidget_ViewportMargins((KRichTextWidget*)self);
 }
 
-QMargins* k_richtextwidget_qbase_viewport_margins(void* self) {
-    return KRichTextWidget_QBaseViewportMargins((KRichTextWidget*)self);
+QMargins* k_richtextwidget_super_viewport_margins(void* self) {
+    return KRichTextWidget_SuperViewportMargins((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -3262,8 +3262,8 @@ void k_richtextwidget_draw_frame(void* self, void* param1) {
     KRichTextWidget_DrawFrame((KRichTextWidget*)self, (QPainter*)param1);
 }
 
-void k_richtextwidget_qbase_draw_frame(void* self, void* param1) {
-    KRichTextWidget_QBaseDrawFrame((KRichTextWidget*)self, (QPainter*)param1);
+void k_richtextwidget_super_draw_frame(void* self, void* param1) {
+    KRichTextWidget_SuperDrawFrame((KRichTextWidget*)self, (QPainter*)param1);
 }
 
 void k_richtextwidget_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -3274,8 +3274,8 @@ void k_richtextwidget_update_micro_focus(void* self) {
     KRichTextWidget_UpdateMicroFocus((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_update_micro_focus(void* self) {
-    KRichTextWidget_QBaseUpdateMicroFocus((KRichTextWidget*)self);
+void k_richtextwidget_super_update_micro_focus(void* self) {
+    KRichTextWidget_SuperUpdateMicroFocus((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3286,8 +3286,8 @@ void k_richtextwidget_create(void* self) {
     KRichTextWidget_Create((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_create(void* self) {
-    KRichTextWidget_QBaseCreate((KRichTextWidget*)self);
+void k_richtextwidget_super_create(void* self) {
+    KRichTextWidget_SuperCreate((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_create(void* self, void (*callback)()) {
@@ -3298,8 +3298,8 @@ void k_richtextwidget_destroy(void* self) {
     KRichTextWidget_Destroy((KRichTextWidget*)self);
 }
 
-void k_richtextwidget_qbase_destroy(void* self) {
-    KRichTextWidget_QBaseDestroy((KRichTextWidget*)self);
+void k_richtextwidget_super_destroy(void* self) {
+    KRichTextWidget_SuperDestroy((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_destroy(void* self, void (*callback)()) {
@@ -3310,8 +3310,8 @@ bool k_richtextwidget_focus_next_child(void* self) {
     return KRichTextWidget_FocusNextChild((KRichTextWidget*)self);
 }
 
-bool k_richtextwidget_qbase_focus_next_child(void* self) {
-    return KRichTextWidget_QBaseFocusNextChild((KRichTextWidget*)self);
+bool k_richtextwidget_super_focus_next_child(void* self) {
+    return KRichTextWidget_SuperFocusNextChild((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3322,8 +3322,8 @@ bool k_richtextwidget_focus_previous_child(void* self) {
     return KRichTextWidget_FocusPreviousChild((KRichTextWidget*)self);
 }
 
-bool k_richtextwidget_qbase_focus_previous_child(void* self) {
-    return KRichTextWidget_QBaseFocusPreviousChild((KRichTextWidget*)self);
+bool k_richtextwidget_super_focus_previous_child(void* self) {
+    return KRichTextWidget_SuperFocusPreviousChild((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3334,8 +3334,8 @@ QObject* k_richtextwidget_sender(void* self) {
     return KRichTextWidget_Sender((KRichTextWidget*)self);
 }
 
-QObject* k_richtextwidget_qbase_sender(void* self) {
-    return KRichTextWidget_QBaseSender((KRichTextWidget*)self);
+QObject* k_richtextwidget_super_sender(void* self) {
+    return KRichTextWidget_SuperSender((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -3346,8 +3346,8 @@ int32_t k_richtextwidget_sender_signal_index(void* self) {
     return KRichTextWidget_SenderSignalIndex((KRichTextWidget*)self);
 }
 
-int32_t k_richtextwidget_qbase_sender_signal_index(void* self) {
-    return KRichTextWidget_QBaseSenderSignalIndex((KRichTextWidget*)self);
+int32_t k_richtextwidget_super_sender_signal_index(void* self) {
+    return KRichTextWidget_SuperSenderSignalIndex((KRichTextWidget*)self);
 }
 
 void k_richtextwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3358,8 +3358,8 @@ int32_t k_richtextwidget_receivers(void* self, const char* signal) {
     return KRichTextWidget_Receivers((KRichTextWidget*)self, signal);
 }
 
-int32_t k_richtextwidget_qbase_receivers(void* self, const char* signal) {
-    return KRichTextWidget_QBaseReceivers((KRichTextWidget*)self, signal);
+int32_t k_richtextwidget_super_receivers(void* self, const char* signal) {
+    return KRichTextWidget_SuperReceivers((KRichTextWidget*)self, signal);
 }
 
 void k_richtextwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3370,8 +3370,8 @@ bool k_richtextwidget_is_signal_connected(void* self, void* signal) {
     return KRichTextWidget_IsSignalConnected((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_richtextwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KRichTextWidget_QBaseIsSignalConnected((KRichTextWidget*)self, (QMetaMethod*)signal);
+bool k_richtextwidget_super_is_signal_connected(void* self, void* signal) {
+    return KRichTextWidget_SuperIsSignalConnected((KRichTextWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_richtextwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3382,8 +3382,8 @@ double k_richtextwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KRichTextWidget_GetDecodedMetricF((KRichTextWidget*)self, metricA, metricB);
 }
 
-double k_richtextwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KRichTextWidget_QBaseGetDecodedMetricF((KRichTextWidget*)self, metricA, metricB);
+double k_richtextwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KRichTextWidget_SuperGetDecodedMetricF((KRichTextWidget*)self, metricA, metricB);
 }
 
 void k_richtextwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

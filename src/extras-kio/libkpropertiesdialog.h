@@ -132,13 +132,17 @@ const QMetaObject* k_propertiesdialog_meta_object(void* self);
 ///
 void k_propertiesdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_meta_object` instead
+///
+#define k_propertiesdialog_qbase_meta_object k_propertiesdialog_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KPropertiesDialog*
 ///
-const QMetaObject* k_propertiesdialog_qbase_meta_object(void* self);
+const QMetaObject* k_propertiesdialog_super_meta_object(void* self);
 
 /// @param self KPropertiesDialog*
 /// @param param1 const char*
@@ -152,12 +156,16 @@ void* k_propertiesdialog_metacast(void* self, const char* param1);
 ///
 void k_propertiesdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_metacast` instead
+///
+#define k_propertiesdialog_qbase_metacast k_propertiesdialog_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KPropertiesDialog*
 /// @param param1 const char*
 ///
-void* k_propertiesdialog_qbase_metacast(void* self, const char* param1);
+void* k_propertiesdialog_super_metacast(void* self, const char* param1);
 
 /// @param self KPropertiesDialog*
 /// @param param1 enum QMetaObject__Call
@@ -173,6 +181,10 @@ int32_t k_propertiesdialog_metacall(void* self, int32_t param1, int param2, void
 ///
 void k_propertiesdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_metacall` instead
+///
+#define k_propertiesdialog_qbase_metacall k_propertiesdialog_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KPropertiesDialog*
@@ -180,7 +192,7 @@ void k_propertiesdialog_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_propertiesdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_propertiesdialog_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -307,13 +319,17 @@ void k_propertiesdialog_accept(void* self);
 ///
 void k_propertiesdialog_on_accept(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_accept` instead
+///
+#define k_propertiesdialog_qbase_accept k_propertiesdialog_super_accept
+
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#accept)
 ///
 /// Base class method implementation
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_accept(void* self);
+void k_propertiesdialog_super_accept(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#reject)
 ///
@@ -330,13 +346,17 @@ void k_propertiesdialog_reject(void* self);
 ///
 void k_propertiesdialog_on_reject(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_reject` instead
+///
+#define k_propertiesdialog_qbase_reject k_propertiesdialog_super_reject
+
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#reject)
 ///
 /// Base class method implementation
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_reject(void* self);
+void k_propertiesdialog_super_reject(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#propertiesClosed)
 ///
@@ -3694,6 +3714,10 @@ int32_t k_propertiesdialog_encode_metric_f(int32_t metric, double value);
 ///
 void k_propertiesdialog_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_set_visible` instead
+///
+#define k_propertiesdialog_qbase_set_visible k_propertiesdialog_super_set_visible
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -3703,7 +3727,7 @@ void k_propertiesdialog_set_visible(void* self, bool visible);
 /// @param self KPropertiesDialog*
 /// @param visible bool
 ///
-void k_propertiesdialog_qbase_set_visible(void* self, bool visible);
+void k_propertiesdialog_super_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
@@ -3726,6 +3750,10 @@ void k_propertiesdialog_on_set_visible(void* self, void (*callback)(void*, bool)
 ///
 QSize* k_propertiesdialog_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_size_hint` instead
+///
+#define k_propertiesdialog_qbase_size_hint k_propertiesdialog_super_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
@@ -3734,7 +3762,7 @@ QSize* k_propertiesdialog_size_hint(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QSize* k_propertiesdialog_qbase_size_hint(void* self);
+QSize* k_propertiesdialog_super_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3757,6 +3785,10 @@ void k_propertiesdialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_propertiesdialog_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_minimum_size_hint` instead
+///
+#define k_propertiesdialog_qbase_minimum_size_hint k_propertiesdialog_super_minimum_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3765,7 +3797,7 @@ QSize* k_propertiesdialog_minimum_size_hint(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QSize* k_propertiesdialog_qbase_minimum_size_hint(void* self);
+QSize* k_propertiesdialog_super_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3788,6 +3820,10 @@ void k_propertiesdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_propertiesdialog_open(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_open` instead
+///
+#define k_propertiesdialog_qbase_open k_propertiesdialog_super_open
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3796,7 +3832,7 @@ void k_propertiesdialog_open(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_open(void* self);
+void k_propertiesdialog_super_open(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3819,6 +3855,10 @@ void k_propertiesdialog_on_open(void* self, void (*callback)());
 ///
 int32_t k_propertiesdialog_exec(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_exec` instead
+///
+#define k_propertiesdialog_qbase_exec k_propertiesdialog_super_exec
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
@@ -3827,7 +3867,7 @@ int32_t k_propertiesdialog_exec(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-int32_t k_propertiesdialog_qbase_exec(void* self);
+int32_t k_propertiesdialog_super_exec(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3851,6 +3891,10 @@ void k_propertiesdialog_on_exec(void* self, int32_t (*callback)());
 ///
 void k_propertiesdialog_done(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_done` instead
+///
+#define k_propertiesdialog_qbase_done k_propertiesdialog_super_done
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -3860,7 +3904,7 @@ void k_propertiesdialog_done(void* self, int param1);
 /// @param self KPropertiesDialog*
 /// @param param1 int
 ///
-void k_propertiesdialog_qbase_done(void* self, int param1);
+void k_propertiesdialog_super_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
@@ -3884,6 +3928,10 @@ void k_propertiesdialog_on_done(void* self, void (*callback)(void*, int));
 ///
 void k_propertiesdialog_key_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_key_press_event` instead
+///
+#define k_propertiesdialog_qbase_key_press_event k_propertiesdialog_super_key_press_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
@@ -3893,7 +3941,7 @@ void k_propertiesdialog_key_press_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QKeyEvent*
 ///
-void k_propertiesdialog_qbase_key_press_event(void* self, void* param1);
+void k_propertiesdialog_super_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3917,6 +3965,10 @@ void k_propertiesdialog_on_key_press_event(void* self, void (*callback)(void*, v
 ///
 void k_propertiesdialog_close_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_close_event` instead
+///
+#define k_propertiesdialog_qbase_close_event k_propertiesdialog_super_close_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3926,7 +3978,7 @@ void k_propertiesdialog_close_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QCloseEvent*
 ///
-void k_propertiesdialog_qbase_close_event(void* self, void* param1);
+void k_propertiesdialog_super_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3950,6 +4002,10 @@ void k_propertiesdialog_on_close_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_show_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_show_event` instead
+///
+#define k_propertiesdialog_qbase_show_event k_propertiesdialog_super_show_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
@@ -3959,7 +4015,7 @@ void k_propertiesdialog_show_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QShowEvent*
 ///
-void k_propertiesdialog_qbase_show_event(void* self, void* param1);
+void k_propertiesdialog_super_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3983,6 +4039,10 @@ void k_propertiesdialog_on_show_event(void* self, void (*callback)(void*, void*)
 ///
 void k_propertiesdialog_resize_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_resize_event` instead
+///
+#define k_propertiesdialog_qbase_resize_event k_propertiesdialog_super_resize_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3992,7 +4052,7 @@ void k_propertiesdialog_resize_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QResizeEvent*
 ///
-void k_propertiesdialog_qbase_resize_event(void* self, void* param1);
+void k_propertiesdialog_super_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -4016,6 +4076,10 @@ void k_propertiesdialog_on_resize_event(void* self, void (*callback)(void*, void
 ///
 void k_propertiesdialog_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_context_menu_event` instead
+///
+#define k_propertiesdialog_qbase_context_menu_event k_propertiesdialog_super_context_menu_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
@@ -4025,7 +4089,7 @@ void k_propertiesdialog_context_menu_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QContextMenuEvent*
 ///
-void k_propertiesdialog_qbase_context_menu_event(void* self, void* param1);
+void k_propertiesdialog_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -4050,6 +4114,10 @@ void k_propertiesdialog_on_context_menu_event(void* self, void (*callback)(void*
 ///
 bool k_propertiesdialog_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_event_filter` instead
+///
+#define k_propertiesdialog_qbase_event_filter k_propertiesdialog_super_event_filter
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -4060,7 +4128,7 @@ bool k_propertiesdialog_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool k_propertiesdialog_qbase_event_filter(void* self, void* param1, void* param2);
+bool k_propertiesdialog_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
@@ -4083,6 +4151,10 @@ void k_propertiesdialog_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 int32_t k_propertiesdialog_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_dev_type` instead
+///
+#define k_propertiesdialog_qbase_dev_type k_propertiesdialog_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4091,7 +4163,7 @@ int32_t k_propertiesdialog_dev_type(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-int32_t k_propertiesdialog_qbase_dev_type(void* self);
+int32_t k_propertiesdialog_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4115,6 +4187,10 @@ void k_propertiesdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 int32_t k_propertiesdialog_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_height_for_width` instead
+///
+#define k_propertiesdialog_qbase_height_for_width k_propertiesdialog_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4124,7 +4200,7 @@ int32_t k_propertiesdialog_height_for_width(void* self, int param1);
 /// @param self KPropertiesDialog*
 /// @param param1 int
 ///
-int32_t k_propertiesdialog_qbase_height_for_width(void* self, int param1);
+int32_t k_propertiesdialog_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4147,6 +4223,10 @@ void k_propertiesdialog_on_height_for_width(void* self, int32_t (*callback)(void
 ///
 bool k_propertiesdialog_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_has_height_for_width` instead
+///
+#define k_propertiesdialog_qbase_has_height_for_width k_propertiesdialog_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4155,7 +4235,7 @@ bool k_propertiesdialog_has_height_for_width(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-bool k_propertiesdialog_qbase_has_height_for_width(void* self);
+bool k_propertiesdialog_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4178,6 +4258,10 @@ void k_propertiesdialog_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_propertiesdialog_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_paint_engine` instead
+///
+#define k_propertiesdialog_qbase_paint_engine k_propertiesdialog_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -4186,7 +4270,7 @@ QPaintEngine* k_propertiesdialog_paint_engine(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QPaintEngine* k_propertiesdialog_qbase_paint_engine(void* self);
+QPaintEngine* k_propertiesdialog_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4210,6 +4294,10 @@ void k_propertiesdialog_on_paint_engine(void* self, QPaintEngine* (*callback)())
 ///
 bool k_propertiesdialog_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_event` instead
+///
+#define k_propertiesdialog_qbase_event k_propertiesdialog_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -4219,7 +4307,7 @@ bool k_propertiesdialog_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QEvent*
 ///
-bool k_propertiesdialog_qbase_event(void* self, void* event);
+bool k_propertiesdialog_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4243,6 +4331,10 @@ void k_propertiesdialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_propertiesdialog_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_mouse_press_event` instead
+///
+#define k_propertiesdialog_qbase_mouse_press_event k_propertiesdialog_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -4252,7 +4344,7 @@ void k_propertiesdialog_mouse_press_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QMouseEvent*
 ///
-void k_propertiesdialog_qbase_mouse_press_event(void* self, void* event);
+void k_propertiesdialog_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4276,6 +4368,10 @@ void k_propertiesdialog_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void k_propertiesdialog_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_mouse_release_event` instead
+///
+#define k_propertiesdialog_qbase_mouse_release_event k_propertiesdialog_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4285,7 +4381,7 @@ void k_propertiesdialog_mouse_release_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QMouseEvent*
 ///
-void k_propertiesdialog_qbase_mouse_release_event(void* self, void* event);
+void k_propertiesdialog_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4309,6 +4405,10 @@ void k_propertiesdialog_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void k_propertiesdialog_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_mouse_double_click_event` instead
+///
+#define k_propertiesdialog_qbase_mouse_double_click_event k_propertiesdialog_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4318,7 +4418,7 @@ void k_propertiesdialog_mouse_double_click_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QMouseEvent*
 ///
-void k_propertiesdialog_qbase_mouse_double_click_event(void* self, void* event);
+void k_propertiesdialog_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4342,6 +4442,10 @@ void k_propertiesdialog_on_mouse_double_click_event(void* self, void (*callback)
 ///
 void k_propertiesdialog_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_mouse_move_event` instead
+///
+#define k_propertiesdialog_qbase_mouse_move_event k_propertiesdialog_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4351,7 +4455,7 @@ void k_propertiesdialog_mouse_move_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QMouseEvent*
 ///
-void k_propertiesdialog_qbase_mouse_move_event(void* self, void* event);
+void k_propertiesdialog_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4375,6 +4479,10 @@ void k_propertiesdialog_on_mouse_move_event(void* self, void (*callback)(void*, 
 ///
 void k_propertiesdialog_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_wheel_event` instead
+///
+#define k_propertiesdialog_qbase_wheel_event k_propertiesdialog_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4384,7 +4492,7 @@ void k_propertiesdialog_wheel_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QWheelEvent*
 ///
-void k_propertiesdialog_qbase_wheel_event(void* self, void* event);
+void k_propertiesdialog_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4408,6 +4516,10 @@ void k_propertiesdialog_on_wheel_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_key_release_event` instead
+///
+#define k_propertiesdialog_qbase_key_release_event k_propertiesdialog_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4417,7 +4529,7 @@ void k_propertiesdialog_key_release_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QKeyEvent*
 ///
-void k_propertiesdialog_qbase_key_release_event(void* self, void* event);
+void k_propertiesdialog_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4441,6 +4553,10 @@ void k_propertiesdialog_on_key_release_event(void* self, void (*callback)(void*,
 ///
 void k_propertiesdialog_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_focus_in_event` instead
+///
+#define k_propertiesdialog_qbase_focus_in_event k_propertiesdialog_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4450,7 +4566,7 @@ void k_propertiesdialog_focus_in_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QFocusEvent*
 ///
-void k_propertiesdialog_qbase_focus_in_event(void* self, void* event);
+void k_propertiesdialog_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4474,6 +4590,10 @@ void k_propertiesdialog_on_focus_in_event(void* self, void (*callback)(void*, vo
 ///
 void k_propertiesdialog_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_focus_out_event` instead
+///
+#define k_propertiesdialog_qbase_focus_out_event k_propertiesdialog_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4483,7 +4603,7 @@ void k_propertiesdialog_focus_out_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QFocusEvent*
 ///
-void k_propertiesdialog_qbase_focus_out_event(void* self, void* event);
+void k_propertiesdialog_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4507,6 +4627,10 @@ void k_propertiesdialog_on_focus_out_event(void* self, void (*callback)(void*, v
 ///
 void k_propertiesdialog_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_enter_event` instead
+///
+#define k_propertiesdialog_qbase_enter_event k_propertiesdialog_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4516,7 +4640,7 @@ void k_propertiesdialog_enter_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QEnterEvent*
 ///
-void k_propertiesdialog_qbase_enter_event(void* self, void* event);
+void k_propertiesdialog_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4540,6 +4664,10 @@ void k_propertiesdialog_on_enter_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_leave_event` instead
+///
+#define k_propertiesdialog_qbase_leave_event k_propertiesdialog_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4549,7 +4677,7 @@ void k_propertiesdialog_leave_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QEvent*
 ///
-void k_propertiesdialog_qbase_leave_event(void* self, void* event);
+void k_propertiesdialog_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4573,6 +4701,10 @@ void k_propertiesdialog_on_leave_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_paint_event` instead
+///
+#define k_propertiesdialog_qbase_paint_event k_propertiesdialog_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4582,7 +4714,7 @@ void k_propertiesdialog_paint_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QPaintEvent*
 ///
-void k_propertiesdialog_qbase_paint_event(void* self, void* event);
+void k_propertiesdialog_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4606,6 +4738,10 @@ void k_propertiesdialog_on_paint_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_move_event` instead
+///
+#define k_propertiesdialog_qbase_move_event k_propertiesdialog_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4615,7 +4751,7 @@ void k_propertiesdialog_move_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QMoveEvent*
 ///
-void k_propertiesdialog_qbase_move_event(void* self, void* event);
+void k_propertiesdialog_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4639,6 +4775,10 @@ void k_propertiesdialog_on_move_event(void* self, void (*callback)(void*, void*)
 ///
 void k_propertiesdialog_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_tablet_event` instead
+///
+#define k_propertiesdialog_qbase_tablet_event k_propertiesdialog_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4648,7 +4788,7 @@ void k_propertiesdialog_tablet_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QTabletEvent*
 ///
-void k_propertiesdialog_qbase_tablet_event(void* self, void* event);
+void k_propertiesdialog_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4672,6 +4812,10 @@ void k_propertiesdialog_on_tablet_event(void* self, void (*callback)(void*, void
 ///
 void k_propertiesdialog_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_action_event` instead
+///
+#define k_propertiesdialog_qbase_action_event k_propertiesdialog_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4681,7 +4825,7 @@ void k_propertiesdialog_action_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QActionEvent*
 ///
-void k_propertiesdialog_qbase_action_event(void* self, void* event);
+void k_propertiesdialog_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4705,6 +4849,10 @@ void k_propertiesdialog_on_action_event(void* self, void (*callback)(void*, void
 ///
 void k_propertiesdialog_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_drag_enter_event` instead
+///
+#define k_propertiesdialog_qbase_drag_enter_event k_propertiesdialog_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4714,7 +4862,7 @@ void k_propertiesdialog_drag_enter_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QDragEnterEvent*
 ///
-void k_propertiesdialog_qbase_drag_enter_event(void* self, void* event);
+void k_propertiesdialog_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4738,6 +4886,10 @@ void k_propertiesdialog_on_drag_enter_event(void* self, void (*callback)(void*, 
 ///
 void k_propertiesdialog_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_drag_move_event` instead
+///
+#define k_propertiesdialog_qbase_drag_move_event k_propertiesdialog_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4747,7 +4899,7 @@ void k_propertiesdialog_drag_move_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QDragMoveEvent*
 ///
-void k_propertiesdialog_qbase_drag_move_event(void* self, void* event);
+void k_propertiesdialog_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4771,6 +4923,10 @@ void k_propertiesdialog_on_drag_move_event(void* self, void (*callback)(void*, v
 ///
 void k_propertiesdialog_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_drag_leave_event` instead
+///
+#define k_propertiesdialog_qbase_drag_leave_event k_propertiesdialog_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4780,7 +4936,7 @@ void k_propertiesdialog_drag_leave_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QDragLeaveEvent*
 ///
-void k_propertiesdialog_qbase_drag_leave_event(void* self, void* event);
+void k_propertiesdialog_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4804,6 +4960,10 @@ void k_propertiesdialog_on_drag_leave_event(void* self, void (*callback)(void*, 
 ///
 void k_propertiesdialog_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_drop_event` instead
+///
+#define k_propertiesdialog_qbase_drop_event k_propertiesdialog_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4813,7 +4973,7 @@ void k_propertiesdialog_drop_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QDropEvent*
 ///
-void k_propertiesdialog_qbase_drop_event(void* self, void* event);
+void k_propertiesdialog_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4837,6 +4997,10 @@ void k_propertiesdialog_on_drop_event(void* self, void (*callback)(void*, void*)
 ///
 void k_propertiesdialog_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_hide_event` instead
+///
+#define k_propertiesdialog_qbase_hide_event k_propertiesdialog_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4846,7 +5010,7 @@ void k_propertiesdialog_hide_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QHideEvent*
 ///
-void k_propertiesdialog_qbase_hide_event(void* self, void* event);
+void k_propertiesdialog_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4872,6 +5036,10 @@ void k_propertiesdialog_on_hide_event(void* self, void (*callback)(void*, void*)
 ///
 bool k_propertiesdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_native_event` instead
+///
+#define k_propertiesdialog_qbase_native_event k_propertiesdialog_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4883,7 +5051,7 @@ bool k_propertiesdialog_native_event(void* self, char* eventType, void* message,
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_propertiesdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_propertiesdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4907,6 +5075,10 @@ void k_propertiesdialog_on_native_event(void* self, bool (*callback)(void*, libq
 ///
 void k_propertiesdialog_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_change_event` instead
+///
+#define k_propertiesdialog_qbase_change_event k_propertiesdialog_super_change_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4916,7 +5088,7 @@ void k_propertiesdialog_change_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QEvent*
 ///
-void k_propertiesdialog_qbase_change_event(void* self, void* param1);
+void k_propertiesdialog_super_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4940,6 +5112,10 @@ void k_propertiesdialog_on_change_event(void* self, void (*callback)(void*, void
 ///
 int32_t k_propertiesdialog_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_metric` instead
+///
+#define k_propertiesdialog_qbase_metric k_propertiesdialog_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4949,7 +5125,7 @@ int32_t k_propertiesdialog_metric(void* self, int32_t param1);
 /// @param self KPropertiesDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_propertiesdialog_qbase_metric(void* self, int32_t param1);
+int32_t k_propertiesdialog_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4973,6 +5149,10 @@ void k_propertiesdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t
 ///
 void k_propertiesdialog_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_init_painter` instead
+///
+#define k_propertiesdialog_qbase_init_painter k_propertiesdialog_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4982,7 +5162,7 @@ void k_propertiesdialog_init_painter(void* self, void* painter);
 /// @param self KPropertiesDialog*
 /// @param painter QPainter*
 ///
-void k_propertiesdialog_qbase_init_painter(void* self, void* painter);
+void k_propertiesdialog_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5006,6 +5186,10 @@ void k_propertiesdialog_on_init_painter(void* self, void (*callback)(void*, void
 ///
 QPaintDevice* k_propertiesdialog_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_redirected` instead
+///
+#define k_propertiesdialog_qbase_redirected k_propertiesdialog_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5015,7 +5199,7 @@ QPaintDevice* k_propertiesdialog_redirected(void* self, void* offset);
 /// @param self KPropertiesDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_propertiesdialog_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_propertiesdialog_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5038,6 +5222,10 @@ void k_propertiesdialog_on_redirected(void* self, QPaintDevice* (*callback)(void
 ///
 QPainter* k_propertiesdialog_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_shared_painter` instead
+///
+#define k_propertiesdialog_qbase_shared_painter k_propertiesdialog_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5046,7 +5234,7 @@ QPainter* k_propertiesdialog_shared_painter(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QPainter* k_propertiesdialog_qbase_shared_painter(void* self);
+QPainter* k_propertiesdialog_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5070,6 +5258,10 @@ void k_propertiesdialog_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_propertiesdialog_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_input_method_event` instead
+///
+#define k_propertiesdialog_qbase_input_method_event k_propertiesdialog_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5079,7 +5271,7 @@ void k_propertiesdialog_input_method_event(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QInputMethodEvent*
 ///
-void k_propertiesdialog_qbase_input_method_event(void* self, void* param1);
+void k_propertiesdialog_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5103,6 +5295,10 @@ void k_propertiesdialog_on_input_method_event(void* self, void (*callback)(void*
 ///
 QVariant* k_propertiesdialog_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_input_method_query` instead
+///
+#define k_propertiesdialog_qbase_input_method_query k_propertiesdialog_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -5112,7 +5308,7 @@ QVariant* k_propertiesdialog_input_method_query(void* self, int32_t param1);
 /// @param self KPropertiesDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_propertiesdialog_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5136,6 +5332,10 @@ void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(
 ///
 bool k_propertiesdialog_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_focus_next_prev_child` instead
+///
+#define k_propertiesdialog_qbase_focus_next_prev_child k_propertiesdialog_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5145,7 +5345,7 @@ bool k_propertiesdialog_focus_next_prev_child(void* self, bool next);
 /// @param self KPropertiesDialog*
 /// @param next bool
 ///
-bool k_propertiesdialog_qbase_focus_next_prev_child(void* self, bool next);
+bool k_propertiesdialog_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -5169,6 +5369,10 @@ void k_propertiesdialog_on_focus_next_prev_child(void* self, bool (*callback)(vo
 ///
 void k_propertiesdialog_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_timer_event` instead
+///
+#define k_propertiesdialog_qbase_timer_event k_propertiesdialog_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5178,7 +5382,7 @@ void k_propertiesdialog_timer_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QTimerEvent*
 ///
-void k_propertiesdialog_qbase_timer_event(void* self, void* event);
+void k_propertiesdialog_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5202,6 +5406,10 @@ void k_propertiesdialog_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_child_event` instead
+///
+#define k_propertiesdialog_qbase_child_event k_propertiesdialog_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5211,7 +5419,7 @@ void k_propertiesdialog_child_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QChildEvent*
 ///
-void k_propertiesdialog_qbase_child_event(void* self, void* event);
+void k_propertiesdialog_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5235,6 +5443,10 @@ void k_propertiesdialog_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void k_propertiesdialog_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_custom_event` instead
+///
+#define k_propertiesdialog_qbase_custom_event k_propertiesdialog_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5244,7 +5456,7 @@ void k_propertiesdialog_custom_event(void* self, void* event);
 /// @param self KPropertiesDialog*
 /// @param event QEvent*
 ///
-void k_propertiesdialog_qbase_custom_event(void* self, void* event);
+void k_propertiesdialog_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5268,6 +5480,10 @@ void k_propertiesdialog_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void k_propertiesdialog_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_connect_notify` instead
+///
+#define k_propertiesdialog_qbase_connect_notify k_propertiesdialog_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5277,7 +5493,7 @@ void k_propertiesdialog_connect_notify(void* self, void* signal);
 /// @param self KPropertiesDialog*
 /// @param signal QMetaMethod*
 ///
-void k_propertiesdialog_qbase_connect_notify(void* self, void* signal);
+void k_propertiesdialog_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5301,6 +5517,10 @@ void k_propertiesdialog_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_propertiesdialog_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_disconnect_notify` instead
+///
+#define k_propertiesdialog_qbase_disconnect_notify k_propertiesdialog_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5310,7 +5530,7 @@ void k_propertiesdialog_disconnect_notify(void* self, void* signal);
 /// @param self KPropertiesDialog*
 /// @param signal QMetaMethod*
 ///
-void k_propertiesdialog_qbase_disconnect_notify(void* self, void* signal);
+void k_propertiesdialog_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5333,6 +5553,10 @@ void k_propertiesdialog_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 KPageWidget* k_propertiesdialog_page_widget(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_page_widget` instead
+///
+#define k_propertiesdialog_qbase_page_widget k_propertiesdialog_super_page_widget
+
 /// Inherited from KPageDialog
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#pageWidget)
@@ -5341,7 +5565,7 @@ KPageWidget* k_propertiesdialog_page_widget(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-KPageWidget* k_propertiesdialog_qbase_page_widget(void* self);
+KPageWidget* k_propertiesdialog_super_page_widget(void* self);
 
 /// Inherited from KPageDialog
 ///
@@ -5365,6 +5589,10 @@ void k_propertiesdialog_on_page_widget(void* self, KPageWidget* (*callback)());
 ///
 void k_propertiesdialog_set_page_widget(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_set_page_widget` instead
+///
+#define k_propertiesdialog_qbase_set_page_widget k_propertiesdialog_super_set_page_widget
+
 /// Inherited from KPageDialog
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#setPageWidget)
@@ -5374,7 +5602,7 @@ void k_propertiesdialog_set_page_widget(void* self, void* widget);
 /// @param self KPropertiesDialog*
 /// @param widget KPageWidget*
 ///
-void k_propertiesdialog_qbase_set_page_widget(void* self, void* widget);
+void k_propertiesdialog_super_set_page_widget(void* self, void* widget);
 
 /// Inherited from KPageDialog
 ///
@@ -5397,6 +5625,10 @@ void k_propertiesdialog_on_set_page_widget(void* self, void (*callback)(void*, v
 ///
 QDialogButtonBox* k_propertiesdialog_button_box(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_button_box` instead
+///
+#define k_propertiesdialog_qbase_button_box k_propertiesdialog_super_button_box
+
 /// Inherited from KPageDialog
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#buttonBox)
@@ -5405,7 +5637,7 @@ QDialogButtonBox* k_propertiesdialog_button_box(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QDialogButtonBox* k_propertiesdialog_qbase_button_box(void* self);
+QDialogButtonBox* k_propertiesdialog_super_button_box(void* self);
 
 /// Inherited from KPageDialog
 ///
@@ -5429,6 +5661,10 @@ void k_propertiesdialog_on_button_box(void* self, QDialogButtonBox* (*callback)(
 ///
 void k_propertiesdialog_set_button_box(void* self, void* box);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_set_button_box` instead
+///
+#define k_propertiesdialog_qbase_set_button_box k_propertiesdialog_super_set_button_box
+
 /// Inherited from KPageDialog
 ///
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#setButtonBox)
@@ -5438,7 +5674,7 @@ void k_propertiesdialog_set_button_box(void* self, void* box);
 /// @param self KPropertiesDialog*
 /// @param box QDialogButtonBox*
 ///
-void k_propertiesdialog_qbase_set_button_box(void* self, void* box);
+void k_propertiesdialog_super_set_button_box(void* self, void* box);
 
 /// Inherited from KPageDialog
 ///
@@ -5462,6 +5698,10 @@ void k_propertiesdialog_on_set_button_box(void* self, void (*callback)(void*, vo
 ///
 void k_propertiesdialog_adjust_position(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_adjust_position` instead
+///
+#define k_propertiesdialog_qbase_adjust_position k_propertiesdialog_super_adjust_position
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5471,7 +5711,7 @@ void k_propertiesdialog_adjust_position(void* self, void* param1);
 /// @param self KPropertiesDialog*
 /// @param param1 QWidget*
 ///
-void k_propertiesdialog_qbase_adjust_position(void* self, void* param1);
+void k_propertiesdialog_super_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -5494,6 +5734,10 @@ void k_propertiesdialog_on_adjust_position(void* self, void (*callback)(void*, v
 ///
 void k_propertiesdialog_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_update_micro_focus` instead
+///
+#define k_propertiesdialog_qbase_update_micro_focus k_propertiesdialog_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5502,7 +5746,7 @@ void k_propertiesdialog_update_micro_focus(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_update_micro_focus(void* self);
+void k_propertiesdialog_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5525,6 +5769,10 @@ void k_propertiesdialog_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_propertiesdialog_create(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_create` instead
+///
+#define k_propertiesdialog_qbase_create k_propertiesdialog_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5533,7 +5781,7 @@ void k_propertiesdialog_create(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_create(void* self);
+void k_propertiesdialog_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5556,6 +5804,10 @@ void k_propertiesdialog_on_create(void* self, void (*callback)());
 ///
 void k_propertiesdialog_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_destroy` instead
+///
+#define k_propertiesdialog_qbase_destroy k_propertiesdialog_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5564,7 +5816,7 @@ void k_propertiesdialog_destroy(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-void k_propertiesdialog_qbase_destroy(void* self);
+void k_propertiesdialog_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5587,6 +5839,10 @@ void k_propertiesdialog_on_destroy(void* self, void (*callback)());
 ///
 bool k_propertiesdialog_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_focus_next_child` instead
+///
+#define k_propertiesdialog_qbase_focus_next_child k_propertiesdialog_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5595,7 +5851,7 @@ bool k_propertiesdialog_focus_next_child(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-bool k_propertiesdialog_qbase_focus_next_child(void* self);
+bool k_propertiesdialog_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5618,6 +5874,10 @@ void k_propertiesdialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_propertiesdialog_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_focus_previous_child` instead
+///
+#define k_propertiesdialog_qbase_focus_previous_child k_propertiesdialog_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5626,7 +5886,7 @@ bool k_propertiesdialog_focus_previous_child(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-bool k_propertiesdialog_qbase_focus_previous_child(void* self);
+bool k_propertiesdialog_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5649,6 +5909,10 @@ void k_propertiesdialog_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_propertiesdialog_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_sender` instead
+///
+#define k_propertiesdialog_qbase_sender k_propertiesdialog_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5657,7 +5921,7 @@ QObject* k_propertiesdialog_sender(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-QObject* k_propertiesdialog_qbase_sender(void* self);
+QObject* k_propertiesdialog_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5680,6 +5944,10 @@ void k_propertiesdialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_propertiesdialog_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_sender_signal_index` instead
+///
+#define k_propertiesdialog_qbase_sender_signal_index k_propertiesdialog_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5688,7 +5956,7 @@ int32_t k_propertiesdialog_sender_signal_index(void* self);
 ///
 /// @param self KPropertiesDialog*
 ///
-int32_t k_propertiesdialog_qbase_sender_signal_index(void* self);
+int32_t k_propertiesdialog_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5712,6 +5980,10 @@ void k_propertiesdialog_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t k_propertiesdialog_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_receivers` instead
+///
+#define k_propertiesdialog_qbase_receivers k_propertiesdialog_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5721,7 +5993,7 @@ int32_t k_propertiesdialog_receivers(void* self, const char* signal);
 /// @param self KPropertiesDialog*
 /// @param signal const char*
 ///
-int32_t k_propertiesdialog_qbase_receivers(void* self, const char* signal);
+int32_t k_propertiesdialog_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5745,6 +6017,10 @@ void k_propertiesdialog_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool k_propertiesdialog_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_is_signal_connected` instead
+///
+#define k_propertiesdialog_qbase_is_signal_connected k_propertiesdialog_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5754,7 +6030,7 @@ bool k_propertiesdialog_is_signal_connected(void* self, void* signal);
 /// @param self KPropertiesDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_propertiesdialog_qbase_is_signal_connected(void* self, void* signal);
+bool k_propertiesdialog_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5779,6 +6055,10 @@ void k_propertiesdialog_on_is_signal_connected(void* self, bool (*callback)(void
 ///
 double k_propertiesdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_propertiesdialog_super_get_decoded_metric_f` instead
+///
+#define k_propertiesdialog_qbase_get_decoded_metric_f k_propertiesdialog_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5789,7 +6069,7 @@ double k_propertiesdialog_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_propertiesdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_propertiesdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

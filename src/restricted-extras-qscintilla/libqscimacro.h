@@ -43,13 +43,17 @@ const QMetaObject* q_scimacro_meta_object(void* self);
 ///
 void q_scimacro_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_scimacro_super_meta_object` instead
+///
+#define q_scimacro_qbase_meta_object q_scimacro_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
 ///
-const QMetaObject* q_scimacro_qbase_meta_object(void* self);
+const QMetaObject* q_scimacro_super_meta_object(void* self);
 
 /// @param self QsciMacro*
 /// @param param1 const char*
@@ -63,12 +67,16 @@ void* q_scimacro_metacast(void* self, const char* param1);
 ///
 void q_scimacro_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_scimacro_super_metacast` instead
+///
+#define q_scimacro_qbase_metacast q_scimacro_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
 /// @param param1 const char*
 ///
-void* q_scimacro_qbase_metacast(void* self, const char* param1);
+void* q_scimacro_super_metacast(void* self, const char* param1);
 
 /// @param self QsciMacro*
 /// @param param1 enum QMetaObject__Call
@@ -84,6 +92,10 @@ int32_t q_scimacro_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_scimacro_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_scimacro_super_metacall` instead
+///
+#define q_scimacro_qbase_metacall q_scimacro_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
@@ -91,7 +103,7 @@ void q_scimacro_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_scimacro_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_scimacro_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -137,13 +149,17 @@ void q_scimacro_play(void* self);
 ///
 void q_scimacro_on_play(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_scimacro_super_play` instead
+///
+#define q_scimacro_qbase_play q_scimacro_super_play
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
 ///
-void q_scimacro_qbase_play(void* self);
+void q_scimacro_super_play(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
@@ -160,13 +176,17 @@ void q_scimacro_start_recording(void* self);
 ///
 void q_scimacro_on_start_recording(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_scimacro_super_start_recording` instead
+///
+#define q_scimacro_qbase_start_recording q_scimacro_super_start_recording
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
 ///
-void q_scimacro_qbase_start_recording(void* self);
+void q_scimacro_super_start_recording(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
@@ -183,13 +203,17 @@ void q_scimacro_end_recording(void* self);
 ///
 void q_scimacro_on_end_recording(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_scimacro_super_end_recording` instead
+///
+#define q_scimacro_qbase_end_recording q_scimacro_super_end_recording
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciMacro*
 ///
-void q_scimacro_qbase_end_recording(void* self);
+void q_scimacro_super_end_recording(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -668,6 +692,10 @@ void q_scimacro_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_scimacro_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_event` instead
+///
+#define q_scimacro_qbase_event q_scimacro_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -677,7 +705,7 @@ bool q_scimacro_event(void* self, void* event);
 /// @param self QsciMacro*
 /// @param event QEvent*
 ///
-bool q_scimacro_qbase_event(void* self, void* event);
+bool q_scimacro_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -702,6 +730,10 @@ void q_scimacro_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_scimacro_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_event_filter` instead
+///
+#define q_scimacro_qbase_event_filter q_scimacro_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -712,7 +744,7 @@ bool q_scimacro_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_scimacro_qbase_event_filter(void* self, void* watched, void* event);
+bool q_scimacro_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -736,6 +768,10 @@ void q_scimacro_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_scimacro_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_timer_event` instead
+///
+#define q_scimacro_qbase_timer_event q_scimacro_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -745,7 +781,7 @@ void q_scimacro_timer_event(void* self, void* event);
 /// @param self QsciMacro*
 /// @param event QTimerEvent*
 ///
-void q_scimacro_qbase_timer_event(void* self, void* event);
+void q_scimacro_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -769,6 +805,10 @@ void q_scimacro_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_scimacro_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_child_event` instead
+///
+#define q_scimacro_qbase_child_event q_scimacro_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -778,7 +818,7 @@ void q_scimacro_child_event(void* self, void* event);
 /// @param self QsciMacro*
 /// @param event QChildEvent*
 ///
-void q_scimacro_qbase_child_event(void* self, void* event);
+void q_scimacro_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -802,6 +842,10 @@ void q_scimacro_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_scimacro_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_custom_event` instead
+///
+#define q_scimacro_qbase_custom_event q_scimacro_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -811,7 +855,7 @@ void q_scimacro_custom_event(void* self, void* event);
 /// @param self QsciMacro*
 /// @param event QEvent*
 ///
-void q_scimacro_qbase_custom_event(void* self, void* event);
+void q_scimacro_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -835,6 +879,10 @@ void q_scimacro_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_scimacro_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_connect_notify` instead
+///
+#define q_scimacro_qbase_connect_notify q_scimacro_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -844,7 +892,7 @@ void q_scimacro_connect_notify(void* self, void* signal);
 /// @param self QsciMacro*
 /// @param signal QMetaMethod*
 ///
-void q_scimacro_qbase_connect_notify(void* self, void* signal);
+void q_scimacro_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -868,6 +916,10 @@ void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_scimacro_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_disconnect_notify` instead
+///
+#define q_scimacro_qbase_disconnect_notify q_scimacro_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -877,7 +929,7 @@ void q_scimacro_disconnect_notify(void* self, void* signal);
 /// @param self QsciMacro*
 /// @param signal QMetaMethod*
 ///
-void q_scimacro_qbase_disconnect_notify(void* self, void* signal);
+void q_scimacro_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -900,6 +952,10 @@ void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_scimacro_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_sender` instead
+///
+#define q_scimacro_qbase_sender q_scimacro_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -908,7 +964,7 @@ QObject* q_scimacro_sender(void* self);
 ///
 /// @param self QsciMacro*
 ///
-QObject* q_scimacro_qbase_sender(void* self);
+QObject* q_scimacro_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -931,6 +987,10 @@ void q_scimacro_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_scimacro_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_sender_signal_index` instead
+///
+#define q_scimacro_qbase_sender_signal_index q_scimacro_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -939,7 +999,7 @@ int32_t q_scimacro_sender_signal_index(void* self);
 ///
 /// @param self QsciMacro*
 ///
-int32_t q_scimacro_qbase_sender_signal_index(void* self);
+int32_t q_scimacro_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -963,6 +1023,10 @@ void q_scimacro_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_scimacro_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_receivers` instead
+///
+#define q_scimacro_qbase_receivers q_scimacro_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -972,7 +1036,7 @@ int32_t q_scimacro_receivers(void* self, const char* signal);
 /// @param self QsciMacro*
 /// @param signal const char*
 ///
-int32_t q_scimacro_qbase_receivers(void* self, const char* signal);
+int32_t q_scimacro_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -996,6 +1060,10 @@ void q_scimacro_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_scimacro_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_scimacro_super_is_signal_connected` instead
+///
+#define q_scimacro_qbase_is_signal_connected q_scimacro_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1005,7 +1073,7 @@ bool q_scimacro_is_signal_connected(void* self, void* signal);
 /// @param self QsciMacro*
 /// @param signal QMetaMethod*
 ///
-bool q_scimacro_qbase_is_signal_connected(void* self, void* signal);
+bool q_scimacro_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

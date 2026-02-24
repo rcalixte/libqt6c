@@ -95,8 +95,8 @@ void k_io__commandlauncherjob_on_start(void* self, void (*callback)()) {
     KIO__CommandLauncherJob_OnStart((KIO__CommandLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__commandlauncherjob_qbase_start(void* self) {
-    KIO__CommandLauncherJob_QBaseStart((KIO__CommandLauncherJob*)self);
+void k_io__commandlauncherjob_super_start(void* self) {
+    KIO__CommandLauncherJob_SuperStart((KIO__CommandLauncherJob*)self);
 }
 
 long long k_io__commandlauncherjob_pid(void* self) {
@@ -466,8 +466,8 @@ const QMetaObject* k_io__commandlauncherjob_meta_object(void* self) {
     return KIO__CommandLauncherJob_MetaObject((KIO__CommandLauncherJob*)self);
 }
 
-const QMetaObject* k_io__commandlauncherjob_qbase_meta_object(void* self) {
-    return KIO__CommandLauncherJob_QBaseMetaObject((KIO__CommandLauncherJob*)self);
+const QMetaObject* k_io__commandlauncherjob_super_meta_object(void* self) {
+    return KIO__CommandLauncherJob_SuperMetaObject((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -478,8 +478,8 @@ void* k_io__commandlauncherjob_metacast(void* self, const char* param1) {
     return KIO__CommandLauncherJob_Metacast((KIO__CommandLauncherJob*)self, param1);
 }
 
-void* k_io__commandlauncherjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__CommandLauncherJob_QBaseMetacast((KIO__CommandLauncherJob*)self, param1);
+void* k_io__commandlauncherjob_super_metacast(void* self, const char* param1) {
+    return KIO__CommandLauncherJob_SuperMetacast((KIO__CommandLauncherJob*)self, param1);
 }
 
 void k_io__commandlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -490,8 +490,8 @@ int32_t k_io__commandlauncherjob_metacall(void* self, int32_t param1, int param2
     return KIO__CommandLauncherJob_Metacall((KIO__CommandLauncherJob*)self, param1, param2, param3);
 }
 
-int32_t k_io__commandlauncherjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__CommandLauncherJob_QBaseMetacall((KIO__CommandLauncherJob*)self, param1, param2, param3);
+int32_t k_io__commandlauncherjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__CommandLauncherJob_SuperMetacall((KIO__CommandLauncherJob*)self, param1, param2, param3);
 }
 
 void k_io__commandlauncherjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -502,8 +502,8 @@ bool k_io__commandlauncherjob_do_kill(void* self) {
     return KIO__CommandLauncherJob_DoKill((KIO__CommandLauncherJob*)self);
 }
 
-bool k_io__commandlauncherjob_qbase_do_kill(void* self) {
-    return KIO__CommandLauncherJob_QBaseDoKill((KIO__CommandLauncherJob*)self);
+bool k_io__commandlauncherjob_super_do_kill(void* self) {
+    return KIO__CommandLauncherJob_SuperDoKill((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_do_kill(void* self, bool (*callback)()) {
@@ -514,8 +514,8 @@ bool k_io__commandlauncherjob_do_suspend(void* self) {
     return KIO__CommandLauncherJob_DoSuspend((KIO__CommandLauncherJob*)self);
 }
 
-bool k_io__commandlauncherjob_qbase_do_suspend(void* self) {
-    return KIO__CommandLauncherJob_QBaseDoSuspend((KIO__CommandLauncherJob*)self);
+bool k_io__commandlauncherjob_super_do_suspend(void* self) {
+    return KIO__CommandLauncherJob_SuperDoSuspend((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -526,8 +526,8 @@ bool k_io__commandlauncherjob_do_resume(void* self) {
     return KIO__CommandLauncherJob_DoResume((KIO__CommandLauncherJob*)self);
 }
 
-bool k_io__commandlauncherjob_qbase_do_resume(void* self) {
-    return KIO__CommandLauncherJob_QBaseDoResume((KIO__CommandLauncherJob*)self);
+bool k_io__commandlauncherjob_super_do_resume(void* self) {
+    return KIO__CommandLauncherJob_SuperDoResume((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_do_resume(void* self, bool (*callback)()) {
@@ -541,8 +541,8 @@ const char* k_io__commandlauncherjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__commandlauncherjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__CommandLauncherJob_QBaseErrorString((KIO__CommandLauncherJob*)self);
+const char* k_io__commandlauncherjob_super_error_string(void* self) {
+    libqt_string _str = KIO__CommandLauncherJob_SuperErrorString((KIO__CommandLauncherJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -556,8 +556,8 @@ bool k_io__commandlauncherjob_event(void* self, void* event) {
     return KIO__CommandLauncherJob_Event((KIO__CommandLauncherJob*)self, (QEvent*)event);
 }
 
-bool k_io__commandlauncherjob_qbase_event(void* self, void* event) {
-    return KIO__CommandLauncherJob_QBaseEvent((KIO__CommandLauncherJob*)self, (QEvent*)event);
+bool k_io__commandlauncherjob_super_event(void* self, void* event) {
+    return KIO__CommandLauncherJob_SuperEvent((KIO__CommandLauncherJob*)self, (QEvent*)event);
 }
 
 void k_io__commandlauncherjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -568,8 +568,8 @@ bool k_io__commandlauncherjob_event_filter(void* self, void* watched, void* even
     return KIO__CommandLauncherJob_EventFilter((KIO__CommandLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__commandlauncherjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__CommandLauncherJob_QBaseEventFilter((KIO__CommandLauncherJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__commandlauncherjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__CommandLauncherJob_SuperEventFilter((KIO__CommandLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__commandlauncherjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -580,8 +580,8 @@ void k_io__commandlauncherjob_timer_event(void* self, void* event) {
     KIO__CommandLauncherJob_TimerEvent((KIO__CommandLauncherJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__commandlauncherjob_qbase_timer_event(void* self, void* event) {
-    KIO__CommandLauncherJob_QBaseTimerEvent((KIO__CommandLauncherJob*)self, (QTimerEvent*)event);
+void k_io__commandlauncherjob_super_timer_event(void* self, void* event) {
+    KIO__CommandLauncherJob_SuperTimerEvent((KIO__CommandLauncherJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__commandlauncherjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -592,8 +592,8 @@ void k_io__commandlauncherjob_child_event(void* self, void* event) {
     KIO__CommandLauncherJob_ChildEvent((KIO__CommandLauncherJob*)self, (QChildEvent*)event);
 }
 
-void k_io__commandlauncherjob_qbase_child_event(void* self, void* event) {
-    KIO__CommandLauncherJob_QBaseChildEvent((KIO__CommandLauncherJob*)self, (QChildEvent*)event);
+void k_io__commandlauncherjob_super_child_event(void* self, void* event) {
+    KIO__CommandLauncherJob_SuperChildEvent((KIO__CommandLauncherJob*)self, (QChildEvent*)event);
 }
 
 void k_io__commandlauncherjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -604,8 +604,8 @@ void k_io__commandlauncherjob_custom_event(void* self, void* event) {
     KIO__CommandLauncherJob_CustomEvent((KIO__CommandLauncherJob*)self, (QEvent*)event);
 }
 
-void k_io__commandlauncherjob_qbase_custom_event(void* self, void* event) {
-    KIO__CommandLauncherJob_QBaseCustomEvent((KIO__CommandLauncherJob*)self, (QEvent*)event);
+void k_io__commandlauncherjob_super_custom_event(void* self, void* event) {
+    KIO__CommandLauncherJob_SuperCustomEvent((KIO__CommandLauncherJob*)self, (QEvent*)event);
 }
 
 void k_io__commandlauncherjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -616,8 +616,8 @@ void k_io__commandlauncherjob_connect_notify(void* self, void* signal) {
     KIO__CommandLauncherJob_ConnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__commandlauncherjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__CommandLauncherJob_QBaseConnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
+void k_io__commandlauncherjob_super_connect_notify(void* self, void* signal) {
+    KIO__CommandLauncherJob_SuperConnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__commandlauncherjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -628,8 +628,8 @@ void k_io__commandlauncherjob_disconnect_notify(void* self, void* signal) {
     KIO__CommandLauncherJob_DisconnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__commandlauncherjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__CommandLauncherJob_QBaseDisconnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
+void k_io__commandlauncherjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__CommandLauncherJob_SuperDisconnectNotify((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__commandlauncherjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -640,8 +640,8 @@ void k_io__commandlauncherjob_set_capabilities(void* self, int32_t capabilities)
     KIO__CommandLauncherJob_SetCapabilities((KIO__CommandLauncherJob*)self, capabilities);
 }
 
-void k_io__commandlauncherjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__CommandLauncherJob_QBaseSetCapabilities((KIO__CommandLauncherJob*)self, capabilities);
+void k_io__commandlauncherjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__CommandLauncherJob_SuperSetCapabilities((KIO__CommandLauncherJob*)self, capabilities);
 }
 
 void k_io__commandlauncherjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -652,8 +652,8 @@ bool k_io__commandlauncherjob_is_finished(void* self) {
     return KIO__CommandLauncherJob_IsFinished((KIO__CommandLauncherJob*)self);
 }
 
-bool k_io__commandlauncherjob_qbase_is_finished(void* self) {
-    return KIO__CommandLauncherJob_QBaseIsFinished((KIO__CommandLauncherJob*)self);
+bool k_io__commandlauncherjob_super_is_finished(void* self) {
+    return KIO__CommandLauncherJob_SuperIsFinished((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_is_finished(void* self, bool (*callback)()) {
@@ -664,8 +664,8 @@ void k_io__commandlauncherjob_set_error(void* self, int errorCode) {
     KIO__CommandLauncherJob_SetError((KIO__CommandLauncherJob*)self, errorCode);
 }
 
-void k_io__commandlauncherjob_qbase_set_error(void* self, int errorCode) {
-    KIO__CommandLauncherJob_QBaseSetError((KIO__CommandLauncherJob*)self, errorCode);
+void k_io__commandlauncherjob_super_set_error(void* self, int errorCode) {
+    KIO__CommandLauncherJob_SuperSetError((KIO__CommandLauncherJob*)self, errorCode);
 }
 
 void k_io__commandlauncherjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -676,8 +676,8 @@ void k_io__commandlauncherjob_set_error_text(void* self, const char* errorText) 
     KIO__CommandLauncherJob_SetErrorText((KIO__CommandLauncherJob*)self, qstring(errorText));
 }
 
-void k_io__commandlauncherjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__CommandLauncherJob_QBaseSetErrorText((KIO__CommandLauncherJob*)self, qstring(errorText));
+void k_io__commandlauncherjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__CommandLauncherJob_SuperSetErrorText((KIO__CommandLauncherJob*)self, qstring(errorText));
 }
 
 void k_io__commandlauncherjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -688,8 +688,8 @@ void k_io__commandlauncherjob_set_processed_amount(void* self, int32_t unit, uin
     KIO__CommandLauncherJob_SetProcessedAmount((KIO__CommandLauncherJob*)self, unit, amount);
 }
 
-void k_io__commandlauncherjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__CommandLauncherJob_QBaseSetProcessedAmount((KIO__CommandLauncherJob*)self, unit, amount);
+void k_io__commandlauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__CommandLauncherJob_SuperSetProcessedAmount((KIO__CommandLauncherJob*)self, unit, amount);
 }
 
 void k_io__commandlauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -700,8 +700,8 @@ void k_io__commandlauncherjob_set_total_amount(void* self, int32_t unit, uint64_
     KIO__CommandLauncherJob_SetTotalAmount((KIO__CommandLauncherJob*)self, unit, amount);
 }
 
-void k_io__commandlauncherjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__CommandLauncherJob_QBaseSetTotalAmount((KIO__CommandLauncherJob*)self, unit, amount);
+void k_io__commandlauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__CommandLauncherJob_SuperSetTotalAmount((KIO__CommandLauncherJob*)self, unit, amount);
 }
 
 void k_io__commandlauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -712,8 +712,8 @@ void k_io__commandlauncherjob_set_progress_unit(void* self, int32_t unit) {
     KIO__CommandLauncherJob_SetProgressUnit((KIO__CommandLauncherJob*)self, unit);
 }
 
-void k_io__commandlauncherjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__CommandLauncherJob_QBaseSetProgressUnit((KIO__CommandLauncherJob*)self, unit);
+void k_io__commandlauncherjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__CommandLauncherJob_SuperSetProgressUnit((KIO__CommandLauncherJob*)self, unit);
 }
 
 void k_io__commandlauncherjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -724,8 +724,8 @@ void k_io__commandlauncherjob_set_percent(void* self, uint64_t percentage) {
     KIO__CommandLauncherJob_SetPercent((KIO__CommandLauncherJob*)self, percentage);
 }
 
-void k_io__commandlauncherjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__CommandLauncherJob_QBaseSetPercent((KIO__CommandLauncherJob*)self, percentage);
+void k_io__commandlauncherjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__CommandLauncherJob_SuperSetPercent((KIO__CommandLauncherJob*)self, percentage);
 }
 
 void k_io__commandlauncherjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -736,8 +736,8 @@ void k_io__commandlauncherjob_emit_result(void* self) {
     KIO__CommandLauncherJob_EmitResult((KIO__CommandLauncherJob*)self);
 }
 
-void k_io__commandlauncherjob_qbase_emit_result(void* self) {
-    KIO__CommandLauncherJob_QBaseEmitResult((KIO__CommandLauncherJob*)self);
+void k_io__commandlauncherjob_super_emit_result(void* self) {
+    KIO__CommandLauncherJob_SuperEmitResult((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_emit_result(void* self, void (*callback)()) {
@@ -748,8 +748,8 @@ void k_io__commandlauncherjob_emit_percent(void* self, uint64_t processedAmount,
     KIO__CommandLauncherJob_EmitPercent((KIO__CommandLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__commandlauncherjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__CommandLauncherJob_QBaseEmitPercent((KIO__CommandLauncherJob*)self, processedAmount, totalAmount);
+void k_io__commandlauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__CommandLauncherJob_SuperEmitPercent((KIO__CommandLauncherJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__commandlauncherjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -760,8 +760,8 @@ void k_io__commandlauncherjob_emit_speed(void* self, uint64_t speed) {
     KIO__CommandLauncherJob_EmitSpeed((KIO__CommandLauncherJob*)self, speed);
 }
 
-void k_io__commandlauncherjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__CommandLauncherJob_QBaseEmitSpeed((KIO__CommandLauncherJob*)self, speed);
+void k_io__commandlauncherjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__CommandLauncherJob_SuperEmitSpeed((KIO__CommandLauncherJob*)self, speed);
 }
 
 void k_io__commandlauncherjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -772,8 +772,8 @@ void k_io__commandlauncherjob_start_elapsed_timer(void* self) {
     KIO__CommandLauncherJob_StartElapsedTimer((KIO__CommandLauncherJob*)self);
 }
 
-void k_io__commandlauncherjob_qbase_start_elapsed_timer(void* self) {
-    KIO__CommandLauncherJob_QBaseStartElapsedTimer((KIO__CommandLauncherJob*)self);
+void k_io__commandlauncherjob_super_start_elapsed_timer(void* self) {
+    KIO__CommandLauncherJob_SuperStartElapsedTimer((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -784,8 +784,8 @@ QObject* k_io__commandlauncherjob_sender(void* self) {
     return KIO__CommandLauncherJob_Sender((KIO__CommandLauncherJob*)self);
 }
 
-QObject* k_io__commandlauncherjob_qbase_sender(void* self) {
-    return KIO__CommandLauncherJob_QBaseSender((KIO__CommandLauncherJob*)self);
+QObject* k_io__commandlauncherjob_super_sender(void* self) {
+    return KIO__CommandLauncherJob_SuperSender((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_sender(void* self, QObject* (*callback)()) {
@@ -796,8 +796,8 @@ int32_t k_io__commandlauncherjob_sender_signal_index(void* self) {
     return KIO__CommandLauncherJob_SenderSignalIndex((KIO__CommandLauncherJob*)self);
 }
 
-int32_t k_io__commandlauncherjob_qbase_sender_signal_index(void* self) {
-    return KIO__CommandLauncherJob_QBaseSenderSignalIndex((KIO__CommandLauncherJob*)self);
+int32_t k_io__commandlauncherjob_super_sender_signal_index(void* self) {
+    return KIO__CommandLauncherJob_SuperSenderSignalIndex((KIO__CommandLauncherJob*)self);
 }
 
 void k_io__commandlauncherjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -808,8 +808,8 @@ int32_t k_io__commandlauncherjob_receivers(void* self, const char* signal) {
     return KIO__CommandLauncherJob_Receivers((KIO__CommandLauncherJob*)self, signal);
 }
 
-int32_t k_io__commandlauncherjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__CommandLauncherJob_QBaseReceivers((KIO__CommandLauncherJob*)self, signal);
+int32_t k_io__commandlauncherjob_super_receivers(void* self, const char* signal) {
+    return KIO__CommandLauncherJob_SuperReceivers((KIO__CommandLauncherJob*)self, signal);
 }
 
 void k_io__commandlauncherjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -820,8 +820,8 @@ bool k_io__commandlauncherjob_is_signal_connected(void* self, void* signal) {
     return KIO__CommandLauncherJob_IsSignalConnected((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__commandlauncherjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__CommandLauncherJob_QBaseIsSignalConnected((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
+bool k_io__commandlauncherjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__CommandLauncherJob_SuperIsSignalConnected((KIO__CommandLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__commandlauncherjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

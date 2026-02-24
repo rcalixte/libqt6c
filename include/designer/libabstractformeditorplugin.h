@@ -32,13 +32,17 @@ bool q_designerformeditorplugininterface_is_initialized(void* self);
 ///
 void q_designerformeditorplugininterface_on_is_initialized(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_is_initialized` instead
+///
+#define q_designerformeditorplugininterface_qbase_is_initialized q_designerformeditorplugininterface_super_is_initialized
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#isInitialized)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorPluginInterface*
 ///
-bool q_designerformeditorplugininterface_qbase_is_initialized(void* self);
+bool q_designerformeditorplugininterface_super_is_initialized(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
 ///
@@ -56,6 +60,10 @@ void q_designerformeditorplugininterface_initialize(void* self, void* core);
 ///
 void q_designerformeditorplugininterface_on_initialize(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_initialize` instead
+///
+#define q_designerformeditorplugininterface_qbase_initialize q_designerformeditorplugininterface_super_initialize
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
 ///
 /// Base class method implementation
@@ -63,7 +71,7 @@ void q_designerformeditorplugininterface_on_initialize(void* self, void (*callba
 /// @param self QDesignerFormEditorPluginInterface*
 /// @param core QDesignerFormEditorInterface*
 ///
-void q_designerformeditorplugininterface_qbase_initialize(void* self, void* core);
+void q_designerformeditorplugininterface_super_initialize(void* self, void* core);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
 ///
@@ -80,13 +88,17 @@ QAction* q_designerformeditorplugininterface_action(void* self);
 ///
 void q_designerformeditorplugininterface_on_action(void* self, QAction* (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_action` instead
+///
+#define q_designerformeditorplugininterface_qbase_action q_designerformeditorplugininterface_super_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorPluginInterface*
 ///
-QAction* q_designerformeditorplugininterface_qbase_action(void* self);
+QAction* q_designerformeditorplugininterface_super_action(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///
@@ -103,13 +115,17 @@ QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(void* sel
 ///
 void q_designerformeditorplugininterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_core` instead
+///
+#define q_designerformeditorplugininterface_qbase_core q_designerformeditorplugininterface_super_core
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorPluginInterface*
 ///
-QDesignerFormEditorInterface* q_designerformeditorplugininterface_qbase_core(void* self);
+QDesignerFormEditorInterface* q_designerformeditorplugininterface_super_core(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#dtor.QDesignerFormEditorPluginInterface)
 ///

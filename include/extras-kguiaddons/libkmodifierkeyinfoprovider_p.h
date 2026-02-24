@@ -32,13 +32,17 @@ const QMetaObject* k_modifierkeyinfoprovider_meta_object(void* self);
 ///
 void k_modifierkeyinfoprovider_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_meta_object` instead
+///
+#define k_modifierkeyinfoprovider_qbase_meta_object k_modifierkeyinfoprovider_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KModifierKeyInfoProvider*
 ///
-const QMetaObject* k_modifierkeyinfoprovider_qbase_meta_object(void* self);
+const QMetaObject* k_modifierkeyinfoprovider_super_meta_object(void* self);
 
 /// @param self KModifierKeyInfoProvider*
 /// @param param1 const char*
@@ -52,12 +56,16 @@ void* k_modifierkeyinfoprovider_metacast(void* self, const char* param1);
 ///
 void k_modifierkeyinfoprovider_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_metacast` instead
+///
+#define k_modifierkeyinfoprovider_qbase_metacast k_modifierkeyinfoprovider_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param param1 const char*
 ///
-void* k_modifierkeyinfoprovider_qbase_metacast(void* self, const char* param1);
+void* k_modifierkeyinfoprovider_super_metacast(void* self, const char* param1);
 
 /// @param self KModifierKeyInfoProvider*
 /// @param param1 enum QMetaObject__Call
@@ -73,6 +81,10 @@ int32_t k_modifierkeyinfoprovider_metacall(void* self, int32_t param1, int param
 ///
 void k_modifierkeyinfoprovider_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_metacall` instead
+///
+#define k_modifierkeyinfoprovider_qbase_metacall k_modifierkeyinfoprovider_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KModifierKeyInfoProvider*
@@ -80,7 +92,7 @@ void k_modifierkeyinfoprovider_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_modifierkeyinfoprovider_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_modifierkeyinfoprovider_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -121,6 +133,10 @@ bool k_modifierkeyinfoprovider_set_key_latched(void* self, int32_t key, bool lat
 ///
 void k_modifierkeyinfoprovider_on_set_key_latched(void* self, bool (*callback)(void*, int32_t, bool));
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_set_key_latched` instead
+///
+#define k_modifierkeyinfoprovider_qbase_set_key_latched k_modifierkeyinfoprovider_super_set_key_latched
+
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
 ///
 /// Base class method implementation
@@ -129,7 +145,7 @@ void k_modifierkeyinfoprovider_on_set_key_latched(void* self, bool (*callback)(v
 /// @param key enum Qt__Key
 /// @param latched bool
 ///
-bool k_modifierkeyinfoprovider_qbase_set_key_latched(void* self, int32_t key, bool latched);
+bool k_modifierkeyinfoprovider_super_set_key_latched(void* self, int32_t key, bool latched);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#isKeyLocked)
 ///
@@ -155,6 +171,10 @@ bool k_modifierkeyinfoprovider_set_key_locked(void* self, int32_t key, bool lock
 ///
 void k_modifierkeyinfoprovider_on_set_key_locked(void* self, bool (*callback)(void*, int32_t, bool));
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_set_key_locked` instead
+///
+#define k_modifierkeyinfoprovider_qbase_set_key_locked k_modifierkeyinfoprovider_super_set_key_locked
+
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
 ///
 /// Base class method implementation
@@ -163,7 +183,7 @@ void k_modifierkeyinfoprovider_on_set_key_locked(void* self, bool (*callback)(vo
 /// @param key enum Qt__Key
 /// @param locked bool
 ///
-bool k_modifierkeyinfoprovider_qbase_set_key_locked(void* self, int32_t key, bool locked);
+bool k_modifierkeyinfoprovider_super_set_key_locked(void* self, int32_t key, bool locked);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#isButtonPressed)
 ///
@@ -292,6 +312,10 @@ void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int32_t st
 ///
 void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_state_updated` instead
+///
+#define k_modifierkeyinfoprovider_qbase_state_updated k_modifierkeyinfoprovider_super_state_updated
+
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
 /// Base class method implementation
@@ -300,7 +324,7 @@ void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(voi
 /// @param key enum Qt__Key
 /// @param state flag of enum KModifierKeyInfoProvider__ModifierState
 ///
-void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int32_t state);
+void k_modifierkeyinfoprovider_super_state_updated(void* self, int32_t key, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -779,6 +803,10 @@ void k_modifierkeyinfoprovider_on_destroyed1(void* self, void (*callback)(void*,
 ///
 bool k_modifierkeyinfoprovider_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_event` instead
+///
+#define k_modifierkeyinfoprovider_qbase_event k_modifierkeyinfoprovider_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -788,7 +816,7 @@ bool k_modifierkeyinfoprovider_event(void* self, void* event);
 /// @param self KModifierKeyInfoProvider*
 /// @param event QEvent*
 ///
-bool k_modifierkeyinfoprovider_qbase_event(void* self, void* event);
+bool k_modifierkeyinfoprovider_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -813,6 +841,10 @@ void k_modifierkeyinfoprovider_on_event(void* self, bool (*callback)(void*, void
 ///
 bool k_modifierkeyinfoprovider_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_event_filter` instead
+///
+#define k_modifierkeyinfoprovider_qbase_event_filter k_modifierkeyinfoprovider_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -823,7 +855,7 @@ bool k_modifierkeyinfoprovider_event_filter(void* self, void* watched, void* eve
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_modifierkeyinfoprovider_qbase_event_filter(void* self, void* watched, void* event);
+bool k_modifierkeyinfoprovider_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -847,6 +879,10 @@ void k_modifierkeyinfoprovider_on_event_filter(void* self, bool (*callback)(void
 ///
 void k_modifierkeyinfoprovider_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_timer_event` instead
+///
+#define k_modifierkeyinfoprovider_qbase_timer_event k_modifierkeyinfoprovider_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -856,7 +892,7 @@ void k_modifierkeyinfoprovider_timer_event(void* self, void* event);
 /// @param self KModifierKeyInfoProvider*
 /// @param event QTimerEvent*
 ///
-void k_modifierkeyinfoprovider_qbase_timer_event(void* self, void* event);
+void k_modifierkeyinfoprovider_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -880,6 +916,10 @@ void k_modifierkeyinfoprovider_on_timer_event(void* self, void (*callback)(void*
 ///
 void k_modifierkeyinfoprovider_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_child_event` instead
+///
+#define k_modifierkeyinfoprovider_qbase_child_event k_modifierkeyinfoprovider_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -889,7 +929,7 @@ void k_modifierkeyinfoprovider_child_event(void* self, void* event);
 /// @param self KModifierKeyInfoProvider*
 /// @param event QChildEvent*
 ///
-void k_modifierkeyinfoprovider_qbase_child_event(void* self, void* event);
+void k_modifierkeyinfoprovider_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -913,6 +953,10 @@ void k_modifierkeyinfoprovider_on_child_event(void* self, void (*callback)(void*
 ///
 void k_modifierkeyinfoprovider_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_custom_event` instead
+///
+#define k_modifierkeyinfoprovider_qbase_custom_event k_modifierkeyinfoprovider_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -922,7 +966,7 @@ void k_modifierkeyinfoprovider_custom_event(void* self, void* event);
 /// @param self KModifierKeyInfoProvider*
 /// @param event QEvent*
 ///
-void k_modifierkeyinfoprovider_qbase_custom_event(void* self, void* event);
+void k_modifierkeyinfoprovider_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -946,6 +990,10 @@ void k_modifierkeyinfoprovider_on_custom_event(void* self, void (*callback)(void
 ///
 void k_modifierkeyinfoprovider_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_connect_notify` instead
+///
+#define k_modifierkeyinfoprovider_qbase_connect_notify k_modifierkeyinfoprovider_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -955,7 +1003,7 @@ void k_modifierkeyinfoprovider_connect_notify(void* self, void* signal);
 /// @param self KModifierKeyInfoProvider*
 /// @param signal QMetaMethod*
 ///
-void k_modifierkeyinfoprovider_qbase_connect_notify(void* self, void* signal);
+void k_modifierkeyinfoprovider_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -979,6 +1027,10 @@ void k_modifierkeyinfoprovider_on_connect_notify(void* self, void (*callback)(vo
 ///
 void k_modifierkeyinfoprovider_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_disconnect_notify` instead
+///
+#define k_modifierkeyinfoprovider_qbase_disconnect_notify k_modifierkeyinfoprovider_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -988,7 +1040,7 @@ void k_modifierkeyinfoprovider_disconnect_notify(void* self, void* signal);
 /// @param self KModifierKeyInfoProvider*
 /// @param signal QMetaMethod*
 ///
-void k_modifierkeyinfoprovider_qbase_disconnect_notify(void* self, void* signal);
+void k_modifierkeyinfoprovider_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1011,6 +1063,10 @@ void k_modifierkeyinfoprovider_on_disconnect_notify(void* self, void (*callback)
 ///
 QObject* k_modifierkeyinfoprovider_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_sender` instead
+///
+#define k_modifierkeyinfoprovider_qbase_sender k_modifierkeyinfoprovider_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1019,7 +1075,7 @@ QObject* k_modifierkeyinfoprovider_sender(void* self);
 ///
 /// @param self KModifierKeyInfoProvider*
 ///
-QObject* k_modifierkeyinfoprovider_qbase_sender(void* self);
+QObject* k_modifierkeyinfoprovider_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1042,6 +1098,10 @@ void k_modifierkeyinfoprovider_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_modifierkeyinfoprovider_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_sender_signal_index` instead
+///
+#define k_modifierkeyinfoprovider_qbase_sender_signal_index k_modifierkeyinfoprovider_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1050,7 +1110,7 @@ int32_t k_modifierkeyinfoprovider_sender_signal_index(void* self);
 ///
 /// @param self KModifierKeyInfoProvider*
 ///
-int32_t k_modifierkeyinfoprovider_qbase_sender_signal_index(void* self);
+int32_t k_modifierkeyinfoprovider_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1074,6 +1134,10 @@ void k_modifierkeyinfoprovider_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t k_modifierkeyinfoprovider_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_receivers` instead
+///
+#define k_modifierkeyinfoprovider_qbase_receivers k_modifierkeyinfoprovider_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1083,7 +1147,7 @@ int32_t k_modifierkeyinfoprovider_receivers(void* self, const char* signal);
 /// @param self KModifierKeyInfoProvider*
 /// @param signal const char*
 ///
-int32_t k_modifierkeyinfoprovider_qbase_receivers(void* self, const char* signal);
+int32_t k_modifierkeyinfoprovider_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1107,6 +1171,10 @@ void k_modifierkeyinfoprovider_on_receivers(void* self, int32_t (*callback)(void
 ///
 bool k_modifierkeyinfoprovider_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_modifierkeyinfoprovider_super_is_signal_connected` instead
+///
+#define k_modifierkeyinfoprovider_qbase_is_signal_connected k_modifierkeyinfoprovider_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1116,7 +1184,7 @@ bool k_modifierkeyinfoprovider_is_signal_connected(void* self, void* signal);
 /// @param self KModifierKeyInfoProvider*
 /// @param signal QMetaMethod*
 ///
-bool k_modifierkeyinfoprovider_qbase_is_signal_connected(void* self, void* signal);
+bool k_modifierkeyinfoprovider_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

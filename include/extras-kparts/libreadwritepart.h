@@ -49,13 +49,17 @@ const QMetaObject* k_parts__readwritepart_meta_object(void* self);
 ///
 void k_parts__readwritepart_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_meta_object` instead
+///
+#define k_parts__readwritepart_qbase_meta_object k_parts__readwritepart_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const QMetaObject* k_parts__readwritepart_qbase_meta_object(void* self);
+const QMetaObject* k_parts__readwritepart_super_meta_object(void* self);
 
 /// @param self KParts__ReadWritePart*
 /// @param param1 const char*
@@ -69,12 +73,16 @@ void* k_parts__readwritepart_metacast(void* self, const char* param1);
 ///
 void k_parts__readwritepart_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_metacast` instead
+///
+#define k_parts__readwritepart_qbase_metacast k_parts__readwritepart_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 /// @param param1 const char*
 ///
-void* k_parts__readwritepart_qbase_metacast(void* self, const char* param1);
+void* k_parts__readwritepart_super_metacast(void* self, const char* param1);
 
 /// @param self KParts__ReadWritePart*
 /// @param param1 enum QMetaObject__Call
@@ -90,6 +98,10 @@ int32_t k_parts__readwritepart_metacall(void* self, int32_t param1, int param2, 
 ///
 void k_parts__readwritepart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_metacall` instead
+///
+#define k_parts__readwritepart_qbase_metacall k_parts__readwritepart_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
@@ -97,7 +109,7 @@ void k_parts__readwritepart_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_parts__readwritepart_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_parts__readwritepart_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -129,6 +141,10 @@ void k_parts__readwritepart_set_read_write(void* self, bool readwrite);
 ///
 void k_parts__readwritepart_on_set_read_write(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_read_write` instead
+///
+#define k_parts__readwritepart_qbase_set_read_write k_parts__readwritepart_super_set_read_write
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setReadWrite)
 ///
 /// Base class method implementation
@@ -136,7 +152,7 @@ void k_parts__readwritepart_on_set_read_write(void* self, void (*callback)(void*
 /// @param self KParts__ReadWritePart*
 /// @param readwrite bool
 ///
-void k_parts__readwritepart_qbase_set_read_write(void* self, bool readwrite);
+void k_parts__readwritepart_super_set_read_write(void* self, bool readwrite);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#isModified)
 ///
@@ -159,13 +175,17 @@ bool k_parts__readwritepart_query_close(void* self);
 ///
 void k_parts__readwritepart_on_query_close(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_query_close` instead
+///
+#define k_parts__readwritepart_qbase_query_close k_parts__readwritepart_super_query_close
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#queryClose)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_query_close(void* self);
+bool k_parts__readwritepart_super_query_close(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
@@ -182,13 +202,17 @@ bool k_parts__readwritepart_close_url(void* self);
 ///
 void k_parts__readwritepart_on_close_url(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_close_url` instead
+///
+#define k_parts__readwritepart_qbase_close_url k_parts__readwritepart_super_close_url
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_close_url(void* self);
+bool k_parts__readwritepart_super_close_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
@@ -206,6 +230,10 @@ bool k_parts__readwritepart_close_url2(void* self, bool promptToSave);
 ///
 void k_parts__readwritepart_on_close_url2(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_close_url2` instead
+///
+#define k_parts__readwritepart_qbase_close_url2 k_parts__readwritepart_super_close_url2
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#closeUrl)
 ///
 /// Base class method implementation
@@ -213,7 +241,7 @@ void k_parts__readwritepart_on_close_url2(void* self, bool (*callback)(void*, bo
 /// @param self KParts__ReadWritePart*
 /// @param promptToSave bool
 ///
-bool k_parts__readwritepart_qbase_close_url2(void* self, bool promptToSave);
+bool k_parts__readwritepart_super_close_url2(void* self, bool promptToSave);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveAs)
 ///
@@ -231,6 +259,10 @@ bool k_parts__readwritepart_save_as(void* self, void* url);
 ///
 void k_parts__readwritepart_on_save_as(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_save_as` instead
+///
+#define k_parts__readwritepart_qbase_save_as k_parts__readwritepart_super_save_as
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveAs)
 ///
 /// Base class method implementation
@@ -238,7 +270,7 @@ void k_parts__readwritepart_on_save_as(void* self, bool (*callback)(void*, void*
 /// @param self KParts__ReadWritePart*
 /// @param url QUrl*
 ///
-bool k_parts__readwritepart_qbase_save_as(void* self, void* url);
+bool k_parts__readwritepart_super_save_as(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
@@ -256,6 +288,10 @@ void k_parts__readwritepart_set_modified(void* self, bool modified);
 ///
 void k_parts__readwritepart_on_set_modified(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_modified` instead
+///
+#define k_parts__readwritepart_qbase_set_modified k_parts__readwritepart_super_set_modified
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#setModified)
 ///
 /// Base class method implementation
@@ -263,7 +299,7 @@ void k_parts__readwritepart_on_set_modified(void* self, void (*callback)(void*, 
 /// @param self KParts__ReadWritePart*
 /// @param modified bool
 ///
-void k_parts__readwritepart_qbase_set_modified(void* self, bool modified);
+void k_parts__readwritepart_super_set_modified(void* self, bool modified);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#sigQueryClose)
 ///
@@ -301,13 +337,17 @@ bool k_parts__readwritepart_save(void* self);
 ///
 void k_parts__readwritepart_on_save(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_save` instead
+///
+#define k_parts__readwritepart_qbase_save k_parts__readwritepart_super_save
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#save)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_save(void* self);
+bool k_parts__readwritepart_super_save(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#waitSaveComplete)
 ///
@@ -330,13 +370,17 @@ bool k_parts__readwritepart_save_file(void* self);
 ///
 void k_parts__readwritepart_on_save_file(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_save_file` instead
+///
+#define k_parts__readwritepart_qbase_save_file k_parts__readwritepart_super_save_file
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_save_file(void* self);
+bool k_parts__readwritepart_super_save_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
 ///
@@ -353,13 +397,17 @@ bool k_parts__readwritepart_save_to_url(void* self);
 ///
 void k_parts__readwritepart_on_save_to_url(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_save_to_url` instead
+///
+#define k_parts__readwritepart_qbase_save_to_url k_parts__readwritepart_super_save_to_url
+
 /// [Upstream resources](https://api.kde.org/kparts-readwritepart.html#saveToUrl)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_save_to_url(void* self);
+bool k_parts__readwritepart_super_save_to_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1310,6 +1358,10 @@ void k_parts__readwritepart_replace_x_m_l_file3(void* self, const char* xmlfile,
 ///
 bool k_parts__readwritepart_open_url(void* self, void* url);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_open_url` instead
+///
+#define k_parts__readwritepart_qbase_open_url k_parts__readwritepart_super_open_url
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openUrl)
@@ -1319,7 +1371,7 @@ bool k_parts__readwritepart_open_url(void* self, void* url);
 /// @param self KParts__ReadWritePart*
 /// @param url QUrl*
 ///
-bool k_parts__readwritepart_qbase_open_url(void* self, void* url);
+bool k_parts__readwritepart_super_open_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1342,6 +1394,10 @@ void k_parts__readwritepart_on_open_url(void* self, bool (*callback)(void*, void
 ///
 bool k_parts__readwritepart_open_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_open_file` instead
+///
+#define k_parts__readwritepart_qbase_open_file k_parts__readwritepart_super_open_file
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#openFile)
@@ -1350,7 +1406,7 @@ bool k_parts__readwritepart_open_file(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-bool k_parts__readwritepart_qbase_open_file(void* self);
+bool k_parts__readwritepart_super_open_file(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1374,6 +1430,10 @@ void k_parts__readwritepart_on_open_file(void* self, bool (*callback)());
 ///
 void k_parts__readwritepart_gui_activate_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_gui_activate_event` instead
+///
+#define k_parts__readwritepart_qbase_gui_activate_event k_parts__readwritepart_super_gui_activate_event
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#guiActivateEvent)
@@ -1383,7 +1443,7 @@ void k_parts__readwritepart_gui_activate_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event KParts__GUIActivateEvent*
 ///
-void k_parts__readwritepart_qbase_gui_activate_event(void* self, void* event);
+void k_parts__readwritepart_super_gui_activate_event(void* self, void* event);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1406,6 +1466,10 @@ void k_parts__readwritepart_on_gui_activate_event(void* self, void (*callback)(v
 ///
 QWidget* k_parts__readwritepart_widget(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_widget` instead
+///
+#define k_parts__readwritepart_qbase_widget k_parts__readwritepart_super_widget
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
@@ -1414,7 +1478,7 @@ QWidget* k_parts__readwritepart_widget(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-QWidget* k_parts__readwritepart_qbase_widget(void* self);
+QWidget* k_parts__readwritepart_super_widget(void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -1438,6 +1502,10 @@ void k_parts__readwritepart_on_widget(void* self, QWidget* (*callback)());
 ///
 void k_parts__readwritepart_set_manager(void* self, void* manager);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_manager` instead
+///
+#define k_parts__readwritepart_qbase_set_manager k_parts__readwritepart_super_set_manager
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
@@ -1447,7 +1515,7 @@ void k_parts__readwritepart_set_manager(void* self, void* manager);
 /// @param self KParts__ReadWritePart*
 /// @param manager KParts__PartManager*
 ///
-void k_parts__readwritepart_qbase_set_manager(void* self, void* manager);
+void k_parts__readwritepart_super_set_manager(void* self, void* manager);
 
 /// Inherited from KParts::Part
 ///
@@ -1472,6 +1540,10 @@ void k_parts__readwritepart_on_set_manager(void* self, void (*callback)(void*, v
 ///
 KParts__Part* k_parts__readwritepart_hit_test(void* self, void* widget, void* globalPos);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_hit_test` instead
+///
+#define k_parts__readwritepart_qbase_hit_test k_parts__readwritepart_super_hit_test
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
@@ -1482,7 +1554,7 @@ KParts__Part* k_parts__readwritepart_hit_test(void* self, void* widget, void* gl
 /// @param widget QWidget*
 /// @param globalPos QPoint*
 ///
-KParts__Part* k_parts__readwritepart_qbase_hit_test(void* self, void* widget, void* globalPos);
+KParts__Part* k_parts__readwritepart_super_hit_test(void* self, void* widget, void* globalPos);
 
 /// Inherited from KParts::Part
 ///
@@ -1506,6 +1578,10 @@ void k_parts__readwritepart_on_hit_test(void* self, KParts__Part* (*callback)(vo
 ///
 void k_parts__readwritepart_set_widget(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_widget` instead
+///
+#define k_parts__readwritepart_qbase_set_widget k_parts__readwritepart_super_set_widget
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setWidget)
@@ -1515,7 +1591,7 @@ void k_parts__readwritepart_set_widget(void* self, void* widget);
 /// @param self KParts__ReadWritePart*
 /// @param widget QWidget*
 ///
-void k_parts__readwritepart_qbase_set_widget(void* self, void* widget);
+void k_parts__readwritepart_super_set_widget(void* self, void* widget);
 
 /// Inherited from KParts::Part
 ///
@@ -1539,6 +1615,10 @@ void k_parts__readwritepart_on_set_widget(void* self, void (*callback)(void*, vo
 ///
 void k_parts__readwritepart_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_custom_event` instead
+///
+#define k_parts__readwritepart_qbase_custom_event k_parts__readwritepart_super_custom_event
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
@@ -1548,7 +1628,7 @@ void k_parts__readwritepart_custom_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event QEvent*
 ///
-void k_parts__readwritepart_qbase_custom_event(void* self, void* event);
+void k_parts__readwritepart_super_custom_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
@@ -1572,6 +1652,10 @@ void k_parts__readwritepart_on_custom_event(void* self, void (*callback)(void*, 
 ///
 void k_parts__readwritepart_part_activate_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_part_activate_event` instead
+///
+#define k_parts__readwritepart_qbase_part_activate_event k_parts__readwritepart_super_part_activate_event
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
@@ -1581,7 +1665,7 @@ void k_parts__readwritepart_part_activate_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event KParts__PartActivateEvent*
 ///
-void k_parts__readwritepart_qbase_part_activate_event(void* self, void* event);
+void k_parts__readwritepart_super_part_activate_event(void* self, void* event);
 
 /// Inherited from KParts::Part
 ///
@@ -1605,6 +1689,10 @@ void k_parts__readwritepart_on_part_activate_event(void* self, void (*callback)(
 ///
 bool k_parts__readwritepart_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_event` instead
+///
+#define k_parts__readwritepart_qbase_event k_parts__readwritepart_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1614,7 +1702,7 @@ bool k_parts__readwritepart_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event QEvent*
 ///
-bool k_parts__readwritepart_qbase_event(void* self, void* event);
+bool k_parts__readwritepart_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1639,6 +1727,10 @@ void k_parts__readwritepart_on_event(void* self, bool (*callback)(void*, void*))
 ///
 bool k_parts__readwritepart_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_event_filter` instead
+///
+#define k_parts__readwritepart_qbase_event_filter k_parts__readwritepart_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1649,7 +1741,7 @@ bool k_parts__readwritepart_event_filter(void* self, void* watched, void* event)
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_parts__readwritepart_qbase_event_filter(void* self, void* watched, void* event);
+bool k_parts__readwritepart_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1673,6 +1765,10 @@ void k_parts__readwritepart_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void k_parts__readwritepart_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_timer_event` instead
+///
+#define k_parts__readwritepart_qbase_timer_event k_parts__readwritepart_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1682,7 +1778,7 @@ void k_parts__readwritepart_timer_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event QTimerEvent*
 ///
-void k_parts__readwritepart_qbase_timer_event(void* self, void* event);
+void k_parts__readwritepart_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1706,6 +1802,10 @@ void k_parts__readwritepart_on_timer_event(void* self, void (*callback)(void*, v
 ///
 void k_parts__readwritepart_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_child_event` instead
+///
+#define k_parts__readwritepart_qbase_child_event k_parts__readwritepart_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1715,7 +1815,7 @@ void k_parts__readwritepart_child_event(void* self, void* event);
 /// @param self KParts__ReadWritePart*
 /// @param event QChildEvent*
 ///
-void k_parts__readwritepart_qbase_child_event(void* self, void* event);
+void k_parts__readwritepart_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1739,6 +1839,10 @@ void k_parts__readwritepart_on_child_event(void* self, void (*callback)(void*, v
 ///
 void k_parts__readwritepart_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_connect_notify` instead
+///
+#define k_parts__readwritepart_qbase_connect_notify k_parts__readwritepart_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1748,7 +1852,7 @@ void k_parts__readwritepart_connect_notify(void* self, void* signal);
 /// @param self KParts__ReadWritePart*
 /// @param signal QMetaMethod*
 ///
-void k_parts__readwritepart_qbase_connect_notify(void* self, void* signal);
+void k_parts__readwritepart_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1772,6 +1876,10 @@ void k_parts__readwritepart_on_connect_notify(void* self, void (*callback)(void*
 ///
 void k_parts__readwritepart_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_disconnect_notify` instead
+///
+#define k_parts__readwritepart_qbase_disconnect_notify k_parts__readwritepart_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1781,7 +1889,7 @@ void k_parts__readwritepart_disconnect_notify(void* self, void* signal);
 /// @param self KParts__ReadWritePart*
 /// @param signal QMetaMethod*
 ///
-void k_parts__readwritepart_qbase_disconnect_notify(void* self, void* signal);
+void k_parts__readwritepart_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1805,6 +1913,10 @@ void k_parts__readwritepart_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QAction* k_parts__readwritepart_action2(void* self, void* element);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_action2` instead
+///
+#define k_parts__readwritepart_qbase_action2 k_parts__readwritepart_super_action2
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
@@ -1814,7 +1926,7 @@ QAction* k_parts__readwritepart_action2(void* self, void* element);
 /// @param self KParts__ReadWritePart*
 /// @param element QDomElement*
 ///
-QAction* k_parts__readwritepart_qbase_action2(void* self, void* element);
+QAction* k_parts__readwritepart_super_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1837,6 +1949,10 @@ void k_parts__readwritepart_on_action2(void* self, QAction* (*callback)(void*, v
 ///
 KActionCollection* k_parts__readwritepart_action_collection(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_action_collection` instead
+///
+#define k_parts__readwritepart_qbase_action_collection k_parts__readwritepart_super_action_collection
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
@@ -1845,7 +1961,7 @@ KActionCollection* k_parts__readwritepart_action_collection(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-KActionCollection* k_parts__readwritepart_qbase_action_collection(void* self);
+KActionCollection* k_parts__readwritepart_super_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1870,6 +1986,10 @@ void k_parts__readwritepart_on_action_collection(void* self, KActionCollection* 
 ///
 const char* k_parts__readwritepart_component_name(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_component_name` instead
+///
+#define k_parts__readwritepart_qbase_component_name k_parts__readwritepart_super_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
@@ -1880,7 +2000,7 @@ const char* k_parts__readwritepart_component_name(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const char* k_parts__readwritepart_qbase_component_name(void* self);
+const char* k_parts__readwritepart_super_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1903,6 +2023,10 @@ void k_parts__readwritepart_on_component_name(void* self, const char* (*callback
 ///
 QDomDocument* k_parts__readwritepart_dom_document(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_dom_document` instead
+///
+#define k_parts__readwritepart_qbase_dom_document k_parts__readwritepart_super_dom_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
@@ -1911,7 +2035,7 @@ QDomDocument* k_parts__readwritepart_dom_document(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-QDomDocument* k_parts__readwritepart_qbase_dom_document(void* self);
+QDomDocument* k_parts__readwritepart_super_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1936,6 +2060,10 @@ void k_parts__readwritepart_on_dom_document(void* self, QDomDocument* (*callback
 ///
 const char* k_parts__readwritepart_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_xml_file` instead
+///
+#define k_parts__readwritepart_qbase_xml_file k_parts__readwritepart_super_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
@@ -1946,7 +2074,7 @@ const char* k_parts__readwritepart_xml_file(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const char* k_parts__readwritepart_qbase_xml_file(void* self);
+const char* k_parts__readwritepart_super_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1971,6 +2099,10 @@ void k_parts__readwritepart_on_xml_file(void* self, const char* (*callback)());
 ///
 const char* k_parts__readwritepart_local_x_m_l_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_local_x_m_l_file` instead
+///
+#define k_parts__readwritepart_qbase_local_x_m_l_file k_parts__readwritepart_super_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
@@ -1981,7 +2113,7 @@ const char* k_parts__readwritepart_local_x_m_l_file(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const char* k_parts__readwritepart_qbase_local_x_m_l_file(void* self);
+const char* k_parts__readwritepart_super_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2006,6 +2138,10 @@ void k_parts__readwritepart_on_local_x_m_l_file(void* self, const char* (*callba
 ///
 void k_parts__readwritepart_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_component_name` instead
+///
+#define k_parts__readwritepart_qbase_set_component_name k_parts__readwritepart_super_set_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
@@ -2016,7 +2152,7 @@ void k_parts__readwritepart_set_component_name(void* self, const char* component
 /// @param componentName const char*
 /// @param componentDisplayName const char*
 ///
-void k_parts__readwritepart_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
+void k_parts__readwritepart_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2042,6 +2178,10 @@ void k_parts__readwritepart_on_set_component_name(void* self, void (*callback)(v
 ///
 void k_parts__readwritepart_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_x_m_l_file` instead
+///
+#define k_parts__readwritepart_qbase_set_x_m_l_file k_parts__readwritepart_super_set_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
@@ -2053,7 +2193,7 @@ void k_parts__readwritepart_set_x_m_l_file(void* self, const char* file, bool me
 /// @param merge bool
 /// @param setXMLDoc bool
 ///
-void k_parts__readwritepart_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
+void k_parts__readwritepart_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2077,6 +2217,10 @@ void k_parts__readwritepart_on_set_x_m_l_file(void* self, void (*callback)(void*
 ///
 void k_parts__readwritepart_set_local_x_m_l_file(void* self, const char* file);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_local_x_m_l_file` instead
+///
+#define k_parts__readwritepart_qbase_set_local_x_m_l_file k_parts__readwritepart_super_set_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
@@ -2086,7 +2230,7 @@ void k_parts__readwritepart_set_local_x_m_l_file(void* self, const char* file);
 /// @param self KParts__ReadWritePart*
 /// @param file const char*
 ///
-void k_parts__readwritepart_qbase_set_local_x_m_l_file(void* self, const char* file);
+void k_parts__readwritepart_super_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2111,6 +2255,10 @@ void k_parts__readwritepart_on_set_local_x_m_l_file(void* self, void (*callback)
 ///
 void k_parts__readwritepart_set_x_m_l(void* self, const char* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_x_m_l` instead
+///
+#define k_parts__readwritepart_qbase_set_x_m_l k_parts__readwritepart_super_set_x_m_l
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
@@ -2121,7 +2269,7 @@ void k_parts__readwritepart_set_x_m_l(void* self, const char* document, bool mer
 /// @param document const char*
 /// @param merge bool
 ///
-void k_parts__readwritepart_qbase_set_x_m_l(void* self, const char* document, bool merge);
+void k_parts__readwritepart_super_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2146,6 +2294,10 @@ void k_parts__readwritepart_on_set_x_m_l(void* self, void (*callback)(void*, con
 ///
 void k_parts__readwritepart_set_d_o_m_document(void* self, void* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_d_o_m_document` instead
+///
+#define k_parts__readwritepart_qbase_set_d_o_m_document k_parts__readwritepart_super_set_d_o_m_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
@@ -2156,7 +2308,7 @@ void k_parts__readwritepart_set_d_o_m_document(void* self, void* document, bool 
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_parts__readwritepart_qbase_set_d_o_m_document(void* self, void* document, bool merge);
+void k_parts__readwritepart_super_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2181,6 +2333,10 @@ void k_parts__readwritepart_on_set_d_o_m_document(void* self, void (*callback)(v
 ///
 void k_parts__readwritepart_state_changed(void* self, const char* newstate, int32_t reverse);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_state_changed` instead
+///
+#define k_parts__readwritepart_qbase_state_changed k_parts__readwritepart_super_state_changed
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
@@ -2191,7 +2347,7 @@ void k_parts__readwritepart_state_changed(void* self, const char* newstate, int3
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 ///
-void k_parts__readwritepart_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
+void k_parts__readwritepart_super_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2214,6 +2370,10 @@ void k_parts__readwritepart_on_state_changed(void* self, void (*callback)(void*,
 ///
 void k_parts__readwritepart_abort_load(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_abort_load` instead
+///
+#define k_parts__readwritepart_qbase_abort_load k_parts__readwritepart_super_abort_load
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#abortLoad)
@@ -2222,7 +2382,7 @@ void k_parts__readwritepart_abort_load(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-void k_parts__readwritepart_qbase_abort_load(void* self);
+void k_parts__readwritepart_super_abort_load(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -2246,6 +2406,10 @@ void k_parts__readwritepart_on_abort_load(void* self, void (*callback)());
 ///
 void k_parts__readwritepart_set_url(void* self, void* url);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_url` instead
+///
+#define k_parts__readwritepart_qbase_set_url k_parts__readwritepart_super_set_url
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setUrl)
@@ -2255,7 +2419,7 @@ void k_parts__readwritepart_set_url(void* self, void* url);
 /// @param self KParts__ReadWritePart*
 /// @param url QUrl*
 ///
-void k_parts__readwritepart_qbase_set_url(void* self, void* url);
+void k_parts__readwritepart_super_set_url(void* self, void* url);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -2280,6 +2444,10 @@ void k_parts__readwritepart_on_set_url(void* self, void (*callback)(void*, void*
 ///
 const char* k_parts__readwritepart_local_file_path(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_local_file_path` instead
+///
+#define k_parts__readwritepart_qbase_local_file_path k_parts__readwritepart_super_local_file_path
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#localFilePath)
@@ -2290,7 +2458,7 @@ const char* k_parts__readwritepart_local_file_path(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const char* k_parts__readwritepart_qbase_local_file_path(void* self);
+const char* k_parts__readwritepart_super_local_file_path(void* self);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -2314,6 +2482,10 @@ void k_parts__readwritepart_on_local_file_path(void* self, const char* (*callbac
 ///
 void k_parts__readwritepart_set_local_file_path(void* self, const char* localFilePath);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_set_local_file_path` instead
+///
+#define k_parts__readwritepart_qbase_set_local_file_path k_parts__readwritepart_super_set_local_file_path
+
 /// Inherited from KParts::ReadOnlyPart
 ///
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#setLocalFilePath)
@@ -2323,7 +2495,7 @@ void k_parts__readwritepart_set_local_file_path(void* self, const char* localFil
 /// @param self KParts__ReadWritePart*
 /// @param localFilePath const char*
 ///
-void k_parts__readwritepart_qbase_set_local_file_path(void* self, const char* localFilePath);
+void k_parts__readwritepart_super_set_local_file_path(void* self, const char* localFilePath);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -2347,6 +2519,10 @@ void k_parts__readwritepart_on_set_local_file_path(void* self, void (*callback)(
 ///
 QWidget* k_parts__readwritepart_host_container(void* self, const char* containerName);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_host_container` instead
+///
+#define k_parts__readwritepart_qbase_host_container k_parts__readwritepart_super_host_container
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
@@ -2356,7 +2532,7 @@ QWidget* k_parts__readwritepart_host_container(void* self, const char* container
 /// @param self KParts__ReadWritePart*
 /// @param containerName const char*
 ///
-QWidget* k_parts__readwritepart_qbase_host_container(void* self, const char* containerName);
+QWidget* k_parts__readwritepart_super_host_container(void* self, const char* containerName);
 
 /// Inherited from KParts::Part
 ///
@@ -2379,6 +2555,10 @@ void k_parts__readwritepart_on_host_container(void* self, QWidget* (*callback)(v
 ///
 void k_parts__readwritepart_slot_widget_destroyed(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_slot_widget_destroyed` instead
+///
+#define k_parts__readwritepart_qbase_slot_widget_destroyed k_parts__readwritepart_super_slot_widget_destroyed
+
 /// Inherited from KParts::Part
 ///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
@@ -2387,7 +2567,7 @@ void k_parts__readwritepart_slot_widget_destroyed(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-void k_parts__readwritepart_qbase_slot_widget_destroyed(void* self);
+void k_parts__readwritepart_super_slot_widget_destroyed(void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -2410,6 +2590,10 @@ void k_parts__readwritepart_on_slot_widget_destroyed(void* self, void (*callback
 ///
 QObject* k_parts__readwritepart_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_sender` instead
+///
+#define k_parts__readwritepart_qbase_sender k_parts__readwritepart_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2418,7 +2602,7 @@ QObject* k_parts__readwritepart_sender(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-QObject* k_parts__readwritepart_qbase_sender(void* self);
+QObject* k_parts__readwritepart_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2441,6 +2625,10 @@ void k_parts__readwritepart_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_parts__readwritepart_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_sender_signal_index` instead
+///
+#define k_parts__readwritepart_qbase_sender_signal_index k_parts__readwritepart_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2449,7 +2637,7 @@ int32_t k_parts__readwritepart_sender_signal_index(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-int32_t k_parts__readwritepart_qbase_sender_signal_index(void* self);
+int32_t k_parts__readwritepart_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2473,6 +2661,10 @@ void k_parts__readwritepart_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t k_parts__readwritepart_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_receivers` instead
+///
+#define k_parts__readwritepart_qbase_receivers k_parts__readwritepart_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2482,7 +2674,7 @@ int32_t k_parts__readwritepart_receivers(void* self, const char* signal);
 /// @param self KParts__ReadWritePart*
 /// @param signal const char*
 ///
-int32_t k_parts__readwritepart_qbase_receivers(void* self, const char* signal);
+int32_t k_parts__readwritepart_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2506,6 +2698,10 @@ void k_parts__readwritepart_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 bool k_parts__readwritepart_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_is_signal_connected` instead
+///
+#define k_parts__readwritepart_qbase_is_signal_connected k_parts__readwritepart_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2515,7 +2711,7 @@ bool k_parts__readwritepart_is_signal_connected(void* self, void* signal);
 /// @param self KParts__ReadWritePart*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__readwritepart_qbase_is_signal_connected(void* self, void* signal);
+bool k_parts__readwritepart_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2540,6 +2736,10 @@ void k_parts__readwritepart_on_is_signal_connected(void* self, bool (*callback)(
 ///
 const char* k_parts__readwritepart_standards_xml_file_location(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_standards_xml_file_location` instead
+///
+#define k_parts__readwritepart_qbase_standards_xml_file_location k_parts__readwritepart_super_standards_xml_file_location
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
@@ -2550,7 +2750,7 @@ const char* k_parts__readwritepart_standards_xml_file_location(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-const char* k_parts__readwritepart_qbase_standards_xml_file_location(void* self);
+const char* k_parts__readwritepart_super_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2573,6 +2773,10 @@ void k_parts__readwritepart_on_standards_xml_file_location(void* self, const cha
 ///
 void k_parts__readwritepart_load_standards_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__readwritepart_super_load_standards_xml_file` instead
+///
+#define k_parts__readwritepart_qbase_load_standards_xml_file k_parts__readwritepart_super_load_standards_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
@@ -2581,7 +2785,7 @@ void k_parts__readwritepart_load_standards_xml_file(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-void k_parts__readwritepart_qbase_load_standards_xml_file(void* self);
+void k_parts__readwritepart_super_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///

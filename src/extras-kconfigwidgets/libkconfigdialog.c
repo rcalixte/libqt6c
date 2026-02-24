@@ -31,8 +31,8 @@ void k_configdialog_on_meta_object(void* self, const QMetaObject* (*callback)())
     KConfigDialog_OnMetaObject((KConfigDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_configdialog_qbase_meta_object(void* self) {
-    return KConfigDialog_QBaseMetaObject((KConfigDialog*)self);
+const QMetaObject* k_configdialog_super_meta_object(void* self) {
+    return KConfigDialog_SuperMetaObject((KConfigDialog*)self);
 }
 
 void* k_configdialog_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_configdialog_on_metacast(void* self, void* (*callback)(void*, const char*
     KConfigDialog_OnMetacast((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void* k_configdialog_qbase_metacast(void* self, const char* param1) {
-    return KConfigDialog_QBaseMetacast((KConfigDialog*)self, param1);
+void* k_configdialog_super_metacast(void* self, const char* param1) {
+    return KConfigDialog_SuperMetacast((KConfigDialog*)self, param1);
 }
 
 int32_t k_configdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_configdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KConfigDialog_OnMetacall((KConfigDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_configdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KConfigDialog_QBaseMetacall((KConfigDialog*)self, param1, param2, param3);
+int32_t k_configdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KConfigDialog_SuperMetacall((KConfigDialog*)self, param1, param2, param3);
 }
 
 const char* k_configdialog_tr(const char* s) {
@@ -106,8 +106,8 @@ void k_configdialog_on_update_settings(void* self, void (*callback)()) {
     KConfigDialog_OnUpdateSettings((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_update_settings(void* self) {
-    KConfigDialog_QBaseUpdateSettings((KConfigDialog*)self);
+void k_configdialog_super_update_settings(void* self) {
+    KConfigDialog_SuperUpdateSettings((KConfigDialog*)self);
 }
 
 void k_configdialog_update_widgets(void* self) {
@@ -118,8 +118,8 @@ void k_configdialog_on_update_widgets(void* self, void (*callback)()) {
     KConfigDialog_OnUpdateWidgets((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_update_widgets(void* self) {
-    KConfigDialog_QBaseUpdateWidgets((KConfigDialog*)self);
+void k_configdialog_super_update_widgets(void* self) {
+    KConfigDialog_SuperUpdateWidgets((KConfigDialog*)self);
 }
 
 void k_configdialog_update_widgets_default(void* self) {
@@ -130,8 +130,8 @@ void k_configdialog_on_update_widgets_default(void* self, void (*callback)()) {
     KConfigDialog_OnUpdateWidgetsDefault((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_update_widgets_default(void* self) {
-    KConfigDialog_QBaseUpdateWidgetsDefault((KConfigDialog*)self);
+void k_configdialog_super_update_widgets_default(void* self) {
+    KConfigDialog_SuperUpdateWidgetsDefault((KConfigDialog*)self);
 }
 
 void k_configdialog_update_buttons(void* self) {
@@ -142,8 +142,8 @@ void k_configdialog_on_update_buttons(void* self, void (*callback)()) {
     KConfigDialog_OnUpdateButtons((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_update_buttons(void* self) {
-    KConfigDialog_QBaseUpdateButtons((KConfigDialog*)self);
+void k_configdialog_super_update_buttons(void* self) {
+    KConfigDialog_SuperUpdateButtons((KConfigDialog*)self);
 }
 
 void k_configdialog_settings_changed_slot(void* self) {
@@ -154,8 +154,8 @@ void k_configdialog_on_settings_changed_slot(void* self, void (*callback)()) {
     KConfigDialog_OnSettingsChangedSlot((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_settings_changed_slot(void* self) {
-    KConfigDialog_QBaseSettingsChangedSlot((KConfigDialog*)self);
+void k_configdialog_super_settings_changed_slot(void* self) {
+    KConfigDialog_SuperSettingsChangedSlot((KConfigDialog*)self);
 }
 
 void k_configdialog_set_help(void* self, const char* anchor) {
@@ -166,8 +166,8 @@ void k_configdialog_on_set_help(void* self, void (*callback)(void*, const char*)
     KConfigDialog_OnSetHelp((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_set_help(void* self, const char* anchor) {
-    KConfigDialog_QBaseSetHelp((KConfigDialog*)self, qstring(anchor));
+void k_configdialog_super_set_help(void* self, const char* anchor) {
+    KConfigDialog_SuperSetHelp((KConfigDialog*)self, qstring(anchor));
 }
 
 void k_configdialog_show_help(void* self) {
@@ -178,8 +178,8 @@ void k_configdialog_on_show_help(void* self, void (*callback)()) {
     KConfigDialog_OnShowHelp((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_show_help(void* self) {
-    KConfigDialog_QBaseShowHelp((KConfigDialog*)self);
+void k_configdialog_super_show_help(void* self) {
+    KConfigDialog_SuperShowHelp((KConfigDialog*)self);
 }
 
 bool k_configdialog_has_changed(void* self) {
@@ -190,8 +190,8 @@ void k_configdialog_on_has_changed(void* self, bool (*callback)()) {
     KConfigDialog_OnHasChanged((KConfigDialog*)self, (intptr_t)callback);
 }
 
-bool k_configdialog_qbase_has_changed(void* self) {
-    return KConfigDialog_QBaseHasChanged((KConfigDialog*)self);
+bool k_configdialog_super_has_changed(void* self) {
+    return KConfigDialog_SuperHasChanged((KConfigDialog*)self);
 }
 
 bool k_configdialog_is_default(void* self) {
@@ -202,8 +202,8 @@ void k_configdialog_on_is_default(void* self, bool (*callback)()) {
     KConfigDialog_OnIsDefault((KConfigDialog*)self, (intptr_t)callback);
 }
 
-bool k_configdialog_qbase_is_default(void* self) {
-    return KConfigDialog_QBaseIsDefault((KConfigDialog*)self);
+bool k_configdialog_super_is_default(void* self) {
+    return KConfigDialog_SuperIsDefault((KConfigDialog*)self);
 }
 
 void k_configdialog_show_event(void* self, void* e) {
@@ -214,8 +214,8 @@ void k_configdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
     KConfigDialog_OnShowEvent((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_show_event(void* self, void* e) {
-    KConfigDialog_QBaseShowEvent((KConfigDialog*)self, (QShowEvent*)e);
+void k_configdialog_super_show_event(void* self, void* e) {
+    KConfigDialog_SuperShowEvent((KConfigDialog*)self, (QShowEvent*)e);
 }
 
 const char* k_configdialog_tr2(const char* s, const char* c) {
@@ -260,8 +260,8 @@ void k_configdialog_on_set_help2(void* self, void (*callback)(void*, const char*
     KConfigDialog_OnSetHelp2((KConfigDialog*)self, (intptr_t)callback);
 }
 
-void k_configdialog_qbase_set_help2(void* self, const char* anchor, const char* appname) {
-    KConfigDialog_QBaseSetHelp2((KConfigDialog*)self, qstring(anchor), qstring(appname));
+void k_configdialog_super_set_help2(void* self, const char* anchor, const char* appname) {
+    KConfigDialog_SuperSetHelp2((KConfigDialog*)self, qstring(anchor), qstring(appname));
 }
 
 void k_configdialog_set_face_type(void* self, int32_t faceType) {
@@ -1753,8 +1753,8 @@ void k_configdialog_set_visible(void* self, bool visible) {
     KConfigDialog_SetVisible((KConfigDialog*)self, visible);
 }
 
-void k_configdialog_qbase_set_visible(void* self, bool visible) {
-    KConfigDialog_QBaseSetVisible((KConfigDialog*)self, visible);
+void k_configdialog_super_set_visible(void* self, bool visible) {
+    KConfigDialog_SuperSetVisible((KConfigDialog*)self, visible);
 }
 
 void k_configdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1765,8 +1765,8 @@ QSize* k_configdialog_size_hint(void* self) {
     return KConfigDialog_SizeHint((KConfigDialog*)self);
 }
 
-QSize* k_configdialog_qbase_size_hint(void* self) {
-    return KConfigDialog_QBaseSizeHint((KConfigDialog*)self);
+QSize* k_configdialog_super_size_hint(void* self) {
+    return KConfigDialog_SuperSizeHint((KConfigDialog*)self);
 }
 
 void k_configdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1777,8 +1777,8 @@ QSize* k_configdialog_minimum_size_hint(void* self) {
     return KConfigDialog_MinimumSizeHint((KConfigDialog*)self);
 }
 
-QSize* k_configdialog_qbase_minimum_size_hint(void* self) {
-    return KConfigDialog_QBaseMinimumSizeHint((KConfigDialog*)self);
+QSize* k_configdialog_super_minimum_size_hint(void* self) {
+    return KConfigDialog_SuperMinimumSizeHint((KConfigDialog*)self);
 }
 
 void k_configdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1789,8 +1789,8 @@ void k_configdialog_open(void* self) {
     KConfigDialog_Open((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_open(void* self) {
-    KConfigDialog_QBaseOpen((KConfigDialog*)self);
+void k_configdialog_super_open(void* self) {
+    KConfigDialog_SuperOpen((KConfigDialog*)self);
 }
 
 void k_configdialog_on_open(void* self, void (*callback)()) {
@@ -1801,8 +1801,8 @@ int32_t k_configdialog_exec(void* self) {
     return KConfigDialog_Exec((KConfigDialog*)self);
 }
 
-int32_t k_configdialog_qbase_exec(void* self) {
-    return KConfigDialog_QBaseExec((KConfigDialog*)self);
+int32_t k_configdialog_super_exec(void* self) {
+    return KConfigDialog_SuperExec((KConfigDialog*)self);
 }
 
 void k_configdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1813,8 +1813,8 @@ void k_configdialog_done(void* self, int param1) {
     KConfigDialog_Done((KConfigDialog*)self, param1);
 }
 
-void k_configdialog_qbase_done(void* self, int param1) {
-    KConfigDialog_QBaseDone((KConfigDialog*)self, param1);
+void k_configdialog_super_done(void* self, int param1) {
+    KConfigDialog_SuperDone((KConfigDialog*)self, param1);
 }
 
 void k_configdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1825,8 +1825,8 @@ void k_configdialog_accept(void* self) {
     KConfigDialog_Accept((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_accept(void* self) {
-    KConfigDialog_QBaseAccept((KConfigDialog*)self);
+void k_configdialog_super_accept(void* self) {
+    KConfigDialog_SuperAccept((KConfigDialog*)self);
 }
 
 void k_configdialog_on_accept(void* self, void (*callback)()) {
@@ -1837,8 +1837,8 @@ void k_configdialog_reject(void* self) {
     KConfigDialog_Reject((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_reject(void* self) {
-    KConfigDialog_QBaseReject((KConfigDialog*)self);
+void k_configdialog_super_reject(void* self) {
+    KConfigDialog_SuperReject((KConfigDialog*)self);
 }
 
 void k_configdialog_on_reject(void* self, void (*callback)()) {
@@ -1849,8 +1849,8 @@ void k_configdialog_key_press_event(void* self, void* param1) {
     KConfigDialog_KeyPressEvent((KConfigDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_configdialog_qbase_key_press_event(void* self, void* param1) {
-    KConfigDialog_QBaseKeyPressEvent((KConfigDialog*)self, (QKeyEvent*)param1);
+void k_configdialog_super_key_press_event(void* self, void* param1) {
+    KConfigDialog_SuperKeyPressEvent((KConfigDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_configdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1861,8 +1861,8 @@ void k_configdialog_close_event(void* self, void* param1) {
     KConfigDialog_CloseEvent((KConfigDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_configdialog_qbase_close_event(void* self, void* param1) {
-    KConfigDialog_QBaseCloseEvent((KConfigDialog*)self, (QCloseEvent*)param1);
+void k_configdialog_super_close_event(void* self, void* param1) {
+    KConfigDialog_SuperCloseEvent((KConfigDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_configdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1873,8 +1873,8 @@ void k_configdialog_resize_event(void* self, void* param1) {
     KConfigDialog_ResizeEvent((KConfigDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_configdialog_qbase_resize_event(void* self, void* param1) {
-    KConfigDialog_QBaseResizeEvent((KConfigDialog*)self, (QResizeEvent*)param1);
+void k_configdialog_super_resize_event(void* self, void* param1) {
+    KConfigDialog_SuperResizeEvent((KConfigDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_configdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1885,8 +1885,8 @@ void k_configdialog_context_menu_event(void* self, void* param1) {
     KConfigDialog_ContextMenuEvent((KConfigDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_configdialog_qbase_context_menu_event(void* self, void* param1) {
-    KConfigDialog_QBaseContextMenuEvent((KConfigDialog*)self, (QContextMenuEvent*)param1);
+void k_configdialog_super_context_menu_event(void* self, void* param1) {
+    KConfigDialog_SuperContextMenuEvent((KConfigDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_configdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1897,8 +1897,8 @@ bool k_configdialog_event_filter(void* self, void* param1, void* param2) {
     return KConfigDialog_EventFilter((KConfigDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_configdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KConfigDialog_QBaseEventFilter((KConfigDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_configdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KConfigDialog_SuperEventFilter((KConfigDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_configdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1909,8 +1909,8 @@ int32_t k_configdialog_dev_type(void* self) {
     return KConfigDialog_DevType((KConfigDialog*)self);
 }
 
-int32_t k_configdialog_qbase_dev_type(void* self) {
-    return KConfigDialog_QBaseDevType((KConfigDialog*)self);
+int32_t k_configdialog_super_dev_type(void* self) {
+    return KConfigDialog_SuperDevType((KConfigDialog*)self);
 }
 
 void k_configdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1921,8 +1921,8 @@ int32_t k_configdialog_height_for_width(void* self, int param1) {
     return KConfigDialog_HeightForWidth((KConfigDialog*)self, param1);
 }
 
-int32_t k_configdialog_qbase_height_for_width(void* self, int param1) {
-    return KConfigDialog_QBaseHeightForWidth((KConfigDialog*)self, param1);
+int32_t k_configdialog_super_height_for_width(void* self, int param1) {
+    return KConfigDialog_SuperHeightForWidth((KConfigDialog*)self, param1);
 }
 
 void k_configdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1933,8 +1933,8 @@ bool k_configdialog_has_height_for_width(void* self) {
     return KConfigDialog_HasHeightForWidth((KConfigDialog*)self);
 }
 
-bool k_configdialog_qbase_has_height_for_width(void* self) {
-    return KConfigDialog_QBaseHasHeightForWidth((KConfigDialog*)self);
+bool k_configdialog_super_has_height_for_width(void* self) {
+    return KConfigDialog_SuperHasHeightForWidth((KConfigDialog*)self);
 }
 
 void k_configdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1945,8 +1945,8 @@ QPaintEngine* k_configdialog_paint_engine(void* self) {
     return KConfigDialog_PaintEngine((KConfigDialog*)self);
 }
 
-QPaintEngine* k_configdialog_qbase_paint_engine(void* self) {
-    return KConfigDialog_QBasePaintEngine((KConfigDialog*)self);
+QPaintEngine* k_configdialog_super_paint_engine(void* self) {
+    return KConfigDialog_SuperPaintEngine((KConfigDialog*)self);
 }
 
 void k_configdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1957,8 +1957,8 @@ bool k_configdialog_event(void* self, void* event) {
     return KConfigDialog_Event((KConfigDialog*)self, (QEvent*)event);
 }
 
-bool k_configdialog_qbase_event(void* self, void* event) {
-    return KConfigDialog_QBaseEvent((KConfigDialog*)self, (QEvent*)event);
+bool k_configdialog_super_event(void* self, void* event) {
+    return KConfigDialog_SuperEvent((KConfigDialog*)self, (QEvent*)event);
 }
 
 void k_configdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1969,8 +1969,8 @@ void k_configdialog_mouse_press_event(void* self, void* event) {
     KConfigDialog_MousePressEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
-void k_configdialog_qbase_mouse_press_event(void* self, void* event) {
-    KConfigDialog_QBaseMousePressEvent((KConfigDialog*)self, (QMouseEvent*)event);
+void k_configdialog_super_mouse_press_event(void* self, void* event) {
+    KConfigDialog_SuperMousePressEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
 void k_configdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1981,8 +1981,8 @@ void k_configdialog_mouse_release_event(void* self, void* event) {
     KConfigDialog_MouseReleaseEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
-void k_configdialog_qbase_mouse_release_event(void* self, void* event) {
-    KConfigDialog_QBaseMouseReleaseEvent((KConfigDialog*)self, (QMouseEvent*)event);
+void k_configdialog_super_mouse_release_event(void* self, void* event) {
+    KConfigDialog_SuperMouseReleaseEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
 void k_configdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1993,8 +1993,8 @@ void k_configdialog_mouse_double_click_event(void* self, void* event) {
     KConfigDialog_MouseDoubleClickEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
-void k_configdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KConfigDialog_QBaseMouseDoubleClickEvent((KConfigDialog*)self, (QMouseEvent*)event);
+void k_configdialog_super_mouse_double_click_event(void* self, void* event) {
+    KConfigDialog_SuperMouseDoubleClickEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
 void k_configdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2005,8 +2005,8 @@ void k_configdialog_mouse_move_event(void* self, void* event) {
     KConfigDialog_MouseMoveEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
-void k_configdialog_qbase_mouse_move_event(void* self, void* event) {
-    KConfigDialog_QBaseMouseMoveEvent((KConfigDialog*)self, (QMouseEvent*)event);
+void k_configdialog_super_mouse_move_event(void* self, void* event) {
+    KConfigDialog_SuperMouseMoveEvent((KConfigDialog*)self, (QMouseEvent*)event);
 }
 
 void k_configdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2017,8 +2017,8 @@ void k_configdialog_wheel_event(void* self, void* event) {
     KConfigDialog_WheelEvent((KConfigDialog*)self, (QWheelEvent*)event);
 }
 
-void k_configdialog_qbase_wheel_event(void* self, void* event) {
-    KConfigDialog_QBaseWheelEvent((KConfigDialog*)self, (QWheelEvent*)event);
+void k_configdialog_super_wheel_event(void* self, void* event) {
+    KConfigDialog_SuperWheelEvent((KConfigDialog*)self, (QWheelEvent*)event);
 }
 
 void k_configdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2029,8 +2029,8 @@ void k_configdialog_key_release_event(void* self, void* event) {
     KConfigDialog_KeyReleaseEvent((KConfigDialog*)self, (QKeyEvent*)event);
 }
 
-void k_configdialog_qbase_key_release_event(void* self, void* event) {
-    KConfigDialog_QBaseKeyReleaseEvent((KConfigDialog*)self, (QKeyEvent*)event);
+void k_configdialog_super_key_release_event(void* self, void* event) {
+    KConfigDialog_SuperKeyReleaseEvent((KConfigDialog*)self, (QKeyEvent*)event);
 }
 
 void k_configdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2041,8 +2041,8 @@ void k_configdialog_focus_in_event(void* self, void* event) {
     KConfigDialog_FocusInEvent((KConfigDialog*)self, (QFocusEvent*)event);
 }
 
-void k_configdialog_qbase_focus_in_event(void* self, void* event) {
-    KConfigDialog_QBaseFocusInEvent((KConfigDialog*)self, (QFocusEvent*)event);
+void k_configdialog_super_focus_in_event(void* self, void* event) {
+    KConfigDialog_SuperFocusInEvent((KConfigDialog*)self, (QFocusEvent*)event);
 }
 
 void k_configdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2053,8 +2053,8 @@ void k_configdialog_focus_out_event(void* self, void* event) {
     KConfigDialog_FocusOutEvent((KConfigDialog*)self, (QFocusEvent*)event);
 }
 
-void k_configdialog_qbase_focus_out_event(void* self, void* event) {
-    KConfigDialog_QBaseFocusOutEvent((KConfigDialog*)self, (QFocusEvent*)event);
+void k_configdialog_super_focus_out_event(void* self, void* event) {
+    KConfigDialog_SuperFocusOutEvent((KConfigDialog*)self, (QFocusEvent*)event);
 }
 
 void k_configdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2065,8 +2065,8 @@ void k_configdialog_enter_event(void* self, void* event) {
     KConfigDialog_EnterEvent((KConfigDialog*)self, (QEnterEvent*)event);
 }
 
-void k_configdialog_qbase_enter_event(void* self, void* event) {
-    KConfigDialog_QBaseEnterEvent((KConfigDialog*)self, (QEnterEvent*)event);
+void k_configdialog_super_enter_event(void* self, void* event) {
+    KConfigDialog_SuperEnterEvent((KConfigDialog*)self, (QEnterEvent*)event);
 }
 
 void k_configdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2077,8 +2077,8 @@ void k_configdialog_leave_event(void* self, void* event) {
     KConfigDialog_LeaveEvent((KConfigDialog*)self, (QEvent*)event);
 }
 
-void k_configdialog_qbase_leave_event(void* self, void* event) {
-    KConfigDialog_QBaseLeaveEvent((KConfigDialog*)self, (QEvent*)event);
+void k_configdialog_super_leave_event(void* self, void* event) {
+    KConfigDialog_SuperLeaveEvent((KConfigDialog*)self, (QEvent*)event);
 }
 
 void k_configdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2089,8 +2089,8 @@ void k_configdialog_paint_event(void* self, void* event) {
     KConfigDialog_PaintEvent((KConfigDialog*)self, (QPaintEvent*)event);
 }
 
-void k_configdialog_qbase_paint_event(void* self, void* event) {
-    KConfigDialog_QBasePaintEvent((KConfigDialog*)self, (QPaintEvent*)event);
+void k_configdialog_super_paint_event(void* self, void* event) {
+    KConfigDialog_SuperPaintEvent((KConfigDialog*)self, (QPaintEvent*)event);
 }
 
 void k_configdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2101,8 +2101,8 @@ void k_configdialog_move_event(void* self, void* event) {
     KConfigDialog_MoveEvent((KConfigDialog*)self, (QMoveEvent*)event);
 }
 
-void k_configdialog_qbase_move_event(void* self, void* event) {
-    KConfigDialog_QBaseMoveEvent((KConfigDialog*)self, (QMoveEvent*)event);
+void k_configdialog_super_move_event(void* self, void* event) {
+    KConfigDialog_SuperMoveEvent((KConfigDialog*)self, (QMoveEvent*)event);
 }
 
 void k_configdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2113,8 +2113,8 @@ void k_configdialog_tablet_event(void* self, void* event) {
     KConfigDialog_TabletEvent((KConfigDialog*)self, (QTabletEvent*)event);
 }
 
-void k_configdialog_qbase_tablet_event(void* self, void* event) {
-    KConfigDialog_QBaseTabletEvent((KConfigDialog*)self, (QTabletEvent*)event);
+void k_configdialog_super_tablet_event(void* self, void* event) {
+    KConfigDialog_SuperTabletEvent((KConfigDialog*)self, (QTabletEvent*)event);
 }
 
 void k_configdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2125,8 +2125,8 @@ void k_configdialog_action_event(void* self, void* event) {
     KConfigDialog_ActionEvent((KConfigDialog*)self, (QActionEvent*)event);
 }
 
-void k_configdialog_qbase_action_event(void* self, void* event) {
-    KConfigDialog_QBaseActionEvent((KConfigDialog*)self, (QActionEvent*)event);
+void k_configdialog_super_action_event(void* self, void* event) {
+    KConfigDialog_SuperActionEvent((KConfigDialog*)self, (QActionEvent*)event);
 }
 
 void k_configdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2137,8 +2137,8 @@ void k_configdialog_drag_enter_event(void* self, void* event) {
     KConfigDialog_DragEnterEvent((KConfigDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_configdialog_qbase_drag_enter_event(void* self, void* event) {
-    KConfigDialog_QBaseDragEnterEvent((KConfigDialog*)self, (QDragEnterEvent*)event);
+void k_configdialog_super_drag_enter_event(void* self, void* event) {
+    KConfigDialog_SuperDragEnterEvent((KConfigDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_configdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2149,8 +2149,8 @@ void k_configdialog_drag_move_event(void* self, void* event) {
     KConfigDialog_DragMoveEvent((KConfigDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_configdialog_qbase_drag_move_event(void* self, void* event) {
-    KConfigDialog_QBaseDragMoveEvent((KConfigDialog*)self, (QDragMoveEvent*)event);
+void k_configdialog_super_drag_move_event(void* self, void* event) {
+    KConfigDialog_SuperDragMoveEvent((KConfigDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_configdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2161,8 +2161,8 @@ void k_configdialog_drag_leave_event(void* self, void* event) {
     KConfigDialog_DragLeaveEvent((KConfigDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_configdialog_qbase_drag_leave_event(void* self, void* event) {
-    KConfigDialog_QBaseDragLeaveEvent((KConfigDialog*)self, (QDragLeaveEvent*)event);
+void k_configdialog_super_drag_leave_event(void* self, void* event) {
+    KConfigDialog_SuperDragLeaveEvent((KConfigDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_configdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2173,8 +2173,8 @@ void k_configdialog_drop_event(void* self, void* event) {
     KConfigDialog_DropEvent((KConfigDialog*)self, (QDropEvent*)event);
 }
 
-void k_configdialog_qbase_drop_event(void* self, void* event) {
-    KConfigDialog_QBaseDropEvent((KConfigDialog*)self, (QDropEvent*)event);
+void k_configdialog_super_drop_event(void* self, void* event) {
+    KConfigDialog_SuperDropEvent((KConfigDialog*)self, (QDropEvent*)event);
 }
 
 void k_configdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2185,8 +2185,8 @@ void k_configdialog_hide_event(void* self, void* event) {
     KConfigDialog_HideEvent((KConfigDialog*)self, (QHideEvent*)event);
 }
 
-void k_configdialog_qbase_hide_event(void* self, void* event) {
-    KConfigDialog_QBaseHideEvent((KConfigDialog*)self, (QHideEvent*)event);
+void k_configdialog_super_hide_event(void* self, void* event) {
+    KConfigDialog_SuperHideEvent((KConfigDialog*)self, (QHideEvent*)event);
 }
 
 void k_configdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2197,8 +2197,8 @@ bool k_configdialog_native_event(void* self, char* eventType, void* message, int
     return KConfigDialog_NativeEvent((KConfigDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_configdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KConfigDialog_QBaseNativeEvent((KConfigDialog*)self, qstring(eventType), message, result);
+bool k_configdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KConfigDialog_SuperNativeEvent((KConfigDialog*)self, qstring(eventType), message, result);
 }
 
 void k_configdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2209,8 +2209,8 @@ void k_configdialog_change_event(void* self, void* param1) {
     KConfigDialog_ChangeEvent((KConfigDialog*)self, (QEvent*)param1);
 }
 
-void k_configdialog_qbase_change_event(void* self, void* param1) {
-    KConfigDialog_QBaseChangeEvent((KConfigDialog*)self, (QEvent*)param1);
+void k_configdialog_super_change_event(void* self, void* param1) {
+    KConfigDialog_SuperChangeEvent((KConfigDialog*)self, (QEvent*)param1);
 }
 
 void k_configdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2221,8 +2221,8 @@ int32_t k_configdialog_metric(void* self, int32_t param1) {
     return KConfigDialog_Metric((KConfigDialog*)self, param1);
 }
 
-int32_t k_configdialog_qbase_metric(void* self, int32_t param1) {
-    return KConfigDialog_QBaseMetric((KConfigDialog*)self, param1);
+int32_t k_configdialog_super_metric(void* self, int32_t param1) {
+    return KConfigDialog_SuperMetric((KConfigDialog*)self, param1);
 }
 
 void k_configdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2233,8 +2233,8 @@ void k_configdialog_init_painter(void* self, void* painter) {
     KConfigDialog_InitPainter((KConfigDialog*)self, (QPainter*)painter);
 }
 
-void k_configdialog_qbase_init_painter(void* self, void* painter) {
-    KConfigDialog_QBaseInitPainter((KConfigDialog*)self, (QPainter*)painter);
+void k_configdialog_super_init_painter(void* self, void* painter) {
+    KConfigDialog_SuperInitPainter((KConfigDialog*)self, (QPainter*)painter);
 }
 
 void k_configdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2245,8 +2245,8 @@ QPaintDevice* k_configdialog_redirected(void* self, void* offset) {
     return KConfigDialog_Redirected((KConfigDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_configdialog_qbase_redirected(void* self, void* offset) {
-    return KConfigDialog_QBaseRedirected((KConfigDialog*)self, (QPoint*)offset);
+QPaintDevice* k_configdialog_super_redirected(void* self, void* offset) {
+    return KConfigDialog_SuperRedirected((KConfigDialog*)self, (QPoint*)offset);
 }
 
 void k_configdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2257,8 +2257,8 @@ QPainter* k_configdialog_shared_painter(void* self) {
     return KConfigDialog_SharedPainter((KConfigDialog*)self);
 }
 
-QPainter* k_configdialog_qbase_shared_painter(void* self) {
-    return KConfigDialog_QBaseSharedPainter((KConfigDialog*)self);
+QPainter* k_configdialog_super_shared_painter(void* self) {
+    return KConfigDialog_SuperSharedPainter((KConfigDialog*)self);
 }
 
 void k_configdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2269,8 +2269,8 @@ void k_configdialog_input_method_event(void* self, void* param1) {
     KConfigDialog_InputMethodEvent((KConfigDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_configdialog_qbase_input_method_event(void* self, void* param1) {
-    KConfigDialog_QBaseInputMethodEvent((KConfigDialog*)self, (QInputMethodEvent*)param1);
+void k_configdialog_super_input_method_event(void* self, void* param1) {
+    KConfigDialog_SuperInputMethodEvent((KConfigDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_configdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2281,8 +2281,8 @@ QVariant* k_configdialog_input_method_query(void* self, int32_t param1) {
     return KConfigDialog_InputMethodQuery((KConfigDialog*)self, param1);
 }
 
-QVariant* k_configdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KConfigDialog_QBaseInputMethodQuery((KConfigDialog*)self, param1);
+QVariant* k_configdialog_super_input_method_query(void* self, int32_t param1) {
+    return KConfigDialog_SuperInputMethodQuery((KConfigDialog*)self, param1);
 }
 
 void k_configdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2293,8 +2293,8 @@ bool k_configdialog_focus_next_prev_child(void* self, bool next) {
     return KConfigDialog_FocusNextPrevChild((KConfigDialog*)self, next);
 }
 
-bool k_configdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KConfigDialog_QBaseFocusNextPrevChild((KConfigDialog*)self, next);
+bool k_configdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KConfigDialog_SuperFocusNextPrevChild((KConfigDialog*)self, next);
 }
 
 void k_configdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2305,8 +2305,8 @@ void k_configdialog_timer_event(void* self, void* event) {
     KConfigDialog_TimerEvent((KConfigDialog*)self, (QTimerEvent*)event);
 }
 
-void k_configdialog_qbase_timer_event(void* self, void* event) {
-    KConfigDialog_QBaseTimerEvent((KConfigDialog*)self, (QTimerEvent*)event);
+void k_configdialog_super_timer_event(void* self, void* event) {
+    KConfigDialog_SuperTimerEvent((KConfigDialog*)self, (QTimerEvent*)event);
 }
 
 void k_configdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2317,8 +2317,8 @@ void k_configdialog_child_event(void* self, void* event) {
     KConfigDialog_ChildEvent((KConfigDialog*)self, (QChildEvent*)event);
 }
 
-void k_configdialog_qbase_child_event(void* self, void* event) {
-    KConfigDialog_QBaseChildEvent((KConfigDialog*)self, (QChildEvent*)event);
+void k_configdialog_super_child_event(void* self, void* event) {
+    KConfigDialog_SuperChildEvent((KConfigDialog*)self, (QChildEvent*)event);
 }
 
 void k_configdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2329,8 +2329,8 @@ void k_configdialog_custom_event(void* self, void* event) {
     KConfigDialog_CustomEvent((KConfigDialog*)self, (QEvent*)event);
 }
 
-void k_configdialog_qbase_custom_event(void* self, void* event) {
-    KConfigDialog_QBaseCustomEvent((KConfigDialog*)self, (QEvent*)event);
+void k_configdialog_super_custom_event(void* self, void* event) {
+    KConfigDialog_SuperCustomEvent((KConfigDialog*)self, (QEvent*)event);
 }
 
 void k_configdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2341,8 +2341,8 @@ void k_configdialog_connect_notify(void* self, void* signal) {
     KConfigDialog_ConnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_configdialog_qbase_connect_notify(void* self, void* signal) {
-    KConfigDialog_QBaseConnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
+void k_configdialog_super_connect_notify(void* self, void* signal) {
+    KConfigDialog_SuperConnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_configdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2353,8 +2353,8 @@ void k_configdialog_disconnect_notify(void* self, void* signal) {
     KConfigDialog_DisconnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_configdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KConfigDialog_QBaseDisconnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
+void k_configdialog_super_disconnect_notify(void* self, void* signal) {
+    KConfigDialog_SuperDisconnectNotify((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_configdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2365,8 +2365,8 @@ KPageWidget* k_configdialog_page_widget(void* self) {
     return KConfigDialog_PageWidget((KConfigDialog*)self);
 }
 
-KPageWidget* k_configdialog_qbase_page_widget(void* self) {
-    return KConfigDialog_QBasePageWidget((KConfigDialog*)self);
+KPageWidget* k_configdialog_super_page_widget(void* self) {
+    return KConfigDialog_SuperPageWidget((KConfigDialog*)self);
 }
 
 void k_configdialog_on_page_widget(void* self, KPageWidget* (*callback)()) {
@@ -2377,8 +2377,8 @@ void k_configdialog_set_page_widget(void* self, void* widget) {
     KConfigDialog_SetPageWidget((KConfigDialog*)self, (KPageWidget*)widget);
 }
 
-void k_configdialog_qbase_set_page_widget(void* self, void* widget) {
-    KConfigDialog_QBaseSetPageWidget((KConfigDialog*)self, (KPageWidget*)widget);
+void k_configdialog_super_set_page_widget(void* self, void* widget) {
+    KConfigDialog_SuperSetPageWidget((KConfigDialog*)self, (KPageWidget*)widget);
 }
 
 void k_configdialog_on_set_page_widget(void* self, void (*callback)(void*, void*)) {
@@ -2389,8 +2389,8 @@ QDialogButtonBox* k_configdialog_button_box(void* self) {
     return KConfigDialog_ButtonBox((KConfigDialog*)self);
 }
 
-QDialogButtonBox* k_configdialog_qbase_button_box(void* self) {
-    return KConfigDialog_QBaseButtonBox((KConfigDialog*)self);
+QDialogButtonBox* k_configdialog_super_button_box(void* self) {
+    return KConfigDialog_SuperButtonBox((KConfigDialog*)self);
 }
 
 void k_configdialog_on_button_box(void* self, QDialogButtonBox* (*callback)()) {
@@ -2401,8 +2401,8 @@ void k_configdialog_set_button_box(void* self, void* box) {
     KConfigDialog_SetButtonBox((KConfigDialog*)self, (QDialogButtonBox*)box);
 }
 
-void k_configdialog_qbase_set_button_box(void* self, void* box) {
-    KConfigDialog_QBaseSetButtonBox((KConfigDialog*)self, (QDialogButtonBox*)box);
+void k_configdialog_super_set_button_box(void* self, void* box) {
+    KConfigDialog_SuperSetButtonBox((KConfigDialog*)self, (QDialogButtonBox*)box);
 }
 
 void k_configdialog_on_set_button_box(void* self, void (*callback)(void*, void*)) {
@@ -2413,8 +2413,8 @@ void k_configdialog_adjust_position(void* self, void* param1) {
     KConfigDialog_AdjustPosition((KConfigDialog*)self, (QWidget*)param1);
 }
 
-void k_configdialog_qbase_adjust_position(void* self, void* param1) {
-    KConfigDialog_QBaseAdjustPosition((KConfigDialog*)self, (QWidget*)param1);
+void k_configdialog_super_adjust_position(void* self, void* param1) {
+    KConfigDialog_SuperAdjustPosition((KConfigDialog*)self, (QWidget*)param1);
 }
 
 void k_configdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2425,8 +2425,8 @@ void k_configdialog_update_micro_focus(void* self) {
     KConfigDialog_UpdateMicroFocus((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_update_micro_focus(void* self) {
-    KConfigDialog_QBaseUpdateMicroFocus((KConfigDialog*)self);
+void k_configdialog_super_update_micro_focus(void* self) {
+    KConfigDialog_SuperUpdateMicroFocus((KConfigDialog*)self);
 }
 
 void k_configdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2437,8 +2437,8 @@ void k_configdialog_create(void* self) {
     KConfigDialog_Create((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_create(void* self) {
-    KConfigDialog_QBaseCreate((KConfigDialog*)self);
+void k_configdialog_super_create(void* self) {
+    KConfigDialog_SuperCreate((KConfigDialog*)self);
 }
 
 void k_configdialog_on_create(void* self, void (*callback)()) {
@@ -2449,8 +2449,8 @@ void k_configdialog_destroy(void* self) {
     KConfigDialog_Destroy((KConfigDialog*)self);
 }
 
-void k_configdialog_qbase_destroy(void* self) {
-    KConfigDialog_QBaseDestroy((KConfigDialog*)self);
+void k_configdialog_super_destroy(void* self) {
+    KConfigDialog_SuperDestroy((KConfigDialog*)self);
 }
 
 void k_configdialog_on_destroy(void* self, void (*callback)()) {
@@ -2461,8 +2461,8 @@ bool k_configdialog_focus_next_child(void* self) {
     return KConfigDialog_FocusNextChild((KConfigDialog*)self);
 }
 
-bool k_configdialog_qbase_focus_next_child(void* self) {
-    return KConfigDialog_QBaseFocusNextChild((KConfigDialog*)self);
+bool k_configdialog_super_focus_next_child(void* self) {
+    return KConfigDialog_SuperFocusNextChild((KConfigDialog*)self);
 }
 
 void k_configdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2473,8 +2473,8 @@ bool k_configdialog_focus_previous_child(void* self) {
     return KConfigDialog_FocusPreviousChild((KConfigDialog*)self);
 }
 
-bool k_configdialog_qbase_focus_previous_child(void* self) {
-    return KConfigDialog_QBaseFocusPreviousChild((KConfigDialog*)self);
+bool k_configdialog_super_focus_previous_child(void* self) {
+    return KConfigDialog_SuperFocusPreviousChild((KConfigDialog*)self);
 }
 
 void k_configdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2485,8 +2485,8 @@ QObject* k_configdialog_sender(void* self) {
     return KConfigDialog_Sender((KConfigDialog*)self);
 }
 
-QObject* k_configdialog_qbase_sender(void* self) {
-    return KConfigDialog_QBaseSender((KConfigDialog*)self);
+QObject* k_configdialog_super_sender(void* self) {
+    return KConfigDialog_SuperSender((KConfigDialog*)self);
 }
 
 void k_configdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2497,8 +2497,8 @@ int32_t k_configdialog_sender_signal_index(void* self) {
     return KConfigDialog_SenderSignalIndex((KConfigDialog*)self);
 }
 
-int32_t k_configdialog_qbase_sender_signal_index(void* self) {
-    return KConfigDialog_QBaseSenderSignalIndex((KConfigDialog*)self);
+int32_t k_configdialog_super_sender_signal_index(void* self) {
+    return KConfigDialog_SuperSenderSignalIndex((KConfigDialog*)self);
 }
 
 void k_configdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2509,8 +2509,8 @@ int32_t k_configdialog_receivers(void* self, const char* signal) {
     return KConfigDialog_Receivers((KConfigDialog*)self, signal);
 }
 
-int32_t k_configdialog_qbase_receivers(void* self, const char* signal) {
-    return KConfigDialog_QBaseReceivers((KConfigDialog*)self, signal);
+int32_t k_configdialog_super_receivers(void* self, const char* signal) {
+    return KConfigDialog_SuperReceivers((KConfigDialog*)self, signal);
 }
 
 void k_configdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2521,8 +2521,8 @@ bool k_configdialog_is_signal_connected(void* self, void* signal) {
     return KConfigDialog_IsSignalConnected((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_configdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KConfigDialog_QBaseIsSignalConnected((KConfigDialog*)self, (QMetaMethod*)signal);
+bool k_configdialog_super_is_signal_connected(void* self, void* signal) {
+    return KConfigDialog_SuperIsSignalConnected((KConfigDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_configdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2533,8 +2533,8 @@ double k_configdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return KConfigDialog_GetDecodedMetricF((KConfigDialog*)self, metricA, metricB);
 }
 
-double k_configdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KConfigDialog_QBaseGetDecodedMetricF((KConfigDialog*)self, metricA, metricB);
+double k_configdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KConfigDialog_SuperGetDecodedMetricF((KConfigDialog*)self, metricA, metricB);
 }
 
 void k_configdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

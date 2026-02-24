@@ -51,8 +51,8 @@ void k_archiveentry_on_is_file(void* self, bool (*callback)()) {
     KArchiveEntry_OnIsFile((KArchiveEntry*)self, (intptr_t)callback);
 }
 
-bool k_archiveentry_qbase_is_file(void* self) {
-    return KArchiveEntry_QBaseIsFile((KArchiveEntry*)self);
+bool k_archiveentry_super_is_file(void* self) {
+    return KArchiveEntry_SuperIsFile((KArchiveEntry*)self);
 }
 
 bool k_archiveentry_is_directory(void* self) {
@@ -63,8 +63,8 @@ void k_archiveentry_on_is_directory(void* self, bool (*callback)()) {
     KArchiveEntry_OnIsDirectory((KArchiveEntry*)self, (intptr_t)callback);
 }
 
-bool k_archiveentry_qbase_is_directory(void* self) {
-    return KArchiveEntry_QBaseIsDirectory((KArchiveEntry*)self);
+bool k_archiveentry_super_is_directory(void* self) {
+    return KArchiveEntry_SuperIsDirectory((KArchiveEntry*)self);
 }
 
 KArchive* k_archiveentry_archive(void* self) {
@@ -75,8 +75,8 @@ void k_archiveentry_on_archive(void* self, KArchive* (*callback)()) {
     KArchiveEntry_OnArchive((KArchiveEntry*)self, (intptr_t)callback);
 }
 
-KArchive* k_archiveentry_qbase_archive(void* self) {
-    return KArchiveEntry_QBaseArchive((KArchiveEntry*)self);
+KArchive* k_archiveentry_super_archive(void* self) {
+    return KArchiveEntry_SuperArchive((KArchiveEntry*)self);
 }
 
 void k_archiveentry_virtual_hook(void* self, int id, void* data) {
@@ -87,8 +87,8 @@ void k_archiveentry_on_virtual_hook(void* self, void (*callback)(void*, int, voi
     KArchiveEntry_OnVirtualHook((KArchiveEntry*)self, (intptr_t)callback);
 }
 
-void k_archiveentry_qbase_virtual_hook(void* self, int id, void* data) {
-    KArchiveEntry_QBaseVirtualHook((KArchiveEntry*)self, id, data);
+void k_archiveentry_super_virtual_hook(void* self, int id, void* data) {
+    KArchiveEntry_SuperVirtualHook((KArchiveEntry*)self, id, data);
 }
 
 void k_archiveentry_delete(void* self) {

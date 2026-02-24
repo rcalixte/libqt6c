@@ -59,13 +59,17 @@ const QMetaObject* k_replace_meta_object(void* self);
 ///
 void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_replace_super_meta_object` instead
+///
+#define k_replace_qbase_meta_object k_replace_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KReplace*
 ///
-const QMetaObject* k_replace_qbase_meta_object(void* self);
+const QMetaObject* k_replace_super_meta_object(void* self);
 
 /// @param self KReplace*
 /// @param param1 const char*
@@ -79,12 +83,16 @@ void* k_replace_metacast(void* self, const char* param1);
 ///
 void k_replace_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_replace_super_metacast` instead
+///
+#define k_replace_qbase_metacast k_replace_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KReplace*
 /// @param param1 const char*
 ///
-void* k_replace_qbase_metacast(void* self, const char* param1);
+void* k_replace_super_metacast(void* self, const char* param1);
 
 /// @param self KReplace*
 /// @param param1 enum QMetaObject__Call
@@ -100,6 +108,10 @@ int32_t k_replace_metacall(void* self, int32_t param1, int param2, void* param3)
 ///
 void k_replace_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_replace_super_metacall` instead
+///
+#define k_replace_qbase_metacall k_replace_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KReplace*
@@ -107,7 +119,7 @@ void k_replace_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_replace_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_replace_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -138,13 +150,17 @@ void k_replace_reset_counts(void* self);
 ///
 void k_replace_on_reset_counts(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_replace_super_reset_counts` instead
+///
+#define k_replace_qbase_reset_counts k_replace_super_reset_counts
+
 /// [Upstream resources](https://api.kde.org/kreplace.html#resetCounts)
 ///
 /// Base class method implementation
 ///
 /// @param self KReplace*
 ///
-void k_replace_qbase_reset_counts(void* self);
+void k_replace_super_reset_counts(void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#replace)
 ///
@@ -194,6 +210,10 @@ bool k_replace_should_restart(void* self, bool forceAsking, bool showNumMatches)
 ///
 void k_replace_on_should_restart(void* self, bool (*callback)(void*, bool, bool));
 
+/// @warning DEPRECATED: Use `k_replace_super_should_restart` instead
+///
+#define k_replace_qbase_should_restart k_replace_super_should_restart
+
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
 /// Base class method implementation
@@ -202,7 +222,7 @@ void k_replace_on_should_restart(void* self, bool (*callback)(void*, bool, bool)
 /// @param forceAsking bool
 /// @param showNumMatches bool
 ///
-bool k_replace_qbase_should_restart(void* self, bool forceAsking, bool showNumMatches);
+bool k_replace_super_should_restart(void* self, bool forceAsking, bool showNumMatches);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
@@ -219,13 +239,17 @@ void k_replace_display_final_dialog(void* self);
 ///
 void k_replace_on_display_final_dialog(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_replace_super_display_final_dialog` instead
+///
+#define k_replace_qbase_display_final_dialog k_replace_super_display_final_dialog
+
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
 /// Base class method implementation
 ///
 /// @param self KReplace*
 ///
-void k_replace_qbase_display_final_dialog(void* self);
+void k_replace_super_display_final_dialog(void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#textReplaced)
 ///
@@ -958,6 +982,10 @@ void k_replace_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void k_replace_set_options(void* self, int64_t options);
 
+/// @warning DEPRECATED: Use `k_replace_super_set_options` instead
+///
+#define k_replace_qbase_set_options k_replace_super_set_options
+
 /// Inherited from KFind
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#setOptions)
@@ -967,7 +995,7 @@ void k_replace_set_options(void* self, int64_t options);
 /// @param self KReplace*
 /// @param options int64_t
 ///
-void k_replace_qbase_set_options(void* self, int64_t options);
+void k_replace_super_set_options(void* self, int64_t options);
 
 /// Inherited from KFind
 ///
@@ -993,6 +1021,10 @@ void k_replace_on_set_options(void* self, void (*callback)(void*, int64_t));
 ///
 bool k_replace_validate_match(void* self, const char* text, int index, int matchedlength);
 
+/// @warning DEPRECATED: Use `k_replace_super_validate_match` instead
+///
+#define k_replace_qbase_validate_match k_replace_super_validate_match
+
 /// Inherited from KFind
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#validateMatch)
@@ -1004,7 +1036,7 @@ bool k_replace_validate_match(void* self, const char* text, int index, int match
 /// @param index int
 /// @param matchedlength int
 ///
-bool k_replace_qbase_validate_match(void* self, const char* text, int index, int matchedlength);
+bool k_replace_super_validate_match(void* self, const char* text, int index, int matchedlength);
 
 /// Inherited from KFind
 ///
@@ -1028,6 +1060,10 @@ void k_replace_on_validate_match(void* self, bool (*callback)(void*, const char*
 ///
 bool k_replace_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_replace_super_event` instead
+///
+#define k_replace_qbase_event k_replace_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1037,7 +1073,7 @@ bool k_replace_event(void* self, void* event);
 /// @param self KReplace*
 /// @param event QEvent*
 ///
-bool k_replace_qbase_event(void* self, void* event);
+bool k_replace_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1062,6 +1098,10 @@ void k_replace_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_replace_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_replace_super_event_filter` instead
+///
+#define k_replace_qbase_event_filter k_replace_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1072,7 +1112,7 @@ bool k_replace_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_replace_qbase_event_filter(void* self, void* watched, void* event);
+bool k_replace_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1096,6 +1136,10 @@ void k_replace_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void k_replace_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_replace_super_timer_event` instead
+///
+#define k_replace_qbase_timer_event k_replace_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1105,7 +1149,7 @@ void k_replace_timer_event(void* self, void* event);
 /// @param self KReplace*
 /// @param event QTimerEvent*
 ///
-void k_replace_qbase_timer_event(void* self, void* event);
+void k_replace_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1129,6 +1173,10 @@ void k_replace_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_replace_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_replace_super_child_event` instead
+///
+#define k_replace_qbase_child_event k_replace_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1138,7 +1186,7 @@ void k_replace_child_event(void* self, void* event);
 /// @param self KReplace*
 /// @param event QChildEvent*
 ///
-void k_replace_qbase_child_event(void* self, void* event);
+void k_replace_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1162,6 +1210,10 @@ void k_replace_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_replace_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_replace_super_custom_event` instead
+///
+#define k_replace_qbase_custom_event k_replace_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1171,7 +1223,7 @@ void k_replace_custom_event(void* self, void* event);
 /// @param self KReplace*
 /// @param event QEvent*
 ///
-void k_replace_qbase_custom_event(void* self, void* event);
+void k_replace_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1195,6 +1247,10 @@ void k_replace_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_replace_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_replace_super_connect_notify` instead
+///
+#define k_replace_qbase_connect_notify k_replace_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1204,7 +1260,7 @@ void k_replace_connect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_qbase_connect_notify(void* self, void* signal);
+void k_replace_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1228,6 +1284,10 @@ void k_replace_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_replace_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_replace_super_disconnect_notify` instead
+///
+#define k_replace_qbase_disconnect_notify k_replace_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1237,7 +1297,7 @@ void k_replace_disconnect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_qbase_disconnect_notify(void* self, void* signal);
+void k_replace_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1260,6 +1320,10 @@ void k_replace_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QWidget* k_replace_parent_widget(void* self);
 
+/// @warning DEPRECATED: Use `k_replace_super_parent_widget` instead
+///
+#define k_replace_qbase_parent_widget k_replace_super_parent_widget
+
 /// Inherited from KFind
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#parentWidget)
@@ -1268,7 +1332,7 @@ QWidget* k_replace_parent_widget(void* self);
 ///
 /// @param self KReplace*
 ///
-QWidget* k_replace_qbase_parent_widget(void* self);
+QWidget* k_replace_super_parent_widget(void* self);
 
 /// Inherited from KFind
 ///
@@ -1291,6 +1355,10 @@ void k_replace_on_parent_widget(void* self, QWidget* (*callback)());
 ///
 QWidget* k_replace_dialogs_parent(void* self);
 
+/// @warning DEPRECATED: Use `k_replace_super_dialogs_parent` instead
+///
+#define k_replace_qbase_dialogs_parent k_replace_super_dialogs_parent
+
 /// Inherited from KFind
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#dialogsParent)
@@ -1299,7 +1367,7 @@ QWidget* k_replace_dialogs_parent(void* self);
 ///
 /// @param self KReplace*
 ///
-QWidget* k_replace_qbase_dialogs_parent(void* self);
+QWidget* k_replace_super_dialogs_parent(void* self);
 
 /// Inherited from KFind
 ///
@@ -1322,6 +1390,10 @@ void k_replace_on_dialogs_parent(void* self, QWidget* (*callback)());
 ///
 QObject* k_replace_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_replace_super_sender` instead
+///
+#define k_replace_qbase_sender k_replace_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1330,7 +1402,7 @@ QObject* k_replace_sender(void* self);
 ///
 /// @param self KReplace*
 ///
-QObject* k_replace_qbase_sender(void* self);
+QObject* k_replace_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1353,6 +1425,10 @@ void k_replace_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_replace_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_replace_super_sender_signal_index` instead
+///
+#define k_replace_qbase_sender_signal_index k_replace_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1361,7 +1437,7 @@ int32_t k_replace_sender_signal_index(void* self);
 ///
 /// @param self KReplace*
 ///
-int32_t k_replace_qbase_sender_signal_index(void* self);
+int32_t k_replace_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1385,6 +1461,10 @@ void k_replace_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_replace_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_replace_super_receivers` instead
+///
+#define k_replace_qbase_receivers k_replace_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1394,7 +1474,7 @@ int32_t k_replace_receivers(void* self, const char* signal);
 /// @param self KReplace*
 /// @param signal const char*
 ///
-int32_t k_replace_qbase_receivers(void* self, const char* signal);
+int32_t k_replace_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1418,6 +1498,10 @@ void k_replace_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 bool k_replace_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_replace_super_is_signal_connected` instead
+///
+#define k_replace_qbase_is_signal_connected k_replace_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1427,7 +1511,7 @@ bool k_replace_is_signal_connected(void* self, void* signal);
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-bool k_replace_qbase_is_signal_connected(void* self, void* signal);
+bool k_replace_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

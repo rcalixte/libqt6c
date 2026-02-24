@@ -29,8 +29,8 @@ void q_designerresourcebrowserinterface_on_meta_object(void* self, const QMetaOb
     QDesignerResourceBrowserInterface_OnMetaObject((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerresourcebrowserinterface_qbase_meta_object(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseMetaObject((QDesignerResourceBrowserInterface*)self);
+const QMetaObject* q_designerresourcebrowserinterface_super_meta_object(void* self) {
+    return QDesignerResourceBrowserInterface_SuperMetaObject((QDesignerResourceBrowserInterface*)self);
 }
 
 void* q_designerresourcebrowserinterface_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_designerresourcebrowserinterface_on_metacast(void* self, void* (*callback
     QDesignerResourceBrowserInterface_OnMetacast((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerresourcebrowserinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerResourceBrowserInterface_QBaseMetacast((QDesignerResourceBrowserInterface*)self, param1);
+void* q_designerresourcebrowserinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerResourceBrowserInterface_SuperMetacast((QDesignerResourceBrowserInterface*)self, param1);
 }
 
 int32_t q_designerresourcebrowserinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_designerresourcebrowserinterface_on_metacall(void* self, int32_t (*callba
     QDesignerResourceBrowserInterface_OnMetacall((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerResourceBrowserInterface_QBaseMetacall((QDesignerResourceBrowserInterface*)self, param1, param2, param3);
+int32_t q_designerresourcebrowserinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerResourceBrowserInterface_SuperMetacall((QDesignerResourceBrowserInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerresourcebrowserinterface_tr(const char* s) {
@@ -72,8 +72,8 @@ void q_designerresourcebrowserinterface_on_set_current_path(void* self, void (*c
     QDesignerResourceBrowserInterface_OnSetCurrentPath((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
-void q_designerresourcebrowserinterface_qbase_set_current_path(void* self, const char* filePath) {
-    QDesignerResourceBrowserInterface_QBaseSetCurrentPath((QDesignerResourceBrowserInterface*)self, qstring(filePath));
+void q_designerresourcebrowserinterface_super_set_current_path(void* self, const char* filePath) {
+    QDesignerResourceBrowserInterface_SuperSetCurrentPath((QDesignerResourceBrowserInterface*)self, qstring(filePath));
 }
 
 const char* q_designerresourcebrowserinterface_current_path(void* self) {
@@ -87,8 +87,8 @@ void q_designerresourcebrowserinterface_on_current_path(void* self, const char* 
     QDesignerResourceBrowserInterface_OnCurrentPath((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
-const char* q_designerresourcebrowserinterface_qbase_current_path(void* self) {
-    libqt_string _str = QDesignerResourceBrowserInterface_QBaseCurrentPath((QDesignerResourceBrowserInterface*)self);
+const char* q_designerresourcebrowserinterface_super_current_path(void* self) {
+    libqt_string _str = QDesignerResourceBrowserInterface_SuperCurrentPath((QDesignerResourceBrowserInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1509,8 +1509,8 @@ int32_t q_designerresourcebrowserinterface_dev_type(void* self) {
     return QDesignerResourceBrowserInterface_DevType((QDesignerResourceBrowserInterface*)self);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_dev_type(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseDevType((QDesignerResourceBrowserInterface*)self);
+int32_t q_designerresourcebrowserinterface_super_dev_type(void* self) {
+    return QDesignerResourceBrowserInterface_SuperDevType((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1521,8 +1521,8 @@ void q_designerresourcebrowserinterface_set_visible(void* self, bool visible) {
     QDesignerResourceBrowserInterface_SetVisible((QDesignerResourceBrowserInterface*)self, visible);
 }
 
-void q_designerresourcebrowserinterface_qbase_set_visible(void* self, bool visible) {
-    QDesignerResourceBrowserInterface_QBaseSetVisible((QDesignerResourceBrowserInterface*)self, visible);
+void q_designerresourcebrowserinterface_super_set_visible(void* self, bool visible) {
+    QDesignerResourceBrowserInterface_SuperSetVisible((QDesignerResourceBrowserInterface*)self, visible);
 }
 
 void q_designerresourcebrowserinterface_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1533,8 +1533,8 @@ QSize* q_designerresourcebrowserinterface_size_hint(void* self) {
     return QDesignerResourceBrowserInterface_SizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
-QSize* q_designerresourcebrowserinterface_qbase_size_hint(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseSizeHint((QDesignerResourceBrowserInterface*)self);
+QSize* q_designerresourcebrowserinterface_super_size_hint(void* self) {
+    return QDesignerResourceBrowserInterface_SuperSizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1545,8 +1545,8 @@ QSize* q_designerresourcebrowserinterface_minimum_size_hint(void* self) {
     return QDesignerResourceBrowserInterface_MinimumSizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
-QSize* q_designerresourcebrowserinterface_qbase_minimum_size_hint(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseMinimumSizeHint((QDesignerResourceBrowserInterface*)self);
+QSize* q_designerresourcebrowserinterface_super_minimum_size_hint(void* self) {
+    return QDesignerResourceBrowserInterface_SuperMinimumSizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1557,8 +1557,8 @@ int32_t q_designerresourcebrowserinterface_height_for_width(void* self, int para
     return QDesignerResourceBrowserInterface_HeightForWidth((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_height_for_width(void* self, int param1) {
-    return QDesignerResourceBrowserInterface_QBaseHeightForWidth((QDesignerResourceBrowserInterface*)self, param1);
+int32_t q_designerresourcebrowserinterface_super_height_for_width(void* self, int param1) {
+    return QDesignerResourceBrowserInterface_SuperHeightForWidth((QDesignerResourceBrowserInterface*)self, param1);
 }
 
 void q_designerresourcebrowserinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1569,8 +1569,8 @@ bool q_designerresourcebrowserinterface_has_height_for_width(void* self) {
     return QDesignerResourceBrowserInterface_HasHeightForWidth((QDesignerResourceBrowserInterface*)self);
 }
 
-bool q_designerresourcebrowserinterface_qbase_has_height_for_width(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseHasHeightForWidth((QDesignerResourceBrowserInterface*)self);
+bool q_designerresourcebrowserinterface_super_has_height_for_width(void* self) {
+    return QDesignerResourceBrowserInterface_SuperHasHeightForWidth((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1581,8 +1581,8 @@ QPaintEngine* q_designerresourcebrowserinterface_paint_engine(void* self) {
     return QDesignerResourceBrowserInterface_PaintEngine((QDesignerResourceBrowserInterface*)self);
 }
 
-QPaintEngine* q_designerresourcebrowserinterface_qbase_paint_engine(void* self) {
-    return QDesignerResourceBrowserInterface_QBasePaintEngine((QDesignerResourceBrowserInterface*)self);
+QPaintEngine* q_designerresourcebrowserinterface_super_paint_engine(void* self) {
+    return QDesignerResourceBrowserInterface_SuperPaintEngine((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1593,8 +1593,8 @@ bool q_designerresourcebrowserinterface_event(void* self, void* event) {
     return QDesignerResourceBrowserInterface_Event((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
-bool q_designerresourcebrowserinterface_qbase_event(void* self, void* event) {
-    return QDesignerResourceBrowserInterface_QBaseEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
+bool q_designerresourcebrowserinterface_super_event(void* self, void* event) {
+    return QDesignerResourceBrowserInterface_SuperEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1605,8 +1605,8 @@ void q_designerresourcebrowserinterface_mouse_press_event(void* self, void* even
     QDesignerResourceBrowserInterface_MousePressEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_mouse_press_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseMousePressEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
+void q_designerresourcebrowserinterface_super_mouse_press_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperMousePressEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1617,8 +1617,8 @@ void q_designerresourcebrowserinterface_mouse_release_event(void* self, void* ev
     QDesignerResourceBrowserInterface_MouseReleaseEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_mouse_release_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseMouseReleaseEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
+void q_designerresourcebrowserinterface_super_mouse_release_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperMouseReleaseEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1629,8 +1629,8 @@ void q_designerresourcebrowserinterface_mouse_double_click_event(void* self, voi
     QDesignerResourceBrowserInterface_MouseDoubleClickEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_mouse_double_click_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseMouseDoubleClickEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
+void q_designerresourcebrowserinterface_super_mouse_double_click_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperMouseDoubleClickEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1641,8 +1641,8 @@ void q_designerresourcebrowserinterface_mouse_move_event(void* self, void* event
     QDesignerResourceBrowserInterface_MouseMoveEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_mouse_move_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseMouseMoveEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
+void q_designerresourcebrowserinterface_super_mouse_move_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperMouseMoveEvent((QDesignerResourceBrowserInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1653,8 +1653,8 @@ void q_designerresourcebrowserinterface_wheel_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_WheelEvent((QDesignerResourceBrowserInterface*)self, (QWheelEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_wheel_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseWheelEvent((QDesignerResourceBrowserInterface*)self, (QWheelEvent*)event);
+void q_designerresourcebrowserinterface_super_wheel_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperWheelEvent((QDesignerResourceBrowserInterface*)self, (QWheelEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1665,8 +1665,8 @@ void q_designerresourcebrowserinterface_key_press_event(void* self, void* event)
     QDesignerResourceBrowserInterface_KeyPressEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_key_press_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseKeyPressEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
+void q_designerresourcebrowserinterface_super_key_press_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperKeyPressEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1677,8 +1677,8 @@ void q_designerresourcebrowserinterface_key_release_event(void* self, void* even
     QDesignerResourceBrowserInterface_KeyReleaseEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_key_release_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseKeyReleaseEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
+void q_designerresourcebrowserinterface_super_key_release_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperKeyReleaseEvent((QDesignerResourceBrowserInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1689,8 +1689,8 @@ void q_designerresourcebrowserinterface_focus_in_event(void* self, void* event) 
     QDesignerResourceBrowserInterface_FocusInEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_focus_in_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseFocusInEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
+void q_designerresourcebrowserinterface_super_focus_in_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperFocusInEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1701,8 +1701,8 @@ void q_designerresourcebrowserinterface_focus_out_event(void* self, void* event)
     QDesignerResourceBrowserInterface_FocusOutEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_focus_out_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseFocusOutEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
+void q_designerresourcebrowserinterface_super_focus_out_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperFocusOutEvent((QDesignerResourceBrowserInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1713,8 +1713,8 @@ void q_designerresourcebrowserinterface_enter_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_EnterEvent((QDesignerResourceBrowserInterface*)self, (QEnterEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_enter_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseEnterEvent((QDesignerResourceBrowserInterface*)self, (QEnterEvent*)event);
+void q_designerresourcebrowserinterface_super_enter_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperEnterEvent((QDesignerResourceBrowserInterface*)self, (QEnterEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1725,8 +1725,8 @@ void q_designerresourcebrowserinterface_leave_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_LeaveEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_leave_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseLeaveEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
+void q_designerresourcebrowserinterface_super_leave_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperLeaveEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1737,8 +1737,8 @@ void q_designerresourcebrowserinterface_paint_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_PaintEvent((QDesignerResourceBrowserInterface*)self, (QPaintEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_paint_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBasePaintEvent((QDesignerResourceBrowserInterface*)self, (QPaintEvent*)event);
+void q_designerresourcebrowserinterface_super_paint_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperPaintEvent((QDesignerResourceBrowserInterface*)self, (QPaintEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1749,8 +1749,8 @@ void q_designerresourcebrowserinterface_move_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_MoveEvent((QDesignerResourceBrowserInterface*)self, (QMoveEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_move_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseMoveEvent((QDesignerResourceBrowserInterface*)self, (QMoveEvent*)event);
+void q_designerresourcebrowserinterface_super_move_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperMoveEvent((QDesignerResourceBrowserInterface*)self, (QMoveEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1761,8 +1761,8 @@ void q_designerresourcebrowserinterface_resize_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_ResizeEvent((QDesignerResourceBrowserInterface*)self, (QResizeEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_resize_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseResizeEvent((QDesignerResourceBrowserInterface*)self, (QResizeEvent*)event);
+void q_designerresourcebrowserinterface_super_resize_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperResizeEvent((QDesignerResourceBrowserInterface*)self, (QResizeEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1773,8 +1773,8 @@ void q_designerresourcebrowserinterface_close_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_CloseEvent((QDesignerResourceBrowserInterface*)self, (QCloseEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_close_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseCloseEvent((QDesignerResourceBrowserInterface*)self, (QCloseEvent*)event);
+void q_designerresourcebrowserinterface_super_close_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperCloseEvent((QDesignerResourceBrowserInterface*)self, (QCloseEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1785,8 +1785,8 @@ void q_designerresourcebrowserinterface_context_menu_event(void* self, void* eve
     QDesignerResourceBrowserInterface_ContextMenuEvent((QDesignerResourceBrowserInterface*)self, (QContextMenuEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_context_menu_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseContextMenuEvent((QDesignerResourceBrowserInterface*)self, (QContextMenuEvent*)event);
+void q_designerresourcebrowserinterface_super_context_menu_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperContextMenuEvent((QDesignerResourceBrowserInterface*)self, (QContextMenuEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1797,8 +1797,8 @@ void q_designerresourcebrowserinterface_tablet_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_TabletEvent((QDesignerResourceBrowserInterface*)self, (QTabletEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_tablet_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseTabletEvent((QDesignerResourceBrowserInterface*)self, (QTabletEvent*)event);
+void q_designerresourcebrowserinterface_super_tablet_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperTabletEvent((QDesignerResourceBrowserInterface*)self, (QTabletEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1809,8 +1809,8 @@ void q_designerresourcebrowserinterface_action_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_ActionEvent((QDesignerResourceBrowserInterface*)self, (QActionEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_action_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseActionEvent((QDesignerResourceBrowserInterface*)self, (QActionEvent*)event);
+void q_designerresourcebrowserinterface_super_action_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperActionEvent((QDesignerResourceBrowserInterface*)self, (QActionEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1821,8 +1821,8 @@ void q_designerresourcebrowserinterface_drag_enter_event(void* self, void* event
     QDesignerResourceBrowserInterface_DragEnterEvent((QDesignerResourceBrowserInterface*)self, (QDragEnterEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_drag_enter_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseDragEnterEvent((QDesignerResourceBrowserInterface*)self, (QDragEnterEvent*)event);
+void q_designerresourcebrowserinterface_super_drag_enter_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperDragEnterEvent((QDesignerResourceBrowserInterface*)self, (QDragEnterEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1833,8 +1833,8 @@ void q_designerresourcebrowserinterface_drag_move_event(void* self, void* event)
     QDesignerResourceBrowserInterface_DragMoveEvent((QDesignerResourceBrowserInterface*)self, (QDragMoveEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_drag_move_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseDragMoveEvent((QDesignerResourceBrowserInterface*)self, (QDragMoveEvent*)event);
+void q_designerresourcebrowserinterface_super_drag_move_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperDragMoveEvent((QDesignerResourceBrowserInterface*)self, (QDragMoveEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1845,8 +1845,8 @@ void q_designerresourcebrowserinterface_drag_leave_event(void* self, void* event
     QDesignerResourceBrowserInterface_DragLeaveEvent((QDesignerResourceBrowserInterface*)self, (QDragLeaveEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_drag_leave_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseDragLeaveEvent((QDesignerResourceBrowserInterface*)self, (QDragLeaveEvent*)event);
+void q_designerresourcebrowserinterface_super_drag_leave_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperDragLeaveEvent((QDesignerResourceBrowserInterface*)self, (QDragLeaveEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1857,8 +1857,8 @@ void q_designerresourcebrowserinterface_drop_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_DropEvent((QDesignerResourceBrowserInterface*)self, (QDropEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_drop_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseDropEvent((QDesignerResourceBrowserInterface*)self, (QDropEvent*)event);
+void q_designerresourcebrowserinterface_super_drop_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperDropEvent((QDesignerResourceBrowserInterface*)self, (QDropEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1869,8 +1869,8 @@ void q_designerresourcebrowserinterface_show_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_ShowEvent((QDesignerResourceBrowserInterface*)self, (QShowEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_show_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseShowEvent((QDesignerResourceBrowserInterface*)self, (QShowEvent*)event);
+void q_designerresourcebrowserinterface_super_show_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperShowEvent((QDesignerResourceBrowserInterface*)self, (QShowEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1881,8 +1881,8 @@ void q_designerresourcebrowserinterface_hide_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_HideEvent((QDesignerResourceBrowserInterface*)self, (QHideEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_hide_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseHideEvent((QDesignerResourceBrowserInterface*)self, (QHideEvent*)event);
+void q_designerresourcebrowserinterface_super_hide_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperHideEvent((QDesignerResourceBrowserInterface*)self, (QHideEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1893,8 +1893,8 @@ bool q_designerresourcebrowserinterface_native_event(void* self, char* eventType
     return QDesignerResourceBrowserInterface_NativeEvent((QDesignerResourceBrowserInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerresourcebrowserinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QDesignerResourceBrowserInterface_QBaseNativeEvent((QDesignerResourceBrowserInterface*)self, qstring(eventType), message, result);
+bool q_designerresourcebrowserinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QDesignerResourceBrowserInterface_SuperNativeEvent((QDesignerResourceBrowserInterface*)self, qstring(eventType), message, result);
 }
 
 void q_designerresourcebrowserinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1905,8 +1905,8 @@ void q_designerresourcebrowserinterface_change_event(void* self, void* param1) {
     QDesignerResourceBrowserInterface_ChangeEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)param1);
 }
 
-void q_designerresourcebrowserinterface_qbase_change_event(void* self, void* param1) {
-    QDesignerResourceBrowserInterface_QBaseChangeEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)param1);
+void q_designerresourcebrowserinterface_super_change_event(void* self, void* param1) {
+    QDesignerResourceBrowserInterface_SuperChangeEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)param1);
 }
 
 void q_designerresourcebrowserinterface_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1917,8 +1917,8 @@ int32_t q_designerresourcebrowserinterface_metric(void* self, int32_t param1) {
     return QDesignerResourceBrowserInterface_Metric((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_metric(void* self, int32_t param1) {
-    return QDesignerResourceBrowserInterface_QBaseMetric((QDesignerResourceBrowserInterface*)self, param1);
+int32_t q_designerresourcebrowserinterface_super_metric(void* self, int32_t param1) {
+    return QDesignerResourceBrowserInterface_SuperMetric((QDesignerResourceBrowserInterface*)self, param1);
 }
 
 void q_designerresourcebrowserinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1929,8 +1929,8 @@ void q_designerresourcebrowserinterface_init_painter(void* self, void* painter) 
     QDesignerResourceBrowserInterface_InitPainter((QDesignerResourceBrowserInterface*)self, (QPainter*)painter);
 }
 
-void q_designerresourcebrowserinterface_qbase_init_painter(void* self, void* painter) {
-    QDesignerResourceBrowserInterface_QBaseInitPainter((QDesignerResourceBrowserInterface*)self, (QPainter*)painter);
+void q_designerresourcebrowserinterface_super_init_painter(void* self, void* painter) {
+    QDesignerResourceBrowserInterface_SuperInitPainter((QDesignerResourceBrowserInterface*)self, (QPainter*)painter);
 }
 
 void q_designerresourcebrowserinterface_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1941,8 +1941,8 @@ QPaintDevice* q_designerresourcebrowserinterface_redirected(void* self, void* of
     return QDesignerResourceBrowserInterface_Redirected((QDesignerResourceBrowserInterface*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_designerresourcebrowserinterface_qbase_redirected(void* self, void* offset) {
-    return QDesignerResourceBrowserInterface_QBaseRedirected((QDesignerResourceBrowserInterface*)self, (QPoint*)offset);
+QPaintDevice* q_designerresourcebrowserinterface_super_redirected(void* self, void* offset) {
+    return QDesignerResourceBrowserInterface_SuperRedirected((QDesignerResourceBrowserInterface*)self, (QPoint*)offset);
 }
 
 void q_designerresourcebrowserinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1953,8 +1953,8 @@ QPainter* q_designerresourcebrowserinterface_shared_painter(void* self) {
     return QDesignerResourceBrowserInterface_SharedPainter((QDesignerResourceBrowserInterface*)self);
 }
 
-QPainter* q_designerresourcebrowserinterface_qbase_shared_painter(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseSharedPainter((QDesignerResourceBrowserInterface*)self);
+QPainter* q_designerresourcebrowserinterface_super_shared_painter(void* self) {
+    return QDesignerResourceBrowserInterface_SuperSharedPainter((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1965,8 +1965,8 @@ void q_designerresourcebrowserinterface_input_method_event(void* self, void* par
     QDesignerResourceBrowserInterface_InputMethodEvent((QDesignerResourceBrowserInterface*)self, (QInputMethodEvent*)param1);
 }
 
-void q_designerresourcebrowserinterface_qbase_input_method_event(void* self, void* param1) {
-    QDesignerResourceBrowserInterface_QBaseInputMethodEvent((QDesignerResourceBrowserInterface*)self, (QInputMethodEvent*)param1);
+void q_designerresourcebrowserinterface_super_input_method_event(void* self, void* param1) {
+    QDesignerResourceBrowserInterface_SuperInputMethodEvent((QDesignerResourceBrowserInterface*)self, (QInputMethodEvent*)param1);
 }
 
 void q_designerresourcebrowserinterface_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1977,8 +1977,8 @@ QVariant* q_designerresourcebrowserinterface_input_method_query(void* self, int3
     return QDesignerResourceBrowserInterface_InputMethodQuery((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-QVariant* q_designerresourcebrowserinterface_qbase_input_method_query(void* self, int32_t param1) {
-    return QDesignerResourceBrowserInterface_QBaseInputMethodQuery((QDesignerResourceBrowserInterface*)self, param1);
+QVariant* q_designerresourcebrowserinterface_super_input_method_query(void* self, int32_t param1) {
+    return QDesignerResourceBrowserInterface_SuperInputMethodQuery((QDesignerResourceBrowserInterface*)self, param1);
 }
 
 void q_designerresourcebrowserinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1989,8 +1989,8 @@ bool q_designerresourcebrowserinterface_focus_next_prev_child(void* self, bool n
     return QDesignerResourceBrowserInterface_FocusNextPrevChild((QDesignerResourceBrowserInterface*)self, next);
 }
 
-bool q_designerresourcebrowserinterface_qbase_focus_next_prev_child(void* self, bool next) {
-    return QDesignerResourceBrowserInterface_QBaseFocusNextPrevChild((QDesignerResourceBrowserInterface*)self, next);
+bool q_designerresourcebrowserinterface_super_focus_next_prev_child(void* self, bool next) {
+    return QDesignerResourceBrowserInterface_SuperFocusNextPrevChild((QDesignerResourceBrowserInterface*)self, next);
 }
 
 void q_designerresourcebrowserinterface_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2001,8 +2001,8 @@ bool q_designerresourcebrowserinterface_event_filter(void* self, void* watched, 
     return QDesignerResourceBrowserInterface_EventFilter((QDesignerResourceBrowserInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerresourcebrowserinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerResourceBrowserInterface_QBaseEventFilter((QDesignerResourceBrowserInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerresourcebrowserinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerResourceBrowserInterface_SuperEventFilter((QDesignerResourceBrowserInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2013,8 +2013,8 @@ void q_designerresourcebrowserinterface_timer_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_TimerEvent((QDesignerResourceBrowserInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseTimerEvent((QDesignerResourceBrowserInterface*)self, (QTimerEvent*)event);
+void q_designerresourcebrowserinterface_super_timer_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperTimerEvent((QDesignerResourceBrowserInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2025,8 +2025,8 @@ void q_designerresourcebrowserinterface_child_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_ChildEvent((QDesignerResourceBrowserInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_child_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseChildEvent((QDesignerResourceBrowserInterface*)self, (QChildEvent*)event);
+void q_designerresourcebrowserinterface_super_child_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperChildEvent((QDesignerResourceBrowserInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2037,8 +2037,8 @@ void q_designerresourcebrowserinterface_custom_event(void* self, void* event) {
     QDesignerResourceBrowserInterface_CustomEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
-void q_designerresourcebrowserinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerResourceBrowserInterface_QBaseCustomEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
+void q_designerresourcebrowserinterface_super_custom_event(void* self, void* event) {
+    QDesignerResourceBrowserInterface_SuperCustomEvent((QDesignerResourceBrowserInterface*)self, (QEvent*)event);
 }
 
 void q_designerresourcebrowserinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2049,8 +2049,8 @@ void q_designerresourcebrowserinterface_connect_notify(void* self, void* signal)
     QDesignerResourceBrowserInterface_ConnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerresourcebrowserinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerResourceBrowserInterface_QBaseConnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
+void q_designerresourcebrowserinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerResourceBrowserInterface_SuperConnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerresourcebrowserinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2061,8 +2061,8 @@ void q_designerresourcebrowserinterface_disconnect_notify(void* self, void* sign
     QDesignerResourceBrowserInterface_DisconnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerresourcebrowserinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerResourceBrowserInterface_QBaseDisconnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
+void q_designerresourcebrowserinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerResourceBrowserInterface_SuperDisconnectNotify((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerresourcebrowserinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2073,8 +2073,8 @@ void q_designerresourcebrowserinterface_update_micro_focus(void* self) {
     QDesignerResourceBrowserInterface_UpdateMicroFocus((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_qbase_update_micro_focus(void* self) {
-    QDesignerResourceBrowserInterface_QBaseUpdateMicroFocus((QDesignerResourceBrowserInterface*)self);
+void q_designerresourcebrowserinterface_super_update_micro_focus(void* self) {
+    QDesignerResourceBrowserInterface_SuperUpdateMicroFocus((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2085,8 +2085,8 @@ void q_designerresourcebrowserinterface_create(void* self) {
     QDesignerResourceBrowserInterface_Create((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_qbase_create(void* self) {
-    QDesignerResourceBrowserInterface_QBaseCreate((QDesignerResourceBrowserInterface*)self);
+void q_designerresourcebrowserinterface_super_create(void* self) {
+    QDesignerResourceBrowserInterface_SuperCreate((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_create(void* self, void (*callback)()) {
@@ -2097,8 +2097,8 @@ void q_designerresourcebrowserinterface_destroy(void* self) {
     QDesignerResourceBrowserInterface_Destroy((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_qbase_destroy(void* self) {
-    QDesignerResourceBrowserInterface_QBaseDestroy((QDesignerResourceBrowserInterface*)self);
+void q_designerresourcebrowserinterface_super_destroy(void* self) {
+    QDesignerResourceBrowserInterface_SuperDestroy((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_destroy(void* self, void (*callback)()) {
@@ -2109,8 +2109,8 @@ bool q_designerresourcebrowserinterface_focus_next_child(void* self) {
     return QDesignerResourceBrowserInterface_FocusNextChild((QDesignerResourceBrowserInterface*)self);
 }
 
-bool q_designerresourcebrowserinterface_qbase_focus_next_child(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseFocusNextChild((QDesignerResourceBrowserInterface*)self);
+bool q_designerresourcebrowserinterface_super_focus_next_child(void* self) {
+    return QDesignerResourceBrowserInterface_SuperFocusNextChild((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2121,8 +2121,8 @@ bool q_designerresourcebrowserinterface_focus_previous_child(void* self) {
     return QDesignerResourceBrowserInterface_FocusPreviousChild((QDesignerResourceBrowserInterface*)self);
 }
 
-bool q_designerresourcebrowserinterface_qbase_focus_previous_child(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseFocusPreviousChild((QDesignerResourceBrowserInterface*)self);
+bool q_designerresourcebrowserinterface_super_focus_previous_child(void* self) {
+    return QDesignerResourceBrowserInterface_SuperFocusPreviousChild((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2133,8 +2133,8 @@ QObject* q_designerresourcebrowserinterface_sender(void* self) {
     return QDesignerResourceBrowserInterface_Sender((QDesignerResourceBrowserInterface*)self);
 }
 
-QObject* q_designerresourcebrowserinterface_qbase_sender(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseSender((QDesignerResourceBrowserInterface*)self);
+QObject* q_designerresourcebrowserinterface_super_sender(void* self) {
+    return QDesignerResourceBrowserInterface_SuperSender((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -2145,8 +2145,8 @@ int32_t q_designerresourcebrowserinterface_sender_signal_index(void* self) {
     return QDesignerResourceBrowserInterface_SenderSignalIndex((QDesignerResourceBrowserInterface*)self);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerResourceBrowserInterface_QBaseSenderSignalIndex((QDesignerResourceBrowserInterface*)self);
+int32_t q_designerresourcebrowserinterface_super_sender_signal_index(void* self) {
+    return QDesignerResourceBrowserInterface_SuperSenderSignalIndex((QDesignerResourceBrowserInterface*)self);
 }
 
 void q_designerresourcebrowserinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2157,8 +2157,8 @@ int32_t q_designerresourcebrowserinterface_receivers(void* self, const char* sig
     return QDesignerResourceBrowserInterface_Receivers((QDesignerResourceBrowserInterface*)self, signal);
 }
 
-int32_t q_designerresourcebrowserinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerResourceBrowserInterface_QBaseReceivers((QDesignerResourceBrowserInterface*)self, signal);
+int32_t q_designerresourcebrowserinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerResourceBrowserInterface_SuperReceivers((QDesignerResourceBrowserInterface*)self, signal);
 }
 
 void q_designerresourcebrowserinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2169,8 +2169,8 @@ bool q_designerresourcebrowserinterface_is_signal_connected(void* self, void* si
     return QDesignerResourceBrowserInterface_IsSignalConnected((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerresourcebrowserinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerResourceBrowserInterface_QBaseIsSignalConnected((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
+bool q_designerresourcebrowserinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerResourceBrowserInterface_SuperIsSignalConnected((QDesignerResourceBrowserInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerresourcebrowserinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2181,8 +2181,8 @@ double q_designerresourcebrowserinterface_get_decoded_metric_f(void* self, int32
     return QDesignerResourceBrowserInterface_GetDecodedMetricF((QDesignerResourceBrowserInterface*)self, metricA, metricB);
 }
 
-double q_designerresourcebrowserinterface_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QDesignerResourceBrowserInterface_QBaseGetDecodedMetricF((QDesignerResourceBrowserInterface*)self, metricA, metricB);
+double q_designerresourcebrowserinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QDesignerResourceBrowserInterface_SuperGetDecodedMetricF((QDesignerResourceBrowserInterface*)self, metricA, metricB);
 }
 
 void q_designerresourcebrowserinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

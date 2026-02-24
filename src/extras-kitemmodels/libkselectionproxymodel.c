@@ -32,8 +32,8 @@ void k_selectionproxymodel_on_meta_object(void* self, const QMetaObject* (*callb
     KSelectionProxyModel_OnMetaObject((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_selectionproxymodel_qbase_meta_object(void* self) {
-    return KSelectionProxyModel_QBaseMetaObject((KSelectionProxyModel*)self);
+const QMetaObject* k_selectionproxymodel_super_meta_object(void* self) {
+    return KSelectionProxyModel_SuperMetaObject((KSelectionProxyModel*)self);
 }
 
 void* k_selectionproxymodel_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_selectionproxymodel_on_metacast(void* self, void* (*callback)(void*, cons
     KSelectionProxyModel_OnMetacast((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-void* k_selectionproxymodel_qbase_metacast(void* self, const char* param1) {
-    return KSelectionProxyModel_QBaseMetacast((KSelectionProxyModel*)self, param1);
+void* k_selectionproxymodel_super_metacast(void* self, const char* param1) {
+    return KSelectionProxyModel_SuperMetacast((KSelectionProxyModel*)self, param1);
 }
 
 int32_t k_selectionproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_selectionproxymodel_on_metacall(void* self, int32_t (*callback)(void*, in
     KSelectionProxyModel_OnMetacall((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSelectionProxyModel_QBaseMetacall((KSelectionProxyModel*)self, param1, param2, param3);
+int32_t k_selectionproxymodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSelectionProxyModel_SuperMetacall((KSelectionProxyModel*)self, param1, param2, param3);
 }
 
 const char* k_selectionproxymodel_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_selectionproxymodel_on_set_source_model(void* self, void (*callback)(void
     KSelectionProxyModel_OnSetSourceModel((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-void k_selectionproxymodel_qbase_set_source_model(void* self, void* sourceModel) {
-    KSelectionProxyModel_QBaseSetSourceModel((KSelectionProxyModel*)self, (QAbstractItemModel*)sourceModel);
+void k_selectionproxymodel_super_set_source_model(void* self, void* sourceModel) {
+    KSelectionProxyModel_SuperSetSourceModel((KSelectionProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
 QItemSelectionModel* k_selectionproxymodel_selection_model(void* self) {
@@ -103,8 +103,8 @@ void k_selectionproxymodel_on_map_from_source(void* self, QModelIndex* (*callbac
     KSelectionProxyModel_OnMapFromSource((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_map_from_source(void* self, void* sourceIndex) {
-    return KSelectionProxyModel_QBaseMapFromSource((KSelectionProxyModel*)self, (QModelIndex*)sourceIndex);
+QModelIndex* k_selectionproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+    return KSelectionProxyModel_SuperMapFromSource((KSelectionProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
 QModelIndex* k_selectionproxymodel_map_to_source(void* self, void* proxyIndex) {
@@ -115,8 +115,8 @@ void k_selectionproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)
     KSelectionProxyModel_OnMapToSource((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_map_to_source(void* self, void* proxyIndex) {
-    return KSelectionProxyModel_QBaseMapToSource((KSelectionProxyModel*)self, (QModelIndex*)proxyIndex);
+QModelIndex* k_selectionproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+    return KSelectionProxyModel_SuperMapToSource((KSelectionProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
 QItemSelection* k_selectionproxymodel_map_selection_from_source(void* self, void* selection) {
@@ -127,8 +127,8 @@ void k_selectionproxymodel_on_map_selection_from_source(void* self, QItemSelecti
     KSelectionProxyModel_OnMapSelectionFromSource((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_selectionproxymodel_qbase_map_selection_from_source(void* self, void* selection) {
-    return KSelectionProxyModel_QBaseMapSelectionFromSource((KSelectionProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* k_selectionproxymodel_super_map_selection_from_source(void* self, void* selection) {
+    return KSelectionProxyModel_SuperMapSelectionFromSource((KSelectionProxyModel*)self, (QItemSelection*)selection);
 }
 
 QItemSelection* k_selectionproxymodel_map_selection_to_source(void* self, void* selection) {
@@ -139,8 +139,8 @@ void k_selectionproxymodel_on_map_selection_to_source(void* self, QItemSelection
     KSelectionProxyModel_OnMapSelectionToSource((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_selectionproxymodel_qbase_map_selection_to_source(void* self, void* selection) {
-    return KSelectionProxyModel_QBaseMapSelectionToSource((KSelectionProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* k_selectionproxymodel_super_map_selection_to_source(void* self, void* selection) {
+    return KSelectionProxyModel_SuperMapSelectionToSource((KSelectionProxyModel*)self, (QItemSelection*)selection);
 }
 
 int32_t k_selectionproxymodel_flags(void* self, void* index) {
@@ -151,8 +151,8 @@ void k_selectionproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*
     KSelectionProxyModel_OnFlags((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionproxymodel_qbase_flags(void* self, void* index) {
-    return KSelectionProxyModel_QBaseFlags((KSelectionProxyModel*)self, (QModelIndex*)index);
+int32_t k_selectionproxymodel_super_flags(void* self, void* index) {
+    return KSelectionProxyModel_SuperFlags((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
 QVariant* k_selectionproxymodel_data(void* self, void* index, int role) {
@@ -163,8 +163,8 @@ void k_selectionproxymodel_on_data(void* self, QVariant* (*callback)(void*, void
     KSelectionProxyModel_OnData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_selectionproxymodel_qbase_data(void* self, void* index, int role) {
-    return KSelectionProxyModel_QBaseData((KSelectionProxyModel*)self, (QModelIndex*)index, role);
+QVariant* k_selectionproxymodel_super_data(void* self, void* index, int role) {
+    return KSelectionProxyModel_SuperData((KSelectionProxyModel*)self, (QModelIndex*)index, role);
 }
 
 int32_t k_selectionproxymodel_row_count(void* self, void* parent) {
@@ -175,8 +175,8 @@ void k_selectionproxymodel_on_row_count(void* self, int32_t (*callback)(void*, v
     KSelectionProxyModel_OnRowCount((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionproxymodel_qbase_row_count(void* self, void* parent) {
-    return KSelectionProxyModel_QBaseRowCount((KSelectionProxyModel*)self, (QModelIndex*)parent);
+int32_t k_selectionproxymodel_super_row_count(void* self, void* parent) {
+    return KSelectionProxyModel_SuperRowCount((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* k_selectionproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
@@ -187,8 +187,8 @@ void k_selectionproxymodel_on_header_data(void* self, QVariant* (*callback)(void
     KSelectionProxyModel_OnHeaderData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_selectionproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KSelectionProxyModel_QBaseHeaderData((KSelectionProxyModel*)self, section, orientation, role);
+QVariant* k_selectionproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KSelectionProxyModel_SuperHeaderData((KSelectionProxyModel*)self, section, orientation, role);
 }
 
 QMimeData* k_selectionproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -199,8 +199,8 @@ void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*
     KSelectionProxyModel_OnMimeData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_selectionproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KSelectionProxyModel_QBaseMimeData((KSelectionProxyModel*)self, indexes);
+QMimeData* k_selectionproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KSelectionProxyModel_SuperMimeData((KSelectionProxyModel*)self, indexes);
 }
 
 const char** k_selectionproxymodel_mime_types(void* self) {
@@ -226,8 +226,8 @@ void k_selectionproxymodel_on_mime_types(void* self, const char** (*callback)())
     KSelectionProxyModel_OnMimeTypes((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-const char** k_selectionproxymodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KSelectionProxyModel_QBaseMimeTypes((KSelectionProxyModel*)self);
+const char** k_selectionproxymodel_super_mime_types(void* self) {
+    libqt_list _arr = KSelectionProxyModel_SuperMimeTypes((KSelectionProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -253,8 +253,8 @@ void k_selectionproxymodel_on_supported_drop_actions(void* self, int32_t (*callb
     KSelectionProxyModel_OnSupportedDropActions((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionproxymodel_qbase_supported_drop_actions(void* self) {
-    return KSelectionProxyModel_QBaseSupportedDropActions((KSelectionProxyModel*)self);
+int32_t k_selectionproxymodel_super_supported_drop_actions(void* self) {
+    return KSelectionProxyModel_SuperSupportedDropActions((KSelectionProxyModel*)self);
 }
 
 bool k_selectionproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
@@ -265,8 +265,8 @@ void k_selectionproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*,
     KSelectionProxyModel_OnDropMimeData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_selectionproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KSelectionProxyModel_QBaseDropMimeData((KSelectionProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KSelectionProxyModel_SuperDropMimeData((KSelectionProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 bool k_selectionproxymodel_has_children(void* self, void* parent) {
@@ -277,8 +277,8 @@ void k_selectionproxymodel_on_has_children(void* self, bool (*callback)(void*, v
     KSelectionProxyModel_OnHasChildren((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_selectionproxymodel_qbase_has_children(void* self, void* parent) {
-    return KSelectionProxyModel_QBaseHasChildren((KSelectionProxyModel*)self, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_has_children(void* self, void* parent) {
+    return KSelectionProxyModel_SuperHasChildren((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
 QModelIndex* k_selectionproxymodel_index(void* self, int param1, int param2, void* param3) {
@@ -289,8 +289,8 @@ void k_selectionproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, 
     KSelectionProxyModel_OnIndex((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_index(void* self, int param1, int param2, void* param3) {
-    return KSelectionProxyModel_QBaseIndex((KSelectionProxyModel*)self, param1, param2, (QModelIndex*)param3);
+QModelIndex* k_selectionproxymodel_super_index(void* self, int param1, int param2, void* param3) {
+    return KSelectionProxyModel_SuperIndex((KSelectionProxyModel*)self, param1, param2, (QModelIndex*)param3);
 }
 
 QModelIndex* k_selectionproxymodel_parent(void* self, void* param1) {
@@ -301,8 +301,8 @@ void k_selectionproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*,
     KSelectionProxyModel_OnParent((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_parent(void* self, void* param1) {
-    return KSelectionProxyModel_QBaseParent((KSelectionProxyModel*)self, (QModelIndex*)param1);
+QModelIndex* k_selectionproxymodel_super_parent(void* self, void* param1) {
+    return KSelectionProxyModel_SuperParent((KSelectionProxyModel*)self, (QModelIndex*)param1);
 }
 
 int32_t k_selectionproxymodel_column_count(void* self, void* param1) {
@@ -313,8 +313,8 @@ void k_selectionproxymodel_on_column_count(void* self, int32_t (*callback)(void*
     KSelectionProxyModel_OnColumnCount((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionproxymodel_qbase_column_count(void* self, void* param1) {
-    return KSelectionProxyModel_QBaseColumnCount((KSelectionProxyModel*)self, (QModelIndex*)param1);
+int32_t k_selectionproxymodel_super_column_count(void* self, void* param1) {
+    return KSelectionProxyModel_SuperColumnCount((KSelectionProxyModel*)self, (QModelIndex*)param1);
 }
 
 libqt_list /* of QModelIndex* */ k_selectionproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
@@ -326,8 +326,8 @@ void k_selectionproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */
     KSelectionProxyModel_OnMatch((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_selectionproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KSelectionProxyModel_QBaseMatch((KSelectionProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_selectionproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KSelectionProxyModel_SuperMatch((KSelectionProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -340,8 +340,8 @@ void k_selectionproxymodel_on_source_root_indexes(void* self, libqt_list /* of Q
     KSelectionProxyModel_OnSourceRootIndexes((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPersistentModelIndex* */ k_selectionproxymodel_qbase_source_root_indexes(void* self) {
-    libqt_list _arr = KSelectionProxyModel_QBaseSourceRootIndexes((KSelectionProxyModel*)self);
+libqt_list /* of QPersistentModelIndex* */ k_selectionproxymodel_super_source_root_indexes(void* self) {
+    libqt_list _arr = KSelectionProxyModel_SuperSourceRootIndexes((KSelectionProxyModel*)self);
     return _arr;
 }
 
@@ -702,8 +702,8 @@ bool k_selectionproxymodel_submit(void* self) {
     return KSelectionProxyModel_Submit((KSelectionProxyModel*)self);
 }
 
-bool k_selectionproxymodel_qbase_submit(void* self) {
-    return KSelectionProxyModel_QBaseSubmit((KSelectionProxyModel*)self);
+bool k_selectionproxymodel_super_submit(void* self) {
+    return KSelectionProxyModel_SuperSubmit((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_submit(void* self, bool (*callback)()) {
@@ -714,8 +714,8 @@ void k_selectionproxymodel_revert(void* self) {
     KSelectionProxyModel_Revert((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_revert(void* self) {
-    KSelectionProxyModel_QBaseRevert((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_revert(void* self) {
+    KSelectionProxyModel_SuperRevert((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_revert(void* self, void (*callback)()) {
@@ -732,9 +732,9 @@ libqt_map /* of int to QVariant* */ k_selectionproxymodel_item_data(void* self, 
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_selectionproxymodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_selectionproxymodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KSelectionProxyModel_QBaseItemData((KSelectionProxyModel*)self, (QModelIndex*)index);
+    libqt_map _out = KSelectionProxyModel_SuperItemData((KSelectionProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -750,8 +750,8 @@ bool k_selectionproxymodel_set_data(void* self, void* index, void* value, int ro
     return KSelectionProxyModel_SetData((KSelectionProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_selectionproxymodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KSelectionProxyModel_QBaseSetData((KSelectionProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_selectionproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KSelectionProxyModel_SuperSetData((KSelectionProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_selectionproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -787,7 +787,7 @@ bool k_selectionproxymodel_set_item_data(void* self, void* index, libqt_map /* o
     return _out;
 }
 
-bool k_selectionproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_selectionproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -810,7 +810,7 @@ bool k_selectionproxymodel_qbase_set_item_data(void* self, void* index, libqt_ma
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KSelectionProxyModel_QBaseSetItemData((KSelectionProxyModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KSelectionProxyModel_SuperSetItemData((KSelectionProxyModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -824,8 +824,8 @@ bool k_selectionproxymodel_set_header_data(void* self, int section, int32_t orie
     return KSelectionProxyModel_SetHeaderData((KSelectionProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_selectionproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KSelectionProxyModel_QBaseSetHeaderData((KSelectionProxyModel*)self, section, orientation, (QVariant*)value, role);
+bool k_selectionproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KSelectionProxyModel_SuperSetHeaderData((KSelectionProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_selectionproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -836,8 +836,8 @@ bool k_selectionproxymodel_clear_item_data(void* self, void* index) {
     return KSelectionProxyModel_ClearItemData((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_selectionproxymodel_qbase_clear_item_data(void* self, void* index) {
-    return KSelectionProxyModel_QBaseClearItemData((KSelectionProxyModel*)self, (QModelIndex*)index);
+bool k_selectionproxymodel_super_clear_item_data(void* self, void* index) {
+    return KSelectionProxyModel_SuperClearItemData((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_selectionproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -848,8 +848,8 @@ QModelIndex* k_selectionproxymodel_buddy(void* self, void* index) {
     return KSelectionProxyModel_Buddy((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_buddy(void* self, void* index) {
-    return KSelectionProxyModel_QBaseBuddy((KSelectionProxyModel*)self, (QModelIndex*)index);
+QModelIndex* k_selectionproxymodel_super_buddy(void* self, void* index) {
+    return KSelectionProxyModel_SuperBuddy((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_selectionproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -860,8 +860,8 @@ bool k_selectionproxymodel_can_fetch_more(void* self, void* parent) {
     return KSelectionProxyModel_CanFetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KSelectionProxyModel_QBaseCanFetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_can_fetch_more(void* self, void* parent) {
+    return KSelectionProxyModel_SuperCanFetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -872,8 +872,8 @@ void k_selectionproxymodel_fetch_more(void* self, void* parent) {
     KSelectionProxyModel_FetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_selectionproxymodel_qbase_fetch_more(void* self, void* parent) {
-    KSelectionProxyModel_QBaseFetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
+void k_selectionproxymodel_super_fetch_more(void* self, void* parent) {
+    KSelectionProxyModel_SuperFetchMore((KSelectionProxyModel*)self, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -884,8 +884,8 @@ void k_selectionproxymodel_sort(void* self, int column, int32_t order) {
     KSelectionProxyModel_Sort((KSelectionProxyModel*)self, column, order);
 }
 
-void k_selectionproxymodel_qbase_sort(void* self, int column, int32_t order) {
-    KSelectionProxyModel_QBaseSort((KSelectionProxyModel*)self, column, order);
+void k_selectionproxymodel_super_sort(void* self, int column, int32_t order) {
+    KSelectionProxyModel_SuperSort((KSelectionProxyModel*)self, column, order);
 }
 
 void k_selectionproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -896,8 +896,8 @@ QSize* k_selectionproxymodel_span(void* self, void* index) {
     return KSelectionProxyModel_Span((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_selectionproxymodel_qbase_span(void* self, void* index) {
-    return KSelectionProxyModel_QBaseSpan((KSelectionProxyModel*)self, (QModelIndex*)index);
+QSize* k_selectionproxymodel_super_span(void* self, void* index) {
+    return KSelectionProxyModel_SuperSpan((KSelectionProxyModel*)self, (QModelIndex*)index);
 }
 
 void k_selectionproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -908,8 +908,8 @@ QModelIndex* k_selectionproxymodel_sibling(void* self, int row, int column, void
     return KSelectionProxyModel_Sibling((KSelectionProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KSelectionProxyModel_QBaseSibling((KSelectionProxyModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_selectionproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KSelectionProxyModel_SuperSibling((KSelectionProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_selectionproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -920,8 +920,8 @@ bool k_selectionproxymodel_can_drop_mime_data(void* self, void* data, int32_t ac
     return KSelectionProxyModel_CanDropMimeData((KSelectionProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KSelectionProxyModel_QBaseCanDropMimeData((KSelectionProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KSelectionProxyModel_SuperCanDropMimeData((KSelectionProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -932,8 +932,8 @@ int32_t k_selectionproxymodel_supported_drag_actions(void* self) {
     return KSelectionProxyModel_SupportedDragActions((KSelectionProxyModel*)self);
 }
 
-int32_t k_selectionproxymodel_qbase_supported_drag_actions(void* self) {
-    return KSelectionProxyModel_QBaseSupportedDragActions((KSelectionProxyModel*)self);
+int32_t k_selectionproxymodel_super_supported_drag_actions(void* self) {
+    return KSelectionProxyModel_SuperSupportedDragActions((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -973,9 +973,9 @@ libqt_map /* of int to char* */ k_selectionproxymodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_selectionproxymodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_selectionproxymodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KSelectionProxyModel_QBaseRoleNames((KSelectionProxyModel*)self);
+    libqt_map _out = KSelectionProxyModel_SuperRoleNames((KSelectionProxyModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -1014,8 +1014,8 @@ bool k_selectionproxymodel_insert_rows(void* self, int row, int count, void* par
     return KSelectionProxyModel_InsertRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KSelectionProxyModel_QBaseInsertRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KSelectionProxyModel_SuperInsertRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -1026,8 +1026,8 @@ bool k_selectionproxymodel_insert_columns(void* self, int column, int count, voi
     return KSelectionProxyModel_InsertColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KSelectionProxyModel_QBaseInsertColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KSelectionProxyModel_SuperInsertColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -1038,8 +1038,8 @@ bool k_selectionproxymodel_remove_rows(void* self, int row, int count, void* par
     return KSelectionProxyModel_RemoveRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KSelectionProxyModel_QBaseRemoveRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KSelectionProxyModel_SuperRemoveRows((KSelectionProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -1050,8 +1050,8 @@ bool k_selectionproxymodel_remove_columns(void* self, int column, int count, voi
     return KSelectionProxyModel_RemoveColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_selectionproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KSelectionProxyModel_QBaseRemoveColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
+bool k_selectionproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KSelectionProxyModel_SuperRemoveColumns((KSelectionProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_selectionproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -1062,8 +1062,8 @@ bool k_selectionproxymodel_move_rows(void* self, void* sourceParent, int sourceR
     return KSelectionProxyModel_MoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_selectionproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KSelectionProxyModel_QBaseMoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_selectionproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KSelectionProxyModel_SuperMoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_selectionproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1074,8 +1074,8 @@ bool k_selectionproxymodel_move_columns(void* self, void* sourceParent, int sour
     return KSelectionProxyModel_MoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_selectionproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KSelectionProxyModel_QBaseMoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_selectionproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KSelectionProxyModel_SuperMoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_selectionproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1086,8 +1086,8 @@ void k_selectionproxymodel_multi_data(void* self, void* index, void* roleDataSpa
     KSelectionProxyModel_MultiData((KSelectionProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_selectionproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KSelectionProxyModel_QBaseMultiData((KSelectionProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_selectionproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KSelectionProxyModel_SuperMultiData((KSelectionProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_selectionproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1098,8 +1098,8 @@ void k_selectionproxymodel_reset_internal_data(void* self) {
     KSelectionProxyModel_ResetInternalData((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_reset_internal_data(void* self) {
-    KSelectionProxyModel_QBaseResetInternalData((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_reset_internal_data(void* self) {
+    KSelectionProxyModel_SuperResetInternalData((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1110,8 +1110,8 @@ bool k_selectionproxymodel_event(void* self, void* event) {
     return KSelectionProxyModel_Event((KSelectionProxyModel*)self, (QEvent*)event);
 }
 
-bool k_selectionproxymodel_qbase_event(void* self, void* event) {
-    return KSelectionProxyModel_QBaseEvent((KSelectionProxyModel*)self, (QEvent*)event);
+bool k_selectionproxymodel_super_event(void* self, void* event) {
+    return KSelectionProxyModel_SuperEvent((KSelectionProxyModel*)self, (QEvent*)event);
 }
 
 void k_selectionproxymodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1122,8 +1122,8 @@ bool k_selectionproxymodel_event_filter(void* self, void* watched, void* event) 
     return KSelectionProxyModel_EventFilter((KSelectionProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_selectionproxymodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSelectionProxyModel_QBaseEventFilter((KSelectionProxyModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_selectionproxymodel_super_event_filter(void* self, void* watched, void* event) {
+    return KSelectionProxyModel_SuperEventFilter((KSelectionProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_selectionproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1134,8 +1134,8 @@ void k_selectionproxymodel_timer_event(void* self, void* event) {
     KSelectionProxyModel_TimerEvent((KSelectionProxyModel*)self, (QTimerEvent*)event);
 }
 
-void k_selectionproxymodel_qbase_timer_event(void* self, void* event) {
-    KSelectionProxyModel_QBaseTimerEvent((KSelectionProxyModel*)self, (QTimerEvent*)event);
+void k_selectionproxymodel_super_timer_event(void* self, void* event) {
+    KSelectionProxyModel_SuperTimerEvent((KSelectionProxyModel*)self, (QTimerEvent*)event);
 }
 
 void k_selectionproxymodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1146,8 +1146,8 @@ void k_selectionproxymodel_child_event(void* self, void* event) {
     KSelectionProxyModel_ChildEvent((KSelectionProxyModel*)self, (QChildEvent*)event);
 }
 
-void k_selectionproxymodel_qbase_child_event(void* self, void* event) {
-    KSelectionProxyModel_QBaseChildEvent((KSelectionProxyModel*)self, (QChildEvent*)event);
+void k_selectionproxymodel_super_child_event(void* self, void* event) {
+    KSelectionProxyModel_SuperChildEvent((KSelectionProxyModel*)self, (QChildEvent*)event);
 }
 
 void k_selectionproxymodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1158,8 +1158,8 @@ void k_selectionproxymodel_custom_event(void* self, void* event) {
     KSelectionProxyModel_CustomEvent((KSelectionProxyModel*)self, (QEvent*)event);
 }
 
-void k_selectionproxymodel_qbase_custom_event(void* self, void* event) {
-    KSelectionProxyModel_QBaseCustomEvent((KSelectionProxyModel*)self, (QEvent*)event);
+void k_selectionproxymodel_super_custom_event(void* self, void* event) {
+    KSelectionProxyModel_SuperCustomEvent((KSelectionProxyModel*)self, (QEvent*)event);
 }
 
 void k_selectionproxymodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1170,8 +1170,8 @@ void k_selectionproxymodel_connect_notify(void* self, void* signal) {
     KSelectionProxyModel_ConnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionproxymodel_qbase_connect_notify(void* self, void* signal) {
-    KSelectionProxyModel_QBaseConnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
+void k_selectionproxymodel_super_connect_notify(void* self, void* signal) {
+    KSelectionProxyModel_SuperConnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1182,8 +1182,8 @@ void k_selectionproxymodel_disconnect_notify(void* self, void* signal) {
     KSelectionProxyModel_DisconnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionproxymodel_qbase_disconnect_notify(void* self, void* signal) {
-    KSelectionProxyModel_QBaseDisconnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
+void k_selectionproxymodel_super_disconnect_notify(void* self, void* signal) {
+    KSelectionProxyModel_SuperDisconnectNotify((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1194,8 +1194,8 @@ QModelIndex* k_selectionproxymodel_create_source_index(void* self, int row, int 
     return KSelectionProxyModel_CreateSourceIndex((KSelectionProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return KSelectionProxyModel_QBaseCreateSourceIndex((KSelectionProxyModel*)self, row, col, internalPtr);
+QModelIndex* k_selectionproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
+    return KSelectionProxyModel_SuperCreateSourceIndex((KSelectionProxyModel*)self, row, col, internalPtr);
 }
 
 void k_selectionproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -1206,8 +1206,8 @@ QModelIndex* k_selectionproxymodel_create_index(void* self, int row, int column)
     return KSelectionProxyModel_CreateIndex((KSelectionProxyModel*)self, row, column);
 }
 
-QModelIndex* k_selectionproxymodel_qbase_create_index(void* self, int row, int column) {
-    return KSelectionProxyModel_QBaseCreateIndex((KSelectionProxyModel*)self, row, column);
+QModelIndex* k_selectionproxymodel_super_create_index(void* self, int row, int column) {
+    return KSelectionProxyModel_SuperCreateIndex((KSelectionProxyModel*)self, row, column);
 }
 
 void k_selectionproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1218,8 +1218,8 @@ void k_selectionproxymodel_encode_data(void* self, libqt_list /* of QModelIndex*
     KSelectionProxyModel_EncodeData((KSelectionProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_selectionproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KSelectionProxyModel_QBaseEncodeData((KSelectionProxyModel*)self, indexes, (QDataStream*)stream);
+void k_selectionproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KSelectionProxyModel_SuperEncodeData((KSelectionProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1230,8 +1230,8 @@ bool k_selectionproxymodel_decode_data(void* self, int row, int column, void* pa
     return KSelectionProxyModel_DecodeData((KSelectionProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_selectionproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KSelectionProxyModel_QBaseDecodeData((KSelectionProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_selectionproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KSelectionProxyModel_SuperDecodeData((KSelectionProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_selectionproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1242,8 +1242,8 @@ void k_selectionproxymodel_begin_insert_rows(void* self, void* parent, int first
     KSelectionProxyModel_BeginInsertRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_selectionproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KSelectionProxyModel_QBaseBeginInsertRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_selectionproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KSelectionProxyModel_SuperBeginInsertRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_selectionproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1254,8 +1254,8 @@ void k_selectionproxymodel_end_insert_rows(void* self) {
     KSelectionProxyModel_EndInsertRows((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_insert_rows(void* self) {
-    KSelectionProxyModel_QBaseEndInsertRows((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_insert_rows(void* self) {
+    KSelectionProxyModel_SuperEndInsertRows((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1266,8 +1266,8 @@ void k_selectionproxymodel_begin_remove_rows(void* self, void* parent, int first
     KSelectionProxyModel_BeginRemoveRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_selectionproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KSelectionProxyModel_QBaseBeginRemoveRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_selectionproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KSelectionProxyModel_SuperBeginRemoveRows((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_selectionproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1278,8 +1278,8 @@ void k_selectionproxymodel_end_remove_rows(void* self) {
     KSelectionProxyModel_EndRemoveRows((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_remove_rows(void* self) {
-    KSelectionProxyModel_QBaseEndRemoveRows((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_remove_rows(void* self) {
+    KSelectionProxyModel_SuperEndRemoveRows((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1290,8 +1290,8 @@ bool k_selectionproxymodel_begin_move_rows(void* self, void* sourceParent, int s
     return KSelectionProxyModel_BeginMoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_selectionproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KSelectionProxyModel_QBaseBeginMoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_selectionproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KSelectionProxyModel_SuperBeginMoveRows((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_selectionproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1302,8 +1302,8 @@ void k_selectionproxymodel_end_move_rows(void* self) {
     KSelectionProxyModel_EndMoveRows((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_move_rows(void* self) {
-    KSelectionProxyModel_QBaseEndMoveRows((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_move_rows(void* self) {
+    KSelectionProxyModel_SuperEndMoveRows((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1314,8 +1314,8 @@ void k_selectionproxymodel_begin_insert_columns(void* self, void* parent, int fi
     KSelectionProxyModel_BeginInsertColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_selectionproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KSelectionProxyModel_QBaseBeginInsertColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_selectionproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KSelectionProxyModel_SuperBeginInsertColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_selectionproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1326,8 +1326,8 @@ void k_selectionproxymodel_end_insert_columns(void* self) {
     KSelectionProxyModel_EndInsertColumns((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_insert_columns(void* self) {
-    KSelectionProxyModel_QBaseEndInsertColumns((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_insert_columns(void* self) {
+    KSelectionProxyModel_SuperEndInsertColumns((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1338,8 +1338,8 @@ void k_selectionproxymodel_begin_remove_columns(void* self, void* parent, int fi
     KSelectionProxyModel_BeginRemoveColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_selectionproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KSelectionProxyModel_QBaseBeginRemoveColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
+void k_selectionproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KSelectionProxyModel_SuperBeginRemoveColumns((KSelectionProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_selectionproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1350,8 +1350,8 @@ void k_selectionproxymodel_end_remove_columns(void* self) {
     KSelectionProxyModel_EndRemoveColumns((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_remove_columns(void* self) {
-    KSelectionProxyModel_QBaseEndRemoveColumns((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_remove_columns(void* self) {
+    KSelectionProxyModel_SuperEndRemoveColumns((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1362,8 +1362,8 @@ bool k_selectionproxymodel_begin_move_columns(void* self, void* sourceParent, in
     return KSelectionProxyModel_BeginMoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_selectionproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KSelectionProxyModel_QBaseBeginMoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_selectionproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KSelectionProxyModel_SuperBeginMoveColumns((KSelectionProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_selectionproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1374,8 +1374,8 @@ void k_selectionproxymodel_end_move_columns(void* self) {
     KSelectionProxyModel_EndMoveColumns((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_move_columns(void* self) {
-    KSelectionProxyModel_QBaseEndMoveColumns((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_move_columns(void* self) {
+    KSelectionProxyModel_SuperEndMoveColumns((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1386,8 +1386,8 @@ void k_selectionproxymodel_begin_reset_model(void* self) {
     KSelectionProxyModel_BeginResetModel((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_begin_reset_model(void* self) {
-    KSelectionProxyModel_QBaseBeginResetModel((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_begin_reset_model(void* self) {
+    KSelectionProxyModel_SuperBeginResetModel((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1398,8 +1398,8 @@ void k_selectionproxymodel_end_reset_model(void* self) {
     KSelectionProxyModel_EndResetModel((KSelectionProxyModel*)self);
 }
 
-void k_selectionproxymodel_qbase_end_reset_model(void* self) {
-    KSelectionProxyModel_QBaseEndResetModel((KSelectionProxyModel*)self);
+void k_selectionproxymodel_super_end_reset_model(void* self) {
+    KSelectionProxyModel_SuperEndResetModel((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1410,8 +1410,8 @@ void k_selectionproxymodel_change_persistent_index(void* self, void* from, void*
     KSelectionProxyModel_ChangePersistentIndex((KSelectionProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_selectionproxymodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KSelectionProxyModel_QBaseChangePersistentIndex((KSelectionProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_selectionproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KSelectionProxyModel_SuperChangePersistentIndex((KSelectionProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_selectionproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1422,8 +1422,8 @@ void k_selectionproxymodel_change_persistent_index_list(void* self, libqt_list /
     KSelectionProxyModel_ChangePersistentIndexList((KSelectionProxyModel*)self, from, to);
 }
 
-void k_selectionproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KSelectionProxyModel_QBaseChangePersistentIndexList((KSelectionProxyModel*)self, from, to);
+void k_selectionproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KSelectionProxyModel_SuperChangePersistentIndexList((KSelectionProxyModel*)self, from, to);
 }
 
 void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1435,8 +1435,8 @@ libqt_list /* of QModelIndex* */ k_selectionproxymodel_persistent_index_list(voi
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_selectionproxymodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KSelectionProxyModel_QBasePersistentIndexList((KSelectionProxyModel*)self);
+libqt_list /* of QModelIndex* */ k_selectionproxymodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KSelectionProxyModel_SuperPersistentIndexList((KSelectionProxyModel*)self);
     return _arr;
 }
 
@@ -1448,8 +1448,8 @@ QObject* k_selectionproxymodel_sender(void* self) {
     return KSelectionProxyModel_Sender((KSelectionProxyModel*)self);
 }
 
-QObject* k_selectionproxymodel_qbase_sender(void* self) {
-    return KSelectionProxyModel_QBaseSender((KSelectionProxyModel*)self);
+QObject* k_selectionproxymodel_super_sender(void* self) {
+    return KSelectionProxyModel_SuperSender((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1460,8 +1460,8 @@ int32_t k_selectionproxymodel_sender_signal_index(void* self) {
     return KSelectionProxyModel_SenderSignalIndex((KSelectionProxyModel*)self);
 }
 
-int32_t k_selectionproxymodel_qbase_sender_signal_index(void* self) {
-    return KSelectionProxyModel_QBaseSenderSignalIndex((KSelectionProxyModel*)self);
+int32_t k_selectionproxymodel_super_sender_signal_index(void* self) {
+    return KSelectionProxyModel_SuperSenderSignalIndex((KSelectionProxyModel*)self);
 }
 
 void k_selectionproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1472,8 +1472,8 @@ int32_t k_selectionproxymodel_receivers(void* self, const char* signal) {
     return KSelectionProxyModel_Receivers((KSelectionProxyModel*)self, signal);
 }
 
-int32_t k_selectionproxymodel_qbase_receivers(void* self, const char* signal) {
-    return KSelectionProxyModel_QBaseReceivers((KSelectionProxyModel*)self, signal);
+int32_t k_selectionproxymodel_super_receivers(void* self, const char* signal) {
+    return KSelectionProxyModel_SuperReceivers((KSelectionProxyModel*)self, signal);
 }
 
 void k_selectionproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1484,8 +1484,8 @@ bool k_selectionproxymodel_is_signal_connected(void* self, void* signal) {
     return KSelectionProxyModel_IsSignalConnected((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_selectionproxymodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KSelectionProxyModel_QBaseIsSignalConnected((KSelectionProxyModel*)self, (QMetaMethod*)signal);
+bool k_selectionproxymodel_super_is_signal_connected(void* self, void* signal) {
+    return KSelectionProxyModel_SuperIsSignalConnected((KSelectionProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

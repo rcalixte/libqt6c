@@ -20,8 +20,8 @@ void k_syntaxhighlighting__repository_on_meta_object(void* self, const QMetaObje
     KSyntaxHighlighting__Repository_OnMetaObject((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_syntaxhighlighting__repository_qbase_meta_object(void* self) {
-    return KSyntaxHighlighting__Repository_QBaseMetaObject((KSyntaxHighlighting__Repository*)self);
+const QMetaObject* k_syntaxhighlighting__repository_super_meta_object(void* self) {
+    return KSyntaxHighlighting__Repository_SuperMetaObject((KSyntaxHighlighting__Repository*)self);
 }
 
 void* k_syntaxhighlighting__repository_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_syntaxhighlighting__repository_on_metacast(void* self, void* (*callback)(
     KSyntaxHighlighting__Repository_OnMetacast((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
 }
 
-void* k_syntaxhighlighting__repository_qbase_metacast(void* self, const char* param1) {
-    return KSyntaxHighlighting__Repository_QBaseMetacast((KSyntaxHighlighting__Repository*)self, param1);
+void* k_syntaxhighlighting__repository_super_metacast(void* self, const char* param1) {
+    return KSyntaxHighlighting__Repository_SuperMetacast((KSyntaxHighlighting__Repository*)self, param1);
 }
 
 int32_t k_syntaxhighlighting__repository_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_syntaxhighlighting__repository_on_metacall(void* self, int32_t (*callback
     KSyntaxHighlighting__Repository_OnMetacall((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
 }
 
-int32_t k_syntaxhighlighting__repository_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSyntaxHighlighting__Repository_QBaseMetacall((KSyntaxHighlighting__Repository*)self, param1, param2, param3);
+int32_t k_syntaxhighlighting__repository_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSyntaxHighlighting__Repository_SuperMetacall((KSyntaxHighlighting__Repository*)self, param1, param2, param3);
 }
 
 const char* k_syntaxhighlighting__repository_tr(const char* s) {
@@ -375,8 +375,8 @@ bool k_syntaxhighlighting__repository_event(void* self, void* event) {
     return KSyntaxHighlighting__Repository_Event((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
 }
 
-bool k_syntaxhighlighting__repository_qbase_event(void* self, void* event) {
-    return KSyntaxHighlighting__Repository_QBaseEvent((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
+bool k_syntaxhighlighting__repository_super_event(void* self, void* event) {
+    return KSyntaxHighlighting__Repository_SuperEvent((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__repository_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ bool k_syntaxhighlighting__repository_event_filter(void* self, void* watched, vo
     return KSyntaxHighlighting__Repository_EventFilter((KSyntaxHighlighting__Repository*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_syntaxhighlighting__repository_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSyntaxHighlighting__Repository_QBaseEventFilter((KSyntaxHighlighting__Repository*)self, (QObject*)watched, (QEvent*)event);
+bool k_syntaxhighlighting__repository_super_event_filter(void* self, void* watched, void* event) {
+    return KSyntaxHighlighting__Repository_SuperEventFilter((KSyntaxHighlighting__Repository*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__repository_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -399,8 +399,8 @@ void k_syntaxhighlighting__repository_timer_event(void* self, void* event) {
     KSyntaxHighlighting__Repository_TimerEvent((KSyntaxHighlighting__Repository*)self, (QTimerEvent*)event);
 }
 
-void k_syntaxhighlighting__repository_qbase_timer_event(void* self, void* event) {
-    KSyntaxHighlighting__Repository_QBaseTimerEvent((KSyntaxHighlighting__Repository*)self, (QTimerEvent*)event);
+void k_syntaxhighlighting__repository_super_timer_event(void* self, void* event) {
+    KSyntaxHighlighting__Repository_SuperTimerEvent((KSyntaxHighlighting__Repository*)self, (QTimerEvent*)event);
 }
 
 void k_syntaxhighlighting__repository_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ void k_syntaxhighlighting__repository_child_event(void* self, void* event) {
     KSyntaxHighlighting__Repository_ChildEvent((KSyntaxHighlighting__Repository*)self, (QChildEvent*)event);
 }
 
-void k_syntaxhighlighting__repository_qbase_child_event(void* self, void* event) {
-    KSyntaxHighlighting__Repository_QBaseChildEvent((KSyntaxHighlighting__Repository*)self, (QChildEvent*)event);
+void k_syntaxhighlighting__repository_super_child_event(void* self, void* event) {
+    KSyntaxHighlighting__Repository_SuperChildEvent((KSyntaxHighlighting__Repository*)self, (QChildEvent*)event);
 }
 
 void k_syntaxhighlighting__repository_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void k_syntaxhighlighting__repository_custom_event(void* self, void* event) {
     KSyntaxHighlighting__Repository_CustomEvent((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
 }
 
-void k_syntaxhighlighting__repository_qbase_custom_event(void* self, void* event) {
-    KSyntaxHighlighting__Repository_QBaseCustomEvent((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
+void k_syntaxhighlighting__repository_super_custom_event(void* self, void* event) {
+    KSyntaxHighlighting__Repository_SuperCustomEvent((KSyntaxHighlighting__Repository*)self, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__repository_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ void k_syntaxhighlighting__repository_connect_notify(void* self, void* signal) {
     KSyntaxHighlighting__Repository_ConnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
-void k_syntaxhighlighting__repository_qbase_connect_notify(void* self, void* signal) {
-    KSyntaxHighlighting__Repository_QBaseConnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
+void k_syntaxhighlighting__repository_super_connect_notify(void* self, void* signal) {
+    KSyntaxHighlighting__Repository_SuperConnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__repository_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void k_syntaxhighlighting__repository_disconnect_notify(void* self, void* signal
     KSyntaxHighlighting__Repository_DisconnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
-void k_syntaxhighlighting__repository_qbase_disconnect_notify(void* self, void* signal) {
-    KSyntaxHighlighting__Repository_QBaseDisconnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
+void k_syntaxhighlighting__repository_super_disconnect_notify(void* self, void* signal) {
+    KSyntaxHighlighting__Repository_SuperDisconnectNotify((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__repository_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ QObject* k_syntaxhighlighting__repository_sender(void* self) {
     return KSyntaxHighlighting__Repository_Sender((KSyntaxHighlighting__Repository*)self);
 }
 
-QObject* k_syntaxhighlighting__repository_qbase_sender(void* self) {
-    return KSyntaxHighlighting__Repository_QBaseSender((KSyntaxHighlighting__Repository*)self);
+QObject* k_syntaxhighlighting__repository_super_sender(void* self) {
+    return KSyntaxHighlighting__Repository_SuperSender((KSyntaxHighlighting__Repository*)self);
 }
 
 void k_syntaxhighlighting__repository_on_sender(void* self, QObject* (*callback)()) {
@@ -471,8 +471,8 @@ int32_t k_syntaxhighlighting__repository_sender_signal_index(void* self) {
     return KSyntaxHighlighting__Repository_SenderSignalIndex((KSyntaxHighlighting__Repository*)self);
 }
 
-int32_t k_syntaxhighlighting__repository_qbase_sender_signal_index(void* self) {
-    return KSyntaxHighlighting__Repository_QBaseSenderSignalIndex((KSyntaxHighlighting__Repository*)self);
+int32_t k_syntaxhighlighting__repository_super_sender_signal_index(void* self) {
+    return KSyntaxHighlighting__Repository_SuperSenderSignalIndex((KSyntaxHighlighting__Repository*)self);
 }
 
 void k_syntaxhighlighting__repository_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -483,8 +483,8 @@ int32_t k_syntaxhighlighting__repository_receivers(void* self, const char* signa
     return KSyntaxHighlighting__Repository_Receivers((KSyntaxHighlighting__Repository*)self, signal);
 }
 
-int32_t k_syntaxhighlighting__repository_qbase_receivers(void* self, const char* signal) {
-    return KSyntaxHighlighting__Repository_QBaseReceivers((KSyntaxHighlighting__Repository*)self, signal);
+int32_t k_syntaxhighlighting__repository_super_receivers(void* self, const char* signal) {
+    return KSyntaxHighlighting__Repository_SuperReceivers((KSyntaxHighlighting__Repository*)self, signal);
 }
 
 void k_syntaxhighlighting__repository_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -495,8 +495,8 @@ bool k_syntaxhighlighting__repository_is_signal_connected(void* self, void* sign
     return KSyntaxHighlighting__Repository_IsSignalConnected((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
-bool k_syntaxhighlighting__repository_qbase_is_signal_connected(void* self, void* signal) {
-    return KSyntaxHighlighting__Repository_QBaseIsSignalConnected((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
+bool k_syntaxhighlighting__repository_super_is_signal_connected(void* self, void* signal) {
+    return KSyntaxHighlighting__Repository_SuperIsSignalConnected((KSyntaxHighlighting__Repository*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__repository_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -75,8 +75,8 @@ void q_settings_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QSettings_OnMetaObject((QSettings*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_settings_qbase_meta_object(void* self) {
-    return QSettings_QBaseMetaObject((QSettings*)self);
+const QMetaObject* q_settings_super_meta_object(void* self) {
+    return QSettings_SuperMetaObject((QSettings*)self);
 }
 
 void* q_settings_metacast(void* self, const char* param1) {
@@ -87,8 +87,8 @@ void q_settings_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QSettings_OnMetacast((QSettings*)self, (intptr_t)callback);
 }
 
-void* q_settings_qbase_metacast(void* self, const char* param1) {
-    return QSettings_QBaseMetacast((QSettings*)self, param1);
+void* q_settings_super_metacast(void* self, const char* param1) {
+    return QSettings_SuperMetacast((QSettings*)self, param1);
 }
 
 int32_t q_settings_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -99,8 +99,8 @@ void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QSettings_OnMetacall((QSettings*)self, (intptr_t)callback);
 }
 
-int32_t q_settings_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSettings_QBaseMetacall((QSettings*)self, param1, param2, param3);
+int32_t q_settings_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSettings_SuperMetacall((QSettings*)self, param1, param2, param3);
 }
 
 const char* q_settings_tr(const char* s) {
@@ -299,8 +299,8 @@ void q_settings_on_event(void* self, bool (*callback)(void*, void*)) {
     QSettings_OnEvent((QSettings*)self, (intptr_t)callback);
 }
 
-bool q_settings_qbase_event(void* self, void* event) {
-    return QSettings_QBaseEvent((QSettings*)self, (QEvent*)event);
+bool q_settings_super_event(void* self, void* event) {
+    return QSettings_SuperEvent((QSettings*)self, (QEvent*)event);
 }
 
 const char* q_settings_tr2(const char* s, const char* c) {
@@ -536,8 +536,8 @@ bool q_settings_event_filter(void* self, void* watched, void* event) {
     return QSettings_EventFilter((QSettings*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_settings_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSettings_QBaseEventFilter((QSettings*)self, (QObject*)watched, (QEvent*)event);
+bool q_settings_super_event_filter(void* self, void* watched, void* event) {
+    return QSettings_SuperEventFilter((QSettings*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_settings_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -548,8 +548,8 @@ void q_settings_timer_event(void* self, void* event) {
     QSettings_TimerEvent((QSettings*)self, (QTimerEvent*)event);
 }
 
-void q_settings_qbase_timer_event(void* self, void* event) {
-    QSettings_QBaseTimerEvent((QSettings*)self, (QTimerEvent*)event);
+void q_settings_super_timer_event(void* self, void* event) {
+    QSettings_SuperTimerEvent((QSettings*)self, (QTimerEvent*)event);
 }
 
 void q_settings_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -560,8 +560,8 @@ void q_settings_child_event(void* self, void* event) {
     QSettings_ChildEvent((QSettings*)self, (QChildEvent*)event);
 }
 
-void q_settings_qbase_child_event(void* self, void* event) {
-    QSettings_QBaseChildEvent((QSettings*)self, (QChildEvent*)event);
+void q_settings_super_child_event(void* self, void* event) {
+    QSettings_SuperChildEvent((QSettings*)self, (QChildEvent*)event);
 }
 
 void q_settings_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ void q_settings_custom_event(void* self, void* event) {
     QSettings_CustomEvent((QSettings*)self, (QEvent*)event);
 }
 
-void q_settings_qbase_custom_event(void* self, void* event) {
-    QSettings_QBaseCustomEvent((QSettings*)self, (QEvent*)event);
+void q_settings_super_custom_event(void* self, void* event) {
+    QSettings_SuperCustomEvent((QSettings*)self, (QEvent*)event);
 }
 
 void q_settings_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -584,8 +584,8 @@ void q_settings_connect_notify(void* self, void* signal) {
     QSettings_ConnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
-void q_settings_qbase_connect_notify(void* self, void* signal) {
-    QSettings_QBaseConnectNotify((QSettings*)self, (QMetaMethod*)signal);
+void q_settings_super_connect_notify(void* self, void* signal) {
+    QSettings_SuperConnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
 void q_settings_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -596,8 +596,8 @@ void q_settings_disconnect_notify(void* self, void* signal) {
     QSettings_DisconnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
-void q_settings_qbase_disconnect_notify(void* self, void* signal) {
-    QSettings_QBaseDisconnectNotify((QSettings*)self, (QMetaMethod*)signal);
+void q_settings_super_disconnect_notify(void* self, void* signal) {
+    QSettings_SuperDisconnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
 void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -608,8 +608,8 @@ QObject* q_settings_sender(void* self) {
     return QSettings_Sender((QSettings*)self);
 }
 
-QObject* q_settings_qbase_sender(void* self) {
-    return QSettings_QBaseSender((QSettings*)self);
+QObject* q_settings_super_sender(void* self) {
+    return QSettings_SuperSender((QSettings*)self);
 }
 
 void q_settings_on_sender(void* self, QObject* (*callback)()) {
@@ -620,8 +620,8 @@ int32_t q_settings_sender_signal_index(void* self) {
     return QSettings_SenderSignalIndex((QSettings*)self);
 }
 
-int32_t q_settings_qbase_sender_signal_index(void* self) {
-    return QSettings_QBaseSenderSignalIndex((QSettings*)self);
+int32_t q_settings_super_sender_signal_index(void* self) {
+    return QSettings_SuperSenderSignalIndex((QSettings*)self);
 }
 
 void q_settings_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -632,8 +632,8 @@ int32_t q_settings_receivers(void* self, const char* signal) {
     return QSettings_Receivers((QSettings*)self, signal);
 }
 
-int32_t q_settings_qbase_receivers(void* self, const char* signal) {
-    return QSettings_QBaseReceivers((QSettings*)self, signal);
+int32_t q_settings_super_receivers(void* self, const char* signal) {
+    return QSettings_SuperReceivers((QSettings*)self, signal);
 }
 
 void q_settings_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -644,8 +644,8 @@ bool q_settings_is_signal_connected(void* self, void* signal) {
     return QSettings_IsSignalConnected((QSettings*)self, (QMetaMethod*)signal);
 }
 
-bool q_settings_qbase_is_signal_connected(void* self, void* signal) {
-    return QSettings_QBaseIsSignalConnected((QSettings*)self, (QMetaMethod*)signal);
+bool q_settings_super_is_signal_connected(void* self, void* signal) {
+    return QSettings_SuperIsSignalConnected((QSettings*)self, (QMetaMethod*)signal);
 }
 
 void q_settings_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

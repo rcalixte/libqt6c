@@ -37,8 +37,8 @@ void k_listwidgetsearchline_on_meta_object(void* self, const QMetaObject* (*call
     KListWidgetSearchLine_OnMetaObject((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_listwidgetsearchline_qbase_meta_object(void* self) {
-    return KListWidgetSearchLine_QBaseMetaObject((KListWidgetSearchLine*)self);
+const QMetaObject* k_listwidgetsearchline_super_meta_object(void* self) {
+    return KListWidgetSearchLine_SuperMetaObject((KListWidgetSearchLine*)self);
 }
 
 void* k_listwidgetsearchline_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void k_listwidgetsearchline_on_metacast(void* self, void* (*callback)(void*, con
     KListWidgetSearchLine_OnMetacast((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void* k_listwidgetsearchline_qbase_metacast(void* self, const char* param1) {
-    return KListWidgetSearchLine_QBaseMetacast((KListWidgetSearchLine*)self, param1);
+void* k_listwidgetsearchline_super_metacast(void* self, const char* param1) {
+    return KListWidgetSearchLine_SuperMetacast((KListWidgetSearchLine*)self, param1);
 }
 
 int32_t k_listwidgetsearchline_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void k_listwidgetsearchline_on_metacall(void* self, int32_t (*callback)(void*, i
     KListWidgetSearchLine_OnMetacall((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-int32_t k_listwidgetsearchline_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KListWidgetSearchLine_QBaseMetacall((KListWidgetSearchLine*)self, param1, param2, param3);
+int32_t k_listwidgetsearchline_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KListWidgetSearchLine_SuperMetacall((KListWidgetSearchLine*)self, param1, param2, param3);
 }
 
 const char* k_listwidgetsearchline_tr(const char* s) {
@@ -88,8 +88,8 @@ void k_listwidgetsearchline_on_update_search(void* self, void (*callback)(void*,
     KListWidgetSearchLine_OnUpdateSearch((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_listwidgetsearchline_qbase_update_search(void* self, const char* s) {
-    KListWidgetSearchLine_QBaseUpdateSearch((KListWidgetSearchLine*)self, qstring(s));
+void k_listwidgetsearchline_super_update_search(void* self, const char* s) {
+    KListWidgetSearchLine_SuperUpdateSearch((KListWidgetSearchLine*)self, qstring(s));
 }
 
 void k_listwidgetsearchline_set_case_sensitivity(void* self, int32_t cs) {
@@ -112,8 +112,8 @@ void k_listwidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, 
     KListWidgetSearchLine_OnItemMatches((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_listwidgetsearchline_qbase_item_matches(void* self, void* item, const char* s) {
-    return KListWidgetSearchLine_QBaseItemMatches((KListWidgetSearchLine*)self, (QListWidgetItem*)item, qstring(s));
+bool k_listwidgetsearchline_super_item_matches(void* self, void* item, const char* s) {
+    return KListWidgetSearchLine_SuperItemMatches((KListWidgetSearchLine*)self, (QListWidgetItem*)item, qstring(s));
 }
 
 bool k_listwidgetsearchline_event(void* self, void* event) {
@@ -124,8 +124,8 @@ void k_listwidgetsearchline_on_event(void* self, bool (*callback)(void*, void*))
     KListWidgetSearchLine_OnEvent((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_listwidgetsearchline_qbase_event(void* self, void* event) {
-    return KListWidgetSearchLine_QBaseEvent((KListWidgetSearchLine*)self, (QEvent*)event);
+bool k_listwidgetsearchline_super_event(void* self, void* event) {
+    return KListWidgetSearchLine_SuperEvent((KListWidgetSearchLine*)self, (QEvent*)event);
 }
 
 const char* k_listwidgetsearchline_tr2(const char* s, const char* c) {
@@ -1854,8 +1854,8 @@ QSize* k_listwidgetsearchline_size_hint(void* self) {
     return KListWidgetSearchLine_SizeHint((KListWidgetSearchLine*)self);
 }
 
-QSize* k_listwidgetsearchline_qbase_size_hint(void* self) {
-    return KListWidgetSearchLine_QBaseSizeHint((KListWidgetSearchLine*)self);
+QSize* k_listwidgetsearchline_super_size_hint(void* self) {
+    return KListWidgetSearchLine_SuperSizeHint((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1866,8 +1866,8 @@ QSize* k_listwidgetsearchline_minimum_size_hint(void* self) {
     return KListWidgetSearchLine_MinimumSizeHint((KListWidgetSearchLine*)self);
 }
 
-QSize* k_listwidgetsearchline_qbase_minimum_size_hint(void* self) {
-    return KListWidgetSearchLine_QBaseMinimumSizeHint((KListWidgetSearchLine*)self);
+QSize* k_listwidgetsearchline_super_minimum_size_hint(void* self) {
+    return KListWidgetSearchLine_SuperMinimumSizeHint((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1878,8 +1878,8 @@ void k_listwidgetsearchline_mouse_press_event(void* self, void* param1) {
     KListWidgetSearchLine_MousePressEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_mouse_press_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseMousePressEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_listwidgetsearchline_super_mouse_press_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperMousePressEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void k_listwidgetsearchline_mouse_move_event(void* self, void* param1) {
     KListWidgetSearchLine_MouseMoveEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_mouse_move_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseMouseMoveEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_listwidgetsearchline_super_mouse_move_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperMouseMoveEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_listwidgetsearchline_mouse_release_event(void* self, void* param1) {
     KListWidgetSearchLine_MouseReleaseEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_mouse_release_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseMouseReleaseEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_listwidgetsearchline_super_mouse_release_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperMouseReleaseEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_listwidgetsearchline_mouse_double_click_event(void* self, void* param1) {
     KListWidgetSearchLine_MouseDoubleClickEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_mouse_double_click_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseMouseDoubleClickEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_listwidgetsearchline_super_mouse_double_click_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperMouseDoubleClickEvent((KListWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ void k_listwidgetsearchline_key_press_event(void* self, void* param1) {
     KListWidgetSearchLine_KeyPressEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_key_press_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseKeyPressEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
+void k_listwidgetsearchline_super_key_press_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperKeyPressEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void k_listwidgetsearchline_key_release_event(void* self, void* param1) {
     KListWidgetSearchLine_KeyReleaseEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_key_release_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseKeyReleaseEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
+void k_listwidgetsearchline_super_key_release_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperKeyReleaseEvent((KListWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ void k_listwidgetsearchline_focus_in_event(void* self, void* param1) {
     KListWidgetSearchLine_FocusInEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_focus_in_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseFocusInEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
+void k_listwidgetsearchline_super_focus_in_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperFocusInEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1962,8 +1962,8 @@ void k_listwidgetsearchline_focus_out_event(void* self, void* param1) {
     KListWidgetSearchLine_FocusOutEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_focus_out_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseFocusOutEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
+void k_listwidgetsearchline_super_focus_out_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperFocusOutEvent((KListWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ void k_listwidgetsearchline_paint_event(void* self, void* param1) {
     KListWidgetSearchLine_PaintEvent((KListWidgetSearchLine*)self, (QPaintEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_paint_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBasePaintEvent((KListWidgetSearchLine*)self, (QPaintEvent*)param1);
+void k_listwidgetsearchline_super_paint_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperPaintEvent((KListWidgetSearchLine*)self, (QPaintEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void k_listwidgetsearchline_drag_enter_event(void* self, void* param1) {
     KListWidgetSearchLine_DragEnterEvent((KListWidgetSearchLine*)self, (QDragEnterEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_drag_enter_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseDragEnterEvent((KListWidgetSearchLine*)self, (QDragEnterEvent*)param1);
+void k_listwidgetsearchline_super_drag_enter_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperDragEnterEvent((KListWidgetSearchLine*)self, (QDragEnterEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void k_listwidgetsearchline_drag_move_event(void* self, void* e) {
     KListWidgetSearchLine_DragMoveEvent((KListWidgetSearchLine*)self, (QDragMoveEvent*)e);
 }
 
-void k_listwidgetsearchline_qbase_drag_move_event(void* self, void* e) {
-    KListWidgetSearchLine_QBaseDragMoveEvent((KListWidgetSearchLine*)self, (QDragMoveEvent*)e);
+void k_listwidgetsearchline_super_drag_move_event(void* self, void* e) {
+    KListWidgetSearchLine_SuperDragMoveEvent((KListWidgetSearchLine*)self, (QDragMoveEvent*)e);
 }
 
 void k_listwidgetsearchline_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_listwidgetsearchline_drag_leave_event(void* self, void* e) {
     KListWidgetSearchLine_DragLeaveEvent((KListWidgetSearchLine*)self, (QDragLeaveEvent*)e);
 }
 
-void k_listwidgetsearchline_qbase_drag_leave_event(void* self, void* e) {
-    KListWidgetSearchLine_QBaseDragLeaveEvent((KListWidgetSearchLine*)self, (QDragLeaveEvent*)e);
+void k_listwidgetsearchline_super_drag_leave_event(void* self, void* e) {
+    KListWidgetSearchLine_SuperDragLeaveEvent((KListWidgetSearchLine*)self, (QDragLeaveEvent*)e);
 }
 
 void k_listwidgetsearchline_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_listwidgetsearchline_drop_event(void* self, void* param1) {
     KListWidgetSearchLine_DropEvent((KListWidgetSearchLine*)self, (QDropEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_drop_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseDropEvent((KListWidgetSearchLine*)self, (QDropEvent*)param1);
+void k_listwidgetsearchline_super_drop_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperDropEvent((KListWidgetSearchLine*)self, (QDropEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_listwidgetsearchline_change_event(void* self, void* param1) {
     KListWidgetSearchLine_ChangeEvent((KListWidgetSearchLine*)self, (QEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_change_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseChangeEvent((KListWidgetSearchLine*)self, (QEvent*)param1);
+void k_listwidgetsearchline_super_change_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperChangeEvent((KListWidgetSearchLine*)self, (QEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_listwidgetsearchline_context_menu_event(void* self, void* param1) {
     KListWidgetSearchLine_ContextMenuEvent((KListWidgetSearchLine*)self, (QContextMenuEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_context_menu_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseContextMenuEvent((KListWidgetSearchLine*)self, (QContextMenuEvent*)param1);
+void k_listwidgetsearchline_super_context_menu_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperContextMenuEvent((KListWidgetSearchLine*)self, (QContextMenuEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_listwidgetsearchline_input_method_event(void* self, void* param1) {
     KListWidgetSearchLine_InputMethodEvent((KListWidgetSearchLine*)self, (QInputMethodEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_input_method_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseInputMethodEvent((KListWidgetSearchLine*)self, (QInputMethodEvent*)param1);
+void k_listwidgetsearchline_super_input_method_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperInputMethodEvent((KListWidgetSearchLine*)self, (QInputMethodEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_listwidgetsearchline_init_style_option(void* self, void* option) {
     KListWidgetSearchLine_InitStyleOption((KListWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
-void k_listwidgetsearchline_qbase_init_style_option(void* self, void* option) {
-    KListWidgetSearchLine_QBaseInitStyleOption((KListWidgetSearchLine*)self, (QStyleOptionFrame*)option);
+void k_listwidgetsearchline_super_init_style_option(void* self, void* option) {
+    KListWidgetSearchLine_SuperInitStyleOption((KListWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
 void k_listwidgetsearchline_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ QVariant* k_listwidgetsearchline_input_method_query(void* self, int32_t param1) 
     return KListWidgetSearchLine_InputMethodQuery((KListWidgetSearchLine*)self, param1);
 }
 
-QVariant* k_listwidgetsearchline_qbase_input_method_query(void* self, int32_t param1) {
-    return KListWidgetSearchLine_QBaseInputMethodQuery((KListWidgetSearchLine*)self, param1);
+QVariant* k_listwidgetsearchline_super_input_method_query(void* self, int32_t param1) {
+    return KListWidgetSearchLine_SuperInputMethodQuery((KListWidgetSearchLine*)self, param1);
 }
 
 void k_listwidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2094,8 +2094,8 @@ void k_listwidgetsearchline_timer_event(void* self, void* param1) {
     KListWidgetSearchLine_TimerEvent((KListWidgetSearchLine*)self, (QTimerEvent*)param1);
 }
 
-void k_listwidgetsearchline_qbase_timer_event(void* self, void* param1) {
-    KListWidgetSearchLine_QBaseTimerEvent((KListWidgetSearchLine*)self, (QTimerEvent*)param1);
+void k_listwidgetsearchline_super_timer_event(void* self, void* param1) {
+    KListWidgetSearchLine_SuperTimerEvent((KListWidgetSearchLine*)self, (QTimerEvent*)param1);
 }
 
 void k_listwidgetsearchline_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ int32_t k_listwidgetsearchline_dev_type(void* self) {
     return KListWidgetSearchLine_DevType((KListWidgetSearchLine*)self);
 }
 
-int32_t k_listwidgetsearchline_qbase_dev_type(void* self) {
-    return KListWidgetSearchLine_QBaseDevType((KListWidgetSearchLine*)self);
+int32_t k_listwidgetsearchline_super_dev_type(void* self) {
+    return KListWidgetSearchLine_SuperDevType((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2118,8 +2118,8 @@ void k_listwidgetsearchline_set_visible(void* self, bool visible) {
     KListWidgetSearchLine_SetVisible((KListWidgetSearchLine*)self, visible);
 }
 
-void k_listwidgetsearchline_qbase_set_visible(void* self, bool visible) {
-    KListWidgetSearchLine_QBaseSetVisible((KListWidgetSearchLine*)self, visible);
+void k_listwidgetsearchline_super_set_visible(void* self, bool visible) {
+    KListWidgetSearchLine_SuperSetVisible((KListWidgetSearchLine*)self, visible);
 }
 
 void k_listwidgetsearchline_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2130,8 +2130,8 @@ int32_t k_listwidgetsearchline_height_for_width(void* self, int param1) {
     return KListWidgetSearchLine_HeightForWidth((KListWidgetSearchLine*)self, param1);
 }
 
-int32_t k_listwidgetsearchline_qbase_height_for_width(void* self, int param1) {
-    return KListWidgetSearchLine_QBaseHeightForWidth((KListWidgetSearchLine*)self, param1);
+int32_t k_listwidgetsearchline_super_height_for_width(void* self, int param1) {
+    return KListWidgetSearchLine_SuperHeightForWidth((KListWidgetSearchLine*)self, param1);
 }
 
 void k_listwidgetsearchline_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2142,8 +2142,8 @@ bool k_listwidgetsearchline_has_height_for_width(void* self) {
     return KListWidgetSearchLine_HasHeightForWidth((KListWidgetSearchLine*)self);
 }
 
-bool k_listwidgetsearchline_qbase_has_height_for_width(void* self) {
-    return KListWidgetSearchLine_QBaseHasHeightForWidth((KListWidgetSearchLine*)self);
+bool k_listwidgetsearchline_super_has_height_for_width(void* self) {
+    return KListWidgetSearchLine_SuperHasHeightForWidth((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2154,8 +2154,8 @@ QPaintEngine* k_listwidgetsearchline_paint_engine(void* self) {
     return KListWidgetSearchLine_PaintEngine((KListWidgetSearchLine*)self);
 }
 
-QPaintEngine* k_listwidgetsearchline_qbase_paint_engine(void* self) {
-    return KListWidgetSearchLine_QBasePaintEngine((KListWidgetSearchLine*)self);
+QPaintEngine* k_listwidgetsearchline_super_paint_engine(void* self) {
+    return KListWidgetSearchLine_SuperPaintEngine((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2166,8 +2166,8 @@ void k_listwidgetsearchline_wheel_event(void* self, void* event) {
     KListWidgetSearchLine_WheelEvent((KListWidgetSearchLine*)self, (QWheelEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_wheel_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseWheelEvent((KListWidgetSearchLine*)self, (QWheelEvent*)event);
+void k_listwidgetsearchline_super_wheel_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperWheelEvent((KListWidgetSearchLine*)self, (QWheelEvent*)event);
 }
 
 void k_listwidgetsearchline_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2178,8 +2178,8 @@ void k_listwidgetsearchline_enter_event(void* self, void* event) {
     KListWidgetSearchLine_EnterEvent((KListWidgetSearchLine*)self, (QEnterEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_enter_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseEnterEvent((KListWidgetSearchLine*)self, (QEnterEvent*)event);
+void k_listwidgetsearchline_super_enter_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperEnterEvent((KListWidgetSearchLine*)self, (QEnterEvent*)event);
 }
 
 void k_listwidgetsearchline_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ void k_listwidgetsearchline_leave_event(void* self, void* event) {
     KListWidgetSearchLine_LeaveEvent((KListWidgetSearchLine*)self, (QEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_leave_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseLeaveEvent((KListWidgetSearchLine*)self, (QEvent*)event);
+void k_listwidgetsearchline_super_leave_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperLeaveEvent((KListWidgetSearchLine*)self, (QEvent*)event);
 }
 
 void k_listwidgetsearchline_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2202,8 +2202,8 @@ void k_listwidgetsearchline_move_event(void* self, void* event) {
     KListWidgetSearchLine_MoveEvent((KListWidgetSearchLine*)self, (QMoveEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_move_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseMoveEvent((KListWidgetSearchLine*)self, (QMoveEvent*)event);
+void k_listwidgetsearchline_super_move_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperMoveEvent((KListWidgetSearchLine*)self, (QMoveEvent*)event);
 }
 
 void k_listwidgetsearchline_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2214,8 +2214,8 @@ void k_listwidgetsearchline_resize_event(void* self, void* event) {
     KListWidgetSearchLine_ResizeEvent((KListWidgetSearchLine*)self, (QResizeEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_resize_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseResizeEvent((KListWidgetSearchLine*)self, (QResizeEvent*)event);
+void k_listwidgetsearchline_super_resize_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperResizeEvent((KListWidgetSearchLine*)self, (QResizeEvent*)event);
 }
 
 void k_listwidgetsearchline_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2226,8 +2226,8 @@ void k_listwidgetsearchline_close_event(void* self, void* event) {
     KListWidgetSearchLine_CloseEvent((KListWidgetSearchLine*)self, (QCloseEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_close_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseCloseEvent((KListWidgetSearchLine*)self, (QCloseEvent*)event);
+void k_listwidgetsearchline_super_close_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperCloseEvent((KListWidgetSearchLine*)self, (QCloseEvent*)event);
 }
 
 void k_listwidgetsearchline_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2238,8 +2238,8 @@ void k_listwidgetsearchline_tablet_event(void* self, void* event) {
     KListWidgetSearchLine_TabletEvent((KListWidgetSearchLine*)self, (QTabletEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_tablet_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseTabletEvent((KListWidgetSearchLine*)self, (QTabletEvent*)event);
+void k_listwidgetsearchline_super_tablet_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperTabletEvent((KListWidgetSearchLine*)self, (QTabletEvent*)event);
 }
 
 void k_listwidgetsearchline_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2250,8 +2250,8 @@ void k_listwidgetsearchline_action_event(void* self, void* event) {
     KListWidgetSearchLine_ActionEvent((KListWidgetSearchLine*)self, (QActionEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_action_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseActionEvent((KListWidgetSearchLine*)self, (QActionEvent*)event);
+void k_listwidgetsearchline_super_action_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperActionEvent((KListWidgetSearchLine*)self, (QActionEvent*)event);
 }
 
 void k_listwidgetsearchline_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2262,8 +2262,8 @@ void k_listwidgetsearchline_show_event(void* self, void* event) {
     KListWidgetSearchLine_ShowEvent((KListWidgetSearchLine*)self, (QShowEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_show_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseShowEvent((KListWidgetSearchLine*)self, (QShowEvent*)event);
+void k_listwidgetsearchline_super_show_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperShowEvent((KListWidgetSearchLine*)self, (QShowEvent*)event);
 }
 
 void k_listwidgetsearchline_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void k_listwidgetsearchline_hide_event(void* self, void* event) {
     KListWidgetSearchLine_HideEvent((KListWidgetSearchLine*)self, (QHideEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_hide_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseHideEvent((KListWidgetSearchLine*)self, (QHideEvent*)event);
+void k_listwidgetsearchline_super_hide_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperHideEvent((KListWidgetSearchLine*)self, (QHideEvent*)event);
 }
 
 void k_listwidgetsearchline_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2286,8 +2286,8 @@ bool k_listwidgetsearchline_native_event(void* self, char* eventType, void* mess
     return KListWidgetSearchLine_NativeEvent((KListWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
-bool k_listwidgetsearchline_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KListWidgetSearchLine_QBaseNativeEvent((KListWidgetSearchLine*)self, qstring(eventType), message, result);
+bool k_listwidgetsearchline_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KListWidgetSearchLine_SuperNativeEvent((KListWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
 void k_listwidgetsearchline_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2298,8 +2298,8 @@ int32_t k_listwidgetsearchline_metric(void* self, int32_t param1) {
     return KListWidgetSearchLine_Metric((KListWidgetSearchLine*)self, param1);
 }
 
-int32_t k_listwidgetsearchline_qbase_metric(void* self, int32_t param1) {
-    return KListWidgetSearchLine_QBaseMetric((KListWidgetSearchLine*)self, param1);
+int32_t k_listwidgetsearchline_super_metric(void* self, int32_t param1) {
+    return KListWidgetSearchLine_SuperMetric((KListWidgetSearchLine*)self, param1);
 }
 
 void k_listwidgetsearchline_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2310,8 +2310,8 @@ void k_listwidgetsearchline_init_painter(void* self, void* painter) {
     KListWidgetSearchLine_InitPainter((KListWidgetSearchLine*)self, (QPainter*)painter);
 }
 
-void k_listwidgetsearchline_qbase_init_painter(void* self, void* painter) {
-    KListWidgetSearchLine_QBaseInitPainter((KListWidgetSearchLine*)self, (QPainter*)painter);
+void k_listwidgetsearchline_super_init_painter(void* self, void* painter) {
+    KListWidgetSearchLine_SuperInitPainter((KListWidgetSearchLine*)self, (QPainter*)painter);
 }
 
 void k_listwidgetsearchline_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2322,8 +2322,8 @@ QPaintDevice* k_listwidgetsearchline_redirected(void* self, void* offset) {
     return KListWidgetSearchLine_Redirected((KListWidgetSearchLine*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_listwidgetsearchline_qbase_redirected(void* self, void* offset) {
-    return KListWidgetSearchLine_QBaseRedirected((KListWidgetSearchLine*)self, (QPoint*)offset);
+QPaintDevice* k_listwidgetsearchline_super_redirected(void* self, void* offset) {
+    return KListWidgetSearchLine_SuperRedirected((KListWidgetSearchLine*)self, (QPoint*)offset);
 }
 
 void k_listwidgetsearchline_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2334,8 +2334,8 @@ QPainter* k_listwidgetsearchline_shared_painter(void* self) {
     return KListWidgetSearchLine_SharedPainter((KListWidgetSearchLine*)self);
 }
 
-QPainter* k_listwidgetsearchline_qbase_shared_painter(void* self) {
-    return KListWidgetSearchLine_QBaseSharedPainter((KListWidgetSearchLine*)self);
+QPainter* k_listwidgetsearchline_super_shared_painter(void* self) {
+    return KListWidgetSearchLine_SuperSharedPainter((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2346,8 +2346,8 @@ bool k_listwidgetsearchline_focus_next_prev_child(void* self, bool next) {
     return KListWidgetSearchLine_FocusNextPrevChild((KListWidgetSearchLine*)self, next);
 }
 
-bool k_listwidgetsearchline_qbase_focus_next_prev_child(void* self, bool next) {
-    return KListWidgetSearchLine_QBaseFocusNextPrevChild((KListWidgetSearchLine*)self, next);
+bool k_listwidgetsearchline_super_focus_next_prev_child(void* self, bool next) {
+    return KListWidgetSearchLine_SuperFocusNextPrevChild((KListWidgetSearchLine*)self, next);
 }
 
 void k_listwidgetsearchline_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2358,8 +2358,8 @@ bool k_listwidgetsearchline_event_filter(void* self, void* watched, void* event)
     return KListWidgetSearchLine_EventFilter((KListWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_listwidgetsearchline_qbase_event_filter(void* self, void* watched, void* event) {
-    return KListWidgetSearchLine_QBaseEventFilter((KListWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
+bool k_listwidgetsearchline_super_event_filter(void* self, void* watched, void* event) {
+    return KListWidgetSearchLine_SuperEventFilter((KListWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_listwidgetsearchline_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2370,8 +2370,8 @@ void k_listwidgetsearchline_child_event(void* self, void* event) {
     KListWidgetSearchLine_ChildEvent((KListWidgetSearchLine*)self, (QChildEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_child_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseChildEvent((KListWidgetSearchLine*)self, (QChildEvent*)event);
+void k_listwidgetsearchline_super_child_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperChildEvent((KListWidgetSearchLine*)self, (QChildEvent*)event);
 }
 
 void k_listwidgetsearchline_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2382,8 +2382,8 @@ void k_listwidgetsearchline_custom_event(void* self, void* event) {
     KListWidgetSearchLine_CustomEvent((KListWidgetSearchLine*)self, (QEvent*)event);
 }
 
-void k_listwidgetsearchline_qbase_custom_event(void* self, void* event) {
-    KListWidgetSearchLine_QBaseCustomEvent((KListWidgetSearchLine*)self, (QEvent*)event);
+void k_listwidgetsearchline_super_custom_event(void* self, void* event) {
+    KListWidgetSearchLine_SuperCustomEvent((KListWidgetSearchLine*)self, (QEvent*)event);
 }
 
 void k_listwidgetsearchline_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2394,8 +2394,8 @@ void k_listwidgetsearchline_connect_notify(void* self, void* signal) {
     KListWidgetSearchLine_ConnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-void k_listwidgetsearchline_qbase_connect_notify(void* self, void* signal) {
-    KListWidgetSearchLine_QBaseConnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
+void k_listwidgetsearchline_super_connect_notify(void* self, void* signal) {
+    KListWidgetSearchLine_SuperConnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_listwidgetsearchline_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2406,8 +2406,8 @@ void k_listwidgetsearchline_disconnect_notify(void* self, void* signal) {
     KListWidgetSearchLine_DisconnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-void k_listwidgetsearchline_qbase_disconnect_notify(void* self, void* signal) {
-    KListWidgetSearchLine_QBaseDisconnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
+void k_listwidgetsearchline_super_disconnect_notify(void* self, void* signal) {
+    KListWidgetSearchLine_SuperDisconnectNotify((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_listwidgetsearchline_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2418,8 +2418,8 @@ QRect* k_listwidgetsearchline_cursor_rect(void* self) {
     return KListWidgetSearchLine_CursorRect((KListWidgetSearchLine*)self);
 }
 
-QRect* k_listwidgetsearchline_qbase_cursor_rect(void* self) {
-    return KListWidgetSearchLine_QBaseCursorRect((KListWidgetSearchLine*)self);
+QRect* k_listwidgetsearchline_super_cursor_rect(void* self) {
+    return KListWidgetSearchLine_SuperCursorRect((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_cursor_rect(void* self, QRect* (*callback)()) {
@@ -2430,8 +2430,8 @@ void k_listwidgetsearchline_update_micro_focus(void* self) {
     KListWidgetSearchLine_UpdateMicroFocus((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_qbase_update_micro_focus(void* self) {
-    KListWidgetSearchLine_QBaseUpdateMicroFocus((KListWidgetSearchLine*)self);
+void k_listwidgetsearchline_super_update_micro_focus(void* self) {
+    KListWidgetSearchLine_SuperUpdateMicroFocus((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2442,8 +2442,8 @@ void k_listwidgetsearchline_create(void* self) {
     KListWidgetSearchLine_Create((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_qbase_create(void* self) {
-    KListWidgetSearchLine_QBaseCreate((KListWidgetSearchLine*)self);
+void k_listwidgetsearchline_super_create(void* self) {
+    KListWidgetSearchLine_SuperCreate((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_create(void* self, void (*callback)()) {
@@ -2454,8 +2454,8 @@ void k_listwidgetsearchline_destroy(void* self) {
     KListWidgetSearchLine_Destroy((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_qbase_destroy(void* self) {
-    KListWidgetSearchLine_QBaseDestroy((KListWidgetSearchLine*)self);
+void k_listwidgetsearchline_super_destroy(void* self) {
+    KListWidgetSearchLine_SuperDestroy((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_destroy(void* self, void (*callback)()) {
@@ -2466,8 +2466,8 @@ bool k_listwidgetsearchline_focus_next_child(void* self) {
     return KListWidgetSearchLine_FocusNextChild((KListWidgetSearchLine*)self);
 }
 
-bool k_listwidgetsearchline_qbase_focus_next_child(void* self) {
-    return KListWidgetSearchLine_QBaseFocusNextChild((KListWidgetSearchLine*)self);
+bool k_listwidgetsearchline_super_focus_next_child(void* self) {
+    return KListWidgetSearchLine_SuperFocusNextChild((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2478,8 +2478,8 @@ bool k_listwidgetsearchline_focus_previous_child(void* self) {
     return KListWidgetSearchLine_FocusPreviousChild((KListWidgetSearchLine*)self);
 }
 
-bool k_listwidgetsearchline_qbase_focus_previous_child(void* self) {
-    return KListWidgetSearchLine_QBaseFocusPreviousChild((KListWidgetSearchLine*)self);
+bool k_listwidgetsearchline_super_focus_previous_child(void* self) {
+    return KListWidgetSearchLine_SuperFocusPreviousChild((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2490,8 +2490,8 @@ QObject* k_listwidgetsearchline_sender(void* self) {
     return KListWidgetSearchLine_Sender((KListWidgetSearchLine*)self);
 }
 
-QObject* k_listwidgetsearchline_qbase_sender(void* self) {
-    return KListWidgetSearchLine_QBaseSender((KListWidgetSearchLine*)self);
+QObject* k_listwidgetsearchline_super_sender(void* self) {
+    return KListWidgetSearchLine_SuperSender((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_sender(void* self, QObject* (*callback)()) {
@@ -2502,8 +2502,8 @@ int32_t k_listwidgetsearchline_sender_signal_index(void* self) {
     return KListWidgetSearchLine_SenderSignalIndex((KListWidgetSearchLine*)self);
 }
 
-int32_t k_listwidgetsearchline_qbase_sender_signal_index(void* self) {
-    return KListWidgetSearchLine_QBaseSenderSignalIndex((KListWidgetSearchLine*)self);
+int32_t k_listwidgetsearchline_super_sender_signal_index(void* self) {
+    return KListWidgetSearchLine_SuperSenderSignalIndex((KListWidgetSearchLine*)self);
 }
 
 void k_listwidgetsearchline_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2514,8 +2514,8 @@ int32_t k_listwidgetsearchline_receivers(void* self, const char* signal) {
     return KListWidgetSearchLine_Receivers((KListWidgetSearchLine*)self, signal);
 }
 
-int32_t k_listwidgetsearchline_qbase_receivers(void* self, const char* signal) {
-    return KListWidgetSearchLine_QBaseReceivers((KListWidgetSearchLine*)self, signal);
+int32_t k_listwidgetsearchline_super_receivers(void* self, const char* signal) {
+    return KListWidgetSearchLine_SuperReceivers((KListWidgetSearchLine*)self, signal);
 }
 
 void k_listwidgetsearchline_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2526,8 +2526,8 @@ bool k_listwidgetsearchline_is_signal_connected(void* self, void* signal) {
     return KListWidgetSearchLine_IsSignalConnected((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-bool k_listwidgetsearchline_qbase_is_signal_connected(void* self, void* signal) {
-    return KListWidgetSearchLine_QBaseIsSignalConnected((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
+bool k_listwidgetsearchline_super_is_signal_connected(void* self, void* signal) {
+    return KListWidgetSearchLine_SuperIsSignalConnected((KListWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_listwidgetsearchline_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2538,8 +2538,8 @@ double k_listwidgetsearchline_get_decoded_metric_f(void* self, int32_t metricA, 
     return KListWidgetSearchLine_GetDecodedMetricF((KListWidgetSearchLine*)self, metricA, metricB);
 }
 
-double k_listwidgetsearchline_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KListWidgetSearchLine_QBaseGetDecodedMetricF((KListWidgetSearchLine*)self, metricA, metricB);
+double k_listwidgetsearchline_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KListWidgetSearchLine_SuperGetDecodedMetricF((KListWidgetSearchLine*)self, metricA, metricB);
 }
 
 void k_listwidgetsearchline_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

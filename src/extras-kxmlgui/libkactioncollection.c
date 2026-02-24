@@ -27,8 +27,8 @@ void k_actioncollection_on_meta_object(void* self, const QMetaObject* (*callback
     KActionCollection_OnMetaObject((KActionCollection*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_actioncollection_qbase_meta_object(void* self) {
-    return KActionCollection_QBaseMetaObject((KActionCollection*)self);
+const QMetaObject* k_actioncollection_super_meta_object(void* self) {
+    return KActionCollection_SuperMetaObject((KActionCollection*)self);
 }
 
 void* k_actioncollection_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void k_actioncollection_on_metacast(void* self, void* (*callback)(void*, const c
     KActionCollection_OnMetacast((KActionCollection*)self, (intptr_t)callback);
 }
 
-void* k_actioncollection_qbase_metacast(void* self, const char* param1) {
-    return KActionCollection_QBaseMetacast((KActionCollection*)self, param1);
+void* k_actioncollection_super_metacast(void* self, const char* param1) {
+    return KActionCollection_SuperMetacast((KActionCollection*)self, param1);
 }
 
 int32_t k_actioncollection_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void k_actioncollection_on_metacall(void* self, int32_t (*callback)(void*, int32
     KActionCollection_OnMetacall((KActionCollection*)self, (intptr_t)callback);
 }
 
-int32_t k_actioncollection_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KActionCollection_QBaseMetacall((KActionCollection*)self, param1, param2, param3);
+int32_t k_actioncollection_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KActionCollection_SuperMetacall((KActionCollection*)self, param1, param2, param3);
 }
 
 const char* k_actioncollection_tr(const char* s) {
@@ -224,8 +224,8 @@ void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, vo
     KActionCollection_OnConnectNotify((KActionCollection*)self, (intptr_t)callback);
 }
 
-void k_actioncollection_qbase_connect_notify(void* self, void* signal) {
-    KActionCollection_QBaseConnectNotify((KActionCollection*)self, (QMetaMethod*)signal);
+void k_actioncollection_super_connect_notify(void* self, void* signal) {
+    KActionCollection_SuperConnectNotify((KActionCollection*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncollection_slot_action_triggered(void* self) {
@@ -236,8 +236,8 @@ void k_actioncollection_on_slot_action_triggered(void* self, void (*callback)())
     KActionCollection_OnSlotActionTriggered((KActionCollection*)self, (intptr_t)callback);
 }
 
-void k_actioncollection_qbase_slot_action_triggered(void* self) {
-    KActionCollection_QBaseSlotActionTriggered((KActionCollection*)self);
+void k_actioncollection_super_slot_action_triggered(void* self) {
+    KActionCollection_SuperSlotActionTriggered((KActionCollection*)self);
 }
 
 QAction* k_actioncollection_add_action(void* self, const char* name, void* action) {
@@ -570,8 +570,8 @@ bool k_actioncollection_event(void* self, void* event) {
     return KActionCollection_Event((KActionCollection*)self, (QEvent*)event);
 }
 
-bool k_actioncollection_qbase_event(void* self, void* event) {
-    return KActionCollection_QBaseEvent((KActionCollection*)self, (QEvent*)event);
+bool k_actioncollection_super_event(void* self, void* event) {
+    return KActionCollection_SuperEvent((KActionCollection*)self, (QEvent*)event);
 }
 
 void k_actioncollection_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -582,8 +582,8 @@ bool k_actioncollection_event_filter(void* self, void* watched, void* event) {
     return KActionCollection_EventFilter((KActionCollection*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_actioncollection_qbase_event_filter(void* self, void* watched, void* event) {
-    return KActionCollection_QBaseEventFilter((KActionCollection*)self, (QObject*)watched, (QEvent*)event);
+bool k_actioncollection_super_event_filter(void* self, void* watched, void* event) {
+    return KActionCollection_SuperEventFilter((KActionCollection*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_actioncollection_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -594,8 +594,8 @@ void k_actioncollection_timer_event(void* self, void* event) {
     KActionCollection_TimerEvent((KActionCollection*)self, (QTimerEvent*)event);
 }
 
-void k_actioncollection_qbase_timer_event(void* self, void* event) {
-    KActionCollection_QBaseTimerEvent((KActionCollection*)self, (QTimerEvent*)event);
+void k_actioncollection_super_timer_event(void* self, void* event) {
+    KActionCollection_SuperTimerEvent((KActionCollection*)self, (QTimerEvent*)event);
 }
 
 void k_actioncollection_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -606,8 +606,8 @@ void k_actioncollection_child_event(void* self, void* event) {
     KActionCollection_ChildEvent((KActionCollection*)self, (QChildEvent*)event);
 }
 
-void k_actioncollection_qbase_child_event(void* self, void* event) {
-    KActionCollection_QBaseChildEvent((KActionCollection*)self, (QChildEvent*)event);
+void k_actioncollection_super_child_event(void* self, void* event) {
+    KActionCollection_SuperChildEvent((KActionCollection*)self, (QChildEvent*)event);
 }
 
 void k_actioncollection_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -618,8 +618,8 @@ void k_actioncollection_custom_event(void* self, void* event) {
     KActionCollection_CustomEvent((KActionCollection*)self, (QEvent*)event);
 }
 
-void k_actioncollection_qbase_custom_event(void* self, void* event) {
-    KActionCollection_QBaseCustomEvent((KActionCollection*)self, (QEvent*)event);
+void k_actioncollection_super_custom_event(void* self, void* event) {
+    KActionCollection_SuperCustomEvent((KActionCollection*)self, (QEvent*)event);
 }
 
 void k_actioncollection_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -630,8 +630,8 @@ void k_actioncollection_disconnect_notify(void* self, void* signal) {
     KActionCollection_DisconnectNotify((KActionCollection*)self, (QMetaMethod*)signal);
 }
 
-void k_actioncollection_qbase_disconnect_notify(void* self, void* signal) {
-    KActionCollection_QBaseDisconnectNotify((KActionCollection*)self, (QMetaMethod*)signal);
+void k_actioncollection_super_disconnect_notify(void* self, void* signal) {
+    KActionCollection_SuperDisconnectNotify((KActionCollection*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncollection_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -642,8 +642,8 @@ QObject* k_actioncollection_sender(void* self) {
     return KActionCollection_Sender((KActionCollection*)self);
 }
 
-QObject* k_actioncollection_qbase_sender(void* self) {
-    return KActionCollection_QBaseSender((KActionCollection*)self);
+QObject* k_actioncollection_super_sender(void* self) {
+    return KActionCollection_SuperSender((KActionCollection*)self);
 }
 
 void k_actioncollection_on_sender(void* self, QObject* (*callback)()) {
@@ -654,8 +654,8 @@ int32_t k_actioncollection_sender_signal_index(void* self) {
     return KActionCollection_SenderSignalIndex((KActionCollection*)self);
 }
 
-int32_t k_actioncollection_qbase_sender_signal_index(void* self) {
-    return KActionCollection_QBaseSenderSignalIndex((KActionCollection*)self);
+int32_t k_actioncollection_super_sender_signal_index(void* self) {
+    return KActionCollection_SuperSenderSignalIndex((KActionCollection*)self);
 }
 
 void k_actioncollection_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -666,8 +666,8 @@ int32_t k_actioncollection_receivers(void* self, const char* signal) {
     return KActionCollection_Receivers((KActionCollection*)self, signal);
 }
 
-int32_t k_actioncollection_qbase_receivers(void* self, const char* signal) {
-    return KActionCollection_QBaseReceivers((KActionCollection*)self, signal);
+int32_t k_actioncollection_super_receivers(void* self, const char* signal) {
+    return KActionCollection_SuperReceivers((KActionCollection*)self, signal);
 }
 
 void k_actioncollection_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -678,8 +678,8 @@ bool k_actioncollection_is_signal_connected(void* self, void* signal) {
     return KActionCollection_IsSignalConnected((KActionCollection*)self, (QMetaMethod*)signal);
 }
 
-bool k_actioncollection_qbase_is_signal_connected(void* self, void* signal) {
-    return KActionCollection_QBaseIsSignalConnected((KActionCollection*)self, (QMetaMethod*)signal);
+bool k_actioncollection_super_is_signal_connected(void* self, void* signal) {
+    return KActionCollection_SuperIsSignalConnected((KActionCollection*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncollection_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

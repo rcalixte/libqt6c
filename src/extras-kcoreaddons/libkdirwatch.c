@@ -22,8 +22,8 @@ void k_dirwatch_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KDirWatch_OnMetaObject((KDirWatch*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dirwatch_qbase_meta_object(void* self) {
-    return KDirWatch_QBaseMetaObject((KDirWatch*)self);
+const QMetaObject* k_dirwatch_super_meta_object(void* self) {
+    return KDirWatch_SuperMetaObject((KDirWatch*)self);
 }
 
 void* k_dirwatch_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_dirwatch_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KDirWatch_OnMetacast((KDirWatch*)self, (intptr_t)callback);
 }
 
-void* k_dirwatch_qbase_metacast(void* self, const char* param1) {
-    return KDirWatch_QBaseMetacast((KDirWatch*)self, param1);
+void* k_dirwatch_super_metacast(void* self, const char* param1) {
+    return KDirWatch_SuperMetacast((KDirWatch*)self, param1);
 }
 
 int32_t k_dirwatch_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_dirwatch_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KDirWatch_OnMetacall((KDirWatch*)self, (intptr_t)callback);
 }
 
-int32_t k_dirwatch_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDirWatch_QBaseMetacall((KDirWatch*)self, param1, param2, param3);
+int32_t k_dirwatch_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDirWatch_SuperMetacall((KDirWatch*)self, param1, param2, param3);
 }
 
 const char* k_dirwatch_tr(const char* s) {
@@ -121,8 +121,8 @@ void k_dirwatch_on_event(void* self, bool (*callback)(void*, void*)) {
     KDirWatch_OnEvent((KDirWatch*)self, (intptr_t)callback);
 }
 
-bool k_dirwatch_qbase_event(void* self, void* event) {
-    return KDirWatch_QBaseEvent((KDirWatch*)self, (QEvent*)event);
+bool k_dirwatch_super_event(void* self, void* event) {
+    return KDirWatch_SuperEvent((KDirWatch*)self, (QEvent*)event);
 }
 
 void k_dirwatch_set_created(void* self, const char* path) {
@@ -402,8 +402,8 @@ bool k_dirwatch_event_filter(void* self, void* watched, void* event) {
     return KDirWatch_EventFilter((KDirWatch*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_dirwatch_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDirWatch_QBaseEventFilter((KDirWatch*)self, (QObject*)watched, (QEvent*)event);
+bool k_dirwatch_super_event_filter(void* self, void* watched, void* event) {
+    return KDirWatch_SuperEventFilter((KDirWatch*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_dirwatch_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -414,8 +414,8 @@ void k_dirwatch_timer_event(void* self, void* event) {
     KDirWatch_TimerEvent((KDirWatch*)self, (QTimerEvent*)event);
 }
 
-void k_dirwatch_qbase_timer_event(void* self, void* event) {
-    KDirWatch_QBaseTimerEvent((KDirWatch*)self, (QTimerEvent*)event);
+void k_dirwatch_super_timer_event(void* self, void* event) {
+    KDirWatch_SuperTimerEvent((KDirWatch*)self, (QTimerEvent*)event);
 }
 
 void k_dirwatch_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ void k_dirwatch_child_event(void* self, void* event) {
     KDirWatch_ChildEvent((KDirWatch*)self, (QChildEvent*)event);
 }
 
-void k_dirwatch_qbase_child_event(void* self, void* event) {
-    KDirWatch_QBaseChildEvent((KDirWatch*)self, (QChildEvent*)event);
+void k_dirwatch_super_child_event(void* self, void* event) {
+    KDirWatch_SuperChildEvent((KDirWatch*)self, (QChildEvent*)event);
 }
 
 void k_dirwatch_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -438,8 +438,8 @@ void k_dirwatch_custom_event(void* self, void* event) {
     KDirWatch_CustomEvent((KDirWatch*)self, (QEvent*)event);
 }
 
-void k_dirwatch_qbase_custom_event(void* self, void* event) {
-    KDirWatch_QBaseCustomEvent((KDirWatch*)self, (QEvent*)event);
+void k_dirwatch_super_custom_event(void* self, void* event) {
+    KDirWatch_SuperCustomEvent((KDirWatch*)self, (QEvent*)event);
 }
 
 void k_dirwatch_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ void k_dirwatch_connect_notify(void* self, void* signal) {
     KDirWatch_ConnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
-void k_dirwatch_qbase_connect_notify(void* self, void* signal) {
-    KDirWatch_QBaseConnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
+void k_dirwatch_super_connect_notify(void* self, void* signal) {
+    KDirWatch_SuperConnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
 void k_dirwatch_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ void k_dirwatch_disconnect_notify(void* self, void* signal) {
     KDirWatch_DisconnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
-void k_dirwatch_qbase_disconnect_notify(void* self, void* signal) {
-    KDirWatch_QBaseDisconnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
+void k_dirwatch_super_disconnect_notify(void* self, void* signal) {
+    KDirWatch_SuperDisconnectNotify((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
 void k_dirwatch_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ QObject* k_dirwatch_sender(void* self) {
     return KDirWatch_Sender((KDirWatch*)self);
 }
 
-QObject* k_dirwatch_qbase_sender(void* self) {
-    return KDirWatch_QBaseSender((KDirWatch*)self);
+QObject* k_dirwatch_super_sender(void* self) {
+    return KDirWatch_SuperSender((KDirWatch*)self);
 }
 
 void k_dirwatch_on_sender(void* self, QObject* (*callback)()) {
@@ -486,8 +486,8 @@ int32_t k_dirwatch_sender_signal_index(void* self) {
     return KDirWatch_SenderSignalIndex((KDirWatch*)self);
 }
 
-int32_t k_dirwatch_qbase_sender_signal_index(void* self) {
-    return KDirWatch_QBaseSenderSignalIndex((KDirWatch*)self);
+int32_t k_dirwatch_super_sender_signal_index(void* self) {
+    return KDirWatch_SuperSenderSignalIndex((KDirWatch*)self);
 }
 
 void k_dirwatch_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -498,8 +498,8 @@ int32_t k_dirwatch_receivers(void* self, const char* signal) {
     return KDirWatch_Receivers((KDirWatch*)self, signal);
 }
 
-int32_t k_dirwatch_qbase_receivers(void* self, const char* signal) {
-    return KDirWatch_QBaseReceivers((KDirWatch*)self, signal);
+int32_t k_dirwatch_super_receivers(void* self, const char* signal) {
+    return KDirWatch_SuperReceivers((KDirWatch*)self, signal);
 }
 
 void k_dirwatch_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -510,8 +510,8 @@ bool k_dirwatch_is_signal_connected(void* self, void* signal) {
     return KDirWatch_IsSignalConnected((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
-bool k_dirwatch_qbase_is_signal_connected(void* self, void* signal) {
-    return KDirWatch_QBaseIsSignalConnected((KDirWatch*)self, (QMetaMethod*)signal);
+bool k_dirwatch_super_is_signal_connected(void* self, void* signal) {
+    return KDirWatch_SuperIsSignalConnected((KDirWatch*)self, (QMetaMethod*)signal);
 }
 
 void k_dirwatch_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

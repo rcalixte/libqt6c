@@ -33,6 +33,10 @@ QIcon* q_fileiconprovider_icon(void* self, int32_t type);
 ///
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_fileiconprovider_super_icon` instead
+///
+#define q_fileiconprovider_qbase_icon q_fileiconprovider_super_icon
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Base class method implementation
@@ -40,7 +44,7 @@ void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 /// @param self QFileIconProvider*
 /// @param type enum QAbstractFileIconProvider__IconType
 ///
-QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t type);
+QIcon* q_fileiconprovider_super_icon(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
@@ -58,6 +62,10 @@ QIcon* q_fileiconprovider_icon2(void* self, void* info);
 ///
 void q_fileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_fileiconprovider_super_icon2` instead
+///
+#define q_fileiconprovider_qbase_icon2 q_fileiconprovider_super_icon2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Base class method implementation
@@ -65,7 +73,7 @@ void q_fileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 /// @param self QFileIconProvider*
 /// @param info QFileInfo*
 ///
-QIcon* q_fileiconprovider_qbase_icon2(void* self, void* info);
+QIcon* q_fileiconprovider_super_icon2(void* self, void* info);
 
 /// Inherited from QAbstractFileIconProvider
 ///
@@ -80,6 +88,10 @@ QIcon* q_fileiconprovider_qbase_icon2(void* self, void* info);
 ///
 const char* q_fileiconprovider_type(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_fileiconprovider_super_type` instead
+///
+#define q_fileiconprovider_qbase_type q_fileiconprovider_super_type
+
 /// Inherited from QAbstractFileIconProvider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
@@ -91,7 +103,7 @@ const char* q_fileiconprovider_type(void* self, void* param1);
 /// @param self QFileIconProvider*
 /// @param param1 QFileInfo*
 ///
-const char* q_fileiconprovider_qbase_type(void* self, void* param1);
+const char* q_fileiconprovider_super_type(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
 ///
@@ -115,6 +127,10 @@ void q_fileiconprovider_on_type(void* self, const char* (*callback)(void*, void*
 ///
 void q_fileiconprovider_set_options(void* self, int32_t options);
 
+/// @warning DEPRECATED: Use `q_fileiconprovider_super_set_options` instead
+///
+#define q_fileiconprovider_qbase_set_options q_fileiconprovider_super_set_options
+
 /// Inherited from QAbstractFileIconProvider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
@@ -124,7 +140,7 @@ void q_fileiconprovider_set_options(void* self, int32_t options);
 /// @param self QFileIconProvider*
 /// @param options flag of enum QAbstractFileIconProvider__Option
 ///
-void q_fileiconprovider_qbase_set_options(void* self, int32_t options);
+void q_fileiconprovider_super_set_options(void* self, int32_t options);
 
 /// Inherited from QAbstractFileIconProvider
 ///
@@ -149,6 +165,10 @@ void q_fileiconprovider_on_set_options(void* self, void (*callback)(void*, int32
 ///
 int32_t q_fileiconprovider_options(void* self);
 
+/// @warning DEPRECATED: Use `q_fileiconprovider_super_options` instead
+///
+#define q_fileiconprovider_qbase_options q_fileiconprovider_super_options
+
 /// Inherited from QAbstractFileIconProvider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
@@ -159,7 +179,7 @@ int32_t q_fileiconprovider_options(void* self);
 ///
 /// @return flag of enum QAbstractFileIconProvider__Option
 ///
-int32_t q_fileiconprovider_qbase_options(void* self);
+int32_t q_fileiconprovider_super_options(void* self);
 
 /// Inherited from QAbstractFileIconProvider
 ///

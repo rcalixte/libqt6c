@@ -20,8 +20,8 @@ void k_io__namefinderjob_on_meta_object(void* self, const QMetaObject* (*callbac
     KIO__NameFinderJob_OnMetaObject((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__namefinderjob_qbase_meta_object(void* self) {
-    return KIO__NameFinderJob_QBaseMetaObject((KIO__NameFinderJob*)self);
+const QMetaObject* k_io__namefinderjob_super_meta_object(void* self) {
+    return KIO__NameFinderJob_SuperMetaObject((KIO__NameFinderJob*)self);
 }
 
 void* k_io__namefinderjob_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_io__namefinderjob_on_metacast(void* self, void* (*callback)(void*, const 
     KIO__NameFinderJob_OnMetacast((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
-void* k_io__namefinderjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__NameFinderJob_QBaseMetacast((KIO__NameFinderJob*)self, param1);
+void* k_io__namefinderjob_super_metacast(void* self, const char* param1) {
+    return KIO__NameFinderJob_SuperMetacast((KIO__NameFinderJob*)self, param1);
 }
 
 int32_t k_io__namefinderjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_io__namefinderjob_on_metacall(void* self, int32_t (*callback)(void*, int3
     KIO__NameFinderJob_OnMetacall((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__namefinderjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__NameFinderJob_QBaseMetacall((KIO__NameFinderJob*)self, param1, param2, param3);
+int32_t k_io__namefinderjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__NameFinderJob_SuperMetacall((KIO__NameFinderJob*)self, param1, param2, param3);
 }
 
 const char* k_io__namefinderjob_tr(const char* s) {
@@ -63,8 +63,8 @@ void k_io__namefinderjob_on_start(void* self, void (*callback)()) {
     KIO__NameFinderJob_OnStart((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__namefinderjob_qbase_start(void* self) {
-    KIO__NameFinderJob_QBaseStart((KIO__NameFinderJob*)self);
+void k_io__namefinderjob_super_start(void* self) {
+    KIO__NameFinderJob_SuperStart((KIO__NameFinderJob*)self);
 }
 
 QUrl* k_io__namefinderjob_final_url(void* self) {
@@ -438,8 +438,8 @@ bool k_io__namefinderjob_add_subjob(void* self, void* job) {
     return KIO__NameFinderJob_AddSubjob((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
-bool k_io__namefinderjob_qbase_add_subjob(void* self, void* job) {
-    return KIO__NameFinderJob_QBaseAddSubjob((KIO__NameFinderJob*)self, (KJob*)job);
+bool k_io__namefinderjob_super_add_subjob(void* self, void* job) {
+    return KIO__NameFinderJob_SuperAddSubjob((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
 void k_io__namefinderjob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ bool k_io__namefinderjob_remove_subjob(void* self, void* job) {
     return KIO__NameFinderJob_RemoveSubjob((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
-bool k_io__namefinderjob_qbase_remove_subjob(void* self, void* job) {
-    return KIO__NameFinderJob_QBaseRemoveSubjob((KIO__NameFinderJob*)self, (KJob*)job);
+bool k_io__namefinderjob_super_remove_subjob(void* self, void* job) {
+    return KIO__NameFinderJob_SuperRemoveSubjob((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
 void k_io__namefinderjob_on_remove_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ void k_io__namefinderjob_slot_result(void* self, void* job) {
     KIO__NameFinderJob_SlotResult((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
-void k_io__namefinderjob_qbase_slot_result(void* self, void* job) {
-    KIO__NameFinderJob_QBaseSlotResult((KIO__NameFinderJob*)self, (KJob*)job);
+void k_io__namefinderjob_super_slot_result(void* self, void* job) {
+    KIO__NameFinderJob_SuperSlotResult((KIO__NameFinderJob*)self, (KJob*)job);
 }
 
 void k_io__namefinderjob_on_slot_result(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ void k_io__namefinderjob_slot_info_message(void* self, void* job, const char* me
     KIO__NameFinderJob_SlotInfoMessage((KIO__NameFinderJob*)self, (KJob*)job, qstring(message));
 }
 
-void k_io__namefinderjob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KIO__NameFinderJob_QBaseSlotInfoMessage((KIO__NameFinderJob*)self, (KJob*)job, qstring(message));
+void k_io__namefinderjob_super_slot_info_message(void* self, void* job, const char* message) {
+    KIO__NameFinderJob_SuperSlotInfoMessage((KIO__NameFinderJob*)self, (KJob*)job, qstring(message));
 }
 
 void k_io__namefinderjob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*)) {
@@ -486,8 +486,8 @@ bool k_io__namefinderjob_do_kill(void* self) {
     return KIO__NameFinderJob_DoKill((KIO__NameFinderJob*)self);
 }
 
-bool k_io__namefinderjob_qbase_do_kill(void* self) {
-    return KIO__NameFinderJob_QBaseDoKill((KIO__NameFinderJob*)self);
+bool k_io__namefinderjob_super_do_kill(void* self) {
+    return KIO__NameFinderJob_SuperDoKill((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_do_kill(void* self, bool (*callback)()) {
@@ -498,8 +498,8 @@ bool k_io__namefinderjob_do_suspend(void* self) {
     return KIO__NameFinderJob_DoSuspend((KIO__NameFinderJob*)self);
 }
 
-bool k_io__namefinderjob_qbase_do_suspend(void* self) {
-    return KIO__NameFinderJob_QBaseDoSuspend((KIO__NameFinderJob*)self);
+bool k_io__namefinderjob_super_do_suspend(void* self) {
+    return KIO__NameFinderJob_SuperDoSuspend((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -510,8 +510,8 @@ bool k_io__namefinderjob_do_resume(void* self) {
     return KIO__NameFinderJob_DoResume((KIO__NameFinderJob*)self);
 }
 
-bool k_io__namefinderjob_qbase_do_resume(void* self) {
-    return KIO__NameFinderJob_QBaseDoResume((KIO__NameFinderJob*)self);
+bool k_io__namefinderjob_super_do_resume(void* self) {
+    return KIO__NameFinderJob_SuperDoResume((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_do_resume(void* self, bool (*callback)()) {
@@ -525,8 +525,8 @@ const char* k_io__namefinderjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__namefinderjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__NameFinderJob_QBaseErrorString((KIO__NameFinderJob*)self);
+const char* k_io__namefinderjob_super_error_string(void* self) {
+    libqt_string _str = KIO__NameFinderJob_SuperErrorString((KIO__NameFinderJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -540,8 +540,8 @@ bool k_io__namefinderjob_event(void* self, void* event) {
     return KIO__NameFinderJob_Event((KIO__NameFinderJob*)self, (QEvent*)event);
 }
 
-bool k_io__namefinderjob_qbase_event(void* self, void* event) {
-    return KIO__NameFinderJob_QBaseEvent((KIO__NameFinderJob*)self, (QEvent*)event);
+bool k_io__namefinderjob_super_event(void* self, void* event) {
+    return KIO__NameFinderJob_SuperEvent((KIO__NameFinderJob*)self, (QEvent*)event);
 }
 
 void k_io__namefinderjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -552,8 +552,8 @@ bool k_io__namefinderjob_event_filter(void* self, void* watched, void* event) {
     return KIO__NameFinderJob_EventFilter((KIO__NameFinderJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__namefinderjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__NameFinderJob_QBaseEventFilter((KIO__NameFinderJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__namefinderjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__NameFinderJob_SuperEventFilter((KIO__NameFinderJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__namefinderjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -564,8 +564,8 @@ void k_io__namefinderjob_timer_event(void* self, void* event) {
     KIO__NameFinderJob_TimerEvent((KIO__NameFinderJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__namefinderjob_qbase_timer_event(void* self, void* event) {
-    KIO__NameFinderJob_QBaseTimerEvent((KIO__NameFinderJob*)self, (QTimerEvent*)event);
+void k_io__namefinderjob_super_timer_event(void* self, void* event) {
+    KIO__NameFinderJob_SuperTimerEvent((KIO__NameFinderJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__namefinderjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -576,8 +576,8 @@ void k_io__namefinderjob_child_event(void* self, void* event) {
     KIO__NameFinderJob_ChildEvent((KIO__NameFinderJob*)self, (QChildEvent*)event);
 }
 
-void k_io__namefinderjob_qbase_child_event(void* self, void* event) {
-    KIO__NameFinderJob_QBaseChildEvent((KIO__NameFinderJob*)self, (QChildEvent*)event);
+void k_io__namefinderjob_super_child_event(void* self, void* event) {
+    KIO__NameFinderJob_SuperChildEvent((KIO__NameFinderJob*)self, (QChildEvent*)event);
 }
 
 void k_io__namefinderjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -588,8 +588,8 @@ void k_io__namefinderjob_custom_event(void* self, void* event) {
     KIO__NameFinderJob_CustomEvent((KIO__NameFinderJob*)self, (QEvent*)event);
 }
 
-void k_io__namefinderjob_qbase_custom_event(void* self, void* event) {
-    KIO__NameFinderJob_QBaseCustomEvent((KIO__NameFinderJob*)self, (QEvent*)event);
+void k_io__namefinderjob_super_custom_event(void* self, void* event) {
+    KIO__NameFinderJob_SuperCustomEvent((KIO__NameFinderJob*)self, (QEvent*)event);
 }
 
 void k_io__namefinderjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -600,8 +600,8 @@ void k_io__namefinderjob_connect_notify(void* self, void* signal) {
     KIO__NameFinderJob_ConnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__namefinderjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__NameFinderJob_QBaseConnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
+void k_io__namefinderjob_super_connect_notify(void* self, void* signal) {
+    KIO__NameFinderJob_SuperConnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__namefinderjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -612,8 +612,8 @@ void k_io__namefinderjob_disconnect_notify(void* self, void* signal) {
     KIO__NameFinderJob_DisconnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__namefinderjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__NameFinderJob_QBaseDisconnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
+void k_io__namefinderjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__NameFinderJob_SuperDisconnectNotify((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__namefinderjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -624,8 +624,8 @@ bool k_io__namefinderjob_has_subjobs(void* self) {
     return KIO__NameFinderJob_HasSubjobs((KIO__NameFinderJob*)self);
 }
 
-bool k_io__namefinderjob_qbase_has_subjobs(void* self) {
-    return KIO__NameFinderJob_QBaseHasSubjobs((KIO__NameFinderJob*)self);
+bool k_io__namefinderjob_super_has_subjobs(void* self) {
+    return KIO__NameFinderJob_SuperHasSubjobs((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_has_subjobs(void* self, bool (*callback)()) {
@@ -637,8 +637,8 @@ libqt_list /* of KJob* */ k_io__namefinderjob_subjobs(void* self) {
     return _arr;
 }
 
-libqt_list /* of KJob* */ k_io__namefinderjob_qbase_subjobs(void* self) {
-    libqt_list _arr = KIO__NameFinderJob_QBaseSubjobs((KIO__NameFinderJob*)self);
+libqt_list /* of KJob* */ k_io__namefinderjob_super_subjobs(void* self) {
+    libqt_list _arr = KIO__NameFinderJob_SuperSubjobs((KIO__NameFinderJob*)self);
     return _arr;
 }
 
@@ -650,8 +650,8 @@ void k_io__namefinderjob_clear_subjobs(void* self) {
     KIO__NameFinderJob_ClearSubjobs((KIO__NameFinderJob*)self);
 }
 
-void k_io__namefinderjob_qbase_clear_subjobs(void* self) {
-    KIO__NameFinderJob_QBaseClearSubjobs((KIO__NameFinderJob*)self);
+void k_io__namefinderjob_super_clear_subjobs(void* self) {
+    KIO__NameFinderJob_SuperClearSubjobs((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_clear_subjobs(void* self, void (*callback)()) {
@@ -662,8 +662,8 @@ void k_io__namefinderjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__NameFinderJob_SetCapabilities((KIO__NameFinderJob*)self, capabilities);
 }
 
-void k_io__namefinderjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__NameFinderJob_QBaseSetCapabilities((KIO__NameFinderJob*)self, capabilities);
+void k_io__namefinderjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__NameFinderJob_SuperSetCapabilities((KIO__NameFinderJob*)self, capabilities);
 }
 
 void k_io__namefinderjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -674,8 +674,8 @@ bool k_io__namefinderjob_is_finished(void* self) {
     return KIO__NameFinderJob_IsFinished((KIO__NameFinderJob*)self);
 }
 
-bool k_io__namefinderjob_qbase_is_finished(void* self) {
-    return KIO__NameFinderJob_QBaseIsFinished((KIO__NameFinderJob*)self);
+bool k_io__namefinderjob_super_is_finished(void* self) {
+    return KIO__NameFinderJob_SuperIsFinished((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_is_finished(void* self, bool (*callback)()) {
@@ -686,8 +686,8 @@ void k_io__namefinderjob_set_error(void* self, int errorCode) {
     KIO__NameFinderJob_SetError((KIO__NameFinderJob*)self, errorCode);
 }
 
-void k_io__namefinderjob_qbase_set_error(void* self, int errorCode) {
-    KIO__NameFinderJob_QBaseSetError((KIO__NameFinderJob*)self, errorCode);
+void k_io__namefinderjob_super_set_error(void* self, int errorCode) {
+    KIO__NameFinderJob_SuperSetError((KIO__NameFinderJob*)self, errorCode);
 }
 
 void k_io__namefinderjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -698,8 +698,8 @@ void k_io__namefinderjob_set_error_text(void* self, const char* errorText) {
     KIO__NameFinderJob_SetErrorText((KIO__NameFinderJob*)self, qstring(errorText));
 }
 
-void k_io__namefinderjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__NameFinderJob_QBaseSetErrorText((KIO__NameFinderJob*)self, qstring(errorText));
+void k_io__namefinderjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__NameFinderJob_SuperSetErrorText((KIO__NameFinderJob*)self, qstring(errorText));
 }
 
 void k_io__namefinderjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -710,8 +710,8 @@ void k_io__namefinderjob_set_processed_amount(void* self, int32_t unit, uint64_t
     KIO__NameFinderJob_SetProcessedAmount((KIO__NameFinderJob*)self, unit, amount);
 }
 
-void k_io__namefinderjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__NameFinderJob_QBaseSetProcessedAmount((KIO__NameFinderJob*)self, unit, amount);
+void k_io__namefinderjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__NameFinderJob_SuperSetProcessedAmount((KIO__NameFinderJob*)self, unit, amount);
 }
 
 void k_io__namefinderjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -722,8 +722,8 @@ void k_io__namefinderjob_set_total_amount(void* self, int32_t unit, uint64_t amo
     KIO__NameFinderJob_SetTotalAmount((KIO__NameFinderJob*)self, unit, amount);
 }
 
-void k_io__namefinderjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__NameFinderJob_QBaseSetTotalAmount((KIO__NameFinderJob*)self, unit, amount);
+void k_io__namefinderjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__NameFinderJob_SuperSetTotalAmount((KIO__NameFinderJob*)self, unit, amount);
 }
 
 void k_io__namefinderjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -734,8 +734,8 @@ void k_io__namefinderjob_set_progress_unit(void* self, int32_t unit) {
     KIO__NameFinderJob_SetProgressUnit((KIO__NameFinderJob*)self, unit);
 }
 
-void k_io__namefinderjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__NameFinderJob_QBaseSetProgressUnit((KIO__NameFinderJob*)self, unit);
+void k_io__namefinderjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__NameFinderJob_SuperSetProgressUnit((KIO__NameFinderJob*)self, unit);
 }
 
 void k_io__namefinderjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -746,8 +746,8 @@ void k_io__namefinderjob_set_percent(void* self, uint64_t percentage) {
     KIO__NameFinderJob_SetPercent((KIO__NameFinderJob*)self, percentage);
 }
 
-void k_io__namefinderjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__NameFinderJob_QBaseSetPercent((KIO__NameFinderJob*)self, percentage);
+void k_io__namefinderjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__NameFinderJob_SuperSetPercent((KIO__NameFinderJob*)self, percentage);
 }
 
 void k_io__namefinderjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -758,8 +758,8 @@ void k_io__namefinderjob_emit_result(void* self) {
     KIO__NameFinderJob_EmitResult((KIO__NameFinderJob*)self);
 }
 
-void k_io__namefinderjob_qbase_emit_result(void* self) {
-    KIO__NameFinderJob_QBaseEmitResult((KIO__NameFinderJob*)self);
+void k_io__namefinderjob_super_emit_result(void* self) {
+    KIO__NameFinderJob_SuperEmitResult((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_emit_result(void* self, void (*callback)()) {
@@ -770,8 +770,8 @@ void k_io__namefinderjob_emit_percent(void* self, uint64_t processedAmount, uint
     KIO__NameFinderJob_EmitPercent((KIO__NameFinderJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__namefinderjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__NameFinderJob_QBaseEmitPercent((KIO__NameFinderJob*)self, processedAmount, totalAmount);
+void k_io__namefinderjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__NameFinderJob_SuperEmitPercent((KIO__NameFinderJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__namefinderjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -782,8 +782,8 @@ void k_io__namefinderjob_emit_speed(void* self, uint64_t speed) {
     KIO__NameFinderJob_EmitSpeed((KIO__NameFinderJob*)self, speed);
 }
 
-void k_io__namefinderjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__NameFinderJob_QBaseEmitSpeed((KIO__NameFinderJob*)self, speed);
+void k_io__namefinderjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__NameFinderJob_SuperEmitSpeed((KIO__NameFinderJob*)self, speed);
 }
 
 void k_io__namefinderjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -794,8 +794,8 @@ void k_io__namefinderjob_start_elapsed_timer(void* self) {
     KIO__NameFinderJob_StartElapsedTimer((KIO__NameFinderJob*)self);
 }
 
-void k_io__namefinderjob_qbase_start_elapsed_timer(void* self) {
-    KIO__NameFinderJob_QBaseStartElapsedTimer((KIO__NameFinderJob*)self);
+void k_io__namefinderjob_super_start_elapsed_timer(void* self) {
+    KIO__NameFinderJob_SuperStartElapsedTimer((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -806,8 +806,8 @@ QObject* k_io__namefinderjob_sender(void* self) {
     return KIO__NameFinderJob_Sender((KIO__NameFinderJob*)self);
 }
 
-QObject* k_io__namefinderjob_qbase_sender(void* self) {
-    return KIO__NameFinderJob_QBaseSender((KIO__NameFinderJob*)self);
+QObject* k_io__namefinderjob_super_sender(void* self) {
+    return KIO__NameFinderJob_SuperSender((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_sender(void* self, QObject* (*callback)()) {
@@ -818,8 +818,8 @@ int32_t k_io__namefinderjob_sender_signal_index(void* self) {
     return KIO__NameFinderJob_SenderSignalIndex((KIO__NameFinderJob*)self);
 }
 
-int32_t k_io__namefinderjob_qbase_sender_signal_index(void* self) {
-    return KIO__NameFinderJob_QBaseSenderSignalIndex((KIO__NameFinderJob*)self);
+int32_t k_io__namefinderjob_super_sender_signal_index(void* self) {
+    return KIO__NameFinderJob_SuperSenderSignalIndex((KIO__NameFinderJob*)self);
 }
 
 void k_io__namefinderjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -830,8 +830,8 @@ int32_t k_io__namefinderjob_receivers(void* self, const char* signal) {
     return KIO__NameFinderJob_Receivers((KIO__NameFinderJob*)self, signal);
 }
 
-int32_t k_io__namefinderjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__NameFinderJob_QBaseReceivers((KIO__NameFinderJob*)self, signal);
+int32_t k_io__namefinderjob_super_receivers(void* self, const char* signal) {
+    return KIO__NameFinderJob_SuperReceivers((KIO__NameFinderJob*)self, signal);
 }
 
 void k_io__namefinderjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -842,8 +842,8 @@ bool k_io__namefinderjob_is_signal_connected(void* self, void* signal) {
     return KIO__NameFinderJob_IsSignalConnected((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__namefinderjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__NameFinderJob_QBaseIsSignalConnected((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
+bool k_io__namefinderjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__NameFinderJob_SuperIsSignalConnected((KIO__NameFinderJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__namefinderjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

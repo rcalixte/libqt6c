@@ -30,8 +30,8 @@ void k_sonnet__backgroundchecker_on_meta_object(void* self, const QMetaObject* (
     Sonnet__BackgroundChecker_OnMetaObject((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sonnet__backgroundchecker_qbase_meta_object(void* self) {
-    return Sonnet__BackgroundChecker_QBaseMetaObject((Sonnet__BackgroundChecker*)self);
+const QMetaObject* k_sonnet__backgroundchecker_super_meta_object(void* self) {
+    return Sonnet__BackgroundChecker_SuperMetaObject((Sonnet__BackgroundChecker*)self);
 }
 
 void* k_sonnet__backgroundchecker_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_sonnet__backgroundchecker_on_metacast(void* self, void* (*callback)(void*
     Sonnet__BackgroundChecker_OnMetacast((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void* k_sonnet__backgroundchecker_qbase_metacast(void* self, const char* param1) {
-    return Sonnet__BackgroundChecker_QBaseMetacast((Sonnet__BackgroundChecker*)self, param1);
+void* k_sonnet__backgroundchecker_super_metacast(void* self, const char* param1) {
+    return Sonnet__BackgroundChecker_SuperMetacast((Sonnet__BackgroundChecker*)self, param1);
 }
 
 int32_t k_sonnet__backgroundchecker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_sonnet__backgroundchecker_on_metacall(void* self, int32_t (*callback)(voi
     Sonnet__BackgroundChecker_OnMetacall((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-int32_t k_sonnet__backgroundchecker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Sonnet__BackgroundChecker_QBaseMetacall((Sonnet__BackgroundChecker*)self, param1, param2, param3);
+int32_t k_sonnet__backgroundchecker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Sonnet__BackgroundChecker_SuperMetacall((Sonnet__BackgroundChecker*)self, param1, param2, param3);
 }
 
 const char* k_sonnet__backgroundchecker_tr(const char* s) {
@@ -138,8 +138,8 @@ void k_sonnet__backgroundchecker_on_start(void* self, void (*callback)()) {
     Sonnet__BackgroundChecker_OnStart((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void k_sonnet__backgroundchecker_qbase_start(void* self) {
-    Sonnet__BackgroundChecker_QBaseStart((Sonnet__BackgroundChecker*)self);
+void k_sonnet__backgroundchecker_super_start(void* self) {
+    Sonnet__BackgroundChecker_SuperStart((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_stop(void* self) {
@@ -150,8 +150,8 @@ void k_sonnet__backgroundchecker_on_stop(void* self, void (*callback)()) {
     Sonnet__BackgroundChecker_OnStop((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void k_sonnet__backgroundchecker_qbase_stop(void* self) {
-    Sonnet__BackgroundChecker_QBaseStop((Sonnet__BackgroundChecker*)self);
+void k_sonnet__backgroundchecker_super_stop(void* self) {
+    Sonnet__BackgroundChecker_SuperStop((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_replace(void* self, int start, const char* oldText, const char* newText) {
@@ -170,8 +170,8 @@ void k_sonnet__backgroundchecker_on_continue_checking(void* self, void (*callbac
     Sonnet__BackgroundChecker_OnContinueChecking((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void k_sonnet__backgroundchecker_qbase_continue_checking(void* self) {
-    Sonnet__BackgroundChecker_QBaseContinueChecking((Sonnet__BackgroundChecker*)self);
+void k_sonnet__backgroundchecker_super_continue_checking(void* self) {
+    Sonnet__BackgroundChecker_SuperContinueChecking((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_misspelling(void* self, const char* word, int start) {
@@ -201,8 +201,8 @@ void k_sonnet__backgroundchecker_on_fetch_more_text(void* self, const char* (*ca
     Sonnet__BackgroundChecker_OnFetchMoreText((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-const char* k_sonnet__backgroundchecker_qbase_fetch_more_text(void* self) {
-    libqt_string _str = Sonnet__BackgroundChecker_QBaseFetchMoreText((Sonnet__BackgroundChecker*)self);
+const char* k_sonnet__backgroundchecker_super_fetch_more_text(void* self) {
+    libqt_string _str = Sonnet__BackgroundChecker_SuperFetchMoreText((Sonnet__BackgroundChecker*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -216,8 +216,8 @@ void k_sonnet__backgroundchecker_on_finished_current_feed(void* self, void (*cal
     Sonnet__BackgroundChecker_OnFinishedCurrentFeed((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void k_sonnet__backgroundchecker_qbase_finished_current_feed(void* self) {
-    Sonnet__BackgroundChecker_QBaseFinishedCurrentFeed((Sonnet__BackgroundChecker*)self);
+void k_sonnet__backgroundchecker_super_finished_current_feed(void* self) {
+    Sonnet__BackgroundChecker_SuperFinishedCurrentFeed((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_slot_engine_done(void* self) {
@@ -228,8 +228,8 @@ void k_sonnet__backgroundchecker_on_slot_engine_done(void* self, void (*callback
     Sonnet__BackgroundChecker_OnSlotEngineDone((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 
-void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self) {
-    Sonnet__BackgroundChecker_QBaseSlotEngineDone((Sonnet__BackgroundChecker*)self);
+void k_sonnet__backgroundchecker_super_slot_engine_done(void* self) {
+    Sonnet__BackgroundChecker_SuperSlotEngineDone((Sonnet__BackgroundChecker*)self);
 }
 
 const char* k_sonnet__backgroundchecker_tr2(const char* s, const char* c) {
@@ -461,8 +461,8 @@ bool k_sonnet__backgroundchecker_event(void* self, void* event) {
     return Sonnet__BackgroundChecker_Event((Sonnet__BackgroundChecker*)self, (QEvent*)event);
 }
 
-bool k_sonnet__backgroundchecker_qbase_event(void* self, void* event) {
-    return Sonnet__BackgroundChecker_QBaseEvent((Sonnet__BackgroundChecker*)self, (QEvent*)event);
+bool k_sonnet__backgroundchecker_super_event(void* self, void* event) {
+    return Sonnet__BackgroundChecker_SuperEvent((Sonnet__BackgroundChecker*)self, (QEvent*)event);
 }
 
 void k_sonnet__backgroundchecker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -473,8 +473,8 @@ bool k_sonnet__backgroundchecker_event_filter(void* self, void* watched, void* e
     return Sonnet__BackgroundChecker_EventFilter((Sonnet__BackgroundChecker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_sonnet__backgroundchecker_qbase_event_filter(void* self, void* watched, void* event) {
-    return Sonnet__BackgroundChecker_QBaseEventFilter((Sonnet__BackgroundChecker*)self, (QObject*)watched, (QEvent*)event);
+bool k_sonnet__backgroundchecker_super_event_filter(void* self, void* watched, void* event) {
+    return Sonnet__BackgroundChecker_SuperEventFilter((Sonnet__BackgroundChecker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_sonnet__backgroundchecker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -485,8 +485,8 @@ void k_sonnet__backgroundchecker_timer_event(void* self, void* event) {
     Sonnet__BackgroundChecker_TimerEvent((Sonnet__BackgroundChecker*)self, (QTimerEvent*)event);
 }
 
-void k_sonnet__backgroundchecker_qbase_timer_event(void* self, void* event) {
-    Sonnet__BackgroundChecker_QBaseTimerEvent((Sonnet__BackgroundChecker*)self, (QTimerEvent*)event);
+void k_sonnet__backgroundchecker_super_timer_event(void* self, void* event) {
+    Sonnet__BackgroundChecker_SuperTimerEvent((Sonnet__BackgroundChecker*)self, (QTimerEvent*)event);
 }
 
 void k_sonnet__backgroundchecker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -497,8 +497,8 @@ void k_sonnet__backgroundchecker_child_event(void* self, void* event) {
     Sonnet__BackgroundChecker_ChildEvent((Sonnet__BackgroundChecker*)self, (QChildEvent*)event);
 }
 
-void k_sonnet__backgroundchecker_qbase_child_event(void* self, void* event) {
-    Sonnet__BackgroundChecker_QBaseChildEvent((Sonnet__BackgroundChecker*)self, (QChildEvent*)event);
+void k_sonnet__backgroundchecker_super_child_event(void* self, void* event) {
+    Sonnet__BackgroundChecker_SuperChildEvent((Sonnet__BackgroundChecker*)self, (QChildEvent*)event);
 }
 
 void k_sonnet__backgroundchecker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -509,8 +509,8 @@ void k_sonnet__backgroundchecker_custom_event(void* self, void* event) {
     Sonnet__BackgroundChecker_CustomEvent((Sonnet__BackgroundChecker*)self, (QEvent*)event);
 }
 
-void k_sonnet__backgroundchecker_qbase_custom_event(void* self, void* event) {
-    Sonnet__BackgroundChecker_QBaseCustomEvent((Sonnet__BackgroundChecker*)self, (QEvent*)event);
+void k_sonnet__backgroundchecker_super_custom_event(void* self, void* event) {
+    Sonnet__BackgroundChecker_SuperCustomEvent((Sonnet__BackgroundChecker*)self, (QEvent*)event);
 }
 
 void k_sonnet__backgroundchecker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -521,8 +521,8 @@ void k_sonnet__backgroundchecker_connect_notify(void* self, void* signal) {
     Sonnet__BackgroundChecker_ConnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__backgroundchecker_qbase_connect_notify(void* self, void* signal) {
-    Sonnet__BackgroundChecker_QBaseConnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
+void k_sonnet__backgroundchecker_super_connect_notify(void* self, void* signal) {
+    Sonnet__BackgroundChecker_SuperConnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__backgroundchecker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -533,8 +533,8 @@ void k_sonnet__backgroundchecker_disconnect_notify(void* self, void* signal) {
     Sonnet__BackgroundChecker_DisconnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__backgroundchecker_qbase_disconnect_notify(void* self, void* signal) {
-    Sonnet__BackgroundChecker_QBaseDisconnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
+void k_sonnet__backgroundchecker_super_disconnect_notify(void* self, void* signal) {
+    Sonnet__BackgroundChecker_SuperDisconnectNotify((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__backgroundchecker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -545,8 +545,8 @@ QObject* k_sonnet__backgroundchecker_sender(void* self) {
     return Sonnet__BackgroundChecker_Sender((Sonnet__BackgroundChecker*)self);
 }
 
-QObject* k_sonnet__backgroundchecker_qbase_sender(void* self) {
-    return Sonnet__BackgroundChecker_QBaseSender((Sonnet__BackgroundChecker*)self);
+QObject* k_sonnet__backgroundchecker_super_sender(void* self) {
+    return Sonnet__BackgroundChecker_SuperSender((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_on_sender(void* self, QObject* (*callback)()) {
@@ -557,8 +557,8 @@ int32_t k_sonnet__backgroundchecker_sender_signal_index(void* self) {
     return Sonnet__BackgroundChecker_SenderSignalIndex((Sonnet__BackgroundChecker*)self);
 }
 
-int32_t k_sonnet__backgroundchecker_qbase_sender_signal_index(void* self) {
-    return Sonnet__BackgroundChecker_QBaseSenderSignalIndex((Sonnet__BackgroundChecker*)self);
+int32_t k_sonnet__backgroundchecker_super_sender_signal_index(void* self) {
+    return Sonnet__BackgroundChecker_SuperSenderSignalIndex((Sonnet__BackgroundChecker*)self);
 }
 
 void k_sonnet__backgroundchecker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -569,8 +569,8 @@ int32_t k_sonnet__backgroundchecker_receivers(void* self, const char* signal) {
     return Sonnet__BackgroundChecker_Receivers((Sonnet__BackgroundChecker*)self, signal);
 }
 
-int32_t k_sonnet__backgroundchecker_qbase_receivers(void* self, const char* signal) {
-    return Sonnet__BackgroundChecker_QBaseReceivers((Sonnet__BackgroundChecker*)self, signal);
+int32_t k_sonnet__backgroundchecker_super_receivers(void* self, const char* signal) {
+    return Sonnet__BackgroundChecker_SuperReceivers((Sonnet__BackgroundChecker*)self, signal);
 }
 
 void k_sonnet__backgroundchecker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -581,8 +581,8 @@ bool k_sonnet__backgroundchecker_is_signal_connected(void* self, void* signal) {
     return Sonnet__BackgroundChecker_IsSignalConnected((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
-bool k_sonnet__backgroundchecker_qbase_is_signal_connected(void* self, void* signal) {
-    return Sonnet__BackgroundChecker_QBaseIsSignalConnected((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
+bool k_sonnet__backgroundchecker_super_is_signal_connected(void* self, void* signal) {
+    return Sonnet__BackgroundChecker_SuperIsSignalConnected((Sonnet__BackgroundChecker*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__backgroundchecker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

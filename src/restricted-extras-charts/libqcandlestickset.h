@@ -85,13 +85,17 @@ const QMetaObject* q_candlestickset_meta_object(void* self);
 ///
 void q_candlestickset_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_meta_object` instead
+///
+#define q_candlestickset_qbase_meta_object q_candlestickset_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickSet*
 ///
-const QMetaObject* q_candlestickset_qbase_meta_object(void* self);
+const QMetaObject* q_candlestickset_super_meta_object(void* self);
 
 /// @param self QCandlestickSet*
 /// @param param1 const char*
@@ -105,12 +109,16 @@ void* q_candlestickset_metacast(void* self, const char* param1);
 ///
 void q_candlestickset_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_metacast` instead
+///
+#define q_candlestickset_qbase_metacast q_candlestickset_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QCandlestickSet*
 /// @param param1 const char*
 ///
-void* q_candlestickset_qbase_metacast(void* self, const char* param1);
+void* q_candlestickset_super_metacast(void* self, const char* param1);
 
 /// @param self QCandlestickSet*
 /// @param param1 enum QMetaObject__Call
@@ -126,6 +134,10 @@ int32_t q_candlestickset_metacall(void* self, int32_t param1, int param2, void* 
 ///
 void q_candlestickset_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_metacall` instead
+///
+#define q_candlestickset_qbase_metacall q_candlestickset_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QCandlestickSet*
@@ -133,7 +145,7 @@ void q_candlestickset_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_candlestickset_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_candlestickset_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -868,6 +880,10 @@ void q_candlestickset_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_candlestickset_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_event` instead
+///
+#define q_candlestickset_qbase_event q_candlestickset_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -877,7 +893,7 @@ bool q_candlestickset_event(void* self, void* event);
 /// @param self QCandlestickSet*
 /// @param event QEvent*
 ///
-bool q_candlestickset_qbase_event(void* self, void* event);
+bool q_candlestickset_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -902,6 +918,10 @@ void q_candlestickset_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_candlestickset_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_event_filter` instead
+///
+#define q_candlestickset_qbase_event_filter q_candlestickset_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -912,7 +932,7 @@ bool q_candlestickset_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_candlestickset_qbase_event_filter(void* self, void* watched, void* event);
+bool q_candlestickset_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -936,6 +956,10 @@ void q_candlestickset_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_candlestickset_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_timer_event` instead
+///
+#define q_candlestickset_qbase_timer_event q_candlestickset_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -945,7 +969,7 @@ void q_candlestickset_timer_event(void* self, void* event);
 /// @param self QCandlestickSet*
 /// @param event QTimerEvent*
 ///
-void q_candlestickset_qbase_timer_event(void* self, void* event);
+void q_candlestickset_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -969,6 +993,10 @@ void q_candlestickset_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void q_candlestickset_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_child_event` instead
+///
+#define q_candlestickset_qbase_child_event q_candlestickset_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -978,7 +1006,7 @@ void q_candlestickset_child_event(void* self, void* event);
 /// @param self QCandlestickSet*
 /// @param event QChildEvent*
 ///
-void q_candlestickset_qbase_child_event(void* self, void* event);
+void q_candlestickset_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1002,6 +1030,10 @@ void q_candlestickset_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_candlestickset_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_custom_event` instead
+///
+#define q_candlestickset_qbase_custom_event q_candlestickset_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1011,7 +1043,7 @@ void q_candlestickset_custom_event(void* self, void* event);
 /// @param self QCandlestickSet*
 /// @param event QEvent*
 ///
-void q_candlestickset_qbase_custom_event(void* self, void* event);
+void q_candlestickset_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1035,6 +1067,10 @@ void q_candlestickset_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void q_candlestickset_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_connect_notify` instead
+///
+#define q_candlestickset_qbase_connect_notify q_candlestickset_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1044,7 +1080,7 @@ void q_candlestickset_connect_notify(void* self, void* signal);
 /// @param self QCandlestickSet*
 /// @param signal QMetaMethod*
 ///
-void q_candlestickset_qbase_connect_notify(void* self, void* signal);
+void q_candlestickset_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1068,6 +1104,10 @@ void q_candlestickset_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_candlestickset_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_disconnect_notify` instead
+///
+#define q_candlestickset_qbase_disconnect_notify q_candlestickset_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1077,7 +1117,7 @@ void q_candlestickset_disconnect_notify(void* self, void* signal);
 /// @param self QCandlestickSet*
 /// @param signal QMetaMethod*
 ///
-void q_candlestickset_qbase_disconnect_notify(void* self, void* signal);
+void q_candlestickset_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1100,6 +1140,10 @@ void q_candlestickset_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* q_candlestickset_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_sender` instead
+///
+#define q_candlestickset_qbase_sender q_candlestickset_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1108,7 +1152,7 @@ QObject* q_candlestickset_sender(void* self);
 ///
 /// @param self QCandlestickSet*
 ///
-QObject* q_candlestickset_qbase_sender(void* self);
+QObject* q_candlestickset_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1131,6 +1175,10 @@ void q_candlestickset_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_candlestickset_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_sender_signal_index` instead
+///
+#define q_candlestickset_qbase_sender_signal_index q_candlestickset_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1139,7 +1187,7 @@ int32_t q_candlestickset_sender_signal_index(void* self);
 ///
 /// @param self QCandlestickSet*
 ///
-int32_t q_candlestickset_qbase_sender_signal_index(void* self);
+int32_t q_candlestickset_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1163,6 +1211,10 @@ void q_candlestickset_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_candlestickset_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_receivers` instead
+///
+#define q_candlestickset_qbase_receivers q_candlestickset_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1172,7 +1224,7 @@ int32_t q_candlestickset_receivers(void* self, const char* signal);
 /// @param self QCandlestickSet*
 /// @param signal const char*
 ///
-int32_t q_candlestickset_qbase_receivers(void* self, const char* signal);
+int32_t q_candlestickset_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1196,6 +1248,10 @@ void q_candlestickset_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_candlestickset_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickset_super_is_signal_connected` instead
+///
+#define q_candlestickset_qbase_is_signal_connected q_candlestickset_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1205,7 +1261,7 @@ bool q_candlestickset_is_signal_connected(void* self, void* signal);
 /// @param self QCandlestickSet*
 /// @param signal QMetaMethod*
 ///
-bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal);
+bool q_candlestickset_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

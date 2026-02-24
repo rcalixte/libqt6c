@@ -59,6 +59,10 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(v
 ///
 void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEventWidgetSequence* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_stationary` instead
+///
+#define q_test__qtoucheventwidgetsequence_qbase_stationary q_test__qtoucheventwidgetsequence_super_stationary
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
 /// Base class method implementation
@@ -66,7 +70,7 @@ void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEv
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 ///
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_qbase_stationary(void* self, int touchId);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_super_stationary(void* self, int touchId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
@@ -84,6 +88,10 @@ bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents);
 ///
 void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_commit` instead
+///
+#define q_test__qtoucheventwidgetsequence_qbase_commit q_test__qtoucheventwidgetsequence_super_commit
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
 /// Base class method implementation
@@ -91,7 +99,7 @@ void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(vo
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param processEvents bool
 ///
-bool q_test__qtoucheventwidgetsequence_qbase_commit(void* self, bool processEvents);
+bool q_test__qtoucheventwidgetsequence_super_commit(void* self, bool processEvents);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
@@ -131,6 +139,10 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release3(voi
 ///
 QEventPoint* q_test__qtoucheventwidgetsequence_point(void* self, int touchId);
 
+/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_point` instead
+///
+#define q_test__qtoucheventwidgetsequence_qbase_point q_test__qtoucheventwidgetsequence_super_point
+
 /// Inherited from QTest::QTouchEventSequence
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
@@ -140,7 +152,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point(void* self, int touchId);
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 ///
-QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point(void* self, int touchId);
+QEventPoint* q_test__qtoucheventwidgetsequence_super_point(void* self, int touchId);
 
 /// Inherited from QTest::QTouchEventSequence
 ///
@@ -164,6 +176,10 @@ void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callb
 ///
 QEventPoint* q_test__qtoucheventwidgetsequence_point_or_previous_point(void* self, int touchId);
 
+/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_point_or_previous_point` instead
+///
+#define q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point q_test__qtoucheventwidgetsequence_super_point_or_previous_point
+
 /// Inherited from QTest::QTouchEventSequence
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#pointOrPreviousPoint)
@@ -173,7 +189,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point_or_previous_point(void* sel
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param touchId int
 ///
-QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point(void* self, int touchId);
+QEventPoint* q_test__qtoucheventwidgetsequence_super_point_or_previous_point(void* self, int touchId);
 
 /// Inherited from QTest::QTouchEventSequence
 ///

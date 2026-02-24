@@ -33,8 +33,8 @@ void k_ratingwidget_on_meta_object(void* self, const QMetaObject* (*callback)())
     KRatingWidget_OnMetaObject((KRatingWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_ratingwidget_qbase_meta_object(void* self) {
-    return KRatingWidget_QBaseMetaObject((KRatingWidget*)self);
+const QMetaObject* k_ratingwidget_super_meta_object(void* self) {
+    return KRatingWidget_SuperMetaObject((KRatingWidget*)self);
 }
 
 void* k_ratingwidget_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void k_ratingwidget_on_metacast(void* self, void* (*callback)(void*, const char*
     KRatingWidget_OnMetacast((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void* k_ratingwidget_qbase_metacast(void* self, const char* param1) {
-    return KRatingWidget_QBaseMetacast((KRatingWidget*)self, param1);
+void* k_ratingwidget_super_metacast(void* self, const char* param1) {
+    return KRatingWidget_SuperMetacast((KRatingWidget*)self, param1);
 }
 
 int32_t k_ratingwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void k_ratingwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KRatingWidget_OnMetacall((KRatingWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_ratingwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KRatingWidget_QBaseMetacall((KRatingWidget*)self, param1, param2, param3);
+int32_t k_ratingwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KRatingWidget_SuperMetacall((KRatingWidget*)self, param1, param2, param3);
 }
 
 const char* k_ratingwidget_tr(const char* s) {
@@ -96,8 +96,8 @@ void k_ratingwidget_on_size_hint(void* self, QSize* (*callback)()) {
     KRatingWidget_OnSizeHint((KRatingWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_ratingwidget_qbase_size_hint(void* self) {
-    return KRatingWidget_QBaseSizeHint((KRatingWidget*)self);
+QSize* k_ratingwidget_super_size_hint(void* self) {
+    return KRatingWidget_SuperSizeHint((KRatingWidget*)self);
 }
 
 bool k_ratingwidget_half_steps_enabled(void* self) {
@@ -160,8 +160,8 @@ void k_ratingwidget_on_mouse_press_event(void* self, void (*callback)(void*, voi
     KRatingWidget_OnMousePressEvent((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void k_ratingwidget_qbase_mouse_press_event(void* self, void* e) {
-    KRatingWidget_QBaseMousePressEvent((KRatingWidget*)self, (QMouseEvent*)e);
+void k_ratingwidget_super_mouse_press_event(void* self, void* e) {
+    KRatingWidget_SuperMousePressEvent((KRatingWidget*)self, (QMouseEvent*)e);
 }
 
 void k_ratingwidget_mouse_move_event(void* self, void* e) {
@@ -172,8 +172,8 @@ void k_ratingwidget_on_mouse_move_event(void* self, void (*callback)(void*, void
     KRatingWidget_OnMouseMoveEvent((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void k_ratingwidget_qbase_mouse_move_event(void* self, void* e) {
-    KRatingWidget_QBaseMouseMoveEvent((KRatingWidget*)self, (QMouseEvent*)e);
+void k_ratingwidget_super_mouse_move_event(void* self, void* e) {
+    KRatingWidget_SuperMouseMoveEvent((KRatingWidget*)self, (QMouseEvent*)e);
 }
 
 void k_ratingwidget_leave_event(void* self, void* e) {
@@ -184,8 +184,8 @@ void k_ratingwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
     KRatingWidget_OnLeaveEvent((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void k_ratingwidget_qbase_leave_event(void* self, void* e) {
-    KRatingWidget_QBaseLeaveEvent((KRatingWidget*)self, (QEvent*)e);
+void k_ratingwidget_super_leave_event(void* self, void* e) {
+    KRatingWidget_SuperLeaveEvent((KRatingWidget*)self, (QEvent*)e);
 }
 
 void k_ratingwidget_paint_event(void* self, void* e) {
@@ -196,8 +196,8 @@ void k_ratingwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KRatingWidget_OnPaintEvent((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void k_ratingwidget_qbase_paint_event(void* self, void* e) {
-    KRatingWidget_QBasePaintEvent((KRatingWidget*)self, (QPaintEvent*)e);
+void k_ratingwidget_super_paint_event(void* self, void* e) {
+    KRatingWidget_SuperPaintEvent((KRatingWidget*)self, (QPaintEvent*)e);
 }
 
 void k_ratingwidget_resize_event(void* self, void* e) {
@@ -208,8 +208,8 @@ void k_ratingwidget_on_resize_event(void* self, void (*callback)(void*, void*)) 
     KRatingWidget_OnResizeEvent((KRatingWidget*)self, (intptr_t)callback);
 }
 
-void k_ratingwidget_qbase_resize_event(void* self, void* e) {
-    KRatingWidget_QBaseResizeEvent((KRatingWidget*)self, (QResizeEvent*)e);
+void k_ratingwidget_super_resize_event(void* self, void* e) {
+    KRatingWidget_SuperResizeEvent((KRatingWidget*)self, (QResizeEvent*)e);
 }
 
 const char* k_ratingwidget_tr2(const char* s, const char* c) {
@@ -1655,8 +1655,8 @@ bool k_ratingwidget_event(void* self, void* e) {
     return KRatingWidget_Event((KRatingWidget*)self, (QEvent*)e);
 }
 
-bool k_ratingwidget_qbase_event(void* self, void* e) {
-    return KRatingWidget_QBaseEvent((KRatingWidget*)self, (QEvent*)e);
+bool k_ratingwidget_super_event(void* self, void* e) {
+    return KRatingWidget_SuperEvent((KRatingWidget*)self, (QEvent*)e);
 }
 
 void k_ratingwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1667,8 +1667,8 @@ void k_ratingwidget_change_event(void* self, void* param1) {
     KRatingWidget_ChangeEvent((KRatingWidget*)self, (QEvent*)param1);
 }
 
-void k_ratingwidget_qbase_change_event(void* self, void* param1) {
-    KRatingWidget_QBaseChangeEvent((KRatingWidget*)self, (QEvent*)param1);
+void k_ratingwidget_super_change_event(void* self, void* param1) {
+    KRatingWidget_SuperChangeEvent((KRatingWidget*)self, (QEvent*)param1);
 }
 
 void k_ratingwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1679,8 +1679,8 @@ void k_ratingwidget_init_style_option(void* self, void* option) {
     KRatingWidget_InitStyleOption((KRatingWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_ratingwidget_qbase_init_style_option(void* self, void* option) {
-    KRatingWidget_QBaseInitStyleOption((KRatingWidget*)self, (QStyleOptionFrame*)option);
+void k_ratingwidget_super_init_style_option(void* self, void* option) {
+    KRatingWidget_SuperInitStyleOption((KRatingWidget*)self, (QStyleOptionFrame*)option);
 }
 
 void k_ratingwidget_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1691,8 +1691,8 @@ int32_t k_ratingwidget_dev_type(void* self) {
     return KRatingWidget_DevType((KRatingWidget*)self);
 }
 
-int32_t k_ratingwidget_qbase_dev_type(void* self) {
-    return KRatingWidget_QBaseDevType((KRatingWidget*)self);
+int32_t k_ratingwidget_super_dev_type(void* self) {
+    return KRatingWidget_SuperDevType((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1703,8 +1703,8 @@ void k_ratingwidget_set_visible(void* self, bool visible) {
     KRatingWidget_SetVisible((KRatingWidget*)self, visible);
 }
 
-void k_ratingwidget_qbase_set_visible(void* self, bool visible) {
-    KRatingWidget_QBaseSetVisible((KRatingWidget*)self, visible);
+void k_ratingwidget_super_set_visible(void* self, bool visible) {
+    KRatingWidget_SuperSetVisible((KRatingWidget*)self, visible);
 }
 
 void k_ratingwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1715,8 +1715,8 @@ QSize* k_ratingwidget_minimum_size_hint(void* self) {
     return KRatingWidget_MinimumSizeHint((KRatingWidget*)self);
 }
 
-QSize* k_ratingwidget_qbase_minimum_size_hint(void* self) {
-    return KRatingWidget_QBaseMinimumSizeHint((KRatingWidget*)self);
+QSize* k_ratingwidget_super_minimum_size_hint(void* self) {
+    return KRatingWidget_SuperMinimumSizeHint((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1727,8 +1727,8 @@ int32_t k_ratingwidget_height_for_width(void* self, int param1) {
     return KRatingWidget_HeightForWidth((KRatingWidget*)self, param1);
 }
 
-int32_t k_ratingwidget_qbase_height_for_width(void* self, int param1) {
-    return KRatingWidget_QBaseHeightForWidth((KRatingWidget*)self, param1);
+int32_t k_ratingwidget_super_height_for_width(void* self, int param1) {
+    return KRatingWidget_SuperHeightForWidth((KRatingWidget*)self, param1);
 }
 
 void k_ratingwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1739,8 +1739,8 @@ bool k_ratingwidget_has_height_for_width(void* self) {
     return KRatingWidget_HasHeightForWidth((KRatingWidget*)self);
 }
 
-bool k_ratingwidget_qbase_has_height_for_width(void* self) {
-    return KRatingWidget_QBaseHasHeightForWidth((KRatingWidget*)self);
+bool k_ratingwidget_super_has_height_for_width(void* self) {
+    return KRatingWidget_SuperHasHeightForWidth((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1751,8 +1751,8 @@ QPaintEngine* k_ratingwidget_paint_engine(void* self) {
     return KRatingWidget_PaintEngine((KRatingWidget*)self);
 }
 
-QPaintEngine* k_ratingwidget_qbase_paint_engine(void* self) {
-    return KRatingWidget_QBasePaintEngine((KRatingWidget*)self);
+QPaintEngine* k_ratingwidget_super_paint_engine(void* self) {
+    return KRatingWidget_SuperPaintEngine((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1763,8 +1763,8 @@ void k_ratingwidget_mouse_release_event(void* self, void* event) {
     KRatingWidget_MouseReleaseEvent((KRatingWidget*)self, (QMouseEvent*)event);
 }
 
-void k_ratingwidget_qbase_mouse_release_event(void* self, void* event) {
-    KRatingWidget_QBaseMouseReleaseEvent((KRatingWidget*)self, (QMouseEvent*)event);
+void k_ratingwidget_super_mouse_release_event(void* self, void* event) {
+    KRatingWidget_SuperMouseReleaseEvent((KRatingWidget*)self, (QMouseEvent*)event);
 }
 
 void k_ratingwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1775,8 +1775,8 @@ void k_ratingwidget_mouse_double_click_event(void* self, void* event) {
     KRatingWidget_MouseDoubleClickEvent((KRatingWidget*)self, (QMouseEvent*)event);
 }
 
-void k_ratingwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KRatingWidget_QBaseMouseDoubleClickEvent((KRatingWidget*)self, (QMouseEvent*)event);
+void k_ratingwidget_super_mouse_double_click_event(void* self, void* event) {
+    KRatingWidget_SuperMouseDoubleClickEvent((KRatingWidget*)self, (QMouseEvent*)event);
 }
 
 void k_ratingwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1787,8 +1787,8 @@ void k_ratingwidget_wheel_event(void* self, void* event) {
     KRatingWidget_WheelEvent((KRatingWidget*)self, (QWheelEvent*)event);
 }
 
-void k_ratingwidget_qbase_wheel_event(void* self, void* event) {
-    KRatingWidget_QBaseWheelEvent((KRatingWidget*)self, (QWheelEvent*)event);
+void k_ratingwidget_super_wheel_event(void* self, void* event) {
+    KRatingWidget_SuperWheelEvent((KRatingWidget*)self, (QWheelEvent*)event);
 }
 
 void k_ratingwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1799,8 +1799,8 @@ void k_ratingwidget_key_press_event(void* self, void* event) {
     KRatingWidget_KeyPressEvent((KRatingWidget*)self, (QKeyEvent*)event);
 }
 
-void k_ratingwidget_qbase_key_press_event(void* self, void* event) {
-    KRatingWidget_QBaseKeyPressEvent((KRatingWidget*)self, (QKeyEvent*)event);
+void k_ratingwidget_super_key_press_event(void* self, void* event) {
+    KRatingWidget_SuperKeyPressEvent((KRatingWidget*)self, (QKeyEvent*)event);
 }
 
 void k_ratingwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1811,8 +1811,8 @@ void k_ratingwidget_key_release_event(void* self, void* event) {
     KRatingWidget_KeyReleaseEvent((KRatingWidget*)self, (QKeyEvent*)event);
 }
 
-void k_ratingwidget_qbase_key_release_event(void* self, void* event) {
-    KRatingWidget_QBaseKeyReleaseEvent((KRatingWidget*)self, (QKeyEvent*)event);
+void k_ratingwidget_super_key_release_event(void* self, void* event) {
+    KRatingWidget_SuperKeyReleaseEvent((KRatingWidget*)self, (QKeyEvent*)event);
 }
 
 void k_ratingwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1823,8 +1823,8 @@ void k_ratingwidget_focus_in_event(void* self, void* event) {
     KRatingWidget_FocusInEvent((KRatingWidget*)self, (QFocusEvent*)event);
 }
 
-void k_ratingwidget_qbase_focus_in_event(void* self, void* event) {
-    KRatingWidget_QBaseFocusInEvent((KRatingWidget*)self, (QFocusEvent*)event);
+void k_ratingwidget_super_focus_in_event(void* self, void* event) {
+    KRatingWidget_SuperFocusInEvent((KRatingWidget*)self, (QFocusEvent*)event);
 }
 
 void k_ratingwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1835,8 +1835,8 @@ void k_ratingwidget_focus_out_event(void* self, void* event) {
     KRatingWidget_FocusOutEvent((KRatingWidget*)self, (QFocusEvent*)event);
 }
 
-void k_ratingwidget_qbase_focus_out_event(void* self, void* event) {
-    KRatingWidget_QBaseFocusOutEvent((KRatingWidget*)self, (QFocusEvent*)event);
+void k_ratingwidget_super_focus_out_event(void* self, void* event) {
+    KRatingWidget_SuperFocusOutEvent((KRatingWidget*)self, (QFocusEvent*)event);
 }
 
 void k_ratingwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1847,8 +1847,8 @@ void k_ratingwidget_enter_event(void* self, void* event) {
     KRatingWidget_EnterEvent((KRatingWidget*)self, (QEnterEvent*)event);
 }
 
-void k_ratingwidget_qbase_enter_event(void* self, void* event) {
-    KRatingWidget_QBaseEnterEvent((KRatingWidget*)self, (QEnterEvent*)event);
+void k_ratingwidget_super_enter_event(void* self, void* event) {
+    KRatingWidget_SuperEnterEvent((KRatingWidget*)self, (QEnterEvent*)event);
 }
 
 void k_ratingwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1859,8 +1859,8 @@ void k_ratingwidget_move_event(void* self, void* event) {
     KRatingWidget_MoveEvent((KRatingWidget*)self, (QMoveEvent*)event);
 }
 
-void k_ratingwidget_qbase_move_event(void* self, void* event) {
-    KRatingWidget_QBaseMoveEvent((KRatingWidget*)self, (QMoveEvent*)event);
+void k_ratingwidget_super_move_event(void* self, void* event) {
+    KRatingWidget_SuperMoveEvent((KRatingWidget*)self, (QMoveEvent*)event);
 }
 
 void k_ratingwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1871,8 +1871,8 @@ void k_ratingwidget_close_event(void* self, void* event) {
     KRatingWidget_CloseEvent((KRatingWidget*)self, (QCloseEvent*)event);
 }
 
-void k_ratingwidget_qbase_close_event(void* self, void* event) {
-    KRatingWidget_QBaseCloseEvent((KRatingWidget*)self, (QCloseEvent*)event);
+void k_ratingwidget_super_close_event(void* self, void* event) {
+    KRatingWidget_SuperCloseEvent((KRatingWidget*)self, (QCloseEvent*)event);
 }
 
 void k_ratingwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1883,8 +1883,8 @@ void k_ratingwidget_context_menu_event(void* self, void* event) {
     KRatingWidget_ContextMenuEvent((KRatingWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_ratingwidget_qbase_context_menu_event(void* self, void* event) {
-    KRatingWidget_QBaseContextMenuEvent((KRatingWidget*)self, (QContextMenuEvent*)event);
+void k_ratingwidget_super_context_menu_event(void* self, void* event) {
+    KRatingWidget_SuperContextMenuEvent((KRatingWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_ratingwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1895,8 +1895,8 @@ void k_ratingwidget_tablet_event(void* self, void* event) {
     KRatingWidget_TabletEvent((KRatingWidget*)self, (QTabletEvent*)event);
 }
 
-void k_ratingwidget_qbase_tablet_event(void* self, void* event) {
-    KRatingWidget_QBaseTabletEvent((KRatingWidget*)self, (QTabletEvent*)event);
+void k_ratingwidget_super_tablet_event(void* self, void* event) {
+    KRatingWidget_SuperTabletEvent((KRatingWidget*)self, (QTabletEvent*)event);
 }
 
 void k_ratingwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1907,8 +1907,8 @@ void k_ratingwidget_action_event(void* self, void* event) {
     KRatingWidget_ActionEvent((KRatingWidget*)self, (QActionEvent*)event);
 }
 
-void k_ratingwidget_qbase_action_event(void* self, void* event) {
-    KRatingWidget_QBaseActionEvent((KRatingWidget*)self, (QActionEvent*)event);
+void k_ratingwidget_super_action_event(void* self, void* event) {
+    KRatingWidget_SuperActionEvent((KRatingWidget*)self, (QActionEvent*)event);
 }
 
 void k_ratingwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1919,8 +1919,8 @@ void k_ratingwidget_drag_enter_event(void* self, void* event) {
     KRatingWidget_DragEnterEvent((KRatingWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_ratingwidget_qbase_drag_enter_event(void* self, void* event) {
-    KRatingWidget_QBaseDragEnterEvent((KRatingWidget*)self, (QDragEnterEvent*)event);
+void k_ratingwidget_super_drag_enter_event(void* self, void* event) {
+    KRatingWidget_SuperDragEnterEvent((KRatingWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_ratingwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1931,8 +1931,8 @@ void k_ratingwidget_drag_move_event(void* self, void* event) {
     KRatingWidget_DragMoveEvent((KRatingWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_ratingwidget_qbase_drag_move_event(void* self, void* event) {
-    KRatingWidget_QBaseDragMoveEvent((KRatingWidget*)self, (QDragMoveEvent*)event);
+void k_ratingwidget_super_drag_move_event(void* self, void* event) {
+    KRatingWidget_SuperDragMoveEvent((KRatingWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_ratingwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1943,8 +1943,8 @@ void k_ratingwidget_drag_leave_event(void* self, void* event) {
     KRatingWidget_DragLeaveEvent((KRatingWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_ratingwidget_qbase_drag_leave_event(void* self, void* event) {
-    KRatingWidget_QBaseDragLeaveEvent((KRatingWidget*)self, (QDragLeaveEvent*)event);
+void k_ratingwidget_super_drag_leave_event(void* self, void* event) {
+    KRatingWidget_SuperDragLeaveEvent((KRatingWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_ratingwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1955,8 +1955,8 @@ void k_ratingwidget_drop_event(void* self, void* event) {
     KRatingWidget_DropEvent((KRatingWidget*)self, (QDropEvent*)event);
 }
 
-void k_ratingwidget_qbase_drop_event(void* self, void* event) {
-    KRatingWidget_QBaseDropEvent((KRatingWidget*)self, (QDropEvent*)event);
+void k_ratingwidget_super_drop_event(void* self, void* event) {
+    KRatingWidget_SuperDropEvent((KRatingWidget*)self, (QDropEvent*)event);
 }
 
 void k_ratingwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1967,8 +1967,8 @@ void k_ratingwidget_show_event(void* self, void* event) {
     KRatingWidget_ShowEvent((KRatingWidget*)self, (QShowEvent*)event);
 }
 
-void k_ratingwidget_qbase_show_event(void* self, void* event) {
-    KRatingWidget_QBaseShowEvent((KRatingWidget*)self, (QShowEvent*)event);
+void k_ratingwidget_super_show_event(void* self, void* event) {
+    KRatingWidget_SuperShowEvent((KRatingWidget*)self, (QShowEvent*)event);
 }
 
 void k_ratingwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1979,8 +1979,8 @@ void k_ratingwidget_hide_event(void* self, void* event) {
     KRatingWidget_HideEvent((KRatingWidget*)self, (QHideEvent*)event);
 }
 
-void k_ratingwidget_qbase_hide_event(void* self, void* event) {
-    KRatingWidget_QBaseHideEvent((KRatingWidget*)self, (QHideEvent*)event);
+void k_ratingwidget_super_hide_event(void* self, void* event) {
+    KRatingWidget_SuperHideEvent((KRatingWidget*)self, (QHideEvent*)event);
 }
 
 void k_ratingwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1991,8 +1991,8 @@ bool k_ratingwidget_native_event(void* self, char* eventType, void* message, int
     return KRatingWidget_NativeEvent((KRatingWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_ratingwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KRatingWidget_QBaseNativeEvent((KRatingWidget*)self, qstring(eventType), message, result);
+bool k_ratingwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KRatingWidget_SuperNativeEvent((KRatingWidget*)self, qstring(eventType), message, result);
 }
 
 void k_ratingwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2003,8 +2003,8 @@ int32_t k_ratingwidget_metric(void* self, int32_t param1) {
     return KRatingWidget_Metric((KRatingWidget*)self, param1);
 }
 
-int32_t k_ratingwidget_qbase_metric(void* self, int32_t param1) {
-    return KRatingWidget_QBaseMetric((KRatingWidget*)self, param1);
+int32_t k_ratingwidget_super_metric(void* self, int32_t param1) {
+    return KRatingWidget_SuperMetric((KRatingWidget*)self, param1);
 }
 
 void k_ratingwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2015,8 +2015,8 @@ void k_ratingwidget_init_painter(void* self, void* painter) {
     KRatingWidget_InitPainter((KRatingWidget*)self, (QPainter*)painter);
 }
 
-void k_ratingwidget_qbase_init_painter(void* self, void* painter) {
-    KRatingWidget_QBaseInitPainter((KRatingWidget*)self, (QPainter*)painter);
+void k_ratingwidget_super_init_painter(void* self, void* painter) {
+    KRatingWidget_SuperInitPainter((KRatingWidget*)self, (QPainter*)painter);
 }
 
 void k_ratingwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2027,8 +2027,8 @@ QPaintDevice* k_ratingwidget_redirected(void* self, void* offset) {
     return KRatingWidget_Redirected((KRatingWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_ratingwidget_qbase_redirected(void* self, void* offset) {
-    return KRatingWidget_QBaseRedirected((KRatingWidget*)self, (QPoint*)offset);
+QPaintDevice* k_ratingwidget_super_redirected(void* self, void* offset) {
+    return KRatingWidget_SuperRedirected((KRatingWidget*)self, (QPoint*)offset);
 }
 
 void k_ratingwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2039,8 +2039,8 @@ QPainter* k_ratingwidget_shared_painter(void* self) {
     return KRatingWidget_SharedPainter((KRatingWidget*)self);
 }
 
-QPainter* k_ratingwidget_qbase_shared_painter(void* self) {
-    return KRatingWidget_QBaseSharedPainter((KRatingWidget*)self);
+QPainter* k_ratingwidget_super_shared_painter(void* self) {
+    return KRatingWidget_SuperSharedPainter((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2051,8 +2051,8 @@ void k_ratingwidget_input_method_event(void* self, void* param1) {
     KRatingWidget_InputMethodEvent((KRatingWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_ratingwidget_qbase_input_method_event(void* self, void* param1) {
-    KRatingWidget_QBaseInputMethodEvent((KRatingWidget*)self, (QInputMethodEvent*)param1);
+void k_ratingwidget_super_input_method_event(void* self, void* param1) {
+    KRatingWidget_SuperInputMethodEvent((KRatingWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_ratingwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2063,8 +2063,8 @@ QVariant* k_ratingwidget_input_method_query(void* self, int32_t param1) {
     return KRatingWidget_InputMethodQuery((KRatingWidget*)self, param1);
 }
 
-QVariant* k_ratingwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KRatingWidget_QBaseInputMethodQuery((KRatingWidget*)self, param1);
+QVariant* k_ratingwidget_super_input_method_query(void* self, int32_t param1) {
+    return KRatingWidget_SuperInputMethodQuery((KRatingWidget*)self, param1);
 }
 
 void k_ratingwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2075,8 +2075,8 @@ bool k_ratingwidget_focus_next_prev_child(void* self, bool next) {
     return KRatingWidget_FocusNextPrevChild((KRatingWidget*)self, next);
 }
 
-bool k_ratingwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KRatingWidget_QBaseFocusNextPrevChild((KRatingWidget*)self, next);
+bool k_ratingwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KRatingWidget_SuperFocusNextPrevChild((KRatingWidget*)self, next);
 }
 
 void k_ratingwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2087,8 +2087,8 @@ bool k_ratingwidget_event_filter(void* self, void* watched, void* event) {
     return KRatingWidget_EventFilter((KRatingWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_ratingwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KRatingWidget_QBaseEventFilter((KRatingWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_ratingwidget_super_event_filter(void* self, void* watched, void* event) {
+    return KRatingWidget_SuperEventFilter((KRatingWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_ratingwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2099,8 +2099,8 @@ void k_ratingwidget_timer_event(void* self, void* event) {
     KRatingWidget_TimerEvent((KRatingWidget*)self, (QTimerEvent*)event);
 }
 
-void k_ratingwidget_qbase_timer_event(void* self, void* event) {
-    KRatingWidget_QBaseTimerEvent((KRatingWidget*)self, (QTimerEvent*)event);
+void k_ratingwidget_super_timer_event(void* self, void* event) {
+    KRatingWidget_SuperTimerEvent((KRatingWidget*)self, (QTimerEvent*)event);
 }
 
 void k_ratingwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2111,8 +2111,8 @@ void k_ratingwidget_child_event(void* self, void* event) {
     KRatingWidget_ChildEvent((KRatingWidget*)self, (QChildEvent*)event);
 }
 
-void k_ratingwidget_qbase_child_event(void* self, void* event) {
-    KRatingWidget_QBaseChildEvent((KRatingWidget*)self, (QChildEvent*)event);
+void k_ratingwidget_super_child_event(void* self, void* event) {
+    KRatingWidget_SuperChildEvent((KRatingWidget*)self, (QChildEvent*)event);
 }
 
 void k_ratingwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2123,8 +2123,8 @@ void k_ratingwidget_custom_event(void* self, void* event) {
     KRatingWidget_CustomEvent((KRatingWidget*)self, (QEvent*)event);
 }
 
-void k_ratingwidget_qbase_custom_event(void* self, void* event) {
-    KRatingWidget_QBaseCustomEvent((KRatingWidget*)self, (QEvent*)event);
+void k_ratingwidget_super_custom_event(void* self, void* event) {
+    KRatingWidget_SuperCustomEvent((KRatingWidget*)self, (QEvent*)event);
 }
 
 void k_ratingwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2135,8 +2135,8 @@ void k_ratingwidget_connect_notify(void* self, void* signal) {
     KRatingWidget_ConnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_ratingwidget_qbase_connect_notify(void* self, void* signal) {
-    KRatingWidget_QBaseConnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
+void k_ratingwidget_super_connect_notify(void* self, void* signal) {
+    KRatingWidget_SuperConnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_ratingwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2147,8 +2147,8 @@ void k_ratingwidget_disconnect_notify(void* self, void* signal) {
     KRatingWidget_DisconnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_ratingwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KRatingWidget_QBaseDisconnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
+void k_ratingwidget_super_disconnect_notify(void* self, void* signal) {
+    KRatingWidget_SuperDisconnectNotify((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_ratingwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2159,8 +2159,8 @@ void k_ratingwidget_draw_frame(void* self, void* param1) {
     KRatingWidget_DrawFrame((KRatingWidget*)self, (QPainter*)param1);
 }
 
-void k_ratingwidget_qbase_draw_frame(void* self, void* param1) {
-    KRatingWidget_QBaseDrawFrame((KRatingWidget*)self, (QPainter*)param1);
+void k_ratingwidget_super_draw_frame(void* self, void* param1) {
+    KRatingWidget_SuperDrawFrame((KRatingWidget*)self, (QPainter*)param1);
 }
 
 void k_ratingwidget_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2171,8 +2171,8 @@ void k_ratingwidget_update_micro_focus(void* self) {
     KRatingWidget_UpdateMicroFocus((KRatingWidget*)self);
 }
 
-void k_ratingwidget_qbase_update_micro_focus(void* self) {
-    KRatingWidget_QBaseUpdateMicroFocus((KRatingWidget*)self);
+void k_ratingwidget_super_update_micro_focus(void* self) {
+    KRatingWidget_SuperUpdateMicroFocus((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2183,8 +2183,8 @@ void k_ratingwidget_create(void* self) {
     KRatingWidget_Create((KRatingWidget*)self);
 }
 
-void k_ratingwidget_qbase_create(void* self) {
-    KRatingWidget_QBaseCreate((KRatingWidget*)self);
+void k_ratingwidget_super_create(void* self) {
+    KRatingWidget_SuperCreate((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_create(void* self, void (*callback)()) {
@@ -2195,8 +2195,8 @@ void k_ratingwidget_destroy(void* self) {
     KRatingWidget_Destroy((KRatingWidget*)self);
 }
 
-void k_ratingwidget_qbase_destroy(void* self) {
-    KRatingWidget_QBaseDestroy((KRatingWidget*)self);
+void k_ratingwidget_super_destroy(void* self) {
+    KRatingWidget_SuperDestroy((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_destroy(void* self, void (*callback)()) {
@@ -2207,8 +2207,8 @@ bool k_ratingwidget_focus_next_child(void* self) {
     return KRatingWidget_FocusNextChild((KRatingWidget*)self);
 }
 
-bool k_ratingwidget_qbase_focus_next_child(void* self) {
-    return KRatingWidget_QBaseFocusNextChild((KRatingWidget*)self);
+bool k_ratingwidget_super_focus_next_child(void* self) {
+    return KRatingWidget_SuperFocusNextChild((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2219,8 +2219,8 @@ bool k_ratingwidget_focus_previous_child(void* self) {
     return KRatingWidget_FocusPreviousChild((KRatingWidget*)self);
 }
 
-bool k_ratingwidget_qbase_focus_previous_child(void* self) {
-    return KRatingWidget_QBaseFocusPreviousChild((KRatingWidget*)self);
+bool k_ratingwidget_super_focus_previous_child(void* self) {
+    return KRatingWidget_SuperFocusPreviousChild((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2231,8 +2231,8 @@ QObject* k_ratingwidget_sender(void* self) {
     return KRatingWidget_Sender((KRatingWidget*)self);
 }
 
-QObject* k_ratingwidget_qbase_sender(void* self) {
-    return KRatingWidget_QBaseSender((KRatingWidget*)self);
+QObject* k_ratingwidget_super_sender(void* self) {
+    return KRatingWidget_SuperSender((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2243,8 +2243,8 @@ int32_t k_ratingwidget_sender_signal_index(void* self) {
     return KRatingWidget_SenderSignalIndex((KRatingWidget*)self);
 }
 
-int32_t k_ratingwidget_qbase_sender_signal_index(void* self) {
-    return KRatingWidget_QBaseSenderSignalIndex((KRatingWidget*)self);
+int32_t k_ratingwidget_super_sender_signal_index(void* self) {
+    return KRatingWidget_SuperSenderSignalIndex((KRatingWidget*)self);
 }
 
 void k_ratingwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2255,8 +2255,8 @@ int32_t k_ratingwidget_receivers(void* self, const char* signal) {
     return KRatingWidget_Receivers((KRatingWidget*)self, signal);
 }
 
-int32_t k_ratingwidget_qbase_receivers(void* self, const char* signal) {
-    return KRatingWidget_QBaseReceivers((KRatingWidget*)self, signal);
+int32_t k_ratingwidget_super_receivers(void* self, const char* signal) {
+    return KRatingWidget_SuperReceivers((KRatingWidget*)self, signal);
 }
 
 void k_ratingwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2267,8 +2267,8 @@ bool k_ratingwidget_is_signal_connected(void* self, void* signal) {
     return KRatingWidget_IsSignalConnected((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_ratingwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KRatingWidget_QBaseIsSignalConnected((KRatingWidget*)self, (QMetaMethod*)signal);
+bool k_ratingwidget_super_is_signal_connected(void* self, void* signal) {
+    return KRatingWidget_SuperIsSignalConnected((KRatingWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_ratingwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2279,8 +2279,8 @@ double k_ratingwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return KRatingWidget_GetDecodedMetricF((KRatingWidget*)self, metricA, metricB);
 }
 
-double k_ratingwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KRatingWidget_QBaseGetDecodedMetricF((KRatingWidget*)self, metricA, metricB);
+double k_ratingwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KRatingWidget_SuperGetDecodedMetricF((KRatingWidget*)self, metricA, metricB);
 }
 
 void k_ratingwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

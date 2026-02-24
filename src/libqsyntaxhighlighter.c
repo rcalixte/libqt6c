@@ -26,8 +26,8 @@ void q_syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callbac
     QSyntaxHighlighter_OnMetaObject((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_syntaxhighlighter_qbase_meta_object(void* self) {
-    return QSyntaxHighlighter_QBaseMetaObject((QSyntaxHighlighter*)self);
+const QMetaObject* q_syntaxhighlighter_super_meta_object(void* self) {
+    return QSyntaxHighlighter_SuperMetaObject((QSyntaxHighlighter*)self);
 }
 
 void* q_syntaxhighlighter_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_syntaxhighlighter_on_metacast(void* self, void* (*callback)(void*, const 
     QSyntaxHighlighter_OnMetacast((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void* q_syntaxhighlighter_qbase_metacast(void* self, const char* param1) {
-    return QSyntaxHighlighter_QBaseMetacast((QSyntaxHighlighter*)self, param1);
+void* q_syntaxhighlighter_super_metacast(void* self, const char* param1) {
+    return QSyntaxHighlighter_SuperMetacast((QSyntaxHighlighter*)self, param1);
 }
 
 int32_t q_syntaxhighlighter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_syntaxhighlighter_on_metacall(void* self, int32_t (*callback)(void*, int3
     QSyntaxHighlighter_OnMetacall((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-int32_t q_syntaxhighlighter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSyntaxHighlighter_QBaseMetacall((QSyntaxHighlighter*)self, param1, param2, param3);
+int32_t q_syntaxhighlighter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSyntaxHighlighter_SuperMetacall((QSyntaxHighlighter*)self, param1, param2, param3);
 }
 
 const char* q_syntaxhighlighter_tr(const char* s) {
@@ -85,8 +85,8 @@ void q_syntaxhighlighter_on_highlight_block(void* self, void (*callback)(void*, 
     QSyntaxHighlighter_OnHighlightBlock((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_highlight_block(void* self, const char* text) {
-    QSyntaxHighlighter_QBaseHighlightBlock((QSyntaxHighlighter*)self, qstring(text));
+void q_syntaxhighlighter_super_highlight_block(void* self, const char* text) {
+    QSyntaxHighlighter_SuperHighlightBlock((QSyntaxHighlighter*)self, qstring(text));
 }
 
 void q_syntaxhighlighter_set_format(void* self, int start, int count, void* format) {
@@ -97,8 +97,8 @@ void q_syntaxhighlighter_on_set_format(void* self, void (*callback)(void*, int, 
     QSyntaxHighlighter_OnSetFormat((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_set_format(void* self, int start, int count, void* format) {
-    QSyntaxHighlighter_QBaseSetFormat((QSyntaxHighlighter*)self, start, count, (QTextCharFormat*)format);
+void q_syntaxhighlighter_super_set_format(void* self, int start, int count, void* format) {
+    QSyntaxHighlighter_SuperSetFormat((QSyntaxHighlighter*)self, start, count, (QTextCharFormat*)format);
 }
 
 void q_syntaxhighlighter_set_format2(void* self, int start, int count, void* color) {
@@ -109,8 +109,8 @@ void q_syntaxhighlighter_on_set_format2(void* self, void (*callback)(void*, int,
     QSyntaxHighlighter_OnSetFormat2((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_set_format2(void* self, int start, int count, void* color) {
-    QSyntaxHighlighter_QBaseSetFormat2((QSyntaxHighlighter*)self, start, count, (QColor*)color);
+void q_syntaxhighlighter_super_set_format2(void* self, int start, int count, void* color) {
+    QSyntaxHighlighter_SuperSetFormat2((QSyntaxHighlighter*)self, start, count, (QColor*)color);
 }
 
 void q_syntaxhighlighter_set_format3(void* self, int start, int count, void* font) {
@@ -121,8 +121,8 @@ void q_syntaxhighlighter_on_set_format3(void* self, void (*callback)(void*, int,
     QSyntaxHighlighter_OnSetFormat3((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_set_format3(void* self, int start, int count, void* font) {
-    QSyntaxHighlighter_QBaseSetFormat3((QSyntaxHighlighter*)self, start, count, (QFont*)font);
+void q_syntaxhighlighter_super_set_format3(void* self, int start, int count, void* font) {
+    QSyntaxHighlighter_SuperSetFormat3((QSyntaxHighlighter*)self, start, count, (QFont*)font);
 }
 
 QTextCharFormat* q_syntaxhighlighter_format(void* self, int pos) {
@@ -133,8 +133,8 @@ void q_syntaxhighlighter_on_format(void* self, QTextCharFormat* (*callback)(void
     QSyntaxHighlighter_OnFormat((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-QTextCharFormat* q_syntaxhighlighter_qbase_format(void* self, int pos) {
-    return QSyntaxHighlighter_QBaseFormat((QSyntaxHighlighter*)self, pos);
+QTextCharFormat* q_syntaxhighlighter_super_format(void* self, int pos) {
+    return QSyntaxHighlighter_SuperFormat((QSyntaxHighlighter*)self, pos);
 }
 
 int32_t q_syntaxhighlighter_previous_block_state(void* self) {
@@ -145,8 +145,8 @@ void q_syntaxhighlighter_on_previous_block_state(void* self, int32_t (*callback)
     QSyntaxHighlighter_OnPreviousBlockState((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-int32_t q_syntaxhighlighter_qbase_previous_block_state(void* self) {
-    return QSyntaxHighlighter_QBasePreviousBlockState((QSyntaxHighlighter*)self);
+int32_t q_syntaxhighlighter_super_previous_block_state(void* self) {
+    return QSyntaxHighlighter_SuperPreviousBlockState((QSyntaxHighlighter*)self);
 }
 
 int32_t q_syntaxhighlighter_current_block_state(void* self) {
@@ -157,8 +157,8 @@ void q_syntaxhighlighter_on_current_block_state(void* self, int32_t (*callback)(
     QSyntaxHighlighter_OnCurrentBlockState((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-int32_t q_syntaxhighlighter_qbase_current_block_state(void* self) {
-    return QSyntaxHighlighter_QBaseCurrentBlockState((QSyntaxHighlighter*)self);
+int32_t q_syntaxhighlighter_super_current_block_state(void* self) {
+    return QSyntaxHighlighter_SuperCurrentBlockState((QSyntaxHighlighter*)self);
 }
 
 void q_syntaxhighlighter_set_current_block_state(void* self, int newState) {
@@ -169,8 +169,8 @@ void q_syntaxhighlighter_on_set_current_block_state(void* self, void (*callback)
     QSyntaxHighlighter_OnSetCurrentBlockState((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_set_current_block_state(void* self, int newState) {
-    QSyntaxHighlighter_QBaseSetCurrentBlockState((QSyntaxHighlighter*)self, newState);
+void q_syntaxhighlighter_super_set_current_block_state(void* self, int newState) {
+    QSyntaxHighlighter_SuperSetCurrentBlockState((QSyntaxHighlighter*)self, newState);
 }
 
 void q_syntaxhighlighter_set_current_block_user_data(void* self, void* data) {
@@ -181,8 +181,8 @@ void q_syntaxhighlighter_on_set_current_block_user_data(void* self, void (*callb
     QSyntaxHighlighter_OnSetCurrentBlockUserData((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-void q_syntaxhighlighter_qbase_set_current_block_user_data(void* self, void* data) {
-    QSyntaxHighlighter_QBaseSetCurrentBlockUserData((QSyntaxHighlighter*)self, (QTextBlockUserData*)data);
+void q_syntaxhighlighter_super_set_current_block_user_data(void* self, void* data) {
+    QSyntaxHighlighter_SuperSetCurrentBlockUserData((QSyntaxHighlighter*)self, (QTextBlockUserData*)data);
 }
 
 QTextBlockUserData* q_syntaxhighlighter_current_block_user_data(void* self) {
@@ -193,8 +193,8 @@ void q_syntaxhighlighter_on_current_block_user_data(void* self, QTextBlockUserDa
     QSyntaxHighlighter_OnCurrentBlockUserData((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-QTextBlockUserData* q_syntaxhighlighter_qbase_current_block_user_data(void* self) {
-    return QSyntaxHighlighter_QBaseCurrentBlockUserData((QSyntaxHighlighter*)self);
+QTextBlockUserData* q_syntaxhighlighter_super_current_block_user_data(void* self) {
+    return QSyntaxHighlighter_SuperCurrentBlockUserData((QSyntaxHighlighter*)self);
 }
 
 QTextBlock* q_syntaxhighlighter_current_block(void* self) {
@@ -205,8 +205,8 @@ void q_syntaxhighlighter_on_current_block(void* self, QTextBlock* (*callback)())
     QSyntaxHighlighter_OnCurrentBlock((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 
-QTextBlock* q_syntaxhighlighter_qbase_current_block(void* self) {
-    return QSyntaxHighlighter_QBaseCurrentBlock((QSyntaxHighlighter*)self);
+QTextBlock* q_syntaxhighlighter_super_current_block(void* self) {
+    return QSyntaxHighlighter_SuperCurrentBlock((QSyntaxHighlighter*)self);
 }
 
 const char* q_syntaxhighlighter_tr2(const char* s, const char* c) {
@@ -438,8 +438,8 @@ bool q_syntaxhighlighter_event(void* self, void* event) {
     return QSyntaxHighlighter_Event((QSyntaxHighlighter*)self, (QEvent*)event);
 }
 
-bool q_syntaxhighlighter_qbase_event(void* self, void* event) {
-    return QSyntaxHighlighter_QBaseEvent((QSyntaxHighlighter*)self, (QEvent*)event);
+bool q_syntaxhighlighter_super_event(void* self, void* event) {
+    return QSyntaxHighlighter_SuperEvent((QSyntaxHighlighter*)self, (QEvent*)event);
 }
 
 void q_syntaxhighlighter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ bool q_syntaxhighlighter_event_filter(void* self, void* watched, void* event) {
     return QSyntaxHighlighter_EventFilter((QSyntaxHighlighter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_syntaxhighlighter_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSyntaxHighlighter_QBaseEventFilter((QSyntaxHighlighter*)self, (QObject*)watched, (QEvent*)event);
+bool q_syntaxhighlighter_super_event_filter(void* self, void* watched, void* event) {
+    return QSyntaxHighlighter_SuperEventFilter((QSyntaxHighlighter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_syntaxhighlighter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -462,8 +462,8 @@ void q_syntaxhighlighter_timer_event(void* self, void* event) {
     QSyntaxHighlighter_TimerEvent((QSyntaxHighlighter*)self, (QTimerEvent*)event);
 }
 
-void q_syntaxhighlighter_qbase_timer_event(void* self, void* event) {
-    QSyntaxHighlighter_QBaseTimerEvent((QSyntaxHighlighter*)self, (QTimerEvent*)event);
+void q_syntaxhighlighter_super_timer_event(void* self, void* event) {
+    QSyntaxHighlighter_SuperTimerEvent((QSyntaxHighlighter*)self, (QTimerEvent*)event);
 }
 
 void q_syntaxhighlighter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ void q_syntaxhighlighter_child_event(void* self, void* event) {
     QSyntaxHighlighter_ChildEvent((QSyntaxHighlighter*)self, (QChildEvent*)event);
 }
 
-void q_syntaxhighlighter_qbase_child_event(void* self, void* event) {
-    QSyntaxHighlighter_QBaseChildEvent((QSyntaxHighlighter*)self, (QChildEvent*)event);
+void q_syntaxhighlighter_super_child_event(void* self, void* event) {
+    QSyntaxHighlighter_SuperChildEvent((QSyntaxHighlighter*)self, (QChildEvent*)event);
 }
 
 void q_syntaxhighlighter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -486,8 +486,8 @@ void q_syntaxhighlighter_custom_event(void* self, void* event) {
     QSyntaxHighlighter_CustomEvent((QSyntaxHighlighter*)self, (QEvent*)event);
 }
 
-void q_syntaxhighlighter_qbase_custom_event(void* self, void* event) {
-    QSyntaxHighlighter_QBaseCustomEvent((QSyntaxHighlighter*)self, (QEvent*)event);
+void q_syntaxhighlighter_super_custom_event(void* self, void* event) {
+    QSyntaxHighlighter_SuperCustomEvent((QSyntaxHighlighter*)self, (QEvent*)event);
 }
 
 void q_syntaxhighlighter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -498,8 +498,8 @@ void q_syntaxhighlighter_connect_notify(void* self, void* signal) {
     QSyntaxHighlighter_ConnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
-void q_syntaxhighlighter_qbase_connect_notify(void* self, void* signal) {
-    QSyntaxHighlighter_QBaseConnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
+void q_syntaxhighlighter_super_connect_notify(void* self, void* signal) {
+    QSyntaxHighlighter_SuperConnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
 void q_syntaxhighlighter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -510,8 +510,8 @@ void q_syntaxhighlighter_disconnect_notify(void* self, void* signal) {
     QSyntaxHighlighter_DisconnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
-void q_syntaxhighlighter_qbase_disconnect_notify(void* self, void* signal) {
-    QSyntaxHighlighter_QBaseDisconnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
+void q_syntaxhighlighter_super_disconnect_notify(void* self, void* signal) {
+    QSyntaxHighlighter_SuperDisconnectNotify((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
 void q_syntaxhighlighter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -522,8 +522,8 @@ QObject* q_syntaxhighlighter_sender(void* self) {
     return QSyntaxHighlighter_Sender((QSyntaxHighlighter*)self);
 }
 
-QObject* q_syntaxhighlighter_qbase_sender(void* self) {
-    return QSyntaxHighlighter_QBaseSender((QSyntaxHighlighter*)self);
+QObject* q_syntaxhighlighter_super_sender(void* self) {
+    return QSyntaxHighlighter_SuperSender((QSyntaxHighlighter*)self);
 }
 
 void q_syntaxhighlighter_on_sender(void* self, QObject* (*callback)()) {
@@ -534,8 +534,8 @@ int32_t q_syntaxhighlighter_sender_signal_index(void* self) {
     return QSyntaxHighlighter_SenderSignalIndex((QSyntaxHighlighter*)self);
 }
 
-int32_t q_syntaxhighlighter_qbase_sender_signal_index(void* self) {
-    return QSyntaxHighlighter_QBaseSenderSignalIndex((QSyntaxHighlighter*)self);
+int32_t q_syntaxhighlighter_super_sender_signal_index(void* self) {
+    return QSyntaxHighlighter_SuperSenderSignalIndex((QSyntaxHighlighter*)self);
 }
 
 void q_syntaxhighlighter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -546,8 +546,8 @@ int32_t q_syntaxhighlighter_receivers(void* self, const char* signal) {
     return QSyntaxHighlighter_Receivers((QSyntaxHighlighter*)self, signal);
 }
 
-int32_t q_syntaxhighlighter_qbase_receivers(void* self, const char* signal) {
-    return QSyntaxHighlighter_QBaseReceivers((QSyntaxHighlighter*)self, signal);
+int32_t q_syntaxhighlighter_super_receivers(void* self, const char* signal) {
+    return QSyntaxHighlighter_SuperReceivers((QSyntaxHighlighter*)self, signal);
 }
 
 void q_syntaxhighlighter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -558,8 +558,8 @@ bool q_syntaxhighlighter_is_signal_connected(void* self, void* signal) {
     return QSyntaxHighlighter_IsSignalConnected((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
-bool q_syntaxhighlighter_qbase_is_signal_connected(void* self, void* signal) {
-    return QSyntaxHighlighter_QBaseIsSignalConnected((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
+bool q_syntaxhighlighter_super_is_signal_connected(void* self, void* signal) {
+    return QSyntaxHighlighter_SuperIsSignalConnected((QSyntaxHighlighter*)self, (QMetaMethod*)signal);
 }
 
 void q_syntaxhighlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

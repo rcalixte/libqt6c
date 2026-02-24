@@ -20,8 +20,8 @@ void k_abstractfileitemactionplugin_on_meta_object(void* self, const QMetaObject
     KAbstractFileItemActionPlugin_OnMetaObject((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_abstractfileitemactionplugin_qbase_meta_object(void* self) {
-    return KAbstractFileItemActionPlugin_QBaseMetaObject((KAbstractFileItemActionPlugin*)self);
+const QMetaObject* k_abstractfileitemactionplugin_super_meta_object(void* self) {
+    return KAbstractFileItemActionPlugin_SuperMetaObject((KAbstractFileItemActionPlugin*)self);
 }
 
 void* k_abstractfileitemactionplugin_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_abstractfileitemactionplugin_on_metacast(void* self, void* (*callback)(vo
     KAbstractFileItemActionPlugin_OnMetacast((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 
-void* k_abstractfileitemactionplugin_qbase_metacast(void* self, const char* param1) {
-    return KAbstractFileItemActionPlugin_QBaseMetacast((KAbstractFileItemActionPlugin*)self, param1);
+void* k_abstractfileitemactionplugin_super_metacast(void* self, const char* param1) {
+    return KAbstractFileItemActionPlugin_SuperMetacast((KAbstractFileItemActionPlugin*)self, param1);
 }
 
 int32_t k_abstractfileitemactionplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_abstractfileitemactionplugin_on_metacall(void* self, int32_t (*callback)(
     KAbstractFileItemActionPlugin_OnMetacall((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 
-int32_t k_abstractfileitemactionplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KAbstractFileItemActionPlugin_QBaseMetacall((KAbstractFileItemActionPlugin*)self, param1, param2, param3);
+int32_t k_abstractfileitemactionplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KAbstractFileItemActionPlugin_SuperMetacall((KAbstractFileItemActionPlugin*)self, param1, param2, param3);
 }
 
 const char* k_abstractfileitemactionplugin_tr(const char* s) {
@@ -64,8 +64,8 @@ void k_abstractfileitemactionplugin_on_actions(void* self, libqt_list /* of QAct
     KAbstractFileItemActionPlugin_OnActions((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ k_abstractfileitemactionplugin_qbase_actions(void* self, void* fileItemInfos, void* parentWidget) {
-    libqt_list _arr = KAbstractFileItemActionPlugin_QBaseActions((KAbstractFileItemActionPlugin*)self, (KFileItemListProperties*)fileItemInfos, (QWidget*)parentWidget);
+libqt_list /* of QAction* */ k_abstractfileitemactionplugin_super_actions(void* self, void* fileItemInfos, void* parentWidget) {
+    libqt_list _arr = KAbstractFileItemActionPlugin_SuperActions((KAbstractFileItemActionPlugin*)self, (KFileItemListProperties*)fileItemInfos, (QWidget*)parentWidget);
     return _arr;
 }
 
@@ -306,8 +306,8 @@ bool k_abstractfileitemactionplugin_event(void* self, void* event) {
     return KAbstractFileItemActionPlugin_Event((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
 }
 
-bool k_abstractfileitemactionplugin_qbase_event(void* self, void* event) {
-    return KAbstractFileItemActionPlugin_QBaseEvent((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
+bool k_abstractfileitemactionplugin_super_event(void* self, void* event) {
+    return KAbstractFileItemActionPlugin_SuperEvent((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
 }
 
 void k_abstractfileitemactionplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -318,8 +318,8 @@ bool k_abstractfileitemactionplugin_event_filter(void* self, void* watched, void
     return KAbstractFileItemActionPlugin_EventFilter((KAbstractFileItemActionPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_abstractfileitemactionplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return KAbstractFileItemActionPlugin_QBaseEventFilter((KAbstractFileItemActionPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool k_abstractfileitemactionplugin_super_event_filter(void* self, void* watched, void* event) {
+    return KAbstractFileItemActionPlugin_SuperEventFilter((KAbstractFileItemActionPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_abstractfileitemactionplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -330,8 +330,8 @@ void k_abstractfileitemactionplugin_timer_event(void* self, void* event) {
     KAbstractFileItemActionPlugin_TimerEvent((KAbstractFileItemActionPlugin*)self, (QTimerEvent*)event);
 }
 
-void k_abstractfileitemactionplugin_qbase_timer_event(void* self, void* event) {
-    KAbstractFileItemActionPlugin_QBaseTimerEvent((KAbstractFileItemActionPlugin*)self, (QTimerEvent*)event);
+void k_abstractfileitemactionplugin_super_timer_event(void* self, void* event) {
+    KAbstractFileItemActionPlugin_SuperTimerEvent((KAbstractFileItemActionPlugin*)self, (QTimerEvent*)event);
 }
 
 void k_abstractfileitemactionplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -342,8 +342,8 @@ void k_abstractfileitemactionplugin_child_event(void* self, void* event) {
     KAbstractFileItemActionPlugin_ChildEvent((KAbstractFileItemActionPlugin*)self, (QChildEvent*)event);
 }
 
-void k_abstractfileitemactionplugin_qbase_child_event(void* self, void* event) {
-    KAbstractFileItemActionPlugin_QBaseChildEvent((KAbstractFileItemActionPlugin*)self, (QChildEvent*)event);
+void k_abstractfileitemactionplugin_super_child_event(void* self, void* event) {
+    KAbstractFileItemActionPlugin_SuperChildEvent((KAbstractFileItemActionPlugin*)self, (QChildEvent*)event);
 }
 
 void k_abstractfileitemactionplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ void k_abstractfileitemactionplugin_custom_event(void* self, void* event) {
     KAbstractFileItemActionPlugin_CustomEvent((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
 }
 
-void k_abstractfileitemactionplugin_qbase_custom_event(void* self, void* event) {
-    KAbstractFileItemActionPlugin_QBaseCustomEvent((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
+void k_abstractfileitemactionplugin_super_custom_event(void* self, void* event) {
+    KAbstractFileItemActionPlugin_SuperCustomEvent((KAbstractFileItemActionPlugin*)self, (QEvent*)event);
 }
 
 void k_abstractfileitemactionplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -366,8 +366,8 @@ void k_abstractfileitemactionplugin_connect_notify(void* self, void* signal) {
     KAbstractFileItemActionPlugin_ConnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractfileitemactionplugin_qbase_connect_notify(void* self, void* signal) {
-    KAbstractFileItemActionPlugin_QBaseConnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
+void k_abstractfileitemactionplugin_super_connect_notify(void* self, void* signal) {
+    KAbstractFileItemActionPlugin_SuperConnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_abstractfileitemactionplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void k_abstractfileitemactionplugin_disconnect_notify(void* self, void* signal) 
     KAbstractFileItemActionPlugin_DisconnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_abstractfileitemactionplugin_qbase_disconnect_notify(void* self, void* signal) {
-    KAbstractFileItemActionPlugin_QBaseDisconnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
+void k_abstractfileitemactionplugin_super_disconnect_notify(void* self, void* signal) {
+    KAbstractFileItemActionPlugin_SuperDisconnectNotify((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_abstractfileitemactionplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ QObject* k_abstractfileitemactionplugin_sender(void* self) {
     return KAbstractFileItemActionPlugin_Sender((KAbstractFileItemActionPlugin*)self);
 }
 
-QObject* k_abstractfileitemactionplugin_qbase_sender(void* self) {
-    return KAbstractFileItemActionPlugin_QBaseSender((KAbstractFileItemActionPlugin*)self);
+QObject* k_abstractfileitemactionplugin_super_sender(void* self) {
+    return KAbstractFileItemActionPlugin_SuperSender((KAbstractFileItemActionPlugin*)self);
 }
 
 void k_abstractfileitemactionplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -402,8 +402,8 @@ int32_t k_abstractfileitemactionplugin_sender_signal_index(void* self) {
     return KAbstractFileItemActionPlugin_SenderSignalIndex((KAbstractFileItemActionPlugin*)self);
 }
 
-int32_t k_abstractfileitemactionplugin_qbase_sender_signal_index(void* self) {
-    return KAbstractFileItemActionPlugin_QBaseSenderSignalIndex((KAbstractFileItemActionPlugin*)self);
+int32_t k_abstractfileitemactionplugin_super_sender_signal_index(void* self) {
+    return KAbstractFileItemActionPlugin_SuperSenderSignalIndex((KAbstractFileItemActionPlugin*)self);
 }
 
 void k_abstractfileitemactionplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -414,8 +414,8 @@ int32_t k_abstractfileitemactionplugin_receivers(void* self, const char* signal)
     return KAbstractFileItemActionPlugin_Receivers((KAbstractFileItemActionPlugin*)self, signal);
 }
 
-int32_t k_abstractfileitemactionplugin_qbase_receivers(void* self, const char* signal) {
-    return KAbstractFileItemActionPlugin_QBaseReceivers((KAbstractFileItemActionPlugin*)self, signal);
+int32_t k_abstractfileitemactionplugin_super_receivers(void* self, const char* signal) {
+    return KAbstractFileItemActionPlugin_SuperReceivers((KAbstractFileItemActionPlugin*)self, signal);
 }
 
 void k_abstractfileitemactionplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -426,8 +426,8 @@ bool k_abstractfileitemactionplugin_is_signal_connected(void* self, void* signal
     return KAbstractFileItemActionPlugin_IsSignalConnected((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool k_abstractfileitemactionplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return KAbstractFileItemActionPlugin_QBaseIsSignalConnected((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
+bool k_abstractfileitemactionplugin_super_is_signal_connected(void* self, void* signal) {
+    return KAbstractFileItemActionPlugin_SuperIsSignalConnected((KAbstractFileItemActionPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_abstractfileitemactionplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

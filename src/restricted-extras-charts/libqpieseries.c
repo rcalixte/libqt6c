@@ -23,8 +23,8 @@ void q_pieseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPieSeries_OnMetaObject((QPieSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pieseries_qbase_meta_object(void* self) {
-    return QPieSeries_QBaseMetaObject((QPieSeries*)self);
+const QMetaObject* q_pieseries_super_meta_object(void* self) {
+    return QPieSeries_SuperMetaObject((QPieSeries*)self);
 }
 
 void* q_pieseries_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_pieseries_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QPieSeries_OnMetacast((QPieSeries*)self, (intptr_t)callback);
 }
 
-void* q_pieseries_qbase_metacast(void* self, const char* param1) {
-    return QPieSeries_QBaseMetacast((QPieSeries*)self, param1);
+void* q_pieseries_super_metacast(void* self, const char* param1) {
+    return QPieSeries_SuperMetacast((QPieSeries*)self, param1);
 }
 
 int32_t q_pieseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_pieseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QPieSeries_OnMetacall((QPieSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_pieseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPieSeries_QBaseMetacall((QPieSeries*)self, param1, param2, param3);
+int32_t q_pieseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPieSeries_SuperMetacall((QPieSeries*)self, param1, param2, param3);
 }
 
 const char* q_pieseries_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_pieseries_on_type(void* self, int32_t (*callback)()) {
     QPieSeries_OnType((QPieSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_pieseries_qbase_type(void* self) {
-    return QPieSeries_QBaseType((QPieSeries*)self);
+int32_t q_pieseries_super_type(void* self) {
+    return QPieSeries_SuperType((QPieSeries*)self);
 }
 
 bool q_pieseries_append(void* self, void* slice) {
@@ -580,8 +580,8 @@ bool q_pieseries_event(void* self, void* event) {
     return QPieSeries_Event((QPieSeries*)self, (QEvent*)event);
 }
 
-bool q_pieseries_qbase_event(void* self, void* event) {
-    return QPieSeries_QBaseEvent((QPieSeries*)self, (QEvent*)event);
+bool q_pieseries_super_event(void* self, void* event) {
+    return QPieSeries_SuperEvent((QPieSeries*)self, (QEvent*)event);
 }
 
 void q_pieseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -592,8 +592,8 @@ bool q_pieseries_event_filter(void* self, void* watched, void* event) {
     return QPieSeries_EventFilter((QPieSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pieseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPieSeries_QBaseEventFilter((QPieSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_pieseries_super_event_filter(void* self, void* watched, void* event) {
+    return QPieSeries_SuperEventFilter((QPieSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pieseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -604,8 +604,8 @@ void q_pieseries_timer_event(void* self, void* event) {
     QPieSeries_TimerEvent((QPieSeries*)self, (QTimerEvent*)event);
 }
 
-void q_pieseries_qbase_timer_event(void* self, void* event) {
-    QPieSeries_QBaseTimerEvent((QPieSeries*)self, (QTimerEvent*)event);
+void q_pieseries_super_timer_event(void* self, void* event) {
+    QPieSeries_SuperTimerEvent((QPieSeries*)self, (QTimerEvent*)event);
 }
 
 void q_pieseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -616,8 +616,8 @@ void q_pieseries_child_event(void* self, void* event) {
     QPieSeries_ChildEvent((QPieSeries*)self, (QChildEvent*)event);
 }
 
-void q_pieseries_qbase_child_event(void* self, void* event) {
-    QPieSeries_QBaseChildEvent((QPieSeries*)self, (QChildEvent*)event);
+void q_pieseries_super_child_event(void* self, void* event) {
+    QPieSeries_SuperChildEvent((QPieSeries*)self, (QChildEvent*)event);
 }
 
 void q_pieseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -628,8 +628,8 @@ void q_pieseries_custom_event(void* self, void* event) {
     QPieSeries_CustomEvent((QPieSeries*)self, (QEvent*)event);
 }
 
-void q_pieseries_qbase_custom_event(void* self, void* event) {
-    QPieSeries_QBaseCustomEvent((QPieSeries*)self, (QEvent*)event);
+void q_pieseries_super_custom_event(void* self, void* event) {
+    QPieSeries_SuperCustomEvent((QPieSeries*)self, (QEvent*)event);
 }
 
 void q_pieseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -640,8 +640,8 @@ void q_pieseries_connect_notify(void* self, void* signal) {
     QPieSeries_ConnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_pieseries_qbase_connect_notify(void* self, void* signal) {
-    QPieSeries_QBaseConnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
+void q_pieseries_super_connect_notify(void* self, void* signal) {
+    QPieSeries_SuperConnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -652,8 +652,8 @@ void q_pieseries_disconnect_notify(void* self, void* signal) {
     QPieSeries_DisconnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_pieseries_qbase_disconnect_notify(void* self, void* signal) {
-    QPieSeries_QBaseDisconnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
+void q_pieseries_super_disconnect_notify(void* self, void* signal) {
+    QPieSeries_SuperDisconnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -664,8 +664,8 @@ QObject* q_pieseries_sender(void* self) {
     return QPieSeries_Sender((QPieSeries*)self);
 }
 
-QObject* q_pieseries_qbase_sender(void* self) {
-    return QPieSeries_QBaseSender((QPieSeries*)self);
+QObject* q_pieseries_super_sender(void* self) {
+    return QPieSeries_SuperSender((QPieSeries*)self);
 }
 
 void q_pieseries_on_sender(void* self, QObject* (*callback)()) {
@@ -676,8 +676,8 @@ int32_t q_pieseries_sender_signal_index(void* self) {
     return QPieSeries_SenderSignalIndex((QPieSeries*)self);
 }
 
-int32_t q_pieseries_qbase_sender_signal_index(void* self) {
-    return QPieSeries_QBaseSenderSignalIndex((QPieSeries*)self);
+int32_t q_pieseries_super_sender_signal_index(void* self) {
+    return QPieSeries_SuperSenderSignalIndex((QPieSeries*)self);
 }
 
 void q_pieseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -688,8 +688,8 @@ int32_t q_pieseries_receivers(void* self, const char* signal) {
     return QPieSeries_Receivers((QPieSeries*)self, signal);
 }
 
-int32_t q_pieseries_qbase_receivers(void* self, const char* signal) {
-    return QPieSeries_QBaseReceivers((QPieSeries*)self, signal);
+int32_t q_pieseries_super_receivers(void* self, const char* signal) {
+    return QPieSeries_SuperReceivers((QPieSeries*)self, signal);
 }
 
 void q_pieseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -700,8 +700,8 @@ bool q_pieseries_is_signal_connected(void* self, void* signal) {
     return QPieSeries_IsSignalConnected((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_pieseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QPieSeries_QBaseIsSignalConnected((QPieSeries*)self, (QMetaMethod*)signal);
+bool q_pieseries_super_is_signal_connected(void* self, void* signal) {
+    return QPieSeries_SuperIsSignalConnected((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_pieseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

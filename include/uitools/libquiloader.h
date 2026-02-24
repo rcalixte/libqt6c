@@ -40,13 +40,17 @@ const QMetaObject* q_uiloader_meta_object(void* self);
 ///
 void q_uiloader_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_uiloader_super_meta_object` instead
+///
+#define q_uiloader_qbase_meta_object q_uiloader_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QUiLoader*
 ///
-const QMetaObject* q_uiloader_qbase_meta_object(void* self);
+const QMetaObject* q_uiloader_super_meta_object(void* self);
 
 /// @param self QUiLoader*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_uiloader_metacast(void* self, const char* param1);
 ///
 void q_uiloader_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_metacast` instead
+///
+#define q_uiloader_qbase_metacast q_uiloader_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QUiLoader*
 /// @param param1 const char*
 ///
-void* q_uiloader_qbase_metacast(void* self, const char* param1);
+void* q_uiloader_super_metacast(void* self, const char* param1);
 
 /// @param self QUiLoader*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_uiloader_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_uiloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_metacall` instead
+///
+#define q_uiloader_qbase_metacall q_uiloader_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QUiLoader*
@@ -88,7 +100,7 @@ void q_uiloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_uiloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_uiloader_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -160,6 +172,10 @@ QWidget* q_uiloader_create_widget(void* self, const char* className, void* paren
 ///
 void q_uiloader_on_create_widget(void* self, QWidget* (*callback)(void*, const char*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_create_widget` instead
+///
+#define q_uiloader_qbase_create_widget q_uiloader_super_create_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createWidget)
 ///
 /// Base class method implementation
@@ -169,7 +185,7 @@ void q_uiloader_on_create_widget(void* self, QWidget* (*callback)(void*, const c
 /// @param parent QWidget*
 /// @param name const char*
 ///
-QWidget* q_uiloader_qbase_create_widget(void* self, const char* className, void* parent, const char* name);
+QWidget* q_uiloader_super_create_widget(void* self, const char* className, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createLayout)
 ///
@@ -189,6 +205,10 @@ QLayout* q_uiloader_create_layout(void* self, const char* className, void* paren
 ///
 void q_uiloader_on_create_layout(void* self, QLayout* (*callback)(void*, const char*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_create_layout` instead
+///
+#define q_uiloader_qbase_create_layout q_uiloader_super_create_layout
+
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createLayout)
 ///
 /// Base class method implementation
@@ -198,7 +218,7 @@ void q_uiloader_on_create_layout(void* self, QLayout* (*callback)(void*, const c
 /// @param parent QObject*
 /// @param name const char*
 ///
-QLayout* q_uiloader_qbase_create_layout(void* self, const char* className, void* parent, const char* name);
+QLayout* q_uiloader_super_create_layout(void* self, const char* className, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createActionGroup)
 ///
@@ -217,6 +237,10 @@ QActionGroup* q_uiloader_create_action_group(void* self, void* parent, const cha
 ///
 void q_uiloader_on_create_action_group(void* self, QActionGroup* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_create_action_group` instead
+///
+#define q_uiloader_qbase_create_action_group q_uiloader_super_create_action_group
+
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createActionGroup)
 ///
 /// Base class method implementation
@@ -225,7 +249,7 @@ void q_uiloader_on_create_action_group(void* self, QActionGroup* (*callback)(voi
 /// @param parent QObject*
 /// @param name const char*
 ///
-QActionGroup* q_uiloader_qbase_create_action_group(void* self, void* parent, const char* name);
+QActionGroup* q_uiloader_super_create_action_group(void* self, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createAction)
 ///
@@ -244,6 +268,10 @@ QAction* q_uiloader_create_action(void* self, void* parent, const char* name);
 ///
 void q_uiloader_on_create_action(void* self, QAction* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_uiloader_super_create_action` instead
+///
+#define q_uiloader_qbase_create_action q_uiloader_super_create_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#createAction)
 ///
 /// Base class method implementation
@@ -252,7 +280,7 @@ void q_uiloader_on_create_action(void* self, QAction* (*callback)(void*, void*, 
 /// @param parent QObject*
 /// @param name const char*
 ///
-QAction* q_uiloader_qbase_create_action(void* self, void* parent, const char* name);
+QAction* q_uiloader_super_create_action(void* self, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#setWorkingDirectory)
 ///
@@ -786,6 +814,10 @@ void q_uiloader_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_uiloader_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_event` instead
+///
+#define q_uiloader_qbase_event q_uiloader_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -795,7 +827,7 @@ bool q_uiloader_event(void* self, void* event);
 /// @param self QUiLoader*
 /// @param event QEvent*
 ///
-bool q_uiloader_qbase_event(void* self, void* event);
+bool q_uiloader_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -820,6 +852,10 @@ void q_uiloader_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_uiloader_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_event_filter` instead
+///
+#define q_uiloader_qbase_event_filter q_uiloader_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -830,7 +866,7 @@ bool q_uiloader_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_uiloader_qbase_event_filter(void* self, void* watched, void* event);
+bool q_uiloader_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -854,6 +890,10 @@ void q_uiloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_uiloader_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_timer_event` instead
+///
+#define q_uiloader_qbase_timer_event q_uiloader_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -863,7 +903,7 @@ void q_uiloader_timer_event(void* self, void* event);
 /// @param self QUiLoader*
 /// @param event QTimerEvent*
 ///
-void q_uiloader_qbase_timer_event(void* self, void* event);
+void q_uiloader_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -887,6 +927,10 @@ void q_uiloader_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_uiloader_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_child_event` instead
+///
+#define q_uiloader_qbase_child_event q_uiloader_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -896,7 +940,7 @@ void q_uiloader_child_event(void* self, void* event);
 /// @param self QUiLoader*
 /// @param event QChildEvent*
 ///
-void q_uiloader_qbase_child_event(void* self, void* event);
+void q_uiloader_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -920,6 +964,10 @@ void q_uiloader_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_uiloader_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_custom_event` instead
+///
+#define q_uiloader_qbase_custom_event q_uiloader_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -929,7 +977,7 @@ void q_uiloader_custom_event(void* self, void* event);
 /// @param self QUiLoader*
 /// @param event QEvent*
 ///
-void q_uiloader_qbase_custom_event(void* self, void* event);
+void q_uiloader_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -953,6 +1001,10 @@ void q_uiloader_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_uiloader_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_connect_notify` instead
+///
+#define q_uiloader_qbase_connect_notify q_uiloader_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -962,7 +1014,7 @@ void q_uiloader_connect_notify(void* self, void* signal);
 /// @param self QUiLoader*
 /// @param signal QMetaMethod*
 ///
-void q_uiloader_qbase_connect_notify(void* self, void* signal);
+void q_uiloader_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -986,6 +1038,10 @@ void q_uiloader_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_uiloader_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_disconnect_notify` instead
+///
+#define q_uiloader_qbase_disconnect_notify q_uiloader_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -995,7 +1051,7 @@ void q_uiloader_disconnect_notify(void* self, void* signal);
 /// @param self QUiLoader*
 /// @param signal QMetaMethod*
 ///
-void q_uiloader_qbase_disconnect_notify(void* self, void* signal);
+void q_uiloader_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1018,6 +1074,10 @@ void q_uiloader_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_uiloader_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_sender` instead
+///
+#define q_uiloader_qbase_sender q_uiloader_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1026,7 +1086,7 @@ QObject* q_uiloader_sender(void* self);
 ///
 /// @param self QUiLoader*
 ///
-QObject* q_uiloader_qbase_sender(void* self);
+QObject* q_uiloader_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1049,6 +1109,10 @@ void q_uiloader_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_uiloader_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_sender_signal_index` instead
+///
+#define q_uiloader_qbase_sender_signal_index q_uiloader_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1057,7 +1121,7 @@ int32_t q_uiloader_sender_signal_index(void* self);
 ///
 /// @param self QUiLoader*
 ///
-int32_t q_uiloader_qbase_sender_signal_index(void* self);
+int32_t q_uiloader_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1081,6 +1145,10 @@ void q_uiloader_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_uiloader_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_receivers` instead
+///
+#define q_uiloader_qbase_receivers q_uiloader_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1090,7 +1158,7 @@ int32_t q_uiloader_receivers(void* self, const char* signal);
 /// @param self QUiLoader*
 /// @param signal const char*
 ///
-int32_t q_uiloader_qbase_receivers(void* self, const char* signal);
+int32_t q_uiloader_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1114,6 +1182,10 @@ void q_uiloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_uiloader_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_uiloader_super_is_signal_connected` instead
+///
+#define q_uiloader_qbase_is_signal_connected q_uiloader_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1123,7 +1195,7 @@ bool q_uiloader_is_signal_connected(void* self, void* signal);
 /// @param self QUiLoader*
 /// @param signal QMetaMethod*
 ///
-bool q_uiloader_qbase_is_signal_connected(void* self, void* signal);
+bool q_uiloader_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -40,13 +40,17 @@ const QMetaObject* q_mdiarea_meta_object(void* self);
 ///
 void q_mdiarea_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_meta_object` instead
+///
+#define q_mdiarea_qbase_meta_object q_mdiarea_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QMdiArea*
 ///
-const QMetaObject* q_mdiarea_qbase_meta_object(void* self);
+const QMetaObject* q_mdiarea_super_meta_object(void* self);
 
 /// @param self QMdiArea*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_mdiarea_metacast(void* self, const char* param1);
 ///
 void q_mdiarea_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_metacast` instead
+///
+#define q_mdiarea_qbase_metacast q_mdiarea_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QMdiArea*
 /// @param param1 const char*
 ///
-void* q_mdiarea_qbase_metacast(void* self, const char* param1);
+void* q_mdiarea_super_metacast(void* self, const char* param1);
 
 /// @param self QMdiArea*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_mdiarea_metacall(void* self, int32_t param1, int param2, void* param3)
 ///
 void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_metacall` instead
+///
+#define q_mdiarea_qbase_metacall q_mdiarea_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QMdiArea*
@@ -88,7 +100,7 @@ void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_mdiarea_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_mdiarea_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -113,13 +125,17 @@ QSize* q_mdiarea_size_hint(void* self);
 ///
 void q_mdiarea_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_size_hint` instead
+///
+#define q_mdiarea_qbase_size_hint q_mdiarea_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QMdiArea*
 ///
-QSize* q_mdiarea_qbase_size_hint(void* self);
+QSize* q_mdiarea_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#minimumSizeHint)
 ///
@@ -136,13 +152,17 @@ QSize* q_mdiarea_minimum_size_hint(void* self);
 ///
 void q_mdiarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_minimum_size_hint` instead
+///
+#define q_mdiarea_qbase_minimum_size_hint q_mdiarea_super_minimum_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QMdiArea*
 ///
-QSize* q_mdiarea_qbase_minimum_size_hint(void* self);
+QSize* q_mdiarea_super_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#currentSubWindow)
 ///
@@ -377,6 +397,10 @@ void q_mdiarea_setup_viewport(void* self, void* viewport);
 ///
 void q_mdiarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_setup_viewport` instead
+///
+#define q_mdiarea_qbase_setup_viewport q_mdiarea_super_setup_viewport
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#setupViewport)
 ///
 /// Base class method implementation
@@ -384,7 +408,7 @@ void q_mdiarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param viewport QWidget*
 ///
-void q_mdiarea_qbase_setup_viewport(void* self, void* viewport);
+void q_mdiarea_super_setup_viewport(void* self, void* viewport);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#event)
 ///
@@ -402,6 +426,10 @@ bool q_mdiarea_event(void* self, void* event);
 ///
 void q_mdiarea_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_event` instead
+///
+#define q_mdiarea_qbase_event q_mdiarea_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#event)
 ///
 /// Base class method implementation
@@ -409,7 +437,7 @@ void q_mdiarea_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param event QEvent*
 ///
-bool q_mdiarea_qbase_event(void* self, void* event);
+bool q_mdiarea_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#eventFilter)
 ///
@@ -428,6 +456,10 @@ bool q_mdiarea_event_filter(void* self, void* object, void* event);
 ///
 void q_mdiarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_event_filter` instead
+///
+#define q_mdiarea_qbase_event_filter q_mdiarea_super_event_filter
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#eventFilter)
 ///
 /// Base class method implementation
@@ -436,7 +468,7 @@ void q_mdiarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 /// @param object QObject*
 /// @param event QEvent*
 ///
-bool q_mdiarea_qbase_event_filter(void* self, void* object, void* event);
+bool q_mdiarea_super_event_filter(void* self, void* object, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#paintEvent)
 ///
@@ -454,6 +486,10 @@ void q_mdiarea_paint_event(void* self, void* paintEvent);
 ///
 void q_mdiarea_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_paint_event` instead
+///
+#define q_mdiarea_qbase_paint_event q_mdiarea_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#paintEvent)
 ///
 /// Base class method implementation
@@ -461,7 +497,7 @@ void q_mdiarea_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param paintEvent QPaintEvent*
 ///
-void q_mdiarea_qbase_paint_event(void* self, void* paintEvent);
+void q_mdiarea_super_paint_event(void* self, void* paintEvent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#childEvent)
 ///
@@ -479,6 +515,10 @@ void q_mdiarea_child_event(void* self, void* childEvent);
 ///
 void q_mdiarea_on_child_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_child_event` instead
+///
+#define q_mdiarea_qbase_child_event q_mdiarea_super_child_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#childEvent)
 ///
 /// Base class method implementation
@@ -486,7 +526,7 @@ void q_mdiarea_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param childEvent QChildEvent*
 ///
-void q_mdiarea_qbase_child_event(void* self, void* childEvent);
+void q_mdiarea_super_child_event(void* self, void* childEvent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#resizeEvent)
 ///
@@ -504,6 +544,10 @@ void q_mdiarea_resize_event(void* self, void* resizeEvent);
 ///
 void q_mdiarea_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_resize_event` instead
+///
+#define q_mdiarea_qbase_resize_event q_mdiarea_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -511,7 +555,7 @@ void q_mdiarea_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param resizeEvent QResizeEvent*
 ///
-void q_mdiarea_qbase_resize_event(void* self, void* resizeEvent);
+void q_mdiarea_super_resize_event(void* self, void* resizeEvent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#timerEvent)
 ///
@@ -529,6 +573,10 @@ void q_mdiarea_timer_event(void* self, void* timerEvent);
 ///
 void q_mdiarea_on_timer_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_timer_event` instead
+///
+#define q_mdiarea_qbase_timer_event q_mdiarea_super_timer_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#timerEvent)
 ///
 /// Base class method implementation
@@ -536,7 +584,7 @@ void q_mdiarea_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param timerEvent QTimerEvent*
 ///
-void q_mdiarea_qbase_timer_event(void* self, void* timerEvent);
+void q_mdiarea_super_timer_event(void* self, void* timerEvent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#showEvent)
 ///
@@ -554,6 +602,10 @@ void q_mdiarea_show_event(void* self, void* showEvent);
 ///
 void q_mdiarea_on_show_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_show_event` instead
+///
+#define q_mdiarea_qbase_show_event q_mdiarea_super_show_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#showEvent)
 ///
 /// Base class method implementation
@@ -561,7 +613,7 @@ void q_mdiarea_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param showEvent QShowEvent*
 ///
-void q_mdiarea_qbase_show_event(void* self, void* showEvent);
+void q_mdiarea_super_show_event(void* self, void* showEvent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#viewportEvent)
 ///
@@ -579,6 +631,10 @@ bool q_mdiarea_viewport_event(void* self, void* event);
 ///
 void q_mdiarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_viewport_event` instead
+///
+#define q_mdiarea_qbase_viewport_event q_mdiarea_super_viewport_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#viewportEvent)
 ///
 /// Base class method implementation
@@ -586,7 +642,7 @@ void q_mdiarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 /// @param self QMdiArea*
 /// @param event QEvent*
 ///
-bool q_mdiarea_qbase_viewport_event(void* self, void* event);
+bool q_mdiarea_super_viewport_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#scrollContentsBy)
 ///
@@ -605,6 +661,10 @@ void q_mdiarea_scroll_contents_by(void* self, int dx, int dy);
 ///
 void q_mdiarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_scroll_contents_by` instead
+///
+#define q_mdiarea_qbase_scroll_contents_by q_mdiarea_super_scroll_contents_by
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmdiarea.html#scrollContentsBy)
 ///
 /// Base class method implementation
@@ -613,7 +673,7 @@ void q_mdiarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, in
 /// @param dx int
 /// @param dy int
 ///
-void q_mdiarea_qbase_scroll_contents_by(void* self, int dx, int dy);
+void q_mdiarea_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3895,6 +3955,10 @@ int32_t q_mdiarea_encode_metric_f(int32_t metric, double value);
 ///
 void q_mdiarea_mouse_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_mouse_press_event` instead
+///
+#define q_mdiarea_qbase_mouse_press_event q_mdiarea_super_mouse_press_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mousePressEvent)
@@ -3904,7 +3968,7 @@ void q_mdiarea_mouse_press_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QMouseEvent*
 ///
-void q_mdiarea_qbase_mouse_press_event(void* self, void* param1);
+void q_mdiarea_super_mouse_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3928,6 +3992,10 @@ void q_mdiarea_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_mouse_release_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_mouse_release_event` instead
+///
+#define q_mdiarea_qbase_mouse_release_event q_mdiarea_super_mouse_release_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
@@ -3937,7 +4005,7 @@ void q_mdiarea_mouse_release_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QMouseEvent*
 ///
-void q_mdiarea_qbase_mouse_release_event(void* self, void* param1);
+void q_mdiarea_super_mouse_release_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3961,6 +4029,10 @@ void q_mdiarea_on_mouse_release_event(void* self, void (*callback)(void*, void*)
 ///
 void q_mdiarea_mouse_double_click_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_mouse_double_click_event` instead
+///
+#define q_mdiarea_qbase_mouse_double_click_event q_mdiarea_super_mouse_double_click_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseDoubleClickEvent)
@@ -3970,7 +4042,7 @@ void q_mdiarea_mouse_double_click_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QMouseEvent*
 ///
-void q_mdiarea_qbase_mouse_double_click_event(void* self, void* param1);
+void q_mdiarea_super_mouse_double_click_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3994,6 +4066,10 @@ void q_mdiarea_on_mouse_double_click_event(void* self, void (*callback)(void*, v
 ///
 void q_mdiarea_mouse_move_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_mouse_move_event` instead
+///
+#define q_mdiarea_qbase_mouse_move_event q_mdiarea_super_mouse_move_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
@@ -4003,7 +4079,7 @@ void q_mdiarea_mouse_move_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QMouseEvent*
 ///
-void q_mdiarea_qbase_mouse_move_event(void* self, void* param1);
+void q_mdiarea_super_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4027,6 +4103,10 @@ void q_mdiarea_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_wheel_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_wheel_event` instead
+///
+#define q_mdiarea_qbase_wheel_event q_mdiarea_super_wheel_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
@@ -4036,7 +4116,7 @@ void q_mdiarea_wheel_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QWheelEvent*
 ///
-void q_mdiarea_qbase_wheel_event(void* self, void* param1);
+void q_mdiarea_super_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4060,6 +4140,10 @@ void q_mdiarea_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_context_menu_event` instead
+///
+#define q_mdiarea_qbase_context_menu_event q_mdiarea_super_context_menu_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -4069,7 +4153,7 @@ void q_mdiarea_context_menu_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QContextMenuEvent*
 ///
-void q_mdiarea_qbase_context_menu_event(void* self, void* param1);
+void q_mdiarea_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4093,6 +4177,10 @@ void q_mdiarea_on_context_menu_event(void* self, void (*callback)(void*, void*))
 ///
 void q_mdiarea_drag_enter_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_drag_enter_event` instead
+///
+#define q_mdiarea_qbase_drag_enter_event q_mdiarea_super_drag_enter_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragEnterEvent)
@@ -4102,7 +4190,7 @@ void q_mdiarea_drag_enter_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QDragEnterEvent*
 ///
-void q_mdiarea_qbase_drag_enter_event(void* self, void* param1);
+void q_mdiarea_super_drag_enter_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4126,6 +4214,10 @@ void q_mdiarea_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_drag_move_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_drag_move_event` instead
+///
+#define q_mdiarea_qbase_drag_move_event q_mdiarea_super_drag_move_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragMoveEvent)
@@ -4135,7 +4227,7 @@ void q_mdiarea_drag_move_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QDragMoveEvent*
 ///
-void q_mdiarea_qbase_drag_move_event(void* self, void* param1);
+void q_mdiarea_super_drag_move_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4159,6 +4251,10 @@ void q_mdiarea_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_drag_leave_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_drag_leave_event` instead
+///
+#define q_mdiarea_qbase_drag_leave_event q_mdiarea_super_drag_leave_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragLeaveEvent)
@@ -4168,7 +4264,7 @@ void q_mdiarea_drag_leave_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QDragLeaveEvent*
 ///
-void q_mdiarea_qbase_drag_leave_event(void* self, void* param1);
+void q_mdiarea_super_drag_leave_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4192,6 +4288,10 @@ void q_mdiarea_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_drop_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_drop_event` instead
+///
+#define q_mdiarea_qbase_drop_event q_mdiarea_super_drop_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dropEvent)
@@ -4201,7 +4301,7 @@ void q_mdiarea_drop_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QDropEvent*
 ///
-void q_mdiarea_qbase_drop_event(void* self, void* param1);
+void q_mdiarea_super_drop_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4225,6 +4325,10 @@ void q_mdiarea_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_key_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_key_press_event` instead
+///
+#define q_mdiarea_qbase_key_press_event q_mdiarea_super_key_press_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#keyPressEvent)
@@ -4234,7 +4338,7 @@ void q_mdiarea_key_press_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QKeyEvent*
 ///
-void q_mdiarea_qbase_key_press_event(void* self, void* param1);
+void q_mdiarea_super_key_press_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4257,6 +4361,10 @@ void q_mdiarea_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 QSize* q_mdiarea_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_viewport_size_hint` instead
+///
+#define q_mdiarea_qbase_viewport_size_hint q_mdiarea_super_viewport_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -4265,7 +4373,7 @@ QSize* q_mdiarea_viewport_size_hint(void* self);
 ///
 /// @param self QMdiArea*
 ///
-QSize* q_mdiarea_qbase_viewport_size_hint(void* self);
+QSize* q_mdiarea_super_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4289,6 +4397,10 @@ void q_mdiarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_mdiarea_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_change_event` instead
+///
+#define q_mdiarea_qbase_change_event q_mdiarea_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -4298,7 +4410,7 @@ void q_mdiarea_change_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QEvent*
 ///
-void q_mdiarea_qbase_change_event(void* self, void* param1);
+void q_mdiarea_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -4322,6 +4434,10 @@ void q_mdiarea_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_init_style_option` instead
+///
+#define q_mdiarea_qbase_init_style_option q_mdiarea_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -4331,7 +4447,7 @@ void q_mdiarea_init_style_option(void* self, void* option);
 /// @param self QMdiArea*
 /// @param option QStyleOptionFrame*
 ///
-void q_mdiarea_qbase_init_style_option(void* self, void* option);
+void q_mdiarea_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -4354,6 +4470,10 @@ void q_mdiarea_on_init_style_option(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_mdiarea_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_dev_type` instead
+///
+#define q_mdiarea_qbase_dev_type q_mdiarea_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4362,7 +4482,7 @@ int32_t q_mdiarea_dev_type(void* self);
 ///
 /// @param self QMdiArea*
 ///
-int32_t q_mdiarea_qbase_dev_type(void* self);
+int32_t q_mdiarea_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4386,6 +4506,10 @@ void q_mdiarea_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_mdiarea_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_set_visible` instead
+///
+#define q_mdiarea_qbase_set_visible q_mdiarea_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4395,7 +4519,7 @@ void q_mdiarea_set_visible(void* self, bool visible);
 /// @param self QMdiArea*
 /// @param visible bool
 ///
-void q_mdiarea_qbase_set_visible(void* self, bool visible);
+void q_mdiarea_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -4419,6 +4543,10 @@ void q_mdiarea_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_mdiarea_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_height_for_width` instead
+///
+#define q_mdiarea_qbase_height_for_width q_mdiarea_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4428,7 +4556,7 @@ int32_t q_mdiarea_height_for_width(void* self, int param1);
 /// @param self QMdiArea*
 /// @param param1 int
 ///
-int32_t q_mdiarea_qbase_height_for_width(void* self, int param1);
+int32_t q_mdiarea_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4451,6 +4579,10 @@ void q_mdiarea_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 ///
 bool q_mdiarea_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_has_height_for_width` instead
+///
+#define q_mdiarea_qbase_has_height_for_width q_mdiarea_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4459,7 +4591,7 @@ bool q_mdiarea_has_height_for_width(void* self);
 ///
 /// @param self QMdiArea*
 ///
-bool q_mdiarea_qbase_has_height_for_width(void* self);
+bool q_mdiarea_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4482,6 +4614,10 @@ void q_mdiarea_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_mdiarea_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_paint_engine` instead
+///
+#define q_mdiarea_qbase_paint_engine q_mdiarea_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -4490,7 +4626,7 @@ QPaintEngine* q_mdiarea_paint_engine(void* self);
 ///
 /// @param self QMdiArea*
 ///
-QPaintEngine* q_mdiarea_qbase_paint_engine(void* self);
+QPaintEngine* q_mdiarea_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4514,6 +4650,10 @@ void q_mdiarea_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_mdiarea_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_key_release_event` instead
+///
+#define q_mdiarea_qbase_key_release_event q_mdiarea_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4523,7 +4663,7 @@ void q_mdiarea_key_release_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QKeyEvent*
 ///
-void q_mdiarea_qbase_key_release_event(void* self, void* event);
+void q_mdiarea_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4547,6 +4687,10 @@ void q_mdiarea_on_key_release_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_focus_in_event` instead
+///
+#define q_mdiarea_qbase_focus_in_event q_mdiarea_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4556,7 +4700,7 @@ void q_mdiarea_focus_in_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QFocusEvent*
 ///
-void q_mdiarea_qbase_focus_in_event(void* self, void* event);
+void q_mdiarea_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4580,6 +4724,10 @@ void q_mdiarea_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_focus_out_event` instead
+///
+#define q_mdiarea_qbase_focus_out_event q_mdiarea_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4589,7 +4737,7 @@ void q_mdiarea_focus_out_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QFocusEvent*
 ///
-void q_mdiarea_qbase_focus_out_event(void* self, void* event);
+void q_mdiarea_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4613,6 +4761,10 @@ void q_mdiarea_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_enter_event` instead
+///
+#define q_mdiarea_qbase_enter_event q_mdiarea_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4622,7 +4774,7 @@ void q_mdiarea_enter_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QEnterEvent*
 ///
-void q_mdiarea_qbase_enter_event(void* self, void* event);
+void q_mdiarea_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4646,6 +4798,10 @@ void q_mdiarea_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_leave_event` instead
+///
+#define q_mdiarea_qbase_leave_event q_mdiarea_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4655,7 +4811,7 @@ void q_mdiarea_leave_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QEvent*
 ///
-void q_mdiarea_qbase_leave_event(void* self, void* event);
+void q_mdiarea_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4679,6 +4835,10 @@ void q_mdiarea_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_move_event` instead
+///
+#define q_mdiarea_qbase_move_event q_mdiarea_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4688,7 +4848,7 @@ void q_mdiarea_move_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QMoveEvent*
 ///
-void q_mdiarea_qbase_move_event(void* self, void* event);
+void q_mdiarea_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4712,6 +4872,10 @@ void q_mdiarea_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_close_event` instead
+///
+#define q_mdiarea_qbase_close_event q_mdiarea_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4721,7 +4885,7 @@ void q_mdiarea_close_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QCloseEvent*
 ///
-void q_mdiarea_qbase_close_event(void* self, void* event);
+void q_mdiarea_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4745,6 +4909,10 @@ void q_mdiarea_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_tablet_event` instead
+///
+#define q_mdiarea_qbase_tablet_event q_mdiarea_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4754,7 +4922,7 @@ void q_mdiarea_tablet_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QTabletEvent*
 ///
-void q_mdiarea_qbase_tablet_event(void* self, void* event);
+void q_mdiarea_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4778,6 +4946,10 @@ void q_mdiarea_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_action_event` instead
+///
+#define q_mdiarea_qbase_action_event q_mdiarea_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4787,7 +4959,7 @@ void q_mdiarea_action_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QActionEvent*
 ///
-void q_mdiarea_qbase_action_event(void* self, void* event);
+void q_mdiarea_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4811,6 +4983,10 @@ void q_mdiarea_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_hide_event` instead
+///
+#define q_mdiarea_qbase_hide_event q_mdiarea_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4820,7 +4996,7 @@ void q_mdiarea_hide_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QHideEvent*
 ///
-void q_mdiarea_qbase_hide_event(void* self, void* event);
+void q_mdiarea_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4846,6 +5022,10 @@ void q_mdiarea_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_native_event` instead
+///
+#define q_mdiarea_qbase_native_event q_mdiarea_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4857,7 +5037,7 @@ bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_mdiarea_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_mdiarea_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4881,6 +5061,10 @@ void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, libqt_string,
 ///
 int32_t q_mdiarea_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_metric` instead
+///
+#define q_mdiarea_qbase_metric q_mdiarea_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4890,7 +5074,7 @@ int32_t q_mdiarea_metric(void* self, int32_t param1);
 /// @param self QMdiArea*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_mdiarea_qbase_metric(void* self, int32_t param1);
+int32_t q_mdiarea_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4914,6 +5098,10 @@ void q_mdiarea_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_mdiarea_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_init_painter` instead
+///
+#define q_mdiarea_qbase_init_painter q_mdiarea_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4923,7 +5111,7 @@ void q_mdiarea_init_painter(void* self, void* painter);
 /// @param self QMdiArea*
 /// @param painter QPainter*
 ///
-void q_mdiarea_qbase_init_painter(void* self, void* painter);
+void q_mdiarea_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4947,6 +5135,10 @@ void q_mdiarea_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_mdiarea_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_redirected` instead
+///
+#define q_mdiarea_qbase_redirected q_mdiarea_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4956,7 +5148,7 @@ QPaintDevice* q_mdiarea_redirected(void* self, void* offset);
 /// @param self QMdiArea*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_mdiarea_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_mdiarea_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4979,6 +5171,10 @@ void q_mdiarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)
 ///
 QPainter* q_mdiarea_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_shared_painter` instead
+///
+#define q_mdiarea_qbase_shared_painter q_mdiarea_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4987,7 +5183,7 @@ QPainter* q_mdiarea_shared_painter(void* self);
 ///
 /// @param self QMdiArea*
 ///
-QPainter* q_mdiarea_qbase_shared_painter(void* self);
+QPainter* q_mdiarea_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5011,6 +5207,10 @@ void q_mdiarea_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_mdiarea_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_input_method_event` instead
+///
+#define q_mdiarea_qbase_input_method_event q_mdiarea_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5020,7 +5220,7 @@ void q_mdiarea_input_method_event(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QInputMethodEvent*
 ///
-void q_mdiarea_qbase_input_method_event(void* self, void* param1);
+void q_mdiarea_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5044,6 +5244,10 @@ void q_mdiarea_on_input_method_event(void* self, void (*callback)(void*, void*))
 ///
 QVariant* q_mdiarea_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_input_method_query` instead
+///
+#define q_mdiarea_qbase_input_method_query q_mdiarea_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -5053,7 +5257,7 @@ QVariant* q_mdiarea_input_method_query(void* self, int32_t param1);
 /// @param self QMdiArea*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_mdiarea_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_mdiarea_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5077,6 +5281,10 @@ void q_mdiarea_on_input_method_query(void* self, QVariant* (*callback)(void*, in
 ///
 bool q_mdiarea_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_focus_next_prev_child` instead
+///
+#define q_mdiarea_qbase_focus_next_prev_child q_mdiarea_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5086,7 +5294,7 @@ bool q_mdiarea_focus_next_prev_child(void* self, bool next);
 /// @param self QMdiArea*
 /// @param next bool
 ///
-bool q_mdiarea_qbase_focus_next_prev_child(void* self, bool next);
+bool q_mdiarea_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -5110,6 +5318,10 @@ void q_mdiarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool
 ///
 void q_mdiarea_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_custom_event` instead
+///
+#define q_mdiarea_qbase_custom_event q_mdiarea_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5119,7 +5331,7 @@ void q_mdiarea_custom_event(void* self, void* event);
 /// @param self QMdiArea*
 /// @param event QEvent*
 ///
-void q_mdiarea_qbase_custom_event(void* self, void* event);
+void q_mdiarea_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5143,6 +5355,10 @@ void q_mdiarea_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_connect_notify` instead
+///
+#define q_mdiarea_qbase_connect_notify q_mdiarea_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5152,7 +5368,7 @@ void q_mdiarea_connect_notify(void* self, void* signal);
 /// @param self QMdiArea*
 /// @param signal QMetaMethod*
 ///
-void q_mdiarea_qbase_connect_notify(void* self, void* signal);
+void q_mdiarea_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5176,6 +5392,10 @@ void q_mdiarea_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_disconnect_notify` instead
+///
+#define q_mdiarea_qbase_disconnect_notify q_mdiarea_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5185,7 +5405,7 @@ void q_mdiarea_disconnect_notify(void* self, void* signal);
 /// @param self QMdiArea*
 /// @param signal QMetaMethod*
 ///
-void q_mdiarea_qbase_disconnect_notify(void* self, void* signal);
+void q_mdiarea_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5212,6 +5432,10 @@ void q_mdiarea_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_set_viewport_margins` instead
+///
+#define q_mdiarea_qbase_set_viewport_margins q_mdiarea_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -5224,7 +5448,7 @@ void q_mdiarea_set_viewport_margins(void* self, int left, int top, int right, in
 /// @param right int
 /// @param bottom int
 ///
-void q_mdiarea_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void q_mdiarea_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5247,6 +5471,10 @@ void q_mdiarea_on_set_viewport_margins(void* self, void (*callback)(void*, int, 
 ///
 QMargins* q_mdiarea_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_viewport_margins` instead
+///
+#define q_mdiarea_qbase_viewport_margins q_mdiarea_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -5255,7 +5483,7 @@ QMargins* q_mdiarea_viewport_margins(void* self);
 ///
 /// @param self QMdiArea*
 ///
-QMargins* q_mdiarea_qbase_viewport_margins(void* self);
+QMargins* q_mdiarea_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5279,6 +5507,10 @@ void q_mdiarea_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_mdiarea_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_draw_frame` instead
+///
+#define q_mdiarea_qbase_draw_frame q_mdiarea_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5288,7 +5520,7 @@ void q_mdiarea_draw_frame(void* self, void* param1);
 /// @param self QMdiArea*
 /// @param param1 QPainter*
 ///
-void q_mdiarea_qbase_draw_frame(void* self, void* param1);
+void q_mdiarea_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -5311,6 +5543,10 @@ void q_mdiarea_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_mdiarea_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_update_micro_focus` instead
+///
+#define q_mdiarea_qbase_update_micro_focus q_mdiarea_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5319,7 +5555,7 @@ void q_mdiarea_update_micro_focus(void* self);
 ///
 /// @param self QMdiArea*
 ///
-void q_mdiarea_qbase_update_micro_focus(void* self);
+void q_mdiarea_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5342,6 +5578,10 @@ void q_mdiarea_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_mdiarea_create(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_create` instead
+///
+#define q_mdiarea_qbase_create q_mdiarea_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5350,7 +5590,7 @@ void q_mdiarea_create(void* self);
 ///
 /// @param self QMdiArea*
 ///
-void q_mdiarea_qbase_create(void* self);
+void q_mdiarea_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5373,6 +5613,10 @@ void q_mdiarea_on_create(void* self, void (*callback)());
 ///
 void q_mdiarea_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_destroy` instead
+///
+#define q_mdiarea_qbase_destroy q_mdiarea_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5381,7 +5625,7 @@ void q_mdiarea_destroy(void* self);
 ///
 /// @param self QMdiArea*
 ///
-void q_mdiarea_qbase_destroy(void* self);
+void q_mdiarea_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5404,6 +5648,10 @@ void q_mdiarea_on_destroy(void* self, void (*callback)());
 ///
 bool q_mdiarea_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_focus_next_child` instead
+///
+#define q_mdiarea_qbase_focus_next_child q_mdiarea_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5412,7 +5660,7 @@ bool q_mdiarea_focus_next_child(void* self);
 ///
 /// @param self QMdiArea*
 ///
-bool q_mdiarea_qbase_focus_next_child(void* self);
+bool q_mdiarea_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5435,6 +5683,10 @@ void q_mdiarea_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_mdiarea_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_focus_previous_child` instead
+///
+#define q_mdiarea_qbase_focus_previous_child q_mdiarea_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5443,7 +5695,7 @@ bool q_mdiarea_focus_previous_child(void* self);
 ///
 /// @param self QMdiArea*
 ///
-bool q_mdiarea_qbase_focus_previous_child(void* self);
+bool q_mdiarea_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5466,6 +5718,10 @@ void q_mdiarea_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_mdiarea_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_sender` instead
+///
+#define q_mdiarea_qbase_sender q_mdiarea_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5474,7 +5730,7 @@ QObject* q_mdiarea_sender(void* self);
 ///
 /// @param self QMdiArea*
 ///
-QObject* q_mdiarea_qbase_sender(void* self);
+QObject* q_mdiarea_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5497,6 +5753,10 @@ void q_mdiarea_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_mdiarea_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_sender_signal_index` instead
+///
+#define q_mdiarea_qbase_sender_signal_index q_mdiarea_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5505,7 +5765,7 @@ int32_t q_mdiarea_sender_signal_index(void* self);
 ///
 /// @param self QMdiArea*
 ///
-int32_t q_mdiarea_qbase_sender_signal_index(void* self);
+int32_t q_mdiarea_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5529,6 +5789,10 @@ void q_mdiarea_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_mdiarea_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_receivers` instead
+///
+#define q_mdiarea_qbase_receivers q_mdiarea_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5538,7 +5802,7 @@ int32_t q_mdiarea_receivers(void* self, const char* signal);
 /// @param self QMdiArea*
 /// @param signal const char*
 ///
-int32_t q_mdiarea_qbase_receivers(void* self, const char* signal);
+int32_t q_mdiarea_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5562,6 +5826,10 @@ void q_mdiarea_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 bool q_mdiarea_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_is_signal_connected` instead
+///
+#define q_mdiarea_qbase_is_signal_connected q_mdiarea_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5571,7 +5839,7 @@ bool q_mdiarea_is_signal_connected(void* self, void* signal);
 /// @param self QMdiArea*
 /// @param signal QMetaMethod*
 ///
-bool q_mdiarea_qbase_is_signal_connected(void* self, void* signal);
+bool q_mdiarea_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5596,6 +5864,10 @@ void q_mdiarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
 ///
 double q_mdiarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_mdiarea_super_get_decoded_metric_f` instead
+///
+#define q_mdiarea_qbase_get_decoded_metric_f q_mdiarea_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5606,7 +5878,7 @@ double q_mdiarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_mdiarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_mdiarea_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

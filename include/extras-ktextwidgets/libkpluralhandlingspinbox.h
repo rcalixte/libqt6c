@@ -40,13 +40,17 @@ const QMetaObject* k_pluralhandlingspinbox_meta_object(void* self);
 ///
 void k_pluralhandlingspinbox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_meta_object` instead
+///
+#define k_pluralhandlingspinbox_qbase_meta_object k_pluralhandlingspinbox_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-const QMetaObject* k_pluralhandlingspinbox_qbase_meta_object(void* self);
+const QMetaObject* k_pluralhandlingspinbox_super_meta_object(void* self);
 
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_pluralhandlingspinbox_metacast(void* self, const char* param1);
 ///
 void k_pluralhandlingspinbox_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_metacast` instead
+///
+#define k_pluralhandlingspinbox_qbase_metacast k_pluralhandlingspinbox_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 const char*
 ///
-void* k_pluralhandlingspinbox_qbase_metacast(void* self, const char* param1);
+void* k_pluralhandlingspinbox_super_metacast(void* self, const char* param1);
 
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_pluralhandlingspinbox_metacall(void* self, int32_t param1, int param2,
 ///
 void k_pluralhandlingspinbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_metacall` instead
+///
+#define k_pluralhandlingspinbox_qbase_metacall k_pluralhandlingspinbox_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KPluralHandlingSpinBox*
@@ -88,7 +100,7 @@ void k_pluralhandlingspinbox_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_pluralhandlingspinbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_pluralhandlingspinbox_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3526,6 +3538,10 @@ int32_t k_pluralhandlingspinbox_encode_metric_f(int32_t metric, double value);
 ///
 bool k_pluralhandlingspinbox_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_event k_pluralhandlingspinbox_super_event
+
 /// Inherited from QSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#event)
@@ -3535,7 +3551,7 @@ bool k_pluralhandlingspinbox_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QEvent*
 ///
-bool k_pluralhandlingspinbox_qbase_event(void* self, void* event);
+bool k_pluralhandlingspinbox_super_event(void* self, void* event);
 
 /// Inherited from QSpinBox
 ///
@@ -3562,6 +3578,10 @@ void k_pluralhandlingspinbox_on_event(void* self, bool (*callback)(void*, void*)
 ///
 int32_t k_pluralhandlingspinbox_validate(void* self, const char* input, int* pos);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_validate` instead
+///
+#define k_pluralhandlingspinbox_qbase_validate k_pluralhandlingspinbox_super_validate
+
 /// Inherited from QSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#validate)
@@ -3574,7 +3594,7 @@ int32_t k_pluralhandlingspinbox_validate(void* self, const char* input, int* pos
 ///
 /// @return enum QValidator__State
 ///
-int32_t k_pluralhandlingspinbox_qbase_validate(void* self, const char* input, int* pos);
+int32_t k_pluralhandlingspinbox_super_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QSpinBox
 ///
@@ -3598,6 +3618,10 @@ void k_pluralhandlingspinbox_on_validate(void* self, int32_t (*callback)(void*, 
 ///
 int32_t k_pluralhandlingspinbox_value_from_text(void* self, const char* text);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_value_from_text` instead
+///
+#define k_pluralhandlingspinbox_qbase_value_from_text k_pluralhandlingspinbox_super_value_from_text
+
 /// Inherited from QSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
@@ -3607,7 +3631,7 @@ int32_t k_pluralhandlingspinbox_value_from_text(void* self, const char* text);
 /// @param self KPluralHandlingSpinBox*
 /// @param text const char*
 ///
-int32_t k_pluralhandlingspinbox_qbase_value_from_text(void* self, const char* text);
+int32_t k_pluralhandlingspinbox_super_value_from_text(void* self, const char* text);
 
 /// Inherited from QSpinBox
 ///
@@ -3633,6 +3657,10 @@ void k_pluralhandlingspinbox_on_value_from_text(void* self, int32_t (*callback)(
 ///
 const char* k_pluralhandlingspinbox_text_from_value(void* self, int val);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_text_from_value` instead
+///
+#define k_pluralhandlingspinbox_qbase_text_from_value k_pluralhandlingspinbox_super_text_from_value
+
 /// Inherited from QSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
@@ -3644,7 +3672,7 @@ const char* k_pluralhandlingspinbox_text_from_value(void* self, int val);
 /// @param self KPluralHandlingSpinBox*
 /// @param val int
 ///
-const char* k_pluralhandlingspinbox_qbase_text_from_value(void* self, int val);
+const char* k_pluralhandlingspinbox_super_text_from_value(void* self, int val);
 
 /// Inherited from QSpinBox
 ///
@@ -3668,6 +3696,10 @@ void k_pluralhandlingspinbox_on_text_from_value(void* self, const char* (*callba
 ///
 void k_pluralhandlingspinbox_fixup(void* self, const char* str);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_fixup` instead
+///
+#define k_pluralhandlingspinbox_qbase_fixup k_pluralhandlingspinbox_super_fixup
+
 /// Inherited from QSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#fixup)
@@ -3677,7 +3709,7 @@ void k_pluralhandlingspinbox_fixup(void* self, const char* str);
 /// @param self KPluralHandlingSpinBox*
 /// @param str const char*
 ///
-void k_pluralhandlingspinbox_qbase_fixup(void* self, const char* str);
+void k_pluralhandlingspinbox_super_fixup(void* self, const char* str);
 
 /// Inherited from QSpinBox
 ///
@@ -3700,6 +3732,10 @@ void k_pluralhandlingspinbox_on_fixup(void* self, void (*callback)(void*, const 
 ///
 QSize* k_pluralhandlingspinbox_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_size_hint` instead
+///
+#define k_pluralhandlingspinbox_qbase_size_hint k_pluralhandlingspinbox_super_size_hint
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
@@ -3708,7 +3744,7 @@ QSize* k_pluralhandlingspinbox_size_hint(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QSize* k_pluralhandlingspinbox_qbase_size_hint(void* self);
+QSize* k_pluralhandlingspinbox_super_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3731,6 +3767,10 @@ void k_pluralhandlingspinbox_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_pluralhandlingspinbox_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_minimum_size_hint` instead
+///
+#define k_pluralhandlingspinbox_qbase_minimum_size_hint k_pluralhandlingspinbox_super_minimum_size_hint
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
@@ -3739,7 +3779,7 @@ QSize* k_pluralhandlingspinbox_minimum_size_hint(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QSize* k_pluralhandlingspinbox_qbase_minimum_size_hint(void* self);
+QSize* k_pluralhandlingspinbox_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3763,6 +3803,10 @@ void k_pluralhandlingspinbox_on_minimum_size_hint(void* self, QSize* (*callback)
 ///
 QVariant* k_pluralhandlingspinbox_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_input_method_query` instead
+///
+#define k_pluralhandlingspinbox_qbase_input_method_query k_pluralhandlingspinbox_super_input_method_query
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
@@ -3772,7 +3816,7 @@ QVariant* k_pluralhandlingspinbox_input_method_query(void* self, int32_t param1)
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_pluralhandlingspinbox_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_pluralhandlingspinbox_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3796,6 +3840,10 @@ void k_pluralhandlingspinbox_on_input_method_query(void* self, QVariant* (*callb
 ///
 void k_pluralhandlingspinbox_step_by(void* self, int steps);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_step_by` instead
+///
+#define k_pluralhandlingspinbox_qbase_step_by k_pluralhandlingspinbox_super_step_by
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
@@ -3805,7 +3853,7 @@ void k_pluralhandlingspinbox_step_by(void* self, int steps);
 /// @param self KPluralHandlingSpinBox*
 /// @param steps int
 ///
-void k_pluralhandlingspinbox_qbase_step_by(void* self, int steps);
+void k_pluralhandlingspinbox_super_step_by(void* self, int steps);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3828,6 +3876,10 @@ void k_pluralhandlingspinbox_on_step_by(void* self, void (*callback)(void*, int)
 ///
 void k_pluralhandlingspinbox_clear(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_clear` instead
+///
+#define k_pluralhandlingspinbox_qbase_clear k_pluralhandlingspinbox_super_clear
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
@@ -3836,7 +3888,7 @@ void k_pluralhandlingspinbox_clear(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-void k_pluralhandlingspinbox_qbase_clear(void* self);
+void k_pluralhandlingspinbox_super_clear(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3860,6 +3912,10 @@ void k_pluralhandlingspinbox_on_clear(void* self, void (*callback)());
 ///
 void k_pluralhandlingspinbox_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_resize_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_resize_event k_pluralhandlingspinbox_super_resize_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
@@ -3869,7 +3925,7 @@ void k_pluralhandlingspinbox_resize_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QResizeEvent*
 ///
-void k_pluralhandlingspinbox_qbase_resize_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3893,6 +3949,10 @@ void k_pluralhandlingspinbox_on_resize_event(void* self, void (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_key_press_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_key_press_event k_pluralhandlingspinbox_super_key_press_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
@@ -3902,7 +3962,7 @@ void k_pluralhandlingspinbox_key_press_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QKeyEvent*
 ///
-void k_pluralhandlingspinbox_qbase_key_press_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3926,6 +3986,10 @@ void k_pluralhandlingspinbox_on_key_press_event(void* self, void (*callback)(voi
 ///
 void k_pluralhandlingspinbox_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_key_release_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_key_release_event k_pluralhandlingspinbox_super_key_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
@@ -3935,7 +3999,7 @@ void k_pluralhandlingspinbox_key_release_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QKeyEvent*
 ///
-void k_pluralhandlingspinbox_qbase_key_release_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3959,6 +4023,10 @@ void k_pluralhandlingspinbox_on_key_release_event(void* self, void (*callback)(v
 ///
 void k_pluralhandlingspinbox_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_wheel_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_wheel_event k_pluralhandlingspinbox_super_wheel_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
@@ -3968,7 +4036,7 @@ void k_pluralhandlingspinbox_wheel_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QWheelEvent*
 ///
-void k_pluralhandlingspinbox_qbase_wheel_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_wheel_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3992,6 +4060,10 @@ void k_pluralhandlingspinbox_on_wheel_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_focus_in_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_focus_in_event k_pluralhandlingspinbox_super_focus_in_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
@@ -4001,7 +4073,7 @@ void k_pluralhandlingspinbox_focus_in_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QFocusEvent*
 ///
-void k_pluralhandlingspinbox_qbase_focus_in_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4025,6 +4097,10 @@ void k_pluralhandlingspinbox_on_focus_in_event(void* self, void (*callback)(void
 ///
 void k_pluralhandlingspinbox_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_focus_out_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_focus_out_event k_pluralhandlingspinbox_super_focus_out_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
@@ -4034,7 +4110,7 @@ void k_pluralhandlingspinbox_focus_out_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QFocusEvent*
 ///
-void k_pluralhandlingspinbox_qbase_focus_out_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4058,6 +4134,10 @@ void k_pluralhandlingspinbox_on_focus_out_event(void* self, void (*callback)(voi
 ///
 void k_pluralhandlingspinbox_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_context_menu_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_context_menu_event k_pluralhandlingspinbox_super_context_menu_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
@@ -4067,7 +4147,7 @@ void k_pluralhandlingspinbox_context_menu_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QContextMenuEvent*
 ///
-void k_pluralhandlingspinbox_qbase_context_menu_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4091,6 +4171,10 @@ void k_pluralhandlingspinbox_on_context_menu_event(void* self, void (*callback)(
 ///
 void k_pluralhandlingspinbox_change_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_change_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_change_event k_pluralhandlingspinbox_super_change_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
@@ -4100,7 +4184,7 @@ void k_pluralhandlingspinbox_change_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QEvent*
 ///
-void k_pluralhandlingspinbox_qbase_change_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4124,6 +4208,10 @@ void k_pluralhandlingspinbox_on_change_event(void* self, void (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_close_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_close_event k_pluralhandlingspinbox_super_close_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
@@ -4133,7 +4221,7 @@ void k_pluralhandlingspinbox_close_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QCloseEvent*
 ///
-void k_pluralhandlingspinbox_qbase_close_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4157,6 +4245,10 @@ void k_pluralhandlingspinbox_on_close_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_hide_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_hide_event k_pluralhandlingspinbox_super_hide_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
@@ -4166,7 +4258,7 @@ void k_pluralhandlingspinbox_hide_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QHideEvent*
 ///
-void k_pluralhandlingspinbox_qbase_hide_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4190,6 +4282,10 @@ void k_pluralhandlingspinbox_on_hide_event(void* self, void (*callback)(void*, v
 ///
 void k_pluralhandlingspinbox_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_mouse_press_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_mouse_press_event k_pluralhandlingspinbox_super_mouse_press_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
@@ -4199,7 +4295,7 @@ void k_pluralhandlingspinbox_mouse_press_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QMouseEvent*
 ///
-void k_pluralhandlingspinbox_qbase_mouse_press_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4223,6 +4319,10 @@ void k_pluralhandlingspinbox_on_mouse_press_event(void* self, void (*callback)(v
 ///
 void k_pluralhandlingspinbox_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_mouse_release_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_mouse_release_event k_pluralhandlingspinbox_super_mouse_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
@@ -4232,7 +4332,7 @@ void k_pluralhandlingspinbox_mouse_release_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QMouseEvent*
 ///
-void k_pluralhandlingspinbox_qbase_mouse_release_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4256,6 +4356,10 @@ void k_pluralhandlingspinbox_on_mouse_release_event(void* self, void (*callback)
 ///
 void k_pluralhandlingspinbox_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_mouse_move_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_mouse_move_event k_pluralhandlingspinbox_super_mouse_move_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
@@ -4265,7 +4369,7 @@ void k_pluralhandlingspinbox_mouse_move_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QMouseEvent*
 ///
-void k_pluralhandlingspinbox_qbase_mouse_move_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4289,6 +4393,10 @@ void k_pluralhandlingspinbox_on_mouse_move_event(void* self, void (*callback)(vo
 ///
 void k_pluralhandlingspinbox_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_timer_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_timer_event k_pluralhandlingspinbox_super_timer_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
@@ -4298,7 +4406,7 @@ void k_pluralhandlingspinbox_timer_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QTimerEvent*
 ///
-void k_pluralhandlingspinbox_qbase_timer_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4322,6 +4430,10 @@ void k_pluralhandlingspinbox_on_timer_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_paint_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_paint_event k_pluralhandlingspinbox_super_paint_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
@@ -4331,7 +4443,7 @@ void k_pluralhandlingspinbox_paint_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QPaintEvent*
 ///
-void k_pluralhandlingspinbox_qbase_paint_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_paint_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4355,6 +4467,10 @@ void k_pluralhandlingspinbox_on_paint_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_show_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_show_event k_pluralhandlingspinbox_super_show_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
@@ -4364,7 +4480,7 @@ void k_pluralhandlingspinbox_show_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QShowEvent*
 ///
-void k_pluralhandlingspinbox_qbase_show_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4388,6 +4504,10 @@ void k_pluralhandlingspinbox_on_show_event(void* self, void (*callback)(void*, v
 ///
 void k_pluralhandlingspinbox_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_init_style_option` instead
+///
+#define k_pluralhandlingspinbox_qbase_init_style_option k_pluralhandlingspinbox_super_init_style_option
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
@@ -4397,7 +4517,7 @@ void k_pluralhandlingspinbox_init_style_option(void* self, void* option);
 /// @param self KPluralHandlingSpinBox*
 /// @param option QStyleOptionSpinBox*
 ///
-void k_pluralhandlingspinbox_qbase_init_style_option(void* self, void* option);
+void k_pluralhandlingspinbox_super_init_style_option(void* self, void* option);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4422,6 +4542,10 @@ void k_pluralhandlingspinbox_on_init_style_option(void* self, void (*callback)(v
 ///
 int32_t k_pluralhandlingspinbox_step_enabled(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_step_enabled` instead
+///
+#define k_pluralhandlingspinbox_qbase_step_enabled k_pluralhandlingspinbox_super_step_enabled
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
@@ -4432,7 +4556,7 @@ int32_t k_pluralhandlingspinbox_step_enabled(void* self);
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t k_pluralhandlingspinbox_qbase_step_enabled(void* self);
+int32_t k_pluralhandlingspinbox_super_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4455,6 +4579,10 @@ void k_pluralhandlingspinbox_on_step_enabled(void* self, int32_t (*callback)());
 ///
 int32_t k_pluralhandlingspinbox_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_dev_type` instead
+///
+#define k_pluralhandlingspinbox_qbase_dev_type k_pluralhandlingspinbox_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4463,7 +4591,7 @@ int32_t k_pluralhandlingspinbox_dev_type(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-int32_t k_pluralhandlingspinbox_qbase_dev_type(void* self);
+int32_t k_pluralhandlingspinbox_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4487,6 +4615,10 @@ void k_pluralhandlingspinbox_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_pluralhandlingspinbox_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_set_visible` instead
+///
+#define k_pluralhandlingspinbox_qbase_set_visible k_pluralhandlingspinbox_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4496,7 +4628,7 @@ void k_pluralhandlingspinbox_set_visible(void* self, bool visible);
 /// @param self KPluralHandlingSpinBox*
 /// @param visible bool
 ///
-void k_pluralhandlingspinbox_qbase_set_visible(void* self, bool visible);
+void k_pluralhandlingspinbox_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -4520,6 +4652,10 @@ void k_pluralhandlingspinbox_on_set_visible(void* self, void (*callback)(void*, 
 ///
 int32_t k_pluralhandlingspinbox_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_height_for_width` instead
+///
+#define k_pluralhandlingspinbox_qbase_height_for_width k_pluralhandlingspinbox_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4529,7 +4665,7 @@ int32_t k_pluralhandlingspinbox_height_for_width(void* self, int param1);
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 int
 ///
-int32_t k_pluralhandlingspinbox_qbase_height_for_width(void* self, int param1);
+int32_t k_pluralhandlingspinbox_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4552,6 +4688,10 @@ void k_pluralhandlingspinbox_on_height_for_width(void* self, int32_t (*callback)
 ///
 bool k_pluralhandlingspinbox_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_has_height_for_width` instead
+///
+#define k_pluralhandlingspinbox_qbase_has_height_for_width k_pluralhandlingspinbox_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4560,7 +4700,7 @@ bool k_pluralhandlingspinbox_has_height_for_width(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-bool k_pluralhandlingspinbox_qbase_has_height_for_width(void* self);
+bool k_pluralhandlingspinbox_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4583,6 +4723,10 @@ void k_pluralhandlingspinbox_on_has_height_for_width(void* self, bool (*callback
 ///
 QPaintEngine* k_pluralhandlingspinbox_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_paint_engine` instead
+///
+#define k_pluralhandlingspinbox_qbase_paint_engine k_pluralhandlingspinbox_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -4591,7 +4735,7 @@ QPaintEngine* k_pluralhandlingspinbox_paint_engine(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QPaintEngine* k_pluralhandlingspinbox_qbase_paint_engine(void* self);
+QPaintEngine* k_pluralhandlingspinbox_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4615,6 +4759,10 @@ void k_pluralhandlingspinbox_on_paint_engine(void* self, QPaintEngine* (*callbac
 ///
 void k_pluralhandlingspinbox_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_mouse_double_click_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_mouse_double_click_event k_pluralhandlingspinbox_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4624,7 +4772,7 @@ void k_pluralhandlingspinbox_mouse_double_click_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QMouseEvent*
 ///
-void k_pluralhandlingspinbox_qbase_mouse_double_click_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4648,6 +4796,10 @@ void k_pluralhandlingspinbox_on_mouse_double_click_event(void* self, void (*call
 ///
 void k_pluralhandlingspinbox_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_enter_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_enter_event k_pluralhandlingspinbox_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4657,7 +4809,7 @@ void k_pluralhandlingspinbox_enter_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QEnterEvent*
 ///
-void k_pluralhandlingspinbox_qbase_enter_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4681,6 +4833,10 @@ void k_pluralhandlingspinbox_on_enter_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_leave_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_leave_event k_pluralhandlingspinbox_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4690,7 +4846,7 @@ void k_pluralhandlingspinbox_leave_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QEvent*
 ///
-void k_pluralhandlingspinbox_qbase_leave_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4714,6 +4870,10 @@ void k_pluralhandlingspinbox_on_leave_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_move_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_move_event k_pluralhandlingspinbox_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4723,7 +4883,7 @@ void k_pluralhandlingspinbox_move_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QMoveEvent*
 ///
-void k_pluralhandlingspinbox_qbase_move_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4747,6 +4907,10 @@ void k_pluralhandlingspinbox_on_move_event(void* self, void (*callback)(void*, v
 ///
 void k_pluralhandlingspinbox_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_tablet_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_tablet_event k_pluralhandlingspinbox_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4756,7 +4920,7 @@ void k_pluralhandlingspinbox_tablet_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QTabletEvent*
 ///
-void k_pluralhandlingspinbox_qbase_tablet_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4780,6 +4944,10 @@ void k_pluralhandlingspinbox_on_tablet_event(void* self, void (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_action_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_action_event k_pluralhandlingspinbox_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4789,7 +4957,7 @@ void k_pluralhandlingspinbox_action_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QActionEvent*
 ///
-void k_pluralhandlingspinbox_qbase_action_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4813,6 +4981,10 @@ void k_pluralhandlingspinbox_on_action_event(void* self, void (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_drag_enter_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_drag_enter_event k_pluralhandlingspinbox_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4822,7 +4994,7 @@ void k_pluralhandlingspinbox_drag_enter_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QDragEnterEvent*
 ///
-void k_pluralhandlingspinbox_qbase_drag_enter_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4846,6 +5018,10 @@ void k_pluralhandlingspinbox_on_drag_enter_event(void* self, void (*callback)(vo
 ///
 void k_pluralhandlingspinbox_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_drag_move_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_drag_move_event k_pluralhandlingspinbox_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4855,7 +5031,7 @@ void k_pluralhandlingspinbox_drag_move_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QDragMoveEvent*
 ///
-void k_pluralhandlingspinbox_qbase_drag_move_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4879,6 +5055,10 @@ void k_pluralhandlingspinbox_on_drag_move_event(void* self, void (*callback)(voi
 ///
 void k_pluralhandlingspinbox_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_drag_leave_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_drag_leave_event k_pluralhandlingspinbox_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4888,7 +5068,7 @@ void k_pluralhandlingspinbox_drag_leave_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QDragLeaveEvent*
 ///
-void k_pluralhandlingspinbox_qbase_drag_leave_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4912,6 +5092,10 @@ void k_pluralhandlingspinbox_on_drag_leave_event(void* self, void (*callback)(vo
 ///
 void k_pluralhandlingspinbox_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_drop_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_drop_event k_pluralhandlingspinbox_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4921,7 +5105,7 @@ void k_pluralhandlingspinbox_drop_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QDropEvent*
 ///
-void k_pluralhandlingspinbox_qbase_drop_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4947,6 +5131,10 @@ void k_pluralhandlingspinbox_on_drop_event(void* self, void (*callback)(void*, v
 ///
 bool k_pluralhandlingspinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_native_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_native_event k_pluralhandlingspinbox_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4958,7 +5146,7 @@ bool k_pluralhandlingspinbox_native_event(void* self, char* eventType, void* mes
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_pluralhandlingspinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_pluralhandlingspinbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4982,6 +5170,10 @@ void k_pluralhandlingspinbox_on_native_event(void* self, bool (*callback)(void*,
 ///
 int32_t k_pluralhandlingspinbox_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_metric` instead
+///
+#define k_pluralhandlingspinbox_qbase_metric k_pluralhandlingspinbox_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4991,7 +5183,7 @@ int32_t k_pluralhandlingspinbox_metric(void* self, int32_t param1);
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_pluralhandlingspinbox_qbase_metric(void* self, int32_t param1);
+int32_t k_pluralhandlingspinbox_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5015,6 +5207,10 @@ void k_pluralhandlingspinbox_on_metric(void* self, int32_t (*callback)(void*, in
 ///
 void k_pluralhandlingspinbox_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_init_painter` instead
+///
+#define k_pluralhandlingspinbox_qbase_init_painter k_pluralhandlingspinbox_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5024,7 +5220,7 @@ void k_pluralhandlingspinbox_init_painter(void* self, void* painter);
 /// @param self KPluralHandlingSpinBox*
 /// @param painter QPainter*
 ///
-void k_pluralhandlingspinbox_qbase_init_painter(void* self, void* painter);
+void k_pluralhandlingspinbox_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5048,6 +5244,10 @@ void k_pluralhandlingspinbox_on_init_painter(void* self, void (*callback)(void*,
 ///
 QPaintDevice* k_pluralhandlingspinbox_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_redirected` instead
+///
+#define k_pluralhandlingspinbox_qbase_redirected k_pluralhandlingspinbox_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5057,7 +5257,7 @@ QPaintDevice* k_pluralhandlingspinbox_redirected(void* self, void* offset);
 /// @param self KPluralHandlingSpinBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_pluralhandlingspinbox_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_pluralhandlingspinbox_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5080,6 +5280,10 @@ void k_pluralhandlingspinbox_on_redirected(void* self, QPaintDevice* (*callback)
 ///
 QPainter* k_pluralhandlingspinbox_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_shared_painter` instead
+///
+#define k_pluralhandlingspinbox_qbase_shared_painter k_pluralhandlingspinbox_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5088,7 +5292,7 @@ QPainter* k_pluralhandlingspinbox_shared_painter(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QPainter* k_pluralhandlingspinbox_qbase_shared_painter(void* self);
+QPainter* k_pluralhandlingspinbox_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5112,6 +5316,10 @@ void k_pluralhandlingspinbox_on_shared_painter(void* self, QPainter* (*callback)
 ///
 void k_pluralhandlingspinbox_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_input_method_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_input_method_event k_pluralhandlingspinbox_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5121,7 +5329,7 @@ void k_pluralhandlingspinbox_input_method_event(void* self, void* param1);
 /// @param self KPluralHandlingSpinBox*
 /// @param param1 QInputMethodEvent*
 ///
-void k_pluralhandlingspinbox_qbase_input_method_event(void* self, void* param1);
+void k_pluralhandlingspinbox_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5145,6 +5353,10 @@ void k_pluralhandlingspinbox_on_input_method_event(void* self, void (*callback)(
 ///
 bool k_pluralhandlingspinbox_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_focus_next_prev_child` instead
+///
+#define k_pluralhandlingspinbox_qbase_focus_next_prev_child k_pluralhandlingspinbox_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5154,7 +5366,7 @@ bool k_pluralhandlingspinbox_focus_next_prev_child(void* self, bool next);
 /// @param self KPluralHandlingSpinBox*
 /// @param next bool
 ///
-bool k_pluralhandlingspinbox_qbase_focus_next_prev_child(void* self, bool next);
+bool k_pluralhandlingspinbox_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -5179,6 +5391,10 @@ void k_pluralhandlingspinbox_on_focus_next_prev_child(void* self, bool (*callbac
 ///
 bool k_pluralhandlingspinbox_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_event_filter` instead
+///
+#define k_pluralhandlingspinbox_qbase_event_filter k_pluralhandlingspinbox_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5189,7 +5405,7 @@ bool k_pluralhandlingspinbox_event_filter(void* self, void* watched, void* event
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_pluralhandlingspinbox_qbase_event_filter(void* self, void* watched, void* event);
+bool k_pluralhandlingspinbox_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -5213,6 +5429,10 @@ void k_pluralhandlingspinbox_on_event_filter(void* self, bool (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_child_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_child_event k_pluralhandlingspinbox_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5222,7 +5442,7 @@ void k_pluralhandlingspinbox_child_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QChildEvent*
 ///
-void k_pluralhandlingspinbox_qbase_child_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5246,6 +5466,10 @@ void k_pluralhandlingspinbox_on_child_event(void* self, void (*callback)(void*, 
 ///
 void k_pluralhandlingspinbox_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_custom_event` instead
+///
+#define k_pluralhandlingspinbox_qbase_custom_event k_pluralhandlingspinbox_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5255,7 +5479,7 @@ void k_pluralhandlingspinbox_custom_event(void* self, void* event);
 /// @param self KPluralHandlingSpinBox*
 /// @param event QEvent*
 ///
-void k_pluralhandlingspinbox_qbase_custom_event(void* self, void* event);
+void k_pluralhandlingspinbox_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5279,6 +5503,10 @@ void k_pluralhandlingspinbox_on_custom_event(void* self, void (*callback)(void*,
 ///
 void k_pluralhandlingspinbox_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_connect_notify` instead
+///
+#define k_pluralhandlingspinbox_qbase_connect_notify k_pluralhandlingspinbox_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5288,7 +5516,7 @@ void k_pluralhandlingspinbox_connect_notify(void* self, void* signal);
 /// @param self KPluralHandlingSpinBox*
 /// @param signal QMetaMethod*
 ///
-void k_pluralhandlingspinbox_qbase_connect_notify(void* self, void* signal);
+void k_pluralhandlingspinbox_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5312,6 +5540,10 @@ void k_pluralhandlingspinbox_on_connect_notify(void* self, void (*callback)(void
 ///
 void k_pluralhandlingspinbox_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_disconnect_notify` instead
+///
+#define k_pluralhandlingspinbox_qbase_disconnect_notify k_pluralhandlingspinbox_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5321,7 +5553,7 @@ void k_pluralhandlingspinbox_disconnect_notify(void* self, void* signal);
 /// @param self KPluralHandlingSpinBox*
 /// @param signal QMetaMethod*
 ///
-void k_pluralhandlingspinbox_qbase_disconnect_notify(void* self, void* signal);
+void k_pluralhandlingspinbox_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5344,6 +5576,10 @@ void k_pluralhandlingspinbox_on_disconnect_notify(void* self, void (*callback)(v
 ///
 QLineEdit* k_pluralhandlingspinbox_line_edit(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_line_edit` instead
+///
+#define k_pluralhandlingspinbox_qbase_line_edit k_pluralhandlingspinbox_super_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
@@ -5352,7 +5588,7 @@ QLineEdit* k_pluralhandlingspinbox_line_edit(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QLineEdit* k_pluralhandlingspinbox_qbase_line_edit(void* self);
+QLineEdit* k_pluralhandlingspinbox_super_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5376,6 +5612,10 @@ void k_pluralhandlingspinbox_on_line_edit(void* self, QLineEdit* (*callback)());
 ///
 void k_pluralhandlingspinbox_set_line_edit(void* self, void* edit);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_set_line_edit` instead
+///
+#define k_pluralhandlingspinbox_qbase_set_line_edit k_pluralhandlingspinbox_super_set_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
@@ -5385,7 +5625,7 @@ void k_pluralhandlingspinbox_set_line_edit(void* self, void* edit);
 /// @param self KPluralHandlingSpinBox*
 /// @param edit QLineEdit*
 ///
-void k_pluralhandlingspinbox_qbase_set_line_edit(void* self, void* edit);
+void k_pluralhandlingspinbox_super_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5408,6 +5648,10 @@ void k_pluralhandlingspinbox_on_set_line_edit(void* self, void (*callback)(void*
 ///
 void k_pluralhandlingspinbox_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_update_micro_focus` instead
+///
+#define k_pluralhandlingspinbox_qbase_update_micro_focus k_pluralhandlingspinbox_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5416,7 +5660,7 @@ void k_pluralhandlingspinbox_update_micro_focus(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-void k_pluralhandlingspinbox_qbase_update_micro_focus(void* self);
+void k_pluralhandlingspinbox_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5439,6 +5683,10 @@ void k_pluralhandlingspinbox_on_update_micro_focus(void* self, void (*callback)(
 ///
 void k_pluralhandlingspinbox_create(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_create` instead
+///
+#define k_pluralhandlingspinbox_qbase_create k_pluralhandlingspinbox_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5447,7 +5695,7 @@ void k_pluralhandlingspinbox_create(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-void k_pluralhandlingspinbox_qbase_create(void* self);
+void k_pluralhandlingspinbox_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5470,6 +5718,10 @@ void k_pluralhandlingspinbox_on_create(void* self, void (*callback)());
 ///
 void k_pluralhandlingspinbox_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_destroy` instead
+///
+#define k_pluralhandlingspinbox_qbase_destroy k_pluralhandlingspinbox_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5478,7 +5730,7 @@ void k_pluralhandlingspinbox_destroy(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-void k_pluralhandlingspinbox_qbase_destroy(void* self);
+void k_pluralhandlingspinbox_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5501,6 +5753,10 @@ void k_pluralhandlingspinbox_on_destroy(void* self, void (*callback)());
 ///
 bool k_pluralhandlingspinbox_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_focus_next_child` instead
+///
+#define k_pluralhandlingspinbox_qbase_focus_next_child k_pluralhandlingspinbox_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5509,7 +5765,7 @@ bool k_pluralhandlingspinbox_focus_next_child(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-bool k_pluralhandlingspinbox_qbase_focus_next_child(void* self);
+bool k_pluralhandlingspinbox_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5532,6 +5788,10 @@ void k_pluralhandlingspinbox_on_focus_next_child(void* self, bool (*callback)())
 ///
 bool k_pluralhandlingspinbox_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_focus_previous_child` instead
+///
+#define k_pluralhandlingspinbox_qbase_focus_previous_child k_pluralhandlingspinbox_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5540,7 +5800,7 @@ bool k_pluralhandlingspinbox_focus_previous_child(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-bool k_pluralhandlingspinbox_qbase_focus_previous_child(void* self);
+bool k_pluralhandlingspinbox_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5563,6 +5823,10 @@ void k_pluralhandlingspinbox_on_focus_previous_child(void* self, bool (*callback
 ///
 QObject* k_pluralhandlingspinbox_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_sender` instead
+///
+#define k_pluralhandlingspinbox_qbase_sender k_pluralhandlingspinbox_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5571,7 +5835,7 @@ QObject* k_pluralhandlingspinbox_sender(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-QObject* k_pluralhandlingspinbox_qbase_sender(void* self);
+QObject* k_pluralhandlingspinbox_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5594,6 +5858,10 @@ void k_pluralhandlingspinbox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_pluralhandlingspinbox_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_sender_signal_index` instead
+///
+#define k_pluralhandlingspinbox_qbase_sender_signal_index k_pluralhandlingspinbox_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5602,7 +5870,7 @@ int32_t k_pluralhandlingspinbox_sender_signal_index(void* self);
 ///
 /// @param self KPluralHandlingSpinBox*
 ///
-int32_t k_pluralhandlingspinbox_qbase_sender_signal_index(void* self);
+int32_t k_pluralhandlingspinbox_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5626,6 +5894,10 @@ void k_pluralhandlingspinbox_on_sender_signal_index(void* self, int32_t (*callba
 ///
 int32_t k_pluralhandlingspinbox_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_receivers` instead
+///
+#define k_pluralhandlingspinbox_qbase_receivers k_pluralhandlingspinbox_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5635,7 +5907,7 @@ int32_t k_pluralhandlingspinbox_receivers(void* self, const char* signal);
 /// @param self KPluralHandlingSpinBox*
 /// @param signal const char*
 ///
-int32_t k_pluralhandlingspinbox_qbase_receivers(void* self, const char* signal);
+int32_t k_pluralhandlingspinbox_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5659,6 +5931,10 @@ void k_pluralhandlingspinbox_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 bool k_pluralhandlingspinbox_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_is_signal_connected` instead
+///
+#define k_pluralhandlingspinbox_qbase_is_signal_connected k_pluralhandlingspinbox_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5668,7 +5944,7 @@ bool k_pluralhandlingspinbox_is_signal_connected(void* self, void* signal);
 /// @param self KPluralHandlingSpinBox*
 /// @param signal QMetaMethod*
 ///
-bool k_pluralhandlingspinbox_qbase_is_signal_connected(void* self, void* signal);
+bool k_pluralhandlingspinbox_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5693,6 +5969,10 @@ void k_pluralhandlingspinbox_on_is_signal_connected(void* self, bool (*callback)
 ///
 double k_pluralhandlingspinbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_pluralhandlingspinbox_super_get_decoded_metric_f` instead
+///
+#define k_pluralhandlingspinbox_qbase_get_decoded_metric_f k_pluralhandlingspinbox_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5703,7 +5983,7 @@ double k_pluralhandlingspinbox_get_decoded_metric_f(void* self, int32_t metricA,
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_pluralhandlingspinbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_pluralhandlingspinbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

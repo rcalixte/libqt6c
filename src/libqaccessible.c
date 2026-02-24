@@ -718,8 +718,8 @@ void q_accessibleevent_on_accessible_interface(void* self, QAccessibleInterface*
     QAccessibleEvent_OnAccessibleInterface((QAccessibleEvent*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_accessibleevent_qbase_accessible_interface(void* self) {
-    return QAccessibleEvent_QBaseAccessibleInterface((QAccessibleEvent*)self);
+QAccessibleInterface* q_accessibleevent_super_accessible_interface(void* self) {
+    return QAccessibleEvent_SuperAccessibleInterface((QAccessibleEvent*)self);
 }
 
 void q_accessibleevent_delete(void* self) {
@@ -762,8 +762,8 @@ QAccessibleInterface* q_accessiblestatechangeevent_accessible_interface(void* se
     return QAccessibleStateChangeEvent_AccessibleInterface((QAccessibleStateChangeEvent*)self);
 }
 
-QAccessibleInterface* q_accessiblestatechangeevent_qbase_accessible_interface(void* self) {
-    return QAccessibleStateChangeEvent_QBaseAccessibleInterface((QAccessibleStateChangeEvent*)self);
+QAccessibleInterface* q_accessiblestatechangeevent_super_accessible_interface(void* self) {
+    return QAccessibleStateChangeEvent_SuperAccessibleInterface((QAccessibleStateChangeEvent*)self);
 }
 
 void q_accessiblestatechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -814,8 +814,8 @@ QAccessibleInterface* q_accessibletextcursorevent_accessible_interface(void* sel
     return QAccessibleTextCursorEvent_AccessibleInterface((QAccessibleTextCursorEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletextcursorevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTextCursorEvent_QBaseAccessibleInterface((QAccessibleTextCursorEvent*)self);
+QAccessibleInterface* q_accessibletextcursorevent_super_accessible_interface(void* self) {
+    return QAccessibleTextCursorEvent_SuperAccessibleInterface((QAccessibleTextCursorEvent*)self);
 }
 
 void q_accessibletextcursorevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -878,8 +878,8 @@ QAccessibleInterface* q_accessibletextselectionevent_accessible_interface(void* 
     return QAccessibleTextSelectionEvent_AccessibleInterface((QAccessibleTextSelectionEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletextselectionevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTextSelectionEvent_QBaseAccessibleInterface((QAccessibleTextSelectionEvent*)self);
+QAccessibleInterface* q_accessibletextselectionevent_super_accessible_interface(void* self) {
+    return QAccessibleTextSelectionEvent_SuperAccessibleInterface((QAccessibleTextSelectionEvent*)self);
 }
 
 void q_accessibletextselectionevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -941,8 +941,8 @@ QAccessibleInterface* q_accessibletextinsertevent_accessible_interface(void* sel
     return QAccessibleTextInsertEvent_AccessibleInterface((QAccessibleTextInsertEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletextinsertevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTextInsertEvent_QBaseAccessibleInterface((QAccessibleTextInsertEvent*)self);
+QAccessibleInterface* q_accessibletextinsertevent_super_accessible_interface(void* self) {
+    return QAccessibleTextInsertEvent_SuperAccessibleInterface((QAccessibleTextInsertEvent*)self);
 }
 
 void q_accessibletextinsertevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -1004,8 +1004,8 @@ QAccessibleInterface* q_accessibletextremoveevent_accessible_interface(void* sel
     return QAccessibleTextRemoveEvent_AccessibleInterface((QAccessibleTextRemoveEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletextremoveevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTextRemoveEvent_QBaseAccessibleInterface((QAccessibleTextRemoveEvent*)self);
+QAccessibleInterface* q_accessibletextremoveevent_super_accessible_interface(void* self) {
+    return QAccessibleTextRemoveEvent_SuperAccessibleInterface((QAccessibleTextRemoveEvent*)self);
 }
 
 void q_accessibletextremoveevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -1074,8 +1074,8 @@ QAccessibleInterface* q_accessibletextupdateevent_accessible_interface(void* sel
     return QAccessibleTextUpdateEvent_AccessibleInterface((QAccessibleTextUpdateEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletextupdateevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTextUpdateEvent_QBaseAccessibleInterface((QAccessibleTextUpdateEvent*)self);
+QAccessibleInterface* q_accessibletextupdateevent_super_accessible_interface(void* self) {
+    return QAccessibleTextUpdateEvent_SuperAccessibleInterface((QAccessibleTextUpdateEvent*)self);
 }
 
 void q_accessibletextupdateevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -1126,8 +1126,8 @@ QAccessibleInterface* q_accessiblevaluechangeevent_accessible_interface(void* se
     return QAccessibleValueChangeEvent_AccessibleInterface((QAccessibleValueChangeEvent*)self);
 }
 
-QAccessibleInterface* q_accessiblevaluechangeevent_qbase_accessible_interface(void* self) {
-    return QAccessibleValueChangeEvent_QBaseAccessibleInterface((QAccessibleValueChangeEvent*)self);
+QAccessibleInterface* q_accessiblevaluechangeevent_super_accessible_interface(void* self) {
+    return QAccessibleValueChangeEvent_SuperAccessibleInterface((QAccessibleValueChangeEvent*)self);
 }
 
 void q_accessiblevaluechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -1210,8 +1210,8 @@ QAccessibleInterface* q_accessibletablemodelchangeevent_accessible_interface(voi
     return QAccessibleTableModelChangeEvent_AccessibleInterface((QAccessibleTableModelChangeEvent*)self);
 }
 
-QAccessibleInterface* q_accessibletablemodelchangeevent_qbase_accessible_interface(void* self) {
-    return QAccessibleTableModelChangeEvent_QBaseAccessibleInterface((QAccessibleTableModelChangeEvent*)self);
+QAccessibleInterface* q_accessibletablemodelchangeevent_super_accessible_interface(void* self) {
+    return QAccessibleTableModelChangeEvent_SuperAccessibleInterface((QAccessibleTableModelChangeEvent*)self);
 }
 
 void q_accessibletablemodelchangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {
@@ -1269,8 +1269,8 @@ QAccessibleInterface* q_accessibleannouncementevent_accessible_interface(void* s
     return QAccessibleAnnouncementEvent_AccessibleInterface((QAccessibleAnnouncementEvent*)self);
 }
 
-QAccessibleInterface* q_accessibleannouncementevent_qbase_accessible_interface(void* self) {
-    return QAccessibleAnnouncementEvent_QBaseAccessibleInterface((QAccessibleAnnouncementEvent*)self);
+QAccessibleInterface* q_accessibleannouncementevent_super_accessible_interface(void* self) {
+    return QAccessibleAnnouncementEvent_SuperAccessibleInterface((QAccessibleAnnouncementEvent*)self);
 }
 
 void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)()) {

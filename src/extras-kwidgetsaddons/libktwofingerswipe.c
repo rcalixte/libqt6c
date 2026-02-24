@@ -24,8 +24,8 @@ void k_twofingerswipe_on_meta_object(void* self, const QMetaObject* (*callback)(
     KTwoFingerSwipe_OnMetaObject((KTwoFingerSwipe*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_twofingerswipe_qbase_meta_object(void* self) {
-    return KTwoFingerSwipe_QBaseMetaObject((KTwoFingerSwipe*)self);
+const QMetaObject* k_twofingerswipe_super_meta_object(void* self) {
+    return KTwoFingerSwipe_SuperMetaObject((KTwoFingerSwipe*)self);
 }
 
 void* k_twofingerswipe_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_twofingerswipe_on_metacast(void* self, void* (*callback)(void*, const cha
     KTwoFingerSwipe_OnMetacast((KTwoFingerSwipe*)self, (intptr_t)callback);
 }
 
-void* k_twofingerswipe_qbase_metacast(void* self, const char* param1) {
-    return KTwoFingerSwipe_QBaseMetacast((KTwoFingerSwipe*)self, param1);
+void* k_twofingerswipe_super_metacast(void* self, const char* param1) {
+    return KTwoFingerSwipe_SuperMetacast((KTwoFingerSwipe*)self, param1);
 }
 
 int32_t k_twofingerswipe_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_twofingerswipe_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KTwoFingerSwipe_OnMetacall((KTwoFingerSwipe*)self, (intptr_t)callback);
 }
 
-int32_t k_twofingerswipe_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTwoFingerSwipe_QBaseMetacall((KTwoFingerSwipe*)self, param1, param2, param3);
+int32_t k_twofingerswipe_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTwoFingerSwipe_SuperMetacall((KTwoFingerSwipe*)self, param1, param2, param3);
 }
 
 const char* k_twofingerswipe_tr(const char* s) {
@@ -352,8 +352,8 @@ bool k_twofingerswipe_event(void* self, void* event) {
     return KTwoFingerSwipe_Event((KTwoFingerSwipe*)self, (QEvent*)event);
 }
 
-bool k_twofingerswipe_qbase_event(void* self, void* event) {
-    return KTwoFingerSwipe_QBaseEvent((KTwoFingerSwipe*)self, (QEvent*)event);
+bool k_twofingerswipe_super_event(void* self, void* event) {
+    return KTwoFingerSwipe_SuperEvent((KTwoFingerSwipe*)self, (QEvent*)event);
 }
 
 void k_twofingerswipe_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -364,8 +364,8 @@ bool k_twofingerswipe_event_filter(void* self, void* watched, void* event) {
     return KTwoFingerSwipe_EventFilter((KTwoFingerSwipe*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_twofingerswipe_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTwoFingerSwipe_QBaseEventFilter((KTwoFingerSwipe*)self, (QObject*)watched, (QEvent*)event);
+bool k_twofingerswipe_super_event_filter(void* self, void* watched, void* event) {
+    return KTwoFingerSwipe_SuperEventFilter((KTwoFingerSwipe*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_twofingerswipe_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -376,8 +376,8 @@ void k_twofingerswipe_timer_event(void* self, void* event) {
     KTwoFingerSwipe_TimerEvent((KTwoFingerSwipe*)self, (QTimerEvent*)event);
 }
 
-void k_twofingerswipe_qbase_timer_event(void* self, void* event) {
-    KTwoFingerSwipe_QBaseTimerEvent((KTwoFingerSwipe*)self, (QTimerEvent*)event);
+void k_twofingerswipe_super_timer_event(void* self, void* event) {
+    KTwoFingerSwipe_SuperTimerEvent((KTwoFingerSwipe*)self, (QTimerEvent*)event);
 }
 
 void k_twofingerswipe_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ void k_twofingerswipe_child_event(void* self, void* event) {
     KTwoFingerSwipe_ChildEvent((KTwoFingerSwipe*)self, (QChildEvent*)event);
 }
 
-void k_twofingerswipe_qbase_child_event(void* self, void* event) {
-    KTwoFingerSwipe_QBaseChildEvent((KTwoFingerSwipe*)self, (QChildEvent*)event);
+void k_twofingerswipe_super_child_event(void* self, void* event) {
+    KTwoFingerSwipe_SuperChildEvent((KTwoFingerSwipe*)self, (QChildEvent*)event);
 }
 
 void k_twofingerswipe_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ void k_twofingerswipe_custom_event(void* self, void* event) {
     KTwoFingerSwipe_CustomEvent((KTwoFingerSwipe*)self, (QEvent*)event);
 }
 
-void k_twofingerswipe_qbase_custom_event(void* self, void* event) {
-    KTwoFingerSwipe_QBaseCustomEvent((KTwoFingerSwipe*)self, (QEvent*)event);
+void k_twofingerswipe_super_custom_event(void* self, void* event) {
+    KTwoFingerSwipe_SuperCustomEvent((KTwoFingerSwipe*)self, (QEvent*)event);
 }
 
 void k_twofingerswipe_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void k_twofingerswipe_connect_notify(void* self, void* signal) {
     KTwoFingerSwipe_ConnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
-void k_twofingerswipe_qbase_connect_notify(void* self, void* signal) {
-    KTwoFingerSwipe_QBaseConnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
+void k_twofingerswipe_super_connect_notify(void* self, void* signal) {
+    KTwoFingerSwipe_SuperConnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingerswipe_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void k_twofingerswipe_disconnect_notify(void* self, void* signal) {
     KTwoFingerSwipe_DisconnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
-void k_twofingerswipe_qbase_disconnect_notify(void* self, void* signal) {
-    KTwoFingerSwipe_QBaseDisconnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
+void k_twofingerswipe_super_disconnect_notify(void* self, void* signal) {
+    KTwoFingerSwipe_SuperDisconnectNotify((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingerswipe_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ QObject* k_twofingerswipe_sender(void* self) {
     return KTwoFingerSwipe_Sender((KTwoFingerSwipe*)self);
 }
 
-QObject* k_twofingerswipe_qbase_sender(void* self) {
-    return KTwoFingerSwipe_QBaseSender((KTwoFingerSwipe*)self);
+QObject* k_twofingerswipe_super_sender(void* self) {
+    return KTwoFingerSwipe_SuperSender((KTwoFingerSwipe*)self);
 }
 
 void k_twofingerswipe_on_sender(void* self, QObject* (*callback)()) {
@@ -448,8 +448,8 @@ int32_t k_twofingerswipe_sender_signal_index(void* self) {
     return KTwoFingerSwipe_SenderSignalIndex((KTwoFingerSwipe*)self);
 }
 
-int32_t k_twofingerswipe_qbase_sender_signal_index(void* self) {
-    return KTwoFingerSwipe_QBaseSenderSignalIndex((KTwoFingerSwipe*)self);
+int32_t k_twofingerswipe_super_sender_signal_index(void* self) {
+    return KTwoFingerSwipe_SuperSenderSignalIndex((KTwoFingerSwipe*)self);
 }
 
 void k_twofingerswipe_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -460,8 +460,8 @@ int32_t k_twofingerswipe_receivers(void* self, const char* signal) {
     return KTwoFingerSwipe_Receivers((KTwoFingerSwipe*)self, signal);
 }
 
-int32_t k_twofingerswipe_qbase_receivers(void* self, const char* signal) {
-    return KTwoFingerSwipe_QBaseReceivers((KTwoFingerSwipe*)self, signal);
+int32_t k_twofingerswipe_super_receivers(void* self, const char* signal) {
+    return KTwoFingerSwipe_SuperReceivers((KTwoFingerSwipe*)self, signal);
 }
 
 void k_twofingerswipe_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -472,8 +472,8 @@ bool k_twofingerswipe_is_signal_connected(void* self, void* signal) {
     return KTwoFingerSwipe_IsSignalConnected((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
-bool k_twofingerswipe_qbase_is_signal_connected(void* self, void* signal) {
-    return KTwoFingerSwipe_QBaseIsSignalConnected((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
+bool k_twofingerswipe_super_is_signal_connected(void* self, void* signal) {
+    return KTwoFingerSwipe_SuperIsSignalConnected((KTwoFingerSwipe*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingerswipe_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -500,8 +500,8 @@ void k_twofingerswiperecognizer_on_create(void* self, QGesture* (*callback)(void
     KTwoFingerSwipeRecognizer_OnCreate((KTwoFingerSwipeRecognizer*)self, (intptr_t)callback);
 }
 
-QGesture* k_twofingerswiperecognizer_qbase_create(void* self, void* target) {
-    return KTwoFingerSwipeRecognizer_QBaseCreate((KTwoFingerSwipeRecognizer*)self, (QObject*)target);
+QGesture* k_twofingerswiperecognizer_super_create(void* self, void* target) {
+    return KTwoFingerSwipeRecognizer_SuperCreate((KTwoFingerSwipeRecognizer*)self, (QObject*)target);
 }
 
 int32_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
@@ -512,8 +512,8 @@ void k_twofingerswiperecognizer_on_recognize(void* self, int32_t (*callback)(voi
     KTwoFingerSwipeRecognizer_OnRecognize((KTwoFingerSwipeRecognizer*)self, (intptr_t)callback);
 }
 
-int32_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
-    return KTwoFingerSwipeRecognizer_QBaseRecognize((KTwoFingerSwipeRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
+int32_t k_twofingerswiperecognizer_super_recognize(void* self, void* gesture, void* watched, void* event) {
+    return KTwoFingerSwipeRecognizer_SuperRecognize((KTwoFingerSwipeRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 
 int32_t k_twofingerswiperecognizer_max_swipe_time(void* self) {
@@ -548,8 +548,8 @@ void k_twofingerswiperecognizer_reset(void* self, void* state) {
     KTwoFingerSwipeRecognizer_Reset((KTwoFingerSwipeRecognizer*)self, (QGesture*)state);
 }
 
-void k_twofingerswiperecognizer_qbase_reset(void* self, void* state) {
-    KTwoFingerSwipeRecognizer_QBaseReset((KTwoFingerSwipeRecognizer*)self, (QGesture*)state);
+void k_twofingerswiperecognizer_super_reset(void* self, void* state) {
+    KTwoFingerSwipeRecognizer_SuperReset((KTwoFingerSwipeRecognizer*)self, (QGesture*)state);
 }
 
 void k_twofingerswiperecognizer_on_reset(void* self, void (*callback)(void*, void*)) {

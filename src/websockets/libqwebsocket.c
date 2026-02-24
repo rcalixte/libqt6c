@@ -39,8 +39,8 @@ void q_websocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QWebSocket_OnMetaObject((QWebSocket*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_websocket_qbase_meta_object(void* self) {
-    return QWebSocket_QBaseMetaObject((QWebSocket*)self);
+const QMetaObject* q_websocket_super_meta_object(void* self) {
+    return QWebSocket_SuperMetaObject((QWebSocket*)self);
 }
 
 void* q_websocket_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_websocket_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QWebSocket_OnMetacast((QWebSocket*)self, (intptr_t)callback);
 }
 
-void* q_websocket_qbase_metacast(void* self, const char* param1) {
-    return QWebSocket_QBaseMetacast((QWebSocket*)self, param1);
+void* q_websocket_super_metacast(void* self, const char* param1) {
+    return QWebSocket_SuperMetacast((QWebSocket*)self, param1);
 }
 
 int32_t q_websocket_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_websocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QWebSocket_OnMetacall((QWebSocket*)self, (intptr_t)callback);
 }
 
-int32_t q_websocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWebSocket_QBaseMetacall((QWebSocket*)self, param1, param2, param3);
+int32_t q_websocket_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWebSocket_SuperMetacall((QWebSocket*)self, param1, param2, param3);
 }
 
 const char* q_websocket_tr(const char* s) {
@@ -705,8 +705,8 @@ bool q_websocket_event(void* self, void* event) {
     return QWebSocket_Event((QWebSocket*)self, (QEvent*)event);
 }
 
-bool q_websocket_qbase_event(void* self, void* event) {
-    return QWebSocket_QBaseEvent((QWebSocket*)self, (QEvent*)event);
+bool q_websocket_super_event(void* self, void* event) {
+    return QWebSocket_SuperEvent((QWebSocket*)self, (QEvent*)event);
 }
 
 void q_websocket_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -717,8 +717,8 @@ bool q_websocket_event_filter(void* self, void* watched, void* event) {
     return QWebSocket_EventFilter((QWebSocket*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_websocket_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWebSocket_QBaseEventFilter((QWebSocket*)self, (QObject*)watched, (QEvent*)event);
+bool q_websocket_super_event_filter(void* self, void* watched, void* event) {
+    return QWebSocket_SuperEventFilter((QWebSocket*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_websocket_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -729,8 +729,8 @@ void q_websocket_timer_event(void* self, void* event) {
     QWebSocket_TimerEvent((QWebSocket*)self, (QTimerEvent*)event);
 }
 
-void q_websocket_qbase_timer_event(void* self, void* event) {
-    QWebSocket_QBaseTimerEvent((QWebSocket*)self, (QTimerEvent*)event);
+void q_websocket_super_timer_event(void* self, void* event) {
+    QWebSocket_SuperTimerEvent((QWebSocket*)self, (QTimerEvent*)event);
 }
 
 void q_websocket_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -741,8 +741,8 @@ void q_websocket_child_event(void* self, void* event) {
     QWebSocket_ChildEvent((QWebSocket*)self, (QChildEvent*)event);
 }
 
-void q_websocket_qbase_child_event(void* self, void* event) {
-    QWebSocket_QBaseChildEvent((QWebSocket*)self, (QChildEvent*)event);
+void q_websocket_super_child_event(void* self, void* event) {
+    QWebSocket_SuperChildEvent((QWebSocket*)self, (QChildEvent*)event);
 }
 
 void q_websocket_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -753,8 +753,8 @@ void q_websocket_custom_event(void* self, void* event) {
     QWebSocket_CustomEvent((QWebSocket*)self, (QEvent*)event);
 }
 
-void q_websocket_qbase_custom_event(void* self, void* event) {
-    QWebSocket_QBaseCustomEvent((QWebSocket*)self, (QEvent*)event);
+void q_websocket_super_custom_event(void* self, void* event) {
+    QWebSocket_SuperCustomEvent((QWebSocket*)self, (QEvent*)event);
 }
 
 void q_websocket_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -765,8 +765,8 @@ void q_websocket_connect_notify(void* self, void* signal) {
     QWebSocket_ConnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_websocket_qbase_connect_notify(void* self, void* signal) {
-    QWebSocket_QBaseConnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
+void q_websocket_super_connect_notify(void* self, void* signal) {
+    QWebSocket_SuperConnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
 void q_websocket_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -777,8 +777,8 @@ void q_websocket_disconnect_notify(void* self, void* signal) {
     QWebSocket_DisconnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_websocket_qbase_disconnect_notify(void* self, void* signal) {
-    QWebSocket_QBaseDisconnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
+void q_websocket_super_disconnect_notify(void* self, void* signal) {
+    QWebSocket_SuperDisconnectNotify((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
 void q_websocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -789,8 +789,8 @@ QObject* q_websocket_sender(void* self) {
     return QWebSocket_Sender((QWebSocket*)self);
 }
 
-QObject* q_websocket_qbase_sender(void* self) {
-    return QWebSocket_QBaseSender((QWebSocket*)self);
+QObject* q_websocket_super_sender(void* self) {
+    return QWebSocket_SuperSender((QWebSocket*)self);
 }
 
 void q_websocket_on_sender(void* self, QObject* (*callback)()) {
@@ -801,8 +801,8 @@ int32_t q_websocket_sender_signal_index(void* self) {
     return QWebSocket_SenderSignalIndex((QWebSocket*)self);
 }
 
-int32_t q_websocket_qbase_sender_signal_index(void* self) {
-    return QWebSocket_QBaseSenderSignalIndex((QWebSocket*)self);
+int32_t q_websocket_super_sender_signal_index(void* self) {
+    return QWebSocket_SuperSenderSignalIndex((QWebSocket*)self);
 }
 
 void q_websocket_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -813,8 +813,8 @@ int32_t q_websocket_receivers(void* self, const char* signal) {
     return QWebSocket_Receivers((QWebSocket*)self, signal);
 }
 
-int32_t q_websocket_qbase_receivers(void* self, const char* signal) {
-    return QWebSocket_QBaseReceivers((QWebSocket*)self, signal);
+int32_t q_websocket_super_receivers(void* self, const char* signal) {
+    return QWebSocket_SuperReceivers((QWebSocket*)self, signal);
 }
 
 void q_websocket_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -825,8 +825,8 @@ bool q_websocket_is_signal_connected(void* self, void* signal) {
     return QWebSocket_IsSignalConnected((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
-bool q_websocket_qbase_is_signal_connected(void* self, void* signal) {
-    return QWebSocket_QBaseIsSignalConnected((QWebSocket*)self, (QMetaMethod*)signal);
+bool q_websocket_super_is_signal_connected(void* self, void* signal) {
+    return QWebSocket_SuperIsSignalConnected((QWebSocket*)self, (QMetaMethod*)signal);
 }
 
 void q_websocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

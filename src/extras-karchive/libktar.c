@@ -41,8 +41,8 @@ void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*,
     KTar_OnDoWriteSymLink((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KTar_QBaseDoWriteSymLink((KTar*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KTar_SuperDoWriteSymLink((KTar*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_tar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -53,8 +53,8 @@ void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, cons
     KTar_OnDoWriteDir((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KTar_QBaseDoWriteDir((KTar*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KTar_SuperDoWriteDir((KTar*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -65,8 +65,8 @@ void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
     KTar_OnDoPrepareWriting((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KTar_QBaseDoPrepareWriting((KTar*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KTar_SuperDoPrepareWriting((KTar*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_tar_do_finish_writing(void* self, long long size) {
@@ -77,8 +77,8 @@ void k_tar_on_do_finish_writing(void* self, bool (*callback)(void*, long long)) 
     KTar_OnDoFinishWriting((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_do_finish_writing(void* self, long long size) {
-    return KTar_QBaseDoFinishWriting((KTar*)self, size);
+bool k_tar_super_do_finish_writing(void* self, long long size) {
+    return KTar_SuperDoFinishWriting((KTar*)self, size);
 }
 
 bool k_tar_open_archive(void* self, int32_t mode) {
@@ -89,8 +89,8 @@ void k_tar_on_open_archive(void* self, bool (*callback)(void*, int32_t)) {
     KTar_OnOpenArchive((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_open_archive(void* self, int32_t mode) {
-    return KTar_QBaseOpenArchive((KTar*)self, mode);
+bool k_tar_super_open_archive(void* self, int32_t mode) {
+    return KTar_SuperOpenArchive((KTar*)self, mode);
 }
 
 bool k_tar_close_archive(void* self) {
@@ -101,8 +101,8 @@ void k_tar_on_close_archive(void* self, bool (*callback)()) {
     KTar_OnCloseArchive((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_close_archive(void* self) {
-    return KTar_QBaseCloseArchive((KTar*)self);
+bool k_tar_super_close_archive(void* self) {
+    return KTar_SuperCloseArchive((KTar*)self);
 }
 
 bool k_tar_create_device(void* self, int32_t mode) {
@@ -113,8 +113,8 @@ void k_tar_on_create_device(void* self, bool (*callback)(void*, int32_t)) {
     KTar_OnCreateDevice((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_qbase_create_device(void* self, int32_t mode) {
-    return KTar_QBaseCreateDevice((KTar*)self, mode);
+bool k_tar_super_create_device(void* self, int32_t mode) {
+    return KTar_SuperCreateDevice((KTar*)self, mode);
 }
 
 void k_tar_virtual_hook(void* self, int id, void* data) {
@@ -125,8 +125,8 @@ void k_tar_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     KTar_OnVirtualHook((KTar*)self, (intptr_t)callback);
 }
 
-void k_tar_qbase_virtual_hook(void* self, int id, void* data) {
-    KTar_QBaseVirtualHook((KTar*)self, id, data);
+void k_tar_super_virtual_hook(void* self, int id, void* data) {
+    KTar_SuperVirtualHook((KTar*)self, id, data);
 }
 
 const char* k_tar_tr2(const char* sourceText, const char* disambiguation) {
@@ -301,8 +301,8 @@ bool k_tar_open(void* self, int32_t mode) {
     return KTar_Open((KTar*)self, mode);
 }
 
-bool k_tar_qbase_open(void* self, int32_t mode) {
-    return KTar_QBaseOpen((KTar*)self, mode);
+bool k_tar_super_open(void* self, int32_t mode) {
+    return KTar_SuperOpen((KTar*)self, mode);
 }
 
 void k_tar_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -313,8 +313,8 @@ bool k_tar_close(void* self) {
     return KTar_Close((KTar*)self);
 }
 
-bool k_tar_qbase_close(void* self) {
-    return KTar_QBaseClose((KTar*)self);
+bool k_tar_super_close(void* self) {
+    return KTar_SuperClose((KTar*)self);
 }
 
 void k_tar_on_close(void* self, bool (*callback)()) {
@@ -325,8 +325,8 @@ KArchiveDirectory* k_tar_root_dir(void* self) {
     return KTar_RootDir((KTar*)self);
 }
 
-KArchiveDirectory* k_tar_qbase_root_dir(void* self) {
-    return KTar_QBaseRootDir((KTar*)self);
+KArchiveDirectory* k_tar_super_root_dir(void* self) {
+    return KTar_SuperRootDir((KTar*)self);
 }
 
 void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
@@ -337,8 +337,8 @@ bool k_tar_do_write_data(void* self, const char* data, long long size) {
     return KTar_DoWriteData((KTar*)self, data, size);
 }
 
-bool k_tar_qbase_do_write_data(void* self, const char* data, long long size) {
-    return KTar_QBaseDoWriteData((KTar*)self, data, size);
+bool k_tar_super_do_write_data(void* self, const char* data, long long size) {
+    return KTar_SuperDoWriteData((KTar*)self, data, size);
 }
 
 void k_tar_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long)) {
@@ -349,8 +349,8 @@ void k_tar_set_error_string(void* self, const char* errorStr) {
     KTar_SetErrorString((KTar*)self, qstring(errorStr));
 }
 
-void k_tar_qbase_set_error_string(void* self, const char* errorStr) {
-    KTar_QBaseSetErrorString((KTar*)self, qstring(errorStr));
+void k_tar_super_set_error_string(void* self, const char* errorStr) {
+    KTar_SuperSetErrorString((KTar*)self, qstring(errorStr));
 }
 
 void k_tar_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -361,8 +361,8 @@ KArchiveDirectory* k_tar_find_or_create(void* self, const char* path) {
     return KTar_FindOrCreate((KTar*)self, qstring(path));
 }
 
-KArchiveDirectory* k_tar_qbase_find_or_create(void* self, const char* path) {
-    return KTar_QBaseFindOrCreate((KTar*)self, qstring(path));
+KArchiveDirectory* k_tar_super_find_or_create(void* self, const char* path) {
+    return KTar_SuperFindOrCreate((KTar*)self, qstring(path));
 }
 
 void k_tar_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
@@ -373,8 +373,8 @@ void k_tar_set_device(void* self, void* dev) {
     KTar_SetDevice((KTar*)self, (QIODevice*)dev);
 }
 
-void k_tar_qbase_set_device(void* self, void* dev) {
-    KTar_QBaseSetDevice((KTar*)self, (QIODevice*)dev);
+void k_tar_super_set_device(void* self, void* dev) {
+    KTar_SuperSetDevice((KTar*)self, (QIODevice*)dev);
 }
 
 void k_tar_on_set_device(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ void k_tar_set_root_dir(void* self, void* rootDir) {
     KTar_SetRootDir((KTar*)self, (KArchiveDirectory*)rootDir);
 }
 
-void k_tar_qbase_set_root_dir(void* self, void* rootDir) {
-    KTar_QBaseSetRootDir((KTar*)self, (KArchiveDirectory*)rootDir);
+void k_tar_super_set_root_dir(void* self, void* rootDir) {
+    KTar_SuperSetRootDir((KTar*)self, (KArchiveDirectory*)rootDir);
 }
 
 void k_tar_on_set_root_dir(void* self, void (*callback)(void*, void*)) {

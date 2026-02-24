@@ -21,8 +21,8 @@ void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback
     KNSCore__Provider_OnMetaObject((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__provider_qbase_meta_object(void* self) {
-    return KNSCore__Provider_QBaseMetaObject((KNSCore__Provider*)self);
+const QMetaObject* k_nscore__provider_super_meta_object(void* self) {
+    return KNSCore__Provider_SuperMetaObject((KNSCore__Provider*)self);
 }
 
 void* k_nscore__provider_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_nscore__provider_on_metacast(void* self, void* (*callback)(void*, const c
     KNSCore__Provider_OnMetacast((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void* k_nscore__provider_qbase_metacast(void* self, const char* param1) {
-    return KNSCore__Provider_QBaseMetacast((KNSCore__Provider*)self, param1);
+void* k_nscore__provider_super_metacast(void* self, const char* param1) {
+    return KNSCore__Provider_SuperMetacast((KNSCore__Provider*)self, param1);
 }
 
 int32_t k_nscore__provider_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_nscore__provider_on_metacall(void* self, int32_t (*callback)(void*, int32
     KNSCore__Provider_OnMetacall((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__provider_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSCore__Provider_QBaseMetacall((KNSCore__Provider*)self, param1, param2, param3);
+int32_t k_nscore__provider_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSCore__Provider_SuperMetacall((KNSCore__Provider*)self, param1, param2, param3);
 }
 
 const char* k_nscore__provider_tr(const char* s) {
@@ -67,8 +67,8 @@ void k_nscore__provider_on_id(void* self, const char* (*callback)()) {
     KNSCore__Provider_OnId((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-const char* k_nscore__provider_qbase_id(void* self) {
-    libqt_string _str = KNSCore__Provider_QBaseId((KNSCore__Provider*)self);
+const char* k_nscore__provider_super_id(void* self) {
+    libqt_string _str = KNSCore__Provider_SuperId((KNSCore__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -82,8 +82,8 @@ void k_nscore__provider_on_set_provider_x_m_l(void* self, bool (*callback)(void*
     KNSCore__Provider_OnSetProviderXML((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-bool k_nscore__provider_qbase_set_provider_x_m_l(void* self, void* xmldata) {
-    return KNSCore__Provider_QBaseSetProviderXML((KNSCore__Provider*)self, (QDomElement*)xmldata);
+bool k_nscore__provider_super_set_provider_x_m_l(void* self, void* xmldata) {
+    return KNSCore__Provider_SuperSetProviderXML((KNSCore__Provider*)self, (QDomElement*)xmldata);
 }
 
 bool k_nscore__provider_is_initialized(void* self) {
@@ -94,8 +94,8 @@ void k_nscore__provider_on_is_initialized(void* self, bool (*callback)()) {
     KNSCore__Provider_OnIsInitialized((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-bool k_nscore__provider_qbase_is_initialized(void* self) {
-    return KNSCore__Provider_QBaseIsInitialized((KNSCore__Provider*)self);
+bool k_nscore__provider_super_is_initialized(void* self) {
+    return KNSCore__Provider_SuperIsInitialized((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries) {
@@ -106,8 +106,8 @@ void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*
     KNSCore__Provider_OnSetCachedEntries((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries) {
-    KNSCore__Provider_QBaseSetCachedEntries((KNSCore__Provider*)self, cachedEntries);
+void k_nscore__provider_super_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries) {
+    KNSCore__Provider_SuperSetCachedEntries((KNSCore__Provider*)self, cachedEntries);
 }
 
 const char* k_nscore__provider_name(void* self) {
@@ -121,8 +121,8 @@ void k_nscore__provider_on_name(void* self, const char* (*callback)()) {
     KNSCore__Provider_OnName((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-const char* k_nscore__provider_qbase_name(void* self) {
-    libqt_string _str = KNSCore__Provider_QBaseName((KNSCore__Provider*)self);
+const char* k_nscore__provider_super_name(void* self) {
+    libqt_string _str = KNSCore__Provider_SuperName((KNSCore__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -136,8 +136,8 @@ void k_nscore__provider_on_icon(void* self, QUrl* (*callback)()) {
     KNSCore__Provider_OnIcon((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-QUrl* k_nscore__provider_qbase_icon(void* self) {
-    return KNSCore__Provider_QBaseIcon((KNSCore__Provider*)self);
+QUrl* k_nscore__provider_super_icon(void* self) {
+    return KNSCore__Provider_SuperIcon((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_load_entries(void* self, void* request) {
@@ -148,8 +148,8 @@ void k_nscore__provider_on_load_entries(void* self, void (*callback)(void*, void
     KNSCore__Provider_OnLoadEntries((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_entries(void* self, void* request) {
-    KNSCore__Provider_QBaseLoadEntries((KNSCore__Provider*)self, (KNSCore__Provider__SearchRequest*)request);
+void k_nscore__provider_super_load_entries(void* self, void* request) {
+    KNSCore__Provider_SuperLoadEntries((KNSCore__Provider*)self, (KNSCore__Provider__SearchRequest*)request);
 }
 
 void k_nscore__provider_load_entry_details(void* self, void* param1) {
@@ -160,8 +160,8 @@ void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*
     KNSCore__Provider_OnLoadEntryDetails((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_entry_details(void* self, void* param1) {
-    KNSCore__Provider_QBaseLoadEntryDetails((KNSCore__Provider*)self, (KNSCore__Entry*)param1);
+void k_nscore__provider_super_load_entry_details(void* self, void* param1) {
+    KNSCore__Provider_SuperLoadEntryDetails((KNSCore__Provider*)self, (KNSCore__Entry*)param1);
 }
 
 void k_nscore__provider_load_payload_link(void* self, void* entry, int linkId) {
@@ -172,8 +172,8 @@ void k_nscore__provider_on_load_payload_link(void* self, void (*callback)(void*,
     KNSCore__Provider_OnLoadPayloadLink((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_payload_link(void* self, void* entry, int linkId) {
-    KNSCore__Provider_QBaseLoadPayloadLink((KNSCore__Provider*)self, (KNSCore__Entry*)entry, linkId);
+void k_nscore__provider_super_load_payload_link(void* self, void* entry, int linkId) {
+    KNSCore__Provider_SuperLoadPayloadLink((KNSCore__Provider*)self, (KNSCore__Entry*)entry, linkId);
 }
 
 void k_nscore__provider_load_comments(void* self, void* param1, int param2, int param3) {
@@ -184,8 +184,8 @@ void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, voi
     KNSCore__Provider_OnLoadComments((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_comments(void* self, void* param1, int param2, int param3) {
-    KNSCore__Provider_QBaseLoadComments((KNSCore__Provider*)self, (KNSCore__Entry*)param1, param2, param3);
+void k_nscore__provider_super_load_comments(void* self, void* param1, int param2, int param3) {
+    KNSCore__Provider_SuperLoadComments((KNSCore__Provider*)self, (KNSCore__Entry*)param1, param2, param3);
 }
 
 void k_nscore__provider_load_person(void* self, const char* param1) {
@@ -196,8 +196,8 @@ void k_nscore__provider_on_load_person(void* self, void (*callback)(void*, const
     KNSCore__Provider_OnLoadPerson((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_person(void* self, const char* param1) {
-    KNSCore__Provider_QBaseLoadPerson((KNSCore__Provider*)self, qstring(param1));
+void k_nscore__provider_super_load_person(void* self, const char* param1) {
+    KNSCore__Provider_SuperLoadPerson((KNSCore__Provider*)self, qstring(param1));
 }
 
 void k_nscore__provider_load_basics(void* self) {
@@ -208,8 +208,8 @@ void k_nscore__provider_on_load_basics(void* self, void (*callback)()) {
     KNSCore__Provider_OnLoadBasics((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_load_basics(void* self) {
-    KNSCore__Provider_QBaseLoadBasics((KNSCore__Provider*)self);
+void k_nscore__provider_super_load_basics(void* self) {
+    KNSCore__Provider_SuperLoadBasics((KNSCore__Provider*)self);
 }
 
 const char* k_nscore__provider_version(void* self) {
@@ -266,8 +266,8 @@ void k_nscore__provider_on_user_can_vote(void* self, bool (*callback)()) {
     KNSCore__Provider_OnUserCanVote((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-bool k_nscore__provider_qbase_user_can_vote(void* self) {
-    return KNSCore__Provider_QBaseUserCanVote((KNSCore__Provider*)self);
+bool k_nscore__provider_super_user_can_vote(void* self) {
+    return KNSCore__Provider_SuperUserCanVote((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_vote(void* self, void* param1, uint32_t param2) {
@@ -278,8 +278,8 @@ void k_nscore__provider_on_vote(void* self, void (*callback)(void*, void*, uint3
     KNSCore__Provider_OnVote((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_vote(void* self, void* param1, uint32_t param2) {
-    KNSCore__Provider_QBaseVote((KNSCore__Provider*)self, (KNSCore__Entry*)param1, param2);
+void k_nscore__provider_super_vote(void* self, void* param1, uint32_t param2) {
+    KNSCore__Provider_SuperVote((KNSCore__Provider*)self, (KNSCore__Entry*)param1, param2);
 }
 
 bool k_nscore__provider_user_can_become_fan(void* self) {
@@ -290,8 +290,8 @@ void k_nscore__provider_on_user_can_become_fan(void* self, bool (*callback)()) {
     KNSCore__Provider_OnUserCanBecomeFan((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-bool k_nscore__provider_qbase_user_can_become_fan(void* self) {
-    return KNSCore__Provider_QBaseUserCanBecomeFan((KNSCore__Provider*)self);
+bool k_nscore__provider_super_user_can_become_fan(void* self) {
+    return KNSCore__Provider_SuperUserCanBecomeFan((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_become_fan(void* self, void* param1) {
@@ -302,8 +302,8 @@ void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, void*)
     KNSCore__Provider_OnBecomeFan((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_become_fan(void* self, void* param1) {
-    KNSCore__Provider_QBaseBecomeFan((KNSCore__Provider*)self, (KNSCore__Entry*)param1);
+void k_nscore__provider_super_become_fan(void* self, void* param1) {
+    KNSCore__Provider_SuperBecomeFan((KNSCore__Provider*)self, (KNSCore__Entry*)param1);
 }
 
 void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 1]) {
@@ -486,8 +486,8 @@ void k_nscore__provider_on_set_name(void* self, void (*callback)(void*, const ch
     KNSCore__Provider_OnSetName((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_set_name(void* self, const char* name) {
-    KNSCore__Provider_QBaseSetName((KNSCore__Provider*)self, qstring(name));
+void k_nscore__provider_super_set_name(void* self, const char* name) {
+    KNSCore__Provider_SuperSetName((KNSCore__Provider*)self, qstring(name));
 }
 
 void k_nscore__provider_set_icon(void* self, void* icon) {
@@ -498,8 +498,8 @@ void k_nscore__provider_on_set_icon(void* self, void (*callback)(void*, void*)) 
     KNSCore__Provider_OnSetIcon((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_set_icon(void* self, void* icon) {
-    KNSCore__Provider_QBaseSetIcon((KNSCore__Provider*)self, (QUrl*)icon);
+void k_nscore__provider_super_set_icon(void* self, void* icon) {
+    KNSCore__Provider_SuperSetIcon((KNSCore__Provider*)self, (QUrl*)icon);
 }
 
 const char* k_nscore__provider_tr2(const char* s, const char* c) {
@@ -731,8 +731,8 @@ bool k_nscore__provider_event(void* self, void* event) {
     return KNSCore__Provider_Event((KNSCore__Provider*)self, (QEvent*)event);
 }
 
-bool k_nscore__provider_qbase_event(void* self, void* event) {
-    return KNSCore__Provider_QBaseEvent((KNSCore__Provider*)self, (QEvent*)event);
+bool k_nscore__provider_super_event(void* self, void* event) {
+    return KNSCore__Provider_SuperEvent((KNSCore__Provider*)self, (QEvent*)event);
 }
 
 void k_nscore__provider_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -743,8 +743,8 @@ bool k_nscore__provider_event_filter(void* self, void* watched, void* event) {
     return KNSCore__Provider_EventFilter((KNSCore__Provider*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nscore__provider_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSCore__Provider_QBaseEventFilter((KNSCore__Provider*)self, (QObject*)watched, (QEvent*)event);
+bool k_nscore__provider_super_event_filter(void* self, void* watched, void* event) {
+    return KNSCore__Provider_SuperEventFilter((KNSCore__Provider*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nscore__provider_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -755,8 +755,8 @@ void k_nscore__provider_timer_event(void* self, void* event) {
     KNSCore__Provider_TimerEvent((KNSCore__Provider*)self, (QTimerEvent*)event);
 }
 
-void k_nscore__provider_qbase_timer_event(void* self, void* event) {
-    KNSCore__Provider_QBaseTimerEvent((KNSCore__Provider*)self, (QTimerEvent*)event);
+void k_nscore__provider_super_timer_event(void* self, void* event) {
+    KNSCore__Provider_SuperTimerEvent((KNSCore__Provider*)self, (QTimerEvent*)event);
 }
 
 void k_nscore__provider_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -767,8 +767,8 @@ void k_nscore__provider_child_event(void* self, void* event) {
     KNSCore__Provider_ChildEvent((KNSCore__Provider*)self, (QChildEvent*)event);
 }
 
-void k_nscore__provider_qbase_child_event(void* self, void* event) {
-    KNSCore__Provider_QBaseChildEvent((KNSCore__Provider*)self, (QChildEvent*)event);
+void k_nscore__provider_super_child_event(void* self, void* event) {
+    KNSCore__Provider_SuperChildEvent((KNSCore__Provider*)self, (QChildEvent*)event);
 }
 
 void k_nscore__provider_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -779,8 +779,8 @@ void k_nscore__provider_custom_event(void* self, void* event) {
     KNSCore__Provider_CustomEvent((KNSCore__Provider*)self, (QEvent*)event);
 }
 
-void k_nscore__provider_qbase_custom_event(void* self, void* event) {
-    KNSCore__Provider_QBaseCustomEvent((KNSCore__Provider*)self, (QEvent*)event);
+void k_nscore__provider_super_custom_event(void* self, void* event) {
+    KNSCore__Provider_SuperCustomEvent((KNSCore__Provider*)self, (QEvent*)event);
 }
 
 void k_nscore__provider_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -791,8 +791,8 @@ void k_nscore__provider_connect_notify(void* self, void* signal) {
     KNSCore__Provider_ConnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__provider_qbase_connect_notify(void* self, void* signal) {
-    KNSCore__Provider_QBaseConnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
+void k_nscore__provider_super_connect_notify(void* self, void* signal) {
+    KNSCore__Provider_SuperConnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__provider_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -803,8 +803,8 @@ void k_nscore__provider_disconnect_notify(void* self, void* signal) {
     KNSCore__Provider_DisconnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__provider_qbase_disconnect_notify(void* self, void* signal) {
-    KNSCore__Provider_QBaseDisconnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
+void k_nscore__provider_super_disconnect_notify(void* self, void* signal) {
+    KNSCore__Provider_SuperDisconnectNotify((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__provider_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -815,8 +815,8 @@ QObject* k_nscore__provider_sender(void* self) {
     return KNSCore__Provider_Sender((KNSCore__Provider*)self);
 }
 
-QObject* k_nscore__provider_qbase_sender(void* self) {
-    return KNSCore__Provider_QBaseSender((KNSCore__Provider*)self);
+QObject* k_nscore__provider_super_sender(void* self) {
+    return KNSCore__Provider_SuperSender((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_on_sender(void* self, QObject* (*callback)()) {
@@ -827,8 +827,8 @@ int32_t k_nscore__provider_sender_signal_index(void* self) {
     return KNSCore__Provider_SenderSignalIndex((KNSCore__Provider*)self);
 }
 
-int32_t k_nscore__provider_qbase_sender_signal_index(void* self) {
-    return KNSCore__Provider_QBaseSenderSignalIndex((KNSCore__Provider*)self);
+int32_t k_nscore__provider_super_sender_signal_index(void* self) {
+    return KNSCore__Provider_SuperSenderSignalIndex((KNSCore__Provider*)self);
 }
 
 void k_nscore__provider_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -839,8 +839,8 @@ int32_t k_nscore__provider_receivers(void* self, const char* signal) {
     return KNSCore__Provider_Receivers((KNSCore__Provider*)self, signal);
 }
 
-int32_t k_nscore__provider_qbase_receivers(void* self, const char* signal) {
-    return KNSCore__Provider_QBaseReceivers((KNSCore__Provider*)self, signal);
+int32_t k_nscore__provider_super_receivers(void* self, const char* signal) {
+    return KNSCore__Provider_SuperReceivers((KNSCore__Provider*)self, signal);
 }
 
 void k_nscore__provider_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -851,8 +851,8 @@ bool k_nscore__provider_is_signal_connected(void* self, void* signal) {
     return KNSCore__Provider_IsSignalConnected((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
-bool k_nscore__provider_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSCore__Provider_QBaseIsSignalConnected((KNSCore__Provider*)self, (QMetaMethod*)signal);
+bool k_nscore__provider_super_is_signal_connected(void* self, void* signal) {
+    return KNSCore__Provider_SuperIsSignalConnected((KNSCore__Provider*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__provider_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

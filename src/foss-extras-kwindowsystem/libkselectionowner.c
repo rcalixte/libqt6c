@@ -67,8 +67,8 @@ void k_selectionowner_on_meta_object(void* self, const QMetaObject* (*callback)(
     KSelectionOwner_OnMetaObject((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_selectionowner_qbase_meta_object(void* self) {
-    return KSelectionOwner_QBaseMetaObject((KSelectionOwner*)self);
+const QMetaObject* k_selectionowner_super_meta_object(void* self) {
+    return KSelectionOwner_SuperMetaObject((KSelectionOwner*)self);
 }
 
 void* k_selectionowner_metacast(void* self, const char* param1) {
@@ -79,8 +79,8 @@ void k_selectionowner_on_metacast(void* self, void* (*callback)(void*, const cha
     KSelectionOwner_OnMetacast((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-void* k_selectionowner_qbase_metacast(void* self, const char* param1) {
-    return KSelectionOwner_QBaseMetacast((KSelectionOwner*)self, param1);
+void* k_selectionowner_super_metacast(void* self, const char* param1) {
+    return KSelectionOwner_SuperMetacast((KSelectionOwner*)self, param1);
 }
 
 int32_t k_selectionowner_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -91,8 +91,8 @@ void k_selectionowner_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KSelectionOwner_OnMetacall((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-int32_t k_selectionowner_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSelectionOwner_QBaseMetacall((KSelectionOwner*)self, param1, param2, param3);
+int32_t k_selectionowner_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSelectionOwner_SuperMetacall((KSelectionOwner*)self, param1, param2, param3);
 }
 
 const char* k_selectionowner_tr(const char* s) {
@@ -128,8 +128,8 @@ void k_selectionowner_on_timer_event(void* self, void (*callback)(void*, void*))
     KSelectionOwner_OnTimerEvent((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-void k_selectionowner_qbase_timer_event(void* self, void* event) {
-    KSelectionOwner_QBaseTimerEvent((KSelectionOwner*)self, (QTimerEvent*)event);
+void k_selectionowner_super_timer_event(void* self, void* event) {
+    KSelectionOwner_SuperTimerEvent((KSelectionOwner*)self, (QTimerEvent*)event);
 }
 
 void k_selectionowner_lost_ownership(void* self) {
@@ -169,8 +169,8 @@ void k_selectionowner_on_generic_reply(void* self, bool (*callback)(void*, xcb_a
 #endif
 
 #ifdef __linux__
-bool k_selectionowner_qbase_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor) {
-    return KSelectionOwner_QBaseGenericReply((KSelectionOwner*)self, target, property, requestor);
+bool k_selectionowner_super_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor) {
+    return KSelectionOwner_SuperGenericReply((KSelectionOwner*)self, target, property, requestor);
 }
 #endif
 
@@ -187,8 +187,8 @@ void k_selectionowner_on_reply_targets(void* self, void (*callback)(void*, xcb_a
 #endif
 
 #ifdef __linux__
-void k_selectionowner_qbase_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor) {
-    KSelectionOwner_QBaseReplyTargets((KSelectionOwner*)self, property, requestor);
+void k_selectionowner_super_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor) {
+    KSelectionOwner_SuperReplyTargets((KSelectionOwner*)self, property, requestor);
 }
 #endif
 
@@ -200,8 +200,8 @@ void k_selectionowner_on_get_atoms(void* self, void (*callback)()) {
     KSelectionOwner_OnGetAtoms((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-void k_selectionowner_qbase_get_atoms(void* self) {
-    KSelectionOwner_QBaseGetAtoms((KSelectionOwner*)self);
+void k_selectionowner_super_get_atoms(void* self) {
+    KSelectionOwner_SuperGetAtoms((KSelectionOwner*)self);
 }
 
 void k_selectionowner_set_data(void* self, uint32_t extra1, uint32_t extra2) {
@@ -212,8 +212,8 @@ void k_selectionowner_on_set_data(void* self, void (*callback)(void*, uint32_t, 
     KSelectionOwner_OnSetData((KSelectionOwner*)self, (intptr_t)callback);
 }
 
-void k_selectionowner_qbase_set_data(void* self, uint32_t extra1, uint32_t extra2) {
-    KSelectionOwner_QBaseSetData((KSelectionOwner*)self, extra1, extra2);
+void k_selectionowner_super_set_data(void* self, uint32_t extra1, uint32_t extra2) {
+    KSelectionOwner_SuperSetData((KSelectionOwner*)self, extra1, extra2);
 }
 
 const char* k_selectionowner_tr2(const char* s, const char* c) {
@@ -449,8 +449,8 @@ bool k_selectionowner_event(void* self, void* event) {
     return KSelectionOwner_Event((KSelectionOwner*)self, (QEvent*)event);
 }
 
-bool k_selectionowner_qbase_event(void* self, void* event) {
-    return KSelectionOwner_QBaseEvent((KSelectionOwner*)self, (QEvent*)event);
+bool k_selectionowner_super_event(void* self, void* event) {
+    return KSelectionOwner_SuperEvent((KSelectionOwner*)self, (QEvent*)event);
 }
 
 void k_selectionowner_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -461,8 +461,8 @@ bool k_selectionowner_event_filter(void* self, void* watched, void* event) {
     return KSelectionOwner_EventFilter((KSelectionOwner*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_selectionowner_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSelectionOwner_QBaseEventFilter((KSelectionOwner*)self, (QObject*)watched, (QEvent*)event);
+bool k_selectionowner_super_event_filter(void* self, void* watched, void* event) {
+    return KSelectionOwner_SuperEventFilter((KSelectionOwner*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_selectionowner_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -473,8 +473,8 @@ void k_selectionowner_child_event(void* self, void* event) {
     KSelectionOwner_ChildEvent((KSelectionOwner*)self, (QChildEvent*)event);
 }
 
-void k_selectionowner_qbase_child_event(void* self, void* event) {
-    KSelectionOwner_QBaseChildEvent((KSelectionOwner*)self, (QChildEvent*)event);
+void k_selectionowner_super_child_event(void* self, void* event) {
+    KSelectionOwner_SuperChildEvent((KSelectionOwner*)self, (QChildEvent*)event);
 }
 
 void k_selectionowner_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -485,8 +485,8 @@ void k_selectionowner_custom_event(void* self, void* event) {
     KSelectionOwner_CustomEvent((KSelectionOwner*)self, (QEvent*)event);
 }
 
-void k_selectionowner_qbase_custom_event(void* self, void* event) {
-    KSelectionOwner_QBaseCustomEvent((KSelectionOwner*)self, (QEvent*)event);
+void k_selectionowner_super_custom_event(void* self, void* event) {
+    KSelectionOwner_SuperCustomEvent((KSelectionOwner*)self, (QEvent*)event);
 }
 
 void k_selectionowner_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -497,8 +497,8 @@ void k_selectionowner_connect_notify(void* self, void* signal) {
     KSelectionOwner_ConnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionowner_qbase_connect_notify(void* self, void* signal) {
-    KSelectionOwner_QBaseConnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
+void k_selectionowner_super_connect_notify(void* self, void* signal) {
+    KSelectionOwner_SuperConnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionowner_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -509,8 +509,8 @@ void k_selectionowner_disconnect_notify(void* self, void* signal) {
     KSelectionOwner_DisconnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
-void k_selectionowner_qbase_disconnect_notify(void* self, void* signal) {
-    KSelectionOwner_QBaseDisconnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
+void k_selectionowner_super_disconnect_notify(void* self, void* signal) {
+    KSelectionOwner_SuperDisconnectNotify((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionowner_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -521,8 +521,8 @@ QObject* k_selectionowner_sender(void* self) {
     return KSelectionOwner_Sender((KSelectionOwner*)self);
 }
 
-QObject* k_selectionowner_qbase_sender(void* self) {
-    return KSelectionOwner_QBaseSender((KSelectionOwner*)self);
+QObject* k_selectionowner_super_sender(void* self) {
+    return KSelectionOwner_SuperSender((KSelectionOwner*)self);
 }
 
 void k_selectionowner_on_sender(void* self, QObject* (*callback)()) {
@@ -533,8 +533,8 @@ int32_t k_selectionowner_sender_signal_index(void* self) {
     return KSelectionOwner_SenderSignalIndex((KSelectionOwner*)self);
 }
 
-int32_t k_selectionowner_qbase_sender_signal_index(void* self) {
-    return KSelectionOwner_QBaseSenderSignalIndex((KSelectionOwner*)self);
+int32_t k_selectionowner_super_sender_signal_index(void* self) {
+    return KSelectionOwner_SuperSenderSignalIndex((KSelectionOwner*)self);
 }
 
 void k_selectionowner_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -545,8 +545,8 @@ int32_t k_selectionowner_receivers(void* self, const char* signal) {
     return KSelectionOwner_Receivers((KSelectionOwner*)self, signal);
 }
 
-int32_t k_selectionowner_qbase_receivers(void* self, const char* signal) {
-    return KSelectionOwner_QBaseReceivers((KSelectionOwner*)self, signal);
+int32_t k_selectionowner_super_receivers(void* self, const char* signal) {
+    return KSelectionOwner_SuperReceivers((KSelectionOwner*)self, signal);
 }
 
 void k_selectionowner_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -557,8 +557,8 @@ bool k_selectionowner_is_signal_connected(void* self, void* signal) {
     return KSelectionOwner_IsSignalConnected((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
-bool k_selectionowner_qbase_is_signal_connected(void* self, void* signal) {
-    return KSelectionOwner_QBaseIsSignalConnected((KSelectionOwner*)self, (QMetaMethod*)signal);
+bool k_selectionowner_super_is_signal_connected(void* self, void* signal) {
+    return KSelectionOwner_SuperIsSignalConnected((KSelectionOwner*)self, (QMetaMethod*)signal);
 }
 
 void k_selectionowner_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

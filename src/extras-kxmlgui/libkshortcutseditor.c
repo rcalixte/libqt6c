@@ -46,8 +46,8 @@ void k_shortcutseditor_on_meta_object(void* self, const QMetaObject* (*callback)
     KShortcutsEditor_OnMetaObject((KShortcutsEditor*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_shortcutseditor_qbase_meta_object(void* self) {
-    return KShortcutsEditor_QBaseMetaObject((KShortcutsEditor*)self);
+const QMetaObject* k_shortcutseditor_super_meta_object(void* self) {
+    return KShortcutsEditor_SuperMetaObject((KShortcutsEditor*)self);
 }
 
 void* k_shortcutseditor_metacast(void* self, const char* param1) {
@@ -58,8 +58,8 @@ void k_shortcutseditor_on_metacast(void* self, void* (*callback)(void*, const ch
     KShortcutsEditor_OnMetacast((KShortcutsEditor*)self, (intptr_t)callback);
 }
 
-void* k_shortcutseditor_qbase_metacast(void* self, const char* param1) {
-    return KShortcutsEditor_QBaseMetacast((KShortcutsEditor*)self, param1);
+void* k_shortcutseditor_super_metacast(void* self, const char* param1) {
+    return KShortcutsEditor_SuperMetacast((KShortcutsEditor*)self, param1);
 }
 
 int32_t k_shortcutseditor_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -70,8 +70,8 @@ void k_shortcutseditor_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KShortcutsEditor_OnMetacall((KShortcutsEditor*)self, (intptr_t)callback);
 }
 
-int32_t k_shortcutseditor_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KShortcutsEditor_QBaseMetacall((KShortcutsEditor*)self, param1, param2, param3);
+int32_t k_shortcutseditor_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KShortcutsEditor_SuperMetacall((KShortcutsEditor*)self, param1, param2, param3);
 }
 
 const char* k_shortcutseditor_tr(const char* s) {
@@ -1524,8 +1524,8 @@ int32_t k_shortcutseditor_dev_type(void* self) {
     return KShortcutsEditor_DevType((KShortcutsEditor*)self);
 }
 
-int32_t k_shortcutseditor_qbase_dev_type(void* self) {
-    return KShortcutsEditor_QBaseDevType((KShortcutsEditor*)self);
+int32_t k_shortcutseditor_super_dev_type(void* self) {
+    return KShortcutsEditor_SuperDevType((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1536,8 +1536,8 @@ void k_shortcutseditor_set_visible(void* self, bool visible) {
     KShortcutsEditor_SetVisible((KShortcutsEditor*)self, visible);
 }
 
-void k_shortcutseditor_qbase_set_visible(void* self, bool visible) {
-    KShortcutsEditor_QBaseSetVisible((KShortcutsEditor*)self, visible);
+void k_shortcutseditor_super_set_visible(void* self, bool visible) {
+    KShortcutsEditor_SuperSetVisible((KShortcutsEditor*)self, visible);
 }
 
 void k_shortcutseditor_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1548,8 +1548,8 @@ QSize* k_shortcutseditor_size_hint(void* self) {
     return KShortcutsEditor_SizeHint((KShortcutsEditor*)self);
 }
 
-QSize* k_shortcutseditor_qbase_size_hint(void* self) {
-    return KShortcutsEditor_QBaseSizeHint((KShortcutsEditor*)self);
+QSize* k_shortcutseditor_super_size_hint(void* self) {
+    return KShortcutsEditor_SuperSizeHint((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1560,8 +1560,8 @@ QSize* k_shortcutseditor_minimum_size_hint(void* self) {
     return KShortcutsEditor_MinimumSizeHint((KShortcutsEditor*)self);
 }
 
-QSize* k_shortcutseditor_qbase_minimum_size_hint(void* self) {
-    return KShortcutsEditor_QBaseMinimumSizeHint((KShortcutsEditor*)self);
+QSize* k_shortcutseditor_super_minimum_size_hint(void* self) {
+    return KShortcutsEditor_SuperMinimumSizeHint((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1572,8 +1572,8 @@ int32_t k_shortcutseditor_height_for_width(void* self, int param1) {
     return KShortcutsEditor_HeightForWidth((KShortcutsEditor*)self, param1);
 }
 
-int32_t k_shortcutseditor_qbase_height_for_width(void* self, int param1) {
-    return KShortcutsEditor_QBaseHeightForWidth((KShortcutsEditor*)self, param1);
+int32_t k_shortcutseditor_super_height_for_width(void* self, int param1) {
+    return KShortcutsEditor_SuperHeightForWidth((KShortcutsEditor*)self, param1);
 }
 
 void k_shortcutseditor_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1584,8 +1584,8 @@ bool k_shortcutseditor_has_height_for_width(void* self) {
     return KShortcutsEditor_HasHeightForWidth((KShortcutsEditor*)self);
 }
 
-bool k_shortcutseditor_qbase_has_height_for_width(void* self) {
-    return KShortcutsEditor_QBaseHasHeightForWidth((KShortcutsEditor*)self);
+bool k_shortcutseditor_super_has_height_for_width(void* self) {
+    return KShortcutsEditor_SuperHasHeightForWidth((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1596,8 +1596,8 @@ QPaintEngine* k_shortcutseditor_paint_engine(void* self) {
     return KShortcutsEditor_PaintEngine((KShortcutsEditor*)self);
 }
 
-QPaintEngine* k_shortcutseditor_qbase_paint_engine(void* self) {
-    return KShortcutsEditor_QBasePaintEngine((KShortcutsEditor*)self);
+QPaintEngine* k_shortcutseditor_super_paint_engine(void* self) {
+    return KShortcutsEditor_SuperPaintEngine((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1608,8 +1608,8 @@ bool k_shortcutseditor_event(void* self, void* event) {
     return KShortcutsEditor_Event((KShortcutsEditor*)self, (QEvent*)event);
 }
 
-bool k_shortcutseditor_qbase_event(void* self, void* event) {
-    return KShortcutsEditor_QBaseEvent((KShortcutsEditor*)self, (QEvent*)event);
+bool k_shortcutseditor_super_event(void* self, void* event) {
+    return KShortcutsEditor_SuperEvent((KShortcutsEditor*)self, (QEvent*)event);
 }
 
 void k_shortcutseditor_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1620,8 +1620,8 @@ void k_shortcutseditor_mouse_press_event(void* self, void* event) {
     KShortcutsEditor_MousePressEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutseditor_qbase_mouse_press_event(void* self, void* event) {
-    KShortcutsEditor_QBaseMousePressEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
+void k_shortcutseditor_super_mouse_press_event(void* self, void* event) {
+    KShortcutsEditor_SuperMousePressEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutseditor_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1632,8 +1632,8 @@ void k_shortcutseditor_mouse_release_event(void* self, void* event) {
     KShortcutsEditor_MouseReleaseEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutseditor_qbase_mouse_release_event(void* self, void* event) {
-    KShortcutsEditor_QBaseMouseReleaseEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
+void k_shortcutseditor_super_mouse_release_event(void* self, void* event) {
+    KShortcutsEditor_SuperMouseReleaseEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutseditor_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1644,8 +1644,8 @@ void k_shortcutseditor_mouse_double_click_event(void* self, void* event) {
     KShortcutsEditor_MouseDoubleClickEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutseditor_qbase_mouse_double_click_event(void* self, void* event) {
-    KShortcutsEditor_QBaseMouseDoubleClickEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
+void k_shortcutseditor_super_mouse_double_click_event(void* self, void* event) {
+    KShortcutsEditor_SuperMouseDoubleClickEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutseditor_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1656,8 +1656,8 @@ void k_shortcutseditor_mouse_move_event(void* self, void* event) {
     KShortcutsEditor_MouseMoveEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutseditor_qbase_mouse_move_event(void* self, void* event) {
-    KShortcutsEditor_QBaseMouseMoveEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
+void k_shortcutseditor_super_mouse_move_event(void* self, void* event) {
+    KShortcutsEditor_SuperMouseMoveEvent((KShortcutsEditor*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutseditor_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1668,8 +1668,8 @@ void k_shortcutseditor_wheel_event(void* self, void* event) {
     KShortcutsEditor_WheelEvent((KShortcutsEditor*)self, (QWheelEvent*)event);
 }
 
-void k_shortcutseditor_qbase_wheel_event(void* self, void* event) {
-    KShortcutsEditor_QBaseWheelEvent((KShortcutsEditor*)self, (QWheelEvent*)event);
+void k_shortcutseditor_super_wheel_event(void* self, void* event) {
+    KShortcutsEditor_SuperWheelEvent((KShortcutsEditor*)self, (QWheelEvent*)event);
 }
 
 void k_shortcutseditor_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1680,8 +1680,8 @@ void k_shortcutseditor_key_press_event(void* self, void* event) {
     KShortcutsEditor_KeyPressEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
 }
 
-void k_shortcutseditor_qbase_key_press_event(void* self, void* event) {
-    KShortcutsEditor_QBaseKeyPressEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
+void k_shortcutseditor_super_key_press_event(void* self, void* event) {
+    KShortcutsEditor_SuperKeyPressEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
 }
 
 void k_shortcutseditor_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1692,8 +1692,8 @@ void k_shortcutseditor_key_release_event(void* self, void* event) {
     KShortcutsEditor_KeyReleaseEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
 }
 
-void k_shortcutseditor_qbase_key_release_event(void* self, void* event) {
-    KShortcutsEditor_QBaseKeyReleaseEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
+void k_shortcutseditor_super_key_release_event(void* self, void* event) {
+    KShortcutsEditor_SuperKeyReleaseEvent((KShortcutsEditor*)self, (QKeyEvent*)event);
 }
 
 void k_shortcutseditor_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1704,8 +1704,8 @@ void k_shortcutseditor_focus_in_event(void* self, void* event) {
     KShortcutsEditor_FocusInEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutseditor_qbase_focus_in_event(void* self, void* event) {
-    KShortcutsEditor_QBaseFocusInEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
+void k_shortcutseditor_super_focus_in_event(void* self, void* event) {
+    KShortcutsEditor_SuperFocusInEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutseditor_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1716,8 +1716,8 @@ void k_shortcutseditor_focus_out_event(void* self, void* event) {
     KShortcutsEditor_FocusOutEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutseditor_qbase_focus_out_event(void* self, void* event) {
-    KShortcutsEditor_QBaseFocusOutEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
+void k_shortcutseditor_super_focus_out_event(void* self, void* event) {
+    KShortcutsEditor_SuperFocusOutEvent((KShortcutsEditor*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutseditor_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1728,8 +1728,8 @@ void k_shortcutseditor_enter_event(void* self, void* event) {
     KShortcutsEditor_EnterEvent((KShortcutsEditor*)self, (QEnterEvent*)event);
 }
 
-void k_shortcutseditor_qbase_enter_event(void* self, void* event) {
-    KShortcutsEditor_QBaseEnterEvent((KShortcutsEditor*)self, (QEnterEvent*)event);
+void k_shortcutseditor_super_enter_event(void* self, void* event) {
+    KShortcutsEditor_SuperEnterEvent((KShortcutsEditor*)self, (QEnterEvent*)event);
 }
 
 void k_shortcutseditor_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1740,8 +1740,8 @@ void k_shortcutseditor_leave_event(void* self, void* event) {
     KShortcutsEditor_LeaveEvent((KShortcutsEditor*)self, (QEvent*)event);
 }
 
-void k_shortcutseditor_qbase_leave_event(void* self, void* event) {
-    KShortcutsEditor_QBaseLeaveEvent((KShortcutsEditor*)self, (QEvent*)event);
+void k_shortcutseditor_super_leave_event(void* self, void* event) {
+    KShortcutsEditor_SuperLeaveEvent((KShortcutsEditor*)self, (QEvent*)event);
 }
 
 void k_shortcutseditor_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1752,8 +1752,8 @@ void k_shortcutseditor_paint_event(void* self, void* event) {
     KShortcutsEditor_PaintEvent((KShortcutsEditor*)self, (QPaintEvent*)event);
 }
 
-void k_shortcutseditor_qbase_paint_event(void* self, void* event) {
-    KShortcutsEditor_QBasePaintEvent((KShortcutsEditor*)self, (QPaintEvent*)event);
+void k_shortcutseditor_super_paint_event(void* self, void* event) {
+    KShortcutsEditor_SuperPaintEvent((KShortcutsEditor*)self, (QPaintEvent*)event);
 }
 
 void k_shortcutseditor_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1764,8 +1764,8 @@ void k_shortcutseditor_move_event(void* self, void* event) {
     KShortcutsEditor_MoveEvent((KShortcutsEditor*)self, (QMoveEvent*)event);
 }
 
-void k_shortcutseditor_qbase_move_event(void* self, void* event) {
-    KShortcutsEditor_QBaseMoveEvent((KShortcutsEditor*)self, (QMoveEvent*)event);
+void k_shortcutseditor_super_move_event(void* self, void* event) {
+    KShortcutsEditor_SuperMoveEvent((KShortcutsEditor*)self, (QMoveEvent*)event);
 }
 
 void k_shortcutseditor_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1776,8 +1776,8 @@ void k_shortcutseditor_resize_event(void* self, void* event) {
     KShortcutsEditor_ResizeEvent((KShortcutsEditor*)self, (QResizeEvent*)event);
 }
 
-void k_shortcutseditor_qbase_resize_event(void* self, void* event) {
-    KShortcutsEditor_QBaseResizeEvent((KShortcutsEditor*)self, (QResizeEvent*)event);
+void k_shortcutseditor_super_resize_event(void* self, void* event) {
+    KShortcutsEditor_SuperResizeEvent((KShortcutsEditor*)self, (QResizeEvent*)event);
 }
 
 void k_shortcutseditor_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1788,8 +1788,8 @@ void k_shortcutseditor_close_event(void* self, void* event) {
     KShortcutsEditor_CloseEvent((KShortcutsEditor*)self, (QCloseEvent*)event);
 }
 
-void k_shortcutseditor_qbase_close_event(void* self, void* event) {
-    KShortcutsEditor_QBaseCloseEvent((KShortcutsEditor*)self, (QCloseEvent*)event);
+void k_shortcutseditor_super_close_event(void* self, void* event) {
+    KShortcutsEditor_SuperCloseEvent((KShortcutsEditor*)self, (QCloseEvent*)event);
 }
 
 void k_shortcutseditor_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1800,8 +1800,8 @@ void k_shortcutseditor_context_menu_event(void* self, void* event) {
     KShortcutsEditor_ContextMenuEvent((KShortcutsEditor*)self, (QContextMenuEvent*)event);
 }
 
-void k_shortcutseditor_qbase_context_menu_event(void* self, void* event) {
-    KShortcutsEditor_QBaseContextMenuEvent((KShortcutsEditor*)self, (QContextMenuEvent*)event);
+void k_shortcutseditor_super_context_menu_event(void* self, void* event) {
+    KShortcutsEditor_SuperContextMenuEvent((KShortcutsEditor*)self, (QContextMenuEvent*)event);
 }
 
 void k_shortcutseditor_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_shortcutseditor_tablet_event(void* self, void* event) {
     KShortcutsEditor_TabletEvent((KShortcutsEditor*)self, (QTabletEvent*)event);
 }
 
-void k_shortcutseditor_qbase_tablet_event(void* self, void* event) {
-    KShortcutsEditor_QBaseTabletEvent((KShortcutsEditor*)self, (QTabletEvent*)event);
+void k_shortcutseditor_super_tablet_event(void* self, void* event) {
+    KShortcutsEditor_SuperTabletEvent((KShortcutsEditor*)self, (QTabletEvent*)event);
 }
 
 void k_shortcutseditor_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ void k_shortcutseditor_action_event(void* self, void* event) {
     KShortcutsEditor_ActionEvent((KShortcutsEditor*)self, (QActionEvent*)event);
 }
 
-void k_shortcutseditor_qbase_action_event(void* self, void* event) {
-    KShortcutsEditor_QBaseActionEvent((KShortcutsEditor*)self, (QActionEvent*)event);
+void k_shortcutseditor_super_action_event(void* self, void* event) {
+    KShortcutsEditor_SuperActionEvent((KShortcutsEditor*)self, (QActionEvent*)event);
 }
 
 void k_shortcutseditor_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_shortcutseditor_drag_enter_event(void* self, void* event) {
     KShortcutsEditor_DragEnterEvent((KShortcutsEditor*)self, (QDragEnterEvent*)event);
 }
 
-void k_shortcutseditor_qbase_drag_enter_event(void* self, void* event) {
-    KShortcutsEditor_QBaseDragEnterEvent((KShortcutsEditor*)self, (QDragEnterEvent*)event);
+void k_shortcutseditor_super_drag_enter_event(void* self, void* event) {
+    KShortcutsEditor_SuperDragEnterEvent((KShortcutsEditor*)self, (QDragEnterEvent*)event);
 }
 
 void k_shortcutseditor_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_shortcutseditor_drag_move_event(void* self, void* event) {
     KShortcutsEditor_DragMoveEvent((KShortcutsEditor*)self, (QDragMoveEvent*)event);
 }
 
-void k_shortcutseditor_qbase_drag_move_event(void* self, void* event) {
-    KShortcutsEditor_QBaseDragMoveEvent((KShortcutsEditor*)self, (QDragMoveEvent*)event);
+void k_shortcutseditor_super_drag_move_event(void* self, void* event) {
+    KShortcutsEditor_SuperDragMoveEvent((KShortcutsEditor*)self, (QDragMoveEvent*)event);
 }
 
 void k_shortcutseditor_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_shortcutseditor_drag_leave_event(void* self, void* event) {
     KShortcutsEditor_DragLeaveEvent((KShortcutsEditor*)self, (QDragLeaveEvent*)event);
 }
 
-void k_shortcutseditor_qbase_drag_leave_event(void* self, void* event) {
-    KShortcutsEditor_QBaseDragLeaveEvent((KShortcutsEditor*)self, (QDragLeaveEvent*)event);
+void k_shortcutseditor_super_drag_leave_event(void* self, void* event) {
+    KShortcutsEditor_SuperDragLeaveEvent((KShortcutsEditor*)self, (QDragLeaveEvent*)event);
 }
 
 void k_shortcutseditor_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_shortcutseditor_drop_event(void* self, void* event) {
     KShortcutsEditor_DropEvent((KShortcutsEditor*)self, (QDropEvent*)event);
 }
 
-void k_shortcutseditor_qbase_drop_event(void* self, void* event) {
-    KShortcutsEditor_QBaseDropEvent((KShortcutsEditor*)self, (QDropEvent*)event);
+void k_shortcutseditor_super_drop_event(void* self, void* event) {
+    KShortcutsEditor_SuperDropEvent((KShortcutsEditor*)self, (QDropEvent*)event);
 }
 
 void k_shortcutseditor_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_shortcutseditor_show_event(void* self, void* event) {
     KShortcutsEditor_ShowEvent((KShortcutsEditor*)self, (QShowEvent*)event);
 }
 
-void k_shortcutseditor_qbase_show_event(void* self, void* event) {
-    KShortcutsEditor_QBaseShowEvent((KShortcutsEditor*)self, (QShowEvent*)event);
+void k_shortcutseditor_super_show_event(void* self, void* event) {
+    KShortcutsEditor_SuperShowEvent((KShortcutsEditor*)self, (QShowEvent*)event);
 }
 
 void k_shortcutseditor_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_shortcutseditor_hide_event(void* self, void* event) {
     KShortcutsEditor_HideEvent((KShortcutsEditor*)self, (QHideEvent*)event);
 }
 
-void k_shortcutseditor_qbase_hide_event(void* self, void* event) {
-    KShortcutsEditor_QBaseHideEvent((KShortcutsEditor*)self, (QHideEvent*)event);
+void k_shortcutseditor_super_hide_event(void* self, void* event) {
+    KShortcutsEditor_SuperHideEvent((KShortcutsEditor*)self, (QHideEvent*)event);
 }
 
 void k_shortcutseditor_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ bool k_shortcutseditor_native_event(void* self, char* eventType, void* message, 
     return KShortcutsEditor_NativeEvent((KShortcutsEditor*)self, qstring(eventType), message, result);
 }
 
-bool k_shortcutseditor_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KShortcutsEditor_QBaseNativeEvent((KShortcutsEditor*)self, qstring(eventType), message, result);
+bool k_shortcutseditor_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KShortcutsEditor_SuperNativeEvent((KShortcutsEditor*)self, qstring(eventType), message, result);
 }
 
 void k_shortcutseditor_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1920,8 +1920,8 @@ void k_shortcutseditor_change_event(void* self, void* param1) {
     KShortcutsEditor_ChangeEvent((KShortcutsEditor*)self, (QEvent*)param1);
 }
 
-void k_shortcutseditor_qbase_change_event(void* self, void* param1) {
-    KShortcutsEditor_QBaseChangeEvent((KShortcutsEditor*)self, (QEvent*)param1);
+void k_shortcutseditor_super_change_event(void* self, void* param1) {
+    KShortcutsEditor_SuperChangeEvent((KShortcutsEditor*)self, (QEvent*)param1);
 }
 
 void k_shortcutseditor_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ int32_t k_shortcutseditor_metric(void* self, int32_t param1) {
     return KShortcutsEditor_Metric((KShortcutsEditor*)self, param1);
 }
 
-int32_t k_shortcutseditor_qbase_metric(void* self, int32_t param1) {
-    return KShortcutsEditor_QBaseMetric((KShortcutsEditor*)self, param1);
+int32_t k_shortcutseditor_super_metric(void* self, int32_t param1) {
+    return KShortcutsEditor_SuperMetric((KShortcutsEditor*)self, param1);
 }
 
 void k_shortcutseditor_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1944,8 +1944,8 @@ void k_shortcutseditor_init_painter(void* self, void* painter) {
     KShortcutsEditor_InitPainter((KShortcutsEditor*)self, (QPainter*)painter);
 }
 
-void k_shortcutseditor_qbase_init_painter(void* self, void* painter) {
-    KShortcutsEditor_QBaseInitPainter((KShortcutsEditor*)self, (QPainter*)painter);
+void k_shortcutseditor_super_init_painter(void* self, void* painter) {
+    KShortcutsEditor_SuperInitPainter((KShortcutsEditor*)self, (QPainter*)painter);
 }
 
 void k_shortcutseditor_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ QPaintDevice* k_shortcutseditor_redirected(void* self, void* offset) {
     return KShortcutsEditor_Redirected((KShortcutsEditor*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_shortcutseditor_qbase_redirected(void* self, void* offset) {
-    return KShortcutsEditor_QBaseRedirected((KShortcutsEditor*)self, (QPoint*)offset);
+QPaintDevice* k_shortcutseditor_super_redirected(void* self, void* offset) {
+    return KShortcutsEditor_SuperRedirected((KShortcutsEditor*)self, (QPoint*)offset);
 }
 
 void k_shortcutseditor_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1968,8 +1968,8 @@ QPainter* k_shortcutseditor_shared_painter(void* self) {
     return KShortcutsEditor_SharedPainter((KShortcutsEditor*)self);
 }
 
-QPainter* k_shortcutseditor_qbase_shared_painter(void* self) {
-    return KShortcutsEditor_QBaseSharedPainter((KShortcutsEditor*)self);
+QPainter* k_shortcutseditor_super_shared_painter(void* self) {
+    return KShortcutsEditor_SuperSharedPainter((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1980,8 +1980,8 @@ void k_shortcutseditor_input_method_event(void* self, void* param1) {
     KShortcutsEditor_InputMethodEvent((KShortcutsEditor*)self, (QInputMethodEvent*)param1);
 }
 
-void k_shortcutseditor_qbase_input_method_event(void* self, void* param1) {
-    KShortcutsEditor_QBaseInputMethodEvent((KShortcutsEditor*)self, (QInputMethodEvent*)param1);
+void k_shortcutseditor_super_input_method_event(void* self, void* param1) {
+    KShortcutsEditor_SuperInputMethodEvent((KShortcutsEditor*)self, (QInputMethodEvent*)param1);
 }
 
 void k_shortcutseditor_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ QVariant* k_shortcutseditor_input_method_query(void* self, int32_t param1) {
     return KShortcutsEditor_InputMethodQuery((KShortcutsEditor*)self, param1);
 }
 
-QVariant* k_shortcutseditor_qbase_input_method_query(void* self, int32_t param1) {
-    return KShortcutsEditor_QBaseInputMethodQuery((KShortcutsEditor*)self, param1);
+QVariant* k_shortcutseditor_super_input_method_query(void* self, int32_t param1) {
+    return KShortcutsEditor_SuperInputMethodQuery((KShortcutsEditor*)self, param1);
 }
 
 void k_shortcutseditor_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2004,8 +2004,8 @@ bool k_shortcutseditor_focus_next_prev_child(void* self, bool next) {
     return KShortcutsEditor_FocusNextPrevChild((KShortcutsEditor*)self, next);
 }
 
-bool k_shortcutseditor_qbase_focus_next_prev_child(void* self, bool next) {
-    return KShortcutsEditor_QBaseFocusNextPrevChild((KShortcutsEditor*)self, next);
+bool k_shortcutseditor_super_focus_next_prev_child(void* self, bool next) {
+    return KShortcutsEditor_SuperFocusNextPrevChild((KShortcutsEditor*)self, next);
 }
 
 void k_shortcutseditor_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2016,8 +2016,8 @@ bool k_shortcutseditor_event_filter(void* self, void* watched, void* event) {
     return KShortcutsEditor_EventFilter((KShortcutsEditor*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_shortcutseditor_qbase_event_filter(void* self, void* watched, void* event) {
-    return KShortcutsEditor_QBaseEventFilter((KShortcutsEditor*)self, (QObject*)watched, (QEvent*)event);
+bool k_shortcutseditor_super_event_filter(void* self, void* watched, void* event) {
+    return KShortcutsEditor_SuperEventFilter((KShortcutsEditor*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_shortcutseditor_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_shortcutseditor_timer_event(void* self, void* event) {
     KShortcutsEditor_TimerEvent((KShortcutsEditor*)self, (QTimerEvent*)event);
 }
 
-void k_shortcutseditor_qbase_timer_event(void* self, void* event) {
-    KShortcutsEditor_QBaseTimerEvent((KShortcutsEditor*)self, (QTimerEvent*)event);
+void k_shortcutseditor_super_timer_event(void* self, void* event) {
+    KShortcutsEditor_SuperTimerEvent((KShortcutsEditor*)self, (QTimerEvent*)event);
 }
 
 void k_shortcutseditor_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_shortcutseditor_child_event(void* self, void* event) {
     KShortcutsEditor_ChildEvent((KShortcutsEditor*)self, (QChildEvent*)event);
 }
 
-void k_shortcutseditor_qbase_child_event(void* self, void* event) {
-    KShortcutsEditor_QBaseChildEvent((KShortcutsEditor*)self, (QChildEvent*)event);
+void k_shortcutseditor_super_child_event(void* self, void* event) {
+    KShortcutsEditor_SuperChildEvent((KShortcutsEditor*)self, (QChildEvent*)event);
 }
 
 void k_shortcutseditor_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_shortcutseditor_custom_event(void* self, void* event) {
     KShortcutsEditor_CustomEvent((KShortcutsEditor*)self, (QEvent*)event);
 }
 
-void k_shortcutseditor_qbase_custom_event(void* self, void* event) {
-    KShortcutsEditor_QBaseCustomEvent((KShortcutsEditor*)self, (QEvent*)event);
+void k_shortcutseditor_super_custom_event(void* self, void* event) {
+    KShortcutsEditor_SuperCustomEvent((KShortcutsEditor*)self, (QEvent*)event);
 }
 
 void k_shortcutseditor_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ void k_shortcutseditor_connect_notify(void* self, void* signal) {
     KShortcutsEditor_ConnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutseditor_qbase_connect_notify(void* self, void* signal) {
-    KShortcutsEditor_QBaseConnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
+void k_shortcutseditor_super_connect_notify(void* self, void* signal) {
+    KShortcutsEditor_SuperConnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutseditor_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2076,8 +2076,8 @@ void k_shortcutseditor_disconnect_notify(void* self, void* signal) {
     KShortcutsEditor_DisconnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutseditor_qbase_disconnect_notify(void* self, void* signal) {
-    KShortcutsEditor_QBaseDisconnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
+void k_shortcutseditor_super_disconnect_notify(void* self, void* signal) {
+    KShortcutsEditor_SuperDisconnectNotify((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutseditor_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_shortcutseditor_update_micro_focus(void* self) {
     KShortcutsEditor_UpdateMicroFocus((KShortcutsEditor*)self);
 }
 
-void k_shortcutseditor_qbase_update_micro_focus(void* self) {
-    KShortcutsEditor_QBaseUpdateMicroFocus((KShortcutsEditor*)self);
+void k_shortcutseditor_super_update_micro_focus(void* self) {
+    KShortcutsEditor_SuperUpdateMicroFocus((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2100,8 +2100,8 @@ void k_shortcutseditor_create(void* self) {
     KShortcutsEditor_Create((KShortcutsEditor*)self);
 }
 
-void k_shortcutseditor_qbase_create(void* self) {
-    KShortcutsEditor_QBaseCreate((KShortcutsEditor*)self);
+void k_shortcutseditor_super_create(void* self) {
+    KShortcutsEditor_SuperCreate((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_create(void* self, void (*callback)()) {
@@ -2112,8 +2112,8 @@ void k_shortcutseditor_destroy(void* self) {
     KShortcutsEditor_Destroy((KShortcutsEditor*)self);
 }
 
-void k_shortcutseditor_qbase_destroy(void* self) {
-    KShortcutsEditor_QBaseDestroy((KShortcutsEditor*)self);
+void k_shortcutseditor_super_destroy(void* self) {
+    KShortcutsEditor_SuperDestroy((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_destroy(void* self, void (*callback)()) {
@@ -2124,8 +2124,8 @@ bool k_shortcutseditor_focus_next_child(void* self) {
     return KShortcutsEditor_FocusNextChild((KShortcutsEditor*)self);
 }
 
-bool k_shortcutseditor_qbase_focus_next_child(void* self) {
-    return KShortcutsEditor_QBaseFocusNextChild((KShortcutsEditor*)self);
+bool k_shortcutseditor_super_focus_next_child(void* self) {
+    return KShortcutsEditor_SuperFocusNextChild((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2136,8 +2136,8 @@ bool k_shortcutseditor_focus_previous_child(void* self) {
     return KShortcutsEditor_FocusPreviousChild((KShortcutsEditor*)self);
 }
 
-bool k_shortcutseditor_qbase_focus_previous_child(void* self) {
-    return KShortcutsEditor_QBaseFocusPreviousChild((KShortcutsEditor*)self);
+bool k_shortcutseditor_super_focus_previous_child(void* self) {
+    return KShortcutsEditor_SuperFocusPreviousChild((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2148,8 +2148,8 @@ QObject* k_shortcutseditor_sender(void* self) {
     return KShortcutsEditor_Sender((KShortcutsEditor*)self);
 }
 
-QObject* k_shortcutseditor_qbase_sender(void* self) {
-    return KShortcutsEditor_QBaseSender((KShortcutsEditor*)self);
+QObject* k_shortcutseditor_super_sender(void* self) {
+    return KShortcutsEditor_SuperSender((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_sender(void* self, QObject* (*callback)()) {
@@ -2160,8 +2160,8 @@ int32_t k_shortcutseditor_sender_signal_index(void* self) {
     return KShortcutsEditor_SenderSignalIndex((KShortcutsEditor*)self);
 }
 
-int32_t k_shortcutseditor_qbase_sender_signal_index(void* self) {
-    return KShortcutsEditor_QBaseSenderSignalIndex((KShortcutsEditor*)self);
+int32_t k_shortcutseditor_super_sender_signal_index(void* self) {
+    return KShortcutsEditor_SuperSenderSignalIndex((KShortcutsEditor*)self);
 }
 
 void k_shortcutseditor_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2172,8 +2172,8 @@ int32_t k_shortcutseditor_receivers(void* self, const char* signal) {
     return KShortcutsEditor_Receivers((KShortcutsEditor*)self, signal);
 }
 
-int32_t k_shortcutseditor_qbase_receivers(void* self, const char* signal) {
-    return KShortcutsEditor_QBaseReceivers((KShortcutsEditor*)self, signal);
+int32_t k_shortcutseditor_super_receivers(void* self, const char* signal) {
+    return KShortcutsEditor_SuperReceivers((KShortcutsEditor*)self, signal);
 }
 
 void k_shortcutseditor_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2184,8 +2184,8 @@ bool k_shortcutseditor_is_signal_connected(void* self, void* signal) {
     return KShortcutsEditor_IsSignalConnected((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
-bool k_shortcutseditor_qbase_is_signal_connected(void* self, void* signal) {
-    return KShortcutsEditor_QBaseIsSignalConnected((KShortcutsEditor*)self, (QMetaMethod*)signal);
+bool k_shortcutseditor_super_is_signal_connected(void* self, void* signal) {
+    return KShortcutsEditor_SuperIsSignalConnected((KShortcutsEditor*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutseditor_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2196,8 +2196,8 @@ double k_shortcutseditor_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KShortcutsEditor_GetDecodedMetricF((KShortcutsEditor*)self, metricA, metricB);
 }
 
-double k_shortcutseditor_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KShortcutsEditor_QBaseGetDecodedMetricF((KShortcutsEditor*)self, metricA, metricB);
+double k_shortcutseditor_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KShortcutsEditor_SuperGetDecodedMetricF((KShortcutsEditor*)self, metricA, metricB);
 }
 
 void k_shortcutseditor_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

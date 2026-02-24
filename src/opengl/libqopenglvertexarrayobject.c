@@ -21,8 +21,8 @@ void q_openglvertexarrayobject_on_meta_object(void* self, const QMetaObject* (*c
     QOpenGLVertexArrayObject_OnMetaObject((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglvertexarrayobject_qbase_meta_object(void* self) {
-    return QOpenGLVertexArrayObject_QBaseMetaObject((QOpenGLVertexArrayObject*)self);
+const QMetaObject* q_openglvertexarrayobject_super_meta_object(void* self) {
+    return QOpenGLVertexArrayObject_SuperMetaObject((QOpenGLVertexArrayObject*)self);
 }
 
 void* q_openglvertexarrayobject_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_openglvertexarrayobject_on_metacast(void* self, void* (*callback)(void*, 
     QOpenGLVertexArrayObject_OnMetacast((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
 }
 
-void* q_openglvertexarrayobject_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLVertexArrayObject_QBaseMetacast((QOpenGLVertexArrayObject*)self, param1);
+void* q_openglvertexarrayobject_super_metacast(void* self, const char* param1) {
+    return QOpenGLVertexArrayObject_SuperMetacast((QOpenGLVertexArrayObject*)self, param1);
 }
 
 int32_t q_openglvertexarrayobject_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_openglvertexarrayobject_on_metacall(void* self, int32_t (*callback)(void*
     QOpenGLVertexArrayObject_OnMetacall((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
 }
 
-int32_t q_openglvertexarrayobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLVertexArrayObject_QBaseMetacall((QOpenGLVertexArrayObject*)self, param1, param2, param3);
+int32_t q_openglvertexarrayobject_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLVertexArrayObject_SuperMetacall((QOpenGLVertexArrayObject*)self, param1, param2, param3);
 }
 
 const char* q_openglvertexarrayobject_tr(const char* s) {
@@ -309,8 +309,8 @@ bool q_openglvertexarrayobject_event(void* self, void* event) {
     return QOpenGLVertexArrayObject_Event((QOpenGLVertexArrayObject*)self, (QEvent*)event);
 }
 
-bool q_openglvertexarrayobject_qbase_event(void* self, void* event) {
-    return QOpenGLVertexArrayObject_QBaseEvent((QOpenGLVertexArrayObject*)self, (QEvent*)event);
+bool q_openglvertexarrayobject_super_event(void* self, void* event) {
+    return QOpenGLVertexArrayObject_SuperEvent((QOpenGLVertexArrayObject*)self, (QEvent*)event);
 }
 
 void q_openglvertexarrayobject_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -321,8 +321,8 @@ bool q_openglvertexarrayobject_event_filter(void* self, void* watched, void* eve
     return QOpenGLVertexArrayObject_EventFilter((QOpenGLVertexArrayObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_openglvertexarrayobject_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLVertexArrayObject_QBaseEventFilter((QOpenGLVertexArrayObject*)self, (QObject*)watched, (QEvent*)event);
+bool q_openglvertexarrayobject_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLVertexArrayObject_SuperEventFilter((QOpenGLVertexArrayObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_openglvertexarrayobject_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -333,8 +333,8 @@ void q_openglvertexarrayobject_timer_event(void* self, void* event) {
     QOpenGLVertexArrayObject_TimerEvent((QOpenGLVertexArrayObject*)self, (QTimerEvent*)event);
 }
 
-void q_openglvertexarrayobject_qbase_timer_event(void* self, void* event) {
-    QOpenGLVertexArrayObject_QBaseTimerEvent((QOpenGLVertexArrayObject*)self, (QTimerEvent*)event);
+void q_openglvertexarrayobject_super_timer_event(void* self, void* event) {
+    QOpenGLVertexArrayObject_SuperTimerEvent((QOpenGLVertexArrayObject*)self, (QTimerEvent*)event);
 }
 
 void q_openglvertexarrayobject_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -345,8 +345,8 @@ void q_openglvertexarrayobject_child_event(void* self, void* event) {
     QOpenGLVertexArrayObject_ChildEvent((QOpenGLVertexArrayObject*)self, (QChildEvent*)event);
 }
 
-void q_openglvertexarrayobject_qbase_child_event(void* self, void* event) {
-    QOpenGLVertexArrayObject_QBaseChildEvent((QOpenGLVertexArrayObject*)self, (QChildEvent*)event);
+void q_openglvertexarrayobject_super_child_event(void* self, void* event) {
+    QOpenGLVertexArrayObject_SuperChildEvent((QOpenGLVertexArrayObject*)self, (QChildEvent*)event);
 }
 
 void q_openglvertexarrayobject_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void q_openglvertexarrayobject_custom_event(void* self, void* event) {
     QOpenGLVertexArrayObject_CustomEvent((QOpenGLVertexArrayObject*)self, (QEvent*)event);
 }
 
-void q_openglvertexarrayobject_qbase_custom_event(void* self, void* event) {
-    QOpenGLVertexArrayObject_QBaseCustomEvent((QOpenGLVertexArrayObject*)self, (QEvent*)event);
+void q_openglvertexarrayobject_super_custom_event(void* self, void* event) {
+    QOpenGLVertexArrayObject_SuperCustomEvent((QOpenGLVertexArrayObject*)self, (QEvent*)event);
 }
 
 void q_openglvertexarrayobject_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ void q_openglvertexarrayobject_connect_notify(void* self, void* signal) {
     QOpenGLVertexArrayObject_ConnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
-void q_openglvertexarrayobject_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLVertexArrayObject_QBaseConnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
+void q_openglvertexarrayobject_super_connect_notify(void* self, void* signal) {
+    QOpenGLVertexArrayObject_SuperConnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
 void q_openglvertexarrayobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ void q_openglvertexarrayobject_disconnect_notify(void* self, void* signal) {
     QOpenGLVertexArrayObject_DisconnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
-void q_openglvertexarrayobject_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLVertexArrayObject_QBaseDisconnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
+void q_openglvertexarrayobject_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLVertexArrayObject_SuperDisconnectNotify((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
 void q_openglvertexarrayobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ QObject* q_openglvertexarrayobject_sender(void* self) {
     return QOpenGLVertexArrayObject_Sender((QOpenGLVertexArrayObject*)self);
 }
 
-QObject* q_openglvertexarrayobject_qbase_sender(void* self) {
-    return QOpenGLVertexArrayObject_QBaseSender((QOpenGLVertexArrayObject*)self);
+QObject* q_openglvertexarrayobject_super_sender(void* self) {
+    return QOpenGLVertexArrayObject_SuperSender((QOpenGLVertexArrayObject*)self);
 }
 
 void q_openglvertexarrayobject_on_sender(void* self, QObject* (*callback)()) {
@@ -405,8 +405,8 @@ int32_t q_openglvertexarrayobject_sender_signal_index(void* self) {
     return QOpenGLVertexArrayObject_SenderSignalIndex((QOpenGLVertexArrayObject*)self);
 }
 
-int32_t q_openglvertexarrayobject_qbase_sender_signal_index(void* self) {
-    return QOpenGLVertexArrayObject_QBaseSenderSignalIndex((QOpenGLVertexArrayObject*)self);
+int32_t q_openglvertexarrayobject_super_sender_signal_index(void* self) {
+    return QOpenGLVertexArrayObject_SuperSenderSignalIndex((QOpenGLVertexArrayObject*)self);
 }
 
 void q_openglvertexarrayobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -417,8 +417,8 @@ int32_t q_openglvertexarrayobject_receivers(void* self, const char* signal) {
     return QOpenGLVertexArrayObject_Receivers((QOpenGLVertexArrayObject*)self, signal);
 }
 
-int32_t q_openglvertexarrayobject_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLVertexArrayObject_QBaseReceivers((QOpenGLVertexArrayObject*)self, signal);
+int32_t q_openglvertexarrayobject_super_receivers(void* self, const char* signal) {
+    return QOpenGLVertexArrayObject_SuperReceivers((QOpenGLVertexArrayObject*)self, signal);
 }
 
 void q_openglvertexarrayobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -429,8 +429,8 @@ bool q_openglvertexarrayobject_is_signal_connected(void* self, void* signal) {
     return QOpenGLVertexArrayObject_IsSignalConnected((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
-bool q_openglvertexarrayobject_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLVertexArrayObject_QBaseIsSignalConnected((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
+bool q_openglvertexarrayobject_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLVertexArrayObject_SuperIsSignalConnected((QOpenGLVertexArrayObject*)self, (QMetaMethod*)signal);
 }
 
 void q_openglvertexarrayobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

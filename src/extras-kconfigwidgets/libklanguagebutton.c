@@ -37,8 +37,8 @@ void k_languagebutton_on_meta_object(void* self, const QMetaObject* (*callback)(
     KLanguageButton_OnMetaObject((KLanguageButton*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_languagebutton_qbase_meta_object(void* self) {
-    return KLanguageButton_QBaseMetaObject((KLanguageButton*)self);
+const QMetaObject* k_languagebutton_super_meta_object(void* self) {
+    return KLanguageButton_SuperMetaObject((KLanguageButton*)self);
 }
 
 void* k_languagebutton_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void k_languagebutton_on_metacast(void* self, void* (*callback)(void*, const cha
     KLanguageButton_OnMetacast((KLanguageButton*)self, (intptr_t)callback);
 }
 
-void* k_languagebutton_qbase_metacast(void* self, const char* param1) {
-    return KLanguageButton_QBaseMetacast((KLanguageButton*)self, param1);
+void* k_languagebutton_super_metacast(void* self, const char* param1) {
+    return KLanguageButton_SuperMetacast((KLanguageButton*)self, param1);
 }
 
 int32_t k_languagebutton_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void k_languagebutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KLanguageButton_OnMetacall((KLanguageButton*)self, (intptr_t)callback);
 }
 
-int32_t k_languagebutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLanguageButton_QBaseMetacall((KLanguageButton*)self, param1, param2, param3);
+int32_t k_languagebutton_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLanguageButton_SuperMetacall((KLanguageButton*)self, param1, param2, param3);
 }
 
 const char* k_languagebutton_tr(const char* s) {
@@ -1542,8 +1542,8 @@ int32_t k_languagebutton_dev_type(void* self) {
     return KLanguageButton_DevType((KLanguageButton*)self);
 }
 
-int32_t k_languagebutton_qbase_dev_type(void* self) {
-    return KLanguageButton_QBaseDevType((KLanguageButton*)self);
+int32_t k_languagebutton_super_dev_type(void* self) {
+    return KLanguageButton_SuperDevType((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1554,8 +1554,8 @@ void k_languagebutton_set_visible(void* self, bool visible) {
     KLanguageButton_SetVisible((KLanguageButton*)self, visible);
 }
 
-void k_languagebutton_qbase_set_visible(void* self, bool visible) {
-    KLanguageButton_QBaseSetVisible((KLanguageButton*)self, visible);
+void k_languagebutton_super_set_visible(void* self, bool visible) {
+    KLanguageButton_SuperSetVisible((KLanguageButton*)self, visible);
 }
 
 void k_languagebutton_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1566,8 +1566,8 @@ QSize* k_languagebutton_size_hint(void* self) {
     return KLanguageButton_SizeHint((KLanguageButton*)self);
 }
 
-QSize* k_languagebutton_qbase_size_hint(void* self) {
-    return KLanguageButton_QBaseSizeHint((KLanguageButton*)self);
+QSize* k_languagebutton_super_size_hint(void* self) {
+    return KLanguageButton_SuperSizeHint((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1578,8 +1578,8 @@ QSize* k_languagebutton_minimum_size_hint(void* self) {
     return KLanguageButton_MinimumSizeHint((KLanguageButton*)self);
 }
 
-QSize* k_languagebutton_qbase_minimum_size_hint(void* self) {
-    return KLanguageButton_QBaseMinimumSizeHint((KLanguageButton*)self);
+QSize* k_languagebutton_super_minimum_size_hint(void* self) {
+    return KLanguageButton_SuperMinimumSizeHint((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1590,8 +1590,8 @@ int32_t k_languagebutton_height_for_width(void* self, int param1) {
     return KLanguageButton_HeightForWidth((KLanguageButton*)self, param1);
 }
 
-int32_t k_languagebutton_qbase_height_for_width(void* self, int param1) {
-    return KLanguageButton_QBaseHeightForWidth((KLanguageButton*)self, param1);
+int32_t k_languagebutton_super_height_for_width(void* self, int param1) {
+    return KLanguageButton_SuperHeightForWidth((KLanguageButton*)self, param1);
 }
 
 void k_languagebutton_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1602,8 +1602,8 @@ bool k_languagebutton_has_height_for_width(void* self) {
     return KLanguageButton_HasHeightForWidth((KLanguageButton*)self);
 }
 
-bool k_languagebutton_qbase_has_height_for_width(void* self) {
-    return KLanguageButton_QBaseHasHeightForWidth((KLanguageButton*)self);
+bool k_languagebutton_super_has_height_for_width(void* self) {
+    return KLanguageButton_SuperHasHeightForWidth((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1614,8 +1614,8 @@ QPaintEngine* k_languagebutton_paint_engine(void* self) {
     return KLanguageButton_PaintEngine((KLanguageButton*)self);
 }
 
-QPaintEngine* k_languagebutton_qbase_paint_engine(void* self) {
-    return KLanguageButton_QBasePaintEngine((KLanguageButton*)self);
+QPaintEngine* k_languagebutton_super_paint_engine(void* self) {
+    return KLanguageButton_SuperPaintEngine((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1626,8 +1626,8 @@ bool k_languagebutton_event(void* self, void* event) {
     return KLanguageButton_Event((KLanguageButton*)self, (QEvent*)event);
 }
 
-bool k_languagebutton_qbase_event(void* self, void* event) {
-    return KLanguageButton_QBaseEvent((KLanguageButton*)self, (QEvent*)event);
+bool k_languagebutton_super_event(void* self, void* event) {
+    return KLanguageButton_SuperEvent((KLanguageButton*)self, (QEvent*)event);
 }
 
 void k_languagebutton_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1638,8 +1638,8 @@ void k_languagebutton_mouse_press_event(void* self, void* event) {
     KLanguageButton_MousePressEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
-void k_languagebutton_qbase_mouse_press_event(void* self, void* event) {
-    KLanguageButton_QBaseMousePressEvent((KLanguageButton*)self, (QMouseEvent*)event);
+void k_languagebutton_super_mouse_press_event(void* self, void* event) {
+    KLanguageButton_SuperMousePressEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
 void k_languagebutton_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1650,8 +1650,8 @@ void k_languagebutton_mouse_release_event(void* self, void* event) {
     KLanguageButton_MouseReleaseEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
-void k_languagebutton_qbase_mouse_release_event(void* self, void* event) {
-    KLanguageButton_QBaseMouseReleaseEvent((KLanguageButton*)self, (QMouseEvent*)event);
+void k_languagebutton_super_mouse_release_event(void* self, void* event) {
+    KLanguageButton_SuperMouseReleaseEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
 void k_languagebutton_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1662,8 +1662,8 @@ void k_languagebutton_mouse_double_click_event(void* self, void* event) {
     KLanguageButton_MouseDoubleClickEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
-void k_languagebutton_qbase_mouse_double_click_event(void* self, void* event) {
-    KLanguageButton_QBaseMouseDoubleClickEvent((KLanguageButton*)self, (QMouseEvent*)event);
+void k_languagebutton_super_mouse_double_click_event(void* self, void* event) {
+    KLanguageButton_SuperMouseDoubleClickEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
 void k_languagebutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1674,8 +1674,8 @@ void k_languagebutton_mouse_move_event(void* self, void* event) {
     KLanguageButton_MouseMoveEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
-void k_languagebutton_qbase_mouse_move_event(void* self, void* event) {
-    KLanguageButton_QBaseMouseMoveEvent((KLanguageButton*)self, (QMouseEvent*)event);
+void k_languagebutton_super_mouse_move_event(void* self, void* event) {
+    KLanguageButton_SuperMouseMoveEvent((KLanguageButton*)self, (QMouseEvent*)event);
 }
 
 void k_languagebutton_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1686,8 +1686,8 @@ void k_languagebutton_wheel_event(void* self, void* event) {
     KLanguageButton_WheelEvent((KLanguageButton*)self, (QWheelEvent*)event);
 }
 
-void k_languagebutton_qbase_wheel_event(void* self, void* event) {
-    KLanguageButton_QBaseWheelEvent((KLanguageButton*)self, (QWheelEvent*)event);
+void k_languagebutton_super_wheel_event(void* self, void* event) {
+    KLanguageButton_SuperWheelEvent((KLanguageButton*)self, (QWheelEvent*)event);
 }
 
 void k_languagebutton_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1698,8 +1698,8 @@ void k_languagebutton_key_press_event(void* self, void* event) {
     KLanguageButton_KeyPressEvent((KLanguageButton*)self, (QKeyEvent*)event);
 }
 
-void k_languagebutton_qbase_key_press_event(void* self, void* event) {
-    KLanguageButton_QBaseKeyPressEvent((KLanguageButton*)self, (QKeyEvent*)event);
+void k_languagebutton_super_key_press_event(void* self, void* event) {
+    KLanguageButton_SuperKeyPressEvent((KLanguageButton*)self, (QKeyEvent*)event);
 }
 
 void k_languagebutton_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1710,8 +1710,8 @@ void k_languagebutton_key_release_event(void* self, void* event) {
     KLanguageButton_KeyReleaseEvent((KLanguageButton*)self, (QKeyEvent*)event);
 }
 
-void k_languagebutton_qbase_key_release_event(void* self, void* event) {
-    KLanguageButton_QBaseKeyReleaseEvent((KLanguageButton*)self, (QKeyEvent*)event);
+void k_languagebutton_super_key_release_event(void* self, void* event) {
+    KLanguageButton_SuperKeyReleaseEvent((KLanguageButton*)self, (QKeyEvent*)event);
 }
 
 void k_languagebutton_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1722,8 +1722,8 @@ void k_languagebutton_focus_in_event(void* self, void* event) {
     KLanguageButton_FocusInEvent((KLanguageButton*)self, (QFocusEvent*)event);
 }
 
-void k_languagebutton_qbase_focus_in_event(void* self, void* event) {
-    KLanguageButton_QBaseFocusInEvent((KLanguageButton*)self, (QFocusEvent*)event);
+void k_languagebutton_super_focus_in_event(void* self, void* event) {
+    KLanguageButton_SuperFocusInEvent((KLanguageButton*)self, (QFocusEvent*)event);
 }
 
 void k_languagebutton_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1734,8 +1734,8 @@ void k_languagebutton_focus_out_event(void* self, void* event) {
     KLanguageButton_FocusOutEvent((KLanguageButton*)self, (QFocusEvent*)event);
 }
 
-void k_languagebutton_qbase_focus_out_event(void* self, void* event) {
-    KLanguageButton_QBaseFocusOutEvent((KLanguageButton*)self, (QFocusEvent*)event);
+void k_languagebutton_super_focus_out_event(void* self, void* event) {
+    KLanguageButton_SuperFocusOutEvent((KLanguageButton*)self, (QFocusEvent*)event);
 }
 
 void k_languagebutton_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1746,8 +1746,8 @@ void k_languagebutton_enter_event(void* self, void* event) {
     KLanguageButton_EnterEvent((KLanguageButton*)self, (QEnterEvent*)event);
 }
 
-void k_languagebutton_qbase_enter_event(void* self, void* event) {
-    KLanguageButton_QBaseEnterEvent((KLanguageButton*)self, (QEnterEvent*)event);
+void k_languagebutton_super_enter_event(void* self, void* event) {
+    KLanguageButton_SuperEnterEvent((KLanguageButton*)self, (QEnterEvent*)event);
 }
 
 void k_languagebutton_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1758,8 +1758,8 @@ void k_languagebutton_leave_event(void* self, void* event) {
     KLanguageButton_LeaveEvent((KLanguageButton*)self, (QEvent*)event);
 }
 
-void k_languagebutton_qbase_leave_event(void* self, void* event) {
-    KLanguageButton_QBaseLeaveEvent((KLanguageButton*)self, (QEvent*)event);
+void k_languagebutton_super_leave_event(void* self, void* event) {
+    KLanguageButton_SuperLeaveEvent((KLanguageButton*)self, (QEvent*)event);
 }
 
 void k_languagebutton_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1770,8 +1770,8 @@ void k_languagebutton_paint_event(void* self, void* event) {
     KLanguageButton_PaintEvent((KLanguageButton*)self, (QPaintEvent*)event);
 }
 
-void k_languagebutton_qbase_paint_event(void* self, void* event) {
-    KLanguageButton_QBasePaintEvent((KLanguageButton*)self, (QPaintEvent*)event);
+void k_languagebutton_super_paint_event(void* self, void* event) {
+    KLanguageButton_SuperPaintEvent((KLanguageButton*)self, (QPaintEvent*)event);
 }
 
 void k_languagebutton_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1782,8 +1782,8 @@ void k_languagebutton_move_event(void* self, void* event) {
     KLanguageButton_MoveEvent((KLanguageButton*)self, (QMoveEvent*)event);
 }
 
-void k_languagebutton_qbase_move_event(void* self, void* event) {
-    KLanguageButton_QBaseMoveEvent((KLanguageButton*)self, (QMoveEvent*)event);
+void k_languagebutton_super_move_event(void* self, void* event) {
+    KLanguageButton_SuperMoveEvent((KLanguageButton*)self, (QMoveEvent*)event);
 }
 
 void k_languagebutton_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_languagebutton_resize_event(void* self, void* event) {
     KLanguageButton_ResizeEvent((KLanguageButton*)self, (QResizeEvent*)event);
 }
 
-void k_languagebutton_qbase_resize_event(void* self, void* event) {
-    KLanguageButton_QBaseResizeEvent((KLanguageButton*)self, (QResizeEvent*)event);
+void k_languagebutton_super_resize_event(void* self, void* event) {
+    KLanguageButton_SuperResizeEvent((KLanguageButton*)self, (QResizeEvent*)event);
 }
 
 void k_languagebutton_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_languagebutton_close_event(void* self, void* event) {
     KLanguageButton_CloseEvent((KLanguageButton*)self, (QCloseEvent*)event);
 }
 
-void k_languagebutton_qbase_close_event(void* self, void* event) {
-    KLanguageButton_QBaseCloseEvent((KLanguageButton*)self, (QCloseEvent*)event);
+void k_languagebutton_super_close_event(void* self, void* event) {
+    KLanguageButton_SuperCloseEvent((KLanguageButton*)self, (QCloseEvent*)event);
 }
 
 void k_languagebutton_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_languagebutton_context_menu_event(void* self, void* event) {
     KLanguageButton_ContextMenuEvent((KLanguageButton*)self, (QContextMenuEvent*)event);
 }
 
-void k_languagebutton_qbase_context_menu_event(void* self, void* event) {
-    KLanguageButton_QBaseContextMenuEvent((KLanguageButton*)self, (QContextMenuEvent*)event);
+void k_languagebutton_super_context_menu_event(void* self, void* event) {
+    KLanguageButton_SuperContextMenuEvent((KLanguageButton*)self, (QContextMenuEvent*)event);
 }
 
 void k_languagebutton_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_languagebutton_tablet_event(void* self, void* event) {
     KLanguageButton_TabletEvent((KLanguageButton*)self, (QTabletEvent*)event);
 }
 
-void k_languagebutton_qbase_tablet_event(void* self, void* event) {
-    KLanguageButton_QBaseTabletEvent((KLanguageButton*)self, (QTabletEvent*)event);
+void k_languagebutton_super_tablet_event(void* self, void* event) {
+    KLanguageButton_SuperTabletEvent((KLanguageButton*)self, (QTabletEvent*)event);
 }
 
 void k_languagebutton_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_languagebutton_action_event(void* self, void* event) {
     KLanguageButton_ActionEvent((KLanguageButton*)self, (QActionEvent*)event);
 }
 
-void k_languagebutton_qbase_action_event(void* self, void* event) {
-    KLanguageButton_QBaseActionEvent((KLanguageButton*)self, (QActionEvent*)event);
+void k_languagebutton_super_action_event(void* self, void* event) {
+    KLanguageButton_SuperActionEvent((KLanguageButton*)self, (QActionEvent*)event);
 }
 
 void k_languagebutton_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_languagebutton_drag_enter_event(void* self, void* event) {
     KLanguageButton_DragEnterEvent((KLanguageButton*)self, (QDragEnterEvent*)event);
 }
 
-void k_languagebutton_qbase_drag_enter_event(void* self, void* event) {
-    KLanguageButton_QBaseDragEnterEvent((KLanguageButton*)self, (QDragEnterEvent*)event);
+void k_languagebutton_super_drag_enter_event(void* self, void* event) {
+    KLanguageButton_SuperDragEnterEvent((KLanguageButton*)self, (QDragEnterEvent*)event);
 }
 
 void k_languagebutton_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ void k_languagebutton_drag_move_event(void* self, void* event) {
     KLanguageButton_DragMoveEvent((KLanguageButton*)self, (QDragMoveEvent*)event);
 }
 
-void k_languagebutton_qbase_drag_move_event(void* self, void* event) {
-    KLanguageButton_QBaseDragMoveEvent((KLanguageButton*)self, (QDragMoveEvent*)event);
+void k_languagebutton_super_drag_move_event(void* self, void* event) {
+    KLanguageButton_SuperDragMoveEvent((KLanguageButton*)self, (QDragMoveEvent*)event);
 }
 
 void k_languagebutton_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ void k_languagebutton_drag_leave_event(void* self, void* event) {
     KLanguageButton_DragLeaveEvent((KLanguageButton*)self, (QDragLeaveEvent*)event);
 }
 
-void k_languagebutton_qbase_drag_leave_event(void* self, void* event) {
-    KLanguageButton_QBaseDragLeaveEvent((KLanguageButton*)self, (QDragLeaveEvent*)event);
+void k_languagebutton_super_drag_leave_event(void* self, void* event) {
+    KLanguageButton_SuperDragLeaveEvent((KLanguageButton*)self, (QDragLeaveEvent*)event);
 }
 
 void k_languagebutton_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void k_languagebutton_drop_event(void* self, void* event) {
     KLanguageButton_DropEvent((KLanguageButton*)self, (QDropEvent*)event);
 }
 
-void k_languagebutton_qbase_drop_event(void* self, void* event) {
-    KLanguageButton_QBaseDropEvent((KLanguageButton*)self, (QDropEvent*)event);
+void k_languagebutton_super_drop_event(void* self, void* event) {
+    KLanguageButton_SuperDropEvent((KLanguageButton*)self, (QDropEvent*)event);
 }
 
 void k_languagebutton_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_languagebutton_show_event(void* self, void* event) {
     KLanguageButton_ShowEvent((KLanguageButton*)self, (QShowEvent*)event);
 }
 
-void k_languagebutton_qbase_show_event(void* self, void* event) {
-    KLanguageButton_QBaseShowEvent((KLanguageButton*)self, (QShowEvent*)event);
+void k_languagebutton_super_show_event(void* self, void* event) {
+    KLanguageButton_SuperShowEvent((KLanguageButton*)self, (QShowEvent*)event);
 }
 
 void k_languagebutton_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_languagebutton_hide_event(void* self, void* event) {
     KLanguageButton_HideEvent((KLanguageButton*)self, (QHideEvent*)event);
 }
 
-void k_languagebutton_qbase_hide_event(void* self, void* event) {
-    KLanguageButton_QBaseHideEvent((KLanguageButton*)self, (QHideEvent*)event);
+void k_languagebutton_super_hide_event(void* self, void* event) {
+    KLanguageButton_SuperHideEvent((KLanguageButton*)self, (QHideEvent*)event);
 }
 
 void k_languagebutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ bool k_languagebutton_native_event(void* self, char* eventType, void* message, i
     return KLanguageButton_NativeEvent((KLanguageButton*)self, qstring(eventType), message, result);
 }
 
-bool k_languagebutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KLanguageButton_QBaseNativeEvent((KLanguageButton*)self, qstring(eventType), message, result);
+bool k_languagebutton_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KLanguageButton_SuperNativeEvent((KLanguageButton*)self, qstring(eventType), message, result);
 }
 
 void k_languagebutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1938,8 +1938,8 @@ void k_languagebutton_change_event(void* self, void* param1) {
     KLanguageButton_ChangeEvent((KLanguageButton*)self, (QEvent*)param1);
 }
 
-void k_languagebutton_qbase_change_event(void* self, void* param1) {
-    KLanguageButton_QBaseChangeEvent((KLanguageButton*)self, (QEvent*)param1);
+void k_languagebutton_super_change_event(void* self, void* param1) {
+    KLanguageButton_SuperChangeEvent((KLanguageButton*)self, (QEvent*)param1);
 }
 
 void k_languagebutton_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ int32_t k_languagebutton_metric(void* self, int32_t param1) {
     return KLanguageButton_Metric((KLanguageButton*)self, param1);
 }
 
-int32_t k_languagebutton_qbase_metric(void* self, int32_t param1) {
-    return KLanguageButton_QBaseMetric((KLanguageButton*)self, param1);
+int32_t k_languagebutton_super_metric(void* self, int32_t param1) {
+    return KLanguageButton_SuperMetric((KLanguageButton*)self, param1);
 }
 
 void k_languagebutton_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1962,8 +1962,8 @@ void k_languagebutton_init_painter(void* self, void* painter) {
     KLanguageButton_InitPainter((KLanguageButton*)self, (QPainter*)painter);
 }
 
-void k_languagebutton_qbase_init_painter(void* self, void* painter) {
-    KLanguageButton_QBaseInitPainter((KLanguageButton*)self, (QPainter*)painter);
+void k_languagebutton_super_init_painter(void* self, void* painter) {
+    KLanguageButton_SuperInitPainter((KLanguageButton*)self, (QPainter*)painter);
 }
 
 void k_languagebutton_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ QPaintDevice* k_languagebutton_redirected(void* self, void* offset) {
     return KLanguageButton_Redirected((KLanguageButton*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_languagebutton_qbase_redirected(void* self, void* offset) {
-    return KLanguageButton_QBaseRedirected((KLanguageButton*)self, (QPoint*)offset);
+QPaintDevice* k_languagebutton_super_redirected(void* self, void* offset) {
+    return KLanguageButton_SuperRedirected((KLanguageButton*)self, (QPoint*)offset);
 }
 
 void k_languagebutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ QPainter* k_languagebutton_shared_painter(void* self) {
     return KLanguageButton_SharedPainter((KLanguageButton*)self);
 }
 
-QPainter* k_languagebutton_qbase_shared_painter(void* self) {
-    return KLanguageButton_QBaseSharedPainter((KLanguageButton*)self);
+QPainter* k_languagebutton_super_shared_painter(void* self) {
+    return KLanguageButton_SuperSharedPainter((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1998,8 +1998,8 @@ void k_languagebutton_input_method_event(void* self, void* param1) {
     KLanguageButton_InputMethodEvent((KLanguageButton*)self, (QInputMethodEvent*)param1);
 }
 
-void k_languagebutton_qbase_input_method_event(void* self, void* param1) {
-    KLanguageButton_QBaseInputMethodEvent((KLanguageButton*)self, (QInputMethodEvent*)param1);
+void k_languagebutton_super_input_method_event(void* self, void* param1) {
+    KLanguageButton_SuperInputMethodEvent((KLanguageButton*)self, (QInputMethodEvent*)param1);
 }
 
 void k_languagebutton_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ QVariant* k_languagebutton_input_method_query(void* self, int32_t param1) {
     return KLanguageButton_InputMethodQuery((KLanguageButton*)self, param1);
 }
 
-QVariant* k_languagebutton_qbase_input_method_query(void* self, int32_t param1) {
-    return KLanguageButton_QBaseInputMethodQuery((KLanguageButton*)self, param1);
+QVariant* k_languagebutton_super_input_method_query(void* self, int32_t param1) {
+    return KLanguageButton_SuperInputMethodQuery((KLanguageButton*)self, param1);
 }
 
 void k_languagebutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2022,8 +2022,8 @@ bool k_languagebutton_focus_next_prev_child(void* self, bool next) {
     return KLanguageButton_FocusNextPrevChild((KLanguageButton*)self, next);
 }
 
-bool k_languagebutton_qbase_focus_next_prev_child(void* self, bool next) {
-    return KLanguageButton_QBaseFocusNextPrevChild((KLanguageButton*)self, next);
+bool k_languagebutton_super_focus_next_prev_child(void* self, bool next) {
+    return KLanguageButton_SuperFocusNextPrevChild((KLanguageButton*)self, next);
 }
 
 void k_languagebutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2034,8 +2034,8 @@ bool k_languagebutton_event_filter(void* self, void* watched, void* event) {
     return KLanguageButton_EventFilter((KLanguageButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_languagebutton_qbase_event_filter(void* self, void* watched, void* event) {
-    return KLanguageButton_QBaseEventFilter((KLanguageButton*)self, (QObject*)watched, (QEvent*)event);
+bool k_languagebutton_super_event_filter(void* self, void* watched, void* event) {
+    return KLanguageButton_SuperEventFilter((KLanguageButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_languagebutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_languagebutton_timer_event(void* self, void* event) {
     KLanguageButton_TimerEvent((KLanguageButton*)self, (QTimerEvent*)event);
 }
 
-void k_languagebutton_qbase_timer_event(void* self, void* event) {
-    KLanguageButton_QBaseTimerEvent((KLanguageButton*)self, (QTimerEvent*)event);
+void k_languagebutton_super_timer_event(void* self, void* event) {
+    KLanguageButton_SuperTimerEvent((KLanguageButton*)self, (QTimerEvent*)event);
 }
 
 void k_languagebutton_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_languagebutton_child_event(void* self, void* event) {
     KLanguageButton_ChildEvent((KLanguageButton*)self, (QChildEvent*)event);
 }
 
-void k_languagebutton_qbase_child_event(void* self, void* event) {
-    KLanguageButton_QBaseChildEvent((KLanguageButton*)self, (QChildEvent*)event);
+void k_languagebutton_super_child_event(void* self, void* event) {
+    KLanguageButton_SuperChildEvent((KLanguageButton*)self, (QChildEvent*)event);
 }
 
 void k_languagebutton_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_languagebutton_custom_event(void* self, void* event) {
     KLanguageButton_CustomEvent((KLanguageButton*)self, (QEvent*)event);
 }
 
-void k_languagebutton_qbase_custom_event(void* self, void* event) {
-    KLanguageButton_QBaseCustomEvent((KLanguageButton*)self, (QEvent*)event);
+void k_languagebutton_super_custom_event(void* self, void* event) {
+    KLanguageButton_SuperCustomEvent((KLanguageButton*)self, (QEvent*)event);
 }
 
 void k_languagebutton_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void k_languagebutton_connect_notify(void* self, void* signal) {
     KLanguageButton_ConnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
-void k_languagebutton_qbase_connect_notify(void* self, void* signal) {
-    KLanguageButton_QBaseConnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
+void k_languagebutton_super_connect_notify(void* self, void* signal) {
+    KLanguageButton_SuperConnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
 void k_languagebutton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void k_languagebutton_disconnect_notify(void* self, void* signal) {
     KLanguageButton_DisconnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
-void k_languagebutton_qbase_disconnect_notify(void* self, void* signal) {
-    KLanguageButton_QBaseDisconnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
+void k_languagebutton_super_disconnect_notify(void* self, void* signal) {
+    KLanguageButton_SuperDisconnectNotify((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
 void k_languagebutton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void k_languagebutton_update_micro_focus(void* self) {
     KLanguageButton_UpdateMicroFocus((KLanguageButton*)self);
 }
 
-void k_languagebutton_qbase_update_micro_focus(void* self) {
-    KLanguageButton_QBaseUpdateMicroFocus((KLanguageButton*)self);
+void k_languagebutton_super_update_micro_focus(void* self) {
+    KLanguageButton_SuperUpdateMicroFocus((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2118,8 +2118,8 @@ void k_languagebutton_create(void* self) {
     KLanguageButton_Create((KLanguageButton*)self);
 }
 
-void k_languagebutton_qbase_create(void* self) {
-    KLanguageButton_QBaseCreate((KLanguageButton*)self);
+void k_languagebutton_super_create(void* self) {
+    KLanguageButton_SuperCreate((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_create(void* self, void (*callback)()) {
@@ -2130,8 +2130,8 @@ void k_languagebutton_destroy(void* self) {
     KLanguageButton_Destroy((KLanguageButton*)self);
 }
 
-void k_languagebutton_qbase_destroy(void* self) {
-    KLanguageButton_QBaseDestroy((KLanguageButton*)self);
+void k_languagebutton_super_destroy(void* self) {
+    KLanguageButton_SuperDestroy((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_destroy(void* self, void (*callback)()) {
@@ -2142,8 +2142,8 @@ bool k_languagebutton_focus_next_child(void* self) {
     return KLanguageButton_FocusNextChild((KLanguageButton*)self);
 }
 
-bool k_languagebutton_qbase_focus_next_child(void* self) {
-    return KLanguageButton_QBaseFocusNextChild((KLanguageButton*)self);
+bool k_languagebutton_super_focus_next_child(void* self) {
+    return KLanguageButton_SuperFocusNextChild((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2154,8 +2154,8 @@ bool k_languagebutton_focus_previous_child(void* self) {
     return KLanguageButton_FocusPreviousChild((KLanguageButton*)self);
 }
 
-bool k_languagebutton_qbase_focus_previous_child(void* self) {
-    return KLanguageButton_QBaseFocusPreviousChild((KLanguageButton*)self);
+bool k_languagebutton_super_focus_previous_child(void* self) {
+    return KLanguageButton_SuperFocusPreviousChild((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2166,8 +2166,8 @@ QObject* k_languagebutton_sender(void* self) {
     return KLanguageButton_Sender((KLanguageButton*)self);
 }
 
-QObject* k_languagebutton_qbase_sender(void* self) {
-    return KLanguageButton_QBaseSender((KLanguageButton*)self);
+QObject* k_languagebutton_super_sender(void* self) {
+    return KLanguageButton_SuperSender((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_sender(void* self, QObject* (*callback)()) {
@@ -2178,8 +2178,8 @@ int32_t k_languagebutton_sender_signal_index(void* self) {
     return KLanguageButton_SenderSignalIndex((KLanguageButton*)self);
 }
 
-int32_t k_languagebutton_qbase_sender_signal_index(void* self) {
-    return KLanguageButton_QBaseSenderSignalIndex((KLanguageButton*)self);
+int32_t k_languagebutton_super_sender_signal_index(void* self) {
+    return KLanguageButton_SuperSenderSignalIndex((KLanguageButton*)self);
 }
 
 void k_languagebutton_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2190,8 +2190,8 @@ int32_t k_languagebutton_receivers(void* self, const char* signal) {
     return KLanguageButton_Receivers((KLanguageButton*)self, signal);
 }
 
-int32_t k_languagebutton_qbase_receivers(void* self, const char* signal) {
-    return KLanguageButton_QBaseReceivers((KLanguageButton*)self, signal);
+int32_t k_languagebutton_super_receivers(void* self, const char* signal) {
+    return KLanguageButton_SuperReceivers((KLanguageButton*)self, signal);
 }
 
 void k_languagebutton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2202,8 +2202,8 @@ bool k_languagebutton_is_signal_connected(void* self, void* signal) {
     return KLanguageButton_IsSignalConnected((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
-bool k_languagebutton_qbase_is_signal_connected(void* self, void* signal) {
-    return KLanguageButton_QBaseIsSignalConnected((KLanguageButton*)self, (QMetaMethod*)signal);
+bool k_languagebutton_super_is_signal_connected(void* self, void* signal) {
+    return KLanguageButton_SuperIsSignalConnected((KLanguageButton*)self, (QMetaMethod*)signal);
 }
 
 void k_languagebutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2214,8 +2214,8 @@ double k_languagebutton_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KLanguageButton_GetDecodedMetricF((KLanguageButton*)self, metricA, metricB);
 }
 
-double k_languagebutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KLanguageButton_QBaseGetDecodedMetricF((KLanguageButton*)self, metricA, metricB);
+double k_languagebutton_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KLanguageButton_SuperGetDecodedMetricF((KLanguageButton*)self, metricA, metricB);
 }
 
 void k_languagebutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

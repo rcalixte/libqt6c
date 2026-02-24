@@ -24,8 +24,8 @@ void k_dirlister_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KDirLister_OnMetaObject((KDirLister*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dirlister_qbase_meta_object(void* self) {
-    return KDirLister_QBaseMetaObject((KDirLister*)self);
+const QMetaObject* k_dirlister_super_meta_object(void* self) {
+    return KDirLister_SuperMetaObject((KDirLister*)self);
 }
 
 void* k_dirlister_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_dirlister_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     KDirLister_OnMetacast((KDirLister*)self, (intptr_t)callback);
 }
 
-void* k_dirlister_qbase_metacast(void* self, const char* param1) {
-    return KDirLister_QBaseMetacast((KDirLister*)self, param1);
+void* k_dirlister_super_metacast(void* self, const char* param1) {
+    return KDirLister_SuperMetacast((KDirLister*)self, param1);
 }
 
 int32_t k_dirlister_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_dirlister_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     KDirLister_OnMetacall((KDirLister*)self, (intptr_t)callback);
 }
 
-int32_t k_dirlister_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDirLister_QBaseMetacall((KDirLister*)self, param1, param2, param3);
+int32_t k_dirlister_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDirLister_SuperMetacall((KDirLister*)self, param1, param2, param3);
 }
 
 const char* k_dirlister_tr(const char* s) {
@@ -79,8 +79,8 @@ void k_dirlister_on_job_started(void* self, void (*callback)(void*, void*)) {
     KDirLister_OnJobStarted((KDirLister*)self, (intptr_t)callback);
 }
 
-void k_dirlister_qbase_job_started(void* self, void* param1) {
-    KDirLister_QBaseJobStarted((KDirLister*)self, (KIO__ListJob*)param1);
+void k_dirlister_super_job_started(void* self, void* param1) {
+    KDirLister_SuperJobStarted((KDirLister*)self, (KIO__ListJob*)param1);
 }
 
 const char* k_dirlister_tr2(const char* s, const char* c) {
@@ -637,8 +637,8 @@ bool k_dirlister_event(void* self, void* event) {
     return KDirLister_Event((KDirLister*)self, (QEvent*)event);
 }
 
-bool k_dirlister_qbase_event(void* self, void* event) {
-    return KDirLister_QBaseEvent((KDirLister*)self, (QEvent*)event);
+bool k_dirlister_super_event(void* self, void* event) {
+    return KDirLister_SuperEvent((KDirLister*)self, (QEvent*)event);
 }
 
 void k_dirlister_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -649,8 +649,8 @@ bool k_dirlister_event_filter(void* self, void* watched, void* event) {
     return KDirLister_EventFilter((KDirLister*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_dirlister_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDirLister_QBaseEventFilter((KDirLister*)self, (QObject*)watched, (QEvent*)event);
+bool k_dirlister_super_event_filter(void* self, void* watched, void* event) {
+    return KDirLister_SuperEventFilter((KDirLister*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_dirlister_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -661,8 +661,8 @@ void k_dirlister_timer_event(void* self, void* event) {
     KDirLister_TimerEvent((KDirLister*)self, (QTimerEvent*)event);
 }
 
-void k_dirlister_qbase_timer_event(void* self, void* event) {
-    KDirLister_QBaseTimerEvent((KDirLister*)self, (QTimerEvent*)event);
+void k_dirlister_super_timer_event(void* self, void* event) {
+    KDirLister_SuperTimerEvent((KDirLister*)self, (QTimerEvent*)event);
 }
 
 void k_dirlister_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -673,8 +673,8 @@ void k_dirlister_child_event(void* self, void* event) {
     KDirLister_ChildEvent((KDirLister*)self, (QChildEvent*)event);
 }
 
-void k_dirlister_qbase_child_event(void* self, void* event) {
-    KDirLister_QBaseChildEvent((KDirLister*)self, (QChildEvent*)event);
+void k_dirlister_super_child_event(void* self, void* event) {
+    KDirLister_SuperChildEvent((KDirLister*)self, (QChildEvent*)event);
 }
 
 void k_dirlister_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -685,8 +685,8 @@ void k_dirlister_custom_event(void* self, void* event) {
     KDirLister_CustomEvent((KDirLister*)self, (QEvent*)event);
 }
 
-void k_dirlister_qbase_custom_event(void* self, void* event) {
-    KDirLister_QBaseCustomEvent((KDirLister*)self, (QEvent*)event);
+void k_dirlister_super_custom_event(void* self, void* event) {
+    KDirLister_SuperCustomEvent((KDirLister*)self, (QEvent*)event);
 }
 
 void k_dirlister_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -697,8 +697,8 @@ void k_dirlister_connect_notify(void* self, void* signal) {
     KDirLister_ConnectNotify((KDirLister*)self, (QMetaMethod*)signal);
 }
 
-void k_dirlister_qbase_connect_notify(void* self, void* signal) {
-    KDirLister_QBaseConnectNotify((KDirLister*)self, (QMetaMethod*)signal);
+void k_dirlister_super_connect_notify(void* self, void* signal) {
+    KDirLister_SuperConnectNotify((KDirLister*)self, (QMetaMethod*)signal);
 }
 
 void k_dirlister_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -709,8 +709,8 @@ void k_dirlister_disconnect_notify(void* self, void* signal) {
     KDirLister_DisconnectNotify((KDirLister*)self, (QMetaMethod*)signal);
 }
 
-void k_dirlister_qbase_disconnect_notify(void* self, void* signal) {
-    KDirLister_QBaseDisconnectNotify((KDirLister*)self, (QMetaMethod*)signal);
+void k_dirlister_super_disconnect_notify(void* self, void* signal) {
+    KDirLister_SuperDisconnectNotify((KDirLister*)self, (QMetaMethod*)signal);
 }
 
 void k_dirlister_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -721,8 +721,8 @@ QObject* k_dirlister_sender(void* self) {
     return KDirLister_Sender((KDirLister*)self);
 }
 
-QObject* k_dirlister_qbase_sender(void* self) {
-    return KDirLister_QBaseSender((KDirLister*)self);
+QObject* k_dirlister_super_sender(void* self) {
+    return KDirLister_SuperSender((KDirLister*)self);
 }
 
 void k_dirlister_on_sender(void* self, QObject* (*callback)()) {
@@ -733,8 +733,8 @@ int32_t k_dirlister_sender_signal_index(void* self) {
     return KDirLister_SenderSignalIndex((KDirLister*)self);
 }
 
-int32_t k_dirlister_qbase_sender_signal_index(void* self) {
-    return KDirLister_QBaseSenderSignalIndex((KDirLister*)self);
+int32_t k_dirlister_super_sender_signal_index(void* self) {
+    return KDirLister_SuperSenderSignalIndex((KDirLister*)self);
 }
 
 void k_dirlister_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -745,8 +745,8 @@ int32_t k_dirlister_receivers(void* self, const char* signal) {
     return KDirLister_Receivers((KDirLister*)self, signal);
 }
 
-int32_t k_dirlister_qbase_receivers(void* self, const char* signal) {
-    return KDirLister_QBaseReceivers((KDirLister*)self, signal);
+int32_t k_dirlister_super_receivers(void* self, const char* signal) {
+    return KDirLister_SuperReceivers((KDirLister*)self, signal);
 }
 
 void k_dirlister_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -757,8 +757,8 @@ bool k_dirlister_is_signal_connected(void* self, void* signal) {
     return KDirLister_IsSignalConnected((KDirLister*)self, (QMetaMethod*)signal);
 }
 
-bool k_dirlister_qbase_is_signal_connected(void* self, void* signal) {
-    return KDirLister_QBaseIsSignalConnected((KDirLister*)self, (QMetaMethod*)signal);
+bool k_dirlister_super_is_signal_connected(void* self, void* signal) {
+    return KDirLister_SuperIsSignalConnected((KDirLister*)self, (QMetaMethod*)signal);
 }
 
 void k_dirlister_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

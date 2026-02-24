@@ -30,8 +30,8 @@ void q_audioinput_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QAudioInput_OnMetaObject((QAudioInput*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_audioinput_qbase_meta_object(void* self) {
-    return QAudioInput_QBaseMetaObject((QAudioInput*)self);
+const QMetaObject* q_audioinput_super_meta_object(void* self) {
+    return QAudioInput_SuperMetaObject((QAudioInput*)self);
 }
 
 void* q_audioinput_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void q_audioinput_on_metacast(void* self, void* (*callback)(void*, const char*))
     QAudioInput_OnMetacast((QAudioInput*)self, (intptr_t)callback);
 }
 
-void* q_audioinput_qbase_metacast(void* self, const char* param1) {
-    return QAudioInput_QBaseMetacast((QAudioInput*)self, param1);
+void* q_audioinput_super_metacast(void* self, const char* param1) {
+    return QAudioInput_SuperMetacast((QAudioInput*)self, param1);
 }
 
 int32_t q_audioinput_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void q_audioinput_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QAudioInput_OnMetacall((QAudioInput*)self, (intptr_t)callback);
 }
 
-int32_t q_audioinput_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAudioInput_QBaseMetacall((QAudioInput*)self, param1, param2, param3);
+int32_t q_audioinput_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAudioInput_SuperMetacall((QAudioInput*)self, param1, param2, param3);
 }
 
 const char* q_audioinput_tr(const char* s) {
@@ -342,8 +342,8 @@ bool q_audioinput_event(void* self, void* event) {
     return QAudioInput_Event((QAudioInput*)self, (QEvent*)event);
 }
 
-bool q_audioinput_qbase_event(void* self, void* event) {
-    return QAudioInput_QBaseEvent((QAudioInput*)self, (QEvent*)event);
+bool q_audioinput_super_event(void* self, void* event) {
+    return QAudioInput_SuperEvent((QAudioInput*)self, (QEvent*)event);
 }
 
 void q_audioinput_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ bool q_audioinput_event_filter(void* self, void* watched, void* event) {
     return QAudioInput_EventFilter((QAudioInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_audioinput_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAudioInput_QBaseEventFilter((QAudioInput*)self, (QObject*)watched, (QEvent*)event);
+bool q_audioinput_super_event_filter(void* self, void* watched, void* event) {
+    return QAudioInput_SuperEventFilter((QAudioInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_audioinput_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -366,8 +366,8 @@ void q_audioinput_timer_event(void* self, void* event) {
     QAudioInput_TimerEvent((QAudioInput*)self, (QTimerEvent*)event);
 }
 
-void q_audioinput_qbase_timer_event(void* self, void* event) {
-    QAudioInput_QBaseTimerEvent((QAudioInput*)self, (QTimerEvent*)event);
+void q_audioinput_super_timer_event(void* self, void* event) {
+    QAudioInput_SuperTimerEvent((QAudioInput*)self, (QTimerEvent*)event);
 }
 
 void q_audioinput_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void q_audioinput_child_event(void* self, void* event) {
     QAudioInput_ChildEvent((QAudioInput*)self, (QChildEvent*)event);
 }
 
-void q_audioinput_qbase_child_event(void* self, void* event) {
-    QAudioInput_QBaseChildEvent((QAudioInput*)self, (QChildEvent*)event);
+void q_audioinput_super_child_event(void* self, void* event) {
+    QAudioInput_SuperChildEvent((QAudioInput*)self, (QChildEvent*)event);
 }
 
 void q_audioinput_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ void q_audioinput_custom_event(void* self, void* event) {
     QAudioInput_CustomEvent((QAudioInput*)self, (QEvent*)event);
 }
 
-void q_audioinput_qbase_custom_event(void* self, void* event) {
-    QAudioInput_QBaseCustomEvent((QAudioInput*)self, (QEvent*)event);
+void q_audioinput_super_custom_event(void* self, void* event) {
+    QAudioInput_SuperCustomEvent((QAudioInput*)self, (QEvent*)event);
 }
 
 void q_audioinput_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -402,8 +402,8 @@ void q_audioinput_connect_notify(void* self, void* signal) {
     QAudioInput_ConnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
-void q_audioinput_qbase_connect_notify(void* self, void* signal) {
-    QAudioInput_QBaseConnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
+void q_audioinput_super_connect_notify(void* self, void* signal) {
+    QAudioInput_SuperConnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audioinput_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -414,8 +414,8 @@ void q_audioinput_disconnect_notify(void* self, void* signal) {
     QAudioInput_DisconnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
-void q_audioinput_qbase_disconnect_notify(void* self, void* signal) {
-    QAudioInput_QBaseDisconnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
+void q_audioinput_super_disconnect_notify(void* self, void* signal) {
+    QAudioInput_SuperDisconnectNotify((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audioinput_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ QObject* q_audioinput_sender(void* self) {
     return QAudioInput_Sender((QAudioInput*)self);
 }
 
-QObject* q_audioinput_qbase_sender(void* self) {
-    return QAudioInput_QBaseSender((QAudioInput*)self);
+QObject* q_audioinput_super_sender(void* self) {
+    return QAudioInput_SuperSender((QAudioInput*)self);
 }
 
 void q_audioinput_on_sender(void* self, QObject* (*callback)()) {
@@ -438,8 +438,8 @@ int32_t q_audioinput_sender_signal_index(void* self) {
     return QAudioInput_SenderSignalIndex((QAudioInput*)self);
 }
 
-int32_t q_audioinput_qbase_sender_signal_index(void* self) {
-    return QAudioInput_QBaseSenderSignalIndex((QAudioInput*)self);
+int32_t q_audioinput_super_sender_signal_index(void* self) {
+    return QAudioInput_SuperSenderSignalIndex((QAudioInput*)self);
 }
 
 void q_audioinput_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -450,8 +450,8 @@ int32_t q_audioinput_receivers(void* self, const char* signal) {
     return QAudioInput_Receivers((QAudioInput*)self, signal);
 }
 
-int32_t q_audioinput_qbase_receivers(void* self, const char* signal) {
-    return QAudioInput_QBaseReceivers((QAudioInput*)self, signal);
+int32_t q_audioinput_super_receivers(void* self, const char* signal) {
+    return QAudioInput_SuperReceivers((QAudioInput*)self, signal);
 }
 
 void q_audioinput_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -462,8 +462,8 @@ bool q_audioinput_is_signal_connected(void* self, void* signal) {
     return QAudioInput_IsSignalConnected((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
-bool q_audioinput_qbase_is_signal_connected(void* self, void* signal) {
-    return QAudioInput_QBaseIsSignalConnected((QAudioInput*)self, (QMetaMethod*)signal);
+bool q_audioinput_super_is_signal_connected(void* self, void* signal) {
+    return QAudioInput_SuperIsSignalConnected((QAudioInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audioinput_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

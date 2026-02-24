@@ -44,8 +44,8 @@ void k_shortcutsdialog_on_meta_object(void* self, const QMetaObject* (*callback)
     KShortcutsDialog_OnMetaObject((KShortcutsDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_shortcutsdialog_qbase_meta_object(void* self) {
-    return KShortcutsDialog_QBaseMetaObject((KShortcutsDialog*)self);
+const QMetaObject* k_shortcutsdialog_super_meta_object(void* self) {
+    return KShortcutsDialog_SuperMetaObject((KShortcutsDialog*)self);
 }
 
 void* k_shortcutsdialog_metacast(void* self, const char* param1) {
@@ -56,8 +56,8 @@ void k_shortcutsdialog_on_metacast(void* self, void* (*callback)(void*, const ch
     KShortcutsDialog_OnMetacast((KShortcutsDialog*)self, (intptr_t)callback);
 }
 
-void* k_shortcutsdialog_qbase_metacast(void* self, const char* param1) {
-    return KShortcutsDialog_QBaseMetacast((KShortcutsDialog*)self, param1);
+void* k_shortcutsdialog_super_metacast(void* self, const char* param1) {
+    return KShortcutsDialog_SuperMetacast((KShortcutsDialog*)self, param1);
 }
 
 int32_t k_shortcutsdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -68,8 +68,8 @@ void k_shortcutsdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KShortcutsDialog_OnMetacall((KShortcutsDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_shortcutsdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KShortcutsDialog_QBaseMetacall((KShortcutsDialog*)self, param1, param2, param3);
+int32_t k_shortcutsdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KShortcutsDialog_SuperMetacall((KShortcutsDialog*)self, param1, param2, param3);
 }
 
 const char* k_shortcutsdialog_tr(const char* s) {
@@ -100,8 +100,8 @@ void k_shortcutsdialog_on_size_hint(void* self, QSize* (*callback)()) {
     KShortcutsDialog_OnSizeHint((KShortcutsDialog*)self, (intptr_t)callback);
 }
 
-QSize* k_shortcutsdialog_qbase_size_hint(void* self) {
-    return KShortcutsDialog_QBaseSizeHint((KShortcutsDialog*)self);
+QSize* k_shortcutsdialog_super_size_hint(void* self) {
+    return KShortcutsDialog_SuperSizeHint((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_show_dialog(void* collection) {
@@ -132,8 +132,8 @@ void k_shortcutsdialog_on_accept(void* self, void (*callback)()) {
     KShortcutsDialog_OnAccept((KShortcutsDialog*)self, (intptr_t)callback);
 }
 
-void k_shortcutsdialog_qbase_accept(void* self) {
-    KShortcutsDialog_QBaseAccept((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_accept(void* self) {
+    KShortcutsDialog_SuperAccept((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_saved(void* self) {
@@ -1603,8 +1603,8 @@ void k_shortcutsdialog_set_visible(void* self, bool visible) {
     KShortcutsDialog_SetVisible((KShortcutsDialog*)self, visible);
 }
 
-void k_shortcutsdialog_qbase_set_visible(void* self, bool visible) {
-    KShortcutsDialog_QBaseSetVisible((KShortcutsDialog*)self, visible);
+void k_shortcutsdialog_super_set_visible(void* self, bool visible) {
+    KShortcutsDialog_SuperSetVisible((KShortcutsDialog*)self, visible);
 }
 
 void k_shortcutsdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1615,8 +1615,8 @@ QSize* k_shortcutsdialog_minimum_size_hint(void* self) {
     return KShortcutsDialog_MinimumSizeHint((KShortcutsDialog*)self);
 }
 
-QSize* k_shortcutsdialog_qbase_minimum_size_hint(void* self) {
-    return KShortcutsDialog_QBaseMinimumSizeHint((KShortcutsDialog*)self);
+QSize* k_shortcutsdialog_super_minimum_size_hint(void* self) {
+    return KShortcutsDialog_SuperMinimumSizeHint((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1627,8 +1627,8 @@ void k_shortcutsdialog_open(void* self) {
     KShortcutsDialog_Open((KShortcutsDialog*)self);
 }
 
-void k_shortcutsdialog_qbase_open(void* self) {
-    KShortcutsDialog_QBaseOpen((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_open(void* self) {
+    KShortcutsDialog_SuperOpen((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_open(void* self, void (*callback)()) {
@@ -1639,8 +1639,8 @@ int32_t k_shortcutsdialog_exec(void* self) {
     return KShortcutsDialog_Exec((KShortcutsDialog*)self);
 }
 
-int32_t k_shortcutsdialog_qbase_exec(void* self) {
-    return KShortcutsDialog_QBaseExec((KShortcutsDialog*)self);
+int32_t k_shortcutsdialog_super_exec(void* self) {
+    return KShortcutsDialog_SuperExec((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1651,8 +1651,8 @@ void k_shortcutsdialog_done(void* self, int param1) {
     KShortcutsDialog_Done((KShortcutsDialog*)self, param1);
 }
 
-void k_shortcutsdialog_qbase_done(void* self, int param1) {
-    KShortcutsDialog_QBaseDone((KShortcutsDialog*)self, param1);
+void k_shortcutsdialog_super_done(void* self, int param1) {
+    KShortcutsDialog_SuperDone((KShortcutsDialog*)self, param1);
 }
 
 void k_shortcutsdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1663,8 +1663,8 @@ void k_shortcutsdialog_reject(void* self) {
     KShortcutsDialog_Reject((KShortcutsDialog*)self);
 }
 
-void k_shortcutsdialog_qbase_reject(void* self) {
-    KShortcutsDialog_QBaseReject((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_reject(void* self) {
+    KShortcutsDialog_SuperReject((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_reject(void* self, void (*callback)()) {
@@ -1675,8 +1675,8 @@ void k_shortcutsdialog_key_press_event(void* self, void* param1) {
     KShortcutsDialog_KeyPressEvent((KShortcutsDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_key_press_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseKeyPressEvent((KShortcutsDialog*)self, (QKeyEvent*)param1);
+void k_shortcutsdialog_super_key_press_event(void* self, void* param1) {
+    KShortcutsDialog_SuperKeyPressEvent((KShortcutsDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_shortcutsdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1687,8 +1687,8 @@ void k_shortcutsdialog_close_event(void* self, void* param1) {
     KShortcutsDialog_CloseEvent((KShortcutsDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_close_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseCloseEvent((KShortcutsDialog*)self, (QCloseEvent*)param1);
+void k_shortcutsdialog_super_close_event(void* self, void* param1) {
+    KShortcutsDialog_SuperCloseEvent((KShortcutsDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_shortcutsdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1699,8 +1699,8 @@ void k_shortcutsdialog_show_event(void* self, void* param1) {
     KShortcutsDialog_ShowEvent((KShortcutsDialog*)self, (QShowEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_show_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseShowEvent((KShortcutsDialog*)self, (QShowEvent*)param1);
+void k_shortcutsdialog_super_show_event(void* self, void* param1) {
+    KShortcutsDialog_SuperShowEvent((KShortcutsDialog*)self, (QShowEvent*)param1);
 }
 
 void k_shortcutsdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1711,8 +1711,8 @@ void k_shortcutsdialog_resize_event(void* self, void* param1) {
     KShortcutsDialog_ResizeEvent((KShortcutsDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_resize_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseResizeEvent((KShortcutsDialog*)self, (QResizeEvent*)param1);
+void k_shortcutsdialog_super_resize_event(void* self, void* param1) {
+    KShortcutsDialog_SuperResizeEvent((KShortcutsDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_shortcutsdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1723,8 +1723,8 @@ void k_shortcutsdialog_context_menu_event(void* self, void* param1) {
     KShortcutsDialog_ContextMenuEvent((KShortcutsDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_context_menu_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseContextMenuEvent((KShortcutsDialog*)self, (QContextMenuEvent*)param1);
+void k_shortcutsdialog_super_context_menu_event(void* self, void* param1) {
+    KShortcutsDialog_SuperContextMenuEvent((KShortcutsDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_shortcutsdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1735,8 +1735,8 @@ bool k_shortcutsdialog_event_filter(void* self, void* param1, void* param2) {
     return KShortcutsDialog_EventFilter((KShortcutsDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_shortcutsdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KShortcutsDialog_QBaseEventFilter((KShortcutsDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_shortcutsdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KShortcutsDialog_SuperEventFilter((KShortcutsDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_shortcutsdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1747,8 +1747,8 @@ int32_t k_shortcutsdialog_dev_type(void* self) {
     return KShortcutsDialog_DevType((KShortcutsDialog*)self);
 }
 
-int32_t k_shortcutsdialog_qbase_dev_type(void* self) {
-    return KShortcutsDialog_QBaseDevType((KShortcutsDialog*)self);
+int32_t k_shortcutsdialog_super_dev_type(void* self) {
+    return KShortcutsDialog_SuperDevType((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1759,8 +1759,8 @@ int32_t k_shortcutsdialog_height_for_width(void* self, int param1) {
     return KShortcutsDialog_HeightForWidth((KShortcutsDialog*)self, param1);
 }
 
-int32_t k_shortcutsdialog_qbase_height_for_width(void* self, int param1) {
-    return KShortcutsDialog_QBaseHeightForWidth((KShortcutsDialog*)self, param1);
+int32_t k_shortcutsdialog_super_height_for_width(void* self, int param1) {
+    return KShortcutsDialog_SuperHeightForWidth((KShortcutsDialog*)self, param1);
 }
 
 void k_shortcutsdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1771,8 +1771,8 @@ bool k_shortcutsdialog_has_height_for_width(void* self) {
     return KShortcutsDialog_HasHeightForWidth((KShortcutsDialog*)self);
 }
 
-bool k_shortcutsdialog_qbase_has_height_for_width(void* self) {
-    return KShortcutsDialog_QBaseHasHeightForWidth((KShortcutsDialog*)self);
+bool k_shortcutsdialog_super_has_height_for_width(void* self) {
+    return KShortcutsDialog_SuperHasHeightForWidth((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1783,8 +1783,8 @@ QPaintEngine* k_shortcutsdialog_paint_engine(void* self) {
     return KShortcutsDialog_PaintEngine((KShortcutsDialog*)self);
 }
 
-QPaintEngine* k_shortcutsdialog_qbase_paint_engine(void* self) {
-    return KShortcutsDialog_QBasePaintEngine((KShortcutsDialog*)self);
+QPaintEngine* k_shortcutsdialog_super_paint_engine(void* self) {
+    return KShortcutsDialog_SuperPaintEngine((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1795,8 +1795,8 @@ bool k_shortcutsdialog_event(void* self, void* event) {
     return KShortcutsDialog_Event((KShortcutsDialog*)self, (QEvent*)event);
 }
 
-bool k_shortcutsdialog_qbase_event(void* self, void* event) {
-    return KShortcutsDialog_QBaseEvent((KShortcutsDialog*)self, (QEvent*)event);
+bool k_shortcutsdialog_super_event(void* self, void* event) {
+    return KShortcutsDialog_SuperEvent((KShortcutsDialog*)self, (QEvent*)event);
 }
 
 void k_shortcutsdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void k_shortcutsdialog_mouse_press_event(void* self, void* event) {
     KShortcutsDialog_MousePressEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_mouse_press_event(void* self, void* event) {
-    KShortcutsDialog_QBaseMousePressEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
+void k_shortcutsdialog_super_mouse_press_event(void* self, void* event) {
+    KShortcutsDialog_SuperMousePressEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutsdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void k_shortcutsdialog_mouse_release_event(void* self, void* event) {
     KShortcutsDialog_MouseReleaseEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_mouse_release_event(void* self, void* event) {
-    KShortcutsDialog_QBaseMouseReleaseEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
+void k_shortcutsdialog_super_mouse_release_event(void* self, void* event) {
+    KShortcutsDialog_SuperMouseReleaseEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutsdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void k_shortcutsdialog_mouse_double_click_event(void* self, void* event) {
     KShortcutsDialog_MouseDoubleClickEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KShortcutsDialog_QBaseMouseDoubleClickEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
+void k_shortcutsdialog_super_mouse_double_click_event(void* self, void* event) {
+    KShortcutsDialog_SuperMouseDoubleClickEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutsdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void k_shortcutsdialog_mouse_move_event(void* self, void* event) {
     KShortcutsDialog_MouseMoveEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_mouse_move_event(void* self, void* event) {
-    KShortcutsDialog_QBaseMouseMoveEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
+void k_shortcutsdialog_super_mouse_move_event(void* self, void* event) {
+    KShortcutsDialog_SuperMouseMoveEvent((KShortcutsDialog*)self, (QMouseEvent*)event);
 }
 
 void k_shortcutsdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ void k_shortcutsdialog_wheel_event(void* self, void* event) {
     KShortcutsDialog_WheelEvent((KShortcutsDialog*)self, (QWheelEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_wheel_event(void* self, void* event) {
-    KShortcutsDialog_QBaseWheelEvent((KShortcutsDialog*)self, (QWheelEvent*)event);
+void k_shortcutsdialog_super_wheel_event(void* self, void* event) {
+    KShortcutsDialog_SuperWheelEvent((KShortcutsDialog*)self, (QWheelEvent*)event);
 }
 
 void k_shortcutsdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ void k_shortcutsdialog_key_release_event(void* self, void* event) {
     KShortcutsDialog_KeyReleaseEvent((KShortcutsDialog*)self, (QKeyEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_key_release_event(void* self, void* event) {
-    KShortcutsDialog_QBaseKeyReleaseEvent((KShortcutsDialog*)self, (QKeyEvent*)event);
+void k_shortcutsdialog_super_key_release_event(void* self, void* event) {
+    KShortcutsDialog_SuperKeyReleaseEvent((KShortcutsDialog*)self, (QKeyEvent*)event);
 }
 
 void k_shortcutsdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void k_shortcutsdialog_focus_in_event(void* self, void* event) {
     KShortcutsDialog_FocusInEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_focus_in_event(void* self, void* event) {
-    KShortcutsDialog_QBaseFocusInEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
+void k_shortcutsdialog_super_focus_in_event(void* self, void* event) {
+    KShortcutsDialog_SuperFocusInEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutsdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void k_shortcutsdialog_focus_out_event(void* self, void* event) {
     KShortcutsDialog_FocusOutEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_focus_out_event(void* self, void* event) {
-    KShortcutsDialog_QBaseFocusOutEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
+void k_shortcutsdialog_super_focus_out_event(void* self, void* event) {
+    KShortcutsDialog_SuperFocusOutEvent((KShortcutsDialog*)self, (QFocusEvent*)event);
 }
 
 void k_shortcutsdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void k_shortcutsdialog_enter_event(void* self, void* event) {
     KShortcutsDialog_EnterEvent((KShortcutsDialog*)self, (QEnterEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_enter_event(void* self, void* event) {
-    KShortcutsDialog_QBaseEnterEvent((KShortcutsDialog*)self, (QEnterEvent*)event);
+void k_shortcutsdialog_super_enter_event(void* self, void* event) {
+    KShortcutsDialog_SuperEnterEvent((KShortcutsDialog*)self, (QEnterEvent*)event);
 }
 
 void k_shortcutsdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void k_shortcutsdialog_leave_event(void* self, void* event) {
     KShortcutsDialog_LeaveEvent((KShortcutsDialog*)self, (QEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_leave_event(void* self, void* event) {
-    KShortcutsDialog_QBaseLeaveEvent((KShortcutsDialog*)self, (QEvent*)event);
+void k_shortcutsdialog_super_leave_event(void* self, void* event) {
+    KShortcutsDialog_SuperLeaveEvent((KShortcutsDialog*)self, (QEvent*)event);
 }
 
 void k_shortcutsdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void k_shortcutsdialog_paint_event(void* self, void* event) {
     KShortcutsDialog_PaintEvent((KShortcutsDialog*)self, (QPaintEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_paint_event(void* self, void* event) {
-    KShortcutsDialog_QBasePaintEvent((KShortcutsDialog*)self, (QPaintEvent*)event);
+void k_shortcutsdialog_super_paint_event(void* self, void* event) {
+    KShortcutsDialog_SuperPaintEvent((KShortcutsDialog*)self, (QPaintEvent*)event);
 }
 
 void k_shortcutsdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ void k_shortcutsdialog_move_event(void* self, void* event) {
     KShortcutsDialog_MoveEvent((KShortcutsDialog*)self, (QMoveEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_move_event(void* self, void* event) {
-    KShortcutsDialog_QBaseMoveEvent((KShortcutsDialog*)self, (QMoveEvent*)event);
+void k_shortcutsdialog_super_move_event(void* self, void* event) {
+    KShortcutsDialog_SuperMoveEvent((KShortcutsDialog*)self, (QMoveEvent*)event);
 }
 
 void k_shortcutsdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void k_shortcutsdialog_tablet_event(void* self, void* event) {
     KShortcutsDialog_TabletEvent((KShortcutsDialog*)self, (QTabletEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_tablet_event(void* self, void* event) {
-    KShortcutsDialog_QBaseTabletEvent((KShortcutsDialog*)self, (QTabletEvent*)event);
+void k_shortcutsdialog_super_tablet_event(void* self, void* event) {
+    KShortcutsDialog_SuperTabletEvent((KShortcutsDialog*)self, (QTabletEvent*)event);
 }
 
 void k_shortcutsdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ void k_shortcutsdialog_action_event(void* self, void* event) {
     KShortcutsDialog_ActionEvent((KShortcutsDialog*)self, (QActionEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_action_event(void* self, void* event) {
-    KShortcutsDialog_QBaseActionEvent((KShortcutsDialog*)self, (QActionEvent*)event);
+void k_shortcutsdialog_super_action_event(void* self, void* event) {
+    KShortcutsDialog_SuperActionEvent((KShortcutsDialog*)self, (QActionEvent*)event);
 }
 
 void k_shortcutsdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ void k_shortcutsdialog_drag_enter_event(void* self, void* event) {
     KShortcutsDialog_DragEnterEvent((KShortcutsDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_drag_enter_event(void* self, void* event) {
-    KShortcutsDialog_QBaseDragEnterEvent((KShortcutsDialog*)self, (QDragEnterEvent*)event);
+void k_shortcutsdialog_super_drag_enter_event(void* self, void* event) {
+    KShortcutsDialog_SuperDragEnterEvent((KShortcutsDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_shortcutsdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ void k_shortcutsdialog_drag_move_event(void* self, void* event) {
     KShortcutsDialog_DragMoveEvent((KShortcutsDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_drag_move_event(void* self, void* event) {
-    KShortcutsDialog_QBaseDragMoveEvent((KShortcutsDialog*)self, (QDragMoveEvent*)event);
+void k_shortcutsdialog_super_drag_move_event(void* self, void* event) {
+    KShortcutsDialog_SuperDragMoveEvent((KShortcutsDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_shortcutsdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ void k_shortcutsdialog_drag_leave_event(void* self, void* event) {
     KShortcutsDialog_DragLeaveEvent((KShortcutsDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_drag_leave_event(void* self, void* event) {
-    KShortcutsDialog_QBaseDragLeaveEvent((KShortcutsDialog*)self, (QDragLeaveEvent*)event);
+void k_shortcutsdialog_super_drag_leave_event(void* self, void* event) {
+    KShortcutsDialog_SuperDragLeaveEvent((KShortcutsDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_shortcutsdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ void k_shortcutsdialog_drop_event(void* self, void* event) {
     KShortcutsDialog_DropEvent((KShortcutsDialog*)self, (QDropEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_drop_event(void* self, void* event) {
-    KShortcutsDialog_QBaseDropEvent((KShortcutsDialog*)self, (QDropEvent*)event);
+void k_shortcutsdialog_super_drop_event(void* self, void* event) {
+    KShortcutsDialog_SuperDropEvent((KShortcutsDialog*)self, (QDropEvent*)event);
 }
 
 void k_shortcutsdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ void k_shortcutsdialog_hide_event(void* self, void* event) {
     KShortcutsDialog_HideEvent((KShortcutsDialog*)self, (QHideEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_hide_event(void* self, void* event) {
-    KShortcutsDialog_QBaseHideEvent((KShortcutsDialog*)self, (QHideEvent*)event);
+void k_shortcutsdialog_super_hide_event(void* self, void* event) {
+    KShortcutsDialog_SuperHideEvent((KShortcutsDialog*)self, (QHideEvent*)event);
 }
 
 void k_shortcutsdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ bool k_shortcutsdialog_native_event(void* self, char* eventType, void* message, 
     return KShortcutsDialog_NativeEvent((KShortcutsDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_shortcutsdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KShortcutsDialog_QBaseNativeEvent((KShortcutsDialog*)self, qstring(eventType), message, result);
+bool k_shortcutsdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KShortcutsDialog_SuperNativeEvent((KShortcutsDialog*)self, qstring(eventType), message, result);
 }
 
 void k_shortcutsdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2047,8 +2047,8 @@ void k_shortcutsdialog_change_event(void* self, void* param1) {
     KShortcutsDialog_ChangeEvent((KShortcutsDialog*)self, (QEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_change_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseChangeEvent((KShortcutsDialog*)self, (QEvent*)param1);
+void k_shortcutsdialog_super_change_event(void* self, void* param1) {
+    KShortcutsDialog_SuperChangeEvent((KShortcutsDialog*)self, (QEvent*)param1);
 }
 
 void k_shortcutsdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2059,8 +2059,8 @@ int32_t k_shortcutsdialog_metric(void* self, int32_t param1) {
     return KShortcutsDialog_Metric((KShortcutsDialog*)self, param1);
 }
 
-int32_t k_shortcutsdialog_qbase_metric(void* self, int32_t param1) {
-    return KShortcutsDialog_QBaseMetric((KShortcutsDialog*)self, param1);
+int32_t k_shortcutsdialog_super_metric(void* self, int32_t param1) {
+    return KShortcutsDialog_SuperMetric((KShortcutsDialog*)self, param1);
 }
 
 void k_shortcutsdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2071,8 +2071,8 @@ void k_shortcutsdialog_init_painter(void* self, void* painter) {
     KShortcutsDialog_InitPainter((KShortcutsDialog*)self, (QPainter*)painter);
 }
 
-void k_shortcutsdialog_qbase_init_painter(void* self, void* painter) {
-    KShortcutsDialog_QBaseInitPainter((KShortcutsDialog*)self, (QPainter*)painter);
+void k_shortcutsdialog_super_init_painter(void* self, void* painter) {
+    KShortcutsDialog_SuperInitPainter((KShortcutsDialog*)self, (QPainter*)painter);
 }
 
 void k_shortcutsdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2083,8 +2083,8 @@ QPaintDevice* k_shortcutsdialog_redirected(void* self, void* offset) {
     return KShortcutsDialog_Redirected((KShortcutsDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_shortcutsdialog_qbase_redirected(void* self, void* offset) {
-    return KShortcutsDialog_QBaseRedirected((KShortcutsDialog*)self, (QPoint*)offset);
+QPaintDevice* k_shortcutsdialog_super_redirected(void* self, void* offset) {
+    return KShortcutsDialog_SuperRedirected((KShortcutsDialog*)self, (QPoint*)offset);
 }
 
 void k_shortcutsdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ QPainter* k_shortcutsdialog_shared_painter(void* self) {
     return KShortcutsDialog_SharedPainter((KShortcutsDialog*)self);
 }
 
-QPainter* k_shortcutsdialog_qbase_shared_painter(void* self) {
-    return KShortcutsDialog_QBaseSharedPainter((KShortcutsDialog*)self);
+QPainter* k_shortcutsdialog_super_shared_painter(void* self) {
+    return KShortcutsDialog_SuperSharedPainter((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2107,8 +2107,8 @@ void k_shortcutsdialog_input_method_event(void* self, void* param1) {
     KShortcutsDialog_InputMethodEvent((KShortcutsDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_shortcutsdialog_qbase_input_method_event(void* self, void* param1) {
-    KShortcutsDialog_QBaseInputMethodEvent((KShortcutsDialog*)self, (QInputMethodEvent*)param1);
+void k_shortcutsdialog_super_input_method_event(void* self, void* param1) {
+    KShortcutsDialog_SuperInputMethodEvent((KShortcutsDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_shortcutsdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ QVariant* k_shortcutsdialog_input_method_query(void* self, int32_t param1) {
     return KShortcutsDialog_InputMethodQuery((KShortcutsDialog*)self, param1);
 }
 
-QVariant* k_shortcutsdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KShortcutsDialog_QBaseInputMethodQuery((KShortcutsDialog*)self, param1);
+QVariant* k_shortcutsdialog_super_input_method_query(void* self, int32_t param1) {
+    return KShortcutsDialog_SuperInputMethodQuery((KShortcutsDialog*)self, param1);
 }
 
 void k_shortcutsdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2131,8 +2131,8 @@ bool k_shortcutsdialog_focus_next_prev_child(void* self, bool next) {
     return KShortcutsDialog_FocusNextPrevChild((KShortcutsDialog*)self, next);
 }
 
-bool k_shortcutsdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KShortcutsDialog_QBaseFocusNextPrevChild((KShortcutsDialog*)self, next);
+bool k_shortcutsdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KShortcutsDialog_SuperFocusNextPrevChild((KShortcutsDialog*)self, next);
 }
 
 void k_shortcutsdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2143,8 +2143,8 @@ void k_shortcutsdialog_timer_event(void* self, void* event) {
     KShortcutsDialog_TimerEvent((KShortcutsDialog*)self, (QTimerEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_timer_event(void* self, void* event) {
-    KShortcutsDialog_QBaseTimerEvent((KShortcutsDialog*)self, (QTimerEvent*)event);
+void k_shortcutsdialog_super_timer_event(void* self, void* event) {
+    KShortcutsDialog_SuperTimerEvent((KShortcutsDialog*)self, (QTimerEvent*)event);
 }
 
 void k_shortcutsdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ void k_shortcutsdialog_child_event(void* self, void* event) {
     KShortcutsDialog_ChildEvent((KShortcutsDialog*)self, (QChildEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_child_event(void* self, void* event) {
-    KShortcutsDialog_QBaseChildEvent((KShortcutsDialog*)self, (QChildEvent*)event);
+void k_shortcutsdialog_super_child_event(void* self, void* event) {
+    KShortcutsDialog_SuperChildEvent((KShortcutsDialog*)self, (QChildEvent*)event);
 }
 
 void k_shortcutsdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2167,8 +2167,8 @@ void k_shortcutsdialog_custom_event(void* self, void* event) {
     KShortcutsDialog_CustomEvent((KShortcutsDialog*)self, (QEvent*)event);
 }
 
-void k_shortcutsdialog_qbase_custom_event(void* self, void* event) {
-    KShortcutsDialog_QBaseCustomEvent((KShortcutsDialog*)self, (QEvent*)event);
+void k_shortcutsdialog_super_custom_event(void* self, void* event) {
+    KShortcutsDialog_SuperCustomEvent((KShortcutsDialog*)self, (QEvent*)event);
 }
 
 void k_shortcutsdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ void k_shortcutsdialog_connect_notify(void* self, void* signal) {
     KShortcutsDialog_ConnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutsdialog_qbase_connect_notify(void* self, void* signal) {
-    KShortcutsDialog_QBaseConnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
+void k_shortcutsdialog_super_connect_notify(void* self, void* signal) {
+    KShortcutsDialog_SuperConnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutsdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2191,8 +2191,8 @@ void k_shortcutsdialog_disconnect_notify(void* self, void* signal) {
     KShortcutsDialog_DisconnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_shortcutsdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KShortcutsDialog_QBaseDisconnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
+void k_shortcutsdialog_super_disconnect_notify(void* self, void* signal) {
+    KShortcutsDialog_SuperDisconnectNotify((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutsdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2203,8 +2203,8 @@ void k_shortcutsdialog_adjust_position(void* self, void* param1) {
     KShortcutsDialog_AdjustPosition((KShortcutsDialog*)self, (QWidget*)param1);
 }
 
-void k_shortcutsdialog_qbase_adjust_position(void* self, void* param1) {
-    KShortcutsDialog_QBaseAdjustPosition((KShortcutsDialog*)self, (QWidget*)param1);
+void k_shortcutsdialog_super_adjust_position(void* self, void* param1) {
+    KShortcutsDialog_SuperAdjustPosition((KShortcutsDialog*)self, (QWidget*)param1);
 }
 
 void k_shortcutsdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2215,8 +2215,8 @@ void k_shortcutsdialog_update_micro_focus(void* self) {
     KShortcutsDialog_UpdateMicroFocus((KShortcutsDialog*)self);
 }
 
-void k_shortcutsdialog_qbase_update_micro_focus(void* self) {
-    KShortcutsDialog_QBaseUpdateMicroFocus((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_update_micro_focus(void* self) {
+    KShortcutsDialog_SuperUpdateMicroFocus((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2227,8 +2227,8 @@ void k_shortcutsdialog_create(void* self) {
     KShortcutsDialog_Create((KShortcutsDialog*)self);
 }
 
-void k_shortcutsdialog_qbase_create(void* self) {
-    KShortcutsDialog_QBaseCreate((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_create(void* self) {
+    KShortcutsDialog_SuperCreate((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_create(void* self, void (*callback)()) {
@@ -2239,8 +2239,8 @@ void k_shortcutsdialog_destroy(void* self) {
     KShortcutsDialog_Destroy((KShortcutsDialog*)self);
 }
 
-void k_shortcutsdialog_qbase_destroy(void* self) {
-    KShortcutsDialog_QBaseDestroy((KShortcutsDialog*)self);
+void k_shortcutsdialog_super_destroy(void* self) {
+    KShortcutsDialog_SuperDestroy((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_destroy(void* self, void (*callback)()) {
@@ -2251,8 +2251,8 @@ bool k_shortcutsdialog_focus_next_child(void* self) {
     return KShortcutsDialog_FocusNextChild((KShortcutsDialog*)self);
 }
 
-bool k_shortcutsdialog_qbase_focus_next_child(void* self) {
-    return KShortcutsDialog_QBaseFocusNextChild((KShortcutsDialog*)self);
+bool k_shortcutsdialog_super_focus_next_child(void* self) {
+    return KShortcutsDialog_SuperFocusNextChild((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2263,8 +2263,8 @@ bool k_shortcutsdialog_focus_previous_child(void* self) {
     return KShortcutsDialog_FocusPreviousChild((KShortcutsDialog*)self);
 }
 
-bool k_shortcutsdialog_qbase_focus_previous_child(void* self) {
-    return KShortcutsDialog_QBaseFocusPreviousChild((KShortcutsDialog*)self);
+bool k_shortcutsdialog_super_focus_previous_child(void* self) {
+    return KShortcutsDialog_SuperFocusPreviousChild((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2275,8 +2275,8 @@ QObject* k_shortcutsdialog_sender(void* self) {
     return KShortcutsDialog_Sender((KShortcutsDialog*)self);
 }
 
-QObject* k_shortcutsdialog_qbase_sender(void* self) {
-    return KShortcutsDialog_QBaseSender((KShortcutsDialog*)self);
+QObject* k_shortcutsdialog_super_sender(void* self) {
+    return KShortcutsDialog_SuperSender((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2287,8 +2287,8 @@ int32_t k_shortcutsdialog_sender_signal_index(void* self) {
     return KShortcutsDialog_SenderSignalIndex((KShortcutsDialog*)self);
 }
 
-int32_t k_shortcutsdialog_qbase_sender_signal_index(void* self) {
-    return KShortcutsDialog_QBaseSenderSignalIndex((KShortcutsDialog*)self);
+int32_t k_shortcutsdialog_super_sender_signal_index(void* self) {
+    return KShortcutsDialog_SuperSenderSignalIndex((KShortcutsDialog*)self);
 }
 
 void k_shortcutsdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2299,8 +2299,8 @@ int32_t k_shortcutsdialog_receivers(void* self, const char* signal) {
     return KShortcutsDialog_Receivers((KShortcutsDialog*)self, signal);
 }
 
-int32_t k_shortcutsdialog_qbase_receivers(void* self, const char* signal) {
-    return KShortcutsDialog_QBaseReceivers((KShortcutsDialog*)self, signal);
+int32_t k_shortcutsdialog_super_receivers(void* self, const char* signal) {
+    return KShortcutsDialog_SuperReceivers((KShortcutsDialog*)self, signal);
 }
 
 void k_shortcutsdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2311,8 +2311,8 @@ bool k_shortcutsdialog_is_signal_connected(void* self, void* signal) {
     return KShortcutsDialog_IsSignalConnected((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_shortcutsdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KShortcutsDialog_QBaseIsSignalConnected((KShortcutsDialog*)self, (QMetaMethod*)signal);
+bool k_shortcutsdialog_super_is_signal_connected(void* self, void* signal) {
+    return KShortcutsDialog_SuperIsSignalConnected((KShortcutsDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_shortcutsdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2323,8 +2323,8 @@ double k_shortcutsdialog_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KShortcutsDialog_GetDecodedMetricF((KShortcutsDialog*)self, metricA, metricB);
 }
 
-double k_shortcutsdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KShortcutsDialog_QBaseGetDecodedMetricF((KShortcutsDialog*)self, metricA, metricB);
+double k_shortcutsdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KShortcutsDialog_SuperGetDecodedMetricF((KShortcutsDialog*)self, metricA, metricB);
 }
 
 void k_shortcutsdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

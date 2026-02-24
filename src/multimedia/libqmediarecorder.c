@@ -27,8 +27,8 @@ void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)()
     QMediaRecorder_OnMetaObject((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mediarecorder_qbase_meta_object(void* self) {
-    return QMediaRecorder_QBaseMetaObject((QMediaRecorder*)self);
+const QMetaObject* q_mediarecorder_super_meta_object(void* self) {
+    return QMediaRecorder_SuperMetaObject((QMediaRecorder*)self);
 }
 
 void* q_mediarecorder_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_mediarecorder_on_metacast(void* self, void* (*callback)(void*, const char
     QMediaRecorder_OnMetacast((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-void* q_mediarecorder_qbase_metacast(void* self, const char* param1) {
-    return QMediaRecorder_QBaseMetacast((QMediaRecorder*)self, param1);
+void* q_mediarecorder_super_metacast(void* self, const char* param1) {
+    return QMediaRecorder_SuperMetacast((QMediaRecorder*)self, param1);
 }
 
 int32_t q_mediarecorder_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QMediaRecorder_OnMetacall((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-int32_t q_mediarecorder_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMediaRecorder_QBaseMetacall((QMediaRecorder*)self, param1, param2, param3);
+int32_t q_mediarecorder_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMediaRecorder_SuperMetacall((QMediaRecorder*)self, param1, param2, param3);
 }
 
 const char* q_mediarecorder_tr(const char* s) {
@@ -582,8 +582,8 @@ bool q_mediarecorder_event(void* self, void* event) {
     return QMediaRecorder_Event((QMediaRecorder*)self, (QEvent*)event);
 }
 
-bool q_mediarecorder_qbase_event(void* self, void* event) {
-    return QMediaRecorder_QBaseEvent((QMediaRecorder*)self, (QEvent*)event);
+bool q_mediarecorder_super_event(void* self, void* event) {
+    return QMediaRecorder_SuperEvent((QMediaRecorder*)self, (QEvent*)event);
 }
 
 void q_mediarecorder_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -594,8 +594,8 @@ bool q_mediarecorder_event_filter(void* self, void* watched, void* event) {
     return QMediaRecorder_EventFilter((QMediaRecorder*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_mediarecorder_qbase_event_filter(void* self, void* watched, void* event) {
-    return QMediaRecorder_QBaseEventFilter((QMediaRecorder*)self, (QObject*)watched, (QEvent*)event);
+bool q_mediarecorder_super_event_filter(void* self, void* watched, void* event) {
+    return QMediaRecorder_SuperEventFilter((QMediaRecorder*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_mediarecorder_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -606,8 +606,8 @@ void q_mediarecorder_timer_event(void* self, void* event) {
     QMediaRecorder_TimerEvent((QMediaRecorder*)self, (QTimerEvent*)event);
 }
 
-void q_mediarecorder_qbase_timer_event(void* self, void* event) {
-    QMediaRecorder_QBaseTimerEvent((QMediaRecorder*)self, (QTimerEvent*)event);
+void q_mediarecorder_super_timer_event(void* self, void* event) {
+    QMediaRecorder_SuperTimerEvent((QMediaRecorder*)self, (QTimerEvent*)event);
 }
 
 void q_mediarecorder_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -618,8 +618,8 @@ void q_mediarecorder_child_event(void* self, void* event) {
     QMediaRecorder_ChildEvent((QMediaRecorder*)self, (QChildEvent*)event);
 }
 
-void q_mediarecorder_qbase_child_event(void* self, void* event) {
-    QMediaRecorder_QBaseChildEvent((QMediaRecorder*)self, (QChildEvent*)event);
+void q_mediarecorder_super_child_event(void* self, void* event) {
+    QMediaRecorder_SuperChildEvent((QMediaRecorder*)self, (QChildEvent*)event);
 }
 
 void q_mediarecorder_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -630,8 +630,8 @@ void q_mediarecorder_custom_event(void* self, void* event) {
     QMediaRecorder_CustomEvent((QMediaRecorder*)self, (QEvent*)event);
 }
 
-void q_mediarecorder_qbase_custom_event(void* self, void* event) {
-    QMediaRecorder_QBaseCustomEvent((QMediaRecorder*)self, (QEvent*)event);
+void q_mediarecorder_super_custom_event(void* self, void* event) {
+    QMediaRecorder_SuperCustomEvent((QMediaRecorder*)self, (QEvent*)event);
 }
 
 void q_mediarecorder_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -642,8 +642,8 @@ void q_mediarecorder_connect_notify(void* self, void* signal) {
     QMediaRecorder_ConnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
-void q_mediarecorder_qbase_connect_notify(void* self, void* signal) {
-    QMediaRecorder_QBaseConnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
+void q_mediarecorder_super_connect_notify(void* self, void* signal) {
+    QMediaRecorder_SuperConnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
 void q_mediarecorder_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -654,8 +654,8 @@ void q_mediarecorder_disconnect_notify(void* self, void* signal) {
     QMediaRecorder_DisconnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
-void q_mediarecorder_qbase_disconnect_notify(void* self, void* signal) {
-    QMediaRecorder_QBaseDisconnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
+void q_mediarecorder_super_disconnect_notify(void* self, void* signal) {
+    QMediaRecorder_SuperDisconnectNotify((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
 void q_mediarecorder_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -666,8 +666,8 @@ QObject* q_mediarecorder_sender(void* self) {
     return QMediaRecorder_Sender((QMediaRecorder*)self);
 }
 
-QObject* q_mediarecorder_qbase_sender(void* self) {
-    return QMediaRecorder_QBaseSender((QMediaRecorder*)self);
+QObject* q_mediarecorder_super_sender(void* self) {
+    return QMediaRecorder_SuperSender((QMediaRecorder*)self);
 }
 
 void q_mediarecorder_on_sender(void* self, QObject* (*callback)()) {
@@ -678,8 +678,8 @@ int32_t q_mediarecorder_sender_signal_index(void* self) {
     return QMediaRecorder_SenderSignalIndex((QMediaRecorder*)self);
 }
 
-int32_t q_mediarecorder_qbase_sender_signal_index(void* self) {
-    return QMediaRecorder_QBaseSenderSignalIndex((QMediaRecorder*)self);
+int32_t q_mediarecorder_super_sender_signal_index(void* self) {
+    return QMediaRecorder_SuperSenderSignalIndex((QMediaRecorder*)self);
 }
 
 void q_mediarecorder_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -690,8 +690,8 @@ int32_t q_mediarecorder_receivers(void* self, const char* signal) {
     return QMediaRecorder_Receivers((QMediaRecorder*)self, signal);
 }
 
-int32_t q_mediarecorder_qbase_receivers(void* self, const char* signal) {
-    return QMediaRecorder_QBaseReceivers((QMediaRecorder*)self, signal);
+int32_t q_mediarecorder_super_receivers(void* self, const char* signal) {
+    return QMediaRecorder_SuperReceivers((QMediaRecorder*)self, signal);
 }
 
 void q_mediarecorder_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -702,8 +702,8 @@ bool q_mediarecorder_is_signal_connected(void* self, void* signal) {
     return QMediaRecorder_IsSignalConnected((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
-bool q_mediarecorder_qbase_is_signal_connected(void* self, void* signal) {
-    return QMediaRecorder_QBaseIsSignalConnected((QMediaRecorder*)self, (QMetaMethod*)signal);
+bool q_mediarecorder_super_is_signal_connected(void* self, void* signal) {
+    return QMediaRecorder_SuperIsSignalConnected((QMediaRecorder*)self, (QMetaMethod*)signal);
 }
 
 void q_mediarecorder_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

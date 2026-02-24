@@ -40,13 +40,17 @@ const QMetaObject* k_datetimeedit_meta_object(void* self);
 ///
 void k_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_meta_object` instead
+///
+#define k_datetimeedit_qbase_meta_object k_datetimeedit_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KDateTimeEdit*
 ///
-const QMetaObject* k_datetimeedit_qbase_meta_object(void* self);
+const QMetaObject* k_datetimeedit_super_meta_object(void* self);
 
 /// @param self KDateTimeEdit*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_datetimeedit_metacast(void* self, const char* param1);
 ///
 void k_datetimeedit_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_metacast` instead
+///
+#define k_datetimeedit_qbase_metacast k_datetimeedit_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KDateTimeEdit*
 /// @param param1 const char*
 ///
-void* k_datetimeedit_qbase_metacast(void* self, const char* param1);
+void* k_datetimeedit_super_metacast(void* self, const char* param1);
 
 /// @param self KDateTimeEdit*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_datetimeedit_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_metacall` instead
+///
+#define k_datetimeedit_qbase_metacall k_datetimeedit_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KDateTimeEdit*
@@ -88,7 +100,7 @@ void k_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_datetimeedit_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -567,6 +579,10 @@ bool k_datetimeedit_event_filter(void* self, void* object, void* event);
 ///
 void k_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_event_filter` instead
+///
+#define k_datetimeedit_qbase_event_filter k_datetimeedit_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
 /// Base class method implementation
@@ -575,7 +591,7 @@ void k_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param object QObject*
 /// @param event QEvent*
 ///
-bool k_datetimeedit_qbase_event_filter(void* self, void* object, void* event);
+bool k_datetimeedit_super_event_filter(void* self, void* object, void* event);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#focusInEvent)
 ///
@@ -593,6 +609,10 @@ void k_datetimeedit_focus_in_event(void* self, void* event);
 ///
 void k_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_focus_in_event` instead
+///
+#define k_datetimeedit_qbase_focus_in_event k_datetimeedit_super_focus_in_event
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -600,7 +620,7 @@ void k_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param self KDateTimeEdit*
 /// @param event QFocusEvent*
 ///
-void k_datetimeedit_qbase_focus_in_event(void* self, void* event);
+void k_datetimeedit_super_focus_in_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#focusOutEvent)
 ///
@@ -618,6 +638,10 @@ void k_datetimeedit_focus_out_event(void* self, void* event);
 ///
 void k_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_focus_out_event` instead
+///
+#define k_datetimeedit_qbase_focus_out_event k_datetimeedit_super_focus_out_event
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -625,7 +649,7 @@ void k_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*
 /// @param self KDateTimeEdit*
 /// @param event QFocusEvent*
 ///
-void k_datetimeedit_qbase_focus_out_event(void* self, void* event);
+void k_datetimeedit_super_focus_out_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#resizeEvent)
 ///
@@ -643,6 +667,10 @@ void k_datetimeedit_resize_event(void* self, void* event);
 ///
 void k_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_resize_event` instead
+///
+#define k_datetimeedit_qbase_resize_event k_datetimeedit_super_resize_event
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -650,7 +678,7 @@ void k_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param self KDateTimeEdit*
 /// @param event QResizeEvent*
 ///
-void k_datetimeedit_qbase_resize_event(void* self, void* event);
+void k_datetimeedit_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignDateTime)
 ///
@@ -668,6 +696,10 @@ void k_datetimeedit_assign_date_time(void* self, void* dateTime);
 ///
 void k_datetimeedit_on_assign_date_time(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_assign_date_time` instead
+///
+#define k_datetimeedit_qbase_assign_date_time k_datetimeedit_super_assign_date_time
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignDateTime)
 ///
 /// Base class method implementation
@@ -675,7 +707,7 @@ void k_datetimeedit_on_assign_date_time(void* self, void (*callback)(void*, void
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 ///
-void k_datetimeedit_qbase_assign_date_time(void* self, void* dateTime);
+void k_datetimeedit_super_assign_date_time(void* self, void* dateTime);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignDate)
 ///
@@ -693,6 +725,10 @@ void k_datetimeedit_assign_date(void* self, void* date);
 ///
 void k_datetimeedit_on_assign_date(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_assign_date` instead
+///
+#define k_datetimeedit_qbase_assign_date k_datetimeedit_super_assign_date
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignDate)
 ///
 /// Base class method implementation
@@ -700,7 +736,7 @@ void k_datetimeedit_on_assign_date(void* self, void (*callback)(void*, void*));
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 ///
-void k_datetimeedit_qbase_assign_date(void* self, void* date);
+void k_datetimeedit_super_assign_date(void* self, void* date);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignTime)
 ///
@@ -718,6 +754,10 @@ void k_datetimeedit_assign_time(void* self, void* time);
 ///
 void k_datetimeedit_on_assign_time(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_assign_time` instead
+///
+#define k_datetimeedit_qbase_assign_time k_datetimeedit_super_assign_time
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignTime)
 ///
 /// Base class method implementation
@@ -725,7 +765,7 @@ void k_datetimeedit_on_assign_time(void* self, void (*callback)(void*, void*));
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 ///
-void k_datetimeedit_qbase_assign_time(void* self, void* time);
+void k_datetimeedit_super_assign_time(void* self, void* time);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignTimeZone)
 ///
@@ -743,6 +783,10 @@ void k_datetimeedit_assign_time_zone(void* self, void* zone);
 ///
 void k_datetimeedit_on_assign_time_zone(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_assign_time_zone` instead
+///
+#define k_datetimeedit_qbase_assign_time_zone k_datetimeedit_super_assign_time_zone
+
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#assignTimeZone)
 ///
 /// Base class method implementation
@@ -750,7 +794,7 @@ void k_datetimeedit_on_assign_time_zone(void* self, void (*callback)(void*, void
 /// @param self KDateTimeEdit*
 /// @param zone QTimeZone*
 ///
-void k_datetimeedit_qbase_assign_time_zone(void* self, void* zone);
+void k_datetimeedit_super_assign_time_zone(void* self, void* zone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3790,6 +3834,10 @@ int32_t k_datetimeedit_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_datetimeedit_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_dev_type` instead
+///
+#define k_datetimeedit_qbase_dev_type k_datetimeedit_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3798,7 +3846,7 @@ int32_t k_datetimeedit_dev_type(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-int32_t k_datetimeedit_qbase_dev_type(void* self);
+int32_t k_datetimeedit_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3822,6 +3870,10 @@ void k_datetimeedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_datetimeedit_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_set_visible` instead
+///
+#define k_datetimeedit_qbase_set_visible k_datetimeedit_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3831,7 +3883,7 @@ void k_datetimeedit_set_visible(void* self, bool visible);
 /// @param self KDateTimeEdit*
 /// @param visible bool
 ///
-void k_datetimeedit_qbase_set_visible(void* self, bool visible);
+void k_datetimeedit_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -3854,6 +3906,10 @@ void k_datetimeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_datetimeedit_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_size_hint` instead
+///
+#define k_datetimeedit_qbase_size_hint k_datetimeedit_super_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3862,7 +3918,7 @@ QSize* k_datetimeedit_size_hint(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-QSize* k_datetimeedit_qbase_size_hint(void* self);
+QSize* k_datetimeedit_super_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3885,6 +3941,10 @@ void k_datetimeedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_datetimeedit_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_minimum_size_hint` instead
+///
+#define k_datetimeedit_qbase_minimum_size_hint k_datetimeedit_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -3893,7 +3953,7 @@ QSize* k_datetimeedit_minimum_size_hint(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-QSize* k_datetimeedit_qbase_minimum_size_hint(void* self);
+QSize* k_datetimeedit_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3917,6 +3977,10 @@ void k_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_datetimeedit_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_height_for_width` instead
+///
+#define k_datetimeedit_qbase_height_for_width k_datetimeedit_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3926,7 +3990,7 @@ int32_t k_datetimeedit_height_for_width(void* self, int param1);
 /// @param self KDateTimeEdit*
 /// @param param1 int
 ///
-int32_t k_datetimeedit_qbase_height_for_width(void* self, int param1);
+int32_t k_datetimeedit_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3949,6 +4013,10 @@ void k_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool k_datetimeedit_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_has_height_for_width` instead
+///
+#define k_datetimeedit_qbase_has_height_for_width k_datetimeedit_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3957,7 +4025,7 @@ bool k_datetimeedit_has_height_for_width(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-bool k_datetimeedit_qbase_has_height_for_width(void* self);
+bool k_datetimeedit_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3980,6 +4048,10 @@ void k_datetimeedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_datetimeedit_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_paint_engine` instead
+///
+#define k_datetimeedit_qbase_paint_engine k_datetimeedit_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3988,7 +4060,7 @@ QPaintEngine* k_datetimeedit_paint_engine(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-QPaintEngine* k_datetimeedit_qbase_paint_engine(void* self);
+QPaintEngine* k_datetimeedit_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4012,6 +4084,10 @@ void k_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 bool k_datetimeedit_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_event` instead
+///
+#define k_datetimeedit_qbase_event k_datetimeedit_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -4021,7 +4097,7 @@ bool k_datetimeedit_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QEvent*
 ///
-bool k_datetimeedit_qbase_event(void* self, void* event);
+bool k_datetimeedit_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4045,6 +4121,10 @@ void k_datetimeedit_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_datetimeedit_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_mouse_press_event` instead
+///
+#define k_datetimeedit_qbase_mouse_press_event k_datetimeedit_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -4054,7 +4134,7 @@ void k_datetimeedit_mouse_press_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void k_datetimeedit_qbase_mouse_press_event(void* self, void* event);
+void k_datetimeedit_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4078,6 +4158,10 @@ void k_datetimeedit_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void k_datetimeedit_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_mouse_release_event` instead
+///
+#define k_datetimeedit_qbase_mouse_release_event k_datetimeedit_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4087,7 +4171,7 @@ void k_datetimeedit_mouse_release_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void k_datetimeedit_qbase_mouse_release_event(void* self, void* event);
+void k_datetimeedit_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4111,6 +4195,10 @@ void k_datetimeedit_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void k_datetimeedit_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_mouse_double_click_event` instead
+///
+#define k_datetimeedit_qbase_mouse_double_click_event k_datetimeedit_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4120,7 +4208,7 @@ void k_datetimeedit_mouse_double_click_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void k_datetimeedit_qbase_mouse_double_click_event(void* self, void* event);
+void k_datetimeedit_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4144,6 +4232,10 @@ void k_datetimeedit_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void k_datetimeedit_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_mouse_move_event` instead
+///
+#define k_datetimeedit_qbase_mouse_move_event k_datetimeedit_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4153,7 +4245,7 @@ void k_datetimeedit_mouse_move_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void k_datetimeedit_qbase_mouse_move_event(void* self, void* event);
+void k_datetimeedit_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4177,6 +4269,10 @@ void k_datetimeedit_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void k_datetimeedit_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_wheel_event` instead
+///
+#define k_datetimeedit_qbase_wheel_event k_datetimeedit_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4186,7 +4282,7 @@ void k_datetimeedit_wheel_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QWheelEvent*
 ///
-void k_datetimeedit_qbase_wheel_event(void* self, void* event);
+void k_datetimeedit_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4210,6 +4306,10 @@ void k_datetimeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_key_press_event` instead
+///
+#define k_datetimeedit_qbase_key_press_event k_datetimeedit_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -4219,7 +4319,7 @@ void k_datetimeedit_key_press_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QKeyEvent*
 ///
-void k_datetimeedit_qbase_key_press_event(void* self, void* event);
+void k_datetimeedit_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4243,6 +4343,10 @@ void k_datetimeedit_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_datetimeedit_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_key_release_event` instead
+///
+#define k_datetimeedit_qbase_key_release_event k_datetimeedit_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4252,7 +4356,7 @@ void k_datetimeedit_key_release_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QKeyEvent*
 ///
-void k_datetimeedit_qbase_key_release_event(void* self, void* event);
+void k_datetimeedit_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4276,6 +4380,10 @@ void k_datetimeedit_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_datetimeedit_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_enter_event` instead
+///
+#define k_datetimeedit_qbase_enter_event k_datetimeedit_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4285,7 +4393,7 @@ void k_datetimeedit_enter_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QEnterEvent*
 ///
-void k_datetimeedit_qbase_enter_event(void* self, void* event);
+void k_datetimeedit_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4309,6 +4417,10 @@ void k_datetimeedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_leave_event` instead
+///
+#define k_datetimeedit_qbase_leave_event k_datetimeedit_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4318,7 +4430,7 @@ void k_datetimeedit_leave_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QEvent*
 ///
-void k_datetimeedit_qbase_leave_event(void* self, void* event);
+void k_datetimeedit_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4342,6 +4454,10 @@ void k_datetimeedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_paint_event` instead
+///
+#define k_datetimeedit_qbase_paint_event k_datetimeedit_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4351,7 +4467,7 @@ void k_datetimeedit_paint_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QPaintEvent*
 ///
-void k_datetimeedit_qbase_paint_event(void* self, void* event);
+void k_datetimeedit_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4375,6 +4491,10 @@ void k_datetimeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_move_event` instead
+///
+#define k_datetimeedit_qbase_move_event k_datetimeedit_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4384,7 +4504,7 @@ void k_datetimeedit_move_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QMoveEvent*
 ///
-void k_datetimeedit_qbase_move_event(void* self, void* event);
+void k_datetimeedit_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4408,6 +4528,10 @@ void k_datetimeedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_close_event` instead
+///
+#define k_datetimeedit_qbase_close_event k_datetimeedit_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4417,7 +4541,7 @@ void k_datetimeedit_close_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QCloseEvent*
 ///
-void k_datetimeedit_qbase_close_event(void* self, void* event);
+void k_datetimeedit_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4441,6 +4565,10 @@ void k_datetimeedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_context_menu_event` instead
+///
+#define k_datetimeedit_qbase_context_menu_event k_datetimeedit_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4450,7 +4578,7 @@ void k_datetimeedit_context_menu_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QContextMenuEvent*
 ///
-void k_datetimeedit_qbase_context_menu_event(void* self, void* event);
+void k_datetimeedit_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4474,6 +4602,10 @@ void k_datetimeedit_on_context_menu_event(void* self, void (*callback)(void*, vo
 ///
 void k_datetimeedit_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_tablet_event` instead
+///
+#define k_datetimeedit_qbase_tablet_event k_datetimeedit_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4483,7 +4615,7 @@ void k_datetimeedit_tablet_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QTabletEvent*
 ///
-void k_datetimeedit_qbase_tablet_event(void* self, void* event);
+void k_datetimeedit_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4507,6 +4639,10 @@ void k_datetimeedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_action_event` instead
+///
+#define k_datetimeedit_qbase_action_event k_datetimeedit_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4516,7 +4652,7 @@ void k_datetimeedit_action_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QActionEvent*
 ///
-void k_datetimeedit_qbase_action_event(void* self, void* event);
+void k_datetimeedit_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4540,6 +4676,10 @@ void k_datetimeedit_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_drag_enter_event` instead
+///
+#define k_datetimeedit_qbase_drag_enter_event k_datetimeedit_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4549,7 +4689,7 @@ void k_datetimeedit_drag_enter_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QDragEnterEvent*
 ///
-void k_datetimeedit_qbase_drag_enter_event(void* self, void* event);
+void k_datetimeedit_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4573,6 +4713,10 @@ void k_datetimeedit_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_datetimeedit_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_drag_move_event` instead
+///
+#define k_datetimeedit_qbase_drag_move_event k_datetimeedit_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4582,7 +4726,7 @@ void k_datetimeedit_drag_move_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QDragMoveEvent*
 ///
-void k_datetimeedit_qbase_drag_move_event(void* self, void* event);
+void k_datetimeedit_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4606,6 +4750,10 @@ void k_datetimeedit_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_datetimeedit_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_drag_leave_event` instead
+///
+#define k_datetimeedit_qbase_drag_leave_event k_datetimeedit_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4615,7 +4763,7 @@ void k_datetimeedit_drag_leave_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QDragLeaveEvent*
 ///
-void k_datetimeedit_qbase_drag_leave_event(void* self, void* event);
+void k_datetimeedit_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4639,6 +4787,10 @@ void k_datetimeedit_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void k_datetimeedit_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_drop_event` instead
+///
+#define k_datetimeedit_qbase_drop_event k_datetimeedit_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4648,7 +4800,7 @@ void k_datetimeedit_drop_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QDropEvent*
 ///
-void k_datetimeedit_qbase_drop_event(void* self, void* event);
+void k_datetimeedit_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4672,6 +4824,10 @@ void k_datetimeedit_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_show_event` instead
+///
+#define k_datetimeedit_qbase_show_event k_datetimeedit_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4681,7 +4837,7 @@ void k_datetimeedit_show_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QShowEvent*
 ///
-void k_datetimeedit_qbase_show_event(void* self, void* event);
+void k_datetimeedit_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4705,6 +4861,10 @@ void k_datetimeedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_hide_event` instead
+///
+#define k_datetimeedit_qbase_hide_event k_datetimeedit_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4714,7 +4874,7 @@ void k_datetimeedit_hide_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QHideEvent*
 ///
-void k_datetimeedit_qbase_hide_event(void* self, void* event);
+void k_datetimeedit_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4740,6 +4900,10 @@ void k_datetimeedit_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_datetimeedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_native_event` instead
+///
+#define k_datetimeedit_qbase_native_event k_datetimeedit_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4751,7 +4915,7 @@ bool k_datetimeedit_native_event(void* self, char* eventType, void* message, int
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_datetimeedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_datetimeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4775,6 +4939,10 @@ void k_datetimeedit_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 void k_datetimeedit_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_change_event` instead
+///
+#define k_datetimeedit_qbase_change_event k_datetimeedit_super_change_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4784,7 +4952,7 @@ void k_datetimeedit_change_event(void* self, void* param1);
 /// @param self KDateTimeEdit*
 /// @param param1 QEvent*
 ///
-void k_datetimeedit_qbase_change_event(void* self, void* param1);
+void k_datetimeedit_super_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4808,6 +4976,10 @@ void k_datetimeedit_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t k_datetimeedit_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_metric` instead
+///
+#define k_datetimeedit_qbase_metric k_datetimeedit_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4817,7 +4989,7 @@ int32_t k_datetimeedit_metric(void* self, int32_t param1);
 /// @param self KDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_datetimeedit_qbase_metric(void* self, int32_t param1);
+int32_t k_datetimeedit_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4841,6 +5013,10 @@ void k_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_datetimeedit_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_init_painter` instead
+///
+#define k_datetimeedit_qbase_init_painter k_datetimeedit_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4850,7 +5026,7 @@ void k_datetimeedit_init_painter(void* self, void* painter);
 /// @param self KDateTimeEdit*
 /// @param painter QPainter*
 ///
-void k_datetimeedit_qbase_init_painter(void* self, void* painter);
+void k_datetimeedit_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4874,6 +5050,10 @@ void k_datetimeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_datetimeedit_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_redirected` instead
+///
+#define k_datetimeedit_qbase_redirected k_datetimeedit_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4883,7 +5063,7 @@ QPaintDevice* k_datetimeedit_redirected(void* self, void* offset);
 /// @param self KDateTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_datetimeedit_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_datetimeedit_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4906,6 +5086,10 @@ void k_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* k_datetimeedit_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_shared_painter` instead
+///
+#define k_datetimeedit_qbase_shared_painter k_datetimeedit_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4914,7 +5098,7 @@ QPainter* k_datetimeedit_shared_painter(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-QPainter* k_datetimeedit_qbase_shared_painter(void* self);
+QPainter* k_datetimeedit_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4938,6 +5122,10 @@ void k_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_datetimeedit_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_input_method_event` instead
+///
+#define k_datetimeedit_qbase_input_method_event k_datetimeedit_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4947,7 +5135,7 @@ void k_datetimeedit_input_method_event(void* self, void* param1);
 /// @param self KDateTimeEdit*
 /// @param param1 QInputMethodEvent*
 ///
-void k_datetimeedit_qbase_input_method_event(void* self, void* param1);
+void k_datetimeedit_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4971,6 +5159,10 @@ void k_datetimeedit_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 QVariant* k_datetimeedit_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_input_method_query` instead
+///
+#define k_datetimeedit_qbase_input_method_query k_datetimeedit_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4980,7 +5172,7 @@ QVariant* k_datetimeedit_input_method_query(void* self, int32_t param1);
 /// @param self KDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datetimeedit_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_datetimeedit_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5004,6 +5196,10 @@ void k_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 bool k_datetimeedit_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_focus_next_prev_child` instead
+///
+#define k_datetimeedit_qbase_focus_next_prev_child k_datetimeedit_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5013,7 +5209,7 @@ bool k_datetimeedit_focus_next_prev_child(void* self, bool next);
 /// @param self KDateTimeEdit*
 /// @param next bool
 ///
-bool k_datetimeedit_qbase_focus_next_prev_child(void* self, bool next);
+bool k_datetimeedit_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -5037,6 +5233,10 @@ void k_datetimeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 ///
 void k_datetimeedit_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_timer_event` instead
+///
+#define k_datetimeedit_qbase_timer_event k_datetimeedit_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5046,7 +5246,7 @@ void k_datetimeedit_timer_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QTimerEvent*
 ///
-void k_datetimeedit_qbase_timer_event(void* self, void* event);
+void k_datetimeedit_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5070,6 +5270,10 @@ void k_datetimeedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_child_event` instead
+///
+#define k_datetimeedit_qbase_child_event k_datetimeedit_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5079,7 +5283,7 @@ void k_datetimeedit_child_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QChildEvent*
 ///
-void k_datetimeedit_qbase_child_event(void* self, void* event);
+void k_datetimeedit_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5103,6 +5307,10 @@ void k_datetimeedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_custom_event` instead
+///
+#define k_datetimeedit_qbase_custom_event k_datetimeedit_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5112,7 +5320,7 @@ void k_datetimeedit_custom_event(void* self, void* event);
 /// @param self KDateTimeEdit*
 /// @param event QEvent*
 ///
-void k_datetimeedit_qbase_custom_event(void* self, void* event);
+void k_datetimeedit_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5136,6 +5344,10 @@ void k_datetimeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datetimeedit_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_connect_notify` instead
+///
+#define k_datetimeedit_qbase_connect_notify k_datetimeedit_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5145,7 +5357,7 @@ void k_datetimeedit_connect_notify(void* self, void* signal);
 /// @param self KDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void k_datetimeedit_qbase_connect_notify(void* self, void* signal);
+void k_datetimeedit_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5169,6 +5381,10 @@ void k_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_datetimeedit_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_disconnect_notify` instead
+///
+#define k_datetimeedit_qbase_disconnect_notify k_datetimeedit_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5178,7 +5394,7 @@ void k_datetimeedit_disconnect_notify(void* self, void* signal);
 /// @param self KDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void k_datetimeedit_qbase_disconnect_notify(void* self, void* signal);
+void k_datetimeedit_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5201,6 +5417,10 @@ void k_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_datetimeedit_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_update_micro_focus` instead
+///
+#define k_datetimeedit_qbase_update_micro_focus k_datetimeedit_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5209,7 +5429,7 @@ void k_datetimeedit_update_micro_focus(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-void k_datetimeedit_qbase_update_micro_focus(void* self);
+void k_datetimeedit_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5232,6 +5452,10 @@ void k_datetimeedit_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_datetimeedit_create(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_create` instead
+///
+#define k_datetimeedit_qbase_create k_datetimeedit_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5240,7 +5464,7 @@ void k_datetimeedit_create(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-void k_datetimeedit_qbase_create(void* self);
+void k_datetimeedit_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5263,6 +5487,10 @@ void k_datetimeedit_on_create(void* self, void (*callback)());
 ///
 void k_datetimeedit_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_destroy` instead
+///
+#define k_datetimeedit_qbase_destroy k_datetimeedit_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5271,7 +5499,7 @@ void k_datetimeedit_destroy(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-void k_datetimeedit_qbase_destroy(void* self);
+void k_datetimeedit_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5294,6 +5522,10 @@ void k_datetimeedit_on_destroy(void* self, void (*callback)());
 ///
 bool k_datetimeedit_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_focus_next_child` instead
+///
+#define k_datetimeedit_qbase_focus_next_child k_datetimeedit_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5302,7 +5534,7 @@ bool k_datetimeedit_focus_next_child(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-bool k_datetimeedit_qbase_focus_next_child(void* self);
+bool k_datetimeedit_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5325,6 +5557,10 @@ void k_datetimeedit_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_datetimeedit_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_focus_previous_child` instead
+///
+#define k_datetimeedit_qbase_focus_previous_child k_datetimeedit_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5333,7 +5569,7 @@ bool k_datetimeedit_focus_previous_child(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-bool k_datetimeedit_qbase_focus_previous_child(void* self);
+bool k_datetimeedit_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5356,6 +5592,10 @@ void k_datetimeedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_datetimeedit_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_sender` instead
+///
+#define k_datetimeedit_qbase_sender k_datetimeedit_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5364,7 +5604,7 @@ QObject* k_datetimeedit_sender(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-QObject* k_datetimeedit_qbase_sender(void* self);
+QObject* k_datetimeedit_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5387,6 +5627,10 @@ void k_datetimeedit_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_datetimeedit_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_sender_signal_index` instead
+///
+#define k_datetimeedit_qbase_sender_signal_index k_datetimeedit_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5395,7 +5639,7 @@ int32_t k_datetimeedit_sender_signal_index(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-int32_t k_datetimeedit_qbase_sender_signal_index(void* self);
+int32_t k_datetimeedit_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5419,6 +5663,10 @@ void k_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_datetimeedit_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_receivers` instead
+///
+#define k_datetimeedit_qbase_receivers k_datetimeedit_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5428,7 +5676,7 @@ int32_t k_datetimeedit_receivers(void* self, const char* signal);
 /// @param self KDateTimeEdit*
 /// @param signal const char*
 ///
-int32_t k_datetimeedit_qbase_receivers(void* self, const char* signal);
+int32_t k_datetimeedit_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5452,6 +5700,10 @@ void k_datetimeedit_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_datetimeedit_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_is_signal_connected` instead
+///
+#define k_datetimeedit_qbase_is_signal_connected k_datetimeedit_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5461,7 +5713,7 @@ bool k_datetimeedit_is_signal_connected(void* self, void* signal);
 /// @param self KDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool k_datetimeedit_qbase_is_signal_connected(void* self, void* signal);
+bool k_datetimeedit_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5486,6 +5738,10 @@ void k_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 double k_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_datetimeedit_super_get_decoded_metric_f` instead
+///
+#define k_datetimeedit_qbase_get_decoded_metric_f k_datetimeedit_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5496,7 +5752,7 @@ double k_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_datetimeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_datetimeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

@@ -23,8 +23,8 @@ void q_extensionfactory_on_meta_object(void* self, const QMetaObject* (*callback
     QExtensionFactory_OnMetaObject((QExtensionFactory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_extensionfactory_qbase_meta_object(void* self) {
-    return QExtensionFactory_QBaseMetaObject((QExtensionFactory*)self);
+const QMetaObject* q_extensionfactory_super_meta_object(void* self) {
+    return QExtensionFactory_SuperMetaObject((QExtensionFactory*)self);
 }
 
 void* q_extensionfactory_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_extensionfactory_on_metacast(void* self, void* (*callback)(void*, const c
     QExtensionFactory_OnMetacast((QExtensionFactory*)self, (intptr_t)callback);
 }
 
-void* q_extensionfactory_qbase_metacast(void* self, const char* param1) {
-    return QExtensionFactory_QBaseMetacast((QExtensionFactory*)self, param1);
+void* q_extensionfactory_super_metacast(void* self, const char* param1) {
+    return QExtensionFactory_SuperMetacast((QExtensionFactory*)self, param1);
 }
 
 int32_t q_extensionfactory_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_extensionfactory_on_metacall(void* self, int32_t (*callback)(void*, int32
     QExtensionFactory_OnMetacall((QExtensionFactory*)self, (intptr_t)callback);
 }
 
-int32_t q_extensionfactory_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QExtensionFactory_QBaseMetacall((QExtensionFactory*)self, param1, param2, param3);
+int32_t q_extensionfactory_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QExtensionFactory_SuperMetacall((QExtensionFactory*)self, param1, param2, param3);
 }
 
 const char* q_extensionfactory_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_extensionfactory_on_extension(void* self, QObject* (*callback)(void*, voi
     QExtensionFactory_OnExtension((QExtensionFactory*)self, (intptr_t)callback);
 }
 
-QObject* q_extensionfactory_qbase_extension(void* self, void* object, const char* iid) {
-    return QExtensionFactory_QBaseExtension((QExtensionFactory*)self, (QObject*)object, qstring(iid));
+QObject* q_extensionfactory_super_extension(void* self, void* object, const char* iid) {
+    return QExtensionFactory_SuperExtension((QExtensionFactory*)self, (QObject*)object, qstring(iid));
 }
 
 QExtensionManager* q_extensionfactory_extension_manager(void* self) {
@@ -82,8 +82,8 @@ void q_extensionfactory_on_create_extension(void* self, QObject* (*callback)(voi
     QExtensionFactory_OnCreateExtension((QExtensionFactory*)self, (intptr_t)callback);
 }
 
-QObject* q_extensionfactory_qbase_create_extension(void* self, void* object, const char* iid, void* parent) {
-    return QExtensionFactory_QBaseCreateExtension((QExtensionFactory*)self, (QObject*)object, qstring(iid), (QObject*)parent);
+QObject* q_extensionfactory_super_create_extension(void* self, void* object, const char* iid, void* parent) {
+    return QExtensionFactory_SuperCreateExtension((QExtensionFactory*)self, (QObject*)object, qstring(iid), (QObject*)parent);
 }
 
 const char* q_extensionfactory_tr2(const char* s, const char* c) {
@@ -319,8 +319,8 @@ bool q_extensionfactory_event(void* self, void* event) {
     return QExtensionFactory_Event((QExtensionFactory*)self, (QEvent*)event);
 }
 
-bool q_extensionfactory_qbase_event(void* self, void* event) {
-    return QExtensionFactory_QBaseEvent((QExtensionFactory*)self, (QEvent*)event);
+bool q_extensionfactory_super_event(void* self, void* event) {
+    return QExtensionFactory_SuperEvent((QExtensionFactory*)self, (QEvent*)event);
 }
 
 void q_extensionfactory_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -331,8 +331,8 @@ bool q_extensionfactory_event_filter(void* self, void* watched, void* event) {
     return QExtensionFactory_EventFilter((QExtensionFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_extensionfactory_qbase_event_filter(void* self, void* watched, void* event) {
-    return QExtensionFactory_QBaseEventFilter((QExtensionFactory*)self, (QObject*)watched, (QEvent*)event);
+bool q_extensionfactory_super_event_filter(void* self, void* watched, void* event) {
+    return QExtensionFactory_SuperEventFilter((QExtensionFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_extensionfactory_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -343,8 +343,8 @@ void q_extensionfactory_timer_event(void* self, void* event) {
     QExtensionFactory_TimerEvent((QExtensionFactory*)self, (QTimerEvent*)event);
 }
 
-void q_extensionfactory_qbase_timer_event(void* self, void* event) {
-    QExtensionFactory_QBaseTimerEvent((QExtensionFactory*)self, (QTimerEvent*)event);
+void q_extensionfactory_super_timer_event(void* self, void* event) {
+    QExtensionFactory_SuperTimerEvent((QExtensionFactory*)self, (QTimerEvent*)event);
 }
 
 void q_extensionfactory_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -355,8 +355,8 @@ void q_extensionfactory_child_event(void* self, void* event) {
     QExtensionFactory_ChildEvent((QExtensionFactory*)self, (QChildEvent*)event);
 }
 
-void q_extensionfactory_qbase_child_event(void* self, void* event) {
-    QExtensionFactory_QBaseChildEvent((QExtensionFactory*)self, (QChildEvent*)event);
+void q_extensionfactory_super_child_event(void* self, void* event) {
+    QExtensionFactory_SuperChildEvent((QExtensionFactory*)self, (QChildEvent*)event);
 }
 
 void q_extensionfactory_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -367,8 +367,8 @@ void q_extensionfactory_custom_event(void* self, void* event) {
     QExtensionFactory_CustomEvent((QExtensionFactory*)self, (QEvent*)event);
 }
 
-void q_extensionfactory_qbase_custom_event(void* self, void* event) {
-    QExtensionFactory_QBaseCustomEvent((QExtensionFactory*)self, (QEvent*)event);
+void q_extensionfactory_super_custom_event(void* self, void* event) {
+    QExtensionFactory_SuperCustomEvent((QExtensionFactory*)self, (QEvent*)event);
 }
 
 void q_extensionfactory_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ void q_extensionfactory_connect_notify(void* self, void* signal) {
     QExtensionFactory_ConnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
-void q_extensionfactory_qbase_connect_notify(void* self, void* signal) {
-    QExtensionFactory_QBaseConnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
+void q_extensionfactory_super_connect_notify(void* self, void* signal) {
+    QExtensionFactory_SuperConnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
 void q_extensionfactory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -391,8 +391,8 @@ void q_extensionfactory_disconnect_notify(void* self, void* signal) {
     QExtensionFactory_DisconnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
-void q_extensionfactory_qbase_disconnect_notify(void* self, void* signal) {
-    QExtensionFactory_QBaseDisconnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
+void q_extensionfactory_super_disconnect_notify(void* self, void* signal) {
+    QExtensionFactory_SuperDisconnectNotify((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
 void q_extensionfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ QObject* q_extensionfactory_sender(void* self) {
     return QExtensionFactory_Sender((QExtensionFactory*)self);
 }
 
-QObject* q_extensionfactory_qbase_sender(void* self) {
-    return QExtensionFactory_QBaseSender((QExtensionFactory*)self);
+QObject* q_extensionfactory_super_sender(void* self) {
+    return QExtensionFactory_SuperSender((QExtensionFactory*)self);
 }
 
 void q_extensionfactory_on_sender(void* self, QObject* (*callback)()) {
@@ -415,8 +415,8 @@ int32_t q_extensionfactory_sender_signal_index(void* self) {
     return QExtensionFactory_SenderSignalIndex((QExtensionFactory*)self);
 }
 
-int32_t q_extensionfactory_qbase_sender_signal_index(void* self) {
-    return QExtensionFactory_QBaseSenderSignalIndex((QExtensionFactory*)self);
+int32_t q_extensionfactory_super_sender_signal_index(void* self) {
+    return QExtensionFactory_SuperSenderSignalIndex((QExtensionFactory*)self);
 }
 
 void q_extensionfactory_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -427,8 +427,8 @@ int32_t q_extensionfactory_receivers(void* self, const char* signal) {
     return QExtensionFactory_Receivers((QExtensionFactory*)self, signal);
 }
 
-int32_t q_extensionfactory_qbase_receivers(void* self, const char* signal) {
-    return QExtensionFactory_QBaseReceivers((QExtensionFactory*)self, signal);
+int32_t q_extensionfactory_super_receivers(void* self, const char* signal) {
+    return QExtensionFactory_SuperReceivers((QExtensionFactory*)self, signal);
 }
 
 void q_extensionfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -439,8 +439,8 @@ bool q_extensionfactory_is_signal_connected(void* self, void* signal) {
     return QExtensionFactory_IsSignalConnected((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
-bool q_extensionfactory_qbase_is_signal_connected(void* self, void* signal) {
-    return QExtensionFactory_QBaseIsSignalConnected((QExtensionFactory*)self, (QMetaMethod*)signal);
+bool q_extensionfactory_super_is_signal_connected(void* self, void* signal) {
+    return QExtensionFactory_SuperIsSignalConnected((QExtensionFactory*)self, (QMetaMethod*)signal);
 }
 
 void q_extensionfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

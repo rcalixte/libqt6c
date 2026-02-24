@@ -28,8 +28,8 @@ void q_designerformwindowmanagerinterface_on_meta_object(void* self, const QMeta
     QDesignerFormWindowManagerInterface_OnMetaObject((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerformwindowmanagerinterface_qbase_meta_object(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseMetaObject((QDesignerFormWindowManagerInterface*)self);
+const QMetaObject* q_designerformwindowmanagerinterface_super_meta_object(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperMetaObject((QDesignerFormWindowManagerInterface*)self);
 }
 
 void* q_designerformwindowmanagerinterface_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_designerformwindowmanagerinterface_on_metacast(void* self, void* (*callba
     QDesignerFormWindowManagerInterface_OnMetacast((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerformwindowmanagerinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerFormWindowManagerInterface_QBaseMetacast((QDesignerFormWindowManagerInterface*)self, param1);
+void* q_designerformwindowmanagerinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerFormWindowManagerInterface_SuperMetacast((QDesignerFormWindowManagerInterface*)self, param1);
 }
 
 int32_t q_designerformwindowmanagerinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_designerformwindowmanagerinterface_on_metacall(void* self, int32_t (*call
     QDesignerFormWindowManagerInterface_OnMetacall((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerformwindowmanagerinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerFormWindowManagerInterface_QBaseMetacall((QDesignerFormWindowManagerInterface*)self, param1, param2, param3);
+int32_t q_designerformwindowmanagerinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerFormWindowManagerInterface_SuperMetacall((QDesignerFormWindowManagerInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerformwindowmanagerinterface_tr(const char* s) {
@@ -71,8 +71,8 @@ void q_designerformwindowmanagerinterface_on_action(void* self, QAction* (*callb
     QDesignerFormWindowManagerInterface_OnAction((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QAction* q_designerformwindowmanagerinterface_qbase_action(void* self, int32_t action) {
-    return QDesignerFormWindowManagerInterface_QBaseAction((QDesignerFormWindowManagerInterface*)self, action);
+QAction* q_designerformwindowmanagerinterface_super_action(void* self, int32_t action) {
+    return QDesignerFormWindowManagerInterface_SuperAction((QDesignerFormWindowManagerInterface*)self, action);
 }
 
 QActionGroup* q_designerformwindowmanagerinterface_action_group(void* self, int32_t actionGroup) {
@@ -83,8 +83,8 @@ void q_designerformwindowmanagerinterface_on_action_group(void* self, QActionGro
     QDesignerFormWindowManagerInterface_OnActionGroup((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QActionGroup* q_designerformwindowmanagerinterface_qbase_action_group(void* self, int32_t actionGroup) {
-    return QDesignerFormWindowManagerInterface_QBaseActionGroup((QDesignerFormWindowManagerInterface*)self, actionGroup);
+QActionGroup* q_designerformwindowmanagerinterface_super_action_group(void* self, int32_t actionGroup) {
+    return QDesignerFormWindowManagerInterface_SuperActionGroup((QDesignerFormWindowManagerInterface*)self, actionGroup);
 }
 
 QAction* q_designerformwindowmanagerinterface_action_cut(void* self) {
@@ -167,8 +167,8 @@ void q_designerformwindowmanagerinterface_on_active_form_window(void* self, QDes
     QDesignerFormWindowManagerInterface_OnActiveFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_active_form_window(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseActiveFormWindow((QDesignerFormWindowManagerInterface*)self);
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_super_active_form_window(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperActiveFormWindow((QDesignerFormWindowManagerInterface*)self);
 }
 
 int32_t q_designerformwindowmanagerinterface_form_window_count(void* self) {
@@ -179,8 +179,8 @@ void q_designerformwindowmanagerinterface_on_form_window_count(void* self, int32
     QDesignerFormWindowManagerInterface_OnFormWindowCount((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerformwindowmanagerinterface_qbase_form_window_count(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseFormWindowCount((QDesignerFormWindowManagerInterface*)self);
+int32_t q_designerformwindowmanagerinterface_super_form_window_count(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperFormWindowCount((QDesignerFormWindowManagerInterface*)self);
 }
 
 QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_form_window(void* self, int index) {
@@ -191,8 +191,8 @@ void q_designerformwindowmanagerinterface_on_form_window(void* self, QDesignerFo
     QDesignerFormWindowManagerInterface_OnFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_form_window(void* self, int index) {
-    return QDesignerFormWindowManagerInterface_QBaseFormWindow((QDesignerFormWindowManagerInterface*)self, index);
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_super_form_window(void* self, int index) {
+    return QDesignerFormWindowManagerInterface_SuperFormWindow((QDesignerFormWindowManagerInterface*)self, index);
 }
 
 QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_window(void* self, void* parentWidget, int32_t flags) {
@@ -203,8 +203,8 @@ void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDes
     QDesignerFormWindowManagerInterface_OnCreateFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_create_form_window(void* self, void* parentWidget, int32_t flags) {
-    return QDesignerFormWindowManagerInterface_QBaseCreateFormWindow((QDesignerFormWindowManagerInterface*)self, (QWidget*)parentWidget, flags);
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_super_create_form_window(void* self, void* parentWidget, int32_t flags) {
+    return QDesignerFormWindowManagerInterface_SuperCreateFormWindow((QDesignerFormWindowManagerInterface*)self, (QWidget*)parentWidget, flags);
 }
 
 QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_core(void* self) {
@@ -215,8 +215,8 @@ void q_designerformwindowmanagerinterface_on_core(void* self, QDesignerFormEdito
     QDesignerFormWindowManagerInterface_OnCore((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_qbase_core(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseCore((QDesignerFormWindowManagerInterface*)self);
+QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_super_core(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperCore((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list) {
@@ -227,8 +227,8 @@ void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callb
     QDesignerFormWindowManagerInterface_OnDragItems((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list) {
-    QDesignerFormWindowManagerInterface_QBaseDragItems((QDesignerFormWindowManagerInterface*)self, item_list);
+void q_designerformwindowmanagerinterface_super_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list) {
+    QDesignerFormWindowManagerInterface_SuperDragItems((QDesignerFormWindowManagerInterface*)self, item_list);
 }
 
 QPixmap* q_designerformwindowmanagerinterface_create_preview_pixmap(void* self) {
@@ -239,8 +239,8 @@ void q_designerformwindowmanagerinterface_on_create_preview_pixmap(void* self, Q
     QDesignerFormWindowManagerInterface_OnCreatePreviewPixmap((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QPixmap* q_designerformwindowmanagerinterface_qbase_create_preview_pixmap(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseCreatePreviewPixmap((QDesignerFormWindowManagerInterface*)self);
+QPixmap* q_designerformwindowmanagerinterface_super_create_preview_pixmap(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperCreatePreviewPixmap((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_form_window_added(void* self, void* formWindow) {
@@ -283,8 +283,8 @@ void q_designerformwindowmanagerinterface_on_add_form_window(void* self, void (*
     QDesignerFormWindowManagerInterface_OnAddFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_add_form_window(void* self, void* formWindow) {
-    QDesignerFormWindowManagerInterface_QBaseAddFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
+void q_designerformwindowmanagerinterface_super_add_form_window(void* self, void* formWindow) {
+    QDesignerFormWindowManagerInterface_SuperAddFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 void q_designerformwindowmanagerinterface_remove_form_window(void* self, void* formWindow) {
@@ -295,8 +295,8 @@ void q_designerformwindowmanagerinterface_on_remove_form_window(void* self, void
     QDesignerFormWindowManagerInterface_OnRemoveFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_remove_form_window(void* self, void* formWindow) {
-    QDesignerFormWindowManagerInterface_QBaseRemoveFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
+void q_designerformwindowmanagerinterface_super_remove_form_window(void* self, void* formWindow) {
+    QDesignerFormWindowManagerInterface_SuperRemoveFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 void q_designerformwindowmanagerinterface_set_active_form_window(void* self, void* formWindow) {
@@ -307,8 +307,8 @@ void q_designerformwindowmanagerinterface_on_set_active_form_window(void* self, 
     QDesignerFormWindowManagerInterface_OnSetActiveFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_set_active_form_window(void* self, void* formWindow) {
-    QDesignerFormWindowManagerInterface_QBaseSetActiveFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
+void q_designerformwindowmanagerinterface_super_set_active_form_window(void* self, void* formWindow) {
+    QDesignerFormWindowManagerInterface_SuperSetActiveFormWindow((QDesignerFormWindowManagerInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 void q_designerformwindowmanagerinterface_show_preview(void* self) {
@@ -319,8 +319,8 @@ void q_designerformwindowmanagerinterface_on_show_preview(void* self, void (*cal
     QDesignerFormWindowManagerInterface_OnShowPreview((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_show_preview(void* self) {
-    QDesignerFormWindowManagerInterface_QBaseShowPreview((QDesignerFormWindowManagerInterface*)self);
+void q_designerformwindowmanagerinterface_super_show_preview(void* self) {
+    QDesignerFormWindowManagerInterface_SuperShowPreview((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_close_all_previews(void* self) {
@@ -331,8 +331,8 @@ void q_designerformwindowmanagerinterface_on_close_all_previews(void* self, void
     QDesignerFormWindowManagerInterface_OnCloseAllPreviews((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_close_all_previews(void* self) {
-    QDesignerFormWindowManagerInterface_QBaseCloseAllPreviews((QDesignerFormWindowManagerInterface*)self);
+void q_designerformwindowmanagerinterface_super_close_all_previews(void* self) {
+    QDesignerFormWindowManagerInterface_SuperCloseAllPreviews((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_show_plugin_dialog(void* self) {
@@ -343,8 +343,8 @@ void q_designerformwindowmanagerinterface_on_show_plugin_dialog(void* self, void
     QDesignerFormWindowManagerInterface_OnShowPluginDialog((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_show_plugin_dialog(void* self) {
-    QDesignerFormWindowManagerInterface_QBaseShowPluginDialog((QDesignerFormWindowManagerInterface*)self);
+void q_designerformwindowmanagerinterface_super_show_plugin_dialog(void* self) {
+    QDesignerFormWindowManagerInterface_SuperShowPluginDialog((QDesignerFormWindowManagerInterface*)self);
 }
 
 const char* q_designerformwindowmanagerinterface_tr2(const char* s, const char* c) {
@@ -576,8 +576,8 @@ bool q_designerformwindowmanagerinterface_event(void* self, void* event) {
     return QDesignerFormWindowManagerInterface_Event((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
 }
 
-bool q_designerformwindowmanagerinterface_qbase_event(void* self, void* event) {
-    return QDesignerFormWindowManagerInterface_QBaseEvent((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
+bool q_designerformwindowmanagerinterface_super_event(void* self, void* event) {
+    return QDesignerFormWindowManagerInterface_SuperEvent((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
 }
 
 void q_designerformwindowmanagerinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -588,8 +588,8 @@ bool q_designerformwindowmanagerinterface_event_filter(void* self, void* watched
     return QDesignerFormWindowManagerInterface_EventFilter((QDesignerFormWindowManagerInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerformwindowmanagerinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerFormWindowManagerInterface_QBaseEventFilter((QDesignerFormWindowManagerInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerformwindowmanagerinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerFormWindowManagerInterface_SuperEventFilter((QDesignerFormWindowManagerInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerformwindowmanagerinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -600,8 +600,8 @@ void q_designerformwindowmanagerinterface_timer_event(void* self, void* event) {
     QDesignerFormWindowManagerInterface_TimerEvent((QDesignerFormWindowManagerInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerformwindowmanagerinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerFormWindowManagerInterface_QBaseTimerEvent((QDesignerFormWindowManagerInterface*)self, (QTimerEvent*)event);
+void q_designerformwindowmanagerinterface_super_timer_event(void* self, void* event) {
+    QDesignerFormWindowManagerInterface_SuperTimerEvent((QDesignerFormWindowManagerInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerformwindowmanagerinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -612,8 +612,8 @@ void q_designerformwindowmanagerinterface_child_event(void* self, void* event) {
     QDesignerFormWindowManagerInterface_ChildEvent((QDesignerFormWindowManagerInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerformwindowmanagerinterface_qbase_child_event(void* self, void* event) {
-    QDesignerFormWindowManagerInterface_QBaseChildEvent((QDesignerFormWindowManagerInterface*)self, (QChildEvent*)event);
+void q_designerformwindowmanagerinterface_super_child_event(void* self, void* event) {
+    QDesignerFormWindowManagerInterface_SuperChildEvent((QDesignerFormWindowManagerInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerformwindowmanagerinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -624,8 +624,8 @@ void q_designerformwindowmanagerinterface_custom_event(void* self, void* event) 
     QDesignerFormWindowManagerInterface_CustomEvent((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
 }
 
-void q_designerformwindowmanagerinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerFormWindowManagerInterface_QBaseCustomEvent((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
+void q_designerformwindowmanagerinterface_super_custom_event(void* self, void* event) {
+    QDesignerFormWindowManagerInterface_SuperCustomEvent((QDesignerFormWindowManagerInterface*)self, (QEvent*)event);
 }
 
 void q_designerformwindowmanagerinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -636,8 +636,8 @@ void q_designerformwindowmanagerinterface_connect_notify(void* self, void* signa
     QDesignerFormWindowManagerInterface_ConnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowmanagerinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerFormWindowManagerInterface_QBaseConnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
+void q_designerformwindowmanagerinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerFormWindowManagerInterface_SuperConnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformwindowmanagerinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -648,8 +648,8 @@ void q_designerformwindowmanagerinterface_disconnect_notify(void* self, void* si
     QDesignerFormWindowManagerInterface_DisconnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformwindowmanagerinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerFormWindowManagerInterface_QBaseDisconnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
+void q_designerformwindowmanagerinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerFormWindowManagerInterface_SuperDisconnectNotify((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformwindowmanagerinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -660,8 +660,8 @@ QObject* q_designerformwindowmanagerinterface_sender(void* self) {
     return QDesignerFormWindowManagerInterface_Sender((QDesignerFormWindowManagerInterface*)self);
 }
 
-QObject* q_designerformwindowmanagerinterface_qbase_sender(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseSender((QDesignerFormWindowManagerInterface*)self);
+QObject* q_designerformwindowmanagerinterface_super_sender(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperSender((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -672,8 +672,8 @@ int32_t q_designerformwindowmanagerinterface_sender_signal_index(void* self) {
     return QDesignerFormWindowManagerInterface_SenderSignalIndex((QDesignerFormWindowManagerInterface*)self);
 }
 
-int32_t q_designerformwindowmanagerinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerFormWindowManagerInterface_QBaseSenderSignalIndex((QDesignerFormWindowManagerInterface*)self);
+int32_t q_designerformwindowmanagerinterface_super_sender_signal_index(void* self) {
+    return QDesignerFormWindowManagerInterface_SuperSenderSignalIndex((QDesignerFormWindowManagerInterface*)self);
 }
 
 void q_designerformwindowmanagerinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -684,8 +684,8 @@ int32_t q_designerformwindowmanagerinterface_receivers(void* self, const char* s
     return QDesignerFormWindowManagerInterface_Receivers((QDesignerFormWindowManagerInterface*)self, signal);
 }
 
-int32_t q_designerformwindowmanagerinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerFormWindowManagerInterface_QBaseReceivers((QDesignerFormWindowManagerInterface*)self, signal);
+int32_t q_designerformwindowmanagerinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerFormWindowManagerInterface_SuperReceivers((QDesignerFormWindowManagerInterface*)self, signal);
 }
 
 void q_designerformwindowmanagerinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -696,8 +696,8 @@ bool q_designerformwindowmanagerinterface_is_signal_connected(void* self, void* 
     return QDesignerFormWindowManagerInterface_IsSignalConnected((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerformwindowmanagerinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerFormWindowManagerInterface_QBaseIsSignalConnected((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
+bool q_designerformwindowmanagerinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerFormWindowManagerInterface_SuperIsSignalConnected((QDesignerFormWindowManagerInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformwindowmanagerinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

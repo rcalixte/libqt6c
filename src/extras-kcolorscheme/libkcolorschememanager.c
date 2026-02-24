@@ -22,8 +22,8 @@ void k_colorschememanager_on_meta_object(void* self, const QMetaObject* (*callba
     KColorSchemeManager_OnMetaObject((KColorSchemeManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_colorschememanager_qbase_meta_object(void* self) {
-    return KColorSchemeManager_QBaseMetaObject((KColorSchemeManager*)self);
+const QMetaObject* k_colorschememanager_super_meta_object(void* self) {
+    return KColorSchemeManager_SuperMetaObject((KColorSchemeManager*)self);
 }
 
 void* k_colorschememanager_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_colorschememanager_on_metacast(void* self, void* (*callback)(void*, const
     KColorSchemeManager_OnMetacast((KColorSchemeManager*)self, (intptr_t)callback);
 }
 
-void* k_colorschememanager_qbase_metacast(void* self, const char* param1) {
-    return KColorSchemeManager_QBaseMetacast((KColorSchemeManager*)self, param1);
+void* k_colorschememanager_super_metacast(void* self, const char* param1) {
+    return KColorSchemeManager_SuperMetacast((KColorSchemeManager*)self, param1);
 }
 
 int32_t k_colorschememanager_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_colorschememanager_on_metacall(void* self, int32_t (*callback)(void*, int
     KColorSchemeManager_OnMetacall((KColorSchemeManager*)self, (intptr_t)callback);
 }
 
-int32_t k_colorschememanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColorSchemeManager_QBaseMetacall((KColorSchemeManager*)self, param1, param2, param3);
+int32_t k_colorschememanager_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColorSchemeManager_SuperMetacall((KColorSchemeManager*)self, param1, param2, param3);
 }
 
 const char* k_colorschememanager_tr(const char* s) {
@@ -328,8 +328,8 @@ bool k_colorschememanager_event(void* self, void* event) {
     return KColorSchemeManager_Event((KColorSchemeManager*)self, (QEvent*)event);
 }
 
-bool k_colorschememanager_qbase_event(void* self, void* event) {
-    return KColorSchemeManager_QBaseEvent((KColorSchemeManager*)self, (QEvent*)event);
+bool k_colorschememanager_super_event(void* self, void* event) {
+    return KColorSchemeManager_SuperEvent((KColorSchemeManager*)self, (QEvent*)event);
 }
 
 void k_colorschememanager_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -340,8 +340,8 @@ bool k_colorschememanager_event_filter(void* self, void* watched, void* event) {
     return KColorSchemeManager_EventFilter((KColorSchemeManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_colorschememanager_qbase_event_filter(void* self, void* watched, void* event) {
-    return KColorSchemeManager_QBaseEventFilter((KColorSchemeManager*)self, (QObject*)watched, (QEvent*)event);
+bool k_colorschememanager_super_event_filter(void* self, void* watched, void* event) {
+    return KColorSchemeManager_SuperEventFilter((KColorSchemeManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_colorschememanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -352,8 +352,8 @@ void k_colorschememanager_timer_event(void* self, void* event) {
     KColorSchemeManager_TimerEvent((KColorSchemeManager*)self, (QTimerEvent*)event);
 }
 
-void k_colorschememanager_qbase_timer_event(void* self, void* event) {
-    KColorSchemeManager_QBaseTimerEvent((KColorSchemeManager*)self, (QTimerEvent*)event);
+void k_colorschememanager_super_timer_event(void* self, void* event) {
+    KColorSchemeManager_SuperTimerEvent((KColorSchemeManager*)self, (QTimerEvent*)event);
 }
 
 void k_colorschememanager_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -364,8 +364,8 @@ void k_colorschememanager_child_event(void* self, void* event) {
     KColorSchemeManager_ChildEvent((KColorSchemeManager*)self, (QChildEvent*)event);
 }
 
-void k_colorschememanager_qbase_child_event(void* self, void* event) {
-    KColorSchemeManager_QBaseChildEvent((KColorSchemeManager*)self, (QChildEvent*)event);
+void k_colorschememanager_super_child_event(void* self, void* event) {
+    KColorSchemeManager_SuperChildEvent((KColorSchemeManager*)self, (QChildEvent*)event);
 }
 
 void k_colorschememanager_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ void k_colorschememanager_custom_event(void* self, void* event) {
     KColorSchemeManager_CustomEvent((KColorSchemeManager*)self, (QEvent*)event);
 }
 
-void k_colorschememanager_qbase_custom_event(void* self, void* event) {
-    KColorSchemeManager_QBaseCustomEvent((KColorSchemeManager*)self, (QEvent*)event);
+void k_colorschememanager_super_custom_event(void* self, void* event) {
+    KColorSchemeManager_SuperCustomEvent((KColorSchemeManager*)self, (QEvent*)event);
 }
 
 void k_colorschememanager_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ void k_colorschememanager_connect_notify(void* self, void* signal) {
     KColorSchemeManager_ConnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
-void k_colorschememanager_qbase_connect_notify(void* self, void* signal) {
-    KColorSchemeManager_QBaseConnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
+void k_colorschememanager_super_connect_notify(void* self, void* signal) {
+    KColorSchemeManager_SuperConnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ void k_colorschememanager_disconnect_notify(void* self, void* signal) {
     KColorSchemeManager_DisconnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
-void k_colorschememanager_qbase_disconnect_notify(void* self, void* signal) {
-    KColorSchemeManager_QBaseDisconnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
+void k_colorschememanager_super_disconnect_notify(void* self, void* signal) {
+    KColorSchemeManager_SuperDisconnectNotify((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ QObject* k_colorschememanager_sender(void* self) {
     return KColorSchemeManager_Sender((KColorSchemeManager*)self);
 }
 
-QObject* k_colorschememanager_qbase_sender(void* self) {
-    return KColorSchemeManager_QBaseSender((KColorSchemeManager*)self);
+QObject* k_colorschememanager_super_sender(void* self) {
+    return KColorSchemeManager_SuperSender((KColorSchemeManager*)self);
 }
 
 void k_colorschememanager_on_sender(void* self, QObject* (*callback)()) {
@@ -424,8 +424,8 @@ int32_t k_colorschememanager_sender_signal_index(void* self) {
     return KColorSchemeManager_SenderSignalIndex((KColorSchemeManager*)self);
 }
 
-int32_t k_colorschememanager_qbase_sender_signal_index(void* self) {
-    return KColorSchemeManager_QBaseSenderSignalIndex((KColorSchemeManager*)self);
+int32_t k_colorschememanager_super_sender_signal_index(void* self) {
+    return KColorSchemeManager_SuperSenderSignalIndex((KColorSchemeManager*)self);
 }
 
 void k_colorschememanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -436,8 +436,8 @@ int32_t k_colorschememanager_receivers(void* self, const char* signal) {
     return KColorSchemeManager_Receivers((KColorSchemeManager*)self, signal);
 }
 
-int32_t k_colorschememanager_qbase_receivers(void* self, const char* signal) {
-    return KColorSchemeManager_QBaseReceivers((KColorSchemeManager*)self, signal);
+int32_t k_colorschememanager_super_receivers(void* self, const char* signal) {
+    return KColorSchemeManager_SuperReceivers((KColorSchemeManager*)self, signal);
 }
 
 void k_colorschememanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -448,8 +448,8 @@ bool k_colorschememanager_is_signal_connected(void* self, void* signal) {
     return KColorSchemeManager_IsSignalConnected((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
-bool k_colorschememanager_qbase_is_signal_connected(void* self, void* signal) {
-    return KColorSchemeManager_QBaseIsSignalConnected((KColorSchemeManager*)self, (QMetaMethod*)signal);
+bool k_colorschememanager_super_is_signal_connected(void* self, void* signal) {
+    return KColorSchemeManager_SuperIsSignalConnected((KColorSchemeManager*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

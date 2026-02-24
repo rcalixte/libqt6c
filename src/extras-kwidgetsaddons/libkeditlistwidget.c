@@ -49,8 +49,8 @@ void k_editlistwidget_on_meta_object(void* self, const QMetaObject* (*callback)(
     KEditListWidget_OnMetaObject((KEditListWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_editlistwidget_qbase_meta_object(void* self) {
-    return KEditListWidget_QBaseMetaObject((KEditListWidget*)self);
+const QMetaObject* k_editlistwidget_super_meta_object(void* self) {
+    return KEditListWidget_SuperMetaObject((KEditListWidget*)self);
 }
 
 void* k_editlistwidget_metacast(void* self, const char* param1) {
@@ -61,8 +61,8 @@ void k_editlistwidget_on_metacast(void* self, void* (*callback)(void*, const cha
     KEditListWidget_OnMetacast((KEditListWidget*)self, (intptr_t)callback);
 }
 
-void* k_editlistwidget_qbase_metacast(void* self, const char* param1) {
-    return KEditListWidget_QBaseMetacast((KEditListWidget*)self, param1);
+void* k_editlistwidget_super_metacast(void* self, const char* param1) {
+    return KEditListWidget_SuperMetacast((KEditListWidget*)self, param1);
 }
 
 int32_t k_editlistwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -73,8 +73,8 @@ void k_editlistwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KEditListWidget_OnMetacall((KEditListWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_editlistwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KEditListWidget_QBaseMetacall((KEditListWidget*)self, param1, param2, param3);
+int32_t k_editlistwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KEditListWidget_SuperMetacall((KEditListWidget*)self, param1, param2, param3);
 }
 
 const char* k_editlistwidget_tr(const char* s) {
@@ -215,8 +215,8 @@ void k_editlistwidget_on_event_filter(void* self, bool (*callback)(void*, void*,
     KEditListWidget_OnEventFilter((KEditListWidget*)self, (intptr_t)callback);
 }
 
-bool k_editlistwidget_qbase_event_filter(void* self, void* o, void* e) {
-    return KEditListWidget_QBaseEventFilter((KEditListWidget*)self, (QObject*)o, (QEvent*)e);
+bool k_editlistwidget_super_event_filter(void* self, void* o, void* e) {
+    return KEditListWidget_SuperEventFilter((KEditListWidget*)self, (QObject*)o, (QEvent*)e);
 }
 
 void k_editlistwidget_changed(void* self) {
@@ -1661,8 +1661,8 @@ int32_t k_editlistwidget_dev_type(void* self) {
     return KEditListWidget_DevType((KEditListWidget*)self);
 }
 
-int32_t k_editlistwidget_qbase_dev_type(void* self) {
-    return KEditListWidget_QBaseDevType((KEditListWidget*)self);
+int32_t k_editlistwidget_super_dev_type(void* self) {
+    return KEditListWidget_SuperDevType((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1673,8 +1673,8 @@ void k_editlistwidget_set_visible(void* self, bool visible) {
     KEditListWidget_SetVisible((KEditListWidget*)self, visible);
 }
 
-void k_editlistwidget_qbase_set_visible(void* self, bool visible) {
-    KEditListWidget_QBaseSetVisible((KEditListWidget*)self, visible);
+void k_editlistwidget_super_set_visible(void* self, bool visible) {
+    KEditListWidget_SuperSetVisible((KEditListWidget*)self, visible);
 }
 
 void k_editlistwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1685,8 +1685,8 @@ QSize* k_editlistwidget_size_hint(void* self) {
     return KEditListWidget_SizeHint((KEditListWidget*)self);
 }
 
-QSize* k_editlistwidget_qbase_size_hint(void* self) {
-    return KEditListWidget_QBaseSizeHint((KEditListWidget*)self);
+QSize* k_editlistwidget_super_size_hint(void* self) {
+    return KEditListWidget_SuperSizeHint((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1697,8 +1697,8 @@ QSize* k_editlistwidget_minimum_size_hint(void* self) {
     return KEditListWidget_MinimumSizeHint((KEditListWidget*)self);
 }
 
-QSize* k_editlistwidget_qbase_minimum_size_hint(void* self) {
-    return KEditListWidget_QBaseMinimumSizeHint((KEditListWidget*)self);
+QSize* k_editlistwidget_super_minimum_size_hint(void* self) {
+    return KEditListWidget_SuperMinimumSizeHint((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1709,8 +1709,8 @@ int32_t k_editlistwidget_height_for_width(void* self, int param1) {
     return KEditListWidget_HeightForWidth((KEditListWidget*)self, param1);
 }
 
-int32_t k_editlistwidget_qbase_height_for_width(void* self, int param1) {
-    return KEditListWidget_QBaseHeightForWidth((KEditListWidget*)self, param1);
+int32_t k_editlistwidget_super_height_for_width(void* self, int param1) {
+    return KEditListWidget_SuperHeightForWidth((KEditListWidget*)self, param1);
 }
 
 void k_editlistwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1721,8 +1721,8 @@ bool k_editlistwidget_has_height_for_width(void* self) {
     return KEditListWidget_HasHeightForWidth((KEditListWidget*)self);
 }
 
-bool k_editlistwidget_qbase_has_height_for_width(void* self) {
-    return KEditListWidget_QBaseHasHeightForWidth((KEditListWidget*)self);
+bool k_editlistwidget_super_has_height_for_width(void* self) {
+    return KEditListWidget_SuperHasHeightForWidth((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1733,8 +1733,8 @@ QPaintEngine* k_editlistwidget_paint_engine(void* self) {
     return KEditListWidget_PaintEngine((KEditListWidget*)self);
 }
 
-QPaintEngine* k_editlistwidget_qbase_paint_engine(void* self) {
-    return KEditListWidget_QBasePaintEngine((KEditListWidget*)self);
+QPaintEngine* k_editlistwidget_super_paint_engine(void* self) {
+    return KEditListWidget_SuperPaintEngine((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1745,8 +1745,8 @@ bool k_editlistwidget_event(void* self, void* event) {
     return KEditListWidget_Event((KEditListWidget*)self, (QEvent*)event);
 }
 
-bool k_editlistwidget_qbase_event(void* self, void* event) {
-    return KEditListWidget_QBaseEvent((KEditListWidget*)self, (QEvent*)event);
+bool k_editlistwidget_super_event(void* self, void* event) {
+    return KEditListWidget_SuperEvent((KEditListWidget*)self, (QEvent*)event);
 }
 
 void k_editlistwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void k_editlistwidget_mouse_press_event(void* self, void* event) {
     KEditListWidget_MousePressEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
-void k_editlistwidget_qbase_mouse_press_event(void* self, void* event) {
-    KEditListWidget_QBaseMousePressEvent((KEditListWidget*)self, (QMouseEvent*)event);
+void k_editlistwidget_super_mouse_press_event(void* self, void* event) {
+    KEditListWidget_SuperMousePressEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
 void k_editlistwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void k_editlistwidget_mouse_release_event(void* self, void* event) {
     KEditListWidget_MouseReleaseEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
-void k_editlistwidget_qbase_mouse_release_event(void* self, void* event) {
-    KEditListWidget_QBaseMouseReleaseEvent((KEditListWidget*)self, (QMouseEvent*)event);
+void k_editlistwidget_super_mouse_release_event(void* self, void* event) {
+    KEditListWidget_SuperMouseReleaseEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
 void k_editlistwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ void k_editlistwidget_mouse_double_click_event(void* self, void* event) {
     KEditListWidget_MouseDoubleClickEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
-void k_editlistwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KEditListWidget_QBaseMouseDoubleClickEvent((KEditListWidget*)self, (QMouseEvent*)event);
+void k_editlistwidget_super_mouse_double_click_event(void* self, void* event) {
+    KEditListWidget_SuperMouseDoubleClickEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
 void k_editlistwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1793,8 +1793,8 @@ void k_editlistwidget_mouse_move_event(void* self, void* event) {
     KEditListWidget_MouseMoveEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
-void k_editlistwidget_qbase_mouse_move_event(void* self, void* event) {
-    KEditListWidget_QBaseMouseMoveEvent((KEditListWidget*)self, (QMouseEvent*)event);
+void k_editlistwidget_super_mouse_move_event(void* self, void* event) {
+    KEditListWidget_SuperMouseMoveEvent((KEditListWidget*)self, (QMouseEvent*)event);
 }
 
 void k_editlistwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1805,8 +1805,8 @@ void k_editlistwidget_wheel_event(void* self, void* event) {
     KEditListWidget_WheelEvent((KEditListWidget*)self, (QWheelEvent*)event);
 }
 
-void k_editlistwidget_qbase_wheel_event(void* self, void* event) {
-    KEditListWidget_QBaseWheelEvent((KEditListWidget*)self, (QWheelEvent*)event);
+void k_editlistwidget_super_wheel_event(void* self, void* event) {
+    KEditListWidget_SuperWheelEvent((KEditListWidget*)self, (QWheelEvent*)event);
 }
 
 void k_editlistwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1817,8 +1817,8 @@ void k_editlistwidget_key_press_event(void* self, void* event) {
     KEditListWidget_KeyPressEvent((KEditListWidget*)self, (QKeyEvent*)event);
 }
 
-void k_editlistwidget_qbase_key_press_event(void* self, void* event) {
-    KEditListWidget_QBaseKeyPressEvent((KEditListWidget*)self, (QKeyEvent*)event);
+void k_editlistwidget_super_key_press_event(void* self, void* event) {
+    KEditListWidget_SuperKeyPressEvent((KEditListWidget*)self, (QKeyEvent*)event);
 }
 
 void k_editlistwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1829,8 +1829,8 @@ void k_editlistwidget_key_release_event(void* self, void* event) {
     KEditListWidget_KeyReleaseEvent((KEditListWidget*)self, (QKeyEvent*)event);
 }
 
-void k_editlistwidget_qbase_key_release_event(void* self, void* event) {
-    KEditListWidget_QBaseKeyReleaseEvent((KEditListWidget*)self, (QKeyEvent*)event);
+void k_editlistwidget_super_key_release_event(void* self, void* event) {
+    KEditListWidget_SuperKeyReleaseEvent((KEditListWidget*)self, (QKeyEvent*)event);
 }
 
 void k_editlistwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1841,8 +1841,8 @@ void k_editlistwidget_focus_in_event(void* self, void* event) {
     KEditListWidget_FocusInEvent((KEditListWidget*)self, (QFocusEvent*)event);
 }
 
-void k_editlistwidget_qbase_focus_in_event(void* self, void* event) {
-    KEditListWidget_QBaseFocusInEvent((KEditListWidget*)self, (QFocusEvent*)event);
+void k_editlistwidget_super_focus_in_event(void* self, void* event) {
+    KEditListWidget_SuperFocusInEvent((KEditListWidget*)self, (QFocusEvent*)event);
 }
 
 void k_editlistwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void k_editlistwidget_focus_out_event(void* self, void* event) {
     KEditListWidget_FocusOutEvent((KEditListWidget*)self, (QFocusEvent*)event);
 }
 
-void k_editlistwidget_qbase_focus_out_event(void* self, void* event) {
-    KEditListWidget_QBaseFocusOutEvent((KEditListWidget*)self, (QFocusEvent*)event);
+void k_editlistwidget_super_focus_out_event(void* self, void* event) {
+    KEditListWidget_SuperFocusOutEvent((KEditListWidget*)self, (QFocusEvent*)event);
 }
 
 void k_editlistwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void k_editlistwidget_enter_event(void* self, void* event) {
     KEditListWidget_EnterEvent((KEditListWidget*)self, (QEnterEvent*)event);
 }
 
-void k_editlistwidget_qbase_enter_event(void* self, void* event) {
-    KEditListWidget_QBaseEnterEvent((KEditListWidget*)self, (QEnterEvent*)event);
+void k_editlistwidget_super_enter_event(void* self, void* event) {
+    KEditListWidget_SuperEnterEvent((KEditListWidget*)self, (QEnterEvent*)event);
 }
 
 void k_editlistwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void k_editlistwidget_leave_event(void* self, void* event) {
     KEditListWidget_LeaveEvent((KEditListWidget*)self, (QEvent*)event);
 }
 
-void k_editlistwidget_qbase_leave_event(void* self, void* event) {
-    KEditListWidget_QBaseLeaveEvent((KEditListWidget*)self, (QEvent*)event);
+void k_editlistwidget_super_leave_event(void* self, void* event) {
+    KEditListWidget_SuperLeaveEvent((KEditListWidget*)self, (QEvent*)event);
 }
 
 void k_editlistwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void k_editlistwidget_paint_event(void* self, void* event) {
     KEditListWidget_PaintEvent((KEditListWidget*)self, (QPaintEvent*)event);
 }
 
-void k_editlistwidget_qbase_paint_event(void* self, void* event) {
-    KEditListWidget_QBasePaintEvent((KEditListWidget*)self, (QPaintEvent*)event);
+void k_editlistwidget_super_paint_event(void* self, void* event) {
+    KEditListWidget_SuperPaintEvent((KEditListWidget*)self, (QPaintEvent*)event);
 }
 
 void k_editlistwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void k_editlistwidget_move_event(void* self, void* event) {
     KEditListWidget_MoveEvent((KEditListWidget*)self, (QMoveEvent*)event);
 }
 
-void k_editlistwidget_qbase_move_event(void* self, void* event) {
-    KEditListWidget_QBaseMoveEvent((KEditListWidget*)self, (QMoveEvent*)event);
+void k_editlistwidget_super_move_event(void* self, void* event) {
+    KEditListWidget_SuperMoveEvent((KEditListWidget*)self, (QMoveEvent*)event);
 }
 
 void k_editlistwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void k_editlistwidget_resize_event(void* self, void* event) {
     KEditListWidget_ResizeEvent((KEditListWidget*)self, (QResizeEvent*)event);
 }
 
-void k_editlistwidget_qbase_resize_event(void* self, void* event) {
-    KEditListWidget_QBaseResizeEvent((KEditListWidget*)self, (QResizeEvent*)event);
+void k_editlistwidget_super_resize_event(void* self, void* event) {
+    KEditListWidget_SuperResizeEvent((KEditListWidget*)self, (QResizeEvent*)event);
 }
 
 void k_editlistwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void k_editlistwidget_close_event(void* self, void* event) {
     KEditListWidget_CloseEvent((KEditListWidget*)self, (QCloseEvent*)event);
 }
 
-void k_editlistwidget_qbase_close_event(void* self, void* event) {
-    KEditListWidget_QBaseCloseEvent((KEditListWidget*)self, (QCloseEvent*)event);
+void k_editlistwidget_super_close_event(void* self, void* event) {
+    KEditListWidget_SuperCloseEvent((KEditListWidget*)self, (QCloseEvent*)event);
 }
 
 void k_editlistwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void k_editlistwidget_context_menu_event(void* self, void* event) {
     KEditListWidget_ContextMenuEvent((KEditListWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_editlistwidget_qbase_context_menu_event(void* self, void* event) {
-    KEditListWidget_QBaseContextMenuEvent((KEditListWidget*)self, (QContextMenuEvent*)event);
+void k_editlistwidget_super_context_menu_event(void* self, void* event) {
+    KEditListWidget_SuperContextMenuEvent((KEditListWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_editlistwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void k_editlistwidget_tablet_event(void* self, void* event) {
     KEditListWidget_TabletEvent((KEditListWidget*)self, (QTabletEvent*)event);
 }
 
-void k_editlistwidget_qbase_tablet_event(void* self, void* event) {
-    KEditListWidget_QBaseTabletEvent((KEditListWidget*)self, (QTabletEvent*)event);
+void k_editlistwidget_super_tablet_event(void* self, void* event) {
+    KEditListWidget_SuperTabletEvent((KEditListWidget*)self, (QTabletEvent*)event);
 }
 
 void k_editlistwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void k_editlistwidget_action_event(void* self, void* event) {
     KEditListWidget_ActionEvent((KEditListWidget*)self, (QActionEvent*)event);
 }
 
-void k_editlistwidget_qbase_action_event(void* self, void* event) {
-    KEditListWidget_QBaseActionEvent((KEditListWidget*)self, (QActionEvent*)event);
+void k_editlistwidget_super_action_event(void* self, void* event) {
+    KEditListWidget_SuperActionEvent((KEditListWidget*)self, (QActionEvent*)event);
 }
 
 void k_editlistwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void k_editlistwidget_drag_enter_event(void* self, void* event) {
     KEditListWidget_DragEnterEvent((KEditListWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_editlistwidget_qbase_drag_enter_event(void* self, void* event) {
-    KEditListWidget_QBaseDragEnterEvent((KEditListWidget*)self, (QDragEnterEvent*)event);
+void k_editlistwidget_super_drag_enter_event(void* self, void* event) {
+    KEditListWidget_SuperDragEnterEvent((KEditListWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_editlistwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void k_editlistwidget_drag_move_event(void* self, void* event) {
     KEditListWidget_DragMoveEvent((KEditListWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_editlistwidget_qbase_drag_move_event(void* self, void* event) {
-    KEditListWidget_QBaseDragMoveEvent((KEditListWidget*)self, (QDragMoveEvent*)event);
+void k_editlistwidget_super_drag_move_event(void* self, void* event) {
+    KEditListWidget_SuperDragMoveEvent((KEditListWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_editlistwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void k_editlistwidget_drag_leave_event(void* self, void* event) {
     KEditListWidget_DragLeaveEvent((KEditListWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_editlistwidget_qbase_drag_leave_event(void* self, void* event) {
-    KEditListWidget_QBaseDragLeaveEvent((KEditListWidget*)self, (QDragLeaveEvent*)event);
+void k_editlistwidget_super_drag_leave_event(void* self, void* event) {
+    KEditListWidget_SuperDragLeaveEvent((KEditListWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_editlistwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void k_editlistwidget_drop_event(void* self, void* event) {
     KEditListWidget_DropEvent((KEditListWidget*)self, (QDropEvent*)event);
 }
 
-void k_editlistwidget_qbase_drop_event(void* self, void* event) {
-    KEditListWidget_QBaseDropEvent((KEditListWidget*)self, (QDropEvent*)event);
+void k_editlistwidget_super_drop_event(void* self, void* event) {
+    KEditListWidget_SuperDropEvent((KEditListWidget*)self, (QDropEvent*)event);
 }
 
 void k_editlistwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void k_editlistwidget_show_event(void* self, void* event) {
     KEditListWidget_ShowEvent((KEditListWidget*)self, (QShowEvent*)event);
 }
 
-void k_editlistwidget_qbase_show_event(void* self, void* event) {
-    KEditListWidget_QBaseShowEvent((KEditListWidget*)self, (QShowEvent*)event);
+void k_editlistwidget_super_show_event(void* self, void* event) {
+    KEditListWidget_SuperShowEvent((KEditListWidget*)self, (QShowEvent*)event);
 }
 
 void k_editlistwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void k_editlistwidget_hide_event(void* self, void* event) {
     KEditListWidget_HideEvent((KEditListWidget*)self, (QHideEvent*)event);
 }
 
-void k_editlistwidget_qbase_hide_event(void* self, void* event) {
-    KEditListWidget_QBaseHideEvent((KEditListWidget*)self, (QHideEvent*)event);
+void k_editlistwidget_super_hide_event(void* self, void* event) {
+    KEditListWidget_SuperHideEvent((KEditListWidget*)self, (QHideEvent*)event);
 }
 
 void k_editlistwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ bool k_editlistwidget_native_event(void* self, char* eventType, void* message, i
     return KEditListWidget_NativeEvent((KEditListWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_editlistwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KEditListWidget_QBaseNativeEvent((KEditListWidget*)self, qstring(eventType), message, result);
+bool k_editlistwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KEditListWidget_SuperNativeEvent((KEditListWidget*)self, qstring(eventType), message, result);
 }
 
 void k_editlistwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2057,8 +2057,8 @@ void k_editlistwidget_change_event(void* self, void* param1) {
     KEditListWidget_ChangeEvent((KEditListWidget*)self, (QEvent*)param1);
 }
 
-void k_editlistwidget_qbase_change_event(void* self, void* param1) {
-    KEditListWidget_QBaseChangeEvent((KEditListWidget*)self, (QEvent*)param1);
+void k_editlistwidget_super_change_event(void* self, void* param1) {
+    KEditListWidget_SuperChangeEvent((KEditListWidget*)self, (QEvent*)param1);
 }
 
 void k_editlistwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ int32_t k_editlistwidget_metric(void* self, int32_t param1) {
     return KEditListWidget_Metric((KEditListWidget*)self, param1);
 }
 
-int32_t k_editlistwidget_qbase_metric(void* self, int32_t param1) {
-    return KEditListWidget_QBaseMetric((KEditListWidget*)self, param1);
+int32_t k_editlistwidget_super_metric(void* self, int32_t param1) {
+    return KEditListWidget_SuperMetric((KEditListWidget*)self, param1);
 }
 
 void k_editlistwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2081,8 +2081,8 @@ void k_editlistwidget_init_painter(void* self, void* painter) {
     KEditListWidget_InitPainter((KEditListWidget*)self, (QPainter*)painter);
 }
 
-void k_editlistwidget_qbase_init_painter(void* self, void* painter) {
-    KEditListWidget_QBaseInitPainter((KEditListWidget*)self, (QPainter*)painter);
+void k_editlistwidget_super_init_painter(void* self, void* painter) {
+    KEditListWidget_SuperInitPainter((KEditListWidget*)self, (QPainter*)painter);
 }
 
 void k_editlistwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ QPaintDevice* k_editlistwidget_redirected(void* self, void* offset) {
     return KEditListWidget_Redirected((KEditListWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_editlistwidget_qbase_redirected(void* self, void* offset) {
-    return KEditListWidget_QBaseRedirected((KEditListWidget*)self, (QPoint*)offset);
+QPaintDevice* k_editlistwidget_super_redirected(void* self, void* offset) {
+    return KEditListWidget_SuperRedirected((KEditListWidget*)self, (QPoint*)offset);
 }
 
 void k_editlistwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ QPainter* k_editlistwidget_shared_painter(void* self) {
     return KEditListWidget_SharedPainter((KEditListWidget*)self);
 }
 
-QPainter* k_editlistwidget_qbase_shared_painter(void* self) {
-    return KEditListWidget_QBaseSharedPainter((KEditListWidget*)self);
+QPainter* k_editlistwidget_super_shared_painter(void* self) {
+    return KEditListWidget_SuperSharedPainter((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2117,8 +2117,8 @@ void k_editlistwidget_input_method_event(void* self, void* param1) {
     KEditListWidget_InputMethodEvent((KEditListWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_editlistwidget_qbase_input_method_event(void* self, void* param1) {
-    KEditListWidget_QBaseInputMethodEvent((KEditListWidget*)self, (QInputMethodEvent*)param1);
+void k_editlistwidget_super_input_method_event(void* self, void* param1) {
+    KEditListWidget_SuperInputMethodEvent((KEditListWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_editlistwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ QVariant* k_editlistwidget_input_method_query(void* self, int32_t param1) {
     return KEditListWidget_InputMethodQuery((KEditListWidget*)self, param1);
 }
 
-QVariant* k_editlistwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KEditListWidget_QBaseInputMethodQuery((KEditListWidget*)self, param1);
+QVariant* k_editlistwidget_super_input_method_query(void* self, int32_t param1) {
+    return KEditListWidget_SuperInputMethodQuery((KEditListWidget*)self, param1);
 }
 
 void k_editlistwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2141,8 +2141,8 @@ bool k_editlistwidget_focus_next_prev_child(void* self, bool next) {
     return KEditListWidget_FocusNextPrevChild((KEditListWidget*)self, next);
 }
 
-bool k_editlistwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KEditListWidget_QBaseFocusNextPrevChild((KEditListWidget*)self, next);
+bool k_editlistwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KEditListWidget_SuperFocusNextPrevChild((KEditListWidget*)self, next);
 }
 
 void k_editlistwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2153,8 +2153,8 @@ void k_editlistwidget_timer_event(void* self, void* event) {
     KEditListWidget_TimerEvent((KEditListWidget*)self, (QTimerEvent*)event);
 }
 
-void k_editlistwidget_qbase_timer_event(void* self, void* event) {
-    KEditListWidget_QBaseTimerEvent((KEditListWidget*)self, (QTimerEvent*)event);
+void k_editlistwidget_super_timer_event(void* self, void* event) {
+    KEditListWidget_SuperTimerEvent((KEditListWidget*)self, (QTimerEvent*)event);
 }
 
 void k_editlistwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2165,8 +2165,8 @@ void k_editlistwidget_child_event(void* self, void* event) {
     KEditListWidget_ChildEvent((KEditListWidget*)self, (QChildEvent*)event);
 }
 
-void k_editlistwidget_qbase_child_event(void* self, void* event) {
-    KEditListWidget_QBaseChildEvent((KEditListWidget*)self, (QChildEvent*)event);
+void k_editlistwidget_super_child_event(void* self, void* event) {
+    KEditListWidget_SuperChildEvent((KEditListWidget*)self, (QChildEvent*)event);
 }
 
 void k_editlistwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ void k_editlistwidget_custom_event(void* self, void* event) {
     KEditListWidget_CustomEvent((KEditListWidget*)self, (QEvent*)event);
 }
 
-void k_editlistwidget_qbase_custom_event(void* self, void* event) {
-    KEditListWidget_QBaseCustomEvent((KEditListWidget*)self, (QEvent*)event);
+void k_editlistwidget_super_custom_event(void* self, void* event) {
+    KEditListWidget_SuperCustomEvent((KEditListWidget*)self, (QEvent*)event);
 }
 
 void k_editlistwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ void k_editlistwidget_connect_notify(void* self, void* signal) {
     KEditListWidget_ConnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_editlistwidget_qbase_connect_notify(void* self, void* signal) {
-    KEditListWidget_QBaseConnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
+void k_editlistwidget_super_connect_notify(void* self, void* signal) {
+    KEditListWidget_SuperConnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_editlistwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2201,8 +2201,8 @@ void k_editlistwidget_disconnect_notify(void* self, void* signal) {
     KEditListWidget_DisconnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_editlistwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KEditListWidget_QBaseDisconnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
+void k_editlistwidget_super_disconnect_notify(void* self, void* signal) {
+    KEditListWidget_SuperDisconnectNotify((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_editlistwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void k_editlistwidget_update_micro_focus(void* self) {
     KEditListWidget_UpdateMicroFocus((KEditListWidget*)self);
 }
 
-void k_editlistwidget_qbase_update_micro_focus(void* self) {
-    KEditListWidget_QBaseUpdateMicroFocus((KEditListWidget*)self);
+void k_editlistwidget_super_update_micro_focus(void* self) {
+    KEditListWidget_SuperUpdateMicroFocus((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2225,8 +2225,8 @@ void k_editlistwidget_create(void* self) {
     KEditListWidget_Create((KEditListWidget*)self);
 }
 
-void k_editlistwidget_qbase_create(void* self) {
-    KEditListWidget_QBaseCreate((KEditListWidget*)self);
+void k_editlistwidget_super_create(void* self) {
+    KEditListWidget_SuperCreate((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_create(void* self, void (*callback)()) {
@@ -2237,8 +2237,8 @@ void k_editlistwidget_destroy(void* self) {
     KEditListWidget_Destroy((KEditListWidget*)self);
 }
 
-void k_editlistwidget_qbase_destroy(void* self) {
-    KEditListWidget_QBaseDestroy((KEditListWidget*)self);
+void k_editlistwidget_super_destroy(void* self) {
+    KEditListWidget_SuperDestroy((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_destroy(void* self, void (*callback)()) {
@@ -2249,8 +2249,8 @@ bool k_editlistwidget_focus_next_child(void* self) {
     return KEditListWidget_FocusNextChild((KEditListWidget*)self);
 }
 
-bool k_editlistwidget_qbase_focus_next_child(void* self) {
-    return KEditListWidget_QBaseFocusNextChild((KEditListWidget*)self);
+bool k_editlistwidget_super_focus_next_child(void* self) {
+    return KEditListWidget_SuperFocusNextChild((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2261,8 +2261,8 @@ bool k_editlistwidget_focus_previous_child(void* self) {
     return KEditListWidget_FocusPreviousChild((KEditListWidget*)self);
 }
 
-bool k_editlistwidget_qbase_focus_previous_child(void* self) {
-    return KEditListWidget_QBaseFocusPreviousChild((KEditListWidget*)self);
+bool k_editlistwidget_super_focus_previous_child(void* self) {
+    return KEditListWidget_SuperFocusPreviousChild((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2273,8 +2273,8 @@ QObject* k_editlistwidget_sender(void* self) {
     return KEditListWidget_Sender((KEditListWidget*)self);
 }
 
-QObject* k_editlistwidget_qbase_sender(void* self) {
-    return KEditListWidget_QBaseSender((KEditListWidget*)self);
+QObject* k_editlistwidget_super_sender(void* self) {
+    return KEditListWidget_SuperSender((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2285,8 +2285,8 @@ int32_t k_editlistwidget_sender_signal_index(void* self) {
     return KEditListWidget_SenderSignalIndex((KEditListWidget*)self);
 }
 
-int32_t k_editlistwidget_qbase_sender_signal_index(void* self) {
-    return KEditListWidget_QBaseSenderSignalIndex((KEditListWidget*)self);
+int32_t k_editlistwidget_super_sender_signal_index(void* self) {
+    return KEditListWidget_SuperSenderSignalIndex((KEditListWidget*)self);
 }
 
 void k_editlistwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2297,8 +2297,8 @@ int32_t k_editlistwidget_receivers(void* self, const char* signal) {
     return KEditListWidget_Receivers((KEditListWidget*)self, signal);
 }
 
-int32_t k_editlistwidget_qbase_receivers(void* self, const char* signal) {
-    return KEditListWidget_QBaseReceivers((KEditListWidget*)self, signal);
+int32_t k_editlistwidget_super_receivers(void* self, const char* signal) {
+    return KEditListWidget_SuperReceivers((KEditListWidget*)self, signal);
 }
 
 void k_editlistwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2309,8 +2309,8 @@ bool k_editlistwidget_is_signal_connected(void* self, void* signal) {
     return KEditListWidget_IsSignalConnected((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_editlistwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KEditListWidget_QBaseIsSignalConnected((KEditListWidget*)self, (QMetaMethod*)signal);
+bool k_editlistwidget_super_is_signal_connected(void* self, void* signal) {
+    return KEditListWidget_SuperIsSignalConnected((KEditListWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_editlistwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2321,8 +2321,8 @@ double k_editlistwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KEditListWidget_GetDecodedMetricF((KEditListWidget*)self, metricA, metricB);
 }
 
-double k_editlistwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KEditListWidget_QBaseGetDecodedMetricF((KEditListWidget*)self, metricA, metricB);
+double k_editlistwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KEditListWidget_SuperGetDecodedMetricF((KEditListWidget*)self, metricA, metricB);
 }
 
 void k_editlistwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2365,8 +2365,8 @@ void k_editlistwidget__customeditor_on_representation_widget(void* self, QWidget
     KEditListWidget__CustomEditor_OnRepresentationWidget((KEditListWidget__CustomEditor*)self, (intptr_t)callback);
 }
 
-QWidget* k_editlistwidget__customeditor_qbase_representation_widget(void* self) {
-    return KEditListWidget__CustomEditor_QBaseRepresentationWidget((KEditListWidget__CustomEditor*)self);
+QWidget* k_editlistwidget__customeditor_super_representation_widget(void* self) {
+    return KEditListWidget__CustomEditor_SuperRepresentationWidget((KEditListWidget__CustomEditor*)self);
 }
 
 QLineEdit* k_editlistwidget__customeditor_line_edit(void* self) {
@@ -2377,8 +2377,8 @@ void k_editlistwidget__customeditor_on_line_edit(void* self, QLineEdit* (*callba
     KEditListWidget__CustomEditor_OnLineEdit((KEditListWidget__CustomEditor*)self, (intptr_t)callback);
 }
 
-QLineEdit* k_editlistwidget__customeditor_qbase_line_edit(void* self) {
-    return KEditListWidget__CustomEditor_QBaseLineEdit((KEditListWidget__CustomEditor*)self);
+QLineEdit* k_editlistwidget__customeditor_super_line_edit(void* self) {
+    return KEditListWidget__CustomEditor_SuperLineEdit((KEditListWidget__CustomEditor*)self);
 }
 
 void k_editlistwidget__customeditor_delete(void* self) {

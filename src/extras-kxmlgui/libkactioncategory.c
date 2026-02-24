@@ -23,8 +23,8 @@ void k_actioncategory_on_meta_object(void* self, const QMetaObject* (*callback)(
     KActionCategory_OnMetaObject((KActionCategory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_actioncategory_qbase_meta_object(void* self) {
-    return KActionCategory_QBaseMetaObject((KActionCategory*)self);
+const QMetaObject* k_actioncategory_super_meta_object(void* self) {
+    return KActionCategory_SuperMetaObject((KActionCategory*)self);
 }
 
 void* k_actioncategory_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_actioncategory_on_metacast(void* self, void* (*callback)(void*, const cha
     KActionCategory_OnMetacast((KActionCategory*)self, (intptr_t)callback);
 }
 
-void* k_actioncategory_qbase_metacast(void* self, const char* param1) {
-    return KActionCategory_QBaseMetacast((KActionCategory*)self, param1);
+void* k_actioncategory_super_metacast(void* self, const char* param1) {
+    return KActionCategory_SuperMetacast((KActionCategory*)self, param1);
 }
 
 int32_t k_actioncategory_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_actioncategory_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KActionCategory_OnMetacall((KActionCategory*)self, (intptr_t)callback);
 }
 
-int32_t k_actioncategory_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KActionCategory_QBaseMetacall((KActionCategory*)self, param1, param2, param3);
+int32_t k_actioncategory_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KActionCategory_SuperMetacall((KActionCategory*)self, param1, param2, param3);
 }
 
 const char* k_actioncategory_tr(const char* s) {
@@ -351,8 +351,8 @@ bool k_actioncategory_event(void* self, void* event) {
     return KActionCategory_Event((KActionCategory*)self, (QEvent*)event);
 }
 
-bool k_actioncategory_qbase_event(void* self, void* event) {
-    return KActionCategory_QBaseEvent((KActionCategory*)self, (QEvent*)event);
+bool k_actioncategory_super_event(void* self, void* event) {
+    return KActionCategory_SuperEvent((KActionCategory*)self, (QEvent*)event);
 }
 
 void k_actioncategory_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ bool k_actioncategory_event_filter(void* self, void* watched, void* event) {
     return KActionCategory_EventFilter((KActionCategory*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_actioncategory_qbase_event_filter(void* self, void* watched, void* event) {
-    return KActionCategory_QBaseEventFilter((KActionCategory*)self, (QObject*)watched, (QEvent*)event);
+bool k_actioncategory_super_event_filter(void* self, void* watched, void* event) {
+    return KActionCategory_SuperEventFilter((KActionCategory*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_actioncategory_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -375,8 +375,8 @@ void k_actioncategory_timer_event(void* self, void* event) {
     KActionCategory_TimerEvent((KActionCategory*)self, (QTimerEvent*)event);
 }
 
-void k_actioncategory_qbase_timer_event(void* self, void* event) {
-    KActionCategory_QBaseTimerEvent((KActionCategory*)self, (QTimerEvent*)event);
+void k_actioncategory_super_timer_event(void* self, void* event) {
+    KActionCategory_SuperTimerEvent((KActionCategory*)self, (QTimerEvent*)event);
 }
 
 void k_actioncategory_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ void k_actioncategory_child_event(void* self, void* event) {
     KActionCategory_ChildEvent((KActionCategory*)self, (QChildEvent*)event);
 }
 
-void k_actioncategory_qbase_child_event(void* self, void* event) {
-    KActionCategory_QBaseChildEvent((KActionCategory*)self, (QChildEvent*)event);
+void k_actioncategory_super_child_event(void* self, void* event) {
+    KActionCategory_SuperChildEvent((KActionCategory*)self, (QChildEvent*)event);
 }
 
 void k_actioncategory_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void k_actioncategory_custom_event(void* self, void* event) {
     KActionCategory_CustomEvent((KActionCategory*)self, (QEvent*)event);
 }
 
-void k_actioncategory_qbase_custom_event(void* self, void* event) {
-    KActionCategory_QBaseCustomEvent((KActionCategory*)self, (QEvent*)event);
+void k_actioncategory_super_custom_event(void* self, void* event) {
+    KActionCategory_SuperCustomEvent((KActionCategory*)self, (QEvent*)event);
 }
 
 void k_actioncategory_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ void k_actioncategory_connect_notify(void* self, void* signal) {
     KActionCategory_ConnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
-void k_actioncategory_qbase_connect_notify(void* self, void* signal) {
-    KActionCategory_QBaseConnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
+void k_actioncategory_super_connect_notify(void* self, void* signal) {
+    KActionCategory_SuperConnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncategory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void k_actioncategory_disconnect_notify(void* self, void* signal) {
     KActionCategory_DisconnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
-void k_actioncategory_qbase_disconnect_notify(void* self, void* signal) {
-    KActionCategory_QBaseDisconnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
+void k_actioncategory_super_disconnect_notify(void* self, void* signal) {
+    KActionCategory_SuperDisconnectNotify((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncategory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ QObject* k_actioncategory_sender(void* self) {
     return KActionCategory_Sender((KActionCategory*)self);
 }
 
-QObject* k_actioncategory_qbase_sender(void* self) {
-    return KActionCategory_QBaseSender((KActionCategory*)self);
+QObject* k_actioncategory_super_sender(void* self) {
+    return KActionCategory_SuperSender((KActionCategory*)self);
 }
 
 void k_actioncategory_on_sender(void* self, QObject* (*callback)()) {
@@ -447,8 +447,8 @@ int32_t k_actioncategory_sender_signal_index(void* self) {
     return KActionCategory_SenderSignalIndex((KActionCategory*)self);
 }
 
-int32_t k_actioncategory_qbase_sender_signal_index(void* self) {
-    return KActionCategory_QBaseSenderSignalIndex((KActionCategory*)self);
+int32_t k_actioncategory_super_sender_signal_index(void* self) {
+    return KActionCategory_SuperSenderSignalIndex((KActionCategory*)self);
 }
 
 void k_actioncategory_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -459,8 +459,8 @@ int32_t k_actioncategory_receivers(void* self, const char* signal) {
     return KActionCategory_Receivers((KActionCategory*)self, signal);
 }
 
-int32_t k_actioncategory_qbase_receivers(void* self, const char* signal) {
-    return KActionCategory_QBaseReceivers((KActionCategory*)self, signal);
+int32_t k_actioncategory_super_receivers(void* self, const char* signal) {
+    return KActionCategory_SuperReceivers((KActionCategory*)self, signal);
 }
 
 void k_actioncategory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -471,8 +471,8 @@ bool k_actioncategory_is_signal_connected(void* self, void* signal) {
     return KActionCategory_IsSignalConnected((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
-bool k_actioncategory_qbase_is_signal_connected(void* self, void* signal) {
-    return KActionCategory_QBaseIsSignalConnected((KActionCategory*)self, (QMetaMethod*)signal);
+bool k_actioncategory_super_is_signal_connected(void* self, void* signal) {
+    return KActionCategory_SuperIsSignalConnected((KActionCategory*)self, (QMetaMethod*)signal);
 }
 
 void k_actioncategory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

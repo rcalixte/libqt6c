@@ -40,13 +40,17 @@ const QMetaObject* q_localsocket_meta_object(void* self);
 ///
 void q_localsocket_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_meta_object` instead
+///
+#define q_localsocket_qbase_meta_object q_localsocket_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-const QMetaObject* q_localsocket_qbase_meta_object(void* self);
+const QMetaObject* q_localsocket_super_meta_object(void* self);
 
 /// @param self QLocalSocket*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_localsocket_metacast(void* self, const char* param1);
 ///
 void q_localsocket_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_metacast` instead
+///
+#define q_localsocket_qbase_metacast q_localsocket_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 /// @param param1 const char*
 ///
-void* q_localsocket_qbase_metacast(void* self, const char* param1);
+void* q_localsocket_super_metacast(void* self, const char* param1);
 
 /// @param self QLocalSocket*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_localsocket_metacall(void* self, int32_t param1, int param2, void* par
 ///
 void q_localsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_metacall` instead
+///
+#define q_localsocket_qbase_metacall q_localsocket_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
@@ -88,7 +100,7 @@ void q_localsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_localsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_localsocket_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -161,13 +173,17 @@ bool q_localsocket_is_sequential(void* self);
 ///
 void q_localsocket_on_is_sequential(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_is_sequential` instead
+///
+#define q_localsocket_qbase_is_sequential q_localsocket_super_is_sequential
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#isSequential)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-bool q_localsocket_qbase_is_sequential(void* self);
+bool q_localsocket_super_is_sequential(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesAvailable)
 ///
@@ -184,13 +200,17 @@ long long q_localsocket_bytes_available(void* self);
 ///
 void q_localsocket_on_bytes_available(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_bytes_available` instead
+///
+#define q_localsocket_qbase_bytes_available q_localsocket_super_bytes_available
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesAvailable)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_qbase_bytes_available(void* self);
+long long q_localsocket_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesToWrite)
 ///
@@ -207,13 +227,17 @@ long long q_localsocket_bytes_to_write(void* self);
 ///
 void q_localsocket_on_bytes_to_write(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_bytes_to_write` instead
+///
+#define q_localsocket_qbase_bytes_to_write q_localsocket_super_bytes_to_write
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesToWrite)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_qbase_bytes_to_write(void* self);
+long long q_localsocket_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#canReadLine)
 ///
@@ -230,13 +254,17 @@ bool q_localsocket_can_read_line(void* self);
 ///
 void q_localsocket_on_can_read_line(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_can_read_line` instead
+///
+#define q_localsocket_qbase_can_read_line q_localsocket_super_can_read_line
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#canReadLine)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-bool q_localsocket_qbase_can_read_line(void* self);
+bool q_localsocket_super_can_read_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#open)
 ///
@@ -254,6 +282,10 @@ bool q_localsocket_open(void* self, int32_t openMode);
 ///
 void q_localsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_open` instead
+///
+#define q_localsocket_qbase_open q_localsocket_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#open)
 ///
 /// Base class method implementation
@@ -261,7 +293,7 @@ void q_localsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool q_localsocket_qbase_open(void* self, int32_t openMode);
+bool q_localsocket_super_open(void* self, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#close)
 ///
@@ -278,13 +310,17 @@ void q_localsocket_close(void* self);
 ///
 void q_localsocket_on_close(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_localsocket_super_close` instead
+///
+#define q_localsocket_qbase_close q_localsocket_super_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
 ///
-void q_localsocket_qbase_close(void* self);
+void q_localsocket_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#error)
 ///
@@ -371,6 +407,10 @@ bool q_localsocket_wait_for_bytes_written(void* self, int msecs);
 ///
 void q_localsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_wait_for_bytes_written` instead
+///
+#define q_localsocket_qbase_wait_for_bytes_written q_localsocket_super_wait_for_bytes_written
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#waitForBytesWritten)
 ///
 /// Base class method implementation
@@ -378,7 +418,7 @@ void q_localsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*,
 /// @param self QLocalSocket*
 /// @param msecs int
 ///
-bool q_localsocket_qbase_wait_for_bytes_written(void* self, int msecs);
+bool q_localsocket_super_wait_for_bytes_written(void* self, int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#waitForConnected)
 ///
@@ -408,6 +448,10 @@ bool q_localsocket_wait_for_ready_read(void* self, int msecs);
 ///
 void q_localsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_wait_for_ready_read` instead
+///
+#define q_localsocket_qbase_wait_for_ready_read q_localsocket_super_wait_for_ready_read
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#waitForReadyRead)
 ///
 /// Base class method implementation
@@ -415,7 +459,7 @@ void q_localsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, in
 /// @param self QLocalSocket*
 /// @param msecs int
 ///
-bool q_localsocket_qbase_wait_for_ready_read(void* self, int msecs);
+bool q_localsocket_super_wait_for_ready_read(void* self, int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#connected)
 ///
@@ -488,6 +532,10 @@ long long q_localsocket_read_data(void* self, char* param1, long long param2);
 ///
 void q_localsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_read_data` instead
+///
+#define q_localsocket_qbase_read_data q_localsocket_super_read_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readData)
 ///
 /// Base class method implementation
@@ -496,7 +544,7 @@ void q_localsocket_on_read_data(void* self, long long (*callback)(void*, char*, 
 /// @param param1 char*
 /// @param param2 long long
 ///
-long long q_localsocket_qbase_read_data(void* self, char* param1, long long param2);
+long long q_localsocket_super_read_data(void* self, char* param1, long long param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readLineData)
 ///
@@ -515,6 +563,10 @@ long long q_localsocket_read_line_data(void* self, char* data, long long maxSize
 ///
 void q_localsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_read_line_data` instead
+///
+#define q_localsocket_qbase_read_line_data q_localsocket_super_read_line_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readLineData)
 ///
 /// Base class method implementation
@@ -523,7 +575,7 @@ void q_localsocket_on_read_line_data(void* self, long long (*callback)(void*, ch
 /// @param data char*
 /// @param maxSize long long
 ///
-long long q_localsocket_qbase_read_line_data(void* self, char* data, long long maxSize);
+long long q_localsocket_super_read_line_data(void* self, char* data, long long maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#skipData)
 ///
@@ -541,6 +593,10 @@ long long q_localsocket_skip_data(void* self, long long maxSize);
 ///
 void q_localsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_skip_data` instead
+///
+#define q_localsocket_qbase_skip_data q_localsocket_super_skip_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#skipData)
 ///
 /// Base class method implementation
@@ -548,7 +604,7 @@ void q_localsocket_on_skip_data(void* self, long long (*callback)(void*, long lo
 /// @param self QLocalSocket*
 /// @param maxSize long long
 ///
-long long q_localsocket_qbase_skip_data(void* self, long long maxSize);
+long long q_localsocket_super_skip_data(void* self, long long maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#writeData)
 ///
@@ -567,6 +623,10 @@ long long q_localsocket_write_data(void* self, const char* param1, long long par
 ///
 void q_localsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
+/// @warning DEPRECATED: Use `q_localsocket_super_write_data` instead
+///
+#define q_localsocket_qbase_write_data q_localsocket_super_write_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#writeData)
 ///
 /// Base class method implementation
@@ -575,7 +635,7 @@ void q_localsocket_on_write_data(void* self, long long (*callback)(void*, const 
 /// @param param1 const char*
 /// @param param2 long long
 ///
-long long q_localsocket_qbase_write_data(void* self, const char* param1, long long param2);
+long long q_localsocket_super_write_data(void* self, const char* param1, long long param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1495,6 +1555,10 @@ void q_localsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 long long q_localsocket_pos(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_pos` instead
+///
+#define q_localsocket_qbase_pos q_localsocket_super_pos
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
@@ -1503,7 +1567,7 @@ long long q_localsocket_pos(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_qbase_pos(void* self);
+long long q_localsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1526,6 +1590,10 @@ void q_localsocket_on_pos(void* self, long long (*callback)());
 ///
 long long q_localsocket_size(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_size` instead
+///
+#define q_localsocket_qbase_size q_localsocket_super_size
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
@@ -1534,7 +1602,7 @@ long long q_localsocket_size(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_qbase_size(void* self);
+long long q_localsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1558,6 +1626,10 @@ void q_localsocket_on_size(void* self, long long (*callback)());
 ///
 bool q_localsocket_seek(void* self, long long pos);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_seek` instead
+///
+#define q_localsocket_qbase_seek q_localsocket_super_seek
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
@@ -1567,7 +1639,7 @@ bool q_localsocket_seek(void* self, long long pos);
 /// @param self QLocalSocket*
 /// @param pos long long
 ///
-bool q_localsocket_qbase_seek(void* self, long long pos);
+bool q_localsocket_super_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
 ///
@@ -1590,6 +1662,10 @@ void q_localsocket_on_seek(void* self, bool (*callback)(void*, long long));
 ///
 bool q_localsocket_at_end(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_at_end` instead
+///
+#define q_localsocket_qbase_at_end q_localsocket_super_at_end
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
@@ -1598,7 +1674,7 @@ bool q_localsocket_at_end(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-bool q_localsocket_qbase_at_end(void* self);
+bool q_localsocket_super_at_end(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1621,6 +1697,10 @@ void q_localsocket_on_at_end(void* self, bool (*callback)());
 ///
 bool q_localsocket_reset(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_reset` instead
+///
+#define q_localsocket_qbase_reset q_localsocket_super_reset
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
@@ -1629,7 +1709,7 @@ bool q_localsocket_reset(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-bool q_localsocket_qbase_reset(void* self);
+bool q_localsocket_super_reset(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1653,6 +1733,10 @@ void q_localsocket_on_reset(void* self, bool (*callback)());
 ///
 bool q_localsocket_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_event` instead
+///
+#define q_localsocket_qbase_event q_localsocket_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1662,7 +1746,7 @@ bool q_localsocket_event(void* self, void* event);
 /// @param self QLocalSocket*
 /// @param event QEvent*
 ///
-bool q_localsocket_qbase_event(void* self, void* event);
+bool q_localsocket_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1687,6 +1771,10 @@ void q_localsocket_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_localsocket_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_event_filter` instead
+///
+#define q_localsocket_qbase_event_filter q_localsocket_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1697,7 +1785,7 @@ bool q_localsocket_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_localsocket_qbase_event_filter(void* self, void* watched, void* event);
+bool q_localsocket_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1721,6 +1809,10 @@ void q_localsocket_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_localsocket_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_timer_event` instead
+///
+#define q_localsocket_qbase_timer_event q_localsocket_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1730,7 +1822,7 @@ void q_localsocket_timer_event(void* self, void* event);
 /// @param self QLocalSocket*
 /// @param event QTimerEvent*
 ///
-void q_localsocket_qbase_timer_event(void* self, void* event);
+void q_localsocket_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1754,6 +1846,10 @@ void q_localsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_localsocket_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_child_event` instead
+///
+#define q_localsocket_qbase_child_event q_localsocket_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1763,7 +1859,7 @@ void q_localsocket_child_event(void* self, void* event);
 /// @param self QLocalSocket*
 /// @param event QChildEvent*
 ///
-void q_localsocket_qbase_child_event(void* self, void* event);
+void q_localsocket_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1787,6 +1883,10 @@ void q_localsocket_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_localsocket_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_custom_event` instead
+///
+#define q_localsocket_qbase_custom_event q_localsocket_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1796,7 +1896,7 @@ void q_localsocket_custom_event(void* self, void* event);
 /// @param self QLocalSocket*
 /// @param event QEvent*
 ///
-void q_localsocket_qbase_custom_event(void* self, void* event);
+void q_localsocket_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1820,6 +1920,10 @@ void q_localsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_localsocket_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_connect_notify` instead
+///
+#define q_localsocket_qbase_connect_notify q_localsocket_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1829,7 +1933,7 @@ void q_localsocket_connect_notify(void* self, void* signal);
 /// @param self QLocalSocket*
 /// @param signal QMetaMethod*
 ///
-void q_localsocket_qbase_connect_notify(void* self, void* signal);
+void q_localsocket_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1853,6 +1957,10 @@ void q_localsocket_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_localsocket_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_disconnect_notify` instead
+///
+#define q_localsocket_qbase_disconnect_notify q_localsocket_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1862,7 +1970,7 @@ void q_localsocket_disconnect_notify(void* self, void* signal);
 /// @param self QLocalSocket*
 /// @param signal QMetaMethod*
 ///
-void q_localsocket_qbase_disconnect_notify(void* self, void* signal);
+void q_localsocket_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1886,6 +1994,10 @@ void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 void q_localsocket_set_open_mode(void* self, int32_t openMode);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_set_open_mode` instead
+///
+#define q_localsocket_qbase_set_open_mode q_localsocket_super_set_open_mode
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -1895,7 +2007,7 @@ void q_localsocket_set_open_mode(void* self, int32_t openMode);
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_localsocket_qbase_set_open_mode(void* self, int32_t openMode);
+void q_localsocket_super_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1919,6 +2031,10 @@ void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)
 ///
 void q_localsocket_set_error_string(void* self, const char* errorString);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_set_error_string` instead
+///
+#define q_localsocket_qbase_set_error_string q_localsocket_super_set_error_string
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -1928,7 +2044,7 @@ void q_localsocket_set_error_string(void* self, const char* errorString);
 /// @param self QLocalSocket*
 /// @param errorString const char*
 ///
-void q_localsocket_qbase_set_error_string(void* self, const char* errorString);
+void q_localsocket_super_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
@@ -1951,6 +2067,10 @@ void q_localsocket_on_set_error_string(void* self, void (*callback)(void*, const
 ///
 QObject* q_localsocket_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_sender` instead
+///
+#define q_localsocket_qbase_sender q_localsocket_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1959,7 +2079,7 @@ QObject* q_localsocket_sender(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-QObject* q_localsocket_qbase_sender(void* self);
+QObject* q_localsocket_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1982,6 +2102,10 @@ void q_localsocket_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_localsocket_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_sender_signal_index` instead
+///
+#define q_localsocket_qbase_sender_signal_index q_localsocket_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1990,7 +2114,7 @@ int32_t q_localsocket_sender_signal_index(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-int32_t q_localsocket_qbase_sender_signal_index(void* self);
+int32_t q_localsocket_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2014,6 +2138,10 @@ void q_localsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_localsocket_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_receivers` instead
+///
+#define q_localsocket_qbase_receivers q_localsocket_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2023,7 +2151,7 @@ int32_t q_localsocket_receivers(void* self, const char* signal);
 /// @param self QLocalSocket*
 /// @param signal const char*
 ///
-int32_t q_localsocket_qbase_receivers(void* self, const char* signal);
+int32_t q_localsocket_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2047,6 +2175,10 @@ void q_localsocket_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 bool q_localsocket_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_localsocket_super_is_signal_connected` instead
+///
+#define q_localsocket_qbase_is_signal_connected q_localsocket_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2056,7 +2188,7 @@ bool q_localsocket_is_signal_connected(void* self, void* signal);
 /// @param self QLocalSocket*
 /// @param signal QMetaMethod*
 ///
-bool q_localsocket_qbase_is_signal_connected(void* self, void* signal);
+bool q_localsocket_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

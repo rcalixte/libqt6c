@@ -37,8 +37,8 @@ void k_filewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KFileWidget_OnMetaObject((KFileWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filewidget_qbase_meta_object(void* self) {
-    return KFileWidget_QBaseMetaObject((KFileWidget*)self);
+const QMetaObject* k_filewidget_super_meta_object(void* self) {
+    return KFileWidget_SuperMetaObject((KFileWidget*)self);
 }
 
 void* k_filewidget_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void k_filewidget_on_metacast(void* self, void* (*callback)(void*, const char*))
     KFileWidget_OnMetacast((KFileWidget*)self, (intptr_t)callback);
 }
 
-void* k_filewidget_qbase_metacast(void* self, const char* param1) {
-    return KFileWidget_QBaseMetacast((KFileWidget*)self, param1);
+void* k_filewidget_super_metacast(void* self, const char* param1) {
+    return KFileWidget_SuperMetacast((KFileWidget*)self, param1);
 }
 
 int32_t k_filewidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void k_filewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KFileWidget_OnMetacall((KFileWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_filewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileWidget_QBaseMetacall((KFileWidget*)self, param1, param2, param3);
+int32_t k_filewidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileWidget_SuperMetacall((KFileWidget*)self, param1, param2, param3);
 }
 
 const char* k_filewidget_tr(const char* s) {
@@ -227,8 +227,8 @@ void k_filewidget_on_size_hint(void* self, QSize* (*callback)()) {
     KFileWidget_OnSizeHint((KFileWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_filewidget_qbase_size_hint(void* self) {
-    return KFileWidget_QBaseSizeHint((KFileWidget*)self);
+QSize* k_filewidget_super_size_hint(void* self) {
+    return KFileWidget_SuperSizeHint((KFileWidget*)self);
 }
 
 void k_filewidget_set_supported_schemes(void* self, const char* schemes[static 1]) {
@@ -285,8 +285,8 @@ void k_filewidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
     KFileWidget_OnResizeEvent((KFileWidget*)self, (intptr_t)callback);
 }
 
-void k_filewidget_qbase_resize_event(void* self, void* event) {
-    KFileWidget_QBaseResizeEvent((KFileWidget*)self, (QResizeEvent*)event);
+void k_filewidget_super_resize_event(void* self, void* event) {
+    KFileWidget_SuperResizeEvent((KFileWidget*)self, (QResizeEvent*)event);
 }
 
 void k_filewidget_show_event(void* self, void* event) {
@@ -297,8 +297,8 @@ void k_filewidget_on_show_event(void* self, void (*callback)(void*, void*)) {
     KFileWidget_OnShowEvent((KFileWidget*)self, (intptr_t)callback);
 }
 
-void k_filewidget_qbase_show_event(void* self, void* event) {
-    KFileWidget_QBaseShowEvent((KFileWidget*)self, (QShowEvent*)event);
+void k_filewidget_super_show_event(void* self, void* event) {
+    KFileWidget_SuperShowEvent((KFileWidget*)self, (QShowEvent*)event);
 }
 
 bool k_filewidget_event_filter(void* self, void* watched, void* event) {
@@ -309,8 +309,8 @@ void k_filewidget_on_event_filter(void* self, bool (*callback)(void*, void*, voi
     KFileWidget_OnEventFilter((KFileWidget*)self, (intptr_t)callback);
 }
 
-bool k_filewidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFileWidget_QBaseEventFilter((KFileWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_filewidget_super_event_filter(void* self, void* watched, void* event) {
+    return KFileWidget_SuperEventFilter((KFileWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_filewidget_file_selected(void* self, void* param1) {
@@ -1768,8 +1768,8 @@ int32_t k_filewidget_dev_type(void* self) {
     return KFileWidget_DevType((KFileWidget*)self);
 }
 
-int32_t k_filewidget_qbase_dev_type(void* self) {
-    return KFileWidget_QBaseDevType((KFileWidget*)self);
+int32_t k_filewidget_super_dev_type(void* self) {
+    return KFileWidget_SuperDevType((KFileWidget*)self);
 }
 
 void k_filewidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1780,8 +1780,8 @@ void k_filewidget_set_visible(void* self, bool visible) {
     KFileWidget_SetVisible((KFileWidget*)self, visible);
 }
 
-void k_filewidget_qbase_set_visible(void* self, bool visible) {
-    KFileWidget_QBaseSetVisible((KFileWidget*)self, visible);
+void k_filewidget_super_set_visible(void* self, bool visible) {
+    KFileWidget_SuperSetVisible((KFileWidget*)self, visible);
 }
 
 void k_filewidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1792,8 +1792,8 @@ QSize* k_filewidget_minimum_size_hint(void* self) {
     return KFileWidget_MinimumSizeHint((KFileWidget*)self);
 }
 
-QSize* k_filewidget_qbase_minimum_size_hint(void* self) {
-    return KFileWidget_QBaseMinimumSizeHint((KFileWidget*)self);
+QSize* k_filewidget_super_minimum_size_hint(void* self) {
+    return KFileWidget_SuperMinimumSizeHint((KFileWidget*)self);
 }
 
 void k_filewidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1804,8 +1804,8 @@ int32_t k_filewidget_height_for_width(void* self, int param1) {
     return KFileWidget_HeightForWidth((KFileWidget*)self, param1);
 }
 
-int32_t k_filewidget_qbase_height_for_width(void* self, int param1) {
-    return KFileWidget_QBaseHeightForWidth((KFileWidget*)self, param1);
+int32_t k_filewidget_super_height_for_width(void* self, int param1) {
+    return KFileWidget_SuperHeightForWidth((KFileWidget*)self, param1);
 }
 
 void k_filewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1816,8 +1816,8 @@ bool k_filewidget_has_height_for_width(void* self) {
     return KFileWidget_HasHeightForWidth((KFileWidget*)self);
 }
 
-bool k_filewidget_qbase_has_height_for_width(void* self) {
-    return KFileWidget_QBaseHasHeightForWidth((KFileWidget*)self);
+bool k_filewidget_super_has_height_for_width(void* self) {
+    return KFileWidget_SuperHasHeightForWidth((KFileWidget*)self);
 }
 
 void k_filewidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1828,8 +1828,8 @@ QPaintEngine* k_filewidget_paint_engine(void* self) {
     return KFileWidget_PaintEngine((KFileWidget*)self);
 }
 
-QPaintEngine* k_filewidget_qbase_paint_engine(void* self) {
-    return KFileWidget_QBasePaintEngine((KFileWidget*)self);
+QPaintEngine* k_filewidget_super_paint_engine(void* self) {
+    return KFileWidget_SuperPaintEngine((KFileWidget*)self);
 }
 
 void k_filewidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1840,8 +1840,8 @@ bool k_filewidget_event(void* self, void* event) {
     return KFileWidget_Event((KFileWidget*)self, (QEvent*)event);
 }
 
-bool k_filewidget_qbase_event(void* self, void* event) {
-    return KFileWidget_QBaseEvent((KFileWidget*)self, (QEvent*)event);
+bool k_filewidget_super_event(void* self, void* event) {
+    return KFileWidget_SuperEvent((KFileWidget*)self, (QEvent*)event);
 }
 
 void k_filewidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_filewidget_mouse_press_event(void* self, void* event) {
     KFileWidget_MousePressEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
-void k_filewidget_qbase_mouse_press_event(void* self, void* event) {
-    KFileWidget_QBaseMousePressEvent((KFileWidget*)self, (QMouseEvent*)event);
+void k_filewidget_super_mouse_press_event(void* self, void* event) {
+    KFileWidget_SuperMousePressEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
 void k_filewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_filewidget_mouse_release_event(void* self, void* event) {
     KFileWidget_MouseReleaseEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
-void k_filewidget_qbase_mouse_release_event(void* self, void* event) {
-    KFileWidget_QBaseMouseReleaseEvent((KFileWidget*)self, (QMouseEvent*)event);
+void k_filewidget_super_mouse_release_event(void* self, void* event) {
+    KFileWidget_SuperMouseReleaseEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
 void k_filewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_filewidget_mouse_double_click_event(void* self, void* event) {
     KFileWidget_MouseDoubleClickEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
-void k_filewidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KFileWidget_QBaseMouseDoubleClickEvent((KFileWidget*)self, (QMouseEvent*)event);
+void k_filewidget_super_mouse_double_click_event(void* self, void* event) {
+    KFileWidget_SuperMouseDoubleClickEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
 void k_filewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_filewidget_mouse_move_event(void* self, void* event) {
     KFileWidget_MouseMoveEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
-void k_filewidget_qbase_mouse_move_event(void* self, void* event) {
-    KFileWidget_QBaseMouseMoveEvent((KFileWidget*)self, (QMouseEvent*)event);
+void k_filewidget_super_mouse_move_event(void* self, void* event) {
+    KFileWidget_SuperMouseMoveEvent((KFileWidget*)self, (QMouseEvent*)event);
 }
 
 void k_filewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_filewidget_wheel_event(void* self, void* event) {
     KFileWidget_WheelEvent((KFileWidget*)self, (QWheelEvent*)event);
 }
 
-void k_filewidget_qbase_wheel_event(void* self, void* event) {
-    KFileWidget_QBaseWheelEvent((KFileWidget*)self, (QWheelEvent*)event);
+void k_filewidget_super_wheel_event(void* self, void* event) {
+    KFileWidget_SuperWheelEvent((KFileWidget*)self, (QWheelEvent*)event);
 }
 
 void k_filewidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_filewidget_key_press_event(void* self, void* event) {
     KFileWidget_KeyPressEvent((KFileWidget*)self, (QKeyEvent*)event);
 }
 
-void k_filewidget_qbase_key_press_event(void* self, void* event) {
-    KFileWidget_QBaseKeyPressEvent((KFileWidget*)self, (QKeyEvent*)event);
+void k_filewidget_super_key_press_event(void* self, void* event) {
+    KFileWidget_SuperKeyPressEvent((KFileWidget*)self, (QKeyEvent*)event);
 }
 
 void k_filewidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_filewidget_key_release_event(void* self, void* event) {
     KFileWidget_KeyReleaseEvent((KFileWidget*)self, (QKeyEvent*)event);
 }
 
-void k_filewidget_qbase_key_release_event(void* self, void* event) {
-    KFileWidget_QBaseKeyReleaseEvent((KFileWidget*)self, (QKeyEvent*)event);
+void k_filewidget_super_key_release_event(void* self, void* event) {
+    KFileWidget_SuperKeyReleaseEvent((KFileWidget*)self, (QKeyEvent*)event);
 }
 
 void k_filewidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_filewidget_focus_in_event(void* self, void* event) {
     KFileWidget_FocusInEvent((KFileWidget*)self, (QFocusEvent*)event);
 }
 
-void k_filewidget_qbase_focus_in_event(void* self, void* event) {
-    KFileWidget_QBaseFocusInEvent((KFileWidget*)self, (QFocusEvent*)event);
+void k_filewidget_super_focus_in_event(void* self, void* event) {
+    KFileWidget_SuperFocusInEvent((KFileWidget*)self, (QFocusEvent*)event);
 }
 
 void k_filewidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_filewidget_focus_out_event(void* self, void* event) {
     KFileWidget_FocusOutEvent((KFileWidget*)self, (QFocusEvent*)event);
 }
 
-void k_filewidget_qbase_focus_out_event(void* self, void* event) {
-    KFileWidget_QBaseFocusOutEvent((KFileWidget*)self, (QFocusEvent*)event);
+void k_filewidget_super_focus_out_event(void* self, void* event) {
+    KFileWidget_SuperFocusOutEvent((KFileWidget*)self, (QFocusEvent*)event);
 }
 
 void k_filewidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void k_filewidget_enter_event(void* self, void* event) {
     KFileWidget_EnterEvent((KFileWidget*)self, (QEnterEvent*)event);
 }
 
-void k_filewidget_qbase_enter_event(void* self, void* event) {
-    KFileWidget_QBaseEnterEvent((KFileWidget*)self, (QEnterEvent*)event);
+void k_filewidget_super_enter_event(void* self, void* event) {
+    KFileWidget_SuperEnterEvent((KFileWidget*)self, (QEnterEvent*)event);
 }
 
 void k_filewidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void k_filewidget_leave_event(void* self, void* event) {
     KFileWidget_LeaveEvent((KFileWidget*)self, (QEvent*)event);
 }
 
-void k_filewidget_qbase_leave_event(void* self, void* event) {
-    KFileWidget_QBaseLeaveEvent((KFileWidget*)self, (QEvent*)event);
+void k_filewidget_super_leave_event(void* self, void* event) {
+    KFileWidget_SuperLeaveEvent((KFileWidget*)self, (QEvent*)event);
 }
 
 void k_filewidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void k_filewidget_paint_event(void* self, void* event) {
     KFileWidget_PaintEvent((KFileWidget*)self, (QPaintEvent*)event);
 }
 
-void k_filewidget_qbase_paint_event(void* self, void* event) {
-    KFileWidget_QBasePaintEvent((KFileWidget*)self, (QPaintEvent*)event);
+void k_filewidget_super_paint_event(void* self, void* event) {
+    KFileWidget_SuperPaintEvent((KFileWidget*)self, (QPaintEvent*)event);
 }
 
 void k_filewidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void k_filewidget_move_event(void* self, void* event) {
     KFileWidget_MoveEvent((KFileWidget*)self, (QMoveEvent*)event);
 }
 
-void k_filewidget_qbase_move_event(void* self, void* event) {
-    KFileWidget_QBaseMoveEvent((KFileWidget*)self, (QMoveEvent*)event);
+void k_filewidget_super_move_event(void* self, void* event) {
+    KFileWidget_SuperMoveEvent((KFileWidget*)self, (QMoveEvent*)event);
 }
 
 void k_filewidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ void k_filewidget_close_event(void* self, void* event) {
     KFileWidget_CloseEvent((KFileWidget*)self, (QCloseEvent*)event);
 }
 
-void k_filewidget_qbase_close_event(void* self, void* event) {
-    KFileWidget_QBaseCloseEvent((KFileWidget*)self, (QCloseEvent*)event);
+void k_filewidget_super_close_event(void* self, void* event) {
+    KFileWidget_SuperCloseEvent((KFileWidget*)self, (QCloseEvent*)event);
 }
 
 void k_filewidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ void k_filewidget_context_menu_event(void* self, void* event) {
     KFileWidget_ContextMenuEvent((KFileWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_filewidget_qbase_context_menu_event(void* self, void* event) {
-    KFileWidget_QBaseContextMenuEvent((KFileWidget*)self, (QContextMenuEvent*)event);
+void k_filewidget_super_context_menu_event(void* self, void* event) {
+    KFileWidget_SuperContextMenuEvent((KFileWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_filewidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ void k_filewidget_tablet_event(void* self, void* event) {
     KFileWidget_TabletEvent((KFileWidget*)self, (QTabletEvent*)event);
 }
 
-void k_filewidget_qbase_tablet_event(void* self, void* event) {
-    KFileWidget_QBaseTabletEvent((KFileWidget*)self, (QTabletEvent*)event);
+void k_filewidget_super_tablet_event(void* self, void* event) {
+    KFileWidget_SuperTabletEvent((KFileWidget*)self, (QTabletEvent*)event);
 }
 
 void k_filewidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ void k_filewidget_action_event(void* self, void* event) {
     KFileWidget_ActionEvent((KFileWidget*)self, (QActionEvent*)event);
 }
 
-void k_filewidget_qbase_action_event(void* self, void* event) {
-    KFileWidget_QBaseActionEvent((KFileWidget*)self, (QActionEvent*)event);
+void k_filewidget_super_action_event(void* self, void* event) {
+    KFileWidget_SuperActionEvent((KFileWidget*)self, (QActionEvent*)event);
 }
 
 void k_filewidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2056,8 +2056,8 @@ void k_filewidget_drag_enter_event(void* self, void* event) {
     KFileWidget_DragEnterEvent((KFileWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_filewidget_qbase_drag_enter_event(void* self, void* event) {
-    KFileWidget_QBaseDragEnterEvent((KFileWidget*)self, (QDragEnterEvent*)event);
+void k_filewidget_super_drag_enter_event(void* self, void* event) {
+    KFileWidget_SuperDragEnterEvent((KFileWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_filewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ void k_filewidget_drag_move_event(void* self, void* event) {
     KFileWidget_DragMoveEvent((KFileWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_filewidget_qbase_drag_move_event(void* self, void* event) {
-    KFileWidget_QBaseDragMoveEvent((KFileWidget*)self, (QDragMoveEvent*)event);
+void k_filewidget_super_drag_move_event(void* self, void* event) {
+    KFileWidget_SuperDragMoveEvent((KFileWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_filewidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ void k_filewidget_drag_leave_event(void* self, void* event) {
     KFileWidget_DragLeaveEvent((KFileWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_filewidget_qbase_drag_leave_event(void* self, void* event) {
-    KFileWidget_QBaseDragLeaveEvent((KFileWidget*)self, (QDragLeaveEvent*)event);
+void k_filewidget_super_drag_leave_event(void* self, void* event) {
+    KFileWidget_SuperDragLeaveEvent((KFileWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_filewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ void k_filewidget_drop_event(void* self, void* event) {
     KFileWidget_DropEvent((KFileWidget*)self, (QDropEvent*)event);
 }
 
-void k_filewidget_qbase_drop_event(void* self, void* event) {
-    KFileWidget_QBaseDropEvent((KFileWidget*)self, (QDropEvent*)event);
+void k_filewidget_super_drop_event(void* self, void* event) {
+    KFileWidget_SuperDropEvent((KFileWidget*)self, (QDropEvent*)event);
 }
 
 void k_filewidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ void k_filewidget_hide_event(void* self, void* event) {
     KFileWidget_HideEvent((KFileWidget*)self, (QHideEvent*)event);
 }
 
-void k_filewidget_qbase_hide_event(void* self, void* event) {
-    KFileWidget_QBaseHideEvent((KFileWidget*)self, (QHideEvent*)event);
+void k_filewidget_super_hide_event(void* self, void* event) {
+    KFileWidget_SuperHideEvent((KFileWidget*)self, (QHideEvent*)event);
 }
 
 void k_filewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2116,8 +2116,8 @@ bool k_filewidget_native_event(void* self, char* eventType, void* message, intpt
     return KFileWidget_NativeEvent((KFileWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_filewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KFileWidget_QBaseNativeEvent((KFileWidget*)self, qstring(eventType), message, result);
+bool k_filewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KFileWidget_SuperNativeEvent((KFileWidget*)self, qstring(eventType), message, result);
 }
 
 void k_filewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2128,8 +2128,8 @@ void k_filewidget_change_event(void* self, void* param1) {
     KFileWidget_ChangeEvent((KFileWidget*)self, (QEvent*)param1);
 }
 
-void k_filewidget_qbase_change_event(void* self, void* param1) {
-    KFileWidget_QBaseChangeEvent((KFileWidget*)self, (QEvent*)param1);
+void k_filewidget_super_change_event(void* self, void* param1) {
+    KFileWidget_SuperChangeEvent((KFileWidget*)self, (QEvent*)param1);
 }
 
 void k_filewidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ int32_t k_filewidget_metric(void* self, int32_t param1) {
     return KFileWidget_Metric((KFileWidget*)self, param1);
 }
 
-int32_t k_filewidget_qbase_metric(void* self, int32_t param1) {
-    return KFileWidget_QBaseMetric((KFileWidget*)self, param1);
+int32_t k_filewidget_super_metric(void* self, int32_t param1) {
+    return KFileWidget_SuperMetric((KFileWidget*)self, param1);
 }
 
 void k_filewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2152,8 +2152,8 @@ void k_filewidget_init_painter(void* self, void* painter) {
     KFileWidget_InitPainter((KFileWidget*)self, (QPainter*)painter);
 }
 
-void k_filewidget_qbase_init_painter(void* self, void* painter) {
-    KFileWidget_QBaseInitPainter((KFileWidget*)self, (QPainter*)painter);
+void k_filewidget_super_init_painter(void* self, void* painter) {
+    KFileWidget_SuperInitPainter((KFileWidget*)self, (QPainter*)painter);
 }
 
 void k_filewidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ QPaintDevice* k_filewidget_redirected(void* self, void* offset) {
     return KFileWidget_Redirected((KFileWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_filewidget_qbase_redirected(void* self, void* offset) {
-    return KFileWidget_QBaseRedirected((KFileWidget*)self, (QPoint*)offset);
+QPaintDevice* k_filewidget_super_redirected(void* self, void* offset) {
+    return KFileWidget_SuperRedirected((KFileWidget*)self, (QPoint*)offset);
 }
 
 void k_filewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ QPainter* k_filewidget_shared_painter(void* self) {
     return KFileWidget_SharedPainter((KFileWidget*)self);
 }
 
-QPainter* k_filewidget_qbase_shared_painter(void* self) {
-    return KFileWidget_QBaseSharedPainter((KFileWidget*)self);
+QPainter* k_filewidget_super_shared_painter(void* self) {
+    return KFileWidget_SuperSharedPainter((KFileWidget*)self);
 }
 
 void k_filewidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2188,8 +2188,8 @@ void k_filewidget_input_method_event(void* self, void* param1) {
     KFileWidget_InputMethodEvent((KFileWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_filewidget_qbase_input_method_event(void* self, void* param1) {
-    KFileWidget_QBaseInputMethodEvent((KFileWidget*)self, (QInputMethodEvent*)param1);
+void k_filewidget_super_input_method_event(void* self, void* param1) {
+    KFileWidget_SuperInputMethodEvent((KFileWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_filewidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ QVariant* k_filewidget_input_method_query(void* self, int32_t param1) {
     return KFileWidget_InputMethodQuery((KFileWidget*)self, param1);
 }
 
-QVariant* k_filewidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KFileWidget_QBaseInputMethodQuery((KFileWidget*)self, param1);
+QVariant* k_filewidget_super_input_method_query(void* self, int32_t param1) {
+    return KFileWidget_SuperInputMethodQuery((KFileWidget*)self, param1);
 }
 
 void k_filewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2212,8 +2212,8 @@ bool k_filewidget_focus_next_prev_child(void* self, bool next) {
     return KFileWidget_FocusNextPrevChild((KFileWidget*)self, next);
 }
 
-bool k_filewidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KFileWidget_QBaseFocusNextPrevChild((KFileWidget*)self, next);
+bool k_filewidget_super_focus_next_prev_child(void* self, bool next) {
+    return KFileWidget_SuperFocusNextPrevChild((KFileWidget*)self, next);
 }
 
 void k_filewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2224,8 +2224,8 @@ void k_filewidget_timer_event(void* self, void* event) {
     KFileWidget_TimerEvent((KFileWidget*)self, (QTimerEvent*)event);
 }
 
-void k_filewidget_qbase_timer_event(void* self, void* event) {
-    KFileWidget_QBaseTimerEvent((KFileWidget*)self, (QTimerEvent*)event);
+void k_filewidget_super_timer_event(void* self, void* event) {
+    KFileWidget_SuperTimerEvent((KFileWidget*)self, (QTimerEvent*)event);
 }
 
 void k_filewidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2236,8 +2236,8 @@ void k_filewidget_child_event(void* self, void* event) {
     KFileWidget_ChildEvent((KFileWidget*)self, (QChildEvent*)event);
 }
 
-void k_filewidget_qbase_child_event(void* self, void* event) {
-    KFileWidget_QBaseChildEvent((KFileWidget*)self, (QChildEvent*)event);
+void k_filewidget_super_child_event(void* self, void* event) {
+    KFileWidget_SuperChildEvent((KFileWidget*)self, (QChildEvent*)event);
 }
 
 void k_filewidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2248,8 +2248,8 @@ void k_filewidget_custom_event(void* self, void* event) {
     KFileWidget_CustomEvent((KFileWidget*)self, (QEvent*)event);
 }
 
-void k_filewidget_qbase_custom_event(void* self, void* event) {
-    KFileWidget_QBaseCustomEvent((KFileWidget*)self, (QEvent*)event);
+void k_filewidget_super_custom_event(void* self, void* event) {
+    KFileWidget_SuperCustomEvent((KFileWidget*)self, (QEvent*)event);
 }
 
 void k_filewidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2260,8 +2260,8 @@ void k_filewidget_connect_notify(void* self, void* signal) {
     KFileWidget_ConnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_filewidget_qbase_connect_notify(void* self, void* signal) {
-    KFileWidget_QBaseConnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
+void k_filewidget_super_connect_notify(void* self, void* signal) {
+    KFileWidget_SuperConnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_filewidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2272,8 +2272,8 @@ void k_filewidget_disconnect_notify(void* self, void* signal) {
     KFileWidget_DisconnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_filewidget_qbase_disconnect_notify(void* self, void* signal) {
-    KFileWidget_QBaseDisconnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
+void k_filewidget_super_disconnect_notify(void* self, void* signal) {
+    KFileWidget_SuperDisconnectNotify((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_filewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2284,8 +2284,8 @@ void k_filewidget_update_micro_focus(void* self) {
     KFileWidget_UpdateMicroFocus((KFileWidget*)self);
 }
 
-void k_filewidget_qbase_update_micro_focus(void* self) {
-    KFileWidget_QBaseUpdateMicroFocus((KFileWidget*)self);
+void k_filewidget_super_update_micro_focus(void* self) {
+    KFileWidget_SuperUpdateMicroFocus((KFileWidget*)self);
 }
 
 void k_filewidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2296,8 +2296,8 @@ void k_filewidget_create(void* self) {
     KFileWidget_Create((KFileWidget*)self);
 }
 
-void k_filewidget_qbase_create(void* self) {
-    KFileWidget_QBaseCreate((KFileWidget*)self);
+void k_filewidget_super_create(void* self) {
+    KFileWidget_SuperCreate((KFileWidget*)self);
 }
 
 void k_filewidget_on_create(void* self, void (*callback)()) {
@@ -2308,8 +2308,8 @@ void k_filewidget_destroy(void* self) {
     KFileWidget_Destroy((KFileWidget*)self);
 }
 
-void k_filewidget_qbase_destroy(void* self) {
-    KFileWidget_QBaseDestroy((KFileWidget*)self);
+void k_filewidget_super_destroy(void* self) {
+    KFileWidget_SuperDestroy((KFileWidget*)self);
 }
 
 void k_filewidget_on_destroy(void* self, void (*callback)()) {
@@ -2320,8 +2320,8 @@ bool k_filewidget_focus_next_child(void* self) {
     return KFileWidget_FocusNextChild((KFileWidget*)self);
 }
 
-bool k_filewidget_qbase_focus_next_child(void* self) {
-    return KFileWidget_QBaseFocusNextChild((KFileWidget*)self);
+bool k_filewidget_super_focus_next_child(void* self) {
+    return KFileWidget_SuperFocusNextChild((KFileWidget*)self);
 }
 
 void k_filewidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2332,8 +2332,8 @@ bool k_filewidget_focus_previous_child(void* self) {
     return KFileWidget_FocusPreviousChild((KFileWidget*)self);
 }
 
-bool k_filewidget_qbase_focus_previous_child(void* self) {
-    return KFileWidget_QBaseFocusPreviousChild((KFileWidget*)self);
+bool k_filewidget_super_focus_previous_child(void* self) {
+    return KFileWidget_SuperFocusPreviousChild((KFileWidget*)self);
 }
 
 void k_filewidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2344,8 +2344,8 @@ QObject* k_filewidget_sender(void* self) {
     return KFileWidget_Sender((KFileWidget*)self);
 }
 
-QObject* k_filewidget_qbase_sender(void* self) {
-    return KFileWidget_QBaseSender((KFileWidget*)self);
+QObject* k_filewidget_super_sender(void* self) {
+    return KFileWidget_SuperSender((KFileWidget*)self);
 }
 
 void k_filewidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2356,8 +2356,8 @@ int32_t k_filewidget_sender_signal_index(void* self) {
     return KFileWidget_SenderSignalIndex((KFileWidget*)self);
 }
 
-int32_t k_filewidget_qbase_sender_signal_index(void* self) {
-    return KFileWidget_QBaseSenderSignalIndex((KFileWidget*)self);
+int32_t k_filewidget_super_sender_signal_index(void* self) {
+    return KFileWidget_SuperSenderSignalIndex((KFileWidget*)self);
 }
 
 void k_filewidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2368,8 +2368,8 @@ int32_t k_filewidget_receivers(void* self, const char* signal) {
     return KFileWidget_Receivers((KFileWidget*)self, signal);
 }
 
-int32_t k_filewidget_qbase_receivers(void* self, const char* signal) {
-    return KFileWidget_QBaseReceivers((KFileWidget*)self, signal);
+int32_t k_filewidget_super_receivers(void* self, const char* signal) {
+    return KFileWidget_SuperReceivers((KFileWidget*)self, signal);
 }
 
 void k_filewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2380,8 +2380,8 @@ bool k_filewidget_is_signal_connected(void* self, void* signal) {
     return KFileWidget_IsSignalConnected((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_filewidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileWidget_QBaseIsSignalConnected((KFileWidget*)self, (QMetaMethod*)signal);
+bool k_filewidget_super_is_signal_connected(void* self, void* signal) {
+    return KFileWidget_SuperIsSignalConnected((KFileWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_filewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2392,8 +2392,8 @@ double k_filewidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KFileWidget_GetDecodedMetricF((KFileWidget*)self, metricA, metricB);
 }
 
-double k_filewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFileWidget_QBaseGetDecodedMetricF((KFileWidget*)self, metricA, metricB);
+double k_filewidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KFileWidget_SuperGetDecodedMetricF((KFileWidget*)self, metricA, metricB);
 }
 
 void k_filewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -41,8 +41,8 @@ void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*
     K7Zip_OnDoWriteSymLink((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return K7Zip_QBaseDoWriteSymLink((K7Zip*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_7zip_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return K7Zip_SuperDoWriteSymLink((K7Zip*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_7zip_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -53,8 +53,8 @@ void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, con
     K7Zip_OnDoWriteDir((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return K7Zip_QBaseDoWriteDir((K7Zip*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return K7Zip_SuperDoWriteDir((K7Zip*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -65,8 +65,8 @@ void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char
     K7Zip_OnDoPrepareWriting((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return K7Zip_QBaseDoPrepareWriting((K7Zip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return K7Zip_SuperDoPrepareWriting((K7Zip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_7zip_do_finish_writing(void* self, long long size) {
@@ -77,8 +77,8 @@ void k_7zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long))
     K7Zip_OnDoFinishWriting((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_do_finish_writing(void* self, long long size) {
-    return K7Zip_QBaseDoFinishWriting((K7Zip*)self, size);
+bool k_7zip_super_do_finish_writing(void* self, long long size) {
+    return K7Zip_SuperDoFinishWriting((K7Zip*)self, size);
 }
 
 bool k_7zip_do_write_data(void* self, const char* data, long long size) {
@@ -89,8 +89,8 @@ void k_7zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, lo
     K7Zip_OnDoWriteData((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_do_write_data(void* self, const char* data, long long size) {
-    return K7Zip_QBaseDoWriteData((K7Zip*)self, data, size);
+bool k_7zip_super_do_write_data(void* self, const char* data, long long size) {
+    return K7Zip_SuperDoWriteData((K7Zip*)self, data, size);
 }
 
 bool k_7zip_open_archive(void* self, int32_t mode) {
@@ -101,8 +101,8 @@ void k_7zip_on_open_archive(void* self, bool (*callback)(void*, int32_t)) {
     K7Zip_OnOpenArchive((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_open_archive(void* self, int32_t mode) {
-    return K7Zip_QBaseOpenArchive((K7Zip*)self, mode);
+bool k_7zip_super_open_archive(void* self, int32_t mode) {
+    return K7Zip_SuperOpenArchive((K7Zip*)self, mode);
 }
 
 bool k_7zip_close_archive(void* self) {
@@ -113,8 +113,8 @@ void k_7zip_on_close_archive(void* self, bool (*callback)()) {
     K7Zip_OnCloseArchive((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_qbase_close_archive(void* self) {
-    return K7Zip_QBaseCloseArchive((K7Zip*)self);
+bool k_7zip_super_close_archive(void* self) {
+    return K7Zip_SuperCloseArchive((K7Zip*)self);
 }
 
 void k_7zip_virtual_hook(void* self, int id, void* data) {
@@ -125,8 +125,8 @@ void k_7zip_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     K7Zip_OnVirtualHook((K7Zip*)self, (intptr_t)callback);
 }
 
-void k_7zip_qbase_virtual_hook(void* self, int id, void* data) {
-    K7Zip_QBaseVirtualHook((K7Zip*)self, id, data);
+void k_7zip_super_virtual_hook(void* self, int id, void* data) {
+    K7Zip_SuperVirtualHook((K7Zip*)self, id, data);
 }
 
 const char* k_7zip_tr2(const char* sourceText, const char* disambiguation) {
@@ -301,8 +301,8 @@ bool k_7zip_open(void* self, int32_t mode) {
     return K7Zip_Open((K7Zip*)self, mode);
 }
 
-bool k_7zip_qbase_open(void* self, int32_t mode) {
-    return K7Zip_QBaseOpen((K7Zip*)self, mode);
+bool k_7zip_super_open(void* self, int32_t mode) {
+    return K7Zip_SuperOpen((K7Zip*)self, mode);
 }
 
 void k_7zip_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -313,8 +313,8 @@ bool k_7zip_close(void* self) {
     return K7Zip_Close((K7Zip*)self);
 }
 
-bool k_7zip_qbase_close(void* self) {
-    return K7Zip_QBaseClose((K7Zip*)self);
+bool k_7zip_super_close(void* self) {
+    return K7Zip_SuperClose((K7Zip*)self);
 }
 
 void k_7zip_on_close(void* self, bool (*callback)()) {
@@ -325,8 +325,8 @@ KArchiveDirectory* k_7zip_root_dir(void* self) {
     return K7Zip_RootDir((K7Zip*)self);
 }
 
-KArchiveDirectory* k_7zip_qbase_root_dir(void* self) {
-    return K7Zip_QBaseRootDir((K7Zip*)self);
+KArchiveDirectory* k_7zip_super_root_dir(void* self) {
+    return K7Zip_SuperRootDir((K7Zip*)self);
 }
 
 void k_7zip_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
@@ -337,8 +337,8 @@ bool k_7zip_create_device(void* self, int32_t mode) {
     return K7Zip_CreateDevice((K7Zip*)self, mode);
 }
 
-bool k_7zip_qbase_create_device(void* self, int32_t mode) {
-    return K7Zip_QBaseCreateDevice((K7Zip*)self, mode);
+bool k_7zip_super_create_device(void* self, int32_t mode) {
+    return K7Zip_SuperCreateDevice((K7Zip*)self, mode);
 }
 
 void k_7zip_on_create_device(void* self, bool (*callback)(void*, int32_t)) {
@@ -349,8 +349,8 @@ void k_7zip_set_error_string(void* self, const char* errorStr) {
     K7Zip_SetErrorString((K7Zip*)self, qstring(errorStr));
 }
 
-void k_7zip_qbase_set_error_string(void* self, const char* errorStr) {
-    K7Zip_QBaseSetErrorString((K7Zip*)self, qstring(errorStr));
+void k_7zip_super_set_error_string(void* self, const char* errorStr) {
+    K7Zip_SuperSetErrorString((K7Zip*)self, qstring(errorStr));
 }
 
 void k_7zip_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -361,8 +361,8 @@ KArchiveDirectory* k_7zip_find_or_create(void* self, const char* path) {
     return K7Zip_FindOrCreate((K7Zip*)self, qstring(path));
 }
 
-KArchiveDirectory* k_7zip_qbase_find_or_create(void* self, const char* path) {
-    return K7Zip_QBaseFindOrCreate((K7Zip*)self, qstring(path));
+KArchiveDirectory* k_7zip_super_find_or_create(void* self, const char* path) {
+    return K7Zip_SuperFindOrCreate((K7Zip*)self, qstring(path));
 }
 
 void k_7zip_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
@@ -373,8 +373,8 @@ void k_7zip_set_device(void* self, void* dev) {
     K7Zip_SetDevice((K7Zip*)self, (QIODevice*)dev);
 }
 
-void k_7zip_qbase_set_device(void* self, void* dev) {
-    K7Zip_QBaseSetDevice((K7Zip*)self, (QIODevice*)dev);
+void k_7zip_super_set_device(void* self, void* dev) {
+    K7Zip_SuperSetDevice((K7Zip*)self, (QIODevice*)dev);
 }
 
 void k_7zip_on_set_device(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ void k_7zip_set_root_dir(void* self, void* rootDir) {
     K7Zip_SetRootDir((K7Zip*)self, (KArchiveDirectory*)rootDir);
 }
 
-void k_7zip_qbase_set_root_dir(void* self, void* rootDir) {
-    K7Zip_QBaseSetRootDir((K7Zip*)self, (KArchiveDirectory*)rootDir);
+void k_7zip_super_set_root_dir(void* self, void* rootDir) {
+    K7Zip_SuperSetRootDir((K7Zip*)self, (KArchiveDirectory*)rootDir);
 }
 
 void k_7zip_on_set_root_dir(void* self, void (*callback)(void*, void*)) {

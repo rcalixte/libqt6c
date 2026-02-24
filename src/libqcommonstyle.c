@@ -29,8 +29,8 @@ void q_commonstyle_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QCommonStyle_OnMetaObject((QCommonStyle*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_commonstyle_qbase_meta_object(void* self) {
-    return QCommonStyle_QBaseMetaObject((QCommonStyle*)self);
+const QMetaObject* q_commonstyle_super_meta_object(void* self) {
+    return QCommonStyle_SuperMetaObject((QCommonStyle*)self);
 }
 
 void* q_commonstyle_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_commonstyle_on_metacast(void* self, void* (*callback)(void*, const char*)
     QCommonStyle_OnMetacast((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void* q_commonstyle_qbase_metacast(void* self, const char* param1) {
-    return QCommonStyle_QBaseMetacast((QCommonStyle*)self, param1);
+void* q_commonstyle_super_metacast(void* self, const char* param1) {
+    return QCommonStyle_SuperMetacast((QCommonStyle*)self, param1);
 }
 
 int32_t q_commonstyle_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_commonstyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QCommonStyle_OnMetacall((QCommonStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_commonstyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCommonStyle_QBaseMetacall((QCommonStyle*)self, param1, param2, param3);
+int32_t q_commonstyle_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCommonStyle_SuperMetacall((QCommonStyle*)self, param1, param2, param3);
 }
 
 const char* q_commonstyle_tr(const char* s) {
@@ -72,8 +72,8 @@ void q_commonstyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t
     QCommonStyle_OnDrawPrimitive((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w) {
-    QCommonStyle_QBaseDrawPrimitive((QCommonStyle*)self, pe, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
+void q_commonstyle_super_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w) {
+    QCommonStyle_SuperDrawPrimitive((QCommonStyle*)self, pe, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
 }
 
 void q_commonstyle_draw_control(void* self, int32_t element, void* opt, void* p, void* w) {
@@ -84,8 +84,8 @@ void q_commonstyle_on_draw_control(void* self, void (*callback)(void*, int32_t, 
     QCommonStyle_OnDrawControl((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_draw_control(void* self, int32_t element, void* opt, void* p, void* w) {
-    QCommonStyle_QBaseDrawControl((QCommonStyle*)self, element, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
+void q_commonstyle_super_draw_control(void* self, int32_t element, void* opt, void* p, void* w) {
+    QCommonStyle_SuperDrawControl((QCommonStyle*)self, element, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
 }
 
 QRect* q_commonstyle_sub_element_rect(void* self, int32_t r, void* opt, void* widget) {
@@ -96,8 +96,8 @@ void q_commonstyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int
     QCommonStyle_OnSubElementRect((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QRect* q_commonstyle_qbase_sub_element_rect(void* self, int32_t r, void* opt, void* widget) {
-    return QCommonStyle_QBaseSubElementRect((QCommonStyle*)self, r, (QStyleOption*)opt, (QWidget*)widget);
+QRect* q_commonstyle_super_sub_element_rect(void* self, int32_t r, void* opt, void* widget) {
+    return QCommonStyle_SuperSubElementRect((QCommonStyle*)self, r, (QStyleOption*)opt, (QWidget*)widget);
 }
 
 void q_commonstyle_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* w) {
@@ -108,8 +108,8 @@ void q_commonstyle_on_draw_complex_control(void* self, void (*callback)(void*, i
     QCommonStyle_OnDrawComplexControl((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* w) {
-    QCommonStyle_QBaseDrawComplexControl((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, (QPainter*)p, (QWidget*)w);
+void q_commonstyle_super_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* w) {
+    QCommonStyle_SuperDrawComplexControl((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, (QPainter*)p, (QWidget*)w);
 }
 
 int32_t q_commonstyle_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* w) {
@@ -120,8 +120,8 @@ void q_commonstyle_on_hit_test_complex_control(void* self, int32_t (*callback)(v
     QCommonStyle_OnHitTestComplexControl((QCommonStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_commonstyle_qbase_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* w) {
-    return QCommonStyle_QBaseHitTestComplexControl((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, (QPoint*)pt, (QWidget*)w);
+int32_t q_commonstyle_super_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* w) {
+    return QCommonStyle_SuperHitTestComplexControl((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, (QPoint*)pt, (QWidget*)w);
 }
 
 QRect* q_commonstyle_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* w) {
@@ -132,8 +132,8 @@ void q_commonstyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int
     QCommonStyle_OnSubControlRect((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QRect* q_commonstyle_qbase_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* w) {
-    return QCommonStyle_QBaseSubControlRect((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, sc, (QWidget*)w);
+QRect* q_commonstyle_super_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* w) {
+    return QCommonStyle_SuperSubControlRect((QCommonStyle*)self, cc, (QStyleOptionComplex*)opt, sc, (QWidget*)w);
 }
 
 QSize* q_commonstyle_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* widget) {
@@ -144,8 +144,8 @@ void q_commonstyle_on_size_from_contents(void* self, QSize* (*callback)(void*, i
     QCommonStyle_OnSizeFromContents((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QSize* q_commonstyle_qbase_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* widget) {
-    return QCommonStyle_QBaseSizeFromContents((QCommonStyle*)self, ct, (QStyleOption*)opt, (QSize*)contentsSize, (QWidget*)widget);
+QSize* q_commonstyle_super_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* widget) {
+    return QCommonStyle_SuperSizeFromContents((QCommonStyle*)self, ct, (QStyleOption*)opt, (QSize*)contentsSize, (QWidget*)widget);
 }
 
 int32_t q_commonstyle_pixel_metric(void* self, int32_t m, void* opt, void* widget) {
@@ -156,8 +156,8 @@ void q_commonstyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_
     QCommonStyle_OnPixelMetric((QCommonStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_commonstyle_qbase_pixel_metric(void* self, int32_t m, void* opt, void* widget) {
-    return QCommonStyle_QBasePixelMetric((QCommonStyle*)self, m, (QStyleOption*)opt, (QWidget*)widget);
+int32_t q_commonstyle_super_pixel_metric(void* self, int32_t m, void* opt, void* widget) {
+    return QCommonStyle_SuperPixelMetric((QCommonStyle*)self, m, (QStyleOption*)opt, (QWidget*)widget);
 }
 
 int32_t q_commonstyle_style_hint(void* self, int32_t sh, void* opt, void* w, void* shret) {
@@ -168,8 +168,8 @@ void q_commonstyle_on_style_hint(void* self, int32_t (*callback)(void*, int32_t,
     QCommonStyle_OnStyleHint((QCommonStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_commonstyle_qbase_style_hint(void* self, int32_t sh, void* opt, void* w, void* shret) {
-    return QCommonStyle_QBaseStyleHint((QCommonStyle*)self, sh, (QStyleOption*)opt, (QWidget*)w, (QStyleHintReturn*)shret);
+int32_t q_commonstyle_super_style_hint(void* self, int32_t sh, void* opt, void* w, void* shret) {
+    return QCommonStyle_SuperStyleHint((QCommonStyle*)self, sh, (QStyleOption*)opt, (QWidget*)w, (QStyleHintReturn*)shret);
 }
 
 QIcon* q_commonstyle_standard_icon(void* self, int32_t standardIcon, void* opt, void* widget) {
@@ -180,8 +180,8 @@ void q_commonstyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_
     QCommonStyle_OnStandardIcon((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QIcon* q_commonstyle_qbase_standard_icon(void* self, int32_t standardIcon, void* opt, void* widget) {
-    return QCommonStyle_QBaseStandardIcon((QCommonStyle*)self, standardIcon, (QStyleOption*)opt, (QWidget*)widget);
+QIcon* q_commonstyle_super_standard_icon(void* self, int32_t standardIcon, void* opt, void* widget) {
+    return QCommonStyle_SuperStandardIcon((QCommonStyle*)self, standardIcon, (QStyleOption*)opt, (QWidget*)widget);
 }
 
 QPixmap* q_commonstyle_standard_pixmap(void* self, int32_t sp, void* opt, void* widget) {
@@ -192,8 +192,8 @@ void q_commonstyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, in
     QCommonStyle_OnStandardPixmap((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QPixmap* q_commonstyle_qbase_standard_pixmap(void* self, int32_t sp, void* opt, void* widget) {
-    return QCommonStyle_QBaseStandardPixmap((QCommonStyle*)self, sp, (QStyleOption*)opt, (QWidget*)widget);
+QPixmap* q_commonstyle_super_standard_pixmap(void* self, int32_t sp, void* opt, void* widget) {
+    return QCommonStyle_SuperStandardPixmap((QCommonStyle*)self, sp, (QStyleOption*)opt, (QWidget*)widget);
 }
 
 QPixmap* q_commonstyle_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt) {
@@ -204,8 +204,8 @@ void q_commonstyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(voi
     QCommonStyle_OnGeneratedIconPixmap((QCommonStyle*)self, (intptr_t)callback);
 }
 
-QPixmap* q_commonstyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt) {
-    return QCommonStyle_QBaseGeneratedIconPixmap((QCommonStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
+QPixmap* q_commonstyle_super_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt) {
+    return QCommonStyle_SuperGeneratedIconPixmap((QCommonStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
 int32_t q_commonstyle_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget) {
@@ -216,8 +216,8 @@ void q_commonstyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int3
     QCommonStyle_OnLayoutSpacing((QCommonStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_commonstyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget) {
-    return QCommonStyle_QBaseLayoutSpacing((QCommonStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
+int32_t q_commonstyle_super_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget) {
+    return QCommonStyle_SuperLayoutSpacing((QCommonStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
 void q_commonstyle_polish(void* self, void* param1) {
@@ -228,8 +228,8 @@ void q_commonstyle_on_polish(void* self, void (*callback)(void*, void*)) {
     QCommonStyle_OnPolish((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_polish(void* self, void* param1) {
-    QCommonStyle_QBasePolish((QCommonStyle*)self, (QPalette*)param1);
+void q_commonstyle_super_polish(void* self, void* param1) {
+    QCommonStyle_SuperPolish((QCommonStyle*)self, (QPalette*)param1);
 }
 
 void q_commonstyle_polish2(void* self, void* app) {
@@ -240,8 +240,8 @@ void q_commonstyle_on_polish2(void* self, void (*callback)(void*, void*)) {
     QCommonStyle_OnPolish2((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_polish2(void* self, void* app) {
-    QCommonStyle_QBasePolish2((QCommonStyle*)self, (QApplication*)app);
+void q_commonstyle_super_polish2(void* self, void* app) {
+    QCommonStyle_SuperPolish2((QCommonStyle*)self, (QApplication*)app);
 }
 
 void q_commonstyle_polish3(void* self, void* widget) {
@@ -252,8 +252,8 @@ void q_commonstyle_on_polish3(void* self, void (*callback)(void*, void*)) {
     QCommonStyle_OnPolish3((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_polish3(void* self, void* widget) {
-    QCommonStyle_QBasePolish3((QCommonStyle*)self, (QWidget*)widget);
+void q_commonstyle_super_polish3(void* self, void* widget) {
+    QCommonStyle_SuperPolish3((QCommonStyle*)self, (QWidget*)widget);
 }
 
 void q_commonstyle_unpolish(void* self, void* widget) {
@@ -264,8 +264,8 @@ void q_commonstyle_on_unpolish(void* self, void (*callback)(void*, void*)) {
     QCommonStyle_OnUnpolish((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_unpolish(void* self, void* widget) {
-    QCommonStyle_QBaseUnpolish((QCommonStyle*)self, (QWidget*)widget);
+void q_commonstyle_super_unpolish(void* self, void* widget) {
+    QCommonStyle_SuperUnpolish((QCommonStyle*)self, (QWidget*)widget);
 }
 
 void q_commonstyle_unpolish2(void* self, void* application) {
@@ -276,8 +276,8 @@ void q_commonstyle_on_unpolish2(void* self, void (*callback)(void*, void*)) {
     QCommonStyle_OnUnpolish2((QCommonStyle*)self, (intptr_t)callback);
 }
 
-void q_commonstyle_qbase_unpolish2(void* self, void* application) {
-    QCommonStyle_QBaseUnpolish2((QCommonStyle*)self, (QApplication*)application);
+void q_commonstyle_super_unpolish2(void* self, void* application) {
+    QCommonStyle_SuperUnpolish2((QCommonStyle*)self, (QApplication*)application);
 }
 
 const char* q_commonstyle_tr2(const char* s, const char* c) {
@@ -564,8 +564,8 @@ QRect* q_commonstyle_item_text_rect(void* self, void* fm, void* r, int flags, bo
     return QCommonStyle_ItemTextRect((QCommonStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
 }
 
-QRect* q_commonstyle_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text) {
-    return QCommonStyle_QBaseItemTextRect((QCommonStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
+QRect* q_commonstyle_super_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text) {
+    return QCommonStyle_SuperItemTextRect((QCommonStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
 }
 
 void q_commonstyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*)) {
@@ -576,8 +576,8 @@ QRect* q_commonstyle_item_pixmap_rect(void* self, void* r, int flags, void* pixm
     return QCommonStyle_ItemPixmapRect((QCommonStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
 }
 
-QRect* q_commonstyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap) {
-    return QCommonStyle_QBaseItemPixmapRect((QCommonStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
+QRect* q_commonstyle_super_item_pixmap_rect(void* self, void* r, int flags, void* pixmap) {
+    return QCommonStyle_SuperItemPixmapRect((QCommonStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
 }
 
 void q_commonstyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*)) {
@@ -588,8 +588,8 @@ void q_commonstyle_draw_item_text(void* self, void* painter, void* rect, int fla
     QCommonStyle_DrawItemText((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
-void q_commonstyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole) {
-    QCommonStyle_QBaseDrawItemText((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
+void q_commonstyle_super_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole) {
+    QCommonStyle_SuperDrawItemText((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
 void q_commonstyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t)) {
@@ -600,8 +600,8 @@ void q_commonstyle_draw_item_pixmap(void* self, void* painter, void* rect, int a
     QCommonStyle_DrawItemPixmap((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
-void q_commonstyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap) {
-    QCommonStyle_QBaseDrawItemPixmap((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
+void q_commonstyle_super_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap) {
+    QCommonStyle_SuperDrawItemPixmap((QCommonStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
 void q_commonstyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*)) {
@@ -612,8 +612,8 @@ QPalette* q_commonstyle_standard_palette(void* self) {
     return QCommonStyle_StandardPalette((QCommonStyle*)self);
 }
 
-QPalette* q_commonstyle_qbase_standard_palette(void* self) {
-    return QCommonStyle_QBaseStandardPalette((QCommonStyle*)self);
+QPalette* q_commonstyle_super_standard_palette(void* self) {
+    return QCommonStyle_SuperStandardPalette((QCommonStyle*)self);
 }
 
 void q_commonstyle_on_standard_palette(void* self, QPalette* (*callback)()) {
@@ -624,8 +624,8 @@ bool q_commonstyle_event(void* self, void* event) {
     return QCommonStyle_Event((QCommonStyle*)self, (QEvent*)event);
 }
 
-bool q_commonstyle_qbase_event(void* self, void* event) {
-    return QCommonStyle_QBaseEvent((QCommonStyle*)self, (QEvent*)event);
+bool q_commonstyle_super_event(void* self, void* event) {
+    return QCommonStyle_SuperEvent((QCommonStyle*)self, (QEvent*)event);
 }
 
 void q_commonstyle_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -636,8 +636,8 @@ bool q_commonstyle_event_filter(void* self, void* watched, void* event) {
     return QCommonStyle_EventFilter((QCommonStyle*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_commonstyle_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCommonStyle_QBaseEventFilter((QCommonStyle*)self, (QObject*)watched, (QEvent*)event);
+bool q_commonstyle_super_event_filter(void* self, void* watched, void* event) {
+    return QCommonStyle_SuperEventFilter((QCommonStyle*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_commonstyle_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -648,8 +648,8 @@ void q_commonstyle_timer_event(void* self, void* event) {
     QCommonStyle_TimerEvent((QCommonStyle*)self, (QTimerEvent*)event);
 }
 
-void q_commonstyle_qbase_timer_event(void* self, void* event) {
-    QCommonStyle_QBaseTimerEvent((QCommonStyle*)self, (QTimerEvent*)event);
+void q_commonstyle_super_timer_event(void* self, void* event) {
+    QCommonStyle_SuperTimerEvent((QCommonStyle*)self, (QTimerEvent*)event);
 }
 
 void q_commonstyle_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -660,8 +660,8 @@ void q_commonstyle_child_event(void* self, void* event) {
     QCommonStyle_ChildEvent((QCommonStyle*)self, (QChildEvent*)event);
 }
 
-void q_commonstyle_qbase_child_event(void* self, void* event) {
-    QCommonStyle_QBaseChildEvent((QCommonStyle*)self, (QChildEvent*)event);
+void q_commonstyle_super_child_event(void* self, void* event) {
+    QCommonStyle_SuperChildEvent((QCommonStyle*)self, (QChildEvent*)event);
 }
 
 void q_commonstyle_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -672,8 +672,8 @@ void q_commonstyle_custom_event(void* self, void* event) {
     QCommonStyle_CustomEvent((QCommonStyle*)self, (QEvent*)event);
 }
 
-void q_commonstyle_qbase_custom_event(void* self, void* event) {
-    QCommonStyle_QBaseCustomEvent((QCommonStyle*)self, (QEvent*)event);
+void q_commonstyle_super_custom_event(void* self, void* event) {
+    QCommonStyle_SuperCustomEvent((QCommonStyle*)self, (QEvent*)event);
 }
 
 void q_commonstyle_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -684,8 +684,8 @@ void q_commonstyle_connect_notify(void* self, void* signal) {
     QCommonStyle_ConnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_commonstyle_qbase_connect_notify(void* self, void* signal) {
-    QCommonStyle_QBaseConnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
+void q_commonstyle_super_connect_notify(void* self, void* signal) {
+    QCommonStyle_SuperConnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
 void q_commonstyle_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -696,8 +696,8 @@ void q_commonstyle_disconnect_notify(void* self, void* signal) {
     QCommonStyle_DisconnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_commonstyle_qbase_disconnect_notify(void* self, void* signal) {
-    QCommonStyle_QBaseDisconnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
+void q_commonstyle_super_disconnect_notify(void* self, void* signal) {
+    QCommonStyle_SuperDisconnectNotify((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
 void q_commonstyle_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -708,8 +708,8 @@ QObject* q_commonstyle_sender(void* self) {
     return QCommonStyle_Sender((QCommonStyle*)self);
 }
 
-QObject* q_commonstyle_qbase_sender(void* self) {
-    return QCommonStyle_QBaseSender((QCommonStyle*)self);
+QObject* q_commonstyle_super_sender(void* self) {
+    return QCommonStyle_SuperSender((QCommonStyle*)self);
 }
 
 void q_commonstyle_on_sender(void* self, QObject* (*callback)()) {
@@ -720,8 +720,8 @@ int32_t q_commonstyle_sender_signal_index(void* self) {
     return QCommonStyle_SenderSignalIndex((QCommonStyle*)self);
 }
 
-int32_t q_commonstyle_qbase_sender_signal_index(void* self) {
-    return QCommonStyle_QBaseSenderSignalIndex((QCommonStyle*)self);
+int32_t q_commonstyle_super_sender_signal_index(void* self) {
+    return QCommonStyle_SuperSenderSignalIndex((QCommonStyle*)self);
 }
 
 void q_commonstyle_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -732,8 +732,8 @@ int32_t q_commonstyle_receivers(void* self, const char* signal) {
     return QCommonStyle_Receivers((QCommonStyle*)self, signal);
 }
 
-int32_t q_commonstyle_qbase_receivers(void* self, const char* signal) {
-    return QCommonStyle_QBaseReceivers((QCommonStyle*)self, signal);
+int32_t q_commonstyle_super_receivers(void* self, const char* signal) {
+    return QCommonStyle_SuperReceivers((QCommonStyle*)self, signal);
 }
 
 void q_commonstyle_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -744,8 +744,8 @@ bool q_commonstyle_is_signal_connected(void* self, void* signal) {
     return QCommonStyle_IsSignalConnected((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
-bool q_commonstyle_qbase_is_signal_connected(void* self, void* signal) {
-    return QCommonStyle_QBaseIsSignalConnected((QCommonStyle*)self, (QMetaMethod*)signal);
+bool q_commonstyle_super_is_signal_connected(void* self, void* signal) {
+    return QCommonStyle_SuperIsSignalConnected((QCommonStyle*)self, (QMetaMethod*)signal);
 }
 
 void q_commonstyle_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

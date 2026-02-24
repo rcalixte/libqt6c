@@ -23,8 +23,8 @@ void k_dragwidgetdecoratorbase_on_meta_object(void* self, const QMetaObject* (*c
     KDragWidgetDecoratorBase_OnMetaObject((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dragwidgetdecoratorbase_qbase_meta_object(void* self) {
-    return KDragWidgetDecoratorBase_QBaseMetaObject((KDragWidgetDecoratorBase*)self);
+const QMetaObject* k_dragwidgetdecoratorbase_super_meta_object(void* self) {
+    return KDragWidgetDecoratorBase_SuperMetaObject((KDragWidgetDecoratorBase*)self);
 }
 
 void* k_dragwidgetdecoratorbase_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_dragwidgetdecoratorbase_on_metacast(void* self, void* (*callback)(void*, 
     KDragWidgetDecoratorBase_OnMetacast((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-void* k_dragwidgetdecoratorbase_qbase_metacast(void* self, const char* param1) {
-    return KDragWidgetDecoratorBase_QBaseMetacast((KDragWidgetDecoratorBase*)self, param1);
+void* k_dragwidgetdecoratorbase_super_metacast(void* self, const char* param1) {
+    return KDragWidgetDecoratorBase_SuperMetacast((KDragWidgetDecoratorBase*)self, param1);
 }
 
 int32_t k_dragwidgetdecoratorbase_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_dragwidgetdecoratorbase_on_metacall(void* self, int32_t (*callback)(void*
     KDragWidgetDecoratorBase_OnMetacall((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-int32_t k_dragwidgetdecoratorbase_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDragWidgetDecoratorBase_QBaseMetacall((KDragWidgetDecoratorBase*)self, param1, param2, param3);
+int32_t k_dragwidgetdecoratorbase_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDragWidgetDecoratorBase_SuperMetacall((KDragWidgetDecoratorBase*)self, param1, param2, param3);
 }
 
 const char* k_dragwidgetdecoratorbase_tr(const char* s) {
@@ -74,8 +74,8 @@ void k_dragwidgetdecoratorbase_on_decorated_widget(void* self, QWidget* (*callba
     KDragWidgetDecoratorBase_OnDecoratedWidget((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-QWidget* k_dragwidgetdecoratorbase_qbase_decorated_widget(void* self) {
-    return KDragWidgetDecoratorBase_QBaseDecoratedWidget((KDragWidgetDecoratorBase*)self);
+QWidget* k_dragwidgetdecoratorbase_super_decorated_widget(void* self) {
+    return KDragWidgetDecoratorBase_SuperDecoratedWidget((KDragWidgetDecoratorBase*)self);
 }
 
 QDrag* k_dragwidgetdecoratorbase_drag_object(void* self) {
@@ -86,8 +86,8 @@ void k_dragwidgetdecoratorbase_on_drag_object(void* self, QDrag* (*callback)()) 
     KDragWidgetDecoratorBase_OnDragObject((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-QDrag* k_dragwidgetdecoratorbase_qbase_drag_object(void* self) {
-    return KDragWidgetDecoratorBase_QBaseDragObject((KDragWidgetDecoratorBase*)self);
+QDrag* k_dragwidgetdecoratorbase_super_drag_object(void* self) {
+    return KDragWidgetDecoratorBase_SuperDragObject((KDragWidgetDecoratorBase*)self);
 }
 
 bool k_dragwidgetdecoratorbase_event_filter(void* self, void* watched, void* event) {
@@ -98,8 +98,8 @@ void k_dragwidgetdecoratorbase_on_event_filter(void* self, bool (*callback)(void
     KDragWidgetDecoratorBase_OnEventFilter((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-bool k_dragwidgetdecoratorbase_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDragWidgetDecoratorBase_QBaseEventFilter((KDragWidgetDecoratorBase*)self, (QObject*)watched, (QEvent*)event);
+bool k_dragwidgetdecoratorbase_super_event_filter(void* self, void* watched, void* event) {
+    return KDragWidgetDecoratorBase_SuperEventFilter((KDragWidgetDecoratorBase*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_dragwidgetdecoratorbase_start_drag(void* self) {
@@ -110,8 +110,8 @@ void k_dragwidgetdecoratorbase_on_start_drag(void* self, void (*callback)()) {
     KDragWidgetDecoratorBase_OnStartDrag((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 
-void k_dragwidgetdecoratorbase_qbase_start_drag(void* self) {
-    KDragWidgetDecoratorBase_QBaseStartDrag((KDragWidgetDecoratorBase*)self);
+void k_dragwidgetdecoratorbase_super_start_drag(void* self) {
+    KDragWidgetDecoratorBase_SuperStartDrag((KDragWidgetDecoratorBase*)self);
 }
 
 const char* k_dragwidgetdecoratorbase_tr2(const char* s, const char* c) {
@@ -343,8 +343,8 @@ bool k_dragwidgetdecoratorbase_event(void* self, void* event) {
     return KDragWidgetDecoratorBase_Event((KDragWidgetDecoratorBase*)self, (QEvent*)event);
 }
 
-bool k_dragwidgetdecoratorbase_qbase_event(void* self, void* event) {
-    return KDragWidgetDecoratorBase_QBaseEvent((KDragWidgetDecoratorBase*)self, (QEvent*)event);
+bool k_dragwidgetdecoratorbase_super_event(void* self, void* event) {
+    return KDragWidgetDecoratorBase_SuperEvent((KDragWidgetDecoratorBase*)self, (QEvent*)event);
 }
 
 void k_dragwidgetdecoratorbase_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -355,8 +355,8 @@ void k_dragwidgetdecoratorbase_timer_event(void* self, void* event) {
     KDragWidgetDecoratorBase_TimerEvent((KDragWidgetDecoratorBase*)self, (QTimerEvent*)event);
 }
 
-void k_dragwidgetdecoratorbase_qbase_timer_event(void* self, void* event) {
-    KDragWidgetDecoratorBase_QBaseTimerEvent((KDragWidgetDecoratorBase*)self, (QTimerEvent*)event);
+void k_dragwidgetdecoratorbase_super_timer_event(void* self, void* event) {
+    KDragWidgetDecoratorBase_SuperTimerEvent((KDragWidgetDecoratorBase*)self, (QTimerEvent*)event);
 }
 
 void k_dragwidgetdecoratorbase_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -367,8 +367,8 @@ void k_dragwidgetdecoratorbase_child_event(void* self, void* event) {
     KDragWidgetDecoratorBase_ChildEvent((KDragWidgetDecoratorBase*)self, (QChildEvent*)event);
 }
 
-void k_dragwidgetdecoratorbase_qbase_child_event(void* self, void* event) {
-    KDragWidgetDecoratorBase_QBaseChildEvent((KDragWidgetDecoratorBase*)self, (QChildEvent*)event);
+void k_dragwidgetdecoratorbase_super_child_event(void* self, void* event) {
+    KDragWidgetDecoratorBase_SuperChildEvent((KDragWidgetDecoratorBase*)self, (QChildEvent*)event);
 }
 
 void k_dragwidgetdecoratorbase_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ void k_dragwidgetdecoratorbase_custom_event(void* self, void* event) {
     KDragWidgetDecoratorBase_CustomEvent((KDragWidgetDecoratorBase*)self, (QEvent*)event);
 }
 
-void k_dragwidgetdecoratorbase_qbase_custom_event(void* self, void* event) {
-    KDragWidgetDecoratorBase_QBaseCustomEvent((KDragWidgetDecoratorBase*)self, (QEvent*)event);
+void k_dragwidgetdecoratorbase_super_custom_event(void* self, void* event) {
+    KDragWidgetDecoratorBase_SuperCustomEvent((KDragWidgetDecoratorBase*)self, (QEvent*)event);
 }
 
 void k_dragwidgetdecoratorbase_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -391,8 +391,8 @@ void k_dragwidgetdecoratorbase_connect_notify(void* self, void* signal) {
     KDragWidgetDecoratorBase_ConnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
-void k_dragwidgetdecoratorbase_qbase_connect_notify(void* self, void* signal) {
-    KDragWidgetDecoratorBase_QBaseConnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
+void k_dragwidgetdecoratorbase_super_connect_notify(void* self, void* signal) {
+    KDragWidgetDecoratorBase_SuperConnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
 void k_dragwidgetdecoratorbase_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ void k_dragwidgetdecoratorbase_disconnect_notify(void* self, void* signal) {
     KDragWidgetDecoratorBase_DisconnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
-void k_dragwidgetdecoratorbase_qbase_disconnect_notify(void* self, void* signal) {
-    KDragWidgetDecoratorBase_QBaseDisconnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
+void k_dragwidgetdecoratorbase_super_disconnect_notify(void* self, void* signal) {
+    KDragWidgetDecoratorBase_SuperDisconnectNotify((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
 void k_dragwidgetdecoratorbase_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ QObject* k_dragwidgetdecoratorbase_sender(void* self) {
     return KDragWidgetDecoratorBase_Sender((KDragWidgetDecoratorBase*)self);
 }
 
-QObject* k_dragwidgetdecoratorbase_qbase_sender(void* self) {
-    return KDragWidgetDecoratorBase_QBaseSender((KDragWidgetDecoratorBase*)self);
+QObject* k_dragwidgetdecoratorbase_super_sender(void* self) {
+    return KDragWidgetDecoratorBase_SuperSender((KDragWidgetDecoratorBase*)self);
 }
 
 void k_dragwidgetdecoratorbase_on_sender(void* self, QObject* (*callback)()) {
@@ -427,8 +427,8 @@ int32_t k_dragwidgetdecoratorbase_sender_signal_index(void* self) {
     return KDragWidgetDecoratorBase_SenderSignalIndex((KDragWidgetDecoratorBase*)self);
 }
 
-int32_t k_dragwidgetdecoratorbase_qbase_sender_signal_index(void* self) {
-    return KDragWidgetDecoratorBase_QBaseSenderSignalIndex((KDragWidgetDecoratorBase*)self);
+int32_t k_dragwidgetdecoratorbase_super_sender_signal_index(void* self) {
+    return KDragWidgetDecoratorBase_SuperSenderSignalIndex((KDragWidgetDecoratorBase*)self);
 }
 
 void k_dragwidgetdecoratorbase_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -439,8 +439,8 @@ int32_t k_dragwidgetdecoratorbase_receivers(void* self, const char* signal) {
     return KDragWidgetDecoratorBase_Receivers((KDragWidgetDecoratorBase*)self, signal);
 }
 
-int32_t k_dragwidgetdecoratorbase_qbase_receivers(void* self, const char* signal) {
-    return KDragWidgetDecoratorBase_QBaseReceivers((KDragWidgetDecoratorBase*)self, signal);
+int32_t k_dragwidgetdecoratorbase_super_receivers(void* self, const char* signal) {
+    return KDragWidgetDecoratorBase_SuperReceivers((KDragWidgetDecoratorBase*)self, signal);
 }
 
 void k_dragwidgetdecoratorbase_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -451,8 +451,8 @@ bool k_dragwidgetdecoratorbase_is_signal_connected(void* self, void* signal) {
     return KDragWidgetDecoratorBase_IsSignalConnected((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
-bool k_dragwidgetdecoratorbase_qbase_is_signal_connected(void* self, void* signal) {
-    return KDragWidgetDecoratorBase_QBaseIsSignalConnected((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
+bool k_dragwidgetdecoratorbase_super_is_signal_connected(void* self, void* signal) {
+    return KDragWidgetDecoratorBase_SuperIsSignalConnected((KDragWidgetDecoratorBase*)self, (QMetaMethod*)signal);
 }
 
 void k_dragwidgetdecoratorbase_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

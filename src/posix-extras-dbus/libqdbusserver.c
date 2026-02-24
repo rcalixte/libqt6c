@@ -31,8 +31,8 @@ void q_dbusserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QDBusServer_OnMetaObject((QDBusServer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbusserver_qbase_meta_object(void* self) {
-    return QDBusServer_QBaseMetaObject((QDBusServer*)self);
+const QMetaObject* q_dbusserver_super_meta_object(void* self) {
+    return QDBusServer_SuperMetaObject((QDBusServer*)self);
 }
 
 void* q_dbusserver_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_dbusserver_on_metacast(void* self, void* (*callback)(void*, const char*))
     QDBusServer_OnMetacast((QDBusServer*)self, (intptr_t)callback);
 }
 
-void* q_dbusserver_qbase_metacast(void* self, const char* param1) {
-    return QDBusServer_QBaseMetacast((QDBusServer*)self, param1);
+void* q_dbusserver_super_metacast(void* self, const char* param1) {
+    return QDBusServer_SuperMetacast((QDBusServer*)self, param1);
 }
 
 int32_t q_dbusserver_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_dbusserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QDBusServer_OnMetacall((QDBusServer*)self, (intptr_t)callback);
 }
 
-int32_t q_dbusserver_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDBusServer_QBaseMetacall((QDBusServer*)self, param1, param2, param3);
+int32_t q_dbusserver_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDBusServer_SuperMetacall((QDBusServer*)self, param1, param2, param3);
 }
 
 const char* q_dbusserver_tr(const char* s) {
@@ -326,8 +326,8 @@ bool q_dbusserver_event(void* self, void* event) {
     return QDBusServer_Event((QDBusServer*)self, (QEvent*)event);
 }
 
-bool q_dbusserver_qbase_event(void* self, void* event) {
-    return QDBusServer_QBaseEvent((QDBusServer*)self, (QEvent*)event);
+bool q_dbusserver_super_event(void* self, void* event) {
+    return QDBusServer_SuperEvent((QDBusServer*)self, (QEvent*)event);
 }
 
 void q_dbusserver_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -338,8 +338,8 @@ bool q_dbusserver_event_filter(void* self, void* watched, void* event) {
     return QDBusServer_EventFilter((QDBusServer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_dbusserver_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDBusServer_QBaseEventFilter((QDBusServer*)self, (QObject*)watched, (QEvent*)event);
+bool q_dbusserver_super_event_filter(void* self, void* watched, void* event) {
+    return QDBusServer_SuperEventFilter((QDBusServer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_dbusserver_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -350,8 +350,8 @@ void q_dbusserver_timer_event(void* self, void* event) {
     QDBusServer_TimerEvent((QDBusServer*)self, (QTimerEvent*)event);
 }
 
-void q_dbusserver_qbase_timer_event(void* self, void* event) {
-    QDBusServer_QBaseTimerEvent((QDBusServer*)self, (QTimerEvent*)event);
+void q_dbusserver_super_timer_event(void* self, void* event) {
+    QDBusServer_SuperTimerEvent((QDBusServer*)self, (QTimerEvent*)event);
 }
 
 void q_dbusserver_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -362,8 +362,8 @@ void q_dbusserver_child_event(void* self, void* event) {
     QDBusServer_ChildEvent((QDBusServer*)self, (QChildEvent*)event);
 }
 
-void q_dbusserver_qbase_child_event(void* self, void* event) {
-    QDBusServer_QBaseChildEvent((QDBusServer*)self, (QChildEvent*)event);
+void q_dbusserver_super_child_event(void* self, void* event) {
+    QDBusServer_SuperChildEvent((QDBusServer*)self, (QChildEvent*)event);
 }
 
 void q_dbusserver_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -374,8 +374,8 @@ void q_dbusserver_custom_event(void* self, void* event) {
     QDBusServer_CustomEvent((QDBusServer*)self, (QEvent*)event);
 }
 
-void q_dbusserver_qbase_custom_event(void* self, void* event) {
-    QDBusServer_QBaseCustomEvent((QDBusServer*)self, (QEvent*)event);
+void q_dbusserver_super_custom_event(void* self, void* event) {
+    QDBusServer_SuperCustomEvent((QDBusServer*)self, (QEvent*)event);
 }
 
 void q_dbusserver_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void q_dbusserver_connect_notify(void* self, void* signal) {
     QDBusServer_ConnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusserver_qbase_connect_notify(void* self, void* signal) {
-    QDBusServer_QBaseConnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
+void q_dbusserver_super_connect_notify(void* self, void* signal) {
+    QDBusServer_SuperConnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusserver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ void q_dbusserver_disconnect_notify(void* self, void* signal) {
     QDBusServer_DisconnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusserver_qbase_disconnect_notify(void* self, void* signal) {
-    QDBusServer_QBaseDisconnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
+void q_dbusserver_super_disconnect_notify(void* self, void* signal) {
+    QDBusServer_SuperDisconnectNotify((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ QObject* q_dbusserver_sender(void* self) {
     return QDBusServer_Sender((QDBusServer*)self);
 }
 
-QObject* q_dbusserver_qbase_sender(void* self) {
-    return QDBusServer_QBaseSender((QDBusServer*)self);
+QObject* q_dbusserver_super_sender(void* self) {
+    return QDBusServer_SuperSender((QDBusServer*)self);
 }
 
 void q_dbusserver_on_sender(void* self, QObject* (*callback)()) {
@@ -422,8 +422,8 @@ int32_t q_dbusserver_sender_signal_index(void* self) {
     return QDBusServer_SenderSignalIndex((QDBusServer*)self);
 }
 
-int32_t q_dbusserver_qbase_sender_signal_index(void* self) {
-    return QDBusServer_QBaseSenderSignalIndex((QDBusServer*)self);
+int32_t q_dbusserver_super_sender_signal_index(void* self) {
+    return QDBusServer_SuperSenderSignalIndex((QDBusServer*)self);
 }
 
 void q_dbusserver_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -434,8 +434,8 @@ int32_t q_dbusserver_receivers(void* self, const char* signal) {
     return QDBusServer_Receivers((QDBusServer*)self, signal);
 }
 
-int32_t q_dbusserver_qbase_receivers(void* self, const char* signal) {
-    return QDBusServer_QBaseReceivers((QDBusServer*)self, signal);
+int32_t q_dbusserver_super_receivers(void* self, const char* signal) {
+    return QDBusServer_SuperReceivers((QDBusServer*)self, signal);
 }
 
 void q_dbusserver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -446,8 +446,8 @@ bool q_dbusserver_is_signal_connected(void* self, void* signal) {
     return QDBusServer_IsSignalConnected((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
-bool q_dbusserver_qbase_is_signal_connected(void* self, void* signal) {
-    return QDBusServer_QBaseIsSignalConnected((QDBusServer*)self, (QMetaMethod*)signal);
+bool q_dbusserver_super_is_signal_connected(void* self, void* signal) {
+    return QDBusServer_SuperIsSignalConnected((QDBusServer*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -34,8 +34,8 @@ void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KFontAction_OnMetaObject((KFontAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fontaction_qbase_meta_object(void* self) {
-    return KFontAction_QBaseMetaObject((KFontAction*)self);
+const QMetaObject* k_fontaction_super_meta_object(void* self) {
+    return KFontAction_SuperMetaObject((KFontAction*)self);
 }
 
 void* k_fontaction_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void k_fontaction_on_metacast(void* self, void* (*callback)(void*, const char*))
     KFontAction_OnMetacast((KFontAction*)self, (intptr_t)callback);
 }
 
-void* k_fontaction_qbase_metacast(void* self, const char* param1) {
-    return KFontAction_QBaseMetacast((KFontAction*)self, param1);
+void* k_fontaction_super_metacast(void* self, const char* param1) {
+    return KFontAction_SuperMetacast((KFontAction*)self, param1);
 }
 
 int32_t k_fontaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void k_fontaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KFontAction_OnMetacall((KFontAction*)self, (intptr_t)callback);
 }
 
-int32_t k_fontaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFontAction_QBaseMetacall((KFontAction*)self, param1, param2, param3);
+int32_t k_fontaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFontAction_SuperMetacall((KFontAction*)self, param1, param2, param3);
 }
 
 const char* k_fontaction_tr(const char* s) {
@@ -88,8 +88,8 @@ void k_fontaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*
     KFontAction_OnCreateWidget((KFontAction*)self, (intptr_t)callback);
 }
 
-QWidget* k_fontaction_qbase_create_widget(void* self, void* parent) {
-    return KFontAction_QBaseCreateWidget((KFontAction*)self, (QWidget*)parent);
+QWidget* k_fontaction_super_create_widget(void* self, void* parent) {
+    return KFontAction_SuperCreateWidget((KFontAction*)self, (QWidget*)parent);
 }
 
 const char* k_fontaction_tr2(const char* s, const char* c) {
@@ -804,8 +804,8 @@ QAction* k_fontaction_remove_action(void* self, void* action) {
     return KFontAction_RemoveAction((KFontAction*)self, (QAction*)action);
 }
 
-QAction* k_fontaction_qbase_remove_action(void* self, void* action) {
-    return KFontAction_QBaseRemoveAction((KFontAction*)self, (QAction*)action);
+QAction* k_fontaction_super_remove_action(void* self, void* action) {
+    return KFontAction_SuperRemoveAction((KFontAction*)self, (QAction*)action);
 }
 
 void k_fontaction_on_remove_action(void* self, QAction* (*callback)(void*, void*)) {
@@ -816,8 +816,8 @@ void k_fontaction_insert_action(void* self, void* before, void* action) {
     KFontAction_InsertAction((KFontAction*)self, (QAction*)before, (QAction*)action);
 }
 
-void k_fontaction_qbase_insert_action(void* self, void* before, void* action) {
-    KFontAction_QBaseInsertAction((KFontAction*)self, (QAction*)before, (QAction*)action);
+void k_fontaction_super_insert_action(void* self, void* before, void* action) {
+    KFontAction_SuperInsertAction((KFontAction*)self, (QAction*)before, (QAction*)action);
 }
 
 void k_fontaction_on_insert_action(void* self, void (*callback)(void*, void*, void*)) {
@@ -828,8 +828,8 @@ void k_fontaction_slot_action_triggered(void* self, void* action) {
     KFontAction_SlotActionTriggered((KFontAction*)self, (QAction*)action);
 }
 
-void k_fontaction_qbase_slot_action_triggered(void* self, void* action) {
-    KFontAction_QBaseSlotActionTriggered((KFontAction*)self, (QAction*)action);
+void k_fontaction_super_slot_action_triggered(void* self, void* action) {
+    KFontAction_SuperSlotActionTriggered((KFontAction*)self, (QAction*)action);
 }
 
 void k_fontaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*)) {
@@ -840,8 +840,8 @@ void k_fontaction_delete_widget(void* self, void* widget) {
     KFontAction_DeleteWidget((KFontAction*)self, (QWidget*)widget);
 }
 
-void k_fontaction_qbase_delete_widget(void* self, void* widget) {
-    KFontAction_QBaseDeleteWidget((KFontAction*)self, (QWidget*)widget);
+void k_fontaction_super_delete_widget(void* self, void* widget) {
+    KFontAction_SuperDeleteWidget((KFontAction*)self, (QWidget*)widget);
 }
 
 void k_fontaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -852,8 +852,8 @@ bool k_fontaction_event(void* self, void* event) {
     return KFontAction_Event((KFontAction*)self, (QEvent*)event);
 }
 
-bool k_fontaction_qbase_event(void* self, void* event) {
-    return KFontAction_QBaseEvent((KFontAction*)self, (QEvent*)event);
+bool k_fontaction_super_event(void* self, void* event) {
+    return KFontAction_SuperEvent((KFontAction*)self, (QEvent*)event);
 }
 
 void k_fontaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -864,8 +864,8 @@ bool k_fontaction_event_filter(void* self, void* watched, void* event) {
     return KFontAction_EventFilter((KFontAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_fontaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFontAction_QBaseEventFilter((KFontAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_fontaction_super_event_filter(void* self, void* watched, void* event) {
+    return KFontAction_SuperEventFilter((KFontAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_fontaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -876,8 +876,8 @@ void k_fontaction_timer_event(void* self, void* event) {
     KFontAction_TimerEvent((KFontAction*)self, (QTimerEvent*)event);
 }
 
-void k_fontaction_qbase_timer_event(void* self, void* event) {
-    KFontAction_QBaseTimerEvent((KFontAction*)self, (QTimerEvent*)event);
+void k_fontaction_super_timer_event(void* self, void* event) {
+    KFontAction_SuperTimerEvent((KFontAction*)self, (QTimerEvent*)event);
 }
 
 void k_fontaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -888,8 +888,8 @@ void k_fontaction_child_event(void* self, void* event) {
     KFontAction_ChildEvent((KFontAction*)self, (QChildEvent*)event);
 }
 
-void k_fontaction_qbase_child_event(void* self, void* event) {
-    KFontAction_QBaseChildEvent((KFontAction*)self, (QChildEvent*)event);
+void k_fontaction_super_child_event(void* self, void* event) {
+    KFontAction_SuperChildEvent((KFontAction*)self, (QChildEvent*)event);
 }
 
 void k_fontaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -900,8 +900,8 @@ void k_fontaction_custom_event(void* self, void* event) {
     KFontAction_CustomEvent((KFontAction*)self, (QEvent*)event);
 }
 
-void k_fontaction_qbase_custom_event(void* self, void* event) {
-    KFontAction_QBaseCustomEvent((KFontAction*)self, (QEvent*)event);
+void k_fontaction_super_custom_event(void* self, void* event) {
+    KFontAction_SuperCustomEvent((KFontAction*)self, (QEvent*)event);
 }
 
 void k_fontaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -912,8 +912,8 @@ void k_fontaction_connect_notify(void* self, void* signal) {
     KFontAction_ConnectNotify((KFontAction*)self, (QMetaMethod*)signal);
 }
 
-void k_fontaction_qbase_connect_notify(void* self, void* signal) {
-    KFontAction_QBaseConnectNotify((KFontAction*)self, (QMetaMethod*)signal);
+void k_fontaction_super_connect_notify(void* self, void* signal) {
+    KFontAction_SuperConnectNotify((KFontAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -924,8 +924,8 @@ void k_fontaction_disconnect_notify(void* self, void* signal) {
     KFontAction_DisconnectNotify((KFontAction*)self, (QMetaMethod*)signal);
 }
 
-void k_fontaction_qbase_disconnect_notify(void* self, void* signal) {
-    KFontAction_QBaseDisconnectNotify((KFontAction*)self, (QMetaMethod*)signal);
+void k_fontaction_super_disconnect_notify(void* self, void* signal) {
+    KFontAction_SuperDisconnectNotify((KFontAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -936,8 +936,8 @@ void k_fontaction_slot_toggled(void* self, bool param1) {
     KFontAction_SlotToggled((KFontAction*)self, param1);
 }
 
-void k_fontaction_qbase_slot_toggled(void* self, bool param1) {
-    KFontAction_QBaseSlotToggled((KFontAction*)self, param1);
+void k_fontaction_super_slot_toggled(void* self, bool param1) {
+    KFontAction_SuperSlotToggled((KFontAction*)self, param1);
 }
 
 void k_fontaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
@@ -949,8 +949,8 @@ libqt_list /* of QWidget* */ k_fontaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_fontaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KFontAction_QBaseCreatedWidgets((KFontAction*)self);
+libqt_list /* of QWidget* */ k_fontaction_super_created_widgets(void* self) {
+    libqt_list _arr = KFontAction_SuperCreatedWidgets((KFontAction*)self);
     return _arr;
 }
 
@@ -962,8 +962,8 @@ QObject* k_fontaction_sender(void* self) {
     return KFontAction_Sender((KFontAction*)self);
 }
 
-QObject* k_fontaction_qbase_sender(void* self) {
-    return KFontAction_QBaseSender((KFontAction*)self);
+QObject* k_fontaction_super_sender(void* self) {
+    return KFontAction_SuperSender((KFontAction*)self);
 }
 
 void k_fontaction_on_sender(void* self, QObject* (*callback)()) {
@@ -974,8 +974,8 @@ int32_t k_fontaction_sender_signal_index(void* self) {
     return KFontAction_SenderSignalIndex((KFontAction*)self);
 }
 
-int32_t k_fontaction_qbase_sender_signal_index(void* self) {
-    return KFontAction_QBaseSenderSignalIndex((KFontAction*)self);
+int32_t k_fontaction_super_sender_signal_index(void* self) {
+    return KFontAction_SuperSenderSignalIndex((KFontAction*)self);
 }
 
 void k_fontaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -986,8 +986,8 @@ int32_t k_fontaction_receivers(void* self, const char* signal) {
     return KFontAction_Receivers((KFontAction*)self, signal);
 }
 
-int32_t k_fontaction_qbase_receivers(void* self, const char* signal) {
-    return KFontAction_QBaseReceivers((KFontAction*)self, signal);
+int32_t k_fontaction_super_receivers(void* self, const char* signal) {
+    return KFontAction_SuperReceivers((KFontAction*)self, signal);
 }
 
 void k_fontaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -998,8 +998,8 @@ bool k_fontaction_is_signal_connected(void* self, void* signal) {
     return KFontAction_IsSignalConnected((KFontAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_fontaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KFontAction_QBaseIsSignalConnected((KFontAction*)self, (QMetaMethod*)signal);
+bool k_fontaction_super_is_signal_connected(void* self, void* signal) {
+    return KFontAction_SuperIsSignalConnected((KFontAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

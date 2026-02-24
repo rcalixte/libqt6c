@@ -1095,13 +1095,17 @@ QAccessibleInterface* q_accessibleevent_accessible_interface(void* self);
 ///
 void q_accessibleevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessibleevent_super_accessible_interface` instead
+///
+#define q_accessibleevent_qbase_accessible_interface q_accessibleevent_super_accessible_interface
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleEvent*
 ///
-QAccessibleInterface* q_accessibleevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibleevent_super_accessible_interface(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#dtor.QAccessibleEvent)
 ///
@@ -1188,6 +1192,10 @@ int32_t q_accessiblestatechangeevent_child(void* self);
 ///
 QAccessibleInterface* q_accessiblestatechangeevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessiblestatechangeevent_super_accessible_interface` instead
+///
+#define q_accessiblestatechangeevent_qbase_accessible_interface q_accessiblestatechangeevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1196,7 +1204,7 @@ QAccessibleInterface* q_accessiblestatechangeevent_accessible_interface(void* se
 ///
 /// @param self QAccessibleStateChangeEvent*
 ///
-QAccessibleInterface* q_accessiblestatechangeevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessiblestatechangeevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1301,6 +1309,10 @@ int32_t q_accessibletextcursorevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletextcursorevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletextcursorevent_super_accessible_interface` instead
+///
+#define q_accessibletextcursorevent_qbase_accessible_interface q_accessibletextcursorevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1309,7 +1321,7 @@ QAccessibleInterface* q_accessibletextcursorevent_accessible_interface(void* sel
 ///
 /// @param self QAccessibleTextCursorEvent*
 ///
-QAccessibleInterface* q_accessibletextcursorevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletextcursorevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1440,6 +1452,10 @@ int32_t q_accessibletextselectionevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletextselectionevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletextselectionevent_super_accessible_interface` instead
+///
+#define q_accessibletextselectionevent_qbase_accessible_interface q_accessibletextselectionevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1448,7 +1464,7 @@ QAccessibleInterface* q_accessibletextselectionevent_accessible_interface(void* 
 ///
 /// @param self QAccessibleTextSelectionEvent*
 ///
-QAccessibleInterface* q_accessibletextselectionevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletextselectionevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1573,6 +1589,10 @@ int32_t q_accessibletextinsertevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletextinsertevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletextinsertevent_super_accessible_interface` instead
+///
+#define q_accessibletextinsertevent_qbase_accessible_interface q_accessibletextinsertevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1581,7 +1601,7 @@ QAccessibleInterface* q_accessibletextinsertevent_accessible_interface(void* sel
 ///
 /// @param self QAccessibleTextInsertEvent*
 ///
-QAccessibleInterface* q_accessibletextinsertevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletextinsertevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1706,6 +1726,10 @@ int32_t q_accessibletextremoveevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletextremoveevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletextremoveevent_super_accessible_interface` instead
+///
+#define q_accessibletextremoveevent_qbase_accessible_interface q_accessibletextremoveevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1714,7 +1738,7 @@ QAccessibleInterface* q_accessibletextremoveevent_accessible_interface(void* sel
 ///
 /// @param self QAccessibleTextRemoveEvent*
 ///
-QAccessibleInterface* q_accessibletextremoveevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletextremoveevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1849,6 +1873,10 @@ int32_t q_accessibletextupdateevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletextupdateevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletextupdateevent_super_accessible_interface` instead
+///
+#define q_accessibletextupdateevent_qbase_accessible_interface q_accessibletextupdateevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1857,7 +1885,7 @@ QAccessibleInterface* q_accessibletextupdateevent_accessible_interface(void* sel
 ///
 /// @param self QAccessibleTextUpdateEvent*
 ///
-QAccessibleInterface* q_accessibletextupdateevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletextupdateevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1962,6 +1990,10 @@ int32_t q_accessiblevaluechangeevent_child(void* self);
 ///
 QAccessibleInterface* q_accessiblevaluechangeevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessiblevaluechangeevent_super_accessible_interface` instead
+///
+#define q_accessiblevaluechangeevent_qbase_accessible_interface q_accessiblevaluechangeevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1970,7 +2002,7 @@ QAccessibleInterface* q_accessiblevaluechangeevent_accessible_interface(void* se
 ///
 /// @param self QAccessibleValueChangeEvent*
 ///
-QAccessibleInterface* q_accessiblevaluechangeevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessiblevaluechangeevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -2129,6 +2161,10 @@ int32_t q_accessibletablemodelchangeevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibletablemodelchangeevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibletablemodelchangeevent_super_accessible_interface` instead
+///
+#define q_accessibletablemodelchangeevent_qbase_accessible_interface q_accessibletablemodelchangeevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -2137,7 +2173,7 @@ QAccessibleInterface* q_accessibletablemodelchangeevent_accessible_interface(voi
 ///
 /// @param self QAccessibleTableModelChangeEvent*
 ///
-QAccessibleInterface* q_accessibletablemodelchangeevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibletablemodelchangeevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -2252,6 +2288,10 @@ int32_t q_accessibleannouncementevent_child(void* self);
 ///
 QAccessibleInterface* q_accessibleannouncementevent_accessible_interface(void* self);
 
+/// @warning DEPRECATED: Use `q_accessibleannouncementevent_super_accessible_interface` instead
+///
+#define q_accessibleannouncementevent_qbase_accessible_interface q_accessibleannouncementevent_super_accessible_interface
+
 /// Inherited from QAccessibleEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -2260,7 +2300,7 @@ QAccessibleInterface* q_accessibleannouncementevent_accessible_interface(void* s
 ///
 /// @param self QAccessibleAnnouncementEvent*
 ///
-QAccessibleInterface* q_accessibleannouncementevent_qbase_accessible_interface(void* self);
+QAccessibleInterface* q_accessibleannouncementevent_super_accessible_interface(void* self);
 
 /// Inherited from QAccessibleEvent
 ///

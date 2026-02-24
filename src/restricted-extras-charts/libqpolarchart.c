@@ -41,8 +41,8 @@ void q_polarchart_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPolarChart_OnMetaObject((QPolarChart*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_polarchart_qbase_meta_object(void* self) {
-    return QPolarChart_QBaseMetaObject((QPolarChart*)self);
+const QMetaObject* q_polarchart_super_meta_object(void* self) {
+    return QPolarChart_SuperMetaObject((QPolarChart*)self);
 }
 
 void* q_polarchart_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void q_polarchart_on_metacast(void* self, void* (*callback)(void*, const char*))
     QPolarChart_OnMetacast((QPolarChart*)self, (intptr_t)callback);
 }
 
-void* q_polarchart_qbase_metacast(void* self, const char* param1) {
-    return QPolarChart_QBaseMetacast((QPolarChart*)self, param1);
+void* q_polarchart_super_metacast(void* self, const char* param1) {
+    return QPolarChart_SuperMetacast((QPolarChart*)self, param1);
 }
 
 int32_t q_polarchart_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void q_polarchart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QPolarChart_OnMetacall((QPolarChart*)self, (intptr_t)callback);
 }
 
-int32_t q_polarchart_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPolarChart_QBaseMetacall((QPolarChart*)self, param1, param2, param3);
+int32_t q_polarchart_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPolarChart_SuperMetacall((QPolarChart*)self, param1, param2, param3);
 }
 
 const char* q_polarchart_tr(const char* s) {
@@ -1759,8 +1759,8 @@ void q_polarchart_set_geometry(void* self, void* rect) {
     QPolarChart_SetGeometry((QPolarChart*)self, (QRectF*)rect);
 }
 
-void q_polarchart_qbase_set_geometry(void* self, void* rect) {
-    QPolarChart_QBaseSetGeometry((QPolarChart*)self, (QRectF*)rect);
+void q_polarchart_super_set_geometry(void* self, void* rect) {
+    QPolarChart_SuperSetGeometry((QPolarChart*)self, (QRectF*)rect);
 }
 
 void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void q_polarchart_get_contents_margins(void* self, double* left, double* top, do
     QPolarChart_GetContentsMargins((QPolarChart*)self, left, top, right, bottom);
 }
 
-void q_polarchart_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom) {
-    QPolarChart_QBaseGetContentsMargins((QPolarChart*)self, left, top, right, bottom);
+void q_polarchart_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom) {
+    QPolarChart_SuperGetContentsMargins((QPolarChart*)self, left, top, right, bottom);
 }
 
 void q_polarchart_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*)) {
@@ -1783,8 +1783,8 @@ int32_t q_polarchart_type(void* self) {
     return QPolarChart_Type((QPolarChart*)self);
 }
 
-int32_t q_polarchart_qbase_type(void* self) {
-    return QPolarChart_QBaseType((QPolarChart*)self);
+int32_t q_polarchart_super_type(void* self) {
+    return QPolarChart_SuperType((QPolarChart*)self);
 }
 
 void q_polarchart_on_type(void* self, int32_t (*callback)()) {
@@ -1795,8 +1795,8 @@ void q_polarchart_paint(void* self, void* painter, void* option, void* widget) {
     QPolarChart_Paint((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_polarchart_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QPolarChart_QBasePaint((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_polarchart_super_paint(void* self, void* painter, void* option, void* widget) {
+    QPolarChart_SuperPaint((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -1807,8 +1807,8 @@ void q_polarchart_paint_window_frame(void* self, void* painter, void* option, vo
     QPolarChart_PaintWindowFrame((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_polarchart_qbase_paint_window_frame(void* self, void* painter, void* option, void* widget) {
-    QPolarChart_QBasePaintWindowFrame((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_polarchart_super_paint_window_frame(void* self, void* painter, void* option, void* widget) {
+    QPolarChart_SuperPaintWindowFrame((QPolarChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -1819,8 +1819,8 @@ QRectF* q_polarchart_bounding_rect(void* self) {
     return QPolarChart_BoundingRect((QPolarChart*)self);
 }
 
-QRectF* q_polarchart_qbase_bounding_rect(void* self) {
-    return QPolarChart_QBaseBoundingRect((QPolarChart*)self);
+QRectF* q_polarchart_super_bounding_rect(void* self) {
+    return QPolarChart_SuperBoundingRect((QPolarChart*)self);
 }
 
 void q_polarchart_on_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -1831,8 +1831,8 @@ QPainterPath* q_polarchart_shape(void* self) {
     return QPolarChart_Shape((QPolarChart*)self);
 }
 
-QPainterPath* q_polarchart_qbase_shape(void* self) {
-    return QPolarChart_QBaseShape((QPolarChart*)self);
+QPainterPath* q_polarchart_super_shape(void* self) {
+    return QPolarChart_SuperShape((QPolarChart*)self);
 }
 
 void q_polarchart_on_shape(void* self, QPainterPath* (*callback)()) {
@@ -1843,8 +1843,8 @@ void q_polarchart_init_style_option(void* self, void* option) {
     QPolarChart_InitStyleOption((QPolarChart*)self, (QStyleOption*)option);
 }
 
-void q_polarchart_qbase_init_style_option(void* self, void* option) {
-    QPolarChart_QBaseInitStyleOption((QPolarChart*)self, (QStyleOption*)option);
+void q_polarchart_super_init_style_option(void* self, void* option) {
+    QPolarChart_SuperInitStyleOption((QPolarChart*)self, (QStyleOption*)option);
 }
 
 void q_polarchart_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ QSizeF* q_polarchart_size_hint(void* self, int32_t which, void* constraint) {
     return QPolarChart_SizeHint((QPolarChart*)self, which, (QSizeF*)constraint);
 }
 
-QSizeF* q_polarchart_qbase_size_hint(void* self, int32_t which, void* constraint) {
-    return QPolarChart_QBaseSizeHint((QPolarChart*)self, which, (QSizeF*)constraint);
+QSizeF* q_polarchart_super_size_hint(void* self, int32_t which, void* constraint) {
+    return QPolarChart_SuperSizeHint((QPolarChart*)self, which, (QSizeF*)constraint);
 }
 
 void q_polarchart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*)) {
@@ -1867,8 +1867,8 @@ void q_polarchart_update_geometry(void* self) {
     QPolarChart_UpdateGeometry((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_update_geometry(void* self) {
-    QPolarChart_QBaseUpdateGeometry((QPolarChart*)self);
+void q_polarchart_super_update_geometry(void* self) {
+    QPolarChart_SuperUpdateGeometry((QPolarChart*)self);
 }
 
 void q_polarchart_on_update_geometry(void* self, void (*callback)()) {
@@ -1879,8 +1879,8 @@ QVariant* q_polarchart_item_change(void* self, int32_t change, void* value) {
     return QPolarChart_ItemChange((QPolarChart*)self, change, (QVariant*)value);
 }
 
-QVariant* q_polarchart_qbase_item_change(void* self, int32_t change, void* value) {
-    return QPolarChart_QBaseItemChange((QPolarChart*)self, change, (QVariant*)value);
+QVariant* q_polarchart_super_item_change(void* self, int32_t change, void* value) {
+    return QPolarChart_SuperItemChange((QPolarChart*)self, change, (QVariant*)value);
 }
 
 void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -1891,8 +1891,8 @@ QVariant* q_polarchart_property_change(void* self, const char* propertyName, voi
     return QPolarChart_PropertyChange((QPolarChart*)self, qstring(propertyName), (QVariant*)value);
 }
 
-QVariant* q_polarchart_qbase_property_change(void* self, const char* propertyName, void* value) {
-    return QPolarChart_QBasePropertyChange((QPolarChart*)self, qstring(propertyName), (QVariant*)value);
+QVariant* q_polarchart_super_property_change(void* self, const char* propertyName, void* value) {
+    return QPolarChart_SuperPropertyChange((QPolarChart*)self, qstring(propertyName), (QVariant*)value);
 }
 
 void q_polarchart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*)) {
@@ -1903,8 +1903,8 @@ bool q_polarchart_scene_event(void* self, void* event) {
     return QPolarChart_SceneEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-bool q_polarchart_qbase_scene_event(void* self, void* event) {
-    return QPolarChart_QBaseSceneEvent((QPolarChart*)self, (QEvent*)event);
+bool q_polarchart_super_scene_event(void* self, void* event) {
+    return QPolarChart_SuperSceneEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ bool q_polarchart_window_frame_event(void* self, void* e) {
     return QPolarChart_WindowFrameEvent((QPolarChart*)self, (QEvent*)e);
 }
 
-bool q_polarchart_qbase_window_frame_event(void* self, void* e) {
-    return QPolarChart_QBaseWindowFrameEvent((QPolarChart*)self, (QEvent*)e);
+bool q_polarchart_super_window_frame_event(void* self, void* e) {
+    return QPolarChart_SuperWindowFrameEvent((QPolarChart*)self, (QEvent*)e);
 }
 
 void q_polarchart_on_window_frame_event(void* self, bool (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ int32_t q_polarchart_window_frame_section_at(void* self, void* pos) {
     return QPolarChart_WindowFrameSectionAt((QPolarChart*)self, (QPointF*)pos);
 }
 
-int32_t q_polarchart_qbase_window_frame_section_at(void* self, void* pos) {
-    return QPolarChart_QBaseWindowFrameSectionAt((QPolarChart*)self, (QPointF*)pos);
+int32_t q_polarchart_super_window_frame_section_at(void* self, void* pos) {
+    return QPolarChart_SuperWindowFrameSectionAt((QPolarChart*)self, (QPointF*)pos);
 }
 
 void q_polarchart_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ bool q_polarchart_event(void* self, void* event) {
     return QPolarChart_Event((QPolarChart*)self, (QEvent*)event);
 }
 
-bool q_polarchart_qbase_event(void* self, void* event) {
-    return QPolarChart_QBaseEvent((QPolarChart*)self, (QEvent*)event);
+bool q_polarchart_super_event(void* self, void* event) {
+    return QPolarChart_SuperEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void q_polarchart_change_event(void* self, void* event) {
     QPolarChart_ChangeEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_change_event(void* self, void* event) {
-    QPolarChart_QBaseChangeEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_change_event(void* self, void* event) {
+    QPolarChart_SuperChangeEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ void q_polarchart_close_event(void* self, void* event) {
     QPolarChart_CloseEvent((QPolarChart*)self, (QCloseEvent*)event);
 }
 
-void q_polarchart_qbase_close_event(void* self, void* event) {
-    QPolarChart_QBaseCloseEvent((QPolarChart*)self, (QCloseEvent*)event);
+void q_polarchart_super_close_event(void* self, void* event) {
+    QPolarChart_SuperCloseEvent((QPolarChart*)self, (QCloseEvent*)event);
 }
 
 void q_polarchart_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ void q_polarchart_focus_in_event(void* self, void* event) {
     QPolarChart_FocusInEvent((QPolarChart*)self, (QFocusEvent*)event);
 }
 
-void q_polarchart_qbase_focus_in_event(void* self, void* event) {
-    QPolarChart_QBaseFocusInEvent((QPolarChart*)self, (QFocusEvent*)event);
+void q_polarchart_super_focus_in_event(void* self, void* event) {
+    QPolarChart_SuperFocusInEvent((QPolarChart*)self, (QFocusEvent*)event);
 }
 
 void q_polarchart_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ bool q_polarchart_focus_next_prev_child(void* self, bool next) {
     return QPolarChart_FocusNextPrevChild((QPolarChart*)self, next);
 }
 
-bool q_polarchart_qbase_focus_next_prev_child(void* self, bool next) {
-    return QPolarChart_QBaseFocusNextPrevChild((QPolarChart*)self, next);
+bool q_polarchart_super_focus_next_prev_child(void* self, bool next) {
+    return QPolarChart_SuperFocusNextPrevChild((QPolarChart*)self, next);
 }
 
 void q_polarchart_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1999,8 +1999,8 @@ void q_polarchart_focus_out_event(void* self, void* event) {
     QPolarChart_FocusOutEvent((QPolarChart*)self, (QFocusEvent*)event);
 }
 
-void q_polarchart_qbase_focus_out_event(void* self, void* event) {
-    QPolarChart_QBaseFocusOutEvent((QPolarChart*)self, (QFocusEvent*)event);
+void q_polarchart_super_focus_out_event(void* self, void* event) {
+    QPolarChart_SuperFocusOutEvent((QPolarChart*)self, (QFocusEvent*)event);
 }
 
 void q_polarchart_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ void q_polarchart_hide_event(void* self, void* event) {
     QPolarChart_HideEvent((QPolarChart*)self, (QHideEvent*)event);
 }
 
-void q_polarchart_qbase_hide_event(void* self, void* event) {
-    QPolarChart_QBaseHideEvent((QPolarChart*)self, (QHideEvent*)event);
+void q_polarchart_super_hide_event(void* self, void* event) {
+    QPolarChart_SuperHideEvent((QPolarChart*)self, (QHideEvent*)event);
 }
 
 void q_polarchart_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ void q_polarchart_move_event(void* self, void* event) {
     QPolarChart_MoveEvent((QPolarChart*)self, (QGraphicsSceneMoveEvent*)event);
 }
 
-void q_polarchart_qbase_move_event(void* self, void* event) {
-    QPolarChart_QBaseMoveEvent((QPolarChart*)self, (QGraphicsSceneMoveEvent*)event);
+void q_polarchart_super_move_event(void* self, void* event) {
+    QPolarChart_SuperMoveEvent((QPolarChart*)self, (QGraphicsSceneMoveEvent*)event);
 }
 
 void q_polarchart_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ void q_polarchart_polish_event(void* self) {
     QPolarChart_PolishEvent((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_polish_event(void* self) {
-    QPolarChart_QBasePolishEvent((QPolarChart*)self);
+void q_polarchart_super_polish_event(void* self) {
+    QPolarChart_SuperPolishEvent((QPolarChart*)self);
 }
 
 void q_polarchart_on_polish_event(void* self, void (*callback)()) {
@@ -2047,8 +2047,8 @@ void q_polarchart_resize_event(void* self, void* event) {
     QPolarChart_ResizeEvent((QPolarChart*)self, (QGraphicsSceneResizeEvent*)event);
 }
 
-void q_polarchart_qbase_resize_event(void* self, void* event) {
-    QPolarChart_QBaseResizeEvent((QPolarChart*)self, (QGraphicsSceneResizeEvent*)event);
+void q_polarchart_super_resize_event(void* self, void* event) {
+    QPolarChart_SuperResizeEvent((QPolarChart*)self, (QGraphicsSceneResizeEvent*)event);
 }
 
 void q_polarchart_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2059,8 +2059,8 @@ void q_polarchart_show_event(void* self, void* event) {
     QPolarChart_ShowEvent((QPolarChart*)self, (QShowEvent*)event);
 }
 
-void q_polarchart_qbase_show_event(void* self, void* event) {
-    QPolarChart_QBaseShowEvent((QPolarChart*)self, (QShowEvent*)event);
+void q_polarchart_super_show_event(void* self, void* event) {
+    QPolarChart_SuperShowEvent((QPolarChart*)self, (QShowEvent*)event);
 }
 
 void q_polarchart_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2071,8 +2071,8 @@ void q_polarchart_hover_move_event(void* self, void* event) {
     QPolarChart_HoverMoveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_polarchart_qbase_hover_move_event(void* self, void* event) {
-    QPolarChart_QBaseHoverMoveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
+void q_polarchart_super_hover_move_event(void* self, void* event) {
+    QPolarChart_SuperHoverMoveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_polarchart_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2083,8 +2083,8 @@ void q_polarchart_hover_leave_event(void* self, void* event) {
     QPolarChart_HoverLeaveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_polarchart_qbase_hover_leave_event(void* self, void* event) {
-    QPolarChart_QBaseHoverLeaveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
+void q_polarchart_super_hover_leave_event(void* self, void* event) {
+    QPolarChart_SuperHoverLeaveEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_polarchart_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ void q_polarchart_grab_mouse_event(void* self, void* event) {
     QPolarChart_GrabMouseEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_grab_mouse_event(void* self, void* event) {
-    QPolarChart_QBaseGrabMouseEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_grab_mouse_event(void* self, void* event) {
+    QPolarChart_SuperGrabMouseEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_grab_mouse_event(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void q_polarchart_ungrab_mouse_event(void* self, void* event) {
     QPolarChart_UngrabMouseEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_ungrab_mouse_event(void* self, void* event) {
-    QPolarChart_QBaseUngrabMouseEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_ungrab_mouse_event(void* self, void* event) {
+    QPolarChart_SuperUngrabMouseEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void q_polarchart_grab_keyboard_event(void* self, void* event) {
     QPolarChart_GrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_grab_keyboard_event(void* self, void* event) {
-    QPolarChart_QBaseGrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_grab_keyboard_event(void* self, void* event) {
+    QPolarChart_SuperGrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_grab_keyboard_event(void* self, void (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ void q_polarchart_ungrab_keyboard_event(void* self, void* event) {
     QPolarChart_UngrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_ungrab_keyboard_event(void* self, void* event) {
-    QPolarChart_QBaseUngrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_ungrab_keyboard_event(void* self, void* event) {
+    QPolarChart_SuperUngrabKeyboardEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*)) {
@@ -2143,8 +2143,8 @@ bool q_polarchart_event_filter(void* self, void* watched, void* event) {
     return QPolarChart_EventFilter((QPolarChart*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_polarchart_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPolarChart_QBaseEventFilter((QPolarChart*)self, (QObject*)watched, (QEvent*)event);
+bool q_polarchart_super_event_filter(void* self, void* watched, void* event) {
+    return QPolarChart_SuperEventFilter((QPolarChart*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_polarchart_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2155,8 +2155,8 @@ void q_polarchart_timer_event(void* self, void* event) {
     QPolarChart_TimerEvent((QPolarChart*)self, (QTimerEvent*)event);
 }
 
-void q_polarchart_qbase_timer_event(void* self, void* event) {
-    QPolarChart_QBaseTimerEvent((QPolarChart*)self, (QTimerEvent*)event);
+void q_polarchart_super_timer_event(void* self, void* event) {
+    QPolarChart_SuperTimerEvent((QPolarChart*)self, (QTimerEvent*)event);
 }
 
 void q_polarchart_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2167,8 +2167,8 @@ void q_polarchart_child_event(void* self, void* event) {
     QPolarChart_ChildEvent((QPolarChart*)self, (QChildEvent*)event);
 }
 
-void q_polarchart_qbase_child_event(void* self, void* event) {
-    QPolarChart_QBaseChildEvent((QPolarChart*)self, (QChildEvent*)event);
+void q_polarchart_super_child_event(void* self, void* event) {
+    QPolarChart_SuperChildEvent((QPolarChart*)self, (QChildEvent*)event);
 }
 
 void q_polarchart_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ void q_polarchart_custom_event(void* self, void* event) {
     QPolarChart_CustomEvent((QPolarChart*)self, (QEvent*)event);
 }
 
-void q_polarchart_qbase_custom_event(void* self, void* event) {
-    QPolarChart_QBaseCustomEvent((QPolarChart*)self, (QEvent*)event);
+void q_polarchart_super_custom_event(void* self, void* event) {
+    QPolarChart_SuperCustomEvent((QPolarChart*)self, (QEvent*)event);
 }
 
 void q_polarchart_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2191,8 +2191,8 @@ void q_polarchart_connect_notify(void* self, void* signal) {
     QPolarChart_ConnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
-void q_polarchart_qbase_connect_notify(void* self, void* signal) {
-    QPolarChart_QBaseConnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
+void q_polarchart_super_connect_notify(void* self, void* signal) {
+    QPolarChart_SuperConnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
 void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2203,8 +2203,8 @@ void q_polarchart_disconnect_notify(void* self, void* signal) {
     QPolarChart_DisconnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
-void q_polarchart_qbase_disconnect_notify(void* self, void* signal) {
-    QPolarChart_QBaseDisconnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
+void q_polarchart_super_disconnect_notify(void* self, void* signal) {
+    QPolarChart_SuperDisconnectNotify((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
 void q_polarchart_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2215,8 +2215,8 @@ void q_polarchart_advance(void* self, int phase) {
     QPolarChart_Advance((QPolarChart*)self, phase);
 }
 
-void q_polarchart_qbase_advance(void* self, int phase) {
-    QPolarChart_QBaseAdvance((QPolarChart*)self, phase);
+void q_polarchart_super_advance(void* self, int phase) {
+    QPolarChart_SuperAdvance((QPolarChart*)self, phase);
 }
 
 void q_polarchart_on_advance(void* self, void (*callback)(void*, int)) {
@@ -2227,8 +2227,8 @@ bool q_polarchart_contains(void* self, void* point) {
     return QPolarChart_Contains((QPolarChart*)self, (QPointF*)point);
 }
 
-bool q_polarchart_qbase_contains(void* self, void* point) {
-    return QPolarChart_QBaseContains((QPolarChart*)self, (QPointF*)point);
+bool q_polarchart_super_contains(void* self, void* point) {
+    return QPolarChart_SuperContains((QPolarChart*)self, (QPointF*)point);
 }
 
 void q_polarchart_on_contains(void* self, bool (*callback)(void*, void*)) {
@@ -2239,8 +2239,8 @@ bool q_polarchart_collides_with_item(void* self, void* other, int32_t mode) {
     return QPolarChart_CollidesWithItem((QPolarChart*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_polarchart_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QPolarChart_QBaseCollidesWithItem((QPolarChart*)self, (QGraphicsItem*)other, mode);
+bool q_polarchart_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QPolarChart_SuperCollidesWithItem((QPolarChart*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_polarchart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -2251,8 +2251,8 @@ bool q_polarchart_collides_with_path(void* self, void* path, int32_t mode) {
     return QPolarChart_CollidesWithPath((QPolarChart*)self, (QPainterPath*)path, mode);
 }
 
-bool q_polarchart_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QPolarChart_QBaseCollidesWithPath((QPolarChart*)self, (QPainterPath*)path, mode);
+bool q_polarchart_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QPolarChart_SuperCollidesWithPath((QPolarChart*)self, (QPainterPath*)path, mode);
 }
 
 void q_polarchart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -2263,8 +2263,8 @@ bool q_polarchart_is_obscured_by(void* self, void* item) {
     return QPolarChart_IsObscuredBy((QPolarChart*)self, (QGraphicsItem*)item);
 }
 
-bool q_polarchart_qbase_is_obscured_by(void* self, void* item) {
-    return QPolarChart_QBaseIsObscuredBy((QPolarChart*)self, (QGraphicsItem*)item);
+bool q_polarchart_super_is_obscured_by(void* self, void* item) {
+    return QPolarChart_SuperIsObscuredBy((QPolarChart*)self, (QGraphicsItem*)item);
 }
 
 void q_polarchart_on_is_obscured_by(void* self, bool (*callback)(void*, void*)) {
@@ -2275,8 +2275,8 @@ QPainterPath* q_polarchart_opaque_area(void* self) {
     return QPolarChart_OpaqueArea((QPolarChart*)self);
 }
 
-QPainterPath* q_polarchart_qbase_opaque_area(void* self) {
-    return QPolarChart_QBaseOpaqueArea((QPolarChart*)self);
+QPainterPath* q_polarchart_super_opaque_area(void* self) {
+    return QPolarChart_SuperOpaqueArea((QPolarChart*)self);
 }
 
 void q_polarchart_on_opaque_area(void* self, QPainterPath* (*callback)()) {
@@ -2287,8 +2287,8 @@ bool q_polarchart_scene_event_filter(void* self, void* watched, void* event) {
     return QPolarChart_SceneEventFilter((QPolarChart*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_polarchart_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QPolarChart_QBaseSceneEventFilter((QPolarChart*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_polarchart_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QPolarChart_SuperSceneEventFilter((QPolarChart*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_polarchart_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2299,8 +2299,8 @@ void q_polarchart_context_menu_event(void* self, void* event) {
     QPolarChart_ContextMenuEvent((QPolarChart*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_polarchart_qbase_context_menu_event(void* self, void* event) {
-    QPolarChart_QBaseContextMenuEvent((QPolarChart*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_polarchart_super_context_menu_event(void* self, void* event) {
+    QPolarChart_SuperContextMenuEvent((QPolarChart*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_polarchart_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2311,8 +2311,8 @@ void q_polarchart_drag_enter_event(void* self, void* event) {
     QPolarChart_DragEnterEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_polarchart_qbase_drag_enter_event(void* self, void* event) {
-    QPolarChart_QBaseDragEnterEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_polarchart_super_drag_enter_event(void* self, void* event) {
+    QPolarChart_SuperDragEnterEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_polarchart_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2323,8 +2323,8 @@ void q_polarchart_drag_leave_event(void* self, void* event) {
     QPolarChart_DragLeaveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_polarchart_qbase_drag_leave_event(void* self, void* event) {
-    QPolarChart_QBaseDragLeaveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_polarchart_super_drag_leave_event(void* self, void* event) {
+    QPolarChart_SuperDragLeaveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_polarchart_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2335,8 +2335,8 @@ void q_polarchart_drag_move_event(void* self, void* event) {
     QPolarChart_DragMoveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_polarchart_qbase_drag_move_event(void* self, void* event) {
-    QPolarChart_QBaseDragMoveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_polarchart_super_drag_move_event(void* self, void* event) {
+    QPolarChart_SuperDragMoveEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_polarchart_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2347,8 +2347,8 @@ void q_polarchart_drop_event(void* self, void* event) {
     QPolarChart_DropEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_polarchart_qbase_drop_event(void* self, void* event) {
-    QPolarChart_QBaseDropEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_polarchart_super_drop_event(void* self, void* event) {
+    QPolarChart_SuperDropEvent((QPolarChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_polarchart_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2359,8 +2359,8 @@ void q_polarchart_hover_enter_event(void* self, void* event) {
     QPolarChart_HoverEnterEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_polarchart_qbase_hover_enter_event(void* self, void* event) {
-    QPolarChart_QBaseHoverEnterEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
+void q_polarchart_super_hover_enter_event(void* self, void* event) {
+    QPolarChart_SuperHoverEnterEvent((QPolarChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_polarchart_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2371,8 +2371,8 @@ void q_polarchart_key_press_event(void* self, void* event) {
     QPolarChart_KeyPressEvent((QPolarChart*)self, (QKeyEvent*)event);
 }
 
-void q_polarchart_qbase_key_press_event(void* self, void* event) {
-    QPolarChart_QBaseKeyPressEvent((QPolarChart*)self, (QKeyEvent*)event);
+void q_polarchart_super_key_press_event(void* self, void* event) {
+    QPolarChart_SuperKeyPressEvent((QPolarChart*)self, (QKeyEvent*)event);
 }
 
 void q_polarchart_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2383,8 +2383,8 @@ void q_polarchart_key_release_event(void* self, void* event) {
     QPolarChart_KeyReleaseEvent((QPolarChart*)self, (QKeyEvent*)event);
 }
 
-void q_polarchart_qbase_key_release_event(void* self, void* event) {
-    QPolarChart_QBaseKeyReleaseEvent((QPolarChart*)self, (QKeyEvent*)event);
+void q_polarchart_super_key_release_event(void* self, void* event) {
+    QPolarChart_SuperKeyReleaseEvent((QPolarChart*)self, (QKeyEvent*)event);
 }
 
 void q_polarchart_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2395,8 +2395,8 @@ void q_polarchart_mouse_press_event(void* self, void* event) {
     QPolarChart_MousePressEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_polarchart_qbase_mouse_press_event(void* self, void* event) {
-    QPolarChart_QBaseMousePressEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
+void q_polarchart_super_mouse_press_event(void* self, void* event) {
+    QPolarChart_SuperMousePressEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_polarchart_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2407,8 +2407,8 @@ void q_polarchart_mouse_move_event(void* self, void* event) {
     QPolarChart_MouseMoveEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_polarchart_qbase_mouse_move_event(void* self, void* event) {
-    QPolarChart_QBaseMouseMoveEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
+void q_polarchart_super_mouse_move_event(void* self, void* event) {
+    QPolarChart_SuperMouseMoveEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_polarchart_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2419,8 +2419,8 @@ void q_polarchart_mouse_release_event(void* self, void* event) {
     QPolarChart_MouseReleaseEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_polarchart_qbase_mouse_release_event(void* self, void* event) {
-    QPolarChart_QBaseMouseReleaseEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
+void q_polarchart_super_mouse_release_event(void* self, void* event) {
+    QPolarChart_SuperMouseReleaseEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_polarchart_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2431,8 +2431,8 @@ void q_polarchart_mouse_double_click_event(void* self, void* event) {
     QPolarChart_MouseDoubleClickEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_polarchart_qbase_mouse_double_click_event(void* self, void* event) {
-    QPolarChart_QBaseMouseDoubleClickEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
+void q_polarchart_super_mouse_double_click_event(void* self, void* event) {
+    QPolarChart_SuperMouseDoubleClickEvent((QPolarChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_polarchart_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2443,8 +2443,8 @@ void q_polarchart_wheel_event(void* self, void* event) {
     QPolarChart_WheelEvent((QPolarChart*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_polarchart_qbase_wheel_event(void* self, void* event) {
-    QPolarChart_QBaseWheelEvent((QPolarChart*)self, (QGraphicsSceneWheelEvent*)event);
+void q_polarchart_super_wheel_event(void* self, void* event) {
+    QPolarChart_SuperWheelEvent((QPolarChart*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_polarchart_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2455,8 +2455,8 @@ void q_polarchart_input_method_event(void* self, void* event) {
     QPolarChart_InputMethodEvent((QPolarChart*)self, (QInputMethodEvent*)event);
 }
 
-void q_polarchart_qbase_input_method_event(void* self, void* event) {
-    QPolarChart_QBaseInputMethodEvent((QPolarChart*)self, (QInputMethodEvent*)event);
+void q_polarchart_super_input_method_event(void* self, void* event) {
+    QPolarChart_SuperInputMethodEvent((QPolarChart*)self, (QInputMethodEvent*)event);
 }
 
 void q_polarchart_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2467,8 +2467,8 @@ QVariant* q_polarchart_input_method_query(void* self, int32_t query) {
     return QPolarChart_InputMethodQuery((QPolarChart*)self, query);
 }
 
-QVariant* q_polarchart_qbase_input_method_query(void* self, int32_t query) {
-    return QPolarChart_QBaseInputMethodQuery((QPolarChart*)self, query);
+QVariant* q_polarchart_super_input_method_query(void* self, int32_t query) {
+    return QPolarChart_SuperInputMethodQuery((QPolarChart*)self, query);
 }
 
 void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2479,8 +2479,8 @@ bool q_polarchart_supports_extension(void* self, int32_t extension) {
     return QPolarChart_SupportsExtension((QPolarChart*)self, extension);
 }
 
-bool q_polarchart_qbase_supports_extension(void* self, int32_t extension) {
-    return QPolarChart_QBaseSupportsExtension((QPolarChart*)self, extension);
+bool q_polarchart_super_supports_extension(void* self, int32_t extension) {
+    return QPolarChart_SuperSupportsExtension((QPolarChart*)self, extension);
 }
 
 void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
@@ -2491,8 +2491,8 @@ void q_polarchart_set_extension(void* self, int32_t extension, void* variant) {
     QPolarChart_SetExtension((QPolarChart*)self, extension, (QVariant*)variant);
 }
 
-void q_polarchart_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QPolarChart_QBaseSetExtension((QPolarChart*)self, extension, (QVariant*)variant);
+void q_polarchart_super_set_extension(void* self, int32_t extension, void* variant) {
+    QPolarChart_SuperSetExtension((QPolarChart*)self, extension, (QVariant*)variant);
 }
 
 void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
@@ -2503,8 +2503,8 @@ QVariant* q_polarchart_extension(void* self, void* variant) {
     return QPolarChart_Extension((QPolarChart*)self, (QVariant*)variant);
 }
 
-QVariant* q_polarchart_qbase_extension(void* self, void* variant) {
-    return QPolarChart_QBaseExtension((QPolarChart*)self, (QVariant*)variant);
+QVariant* q_polarchart_super_extension(void* self, void* variant) {
+    return QPolarChart_SuperExtension((QPolarChart*)self, (QVariant*)variant);
 }
 
 void q_polarchart_on_extension(void* self, QVariant* (*callback)(void*, void*)) {
@@ -2515,8 +2515,8 @@ bool q_polarchart_is_empty(void* self) {
     return QPolarChart_IsEmpty((QPolarChart*)self);
 }
 
-bool q_polarchart_qbase_is_empty(void* self) {
-    return QPolarChart_QBaseIsEmpty((QPolarChart*)self);
+bool q_polarchart_super_is_empty(void* self) {
+    return QPolarChart_SuperIsEmpty((QPolarChart*)self);
 }
 
 void q_polarchart_on_is_empty(void* self, bool (*callback)()) {
@@ -2527,8 +2527,8 @@ void q_polarchart_update_micro_focus(void* self) {
     QPolarChart_UpdateMicroFocus((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_update_micro_focus(void* self) {
-    QPolarChart_QBaseUpdateMicroFocus((QPolarChart*)self);
+void q_polarchart_super_update_micro_focus(void* self) {
+    QPolarChart_SuperUpdateMicroFocus((QPolarChart*)self);
 }
 
 void q_polarchart_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2539,8 +2539,8 @@ QObject* q_polarchart_sender(void* self) {
     return QPolarChart_Sender((QPolarChart*)self);
 }
 
-QObject* q_polarchart_qbase_sender(void* self) {
-    return QPolarChart_QBaseSender((QPolarChart*)self);
+QObject* q_polarchart_super_sender(void* self) {
+    return QPolarChart_SuperSender((QPolarChart*)self);
 }
 
 void q_polarchart_on_sender(void* self, QObject* (*callback)()) {
@@ -2551,8 +2551,8 @@ int32_t q_polarchart_sender_signal_index(void* self) {
     return QPolarChart_SenderSignalIndex((QPolarChart*)self);
 }
 
-int32_t q_polarchart_qbase_sender_signal_index(void* self) {
-    return QPolarChart_QBaseSenderSignalIndex((QPolarChart*)self);
+int32_t q_polarchart_super_sender_signal_index(void* self) {
+    return QPolarChart_SuperSenderSignalIndex((QPolarChart*)self);
 }
 
 void q_polarchart_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2563,8 +2563,8 @@ int32_t q_polarchart_receivers(void* self, const char* signal) {
     return QPolarChart_Receivers((QPolarChart*)self, signal);
 }
 
-int32_t q_polarchart_qbase_receivers(void* self, const char* signal) {
-    return QPolarChart_QBaseReceivers((QPolarChart*)self, signal);
+int32_t q_polarchart_super_receivers(void* self, const char* signal) {
+    return QPolarChart_SuperReceivers((QPolarChart*)self, signal);
 }
 
 void q_polarchart_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2575,8 +2575,8 @@ bool q_polarchart_is_signal_connected(void* self, void* signal) {
     return QPolarChart_IsSignalConnected((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
-bool q_polarchart_qbase_is_signal_connected(void* self, void* signal) {
-    return QPolarChart_QBaseIsSignalConnected((QPolarChart*)self, (QMetaMethod*)signal);
+bool q_polarchart_super_is_signal_connected(void* self, void* signal) {
+    return QPolarChart_SuperIsSignalConnected((QPolarChart*)self, (QMetaMethod*)signal);
 }
 
 void q_polarchart_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2587,8 +2587,8 @@ void q_polarchart_add_to_index(void* self) {
     QPolarChart_AddToIndex((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_add_to_index(void* self) {
-    QPolarChart_QBaseAddToIndex((QPolarChart*)self);
+void q_polarchart_super_add_to_index(void* self) {
+    QPolarChart_SuperAddToIndex((QPolarChart*)self);
 }
 
 void q_polarchart_on_add_to_index(void* self, void (*callback)()) {
@@ -2599,8 +2599,8 @@ void q_polarchart_remove_from_index(void* self) {
     QPolarChart_RemoveFromIndex((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_remove_from_index(void* self) {
-    QPolarChart_QBaseRemoveFromIndex((QPolarChart*)self);
+void q_polarchart_super_remove_from_index(void* self) {
+    QPolarChart_SuperRemoveFromIndex((QPolarChart*)self);
 }
 
 void q_polarchart_on_remove_from_index(void* self, void (*callback)()) {
@@ -2611,8 +2611,8 @@ void q_polarchart_prepare_geometry_change(void* self) {
     QPolarChart_PrepareGeometryChange((QPolarChart*)self);
 }
 
-void q_polarchart_qbase_prepare_geometry_change(void* self) {
-    QPolarChart_QBasePrepareGeometryChange((QPolarChart*)self);
+void q_polarchart_super_prepare_geometry_change(void* self) {
+    QPolarChart_SuperPrepareGeometryChange((QPolarChart*)self);
 }
 
 void q_polarchart_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -2623,8 +2623,8 @@ void q_polarchart_set_graphics_item(void* self, void* item) {
     QPolarChart_SetGraphicsItem((QPolarChart*)self, (QGraphicsItem*)item);
 }
 
-void q_polarchart_qbase_set_graphics_item(void* self, void* item) {
-    QPolarChart_QBaseSetGraphicsItem((QPolarChart*)self, (QGraphicsItem*)item);
+void q_polarchart_super_set_graphics_item(void* self, void* item) {
+    QPolarChart_SuperSetGraphicsItem((QPolarChart*)self, (QGraphicsItem*)item);
 }
 
 void q_polarchart_on_set_graphics_item(void* self, void (*callback)(void*, void*)) {
@@ -2635,8 +2635,8 @@ void q_polarchart_set_owned_by_layout(void* self, bool ownedByLayout) {
     QPolarChart_SetOwnedByLayout((QPolarChart*)self, ownedByLayout);
 }
 
-void q_polarchart_qbase_set_owned_by_layout(void* self, bool ownedByLayout) {
-    QPolarChart_QBaseSetOwnedByLayout((QPolarChart*)self, ownedByLayout);
+void q_polarchart_super_set_owned_by_layout(void* self, bool ownedByLayout) {
+    QPolarChart_SuperSetOwnedByLayout((QPolarChart*)self, ownedByLayout);
 }
 
 void q_polarchart_on_set_owned_by_layout(void* self, void (*callback)(void*, bool)) {

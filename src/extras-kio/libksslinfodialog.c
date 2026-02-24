@@ -30,8 +30,8 @@ void k_sslinfodialog_on_meta_object(void* self, const QMetaObject* (*callback)()
     KSslInfoDialog_OnMetaObject((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sslinfodialog_qbase_meta_object(void* self) {
-    return KSslInfoDialog_QBaseMetaObject((KSslInfoDialog*)self);
+const QMetaObject* k_sslinfodialog_super_meta_object(void* self) {
+    return KSslInfoDialog_SuperMetaObject((KSslInfoDialog*)self);
 }
 
 void* k_sslinfodialog_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_sslinfodialog_on_metacast(void* self, void* (*callback)(void*, const char
     KSslInfoDialog_OnMetacast((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
-void* k_sslinfodialog_qbase_metacast(void* self, const char* param1) {
-    return KSslInfoDialog_QBaseMetacast((KSslInfoDialog*)self, param1);
+void* k_sslinfodialog_super_metacast(void* self, const char* param1) {
+    return KSslInfoDialog_SuperMetacast((KSslInfoDialog*)self, param1);
 }
 
 int32_t k_sslinfodialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_sslinfodialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KSslInfoDialog_OnMetacall((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_sslinfodialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSslInfoDialog_QBaseMetacall((KSslInfoDialog*)self, param1, param2, param3);
+int32_t k_sslinfodialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSslInfoDialog_SuperMetacall((KSslInfoDialog*)self, param1, param2, param3);
 }
 
 const char* k_sslinfodialog_tr(const char* s) {
@@ -1516,8 +1516,8 @@ void k_sslinfodialog_set_visible(void* self, bool visible) {
     KSslInfoDialog_SetVisible((KSslInfoDialog*)self, visible);
 }
 
-void k_sslinfodialog_qbase_set_visible(void* self, bool visible) {
-    KSslInfoDialog_QBaseSetVisible((KSslInfoDialog*)self, visible);
+void k_sslinfodialog_super_set_visible(void* self, bool visible) {
+    KSslInfoDialog_SuperSetVisible((KSslInfoDialog*)self, visible);
 }
 
 void k_sslinfodialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1528,8 +1528,8 @@ QSize* k_sslinfodialog_size_hint(void* self) {
     return KSslInfoDialog_SizeHint((KSslInfoDialog*)self);
 }
 
-QSize* k_sslinfodialog_qbase_size_hint(void* self) {
-    return KSslInfoDialog_QBaseSizeHint((KSslInfoDialog*)self);
+QSize* k_sslinfodialog_super_size_hint(void* self) {
+    return KSslInfoDialog_SuperSizeHint((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1540,8 +1540,8 @@ QSize* k_sslinfodialog_minimum_size_hint(void* self) {
     return KSslInfoDialog_MinimumSizeHint((KSslInfoDialog*)self);
 }
 
-QSize* k_sslinfodialog_qbase_minimum_size_hint(void* self) {
-    return KSslInfoDialog_QBaseMinimumSizeHint((KSslInfoDialog*)self);
+QSize* k_sslinfodialog_super_minimum_size_hint(void* self) {
+    return KSslInfoDialog_SuperMinimumSizeHint((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1552,8 +1552,8 @@ void k_sslinfodialog_open(void* self) {
     KSslInfoDialog_Open((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_open(void* self) {
-    KSslInfoDialog_QBaseOpen((KSslInfoDialog*)self);
+void k_sslinfodialog_super_open(void* self) {
+    KSslInfoDialog_SuperOpen((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_open(void* self, void (*callback)()) {
@@ -1564,8 +1564,8 @@ int32_t k_sslinfodialog_exec(void* self) {
     return KSslInfoDialog_Exec((KSslInfoDialog*)self);
 }
 
-int32_t k_sslinfodialog_qbase_exec(void* self) {
-    return KSslInfoDialog_QBaseExec((KSslInfoDialog*)self);
+int32_t k_sslinfodialog_super_exec(void* self) {
+    return KSslInfoDialog_SuperExec((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1576,8 +1576,8 @@ void k_sslinfodialog_done(void* self, int param1) {
     KSslInfoDialog_Done((KSslInfoDialog*)self, param1);
 }
 
-void k_sslinfodialog_qbase_done(void* self, int param1) {
-    KSslInfoDialog_QBaseDone((KSslInfoDialog*)self, param1);
+void k_sslinfodialog_super_done(void* self, int param1) {
+    KSslInfoDialog_SuperDone((KSslInfoDialog*)self, param1);
 }
 
 void k_sslinfodialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1588,8 +1588,8 @@ void k_sslinfodialog_accept(void* self) {
     KSslInfoDialog_Accept((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_accept(void* self) {
-    KSslInfoDialog_QBaseAccept((KSslInfoDialog*)self);
+void k_sslinfodialog_super_accept(void* self) {
+    KSslInfoDialog_SuperAccept((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_accept(void* self, void (*callback)()) {
@@ -1600,8 +1600,8 @@ void k_sslinfodialog_reject(void* self) {
     KSslInfoDialog_Reject((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_reject(void* self) {
-    KSslInfoDialog_QBaseReject((KSslInfoDialog*)self);
+void k_sslinfodialog_super_reject(void* self) {
+    KSslInfoDialog_SuperReject((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_reject(void* self, void (*callback)()) {
@@ -1612,8 +1612,8 @@ void k_sslinfodialog_key_press_event(void* self, void* param1) {
     KSslInfoDialog_KeyPressEvent((KSslInfoDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_key_press_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseKeyPressEvent((KSslInfoDialog*)self, (QKeyEvent*)param1);
+void k_sslinfodialog_super_key_press_event(void* self, void* param1) {
+    KSslInfoDialog_SuperKeyPressEvent((KSslInfoDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_sslinfodialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1624,8 +1624,8 @@ void k_sslinfodialog_close_event(void* self, void* param1) {
     KSslInfoDialog_CloseEvent((KSslInfoDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_close_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseCloseEvent((KSslInfoDialog*)self, (QCloseEvent*)param1);
+void k_sslinfodialog_super_close_event(void* self, void* param1) {
+    KSslInfoDialog_SuperCloseEvent((KSslInfoDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_sslinfodialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1636,8 +1636,8 @@ void k_sslinfodialog_show_event(void* self, void* param1) {
     KSslInfoDialog_ShowEvent((KSslInfoDialog*)self, (QShowEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_show_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseShowEvent((KSslInfoDialog*)self, (QShowEvent*)param1);
+void k_sslinfodialog_super_show_event(void* self, void* param1) {
+    KSslInfoDialog_SuperShowEvent((KSslInfoDialog*)self, (QShowEvent*)param1);
 }
 
 void k_sslinfodialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1648,8 +1648,8 @@ void k_sslinfodialog_resize_event(void* self, void* param1) {
     KSslInfoDialog_ResizeEvent((KSslInfoDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_resize_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseResizeEvent((KSslInfoDialog*)self, (QResizeEvent*)param1);
+void k_sslinfodialog_super_resize_event(void* self, void* param1) {
+    KSslInfoDialog_SuperResizeEvent((KSslInfoDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_sslinfodialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1660,8 +1660,8 @@ void k_sslinfodialog_context_menu_event(void* self, void* param1) {
     KSslInfoDialog_ContextMenuEvent((KSslInfoDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_context_menu_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseContextMenuEvent((KSslInfoDialog*)self, (QContextMenuEvent*)param1);
+void k_sslinfodialog_super_context_menu_event(void* self, void* param1) {
+    KSslInfoDialog_SuperContextMenuEvent((KSslInfoDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_sslinfodialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1672,8 +1672,8 @@ bool k_sslinfodialog_event_filter(void* self, void* param1, void* param2) {
     return KSslInfoDialog_EventFilter((KSslInfoDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_sslinfodialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KSslInfoDialog_QBaseEventFilter((KSslInfoDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_sslinfodialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KSslInfoDialog_SuperEventFilter((KSslInfoDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_sslinfodialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1684,8 +1684,8 @@ int32_t k_sslinfodialog_dev_type(void* self) {
     return KSslInfoDialog_DevType((KSslInfoDialog*)self);
 }
 
-int32_t k_sslinfodialog_qbase_dev_type(void* self) {
-    return KSslInfoDialog_QBaseDevType((KSslInfoDialog*)self);
+int32_t k_sslinfodialog_super_dev_type(void* self) {
+    return KSslInfoDialog_SuperDevType((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1696,8 +1696,8 @@ int32_t k_sslinfodialog_height_for_width(void* self, int param1) {
     return KSslInfoDialog_HeightForWidth((KSslInfoDialog*)self, param1);
 }
 
-int32_t k_sslinfodialog_qbase_height_for_width(void* self, int param1) {
-    return KSslInfoDialog_QBaseHeightForWidth((KSslInfoDialog*)self, param1);
+int32_t k_sslinfodialog_super_height_for_width(void* self, int param1) {
+    return KSslInfoDialog_SuperHeightForWidth((KSslInfoDialog*)self, param1);
 }
 
 void k_sslinfodialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1708,8 +1708,8 @@ bool k_sslinfodialog_has_height_for_width(void* self) {
     return KSslInfoDialog_HasHeightForWidth((KSslInfoDialog*)self);
 }
 
-bool k_sslinfodialog_qbase_has_height_for_width(void* self) {
-    return KSslInfoDialog_QBaseHasHeightForWidth((KSslInfoDialog*)self);
+bool k_sslinfodialog_super_has_height_for_width(void* self) {
+    return KSslInfoDialog_SuperHasHeightForWidth((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1720,8 +1720,8 @@ QPaintEngine* k_sslinfodialog_paint_engine(void* self) {
     return KSslInfoDialog_PaintEngine((KSslInfoDialog*)self);
 }
 
-QPaintEngine* k_sslinfodialog_qbase_paint_engine(void* self) {
-    return KSslInfoDialog_QBasePaintEngine((KSslInfoDialog*)self);
+QPaintEngine* k_sslinfodialog_super_paint_engine(void* self) {
+    return KSslInfoDialog_SuperPaintEngine((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1732,8 +1732,8 @@ bool k_sslinfodialog_event(void* self, void* event) {
     return KSslInfoDialog_Event((KSslInfoDialog*)self, (QEvent*)event);
 }
 
-bool k_sslinfodialog_qbase_event(void* self, void* event) {
-    return KSslInfoDialog_QBaseEvent((KSslInfoDialog*)self, (QEvent*)event);
+bool k_sslinfodialog_super_event(void* self, void* event) {
+    return KSslInfoDialog_SuperEvent((KSslInfoDialog*)self, (QEvent*)event);
 }
 
 void k_sslinfodialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1744,8 +1744,8 @@ void k_sslinfodialog_mouse_press_event(void* self, void* event) {
     KSslInfoDialog_MousePressEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
-void k_sslinfodialog_qbase_mouse_press_event(void* self, void* event) {
-    KSslInfoDialog_QBaseMousePressEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
+void k_sslinfodialog_super_mouse_press_event(void* self, void* event) {
+    KSslInfoDialog_SuperMousePressEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
 void k_sslinfodialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1756,8 +1756,8 @@ void k_sslinfodialog_mouse_release_event(void* self, void* event) {
     KSslInfoDialog_MouseReleaseEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
-void k_sslinfodialog_qbase_mouse_release_event(void* self, void* event) {
-    KSslInfoDialog_QBaseMouseReleaseEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
+void k_sslinfodialog_super_mouse_release_event(void* self, void* event) {
+    KSslInfoDialog_SuperMouseReleaseEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
 void k_sslinfodialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1768,8 +1768,8 @@ void k_sslinfodialog_mouse_double_click_event(void* self, void* event) {
     KSslInfoDialog_MouseDoubleClickEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
-void k_sslinfodialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KSslInfoDialog_QBaseMouseDoubleClickEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
+void k_sslinfodialog_super_mouse_double_click_event(void* self, void* event) {
+    KSslInfoDialog_SuperMouseDoubleClickEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
 void k_sslinfodialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1780,8 +1780,8 @@ void k_sslinfodialog_mouse_move_event(void* self, void* event) {
     KSslInfoDialog_MouseMoveEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
-void k_sslinfodialog_qbase_mouse_move_event(void* self, void* event) {
-    KSslInfoDialog_QBaseMouseMoveEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
+void k_sslinfodialog_super_mouse_move_event(void* self, void* event) {
+    KSslInfoDialog_SuperMouseMoveEvent((KSslInfoDialog*)self, (QMouseEvent*)event);
 }
 
 void k_sslinfodialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1792,8 +1792,8 @@ void k_sslinfodialog_wheel_event(void* self, void* event) {
     KSslInfoDialog_WheelEvent((KSslInfoDialog*)self, (QWheelEvent*)event);
 }
 
-void k_sslinfodialog_qbase_wheel_event(void* self, void* event) {
-    KSslInfoDialog_QBaseWheelEvent((KSslInfoDialog*)self, (QWheelEvent*)event);
+void k_sslinfodialog_super_wheel_event(void* self, void* event) {
+    KSslInfoDialog_SuperWheelEvent((KSslInfoDialog*)self, (QWheelEvent*)event);
 }
 
 void k_sslinfodialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1804,8 +1804,8 @@ void k_sslinfodialog_key_release_event(void* self, void* event) {
     KSslInfoDialog_KeyReleaseEvent((KSslInfoDialog*)self, (QKeyEvent*)event);
 }
 
-void k_sslinfodialog_qbase_key_release_event(void* self, void* event) {
-    KSslInfoDialog_QBaseKeyReleaseEvent((KSslInfoDialog*)self, (QKeyEvent*)event);
+void k_sslinfodialog_super_key_release_event(void* self, void* event) {
+    KSslInfoDialog_SuperKeyReleaseEvent((KSslInfoDialog*)self, (QKeyEvent*)event);
 }
 
 void k_sslinfodialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1816,8 +1816,8 @@ void k_sslinfodialog_focus_in_event(void* self, void* event) {
     KSslInfoDialog_FocusInEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
 }
 
-void k_sslinfodialog_qbase_focus_in_event(void* self, void* event) {
-    KSslInfoDialog_QBaseFocusInEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
+void k_sslinfodialog_super_focus_in_event(void* self, void* event) {
+    KSslInfoDialog_SuperFocusInEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
 }
 
 void k_sslinfodialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1828,8 +1828,8 @@ void k_sslinfodialog_focus_out_event(void* self, void* event) {
     KSslInfoDialog_FocusOutEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
 }
 
-void k_sslinfodialog_qbase_focus_out_event(void* self, void* event) {
-    KSslInfoDialog_QBaseFocusOutEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
+void k_sslinfodialog_super_focus_out_event(void* self, void* event) {
+    KSslInfoDialog_SuperFocusOutEvent((KSslInfoDialog*)self, (QFocusEvent*)event);
 }
 
 void k_sslinfodialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1840,8 +1840,8 @@ void k_sslinfodialog_enter_event(void* self, void* event) {
     KSslInfoDialog_EnterEvent((KSslInfoDialog*)self, (QEnterEvent*)event);
 }
 
-void k_sslinfodialog_qbase_enter_event(void* self, void* event) {
-    KSslInfoDialog_QBaseEnterEvent((KSslInfoDialog*)self, (QEnterEvent*)event);
+void k_sslinfodialog_super_enter_event(void* self, void* event) {
+    KSslInfoDialog_SuperEnterEvent((KSslInfoDialog*)self, (QEnterEvent*)event);
 }
 
 void k_sslinfodialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_sslinfodialog_leave_event(void* self, void* event) {
     KSslInfoDialog_LeaveEvent((KSslInfoDialog*)self, (QEvent*)event);
 }
 
-void k_sslinfodialog_qbase_leave_event(void* self, void* event) {
-    KSslInfoDialog_QBaseLeaveEvent((KSslInfoDialog*)self, (QEvent*)event);
+void k_sslinfodialog_super_leave_event(void* self, void* event) {
+    KSslInfoDialog_SuperLeaveEvent((KSslInfoDialog*)self, (QEvent*)event);
 }
 
 void k_sslinfodialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_sslinfodialog_paint_event(void* self, void* event) {
     KSslInfoDialog_PaintEvent((KSslInfoDialog*)self, (QPaintEvent*)event);
 }
 
-void k_sslinfodialog_qbase_paint_event(void* self, void* event) {
-    KSslInfoDialog_QBasePaintEvent((KSslInfoDialog*)self, (QPaintEvent*)event);
+void k_sslinfodialog_super_paint_event(void* self, void* event) {
+    KSslInfoDialog_SuperPaintEvent((KSslInfoDialog*)self, (QPaintEvent*)event);
 }
 
 void k_sslinfodialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_sslinfodialog_move_event(void* self, void* event) {
     KSslInfoDialog_MoveEvent((KSslInfoDialog*)self, (QMoveEvent*)event);
 }
 
-void k_sslinfodialog_qbase_move_event(void* self, void* event) {
-    KSslInfoDialog_QBaseMoveEvent((KSslInfoDialog*)self, (QMoveEvent*)event);
+void k_sslinfodialog_super_move_event(void* self, void* event) {
+    KSslInfoDialog_SuperMoveEvent((KSslInfoDialog*)self, (QMoveEvent*)event);
 }
 
 void k_sslinfodialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_sslinfodialog_tablet_event(void* self, void* event) {
     KSslInfoDialog_TabletEvent((KSslInfoDialog*)self, (QTabletEvent*)event);
 }
 
-void k_sslinfodialog_qbase_tablet_event(void* self, void* event) {
-    KSslInfoDialog_QBaseTabletEvent((KSslInfoDialog*)self, (QTabletEvent*)event);
+void k_sslinfodialog_super_tablet_event(void* self, void* event) {
+    KSslInfoDialog_SuperTabletEvent((KSslInfoDialog*)self, (QTabletEvent*)event);
 }
 
 void k_sslinfodialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_sslinfodialog_action_event(void* self, void* event) {
     KSslInfoDialog_ActionEvent((KSslInfoDialog*)self, (QActionEvent*)event);
 }
 
-void k_sslinfodialog_qbase_action_event(void* self, void* event) {
-    KSslInfoDialog_QBaseActionEvent((KSslInfoDialog*)self, (QActionEvent*)event);
+void k_sslinfodialog_super_action_event(void* self, void* event) {
+    KSslInfoDialog_SuperActionEvent((KSslInfoDialog*)self, (QActionEvent*)event);
 }
 
 void k_sslinfodialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_sslinfodialog_drag_enter_event(void* self, void* event) {
     KSslInfoDialog_DragEnterEvent((KSslInfoDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_sslinfodialog_qbase_drag_enter_event(void* self, void* event) {
-    KSslInfoDialog_QBaseDragEnterEvent((KSslInfoDialog*)self, (QDragEnterEvent*)event);
+void k_sslinfodialog_super_drag_enter_event(void* self, void* event) {
+    KSslInfoDialog_SuperDragEnterEvent((KSslInfoDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_sslinfodialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_sslinfodialog_drag_move_event(void* self, void* event) {
     KSslInfoDialog_DragMoveEvent((KSslInfoDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_sslinfodialog_qbase_drag_move_event(void* self, void* event) {
-    KSslInfoDialog_QBaseDragMoveEvent((KSslInfoDialog*)self, (QDragMoveEvent*)event);
+void k_sslinfodialog_super_drag_move_event(void* self, void* event) {
+    KSslInfoDialog_SuperDragMoveEvent((KSslInfoDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_sslinfodialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_sslinfodialog_drag_leave_event(void* self, void* event) {
     KSslInfoDialog_DragLeaveEvent((KSslInfoDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_sslinfodialog_qbase_drag_leave_event(void* self, void* event) {
-    KSslInfoDialog_QBaseDragLeaveEvent((KSslInfoDialog*)self, (QDragLeaveEvent*)event);
+void k_sslinfodialog_super_drag_leave_event(void* self, void* event) {
+    KSslInfoDialog_SuperDragLeaveEvent((KSslInfoDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_sslinfodialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_sslinfodialog_drop_event(void* self, void* event) {
     KSslInfoDialog_DropEvent((KSslInfoDialog*)self, (QDropEvent*)event);
 }
 
-void k_sslinfodialog_qbase_drop_event(void* self, void* event) {
-    KSslInfoDialog_QBaseDropEvent((KSslInfoDialog*)self, (QDropEvent*)event);
+void k_sslinfodialog_super_drop_event(void* self, void* event) {
+    KSslInfoDialog_SuperDropEvent((KSslInfoDialog*)self, (QDropEvent*)event);
 }
 
 void k_sslinfodialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void k_sslinfodialog_hide_event(void* self, void* event) {
     KSslInfoDialog_HideEvent((KSslInfoDialog*)self, (QHideEvent*)event);
 }
 
-void k_sslinfodialog_qbase_hide_event(void* self, void* event) {
-    KSslInfoDialog_QBaseHideEvent((KSslInfoDialog*)self, (QHideEvent*)event);
+void k_sslinfodialog_super_hide_event(void* self, void* event) {
+    KSslInfoDialog_SuperHideEvent((KSslInfoDialog*)self, (QHideEvent*)event);
 }
 
 void k_sslinfodialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ bool k_sslinfodialog_native_event(void* self, char* eventType, void* message, in
     return KSslInfoDialog_NativeEvent((KSslInfoDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_sslinfodialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KSslInfoDialog_QBaseNativeEvent((KSslInfoDialog*)self, qstring(eventType), message, result);
+bool k_sslinfodialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KSslInfoDialog_SuperNativeEvent((KSslInfoDialog*)self, qstring(eventType), message, result);
 }
 
 void k_sslinfodialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1984,8 +1984,8 @@ void k_sslinfodialog_change_event(void* self, void* param1) {
     KSslInfoDialog_ChangeEvent((KSslInfoDialog*)self, (QEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_change_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseChangeEvent((KSslInfoDialog*)self, (QEvent*)param1);
+void k_sslinfodialog_super_change_event(void* self, void* param1) {
+    KSslInfoDialog_SuperChangeEvent((KSslInfoDialog*)self, (QEvent*)param1);
 }
 
 void k_sslinfodialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ int32_t k_sslinfodialog_metric(void* self, int32_t param1) {
     return KSslInfoDialog_Metric((KSslInfoDialog*)self, param1);
 }
 
-int32_t k_sslinfodialog_qbase_metric(void* self, int32_t param1) {
-    return KSslInfoDialog_QBaseMetric((KSslInfoDialog*)self, param1);
+int32_t k_sslinfodialog_super_metric(void* self, int32_t param1) {
+    return KSslInfoDialog_SuperMetric((KSslInfoDialog*)self, param1);
 }
 
 void k_sslinfodialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2008,8 +2008,8 @@ void k_sslinfodialog_init_painter(void* self, void* painter) {
     KSslInfoDialog_InitPainter((KSslInfoDialog*)self, (QPainter*)painter);
 }
 
-void k_sslinfodialog_qbase_init_painter(void* self, void* painter) {
-    KSslInfoDialog_QBaseInitPainter((KSslInfoDialog*)self, (QPainter*)painter);
+void k_sslinfodialog_super_init_painter(void* self, void* painter) {
+    KSslInfoDialog_SuperInitPainter((KSslInfoDialog*)self, (QPainter*)painter);
 }
 
 void k_sslinfodialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ QPaintDevice* k_sslinfodialog_redirected(void* self, void* offset) {
     return KSslInfoDialog_Redirected((KSslInfoDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_sslinfodialog_qbase_redirected(void* self, void* offset) {
-    return KSslInfoDialog_QBaseRedirected((KSslInfoDialog*)self, (QPoint*)offset);
+QPaintDevice* k_sslinfodialog_super_redirected(void* self, void* offset) {
+    return KSslInfoDialog_SuperRedirected((KSslInfoDialog*)self, (QPoint*)offset);
 }
 
 void k_sslinfodialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ QPainter* k_sslinfodialog_shared_painter(void* self) {
     return KSslInfoDialog_SharedPainter((KSslInfoDialog*)self);
 }
 
-QPainter* k_sslinfodialog_qbase_shared_painter(void* self) {
-    return KSslInfoDialog_QBaseSharedPainter((KSslInfoDialog*)self);
+QPainter* k_sslinfodialog_super_shared_painter(void* self) {
+    return KSslInfoDialog_SuperSharedPainter((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2044,8 +2044,8 @@ void k_sslinfodialog_input_method_event(void* self, void* param1) {
     KSslInfoDialog_InputMethodEvent((KSslInfoDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_sslinfodialog_qbase_input_method_event(void* self, void* param1) {
-    KSslInfoDialog_QBaseInputMethodEvent((KSslInfoDialog*)self, (QInputMethodEvent*)param1);
+void k_sslinfodialog_super_input_method_event(void* self, void* param1) {
+    KSslInfoDialog_SuperInputMethodEvent((KSslInfoDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_sslinfodialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2056,8 +2056,8 @@ QVariant* k_sslinfodialog_input_method_query(void* self, int32_t param1) {
     return KSslInfoDialog_InputMethodQuery((KSslInfoDialog*)self, param1);
 }
 
-QVariant* k_sslinfodialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KSslInfoDialog_QBaseInputMethodQuery((KSslInfoDialog*)self, param1);
+QVariant* k_sslinfodialog_super_input_method_query(void* self, int32_t param1) {
+    return KSslInfoDialog_SuperInputMethodQuery((KSslInfoDialog*)self, param1);
 }
 
 void k_sslinfodialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2068,8 +2068,8 @@ bool k_sslinfodialog_focus_next_prev_child(void* self, bool next) {
     return KSslInfoDialog_FocusNextPrevChild((KSslInfoDialog*)self, next);
 }
 
-bool k_sslinfodialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KSslInfoDialog_QBaseFocusNextPrevChild((KSslInfoDialog*)self, next);
+bool k_sslinfodialog_super_focus_next_prev_child(void* self, bool next) {
+    return KSslInfoDialog_SuperFocusNextPrevChild((KSslInfoDialog*)self, next);
 }
 
 void k_sslinfodialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2080,8 +2080,8 @@ void k_sslinfodialog_timer_event(void* self, void* event) {
     KSslInfoDialog_TimerEvent((KSslInfoDialog*)self, (QTimerEvent*)event);
 }
 
-void k_sslinfodialog_qbase_timer_event(void* self, void* event) {
-    KSslInfoDialog_QBaseTimerEvent((KSslInfoDialog*)self, (QTimerEvent*)event);
+void k_sslinfodialog_super_timer_event(void* self, void* event) {
+    KSslInfoDialog_SuperTimerEvent((KSslInfoDialog*)self, (QTimerEvent*)event);
 }
 
 void k_sslinfodialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ void k_sslinfodialog_child_event(void* self, void* event) {
     KSslInfoDialog_ChildEvent((KSslInfoDialog*)self, (QChildEvent*)event);
 }
 
-void k_sslinfodialog_qbase_child_event(void* self, void* event) {
-    KSslInfoDialog_QBaseChildEvent((KSslInfoDialog*)self, (QChildEvent*)event);
+void k_sslinfodialog_super_child_event(void* self, void* event) {
+    KSslInfoDialog_SuperChildEvent((KSslInfoDialog*)self, (QChildEvent*)event);
 }
 
 void k_sslinfodialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ void k_sslinfodialog_custom_event(void* self, void* event) {
     KSslInfoDialog_CustomEvent((KSslInfoDialog*)self, (QEvent*)event);
 }
 
-void k_sslinfodialog_qbase_custom_event(void* self, void* event) {
-    KSslInfoDialog_QBaseCustomEvent((KSslInfoDialog*)self, (QEvent*)event);
+void k_sslinfodialog_super_custom_event(void* self, void* event) {
+    KSslInfoDialog_SuperCustomEvent((KSslInfoDialog*)self, (QEvent*)event);
 }
 
 void k_sslinfodialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2116,8 +2116,8 @@ void k_sslinfodialog_connect_notify(void* self, void* signal) {
     KSslInfoDialog_ConnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_sslinfodialog_qbase_connect_notify(void* self, void* signal) {
-    KSslInfoDialog_QBaseConnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
+void k_sslinfodialog_super_connect_notify(void* self, void* signal) {
+    KSslInfoDialog_SuperConnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_sslinfodialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ void k_sslinfodialog_disconnect_notify(void* self, void* signal) {
     KSslInfoDialog_DisconnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_sslinfodialog_qbase_disconnect_notify(void* self, void* signal) {
-    KSslInfoDialog_QBaseDisconnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
+void k_sslinfodialog_super_disconnect_notify(void* self, void* signal) {
+    KSslInfoDialog_SuperDisconnectNotify((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_sslinfodialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_sslinfodialog_adjust_position(void* self, void* param1) {
     KSslInfoDialog_AdjustPosition((KSslInfoDialog*)self, (QWidget*)param1);
 }
 
-void k_sslinfodialog_qbase_adjust_position(void* self, void* param1) {
-    KSslInfoDialog_QBaseAdjustPosition((KSslInfoDialog*)self, (QWidget*)param1);
+void k_sslinfodialog_super_adjust_position(void* self, void* param1) {
+    KSslInfoDialog_SuperAdjustPosition((KSslInfoDialog*)self, (QWidget*)param1);
 }
 
 void k_sslinfodialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void k_sslinfodialog_update_micro_focus(void* self) {
     KSslInfoDialog_UpdateMicroFocus((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_update_micro_focus(void* self) {
-    KSslInfoDialog_QBaseUpdateMicroFocus((KSslInfoDialog*)self);
+void k_sslinfodialog_super_update_micro_focus(void* self) {
+    KSslInfoDialog_SuperUpdateMicroFocus((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2164,8 +2164,8 @@ void k_sslinfodialog_create(void* self) {
     KSslInfoDialog_Create((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_create(void* self) {
-    KSslInfoDialog_QBaseCreate((KSslInfoDialog*)self);
+void k_sslinfodialog_super_create(void* self) {
+    KSslInfoDialog_SuperCreate((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_create(void* self, void (*callback)()) {
@@ -2176,8 +2176,8 @@ void k_sslinfodialog_destroy(void* self) {
     KSslInfoDialog_Destroy((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_qbase_destroy(void* self) {
-    KSslInfoDialog_QBaseDestroy((KSslInfoDialog*)self);
+void k_sslinfodialog_super_destroy(void* self) {
+    KSslInfoDialog_SuperDestroy((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_destroy(void* self, void (*callback)()) {
@@ -2188,8 +2188,8 @@ bool k_sslinfodialog_focus_next_child(void* self) {
     return KSslInfoDialog_FocusNextChild((KSslInfoDialog*)self);
 }
 
-bool k_sslinfodialog_qbase_focus_next_child(void* self) {
-    return KSslInfoDialog_QBaseFocusNextChild((KSslInfoDialog*)self);
+bool k_sslinfodialog_super_focus_next_child(void* self) {
+    return KSslInfoDialog_SuperFocusNextChild((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2200,8 +2200,8 @@ bool k_sslinfodialog_focus_previous_child(void* self) {
     return KSslInfoDialog_FocusPreviousChild((KSslInfoDialog*)self);
 }
 
-bool k_sslinfodialog_qbase_focus_previous_child(void* self) {
-    return KSslInfoDialog_QBaseFocusPreviousChild((KSslInfoDialog*)self);
+bool k_sslinfodialog_super_focus_previous_child(void* self) {
+    return KSslInfoDialog_SuperFocusPreviousChild((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2212,8 +2212,8 @@ QObject* k_sslinfodialog_sender(void* self) {
     return KSslInfoDialog_Sender((KSslInfoDialog*)self);
 }
 
-QObject* k_sslinfodialog_qbase_sender(void* self) {
-    return KSslInfoDialog_QBaseSender((KSslInfoDialog*)self);
+QObject* k_sslinfodialog_super_sender(void* self) {
+    return KSslInfoDialog_SuperSender((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2224,8 +2224,8 @@ int32_t k_sslinfodialog_sender_signal_index(void* self) {
     return KSslInfoDialog_SenderSignalIndex((KSslInfoDialog*)self);
 }
 
-int32_t k_sslinfodialog_qbase_sender_signal_index(void* self) {
-    return KSslInfoDialog_QBaseSenderSignalIndex((KSslInfoDialog*)self);
+int32_t k_sslinfodialog_super_sender_signal_index(void* self) {
+    return KSslInfoDialog_SuperSenderSignalIndex((KSslInfoDialog*)self);
 }
 
 void k_sslinfodialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2236,8 +2236,8 @@ int32_t k_sslinfodialog_receivers(void* self, const char* signal) {
     return KSslInfoDialog_Receivers((KSslInfoDialog*)self, signal);
 }
 
-int32_t k_sslinfodialog_qbase_receivers(void* self, const char* signal) {
-    return KSslInfoDialog_QBaseReceivers((KSslInfoDialog*)self, signal);
+int32_t k_sslinfodialog_super_receivers(void* self, const char* signal) {
+    return KSslInfoDialog_SuperReceivers((KSslInfoDialog*)self, signal);
 }
 
 void k_sslinfodialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2248,8 +2248,8 @@ bool k_sslinfodialog_is_signal_connected(void* self, void* signal) {
     return KSslInfoDialog_IsSignalConnected((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_sslinfodialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KSslInfoDialog_QBaseIsSignalConnected((KSslInfoDialog*)self, (QMetaMethod*)signal);
+bool k_sslinfodialog_super_is_signal_connected(void* self, void* signal) {
+    return KSslInfoDialog_SuperIsSignalConnected((KSslInfoDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_sslinfodialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2260,8 +2260,8 @@ double k_sslinfodialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t
     return KSslInfoDialog_GetDecodedMetricF((KSslInfoDialog*)self, metricA, metricB);
 }
 
-double k_sslinfodialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KSslInfoDialog_QBaseGetDecodedMetricF((KSslInfoDialog*)self, metricA, metricB);
+double k_sslinfodialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KSslInfoDialog_SuperGetDecodedMetricF((KSslInfoDialog*)self, metricA, metricB);
 }
 
 void k_sslinfodialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

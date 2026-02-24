@@ -44,6 +44,10 @@ void q_sciprinter_format_page(void* self, void* painter, bool drawing, void* are
 ///
 void q_sciprinter_on_format_page(void* self, void (*callback)(void*, void*, bool, void*, int));
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_format_page` instead
+///
+#define q_sciprinter_qbase_format_page q_sciprinter_super_format_page
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// Base class method implementation
@@ -54,7 +58,7 @@ void q_sciprinter_on_format_page(void* self, void (*callback)(void*, void*, bool
 /// @param area QRect*
 /// @param pagenr int
 ///
-void q_sciprinter_qbase_format_page(void* self, void* painter, bool drawing, void* area, int pagenr);
+void q_sciprinter_super_format_page(void* self, void* painter, bool drawing, void* area, int pagenr);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -78,6 +82,10 @@ void q_sciprinter_set_magnification(void* self, int magnification);
 ///
 void q_sciprinter_on_set_magnification(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_magnification` instead
+///
+#define q_sciprinter_qbase_set_magnification q_sciprinter_super_set_magnification
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// Base class method implementation
@@ -85,7 +93,7 @@ void q_sciprinter_on_set_magnification(void* self, void (*callback)(void*, int))
 /// @param self QsciPrinter*
 /// @param magnification int
 ///
-void q_sciprinter_qbase_set_magnification(void* self, int magnification);
+void q_sciprinter_super_set_magnification(void* self, int magnification);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -106,6 +114,10 @@ int32_t q_sciprinter_print_range(void* self, void* qsb, void* painter, int from,
 ///
 void q_sciprinter_on_print_range(void* self, int32_t (*callback)(void*, void*, void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_print_range` instead
+///
+#define q_sciprinter_qbase_print_range q_sciprinter_super_print_range
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// Base class method implementation
@@ -116,7 +128,7 @@ void q_sciprinter_on_print_range(void* self, int32_t (*callback)(void*, void*, v
 /// @param from int
 /// @param to int
 ///
-int32_t q_sciprinter_qbase_print_range(void* self, void* qsb, void* painter, int from, int to);
+int32_t q_sciprinter_super_print_range(void* self, void* qsb, void* painter, int from, int to);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -136,6 +148,10 @@ int32_t q_sciprinter_print_range2(void* self, void* qsb, int from, int to);
 ///
 void q_sciprinter_on_print_range2(void* self, int32_t (*callback)(void*, void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_print_range2` instead
+///
+#define q_sciprinter_qbase_print_range2 q_sciprinter_super_print_range2
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// Base class method implementation
@@ -145,7 +161,7 @@ void q_sciprinter_on_print_range2(void* self, int32_t (*callback)(void*, void*, 
 /// @param from int
 /// @param to int
 ///
-int32_t q_sciprinter_qbase_print_range2(void* self, void* qsb, int from, int to);
+int32_t q_sciprinter_super_print_range2(void* self, void* qsb, int from, int to);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -171,6 +187,10 @@ void q_sciprinter_set_wrap_mode(void* self, int32_t wmode);
 ///
 void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_wrap_mode` instead
+///
+#define q_sciprinter_qbase_set_wrap_mode q_sciprinter_super_set_wrap_mode
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// Base class method implementation
@@ -178,7 +198,7 @@ void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t))
 /// @param self QsciPrinter*
 /// @param wmode enum QsciScintilla__WrapMode
 ///
-void q_sciprinter_qbase_set_wrap_mode(void* self, int32_t wmode);
+void q_sciprinter_super_set_wrap_mode(void* self, int32_t wmode);
 
 /// Inherited from QPrinter
 ///
@@ -743,6 +763,10 @@ int32_t q_sciprinter_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_sciprinter_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_dev_type` instead
+///
+#define q_sciprinter_qbase_dev_type q_sciprinter_super_dev_type
+
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#devType)
@@ -751,7 +775,7 @@ int32_t q_sciprinter_dev_type(void* self);
 ///
 /// @param self QsciPrinter*
 ///
-int32_t q_sciprinter_qbase_dev_type(void* self);
+int32_t q_sciprinter_super_dev_type(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -774,6 +798,10 @@ void q_sciprinter_on_dev_type(void* self, int32_t (*callback)());
 ///
 bool q_sciprinter_new_page(void* self);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_new_page` instead
+///
+#define q_sciprinter_qbase_new_page q_sciprinter_super_new_page
+
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#newPage)
@@ -782,7 +810,7 @@ bool q_sciprinter_new_page(void* self);
 ///
 /// @param self QsciPrinter*
 ///
-bool q_sciprinter_qbase_new_page(void* self);
+bool q_sciprinter_super_new_page(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -805,6 +833,10 @@ void q_sciprinter_on_new_page(void* self, bool (*callback)());
 ///
 QPaintEngine* q_sciprinter_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_paint_engine` instead
+///
+#define q_sciprinter_qbase_paint_engine q_sciprinter_super_paint_engine
+
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
@@ -813,7 +845,7 @@ QPaintEngine* q_sciprinter_paint_engine(void* self);
 ///
 /// @param self QsciPrinter*
 ///
-QPaintEngine* q_sciprinter_qbase_paint_engine(void* self);
+QPaintEngine* q_sciprinter_super_paint_engine(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -837,6 +869,10 @@ void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 int32_t q_sciprinter_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_metric` instead
+///
+#define q_sciprinter_qbase_metric q_sciprinter_super_metric
+
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#metric)
@@ -846,7 +882,7 @@ int32_t q_sciprinter_metric(void* self, int32_t param1);
 /// @param self QsciPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_sciprinter_qbase_metric(void* self, int32_t param1);
+int32_t q_sciprinter_super_metric(void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -870,6 +906,10 @@ void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 bool q_sciprinter_set_page_layout(void* self, void* pageLayout);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_page_layout` instead
+///
+#define q_sciprinter_qbase_set_page_layout q_sciprinter_super_set_page_layout
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageLayout)
@@ -879,7 +919,7 @@ bool q_sciprinter_set_page_layout(void* self, void* pageLayout);
 /// @param self QsciPrinter*
 /// @param pageLayout QPageLayout*
 ///
-bool q_sciprinter_qbase_set_page_layout(void* self, void* pageLayout);
+bool q_sciprinter_super_set_page_layout(void* self, void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -903,6 +943,10 @@ void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, void*))
 ///
 bool q_sciprinter_set_page_size(void* self, void* pageSize);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_page_size` instead
+///
+#define q_sciprinter_qbase_set_page_size q_sciprinter_super_set_page_size
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageSize)
@@ -912,7 +956,7 @@ bool q_sciprinter_set_page_size(void* self, void* pageSize);
 /// @param self QsciPrinter*
 /// @param pageSize QPageSize*
 ///
-bool q_sciprinter_qbase_set_page_size(void* self, void* pageSize);
+bool q_sciprinter_super_set_page_size(void* self, void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -936,6 +980,10 @@ void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 ///
 bool q_sciprinter_set_page_orientation(void* self, int32_t orientation);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_page_orientation` instead
+///
+#define q_sciprinter_qbase_set_page_orientation q_sciprinter_super_set_page_orientation
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageOrientation)
@@ -945,7 +993,7 @@ bool q_sciprinter_set_page_orientation(void* self, int32_t orientation);
 /// @param self QsciPrinter*
 /// @param orientation enum QPageLayout__Orientation
 ///
-bool q_sciprinter_qbase_set_page_orientation(void* self, int32_t orientation);
+bool q_sciprinter_super_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -970,6 +1018,10 @@ void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, in
 ///
 bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_page_margins` instead
+///
+#define q_sciprinter_qbase_set_page_margins q_sciprinter_super_set_page_margins
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageMargins)
@@ -980,7 +1032,7 @@ bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units);
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
 ///
-bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int32_t units);
+bool q_sciprinter_super_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1004,6 +1056,10 @@ void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*,
 ///
 void q_sciprinter_set_page_ranges(void* self, void* ranges);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_page_ranges` instead
+///
+#define q_sciprinter_qbase_set_page_ranges q_sciprinter_super_set_page_ranges
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageRanges)
@@ -1013,7 +1069,7 @@ void q_sciprinter_set_page_ranges(void* self, void* ranges);
 /// @param self QsciPrinter*
 /// @param ranges QPageRanges*
 ///
-void q_sciprinter_qbase_set_page_ranges(void* self, void* ranges);
+void q_sciprinter_super_set_page_ranges(void* self, void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1037,6 +1093,10 @@ void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, void*))
 ///
 void q_sciprinter_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_init_painter` instead
+///
+#define q_sciprinter_qbase_init_painter q_sciprinter_super_init_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -1046,7 +1106,7 @@ void q_sciprinter_init_painter(void* self, void* painter);
 /// @param self QsciPrinter*
 /// @param painter QPainter*
 ///
-void q_sciprinter_qbase_init_painter(void* self, void* painter);
+void q_sciprinter_super_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1070,6 +1130,10 @@ void q_sciprinter_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_sciprinter_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_redirected` instead
+///
+#define q_sciprinter_qbase_redirected q_sciprinter_super_redirected
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -1079,7 +1143,7 @@ QPaintDevice* q_sciprinter_redirected(void* self, void* offset);
 /// @param self QsciPrinter*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_sciprinter_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_sciprinter_super_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1102,6 +1166,10 @@ void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 QPainter* q_sciprinter_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_shared_painter` instead
+///
+#define q_sciprinter_qbase_shared_painter q_sciprinter_super_shared_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
@@ -1110,7 +1178,7 @@ QPainter* q_sciprinter_shared_painter(void* self);
 ///
 /// @param self QsciPrinter*
 ///
-QPainter* q_sciprinter_qbase_shared_painter(void* self);
+QPainter* q_sciprinter_super_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1135,6 +1203,10 @@ void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_sciprinter_set_engines(void* self, void* printEngine, void* paintEngine);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_set_engines` instead
+///
+#define q_sciprinter_qbase_set_engines q_sciprinter_super_set_engines
+
 /// Inherited from QPrinter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setEngines)
@@ -1145,7 +1217,7 @@ void q_sciprinter_set_engines(void* self, void* printEngine, void* paintEngine);
 /// @param printEngine QPrintEngine*
 /// @param paintEngine QPaintEngine*
 ///
-void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEngine);
+void q_sciprinter_super_set_engines(void* self, void* printEngine, void* paintEngine);
 
 /// Inherited from QPrinter
 ///
@@ -1170,6 +1242,10 @@ void q_sciprinter_on_set_engines(void* self, void (*callback)(void*, void*, void
 ///
 double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_sciprinter_super_get_decoded_metric_f` instead
+///
+#define q_sciprinter_qbase_get_decoded_metric_f q_sciprinter_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -1180,7 +1256,7 @@ double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_sciprinter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_sciprinter_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

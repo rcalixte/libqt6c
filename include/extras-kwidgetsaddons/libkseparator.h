@@ -76,13 +76,17 @@ const QMetaObject* k_separator_meta_object(void* self);
 ///
 void k_separator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_separator_super_meta_object` instead
+///
+#define k_separator_qbase_meta_object k_separator_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KSeparator*
 ///
-const QMetaObject* k_separator_qbase_meta_object(void* self);
+const QMetaObject* k_separator_super_meta_object(void* self);
 
 /// @param self KSeparator*
 /// @param param1 const char*
@@ -96,12 +100,16 @@ void* k_separator_metacast(void* self, const char* param1);
 ///
 void k_separator_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_separator_super_metacast` instead
+///
+#define k_separator_qbase_metacast k_separator_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KSeparator*
 /// @param param1 const char*
 ///
-void* k_separator_qbase_metacast(void* self, const char* param1);
+void* k_separator_super_metacast(void* self, const char* param1);
 
 /// @param self KSeparator*
 /// @param param1 enum QMetaObject__Call
@@ -117,6 +125,10 @@ int32_t k_separator_metacall(void* self, int32_t param1, int param2, void* param
 ///
 void k_separator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_separator_super_metacall` instead
+///
+#define k_separator_qbase_metacall k_separator_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KSeparator*
@@ -124,7 +136,7 @@ void k_separator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_separator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_separator_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3249,6 +3261,10 @@ int32_t k_separator_encode_metric_f(int32_t metric, double value);
 ///
 QSize* k_separator_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_size_hint` instead
+///
+#define k_separator_qbase_size_hint k_separator_super_size_hint
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#sizeHint)
@@ -3257,7 +3273,7 @@ QSize* k_separator_size_hint(void* self);
 ///
 /// @param self KSeparator*
 ///
-QSize* k_separator_qbase_size_hint(void* self);
+QSize* k_separator_super_size_hint(void* self);
 
 /// Inherited from QFrame
 ///
@@ -3281,6 +3297,10 @@ void k_separator_on_size_hint(void* self, QSize* (*callback)());
 ///
 bool k_separator_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_separator_super_event` instead
+///
+#define k_separator_qbase_event k_separator_super_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#event)
@@ -3290,7 +3310,7 @@ bool k_separator_event(void* self, void* e);
 /// @param self KSeparator*
 /// @param e QEvent*
 ///
-bool k_separator_qbase_event(void* self, void* e);
+bool k_separator_super_event(void* self, void* e);
 
 /// Inherited from QFrame
 ///
@@ -3314,6 +3334,10 @@ void k_separator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_separator_paint_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_paint_event` instead
+///
+#define k_separator_qbase_paint_event k_separator_super_paint_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#paintEvent)
@@ -3323,7 +3347,7 @@ void k_separator_paint_event(void* self, void* param1);
 /// @param self KSeparator*
 /// @param param1 QPaintEvent*
 ///
-void k_separator_qbase_paint_event(void* self, void* param1);
+void k_separator_super_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -3347,6 +3371,10 @@ void k_separator_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_change_event` instead
+///
+#define k_separator_qbase_change_event k_separator_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -3356,7 +3384,7 @@ void k_separator_change_event(void* self, void* param1);
 /// @param self KSeparator*
 /// @param param1 QEvent*
 ///
-void k_separator_qbase_change_event(void* self, void* param1);
+void k_separator_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -3380,6 +3408,10 @@ void k_separator_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_separator_super_init_style_option` instead
+///
+#define k_separator_qbase_init_style_option k_separator_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -3389,7 +3421,7 @@ void k_separator_init_style_option(void* self, void* option);
 /// @param self KSeparator*
 /// @param option QStyleOptionFrame*
 ///
-void k_separator_qbase_init_style_option(void* self, void* option);
+void k_separator_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -3412,6 +3444,10 @@ void k_separator_on_init_style_option(void* self, void (*callback)(void*, void*)
 ///
 int32_t k_separator_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_dev_type` instead
+///
+#define k_separator_qbase_dev_type k_separator_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3420,7 +3456,7 @@ int32_t k_separator_dev_type(void* self);
 ///
 /// @param self KSeparator*
 ///
-int32_t k_separator_qbase_dev_type(void* self);
+int32_t k_separator_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3444,6 +3480,10 @@ void k_separator_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_separator_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_separator_super_set_visible` instead
+///
+#define k_separator_qbase_set_visible k_separator_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3453,7 +3493,7 @@ void k_separator_set_visible(void* self, bool visible);
 /// @param self KSeparator*
 /// @param visible bool
 ///
-void k_separator_qbase_set_visible(void* self, bool visible);
+void k_separator_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -3476,6 +3516,10 @@ void k_separator_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_separator_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_minimum_size_hint` instead
+///
+#define k_separator_qbase_minimum_size_hint k_separator_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -3484,7 +3528,7 @@ QSize* k_separator_minimum_size_hint(void* self);
 ///
 /// @param self KSeparator*
 ///
-QSize* k_separator_qbase_minimum_size_hint(void* self);
+QSize* k_separator_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3508,6 +3552,10 @@ void k_separator_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_separator_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_height_for_width` instead
+///
+#define k_separator_qbase_height_for_width k_separator_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3517,7 +3565,7 @@ int32_t k_separator_height_for_width(void* self, int param1);
 /// @param self KSeparator*
 /// @param param1 int
 ///
-int32_t k_separator_qbase_height_for_width(void* self, int param1);
+int32_t k_separator_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3540,6 +3588,10 @@ void k_separator_on_height_for_width(void* self, int32_t (*callback)(void*, int)
 ///
 bool k_separator_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_has_height_for_width` instead
+///
+#define k_separator_qbase_has_height_for_width k_separator_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3548,7 +3600,7 @@ bool k_separator_has_height_for_width(void* self);
 ///
 /// @param self KSeparator*
 ///
-bool k_separator_qbase_has_height_for_width(void* self);
+bool k_separator_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3571,6 +3623,10 @@ void k_separator_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_separator_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_paint_engine` instead
+///
+#define k_separator_qbase_paint_engine k_separator_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3579,7 +3635,7 @@ QPaintEngine* k_separator_paint_engine(void* self);
 ///
 /// @param self KSeparator*
 ///
-QPaintEngine* k_separator_qbase_paint_engine(void* self);
+QPaintEngine* k_separator_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3603,6 +3659,10 @@ void k_separator_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_separator_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_mouse_press_event` instead
+///
+#define k_separator_qbase_mouse_press_event k_separator_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3612,7 +3672,7 @@ void k_separator_mouse_press_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QMouseEvent*
 ///
-void k_separator_qbase_mouse_press_event(void* self, void* event);
+void k_separator_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3636,6 +3696,10 @@ void k_separator_on_mouse_press_event(void* self, void (*callback)(void*, void*)
 ///
 void k_separator_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_mouse_release_event` instead
+///
+#define k_separator_qbase_mouse_release_event k_separator_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3645,7 +3709,7 @@ void k_separator_mouse_release_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QMouseEvent*
 ///
-void k_separator_qbase_mouse_release_event(void* self, void* event);
+void k_separator_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3669,6 +3733,10 @@ void k_separator_on_mouse_release_event(void* self, void (*callback)(void*, void
 ///
 void k_separator_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_mouse_double_click_event` instead
+///
+#define k_separator_qbase_mouse_double_click_event k_separator_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3678,7 +3746,7 @@ void k_separator_mouse_double_click_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QMouseEvent*
 ///
-void k_separator_qbase_mouse_double_click_event(void* self, void* event);
+void k_separator_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3702,6 +3770,10 @@ void k_separator_on_mouse_double_click_event(void* self, void (*callback)(void*,
 ///
 void k_separator_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_mouse_move_event` instead
+///
+#define k_separator_qbase_mouse_move_event k_separator_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3711,7 +3783,7 @@ void k_separator_mouse_move_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QMouseEvent*
 ///
-void k_separator_qbase_mouse_move_event(void* self, void* event);
+void k_separator_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3735,6 +3807,10 @@ void k_separator_on_mouse_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_separator_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_wheel_event` instead
+///
+#define k_separator_qbase_wheel_event k_separator_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3744,7 +3820,7 @@ void k_separator_wheel_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QWheelEvent*
 ///
-void k_separator_qbase_wheel_event(void* self, void* event);
+void k_separator_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3768,6 +3844,10 @@ void k_separator_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_key_press_event` instead
+///
+#define k_separator_qbase_key_press_event k_separator_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3777,7 +3857,7 @@ void k_separator_key_press_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QKeyEvent*
 ///
-void k_separator_qbase_key_press_event(void* self, void* event);
+void k_separator_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3801,6 +3881,10 @@ void k_separator_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_key_release_event` instead
+///
+#define k_separator_qbase_key_release_event k_separator_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3810,7 +3894,7 @@ void k_separator_key_release_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QKeyEvent*
 ///
-void k_separator_qbase_key_release_event(void* self, void* event);
+void k_separator_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3834,6 +3918,10 @@ void k_separator_on_key_release_event(void* self, void (*callback)(void*, void*)
 ///
 void k_separator_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_focus_in_event` instead
+///
+#define k_separator_qbase_focus_in_event k_separator_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3843,7 +3931,7 @@ void k_separator_focus_in_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QFocusEvent*
 ///
-void k_separator_qbase_focus_in_event(void* self, void* event);
+void k_separator_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3867,6 +3955,10 @@ void k_separator_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_focus_out_event` instead
+///
+#define k_separator_qbase_focus_out_event k_separator_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3876,7 +3968,7 @@ void k_separator_focus_out_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QFocusEvent*
 ///
-void k_separator_qbase_focus_out_event(void* self, void* event);
+void k_separator_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3900,6 +3992,10 @@ void k_separator_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_enter_event` instead
+///
+#define k_separator_qbase_enter_event k_separator_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -3909,7 +4005,7 @@ void k_separator_enter_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QEnterEvent*
 ///
-void k_separator_qbase_enter_event(void* self, void* event);
+void k_separator_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3933,6 +4029,10 @@ void k_separator_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_leave_event` instead
+///
+#define k_separator_qbase_leave_event k_separator_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3942,7 +4042,7 @@ void k_separator_leave_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QEvent*
 ///
-void k_separator_qbase_leave_event(void* self, void* event);
+void k_separator_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3966,6 +4066,10 @@ void k_separator_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_move_event` instead
+///
+#define k_separator_qbase_move_event k_separator_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3975,7 +4079,7 @@ void k_separator_move_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QMoveEvent*
 ///
-void k_separator_qbase_move_event(void* self, void* event);
+void k_separator_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3999,6 +4103,10 @@ void k_separator_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_resize_event` instead
+///
+#define k_separator_qbase_resize_event k_separator_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4008,7 +4116,7 @@ void k_separator_resize_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QResizeEvent*
 ///
-void k_separator_qbase_resize_event(void* self, void* event);
+void k_separator_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4032,6 +4140,10 @@ void k_separator_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_close_event` instead
+///
+#define k_separator_qbase_close_event k_separator_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4041,7 +4153,7 @@ void k_separator_close_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QCloseEvent*
 ///
-void k_separator_qbase_close_event(void* self, void* event);
+void k_separator_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4065,6 +4177,10 @@ void k_separator_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_context_menu_event` instead
+///
+#define k_separator_qbase_context_menu_event k_separator_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4074,7 +4190,7 @@ void k_separator_context_menu_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QContextMenuEvent*
 ///
-void k_separator_qbase_context_menu_event(void* self, void* event);
+void k_separator_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4098,6 +4214,10 @@ void k_separator_on_context_menu_event(void* self, void (*callback)(void*, void*
 ///
 void k_separator_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_tablet_event` instead
+///
+#define k_separator_qbase_tablet_event k_separator_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4107,7 +4227,7 @@ void k_separator_tablet_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QTabletEvent*
 ///
-void k_separator_qbase_tablet_event(void* self, void* event);
+void k_separator_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4131,6 +4251,10 @@ void k_separator_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_action_event` instead
+///
+#define k_separator_qbase_action_event k_separator_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4140,7 +4264,7 @@ void k_separator_action_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QActionEvent*
 ///
-void k_separator_qbase_action_event(void* self, void* event);
+void k_separator_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4164,6 +4288,10 @@ void k_separator_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_drag_enter_event` instead
+///
+#define k_separator_qbase_drag_enter_event k_separator_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4173,7 +4301,7 @@ void k_separator_drag_enter_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QDragEnterEvent*
 ///
-void k_separator_qbase_drag_enter_event(void* self, void* event);
+void k_separator_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4197,6 +4325,10 @@ void k_separator_on_drag_enter_event(void* self, void (*callback)(void*, void*))
 ///
 void k_separator_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_drag_move_event` instead
+///
+#define k_separator_qbase_drag_move_event k_separator_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4206,7 +4338,7 @@ void k_separator_drag_move_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QDragMoveEvent*
 ///
-void k_separator_qbase_drag_move_event(void* self, void* event);
+void k_separator_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4230,6 +4362,10 @@ void k_separator_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_drag_leave_event` instead
+///
+#define k_separator_qbase_drag_leave_event k_separator_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4239,7 +4375,7 @@ void k_separator_drag_leave_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QDragLeaveEvent*
 ///
-void k_separator_qbase_drag_leave_event(void* self, void* event);
+void k_separator_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4263,6 +4399,10 @@ void k_separator_on_drag_leave_event(void* self, void (*callback)(void*, void*))
 ///
 void k_separator_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_drop_event` instead
+///
+#define k_separator_qbase_drop_event k_separator_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4272,7 +4412,7 @@ void k_separator_drop_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QDropEvent*
 ///
-void k_separator_qbase_drop_event(void* self, void* event);
+void k_separator_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4296,6 +4436,10 @@ void k_separator_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_show_event` instead
+///
+#define k_separator_qbase_show_event k_separator_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4305,7 +4449,7 @@ void k_separator_show_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QShowEvent*
 ///
-void k_separator_qbase_show_event(void* self, void* event);
+void k_separator_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4329,6 +4473,10 @@ void k_separator_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_hide_event` instead
+///
+#define k_separator_qbase_hide_event k_separator_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4338,7 +4486,7 @@ void k_separator_hide_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QHideEvent*
 ///
-void k_separator_qbase_hide_event(void* self, void* event);
+void k_separator_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4364,6 +4512,10 @@ void k_separator_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_separator_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_separator_super_native_event` instead
+///
+#define k_separator_qbase_native_event k_separator_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4375,7 +4527,7 @@ bool k_separator_native_event(void* self, char* eventType, void* message, intptr
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_separator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_separator_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4399,6 +4551,10 @@ void k_separator_on_native_event(void* self, bool (*callback)(void*, libqt_strin
 ///
 int32_t k_separator_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_metric` instead
+///
+#define k_separator_qbase_metric k_separator_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4408,7 +4564,7 @@ int32_t k_separator_metric(void* self, int32_t param1);
 /// @param self KSeparator*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_separator_qbase_metric(void* self, int32_t param1);
+int32_t k_separator_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4432,6 +4588,10 @@ void k_separator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_separator_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_separator_super_init_painter` instead
+///
+#define k_separator_qbase_init_painter k_separator_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4441,7 +4601,7 @@ void k_separator_init_painter(void* self, void* painter);
 /// @param self KSeparator*
 /// @param painter QPainter*
 ///
-void k_separator_qbase_init_painter(void* self, void* painter);
+void k_separator_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4465,6 +4625,10 @@ void k_separator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_separator_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_separator_super_redirected` instead
+///
+#define k_separator_qbase_redirected k_separator_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4474,7 +4638,7 @@ QPaintDevice* k_separator_redirected(void* self, void* offset);
 /// @param self KSeparator*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_separator_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_separator_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4497,6 +4661,10 @@ void k_separator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 QPainter* k_separator_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_shared_painter` instead
+///
+#define k_separator_qbase_shared_painter k_separator_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4505,7 +4673,7 @@ QPainter* k_separator_shared_painter(void* self);
 ///
 /// @param self KSeparator*
 ///
-QPainter* k_separator_qbase_shared_painter(void* self);
+QPainter* k_separator_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4529,6 +4697,10 @@ void k_separator_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_separator_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_input_method_event` instead
+///
+#define k_separator_qbase_input_method_event k_separator_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4538,7 +4710,7 @@ void k_separator_input_method_event(void* self, void* param1);
 /// @param self KSeparator*
 /// @param param1 QInputMethodEvent*
 ///
-void k_separator_qbase_input_method_event(void* self, void* param1);
+void k_separator_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4562,6 +4734,10 @@ void k_separator_on_input_method_event(void* self, void (*callback)(void*, void*
 ///
 QVariant* k_separator_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_input_method_query` instead
+///
+#define k_separator_qbase_input_method_query k_separator_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4571,7 +4747,7 @@ QVariant* k_separator_input_method_query(void* self, int32_t param1);
 /// @param self KSeparator*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_separator_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_separator_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4595,6 +4771,10 @@ void k_separator_on_input_method_query(void* self, QVariant* (*callback)(void*, 
 ///
 bool k_separator_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_separator_super_focus_next_prev_child` instead
+///
+#define k_separator_qbase_focus_next_prev_child k_separator_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4604,7 +4784,7 @@ bool k_separator_focus_next_prev_child(void* self, bool next);
 /// @param self KSeparator*
 /// @param next bool
 ///
-bool k_separator_qbase_focus_next_prev_child(void* self, bool next);
+bool k_separator_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4629,6 +4809,10 @@ void k_separator_on_focus_next_prev_child(void* self, bool (*callback)(void*, bo
 ///
 bool k_separator_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_event_filter` instead
+///
+#define k_separator_qbase_event_filter k_separator_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4639,7 +4823,7 @@ bool k_separator_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_separator_qbase_event_filter(void* self, void* watched, void* event);
+bool k_separator_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4663,6 +4847,10 @@ void k_separator_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void k_separator_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_timer_event` instead
+///
+#define k_separator_qbase_timer_event k_separator_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4672,7 +4860,7 @@ void k_separator_timer_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QTimerEvent*
 ///
-void k_separator_qbase_timer_event(void* self, void* event);
+void k_separator_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4696,6 +4884,10 @@ void k_separator_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_child_event` instead
+///
+#define k_separator_qbase_child_event k_separator_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4705,7 +4897,7 @@ void k_separator_child_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QChildEvent*
 ///
-void k_separator_qbase_child_event(void* self, void* event);
+void k_separator_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4729,6 +4921,10 @@ void k_separator_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_separator_super_custom_event` instead
+///
+#define k_separator_qbase_custom_event k_separator_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4738,7 +4934,7 @@ void k_separator_custom_event(void* self, void* event);
 /// @param self KSeparator*
 /// @param event QEvent*
 ///
-void k_separator_qbase_custom_event(void* self, void* event);
+void k_separator_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4762,6 +4958,10 @@ void k_separator_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_separator_super_connect_notify` instead
+///
+#define k_separator_qbase_connect_notify k_separator_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4771,7 +4971,7 @@ void k_separator_connect_notify(void* self, void* signal);
 /// @param self KSeparator*
 /// @param signal QMetaMethod*
 ///
-void k_separator_qbase_connect_notify(void* self, void* signal);
+void k_separator_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4795,6 +4995,10 @@ void k_separator_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_separator_super_disconnect_notify` instead
+///
+#define k_separator_qbase_disconnect_notify k_separator_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4804,7 +5008,7 @@ void k_separator_disconnect_notify(void* self, void* signal);
 /// @param self KSeparator*
 /// @param signal QMetaMethod*
 ///
-void k_separator_qbase_disconnect_notify(void* self, void* signal);
+void k_separator_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4828,6 +5032,10 @@ void k_separator_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_separator_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_separator_super_draw_frame` instead
+///
+#define k_separator_qbase_draw_frame k_separator_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -4837,7 +5045,7 @@ void k_separator_draw_frame(void* self, void* param1);
 /// @param self KSeparator*
 /// @param param1 QPainter*
 ///
-void k_separator_qbase_draw_frame(void* self, void* param1);
+void k_separator_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -4860,6 +5068,10 @@ void k_separator_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void k_separator_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_update_micro_focus` instead
+///
+#define k_separator_qbase_update_micro_focus k_separator_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4868,7 +5080,7 @@ void k_separator_update_micro_focus(void* self);
 ///
 /// @param self KSeparator*
 ///
-void k_separator_qbase_update_micro_focus(void* self);
+void k_separator_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4891,6 +5103,10 @@ void k_separator_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_separator_create(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_create` instead
+///
+#define k_separator_qbase_create k_separator_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4899,7 +5115,7 @@ void k_separator_create(void* self);
 ///
 /// @param self KSeparator*
 ///
-void k_separator_qbase_create(void* self);
+void k_separator_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4922,6 +5138,10 @@ void k_separator_on_create(void* self, void (*callback)());
 ///
 void k_separator_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_destroy` instead
+///
+#define k_separator_qbase_destroy k_separator_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4930,7 +5150,7 @@ void k_separator_destroy(void* self);
 ///
 /// @param self KSeparator*
 ///
-void k_separator_qbase_destroy(void* self);
+void k_separator_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4953,6 +5173,10 @@ void k_separator_on_destroy(void* self, void (*callback)());
 ///
 bool k_separator_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_focus_next_child` instead
+///
+#define k_separator_qbase_focus_next_child k_separator_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -4961,7 +5185,7 @@ bool k_separator_focus_next_child(void* self);
 ///
 /// @param self KSeparator*
 ///
-bool k_separator_qbase_focus_next_child(void* self);
+bool k_separator_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4984,6 +5208,10 @@ void k_separator_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_separator_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_focus_previous_child` instead
+///
+#define k_separator_qbase_focus_previous_child k_separator_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -4992,7 +5220,7 @@ bool k_separator_focus_previous_child(void* self);
 ///
 /// @param self KSeparator*
 ///
-bool k_separator_qbase_focus_previous_child(void* self);
+bool k_separator_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5015,6 +5243,10 @@ void k_separator_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_separator_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_sender` instead
+///
+#define k_separator_qbase_sender k_separator_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5023,7 +5255,7 @@ QObject* k_separator_sender(void* self);
 ///
 /// @param self KSeparator*
 ///
-QObject* k_separator_qbase_sender(void* self);
+QObject* k_separator_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5046,6 +5278,10 @@ void k_separator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_separator_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_separator_super_sender_signal_index` instead
+///
+#define k_separator_qbase_sender_signal_index k_separator_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5054,7 +5290,7 @@ int32_t k_separator_sender_signal_index(void* self);
 ///
 /// @param self KSeparator*
 ///
-int32_t k_separator_qbase_sender_signal_index(void* self);
+int32_t k_separator_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5078,6 +5314,10 @@ void k_separator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_separator_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_separator_super_receivers` instead
+///
+#define k_separator_qbase_receivers k_separator_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5087,7 +5327,7 @@ int32_t k_separator_receivers(void* self, const char* signal);
 /// @param self KSeparator*
 /// @param signal const char*
 ///
-int32_t k_separator_qbase_receivers(void* self, const char* signal);
+int32_t k_separator_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5111,6 +5351,10 @@ void k_separator_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool k_separator_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_separator_super_is_signal_connected` instead
+///
+#define k_separator_qbase_is_signal_connected k_separator_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5120,7 +5364,7 @@ bool k_separator_is_signal_connected(void* self, void* signal);
 /// @param self KSeparator*
 /// @param signal QMetaMethod*
 ///
-bool k_separator_qbase_is_signal_connected(void* self, void* signal);
+bool k_separator_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5145,6 +5389,10 @@ void k_separator_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 double k_separator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_separator_super_get_decoded_metric_f` instead
+///
+#define k_separator_qbase_get_decoded_metric_f k_separator_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5155,7 +5403,7 @@ double k_separator_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_separator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_separator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

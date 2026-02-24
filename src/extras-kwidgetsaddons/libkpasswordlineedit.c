@@ -31,8 +31,8 @@ void k_passwordlineedit_on_meta_object(void* self, const QMetaObject* (*callback
     KPasswordLineEdit_OnMetaObject((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_passwordlineedit_qbase_meta_object(void* self) {
-    return KPasswordLineEdit_QBaseMetaObject((KPasswordLineEdit*)self);
+const QMetaObject* k_passwordlineedit_super_meta_object(void* self) {
+    return KPasswordLineEdit_SuperMetaObject((KPasswordLineEdit*)self);
 }
 
 void* k_passwordlineedit_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_passwordlineedit_on_metacast(void* self, void* (*callback)(void*, const c
     KPasswordLineEdit_OnMetacast((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
-void* k_passwordlineedit_qbase_metacast(void* self, const char* param1) {
-    return KPasswordLineEdit_QBaseMetacast((KPasswordLineEdit*)self, param1);
+void* k_passwordlineedit_super_metacast(void* self, const char* param1) {
+    return KPasswordLineEdit_SuperMetacast((KPasswordLineEdit*)self, param1);
 }
 
 int32_t k_passwordlineedit_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_passwordlineedit_on_metacall(void* self, int32_t (*callback)(void*, int32
     KPasswordLineEdit_OnMetacall((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
-int32_t k_passwordlineedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPasswordLineEdit_QBaseMetacall((KPasswordLineEdit*)self, param1, param2, param3);
+int32_t k_passwordlineedit_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPasswordLineEdit_SuperMetacall((KPasswordLineEdit*)self, param1, param2, param3);
 }
 
 const char* k_passwordlineedit_tr(const char* s) {
@@ -1544,8 +1544,8 @@ int32_t k_passwordlineedit_dev_type(void* self) {
     return KPasswordLineEdit_DevType((KPasswordLineEdit*)self);
 }
 
-int32_t k_passwordlineedit_qbase_dev_type(void* self) {
-    return KPasswordLineEdit_QBaseDevType((KPasswordLineEdit*)self);
+int32_t k_passwordlineedit_super_dev_type(void* self) {
+    return KPasswordLineEdit_SuperDevType((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1556,8 +1556,8 @@ void k_passwordlineedit_set_visible(void* self, bool visible) {
     KPasswordLineEdit_SetVisible((KPasswordLineEdit*)self, visible);
 }
 
-void k_passwordlineedit_qbase_set_visible(void* self, bool visible) {
-    KPasswordLineEdit_QBaseSetVisible((KPasswordLineEdit*)self, visible);
+void k_passwordlineedit_super_set_visible(void* self, bool visible) {
+    KPasswordLineEdit_SuperSetVisible((KPasswordLineEdit*)self, visible);
 }
 
 void k_passwordlineedit_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1568,8 +1568,8 @@ QSize* k_passwordlineedit_size_hint(void* self) {
     return KPasswordLineEdit_SizeHint((KPasswordLineEdit*)self);
 }
 
-QSize* k_passwordlineedit_qbase_size_hint(void* self) {
-    return KPasswordLineEdit_QBaseSizeHint((KPasswordLineEdit*)self);
+QSize* k_passwordlineedit_super_size_hint(void* self) {
+    return KPasswordLineEdit_SuperSizeHint((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1580,8 +1580,8 @@ QSize* k_passwordlineedit_minimum_size_hint(void* self) {
     return KPasswordLineEdit_MinimumSizeHint((KPasswordLineEdit*)self);
 }
 
-QSize* k_passwordlineedit_qbase_minimum_size_hint(void* self) {
-    return KPasswordLineEdit_QBaseMinimumSizeHint((KPasswordLineEdit*)self);
+QSize* k_passwordlineedit_super_minimum_size_hint(void* self) {
+    return KPasswordLineEdit_SuperMinimumSizeHint((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1592,8 +1592,8 @@ int32_t k_passwordlineedit_height_for_width(void* self, int param1) {
     return KPasswordLineEdit_HeightForWidth((KPasswordLineEdit*)self, param1);
 }
 
-int32_t k_passwordlineedit_qbase_height_for_width(void* self, int param1) {
-    return KPasswordLineEdit_QBaseHeightForWidth((KPasswordLineEdit*)self, param1);
+int32_t k_passwordlineedit_super_height_for_width(void* self, int param1) {
+    return KPasswordLineEdit_SuperHeightForWidth((KPasswordLineEdit*)self, param1);
 }
 
 void k_passwordlineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1604,8 +1604,8 @@ bool k_passwordlineedit_has_height_for_width(void* self) {
     return KPasswordLineEdit_HasHeightForWidth((KPasswordLineEdit*)self);
 }
 
-bool k_passwordlineedit_qbase_has_height_for_width(void* self) {
-    return KPasswordLineEdit_QBaseHasHeightForWidth((KPasswordLineEdit*)self);
+bool k_passwordlineedit_super_has_height_for_width(void* self) {
+    return KPasswordLineEdit_SuperHasHeightForWidth((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1616,8 +1616,8 @@ QPaintEngine* k_passwordlineedit_paint_engine(void* self) {
     return KPasswordLineEdit_PaintEngine((KPasswordLineEdit*)self);
 }
 
-QPaintEngine* k_passwordlineedit_qbase_paint_engine(void* self) {
-    return KPasswordLineEdit_QBasePaintEngine((KPasswordLineEdit*)self);
+QPaintEngine* k_passwordlineedit_super_paint_engine(void* self) {
+    return KPasswordLineEdit_SuperPaintEngine((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1628,8 +1628,8 @@ bool k_passwordlineedit_event(void* self, void* event) {
     return KPasswordLineEdit_Event((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
-bool k_passwordlineedit_qbase_event(void* self, void* event) {
-    return KPasswordLineEdit_QBaseEvent((KPasswordLineEdit*)self, (QEvent*)event);
+bool k_passwordlineedit_super_event(void* self, void* event) {
+    return KPasswordLineEdit_SuperEvent((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
 void k_passwordlineedit_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1640,8 +1640,8 @@ void k_passwordlineedit_mouse_press_event(void* self, void* event) {
     KPasswordLineEdit_MousePressEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
-void k_passwordlineedit_qbase_mouse_press_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseMousePressEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
+void k_passwordlineedit_super_mouse_press_event(void* self, void* event) {
+    KPasswordLineEdit_SuperMousePressEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
 void k_passwordlineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1652,8 +1652,8 @@ void k_passwordlineedit_mouse_release_event(void* self, void* event) {
     KPasswordLineEdit_MouseReleaseEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
-void k_passwordlineedit_qbase_mouse_release_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseMouseReleaseEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
+void k_passwordlineedit_super_mouse_release_event(void* self, void* event) {
+    KPasswordLineEdit_SuperMouseReleaseEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
 void k_passwordlineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1664,8 +1664,8 @@ void k_passwordlineedit_mouse_double_click_event(void* self, void* event) {
     KPasswordLineEdit_MouseDoubleClickEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
-void k_passwordlineedit_qbase_mouse_double_click_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseMouseDoubleClickEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
+void k_passwordlineedit_super_mouse_double_click_event(void* self, void* event) {
+    KPasswordLineEdit_SuperMouseDoubleClickEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
 void k_passwordlineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1676,8 +1676,8 @@ void k_passwordlineedit_mouse_move_event(void* self, void* event) {
     KPasswordLineEdit_MouseMoveEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
-void k_passwordlineedit_qbase_mouse_move_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseMouseMoveEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
+void k_passwordlineedit_super_mouse_move_event(void* self, void* event) {
+    KPasswordLineEdit_SuperMouseMoveEvent((KPasswordLineEdit*)self, (QMouseEvent*)event);
 }
 
 void k_passwordlineedit_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1688,8 +1688,8 @@ void k_passwordlineedit_wheel_event(void* self, void* event) {
     KPasswordLineEdit_WheelEvent((KPasswordLineEdit*)self, (QWheelEvent*)event);
 }
 
-void k_passwordlineedit_qbase_wheel_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseWheelEvent((KPasswordLineEdit*)self, (QWheelEvent*)event);
+void k_passwordlineedit_super_wheel_event(void* self, void* event) {
+    KPasswordLineEdit_SuperWheelEvent((KPasswordLineEdit*)self, (QWheelEvent*)event);
 }
 
 void k_passwordlineedit_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1700,8 +1700,8 @@ void k_passwordlineedit_key_press_event(void* self, void* event) {
     KPasswordLineEdit_KeyPressEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
 }
 
-void k_passwordlineedit_qbase_key_press_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseKeyPressEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
+void k_passwordlineedit_super_key_press_event(void* self, void* event) {
+    KPasswordLineEdit_SuperKeyPressEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
 }
 
 void k_passwordlineedit_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1712,8 +1712,8 @@ void k_passwordlineedit_key_release_event(void* self, void* event) {
     KPasswordLineEdit_KeyReleaseEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
 }
 
-void k_passwordlineedit_qbase_key_release_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseKeyReleaseEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
+void k_passwordlineedit_super_key_release_event(void* self, void* event) {
+    KPasswordLineEdit_SuperKeyReleaseEvent((KPasswordLineEdit*)self, (QKeyEvent*)event);
 }
 
 void k_passwordlineedit_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1724,8 +1724,8 @@ void k_passwordlineedit_focus_in_event(void* self, void* event) {
     KPasswordLineEdit_FocusInEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
 }
 
-void k_passwordlineedit_qbase_focus_in_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseFocusInEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
+void k_passwordlineedit_super_focus_in_event(void* self, void* event) {
+    KPasswordLineEdit_SuperFocusInEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
 }
 
 void k_passwordlineedit_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1736,8 +1736,8 @@ void k_passwordlineedit_focus_out_event(void* self, void* event) {
     KPasswordLineEdit_FocusOutEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
 }
 
-void k_passwordlineedit_qbase_focus_out_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseFocusOutEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
+void k_passwordlineedit_super_focus_out_event(void* self, void* event) {
+    KPasswordLineEdit_SuperFocusOutEvent((KPasswordLineEdit*)self, (QFocusEvent*)event);
 }
 
 void k_passwordlineedit_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1748,8 +1748,8 @@ void k_passwordlineedit_enter_event(void* self, void* event) {
     KPasswordLineEdit_EnterEvent((KPasswordLineEdit*)self, (QEnterEvent*)event);
 }
 
-void k_passwordlineedit_qbase_enter_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseEnterEvent((KPasswordLineEdit*)self, (QEnterEvent*)event);
+void k_passwordlineedit_super_enter_event(void* self, void* event) {
+    KPasswordLineEdit_SuperEnterEvent((KPasswordLineEdit*)self, (QEnterEvent*)event);
 }
 
 void k_passwordlineedit_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1760,8 +1760,8 @@ void k_passwordlineedit_leave_event(void* self, void* event) {
     KPasswordLineEdit_LeaveEvent((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
-void k_passwordlineedit_qbase_leave_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseLeaveEvent((KPasswordLineEdit*)self, (QEvent*)event);
+void k_passwordlineedit_super_leave_event(void* self, void* event) {
+    KPasswordLineEdit_SuperLeaveEvent((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
 void k_passwordlineedit_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1772,8 +1772,8 @@ void k_passwordlineedit_paint_event(void* self, void* event) {
     KPasswordLineEdit_PaintEvent((KPasswordLineEdit*)self, (QPaintEvent*)event);
 }
 
-void k_passwordlineedit_qbase_paint_event(void* self, void* event) {
-    KPasswordLineEdit_QBasePaintEvent((KPasswordLineEdit*)self, (QPaintEvent*)event);
+void k_passwordlineedit_super_paint_event(void* self, void* event) {
+    KPasswordLineEdit_SuperPaintEvent((KPasswordLineEdit*)self, (QPaintEvent*)event);
 }
 
 void k_passwordlineedit_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1784,8 +1784,8 @@ void k_passwordlineedit_move_event(void* self, void* event) {
     KPasswordLineEdit_MoveEvent((KPasswordLineEdit*)self, (QMoveEvent*)event);
 }
 
-void k_passwordlineedit_qbase_move_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseMoveEvent((KPasswordLineEdit*)self, (QMoveEvent*)event);
+void k_passwordlineedit_super_move_event(void* self, void* event) {
+    KPasswordLineEdit_SuperMoveEvent((KPasswordLineEdit*)self, (QMoveEvent*)event);
 }
 
 void k_passwordlineedit_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1796,8 +1796,8 @@ void k_passwordlineedit_resize_event(void* self, void* event) {
     KPasswordLineEdit_ResizeEvent((KPasswordLineEdit*)self, (QResizeEvent*)event);
 }
 
-void k_passwordlineedit_qbase_resize_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseResizeEvent((KPasswordLineEdit*)self, (QResizeEvent*)event);
+void k_passwordlineedit_super_resize_event(void* self, void* event) {
+    KPasswordLineEdit_SuperResizeEvent((KPasswordLineEdit*)self, (QResizeEvent*)event);
 }
 
 void k_passwordlineedit_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1808,8 +1808,8 @@ void k_passwordlineedit_close_event(void* self, void* event) {
     KPasswordLineEdit_CloseEvent((KPasswordLineEdit*)self, (QCloseEvent*)event);
 }
 
-void k_passwordlineedit_qbase_close_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseCloseEvent((KPasswordLineEdit*)self, (QCloseEvent*)event);
+void k_passwordlineedit_super_close_event(void* self, void* event) {
+    KPasswordLineEdit_SuperCloseEvent((KPasswordLineEdit*)self, (QCloseEvent*)event);
 }
 
 void k_passwordlineedit_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1820,8 +1820,8 @@ void k_passwordlineedit_context_menu_event(void* self, void* event) {
     KPasswordLineEdit_ContextMenuEvent((KPasswordLineEdit*)self, (QContextMenuEvent*)event);
 }
 
-void k_passwordlineedit_qbase_context_menu_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseContextMenuEvent((KPasswordLineEdit*)self, (QContextMenuEvent*)event);
+void k_passwordlineedit_super_context_menu_event(void* self, void* event) {
+    KPasswordLineEdit_SuperContextMenuEvent((KPasswordLineEdit*)self, (QContextMenuEvent*)event);
 }
 
 void k_passwordlineedit_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1832,8 +1832,8 @@ void k_passwordlineedit_tablet_event(void* self, void* event) {
     KPasswordLineEdit_TabletEvent((KPasswordLineEdit*)self, (QTabletEvent*)event);
 }
 
-void k_passwordlineedit_qbase_tablet_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseTabletEvent((KPasswordLineEdit*)self, (QTabletEvent*)event);
+void k_passwordlineedit_super_tablet_event(void* self, void* event) {
+    KPasswordLineEdit_SuperTabletEvent((KPasswordLineEdit*)self, (QTabletEvent*)event);
 }
 
 void k_passwordlineedit_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1844,8 +1844,8 @@ void k_passwordlineedit_action_event(void* self, void* event) {
     KPasswordLineEdit_ActionEvent((KPasswordLineEdit*)self, (QActionEvent*)event);
 }
 
-void k_passwordlineedit_qbase_action_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseActionEvent((KPasswordLineEdit*)self, (QActionEvent*)event);
+void k_passwordlineedit_super_action_event(void* self, void* event) {
+    KPasswordLineEdit_SuperActionEvent((KPasswordLineEdit*)self, (QActionEvent*)event);
 }
 
 void k_passwordlineedit_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1856,8 +1856,8 @@ void k_passwordlineedit_drag_enter_event(void* self, void* event) {
     KPasswordLineEdit_DragEnterEvent((KPasswordLineEdit*)self, (QDragEnterEvent*)event);
 }
 
-void k_passwordlineedit_qbase_drag_enter_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseDragEnterEvent((KPasswordLineEdit*)self, (QDragEnterEvent*)event);
+void k_passwordlineedit_super_drag_enter_event(void* self, void* event) {
+    KPasswordLineEdit_SuperDragEnterEvent((KPasswordLineEdit*)self, (QDragEnterEvent*)event);
 }
 
 void k_passwordlineedit_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1868,8 +1868,8 @@ void k_passwordlineedit_drag_move_event(void* self, void* event) {
     KPasswordLineEdit_DragMoveEvent((KPasswordLineEdit*)self, (QDragMoveEvent*)event);
 }
 
-void k_passwordlineedit_qbase_drag_move_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseDragMoveEvent((KPasswordLineEdit*)self, (QDragMoveEvent*)event);
+void k_passwordlineedit_super_drag_move_event(void* self, void* event) {
+    KPasswordLineEdit_SuperDragMoveEvent((KPasswordLineEdit*)self, (QDragMoveEvent*)event);
 }
 
 void k_passwordlineedit_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1880,8 +1880,8 @@ void k_passwordlineedit_drag_leave_event(void* self, void* event) {
     KPasswordLineEdit_DragLeaveEvent((KPasswordLineEdit*)self, (QDragLeaveEvent*)event);
 }
 
-void k_passwordlineedit_qbase_drag_leave_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseDragLeaveEvent((KPasswordLineEdit*)self, (QDragLeaveEvent*)event);
+void k_passwordlineedit_super_drag_leave_event(void* self, void* event) {
+    KPasswordLineEdit_SuperDragLeaveEvent((KPasswordLineEdit*)self, (QDragLeaveEvent*)event);
 }
 
 void k_passwordlineedit_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1892,8 +1892,8 @@ void k_passwordlineedit_drop_event(void* self, void* event) {
     KPasswordLineEdit_DropEvent((KPasswordLineEdit*)self, (QDropEvent*)event);
 }
 
-void k_passwordlineedit_qbase_drop_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseDropEvent((KPasswordLineEdit*)self, (QDropEvent*)event);
+void k_passwordlineedit_super_drop_event(void* self, void* event) {
+    KPasswordLineEdit_SuperDropEvent((KPasswordLineEdit*)self, (QDropEvent*)event);
 }
 
 void k_passwordlineedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1904,8 +1904,8 @@ void k_passwordlineedit_show_event(void* self, void* event) {
     KPasswordLineEdit_ShowEvent((KPasswordLineEdit*)self, (QShowEvent*)event);
 }
 
-void k_passwordlineedit_qbase_show_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseShowEvent((KPasswordLineEdit*)self, (QShowEvent*)event);
+void k_passwordlineedit_super_show_event(void* self, void* event) {
+    KPasswordLineEdit_SuperShowEvent((KPasswordLineEdit*)self, (QShowEvent*)event);
 }
 
 void k_passwordlineedit_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1916,8 +1916,8 @@ void k_passwordlineedit_hide_event(void* self, void* event) {
     KPasswordLineEdit_HideEvent((KPasswordLineEdit*)self, (QHideEvent*)event);
 }
 
-void k_passwordlineedit_qbase_hide_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseHideEvent((KPasswordLineEdit*)self, (QHideEvent*)event);
+void k_passwordlineedit_super_hide_event(void* self, void* event) {
+    KPasswordLineEdit_SuperHideEvent((KPasswordLineEdit*)self, (QHideEvent*)event);
 }
 
 void k_passwordlineedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1928,8 +1928,8 @@ bool k_passwordlineedit_native_event(void* self, char* eventType, void* message,
     return KPasswordLineEdit_NativeEvent((KPasswordLineEdit*)self, qstring(eventType), message, result);
 }
 
-bool k_passwordlineedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPasswordLineEdit_QBaseNativeEvent((KPasswordLineEdit*)self, qstring(eventType), message, result);
+bool k_passwordlineedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPasswordLineEdit_SuperNativeEvent((KPasswordLineEdit*)self, qstring(eventType), message, result);
 }
 
 void k_passwordlineedit_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1940,8 +1940,8 @@ void k_passwordlineedit_change_event(void* self, void* param1) {
     KPasswordLineEdit_ChangeEvent((KPasswordLineEdit*)self, (QEvent*)param1);
 }
 
-void k_passwordlineedit_qbase_change_event(void* self, void* param1) {
-    KPasswordLineEdit_QBaseChangeEvent((KPasswordLineEdit*)self, (QEvent*)param1);
+void k_passwordlineedit_super_change_event(void* self, void* param1) {
+    KPasswordLineEdit_SuperChangeEvent((KPasswordLineEdit*)self, (QEvent*)param1);
 }
 
 void k_passwordlineedit_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1952,8 +1952,8 @@ int32_t k_passwordlineedit_metric(void* self, int32_t param1) {
     return KPasswordLineEdit_Metric((KPasswordLineEdit*)self, param1);
 }
 
-int32_t k_passwordlineedit_qbase_metric(void* self, int32_t param1) {
-    return KPasswordLineEdit_QBaseMetric((KPasswordLineEdit*)self, param1);
+int32_t k_passwordlineedit_super_metric(void* self, int32_t param1) {
+    return KPasswordLineEdit_SuperMetric((KPasswordLineEdit*)self, param1);
 }
 
 void k_passwordlineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1964,8 +1964,8 @@ void k_passwordlineedit_init_painter(void* self, void* painter) {
     KPasswordLineEdit_InitPainter((KPasswordLineEdit*)self, (QPainter*)painter);
 }
 
-void k_passwordlineedit_qbase_init_painter(void* self, void* painter) {
-    KPasswordLineEdit_QBaseInitPainter((KPasswordLineEdit*)self, (QPainter*)painter);
+void k_passwordlineedit_super_init_painter(void* self, void* painter) {
+    KPasswordLineEdit_SuperInitPainter((KPasswordLineEdit*)self, (QPainter*)painter);
 }
 
 void k_passwordlineedit_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1976,8 +1976,8 @@ QPaintDevice* k_passwordlineedit_redirected(void* self, void* offset) {
     return KPasswordLineEdit_Redirected((KPasswordLineEdit*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_passwordlineedit_qbase_redirected(void* self, void* offset) {
-    return KPasswordLineEdit_QBaseRedirected((KPasswordLineEdit*)self, (QPoint*)offset);
+QPaintDevice* k_passwordlineedit_super_redirected(void* self, void* offset) {
+    return KPasswordLineEdit_SuperRedirected((KPasswordLineEdit*)self, (QPoint*)offset);
 }
 
 void k_passwordlineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1988,8 +1988,8 @@ QPainter* k_passwordlineedit_shared_painter(void* self) {
     return KPasswordLineEdit_SharedPainter((KPasswordLineEdit*)self);
 }
 
-QPainter* k_passwordlineedit_qbase_shared_painter(void* self) {
-    return KPasswordLineEdit_QBaseSharedPainter((KPasswordLineEdit*)self);
+QPainter* k_passwordlineedit_super_shared_painter(void* self) {
+    return KPasswordLineEdit_SuperSharedPainter((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2000,8 +2000,8 @@ void k_passwordlineedit_input_method_event(void* self, void* param1) {
     KPasswordLineEdit_InputMethodEvent((KPasswordLineEdit*)self, (QInputMethodEvent*)param1);
 }
 
-void k_passwordlineedit_qbase_input_method_event(void* self, void* param1) {
-    KPasswordLineEdit_QBaseInputMethodEvent((KPasswordLineEdit*)self, (QInputMethodEvent*)param1);
+void k_passwordlineedit_super_input_method_event(void* self, void* param1) {
+    KPasswordLineEdit_SuperInputMethodEvent((KPasswordLineEdit*)self, (QInputMethodEvent*)param1);
 }
 
 void k_passwordlineedit_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2012,8 +2012,8 @@ QVariant* k_passwordlineedit_input_method_query(void* self, int32_t param1) {
     return KPasswordLineEdit_InputMethodQuery((KPasswordLineEdit*)self, param1);
 }
 
-QVariant* k_passwordlineedit_qbase_input_method_query(void* self, int32_t param1) {
-    return KPasswordLineEdit_QBaseInputMethodQuery((KPasswordLineEdit*)self, param1);
+QVariant* k_passwordlineedit_super_input_method_query(void* self, int32_t param1) {
+    return KPasswordLineEdit_SuperInputMethodQuery((KPasswordLineEdit*)self, param1);
 }
 
 void k_passwordlineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2024,8 +2024,8 @@ bool k_passwordlineedit_focus_next_prev_child(void* self, bool next) {
     return KPasswordLineEdit_FocusNextPrevChild((KPasswordLineEdit*)self, next);
 }
 
-bool k_passwordlineedit_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPasswordLineEdit_QBaseFocusNextPrevChild((KPasswordLineEdit*)self, next);
+bool k_passwordlineedit_super_focus_next_prev_child(void* self, bool next) {
+    return KPasswordLineEdit_SuperFocusNextPrevChild((KPasswordLineEdit*)self, next);
 }
 
 void k_passwordlineedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2036,8 +2036,8 @@ bool k_passwordlineedit_event_filter(void* self, void* watched, void* event) {
     return KPasswordLineEdit_EventFilter((KPasswordLineEdit*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_passwordlineedit_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPasswordLineEdit_QBaseEventFilter((KPasswordLineEdit*)self, (QObject*)watched, (QEvent*)event);
+bool k_passwordlineedit_super_event_filter(void* self, void* watched, void* event) {
+    return KPasswordLineEdit_SuperEventFilter((KPasswordLineEdit*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_passwordlineedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2048,8 +2048,8 @@ void k_passwordlineedit_timer_event(void* self, void* event) {
     KPasswordLineEdit_TimerEvent((KPasswordLineEdit*)self, (QTimerEvent*)event);
 }
 
-void k_passwordlineedit_qbase_timer_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseTimerEvent((KPasswordLineEdit*)self, (QTimerEvent*)event);
+void k_passwordlineedit_super_timer_event(void* self, void* event) {
+    KPasswordLineEdit_SuperTimerEvent((KPasswordLineEdit*)self, (QTimerEvent*)event);
 }
 
 void k_passwordlineedit_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2060,8 +2060,8 @@ void k_passwordlineedit_child_event(void* self, void* event) {
     KPasswordLineEdit_ChildEvent((KPasswordLineEdit*)self, (QChildEvent*)event);
 }
 
-void k_passwordlineedit_qbase_child_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseChildEvent((KPasswordLineEdit*)self, (QChildEvent*)event);
+void k_passwordlineedit_super_child_event(void* self, void* event) {
+    KPasswordLineEdit_SuperChildEvent((KPasswordLineEdit*)self, (QChildEvent*)event);
 }
 
 void k_passwordlineedit_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2072,8 +2072,8 @@ void k_passwordlineedit_custom_event(void* self, void* event) {
     KPasswordLineEdit_CustomEvent((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
-void k_passwordlineedit_qbase_custom_event(void* self, void* event) {
-    KPasswordLineEdit_QBaseCustomEvent((KPasswordLineEdit*)self, (QEvent*)event);
+void k_passwordlineedit_super_custom_event(void* self, void* event) {
+    KPasswordLineEdit_SuperCustomEvent((KPasswordLineEdit*)self, (QEvent*)event);
 }
 
 void k_passwordlineedit_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2084,8 +2084,8 @@ void k_passwordlineedit_connect_notify(void* self, void* signal) {
     KPasswordLineEdit_ConnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_passwordlineedit_qbase_connect_notify(void* self, void* signal) {
-    KPasswordLineEdit_QBaseConnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
+void k_passwordlineedit_super_connect_notify(void* self, void* signal) {
+    KPasswordLineEdit_SuperConnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_passwordlineedit_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2096,8 +2096,8 @@ void k_passwordlineedit_disconnect_notify(void* self, void* signal) {
     KPasswordLineEdit_DisconnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_passwordlineedit_qbase_disconnect_notify(void* self, void* signal) {
-    KPasswordLineEdit_QBaseDisconnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
+void k_passwordlineedit_super_disconnect_notify(void* self, void* signal) {
+    KPasswordLineEdit_SuperDisconnectNotify((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_passwordlineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2108,8 +2108,8 @@ void k_passwordlineedit_update_micro_focus(void* self) {
     KPasswordLineEdit_UpdateMicroFocus((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_qbase_update_micro_focus(void* self) {
-    KPasswordLineEdit_QBaseUpdateMicroFocus((KPasswordLineEdit*)self);
+void k_passwordlineedit_super_update_micro_focus(void* self) {
+    KPasswordLineEdit_SuperUpdateMicroFocus((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2120,8 +2120,8 @@ void k_passwordlineedit_create(void* self) {
     KPasswordLineEdit_Create((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_qbase_create(void* self) {
-    KPasswordLineEdit_QBaseCreate((KPasswordLineEdit*)self);
+void k_passwordlineedit_super_create(void* self) {
+    KPasswordLineEdit_SuperCreate((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_create(void* self, void (*callback)()) {
@@ -2132,8 +2132,8 @@ void k_passwordlineedit_destroy(void* self) {
     KPasswordLineEdit_Destroy((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_qbase_destroy(void* self) {
-    KPasswordLineEdit_QBaseDestroy((KPasswordLineEdit*)self);
+void k_passwordlineedit_super_destroy(void* self) {
+    KPasswordLineEdit_SuperDestroy((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_destroy(void* self, void (*callback)()) {
@@ -2144,8 +2144,8 @@ bool k_passwordlineedit_focus_next_child(void* self) {
     return KPasswordLineEdit_FocusNextChild((KPasswordLineEdit*)self);
 }
 
-bool k_passwordlineedit_qbase_focus_next_child(void* self) {
-    return KPasswordLineEdit_QBaseFocusNextChild((KPasswordLineEdit*)self);
+bool k_passwordlineedit_super_focus_next_child(void* self) {
+    return KPasswordLineEdit_SuperFocusNextChild((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2156,8 +2156,8 @@ bool k_passwordlineedit_focus_previous_child(void* self) {
     return KPasswordLineEdit_FocusPreviousChild((KPasswordLineEdit*)self);
 }
 
-bool k_passwordlineedit_qbase_focus_previous_child(void* self) {
-    return KPasswordLineEdit_QBaseFocusPreviousChild((KPasswordLineEdit*)self);
+bool k_passwordlineedit_super_focus_previous_child(void* self) {
+    return KPasswordLineEdit_SuperFocusPreviousChild((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2168,8 +2168,8 @@ QObject* k_passwordlineedit_sender(void* self) {
     return KPasswordLineEdit_Sender((KPasswordLineEdit*)self);
 }
 
-QObject* k_passwordlineedit_qbase_sender(void* self) {
-    return KPasswordLineEdit_QBaseSender((KPasswordLineEdit*)self);
+QObject* k_passwordlineedit_super_sender(void* self) {
+    return KPasswordLineEdit_SuperSender((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_sender(void* self, QObject* (*callback)()) {
@@ -2180,8 +2180,8 @@ int32_t k_passwordlineedit_sender_signal_index(void* self) {
     return KPasswordLineEdit_SenderSignalIndex((KPasswordLineEdit*)self);
 }
 
-int32_t k_passwordlineedit_qbase_sender_signal_index(void* self) {
-    return KPasswordLineEdit_QBaseSenderSignalIndex((KPasswordLineEdit*)self);
+int32_t k_passwordlineedit_super_sender_signal_index(void* self) {
+    return KPasswordLineEdit_SuperSenderSignalIndex((KPasswordLineEdit*)self);
 }
 
 void k_passwordlineedit_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2192,8 +2192,8 @@ int32_t k_passwordlineedit_receivers(void* self, const char* signal) {
     return KPasswordLineEdit_Receivers((KPasswordLineEdit*)self, signal);
 }
 
-int32_t k_passwordlineedit_qbase_receivers(void* self, const char* signal) {
-    return KPasswordLineEdit_QBaseReceivers((KPasswordLineEdit*)self, signal);
+int32_t k_passwordlineedit_super_receivers(void* self, const char* signal) {
+    return KPasswordLineEdit_SuperReceivers((KPasswordLineEdit*)self, signal);
 }
 
 void k_passwordlineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2204,8 +2204,8 @@ bool k_passwordlineedit_is_signal_connected(void* self, void* signal) {
     return KPasswordLineEdit_IsSignalConnected((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
-bool k_passwordlineedit_qbase_is_signal_connected(void* self, void* signal) {
-    return KPasswordLineEdit_QBaseIsSignalConnected((KPasswordLineEdit*)self, (QMetaMethod*)signal);
+bool k_passwordlineedit_super_is_signal_connected(void* self, void* signal) {
+    return KPasswordLineEdit_SuperIsSignalConnected((KPasswordLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_passwordlineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2216,8 +2216,8 @@ double k_passwordlineedit_get_decoded_metric_f(void* self, int32_t metricA, int3
     return KPasswordLineEdit_GetDecodedMetricF((KPasswordLineEdit*)self, metricA, metricB);
 }
 
-double k_passwordlineedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPasswordLineEdit_QBaseGetDecodedMetricF((KPasswordLineEdit*)self, metricA, metricB);
+double k_passwordlineedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPasswordLineEdit_SuperGetDecodedMetricF((KPasswordLineEdit*)self, metricA, metricB);
 }
 
 void k_passwordlineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

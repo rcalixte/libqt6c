@@ -49,13 +49,17 @@ const QMetaObject* q_polarchart_meta_object(void* self);
 ///
 void q_polarchart_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_polarchart_super_meta_object` instead
+///
+#define q_polarchart_qbase_meta_object q_polarchart_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPolarChart*
 ///
-const QMetaObject* q_polarchart_qbase_meta_object(void* self);
+const QMetaObject* q_polarchart_super_meta_object(void* self);
 
 /// @param self QPolarChart*
 /// @param param1 const char*
@@ -69,12 +73,16 @@ void* q_polarchart_metacast(void* self, const char* param1);
 ///
 void q_polarchart_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_polarchart_super_metacast` instead
+///
+#define q_polarchart_qbase_metacast q_polarchart_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPolarChart*
 /// @param param1 const char*
 ///
-void* q_polarchart_qbase_metacast(void* self, const char* param1);
+void* q_polarchart_super_metacast(void* self, const char* param1);
 
 /// @param self QPolarChart*
 /// @param param1 enum QMetaObject__Call
@@ -90,6 +98,10 @@ int32_t q_polarchart_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_polarchart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_polarchart_super_metacall` instead
+///
+#define q_polarchart_qbase_metacall q_polarchart_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPolarChart*
@@ -97,7 +109,7 @@ void q_polarchart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_polarchart_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_polarchart_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3797,6 +3809,10 @@ QSizeF* q_polarchart_effective_size_hint2(void* self, int32_t which, void* const
 ///
 void q_polarchart_set_geometry(void* self, void* rect);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_set_geometry` instead
+///
+#define q_polarchart_qbase_set_geometry q_polarchart_super_set_geometry
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
@@ -3806,7 +3822,7 @@ void q_polarchart_set_geometry(void* self, void* rect);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_qbase_set_geometry(void* self, void* rect);
+void q_polarchart_super_set_geometry(void* self, void* rect);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3833,6 +3849,10 @@ void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_get_contents_margins` instead
+///
+#define q_polarchart_qbase_get_contents_margins q_polarchart_super_get_contents_margins
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
@@ -3845,7 +3865,7 @@ void q_polarchart_get_contents_margins(void* self, double* left, double* top, do
 /// @param right double*
 /// @param bottom double*
 ///
-void q_polarchart_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_polarchart_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3868,6 +3888,10 @@ void q_polarchart_on_get_contents_margins(void* self, void (*callback)(void*, do
 ///
 int32_t q_polarchart_type(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_type` instead
+///
+#define q_polarchart_qbase_type q_polarchart_super_type
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
@@ -3876,7 +3900,7 @@ int32_t q_polarchart_type(void* self);
 ///
 /// @param self QPolarChart*
 ///
-int32_t q_polarchart_qbase_type(void* self);
+int32_t q_polarchart_super_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3902,6 +3926,10 @@ void q_polarchart_on_type(void* self, int32_t (*callback)());
 ///
 void q_polarchart_paint(void* self, void* painter, void* option, void* widget);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_paint` instead
+///
+#define q_polarchart_qbase_paint q_polarchart_super_paint
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
@@ -3913,7 +3941,7 @@ void q_polarchart_paint(void* self, void* painter, void* option, void* widget);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_qbase_paint(void* self, void* painter, void* option, void* widget);
+void q_polarchart_super_paint(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3939,6 +3967,10 @@ void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, void*, voi
 ///
 void q_polarchart_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_paint_window_frame` instead
+///
+#define q_polarchart_qbase_paint_window_frame q_polarchart_super_paint_window_frame
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
@@ -3950,7 +3982,7 @@ void q_polarchart_paint_window_frame(void* self, void* painter, void* option, vo
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_qbase_paint_window_frame(void* self, void* painter, void* option, void* widget);
+void q_polarchart_super_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3973,6 +4005,10 @@ void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void
 ///
 QRectF* q_polarchart_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_bounding_rect` instead
+///
+#define q_polarchart_qbase_bounding_rect q_polarchart_super_bounding_rect
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
@@ -3981,7 +4017,7 @@ QRectF* q_polarchart_bounding_rect(void* self);
 ///
 /// @param self QPolarChart*
 ///
-QRectF* q_polarchart_qbase_bounding_rect(void* self);
+QRectF* q_polarchart_super_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4004,6 +4040,10 @@ void q_polarchart_on_bounding_rect(void* self, QRectF* (*callback)());
 ///
 QPainterPath* q_polarchart_shape(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_shape` instead
+///
+#define q_polarchart_qbase_shape q_polarchart_super_shape
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
@@ -4012,7 +4052,7 @@ QPainterPath* q_polarchart_shape(void* self);
 ///
 /// @param self QPolarChart*
 ///
-QPainterPath* q_polarchart_qbase_shape(void* self);
+QPainterPath* q_polarchart_super_shape(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4036,6 +4076,10 @@ void q_polarchart_on_shape(void* self, QPainterPath* (*callback)());
 ///
 void q_polarchart_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_init_style_option` instead
+///
+#define q_polarchart_qbase_init_style_option q_polarchart_super_init_style_option
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
@@ -4045,7 +4089,7 @@ void q_polarchart_init_style_option(void* self, void* option);
 /// @param self QPolarChart*
 /// @param option QStyleOption*
 ///
-void q_polarchart_qbase_init_style_option(void* self, void* option);
+void q_polarchart_super_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4070,6 +4114,10 @@ void q_polarchart_on_init_style_option(void* self, void (*callback)(void*, void*
 ///
 QSizeF* q_polarchart_size_hint(void* self, int32_t which, void* constraint);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_size_hint` instead
+///
+#define q_polarchart_qbase_size_hint q_polarchart_super_size_hint
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
@@ -4080,7 +4128,7 @@ QSizeF* q_polarchart_size_hint(void* self, int32_t which, void* constraint);
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_polarchart_qbase_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_polarchart_super_size_hint(void* self, int32_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4103,6 +4151,10 @@ void q_polarchart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, v
 ///
 void q_polarchart_update_geometry(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_update_geometry` instead
+///
+#define q_polarchart_qbase_update_geometry q_polarchart_super_update_geometry
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
@@ -4111,7 +4163,7 @@ void q_polarchart_update_geometry(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_update_geometry(void* self);
+void q_polarchart_super_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4136,6 +4188,10 @@ void q_polarchart_on_update_geometry(void* self, void (*callback)());
 ///
 QVariant* q_polarchart_item_change(void* self, int32_t change, void* value);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_item_change` instead
+///
+#define q_polarchart_qbase_item_change q_polarchart_super_item_change
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
@@ -4146,7 +4202,7 @@ QVariant* q_polarchart_item_change(void* self, int32_t change, void* value);
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_qbase_item_change(void* self, int32_t change, void* value);
+QVariant* q_polarchart_super_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4171,6 +4227,10 @@ void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_
 ///
 QVariant* q_polarchart_property_change(void* self, const char* propertyName, void* value);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_property_change` instead
+///
+#define q_polarchart_qbase_property_change q_polarchart_super_property_change
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
@@ -4181,7 +4241,7 @@ QVariant* q_polarchart_property_change(void* self, const char* propertyName, voi
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_qbase_property_change(void* self, const char* propertyName, void* value);
+QVariant* q_polarchart_super_property_change(void* self, const char* propertyName, void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4205,6 +4265,10 @@ void q_polarchart_on_property_change(void* self, QVariant* (*callback)(void*, co
 ///
 bool q_polarchart_scene_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_scene_event` instead
+///
+#define q_polarchart_qbase_scene_event q_polarchart_super_scene_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
@@ -4214,7 +4278,7 @@ bool q_polarchart_scene_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-bool q_polarchart_qbase_scene_event(void* self, void* event);
+bool q_polarchart_super_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4238,6 +4302,10 @@ void q_polarchart_on_scene_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_polarchart_window_frame_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_window_frame_event` instead
+///
+#define q_polarchart_qbase_window_frame_event q_polarchart_super_window_frame_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
@@ -4247,7 +4315,7 @@ bool q_polarchart_window_frame_event(void* self, void* e);
 /// @param self QPolarChart*
 /// @param e QEvent*
 ///
-bool q_polarchart_qbase_window_frame_event(void* self, void* e);
+bool q_polarchart_super_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4273,6 +4341,10 @@ void q_polarchart_on_window_frame_event(void* self, bool (*callback)(void*, void
 ///
 int32_t q_polarchart_window_frame_section_at(void* self, void* pos);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_window_frame_section_at` instead
+///
+#define q_polarchart_qbase_window_frame_section_at q_polarchart_super_window_frame_section_at
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
@@ -4284,7 +4356,7 @@ int32_t q_polarchart_window_frame_section_at(void* self, void* pos);
 ///
 /// @return enum Qt__WindowFrameSection
 ///
-int32_t q_polarchart_qbase_window_frame_section_at(void* self, void* pos);
+int32_t q_polarchart_super_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4308,6 +4380,10 @@ void q_polarchart_on_window_frame_section_at(void* self, int32_t (*callback)(voi
 ///
 bool q_polarchart_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_event` instead
+///
+#define q_polarchart_qbase_event q_polarchart_super_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
@@ -4317,7 +4393,7 @@ bool q_polarchart_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-bool q_polarchart_qbase_event(void* self, void* event);
+bool q_polarchart_super_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4341,6 +4417,10 @@ void q_polarchart_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_polarchart_change_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_change_event` instead
+///
+#define q_polarchart_qbase_change_event q_polarchart_super_change_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
@@ -4350,7 +4430,7 @@ void q_polarchart_change_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_change_event(void* self, void* event);
+void q_polarchart_super_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4374,6 +4454,10 @@ void q_polarchart_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_close_event` instead
+///
+#define q_polarchart_qbase_close_event q_polarchart_super_close_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
@@ -4383,7 +4467,7 @@ void q_polarchart_close_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QCloseEvent*
 ///
-void q_polarchart_qbase_close_event(void* self, void* event);
+void q_polarchart_super_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4407,6 +4491,10 @@ void q_polarchart_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_focus_in_event` instead
+///
+#define q_polarchart_qbase_focus_in_event q_polarchart_super_focus_in_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
@@ -4416,7 +4504,7 @@ void q_polarchart_focus_in_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QFocusEvent*
 ///
-void q_polarchart_qbase_focus_in_event(void* self, void* event);
+void q_polarchart_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4440,6 +4528,10 @@ void q_polarchart_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_polarchart_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_focus_next_prev_child` instead
+///
+#define q_polarchart_qbase_focus_next_prev_child q_polarchart_super_focus_next_prev_child
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
@@ -4449,7 +4541,7 @@ bool q_polarchart_focus_next_prev_child(void* self, bool next);
 /// @param self QPolarChart*
 /// @param next bool
 ///
-bool q_polarchart_qbase_focus_next_prev_child(void* self, bool next);
+bool q_polarchart_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4473,6 +4565,10 @@ void q_polarchart_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 ///
 void q_polarchart_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_focus_out_event` instead
+///
+#define q_polarchart_qbase_focus_out_event q_polarchart_super_focus_out_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
@@ -4482,7 +4578,7 @@ void q_polarchart_focus_out_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QFocusEvent*
 ///
-void q_polarchart_qbase_focus_out_event(void* self, void* event);
+void q_polarchart_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4506,6 +4602,10 @@ void q_polarchart_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void q_polarchart_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_hide_event` instead
+///
+#define q_polarchart_qbase_hide_event q_polarchart_super_hide_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
@@ -4515,7 +4615,7 @@ void q_polarchart_hide_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QHideEvent*
 ///
-void q_polarchart_qbase_hide_event(void* self, void* event);
+void q_polarchart_super_hide_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4539,6 +4639,10 @@ void q_polarchart_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_move_event` instead
+///
+#define q_polarchart_qbase_move_event q_polarchart_super_move_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
@@ -4548,7 +4652,7 @@ void q_polarchart_move_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneMoveEvent*
 ///
-void q_polarchart_qbase_move_event(void* self, void* event);
+void q_polarchart_super_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4571,6 +4675,10 @@ void q_polarchart_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_polish_event(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_polish_event` instead
+///
+#define q_polarchart_qbase_polish_event q_polarchart_super_polish_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
@@ -4579,7 +4687,7 @@ void q_polarchart_polish_event(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_polish_event(void* self);
+void q_polarchart_super_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4603,6 +4711,10 @@ void q_polarchart_on_polish_event(void* self, void (*callback)());
 ///
 void q_polarchart_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_resize_event` instead
+///
+#define q_polarchart_qbase_resize_event q_polarchart_super_resize_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
@@ -4612,7 +4724,7 @@ void q_polarchart_resize_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneResizeEvent*
 ///
-void q_polarchart_qbase_resize_event(void* self, void* event);
+void q_polarchart_super_resize_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4636,6 +4748,10 @@ void q_polarchart_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_show_event` instead
+///
+#define q_polarchart_qbase_show_event q_polarchart_super_show_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
@@ -4645,7 +4761,7 @@ void q_polarchart_show_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QShowEvent*
 ///
-void q_polarchart_qbase_show_event(void* self, void* event);
+void q_polarchart_super_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4669,6 +4785,10 @@ void q_polarchart_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_hover_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_hover_move_event` instead
+///
+#define q_polarchart_qbase_hover_move_event q_polarchart_super_hover_move_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
@@ -4678,7 +4798,7 @@ void q_polarchart_hover_move_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneHoverEvent*
 ///
-void q_polarchart_qbase_hover_move_event(void* self, void* event);
+void q_polarchart_super_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4702,6 +4822,10 @@ void q_polarchart_on_hover_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_polarchart_hover_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_hover_leave_event` instead
+///
+#define q_polarchart_qbase_hover_leave_event q_polarchart_super_hover_leave_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
@@ -4711,7 +4835,7 @@ void q_polarchart_hover_leave_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneHoverEvent*
 ///
-void q_polarchart_qbase_hover_leave_event(void* self, void* event);
+void q_polarchart_super_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4735,6 +4859,10 @@ void q_polarchart_on_hover_leave_event(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_grab_mouse_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_grab_mouse_event` instead
+///
+#define q_polarchart_qbase_grab_mouse_event q_polarchart_super_grab_mouse_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
@@ -4744,7 +4872,7 @@ void q_polarchart_grab_mouse_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_grab_mouse_event(void* self, void* event);
+void q_polarchart_super_grab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4768,6 +4896,10 @@ void q_polarchart_on_grab_mouse_event(void* self, void (*callback)(void*, void*)
 ///
 void q_polarchart_ungrab_mouse_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_ungrab_mouse_event` instead
+///
+#define q_polarchart_qbase_ungrab_mouse_event q_polarchart_super_ungrab_mouse_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
@@ -4777,7 +4909,7 @@ void q_polarchart_ungrab_mouse_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_ungrab_mouse_event(void* self, void* event);
+void q_polarchart_super_ungrab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4801,6 +4933,10 @@ void q_polarchart_on_ungrab_mouse_event(void* self, void (*callback)(void*, void
 ///
 void q_polarchart_grab_keyboard_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_grab_keyboard_event` instead
+///
+#define q_polarchart_qbase_grab_keyboard_event q_polarchart_super_grab_keyboard_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
@@ -4810,7 +4946,7 @@ void q_polarchart_grab_keyboard_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_grab_keyboard_event(void* self, void* event);
+void q_polarchart_super_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4834,6 +4970,10 @@ void q_polarchart_on_grab_keyboard_event(void* self, void (*callback)(void*, voi
 ///
 void q_polarchart_ungrab_keyboard_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_ungrab_keyboard_event` instead
+///
+#define q_polarchart_qbase_ungrab_keyboard_event q_polarchart_super_ungrab_keyboard_event
+
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
@@ -4843,7 +4983,7 @@ void q_polarchart_ungrab_keyboard_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_ungrab_keyboard_event(void* self, void* event);
+void q_polarchart_super_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4868,6 +5008,10 @@ void q_polarchart_on_ungrab_keyboard_event(void* self, void (*callback)(void*, v
 ///
 bool q_polarchart_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_event_filter` instead
+///
+#define q_polarchart_qbase_event_filter q_polarchart_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4878,7 +5022,7 @@ bool q_polarchart_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_polarchart_qbase_event_filter(void* self, void* watched, void* event);
+bool q_polarchart_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4902,6 +5046,10 @@ void q_polarchart_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_polarchart_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_timer_event` instead
+///
+#define q_polarchart_qbase_timer_event q_polarchart_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4911,7 +5059,7 @@ void q_polarchart_timer_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QTimerEvent*
 ///
-void q_polarchart_qbase_timer_event(void* self, void* event);
+void q_polarchart_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4935,6 +5083,10 @@ void q_polarchart_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_child_event` instead
+///
+#define q_polarchart_qbase_child_event q_polarchart_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4944,7 +5096,7 @@ void q_polarchart_child_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QChildEvent*
 ///
-void q_polarchart_qbase_child_event(void* self, void* event);
+void q_polarchart_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4968,6 +5120,10 @@ void q_polarchart_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_custom_event` instead
+///
+#define q_polarchart_qbase_custom_event q_polarchart_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4977,7 +5133,7 @@ void q_polarchart_custom_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QEvent*
 ///
-void q_polarchart_qbase_custom_event(void* self, void* event);
+void q_polarchart_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5001,6 +5157,10 @@ void q_polarchart_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_connect_notify` instead
+///
+#define q_polarchart_qbase_connect_notify q_polarchart_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5010,7 +5170,7 @@ void q_polarchart_connect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_qbase_connect_notify(void* self, void* signal);
+void q_polarchart_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5034,6 +5194,10 @@ void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_disconnect_notify` instead
+///
+#define q_polarchart_qbase_disconnect_notify q_polarchart_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5043,7 +5207,7 @@ void q_polarchart_disconnect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_qbase_disconnect_notify(void* self, void* signal);
+void q_polarchart_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5067,6 +5231,10 @@ void q_polarchart_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_advance(void* self, int phase);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_advance` instead
+///
+#define q_polarchart_qbase_advance q_polarchart_super_advance
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -5076,7 +5244,7 @@ void q_polarchart_advance(void* self, int phase);
 /// @param self QPolarChart*
 /// @param phase int
 ///
-void q_polarchart_qbase_advance(void* self, int phase);
+void q_polarchart_super_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5100,6 +5268,10 @@ void q_polarchart_on_advance(void* self, void (*callback)(void*, int));
 ///
 bool q_polarchart_contains(void* self, void* point);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_contains` instead
+///
+#define q_polarchart_qbase_contains q_polarchart_super_contains
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
@@ -5109,7 +5281,7 @@ bool q_polarchart_contains(void* self, void* point);
 /// @param self QPolarChart*
 /// @param point QPointF*
 ///
-bool q_polarchart_qbase_contains(void* self, void* point);
+bool q_polarchart_super_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5134,6 +5306,10 @@ void q_polarchart_on_contains(void* self, bool (*callback)(void*, void*));
 ///
 bool q_polarchart_collides_with_item(void* self, void* other, int32_t mode);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_collides_with_item` instead
+///
+#define q_polarchart_qbase_collides_with_item q_polarchart_super_collides_with_item
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
@@ -5144,7 +5320,7 @@ bool q_polarchart_collides_with_item(void* self, void* other, int32_t mode);
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_qbase_collides_with_item(void* self, void* other, int32_t mode);
+bool q_polarchart_super_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5169,6 +5345,10 @@ void q_polarchart_on_collides_with_item(void* self, bool (*callback)(void*, void
 ///
 bool q_polarchart_collides_with_path(void* self, void* path, int32_t mode);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_collides_with_path` instead
+///
+#define q_polarchart_qbase_collides_with_path q_polarchart_super_collides_with_path
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -5179,7 +5359,7 @@ bool q_polarchart_collides_with_path(void* self, void* path, int32_t mode);
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_qbase_collides_with_path(void* self, void* path, int32_t mode);
+bool q_polarchart_super_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5203,6 +5383,10 @@ void q_polarchart_on_collides_with_path(void* self, bool (*callback)(void*, void
 ///
 bool q_polarchart_is_obscured_by(void* self, void* item);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_is_obscured_by` instead
+///
+#define q_polarchart_qbase_is_obscured_by q_polarchart_super_is_obscured_by
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
@@ -5212,7 +5396,7 @@ bool q_polarchart_is_obscured_by(void* self, void* item);
 /// @param self QPolarChart*
 /// @param item QGraphicsItem*
 ///
-bool q_polarchart_qbase_is_obscured_by(void* self, void* item);
+bool q_polarchart_super_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5235,6 +5419,10 @@ void q_polarchart_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 ///
 QPainterPath* q_polarchart_opaque_area(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_opaque_area` instead
+///
+#define q_polarchart_qbase_opaque_area q_polarchart_super_opaque_area
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
@@ -5243,7 +5431,7 @@ QPainterPath* q_polarchart_opaque_area(void* self);
 ///
 /// @param self QPolarChart*
 ///
-QPainterPath* q_polarchart_qbase_opaque_area(void* self);
+QPainterPath* q_polarchart_super_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5268,6 +5456,10 @@ void q_polarchart_on_opaque_area(void* self, QPainterPath* (*callback)());
 ///
 bool q_polarchart_scene_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_scene_event_filter` instead
+///
+#define q_polarchart_qbase_scene_event_filter q_polarchart_super_scene_event_filter
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -5278,7 +5470,7 @@ bool q_polarchart_scene_event_filter(void* self, void* watched, void* event);
 /// @param watched QGraphicsItem*
 /// @param event QEvent*
 ///
-bool q_polarchart_qbase_scene_event_filter(void* self, void* watched, void* event);
+bool q_polarchart_super_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5302,6 +5494,10 @@ void q_polarchart_on_scene_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_polarchart_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_context_menu_event` instead
+///
+#define q_polarchart_qbase_context_menu_event q_polarchart_super_context_menu_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
@@ -5311,7 +5507,7 @@ void q_polarchart_context_menu_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
-void q_polarchart_qbase_context_menu_event(void* self, void* event);
+void q_polarchart_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5335,6 +5531,10 @@ void q_polarchart_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 void q_polarchart_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_drag_enter_event` instead
+///
+#define q_polarchart_qbase_drag_enter_event q_polarchart_super_drag_enter_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -5344,7 +5544,7 @@ void q_polarchart_drag_enter_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_polarchart_qbase_drag_enter_event(void* self, void* event);
+void q_polarchart_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5368,6 +5568,10 @@ void q_polarchart_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void q_polarchart_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_drag_leave_event` instead
+///
+#define q_polarchart_qbase_drag_leave_event q_polarchart_super_drag_leave_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
@@ -5377,7 +5581,7 @@ void q_polarchart_drag_leave_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_polarchart_qbase_drag_leave_event(void* self, void* event);
+void q_polarchart_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5401,6 +5605,10 @@ void q_polarchart_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void q_polarchart_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_drag_move_event` instead
+///
+#define q_polarchart_qbase_drag_move_event q_polarchart_super_drag_move_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -5410,7 +5618,7 @@ void q_polarchart_drag_move_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_polarchart_qbase_drag_move_event(void* self, void* event);
+void q_polarchart_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5434,6 +5642,10 @@ void q_polarchart_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_polarchart_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_drop_event` instead
+///
+#define q_polarchart_qbase_drop_event q_polarchart_super_drop_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
@@ -5443,7 +5655,7 @@ void q_polarchart_drop_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_polarchart_qbase_drop_event(void* self, void* event);
+void q_polarchart_super_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5467,6 +5679,10 @@ void q_polarchart_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_hover_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_hover_enter_event` instead
+///
+#define q_polarchart_qbase_hover_enter_event q_polarchart_super_hover_enter_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -5476,7 +5692,7 @@ void q_polarchart_hover_enter_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneHoverEvent*
 ///
-void q_polarchart_qbase_hover_enter_event(void* self, void* event);
+void q_polarchart_super_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5500,6 +5716,10 @@ void q_polarchart_on_hover_enter_event(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_key_press_event` instead
+///
+#define q_polarchart_qbase_key_press_event q_polarchart_super_key_press_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
@@ -5509,7 +5729,7 @@ void q_polarchart_key_press_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QKeyEvent*
 ///
-void q_polarchart_qbase_key_press_event(void* self, void* event);
+void q_polarchart_super_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5533,6 +5753,10 @@ void q_polarchart_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_polarchart_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_key_release_event` instead
+///
+#define q_polarchart_qbase_key_release_event q_polarchart_super_key_release_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -5542,7 +5766,7 @@ void q_polarchart_key_release_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QKeyEvent*
 ///
-void q_polarchart_qbase_key_release_event(void* self, void* event);
+void q_polarchart_super_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5566,6 +5790,10 @@ void q_polarchart_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_mouse_press_event` instead
+///
+#define q_polarchart_qbase_mouse_press_event q_polarchart_super_mouse_press_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
@@ -5575,7 +5803,7 @@ void q_polarchart_mouse_press_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_polarchart_qbase_mouse_press_event(void* self, void* event);
+void q_polarchart_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5599,6 +5827,10 @@ void q_polarchart_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_mouse_move_event` instead
+///
+#define q_polarchart_qbase_mouse_move_event q_polarchart_super_mouse_move_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -5608,7 +5840,7 @@ void q_polarchart_mouse_move_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_polarchart_qbase_mouse_move_event(void* self, void* event);
+void q_polarchart_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5632,6 +5864,10 @@ void q_polarchart_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_polarchart_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_mouse_release_event` instead
+///
+#define q_polarchart_qbase_mouse_release_event q_polarchart_super_mouse_release_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
@@ -5641,7 +5877,7 @@ void q_polarchart_mouse_release_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_polarchart_qbase_mouse_release_event(void* self, void* event);
+void q_polarchart_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5665,6 +5901,10 @@ void q_polarchart_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_polarchart_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_mouse_double_click_event` instead
+///
+#define q_polarchart_qbase_mouse_double_click_event q_polarchart_super_mouse_double_click_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -5674,7 +5914,7 @@ void q_polarchart_mouse_double_click_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_polarchart_qbase_mouse_double_click_event(void* self, void* event);
+void q_polarchart_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5698,6 +5938,10 @@ void q_polarchart_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_polarchart_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_wheel_event` instead
+///
+#define q_polarchart_qbase_wheel_event q_polarchart_super_wheel_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
@@ -5707,7 +5951,7 @@ void q_polarchart_wheel_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QGraphicsSceneWheelEvent*
 ///
-void q_polarchart_qbase_wheel_event(void* self, void* event);
+void q_polarchart_super_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5731,6 +5975,10 @@ void q_polarchart_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_polarchart_input_method_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_input_method_event` instead
+///
+#define q_polarchart_qbase_input_method_event q_polarchart_super_input_method_event
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -5740,7 +5988,7 @@ void q_polarchart_input_method_event(void* self, void* event);
 /// @param self QPolarChart*
 /// @param event QInputMethodEvent*
 ///
-void q_polarchart_qbase_input_method_event(void* self, void* event);
+void q_polarchart_super_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5764,6 +6012,10 @@ void q_polarchart_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 QVariant* q_polarchart_input_method_query(void* self, int32_t query);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_input_method_query` instead
+///
+#define q_polarchart_qbase_input_method_query q_polarchart_super_input_method_query
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
@@ -5773,7 +6025,7 @@ QVariant* q_polarchart_input_method_query(void* self, int32_t query);
 /// @param self QPolarChart*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_polarchart_qbase_input_method_query(void* self, int32_t query);
+QVariant* q_polarchart_super_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5797,6 +6049,10 @@ void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool q_polarchart_supports_extension(void* self, int32_t extension);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_supports_extension` instead
+///
+#define q_polarchart_qbase_supports_extension q_polarchart_super_supports_extension
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
@@ -5806,7 +6062,7 @@ bool q_polarchart_supports_extension(void* self, int32_t extension);
 /// @param self QPolarChart*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_polarchart_qbase_supports_extension(void* self, int32_t extension);
+bool q_polarchart_super_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5831,6 +6087,10 @@ void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int3
 ///
 void q_polarchart_set_extension(void* self, int32_t extension, void* variant);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_set_extension` instead
+///
+#define q_polarchart_qbase_set_extension q_polarchart_super_set_extension
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
@@ -5841,7 +6101,7 @@ void q_polarchart_set_extension(void* self, int32_t extension, void* variant);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_polarchart_qbase_set_extension(void* self, int32_t extension, void* variant);
+void q_polarchart_super_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5865,6 +6125,10 @@ void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, 
 ///
 QVariant* q_polarchart_extension(void* self, void* variant);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_extension` instead
+///
+#define q_polarchart_qbase_extension q_polarchart_super_extension
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
@@ -5874,7 +6138,7 @@ QVariant* q_polarchart_extension(void* self, void* variant);
 /// @param self QPolarChart*
 /// @param variant QVariant*
 ///
-QVariant* q_polarchart_qbase_extension(void* self, void* variant);
+QVariant* q_polarchart_super_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5897,6 +6161,10 @@ void q_polarchart_on_extension(void* self, QVariant* (*callback)(void*, void*));
 ///
 bool q_polarchart_is_empty(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_is_empty` instead
+///
+#define q_polarchart_qbase_is_empty q_polarchart_super_is_empty
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
@@ -5905,7 +6173,7 @@ bool q_polarchart_is_empty(void* self);
 ///
 /// @param self QPolarChart*
 ///
-bool q_polarchart_qbase_is_empty(void* self);
+bool q_polarchart_super_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -5928,6 +6196,10 @@ void q_polarchart_on_is_empty(void* self, bool (*callback)());
 ///
 void q_polarchart_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_update_micro_focus` instead
+///
+#define q_polarchart_qbase_update_micro_focus q_polarchart_super_update_micro_focus
+
 /// Inherited from QGraphicsObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
@@ -5936,7 +6208,7 @@ void q_polarchart_update_micro_focus(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_update_micro_focus(void* self);
+void q_polarchart_super_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
 ///
@@ -5959,6 +6231,10 @@ void q_polarchart_on_update_micro_focus(void* self, void (*callback)());
 ///
 QObject* q_polarchart_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_sender` instead
+///
+#define q_polarchart_qbase_sender q_polarchart_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5967,7 +6243,7 @@ QObject* q_polarchart_sender(void* self);
 ///
 /// @param self QPolarChart*
 ///
-QObject* q_polarchart_qbase_sender(void* self);
+QObject* q_polarchart_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5990,6 +6266,10 @@ void q_polarchart_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_polarchart_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_sender_signal_index` instead
+///
+#define q_polarchart_qbase_sender_signal_index q_polarchart_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5998,7 +6278,7 @@ int32_t q_polarchart_sender_signal_index(void* self);
 ///
 /// @param self QPolarChart*
 ///
-int32_t q_polarchart_qbase_sender_signal_index(void* self);
+int32_t q_polarchart_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6022,6 +6302,10 @@ void q_polarchart_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_polarchart_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_receivers` instead
+///
+#define q_polarchart_qbase_receivers q_polarchart_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6031,7 +6315,7 @@ int32_t q_polarchart_receivers(void* self, const char* signal);
 /// @param self QPolarChart*
 /// @param signal const char*
 ///
-int32_t q_polarchart_qbase_receivers(void* self, const char* signal);
+int32_t q_polarchart_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6055,6 +6339,10 @@ void q_polarchart_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_polarchart_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_is_signal_connected` instead
+///
+#define q_polarchart_qbase_is_signal_connected q_polarchart_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6064,7 +6352,7 @@ bool q_polarchart_is_signal_connected(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-bool q_polarchart_qbase_is_signal_connected(void* self, void* signal);
+bool q_polarchart_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6087,6 +6375,10 @@ void q_polarchart_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 void q_polarchart_add_to_index(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_add_to_index` instead
+///
+#define q_polarchart_qbase_add_to_index q_polarchart_super_add_to_index
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
@@ -6095,7 +6387,7 @@ void q_polarchart_add_to_index(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_add_to_index(void* self);
+void q_polarchart_super_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6118,6 +6410,10 @@ void q_polarchart_on_add_to_index(void* self, void (*callback)());
 ///
 void q_polarchart_remove_from_index(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_remove_from_index` instead
+///
+#define q_polarchart_qbase_remove_from_index q_polarchart_super_remove_from_index
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -6126,7 +6422,7 @@ void q_polarchart_remove_from_index(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_remove_from_index(void* self);
+void q_polarchart_super_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6149,6 +6445,10 @@ void q_polarchart_on_remove_from_index(void* self, void (*callback)());
 ///
 void q_polarchart_prepare_geometry_change(void* self);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_prepare_geometry_change` instead
+///
+#define q_polarchart_qbase_prepare_geometry_change q_polarchart_super_prepare_geometry_change
+
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
@@ -6157,7 +6457,7 @@ void q_polarchart_prepare_geometry_change(void* self);
 ///
 /// @param self QPolarChart*
 ///
-void q_polarchart_qbase_prepare_geometry_change(void* self);
+void q_polarchart_super_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6181,6 +6481,10 @@ void q_polarchart_on_prepare_geometry_change(void* self, void (*callback)());
 ///
 void q_polarchart_set_graphics_item(void* self, void* item);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_set_graphics_item` instead
+///
+#define q_polarchart_qbase_set_graphics_item q_polarchart_super_set_graphics_item
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
@@ -6190,7 +6494,7 @@ void q_polarchart_set_graphics_item(void* self, void* item);
 /// @param self QPolarChart*
 /// @param item QGraphicsItem*
 ///
-void q_polarchart_qbase_set_graphics_item(void* self, void* item);
+void q_polarchart_super_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -6214,6 +6518,10 @@ void q_polarchart_on_set_graphics_item(void* self, void (*callback)(void*, void*
 ///
 void q_polarchart_set_owned_by_layout(void* self, bool ownedByLayout);
 
+/// @warning DEPRECATED: Use `q_polarchart_super_set_owned_by_layout` instead
+///
+#define q_polarchart_qbase_set_owned_by_layout q_polarchart_super_set_owned_by_layout
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
@@ -6223,7 +6531,7 @@ void q_polarchart_set_owned_by_layout(void* self, bool ownedByLayout);
 /// @param self QPolarChart*
 /// @param ownedByLayout bool
 ///
-void q_polarchart_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
+void q_polarchart_super_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///

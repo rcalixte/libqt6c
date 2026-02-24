@@ -39,8 +39,8 @@ void k_fileplaceeditdialog_on_meta_object(void* self, const QMetaObject* (*callb
     KFilePlaceEditDialog_OnMetaObject((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fileplaceeditdialog_qbase_meta_object(void* self) {
-    return KFilePlaceEditDialog_QBaseMetaObject((KFilePlaceEditDialog*)self);
+const QMetaObject* k_fileplaceeditdialog_super_meta_object(void* self) {
+    return KFilePlaceEditDialog_SuperMetaObject((KFilePlaceEditDialog*)self);
 }
 
 void* k_fileplaceeditdialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void k_fileplaceeditdialog_on_metacast(void* self, void* (*callback)(void*, cons
     KFilePlaceEditDialog_OnMetacast((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
-void* k_fileplaceeditdialog_qbase_metacast(void* self, const char* param1) {
-    return KFilePlaceEditDialog_QBaseMetacast((KFilePlaceEditDialog*)self, param1);
+void* k_fileplaceeditdialog_super_metacast(void* self, const char* param1) {
+    return KFilePlaceEditDialog_SuperMetacast((KFilePlaceEditDialog*)self, param1);
 }
 
 int32_t k_fileplaceeditdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void k_fileplaceeditdialog_on_metacall(void* self, int32_t (*callback)(void*, in
     KFilePlaceEditDialog_OnMetacall((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_fileplaceeditdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFilePlaceEditDialog_QBaseMetacall((KFilePlaceEditDialog*)self, param1, param2, param3);
+int32_t k_fileplaceeditdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFilePlaceEditDialog_SuperMetacall((KFilePlaceEditDialog*)self, param1, param2, param3);
 }
 
 const char* k_fileplaceeditdialog_tr(const char* s) {
@@ -1551,8 +1551,8 @@ void k_fileplaceeditdialog_set_visible(void* self, bool visible) {
     KFilePlaceEditDialog_SetVisible((KFilePlaceEditDialog*)self, visible);
 }
 
-void k_fileplaceeditdialog_qbase_set_visible(void* self, bool visible) {
-    KFilePlaceEditDialog_QBaseSetVisible((KFilePlaceEditDialog*)self, visible);
+void k_fileplaceeditdialog_super_set_visible(void* self, bool visible) {
+    KFilePlaceEditDialog_SuperSetVisible((KFilePlaceEditDialog*)self, visible);
 }
 
 void k_fileplaceeditdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1563,8 +1563,8 @@ QSize* k_fileplaceeditdialog_size_hint(void* self) {
     return KFilePlaceEditDialog_SizeHint((KFilePlaceEditDialog*)self);
 }
 
-QSize* k_fileplaceeditdialog_qbase_size_hint(void* self) {
-    return KFilePlaceEditDialog_QBaseSizeHint((KFilePlaceEditDialog*)self);
+QSize* k_fileplaceeditdialog_super_size_hint(void* self) {
+    return KFilePlaceEditDialog_SuperSizeHint((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1575,8 +1575,8 @@ QSize* k_fileplaceeditdialog_minimum_size_hint(void* self) {
     return KFilePlaceEditDialog_MinimumSizeHint((KFilePlaceEditDialog*)self);
 }
 
-QSize* k_fileplaceeditdialog_qbase_minimum_size_hint(void* self) {
-    return KFilePlaceEditDialog_QBaseMinimumSizeHint((KFilePlaceEditDialog*)self);
+QSize* k_fileplaceeditdialog_super_minimum_size_hint(void* self) {
+    return KFilePlaceEditDialog_SuperMinimumSizeHint((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1587,8 +1587,8 @@ void k_fileplaceeditdialog_open(void* self) {
     KFilePlaceEditDialog_Open((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_open(void* self) {
-    KFilePlaceEditDialog_QBaseOpen((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_open(void* self) {
+    KFilePlaceEditDialog_SuperOpen((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_open(void* self, void (*callback)()) {
@@ -1599,8 +1599,8 @@ int32_t k_fileplaceeditdialog_exec(void* self) {
     return KFilePlaceEditDialog_Exec((KFilePlaceEditDialog*)self);
 }
 
-int32_t k_fileplaceeditdialog_qbase_exec(void* self) {
-    return KFilePlaceEditDialog_QBaseExec((KFilePlaceEditDialog*)self);
+int32_t k_fileplaceeditdialog_super_exec(void* self) {
+    return KFilePlaceEditDialog_SuperExec((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1611,8 +1611,8 @@ void k_fileplaceeditdialog_done(void* self, int param1) {
     KFilePlaceEditDialog_Done((KFilePlaceEditDialog*)self, param1);
 }
 
-void k_fileplaceeditdialog_qbase_done(void* self, int param1) {
-    KFilePlaceEditDialog_QBaseDone((KFilePlaceEditDialog*)self, param1);
+void k_fileplaceeditdialog_super_done(void* self, int param1) {
+    KFilePlaceEditDialog_SuperDone((KFilePlaceEditDialog*)self, param1);
 }
 
 void k_fileplaceeditdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1623,8 +1623,8 @@ void k_fileplaceeditdialog_accept(void* self) {
     KFilePlaceEditDialog_Accept((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_accept(void* self) {
-    KFilePlaceEditDialog_QBaseAccept((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_accept(void* self) {
+    KFilePlaceEditDialog_SuperAccept((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_accept(void* self, void (*callback)()) {
@@ -1635,8 +1635,8 @@ void k_fileplaceeditdialog_reject(void* self) {
     KFilePlaceEditDialog_Reject((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_reject(void* self) {
-    KFilePlaceEditDialog_QBaseReject((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_reject(void* self) {
+    KFilePlaceEditDialog_SuperReject((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_reject(void* self, void (*callback)()) {
@@ -1647,8 +1647,8 @@ void k_fileplaceeditdialog_key_press_event(void* self, void* param1) {
     KFilePlaceEditDialog_KeyPressEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_key_press_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseKeyPressEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)param1);
+void k_fileplaceeditdialog_super_key_press_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperKeyPressEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1659,8 +1659,8 @@ void k_fileplaceeditdialog_close_event(void* self, void* param1) {
     KFilePlaceEditDialog_CloseEvent((KFilePlaceEditDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_close_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseCloseEvent((KFilePlaceEditDialog*)self, (QCloseEvent*)param1);
+void k_fileplaceeditdialog_super_close_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperCloseEvent((KFilePlaceEditDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1671,8 +1671,8 @@ void k_fileplaceeditdialog_show_event(void* self, void* param1) {
     KFilePlaceEditDialog_ShowEvent((KFilePlaceEditDialog*)self, (QShowEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_show_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseShowEvent((KFilePlaceEditDialog*)self, (QShowEvent*)param1);
+void k_fileplaceeditdialog_super_show_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperShowEvent((KFilePlaceEditDialog*)self, (QShowEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1683,8 +1683,8 @@ void k_fileplaceeditdialog_resize_event(void* self, void* param1) {
     KFilePlaceEditDialog_ResizeEvent((KFilePlaceEditDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_resize_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseResizeEvent((KFilePlaceEditDialog*)self, (QResizeEvent*)param1);
+void k_fileplaceeditdialog_super_resize_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperResizeEvent((KFilePlaceEditDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1695,8 +1695,8 @@ void k_fileplaceeditdialog_context_menu_event(void* self, void* param1) {
     KFilePlaceEditDialog_ContextMenuEvent((KFilePlaceEditDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_context_menu_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseContextMenuEvent((KFilePlaceEditDialog*)self, (QContextMenuEvent*)param1);
+void k_fileplaceeditdialog_super_context_menu_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperContextMenuEvent((KFilePlaceEditDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1707,8 +1707,8 @@ bool k_fileplaceeditdialog_event_filter(void* self, void* param1, void* param2) 
     return KFilePlaceEditDialog_EventFilter((KFilePlaceEditDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_fileplaceeditdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KFilePlaceEditDialog_QBaseEventFilter((KFilePlaceEditDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_fileplaceeditdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KFilePlaceEditDialog_SuperEventFilter((KFilePlaceEditDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_fileplaceeditdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1719,8 +1719,8 @@ int32_t k_fileplaceeditdialog_dev_type(void* self) {
     return KFilePlaceEditDialog_DevType((KFilePlaceEditDialog*)self);
 }
 
-int32_t k_fileplaceeditdialog_qbase_dev_type(void* self) {
-    return KFilePlaceEditDialog_QBaseDevType((KFilePlaceEditDialog*)self);
+int32_t k_fileplaceeditdialog_super_dev_type(void* self) {
+    return KFilePlaceEditDialog_SuperDevType((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1731,8 +1731,8 @@ int32_t k_fileplaceeditdialog_height_for_width(void* self, int param1) {
     return KFilePlaceEditDialog_HeightForWidth((KFilePlaceEditDialog*)self, param1);
 }
 
-int32_t k_fileplaceeditdialog_qbase_height_for_width(void* self, int param1) {
-    return KFilePlaceEditDialog_QBaseHeightForWidth((KFilePlaceEditDialog*)self, param1);
+int32_t k_fileplaceeditdialog_super_height_for_width(void* self, int param1) {
+    return KFilePlaceEditDialog_SuperHeightForWidth((KFilePlaceEditDialog*)self, param1);
 }
 
 void k_fileplaceeditdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1743,8 +1743,8 @@ bool k_fileplaceeditdialog_has_height_for_width(void* self) {
     return KFilePlaceEditDialog_HasHeightForWidth((KFilePlaceEditDialog*)self);
 }
 
-bool k_fileplaceeditdialog_qbase_has_height_for_width(void* self) {
-    return KFilePlaceEditDialog_QBaseHasHeightForWidth((KFilePlaceEditDialog*)self);
+bool k_fileplaceeditdialog_super_has_height_for_width(void* self) {
+    return KFilePlaceEditDialog_SuperHasHeightForWidth((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1755,8 +1755,8 @@ QPaintEngine* k_fileplaceeditdialog_paint_engine(void* self) {
     return KFilePlaceEditDialog_PaintEngine((KFilePlaceEditDialog*)self);
 }
 
-QPaintEngine* k_fileplaceeditdialog_qbase_paint_engine(void* self) {
-    return KFilePlaceEditDialog_QBasePaintEngine((KFilePlaceEditDialog*)self);
+QPaintEngine* k_fileplaceeditdialog_super_paint_engine(void* self) {
+    return KFilePlaceEditDialog_SuperPaintEngine((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1767,8 +1767,8 @@ bool k_fileplaceeditdialog_event(void* self, void* event) {
     return KFilePlaceEditDialog_Event((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
-bool k_fileplaceeditdialog_qbase_event(void* self, void* event) {
-    return KFilePlaceEditDialog_QBaseEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
+bool k_fileplaceeditdialog_super_event(void* self, void* event) {
+    return KFilePlaceEditDialog_SuperEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1779,8 +1779,8 @@ void k_fileplaceeditdialog_mouse_press_event(void* self, void* event) {
     KFilePlaceEditDialog_MousePressEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_mouse_press_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseMousePressEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
+void k_fileplaceeditdialog_super_mouse_press_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperMousePressEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1791,8 +1791,8 @@ void k_fileplaceeditdialog_mouse_release_event(void* self, void* event) {
     KFilePlaceEditDialog_MouseReleaseEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_mouse_release_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseMouseReleaseEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
+void k_fileplaceeditdialog_super_mouse_release_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperMouseReleaseEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1803,8 +1803,8 @@ void k_fileplaceeditdialog_mouse_double_click_event(void* self, void* event) {
     KFilePlaceEditDialog_MouseDoubleClickEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseMouseDoubleClickEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
+void k_fileplaceeditdialog_super_mouse_double_click_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperMouseDoubleClickEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1815,8 +1815,8 @@ void k_fileplaceeditdialog_mouse_move_event(void* self, void* event) {
     KFilePlaceEditDialog_MouseMoveEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_mouse_move_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseMouseMoveEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
+void k_fileplaceeditdialog_super_mouse_move_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperMouseMoveEvent((KFilePlaceEditDialog*)self, (QMouseEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1827,8 +1827,8 @@ void k_fileplaceeditdialog_wheel_event(void* self, void* event) {
     KFilePlaceEditDialog_WheelEvent((KFilePlaceEditDialog*)self, (QWheelEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_wheel_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseWheelEvent((KFilePlaceEditDialog*)self, (QWheelEvent*)event);
+void k_fileplaceeditdialog_super_wheel_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperWheelEvent((KFilePlaceEditDialog*)self, (QWheelEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1839,8 +1839,8 @@ void k_fileplaceeditdialog_key_release_event(void* self, void* event) {
     KFilePlaceEditDialog_KeyReleaseEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_key_release_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseKeyReleaseEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)event);
+void k_fileplaceeditdialog_super_key_release_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperKeyReleaseEvent((KFilePlaceEditDialog*)self, (QKeyEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1851,8 +1851,8 @@ void k_fileplaceeditdialog_focus_in_event(void* self, void* event) {
     KFilePlaceEditDialog_FocusInEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_focus_in_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseFocusInEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
+void k_fileplaceeditdialog_super_focus_in_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperFocusInEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1863,8 +1863,8 @@ void k_fileplaceeditdialog_focus_out_event(void* self, void* event) {
     KFilePlaceEditDialog_FocusOutEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_focus_out_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseFocusOutEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
+void k_fileplaceeditdialog_super_focus_out_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperFocusOutEvent((KFilePlaceEditDialog*)self, (QFocusEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1875,8 +1875,8 @@ void k_fileplaceeditdialog_enter_event(void* self, void* event) {
     KFilePlaceEditDialog_EnterEvent((KFilePlaceEditDialog*)self, (QEnterEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_enter_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseEnterEvent((KFilePlaceEditDialog*)self, (QEnterEvent*)event);
+void k_fileplaceeditdialog_super_enter_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperEnterEvent((KFilePlaceEditDialog*)self, (QEnterEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ void k_fileplaceeditdialog_leave_event(void* self, void* event) {
     KFilePlaceEditDialog_LeaveEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_leave_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseLeaveEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
+void k_fileplaceeditdialog_super_leave_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperLeaveEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ void k_fileplaceeditdialog_paint_event(void* self, void* event) {
     KFilePlaceEditDialog_PaintEvent((KFilePlaceEditDialog*)self, (QPaintEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_paint_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBasePaintEvent((KFilePlaceEditDialog*)self, (QPaintEvent*)event);
+void k_fileplaceeditdialog_super_paint_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperPaintEvent((KFilePlaceEditDialog*)self, (QPaintEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1911,8 +1911,8 @@ void k_fileplaceeditdialog_move_event(void* self, void* event) {
     KFilePlaceEditDialog_MoveEvent((KFilePlaceEditDialog*)self, (QMoveEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_move_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseMoveEvent((KFilePlaceEditDialog*)self, (QMoveEvent*)event);
+void k_fileplaceeditdialog_super_move_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperMoveEvent((KFilePlaceEditDialog*)self, (QMoveEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1923,8 +1923,8 @@ void k_fileplaceeditdialog_tablet_event(void* self, void* event) {
     KFilePlaceEditDialog_TabletEvent((KFilePlaceEditDialog*)self, (QTabletEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_tablet_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseTabletEvent((KFilePlaceEditDialog*)self, (QTabletEvent*)event);
+void k_fileplaceeditdialog_super_tablet_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperTabletEvent((KFilePlaceEditDialog*)self, (QTabletEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1935,8 +1935,8 @@ void k_fileplaceeditdialog_action_event(void* self, void* event) {
     KFilePlaceEditDialog_ActionEvent((KFilePlaceEditDialog*)self, (QActionEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_action_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseActionEvent((KFilePlaceEditDialog*)self, (QActionEvent*)event);
+void k_fileplaceeditdialog_super_action_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperActionEvent((KFilePlaceEditDialog*)self, (QActionEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1947,8 +1947,8 @@ void k_fileplaceeditdialog_drag_enter_event(void* self, void* event) {
     KFilePlaceEditDialog_DragEnterEvent((KFilePlaceEditDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_drag_enter_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseDragEnterEvent((KFilePlaceEditDialog*)self, (QDragEnterEvent*)event);
+void k_fileplaceeditdialog_super_drag_enter_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperDragEnterEvent((KFilePlaceEditDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1959,8 +1959,8 @@ void k_fileplaceeditdialog_drag_move_event(void* self, void* event) {
     KFilePlaceEditDialog_DragMoveEvent((KFilePlaceEditDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_drag_move_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseDragMoveEvent((KFilePlaceEditDialog*)self, (QDragMoveEvent*)event);
+void k_fileplaceeditdialog_super_drag_move_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperDragMoveEvent((KFilePlaceEditDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ void k_fileplaceeditdialog_drag_leave_event(void* self, void* event) {
     KFilePlaceEditDialog_DragLeaveEvent((KFilePlaceEditDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_drag_leave_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseDragLeaveEvent((KFilePlaceEditDialog*)self, (QDragLeaveEvent*)event);
+void k_fileplaceeditdialog_super_drag_leave_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperDragLeaveEvent((KFilePlaceEditDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ void k_fileplaceeditdialog_drop_event(void* self, void* event) {
     KFilePlaceEditDialog_DropEvent((KFilePlaceEditDialog*)self, (QDropEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_drop_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseDropEvent((KFilePlaceEditDialog*)self, (QDropEvent*)event);
+void k_fileplaceeditdialog_super_drop_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperDropEvent((KFilePlaceEditDialog*)self, (QDropEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1995,8 +1995,8 @@ void k_fileplaceeditdialog_hide_event(void* self, void* event) {
     KFilePlaceEditDialog_HideEvent((KFilePlaceEditDialog*)self, (QHideEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_hide_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseHideEvent((KFilePlaceEditDialog*)self, (QHideEvent*)event);
+void k_fileplaceeditdialog_super_hide_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperHideEvent((KFilePlaceEditDialog*)self, (QHideEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ bool k_fileplaceeditdialog_native_event(void* self, char* eventType, void* messa
     return KFilePlaceEditDialog_NativeEvent((KFilePlaceEditDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_fileplaceeditdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KFilePlaceEditDialog_QBaseNativeEvent((KFilePlaceEditDialog*)self, qstring(eventType), message, result);
+bool k_fileplaceeditdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KFilePlaceEditDialog_SuperNativeEvent((KFilePlaceEditDialog*)self, qstring(eventType), message, result);
 }
 
 void k_fileplaceeditdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2019,8 +2019,8 @@ void k_fileplaceeditdialog_change_event(void* self, void* param1) {
     KFilePlaceEditDialog_ChangeEvent((KFilePlaceEditDialog*)self, (QEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_change_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseChangeEvent((KFilePlaceEditDialog*)self, (QEvent*)param1);
+void k_fileplaceeditdialog_super_change_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperChangeEvent((KFilePlaceEditDialog*)self, (QEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ int32_t k_fileplaceeditdialog_metric(void* self, int32_t param1) {
     return KFilePlaceEditDialog_Metric((KFilePlaceEditDialog*)self, param1);
 }
 
-int32_t k_fileplaceeditdialog_qbase_metric(void* self, int32_t param1) {
-    return KFilePlaceEditDialog_QBaseMetric((KFilePlaceEditDialog*)self, param1);
+int32_t k_fileplaceeditdialog_super_metric(void* self, int32_t param1) {
+    return KFilePlaceEditDialog_SuperMetric((KFilePlaceEditDialog*)self, param1);
 }
 
 void k_fileplaceeditdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2043,8 +2043,8 @@ void k_fileplaceeditdialog_init_painter(void* self, void* painter) {
     KFilePlaceEditDialog_InitPainter((KFilePlaceEditDialog*)self, (QPainter*)painter);
 }
 
-void k_fileplaceeditdialog_qbase_init_painter(void* self, void* painter) {
-    KFilePlaceEditDialog_QBaseInitPainter((KFilePlaceEditDialog*)self, (QPainter*)painter);
+void k_fileplaceeditdialog_super_init_painter(void* self, void* painter) {
+    KFilePlaceEditDialog_SuperInitPainter((KFilePlaceEditDialog*)self, (QPainter*)painter);
 }
 
 void k_fileplaceeditdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2055,8 +2055,8 @@ QPaintDevice* k_fileplaceeditdialog_redirected(void* self, void* offset) {
     return KFilePlaceEditDialog_Redirected((KFilePlaceEditDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_fileplaceeditdialog_qbase_redirected(void* self, void* offset) {
-    return KFilePlaceEditDialog_QBaseRedirected((KFilePlaceEditDialog*)self, (QPoint*)offset);
+QPaintDevice* k_fileplaceeditdialog_super_redirected(void* self, void* offset) {
+    return KFilePlaceEditDialog_SuperRedirected((KFilePlaceEditDialog*)self, (QPoint*)offset);
 }
 
 void k_fileplaceeditdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ QPainter* k_fileplaceeditdialog_shared_painter(void* self) {
     return KFilePlaceEditDialog_SharedPainter((KFilePlaceEditDialog*)self);
 }
 
-QPainter* k_fileplaceeditdialog_qbase_shared_painter(void* self) {
-    return KFilePlaceEditDialog_QBaseSharedPainter((KFilePlaceEditDialog*)self);
+QPainter* k_fileplaceeditdialog_super_shared_painter(void* self) {
+    return KFilePlaceEditDialog_SuperSharedPainter((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2079,8 +2079,8 @@ void k_fileplaceeditdialog_input_method_event(void* self, void* param1) {
     KFilePlaceEditDialog_InputMethodEvent((KFilePlaceEditDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_input_method_event(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseInputMethodEvent((KFilePlaceEditDialog*)self, (QInputMethodEvent*)param1);
+void k_fileplaceeditdialog_super_input_method_event(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperInputMethodEvent((KFilePlaceEditDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_fileplaceeditdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ QVariant* k_fileplaceeditdialog_input_method_query(void* self, int32_t param1) {
     return KFilePlaceEditDialog_InputMethodQuery((KFilePlaceEditDialog*)self, param1);
 }
 
-QVariant* k_fileplaceeditdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KFilePlaceEditDialog_QBaseInputMethodQuery((KFilePlaceEditDialog*)self, param1);
+QVariant* k_fileplaceeditdialog_super_input_method_query(void* self, int32_t param1) {
+    return KFilePlaceEditDialog_SuperInputMethodQuery((KFilePlaceEditDialog*)self, param1);
 }
 
 void k_fileplaceeditdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2103,8 +2103,8 @@ bool k_fileplaceeditdialog_focus_next_prev_child(void* self, bool next) {
     return KFilePlaceEditDialog_FocusNextPrevChild((KFilePlaceEditDialog*)self, next);
 }
 
-bool k_fileplaceeditdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KFilePlaceEditDialog_QBaseFocusNextPrevChild((KFilePlaceEditDialog*)self, next);
+bool k_fileplaceeditdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KFilePlaceEditDialog_SuperFocusNextPrevChild((KFilePlaceEditDialog*)self, next);
 }
 
 void k_fileplaceeditdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2115,8 +2115,8 @@ void k_fileplaceeditdialog_timer_event(void* self, void* event) {
     KFilePlaceEditDialog_TimerEvent((KFilePlaceEditDialog*)self, (QTimerEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_timer_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseTimerEvent((KFilePlaceEditDialog*)self, (QTimerEvent*)event);
+void k_fileplaceeditdialog_super_timer_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperTimerEvent((KFilePlaceEditDialog*)self, (QTimerEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ void k_fileplaceeditdialog_child_event(void* self, void* event) {
     KFilePlaceEditDialog_ChildEvent((KFilePlaceEditDialog*)self, (QChildEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_child_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseChildEvent((KFilePlaceEditDialog*)self, (QChildEvent*)event);
+void k_fileplaceeditdialog_super_child_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperChildEvent((KFilePlaceEditDialog*)self, (QChildEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2139,8 +2139,8 @@ void k_fileplaceeditdialog_custom_event(void* self, void* event) {
     KFilePlaceEditDialog_CustomEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
-void k_fileplaceeditdialog_qbase_custom_event(void* self, void* event) {
-    KFilePlaceEditDialog_QBaseCustomEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
+void k_fileplaceeditdialog_super_custom_event(void* self, void* event) {
+    KFilePlaceEditDialog_SuperCustomEvent((KFilePlaceEditDialog*)self, (QEvent*)event);
 }
 
 void k_fileplaceeditdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2151,8 +2151,8 @@ void k_fileplaceeditdialog_connect_notify(void* self, void* signal) {
     KFilePlaceEditDialog_ConnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplaceeditdialog_qbase_connect_notify(void* self, void* signal) {
-    KFilePlaceEditDialog_QBaseConnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
+void k_fileplaceeditdialog_super_connect_notify(void* self, void* signal) {
+    KFilePlaceEditDialog_SuperConnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_fileplaceeditdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2163,8 +2163,8 @@ void k_fileplaceeditdialog_disconnect_notify(void* self, void* signal) {
     KFilePlaceEditDialog_DisconnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_fileplaceeditdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KFilePlaceEditDialog_QBaseDisconnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
+void k_fileplaceeditdialog_super_disconnect_notify(void* self, void* signal) {
+    KFilePlaceEditDialog_SuperDisconnectNotify((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_fileplaceeditdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2175,8 +2175,8 @@ void k_fileplaceeditdialog_adjust_position(void* self, void* param1) {
     KFilePlaceEditDialog_AdjustPosition((KFilePlaceEditDialog*)self, (QWidget*)param1);
 }
 
-void k_fileplaceeditdialog_qbase_adjust_position(void* self, void* param1) {
-    KFilePlaceEditDialog_QBaseAdjustPosition((KFilePlaceEditDialog*)self, (QWidget*)param1);
+void k_fileplaceeditdialog_super_adjust_position(void* self, void* param1) {
+    KFilePlaceEditDialog_SuperAdjustPosition((KFilePlaceEditDialog*)self, (QWidget*)param1);
 }
 
 void k_fileplaceeditdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2187,8 +2187,8 @@ void k_fileplaceeditdialog_update_micro_focus(void* self) {
     KFilePlaceEditDialog_UpdateMicroFocus((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_update_micro_focus(void* self) {
-    KFilePlaceEditDialog_QBaseUpdateMicroFocus((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_update_micro_focus(void* self) {
+    KFilePlaceEditDialog_SuperUpdateMicroFocus((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2199,8 +2199,8 @@ void k_fileplaceeditdialog_create(void* self) {
     KFilePlaceEditDialog_Create((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_create(void* self) {
-    KFilePlaceEditDialog_QBaseCreate((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_create(void* self) {
+    KFilePlaceEditDialog_SuperCreate((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_create(void* self, void (*callback)()) {
@@ -2211,8 +2211,8 @@ void k_fileplaceeditdialog_destroy(void* self) {
     KFilePlaceEditDialog_Destroy((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_qbase_destroy(void* self) {
-    KFilePlaceEditDialog_QBaseDestroy((KFilePlaceEditDialog*)self);
+void k_fileplaceeditdialog_super_destroy(void* self) {
+    KFilePlaceEditDialog_SuperDestroy((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_destroy(void* self, void (*callback)()) {
@@ -2223,8 +2223,8 @@ bool k_fileplaceeditdialog_focus_next_child(void* self) {
     return KFilePlaceEditDialog_FocusNextChild((KFilePlaceEditDialog*)self);
 }
 
-bool k_fileplaceeditdialog_qbase_focus_next_child(void* self) {
-    return KFilePlaceEditDialog_QBaseFocusNextChild((KFilePlaceEditDialog*)self);
+bool k_fileplaceeditdialog_super_focus_next_child(void* self) {
+    return KFilePlaceEditDialog_SuperFocusNextChild((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2235,8 +2235,8 @@ bool k_fileplaceeditdialog_focus_previous_child(void* self) {
     return KFilePlaceEditDialog_FocusPreviousChild((KFilePlaceEditDialog*)self);
 }
 
-bool k_fileplaceeditdialog_qbase_focus_previous_child(void* self) {
-    return KFilePlaceEditDialog_QBaseFocusPreviousChild((KFilePlaceEditDialog*)self);
+bool k_fileplaceeditdialog_super_focus_previous_child(void* self) {
+    return KFilePlaceEditDialog_SuperFocusPreviousChild((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2247,8 +2247,8 @@ QObject* k_fileplaceeditdialog_sender(void* self) {
     return KFilePlaceEditDialog_Sender((KFilePlaceEditDialog*)self);
 }
 
-QObject* k_fileplaceeditdialog_qbase_sender(void* self) {
-    return KFilePlaceEditDialog_QBaseSender((KFilePlaceEditDialog*)self);
+QObject* k_fileplaceeditdialog_super_sender(void* self) {
+    return KFilePlaceEditDialog_SuperSender((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2259,8 +2259,8 @@ int32_t k_fileplaceeditdialog_sender_signal_index(void* self) {
     return KFilePlaceEditDialog_SenderSignalIndex((KFilePlaceEditDialog*)self);
 }
 
-int32_t k_fileplaceeditdialog_qbase_sender_signal_index(void* self) {
-    return KFilePlaceEditDialog_QBaseSenderSignalIndex((KFilePlaceEditDialog*)self);
+int32_t k_fileplaceeditdialog_super_sender_signal_index(void* self) {
+    return KFilePlaceEditDialog_SuperSenderSignalIndex((KFilePlaceEditDialog*)self);
 }
 
 void k_fileplaceeditdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2271,8 +2271,8 @@ int32_t k_fileplaceeditdialog_receivers(void* self, const char* signal) {
     return KFilePlaceEditDialog_Receivers((KFilePlaceEditDialog*)self, signal);
 }
 
-int32_t k_fileplaceeditdialog_qbase_receivers(void* self, const char* signal) {
-    return KFilePlaceEditDialog_QBaseReceivers((KFilePlaceEditDialog*)self, signal);
+int32_t k_fileplaceeditdialog_super_receivers(void* self, const char* signal) {
+    return KFilePlaceEditDialog_SuperReceivers((KFilePlaceEditDialog*)self, signal);
 }
 
 void k_fileplaceeditdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2283,8 +2283,8 @@ bool k_fileplaceeditdialog_is_signal_connected(void* self, void* signal) {
     return KFilePlaceEditDialog_IsSignalConnected((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_fileplaceeditdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KFilePlaceEditDialog_QBaseIsSignalConnected((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
+bool k_fileplaceeditdialog_super_is_signal_connected(void* self, void* signal) {
+    return KFilePlaceEditDialog_SuperIsSignalConnected((KFilePlaceEditDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_fileplaceeditdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2295,8 +2295,8 @@ double k_fileplaceeditdialog_get_decoded_metric_f(void* self, int32_t metricA, i
     return KFilePlaceEditDialog_GetDecodedMetricF((KFilePlaceEditDialog*)self, metricA, metricB);
 }
 
-double k_fileplaceeditdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFilePlaceEditDialog_QBaseGetDecodedMetricF((KFilePlaceEditDialog*)self, metricA, metricB);
+double k_fileplaceeditdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KFilePlaceEditDialog_SuperGetDecodedMetricF((KFilePlaceEditDialog*)self, metricA, metricB);
 }
 
 void k_fileplaceeditdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

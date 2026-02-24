@@ -27,8 +27,8 @@ void q_graphicseffect_on_meta_object(void* self, const QMetaObject* (*callback)(
     QGraphicsEffect_OnMetaObject((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicseffect_qbase_meta_object(void* self) {
-    return QGraphicsEffect_QBaseMetaObject((QGraphicsEffect*)self);
+const QMetaObject* q_graphicseffect_super_meta_object(void* self) {
+    return QGraphicsEffect_SuperMetaObject((QGraphicsEffect*)self);
 }
 
 void* q_graphicseffect_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_graphicseffect_on_metacast(void* self, void* (*callback)(void*, const cha
     QGraphicsEffect_OnMetacast((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void* q_graphicseffect_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsEffect_QBaseMetacast((QGraphicsEffect*)self, param1);
+void* q_graphicseffect_super_metacast(void* self, const char* param1) {
+    return QGraphicsEffect_SuperMetacast((QGraphicsEffect*)self, param1);
 }
 
 int32_t q_graphicseffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QGraphicsEffect_OnMetacall((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicseffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsEffect_QBaseMetacall((QGraphicsEffect*)self, param1, param2, param3);
+int32_t q_graphicseffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsEffect_SuperMetacall((QGraphicsEffect*)self, param1, param2, param3);
 }
 
 const char* q_graphicseffect_tr(const char* s) {
@@ -70,8 +70,8 @@ void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*
     QGraphicsEffect_OnBoundingRectFor((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicseffect_qbase_bounding_rect_for(void* self, void* sourceRect) {
-    return QGraphicsEffect_QBaseBoundingRectFor((QGraphicsEffect*)self, (QRectF*)sourceRect);
+QRectF* q_graphicseffect_super_bounding_rect_for(void* self, void* sourceRect) {
+    return QGraphicsEffect_SuperBoundingRectFor((QGraphicsEffect*)self, (QRectF*)sourceRect);
 }
 
 QRectF* q_graphicseffect_bounding_rect(void* self) {
@@ -106,8 +106,8 @@ void q_graphicseffect_on_draw(void* self, void (*callback)(void*, void*)) {
     QGraphicsEffect_OnDraw((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicseffect_qbase_draw(void* self, void* painter) {
-    QGraphicsEffect_QBaseDraw((QGraphicsEffect*)self, (QPainter*)painter);
+void q_graphicseffect_super_draw(void* self, void* painter) {
+    QGraphicsEffect_SuperDraw((QGraphicsEffect*)self, (QPainter*)painter);
 }
 
 void q_graphicseffect_source_changed(void* self, int32_t flags) {
@@ -118,8 +118,8 @@ void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int3
     QGraphicsEffect_OnSourceChanged((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicseffect_qbase_source_changed(void* self, int32_t flags) {
-    QGraphicsEffect_QBaseSourceChanged((QGraphicsEffect*)self, flags);
+void q_graphicseffect_super_source_changed(void* self, int32_t flags) {
+    QGraphicsEffect_SuperSourceChanged((QGraphicsEffect*)self, flags);
 }
 
 void q_graphicseffect_update_bounding_rect(void* self) {
@@ -130,8 +130,8 @@ void q_graphicseffect_on_update_bounding_rect(void* self, void (*callback)()) {
     QGraphicsEffect_OnUpdateBoundingRect((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicseffect_qbase_update_bounding_rect(void* self) {
-    QGraphicsEffect_QBaseUpdateBoundingRect((QGraphicsEffect*)self);
+void q_graphicseffect_super_update_bounding_rect(void* self) {
+    QGraphicsEffect_SuperUpdateBoundingRect((QGraphicsEffect*)self);
 }
 
 bool q_graphicseffect_source_is_pixmap(void* self) {
@@ -142,8 +142,8 @@ void q_graphicseffect_on_source_is_pixmap(void* self, bool (*callback)()) {
     QGraphicsEffect_OnSourceIsPixmap((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-bool q_graphicseffect_qbase_source_is_pixmap(void* self) {
-    return QGraphicsEffect_QBaseSourceIsPixmap((QGraphicsEffect*)self);
+bool q_graphicseffect_super_source_is_pixmap(void* self) {
+    return QGraphicsEffect_SuperSourceIsPixmap((QGraphicsEffect*)self);
 }
 
 QRectF* q_graphicseffect_source_bounding_rect(void* self) {
@@ -154,8 +154,8 @@ void q_graphicseffect_on_source_bounding_rect(void* self, QRectF* (*callback)())
     QGraphicsEffect_OnSourceBoundingRect((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicseffect_qbase_source_bounding_rect(void* self) {
-    return QGraphicsEffect_QBaseSourceBoundingRect((QGraphicsEffect*)self);
+QRectF* q_graphicseffect_super_source_bounding_rect(void* self) {
+    return QGraphicsEffect_SuperSourceBoundingRect((QGraphicsEffect*)self);
 }
 
 void q_graphicseffect_draw_source(void* self, void* painter) {
@@ -166,8 +166,8 @@ void q_graphicseffect_on_draw_source(void* self, void (*callback)(void*, void*))
     QGraphicsEffect_OnDrawSource((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicseffect_qbase_draw_source(void* self, void* painter) {
-    QGraphicsEffect_QBaseDrawSource((QGraphicsEffect*)self, (QPainter*)painter);
+void q_graphicseffect_super_draw_source(void* self, void* painter) {
+    QGraphicsEffect_SuperDrawSource((QGraphicsEffect*)self, (QPainter*)painter);
 }
 
 QPixmap* q_graphicseffect_source_pixmap(void* self) {
@@ -178,8 +178,8 @@ void q_graphicseffect_on_source_pixmap(void* self, QPixmap* (*callback)()) {
     QGraphicsEffect_OnSourcePixmap((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap(void* self) {
-    return QGraphicsEffect_QBaseSourcePixmap((QGraphicsEffect*)self);
+QPixmap* q_graphicseffect_super_source_pixmap(void* self) {
+    return QGraphicsEffect_SuperSourcePixmap((QGraphicsEffect*)self);
 }
 
 const char* q_graphicseffect_tr2(const char* s, const char* c) {
@@ -204,8 +204,8 @@ void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(v
     QGraphicsEffect_OnSourceBoundingRect1((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int32_t system) {
-    return QGraphicsEffect_QBaseSourceBoundingRect1((QGraphicsEffect*)self, system);
+QRectF* q_graphicseffect_super_source_bounding_rect1(void* self, int32_t system) {
+    return QGraphicsEffect_SuperSourceBoundingRect1((QGraphicsEffect*)self, system);
 }
 
 QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system) {
@@ -216,8 +216,8 @@ void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, 
     QGraphicsEffect_OnSourcePixmap1((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int32_t system) {
-    return QGraphicsEffect_QBaseSourcePixmap1((QGraphicsEffect*)self, system);
+QPixmap* q_graphicseffect_super_source_pixmap1(void* self, int32_t system) {
+    return QGraphicsEffect_SuperSourcePixmap1((QGraphicsEffect*)self, system);
 }
 
 QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offset) {
@@ -228,8 +228,8 @@ void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, 
     QGraphicsEffect_OnSourcePixmap2((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int32_t system, void* offset) {
-    return QGraphicsEffect_QBaseSourcePixmap2((QGraphicsEffect*)self, system, (QPoint*)offset);
+QPixmap* q_graphicseffect_super_source_pixmap2(void* self, int32_t system, void* offset) {
+    return QGraphicsEffect_SuperSourcePixmap2((QGraphicsEffect*)self, system, (QPoint*)offset);
 }
 
 QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode) {
@@ -240,8 +240,8 @@ void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, 
     QGraphicsEffect_OnSourcePixmap3((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode) {
-    return QGraphicsEffect_QBaseSourcePixmap3((QGraphicsEffect*)self, system, (QPoint*)offset, mode);
+QPixmap* q_graphicseffect_super_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode) {
+    return QGraphicsEffect_SuperSourcePixmap3((QGraphicsEffect*)self, system, (QPoint*)offset, mode);
 }
 
 const char* q_graphicseffect_object_name(void* self) {
@@ -459,8 +459,8 @@ bool q_graphicseffect_event(void* self, void* event) {
     return QGraphicsEffect_Event((QGraphicsEffect*)self, (QEvent*)event);
 }
 
-bool q_graphicseffect_qbase_event(void* self, void* event) {
-    return QGraphicsEffect_QBaseEvent((QGraphicsEffect*)self, (QEvent*)event);
+bool q_graphicseffect_super_event(void* self, void* event) {
+    return QGraphicsEffect_SuperEvent((QGraphicsEffect*)self, (QEvent*)event);
 }
 
 void q_graphicseffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ bool q_graphicseffect_event_filter(void* self, void* watched, void* event) {
     return QGraphicsEffect_EventFilter((QGraphicsEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicseffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsEffect_QBaseEventFilter((QGraphicsEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicseffect_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsEffect_SuperEventFilter((QGraphicsEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicseffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -483,8 +483,8 @@ void q_graphicseffect_timer_event(void* self, void* event) {
     QGraphicsEffect_TimerEvent((QGraphicsEffect*)self, (QTimerEvent*)event);
 }
 
-void q_graphicseffect_qbase_timer_event(void* self, void* event) {
-    QGraphicsEffect_QBaseTimerEvent((QGraphicsEffect*)self, (QTimerEvent*)event);
+void q_graphicseffect_super_timer_event(void* self, void* event) {
+    QGraphicsEffect_SuperTimerEvent((QGraphicsEffect*)self, (QTimerEvent*)event);
 }
 
 void q_graphicseffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -495,8 +495,8 @@ void q_graphicseffect_child_event(void* self, void* event) {
     QGraphicsEffect_ChildEvent((QGraphicsEffect*)self, (QChildEvent*)event);
 }
 
-void q_graphicseffect_qbase_child_event(void* self, void* event) {
-    QGraphicsEffect_QBaseChildEvent((QGraphicsEffect*)self, (QChildEvent*)event);
+void q_graphicseffect_super_child_event(void* self, void* event) {
+    QGraphicsEffect_SuperChildEvent((QGraphicsEffect*)self, (QChildEvent*)event);
 }
 
 void q_graphicseffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -507,8 +507,8 @@ void q_graphicseffect_custom_event(void* self, void* event) {
     QGraphicsEffect_CustomEvent((QGraphicsEffect*)self, (QEvent*)event);
 }
 
-void q_graphicseffect_qbase_custom_event(void* self, void* event) {
-    QGraphicsEffect_QBaseCustomEvent((QGraphicsEffect*)self, (QEvent*)event);
+void q_graphicseffect_super_custom_event(void* self, void* event) {
+    QGraphicsEffect_SuperCustomEvent((QGraphicsEffect*)self, (QEvent*)event);
 }
 
 void q_graphicseffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -519,8 +519,8 @@ void q_graphicseffect_connect_notify(void* self, void* signal) {
     QGraphicsEffect_ConnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicseffect_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsEffect_QBaseConnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
+void q_graphicseffect_super_connect_notify(void* self, void* signal) {
+    QGraphicsEffect_SuperConnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicseffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -531,8 +531,8 @@ void q_graphicseffect_disconnect_notify(void* self, void* signal) {
     QGraphicsEffect_DisconnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicseffect_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsEffect_QBaseDisconnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
+void q_graphicseffect_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsEffect_SuperDisconnectNotify((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicseffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -543,8 +543,8 @@ QObject* q_graphicseffect_sender(void* self) {
     return QGraphicsEffect_Sender((QGraphicsEffect*)self);
 }
 
-QObject* q_graphicseffect_qbase_sender(void* self) {
-    return QGraphicsEffect_QBaseSender((QGraphicsEffect*)self);
+QObject* q_graphicseffect_super_sender(void* self) {
+    return QGraphicsEffect_SuperSender((QGraphicsEffect*)self);
 }
 
 void q_graphicseffect_on_sender(void* self, QObject* (*callback)()) {
@@ -555,8 +555,8 @@ int32_t q_graphicseffect_sender_signal_index(void* self) {
     return QGraphicsEffect_SenderSignalIndex((QGraphicsEffect*)self);
 }
 
-int32_t q_graphicseffect_qbase_sender_signal_index(void* self) {
-    return QGraphicsEffect_QBaseSenderSignalIndex((QGraphicsEffect*)self);
+int32_t q_graphicseffect_super_sender_signal_index(void* self) {
+    return QGraphicsEffect_SuperSenderSignalIndex((QGraphicsEffect*)self);
 }
 
 void q_graphicseffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -567,8 +567,8 @@ int32_t q_graphicseffect_receivers(void* self, const char* signal) {
     return QGraphicsEffect_Receivers((QGraphicsEffect*)self, signal);
 }
 
-int32_t q_graphicseffect_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsEffect_QBaseReceivers((QGraphicsEffect*)self, signal);
+int32_t q_graphicseffect_super_receivers(void* self, const char* signal) {
+    return QGraphicsEffect_SuperReceivers((QGraphicsEffect*)self, signal);
 }
 
 void q_graphicseffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -579,8 +579,8 @@ bool q_graphicseffect_is_signal_connected(void* self, void* signal) {
     return QGraphicsEffect_IsSignalConnected((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicseffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsEffect_QBaseIsSignalConnected((QGraphicsEffect*)self, (QMetaMethod*)signal);
+bool q_graphicseffect_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsEffect_SuperIsSignalConnected((QGraphicsEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicseffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -611,8 +611,8 @@ void q_graphicscolorizeeffect_on_meta_object(void* self, const QMetaObject* (*ca
     QGraphicsColorizeEffect_OnMetaObject((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicscolorizeeffect_qbase_meta_object(void* self) {
-    return QGraphicsColorizeEffect_QBaseMetaObject((QGraphicsColorizeEffect*)self);
+const QMetaObject* q_graphicscolorizeeffect_super_meta_object(void* self) {
+    return QGraphicsColorizeEffect_SuperMetaObject((QGraphicsColorizeEffect*)self);
 }
 
 void* q_graphicscolorizeeffect_metacast(void* self, const char* param1) {
@@ -623,8 +623,8 @@ void q_graphicscolorizeeffect_on_metacast(void* self, void* (*callback)(void*, c
     QGraphicsColorizeEffect_OnMetacast((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-void* q_graphicscolorizeeffect_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsColorizeEffect_QBaseMetacast((QGraphicsColorizeEffect*)self, param1);
+void* q_graphicscolorizeeffect_super_metacast(void* self, const char* param1) {
+    return QGraphicsColorizeEffect_SuperMetacast((QGraphicsColorizeEffect*)self, param1);
 }
 
 int32_t q_graphicscolorizeeffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -635,8 +635,8 @@ void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*,
     QGraphicsColorizeEffect_OnMetacall((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsColorizeEffect_QBaseMetacall((QGraphicsColorizeEffect*)self, param1, param2, param3);
+int32_t q_graphicscolorizeeffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsColorizeEffect_SuperMetacall((QGraphicsColorizeEffect*)self, param1, param2, param3);
 }
 
 const char* q_graphicscolorizeeffect_tr(const char* s) {
@@ -686,8 +686,8 @@ void q_graphicscolorizeeffect_on_draw(void* self, void (*callback)(void*, void*)
     QGraphicsColorizeEffect_OnDraw((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicscolorizeeffect_qbase_draw(void* self, void* painter) {
-    QGraphicsColorizeEffect_QBaseDraw((QGraphicsColorizeEffect*)self, (QPainter*)painter);
+void q_graphicscolorizeeffect_super_draw(void* self, void* painter) {
+    QGraphicsColorizeEffect_SuperDraw((QGraphicsColorizeEffect*)self, (QPainter*)painter);
 }
 
 const char* q_graphicscolorizeeffect_tr2(const char* s, const char* c) {
@@ -943,8 +943,8 @@ QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect)
     return QGraphicsColorizeEffect_BoundingRectFor((QGraphicsColorizeEffect*)self, (QRectF*)sourceRect);
 }
 
-QRectF* q_graphicscolorizeeffect_qbase_bounding_rect_for(void* self, void* sourceRect) {
-    return QGraphicsColorizeEffect_QBaseBoundingRectFor((QGraphicsColorizeEffect*)self, (QRectF*)sourceRect);
+QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(void* self, void* sourceRect) {
+    return QGraphicsColorizeEffect_SuperBoundingRectFor((QGraphicsColorizeEffect*)self, (QRectF*)sourceRect);
 }
 
 void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*)) {
@@ -955,8 +955,8 @@ void q_graphicscolorizeeffect_source_changed(void* self, int32_t flags) {
     QGraphicsColorizeEffect_SourceChanged((QGraphicsColorizeEffect*)self, flags);
 }
 
-void q_graphicscolorizeeffect_qbase_source_changed(void* self, int32_t flags) {
-    QGraphicsColorizeEffect_QBaseSourceChanged((QGraphicsColorizeEffect*)self, flags);
+void q_graphicscolorizeeffect_super_source_changed(void* self, int32_t flags) {
+    QGraphicsColorizeEffect_SuperSourceChanged((QGraphicsColorizeEffect*)self, flags);
 }
 
 void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
@@ -967,8 +967,8 @@ bool q_graphicscolorizeeffect_event(void* self, void* event) {
     return QGraphicsColorizeEffect_Event((QGraphicsColorizeEffect*)self, (QEvent*)event);
 }
 
-bool q_graphicscolorizeeffect_qbase_event(void* self, void* event) {
-    return QGraphicsColorizeEffect_QBaseEvent((QGraphicsColorizeEffect*)self, (QEvent*)event);
+bool q_graphicscolorizeeffect_super_event(void* self, void* event) {
+    return QGraphicsColorizeEffect_SuperEvent((QGraphicsColorizeEffect*)self, (QEvent*)event);
 }
 
 void q_graphicscolorizeeffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -979,8 +979,8 @@ bool q_graphicscolorizeeffect_event_filter(void* self, void* watched, void* even
     return QGraphicsColorizeEffect_EventFilter((QGraphicsColorizeEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicscolorizeeffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsColorizeEffect_QBaseEventFilter((QGraphicsColorizeEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicscolorizeeffect_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsColorizeEffect_SuperEventFilter((QGraphicsColorizeEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicscolorizeeffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -991,8 +991,8 @@ void q_graphicscolorizeeffect_timer_event(void* self, void* event) {
     QGraphicsColorizeEffect_TimerEvent((QGraphicsColorizeEffect*)self, (QTimerEvent*)event);
 }
 
-void q_graphicscolorizeeffect_qbase_timer_event(void* self, void* event) {
-    QGraphicsColorizeEffect_QBaseTimerEvent((QGraphicsColorizeEffect*)self, (QTimerEvent*)event);
+void q_graphicscolorizeeffect_super_timer_event(void* self, void* event) {
+    QGraphicsColorizeEffect_SuperTimerEvent((QGraphicsColorizeEffect*)self, (QTimerEvent*)event);
 }
 
 void q_graphicscolorizeeffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1003,8 +1003,8 @@ void q_graphicscolorizeeffect_child_event(void* self, void* event) {
     QGraphicsColorizeEffect_ChildEvent((QGraphicsColorizeEffect*)self, (QChildEvent*)event);
 }
 
-void q_graphicscolorizeeffect_qbase_child_event(void* self, void* event) {
-    QGraphicsColorizeEffect_QBaseChildEvent((QGraphicsColorizeEffect*)self, (QChildEvent*)event);
+void q_graphicscolorizeeffect_super_child_event(void* self, void* event) {
+    QGraphicsColorizeEffect_SuperChildEvent((QGraphicsColorizeEffect*)self, (QChildEvent*)event);
 }
 
 void q_graphicscolorizeeffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1015,8 +1015,8 @@ void q_graphicscolorizeeffect_custom_event(void* self, void* event) {
     QGraphicsColorizeEffect_CustomEvent((QGraphicsColorizeEffect*)self, (QEvent*)event);
 }
 
-void q_graphicscolorizeeffect_qbase_custom_event(void* self, void* event) {
-    QGraphicsColorizeEffect_QBaseCustomEvent((QGraphicsColorizeEffect*)self, (QEvent*)event);
+void q_graphicscolorizeeffect_super_custom_event(void* self, void* event) {
+    QGraphicsColorizeEffect_SuperCustomEvent((QGraphicsColorizeEffect*)self, (QEvent*)event);
 }
 
 void q_graphicscolorizeeffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1027,8 +1027,8 @@ void q_graphicscolorizeeffect_connect_notify(void* self, void* signal) {
     QGraphicsColorizeEffect_ConnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicscolorizeeffect_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsColorizeEffect_QBaseConnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
+void q_graphicscolorizeeffect_super_connect_notify(void* self, void* signal) {
+    QGraphicsColorizeEffect_SuperConnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicscolorizeeffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1039,8 +1039,8 @@ void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal) {
     QGraphicsColorizeEffect_DisconnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicscolorizeeffect_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsColorizeEffect_QBaseDisconnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
+void q_graphicscolorizeeffect_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsColorizeEffect_SuperDisconnectNotify((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicscolorizeeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1051,8 +1051,8 @@ void q_graphicscolorizeeffect_update_bounding_rect(void* self) {
     QGraphicsColorizeEffect_UpdateBoundingRect((QGraphicsColorizeEffect*)self);
 }
 
-void q_graphicscolorizeeffect_qbase_update_bounding_rect(void* self) {
-    QGraphicsColorizeEffect_QBaseUpdateBoundingRect((QGraphicsColorizeEffect*)self);
+void q_graphicscolorizeeffect_super_update_bounding_rect(void* self) {
+    QGraphicsColorizeEffect_SuperUpdateBoundingRect((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_update_bounding_rect(void* self, void (*callback)()) {
@@ -1063,8 +1063,8 @@ bool q_graphicscolorizeeffect_source_is_pixmap(void* self) {
     return QGraphicsColorizeEffect_SourceIsPixmap((QGraphicsColorizeEffect*)self);
 }
 
-bool q_graphicscolorizeeffect_qbase_source_is_pixmap(void* self) {
-    return QGraphicsColorizeEffect_QBaseSourceIsPixmap((QGraphicsColorizeEffect*)self);
+bool q_graphicscolorizeeffect_super_source_is_pixmap(void* self) {
+    return QGraphicsColorizeEffect_SuperSourceIsPixmap((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_source_is_pixmap(void* self, bool (*callback)()) {
@@ -1075,8 +1075,8 @@ QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self) {
     return QGraphicsColorizeEffect_SourceBoundingRect((QGraphicsColorizeEffect*)self);
 }
 
-QRectF* q_graphicscolorizeeffect_qbase_source_bounding_rect(void* self) {
-    return QGraphicsColorizeEffect_QBaseSourceBoundingRect((QGraphicsColorizeEffect*)self);
+QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(void* self) {
+    return QGraphicsColorizeEffect_SuperSourceBoundingRect((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_source_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -1087,8 +1087,8 @@ void q_graphicscolorizeeffect_draw_source(void* self, void* painter) {
     QGraphicsColorizeEffect_DrawSource((QGraphicsColorizeEffect*)self, (QPainter*)painter);
 }
 
-void q_graphicscolorizeeffect_qbase_draw_source(void* self, void* painter) {
-    QGraphicsColorizeEffect_QBaseDrawSource((QGraphicsColorizeEffect*)self, (QPainter*)painter);
+void q_graphicscolorizeeffect_super_draw_source(void* self, void* painter) {
+    QGraphicsColorizeEffect_SuperDrawSource((QGraphicsColorizeEffect*)self, (QPainter*)painter);
 }
 
 void q_graphicscolorizeeffect_on_draw_source(void* self, void (*callback)(void*, void*)) {
@@ -1099,8 +1099,8 @@ QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self) {
     return QGraphicsColorizeEffect_SourcePixmap((QGraphicsColorizeEffect*)self);
 }
 
-QPixmap* q_graphicscolorizeeffect_qbase_source_pixmap(void* self) {
-    return QGraphicsColorizeEffect_QBaseSourcePixmap((QGraphicsColorizeEffect*)self);
+QPixmap* q_graphicscolorizeeffect_super_source_pixmap(void* self) {
+    return QGraphicsColorizeEffect_SuperSourcePixmap((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_source_pixmap(void* self, QPixmap* (*callback)()) {
@@ -1111,8 +1111,8 @@ QObject* q_graphicscolorizeeffect_sender(void* self) {
     return QGraphicsColorizeEffect_Sender((QGraphicsColorizeEffect*)self);
 }
 
-QObject* q_graphicscolorizeeffect_qbase_sender(void* self) {
-    return QGraphicsColorizeEffect_QBaseSender((QGraphicsColorizeEffect*)self);
+QObject* q_graphicscolorizeeffect_super_sender(void* self) {
+    return QGraphicsColorizeEffect_SuperSender((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_sender(void* self, QObject* (*callback)()) {
@@ -1123,8 +1123,8 @@ int32_t q_graphicscolorizeeffect_sender_signal_index(void* self) {
     return QGraphicsColorizeEffect_SenderSignalIndex((QGraphicsColorizeEffect*)self);
 }
 
-int32_t q_graphicscolorizeeffect_qbase_sender_signal_index(void* self) {
-    return QGraphicsColorizeEffect_QBaseSenderSignalIndex((QGraphicsColorizeEffect*)self);
+int32_t q_graphicscolorizeeffect_super_sender_signal_index(void* self) {
+    return QGraphicsColorizeEffect_SuperSenderSignalIndex((QGraphicsColorizeEffect*)self);
 }
 
 void q_graphicscolorizeeffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1135,8 +1135,8 @@ int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal) {
     return QGraphicsColorizeEffect_Receivers((QGraphicsColorizeEffect*)self, signal);
 }
 
-int32_t q_graphicscolorizeeffect_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsColorizeEffect_QBaseReceivers((QGraphicsColorizeEffect*)self, signal);
+int32_t q_graphicscolorizeeffect_super_receivers(void* self, const char* signal) {
+    return QGraphicsColorizeEffect_SuperReceivers((QGraphicsColorizeEffect*)self, signal);
 }
 
 void q_graphicscolorizeeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1147,8 +1147,8 @@ bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal) {
     return QGraphicsColorizeEffect_IsSignalConnected((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicscolorizeeffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsColorizeEffect_QBaseIsSignalConnected((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
+bool q_graphicscolorizeeffect_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsColorizeEffect_SuperIsSignalConnected((QGraphicsColorizeEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicscolorizeeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1179,8 +1179,8 @@ void q_graphicsblureffect_on_meta_object(void* self, const QMetaObject* (*callba
     QGraphicsBlurEffect_OnMetaObject((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsblureffect_qbase_meta_object(void* self) {
-    return QGraphicsBlurEffect_QBaseMetaObject((QGraphicsBlurEffect*)self);
+const QMetaObject* q_graphicsblureffect_super_meta_object(void* self) {
+    return QGraphicsBlurEffect_SuperMetaObject((QGraphicsBlurEffect*)self);
 }
 
 void* q_graphicsblureffect_metacast(void* self, const char* param1) {
@@ -1191,8 +1191,8 @@ void q_graphicsblureffect_on_metacast(void* self, void* (*callback)(void*, const
     QGraphicsBlurEffect_OnMetacast((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-void* q_graphicsblureffect_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsBlurEffect_QBaseMetacast((QGraphicsBlurEffect*)self, param1);
+void* q_graphicsblureffect_super_metacast(void* self, const char* param1) {
+    return QGraphicsBlurEffect_SuperMetacast((QGraphicsBlurEffect*)self, param1);
 }
 
 int32_t q_graphicsblureffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1203,8 +1203,8 @@ void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int
     QGraphicsBlurEffect_OnMetacall((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsblureffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsBlurEffect_QBaseMetacall((QGraphicsBlurEffect*)self, param1, param2, param3);
+int32_t q_graphicsblureffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsBlurEffect_SuperMetacall((QGraphicsBlurEffect*)self, param1, param2, param3);
 }
 
 const char* q_graphicsblureffect_tr(const char* s) {
@@ -1222,8 +1222,8 @@ void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*callback)(v
     QGraphicsBlurEffect_OnBoundingRectFor((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsblureffect_qbase_bounding_rect_for(void* self, void* rect) {
-    return QGraphicsBlurEffect_QBaseBoundingRectFor((QGraphicsBlurEffect*)self, (QRectF*)rect);
+QRectF* q_graphicsblureffect_super_bounding_rect_for(void* self, void* rect) {
+    return QGraphicsBlurEffect_SuperBoundingRectFor((QGraphicsBlurEffect*)self, (QRectF*)rect);
 }
 
 double q_graphicsblureffect_blur_radius(void* self) {
@@ -1266,8 +1266,8 @@ void q_graphicsblureffect_on_draw(void* self, void (*callback)(void*, void*)) {
     QGraphicsBlurEffect_OnDraw((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicsblureffect_qbase_draw(void* self, void* painter) {
-    QGraphicsBlurEffect_QBaseDraw((QGraphicsBlurEffect*)self, (QPainter*)painter);
+void q_graphicsblureffect_super_draw(void* self, void* painter) {
+    QGraphicsBlurEffect_SuperDraw((QGraphicsBlurEffect*)self, (QPainter*)painter);
 }
 
 const char* q_graphicsblureffect_tr2(const char* s, const char* c) {
@@ -1523,8 +1523,8 @@ void q_graphicsblureffect_source_changed(void* self, int32_t flags) {
     QGraphicsBlurEffect_SourceChanged((QGraphicsBlurEffect*)self, flags);
 }
 
-void q_graphicsblureffect_qbase_source_changed(void* self, int32_t flags) {
-    QGraphicsBlurEffect_QBaseSourceChanged((QGraphicsBlurEffect*)self, flags);
+void q_graphicsblureffect_super_source_changed(void* self, int32_t flags) {
+    QGraphicsBlurEffect_SuperSourceChanged((QGraphicsBlurEffect*)self, flags);
 }
 
 void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
@@ -1535,8 +1535,8 @@ bool q_graphicsblureffect_event(void* self, void* event) {
     return QGraphicsBlurEffect_Event((QGraphicsBlurEffect*)self, (QEvent*)event);
 }
 
-bool q_graphicsblureffect_qbase_event(void* self, void* event) {
-    return QGraphicsBlurEffect_QBaseEvent((QGraphicsBlurEffect*)self, (QEvent*)event);
+bool q_graphicsblureffect_super_event(void* self, void* event) {
+    return QGraphicsBlurEffect_SuperEvent((QGraphicsBlurEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsblureffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1547,8 +1547,8 @@ bool q_graphicsblureffect_event_filter(void* self, void* watched, void* event) {
     return QGraphicsBlurEffect_EventFilter((QGraphicsBlurEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsblureffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsBlurEffect_QBaseEventFilter((QGraphicsBlurEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsblureffect_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsBlurEffect_SuperEventFilter((QGraphicsBlurEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsblureffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1559,8 +1559,8 @@ void q_graphicsblureffect_timer_event(void* self, void* event) {
     QGraphicsBlurEffect_TimerEvent((QGraphicsBlurEffect*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsblureffect_qbase_timer_event(void* self, void* event) {
-    QGraphicsBlurEffect_QBaseTimerEvent((QGraphicsBlurEffect*)self, (QTimerEvent*)event);
+void q_graphicsblureffect_super_timer_event(void* self, void* event) {
+    QGraphicsBlurEffect_SuperTimerEvent((QGraphicsBlurEffect*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsblureffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1571,8 +1571,8 @@ void q_graphicsblureffect_child_event(void* self, void* event) {
     QGraphicsBlurEffect_ChildEvent((QGraphicsBlurEffect*)self, (QChildEvent*)event);
 }
 
-void q_graphicsblureffect_qbase_child_event(void* self, void* event) {
-    QGraphicsBlurEffect_QBaseChildEvent((QGraphicsBlurEffect*)self, (QChildEvent*)event);
+void q_graphicsblureffect_super_child_event(void* self, void* event) {
+    QGraphicsBlurEffect_SuperChildEvent((QGraphicsBlurEffect*)self, (QChildEvent*)event);
 }
 
 void q_graphicsblureffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1583,8 +1583,8 @@ void q_graphicsblureffect_custom_event(void* self, void* event) {
     QGraphicsBlurEffect_CustomEvent((QGraphicsBlurEffect*)self, (QEvent*)event);
 }
 
-void q_graphicsblureffect_qbase_custom_event(void* self, void* event) {
-    QGraphicsBlurEffect_QBaseCustomEvent((QGraphicsBlurEffect*)self, (QEvent*)event);
+void q_graphicsblureffect_super_custom_event(void* self, void* event) {
+    QGraphicsBlurEffect_SuperCustomEvent((QGraphicsBlurEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsblureffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1595,8 +1595,8 @@ void q_graphicsblureffect_connect_notify(void* self, void* signal) {
     QGraphicsBlurEffect_ConnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsblureffect_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsBlurEffect_QBaseConnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
+void q_graphicsblureffect_super_connect_notify(void* self, void* signal) {
+    QGraphicsBlurEffect_SuperConnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsblureffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1607,8 +1607,8 @@ void q_graphicsblureffect_disconnect_notify(void* self, void* signal) {
     QGraphicsBlurEffect_DisconnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsblureffect_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsBlurEffect_QBaseDisconnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
+void q_graphicsblureffect_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsBlurEffect_SuperDisconnectNotify((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsblureffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1619,8 +1619,8 @@ void q_graphicsblureffect_update_bounding_rect(void* self) {
     QGraphicsBlurEffect_UpdateBoundingRect((QGraphicsBlurEffect*)self);
 }
 
-void q_graphicsblureffect_qbase_update_bounding_rect(void* self) {
-    QGraphicsBlurEffect_QBaseUpdateBoundingRect((QGraphicsBlurEffect*)self);
+void q_graphicsblureffect_super_update_bounding_rect(void* self) {
+    QGraphicsBlurEffect_SuperUpdateBoundingRect((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_update_bounding_rect(void* self, void (*callback)()) {
@@ -1631,8 +1631,8 @@ bool q_graphicsblureffect_source_is_pixmap(void* self) {
     return QGraphicsBlurEffect_SourceIsPixmap((QGraphicsBlurEffect*)self);
 }
 
-bool q_graphicsblureffect_qbase_source_is_pixmap(void* self) {
-    return QGraphicsBlurEffect_QBaseSourceIsPixmap((QGraphicsBlurEffect*)self);
+bool q_graphicsblureffect_super_source_is_pixmap(void* self) {
+    return QGraphicsBlurEffect_SuperSourceIsPixmap((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_source_is_pixmap(void* self, bool (*callback)()) {
@@ -1643,8 +1643,8 @@ QRectF* q_graphicsblureffect_source_bounding_rect(void* self) {
     return QGraphicsBlurEffect_SourceBoundingRect((QGraphicsBlurEffect*)self);
 }
 
-QRectF* q_graphicsblureffect_qbase_source_bounding_rect(void* self) {
-    return QGraphicsBlurEffect_QBaseSourceBoundingRect((QGraphicsBlurEffect*)self);
+QRectF* q_graphicsblureffect_super_source_bounding_rect(void* self) {
+    return QGraphicsBlurEffect_SuperSourceBoundingRect((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_source_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -1655,8 +1655,8 @@ void q_graphicsblureffect_draw_source(void* self, void* painter) {
     QGraphicsBlurEffect_DrawSource((QGraphicsBlurEffect*)self, (QPainter*)painter);
 }
 
-void q_graphicsblureffect_qbase_draw_source(void* self, void* painter) {
-    QGraphicsBlurEffect_QBaseDrawSource((QGraphicsBlurEffect*)self, (QPainter*)painter);
+void q_graphicsblureffect_super_draw_source(void* self, void* painter) {
+    QGraphicsBlurEffect_SuperDrawSource((QGraphicsBlurEffect*)self, (QPainter*)painter);
 }
 
 void q_graphicsblureffect_on_draw_source(void* self, void (*callback)(void*, void*)) {
@@ -1667,8 +1667,8 @@ QPixmap* q_graphicsblureffect_source_pixmap(void* self) {
     return QGraphicsBlurEffect_SourcePixmap((QGraphicsBlurEffect*)self);
 }
 
-QPixmap* q_graphicsblureffect_qbase_source_pixmap(void* self) {
-    return QGraphicsBlurEffect_QBaseSourcePixmap((QGraphicsBlurEffect*)self);
+QPixmap* q_graphicsblureffect_super_source_pixmap(void* self) {
+    return QGraphicsBlurEffect_SuperSourcePixmap((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_source_pixmap(void* self, QPixmap* (*callback)()) {
@@ -1679,8 +1679,8 @@ QObject* q_graphicsblureffect_sender(void* self) {
     return QGraphicsBlurEffect_Sender((QGraphicsBlurEffect*)self);
 }
 
-QObject* q_graphicsblureffect_qbase_sender(void* self) {
-    return QGraphicsBlurEffect_QBaseSender((QGraphicsBlurEffect*)self);
+QObject* q_graphicsblureffect_super_sender(void* self) {
+    return QGraphicsBlurEffect_SuperSender((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_sender(void* self, QObject* (*callback)()) {
@@ -1691,8 +1691,8 @@ int32_t q_graphicsblureffect_sender_signal_index(void* self) {
     return QGraphicsBlurEffect_SenderSignalIndex((QGraphicsBlurEffect*)self);
 }
 
-int32_t q_graphicsblureffect_qbase_sender_signal_index(void* self) {
-    return QGraphicsBlurEffect_QBaseSenderSignalIndex((QGraphicsBlurEffect*)self);
+int32_t q_graphicsblureffect_super_sender_signal_index(void* self) {
+    return QGraphicsBlurEffect_SuperSenderSignalIndex((QGraphicsBlurEffect*)self);
 }
 
 void q_graphicsblureffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1703,8 +1703,8 @@ int32_t q_graphicsblureffect_receivers(void* self, const char* signal) {
     return QGraphicsBlurEffect_Receivers((QGraphicsBlurEffect*)self, signal);
 }
 
-int32_t q_graphicsblureffect_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsBlurEffect_QBaseReceivers((QGraphicsBlurEffect*)self, signal);
+int32_t q_graphicsblureffect_super_receivers(void* self, const char* signal) {
+    return QGraphicsBlurEffect_SuperReceivers((QGraphicsBlurEffect*)self, signal);
 }
 
 void q_graphicsblureffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1715,8 +1715,8 @@ bool q_graphicsblureffect_is_signal_connected(void* self, void* signal) {
     return QGraphicsBlurEffect_IsSignalConnected((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsblureffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsBlurEffect_QBaseIsSignalConnected((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
+bool q_graphicsblureffect_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsBlurEffect_SuperIsSignalConnected((QGraphicsBlurEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsblureffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1747,8 +1747,8 @@ void q_graphicsdropshadoweffect_on_meta_object(void* self, const QMetaObject* (*
     QGraphicsDropShadowEffect_OnMetaObject((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsdropshadoweffect_qbase_meta_object(void* self) {
-    return QGraphicsDropShadowEffect_QBaseMetaObject((QGraphicsDropShadowEffect*)self);
+const QMetaObject* q_graphicsdropshadoweffect_super_meta_object(void* self) {
+    return QGraphicsDropShadowEffect_SuperMetaObject((QGraphicsDropShadowEffect*)self);
 }
 
 void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1) {
@@ -1759,8 +1759,8 @@ void q_graphicsdropshadoweffect_on_metacast(void* self, void* (*callback)(void*,
     QGraphicsDropShadowEffect_OnMetacast((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-void* q_graphicsdropshadoweffect_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsDropShadowEffect_QBaseMetacast((QGraphicsDropShadowEffect*)self, param1);
+void* q_graphicsdropshadoweffect_super_metacast(void* self, const char* param1) {
+    return QGraphicsDropShadowEffect_SuperMetacast((QGraphicsDropShadowEffect*)self, param1);
 }
 
 int32_t q_graphicsdropshadoweffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1771,8 +1771,8 @@ void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void
     QGraphicsDropShadowEffect_OnMetacall((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsDropShadowEffect_QBaseMetacall((QGraphicsDropShadowEffect*)self, param1, param2, param3);
+int32_t q_graphicsdropshadoweffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsDropShadowEffect_SuperMetacall((QGraphicsDropShadowEffect*)self, param1, param2, param3);
 }
 
 const char* q_graphicsdropshadoweffect_tr(const char* s) {
@@ -1790,8 +1790,8 @@ void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*callb
     QGraphicsDropShadowEffect_OnBoundingRectFor((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsdropshadoweffect_qbase_bounding_rect_for(void* self, void* rect) {
-    return QGraphicsDropShadowEffect_QBaseBoundingRectFor((QGraphicsDropShadowEffect*)self, (QRectF*)rect);
+QRectF* q_graphicsdropshadoweffect_super_bounding_rect_for(void* self, void* rect) {
+    return QGraphicsDropShadowEffect_SuperBoundingRectFor((QGraphicsDropShadowEffect*)self, (QRectF*)rect);
 }
 
 QPointF* q_graphicsdropshadoweffect_offset(void* self) {
@@ -1874,8 +1874,8 @@ void q_graphicsdropshadoweffect_on_draw(void* self, void (*callback)(void*, void
     QGraphicsDropShadowEffect_OnDraw((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicsdropshadoweffect_qbase_draw(void* self, void* painter) {
-    QGraphicsDropShadowEffect_QBaseDraw((QGraphicsDropShadowEffect*)self, (QPainter*)painter);
+void q_graphicsdropshadoweffect_super_draw(void* self, void* painter) {
+    QGraphicsDropShadowEffect_SuperDraw((QGraphicsDropShadowEffect*)self, (QPainter*)painter);
 }
 
 const char* q_graphicsdropshadoweffect_tr2(const char* s, const char* c) {
@@ -2131,8 +2131,8 @@ void q_graphicsdropshadoweffect_source_changed(void* self, int32_t flags) {
     QGraphicsDropShadowEffect_SourceChanged((QGraphicsDropShadowEffect*)self, flags);
 }
 
-void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int32_t flags) {
-    QGraphicsDropShadowEffect_QBaseSourceChanged((QGraphicsDropShadowEffect*)self, flags);
+void q_graphicsdropshadoweffect_super_source_changed(void* self, int32_t flags) {
+    QGraphicsDropShadowEffect_SuperSourceChanged((QGraphicsDropShadowEffect*)self, flags);
 }
 
 void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
@@ -2143,8 +2143,8 @@ bool q_graphicsdropshadoweffect_event(void* self, void* event) {
     return QGraphicsDropShadowEffect_Event((QGraphicsDropShadowEffect*)self, (QEvent*)event);
 }
 
-bool q_graphicsdropshadoweffect_qbase_event(void* self, void* event) {
-    return QGraphicsDropShadowEffect_QBaseEvent((QGraphicsDropShadowEffect*)self, (QEvent*)event);
+bool q_graphicsdropshadoweffect_super_event(void* self, void* event) {
+    return QGraphicsDropShadowEffect_SuperEvent((QGraphicsDropShadowEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsdropshadoweffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ bool q_graphicsdropshadoweffect_event_filter(void* self, void* watched, void* ev
     return QGraphicsDropShadowEffect_EventFilter((QGraphicsDropShadowEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsdropshadoweffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsDropShadowEffect_QBaseEventFilter((QGraphicsDropShadowEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsdropshadoweffect_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsDropShadowEffect_SuperEventFilter((QGraphicsDropShadowEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsdropshadoweffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2167,8 +2167,8 @@ void q_graphicsdropshadoweffect_timer_event(void* self, void* event) {
     QGraphicsDropShadowEffect_TimerEvent((QGraphicsDropShadowEffect*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsdropshadoweffect_qbase_timer_event(void* self, void* event) {
-    QGraphicsDropShadowEffect_QBaseTimerEvent((QGraphicsDropShadowEffect*)self, (QTimerEvent*)event);
+void q_graphicsdropshadoweffect_super_timer_event(void* self, void* event) {
+    QGraphicsDropShadowEffect_SuperTimerEvent((QGraphicsDropShadowEffect*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsdropshadoweffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ void q_graphicsdropshadoweffect_child_event(void* self, void* event) {
     QGraphicsDropShadowEffect_ChildEvent((QGraphicsDropShadowEffect*)self, (QChildEvent*)event);
 }
 
-void q_graphicsdropshadoweffect_qbase_child_event(void* self, void* event) {
-    QGraphicsDropShadowEffect_QBaseChildEvent((QGraphicsDropShadowEffect*)self, (QChildEvent*)event);
+void q_graphicsdropshadoweffect_super_child_event(void* self, void* event) {
+    QGraphicsDropShadowEffect_SuperChildEvent((QGraphicsDropShadowEffect*)self, (QChildEvent*)event);
 }
 
 void q_graphicsdropshadoweffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2191,8 +2191,8 @@ void q_graphicsdropshadoweffect_custom_event(void* self, void* event) {
     QGraphicsDropShadowEffect_CustomEvent((QGraphicsDropShadowEffect*)self, (QEvent*)event);
 }
 
-void q_graphicsdropshadoweffect_qbase_custom_event(void* self, void* event) {
-    QGraphicsDropShadowEffect_QBaseCustomEvent((QGraphicsDropShadowEffect*)self, (QEvent*)event);
+void q_graphicsdropshadoweffect_super_custom_event(void* self, void* event) {
+    QGraphicsDropShadowEffect_SuperCustomEvent((QGraphicsDropShadowEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsdropshadoweffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2203,8 +2203,8 @@ void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal) {
     QGraphicsDropShadowEffect_ConnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsdropshadoweffect_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsDropShadowEffect_QBaseConnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
+void q_graphicsdropshadoweffect_super_connect_notify(void* self, void* signal) {
+    QGraphicsDropShadowEffect_SuperConnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsdropshadoweffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2215,8 +2215,8 @@ void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal) {
     QGraphicsDropShadowEffect_DisconnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsdropshadoweffect_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsDropShadowEffect_QBaseDisconnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
+void q_graphicsdropshadoweffect_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsDropShadowEffect_SuperDisconnectNotify((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsdropshadoweffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2227,8 +2227,8 @@ void q_graphicsdropshadoweffect_update_bounding_rect(void* self) {
     QGraphicsDropShadowEffect_UpdateBoundingRect((QGraphicsDropShadowEffect*)self);
 }
 
-void q_graphicsdropshadoweffect_qbase_update_bounding_rect(void* self) {
-    QGraphicsDropShadowEffect_QBaseUpdateBoundingRect((QGraphicsDropShadowEffect*)self);
+void q_graphicsdropshadoweffect_super_update_bounding_rect(void* self) {
+    QGraphicsDropShadowEffect_SuperUpdateBoundingRect((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_update_bounding_rect(void* self, void (*callback)()) {
@@ -2239,8 +2239,8 @@ bool q_graphicsdropshadoweffect_source_is_pixmap(void* self) {
     return QGraphicsDropShadowEffect_SourceIsPixmap((QGraphicsDropShadowEffect*)self);
 }
 
-bool q_graphicsdropshadoweffect_qbase_source_is_pixmap(void* self) {
-    return QGraphicsDropShadowEffect_QBaseSourceIsPixmap((QGraphicsDropShadowEffect*)self);
+bool q_graphicsdropshadoweffect_super_source_is_pixmap(void* self) {
+    return QGraphicsDropShadowEffect_SuperSourceIsPixmap((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_source_is_pixmap(void* self, bool (*callback)()) {
@@ -2251,8 +2251,8 @@ QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self) {
     return QGraphicsDropShadowEffect_SourceBoundingRect((QGraphicsDropShadowEffect*)self);
 }
 
-QRectF* q_graphicsdropshadoweffect_qbase_source_bounding_rect(void* self) {
-    return QGraphicsDropShadowEffect_QBaseSourceBoundingRect((QGraphicsDropShadowEffect*)self);
+QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(void* self) {
+    return QGraphicsDropShadowEffect_SuperSourceBoundingRect((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_source_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -2263,8 +2263,8 @@ void q_graphicsdropshadoweffect_draw_source(void* self, void* painter) {
     QGraphicsDropShadowEffect_DrawSource((QGraphicsDropShadowEffect*)self, (QPainter*)painter);
 }
 
-void q_graphicsdropshadoweffect_qbase_draw_source(void* self, void* painter) {
-    QGraphicsDropShadowEffect_QBaseDrawSource((QGraphicsDropShadowEffect*)self, (QPainter*)painter);
+void q_graphicsdropshadoweffect_super_draw_source(void* self, void* painter) {
+    QGraphicsDropShadowEffect_SuperDrawSource((QGraphicsDropShadowEffect*)self, (QPainter*)painter);
 }
 
 void q_graphicsdropshadoweffect_on_draw_source(void* self, void (*callback)(void*, void*)) {
@@ -2275,8 +2275,8 @@ QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self) {
     return QGraphicsDropShadowEffect_SourcePixmap((QGraphicsDropShadowEffect*)self);
 }
 
-QPixmap* q_graphicsdropshadoweffect_qbase_source_pixmap(void* self) {
-    return QGraphicsDropShadowEffect_QBaseSourcePixmap((QGraphicsDropShadowEffect*)self);
+QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(void* self) {
+    return QGraphicsDropShadowEffect_SuperSourcePixmap((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_source_pixmap(void* self, QPixmap* (*callback)()) {
@@ -2287,8 +2287,8 @@ QObject* q_graphicsdropshadoweffect_sender(void* self) {
     return QGraphicsDropShadowEffect_Sender((QGraphicsDropShadowEffect*)self);
 }
 
-QObject* q_graphicsdropshadoweffect_qbase_sender(void* self) {
-    return QGraphicsDropShadowEffect_QBaseSender((QGraphicsDropShadowEffect*)self);
+QObject* q_graphicsdropshadoweffect_super_sender(void* self) {
+    return QGraphicsDropShadowEffect_SuperSender((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_sender(void* self, QObject* (*callback)()) {
@@ -2299,8 +2299,8 @@ int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self) {
     return QGraphicsDropShadowEffect_SenderSignalIndex((QGraphicsDropShadowEffect*)self);
 }
 
-int32_t q_graphicsdropshadoweffect_qbase_sender_signal_index(void* self) {
-    return QGraphicsDropShadowEffect_QBaseSenderSignalIndex((QGraphicsDropShadowEffect*)self);
+int32_t q_graphicsdropshadoweffect_super_sender_signal_index(void* self) {
+    return QGraphicsDropShadowEffect_SuperSenderSignalIndex((QGraphicsDropShadowEffect*)self);
 }
 
 void q_graphicsdropshadoweffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2311,8 +2311,8 @@ int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal) {
     return QGraphicsDropShadowEffect_Receivers((QGraphicsDropShadowEffect*)self, signal);
 }
 
-int32_t q_graphicsdropshadoweffect_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsDropShadowEffect_QBaseReceivers((QGraphicsDropShadowEffect*)self, signal);
+int32_t q_graphicsdropshadoweffect_super_receivers(void* self, const char* signal) {
+    return QGraphicsDropShadowEffect_SuperReceivers((QGraphicsDropShadowEffect*)self, signal);
 }
 
 void q_graphicsdropshadoweffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2323,8 +2323,8 @@ bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal) {
     return QGraphicsDropShadowEffect_IsSignalConnected((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsdropshadoweffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsDropShadowEffect_QBaseIsSignalConnected((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
+bool q_graphicsdropshadoweffect_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsDropShadowEffect_SuperIsSignalConnected((QGraphicsDropShadowEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsdropshadoweffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2355,8 +2355,8 @@ void q_graphicsopacityeffect_on_meta_object(void* self, const QMetaObject* (*cal
     QGraphicsOpacityEffect_OnMetaObject((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsopacityeffect_qbase_meta_object(void* self) {
-    return QGraphicsOpacityEffect_QBaseMetaObject((QGraphicsOpacityEffect*)self);
+const QMetaObject* q_graphicsopacityeffect_super_meta_object(void* self) {
+    return QGraphicsOpacityEffect_SuperMetaObject((QGraphicsOpacityEffect*)self);
 }
 
 void* q_graphicsopacityeffect_metacast(void* self, const char* param1) {
@@ -2367,8 +2367,8 @@ void q_graphicsopacityeffect_on_metacast(void* self, void* (*callback)(void*, co
     QGraphicsOpacityEffect_OnMetacast((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-void* q_graphicsopacityeffect_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsOpacityEffect_QBaseMetacast((QGraphicsOpacityEffect*)self, param1);
+void* q_graphicsopacityeffect_super_metacast(void* self, const char* param1) {
+    return QGraphicsOpacityEffect_SuperMetacast((QGraphicsOpacityEffect*)self, param1);
 }
 
 int32_t q_graphicsopacityeffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2379,8 +2379,8 @@ void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, 
     QGraphicsOpacityEffect_OnMetacall((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsOpacityEffect_QBaseMetacall((QGraphicsOpacityEffect*)self, param1, param2, param3);
+int32_t q_graphicsopacityeffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsOpacityEffect_SuperMetacall((QGraphicsOpacityEffect*)self, param1, param2, param3);
 }
 
 const char* q_graphicsopacityeffect_tr(const char* s) {
@@ -2430,8 +2430,8 @@ void q_graphicsopacityeffect_on_draw(void* self, void (*callback)(void*, void*))
     QGraphicsOpacityEffect_OnDraw((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicsopacityeffect_qbase_draw(void* self, void* painter) {
-    QGraphicsOpacityEffect_QBaseDraw((QGraphicsOpacityEffect*)self, (QPainter*)painter);
+void q_graphicsopacityeffect_super_draw(void* self, void* painter) {
+    QGraphicsOpacityEffect_SuperDraw((QGraphicsOpacityEffect*)self, (QPainter*)painter);
 }
 
 const char* q_graphicsopacityeffect_tr2(const char* s, const char* c) {
@@ -2687,8 +2687,8 @@ QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect) 
     return QGraphicsOpacityEffect_BoundingRectFor((QGraphicsOpacityEffect*)self, (QRectF*)sourceRect);
 }
 
-QRectF* q_graphicsopacityeffect_qbase_bounding_rect_for(void* self, void* sourceRect) {
-    return QGraphicsOpacityEffect_QBaseBoundingRectFor((QGraphicsOpacityEffect*)self, (QRectF*)sourceRect);
+QRectF* q_graphicsopacityeffect_super_bounding_rect_for(void* self, void* sourceRect) {
+    return QGraphicsOpacityEffect_SuperBoundingRectFor((QGraphicsOpacityEffect*)self, (QRectF*)sourceRect);
 }
 
 void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*)) {
@@ -2699,8 +2699,8 @@ void q_graphicsopacityeffect_source_changed(void* self, int32_t flags) {
     QGraphicsOpacityEffect_SourceChanged((QGraphicsOpacityEffect*)self, flags);
 }
 
-void q_graphicsopacityeffect_qbase_source_changed(void* self, int32_t flags) {
-    QGraphicsOpacityEffect_QBaseSourceChanged((QGraphicsOpacityEffect*)self, flags);
+void q_graphicsopacityeffect_super_source_changed(void* self, int32_t flags) {
+    QGraphicsOpacityEffect_SuperSourceChanged((QGraphicsOpacityEffect*)self, flags);
 }
 
 void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
@@ -2711,8 +2711,8 @@ bool q_graphicsopacityeffect_event(void* self, void* event) {
     return QGraphicsOpacityEffect_Event((QGraphicsOpacityEffect*)self, (QEvent*)event);
 }
 
-bool q_graphicsopacityeffect_qbase_event(void* self, void* event) {
-    return QGraphicsOpacityEffect_QBaseEvent((QGraphicsOpacityEffect*)self, (QEvent*)event);
+bool q_graphicsopacityeffect_super_event(void* self, void* event) {
+    return QGraphicsOpacityEffect_SuperEvent((QGraphicsOpacityEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsopacityeffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2723,8 +2723,8 @@ bool q_graphicsopacityeffect_event_filter(void* self, void* watched, void* event
     return QGraphicsOpacityEffect_EventFilter((QGraphicsOpacityEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsopacityeffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsOpacityEffect_QBaseEventFilter((QGraphicsOpacityEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsopacityeffect_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsOpacityEffect_SuperEventFilter((QGraphicsOpacityEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsopacityeffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2735,8 +2735,8 @@ void q_graphicsopacityeffect_timer_event(void* self, void* event) {
     QGraphicsOpacityEffect_TimerEvent((QGraphicsOpacityEffect*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsopacityeffect_qbase_timer_event(void* self, void* event) {
-    QGraphicsOpacityEffect_QBaseTimerEvent((QGraphicsOpacityEffect*)self, (QTimerEvent*)event);
+void q_graphicsopacityeffect_super_timer_event(void* self, void* event) {
+    QGraphicsOpacityEffect_SuperTimerEvent((QGraphicsOpacityEffect*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsopacityeffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2747,8 +2747,8 @@ void q_graphicsopacityeffect_child_event(void* self, void* event) {
     QGraphicsOpacityEffect_ChildEvent((QGraphicsOpacityEffect*)self, (QChildEvent*)event);
 }
 
-void q_graphicsopacityeffect_qbase_child_event(void* self, void* event) {
-    QGraphicsOpacityEffect_QBaseChildEvent((QGraphicsOpacityEffect*)self, (QChildEvent*)event);
+void q_graphicsopacityeffect_super_child_event(void* self, void* event) {
+    QGraphicsOpacityEffect_SuperChildEvent((QGraphicsOpacityEffect*)self, (QChildEvent*)event);
 }
 
 void q_graphicsopacityeffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2759,8 +2759,8 @@ void q_graphicsopacityeffect_custom_event(void* self, void* event) {
     QGraphicsOpacityEffect_CustomEvent((QGraphicsOpacityEffect*)self, (QEvent*)event);
 }
 
-void q_graphicsopacityeffect_qbase_custom_event(void* self, void* event) {
-    QGraphicsOpacityEffect_QBaseCustomEvent((QGraphicsOpacityEffect*)self, (QEvent*)event);
+void q_graphicsopacityeffect_super_custom_event(void* self, void* event) {
+    QGraphicsOpacityEffect_SuperCustomEvent((QGraphicsOpacityEffect*)self, (QEvent*)event);
 }
 
 void q_graphicsopacityeffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2771,8 +2771,8 @@ void q_graphicsopacityeffect_connect_notify(void* self, void* signal) {
     QGraphicsOpacityEffect_ConnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsopacityeffect_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsOpacityEffect_QBaseConnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
+void q_graphicsopacityeffect_super_connect_notify(void* self, void* signal) {
+    QGraphicsOpacityEffect_SuperConnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsopacityeffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2783,8 +2783,8 @@ void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal) {
     QGraphicsOpacityEffect_DisconnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsopacityeffect_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsOpacityEffect_QBaseDisconnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
+void q_graphicsopacityeffect_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsOpacityEffect_SuperDisconnectNotify((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsopacityeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2795,8 +2795,8 @@ void q_graphicsopacityeffect_update_bounding_rect(void* self) {
     QGraphicsOpacityEffect_UpdateBoundingRect((QGraphicsOpacityEffect*)self);
 }
 
-void q_graphicsopacityeffect_qbase_update_bounding_rect(void* self) {
-    QGraphicsOpacityEffect_QBaseUpdateBoundingRect((QGraphicsOpacityEffect*)self);
+void q_graphicsopacityeffect_super_update_bounding_rect(void* self) {
+    QGraphicsOpacityEffect_SuperUpdateBoundingRect((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_update_bounding_rect(void* self, void (*callback)()) {
@@ -2807,8 +2807,8 @@ bool q_graphicsopacityeffect_source_is_pixmap(void* self) {
     return QGraphicsOpacityEffect_SourceIsPixmap((QGraphicsOpacityEffect*)self);
 }
 
-bool q_graphicsopacityeffect_qbase_source_is_pixmap(void* self) {
-    return QGraphicsOpacityEffect_QBaseSourceIsPixmap((QGraphicsOpacityEffect*)self);
+bool q_graphicsopacityeffect_super_source_is_pixmap(void* self) {
+    return QGraphicsOpacityEffect_SuperSourceIsPixmap((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_source_is_pixmap(void* self, bool (*callback)()) {
@@ -2819,8 +2819,8 @@ QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self) {
     return QGraphicsOpacityEffect_SourceBoundingRect((QGraphicsOpacityEffect*)self);
 }
 
-QRectF* q_graphicsopacityeffect_qbase_source_bounding_rect(void* self) {
-    return QGraphicsOpacityEffect_QBaseSourceBoundingRect((QGraphicsOpacityEffect*)self);
+QRectF* q_graphicsopacityeffect_super_source_bounding_rect(void* self) {
+    return QGraphicsOpacityEffect_SuperSourceBoundingRect((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_source_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -2831,8 +2831,8 @@ void q_graphicsopacityeffect_draw_source(void* self, void* painter) {
     QGraphicsOpacityEffect_DrawSource((QGraphicsOpacityEffect*)self, (QPainter*)painter);
 }
 
-void q_graphicsopacityeffect_qbase_draw_source(void* self, void* painter) {
-    QGraphicsOpacityEffect_QBaseDrawSource((QGraphicsOpacityEffect*)self, (QPainter*)painter);
+void q_graphicsopacityeffect_super_draw_source(void* self, void* painter) {
+    QGraphicsOpacityEffect_SuperDrawSource((QGraphicsOpacityEffect*)self, (QPainter*)painter);
 }
 
 void q_graphicsopacityeffect_on_draw_source(void* self, void (*callback)(void*, void*)) {
@@ -2843,8 +2843,8 @@ QPixmap* q_graphicsopacityeffect_source_pixmap(void* self) {
     return QGraphicsOpacityEffect_SourcePixmap((QGraphicsOpacityEffect*)self);
 }
 
-QPixmap* q_graphicsopacityeffect_qbase_source_pixmap(void* self) {
-    return QGraphicsOpacityEffect_QBaseSourcePixmap((QGraphicsOpacityEffect*)self);
+QPixmap* q_graphicsopacityeffect_super_source_pixmap(void* self) {
+    return QGraphicsOpacityEffect_SuperSourcePixmap((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_source_pixmap(void* self, QPixmap* (*callback)()) {
@@ -2855,8 +2855,8 @@ QObject* q_graphicsopacityeffect_sender(void* self) {
     return QGraphicsOpacityEffect_Sender((QGraphicsOpacityEffect*)self);
 }
 
-QObject* q_graphicsopacityeffect_qbase_sender(void* self) {
-    return QGraphicsOpacityEffect_QBaseSender((QGraphicsOpacityEffect*)self);
+QObject* q_graphicsopacityeffect_super_sender(void* self) {
+    return QGraphicsOpacityEffect_SuperSender((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_sender(void* self, QObject* (*callback)()) {
@@ -2867,8 +2867,8 @@ int32_t q_graphicsopacityeffect_sender_signal_index(void* self) {
     return QGraphicsOpacityEffect_SenderSignalIndex((QGraphicsOpacityEffect*)self);
 }
 
-int32_t q_graphicsopacityeffect_qbase_sender_signal_index(void* self) {
-    return QGraphicsOpacityEffect_QBaseSenderSignalIndex((QGraphicsOpacityEffect*)self);
+int32_t q_graphicsopacityeffect_super_sender_signal_index(void* self) {
+    return QGraphicsOpacityEffect_SuperSenderSignalIndex((QGraphicsOpacityEffect*)self);
 }
 
 void q_graphicsopacityeffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2879,8 +2879,8 @@ int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal) {
     return QGraphicsOpacityEffect_Receivers((QGraphicsOpacityEffect*)self, signal);
 }
 
-int32_t q_graphicsopacityeffect_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsOpacityEffect_QBaseReceivers((QGraphicsOpacityEffect*)self, signal);
+int32_t q_graphicsopacityeffect_super_receivers(void* self, const char* signal) {
+    return QGraphicsOpacityEffect_SuperReceivers((QGraphicsOpacityEffect*)self, signal);
 }
 
 void q_graphicsopacityeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2891,8 +2891,8 @@ bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal) {
     return QGraphicsOpacityEffect_IsSignalConnected((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsopacityeffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsOpacityEffect_QBaseIsSignalConnected((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
+bool q_graphicsopacityeffect_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsOpacityEffect_SuperIsSignalConnected((QGraphicsOpacityEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsopacityeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

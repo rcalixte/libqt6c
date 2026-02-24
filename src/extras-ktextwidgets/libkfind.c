@@ -24,8 +24,8 @@ void k_find_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KFind_OnMetaObject((KFind*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_find_qbase_meta_object(void* self) {
-    return KFind_QBaseMetaObject((KFind*)self);
+const QMetaObject* k_find_super_meta_object(void* self) {
+    return KFind_SuperMetaObject((KFind*)self);
 }
 
 void* k_find_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_find_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KFind_OnMetacast((KFind*)self, (intptr_t)callback);
 }
 
-void* k_find_qbase_metacast(void* self, const char* param1) {
-    return KFind_QBaseMetacast((KFind*)self, param1);
+void* k_find_super_metacast(void* self, const char* param1) {
+    return KFind_SuperMetacast((KFind*)self, param1);
 }
 
 int32_t k_find_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_find_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, voi
     KFind_OnMetacall((KFind*)self, (intptr_t)callback);
 }
 
-int32_t k_find_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFind_QBaseMetacall((KFind*)self, param1, param2, param3);
+int32_t k_find_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFind_SuperMetacall((KFind*)self, param1, param2, param3);
 }
 
 const char* k_find_tr(const char* s) {
@@ -87,8 +87,8 @@ void k_find_on_set_options(void* self, void (*callback)(void*, int64_t)) {
     KFind_OnSetOptions((KFind*)self, (intptr_t)callback);
 }
 
-void k_find_qbase_set_options(void* self, int64_t options) {
-    KFind_QBaseSetOptions((KFind*)self, options);
+void k_find_super_set_options(void* self, int64_t options) {
+    KFind_SuperSetOptions((KFind*)self, options);
 }
 
 const char* k_find_pattern(void* self) {
@@ -114,8 +114,8 @@ void k_find_on_reset_counts(void* self, void (*callback)()) {
     KFind_OnResetCounts((KFind*)self, (intptr_t)callback);
 }
 
-void k_find_qbase_reset_counts(void* self) {
-    KFind_QBaseResetCounts((KFind*)self);
+void k_find_super_reset_counts(void* self) {
+    KFind_SuperResetCounts((KFind*)self);
 }
 
 bool k_find_validate_match(void* self, const char* text, int index, int matchedlength) {
@@ -126,8 +126,8 @@ void k_find_on_validate_match(void* self, bool (*callback)(void*, const char*, i
     KFind_OnValidateMatch((KFind*)self, (intptr_t)callback);
 }
 
-bool k_find_qbase_validate_match(void* self, const char* text, int index, int matchedlength) {
-    return KFind_QBaseValidateMatch((KFind*)self, qstring(text), index, matchedlength);
+bool k_find_super_validate_match(void* self, const char* text, int index, int matchedlength) {
+    return KFind_SuperValidateMatch((KFind*)self, qstring(text), index, matchedlength);
 }
 
 bool k_find_should_restart(void* self, bool forceAsking, bool showNumMatches) {
@@ -138,8 +138,8 @@ void k_find_on_should_restart(void* self, bool (*callback)(void*, bool, bool)) {
     KFind_OnShouldRestart((KFind*)self, (intptr_t)callback);
 }
 
-bool k_find_qbase_should_restart(void* self, bool forceAsking, bool showNumMatches) {
-    return KFind_QBaseShouldRestart((KFind*)self, forceAsking, showNumMatches);
+bool k_find_super_should_restart(void* self, bool forceAsking, bool showNumMatches) {
+    return KFind_SuperShouldRestart((KFind*)self, forceAsking, showNumMatches);
 }
 
 int32_t k_find_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch) {
@@ -154,8 +154,8 @@ void k_find_on_display_final_dialog(void* self, void (*callback)()) {
     KFind_OnDisplayFinalDialog((KFind*)self, (intptr_t)callback);
 }
 
-void k_find_qbase_display_final_dialog(void* self) {
-    KFind_QBaseDisplayFinalDialog((KFind*)self);
+void k_find_super_display_final_dialog(void* self) {
+    KFind_SuperDisplayFinalDialog((KFind*)self);
 }
 
 QDialog* k_find_find_next_dialog(void* self) {
@@ -218,8 +218,8 @@ void k_find_on_parent_widget(void* self, QWidget* (*callback)()) {
     KFind_OnParentWidget((KFind*)self, (intptr_t)callback);
 }
 
-QWidget* k_find_qbase_parent_widget(void* self) {
-    return KFind_QBaseParentWidget((KFind*)self);
+QWidget* k_find_super_parent_widget(void* self) {
+    return KFind_SuperParentWidget((KFind*)self);
 }
 
 QWidget* k_find_dialogs_parent(void* self) {
@@ -230,8 +230,8 @@ void k_find_on_dialogs_parent(void* self, QWidget* (*callback)()) {
     KFind_OnDialogsParent((KFind*)self, (intptr_t)callback);
 }
 
-QWidget* k_find_qbase_dialogs_parent(void* self) {
-    return KFind_QBaseDialogsParent((KFind*)self);
+QWidget* k_find_super_dialogs_parent(void* self) {
+    return KFind_SuperDialogsParent((KFind*)self);
 }
 
 const char* k_find_tr2(const char* s, const char* c) {
@@ -475,8 +475,8 @@ bool k_find_event(void* self, void* event) {
     return KFind_Event((KFind*)self, (QEvent*)event);
 }
 
-bool k_find_qbase_event(void* self, void* event) {
-    return KFind_QBaseEvent((KFind*)self, (QEvent*)event);
+bool k_find_super_event(void* self, void* event) {
+    return KFind_SuperEvent((KFind*)self, (QEvent*)event);
 }
 
 void k_find_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ bool k_find_event_filter(void* self, void* watched, void* event) {
     return KFind_EventFilter((KFind*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_find_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFind_QBaseEventFilter((KFind*)self, (QObject*)watched, (QEvent*)event);
+bool k_find_super_event_filter(void* self, void* watched, void* event) {
+    return KFind_SuperEventFilter((KFind*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_find_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -499,8 +499,8 @@ void k_find_timer_event(void* self, void* event) {
     KFind_TimerEvent((KFind*)self, (QTimerEvent*)event);
 }
 
-void k_find_qbase_timer_event(void* self, void* event) {
-    KFind_QBaseTimerEvent((KFind*)self, (QTimerEvent*)event);
+void k_find_super_timer_event(void* self, void* event) {
+    KFind_SuperTimerEvent((KFind*)self, (QTimerEvent*)event);
 }
 
 void k_find_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -511,8 +511,8 @@ void k_find_child_event(void* self, void* event) {
     KFind_ChildEvent((KFind*)self, (QChildEvent*)event);
 }
 
-void k_find_qbase_child_event(void* self, void* event) {
-    KFind_QBaseChildEvent((KFind*)self, (QChildEvent*)event);
+void k_find_super_child_event(void* self, void* event) {
+    KFind_SuperChildEvent((KFind*)self, (QChildEvent*)event);
 }
 
 void k_find_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -523,8 +523,8 @@ void k_find_custom_event(void* self, void* event) {
     KFind_CustomEvent((KFind*)self, (QEvent*)event);
 }
 
-void k_find_qbase_custom_event(void* self, void* event) {
-    KFind_QBaseCustomEvent((KFind*)self, (QEvent*)event);
+void k_find_super_custom_event(void* self, void* event) {
+    KFind_SuperCustomEvent((KFind*)self, (QEvent*)event);
 }
 
 void k_find_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -535,8 +535,8 @@ void k_find_connect_notify(void* self, void* signal) {
     KFind_ConnectNotify((KFind*)self, (QMetaMethod*)signal);
 }
 
-void k_find_qbase_connect_notify(void* self, void* signal) {
-    KFind_QBaseConnectNotify((KFind*)self, (QMetaMethod*)signal);
+void k_find_super_connect_notify(void* self, void* signal) {
+    KFind_SuperConnectNotify((KFind*)self, (QMetaMethod*)signal);
 }
 
 void k_find_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -547,8 +547,8 @@ void k_find_disconnect_notify(void* self, void* signal) {
     KFind_DisconnectNotify((KFind*)self, (QMetaMethod*)signal);
 }
 
-void k_find_qbase_disconnect_notify(void* self, void* signal) {
-    KFind_QBaseDisconnectNotify((KFind*)self, (QMetaMethod*)signal);
+void k_find_super_disconnect_notify(void* self, void* signal) {
+    KFind_SuperDisconnectNotify((KFind*)self, (QMetaMethod*)signal);
 }
 
 void k_find_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ QObject* k_find_sender(void* self) {
     return KFind_Sender((KFind*)self);
 }
 
-QObject* k_find_qbase_sender(void* self) {
-    return KFind_QBaseSender((KFind*)self);
+QObject* k_find_super_sender(void* self) {
+    return KFind_SuperSender((KFind*)self);
 }
 
 void k_find_on_sender(void* self, QObject* (*callback)()) {
@@ -571,8 +571,8 @@ int32_t k_find_sender_signal_index(void* self) {
     return KFind_SenderSignalIndex((KFind*)self);
 }
 
-int32_t k_find_qbase_sender_signal_index(void* self) {
-    return KFind_QBaseSenderSignalIndex((KFind*)self);
+int32_t k_find_super_sender_signal_index(void* self) {
+    return KFind_SuperSenderSignalIndex((KFind*)self);
 }
 
 void k_find_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -583,8 +583,8 @@ int32_t k_find_receivers(void* self, const char* signal) {
     return KFind_Receivers((KFind*)self, signal);
 }
 
-int32_t k_find_qbase_receivers(void* self, const char* signal) {
-    return KFind_QBaseReceivers((KFind*)self, signal);
+int32_t k_find_super_receivers(void* self, const char* signal) {
+    return KFind_SuperReceivers((KFind*)self, signal);
 }
 
 void k_find_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -595,8 +595,8 @@ bool k_find_is_signal_connected(void* self, void* signal) {
     return KFind_IsSignalConnected((KFind*)self, (QMetaMethod*)signal);
 }
 
-bool k_find_qbase_is_signal_connected(void* self, void* signal) {
-    return KFind_QBaseIsSignalConnected((KFind*)self, (QMetaMethod*)signal);
+bool k_find_super_is_signal_connected(void* self, void* signal) {
+    return KFind_SuperIsSignalConnected((KFind*)self, (QMetaMethod*)signal);
 }
 
 void k_find_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

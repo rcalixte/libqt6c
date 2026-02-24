@@ -71,13 +71,17 @@ char* k_archivefile_data(void* self);
 ///
 void k_archivefile_on_data(void* self, libqt_string (*callback)());
 
+/// @warning DEPRECATED: Use `k_archivefile_super_data` instead
+///
+#define k_archivefile_qbase_data k_archivefile_super_data
+
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveFile*
 ///
-char* k_archivefile_qbase_data(void* self);
+char* k_archivefile_super_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
@@ -94,13 +98,17 @@ QIODevice* k_archivefile_create_device(void* self);
 ///
 void k_archivefile_on_create_device(void* self, QIODevice* (*callback)());
 
+/// @warning DEPRECATED: Use `k_archivefile_super_create_device` instead
+///
+#define k_archivefile_qbase_create_device k_archivefile_super_create_device
+
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveFile*
 ///
-QIODevice* k_archivefile_qbase_create_device(void* self);
+QIODevice* k_archivefile_super_create_device(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
@@ -117,13 +125,17 @@ bool k_archivefile_is_file(void* self);
 ///
 void k_archivefile_on_is_file(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_archivefile_super_is_file` instead
+///
+#define k_archivefile_qbase_is_file k_archivefile_super_is_file
+
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveFile*
 ///
-bool k_archivefile_qbase_is_file(void* self);
+bool k_archivefile_super_is_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#copyTo)
 ///
@@ -149,6 +161,10 @@ void k_archivefile_virtual_hook(void* self, int id, void* data);
 ///
 void k_archivefile_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_archivefile_super_virtual_hook` instead
+///
+#define k_archivefile_qbase_virtual_hook k_archivefile_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/karchivefile.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -157,7 +173,7 @@ void k_archivefile_on_virtual_hook(void* self, void (*callback)(void*, int, void
 /// @param id int
 /// @param data void*
 ///
-void k_archivefile_qbase_virtual_hook(void* self, int id, void* data);
+void k_archivefile_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KArchiveEntry
 ///
@@ -225,6 +241,10 @@ const char* k_archivefile_sym_link_target(void* self);
 ///
 bool k_archivefile_is_directory(void* self);
 
+/// @warning DEPRECATED: Use `k_archivefile_super_is_directory` instead
+///
+#define k_archivefile_qbase_is_directory k_archivefile_super_is_directory
+
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
@@ -233,7 +253,7 @@ bool k_archivefile_is_directory(void* self);
 ///
 /// @param self KArchiveFile*
 ///
-bool k_archivefile_qbase_is_directory(void* self);
+bool k_archivefile_super_is_directory(void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -256,6 +276,10 @@ void k_archivefile_on_is_directory(void* self, bool (*callback)());
 ///
 KArchive* k_archivefile_archive(void* self);
 
+/// @warning DEPRECATED: Use `k_archivefile_super_archive` instead
+///
+#define k_archivefile_qbase_archive k_archivefile_super_archive
+
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
@@ -264,7 +288,7 @@ KArchive* k_archivefile_archive(void* self);
 ///
 /// @param self KArchiveFile*
 ///
-KArchive* k_archivefile_qbase_archive(void* self);
+KArchive* k_archivefile_super_archive(void* self);
 
 /// Inherited from KArchiveEntry
 ///

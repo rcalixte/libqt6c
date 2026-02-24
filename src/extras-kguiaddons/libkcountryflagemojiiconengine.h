@@ -34,13 +34,17 @@ QIconEngine* k_countryflagemojiiconengine_clone(void* self);
 ///
 void k_countryflagemojiiconengine_on_clone(void* self, QIconEngine* (*callback)());
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_clone` instead
+///
+#define k_countryflagemojiiconengine_qbase_clone k_countryflagemojiiconengine_super_clone
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 ///
-QIconEngine* k_countryflagemojiiconengine_qbase_clone(void* self);
+QIconEngine* k_countryflagemojiiconengine_super_clone(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
@@ -59,13 +63,17 @@ const char* k_countryflagemojiiconengine_key(void* self);
 ///
 void k_countryflagemojiiconengine_on_key(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_key` instead
+///
+#define k_countryflagemojiiconengine_qbase_key k_countryflagemojiiconengine_super_key
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 ///
-const char* k_countryflagemojiiconengine_qbase_key(void* self);
+const char* k_countryflagemojiiconengine_super_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
@@ -86,6 +94,10 @@ void k_countryflagemojiiconengine_paint(void* self, void* painter, void* rect, i
 ///
 void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_paint` instead
+///
+#define k_countryflagemojiiconengine_qbase_paint k_countryflagemojiiconengine_super_paint
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
 /// Base class method implementation
@@ -96,7 +108,7 @@ void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, v
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
@@ -116,6 +128,10 @@ QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mod
 ///
 void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_pixmap` instead
+///
+#define k_countryflagemojiiconengine_qbase_pixmap k_countryflagemojiiconengine_super_pixmap
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
 /// Base class method implementation
@@ -125,7 +141,7 @@ void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(voi
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QPixmap* k_countryflagemojiiconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state);
+QPixmap* k_countryflagemojiiconengine_super_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
@@ -146,6 +162,10 @@ QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int3
 ///
 void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_scaled_pixmap` instead
+///
+#define k_countryflagemojiiconengine_qbase_scaled_pixmap k_countryflagemojiiconengine_super_scaled_pixmap
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
 /// Base class method implementation
@@ -156,7 +176,7 @@ void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callba
 /// @param state enum QIcon__State
 /// @param scale double
 ///
-QPixmap* k_countryflagemojiiconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
+QPixmap* k_countryflagemojiiconengine_super_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
@@ -173,13 +193,17 @@ bool k_countryflagemojiiconengine_is_null(void* self);
 ///
 void k_countryflagemojiiconengine_on_is_null(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_is_null` instead
+///
+#define k_countryflagemojiiconengine_qbase_is_null k_countryflagemojiiconengine_super_is_null
+
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 ///
-bool k_countryflagemojiiconengine_qbase_is_null(void* self);
+bool k_countryflagemojiiconengine_super_is_null(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#setGlobalDefaultFont)
 ///
@@ -200,6 +224,10 @@ void k_countryflagemojiiconengine_set_global_default_font(void* font);
 ///
 QSize* k_countryflagemojiiconengine_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_actual_size` instead
+///
+#define k_countryflagemojiiconengine_qbase_actual_size k_countryflagemojiiconengine_super_actual_size
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
@@ -211,7 +239,7 @@ QSize* k_countryflagemojiiconengine_actual_size(void* self, void* size, int32_t 
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-QSize* k_countryflagemojiiconengine_qbase_actual_size(void* self, void* size, int32_t mode, int32_t state);
+QSize* k_countryflagemojiiconengine_super_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -237,6 +265,10 @@ void k_countryflagemojiiconengine_on_actual_size(void* self, QSize* (*callback)(
 ///
 void k_countryflagemojiiconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_add_pixmap` instead
+///
+#define k_countryflagemojiiconengine_qbase_add_pixmap k_countryflagemojiiconengine_super_add_pixmap
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
@@ -248,7 +280,7 @@ void k_countryflagemojiiconengine_add_pixmap(void* self, void* pixmap, int32_t m
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -275,6 +307,10 @@ void k_countryflagemojiiconengine_on_add_pixmap(void* self, void (*callback)(voi
 ///
 void k_countryflagemojiiconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_add_file` instead
+///
+#define k_countryflagemojiiconengine_qbase_add_file k_countryflagemojiiconengine_super_add_file
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addFile)
@@ -287,7 +323,7 @@ void k_countryflagemojiiconengine_add_file(void* self, const char* fileName, voi
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-void k_countryflagemojiiconengine_qbase_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
+void k_countryflagemojiiconengine_super_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -311,6 +347,10 @@ void k_countryflagemojiiconengine_on_add_file(void* self, void (*callback)(void*
 ///
 bool k_countryflagemojiiconengine_read(void* self, void* in);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_read` instead
+///
+#define k_countryflagemojiiconengine_qbase_read k_countryflagemojiiconengine_super_read
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
@@ -320,7 +360,7 @@ bool k_countryflagemojiiconengine_read(void* self, void* in);
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param in QDataStream*
 ///
-bool k_countryflagemojiiconengine_qbase_read(void* self, void* in);
+bool k_countryflagemojiiconengine_super_read(void* self, void* in);
 
 /// Inherited from QIconEngine
 ///
@@ -344,6 +384,10 @@ void k_countryflagemojiiconengine_on_read(void* self, bool (*callback)(void*, vo
 ///
 bool k_countryflagemojiiconengine_write(void* self, void* out);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_write` instead
+///
+#define k_countryflagemojiiconengine_qbase_write k_countryflagemojiiconengine_super_write
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
@@ -353,7 +397,7 @@ bool k_countryflagemojiiconengine_write(void* self, void* out);
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param out QDataStream*
 ///
-bool k_countryflagemojiiconengine_qbase_write(void* self, void* out);
+bool k_countryflagemojiiconengine_super_write(void* self, void* out);
 
 /// Inherited from QIconEngine
 ///
@@ -380,6 +424,10 @@ void k_countryflagemojiiconengine_on_write(void* self, bool (*callback)(void*, v
 ///
 libqt_list k_countryflagemojiiconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_available_sizes` instead
+///
+#define k_countryflagemojiiconengine_qbase_available_sizes k_countryflagemojiiconengine_super_available_sizes
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
@@ -392,7 +440,7 @@ libqt_list k_countryflagemojiiconengine_available_sizes(void* self, int32_t mode
 ///
 /// @return libqt_list of QSize*
 ///
-libqt_list k_countryflagemojiiconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
+libqt_list k_countryflagemojiiconengine_super_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -417,6 +465,10 @@ void k_countryflagemojiiconengine_on_available_sizes(void* self, libqt_list (*ca
 ///
 const char* k_countryflagemojiiconengine_icon_name(void* self);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_icon_name` instead
+///
+#define k_countryflagemojiiconengine_qbase_icon_name k_countryflagemojiiconengine_super_icon_name
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
@@ -427,7 +479,7 @@ const char* k_countryflagemojiiconengine_icon_name(void* self);
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 ///
-const char* k_countryflagemojiiconengine_qbase_icon_name(void* self);
+const char* k_countryflagemojiiconengine_super_icon_name(void* self);
 
 /// Inherited from QIconEngine
 ///
@@ -452,6 +504,10 @@ void k_countryflagemojiiconengine_on_icon_name(void* self, const char* (*callbac
 ///
 void k_countryflagemojiiconengine_virtual_hook(void* self, int id, void* data);
 
+/// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_virtual_hook` instead
+///
+#define k_countryflagemojiiconengine_qbase_virtual_hook k_countryflagemojiiconengine_super_virtual_hook
+
 /// Inherited from QIconEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
@@ -462,7 +518,7 @@ void k_countryflagemojiiconengine_virtual_hook(void* self, int id, void* data);
 /// @param id int
 /// @param data void*
 ///
-void k_countryflagemojiiconengine_qbase_virtual_hook(void* self, int id, void* data);
+void k_countryflagemojiiconengine_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QIconEngine
 ///

@@ -21,8 +21,8 @@ void q_timer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTimer_OnMetaObject((QTimer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_timer_qbase_meta_object(void* self) {
-    return QTimer_QBaseMetaObject((QTimer*)self);
+const QMetaObject* q_timer_super_meta_object(void* self) {
+    return QTimer_SuperMetaObject((QTimer*)self);
 }
 
 void* q_timer_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_timer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QTimer_OnMetacast((QTimer*)self, (intptr_t)callback);
 }
 
-void* q_timer_qbase_metacast(void* self, const char* param1) {
-    return QTimer_QBaseMetacast((QTimer*)self, param1);
+void* q_timer_super_metacast(void* self, const char* param1) {
+    return QTimer_SuperMetacast((QTimer*)self, param1);
 }
 
 int32_t q_timer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
     QTimer_OnMetacall((QTimer*)self, (intptr_t)callback);
 }
 
-int32_t q_timer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTimer_QBaseMetacall((QTimer*)self, param1, param2, param3);
+int32_t q_timer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTimer_SuperMetacall((QTimer*)self, param1, param2, param3);
 }
 
 const char* q_timer_tr(const char* s) {
@@ -148,8 +148,8 @@ void q_timer_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QTimer_OnTimerEvent((QTimer*)self, (intptr_t)callback);
 }
 
-void q_timer_qbase_timer_event(void* self, void* param1) {
-    QTimer_QBaseTimerEvent((QTimer*)self, (QTimerEvent*)param1);
+void q_timer_super_timer_event(void* self, void* param1) {
+    QTimer_SuperTimerEvent((QTimer*)self, (QTimerEvent*)param1);
 }
 
 const char* q_timer_tr2(const char* s, const char* c) {
@@ -381,8 +381,8 @@ bool q_timer_event(void* self, void* event) {
     return QTimer_Event((QTimer*)self, (QEvent*)event);
 }
 
-bool q_timer_qbase_event(void* self, void* event) {
-    return QTimer_QBaseEvent((QTimer*)self, (QEvent*)event);
+bool q_timer_super_event(void* self, void* event) {
+    return QTimer_SuperEvent((QTimer*)self, (QEvent*)event);
 }
 
 void q_timer_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ bool q_timer_event_filter(void* self, void* watched, void* event) {
     return QTimer_EventFilter((QTimer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_timer_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTimer_QBaseEventFilter((QTimer*)self, (QObject*)watched, (QEvent*)event);
+bool q_timer_super_event_filter(void* self, void* watched, void* event) {
+    return QTimer_SuperEventFilter((QTimer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_timer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -405,8 +405,8 @@ void q_timer_child_event(void* self, void* event) {
     QTimer_ChildEvent((QTimer*)self, (QChildEvent*)event);
 }
 
-void q_timer_qbase_child_event(void* self, void* event) {
-    QTimer_QBaseChildEvent((QTimer*)self, (QChildEvent*)event);
+void q_timer_super_child_event(void* self, void* event) {
+    QTimer_SuperChildEvent((QTimer*)self, (QChildEvent*)event);
 }
 
 void q_timer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -417,8 +417,8 @@ void q_timer_custom_event(void* self, void* event) {
     QTimer_CustomEvent((QTimer*)self, (QEvent*)event);
 }
 
-void q_timer_qbase_custom_event(void* self, void* event) {
-    QTimer_QBaseCustomEvent((QTimer*)self, (QEvent*)event);
+void q_timer_super_custom_event(void* self, void* event) {
+    QTimer_SuperCustomEvent((QTimer*)self, (QEvent*)event);
 }
 
 void q_timer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -429,8 +429,8 @@ void q_timer_connect_notify(void* self, void* signal) {
     QTimer_ConnectNotify((QTimer*)self, (QMetaMethod*)signal);
 }
 
-void q_timer_qbase_connect_notify(void* self, void* signal) {
-    QTimer_QBaseConnectNotify((QTimer*)self, (QMetaMethod*)signal);
+void q_timer_super_connect_notify(void* self, void* signal) {
+    QTimer_SuperConnectNotify((QTimer*)self, (QMetaMethod*)signal);
 }
 
 void q_timer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -441,8 +441,8 @@ void q_timer_disconnect_notify(void* self, void* signal) {
     QTimer_DisconnectNotify((QTimer*)self, (QMetaMethod*)signal);
 }
 
-void q_timer_qbase_disconnect_notify(void* self, void* signal) {
-    QTimer_QBaseDisconnectNotify((QTimer*)self, (QMetaMethod*)signal);
+void q_timer_super_disconnect_notify(void* self, void* signal) {
+    QTimer_SuperDisconnectNotify((QTimer*)self, (QMetaMethod*)signal);
 }
 
 void q_timer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -453,8 +453,8 @@ QObject* q_timer_sender(void* self) {
     return QTimer_Sender((QTimer*)self);
 }
 
-QObject* q_timer_qbase_sender(void* self) {
-    return QTimer_QBaseSender((QTimer*)self);
+QObject* q_timer_super_sender(void* self) {
+    return QTimer_SuperSender((QTimer*)self);
 }
 
 void q_timer_on_sender(void* self, QObject* (*callback)()) {
@@ -465,8 +465,8 @@ int32_t q_timer_sender_signal_index(void* self) {
     return QTimer_SenderSignalIndex((QTimer*)self);
 }
 
-int32_t q_timer_qbase_sender_signal_index(void* self) {
-    return QTimer_QBaseSenderSignalIndex((QTimer*)self);
+int32_t q_timer_super_sender_signal_index(void* self) {
+    return QTimer_SuperSenderSignalIndex((QTimer*)self);
 }
 
 void q_timer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -477,8 +477,8 @@ int32_t q_timer_receivers(void* self, const char* signal) {
     return QTimer_Receivers((QTimer*)self, signal);
 }
 
-int32_t q_timer_qbase_receivers(void* self, const char* signal) {
-    return QTimer_QBaseReceivers((QTimer*)self, signal);
+int32_t q_timer_super_receivers(void* self, const char* signal) {
+    return QTimer_SuperReceivers((QTimer*)self, signal);
 }
 
 void q_timer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -489,8 +489,8 @@ bool q_timer_is_signal_connected(void* self, void* signal) {
     return QTimer_IsSignalConnected((QTimer*)self, (QMetaMethod*)signal);
 }
 
-bool q_timer_qbase_is_signal_connected(void* self, void* signal) {
-    return QTimer_QBaseIsSignalConnected((QTimer*)self, (QMetaMethod*)signal);
+bool q_timer_super_is_signal_connected(void* self, void* signal) {
+    return QTimer_SuperIsSignalConnected((QTimer*)self, (QMetaMethod*)signal);
 }
 
 void q_timer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

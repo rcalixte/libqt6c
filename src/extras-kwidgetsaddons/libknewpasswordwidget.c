@@ -30,8 +30,8 @@ void k_newpasswordwidget_on_meta_object(void* self, const QMetaObject* (*callbac
     KNewPasswordWidget_OnMetaObject((KNewPasswordWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_newpasswordwidget_qbase_meta_object(void* self) {
-    return KNewPasswordWidget_QBaseMetaObject((KNewPasswordWidget*)self);
+const QMetaObject* k_newpasswordwidget_super_meta_object(void* self) {
+    return KNewPasswordWidget_SuperMetaObject((KNewPasswordWidget*)self);
 }
 
 void* k_newpasswordwidget_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_newpasswordwidget_on_metacast(void* self, void* (*callback)(void*, const 
     KNewPasswordWidget_OnMetacast((KNewPasswordWidget*)self, (intptr_t)callback);
 }
 
-void* k_newpasswordwidget_qbase_metacast(void* self, const char* param1) {
-    return KNewPasswordWidget_QBaseMetacast((KNewPasswordWidget*)self, param1);
+void* k_newpasswordwidget_super_metacast(void* self, const char* param1) {
+    return KNewPasswordWidget_SuperMetacast((KNewPasswordWidget*)self, param1);
 }
 
 int32_t k_newpasswordwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_newpasswordwidget_on_metacall(void* self, int32_t (*callback)(void*, int3
     KNewPasswordWidget_OnMetacall((KNewPasswordWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_newpasswordwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNewPasswordWidget_QBaseMetacall((KNewPasswordWidget*)self, param1, param2, param3);
+int32_t k_newpasswordwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNewPasswordWidget_SuperMetacall((KNewPasswordWidget*)self, param1, param2, param3);
 }
 
 const char* k_newpasswordwidget_tr(const char* s) {
@@ -1555,8 +1555,8 @@ int32_t k_newpasswordwidget_dev_type(void* self) {
     return KNewPasswordWidget_DevType((KNewPasswordWidget*)self);
 }
 
-int32_t k_newpasswordwidget_qbase_dev_type(void* self) {
-    return KNewPasswordWidget_QBaseDevType((KNewPasswordWidget*)self);
+int32_t k_newpasswordwidget_super_dev_type(void* self) {
+    return KNewPasswordWidget_SuperDevType((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1567,8 +1567,8 @@ void k_newpasswordwidget_set_visible(void* self, bool visible) {
     KNewPasswordWidget_SetVisible((KNewPasswordWidget*)self, visible);
 }
 
-void k_newpasswordwidget_qbase_set_visible(void* self, bool visible) {
-    KNewPasswordWidget_QBaseSetVisible((KNewPasswordWidget*)self, visible);
+void k_newpasswordwidget_super_set_visible(void* self, bool visible) {
+    KNewPasswordWidget_SuperSetVisible((KNewPasswordWidget*)self, visible);
 }
 
 void k_newpasswordwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1579,8 +1579,8 @@ QSize* k_newpasswordwidget_size_hint(void* self) {
     return KNewPasswordWidget_SizeHint((KNewPasswordWidget*)self);
 }
 
-QSize* k_newpasswordwidget_qbase_size_hint(void* self) {
-    return KNewPasswordWidget_QBaseSizeHint((KNewPasswordWidget*)self);
+QSize* k_newpasswordwidget_super_size_hint(void* self) {
+    return KNewPasswordWidget_SuperSizeHint((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1591,8 +1591,8 @@ QSize* k_newpasswordwidget_minimum_size_hint(void* self) {
     return KNewPasswordWidget_MinimumSizeHint((KNewPasswordWidget*)self);
 }
 
-QSize* k_newpasswordwidget_qbase_minimum_size_hint(void* self) {
-    return KNewPasswordWidget_QBaseMinimumSizeHint((KNewPasswordWidget*)self);
+QSize* k_newpasswordwidget_super_minimum_size_hint(void* self) {
+    return KNewPasswordWidget_SuperMinimumSizeHint((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1603,8 +1603,8 @@ int32_t k_newpasswordwidget_height_for_width(void* self, int param1) {
     return KNewPasswordWidget_HeightForWidth((KNewPasswordWidget*)self, param1);
 }
 
-int32_t k_newpasswordwidget_qbase_height_for_width(void* self, int param1) {
-    return KNewPasswordWidget_QBaseHeightForWidth((KNewPasswordWidget*)self, param1);
+int32_t k_newpasswordwidget_super_height_for_width(void* self, int param1) {
+    return KNewPasswordWidget_SuperHeightForWidth((KNewPasswordWidget*)self, param1);
 }
 
 void k_newpasswordwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1615,8 +1615,8 @@ bool k_newpasswordwidget_has_height_for_width(void* self) {
     return KNewPasswordWidget_HasHeightForWidth((KNewPasswordWidget*)self);
 }
 
-bool k_newpasswordwidget_qbase_has_height_for_width(void* self) {
-    return KNewPasswordWidget_QBaseHasHeightForWidth((KNewPasswordWidget*)self);
+bool k_newpasswordwidget_super_has_height_for_width(void* self) {
+    return KNewPasswordWidget_SuperHasHeightForWidth((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1627,8 +1627,8 @@ QPaintEngine* k_newpasswordwidget_paint_engine(void* self) {
     return KNewPasswordWidget_PaintEngine((KNewPasswordWidget*)self);
 }
 
-QPaintEngine* k_newpasswordwidget_qbase_paint_engine(void* self) {
-    return KNewPasswordWidget_QBasePaintEngine((KNewPasswordWidget*)self);
+QPaintEngine* k_newpasswordwidget_super_paint_engine(void* self) {
+    return KNewPasswordWidget_SuperPaintEngine((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1639,8 +1639,8 @@ bool k_newpasswordwidget_event(void* self, void* event) {
     return KNewPasswordWidget_Event((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
-bool k_newpasswordwidget_qbase_event(void* self, void* event) {
-    return KNewPasswordWidget_QBaseEvent((KNewPasswordWidget*)self, (QEvent*)event);
+bool k_newpasswordwidget_super_event(void* self, void* event) {
+    return KNewPasswordWidget_SuperEvent((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
 void k_newpasswordwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1651,8 +1651,8 @@ void k_newpasswordwidget_mouse_press_event(void* self, void* event) {
     KNewPasswordWidget_MousePressEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_mouse_press_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseMousePressEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
+void k_newpasswordwidget_super_mouse_press_event(void* self, void* event) {
+    KNewPasswordWidget_SuperMousePressEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
 void k_newpasswordwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1663,8 +1663,8 @@ void k_newpasswordwidget_mouse_release_event(void* self, void* event) {
     KNewPasswordWidget_MouseReleaseEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_mouse_release_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseMouseReleaseEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
+void k_newpasswordwidget_super_mouse_release_event(void* self, void* event) {
+    KNewPasswordWidget_SuperMouseReleaseEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
 void k_newpasswordwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1675,8 +1675,8 @@ void k_newpasswordwidget_mouse_double_click_event(void* self, void* event) {
     KNewPasswordWidget_MouseDoubleClickEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseMouseDoubleClickEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
+void k_newpasswordwidget_super_mouse_double_click_event(void* self, void* event) {
+    KNewPasswordWidget_SuperMouseDoubleClickEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
 void k_newpasswordwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1687,8 +1687,8 @@ void k_newpasswordwidget_mouse_move_event(void* self, void* event) {
     KNewPasswordWidget_MouseMoveEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_mouse_move_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseMouseMoveEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
+void k_newpasswordwidget_super_mouse_move_event(void* self, void* event) {
+    KNewPasswordWidget_SuperMouseMoveEvent((KNewPasswordWidget*)self, (QMouseEvent*)event);
 }
 
 void k_newpasswordwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1699,8 +1699,8 @@ void k_newpasswordwidget_wheel_event(void* self, void* event) {
     KNewPasswordWidget_WheelEvent((KNewPasswordWidget*)self, (QWheelEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_wheel_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseWheelEvent((KNewPasswordWidget*)self, (QWheelEvent*)event);
+void k_newpasswordwidget_super_wheel_event(void* self, void* event) {
+    KNewPasswordWidget_SuperWheelEvent((KNewPasswordWidget*)self, (QWheelEvent*)event);
 }
 
 void k_newpasswordwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1711,8 +1711,8 @@ void k_newpasswordwidget_key_press_event(void* self, void* event) {
     KNewPasswordWidget_KeyPressEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_key_press_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseKeyPressEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
+void k_newpasswordwidget_super_key_press_event(void* self, void* event) {
+    KNewPasswordWidget_SuperKeyPressEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
 }
 
 void k_newpasswordwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1723,8 +1723,8 @@ void k_newpasswordwidget_key_release_event(void* self, void* event) {
     KNewPasswordWidget_KeyReleaseEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_key_release_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseKeyReleaseEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
+void k_newpasswordwidget_super_key_release_event(void* self, void* event) {
+    KNewPasswordWidget_SuperKeyReleaseEvent((KNewPasswordWidget*)self, (QKeyEvent*)event);
 }
 
 void k_newpasswordwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1735,8 +1735,8 @@ void k_newpasswordwidget_focus_in_event(void* self, void* event) {
     KNewPasswordWidget_FocusInEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_focus_in_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseFocusInEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
+void k_newpasswordwidget_super_focus_in_event(void* self, void* event) {
+    KNewPasswordWidget_SuperFocusInEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
 }
 
 void k_newpasswordwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1747,8 +1747,8 @@ void k_newpasswordwidget_focus_out_event(void* self, void* event) {
     KNewPasswordWidget_FocusOutEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_focus_out_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseFocusOutEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
+void k_newpasswordwidget_super_focus_out_event(void* self, void* event) {
+    KNewPasswordWidget_SuperFocusOutEvent((KNewPasswordWidget*)self, (QFocusEvent*)event);
 }
 
 void k_newpasswordwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1759,8 +1759,8 @@ void k_newpasswordwidget_enter_event(void* self, void* event) {
     KNewPasswordWidget_EnterEvent((KNewPasswordWidget*)self, (QEnterEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_enter_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseEnterEvent((KNewPasswordWidget*)self, (QEnterEvent*)event);
+void k_newpasswordwidget_super_enter_event(void* self, void* event) {
+    KNewPasswordWidget_SuperEnterEvent((KNewPasswordWidget*)self, (QEnterEvent*)event);
 }
 
 void k_newpasswordwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void k_newpasswordwidget_leave_event(void* self, void* event) {
     KNewPasswordWidget_LeaveEvent((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_leave_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseLeaveEvent((KNewPasswordWidget*)self, (QEvent*)event);
+void k_newpasswordwidget_super_leave_event(void* self, void* event) {
+    KNewPasswordWidget_SuperLeaveEvent((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
 void k_newpasswordwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1783,8 +1783,8 @@ void k_newpasswordwidget_paint_event(void* self, void* event) {
     KNewPasswordWidget_PaintEvent((KNewPasswordWidget*)self, (QPaintEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_paint_event(void* self, void* event) {
-    KNewPasswordWidget_QBasePaintEvent((KNewPasswordWidget*)self, (QPaintEvent*)event);
+void k_newpasswordwidget_super_paint_event(void* self, void* event) {
+    KNewPasswordWidget_SuperPaintEvent((KNewPasswordWidget*)self, (QPaintEvent*)event);
 }
 
 void k_newpasswordwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1795,8 +1795,8 @@ void k_newpasswordwidget_move_event(void* self, void* event) {
     KNewPasswordWidget_MoveEvent((KNewPasswordWidget*)self, (QMoveEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_move_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseMoveEvent((KNewPasswordWidget*)self, (QMoveEvent*)event);
+void k_newpasswordwidget_super_move_event(void* self, void* event) {
+    KNewPasswordWidget_SuperMoveEvent((KNewPasswordWidget*)self, (QMoveEvent*)event);
 }
 
 void k_newpasswordwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void k_newpasswordwidget_resize_event(void* self, void* event) {
     KNewPasswordWidget_ResizeEvent((KNewPasswordWidget*)self, (QResizeEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_resize_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseResizeEvent((KNewPasswordWidget*)self, (QResizeEvent*)event);
+void k_newpasswordwidget_super_resize_event(void* self, void* event) {
+    KNewPasswordWidget_SuperResizeEvent((KNewPasswordWidget*)self, (QResizeEvent*)event);
 }
 
 void k_newpasswordwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void k_newpasswordwidget_close_event(void* self, void* event) {
     KNewPasswordWidget_CloseEvent((KNewPasswordWidget*)self, (QCloseEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_close_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseCloseEvent((KNewPasswordWidget*)self, (QCloseEvent*)event);
+void k_newpasswordwidget_super_close_event(void* self, void* event) {
+    KNewPasswordWidget_SuperCloseEvent((KNewPasswordWidget*)self, (QCloseEvent*)event);
 }
 
 void k_newpasswordwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void k_newpasswordwidget_context_menu_event(void* self, void* event) {
     KNewPasswordWidget_ContextMenuEvent((KNewPasswordWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_context_menu_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseContextMenuEvent((KNewPasswordWidget*)self, (QContextMenuEvent*)event);
+void k_newpasswordwidget_super_context_menu_event(void* self, void* event) {
+    KNewPasswordWidget_SuperContextMenuEvent((KNewPasswordWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_newpasswordwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void k_newpasswordwidget_tablet_event(void* self, void* event) {
     KNewPasswordWidget_TabletEvent((KNewPasswordWidget*)self, (QTabletEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_tablet_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseTabletEvent((KNewPasswordWidget*)self, (QTabletEvent*)event);
+void k_newpasswordwidget_super_tablet_event(void* self, void* event) {
+    KNewPasswordWidget_SuperTabletEvent((KNewPasswordWidget*)self, (QTabletEvent*)event);
 }
 
 void k_newpasswordwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ void k_newpasswordwidget_action_event(void* self, void* event) {
     KNewPasswordWidget_ActionEvent((KNewPasswordWidget*)self, (QActionEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_action_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseActionEvent((KNewPasswordWidget*)self, (QActionEvent*)event);
+void k_newpasswordwidget_super_action_event(void* self, void* event) {
+    KNewPasswordWidget_SuperActionEvent((KNewPasswordWidget*)self, (QActionEvent*)event);
 }
 
 void k_newpasswordwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ void k_newpasswordwidget_drag_enter_event(void* self, void* event) {
     KNewPasswordWidget_DragEnterEvent((KNewPasswordWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_drag_enter_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseDragEnterEvent((KNewPasswordWidget*)self, (QDragEnterEvent*)event);
+void k_newpasswordwidget_super_drag_enter_event(void* self, void* event) {
+    KNewPasswordWidget_SuperDragEnterEvent((KNewPasswordWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_newpasswordwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void k_newpasswordwidget_drag_move_event(void* self, void* event) {
     KNewPasswordWidget_DragMoveEvent((KNewPasswordWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_drag_move_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseDragMoveEvent((KNewPasswordWidget*)self, (QDragMoveEvent*)event);
+void k_newpasswordwidget_super_drag_move_event(void* self, void* event) {
+    KNewPasswordWidget_SuperDragMoveEvent((KNewPasswordWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_newpasswordwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void k_newpasswordwidget_drag_leave_event(void* self, void* event) {
     KNewPasswordWidget_DragLeaveEvent((KNewPasswordWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_drag_leave_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseDragLeaveEvent((KNewPasswordWidget*)self, (QDragLeaveEvent*)event);
+void k_newpasswordwidget_super_drag_leave_event(void* self, void* event) {
+    KNewPasswordWidget_SuperDragLeaveEvent((KNewPasswordWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_newpasswordwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void k_newpasswordwidget_drop_event(void* self, void* event) {
     KNewPasswordWidget_DropEvent((KNewPasswordWidget*)self, (QDropEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_drop_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseDropEvent((KNewPasswordWidget*)self, (QDropEvent*)event);
+void k_newpasswordwidget_super_drop_event(void* self, void* event) {
+    KNewPasswordWidget_SuperDropEvent((KNewPasswordWidget*)self, (QDropEvent*)event);
 }
 
 void k_newpasswordwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void k_newpasswordwidget_show_event(void* self, void* event) {
     KNewPasswordWidget_ShowEvent((KNewPasswordWidget*)self, (QShowEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_show_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseShowEvent((KNewPasswordWidget*)self, (QShowEvent*)event);
+void k_newpasswordwidget_super_show_event(void* self, void* event) {
+    KNewPasswordWidget_SuperShowEvent((KNewPasswordWidget*)self, (QShowEvent*)event);
 }
 
 void k_newpasswordwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void k_newpasswordwidget_hide_event(void* self, void* event) {
     KNewPasswordWidget_HideEvent((KNewPasswordWidget*)self, (QHideEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_hide_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseHideEvent((KNewPasswordWidget*)self, (QHideEvent*)event);
+void k_newpasswordwidget_super_hide_event(void* self, void* event) {
+    KNewPasswordWidget_SuperHideEvent((KNewPasswordWidget*)self, (QHideEvent*)event);
 }
 
 void k_newpasswordwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ bool k_newpasswordwidget_native_event(void* self, char* eventType, void* message
     return KNewPasswordWidget_NativeEvent((KNewPasswordWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_newpasswordwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KNewPasswordWidget_QBaseNativeEvent((KNewPasswordWidget*)self, qstring(eventType), message, result);
+bool k_newpasswordwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KNewPasswordWidget_SuperNativeEvent((KNewPasswordWidget*)self, qstring(eventType), message, result);
 }
 
 void k_newpasswordwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1951,8 +1951,8 @@ void k_newpasswordwidget_change_event(void* self, void* param1) {
     KNewPasswordWidget_ChangeEvent((KNewPasswordWidget*)self, (QEvent*)param1);
 }
 
-void k_newpasswordwidget_qbase_change_event(void* self, void* param1) {
-    KNewPasswordWidget_QBaseChangeEvent((KNewPasswordWidget*)self, (QEvent*)param1);
+void k_newpasswordwidget_super_change_event(void* self, void* param1) {
+    KNewPasswordWidget_SuperChangeEvent((KNewPasswordWidget*)self, (QEvent*)param1);
 }
 
 void k_newpasswordwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ int32_t k_newpasswordwidget_metric(void* self, int32_t param1) {
     return KNewPasswordWidget_Metric((KNewPasswordWidget*)self, param1);
 }
 
-int32_t k_newpasswordwidget_qbase_metric(void* self, int32_t param1) {
-    return KNewPasswordWidget_QBaseMetric((KNewPasswordWidget*)self, param1);
+int32_t k_newpasswordwidget_super_metric(void* self, int32_t param1) {
+    return KNewPasswordWidget_SuperMetric((KNewPasswordWidget*)self, param1);
 }
 
 void k_newpasswordwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1975,8 +1975,8 @@ void k_newpasswordwidget_init_painter(void* self, void* painter) {
     KNewPasswordWidget_InitPainter((KNewPasswordWidget*)self, (QPainter*)painter);
 }
 
-void k_newpasswordwidget_qbase_init_painter(void* self, void* painter) {
-    KNewPasswordWidget_QBaseInitPainter((KNewPasswordWidget*)self, (QPainter*)painter);
+void k_newpasswordwidget_super_init_painter(void* self, void* painter) {
+    KNewPasswordWidget_SuperInitPainter((KNewPasswordWidget*)self, (QPainter*)painter);
 }
 
 void k_newpasswordwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ QPaintDevice* k_newpasswordwidget_redirected(void* self, void* offset) {
     return KNewPasswordWidget_Redirected((KNewPasswordWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_newpasswordwidget_qbase_redirected(void* self, void* offset) {
-    return KNewPasswordWidget_QBaseRedirected((KNewPasswordWidget*)self, (QPoint*)offset);
+QPaintDevice* k_newpasswordwidget_super_redirected(void* self, void* offset) {
+    return KNewPasswordWidget_SuperRedirected((KNewPasswordWidget*)self, (QPoint*)offset);
 }
 
 void k_newpasswordwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ QPainter* k_newpasswordwidget_shared_painter(void* self) {
     return KNewPasswordWidget_SharedPainter((KNewPasswordWidget*)self);
 }
 
-QPainter* k_newpasswordwidget_qbase_shared_painter(void* self) {
-    return KNewPasswordWidget_QBaseSharedPainter((KNewPasswordWidget*)self);
+QPainter* k_newpasswordwidget_super_shared_painter(void* self) {
+    return KNewPasswordWidget_SuperSharedPainter((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2011,8 +2011,8 @@ void k_newpasswordwidget_input_method_event(void* self, void* param1) {
     KNewPasswordWidget_InputMethodEvent((KNewPasswordWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_newpasswordwidget_qbase_input_method_event(void* self, void* param1) {
-    KNewPasswordWidget_QBaseInputMethodEvent((KNewPasswordWidget*)self, (QInputMethodEvent*)param1);
+void k_newpasswordwidget_super_input_method_event(void* self, void* param1) {
+    KNewPasswordWidget_SuperInputMethodEvent((KNewPasswordWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_newpasswordwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ QVariant* k_newpasswordwidget_input_method_query(void* self, int32_t param1) {
     return KNewPasswordWidget_InputMethodQuery((KNewPasswordWidget*)self, param1);
 }
 
-QVariant* k_newpasswordwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KNewPasswordWidget_QBaseInputMethodQuery((KNewPasswordWidget*)self, param1);
+QVariant* k_newpasswordwidget_super_input_method_query(void* self, int32_t param1) {
+    return KNewPasswordWidget_SuperInputMethodQuery((KNewPasswordWidget*)self, param1);
 }
 
 void k_newpasswordwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2035,8 +2035,8 @@ bool k_newpasswordwidget_focus_next_prev_child(void* self, bool next) {
     return KNewPasswordWidget_FocusNextPrevChild((KNewPasswordWidget*)self, next);
 }
 
-bool k_newpasswordwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KNewPasswordWidget_QBaseFocusNextPrevChild((KNewPasswordWidget*)self, next);
+bool k_newpasswordwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KNewPasswordWidget_SuperFocusNextPrevChild((KNewPasswordWidget*)self, next);
 }
 
 void k_newpasswordwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2047,8 +2047,8 @@ bool k_newpasswordwidget_event_filter(void* self, void* watched, void* event) {
     return KNewPasswordWidget_EventFilter((KNewPasswordWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_newpasswordwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNewPasswordWidget_QBaseEventFilter((KNewPasswordWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_newpasswordwidget_super_event_filter(void* self, void* watched, void* event) {
+    return KNewPasswordWidget_SuperEventFilter((KNewPasswordWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_newpasswordwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2059,8 +2059,8 @@ void k_newpasswordwidget_timer_event(void* self, void* event) {
     KNewPasswordWidget_TimerEvent((KNewPasswordWidget*)self, (QTimerEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_timer_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseTimerEvent((KNewPasswordWidget*)self, (QTimerEvent*)event);
+void k_newpasswordwidget_super_timer_event(void* self, void* event) {
+    KNewPasswordWidget_SuperTimerEvent((KNewPasswordWidget*)self, (QTimerEvent*)event);
 }
 
 void k_newpasswordwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2071,8 +2071,8 @@ void k_newpasswordwidget_child_event(void* self, void* event) {
     KNewPasswordWidget_ChildEvent((KNewPasswordWidget*)self, (QChildEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_child_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseChildEvent((KNewPasswordWidget*)self, (QChildEvent*)event);
+void k_newpasswordwidget_super_child_event(void* self, void* event) {
+    KNewPasswordWidget_SuperChildEvent((KNewPasswordWidget*)self, (QChildEvent*)event);
 }
 
 void k_newpasswordwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2083,8 +2083,8 @@ void k_newpasswordwidget_custom_event(void* self, void* event) {
     KNewPasswordWidget_CustomEvent((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
-void k_newpasswordwidget_qbase_custom_event(void* self, void* event) {
-    KNewPasswordWidget_QBaseCustomEvent((KNewPasswordWidget*)self, (QEvent*)event);
+void k_newpasswordwidget_super_custom_event(void* self, void* event) {
+    KNewPasswordWidget_SuperCustomEvent((KNewPasswordWidget*)self, (QEvent*)event);
 }
 
 void k_newpasswordwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ void k_newpasswordwidget_connect_notify(void* self, void* signal) {
     KNewPasswordWidget_ConnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_newpasswordwidget_qbase_connect_notify(void* self, void* signal) {
-    KNewPasswordWidget_QBaseConnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
+void k_newpasswordwidget_super_connect_notify(void* self, void* signal) {
+    KNewPasswordWidget_SuperConnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_newpasswordwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void k_newpasswordwidget_disconnect_notify(void* self, void* signal) {
     KNewPasswordWidget_DisconnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_newpasswordwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KNewPasswordWidget_QBaseDisconnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
+void k_newpasswordwidget_super_disconnect_notify(void* self, void* signal) {
+    KNewPasswordWidget_SuperDisconnectNotify((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_newpasswordwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void k_newpasswordwidget_update_micro_focus(void* self) {
     KNewPasswordWidget_UpdateMicroFocus((KNewPasswordWidget*)self);
 }
 
-void k_newpasswordwidget_qbase_update_micro_focus(void* self) {
-    KNewPasswordWidget_QBaseUpdateMicroFocus((KNewPasswordWidget*)self);
+void k_newpasswordwidget_super_update_micro_focus(void* self) {
+    KNewPasswordWidget_SuperUpdateMicroFocus((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2131,8 +2131,8 @@ void k_newpasswordwidget_create(void* self) {
     KNewPasswordWidget_Create((KNewPasswordWidget*)self);
 }
 
-void k_newpasswordwidget_qbase_create(void* self) {
-    KNewPasswordWidget_QBaseCreate((KNewPasswordWidget*)self);
+void k_newpasswordwidget_super_create(void* self) {
+    KNewPasswordWidget_SuperCreate((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_create(void* self, void (*callback)()) {
@@ -2143,8 +2143,8 @@ void k_newpasswordwidget_destroy(void* self) {
     KNewPasswordWidget_Destroy((KNewPasswordWidget*)self);
 }
 
-void k_newpasswordwidget_qbase_destroy(void* self) {
-    KNewPasswordWidget_QBaseDestroy((KNewPasswordWidget*)self);
+void k_newpasswordwidget_super_destroy(void* self) {
+    KNewPasswordWidget_SuperDestroy((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_destroy(void* self, void (*callback)()) {
@@ -2155,8 +2155,8 @@ bool k_newpasswordwidget_focus_next_child(void* self) {
     return KNewPasswordWidget_FocusNextChild((KNewPasswordWidget*)self);
 }
 
-bool k_newpasswordwidget_qbase_focus_next_child(void* self) {
-    return KNewPasswordWidget_QBaseFocusNextChild((KNewPasswordWidget*)self);
+bool k_newpasswordwidget_super_focus_next_child(void* self) {
+    return KNewPasswordWidget_SuperFocusNextChild((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2167,8 +2167,8 @@ bool k_newpasswordwidget_focus_previous_child(void* self) {
     return KNewPasswordWidget_FocusPreviousChild((KNewPasswordWidget*)self);
 }
 
-bool k_newpasswordwidget_qbase_focus_previous_child(void* self) {
-    return KNewPasswordWidget_QBaseFocusPreviousChild((KNewPasswordWidget*)self);
+bool k_newpasswordwidget_super_focus_previous_child(void* self) {
+    return KNewPasswordWidget_SuperFocusPreviousChild((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2179,8 +2179,8 @@ QObject* k_newpasswordwidget_sender(void* self) {
     return KNewPasswordWidget_Sender((KNewPasswordWidget*)self);
 }
 
-QObject* k_newpasswordwidget_qbase_sender(void* self) {
-    return KNewPasswordWidget_QBaseSender((KNewPasswordWidget*)self);
+QObject* k_newpasswordwidget_super_sender(void* self) {
+    return KNewPasswordWidget_SuperSender((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2191,8 +2191,8 @@ int32_t k_newpasswordwidget_sender_signal_index(void* self) {
     return KNewPasswordWidget_SenderSignalIndex((KNewPasswordWidget*)self);
 }
 
-int32_t k_newpasswordwidget_qbase_sender_signal_index(void* self) {
-    return KNewPasswordWidget_QBaseSenderSignalIndex((KNewPasswordWidget*)self);
+int32_t k_newpasswordwidget_super_sender_signal_index(void* self) {
+    return KNewPasswordWidget_SuperSenderSignalIndex((KNewPasswordWidget*)self);
 }
 
 void k_newpasswordwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2203,8 +2203,8 @@ int32_t k_newpasswordwidget_receivers(void* self, const char* signal) {
     return KNewPasswordWidget_Receivers((KNewPasswordWidget*)self, signal);
 }
 
-int32_t k_newpasswordwidget_qbase_receivers(void* self, const char* signal) {
-    return KNewPasswordWidget_QBaseReceivers((KNewPasswordWidget*)self, signal);
+int32_t k_newpasswordwidget_super_receivers(void* self, const char* signal) {
+    return KNewPasswordWidget_SuperReceivers((KNewPasswordWidget*)self, signal);
 }
 
 void k_newpasswordwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2215,8 +2215,8 @@ bool k_newpasswordwidget_is_signal_connected(void* self, void* signal) {
     return KNewPasswordWidget_IsSignalConnected((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_newpasswordwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KNewPasswordWidget_QBaseIsSignalConnected((KNewPasswordWidget*)self, (QMetaMethod*)signal);
+bool k_newpasswordwidget_super_is_signal_connected(void* self, void* signal) {
+    return KNewPasswordWidget_SuperIsSignalConnected((KNewPasswordWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_newpasswordwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2227,8 +2227,8 @@ double k_newpasswordwidget_get_decoded_metric_f(void* self, int32_t metricA, int
     return KNewPasswordWidget_GetDecodedMetricF((KNewPasswordWidget*)self, metricA, metricB);
 }
 
-double k_newpasswordwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KNewPasswordWidget_QBaseGetDecodedMetricF((KNewPasswordWidget*)self, metricA, metricB);
+double k_newpasswordwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KNewPasswordWidget_SuperGetDecodedMetricF((KNewPasswordWidget*)self, metricA, metricB);
 }
 
 void k_newpasswordwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

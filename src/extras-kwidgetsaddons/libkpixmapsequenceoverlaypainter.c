@@ -33,8 +33,8 @@ void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject
     KPixmapSequenceOverlayPainter_OnMetaObject((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pixmapsequenceoverlaypainter_qbase_meta_object(void* self) {
-    return KPixmapSequenceOverlayPainter_QBaseMetaObject((KPixmapSequenceOverlayPainter*)self);
+const QMetaObject* k_pixmapsequenceoverlaypainter_super_meta_object(void* self) {
+    return KPixmapSequenceOverlayPainter_SuperMetaObject((KPixmapSequenceOverlayPainter*)self);
 }
 
 void* k_pixmapsequenceoverlaypainter_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void k_pixmapsequenceoverlaypainter_on_metacast(void* self, void* (*callback)(vo
     KPixmapSequenceOverlayPainter_OnMetacast((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
 }
 
-void* k_pixmapsequenceoverlaypainter_qbase_metacast(void* self, const char* param1) {
-    return KPixmapSequenceOverlayPainter_QBaseMetacast((KPixmapSequenceOverlayPainter*)self, param1);
+void* k_pixmapsequenceoverlaypainter_super_metacast(void* self, const char* param1) {
+    return KPixmapSequenceOverlayPainter_SuperMetacast((KPixmapSequenceOverlayPainter*)self, param1);
 }
 
 int32_t k_pixmapsequenceoverlaypainter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void k_pixmapsequenceoverlaypainter_on_metacall(void* self, int32_t (*callback)(
     KPixmapSequenceOverlayPainter_OnMetacall((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
 }
 
-int32_t k_pixmapsequenceoverlaypainter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPixmapSequenceOverlayPainter_QBaseMetacall((KPixmapSequenceOverlayPainter*)self, param1, param2, param3);
+int32_t k_pixmapsequenceoverlaypainter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPixmapSequenceOverlayPainter_SuperMetacall((KPixmapSequenceOverlayPainter*)self, param1, param2, param3);
 }
 
 const char* k_pixmapsequenceoverlaypainter_tr(const char* s) {
@@ -128,8 +128,8 @@ void k_pixmapsequenceoverlaypainter_on_event_filter(void* self, bool (*callback)
     KPixmapSequenceOverlayPainter_OnEventFilter((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
 }
 
-bool k_pixmapsequenceoverlaypainter_qbase_event_filter(void* self, void* obj, void* event) {
-    return KPixmapSequenceOverlayPainter_QBaseEventFilter((KPixmapSequenceOverlayPainter*)self, (QObject*)obj, (QEvent*)event);
+bool k_pixmapsequenceoverlaypainter_super_event_filter(void* self, void* obj, void* event) {
+    return KPixmapSequenceOverlayPainter_SuperEventFilter((KPixmapSequenceOverlayPainter*)self, (QObject*)obj, (QEvent*)event);
 }
 
 const char* k_pixmapsequenceoverlaypainter_tr2(const char* s, const char* c) {
@@ -361,8 +361,8 @@ bool k_pixmapsequenceoverlaypainter_event(void* self, void* event) {
     return KPixmapSequenceOverlayPainter_Event((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
 }
 
-bool k_pixmapsequenceoverlaypainter_qbase_event(void* self, void* event) {
-    return KPixmapSequenceOverlayPainter_QBaseEvent((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
+bool k_pixmapsequenceoverlaypainter_super_event(void* self, void* event) {
+    return KPixmapSequenceOverlayPainter_SuperEvent((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
 }
 
 void k_pixmapsequenceoverlaypainter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ void k_pixmapsequenceoverlaypainter_timer_event(void* self, void* event) {
     KPixmapSequenceOverlayPainter_TimerEvent((KPixmapSequenceOverlayPainter*)self, (QTimerEvent*)event);
 }
 
-void k_pixmapsequenceoverlaypainter_qbase_timer_event(void* self, void* event) {
-    KPixmapSequenceOverlayPainter_QBaseTimerEvent((KPixmapSequenceOverlayPainter*)self, (QTimerEvent*)event);
+void k_pixmapsequenceoverlaypainter_super_timer_event(void* self, void* event) {
+    KPixmapSequenceOverlayPainter_SuperTimerEvent((KPixmapSequenceOverlayPainter*)self, (QTimerEvent*)event);
 }
 
 void k_pixmapsequenceoverlaypainter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ void k_pixmapsequenceoverlaypainter_child_event(void* self, void* event) {
     KPixmapSequenceOverlayPainter_ChildEvent((KPixmapSequenceOverlayPainter*)self, (QChildEvent*)event);
 }
 
-void k_pixmapsequenceoverlaypainter_qbase_child_event(void* self, void* event) {
-    KPixmapSequenceOverlayPainter_QBaseChildEvent((KPixmapSequenceOverlayPainter*)self, (QChildEvent*)event);
+void k_pixmapsequenceoverlaypainter_super_child_event(void* self, void* event) {
+    KPixmapSequenceOverlayPainter_SuperChildEvent((KPixmapSequenceOverlayPainter*)self, (QChildEvent*)event);
 }
 
 void k_pixmapsequenceoverlaypainter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ void k_pixmapsequenceoverlaypainter_custom_event(void* self, void* event) {
     KPixmapSequenceOverlayPainter_CustomEvent((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
 }
 
-void k_pixmapsequenceoverlaypainter_qbase_custom_event(void* self, void* event) {
-    KPixmapSequenceOverlayPainter_QBaseCustomEvent((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
+void k_pixmapsequenceoverlaypainter_super_custom_event(void* self, void* event) {
+    KPixmapSequenceOverlayPainter_SuperCustomEvent((KPixmapSequenceOverlayPainter*)self, (QEvent*)event);
 }
 
 void k_pixmapsequenceoverlaypainter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -409,8 +409,8 @@ void k_pixmapsequenceoverlaypainter_connect_notify(void* self, void* signal) {
     KPixmapSequenceOverlayPainter_ConnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapsequenceoverlaypainter_qbase_connect_notify(void* self, void* signal) {
-    KPixmapSequenceOverlayPainter_QBaseConnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
+void k_pixmapsequenceoverlaypainter_super_connect_notify(void* self, void* signal) {
+    KPixmapSequenceOverlayPainter_SuperConnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequenceoverlaypainter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -421,8 +421,8 @@ void k_pixmapsequenceoverlaypainter_disconnect_notify(void* self, void* signal) 
     KPixmapSequenceOverlayPainter_DisconnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapsequenceoverlaypainter_qbase_disconnect_notify(void* self, void* signal) {
-    KPixmapSequenceOverlayPainter_QBaseDisconnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
+void k_pixmapsequenceoverlaypainter_super_disconnect_notify(void* self, void* signal) {
+    KPixmapSequenceOverlayPainter_SuperDisconnectNotify((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequenceoverlaypainter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -433,8 +433,8 @@ QObject* k_pixmapsequenceoverlaypainter_sender(void* self) {
     return KPixmapSequenceOverlayPainter_Sender((KPixmapSequenceOverlayPainter*)self);
 }
 
-QObject* k_pixmapsequenceoverlaypainter_qbase_sender(void* self) {
-    return KPixmapSequenceOverlayPainter_QBaseSender((KPixmapSequenceOverlayPainter*)self);
+QObject* k_pixmapsequenceoverlaypainter_super_sender(void* self) {
+    return KPixmapSequenceOverlayPainter_SuperSender((KPixmapSequenceOverlayPainter*)self);
 }
 
 void k_pixmapsequenceoverlaypainter_on_sender(void* self, QObject* (*callback)()) {
@@ -445,8 +445,8 @@ int32_t k_pixmapsequenceoverlaypainter_sender_signal_index(void* self) {
     return KPixmapSequenceOverlayPainter_SenderSignalIndex((KPixmapSequenceOverlayPainter*)self);
 }
 
-int32_t k_pixmapsequenceoverlaypainter_qbase_sender_signal_index(void* self) {
-    return KPixmapSequenceOverlayPainter_QBaseSenderSignalIndex((KPixmapSequenceOverlayPainter*)self);
+int32_t k_pixmapsequenceoverlaypainter_super_sender_signal_index(void* self) {
+    return KPixmapSequenceOverlayPainter_SuperSenderSignalIndex((KPixmapSequenceOverlayPainter*)self);
 }
 
 void k_pixmapsequenceoverlaypainter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -457,8 +457,8 @@ int32_t k_pixmapsequenceoverlaypainter_receivers(void* self, const char* signal)
     return KPixmapSequenceOverlayPainter_Receivers((KPixmapSequenceOverlayPainter*)self, signal);
 }
 
-int32_t k_pixmapsequenceoverlaypainter_qbase_receivers(void* self, const char* signal) {
-    return KPixmapSequenceOverlayPainter_QBaseReceivers((KPixmapSequenceOverlayPainter*)self, signal);
+int32_t k_pixmapsequenceoverlaypainter_super_receivers(void* self, const char* signal) {
+    return KPixmapSequenceOverlayPainter_SuperReceivers((KPixmapSequenceOverlayPainter*)self, signal);
 }
 
 void k_pixmapsequenceoverlaypainter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -469,8 +469,8 @@ bool k_pixmapsequenceoverlaypainter_is_signal_connected(void* self, void* signal
     return KPixmapSequenceOverlayPainter_IsSignalConnected((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
-bool k_pixmapsequenceoverlaypainter_qbase_is_signal_connected(void* self, void* signal) {
-    return KPixmapSequenceOverlayPainter_QBaseIsSignalConnected((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
+bool k_pixmapsequenceoverlaypainter_super_is_signal_connected(void* self, void* signal) {
+    return KPixmapSequenceOverlayPainter_SuperIsSignalConnected((KPixmapSequenceOverlayPainter*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequenceoverlaypainter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

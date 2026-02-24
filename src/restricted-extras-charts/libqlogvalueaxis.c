@@ -22,8 +22,8 @@ void q_logvalueaxis_on_meta_object(void* self, const QMetaObject* (*callback)())
     QLogValueAxis_OnMetaObject((QLogValueAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_logvalueaxis_qbase_meta_object(void* self) {
-    return QLogValueAxis_QBaseMetaObject((QLogValueAxis*)self);
+const QMetaObject* q_logvalueaxis_super_meta_object(void* self) {
+    return QLogValueAxis_SuperMetaObject((QLogValueAxis*)self);
 }
 
 void* q_logvalueaxis_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_logvalueaxis_on_metacast(void* self, void* (*callback)(void*, const char*
     QLogValueAxis_OnMetacast((QLogValueAxis*)self, (intptr_t)callback);
 }
 
-void* q_logvalueaxis_qbase_metacast(void* self, const char* param1) {
-    return QLogValueAxis_QBaseMetacast((QLogValueAxis*)self, param1);
+void* q_logvalueaxis_super_metacast(void* self, const char* param1) {
+    return QLogValueAxis_SuperMetacast((QLogValueAxis*)self, param1);
 }
 
 int32_t q_logvalueaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_logvalueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QLogValueAxis_OnMetacall((QLogValueAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_logvalueaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QLogValueAxis_QBaseMetacall((QLogValueAxis*)self, param1, param2, param3);
+int32_t q_logvalueaxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QLogValueAxis_SuperMetacall((QLogValueAxis*)self, param1, param2, param3);
 }
 
 const char* q_logvalueaxis_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_logvalueaxis_on_type(void* self, int32_t (*callback)()) {
     QLogValueAxis_OnType((QLogValueAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_logvalueaxis_qbase_type(void* self) {
-    return QLogValueAxis_QBaseType((QLogValueAxis*)self);
+int32_t q_logvalueaxis_super_type(void* self) {
+    return QLogValueAxis_SuperType((QLogValueAxis*)self);
 }
 
 void q_logvalueaxis_set_min(void* self, double min) {
@@ -908,8 +908,8 @@ bool q_logvalueaxis_event(void* self, void* event) {
     return QLogValueAxis_Event((QLogValueAxis*)self, (QEvent*)event);
 }
 
-bool q_logvalueaxis_qbase_event(void* self, void* event) {
-    return QLogValueAxis_QBaseEvent((QLogValueAxis*)self, (QEvent*)event);
+bool q_logvalueaxis_super_event(void* self, void* event) {
+    return QLogValueAxis_SuperEvent((QLogValueAxis*)self, (QEvent*)event);
 }
 
 void q_logvalueaxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -920,8 +920,8 @@ bool q_logvalueaxis_event_filter(void* self, void* watched, void* event) {
     return QLogValueAxis_EventFilter((QLogValueAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_logvalueaxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QLogValueAxis_QBaseEventFilter((QLogValueAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_logvalueaxis_super_event_filter(void* self, void* watched, void* event) {
+    return QLogValueAxis_SuperEventFilter((QLogValueAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_logvalueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -932,8 +932,8 @@ void q_logvalueaxis_timer_event(void* self, void* event) {
     QLogValueAxis_TimerEvent((QLogValueAxis*)self, (QTimerEvent*)event);
 }
 
-void q_logvalueaxis_qbase_timer_event(void* self, void* event) {
-    QLogValueAxis_QBaseTimerEvent((QLogValueAxis*)self, (QTimerEvent*)event);
+void q_logvalueaxis_super_timer_event(void* self, void* event) {
+    QLogValueAxis_SuperTimerEvent((QLogValueAxis*)self, (QTimerEvent*)event);
 }
 
 void q_logvalueaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -944,8 +944,8 @@ void q_logvalueaxis_child_event(void* self, void* event) {
     QLogValueAxis_ChildEvent((QLogValueAxis*)self, (QChildEvent*)event);
 }
 
-void q_logvalueaxis_qbase_child_event(void* self, void* event) {
-    QLogValueAxis_QBaseChildEvent((QLogValueAxis*)self, (QChildEvent*)event);
+void q_logvalueaxis_super_child_event(void* self, void* event) {
+    QLogValueAxis_SuperChildEvent((QLogValueAxis*)self, (QChildEvent*)event);
 }
 
 void q_logvalueaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -956,8 +956,8 @@ void q_logvalueaxis_custom_event(void* self, void* event) {
     QLogValueAxis_CustomEvent((QLogValueAxis*)self, (QEvent*)event);
 }
 
-void q_logvalueaxis_qbase_custom_event(void* self, void* event) {
-    QLogValueAxis_QBaseCustomEvent((QLogValueAxis*)self, (QEvent*)event);
+void q_logvalueaxis_super_custom_event(void* self, void* event) {
+    QLogValueAxis_SuperCustomEvent((QLogValueAxis*)self, (QEvent*)event);
 }
 
 void q_logvalueaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -968,8 +968,8 @@ void q_logvalueaxis_connect_notify(void* self, void* signal) {
     QLogValueAxis_ConnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_logvalueaxis_qbase_connect_notify(void* self, void* signal) {
-    QLogValueAxis_QBaseConnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
+void q_logvalueaxis_super_connect_notify(void* self, void* signal) {
+    QLogValueAxis_SuperConnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_logvalueaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -980,8 +980,8 @@ void q_logvalueaxis_disconnect_notify(void* self, void* signal) {
     QLogValueAxis_DisconnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_logvalueaxis_qbase_disconnect_notify(void* self, void* signal) {
-    QLogValueAxis_QBaseDisconnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
+void q_logvalueaxis_super_disconnect_notify(void* self, void* signal) {
+    QLogValueAxis_SuperDisconnectNotify((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_logvalueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -992,8 +992,8 @@ QObject* q_logvalueaxis_sender(void* self) {
     return QLogValueAxis_Sender((QLogValueAxis*)self);
 }
 
-QObject* q_logvalueaxis_qbase_sender(void* self) {
-    return QLogValueAxis_QBaseSender((QLogValueAxis*)self);
+QObject* q_logvalueaxis_super_sender(void* self) {
+    return QLogValueAxis_SuperSender((QLogValueAxis*)self);
 }
 
 void q_logvalueaxis_on_sender(void* self, QObject* (*callback)()) {
@@ -1004,8 +1004,8 @@ int32_t q_logvalueaxis_sender_signal_index(void* self) {
     return QLogValueAxis_SenderSignalIndex((QLogValueAxis*)self);
 }
 
-int32_t q_logvalueaxis_qbase_sender_signal_index(void* self) {
-    return QLogValueAxis_QBaseSenderSignalIndex((QLogValueAxis*)self);
+int32_t q_logvalueaxis_super_sender_signal_index(void* self) {
+    return QLogValueAxis_SuperSenderSignalIndex((QLogValueAxis*)self);
 }
 
 void q_logvalueaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1016,8 +1016,8 @@ int32_t q_logvalueaxis_receivers(void* self, const char* signal) {
     return QLogValueAxis_Receivers((QLogValueAxis*)self, signal);
 }
 
-int32_t q_logvalueaxis_qbase_receivers(void* self, const char* signal) {
-    return QLogValueAxis_QBaseReceivers((QLogValueAxis*)self, signal);
+int32_t q_logvalueaxis_super_receivers(void* self, const char* signal) {
+    return QLogValueAxis_SuperReceivers((QLogValueAxis*)self, signal);
 }
 
 void q_logvalueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1028,8 +1028,8 @@ bool q_logvalueaxis_is_signal_connected(void* self, void* signal) {
     return QLogValueAxis_IsSignalConnected((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_logvalueaxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QLogValueAxis_QBaseIsSignalConnected((QLogValueAxis*)self, (QMetaMethod*)signal);
+bool q_logvalueaxis_super_is_signal_connected(void* self, void* signal) {
+    return QLogValueAxis_SuperIsSignalConnected((QLogValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_logvalueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

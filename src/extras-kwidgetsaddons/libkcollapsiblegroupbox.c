@@ -29,8 +29,8 @@ void k_collapsiblegroupbox_on_meta_object(void* self, const QMetaObject* (*callb
     KCollapsibleGroupBox_OnMetaObject((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_collapsiblegroupbox_qbase_meta_object(void* self) {
-    return KCollapsibleGroupBox_QBaseMetaObject((KCollapsibleGroupBox*)self);
+const QMetaObject* k_collapsiblegroupbox_super_meta_object(void* self) {
+    return KCollapsibleGroupBox_SuperMetaObject((KCollapsibleGroupBox*)self);
 }
 
 void* k_collapsiblegroupbox_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_collapsiblegroupbox_on_metacast(void* self, void* (*callback)(void*, cons
     KCollapsibleGroupBox_OnMetacast((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void* k_collapsiblegroupbox_qbase_metacast(void* self, const char* param1) {
-    return KCollapsibleGroupBox_QBaseMetacast((KCollapsibleGroupBox*)self, param1);
+void* k_collapsiblegroupbox_super_metacast(void* self, const char* param1) {
+    return KCollapsibleGroupBox_SuperMetacast((KCollapsibleGroupBox*)self, param1);
 }
 
 int32_t k_collapsiblegroupbox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_collapsiblegroupbox_on_metacall(void* self, int32_t (*callback)(void*, in
     KCollapsibleGroupBox_OnMetacall((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-int32_t k_collapsiblegroupbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCollapsibleGroupBox_QBaseMetacall((KCollapsibleGroupBox*)self, param1, param2, param3);
+int32_t k_collapsiblegroupbox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCollapsibleGroupBox_SuperMetacall((KCollapsibleGroupBox*)self, param1, param2, param3);
 }
 
 const char* k_collapsiblegroupbox_tr(const char* s) {
@@ -91,8 +91,8 @@ void k_collapsiblegroupbox_on_size_hint(void* self, QSize* (*callback)()) {
     KCollapsibleGroupBox_OnSizeHint((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-QSize* k_collapsiblegroupbox_qbase_size_hint(void* self) {
-    return KCollapsibleGroupBox_QBaseSizeHint((KCollapsibleGroupBox*)self);
+QSize* k_collapsiblegroupbox_super_size_hint(void* self) {
+    return KCollapsibleGroupBox_SuperSizeHint((KCollapsibleGroupBox*)self);
 }
 
 QSize* k_collapsiblegroupbox_minimum_size_hint(void* self) {
@@ -103,8 +103,8 @@ void k_collapsiblegroupbox_on_minimum_size_hint(void* self, QSize* (*callback)()
     KCollapsibleGroupBox_OnMinimumSizeHint((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-QSize* k_collapsiblegroupbox_qbase_minimum_size_hint(void* self) {
-    return KCollapsibleGroupBox_QBaseMinimumSizeHint((KCollapsibleGroupBox*)self);
+QSize* k_collapsiblegroupbox_super_minimum_size_hint(void* self) {
+    return KCollapsibleGroupBox_SuperMinimumSizeHint((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_toggle(void* self) {
@@ -143,8 +143,8 @@ void k_collapsiblegroupbox_on_paint_event(void* self, void (*callback)(void*, vo
     KCollapsibleGroupBox_OnPaintEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_paint_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBasePaintEvent((KCollapsibleGroupBox*)self, (QPaintEvent*)param1);
+void k_collapsiblegroupbox_super_paint_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperPaintEvent((KCollapsibleGroupBox*)self, (QPaintEvent*)param1);
 }
 
 bool k_collapsiblegroupbox_event(void* self, void* param1) {
@@ -155,8 +155,8 @@ void k_collapsiblegroupbox_on_event(void* self, bool (*callback)(void*, void*)) 
     KCollapsibleGroupBox_OnEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-bool k_collapsiblegroupbox_qbase_event(void* self, void* param1) {
-    return KCollapsibleGroupBox_QBaseEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
+bool k_collapsiblegroupbox_super_event(void* self, void* param1) {
+    return KCollapsibleGroupBox_SuperEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
 }
 
 void k_collapsiblegroupbox_mouse_press_event(void* self, void* param1) {
@@ -167,8 +167,8 @@ void k_collapsiblegroupbox_on_mouse_press_event(void* self, void (*callback)(voi
     KCollapsibleGroupBox_OnMousePressEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_mouse_press_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseMousePressEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)param1);
+void k_collapsiblegroupbox_super_mouse_press_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperMousePressEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)param1);
 }
 
 void k_collapsiblegroupbox_mouse_move_event(void* self, void* param1) {
@@ -179,8 +179,8 @@ void k_collapsiblegroupbox_on_mouse_move_event(void* self, void (*callback)(void
     KCollapsibleGroupBox_OnMouseMoveEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_mouse_move_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseMouseMoveEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)param1);
+void k_collapsiblegroupbox_super_mouse_move_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperMouseMoveEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)param1);
 }
 
 void k_collapsiblegroupbox_leave_event(void* self, void* param1) {
@@ -191,8 +191,8 @@ void k_collapsiblegroupbox_on_leave_event(void* self, void (*callback)(void*, vo
     KCollapsibleGroupBox_OnLeaveEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_leave_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseLeaveEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
+void k_collapsiblegroupbox_super_leave_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperLeaveEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
 }
 
 void k_collapsiblegroupbox_key_press_event(void* self, void* param1) {
@@ -203,8 +203,8 @@ void k_collapsiblegroupbox_on_key_press_event(void* self, void (*callback)(void*
     KCollapsibleGroupBox_OnKeyPressEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_key_press_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseKeyPressEvent((KCollapsibleGroupBox*)self, (QKeyEvent*)param1);
+void k_collapsiblegroupbox_super_key_press_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperKeyPressEvent((KCollapsibleGroupBox*)self, (QKeyEvent*)param1);
 }
 
 void k_collapsiblegroupbox_resize_event(void* self, void* param1) {
@@ -215,8 +215,8 @@ void k_collapsiblegroupbox_on_resize_event(void* self, void (*callback)(void*, v
     KCollapsibleGroupBox_OnResizeEvent((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
-void k_collapsiblegroupbox_qbase_resize_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseResizeEvent((KCollapsibleGroupBox*)self, (QResizeEvent*)param1);
+void k_collapsiblegroupbox_super_resize_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperResizeEvent((KCollapsibleGroupBox*)self, (QResizeEvent*)param1);
 }
 
 const char* k_collapsiblegroupbox_tr2(const char* s, const char* c) {
@@ -1618,8 +1618,8 @@ int32_t k_collapsiblegroupbox_dev_type(void* self) {
     return KCollapsibleGroupBox_DevType((KCollapsibleGroupBox*)self);
 }
 
-int32_t k_collapsiblegroupbox_qbase_dev_type(void* self) {
-    return KCollapsibleGroupBox_QBaseDevType((KCollapsibleGroupBox*)self);
+int32_t k_collapsiblegroupbox_super_dev_type(void* self) {
+    return KCollapsibleGroupBox_SuperDevType((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1630,8 +1630,8 @@ void k_collapsiblegroupbox_set_visible(void* self, bool visible) {
     KCollapsibleGroupBox_SetVisible((KCollapsibleGroupBox*)self, visible);
 }
 
-void k_collapsiblegroupbox_qbase_set_visible(void* self, bool visible) {
-    KCollapsibleGroupBox_QBaseSetVisible((KCollapsibleGroupBox*)self, visible);
+void k_collapsiblegroupbox_super_set_visible(void* self, bool visible) {
+    KCollapsibleGroupBox_SuperSetVisible((KCollapsibleGroupBox*)self, visible);
 }
 
 void k_collapsiblegroupbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1642,8 +1642,8 @@ int32_t k_collapsiblegroupbox_height_for_width(void* self, int param1) {
     return KCollapsibleGroupBox_HeightForWidth((KCollapsibleGroupBox*)self, param1);
 }
 
-int32_t k_collapsiblegroupbox_qbase_height_for_width(void* self, int param1) {
-    return KCollapsibleGroupBox_QBaseHeightForWidth((KCollapsibleGroupBox*)self, param1);
+int32_t k_collapsiblegroupbox_super_height_for_width(void* self, int param1) {
+    return KCollapsibleGroupBox_SuperHeightForWidth((KCollapsibleGroupBox*)self, param1);
 }
 
 void k_collapsiblegroupbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1654,8 +1654,8 @@ bool k_collapsiblegroupbox_has_height_for_width(void* self) {
     return KCollapsibleGroupBox_HasHeightForWidth((KCollapsibleGroupBox*)self);
 }
 
-bool k_collapsiblegroupbox_qbase_has_height_for_width(void* self) {
-    return KCollapsibleGroupBox_QBaseHasHeightForWidth((KCollapsibleGroupBox*)self);
+bool k_collapsiblegroupbox_super_has_height_for_width(void* self) {
+    return KCollapsibleGroupBox_SuperHasHeightForWidth((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1666,8 +1666,8 @@ QPaintEngine* k_collapsiblegroupbox_paint_engine(void* self) {
     return KCollapsibleGroupBox_PaintEngine((KCollapsibleGroupBox*)self);
 }
 
-QPaintEngine* k_collapsiblegroupbox_qbase_paint_engine(void* self) {
-    return KCollapsibleGroupBox_QBasePaintEngine((KCollapsibleGroupBox*)self);
+QPaintEngine* k_collapsiblegroupbox_super_paint_engine(void* self) {
+    return KCollapsibleGroupBox_SuperPaintEngine((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1678,8 +1678,8 @@ void k_collapsiblegroupbox_mouse_release_event(void* self, void* event) {
     KCollapsibleGroupBox_MouseReleaseEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_mouse_release_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseMouseReleaseEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
+void k_collapsiblegroupbox_super_mouse_release_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperMouseReleaseEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1690,8 +1690,8 @@ void k_collapsiblegroupbox_mouse_double_click_event(void* self, void* event) {
     KCollapsibleGroupBox_MouseDoubleClickEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_mouse_double_click_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseMouseDoubleClickEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
+void k_collapsiblegroupbox_super_mouse_double_click_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperMouseDoubleClickEvent((KCollapsibleGroupBox*)self, (QMouseEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1702,8 +1702,8 @@ void k_collapsiblegroupbox_wheel_event(void* self, void* event) {
     KCollapsibleGroupBox_WheelEvent((KCollapsibleGroupBox*)self, (QWheelEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_wheel_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseWheelEvent((KCollapsibleGroupBox*)self, (QWheelEvent*)event);
+void k_collapsiblegroupbox_super_wheel_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperWheelEvent((KCollapsibleGroupBox*)self, (QWheelEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1714,8 +1714,8 @@ void k_collapsiblegroupbox_key_release_event(void* self, void* event) {
     KCollapsibleGroupBox_KeyReleaseEvent((KCollapsibleGroupBox*)self, (QKeyEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_key_release_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseKeyReleaseEvent((KCollapsibleGroupBox*)self, (QKeyEvent*)event);
+void k_collapsiblegroupbox_super_key_release_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperKeyReleaseEvent((KCollapsibleGroupBox*)self, (QKeyEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1726,8 +1726,8 @@ void k_collapsiblegroupbox_focus_in_event(void* self, void* event) {
     KCollapsibleGroupBox_FocusInEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_focus_in_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseFocusInEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
+void k_collapsiblegroupbox_super_focus_in_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperFocusInEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1738,8 +1738,8 @@ void k_collapsiblegroupbox_focus_out_event(void* self, void* event) {
     KCollapsibleGroupBox_FocusOutEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_focus_out_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseFocusOutEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
+void k_collapsiblegroupbox_super_focus_out_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperFocusOutEvent((KCollapsibleGroupBox*)self, (QFocusEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1750,8 +1750,8 @@ void k_collapsiblegroupbox_enter_event(void* self, void* event) {
     KCollapsibleGroupBox_EnterEvent((KCollapsibleGroupBox*)self, (QEnterEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_enter_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseEnterEvent((KCollapsibleGroupBox*)self, (QEnterEvent*)event);
+void k_collapsiblegroupbox_super_enter_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperEnterEvent((KCollapsibleGroupBox*)self, (QEnterEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1762,8 +1762,8 @@ void k_collapsiblegroupbox_move_event(void* self, void* event) {
     KCollapsibleGroupBox_MoveEvent((KCollapsibleGroupBox*)self, (QMoveEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_move_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseMoveEvent((KCollapsibleGroupBox*)self, (QMoveEvent*)event);
+void k_collapsiblegroupbox_super_move_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperMoveEvent((KCollapsibleGroupBox*)self, (QMoveEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1774,8 +1774,8 @@ void k_collapsiblegroupbox_close_event(void* self, void* event) {
     KCollapsibleGroupBox_CloseEvent((KCollapsibleGroupBox*)self, (QCloseEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_close_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseCloseEvent((KCollapsibleGroupBox*)self, (QCloseEvent*)event);
+void k_collapsiblegroupbox_super_close_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperCloseEvent((KCollapsibleGroupBox*)self, (QCloseEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1786,8 +1786,8 @@ void k_collapsiblegroupbox_context_menu_event(void* self, void* event) {
     KCollapsibleGroupBox_ContextMenuEvent((KCollapsibleGroupBox*)self, (QContextMenuEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_context_menu_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseContextMenuEvent((KCollapsibleGroupBox*)self, (QContextMenuEvent*)event);
+void k_collapsiblegroupbox_super_context_menu_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperContextMenuEvent((KCollapsibleGroupBox*)self, (QContextMenuEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1798,8 +1798,8 @@ void k_collapsiblegroupbox_tablet_event(void* self, void* event) {
     KCollapsibleGroupBox_TabletEvent((KCollapsibleGroupBox*)self, (QTabletEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_tablet_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseTabletEvent((KCollapsibleGroupBox*)self, (QTabletEvent*)event);
+void k_collapsiblegroupbox_super_tablet_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperTabletEvent((KCollapsibleGroupBox*)self, (QTabletEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1810,8 +1810,8 @@ void k_collapsiblegroupbox_action_event(void* self, void* event) {
     KCollapsibleGroupBox_ActionEvent((KCollapsibleGroupBox*)self, (QActionEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_action_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseActionEvent((KCollapsibleGroupBox*)self, (QActionEvent*)event);
+void k_collapsiblegroupbox_super_action_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperActionEvent((KCollapsibleGroupBox*)self, (QActionEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1822,8 +1822,8 @@ void k_collapsiblegroupbox_drag_enter_event(void* self, void* event) {
     KCollapsibleGroupBox_DragEnterEvent((KCollapsibleGroupBox*)self, (QDragEnterEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_drag_enter_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseDragEnterEvent((KCollapsibleGroupBox*)self, (QDragEnterEvent*)event);
+void k_collapsiblegroupbox_super_drag_enter_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperDragEnterEvent((KCollapsibleGroupBox*)self, (QDragEnterEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1834,8 +1834,8 @@ void k_collapsiblegroupbox_drag_move_event(void* self, void* event) {
     KCollapsibleGroupBox_DragMoveEvent((KCollapsibleGroupBox*)self, (QDragMoveEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_drag_move_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseDragMoveEvent((KCollapsibleGroupBox*)self, (QDragMoveEvent*)event);
+void k_collapsiblegroupbox_super_drag_move_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperDragMoveEvent((KCollapsibleGroupBox*)self, (QDragMoveEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1846,8 +1846,8 @@ void k_collapsiblegroupbox_drag_leave_event(void* self, void* event) {
     KCollapsibleGroupBox_DragLeaveEvent((KCollapsibleGroupBox*)self, (QDragLeaveEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_drag_leave_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseDragLeaveEvent((KCollapsibleGroupBox*)self, (QDragLeaveEvent*)event);
+void k_collapsiblegroupbox_super_drag_leave_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperDragLeaveEvent((KCollapsibleGroupBox*)self, (QDragLeaveEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1858,8 +1858,8 @@ void k_collapsiblegroupbox_drop_event(void* self, void* event) {
     KCollapsibleGroupBox_DropEvent((KCollapsibleGroupBox*)self, (QDropEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_drop_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseDropEvent((KCollapsibleGroupBox*)self, (QDropEvent*)event);
+void k_collapsiblegroupbox_super_drop_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperDropEvent((KCollapsibleGroupBox*)self, (QDropEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1870,8 +1870,8 @@ void k_collapsiblegroupbox_show_event(void* self, void* event) {
     KCollapsibleGroupBox_ShowEvent((KCollapsibleGroupBox*)self, (QShowEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_show_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseShowEvent((KCollapsibleGroupBox*)self, (QShowEvent*)event);
+void k_collapsiblegroupbox_super_show_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperShowEvent((KCollapsibleGroupBox*)self, (QShowEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1882,8 +1882,8 @@ void k_collapsiblegroupbox_hide_event(void* self, void* event) {
     KCollapsibleGroupBox_HideEvent((KCollapsibleGroupBox*)self, (QHideEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_hide_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseHideEvent((KCollapsibleGroupBox*)self, (QHideEvent*)event);
+void k_collapsiblegroupbox_super_hide_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperHideEvent((KCollapsibleGroupBox*)self, (QHideEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1894,8 +1894,8 @@ bool k_collapsiblegroupbox_native_event(void* self, char* eventType, void* messa
     return KCollapsibleGroupBox_NativeEvent((KCollapsibleGroupBox*)self, qstring(eventType), message, result);
 }
 
-bool k_collapsiblegroupbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KCollapsibleGroupBox_QBaseNativeEvent((KCollapsibleGroupBox*)self, qstring(eventType), message, result);
+bool k_collapsiblegroupbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KCollapsibleGroupBox_SuperNativeEvent((KCollapsibleGroupBox*)self, qstring(eventType), message, result);
 }
 
 void k_collapsiblegroupbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1906,8 +1906,8 @@ void k_collapsiblegroupbox_change_event(void* self, void* param1) {
     KCollapsibleGroupBox_ChangeEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
 }
 
-void k_collapsiblegroupbox_qbase_change_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseChangeEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
+void k_collapsiblegroupbox_super_change_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperChangeEvent((KCollapsibleGroupBox*)self, (QEvent*)param1);
 }
 
 void k_collapsiblegroupbox_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1918,8 +1918,8 @@ int32_t k_collapsiblegroupbox_metric(void* self, int32_t param1) {
     return KCollapsibleGroupBox_Metric((KCollapsibleGroupBox*)self, param1);
 }
 
-int32_t k_collapsiblegroupbox_qbase_metric(void* self, int32_t param1) {
-    return KCollapsibleGroupBox_QBaseMetric((KCollapsibleGroupBox*)self, param1);
+int32_t k_collapsiblegroupbox_super_metric(void* self, int32_t param1) {
+    return KCollapsibleGroupBox_SuperMetric((KCollapsibleGroupBox*)self, param1);
 }
 
 void k_collapsiblegroupbox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1930,8 +1930,8 @@ void k_collapsiblegroupbox_init_painter(void* self, void* painter) {
     KCollapsibleGroupBox_InitPainter((KCollapsibleGroupBox*)self, (QPainter*)painter);
 }
 
-void k_collapsiblegroupbox_qbase_init_painter(void* self, void* painter) {
-    KCollapsibleGroupBox_QBaseInitPainter((KCollapsibleGroupBox*)self, (QPainter*)painter);
+void k_collapsiblegroupbox_super_init_painter(void* self, void* painter) {
+    KCollapsibleGroupBox_SuperInitPainter((KCollapsibleGroupBox*)self, (QPainter*)painter);
 }
 
 void k_collapsiblegroupbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1942,8 +1942,8 @@ QPaintDevice* k_collapsiblegroupbox_redirected(void* self, void* offset) {
     return KCollapsibleGroupBox_Redirected((KCollapsibleGroupBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_collapsiblegroupbox_qbase_redirected(void* self, void* offset) {
-    return KCollapsibleGroupBox_QBaseRedirected((KCollapsibleGroupBox*)self, (QPoint*)offset);
+QPaintDevice* k_collapsiblegroupbox_super_redirected(void* self, void* offset) {
+    return KCollapsibleGroupBox_SuperRedirected((KCollapsibleGroupBox*)self, (QPoint*)offset);
 }
 
 void k_collapsiblegroupbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1954,8 +1954,8 @@ QPainter* k_collapsiblegroupbox_shared_painter(void* self) {
     return KCollapsibleGroupBox_SharedPainter((KCollapsibleGroupBox*)self);
 }
 
-QPainter* k_collapsiblegroupbox_qbase_shared_painter(void* self) {
-    return KCollapsibleGroupBox_QBaseSharedPainter((KCollapsibleGroupBox*)self);
+QPainter* k_collapsiblegroupbox_super_shared_painter(void* self) {
+    return KCollapsibleGroupBox_SuperSharedPainter((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1966,8 +1966,8 @@ void k_collapsiblegroupbox_input_method_event(void* self, void* param1) {
     KCollapsibleGroupBox_InputMethodEvent((KCollapsibleGroupBox*)self, (QInputMethodEvent*)param1);
 }
 
-void k_collapsiblegroupbox_qbase_input_method_event(void* self, void* param1) {
-    KCollapsibleGroupBox_QBaseInputMethodEvent((KCollapsibleGroupBox*)self, (QInputMethodEvent*)param1);
+void k_collapsiblegroupbox_super_input_method_event(void* self, void* param1) {
+    KCollapsibleGroupBox_SuperInputMethodEvent((KCollapsibleGroupBox*)self, (QInputMethodEvent*)param1);
 }
 
 void k_collapsiblegroupbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1978,8 +1978,8 @@ QVariant* k_collapsiblegroupbox_input_method_query(void* self, int32_t param1) {
     return KCollapsibleGroupBox_InputMethodQuery((KCollapsibleGroupBox*)self, param1);
 }
 
-QVariant* k_collapsiblegroupbox_qbase_input_method_query(void* self, int32_t param1) {
-    return KCollapsibleGroupBox_QBaseInputMethodQuery((KCollapsibleGroupBox*)self, param1);
+QVariant* k_collapsiblegroupbox_super_input_method_query(void* self, int32_t param1) {
+    return KCollapsibleGroupBox_SuperInputMethodQuery((KCollapsibleGroupBox*)self, param1);
 }
 
 void k_collapsiblegroupbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1990,8 +1990,8 @@ bool k_collapsiblegroupbox_focus_next_prev_child(void* self, bool next) {
     return KCollapsibleGroupBox_FocusNextPrevChild((KCollapsibleGroupBox*)self, next);
 }
 
-bool k_collapsiblegroupbox_qbase_focus_next_prev_child(void* self, bool next) {
-    return KCollapsibleGroupBox_QBaseFocusNextPrevChild((KCollapsibleGroupBox*)self, next);
+bool k_collapsiblegroupbox_super_focus_next_prev_child(void* self, bool next) {
+    return KCollapsibleGroupBox_SuperFocusNextPrevChild((KCollapsibleGroupBox*)self, next);
 }
 
 void k_collapsiblegroupbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2002,8 +2002,8 @@ bool k_collapsiblegroupbox_event_filter(void* self, void* watched, void* event) 
     return KCollapsibleGroupBox_EventFilter((KCollapsibleGroupBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_collapsiblegroupbox_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCollapsibleGroupBox_QBaseEventFilter((KCollapsibleGroupBox*)self, (QObject*)watched, (QEvent*)event);
+bool k_collapsiblegroupbox_super_event_filter(void* self, void* watched, void* event) {
+    return KCollapsibleGroupBox_SuperEventFilter((KCollapsibleGroupBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2014,8 +2014,8 @@ void k_collapsiblegroupbox_timer_event(void* self, void* event) {
     KCollapsibleGroupBox_TimerEvent((KCollapsibleGroupBox*)self, (QTimerEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_timer_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseTimerEvent((KCollapsibleGroupBox*)self, (QTimerEvent*)event);
+void k_collapsiblegroupbox_super_timer_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperTimerEvent((KCollapsibleGroupBox*)self, (QTimerEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2026,8 +2026,8 @@ void k_collapsiblegroupbox_child_event(void* self, void* event) {
     KCollapsibleGroupBox_ChildEvent((KCollapsibleGroupBox*)self, (QChildEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_child_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseChildEvent((KCollapsibleGroupBox*)self, (QChildEvent*)event);
+void k_collapsiblegroupbox_super_child_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperChildEvent((KCollapsibleGroupBox*)self, (QChildEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2038,8 +2038,8 @@ void k_collapsiblegroupbox_custom_event(void* self, void* event) {
     KCollapsibleGroupBox_CustomEvent((KCollapsibleGroupBox*)self, (QEvent*)event);
 }
 
-void k_collapsiblegroupbox_qbase_custom_event(void* self, void* event) {
-    KCollapsibleGroupBox_QBaseCustomEvent((KCollapsibleGroupBox*)self, (QEvent*)event);
+void k_collapsiblegroupbox_super_custom_event(void* self, void* event) {
+    KCollapsibleGroupBox_SuperCustomEvent((KCollapsibleGroupBox*)self, (QEvent*)event);
 }
 
 void k_collapsiblegroupbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2050,8 +2050,8 @@ void k_collapsiblegroupbox_connect_notify(void* self, void* signal) {
     KCollapsibleGroupBox_ConnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
-void k_collapsiblegroupbox_qbase_connect_notify(void* self, void* signal) {
-    KCollapsibleGroupBox_QBaseConnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
+void k_collapsiblegroupbox_super_connect_notify(void* self, void* signal) {
+    KCollapsibleGroupBox_SuperConnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
 void k_collapsiblegroupbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2062,8 +2062,8 @@ void k_collapsiblegroupbox_disconnect_notify(void* self, void* signal) {
     KCollapsibleGroupBox_DisconnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
-void k_collapsiblegroupbox_qbase_disconnect_notify(void* self, void* signal) {
-    KCollapsibleGroupBox_QBaseDisconnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
+void k_collapsiblegroupbox_super_disconnect_notify(void* self, void* signal) {
+    KCollapsibleGroupBox_SuperDisconnectNotify((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
 void k_collapsiblegroupbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2074,8 +2074,8 @@ void k_collapsiblegroupbox_update_micro_focus(void* self) {
     KCollapsibleGroupBox_UpdateMicroFocus((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_qbase_update_micro_focus(void* self) {
-    KCollapsibleGroupBox_QBaseUpdateMicroFocus((KCollapsibleGroupBox*)self);
+void k_collapsiblegroupbox_super_update_micro_focus(void* self) {
+    KCollapsibleGroupBox_SuperUpdateMicroFocus((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2086,8 +2086,8 @@ void k_collapsiblegroupbox_create(void* self) {
     KCollapsibleGroupBox_Create((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_qbase_create(void* self) {
-    KCollapsibleGroupBox_QBaseCreate((KCollapsibleGroupBox*)self);
+void k_collapsiblegroupbox_super_create(void* self) {
+    KCollapsibleGroupBox_SuperCreate((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_create(void* self, void (*callback)()) {
@@ -2098,8 +2098,8 @@ void k_collapsiblegroupbox_destroy(void* self) {
     KCollapsibleGroupBox_Destroy((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_qbase_destroy(void* self) {
-    KCollapsibleGroupBox_QBaseDestroy((KCollapsibleGroupBox*)self);
+void k_collapsiblegroupbox_super_destroy(void* self) {
+    KCollapsibleGroupBox_SuperDestroy((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_destroy(void* self, void (*callback)()) {
@@ -2110,8 +2110,8 @@ bool k_collapsiblegroupbox_focus_next_child(void* self) {
     return KCollapsibleGroupBox_FocusNextChild((KCollapsibleGroupBox*)self);
 }
 
-bool k_collapsiblegroupbox_qbase_focus_next_child(void* self) {
-    return KCollapsibleGroupBox_QBaseFocusNextChild((KCollapsibleGroupBox*)self);
+bool k_collapsiblegroupbox_super_focus_next_child(void* self) {
+    return KCollapsibleGroupBox_SuperFocusNextChild((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2122,8 +2122,8 @@ bool k_collapsiblegroupbox_focus_previous_child(void* self) {
     return KCollapsibleGroupBox_FocusPreviousChild((KCollapsibleGroupBox*)self);
 }
 
-bool k_collapsiblegroupbox_qbase_focus_previous_child(void* self) {
-    return KCollapsibleGroupBox_QBaseFocusPreviousChild((KCollapsibleGroupBox*)self);
+bool k_collapsiblegroupbox_super_focus_previous_child(void* self) {
+    return KCollapsibleGroupBox_SuperFocusPreviousChild((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2134,8 +2134,8 @@ QObject* k_collapsiblegroupbox_sender(void* self) {
     return KCollapsibleGroupBox_Sender((KCollapsibleGroupBox*)self);
 }
 
-QObject* k_collapsiblegroupbox_qbase_sender(void* self) {
-    return KCollapsibleGroupBox_QBaseSender((KCollapsibleGroupBox*)self);
+QObject* k_collapsiblegroupbox_super_sender(void* self) {
+    return KCollapsibleGroupBox_SuperSender((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_sender(void* self, QObject* (*callback)()) {
@@ -2146,8 +2146,8 @@ int32_t k_collapsiblegroupbox_sender_signal_index(void* self) {
     return KCollapsibleGroupBox_SenderSignalIndex((KCollapsibleGroupBox*)self);
 }
 
-int32_t k_collapsiblegroupbox_qbase_sender_signal_index(void* self) {
-    return KCollapsibleGroupBox_QBaseSenderSignalIndex((KCollapsibleGroupBox*)self);
+int32_t k_collapsiblegroupbox_super_sender_signal_index(void* self) {
+    return KCollapsibleGroupBox_SuperSenderSignalIndex((KCollapsibleGroupBox*)self);
 }
 
 void k_collapsiblegroupbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2158,8 +2158,8 @@ int32_t k_collapsiblegroupbox_receivers(void* self, const char* signal) {
     return KCollapsibleGroupBox_Receivers((KCollapsibleGroupBox*)self, signal);
 }
 
-int32_t k_collapsiblegroupbox_qbase_receivers(void* self, const char* signal) {
-    return KCollapsibleGroupBox_QBaseReceivers((KCollapsibleGroupBox*)self, signal);
+int32_t k_collapsiblegroupbox_super_receivers(void* self, const char* signal) {
+    return KCollapsibleGroupBox_SuperReceivers((KCollapsibleGroupBox*)self, signal);
 }
 
 void k_collapsiblegroupbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2170,8 +2170,8 @@ bool k_collapsiblegroupbox_is_signal_connected(void* self, void* signal) {
     return KCollapsibleGroupBox_IsSignalConnected((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_collapsiblegroupbox_qbase_is_signal_connected(void* self, void* signal) {
-    return KCollapsibleGroupBox_QBaseIsSignalConnected((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
+bool k_collapsiblegroupbox_super_is_signal_connected(void* self, void* signal) {
+    return KCollapsibleGroupBox_SuperIsSignalConnected((KCollapsibleGroupBox*)self, (QMetaMethod*)signal);
 }
 
 void k_collapsiblegroupbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2182,8 +2182,8 @@ double k_collapsiblegroupbox_get_decoded_metric_f(void* self, int32_t metricA, i
     return KCollapsibleGroupBox_GetDecodedMetricF((KCollapsibleGroupBox*)self, metricA, metricB);
 }
 
-double k_collapsiblegroupbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KCollapsibleGroupBox_QBaseGetDecodedMetricF((KCollapsibleGroupBox*)self, metricA, metricB);
+double k_collapsiblegroupbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KCollapsibleGroupBox_SuperGetDecodedMetricF((KCollapsibleGroupBox*)self, metricA, metricB);
 }
 
 void k_collapsiblegroupbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

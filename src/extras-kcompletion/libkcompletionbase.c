@@ -19,8 +19,8 @@ void k_completionbase_on_set_completion_object(void* self, void (*callback)(void
     KCompletionBase_OnSetCompletionObject((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_completion_object(void* self, void* completionObject, bool handleSignals) {
-    KCompletionBase_QBaseSetCompletionObject((KCompletionBase*)self, (KCompletion*)completionObject, handleSignals);
+void k_completionbase_super_set_completion_object(void* self, void* completionObject, bool handleSignals) {
+    KCompletionBase_SuperSetCompletionObject((KCompletionBase*)self, (KCompletion*)completionObject, handleSignals);
 }
 
 void k_completionbase_set_handle_signals(void* self, bool handle) {
@@ -31,8 +31,8 @@ void k_completionbase_on_set_handle_signals(void* self, void (*callback)(void*, 
     KCompletionBase_OnSetHandleSignals((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_handle_signals(void* self, bool handle) {
-    KCompletionBase_QBaseSetHandleSignals((KCompletionBase*)self, handle);
+void k_completionbase_super_set_handle_signals(void* self, bool handle) {
+    KCompletionBase_SuperSetHandleSignals((KCompletionBase*)self, handle);
 }
 
 bool k_completionbase_is_completion_object_auto_deleted(void* self) {
@@ -67,8 +67,8 @@ void k_completionbase_on_set_completion_mode(void* self, void (*callback)(void*,
     KCompletionBase_OnSetCompletionMode((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_completion_mode(void* self, int32_t mode) {
-    KCompletionBase_QBaseSetCompletionMode((KCompletionBase*)self, mode);
+void k_completionbase_super_set_completion_mode(void* self, int32_t mode) {
+    KCompletionBase_SuperSetCompletionMode((KCompletionBase*)self, mode);
 }
 
 int32_t k_completionbase_completion_mode(void* self) {
@@ -96,8 +96,8 @@ void k_completionbase_on_set_completed_text(void* self, void (*callback)(void*, 
     KCompletionBase_OnSetCompletedText((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_completed_text(void* self, const char* text) {
-    KCompletionBase_QBaseSetCompletedText((KCompletionBase*)self, qstring(text));
+void k_completionbase_super_set_completed_text(void* self, const char* text) {
+    KCompletionBase_SuperSetCompletedText((KCompletionBase*)self, qstring(text));
 }
 
 void k_completionbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
@@ -119,7 +119,7 @@ void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*,
     KCompletionBase_OnSetCompletedItems((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
+void k_completionbase_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -130,7 +130,7 @@ void k_completionbase_qbase_set_completed_items(void* self, const char* items[st
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KCompletionBase_QBaseSetCompletedItems((KCompletionBase*)self, items_list, autoSuggest);
+    KCompletionBase_SuperSetCompletedItems((KCompletionBase*)self, items_list, autoSuggest);
 }
 
 KCompletion* k_completionbase_comp_obj(void* self) {
@@ -180,9 +180,9 @@ void k_completionbase_on_key_binding_map(void* self, libqt_map /* of enum KCompl
     KCompletionBase_OnKeyBindingMap((KCompletionBase*)self, (intptr_t)callback);
 }
 
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_completionbase_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_completionbase_super_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
-    libqt_map _out = KCompletionBase_QBaseKeyBindingMap((KCompletionBase*)self);
+    libqt_map _out = KCompletionBase_SuperKeyBindingMap((KCompletionBase*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -256,7 +256,7 @@ void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*,
     KCompletionBase_OnSetKeyBindingMap((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
+void k_completionbase_super_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
@@ -284,7 +284,7 @@ void k_completionbase_qbase_set_key_binding_map(void* self, libqt_map /* of enum
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
-    KCompletionBase_QBaseSetKeyBindingMap((KCompletionBase*)self, keyBindingMap_ret);
+    KCompletionBase_SuperSetKeyBindingMap((KCompletionBase*)self, keyBindingMap_ret);
 }
 
 void k_completionbase_set_delegate(void* self, void* delegate) {
@@ -295,8 +295,8 @@ void k_completionbase_on_set_delegate(void* self, void (*callback)(void*, void*)
     KCompletionBase_OnSetDelegate((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_delegate(void* self, void* delegate) {
-    KCompletionBase_QBaseSetDelegate((KCompletionBase*)self, (KCompletionBase*)delegate);
+void k_completionbase_super_set_delegate(void* self, void* delegate) {
+    KCompletionBase_SuperSetDelegate((KCompletionBase*)self, (KCompletionBase*)delegate);
 }
 
 KCompletionBase* k_completionbase_delegate(void* self) {
@@ -307,8 +307,8 @@ void k_completionbase_on_delegate(void* self, KCompletionBase* (*callback)()) {
     KCompletionBase_OnDelegate((KCompletionBase*)self, (intptr_t)callback);
 }
 
-KCompletionBase* k_completionbase_qbase_delegate(void* self) {
-    return KCompletionBase_QBaseDelegate((KCompletionBase*)self);
+KCompletionBase* k_completionbase_super_delegate(void* self) {
+    return KCompletionBase_SuperDelegate((KCompletionBase*)self);
 }
 
 void k_completionbase_virtual_hook(void* self, int id, void* data) {
@@ -319,8 +319,8 @@ void k_completionbase_on_virtual_hook(void* self, void (*callback)(void*, int, v
     KCompletionBase_OnVirtualHook((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_virtual_hook(void* self, int id, void* data) {
-    KCompletionBase_QBaseVirtualHook((KCompletionBase*)self, id, data);
+void k_completionbase_super_virtual_hook(void* self, int id, void* data) {
+    KCompletionBase_SuperVirtualHook((KCompletionBase*)self, id, data);
 }
 
 KCompletion* k_completionbase_completion_object1(void* self, bool handleSignals) {

@@ -27,8 +27,8 @@ void k_coreurlnavigator_on_meta_object(void* self, const QMetaObject* (*callback
     KCoreUrlNavigator_OnMetaObject((KCoreUrlNavigator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_coreurlnavigator_qbase_meta_object(void* self) {
-    return KCoreUrlNavigator_QBaseMetaObject((KCoreUrlNavigator*)self);
+const QMetaObject* k_coreurlnavigator_super_meta_object(void* self) {
+    return KCoreUrlNavigator_SuperMetaObject((KCoreUrlNavigator*)self);
 }
 
 void* k_coreurlnavigator_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void k_coreurlnavigator_on_metacast(void* self, void* (*callback)(void*, const c
     KCoreUrlNavigator_OnMetacast((KCoreUrlNavigator*)self, (intptr_t)callback);
 }
 
-void* k_coreurlnavigator_qbase_metacast(void* self, const char* param1) {
-    return KCoreUrlNavigator_QBaseMetacast((KCoreUrlNavigator*)self, param1);
+void* k_coreurlnavigator_super_metacast(void* self, const char* param1) {
+    return KCoreUrlNavigator_SuperMetacast((KCoreUrlNavigator*)self, param1);
 }
 
 int32_t k_coreurlnavigator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void k_coreurlnavigator_on_metacall(void* self, int32_t (*callback)(void*, int32
     KCoreUrlNavigator_OnMetacall((KCoreUrlNavigator*)self, (intptr_t)callback);
 }
 
-int32_t k_coreurlnavigator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCoreUrlNavigator_QBaseMetacall((KCoreUrlNavigator*)self, param1, param2, param3);
+int32_t k_coreurlnavigator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCoreUrlNavigator_SuperMetacall((KCoreUrlNavigator*)self, param1, param2, param3);
 }
 
 const char* k_coreurlnavigator_tr(const char* s) {
@@ -363,8 +363,8 @@ bool k_coreurlnavigator_event(void* self, void* event) {
     return KCoreUrlNavigator_Event((KCoreUrlNavigator*)self, (QEvent*)event);
 }
 
-bool k_coreurlnavigator_qbase_event(void* self, void* event) {
-    return KCoreUrlNavigator_QBaseEvent((KCoreUrlNavigator*)self, (QEvent*)event);
+bool k_coreurlnavigator_super_event(void* self, void* event) {
+    return KCoreUrlNavigator_SuperEvent((KCoreUrlNavigator*)self, (QEvent*)event);
 }
 
 void k_coreurlnavigator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ bool k_coreurlnavigator_event_filter(void* self, void* watched, void* event) {
     return KCoreUrlNavigator_EventFilter((KCoreUrlNavigator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_coreurlnavigator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCoreUrlNavigator_QBaseEventFilter((KCoreUrlNavigator*)self, (QObject*)watched, (QEvent*)event);
+bool k_coreurlnavigator_super_event_filter(void* self, void* watched, void* event) {
+    return KCoreUrlNavigator_SuperEventFilter((KCoreUrlNavigator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_coreurlnavigator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -387,8 +387,8 @@ void k_coreurlnavigator_timer_event(void* self, void* event) {
     KCoreUrlNavigator_TimerEvent((KCoreUrlNavigator*)self, (QTimerEvent*)event);
 }
 
-void k_coreurlnavigator_qbase_timer_event(void* self, void* event) {
-    KCoreUrlNavigator_QBaseTimerEvent((KCoreUrlNavigator*)self, (QTimerEvent*)event);
+void k_coreurlnavigator_super_timer_event(void* self, void* event) {
+    KCoreUrlNavigator_SuperTimerEvent((KCoreUrlNavigator*)self, (QTimerEvent*)event);
 }
 
 void k_coreurlnavigator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void k_coreurlnavigator_child_event(void* self, void* event) {
     KCoreUrlNavigator_ChildEvent((KCoreUrlNavigator*)self, (QChildEvent*)event);
 }
 
-void k_coreurlnavigator_qbase_child_event(void* self, void* event) {
-    KCoreUrlNavigator_QBaseChildEvent((KCoreUrlNavigator*)self, (QChildEvent*)event);
+void k_coreurlnavigator_super_child_event(void* self, void* event) {
+    KCoreUrlNavigator_SuperChildEvent((KCoreUrlNavigator*)self, (QChildEvent*)event);
 }
 
 void k_coreurlnavigator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ void k_coreurlnavigator_custom_event(void* self, void* event) {
     KCoreUrlNavigator_CustomEvent((KCoreUrlNavigator*)self, (QEvent*)event);
 }
 
-void k_coreurlnavigator_qbase_custom_event(void* self, void* event) {
-    KCoreUrlNavigator_QBaseCustomEvent((KCoreUrlNavigator*)self, (QEvent*)event);
+void k_coreurlnavigator_super_custom_event(void* self, void* event) {
+    KCoreUrlNavigator_SuperCustomEvent((KCoreUrlNavigator*)self, (QEvent*)event);
 }
 
 void k_coreurlnavigator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void k_coreurlnavigator_connect_notify(void* self, void* signal) {
     KCoreUrlNavigator_ConnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-void k_coreurlnavigator_qbase_connect_notify(void* self, void* signal) {
-    KCoreUrlNavigator_QBaseConnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
+void k_coreurlnavigator_super_connect_notify(void* self, void* signal) {
+    KCoreUrlNavigator_SuperConnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_coreurlnavigator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ void k_coreurlnavigator_disconnect_notify(void* self, void* signal) {
     KCoreUrlNavigator_DisconnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-void k_coreurlnavigator_qbase_disconnect_notify(void* self, void* signal) {
-    KCoreUrlNavigator_QBaseDisconnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
+void k_coreurlnavigator_super_disconnect_notify(void* self, void* signal) {
+    KCoreUrlNavigator_SuperDisconnectNotify((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_coreurlnavigator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ QObject* k_coreurlnavigator_sender(void* self) {
     return KCoreUrlNavigator_Sender((KCoreUrlNavigator*)self);
 }
 
-QObject* k_coreurlnavigator_qbase_sender(void* self) {
-    return KCoreUrlNavigator_QBaseSender((KCoreUrlNavigator*)self);
+QObject* k_coreurlnavigator_super_sender(void* self) {
+    return KCoreUrlNavigator_SuperSender((KCoreUrlNavigator*)self);
 }
 
 void k_coreurlnavigator_on_sender(void* self, QObject* (*callback)()) {
@@ -459,8 +459,8 @@ int32_t k_coreurlnavigator_sender_signal_index(void* self) {
     return KCoreUrlNavigator_SenderSignalIndex((KCoreUrlNavigator*)self);
 }
 
-int32_t k_coreurlnavigator_qbase_sender_signal_index(void* self) {
-    return KCoreUrlNavigator_QBaseSenderSignalIndex((KCoreUrlNavigator*)self);
+int32_t k_coreurlnavigator_super_sender_signal_index(void* self) {
+    return KCoreUrlNavigator_SuperSenderSignalIndex((KCoreUrlNavigator*)self);
 }
 
 void k_coreurlnavigator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -471,8 +471,8 @@ int32_t k_coreurlnavigator_receivers(void* self, const char* signal) {
     return KCoreUrlNavigator_Receivers((KCoreUrlNavigator*)self, signal);
 }
 
-int32_t k_coreurlnavigator_qbase_receivers(void* self, const char* signal) {
-    return KCoreUrlNavigator_QBaseReceivers((KCoreUrlNavigator*)self, signal);
+int32_t k_coreurlnavigator_super_receivers(void* self, const char* signal) {
+    return KCoreUrlNavigator_SuperReceivers((KCoreUrlNavigator*)self, signal);
 }
 
 void k_coreurlnavigator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -483,8 +483,8 @@ bool k_coreurlnavigator_is_signal_connected(void* self, void* signal) {
     return KCoreUrlNavigator_IsSignalConnected((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-bool k_coreurlnavigator_qbase_is_signal_connected(void* self, void* signal) {
-    return KCoreUrlNavigator_QBaseIsSignalConnected((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
+bool k_coreurlnavigator_super_is_signal_connected(void* self, void* signal) {
+    return KCoreUrlNavigator_SuperIsSignalConnected((KCoreUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_coreurlnavigator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

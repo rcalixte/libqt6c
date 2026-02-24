@@ -38,8 +38,8 @@ void k_mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KMainWindow_OnMetaObject((KMainWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_mainwindow_qbase_meta_object(void* self) {
-    return KMainWindow_QBaseMetaObject((KMainWindow*)self);
+const QMetaObject* k_mainwindow_super_meta_object(void* self) {
+    return KMainWindow_SuperMetaObject((KMainWindow*)self);
 }
 
 void* k_mainwindow_metacast(void* self, const char* param1) {
@@ -50,8 +50,8 @@ void k_mainwindow_on_metacast(void* self, void* (*callback)(void*, const char*))
     KMainWindow_OnMetacast((KMainWindow*)self, (intptr_t)callback);
 }
 
-void* k_mainwindow_qbase_metacast(void* self, const char* param1) {
-    return KMainWindow_QBaseMetacast((KMainWindow*)self, param1);
+void* k_mainwindow_super_metacast(void* self, const char* param1) {
+    return KMainWindow_SuperMetacast((KMainWindow*)self, param1);
 }
 
 int32_t k_mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ void k_mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KMainWindow_OnMetacall((KMainWindow*)self, (intptr_t)callback);
 }
 
-int32_t k_mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KMainWindow_QBaseMetacall((KMainWindow*)self, param1, param2, param3);
+int32_t k_mainwindow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KMainWindow_SuperMetacall((KMainWindow*)self, param1, param2, param3);
 }
 
 const char* k_mainwindow_tr(const char* s) {
@@ -149,8 +149,8 @@ void k_mainwindow_on_apply_main_window_settings(void* self, void (*callback)(voi
     KMainWindow_OnApplyMainWindowSettings((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_apply_main_window_settings(void* self, void* config) {
-    KMainWindow_QBaseApplyMainWindowSettings((KMainWindow*)self, (KConfigGroup*)config);
+void k_mainwindow_super_apply_main_window_settings(void* self, void* config) {
+    KMainWindow_SuperApplyMainWindowSettings((KMainWindow*)self, (KConfigGroup*)config);
 }
 
 void k_mainwindow_save_main_window_settings(void* self, void* config) {
@@ -172,8 +172,8 @@ void k_mainwindow_on_set_caption(void* self, void (*callback)(void*, const char*
     KMainWindow_OnSetCaption((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_set_caption(void* self, const char* caption) {
-    KMainWindow_QBaseSetCaption((KMainWindow*)self, qstring(caption));
+void k_mainwindow_super_set_caption(void* self, const char* caption) {
+    KMainWindow_SuperSetCaption((KMainWindow*)self, qstring(caption));
 }
 
 void k_mainwindow_set_caption2(void* self, const char* caption, bool modified) {
@@ -184,8 +184,8 @@ void k_mainwindow_on_set_caption2(void* self, void (*callback)(void*, const char
     KMainWindow_OnSetCaption2((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_set_caption2(void* self, const char* caption, bool modified) {
-    KMainWindow_QBaseSetCaption2((KMainWindow*)self, qstring(caption), modified);
+void k_mainwindow_super_set_caption2(void* self, const char* caption, bool modified) {
+    KMainWindow_SuperSetCaption2((KMainWindow*)self, qstring(caption), modified);
 }
 
 void k_mainwindow_set_plain_caption(void* self, const char* caption) {
@@ -196,8 +196,8 @@ void k_mainwindow_on_set_plain_caption(void* self, void (*callback)(void*, const
     KMainWindow_OnSetPlainCaption((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_set_plain_caption(void* self, const char* caption) {
-    KMainWindow_QBaseSetPlainCaption((KMainWindow*)self, qstring(caption));
+void k_mainwindow_super_set_plain_caption(void* self, const char* caption) {
+    KMainWindow_SuperSetPlainCaption((KMainWindow*)self, qstring(caption));
 }
 
 void k_mainwindow_app_help_activated(void* self) {
@@ -216,8 +216,8 @@ void k_mainwindow_on_event(void* self, bool (*callback)(void*, void*)) {
     KMainWindow_OnEvent((KMainWindow*)self, (intptr_t)callback);
 }
 
-bool k_mainwindow_qbase_event(void* self, void* event) {
-    return KMainWindow_QBaseEvent((KMainWindow*)self, (QEvent*)event);
+bool k_mainwindow_super_event(void* self, void* event) {
+    return KMainWindow_SuperEvent((KMainWindow*)self, (QEvent*)event);
 }
 
 void k_mainwindow_key_press_event(void* self, void* keyEvent) {
@@ -228,8 +228,8 @@ void k_mainwindow_on_key_press_event(void* self, void (*callback)(void*, void*))
     KMainWindow_OnKeyPressEvent((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_key_press_event(void* self, void* keyEvent) {
-    KMainWindow_QBaseKeyPressEvent((KMainWindow*)self, (QKeyEvent*)keyEvent);
+void k_mainwindow_super_key_press_event(void* self, void* keyEvent) {
+    KMainWindow_SuperKeyPressEvent((KMainWindow*)self, (QKeyEvent*)keyEvent);
 }
 
 void k_mainwindow_close_event(void* self, void* param1) {
@@ -240,8 +240,8 @@ void k_mainwindow_on_close_event(void* self, void (*callback)(void*, void*)) {
     KMainWindow_OnCloseEvent((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_close_event(void* self, void* param1) {
-    KMainWindow_QBaseCloseEvent((KMainWindow*)self, (QCloseEvent*)param1);
+void k_mainwindow_super_close_event(void* self, void* param1) {
+    KMainWindow_SuperCloseEvent((KMainWindow*)self, (QCloseEvent*)param1);
 }
 
 bool k_mainwindow_query_close(void* self) {
@@ -252,8 +252,8 @@ void k_mainwindow_on_query_close(void* self, bool (*callback)()) {
     KMainWindow_OnQueryClose((KMainWindow*)self, (intptr_t)callback);
 }
 
-bool k_mainwindow_qbase_query_close(void* self) {
-    return KMainWindow_QBaseQueryClose((KMainWindow*)self);
+bool k_mainwindow_super_query_close(void* self) {
+    return KMainWindow_SuperQueryClose((KMainWindow*)self);
 }
 
 void k_mainwindow_save_properties(void* self, void* param1) {
@@ -264,8 +264,8 @@ void k_mainwindow_on_save_properties(void* self, void (*callback)(void*, void*))
     KMainWindow_OnSaveProperties((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_save_properties(void* self, void* param1) {
-    KMainWindow_QBaseSaveProperties((KMainWindow*)self, (KConfigGroup*)param1);
+void k_mainwindow_super_save_properties(void* self, void* param1) {
+    KMainWindow_SuperSaveProperties((KMainWindow*)self, (KConfigGroup*)param1);
 }
 
 void k_mainwindow_read_properties(void* self, void* param1) {
@@ -276,8 +276,8 @@ void k_mainwindow_on_read_properties(void* self, void (*callback)(void*, void*))
     KMainWindow_OnReadProperties((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_read_properties(void* self, void* param1) {
-    KMainWindow_QBaseReadProperties((KMainWindow*)self, (KConfigGroup*)param1);
+void k_mainwindow_super_read_properties(void* self, void* param1) {
+    KMainWindow_SuperReadProperties((KMainWindow*)self, (KConfigGroup*)param1);
 }
 
 void k_mainwindow_save_global_properties(void* self, void* sessionConfig) {
@@ -288,8 +288,8 @@ void k_mainwindow_on_save_global_properties(void* self, void (*callback)(void*, 
     KMainWindow_OnSaveGlobalProperties((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_save_global_properties(void* self, void* sessionConfig) {
-    KMainWindow_QBaseSaveGlobalProperties((KMainWindow*)self, (KConfig*)sessionConfig);
+void k_mainwindow_super_save_global_properties(void* self, void* sessionConfig) {
+    KMainWindow_SuperSaveGlobalProperties((KMainWindow*)self, (KConfig*)sessionConfig);
 }
 
 void k_mainwindow_read_global_properties(void* self, void* sessionConfig) {
@@ -300,8 +300,8 @@ void k_mainwindow_on_read_global_properties(void* self, void (*callback)(void*, 
     KMainWindow_OnReadGlobalProperties((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_read_global_properties(void* self, void* sessionConfig) {
-    KMainWindow_QBaseReadGlobalProperties((KMainWindow*)self, (KConfig*)sessionConfig);
+void k_mainwindow_super_read_global_properties(void* self, void* sessionConfig) {
+    KMainWindow_SuperReadGlobalProperties((KMainWindow*)self, (KConfig*)sessionConfig);
 }
 
 void k_mainwindow_save_properties_internal(void* self, void* param1, int param2) {
@@ -312,8 +312,8 @@ void k_mainwindow_on_save_properties_internal(void* self, void (*callback)(void*
     KMainWindow_OnSavePropertiesInternal((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_save_properties_internal(void* self, void* param1, int param2) {
-    KMainWindow_QBaseSavePropertiesInternal((KMainWindow*)self, (KConfig*)param1, param2);
+void k_mainwindow_super_save_properties_internal(void* self, void* param1, int param2) {
+    KMainWindow_SuperSavePropertiesInternal((KMainWindow*)self, (KConfig*)param1, param2);
 }
 
 bool k_mainwindow_read_properties_internal(void* self, void* param1, int param2) {
@@ -324,8 +324,8 @@ void k_mainwindow_on_read_properties_internal(void* self, bool (*callback)(void*
     KMainWindow_OnReadPropertiesInternal((KMainWindow*)self, (intptr_t)callback);
 }
 
-bool k_mainwindow_qbase_read_properties_internal(void* self, void* param1, int param2) {
-    return KMainWindow_QBaseReadPropertiesInternal((KMainWindow*)self, (KConfig*)param1, param2);
+bool k_mainwindow_super_read_properties_internal(void* self, void* param1, int param2) {
+    return KMainWindow_SuperReadPropertiesInternal((KMainWindow*)self, (KConfig*)param1, param2);
 }
 
 bool k_mainwindow_settings_dirty(void* self) {
@@ -336,8 +336,8 @@ void k_mainwindow_on_settings_dirty(void* self, bool (*callback)()) {
     KMainWindow_OnSettingsDirty((KMainWindow*)self, (intptr_t)callback);
 }
 
-bool k_mainwindow_qbase_settings_dirty(void* self) {
-    return KMainWindow_QBaseSettingsDirty((KMainWindow*)self);
+bool k_mainwindow_super_settings_dirty(void* self) {
+    return KMainWindow_SuperSettingsDirty((KMainWindow*)self);
 }
 
 void k_mainwindow_save_auto_save_settings(void* self) {
@@ -348,8 +348,8 @@ void k_mainwindow_on_save_auto_save_settings(void* self, void (*callback)()) {
     KMainWindow_OnSaveAutoSaveSettings((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_mainwindow_qbase_save_auto_save_settings(void* self) {
-    KMainWindow_QBaseSaveAutoSaveSettings((KMainWindow*)self);
+void k_mainwindow_super_save_auto_save_settings(void* self) {
+    KMainWindow_SuperSaveAutoSaveSettings((KMainWindow*)self);
 }
 
 const char* k_mainwindow_tr2(const char* s, const char* c) {
@@ -2018,8 +2018,8 @@ QMenu* k_mainwindow_create_popup_menu(void* self) {
     return KMainWindow_CreatePopupMenu((KMainWindow*)self);
 }
 
-QMenu* k_mainwindow_qbase_create_popup_menu(void* self) {
-    return KMainWindow_QBaseCreatePopupMenu((KMainWindow*)self);
+QMenu* k_mainwindow_super_create_popup_menu(void* self) {
+    return KMainWindow_SuperCreatePopupMenu((KMainWindow*)self);
 }
 
 void k_mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)()) {
@@ -2030,8 +2030,8 @@ void k_mainwindow_context_menu_event(void* self, void* event) {
     KMainWindow_ContextMenuEvent((KMainWindow*)self, (QContextMenuEvent*)event);
 }
 
-void k_mainwindow_qbase_context_menu_event(void* self, void* event) {
-    KMainWindow_QBaseContextMenuEvent((KMainWindow*)self, (QContextMenuEvent*)event);
+void k_mainwindow_super_context_menu_event(void* self, void* event) {
+    KMainWindow_SuperContextMenuEvent((KMainWindow*)self, (QContextMenuEvent*)event);
 }
 
 void k_mainwindow_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ int32_t k_mainwindow_dev_type(void* self) {
     return KMainWindow_DevType((KMainWindow*)self);
 }
 
-int32_t k_mainwindow_qbase_dev_type(void* self) {
-    return KMainWindow_QBaseDevType((KMainWindow*)self);
+int32_t k_mainwindow_super_dev_type(void* self) {
+    return KMainWindow_SuperDevType((KMainWindow*)self);
 }
 
 void k_mainwindow_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2054,8 +2054,8 @@ void k_mainwindow_set_visible(void* self, bool visible) {
     KMainWindow_SetVisible((KMainWindow*)self, visible);
 }
 
-void k_mainwindow_qbase_set_visible(void* self, bool visible) {
-    KMainWindow_QBaseSetVisible((KMainWindow*)self, visible);
+void k_mainwindow_super_set_visible(void* self, bool visible) {
+    KMainWindow_SuperSetVisible((KMainWindow*)self, visible);
 }
 
 void k_mainwindow_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2066,8 +2066,8 @@ QSize* k_mainwindow_size_hint(void* self) {
     return KMainWindow_SizeHint((KMainWindow*)self);
 }
 
-QSize* k_mainwindow_qbase_size_hint(void* self) {
-    return KMainWindow_QBaseSizeHint((KMainWindow*)self);
+QSize* k_mainwindow_super_size_hint(void* self) {
+    return KMainWindow_SuperSizeHint((KMainWindow*)self);
 }
 
 void k_mainwindow_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2078,8 +2078,8 @@ QSize* k_mainwindow_minimum_size_hint(void* self) {
     return KMainWindow_MinimumSizeHint((KMainWindow*)self);
 }
 
-QSize* k_mainwindow_qbase_minimum_size_hint(void* self) {
-    return KMainWindow_QBaseMinimumSizeHint((KMainWindow*)self);
+QSize* k_mainwindow_super_minimum_size_hint(void* self) {
+    return KMainWindow_SuperMinimumSizeHint((KMainWindow*)self);
 }
 
 void k_mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2090,8 +2090,8 @@ int32_t k_mainwindow_height_for_width(void* self, int param1) {
     return KMainWindow_HeightForWidth((KMainWindow*)self, param1);
 }
 
-int32_t k_mainwindow_qbase_height_for_width(void* self, int param1) {
-    return KMainWindow_QBaseHeightForWidth((KMainWindow*)self, param1);
+int32_t k_mainwindow_super_height_for_width(void* self, int param1) {
+    return KMainWindow_SuperHeightForWidth((KMainWindow*)self, param1);
 }
 
 void k_mainwindow_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2102,8 +2102,8 @@ bool k_mainwindow_has_height_for_width(void* self) {
     return KMainWindow_HasHeightForWidth((KMainWindow*)self);
 }
 
-bool k_mainwindow_qbase_has_height_for_width(void* self) {
-    return KMainWindow_QBaseHasHeightForWidth((KMainWindow*)self);
+bool k_mainwindow_super_has_height_for_width(void* self) {
+    return KMainWindow_SuperHasHeightForWidth((KMainWindow*)self);
 }
 
 void k_mainwindow_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2114,8 +2114,8 @@ QPaintEngine* k_mainwindow_paint_engine(void* self) {
     return KMainWindow_PaintEngine((KMainWindow*)self);
 }
 
-QPaintEngine* k_mainwindow_qbase_paint_engine(void* self) {
-    return KMainWindow_QBasePaintEngine((KMainWindow*)self);
+QPaintEngine* k_mainwindow_super_paint_engine(void* self) {
+    return KMainWindow_SuperPaintEngine((KMainWindow*)self);
 }
 
 void k_mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2126,8 +2126,8 @@ void k_mainwindow_mouse_press_event(void* self, void* event) {
     KMainWindow_MousePressEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_mainwindow_qbase_mouse_press_event(void* self, void* event) {
-    KMainWindow_QBaseMousePressEvent((KMainWindow*)self, (QMouseEvent*)event);
+void k_mainwindow_super_mouse_press_event(void* self, void* event) {
+    KMainWindow_SuperMousePressEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_mainwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2138,8 +2138,8 @@ void k_mainwindow_mouse_release_event(void* self, void* event) {
     KMainWindow_MouseReleaseEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_mainwindow_qbase_mouse_release_event(void* self, void* event) {
-    KMainWindow_QBaseMouseReleaseEvent((KMainWindow*)self, (QMouseEvent*)event);
+void k_mainwindow_super_mouse_release_event(void* self, void* event) {
+    KMainWindow_SuperMouseReleaseEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_mainwindow_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2150,8 +2150,8 @@ void k_mainwindow_mouse_double_click_event(void* self, void* event) {
     KMainWindow_MouseDoubleClickEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_mainwindow_qbase_mouse_double_click_event(void* self, void* event) {
-    KMainWindow_QBaseMouseDoubleClickEvent((KMainWindow*)self, (QMouseEvent*)event);
+void k_mainwindow_super_mouse_double_click_event(void* self, void* event) {
+    KMainWindow_SuperMouseDoubleClickEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_mainwindow_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2162,8 +2162,8 @@ void k_mainwindow_mouse_move_event(void* self, void* event) {
     KMainWindow_MouseMoveEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_mainwindow_qbase_mouse_move_event(void* self, void* event) {
-    KMainWindow_QBaseMouseMoveEvent((KMainWindow*)self, (QMouseEvent*)event);
+void k_mainwindow_super_mouse_move_event(void* self, void* event) {
+    KMainWindow_SuperMouseMoveEvent((KMainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_mainwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2174,8 +2174,8 @@ void k_mainwindow_wheel_event(void* self, void* event) {
     KMainWindow_WheelEvent((KMainWindow*)self, (QWheelEvent*)event);
 }
 
-void k_mainwindow_qbase_wheel_event(void* self, void* event) {
-    KMainWindow_QBaseWheelEvent((KMainWindow*)self, (QWheelEvent*)event);
+void k_mainwindow_super_wheel_event(void* self, void* event) {
+    KMainWindow_SuperWheelEvent((KMainWindow*)self, (QWheelEvent*)event);
 }
 
 void k_mainwindow_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ void k_mainwindow_key_release_event(void* self, void* event) {
     KMainWindow_KeyReleaseEvent((KMainWindow*)self, (QKeyEvent*)event);
 }
 
-void k_mainwindow_qbase_key_release_event(void* self, void* event) {
-    KMainWindow_QBaseKeyReleaseEvent((KMainWindow*)self, (QKeyEvent*)event);
+void k_mainwindow_super_key_release_event(void* self, void* event) {
+    KMainWindow_SuperKeyReleaseEvent((KMainWindow*)self, (QKeyEvent*)event);
 }
 
 void k_mainwindow_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ void k_mainwindow_focus_in_event(void* self, void* event) {
     KMainWindow_FocusInEvent((KMainWindow*)self, (QFocusEvent*)event);
 }
 
-void k_mainwindow_qbase_focus_in_event(void* self, void* event) {
-    KMainWindow_QBaseFocusInEvent((KMainWindow*)self, (QFocusEvent*)event);
+void k_mainwindow_super_focus_in_event(void* self, void* event) {
+    KMainWindow_SuperFocusInEvent((KMainWindow*)self, (QFocusEvent*)event);
 }
 
 void k_mainwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2210,8 +2210,8 @@ void k_mainwindow_focus_out_event(void* self, void* event) {
     KMainWindow_FocusOutEvent((KMainWindow*)self, (QFocusEvent*)event);
 }
 
-void k_mainwindow_qbase_focus_out_event(void* self, void* event) {
-    KMainWindow_QBaseFocusOutEvent((KMainWindow*)self, (QFocusEvent*)event);
+void k_mainwindow_super_focus_out_event(void* self, void* event) {
+    KMainWindow_SuperFocusOutEvent((KMainWindow*)self, (QFocusEvent*)event);
 }
 
 void k_mainwindow_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2222,8 +2222,8 @@ void k_mainwindow_enter_event(void* self, void* event) {
     KMainWindow_EnterEvent((KMainWindow*)self, (QEnterEvent*)event);
 }
 
-void k_mainwindow_qbase_enter_event(void* self, void* event) {
-    KMainWindow_QBaseEnterEvent((KMainWindow*)self, (QEnterEvent*)event);
+void k_mainwindow_super_enter_event(void* self, void* event) {
+    KMainWindow_SuperEnterEvent((KMainWindow*)self, (QEnterEvent*)event);
 }
 
 void k_mainwindow_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2234,8 +2234,8 @@ void k_mainwindow_leave_event(void* self, void* event) {
     KMainWindow_LeaveEvent((KMainWindow*)self, (QEvent*)event);
 }
 
-void k_mainwindow_qbase_leave_event(void* self, void* event) {
-    KMainWindow_QBaseLeaveEvent((KMainWindow*)self, (QEvent*)event);
+void k_mainwindow_super_leave_event(void* self, void* event) {
+    KMainWindow_SuperLeaveEvent((KMainWindow*)self, (QEvent*)event);
 }
 
 void k_mainwindow_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2246,8 +2246,8 @@ void k_mainwindow_paint_event(void* self, void* event) {
     KMainWindow_PaintEvent((KMainWindow*)self, (QPaintEvent*)event);
 }
 
-void k_mainwindow_qbase_paint_event(void* self, void* event) {
-    KMainWindow_QBasePaintEvent((KMainWindow*)self, (QPaintEvent*)event);
+void k_mainwindow_super_paint_event(void* self, void* event) {
+    KMainWindow_SuperPaintEvent((KMainWindow*)self, (QPaintEvent*)event);
 }
 
 void k_mainwindow_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2258,8 +2258,8 @@ void k_mainwindow_move_event(void* self, void* event) {
     KMainWindow_MoveEvent((KMainWindow*)self, (QMoveEvent*)event);
 }
 
-void k_mainwindow_qbase_move_event(void* self, void* event) {
-    KMainWindow_QBaseMoveEvent((KMainWindow*)self, (QMoveEvent*)event);
+void k_mainwindow_super_move_event(void* self, void* event) {
+    KMainWindow_SuperMoveEvent((KMainWindow*)self, (QMoveEvent*)event);
 }
 
 void k_mainwindow_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2270,8 +2270,8 @@ void k_mainwindow_resize_event(void* self, void* event) {
     KMainWindow_ResizeEvent((KMainWindow*)self, (QResizeEvent*)event);
 }
 
-void k_mainwindow_qbase_resize_event(void* self, void* event) {
-    KMainWindow_QBaseResizeEvent((KMainWindow*)self, (QResizeEvent*)event);
+void k_mainwindow_super_resize_event(void* self, void* event) {
+    KMainWindow_SuperResizeEvent((KMainWindow*)self, (QResizeEvent*)event);
 }
 
 void k_mainwindow_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2282,8 +2282,8 @@ void k_mainwindow_tablet_event(void* self, void* event) {
     KMainWindow_TabletEvent((KMainWindow*)self, (QTabletEvent*)event);
 }
 
-void k_mainwindow_qbase_tablet_event(void* self, void* event) {
-    KMainWindow_QBaseTabletEvent((KMainWindow*)self, (QTabletEvent*)event);
+void k_mainwindow_super_tablet_event(void* self, void* event) {
+    KMainWindow_SuperTabletEvent((KMainWindow*)self, (QTabletEvent*)event);
 }
 
 void k_mainwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2294,8 +2294,8 @@ void k_mainwindow_action_event(void* self, void* event) {
     KMainWindow_ActionEvent((KMainWindow*)self, (QActionEvent*)event);
 }
 
-void k_mainwindow_qbase_action_event(void* self, void* event) {
-    KMainWindow_QBaseActionEvent((KMainWindow*)self, (QActionEvent*)event);
+void k_mainwindow_super_action_event(void* self, void* event) {
+    KMainWindow_SuperActionEvent((KMainWindow*)self, (QActionEvent*)event);
 }
 
 void k_mainwindow_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2306,8 +2306,8 @@ void k_mainwindow_drag_enter_event(void* self, void* event) {
     KMainWindow_DragEnterEvent((KMainWindow*)self, (QDragEnterEvent*)event);
 }
 
-void k_mainwindow_qbase_drag_enter_event(void* self, void* event) {
-    KMainWindow_QBaseDragEnterEvent((KMainWindow*)self, (QDragEnterEvent*)event);
+void k_mainwindow_super_drag_enter_event(void* self, void* event) {
+    KMainWindow_SuperDragEnterEvent((KMainWindow*)self, (QDragEnterEvent*)event);
 }
 
 void k_mainwindow_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2318,8 +2318,8 @@ void k_mainwindow_drag_move_event(void* self, void* event) {
     KMainWindow_DragMoveEvent((KMainWindow*)self, (QDragMoveEvent*)event);
 }
 
-void k_mainwindow_qbase_drag_move_event(void* self, void* event) {
-    KMainWindow_QBaseDragMoveEvent((KMainWindow*)self, (QDragMoveEvent*)event);
+void k_mainwindow_super_drag_move_event(void* self, void* event) {
+    KMainWindow_SuperDragMoveEvent((KMainWindow*)self, (QDragMoveEvent*)event);
 }
 
 void k_mainwindow_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2330,8 +2330,8 @@ void k_mainwindow_drag_leave_event(void* self, void* event) {
     KMainWindow_DragLeaveEvent((KMainWindow*)self, (QDragLeaveEvent*)event);
 }
 
-void k_mainwindow_qbase_drag_leave_event(void* self, void* event) {
-    KMainWindow_QBaseDragLeaveEvent((KMainWindow*)self, (QDragLeaveEvent*)event);
+void k_mainwindow_super_drag_leave_event(void* self, void* event) {
+    KMainWindow_SuperDragLeaveEvent((KMainWindow*)self, (QDragLeaveEvent*)event);
 }
 
 void k_mainwindow_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2342,8 +2342,8 @@ void k_mainwindow_drop_event(void* self, void* event) {
     KMainWindow_DropEvent((KMainWindow*)self, (QDropEvent*)event);
 }
 
-void k_mainwindow_qbase_drop_event(void* self, void* event) {
-    KMainWindow_QBaseDropEvent((KMainWindow*)self, (QDropEvent*)event);
+void k_mainwindow_super_drop_event(void* self, void* event) {
+    KMainWindow_SuperDropEvent((KMainWindow*)self, (QDropEvent*)event);
 }
 
 void k_mainwindow_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2354,8 +2354,8 @@ void k_mainwindow_show_event(void* self, void* event) {
     KMainWindow_ShowEvent((KMainWindow*)self, (QShowEvent*)event);
 }
 
-void k_mainwindow_qbase_show_event(void* self, void* event) {
-    KMainWindow_QBaseShowEvent((KMainWindow*)self, (QShowEvent*)event);
+void k_mainwindow_super_show_event(void* self, void* event) {
+    KMainWindow_SuperShowEvent((KMainWindow*)self, (QShowEvent*)event);
 }
 
 void k_mainwindow_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2366,8 +2366,8 @@ void k_mainwindow_hide_event(void* self, void* event) {
     KMainWindow_HideEvent((KMainWindow*)self, (QHideEvent*)event);
 }
 
-void k_mainwindow_qbase_hide_event(void* self, void* event) {
-    KMainWindow_QBaseHideEvent((KMainWindow*)self, (QHideEvent*)event);
+void k_mainwindow_super_hide_event(void* self, void* event) {
+    KMainWindow_SuperHideEvent((KMainWindow*)self, (QHideEvent*)event);
 }
 
 void k_mainwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2378,8 +2378,8 @@ bool k_mainwindow_native_event(void* self, char* eventType, void* message, intpt
     return KMainWindow_NativeEvent((KMainWindow*)self, qstring(eventType), message, result);
 }
 
-bool k_mainwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KMainWindow_QBaseNativeEvent((KMainWindow*)self, qstring(eventType), message, result);
+bool k_mainwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KMainWindow_SuperNativeEvent((KMainWindow*)self, qstring(eventType), message, result);
 }
 
 void k_mainwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2390,8 +2390,8 @@ void k_mainwindow_change_event(void* self, void* param1) {
     KMainWindow_ChangeEvent((KMainWindow*)self, (QEvent*)param1);
 }
 
-void k_mainwindow_qbase_change_event(void* self, void* param1) {
-    KMainWindow_QBaseChangeEvent((KMainWindow*)self, (QEvent*)param1);
+void k_mainwindow_super_change_event(void* self, void* param1) {
+    KMainWindow_SuperChangeEvent((KMainWindow*)self, (QEvent*)param1);
 }
 
 void k_mainwindow_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2402,8 +2402,8 @@ int32_t k_mainwindow_metric(void* self, int32_t param1) {
     return KMainWindow_Metric((KMainWindow*)self, param1);
 }
 
-int32_t k_mainwindow_qbase_metric(void* self, int32_t param1) {
-    return KMainWindow_QBaseMetric((KMainWindow*)self, param1);
+int32_t k_mainwindow_super_metric(void* self, int32_t param1) {
+    return KMainWindow_SuperMetric((KMainWindow*)self, param1);
 }
 
 void k_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2414,8 +2414,8 @@ void k_mainwindow_init_painter(void* self, void* painter) {
     KMainWindow_InitPainter((KMainWindow*)self, (QPainter*)painter);
 }
 
-void k_mainwindow_qbase_init_painter(void* self, void* painter) {
-    KMainWindow_QBaseInitPainter((KMainWindow*)self, (QPainter*)painter);
+void k_mainwindow_super_init_painter(void* self, void* painter) {
+    KMainWindow_SuperInitPainter((KMainWindow*)self, (QPainter*)painter);
 }
 
 void k_mainwindow_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2426,8 +2426,8 @@ QPaintDevice* k_mainwindow_redirected(void* self, void* offset) {
     return KMainWindow_Redirected((KMainWindow*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_mainwindow_qbase_redirected(void* self, void* offset) {
-    return KMainWindow_QBaseRedirected((KMainWindow*)self, (QPoint*)offset);
+QPaintDevice* k_mainwindow_super_redirected(void* self, void* offset) {
+    return KMainWindow_SuperRedirected((KMainWindow*)self, (QPoint*)offset);
 }
 
 void k_mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2438,8 +2438,8 @@ QPainter* k_mainwindow_shared_painter(void* self) {
     return KMainWindow_SharedPainter((KMainWindow*)self);
 }
 
-QPainter* k_mainwindow_qbase_shared_painter(void* self) {
-    return KMainWindow_QBaseSharedPainter((KMainWindow*)self);
+QPainter* k_mainwindow_super_shared_painter(void* self) {
+    return KMainWindow_SuperSharedPainter((KMainWindow*)self);
 }
 
 void k_mainwindow_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2450,8 +2450,8 @@ void k_mainwindow_input_method_event(void* self, void* param1) {
     KMainWindow_InputMethodEvent((KMainWindow*)self, (QInputMethodEvent*)param1);
 }
 
-void k_mainwindow_qbase_input_method_event(void* self, void* param1) {
-    KMainWindow_QBaseInputMethodEvent((KMainWindow*)self, (QInputMethodEvent*)param1);
+void k_mainwindow_super_input_method_event(void* self, void* param1) {
+    KMainWindow_SuperInputMethodEvent((KMainWindow*)self, (QInputMethodEvent*)param1);
 }
 
 void k_mainwindow_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2462,8 +2462,8 @@ QVariant* k_mainwindow_input_method_query(void* self, int32_t param1) {
     return KMainWindow_InputMethodQuery((KMainWindow*)self, param1);
 }
 
-QVariant* k_mainwindow_qbase_input_method_query(void* self, int32_t param1) {
-    return KMainWindow_QBaseInputMethodQuery((KMainWindow*)self, param1);
+QVariant* k_mainwindow_super_input_method_query(void* self, int32_t param1) {
+    return KMainWindow_SuperInputMethodQuery((KMainWindow*)self, param1);
 }
 
 void k_mainwindow_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2474,8 +2474,8 @@ bool k_mainwindow_focus_next_prev_child(void* self, bool next) {
     return KMainWindow_FocusNextPrevChild((KMainWindow*)self, next);
 }
 
-bool k_mainwindow_qbase_focus_next_prev_child(void* self, bool next) {
-    return KMainWindow_QBaseFocusNextPrevChild((KMainWindow*)self, next);
+bool k_mainwindow_super_focus_next_prev_child(void* self, bool next) {
+    return KMainWindow_SuperFocusNextPrevChild((KMainWindow*)self, next);
 }
 
 void k_mainwindow_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2486,8 +2486,8 @@ bool k_mainwindow_event_filter(void* self, void* watched, void* event) {
     return KMainWindow_EventFilter((KMainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_mainwindow_qbase_event_filter(void* self, void* watched, void* event) {
-    return KMainWindow_QBaseEventFilter((KMainWindow*)self, (QObject*)watched, (QEvent*)event);
+bool k_mainwindow_super_event_filter(void* self, void* watched, void* event) {
+    return KMainWindow_SuperEventFilter((KMainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_mainwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2498,8 +2498,8 @@ void k_mainwindow_timer_event(void* self, void* event) {
     KMainWindow_TimerEvent((KMainWindow*)self, (QTimerEvent*)event);
 }
 
-void k_mainwindow_qbase_timer_event(void* self, void* event) {
-    KMainWindow_QBaseTimerEvent((KMainWindow*)self, (QTimerEvent*)event);
+void k_mainwindow_super_timer_event(void* self, void* event) {
+    KMainWindow_SuperTimerEvent((KMainWindow*)self, (QTimerEvent*)event);
 }
 
 void k_mainwindow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2510,8 +2510,8 @@ void k_mainwindow_child_event(void* self, void* event) {
     KMainWindow_ChildEvent((KMainWindow*)self, (QChildEvent*)event);
 }
 
-void k_mainwindow_qbase_child_event(void* self, void* event) {
-    KMainWindow_QBaseChildEvent((KMainWindow*)self, (QChildEvent*)event);
+void k_mainwindow_super_child_event(void* self, void* event) {
+    KMainWindow_SuperChildEvent((KMainWindow*)self, (QChildEvent*)event);
 }
 
 void k_mainwindow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2522,8 +2522,8 @@ void k_mainwindow_custom_event(void* self, void* event) {
     KMainWindow_CustomEvent((KMainWindow*)self, (QEvent*)event);
 }
 
-void k_mainwindow_qbase_custom_event(void* self, void* event) {
-    KMainWindow_QBaseCustomEvent((KMainWindow*)self, (QEvent*)event);
+void k_mainwindow_super_custom_event(void* self, void* event) {
+    KMainWindow_SuperCustomEvent((KMainWindow*)self, (QEvent*)event);
 }
 
 void k_mainwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2534,8 +2534,8 @@ void k_mainwindow_connect_notify(void* self, void* signal) {
     KMainWindow_ConnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_mainwindow_qbase_connect_notify(void* self, void* signal) {
-    KMainWindow_QBaseConnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
+void k_mainwindow_super_connect_notify(void* self, void* signal) {
+    KMainWindow_SuperConnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2546,8 +2546,8 @@ void k_mainwindow_disconnect_notify(void* self, void* signal) {
     KMainWindow_DisconnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_mainwindow_qbase_disconnect_notify(void* self, void* signal) {
-    KMainWindow_QBaseDisconnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
+void k_mainwindow_super_disconnect_notify(void* self, void* signal) {
+    KMainWindow_SuperDisconnectNotify((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2558,8 +2558,8 @@ void k_mainwindow_update_micro_focus(void* self) {
     KMainWindow_UpdateMicroFocus((KMainWindow*)self);
 }
 
-void k_mainwindow_qbase_update_micro_focus(void* self) {
-    KMainWindow_QBaseUpdateMicroFocus((KMainWindow*)self);
+void k_mainwindow_super_update_micro_focus(void* self) {
+    KMainWindow_SuperUpdateMicroFocus((KMainWindow*)self);
 }
 
 void k_mainwindow_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2570,8 +2570,8 @@ void k_mainwindow_create(void* self) {
     KMainWindow_Create((KMainWindow*)self);
 }
 
-void k_mainwindow_qbase_create(void* self) {
-    KMainWindow_QBaseCreate((KMainWindow*)self);
+void k_mainwindow_super_create(void* self) {
+    KMainWindow_SuperCreate((KMainWindow*)self);
 }
 
 void k_mainwindow_on_create(void* self, void (*callback)()) {
@@ -2582,8 +2582,8 @@ void k_mainwindow_destroy(void* self) {
     KMainWindow_Destroy((KMainWindow*)self);
 }
 
-void k_mainwindow_qbase_destroy(void* self) {
-    KMainWindow_QBaseDestroy((KMainWindow*)self);
+void k_mainwindow_super_destroy(void* self) {
+    KMainWindow_SuperDestroy((KMainWindow*)self);
 }
 
 void k_mainwindow_on_destroy(void* self, void (*callback)()) {
@@ -2594,8 +2594,8 @@ bool k_mainwindow_focus_next_child(void* self) {
     return KMainWindow_FocusNextChild((KMainWindow*)self);
 }
 
-bool k_mainwindow_qbase_focus_next_child(void* self) {
-    return KMainWindow_QBaseFocusNextChild((KMainWindow*)self);
+bool k_mainwindow_super_focus_next_child(void* self) {
+    return KMainWindow_SuperFocusNextChild((KMainWindow*)self);
 }
 
 void k_mainwindow_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2606,8 +2606,8 @@ bool k_mainwindow_focus_previous_child(void* self) {
     return KMainWindow_FocusPreviousChild((KMainWindow*)self);
 }
 
-bool k_mainwindow_qbase_focus_previous_child(void* self) {
-    return KMainWindow_QBaseFocusPreviousChild((KMainWindow*)self);
+bool k_mainwindow_super_focus_previous_child(void* self) {
+    return KMainWindow_SuperFocusPreviousChild((KMainWindow*)self);
 }
 
 void k_mainwindow_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2618,8 +2618,8 @@ QObject* k_mainwindow_sender(void* self) {
     return KMainWindow_Sender((KMainWindow*)self);
 }
 
-QObject* k_mainwindow_qbase_sender(void* self) {
-    return KMainWindow_QBaseSender((KMainWindow*)self);
+QObject* k_mainwindow_super_sender(void* self) {
+    return KMainWindow_SuperSender((KMainWindow*)self);
 }
 
 void k_mainwindow_on_sender(void* self, QObject* (*callback)()) {
@@ -2630,8 +2630,8 @@ int32_t k_mainwindow_sender_signal_index(void* self) {
     return KMainWindow_SenderSignalIndex((KMainWindow*)self);
 }
 
-int32_t k_mainwindow_qbase_sender_signal_index(void* self) {
-    return KMainWindow_QBaseSenderSignalIndex((KMainWindow*)self);
+int32_t k_mainwindow_super_sender_signal_index(void* self) {
+    return KMainWindow_SuperSenderSignalIndex((KMainWindow*)self);
 }
 
 void k_mainwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2642,8 +2642,8 @@ int32_t k_mainwindow_receivers(void* self, const char* signal) {
     return KMainWindow_Receivers((KMainWindow*)self, signal);
 }
 
-int32_t k_mainwindow_qbase_receivers(void* self, const char* signal) {
-    return KMainWindow_QBaseReceivers((KMainWindow*)self, signal);
+int32_t k_mainwindow_super_receivers(void* self, const char* signal) {
+    return KMainWindow_SuperReceivers((KMainWindow*)self, signal);
 }
 
 void k_mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2654,8 +2654,8 @@ bool k_mainwindow_is_signal_connected(void* self, void* signal) {
     return KMainWindow_IsSignalConnected((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
-bool k_mainwindow_qbase_is_signal_connected(void* self, void* signal) {
-    return KMainWindow_QBaseIsSignalConnected((KMainWindow*)self, (QMetaMethod*)signal);
+bool k_mainwindow_super_is_signal_connected(void* self, void* signal) {
+    return KMainWindow_SuperIsSignalConnected((KMainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2666,8 +2666,8 @@ double k_mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KMainWindow_GetDecodedMetricF((KMainWindow*)self, metricA, metricB);
 }
 
-double k_mainwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KMainWindow_QBaseGetDecodedMetricF((KMainWindow*)self, metricA, metricB);
+double k_mainwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KMainWindow_SuperGetDecodedMetricF((KMainWindow*)self, metricA, metricB);
 }
 
 void k_mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

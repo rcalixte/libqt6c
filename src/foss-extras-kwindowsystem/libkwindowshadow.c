@@ -48,8 +48,8 @@ void k_windowshadow_on_meta_object(void* self, const QMetaObject* (*callback)())
     KWindowShadow_OnMetaObject((KWindowShadow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_windowshadow_qbase_meta_object(void* self) {
-    return KWindowShadow_QBaseMetaObject((KWindowShadow*)self);
+const QMetaObject* k_windowshadow_super_meta_object(void* self) {
+    return KWindowShadow_SuperMetaObject((KWindowShadow*)self);
 }
 
 void* k_windowshadow_metacast(void* self, const char* param1) {
@@ -60,8 +60,8 @@ void k_windowshadow_on_metacast(void* self, void* (*callback)(void*, const char*
     KWindowShadow_OnMetacast((KWindowShadow*)self, (intptr_t)callback);
 }
 
-void* k_windowshadow_qbase_metacast(void* self, const char* param1) {
-    return KWindowShadow_QBaseMetacast((KWindowShadow*)self, param1);
+void* k_windowshadow_super_metacast(void* self, const char* param1) {
+    return KWindowShadow_SuperMetacast((KWindowShadow*)self, param1);
 }
 
 int32_t k_windowshadow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -72,8 +72,8 @@ void k_windowshadow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KWindowShadow_OnMetacall((KWindowShadow*)self, (intptr_t)callback);
 }
 
-int32_t k_windowshadow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KWindowShadow_QBaseMetacall((KWindowShadow*)self, param1, param2, param3);
+int32_t k_windowshadow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KWindowShadow_SuperMetacall((KWindowShadow*)self, param1, param2, param3);
 }
 
 const char* k_windowshadow_tr(const char* s) {
@@ -340,8 +340,8 @@ bool k_windowshadow_event(void* self, void* event) {
     return KWindowShadow_Event((KWindowShadow*)self, (QEvent*)event);
 }
 
-bool k_windowshadow_qbase_event(void* self, void* event) {
-    return KWindowShadow_QBaseEvent((KWindowShadow*)self, (QEvent*)event);
+bool k_windowshadow_super_event(void* self, void* event) {
+    return KWindowShadow_SuperEvent((KWindowShadow*)self, (QEvent*)event);
 }
 
 void k_windowshadow_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -352,8 +352,8 @@ bool k_windowshadow_event_filter(void* self, void* watched, void* event) {
     return KWindowShadow_EventFilter((KWindowShadow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_windowshadow_qbase_event_filter(void* self, void* watched, void* event) {
-    return KWindowShadow_QBaseEventFilter((KWindowShadow*)self, (QObject*)watched, (QEvent*)event);
+bool k_windowshadow_super_event_filter(void* self, void* watched, void* event) {
+    return KWindowShadow_SuperEventFilter((KWindowShadow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_windowshadow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -364,8 +364,8 @@ void k_windowshadow_timer_event(void* self, void* event) {
     KWindowShadow_TimerEvent((KWindowShadow*)self, (QTimerEvent*)event);
 }
 
-void k_windowshadow_qbase_timer_event(void* self, void* event) {
-    KWindowShadow_QBaseTimerEvent((KWindowShadow*)self, (QTimerEvent*)event);
+void k_windowshadow_super_timer_event(void* self, void* event) {
+    KWindowShadow_SuperTimerEvent((KWindowShadow*)self, (QTimerEvent*)event);
 }
 
 void k_windowshadow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ void k_windowshadow_child_event(void* self, void* event) {
     KWindowShadow_ChildEvent((KWindowShadow*)self, (QChildEvent*)event);
 }
 
-void k_windowshadow_qbase_child_event(void* self, void* event) {
-    KWindowShadow_QBaseChildEvent((KWindowShadow*)self, (QChildEvent*)event);
+void k_windowshadow_super_child_event(void* self, void* event) {
+    KWindowShadow_SuperChildEvent((KWindowShadow*)self, (QChildEvent*)event);
 }
 
 void k_windowshadow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ void k_windowshadow_custom_event(void* self, void* event) {
     KWindowShadow_CustomEvent((KWindowShadow*)self, (QEvent*)event);
 }
 
-void k_windowshadow_qbase_custom_event(void* self, void* event) {
-    KWindowShadow_QBaseCustomEvent((KWindowShadow*)self, (QEvent*)event);
+void k_windowshadow_super_custom_event(void* self, void* event) {
+    KWindowShadow_SuperCustomEvent((KWindowShadow*)self, (QEvent*)event);
 }
 
 void k_windowshadow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ void k_windowshadow_connect_notify(void* self, void* signal) {
     KWindowShadow_ConnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
-void k_windowshadow_qbase_connect_notify(void* self, void* signal) {
-    KWindowShadow_QBaseConnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
+void k_windowshadow_super_connect_notify(void* self, void* signal) {
+    KWindowShadow_SuperConnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
 void k_windowshadow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void k_windowshadow_disconnect_notify(void* self, void* signal) {
     KWindowShadow_DisconnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
-void k_windowshadow_qbase_disconnect_notify(void* self, void* signal) {
-    KWindowShadow_QBaseDisconnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
+void k_windowshadow_super_disconnect_notify(void* self, void* signal) {
+    KWindowShadow_SuperDisconnectNotify((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
 void k_windowshadow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ QObject* k_windowshadow_sender(void* self) {
     return KWindowShadow_Sender((KWindowShadow*)self);
 }
 
-QObject* k_windowshadow_qbase_sender(void* self) {
-    return KWindowShadow_QBaseSender((KWindowShadow*)self);
+QObject* k_windowshadow_super_sender(void* self) {
+    return KWindowShadow_SuperSender((KWindowShadow*)self);
 }
 
 void k_windowshadow_on_sender(void* self, QObject* (*callback)()) {
@@ -436,8 +436,8 @@ int32_t k_windowshadow_sender_signal_index(void* self) {
     return KWindowShadow_SenderSignalIndex((KWindowShadow*)self);
 }
 
-int32_t k_windowshadow_qbase_sender_signal_index(void* self) {
-    return KWindowShadow_QBaseSenderSignalIndex((KWindowShadow*)self);
+int32_t k_windowshadow_super_sender_signal_index(void* self) {
+    return KWindowShadow_SuperSenderSignalIndex((KWindowShadow*)self);
 }
 
 void k_windowshadow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -448,8 +448,8 @@ int32_t k_windowshadow_receivers(void* self, const char* signal) {
     return KWindowShadow_Receivers((KWindowShadow*)self, signal);
 }
 
-int32_t k_windowshadow_qbase_receivers(void* self, const char* signal) {
-    return KWindowShadow_QBaseReceivers((KWindowShadow*)self, signal);
+int32_t k_windowshadow_super_receivers(void* self, const char* signal) {
+    return KWindowShadow_SuperReceivers((KWindowShadow*)self, signal);
 }
 
 void k_windowshadow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -460,8 +460,8 @@ bool k_windowshadow_is_signal_connected(void* self, void* signal) {
     return KWindowShadow_IsSignalConnected((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
-bool k_windowshadow_qbase_is_signal_connected(void* self, void* signal) {
-    return KWindowShadow_QBaseIsSignalConnected((KWindowShadow*)self, (QMetaMethod*)signal);
+bool k_windowshadow_super_is_signal_connected(void* self, void* signal) {
+    return KWindowShadow_SuperIsSignalConnected((KWindowShadow*)self, (QMetaMethod*)signal);
 }
 
 void k_windowshadow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

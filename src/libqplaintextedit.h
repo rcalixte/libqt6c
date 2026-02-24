@@ -57,13 +57,17 @@ const QMetaObject* q_plaintextedit_meta_object(void* self);
 ///
 void q_plaintextedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_meta_object` instead
+///
+#define q_plaintextedit_qbase_meta_object q_plaintextedit_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 ///
-const QMetaObject* q_plaintextedit_qbase_meta_object(void* self);
+const QMetaObject* q_plaintextedit_super_meta_object(void* self);
 
 /// @param self QPlainTextEdit*
 /// @param param1 const char*
@@ -77,12 +81,16 @@ void* q_plaintextedit_metacast(void* self, const char* param1);
 ///
 void q_plaintextedit_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_metacast` instead
+///
+#define q_plaintextedit_qbase_metacast q_plaintextedit_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 /// @param param1 const char*
 ///
-void* q_plaintextedit_qbase_metacast(void* self, const char* param1);
+void* q_plaintextedit_super_metacast(void* self, const char* param1);
 
 /// @param self QPlainTextEdit*
 /// @param param1 enum QMetaObject__Call
@@ -98,6 +106,10 @@ int32_t q_plaintextedit_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_plaintextedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_metacall` instead
+///
+#define q_plaintextedit_qbase_metacall q_plaintextedit_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
@@ -105,7 +117,7 @@ void q_plaintextedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_plaintextedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_plaintextedit_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -359,6 +371,10 @@ QVariant* q_plaintextedit_load_resource(void* self, int type, void* name);
 ///
 void q_plaintextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_load_resource` instead
+///
+#define q_plaintextedit_qbase_load_resource q_plaintextedit_super_load_resource
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#loadResource)
 ///
 /// Base class method implementation
@@ -367,7 +383,7 @@ void q_plaintextedit_on_load_resource(void* self, QVariant* (*callback)(void*, i
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* q_plaintextedit_qbase_load_resource(void* self, int type, void* name);
+QVariant* q_plaintextedit_super_load_resource(void* self, int type, void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createStandardContextMenu)
 ///
@@ -507,6 +523,10 @@ QVariant* q_plaintextedit_input_method_query(void* self, int32_t property);
 ///
 void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_input_method_query` instead
+///
+#define q_plaintextedit_qbase_input_method_query q_plaintextedit_super_input_method_query
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
 /// Base class method implementation
@@ -514,7 +534,7 @@ void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(voi
 /// @param self QPlainTextEdit*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_plaintextedit_qbase_input_method_query(void* self, int32_t property);
+QVariant* q_plaintextedit_super_input_method_query(void* self, int32_t property);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
@@ -752,6 +772,10 @@ bool q_plaintextedit_event(void* self, void* e);
 ///
 void q_plaintextedit_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_event` instead
+///
+#define q_plaintextedit_qbase_event q_plaintextedit_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#event)
 ///
 /// Base class method implementation
@@ -759,7 +783,7 @@ void q_plaintextedit_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param e QEvent*
 ///
-bool q_plaintextedit_qbase_event(void* self, void* e);
+bool q_plaintextedit_super_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#timerEvent)
 ///
@@ -777,6 +801,10 @@ void q_plaintextedit_timer_event(void* self, void* e);
 ///
 void q_plaintextedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_timer_event` instead
+///
+#define q_plaintextedit_qbase_timer_event q_plaintextedit_super_timer_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#timerEvent)
 ///
 /// Base class method implementation
@@ -784,7 +812,7 @@ void q_plaintextedit_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param e QTimerEvent*
 ///
-void q_plaintextedit_qbase_timer_event(void* self, void* e);
+void q_plaintextedit_super_timer_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#keyPressEvent)
 ///
@@ -802,6 +830,10 @@ void q_plaintextedit_key_press_event(void* self, void* e);
 ///
 void q_plaintextedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_key_press_event` instead
+///
+#define q_plaintextedit_qbase_key_press_event q_plaintextedit_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -809,7 +841,7 @@ void q_plaintextedit_on_key_press_event(void* self, void (*callback)(void*, void
 /// @param self QPlainTextEdit*
 /// @param e QKeyEvent*
 ///
-void q_plaintextedit_qbase_key_press_event(void* self, void* e);
+void q_plaintextedit_super_key_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#keyReleaseEvent)
 ///
@@ -827,6 +859,10 @@ void q_plaintextedit_key_release_event(void* self, void* e);
 ///
 void q_plaintextedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_key_release_event` instead
+///
+#define q_plaintextedit_qbase_key_release_event q_plaintextedit_super_key_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#keyReleaseEvent)
 ///
 /// Base class method implementation
@@ -834,7 +870,7 @@ void q_plaintextedit_on_key_release_event(void* self, void (*callback)(void*, vo
 /// @param self QPlainTextEdit*
 /// @param e QKeyEvent*
 ///
-void q_plaintextedit_qbase_key_release_event(void* self, void* e);
+void q_plaintextedit_super_key_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
 ///
@@ -852,6 +888,10 @@ void q_plaintextedit_resize_event(void* self, void* e);
 ///
 void q_plaintextedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_resize_event` instead
+///
+#define q_plaintextedit_qbase_resize_event q_plaintextedit_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -859,7 +899,7 @@ void q_plaintextedit_on_resize_event(void* self, void (*callback)(void*, void*))
 /// @param self QPlainTextEdit*
 /// @param e QResizeEvent*
 ///
-void q_plaintextedit_qbase_resize_event(void* self, void* e);
+void q_plaintextedit_super_resize_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#paintEvent)
 ///
@@ -877,6 +917,10 @@ void q_plaintextedit_paint_event(void* self, void* e);
 ///
 void q_plaintextedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_paint_event` instead
+///
+#define q_plaintextedit_qbase_paint_event q_plaintextedit_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#paintEvent)
 ///
 /// Base class method implementation
@@ -884,7 +928,7 @@ void q_plaintextedit_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param e QPaintEvent*
 ///
-void q_plaintextedit_qbase_paint_event(void* self, void* e);
+void q_plaintextedit_super_paint_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
 ///
@@ -902,6 +946,10 @@ void q_plaintextedit_mouse_press_event(void* self, void* e);
 ///
 void q_plaintextedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_mouse_press_event` instead
+///
+#define q_plaintextedit_qbase_mouse_press_event q_plaintextedit_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -909,7 +957,7 @@ void q_plaintextedit_on_mouse_press_event(void* self, void (*callback)(void*, vo
 /// @param self QPlainTextEdit*
 /// @param e QMouseEvent*
 ///
-void q_plaintextedit_qbase_mouse_press_event(void* self, void* e);
+void q_plaintextedit_super_mouse_press_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseMoveEvent)
 ///
@@ -927,6 +975,10 @@ void q_plaintextedit_mouse_move_event(void* self, void* e);
 ///
 void q_plaintextedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_mouse_move_event` instead
+///
+#define q_plaintextedit_qbase_mouse_move_event q_plaintextedit_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -934,7 +986,7 @@ void q_plaintextedit_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param self QPlainTextEdit*
 /// @param e QMouseEvent*
 ///
-void q_plaintextedit_qbase_mouse_move_event(void* self, void* e);
+void q_plaintextedit_super_mouse_move_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
 ///
@@ -952,6 +1004,10 @@ void q_plaintextedit_mouse_release_event(void* self, void* e);
 ///
 void q_plaintextedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_mouse_release_event` instead
+///
+#define q_plaintextedit_qbase_mouse_release_event q_plaintextedit_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -959,7 +1015,7 @@ void q_plaintextedit_on_mouse_release_event(void* self, void (*callback)(void*, 
 /// @param self QPlainTextEdit*
 /// @param e QMouseEvent*
 ///
-void q_plaintextedit_qbase_mouse_release_event(void* self, void* e);
+void q_plaintextedit_super_mouse_release_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseDoubleClickEvent)
 ///
@@ -977,6 +1033,10 @@ void q_plaintextedit_mouse_double_click_event(void* self, void* e);
 ///
 void q_plaintextedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_mouse_double_click_event` instead
+///
+#define q_plaintextedit_qbase_mouse_double_click_event q_plaintextedit_super_mouse_double_click_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -984,7 +1044,7 @@ void q_plaintextedit_on_mouse_double_click_event(void* self, void (*callback)(vo
 /// @param self QPlainTextEdit*
 /// @param e QMouseEvent*
 ///
-void q_plaintextedit_qbase_mouse_double_click_event(void* self, void* e);
+void q_plaintextedit_super_mouse_double_click_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
 ///
@@ -1002,6 +1062,10 @@ bool q_plaintextedit_focus_next_prev_child(void* self, bool next);
 ///
 void q_plaintextedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_focus_next_prev_child` instead
+///
+#define q_plaintextedit_qbase_focus_next_prev_child q_plaintextedit_super_focus_next_prev_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
 ///
 /// Base class method implementation
@@ -1009,7 +1073,7 @@ void q_plaintextedit_on_focus_next_prev_child(void* self, bool (*callback)(void*
 /// @param self QPlainTextEdit*
 /// @param next bool
 ///
-bool q_plaintextedit_qbase_focus_next_prev_child(void* self, bool next);
+bool q_plaintextedit_super_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contextMenuEvent)
 ///
@@ -1027,6 +1091,10 @@ void q_plaintextedit_context_menu_event(void* self, void* e);
 ///
 void q_plaintextedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_context_menu_event` instead
+///
+#define q_plaintextedit_qbase_context_menu_event q_plaintextedit_super_context_menu_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contextMenuEvent)
 ///
 /// Base class method implementation
@@ -1034,7 +1102,7 @@ void q_plaintextedit_on_context_menu_event(void* self, void (*callback)(void*, v
 /// @param self QPlainTextEdit*
 /// @param e QContextMenuEvent*
 ///
-void q_plaintextedit_qbase_context_menu_event(void* self, void* e);
+void q_plaintextedit_super_context_menu_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragEnterEvent)
 ///
@@ -1052,6 +1120,10 @@ void q_plaintextedit_drag_enter_event(void* self, void* e);
 ///
 void q_plaintextedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_drag_enter_event` instead
+///
+#define q_plaintextedit_qbase_drag_enter_event q_plaintextedit_super_drag_enter_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -1059,7 +1131,7 @@ void q_plaintextedit_on_drag_enter_event(void* self, void (*callback)(void*, voi
 /// @param self QPlainTextEdit*
 /// @param e QDragEnterEvent*
 ///
-void q_plaintextedit_qbase_drag_enter_event(void* self, void* e);
+void q_plaintextedit_super_drag_enter_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragLeaveEvent)
 ///
@@ -1077,6 +1149,10 @@ void q_plaintextedit_drag_leave_event(void* self, void* e);
 ///
 void q_plaintextedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_drag_leave_event` instead
+///
+#define q_plaintextedit_qbase_drag_leave_event q_plaintextedit_super_drag_leave_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragLeaveEvent)
 ///
 /// Base class method implementation
@@ -1084,7 +1160,7 @@ void q_plaintextedit_on_drag_leave_event(void* self, void (*callback)(void*, voi
 /// @param self QPlainTextEdit*
 /// @param e QDragLeaveEvent*
 ///
-void q_plaintextedit_qbase_drag_leave_event(void* self, void* e);
+void q_plaintextedit_super_drag_leave_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragMoveEvent)
 ///
@@ -1102,6 +1178,10 @@ void q_plaintextedit_drag_move_event(void* self, void* e);
 ///
 void q_plaintextedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_drag_move_event` instead
+///
+#define q_plaintextedit_qbase_drag_move_event q_plaintextedit_super_drag_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -1109,7 +1189,7 @@ void q_plaintextedit_on_drag_move_event(void* self, void (*callback)(void*, void
 /// @param self QPlainTextEdit*
 /// @param e QDragMoveEvent*
 ///
-void q_plaintextedit_qbase_drag_move_event(void* self, void* e);
+void q_plaintextedit_super_drag_move_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dropEvent)
 ///
@@ -1127,6 +1207,10 @@ void q_plaintextedit_drop_event(void* self, void* e);
 ///
 void q_plaintextedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_drop_event` instead
+///
+#define q_plaintextedit_qbase_drop_event q_plaintextedit_super_drop_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dropEvent)
 ///
 /// Base class method implementation
@@ -1134,7 +1218,7 @@ void q_plaintextedit_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param e QDropEvent*
 ///
-void q_plaintextedit_qbase_drop_event(void* self, void* e);
+void q_plaintextedit_super_drop_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusInEvent)
 ///
@@ -1152,6 +1236,10 @@ void q_plaintextedit_focus_in_event(void* self, void* e);
 ///
 void q_plaintextedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_focus_in_event` instead
+///
+#define q_plaintextedit_qbase_focus_in_event q_plaintextedit_super_focus_in_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -1159,7 +1247,7 @@ void q_plaintextedit_on_focus_in_event(void* self, void (*callback)(void*, void*
 /// @param self QPlainTextEdit*
 /// @param e QFocusEvent*
 ///
-void q_plaintextedit_qbase_focus_in_event(void* self, void* e);
+void q_plaintextedit_super_focus_in_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusOutEvent)
 ///
@@ -1177,6 +1265,10 @@ void q_plaintextedit_focus_out_event(void* self, void* e);
 ///
 void q_plaintextedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_focus_out_event` instead
+///
+#define q_plaintextedit_qbase_focus_out_event q_plaintextedit_super_focus_out_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -1184,7 +1276,7 @@ void q_plaintextedit_on_focus_out_event(void* self, void (*callback)(void*, void
 /// @param self QPlainTextEdit*
 /// @param e QFocusEvent*
 ///
-void q_plaintextedit_qbase_focus_out_event(void* self, void* e);
+void q_plaintextedit_super_focus_out_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#showEvent)
 ///
@@ -1202,6 +1294,10 @@ void q_plaintextedit_show_event(void* self, void* param1);
 ///
 void q_plaintextedit_on_show_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_show_event` instead
+///
+#define q_plaintextedit_qbase_show_event q_plaintextedit_super_show_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#showEvent)
 ///
 /// Base class method implementation
@@ -1209,7 +1305,7 @@ void q_plaintextedit_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param param1 QShowEvent*
 ///
-void q_plaintextedit_qbase_show_event(void* self, void* param1);
+void q_plaintextedit_super_show_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
 ///
@@ -1227,6 +1323,10 @@ void q_plaintextedit_change_event(void* self, void* e);
 ///
 void q_plaintextedit_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_change_event` instead
+///
+#define q_plaintextedit_qbase_change_event q_plaintextedit_super_change_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
 ///
 /// Base class method implementation
@@ -1234,7 +1334,7 @@ void q_plaintextedit_on_change_event(void* self, void (*callback)(void*, void*))
 /// @param self QPlainTextEdit*
 /// @param e QEvent*
 ///
-void q_plaintextedit_qbase_change_event(void* self, void* e);
+void q_plaintextedit_super_change_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#wheelEvent)
 ///
@@ -1252,6 +1352,10 @@ void q_plaintextedit_wheel_event(void* self, void* e);
 ///
 void q_plaintextedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_wheel_event` instead
+///
+#define q_plaintextedit_qbase_wheel_event q_plaintextedit_super_wheel_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -1259,7 +1363,7 @@ void q_plaintextedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param self QPlainTextEdit*
 /// @param e QWheelEvent*
 ///
-void q_plaintextedit_qbase_wheel_event(void* self, void* e);
+void q_plaintextedit_super_wheel_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
 ///
@@ -1276,13 +1380,17 @@ QMimeData* q_plaintextedit_create_mime_data_from_selection(void* self);
 ///
 void q_plaintextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_create_mime_data_from_selection` instead
+///
+#define q_plaintextedit_qbase_create_mime_data_from_selection q_plaintextedit_super_create_mime_data_from_selection
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 ///
-QMimeData* q_plaintextedit_qbase_create_mime_data_from_selection(void* self);
+QMimeData* q_plaintextedit_super_create_mime_data_from_selection(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#canInsertFromMimeData)
 ///
@@ -1300,6 +1408,10 @@ bool q_plaintextedit_can_insert_from_mime_data(void* self, void* source);
 ///
 void q_plaintextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_can_insert_from_mime_data` instead
+///
+#define q_plaintextedit_qbase_can_insert_from_mime_data q_plaintextedit_super_can_insert_from_mime_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#canInsertFromMimeData)
 ///
 /// Base class method implementation
@@ -1307,7 +1419,7 @@ void q_plaintextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(v
 /// @param self QPlainTextEdit*
 /// @param source QMimeData*
 ///
-bool q_plaintextedit_qbase_can_insert_from_mime_data(void* self, void* source);
+bool q_plaintextedit_super_can_insert_from_mime_data(void* self, void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
 ///
@@ -1325,6 +1437,10 @@ void q_plaintextedit_insert_from_mime_data(void* self, void* source);
 ///
 void q_plaintextedit_on_insert_from_mime_data(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_insert_from_mime_data` instead
+///
+#define q_plaintextedit_qbase_insert_from_mime_data q_plaintextedit_super_insert_from_mime_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
 ///
 /// Base class method implementation
@@ -1332,7 +1448,7 @@ void q_plaintextedit_on_insert_from_mime_data(void* self, void (*callback)(void*
 /// @param self QPlainTextEdit*
 /// @param source QMimeData*
 ///
-void q_plaintextedit_qbase_insert_from_mime_data(void* self, void* source);
+void q_plaintextedit_super_insert_from_mime_data(void* self, void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodEvent)
 ///
@@ -1350,6 +1466,10 @@ void q_plaintextedit_input_method_event(void* self, void* param1);
 ///
 void q_plaintextedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_input_method_event` instead
+///
+#define q_plaintextedit_qbase_input_method_event q_plaintextedit_super_input_method_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodEvent)
 ///
 /// Base class method implementation
@@ -1357,7 +1477,7 @@ void q_plaintextedit_on_input_method_event(void* self, void (*callback)(void*, v
 /// @param self QPlainTextEdit*
 /// @param param1 QInputMethodEvent*
 ///
-void q_plaintextedit_qbase_input_method_event(void* self, void* param1);
+void q_plaintextedit_super_input_method_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
 ///
@@ -1376,6 +1496,10 @@ void q_plaintextedit_scroll_contents_by(void* self, int dx, int dy);
 ///
 void q_plaintextedit_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_scroll_contents_by` instead
+///
+#define q_plaintextedit_qbase_scroll_contents_by q_plaintextedit_super_scroll_contents_by
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
 ///
 /// Base class method implementation
@@ -1384,7 +1508,7 @@ void q_plaintextedit_on_scroll_contents_by(void* self, void (*callback)(void*, i
 /// @param dx int
 /// @param dy int
 ///
-void q_plaintextedit_qbase_scroll_contents_by(void* self, int dx, int dy);
+void q_plaintextedit_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
 ///
@@ -1402,6 +1526,10 @@ void q_plaintextedit_do_set_text_cursor(void* self, void* cursor);
 ///
 void q_plaintextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_do_set_text_cursor` instead
+///
+#define q_plaintextedit_qbase_do_set_text_cursor q_plaintextedit_super_do_set_text_cursor
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
 ///
 /// Base class method implementation
@@ -1409,7 +1537,7 @@ void q_plaintextedit_on_do_set_text_cursor(void* self, void (*callback)(void*, v
 /// @param self QPlainTextEdit*
 /// @param cursor QTextCursor*
 ///
-void q_plaintextedit_qbase_do_set_text_cursor(void* self, void* cursor);
+void q_plaintextedit_super_do_set_text_cursor(void* self, void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#firstVisibleBlock)
 ///
@@ -1426,13 +1554,17 @@ QTextBlock* q_plaintextedit_first_visible_block(void* self);
 ///
 void q_plaintextedit_on_first_visible_block(void* self, QTextBlock* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_first_visible_block` instead
+///
+#define q_plaintextedit_qbase_first_visible_block q_plaintextedit_super_first_visible_block
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#firstVisibleBlock)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 ///
-QTextBlock* q_plaintextedit_qbase_first_visible_block(void* self);
+QTextBlock* q_plaintextedit_super_first_visible_block(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
 ///
@@ -1449,13 +1581,17 @@ QPointF* q_plaintextedit_content_offset(void* self);
 ///
 void q_plaintextedit_on_content_offset(void* self, QPointF* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_content_offset` instead
+///
+#define q_plaintextedit_qbase_content_offset q_plaintextedit_super_content_offset
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 ///
-QPointF* q_plaintextedit_qbase_content_offset(void* self);
+QPointF* q_plaintextedit_super_content_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingRect)
 ///
@@ -1473,6 +1609,10 @@ QRectF* q_plaintextedit_block_bounding_rect(void* self, void* block);
 ///
 void q_plaintextedit_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_block_bounding_rect` instead
+///
+#define q_plaintextedit_qbase_block_bounding_rect q_plaintextedit_super_block_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingRect)
 ///
 /// Base class method implementation
@@ -1480,7 +1620,7 @@ void q_plaintextedit_on_block_bounding_rect(void* self, QRectF* (*callback)(void
 /// @param self QPlainTextEdit*
 /// @param block QTextBlock*
 ///
-QRectF* q_plaintextedit_qbase_block_bounding_rect(void* self, void* block);
+QRectF* q_plaintextedit_super_block_bounding_rect(void* self, void* block);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
 ///
@@ -1498,6 +1638,10 @@ QRectF* q_plaintextedit_block_bounding_geometry(void* self, void* block);
 ///
 void q_plaintextedit_on_block_bounding_geometry(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_block_bounding_geometry` instead
+///
+#define q_plaintextedit_qbase_block_bounding_geometry q_plaintextedit_super_block_bounding_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
 ///
 /// Base class method implementation
@@ -1505,7 +1649,7 @@ void q_plaintextedit_on_block_bounding_geometry(void* self, QRectF* (*callback)(
 /// @param self QPlainTextEdit*
 /// @param block QTextBlock*
 ///
-QRectF* q_plaintextedit_qbase_block_bounding_geometry(void* self, void* block);
+QRectF* q_plaintextedit_super_block_bounding_geometry(void* self, void* block);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
 ///
@@ -1522,13 +1666,17 @@ QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_get_paint_context(voi
 ///
 void q_plaintextedit_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_get_paint_context` instead
+///
+#define q_plaintextedit_qbase_get_paint_context q_plaintextedit_super_get_paint_context
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextEdit*
 ///
-QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_qbase_get_paint_context(void* self);
+QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_super_get_paint_context(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#zoomInF)
 ///
@@ -1546,6 +1694,10 @@ void q_plaintextedit_zoom_in_f(void* self, float range);
 ///
 void q_plaintextedit_on_zoom_in_f(void* self, void (*callback)(void*, float));
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_zoom_in_f` instead
+///
+#define q_plaintextedit_qbase_zoom_in_f q_plaintextedit_super_zoom_in_f
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#zoomInF)
 ///
 /// Base class method implementation
@@ -1553,7 +1705,7 @@ void q_plaintextedit_on_zoom_in_f(void* self, void (*callback)(void*, float));
 /// @param self QPlainTextEdit*
 /// @param range float
 ///
-void q_plaintextedit_qbase_zoom_in_f(void* self, float range);
+void q_plaintextedit_super_zoom_in_f(void* self, float range);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4839,6 +4991,10 @@ int32_t q_plaintextedit_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_plaintextedit_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_minimum_size_hint` instead
+///
+#define q_plaintextedit_qbase_minimum_size_hint q_plaintextedit_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -4847,7 +5003,7 @@ QSize* q_plaintextedit_minimum_size_hint(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QSize* q_plaintextedit_qbase_minimum_size_hint(void* self);
+QSize* q_plaintextedit_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4870,6 +5026,10 @@ void q_plaintextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* q_plaintextedit_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_size_hint` instead
+///
+#define q_plaintextedit_qbase_size_hint q_plaintextedit_super_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
@@ -4878,7 +5038,7 @@ QSize* q_plaintextedit_size_hint(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QSize* q_plaintextedit_qbase_size_hint(void* self);
+QSize* q_plaintextedit_super_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4902,6 +5062,10 @@ void q_plaintextedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_plaintextedit_setup_viewport(void* self, void* viewport);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_setup_viewport` instead
+///
+#define q_plaintextedit_qbase_setup_viewport q_plaintextedit_super_setup_viewport
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -4911,7 +5075,7 @@ void q_plaintextedit_setup_viewport(void* self, void* viewport);
 /// @param self QPlainTextEdit*
 /// @param viewport QWidget*
 ///
-void q_plaintextedit_qbase_setup_viewport(void* self, void* viewport);
+void q_plaintextedit_super_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4936,6 +5100,10 @@ void q_plaintextedit_on_setup_viewport(void* self, void (*callback)(void*, void*
 ///
 bool q_plaintextedit_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_event_filter` instead
+///
+#define q_plaintextedit_qbase_event_filter q_plaintextedit_super_event_filter
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
@@ -4946,7 +5114,7 @@ bool q_plaintextedit_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_plaintextedit_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_plaintextedit_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4970,6 +5138,10 @@ void q_plaintextedit_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 bool q_plaintextedit_viewport_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_viewport_event` instead
+///
+#define q_plaintextedit_qbase_viewport_event q_plaintextedit_super_viewport_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -4979,7 +5151,7 @@ bool q_plaintextedit_viewport_event(void* self, void* param1);
 /// @param self QPlainTextEdit*
 /// @param param1 QEvent*
 ///
-bool q_plaintextedit_qbase_viewport_event(void* self, void* param1);
+bool q_plaintextedit_super_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5002,6 +5174,10 @@ void q_plaintextedit_on_viewport_event(void* self, bool (*callback)(void*, void*
 ///
 QSize* q_plaintextedit_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_viewport_size_hint` instead
+///
+#define q_plaintextedit_qbase_viewport_size_hint q_plaintextedit_super_viewport_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -5010,7 +5186,7 @@ QSize* q_plaintextedit_viewport_size_hint(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QSize* q_plaintextedit_qbase_viewport_size_hint(void* self);
+QSize* q_plaintextedit_super_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5034,6 +5210,10 @@ void q_plaintextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_plaintextedit_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_init_style_option` instead
+///
+#define q_plaintextedit_qbase_init_style_option q_plaintextedit_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -5043,7 +5223,7 @@ void q_plaintextedit_init_style_option(void* self, void* option);
 /// @param self QPlainTextEdit*
 /// @param option QStyleOptionFrame*
 ///
-void q_plaintextedit_qbase_init_style_option(void* self, void* option);
+void q_plaintextedit_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -5066,6 +5246,10 @@ void q_plaintextedit_on_init_style_option(void* self, void (*callback)(void*, vo
 ///
 int32_t q_plaintextedit_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_dev_type` instead
+///
+#define q_plaintextedit_qbase_dev_type q_plaintextedit_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5074,7 +5258,7 @@ int32_t q_plaintextedit_dev_type(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-int32_t q_plaintextedit_qbase_dev_type(void* self);
+int32_t q_plaintextedit_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5098,6 +5282,10 @@ void q_plaintextedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_plaintextedit_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_set_visible` instead
+///
+#define q_plaintextedit_qbase_set_visible q_plaintextedit_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5107,7 +5295,7 @@ void q_plaintextedit_set_visible(void* self, bool visible);
 /// @param self QPlainTextEdit*
 /// @param visible bool
 ///
-void q_plaintextedit_qbase_set_visible(void* self, bool visible);
+void q_plaintextedit_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -5131,6 +5319,10 @@ void q_plaintextedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_plaintextedit_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_height_for_width` instead
+///
+#define q_plaintextedit_qbase_height_for_width q_plaintextedit_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5140,7 +5332,7 @@ int32_t q_plaintextedit_height_for_width(void* self, int param1);
 /// @param self QPlainTextEdit*
 /// @param param1 int
 ///
-int32_t q_plaintextedit_qbase_height_for_width(void* self, int param1);
+int32_t q_plaintextedit_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5163,6 +5355,10 @@ void q_plaintextedit_on_height_for_width(void* self, int32_t (*callback)(void*, 
 ///
 bool q_plaintextedit_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_has_height_for_width` instead
+///
+#define q_plaintextedit_qbase_has_height_for_width q_plaintextedit_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5171,7 +5367,7 @@ bool q_plaintextedit_has_height_for_width(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-bool q_plaintextedit_qbase_has_height_for_width(void* self);
+bool q_plaintextedit_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5194,6 +5390,10 @@ void q_plaintextedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_plaintextedit_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_paint_engine` instead
+///
+#define q_plaintextedit_qbase_paint_engine q_plaintextedit_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5202,7 +5402,7 @@ QPaintEngine* q_plaintextedit_paint_engine(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QPaintEngine* q_plaintextedit_qbase_paint_engine(void* self);
+QPaintEngine* q_plaintextedit_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5226,6 +5426,10 @@ void q_plaintextedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_plaintextedit_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_enter_event` instead
+///
+#define q_plaintextedit_qbase_enter_event q_plaintextedit_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5235,7 +5439,7 @@ void q_plaintextedit_enter_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QEnterEvent*
 ///
-void q_plaintextedit_qbase_enter_event(void* self, void* event);
+void q_plaintextedit_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5259,6 +5463,10 @@ void q_plaintextedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_leave_event` instead
+///
+#define q_plaintextedit_qbase_leave_event q_plaintextedit_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5268,7 +5476,7 @@ void q_plaintextedit_leave_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QEvent*
 ///
-void q_plaintextedit_qbase_leave_event(void* self, void* event);
+void q_plaintextedit_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5292,6 +5500,10 @@ void q_plaintextedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_move_event` instead
+///
+#define q_plaintextedit_qbase_move_event q_plaintextedit_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5301,7 +5513,7 @@ void q_plaintextedit_move_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QMoveEvent*
 ///
-void q_plaintextedit_qbase_move_event(void* self, void* event);
+void q_plaintextedit_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5325,6 +5537,10 @@ void q_plaintextedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_close_event` instead
+///
+#define q_plaintextedit_qbase_close_event q_plaintextedit_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5334,7 +5550,7 @@ void q_plaintextedit_close_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QCloseEvent*
 ///
-void q_plaintextedit_qbase_close_event(void* self, void* event);
+void q_plaintextedit_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5358,6 +5574,10 @@ void q_plaintextedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_tablet_event` instead
+///
+#define q_plaintextedit_qbase_tablet_event q_plaintextedit_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5367,7 +5587,7 @@ void q_plaintextedit_tablet_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QTabletEvent*
 ///
-void q_plaintextedit_qbase_tablet_event(void* self, void* event);
+void q_plaintextedit_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5391,6 +5611,10 @@ void q_plaintextedit_on_tablet_event(void* self, void (*callback)(void*, void*))
 ///
 void q_plaintextedit_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_action_event` instead
+///
+#define q_plaintextedit_qbase_action_event q_plaintextedit_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5400,7 +5624,7 @@ void q_plaintextedit_action_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QActionEvent*
 ///
-void q_plaintextedit_qbase_action_event(void* self, void* event);
+void q_plaintextedit_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5424,6 +5648,10 @@ void q_plaintextedit_on_action_event(void* self, void (*callback)(void*, void*))
 ///
 void q_plaintextedit_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_hide_event` instead
+///
+#define q_plaintextedit_qbase_hide_event q_plaintextedit_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -5433,7 +5661,7 @@ void q_plaintextedit_hide_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QHideEvent*
 ///
-void q_plaintextedit_qbase_hide_event(void* self, void* event);
+void q_plaintextedit_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5459,6 +5687,10 @@ void q_plaintextedit_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_plaintextedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_native_event` instead
+///
+#define q_plaintextedit_qbase_native_event q_plaintextedit_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5470,7 +5702,7 @@ bool q_plaintextedit_native_event(void* self, char* eventType, void* message, in
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_plaintextedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_plaintextedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5494,6 +5726,10 @@ void q_plaintextedit_on_native_event(void* self, bool (*callback)(void*, libqt_s
 ///
 int32_t q_plaintextedit_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_metric` instead
+///
+#define q_plaintextedit_qbase_metric q_plaintextedit_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5503,7 +5739,7 @@ int32_t q_plaintextedit_metric(void* self, int32_t param1);
 /// @param self QPlainTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_plaintextedit_qbase_metric(void* self, int32_t param1);
+int32_t q_plaintextedit_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5527,6 +5763,10 @@ void q_plaintextedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_plaintextedit_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_init_painter` instead
+///
+#define q_plaintextedit_qbase_init_painter q_plaintextedit_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5536,7 +5776,7 @@ void q_plaintextedit_init_painter(void* self, void* painter);
 /// @param self QPlainTextEdit*
 /// @param painter QPainter*
 ///
-void q_plaintextedit_qbase_init_painter(void* self, void* painter);
+void q_plaintextedit_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5560,6 +5800,10 @@ void q_plaintextedit_on_init_painter(void* self, void (*callback)(void*, void*))
 ///
 QPaintDevice* q_plaintextedit_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_redirected` instead
+///
+#define q_plaintextedit_qbase_redirected q_plaintextedit_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5569,7 +5813,7 @@ QPaintDevice* q_plaintextedit_redirected(void* self, void* offset);
 /// @param self QPlainTextEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_plaintextedit_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_plaintextedit_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5592,6 +5836,10 @@ void q_plaintextedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, 
 ///
 QPainter* q_plaintextedit_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_shared_painter` instead
+///
+#define q_plaintextedit_qbase_shared_painter q_plaintextedit_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5600,7 +5848,7 @@ QPainter* q_plaintextedit_shared_painter(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QPainter* q_plaintextedit_qbase_shared_painter(void* self);
+QPainter* q_plaintextedit_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5624,6 +5872,10 @@ void q_plaintextedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_plaintextedit_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_child_event` instead
+///
+#define q_plaintextedit_qbase_child_event q_plaintextedit_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5633,7 +5885,7 @@ void q_plaintextedit_child_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QChildEvent*
 ///
-void q_plaintextedit_qbase_child_event(void* self, void* event);
+void q_plaintextedit_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5657,6 +5909,10 @@ void q_plaintextedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_custom_event` instead
+///
+#define q_plaintextedit_qbase_custom_event q_plaintextedit_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5666,7 +5922,7 @@ void q_plaintextedit_custom_event(void* self, void* event);
 /// @param self QPlainTextEdit*
 /// @param event QEvent*
 ///
-void q_plaintextedit_qbase_custom_event(void* self, void* event);
+void q_plaintextedit_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5690,6 +5946,10 @@ void q_plaintextedit_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_plaintextedit_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_connect_notify` instead
+///
+#define q_plaintextedit_qbase_connect_notify q_plaintextedit_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5699,7 +5959,7 @@ void q_plaintextedit_connect_notify(void* self, void* signal);
 /// @param self QPlainTextEdit*
 /// @param signal QMetaMethod*
 ///
-void q_plaintextedit_qbase_connect_notify(void* self, void* signal);
+void q_plaintextedit_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5723,6 +5983,10 @@ void q_plaintextedit_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_plaintextedit_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_disconnect_notify` instead
+///
+#define q_plaintextedit_qbase_disconnect_notify q_plaintextedit_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5732,7 +5996,7 @@ void q_plaintextedit_disconnect_notify(void* self, void* signal);
 /// @param self QPlainTextEdit*
 /// @param signal QMetaMethod*
 ///
-void q_plaintextedit_qbase_disconnect_notify(void* self, void* signal);
+void q_plaintextedit_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5759,6 +6023,10 @@ void q_plaintextedit_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_plaintextedit_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_set_viewport_margins` instead
+///
+#define q_plaintextedit_qbase_set_viewport_margins q_plaintextedit_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -5771,7 +6039,7 @@ void q_plaintextedit_set_viewport_margins(void* self, int left, int top, int rig
 /// @param right int
 /// @param bottom int
 ///
-void q_plaintextedit_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void q_plaintextedit_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5794,6 +6062,10 @@ void q_plaintextedit_on_set_viewport_margins(void* self, void (*callback)(void*,
 ///
 QMargins* q_plaintextedit_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_viewport_margins` instead
+///
+#define q_plaintextedit_qbase_viewport_margins q_plaintextedit_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -5802,7 +6074,7 @@ QMargins* q_plaintextedit_viewport_margins(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QMargins* q_plaintextedit_qbase_viewport_margins(void* self);
+QMargins* q_plaintextedit_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5826,6 +6098,10 @@ void q_plaintextedit_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_plaintextedit_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_draw_frame` instead
+///
+#define q_plaintextedit_qbase_draw_frame q_plaintextedit_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5835,7 +6111,7 @@ void q_plaintextedit_draw_frame(void* self, void* param1);
 /// @param self QPlainTextEdit*
 /// @param param1 QPainter*
 ///
-void q_plaintextedit_qbase_draw_frame(void* self, void* param1);
+void q_plaintextedit_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -5858,6 +6134,10 @@ void q_plaintextedit_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_plaintextedit_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_update_micro_focus` instead
+///
+#define q_plaintextedit_qbase_update_micro_focus q_plaintextedit_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5866,7 +6146,7 @@ void q_plaintextedit_update_micro_focus(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-void q_plaintextedit_qbase_update_micro_focus(void* self);
+void q_plaintextedit_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5889,6 +6169,10 @@ void q_plaintextedit_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_plaintextedit_create(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_create` instead
+///
+#define q_plaintextedit_qbase_create q_plaintextedit_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5897,7 +6181,7 @@ void q_plaintextedit_create(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-void q_plaintextedit_qbase_create(void* self);
+void q_plaintextedit_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5920,6 +6204,10 @@ void q_plaintextedit_on_create(void* self, void (*callback)());
 ///
 void q_plaintextedit_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_destroy` instead
+///
+#define q_plaintextedit_qbase_destroy q_plaintextedit_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5928,7 +6216,7 @@ void q_plaintextedit_destroy(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-void q_plaintextedit_qbase_destroy(void* self);
+void q_plaintextedit_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5951,6 +6239,10 @@ void q_plaintextedit_on_destroy(void* self, void (*callback)());
 ///
 bool q_plaintextedit_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_focus_next_child` instead
+///
+#define q_plaintextedit_qbase_focus_next_child q_plaintextedit_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5959,7 +6251,7 @@ bool q_plaintextedit_focus_next_child(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-bool q_plaintextedit_qbase_focus_next_child(void* self);
+bool q_plaintextedit_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5982,6 +6274,10 @@ void q_plaintextedit_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_plaintextedit_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_focus_previous_child` instead
+///
+#define q_plaintextedit_qbase_focus_previous_child q_plaintextedit_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5990,7 +6286,7 @@ bool q_plaintextedit_focus_previous_child(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-bool q_plaintextedit_qbase_focus_previous_child(void* self);
+bool q_plaintextedit_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6013,6 +6309,10 @@ void q_plaintextedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_plaintextedit_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_sender` instead
+///
+#define q_plaintextedit_qbase_sender q_plaintextedit_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6021,7 +6321,7 @@ QObject* q_plaintextedit_sender(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-QObject* q_plaintextedit_qbase_sender(void* self);
+QObject* q_plaintextedit_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6044,6 +6344,10 @@ void q_plaintextedit_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_plaintextedit_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_sender_signal_index` instead
+///
+#define q_plaintextedit_qbase_sender_signal_index q_plaintextedit_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6052,7 +6356,7 @@ int32_t q_plaintextedit_sender_signal_index(void* self);
 ///
 /// @param self QPlainTextEdit*
 ///
-int32_t q_plaintextedit_qbase_sender_signal_index(void* self);
+int32_t q_plaintextedit_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6076,6 +6380,10 @@ void q_plaintextedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_plaintextedit_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_receivers` instead
+///
+#define q_plaintextedit_qbase_receivers q_plaintextedit_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6085,7 +6393,7 @@ int32_t q_plaintextedit_receivers(void* self, const char* signal);
 /// @param self QPlainTextEdit*
 /// @param signal const char*
 ///
-int32_t q_plaintextedit_qbase_receivers(void* self, const char* signal);
+int32_t q_plaintextedit_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6109,6 +6417,10 @@ void q_plaintextedit_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_plaintextedit_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_is_signal_connected` instead
+///
+#define q_plaintextedit_qbase_is_signal_connected q_plaintextedit_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6118,7 +6430,7 @@ bool q_plaintextedit_is_signal_connected(void* self, void* signal);
 /// @param self QPlainTextEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_plaintextedit_qbase_is_signal_connected(void* self, void* signal);
+bool q_plaintextedit_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6143,6 +6455,10 @@ void q_plaintextedit_on_is_signal_connected(void* self, bool (*callback)(void*, 
 ///
 double q_plaintextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_plaintextedit_super_get_decoded_metric_f` instead
+///
+#define q_plaintextedit_qbase_get_decoded_metric_f q_plaintextedit_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -6153,7 +6469,7 @@ double q_plaintextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_plaintextedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_plaintextedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6208,13 +6524,17 @@ const QMetaObject* q_plaintextdocumentlayout_meta_object(void* self);
 ///
 void q_plaintextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_meta_object` instead
+///
+#define q_plaintextdocumentlayout_qbase_meta_object q_plaintextdocumentlayout_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-const QMetaObject* q_plaintextdocumentlayout_qbase_meta_object(void* self);
+const QMetaObject* q_plaintextdocumentlayout_super_meta_object(void* self);
 
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 const char*
@@ -6228,12 +6548,16 @@ void* q_plaintextdocumentlayout_metacast(void* self, const char* param1);
 ///
 void q_plaintextdocumentlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_metacast` instead
+///
+#define q_plaintextdocumentlayout_qbase_metacast q_plaintextdocumentlayout_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 const char*
 ///
-void* q_plaintextdocumentlayout_qbase_metacast(void* self, const char* param1);
+void* q_plaintextdocumentlayout_super_metacast(void* self, const char* param1);
 
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 enum QMetaObject__Call
@@ -6249,6 +6573,10 @@ int32_t q_plaintextdocumentlayout_metacall(void* self, int32_t param1, int param
 ///
 void q_plaintextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_metacall` instead
+///
+#define q_plaintextdocumentlayout_qbase_metacall q_plaintextdocumentlayout_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPlainTextDocumentLayout*
@@ -6256,7 +6584,7 @@ void q_plaintextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_plaintextdocumentlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_plaintextdocumentlayout_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -6283,6 +6611,10 @@ void q_plaintextdocumentlayout_draw(void* self, void* param1, void* param2);
 ///
 void q_plaintextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_draw` instead
+///
+#define q_plaintextdocumentlayout_qbase_draw q_plaintextdocumentlayout_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#draw)
 ///
 /// Base class method implementation
@@ -6291,7 +6623,7 @@ void q_plaintextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*
 /// @param param1 QPainter*
 /// @param param2 QAbstractTextDocumentLayout__PaintContext*
 ///
-void q_plaintextdocumentlayout_qbase_draw(void* self, void* param1, void* param2);
+void q_plaintextdocumentlayout_super_draw(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
 ///
@@ -6310,6 +6642,10 @@ int32_t q_plaintextdocumentlayout_hit_test(void* self, void* param1, int32_t par
 ///
 void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_hit_test` instead
+///
+#define q_plaintextdocumentlayout_qbase_hit_test q_plaintextdocumentlayout_super_hit_test
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
 ///
 /// Base class method implementation
@@ -6318,7 +6654,7 @@ void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*
 /// @param param1 QPointF*
 /// @param param2 enum Qt__HitTestAccuracy
 ///
-int32_t q_plaintextdocumentlayout_qbase_hit_test(void* self, void* param1, int32_t param2);
+int32_t q_plaintextdocumentlayout_super_hit_test(void* self, void* param1, int32_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
 ///
@@ -6335,13 +6671,17 @@ int32_t q_plaintextdocumentlayout_page_count(void* self);
 ///
 void q_plaintextdocumentlayout_on_page_count(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_page_count` instead
+///
+#define q_plaintextdocumentlayout_qbase_page_count q_plaintextdocumentlayout_super_page_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-int32_t q_plaintextdocumentlayout_qbase_page_count(void* self);
+int32_t q_plaintextdocumentlayout_super_page_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentSize)
 ///
@@ -6358,13 +6698,17 @@ QSizeF* q_plaintextdocumentlayout_document_size(void* self);
 ///
 void q_plaintextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)());
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_document_size` instead
+///
+#define q_plaintextdocumentlayout_qbase_document_size q_plaintextdocumentlayout_super_document_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-QSizeF* q_plaintextdocumentlayout_qbase_document_size(void* self);
+QSizeF* q_plaintextdocumentlayout_super_document_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#frameBoundingRect)
 ///
@@ -6382,6 +6726,10 @@ QRectF* q_plaintextdocumentlayout_frame_bounding_rect(void* self, void* param1);
 ///
 void q_plaintextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_frame_bounding_rect` instead
+///
+#define q_plaintextdocumentlayout_qbase_frame_bounding_rect q_plaintextdocumentlayout_super_frame_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#frameBoundingRect)
 ///
 /// Base class method implementation
@@ -6389,7 +6737,7 @@ void q_plaintextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*call
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 QTextFrame*
 ///
-QRectF* q_plaintextdocumentlayout_qbase_frame_bounding_rect(void* self, void* param1);
+QRectF* q_plaintextdocumentlayout_super_frame_bounding_rect(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#blockBoundingRect)
 ///
@@ -6407,6 +6755,10 @@ QRectF* q_plaintextdocumentlayout_block_bounding_rect(void* self, void* block);
 ///
 void q_plaintextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_block_bounding_rect` instead
+///
+#define q_plaintextdocumentlayout_qbase_block_bounding_rect q_plaintextdocumentlayout_super_block_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#blockBoundingRect)
 ///
 /// Base class method implementation
@@ -6414,7 +6766,7 @@ void q_plaintextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*call
 /// @param self QPlainTextDocumentLayout*
 /// @param block QTextBlock*
 ///
-QRectF* q_plaintextdocumentlayout_qbase_block_bounding_rect(void* self, void* block);
+QRectF* q_plaintextdocumentlayout_super_block_bounding_rect(void* self, void* block);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#ensureBlockLayout)
 ///
@@ -6460,6 +6812,10 @@ void q_plaintextdocumentlayout_document_changed(void* self, int from, int param2
 ///
 void q_plaintextdocumentlayout_on_document_changed(void* self, void (*callback)(void*, int, int, int));
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_document_changed` instead
+///
+#define q_plaintextdocumentlayout_qbase_document_changed q_plaintextdocumentlayout_super_document_changed
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentChanged)
 ///
 /// Base class method implementation
@@ -6469,7 +6825,7 @@ void q_plaintextdocumentlayout_on_document_changed(void* self, void (*callback)(
 /// @param param2 int
 /// @param charsAdded int
 ///
-void q_plaintextdocumentlayout_qbase_document_changed(void* self, int from, int param2, int charsAdded);
+void q_plaintextdocumentlayout_super_document_changed(void* self, int from, int param2, int charsAdded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -7142,6 +7498,10 @@ void q_plaintextdocumentlayout_on_destroyed1(void* self, void (*callback)(void*,
 ///
 void q_plaintextdocumentlayout_resize_inline_object(void* self, void* item, int posInDocument, void* format);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_resize_inline_object` instead
+///
+#define q_plaintextdocumentlayout_qbase_resize_inline_object q_plaintextdocumentlayout_super_resize_inline_object
+
 /// Inherited from QAbstractTextDocumentLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
@@ -7153,7 +7513,7 @@ void q_plaintextdocumentlayout_resize_inline_object(void* self, void* item, int 
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_plaintextdocumentlayout_qbase_resize_inline_object(void* self, void* item, int posInDocument, void* format);
+void q_plaintextdocumentlayout_super_resize_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
@@ -7179,6 +7539,10 @@ void q_plaintextdocumentlayout_on_resize_inline_object(void* self, void (*callba
 ///
 void q_plaintextdocumentlayout_position_inline_object(void* self, void* item, int posInDocument, void* format);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_position_inline_object` instead
+///
+#define q_plaintextdocumentlayout_qbase_position_inline_object q_plaintextdocumentlayout_super_position_inline_object
+
 /// Inherited from QAbstractTextDocumentLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
@@ -7190,7 +7554,7 @@ void q_plaintextdocumentlayout_position_inline_object(void* self, void* item, in
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_plaintextdocumentlayout_qbase_position_inline_object(void* self, void* item, int posInDocument, void* format);
+void q_plaintextdocumentlayout_super_position_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
@@ -7218,6 +7582,10 @@ void q_plaintextdocumentlayout_on_position_inline_object(void* self, void (*call
 ///
 void q_plaintextdocumentlayout_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_draw_inline_object` instead
+///
+#define q_plaintextdocumentlayout_qbase_draw_inline_object q_plaintextdocumentlayout_super_draw_inline_object
+
 /// Inherited from QAbstractTextDocumentLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
@@ -7231,7 +7599,7 @@ void q_plaintextdocumentlayout_draw_inline_object(void* self, void* painter, voi
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_plaintextdocumentlayout_qbase_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
+void q_plaintextdocumentlayout_super_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
@@ -7255,6 +7623,10 @@ void q_plaintextdocumentlayout_on_draw_inline_object(void* self, void (*callback
 ///
 bool q_plaintextdocumentlayout_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_event` instead
+///
+#define q_plaintextdocumentlayout_qbase_event q_plaintextdocumentlayout_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -7264,7 +7636,7 @@ bool q_plaintextdocumentlayout_event(void* self, void* event);
 /// @param self QPlainTextDocumentLayout*
 /// @param event QEvent*
 ///
-bool q_plaintextdocumentlayout_qbase_event(void* self, void* event);
+bool q_plaintextdocumentlayout_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7289,6 +7661,10 @@ void q_plaintextdocumentlayout_on_event(void* self, bool (*callback)(void*, void
 ///
 bool q_plaintextdocumentlayout_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_event_filter` instead
+///
+#define q_plaintextdocumentlayout_qbase_event_filter q_plaintextdocumentlayout_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -7299,7 +7675,7 @@ bool q_plaintextdocumentlayout_event_filter(void* self, void* watched, void* eve
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_plaintextdocumentlayout_qbase_event_filter(void* self, void* watched, void* event);
+bool q_plaintextdocumentlayout_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -7323,6 +7699,10 @@ void q_plaintextdocumentlayout_on_event_filter(void* self, bool (*callback)(void
 ///
 void q_plaintextdocumentlayout_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_timer_event` instead
+///
+#define q_plaintextdocumentlayout_qbase_timer_event q_plaintextdocumentlayout_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -7332,7 +7712,7 @@ void q_plaintextdocumentlayout_timer_event(void* self, void* event);
 /// @param self QPlainTextDocumentLayout*
 /// @param event QTimerEvent*
 ///
-void q_plaintextdocumentlayout_qbase_timer_event(void* self, void* event);
+void q_plaintextdocumentlayout_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7356,6 +7736,10 @@ void q_plaintextdocumentlayout_on_timer_event(void* self, void (*callback)(void*
 ///
 void q_plaintextdocumentlayout_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_child_event` instead
+///
+#define q_plaintextdocumentlayout_qbase_child_event q_plaintextdocumentlayout_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -7365,7 +7749,7 @@ void q_plaintextdocumentlayout_child_event(void* self, void* event);
 /// @param self QPlainTextDocumentLayout*
 /// @param event QChildEvent*
 ///
-void q_plaintextdocumentlayout_qbase_child_event(void* self, void* event);
+void q_plaintextdocumentlayout_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7389,6 +7773,10 @@ void q_plaintextdocumentlayout_on_child_event(void* self, void (*callback)(void*
 ///
 void q_plaintextdocumentlayout_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_custom_event` instead
+///
+#define q_plaintextdocumentlayout_qbase_custom_event q_plaintextdocumentlayout_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -7398,7 +7786,7 @@ void q_plaintextdocumentlayout_custom_event(void* self, void* event);
 /// @param self QPlainTextDocumentLayout*
 /// @param event QEvent*
 ///
-void q_plaintextdocumentlayout_qbase_custom_event(void* self, void* event);
+void q_plaintextdocumentlayout_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7422,6 +7810,10 @@ void q_plaintextdocumentlayout_on_custom_event(void* self, void (*callback)(void
 ///
 void q_plaintextdocumentlayout_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_connect_notify` instead
+///
+#define q_plaintextdocumentlayout_qbase_connect_notify q_plaintextdocumentlayout_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -7431,7 +7823,7 @@ void q_plaintextdocumentlayout_connect_notify(void* self, void* signal);
 /// @param self QPlainTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-void q_plaintextdocumentlayout_qbase_connect_notify(void* self, void* signal);
+void q_plaintextdocumentlayout_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -7455,6 +7847,10 @@ void q_plaintextdocumentlayout_on_connect_notify(void* self, void (*callback)(vo
 ///
 void q_plaintextdocumentlayout_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_disconnect_notify` instead
+///
+#define q_plaintextdocumentlayout_qbase_disconnect_notify q_plaintextdocumentlayout_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -7464,7 +7860,7 @@ void q_plaintextdocumentlayout_disconnect_notify(void* self, void* signal);
 /// @param self QPlainTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-void q_plaintextdocumentlayout_qbase_disconnect_notify(void* self, void* signal);
+void q_plaintextdocumentlayout_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -7488,6 +7884,10 @@ void q_plaintextdocumentlayout_on_disconnect_notify(void* self, void (*callback)
 ///
 int32_t q_plaintextdocumentlayout_format_index(void* self, int pos);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_format_index` instead
+///
+#define q_plaintextdocumentlayout_qbase_format_index q_plaintextdocumentlayout_super_format_index
+
 /// Inherited from QAbstractTextDocumentLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
@@ -7497,7 +7897,7 @@ int32_t q_plaintextdocumentlayout_format_index(void* self, int pos);
 /// @param self QPlainTextDocumentLayout*
 /// @param pos int
 ///
-int32_t q_plaintextdocumentlayout_qbase_format_index(void* self, int pos);
+int32_t q_plaintextdocumentlayout_super_format_index(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
@@ -7521,6 +7921,10 @@ void q_plaintextdocumentlayout_on_format_index(void* self, int32_t (*callback)(v
 ///
 QTextCharFormat* q_plaintextdocumentlayout_format(void* self, int pos);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_format` instead
+///
+#define q_plaintextdocumentlayout_qbase_format q_plaintextdocumentlayout_super_format
+
 /// Inherited from QAbstractTextDocumentLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
@@ -7530,7 +7934,7 @@ QTextCharFormat* q_plaintextdocumentlayout_format(void* self, int pos);
 /// @param self QPlainTextDocumentLayout*
 /// @param pos int
 ///
-QTextCharFormat* q_plaintextdocumentlayout_qbase_format(void* self, int pos);
+QTextCharFormat* q_plaintextdocumentlayout_super_format(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
@@ -7553,6 +7957,10 @@ void q_plaintextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback
 ///
 QObject* q_plaintextdocumentlayout_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_sender` instead
+///
+#define q_plaintextdocumentlayout_qbase_sender q_plaintextdocumentlayout_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -7561,7 +7969,7 @@ QObject* q_plaintextdocumentlayout_sender(void* self);
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-QObject* q_plaintextdocumentlayout_qbase_sender(void* self);
+QObject* q_plaintextdocumentlayout_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -7584,6 +7992,10 @@ void q_plaintextdocumentlayout_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_plaintextdocumentlayout_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_sender_signal_index` instead
+///
+#define q_plaintextdocumentlayout_qbase_sender_signal_index q_plaintextdocumentlayout_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -7592,7 +8004,7 @@ int32_t q_plaintextdocumentlayout_sender_signal_index(void* self);
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-int32_t q_plaintextdocumentlayout_qbase_sender_signal_index(void* self);
+int32_t q_plaintextdocumentlayout_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -7616,6 +8028,10 @@ void q_plaintextdocumentlayout_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t q_plaintextdocumentlayout_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_receivers` instead
+///
+#define q_plaintextdocumentlayout_qbase_receivers q_plaintextdocumentlayout_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -7625,7 +8041,7 @@ int32_t q_plaintextdocumentlayout_receivers(void* self, const char* signal);
 /// @param self QPlainTextDocumentLayout*
 /// @param signal const char*
 ///
-int32_t q_plaintextdocumentlayout_qbase_receivers(void* self, const char* signal);
+int32_t q_plaintextdocumentlayout_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -7649,6 +8065,10 @@ void q_plaintextdocumentlayout_on_receivers(void* self, int32_t (*callback)(void
 ///
 bool q_plaintextdocumentlayout_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_is_signal_connected` instead
+///
+#define q_plaintextdocumentlayout_qbase_is_signal_connected q_plaintextdocumentlayout_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -7658,7 +8078,7 @@ bool q_plaintextdocumentlayout_is_signal_connected(void* self, void* signal);
 /// @param self QPlainTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-bool q_plaintextdocumentlayout_qbase_is_signal_connected(void* self, void* signal);
+bool q_plaintextdocumentlayout_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

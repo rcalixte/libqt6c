@@ -85,8 +85,8 @@ void k_finddialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KFindDialog_OnMetaObject((KFindDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_finddialog_qbase_meta_object(void* self) {
-    return KFindDialog_QBaseMetaObject((KFindDialog*)self);
+const QMetaObject* k_finddialog_super_meta_object(void* self) {
+    return KFindDialog_SuperMetaObject((KFindDialog*)self);
 }
 
 void* k_finddialog_metacast(void* self, const char* param1) {
@@ -97,8 +97,8 @@ void k_finddialog_on_metacast(void* self, void* (*callback)(void*, const char*))
     KFindDialog_OnMetacast((KFindDialog*)self, (intptr_t)callback);
 }
 
-void* k_finddialog_qbase_metacast(void* self, const char* param1) {
-    return KFindDialog_QBaseMetacast((KFindDialog*)self, param1);
+void* k_finddialog_super_metacast(void* self, const char* param1) {
+    return KFindDialog_SuperMetacast((KFindDialog*)self, param1);
 }
 
 int32_t k_finddialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -109,8 +109,8 @@ void k_finddialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KFindDialog_OnMetacall((KFindDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_finddialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFindDialog_QBaseMetacall((KFindDialog*)self, param1, param2, param3);
+int32_t k_finddialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFindDialog_SuperMetacall((KFindDialog*)self, param1, param2, param3);
 }
 
 const char* k_finddialog_tr(const char* s) {
@@ -233,8 +233,8 @@ void k_finddialog_on_show_event(void* self, void (*callback)(void*, void*)) {
     KFindDialog_OnShowEvent((KFindDialog*)self, (intptr_t)callback);
 }
 
-void k_finddialog_qbase_show_event(void* self, void* param1) {
-    KFindDialog_QBaseShowEvent((KFindDialog*)self, (QShowEvent*)param1);
+void k_finddialog_super_show_event(void* self, void* param1) {
+    KFindDialog_SuperShowEvent((KFindDialog*)self, (QShowEvent*)param1);
 }
 
 const char* k_finddialog_tr2(const char* s, const char* c) {
@@ -1680,8 +1680,8 @@ void k_finddialog_set_visible(void* self, bool visible) {
     KFindDialog_SetVisible((KFindDialog*)self, visible);
 }
 
-void k_finddialog_qbase_set_visible(void* self, bool visible) {
-    KFindDialog_QBaseSetVisible((KFindDialog*)self, visible);
+void k_finddialog_super_set_visible(void* self, bool visible) {
+    KFindDialog_SuperSetVisible((KFindDialog*)self, visible);
 }
 
 void k_finddialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1692,8 +1692,8 @@ QSize* k_finddialog_size_hint(void* self) {
     return KFindDialog_SizeHint((KFindDialog*)self);
 }
 
-QSize* k_finddialog_qbase_size_hint(void* self) {
-    return KFindDialog_QBaseSizeHint((KFindDialog*)self);
+QSize* k_finddialog_super_size_hint(void* self) {
+    return KFindDialog_SuperSizeHint((KFindDialog*)self);
 }
 
 void k_finddialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1704,8 +1704,8 @@ QSize* k_finddialog_minimum_size_hint(void* self) {
     return KFindDialog_MinimumSizeHint((KFindDialog*)self);
 }
 
-QSize* k_finddialog_qbase_minimum_size_hint(void* self) {
-    return KFindDialog_QBaseMinimumSizeHint((KFindDialog*)self);
+QSize* k_finddialog_super_minimum_size_hint(void* self) {
+    return KFindDialog_SuperMinimumSizeHint((KFindDialog*)self);
 }
 
 void k_finddialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1716,8 +1716,8 @@ void k_finddialog_open(void* self) {
     KFindDialog_Open((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_open(void* self) {
-    KFindDialog_QBaseOpen((KFindDialog*)self);
+void k_finddialog_super_open(void* self) {
+    KFindDialog_SuperOpen((KFindDialog*)self);
 }
 
 void k_finddialog_on_open(void* self, void (*callback)()) {
@@ -1728,8 +1728,8 @@ int32_t k_finddialog_exec(void* self) {
     return KFindDialog_Exec((KFindDialog*)self);
 }
 
-int32_t k_finddialog_qbase_exec(void* self) {
-    return KFindDialog_QBaseExec((KFindDialog*)self);
+int32_t k_finddialog_super_exec(void* self) {
+    return KFindDialog_SuperExec((KFindDialog*)self);
 }
 
 void k_finddialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1740,8 +1740,8 @@ void k_finddialog_done(void* self, int param1) {
     KFindDialog_Done((KFindDialog*)self, param1);
 }
 
-void k_finddialog_qbase_done(void* self, int param1) {
-    KFindDialog_QBaseDone((KFindDialog*)self, param1);
+void k_finddialog_super_done(void* self, int param1) {
+    KFindDialog_SuperDone((KFindDialog*)self, param1);
 }
 
 void k_finddialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1752,8 +1752,8 @@ void k_finddialog_accept(void* self) {
     KFindDialog_Accept((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_accept(void* self) {
-    KFindDialog_QBaseAccept((KFindDialog*)self);
+void k_finddialog_super_accept(void* self) {
+    KFindDialog_SuperAccept((KFindDialog*)self);
 }
 
 void k_finddialog_on_accept(void* self, void (*callback)()) {
@@ -1764,8 +1764,8 @@ void k_finddialog_reject(void* self) {
     KFindDialog_Reject((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_reject(void* self) {
-    KFindDialog_QBaseReject((KFindDialog*)self);
+void k_finddialog_super_reject(void* self) {
+    KFindDialog_SuperReject((KFindDialog*)self);
 }
 
 void k_finddialog_on_reject(void* self, void (*callback)()) {
@@ -1776,8 +1776,8 @@ void k_finddialog_key_press_event(void* self, void* param1) {
     KFindDialog_KeyPressEvent((KFindDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_finddialog_qbase_key_press_event(void* self, void* param1) {
-    KFindDialog_QBaseKeyPressEvent((KFindDialog*)self, (QKeyEvent*)param1);
+void k_finddialog_super_key_press_event(void* self, void* param1) {
+    KFindDialog_SuperKeyPressEvent((KFindDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_finddialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1788,8 +1788,8 @@ void k_finddialog_close_event(void* self, void* param1) {
     KFindDialog_CloseEvent((KFindDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_finddialog_qbase_close_event(void* self, void* param1) {
-    KFindDialog_QBaseCloseEvent((KFindDialog*)self, (QCloseEvent*)param1);
+void k_finddialog_super_close_event(void* self, void* param1) {
+    KFindDialog_SuperCloseEvent((KFindDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_finddialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1800,8 +1800,8 @@ void k_finddialog_resize_event(void* self, void* param1) {
     KFindDialog_ResizeEvent((KFindDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_finddialog_qbase_resize_event(void* self, void* param1) {
-    KFindDialog_QBaseResizeEvent((KFindDialog*)self, (QResizeEvent*)param1);
+void k_finddialog_super_resize_event(void* self, void* param1) {
+    KFindDialog_SuperResizeEvent((KFindDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_finddialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_finddialog_context_menu_event(void* self, void* param1) {
     KFindDialog_ContextMenuEvent((KFindDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_finddialog_qbase_context_menu_event(void* self, void* param1) {
-    KFindDialog_QBaseContextMenuEvent((KFindDialog*)self, (QContextMenuEvent*)param1);
+void k_finddialog_super_context_menu_event(void* self, void* param1) {
+    KFindDialog_SuperContextMenuEvent((KFindDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_finddialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ bool k_finddialog_event_filter(void* self, void* param1, void* param2) {
     return KFindDialog_EventFilter((KFindDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_finddialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KFindDialog_QBaseEventFilter((KFindDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_finddialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KFindDialog_SuperEventFilter((KFindDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_finddialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1836,8 +1836,8 @@ int32_t k_finddialog_dev_type(void* self) {
     return KFindDialog_DevType((KFindDialog*)self);
 }
 
-int32_t k_finddialog_qbase_dev_type(void* self) {
-    return KFindDialog_QBaseDevType((KFindDialog*)self);
+int32_t k_finddialog_super_dev_type(void* self) {
+    return KFindDialog_SuperDevType((KFindDialog*)self);
 }
 
 void k_finddialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1848,8 +1848,8 @@ int32_t k_finddialog_height_for_width(void* self, int param1) {
     return KFindDialog_HeightForWidth((KFindDialog*)self, param1);
 }
 
-int32_t k_finddialog_qbase_height_for_width(void* self, int param1) {
-    return KFindDialog_QBaseHeightForWidth((KFindDialog*)self, param1);
+int32_t k_finddialog_super_height_for_width(void* self, int param1) {
+    return KFindDialog_SuperHeightForWidth((KFindDialog*)self, param1);
 }
 
 void k_finddialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1860,8 +1860,8 @@ bool k_finddialog_has_height_for_width(void* self) {
     return KFindDialog_HasHeightForWidth((KFindDialog*)self);
 }
 
-bool k_finddialog_qbase_has_height_for_width(void* self) {
-    return KFindDialog_QBaseHasHeightForWidth((KFindDialog*)self);
+bool k_finddialog_super_has_height_for_width(void* self) {
+    return KFindDialog_SuperHasHeightForWidth((KFindDialog*)self);
 }
 
 void k_finddialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1872,8 +1872,8 @@ QPaintEngine* k_finddialog_paint_engine(void* self) {
     return KFindDialog_PaintEngine((KFindDialog*)self);
 }
 
-QPaintEngine* k_finddialog_qbase_paint_engine(void* self) {
-    return KFindDialog_QBasePaintEngine((KFindDialog*)self);
+QPaintEngine* k_finddialog_super_paint_engine(void* self) {
+    return KFindDialog_SuperPaintEngine((KFindDialog*)self);
 }
 
 void k_finddialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1884,8 +1884,8 @@ bool k_finddialog_event(void* self, void* event) {
     return KFindDialog_Event((KFindDialog*)self, (QEvent*)event);
 }
 
-bool k_finddialog_qbase_event(void* self, void* event) {
-    return KFindDialog_QBaseEvent((KFindDialog*)self, (QEvent*)event);
+bool k_finddialog_super_event(void* self, void* event) {
+    return KFindDialog_SuperEvent((KFindDialog*)self, (QEvent*)event);
 }
 
 void k_finddialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_finddialog_mouse_press_event(void* self, void* event) {
     KFindDialog_MousePressEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
-void k_finddialog_qbase_mouse_press_event(void* self, void* event) {
-    KFindDialog_QBaseMousePressEvent((KFindDialog*)self, (QMouseEvent*)event);
+void k_finddialog_super_mouse_press_event(void* self, void* event) {
+    KFindDialog_SuperMousePressEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
 void k_finddialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ void k_finddialog_mouse_release_event(void* self, void* event) {
     KFindDialog_MouseReleaseEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
-void k_finddialog_qbase_mouse_release_event(void* self, void* event) {
-    KFindDialog_QBaseMouseReleaseEvent((KFindDialog*)self, (QMouseEvent*)event);
+void k_finddialog_super_mouse_release_event(void* self, void* event) {
+    KFindDialog_SuperMouseReleaseEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
 void k_finddialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ void k_finddialog_mouse_double_click_event(void* self, void* event) {
     KFindDialog_MouseDoubleClickEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
-void k_finddialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KFindDialog_QBaseMouseDoubleClickEvent((KFindDialog*)self, (QMouseEvent*)event);
+void k_finddialog_super_mouse_double_click_event(void* self, void* event) {
+    KFindDialog_SuperMouseDoubleClickEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
 void k_finddialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ void k_finddialog_mouse_move_event(void* self, void* event) {
     KFindDialog_MouseMoveEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
-void k_finddialog_qbase_mouse_move_event(void* self, void* event) {
-    KFindDialog_QBaseMouseMoveEvent((KFindDialog*)self, (QMouseEvent*)event);
+void k_finddialog_super_mouse_move_event(void* self, void* event) {
+    KFindDialog_SuperMouseMoveEvent((KFindDialog*)self, (QMouseEvent*)event);
 }
 
 void k_finddialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1944,8 +1944,8 @@ void k_finddialog_wheel_event(void* self, void* event) {
     KFindDialog_WheelEvent((KFindDialog*)self, (QWheelEvent*)event);
 }
 
-void k_finddialog_qbase_wheel_event(void* self, void* event) {
-    KFindDialog_QBaseWheelEvent((KFindDialog*)self, (QWheelEvent*)event);
+void k_finddialog_super_wheel_event(void* self, void* event) {
+    KFindDialog_SuperWheelEvent((KFindDialog*)self, (QWheelEvent*)event);
 }
 
 void k_finddialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ void k_finddialog_key_release_event(void* self, void* event) {
     KFindDialog_KeyReleaseEvent((KFindDialog*)self, (QKeyEvent*)event);
 }
 
-void k_finddialog_qbase_key_release_event(void* self, void* event) {
-    KFindDialog_QBaseKeyReleaseEvent((KFindDialog*)self, (QKeyEvent*)event);
+void k_finddialog_super_key_release_event(void* self, void* event) {
+    KFindDialog_SuperKeyReleaseEvent((KFindDialog*)self, (QKeyEvent*)event);
 }
 
 void k_finddialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1968,8 +1968,8 @@ void k_finddialog_focus_in_event(void* self, void* event) {
     KFindDialog_FocusInEvent((KFindDialog*)self, (QFocusEvent*)event);
 }
 
-void k_finddialog_qbase_focus_in_event(void* self, void* event) {
-    KFindDialog_QBaseFocusInEvent((KFindDialog*)self, (QFocusEvent*)event);
+void k_finddialog_super_focus_in_event(void* self, void* event) {
+    KFindDialog_SuperFocusInEvent((KFindDialog*)self, (QFocusEvent*)event);
 }
 
 void k_finddialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ void k_finddialog_focus_out_event(void* self, void* event) {
     KFindDialog_FocusOutEvent((KFindDialog*)self, (QFocusEvent*)event);
 }
 
-void k_finddialog_qbase_focus_out_event(void* self, void* event) {
-    KFindDialog_QBaseFocusOutEvent((KFindDialog*)self, (QFocusEvent*)event);
+void k_finddialog_super_focus_out_event(void* self, void* event) {
+    KFindDialog_SuperFocusOutEvent((KFindDialog*)self, (QFocusEvent*)event);
 }
 
 void k_finddialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_finddialog_enter_event(void* self, void* event) {
     KFindDialog_EnterEvent((KFindDialog*)self, (QEnterEvent*)event);
 }
 
-void k_finddialog_qbase_enter_event(void* self, void* event) {
-    KFindDialog_QBaseEnterEvent((KFindDialog*)self, (QEnterEvent*)event);
+void k_finddialog_super_enter_event(void* self, void* event) {
+    KFindDialog_SuperEnterEvent((KFindDialog*)self, (QEnterEvent*)event);
 }
 
 void k_finddialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ void k_finddialog_leave_event(void* self, void* event) {
     KFindDialog_LeaveEvent((KFindDialog*)self, (QEvent*)event);
 }
 
-void k_finddialog_qbase_leave_event(void* self, void* event) {
-    KFindDialog_QBaseLeaveEvent((KFindDialog*)self, (QEvent*)event);
+void k_finddialog_super_leave_event(void* self, void* event) {
+    KFindDialog_SuperLeaveEvent((KFindDialog*)self, (QEvent*)event);
 }
 
 void k_finddialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2016,8 +2016,8 @@ void k_finddialog_paint_event(void* self, void* event) {
     KFindDialog_PaintEvent((KFindDialog*)self, (QPaintEvent*)event);
 }
 
-void k_finddialog_qbase_paint_event(void* self, void* event) {
-    KFindDialog_QBasePaintEvent((KFindDialog*)self, (QPaintEvent*)event);
+void k_finddialog_super_paint_event(void* self, void* event) {
+    KFindDialog_SuperPaintEvent((KFindDialog*)self, (QPaintEvent*)event);
 }
 
 void k_finddialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_finddialog_move_event(void* self, void* event) {
     KFindDialog_MoveEvent((KFindDialog*)self, (QMoveEvent*)event);
 }
 
-void k_finddialog_qbase_move_event(void* self, void* event) {
-    KFindDialog_QBaseMoveEvent((KFindDialog*)self, (QMoveEvent*)event);
+void k_finddialog_super_move_event(void* self, void* event) {
+    KFindDialog_SuperMoveEvent((KFindDialog*)self, (QMoveEvent*)event);
 }
 
 void k_finddialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_finddialog_tablet_event(void* self, void* event) {
     KFindDialog_TabletEvent((KFindDialog*)self, (QTabletEvent*)event);
 }
 
-void k_finddialog_qbase_tablet_event(void* self, void* event) {
-    KFindDialog_QBaseTabletEvent((KFindDialog*)self, (QTabletEvent*)event);
+void k_finddialog_super_tablet_event(void* self, void* event) {
+    KFindDialog_SuperTabletEvent((KFindDialog*)self, (QTabletEvent*)event);
 }
 
 void k_finddialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_finddialog_action_event(void* self, void* event) {
     KFindDialog_ActionEvent((KFindDialog*)self, (QActionEvent*)event);
 }
 
-void k_finddialog_qbase_action_event(void* self, void* event) {
-    KFindDialog_QBaseActionEvent((KFindDialog*)self, (QActionEvent*)event);
+void k_finddialog_super_action_event(void* self, void* event) {
+    KFindDialog_SuperActionEvent((KFindDialog*)self, (QActionEvent*)event);
 }
 
 void k_finddialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ void k_finddialog_drag_enter_event(void* self, void* event) {
     KFindDialog_DragEnterEvent((KFindDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_finddialog_qbase_drag_enter_event(void* self, void* event) {
-    KFindDialog_QBaseDragEnterEvent((KFindDialog*)self, (QDragEnterEvent*)event);
+void k_finddialog_super_drag_enter_event(void* self, void* event) {
+    KFindDialog_SuperDragEnterEvent((KFindDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_finddialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2076,8 +2076,8 @@ void k_finddialog_drag_move_event(void* self, void* event) {
     KFindDialog_DragMoveEvent((KFindDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_finddialog_qbase_drag_move_event(void* self, void* event) {
-    KFindDialog_QBaseDragMoveEvent((KFindDialog*)self, (QDragMoveEvent*)event);
+void k_finddialog_super_drag_move_event(void* self, void* event) {
+    KFindDialog_SuperDragMoveEvent((KFindDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_finddialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_finddialog_drag_leave_event(void* self, void* event) {
     KFindDialog_DragLeaveEvent((KFindDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_finddialog_qbase_drag_leave_event(void* self, void* event) {
-    KFindDialog_QBaseDragLeaveEvent((KFindDialog*)self, (QDragLeaveEvent*)event);
+void k_finddialog_super_drag_leave_event(void* self, void* event) {
+    KFindDialog_SuperDragLeaveEvent((KFindDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_finddialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2100,8 +2100,8 @@ void k_finddialog_drop_event(void* self, void* event) {
     KFindDialog_DropEvent((KFindDialog*)self, (QDropEvent*)event);
 }
 
-void k_finddialog_qbase_drop_event(void* self, void* event) {
-    KFindDialog_QBaseDropEvent((KFindDialog*)self, (QDropEvent*)event);
+void k_finddialog_super_drop_event(void* self, void* event) {
+    KFindDialog_SuperDropEvent((KFindDialog*)self, (QDropEvent*)event);
 }
 
 void k_finddialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2112,8 +2112,8 @@ void k_finddialog_hide_event(void* self, void* event) {
     KFindDialog_HideEvent((KFindDialog*)self, (QHideEvent*)event);
 }
 
-void k_finddialog_qbase_hide_event(void* self, void* event) {
-    KFindDialog_QBaseHideEvent((KFindDialog*)self, (QHideEvent*)event);
+void k_finddialog_super_hide_event(void* self, void* event) {
+    KFindDialog_SuperHideEvent((KFindDialog*)self, (QHideEvent*)event);
 }
 
 void k_finddialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2124,8 +2124,8 @@ bool k_finddialog_native_event(void* self, char* eventType, void* message, intpt
     return KFindDialog_NativeEvent((KFindDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_finddialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KFindDialog_QBaseNativeEvent((KFindDialog*)self, qstring(eventType), message, result);
+bool k_finddialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KFindDialog_SuperNativeEvent((KFindDialog*)self, qstring(eventType), message, result);
 }
 
 void k_finddialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2136,8 +2136,8 @@ void k_finddialog_change_event(void* self, void* param1) {
     KFindDialog_ChangeEvent((KFindDialog*)self, (QEvent*)param1);
 }
 
-void k_finddialog_qbase_change_event(void* self, void* param1) {
-    KFindDialog_QBaseChangeEvent((KFindDialog*)self, (QEvent*)param1);
+void k_finddialog_super_change_event(void* self, void* param1) {
+    KFindDialog_SuperChangeEvent((KFindDialog*)self, (QEvent*)param1);
 }
 
 void k_finddialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ int32_t k_finddialog_metric(void* self, int32_t param1) {
     return KFindDialog_Metric((KFindDialog*)self, param1);
 }
 
-int32_t k_finddialog_qbase_metric(void* self, int32_t param1) {
-    return KFindDialog_QBaseMetric((KFindDialog*)self, param1);
+int32_t k_finddialog_super_metric(void* self, int32_t param1) {
+    return KFindDialog_SuperMetric((KFindDialog*)self, param1);
 }
 
 void k_finddialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2160,8 +2160,8 @@ void k_finddialog_init_painter(void* self, void* painter) {
     KFindDialog_InitPainter((KFindDialog*)self, (QPainter*)painter);
 }
 
-void k_finddialog_qbase_init_painter(void* self, void* painter) {
-    KFindDialog_QBaseInitPainter((KFindDialog*)self, (QPainter*)painter);
+void k_finddialog_super_init_painter(void* self, void* painter) {
+    KFindDialog_SuperInitPainter((KFindDialog*)self, (QPainter*)painter);
 }
 
 void k_finddialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2172,8 +2172,8 @@ QPaintDevice* k_finddialog_redirected(void* self, void* offset) {
     return KFindDialog_Redirected((KFindDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_finddialog_qbase_redirected(void* self, void* offset) {
-    return KFindDialog_QBaseRedirected((KFindDialog*)self, (QPoint*)offset);
+QPaintDevice* k_finddialog_super_redirected(void* self, void* offset) {
+    return KFindDialog_SuperRedirected((KFindDialog*)self, (QPoint*)offset);
 }
 
 void k_finddialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2184,8 +2184,8 @@ QPainter* k_finddialog_shared_painter(void* self) {
     return KFindDialog_SharedPainter((KFindDialog*)self);
 }
 
-QPainter* k_finddialog_qbase_shared_painter(void* self) {
-    return KFindDialog_QBaseSharedPainter((KFindDialog*)self);
+QPainter* k_finddialog_super_shared_painter(void* self) {
+    return KFindDialog_SuperSharedPainter((KFindDialog*)self);
 }
 
 void k_finddialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2196,8 +2196,8 @@ void k_finddialog_input_method_event(void* self, void* param1) {
     KFindDialog_InputMethodEvent((KFindDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_finddialog_qbase_input_method_event(void* self, void* param1) {
-    KFindDialog_QBaseInputMethodEvent((KFindDialog*)self, (QInputMethodEvent*)param1);
+void k_finddialog_super_input_method_event(void* self, void* param1) {
+    KFindDialog_SuperInputMethodEvent((KFindDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_finddialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2208,8 +2208,8 @@ QVariant* k_finddialog_input_method_query(void* self, int32_t param1) {
     return KFindDialog_InputMethodQuery((KFindDialog*)self, param1);
 }
 
-QVariant* k_finddialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KFindDialog_QBaseInputMethodQuery((KFindDialog*)self, param1);
+QVariant* k_finddialog_super_input_method_query(void* self, int32_t param1) {
+    return KFindDialog_SuperInputMethodQuery((KFindDialog*)self, param1);
 }
 
 void k_finddialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2220,8 +2220,8 @@ bool k_finddialog_focus_next_prev_child(void* self, bool next) {
     return KFindDialog_FocusNextPrevChild((KFindDialog*)self, next);
 }
 
-bool k_finddialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KFindDialog_QBaseFocusNextPrevChild((KFindDialog*)self, next);
+bool k_finddialog_super_focus_next_prev_child(void* self, bool next) {
+    return KFindDialog_SuperFocusNextPrevChild((KFindDialog*)self, next);
 }
 
 void k_finddialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2232,8 +2232,8 @@ void k_finddialog_timer_event(void* self, void* event) {
     KFindDialog_TimerEvent((KFindDialog*)self, (QTimerEvent*)event);
 }
 
-void k_finddialog_qbase_timer_event(void* self, void* event) {
-    KFindDialog_QBaseTimerEvent((KFindDialog*)self, (QTimerEvent*)event);
+void k_finddialog_super_timer_event(void* self, void* event) {
+    KFindDialog_SuperTimerEvent((KFindDialog*)self, (QTimerEvent*)event);
 }
 
 void k_finddialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2244,8 +2244,8 @@ void k_finddialog_child_event(void* self, void* event) {
     KFindDialog_ChildEvent((KFindDialog*)self, (QChildEvent*)event);
 }
 
-void k_finddialog_qbase_child_event(void* self, void* event) {
-    KFindDialog_QBaseChildEvent((KFindDialog*)self, (QChildEvent*)event);
+void k_finddialog_super_child_event(void* self, void* event) {
+    KFindDialog_SuperChildEvent((KFindDialog*)self, (QChildEvent*)event);
 }
 
 void k_finddialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2256,8 +2256,8 @@ void k_finddialog_custom_event(void* self, void* event) {
     KFindDialog_CustomEvent((KFindDialog*)self, (QEvent*)event);
 }
 
-void k_finddialog_qbase_custom_event(void* self, void* event) {
-    KFindDialog_QBaseCustomEvent((KFindDialog*)self, (QEvent*)event);
+void k_finddialog_super_custom_event(void* self, void* event) {
+    KFindDialog_SuperCustomEvent((KFindDialog*)self, (QEvent*)event);
 }
 
 void k_finddialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2268,8 +2268,8 @@ void k_finddialog_connect_notify(void* self, void* signal) {
     KFindDialog_ConnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_finddialog_qbase_connect_notify(void* self, void* signal) {
-    KFindDialog_QBaseConnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
+void k_finddialog_super_connect_notify(void* self, void* signal) {
+    KFindDialog_SuperConnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_finddialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2280,8 +2280,8 @@ void k_finddialog_disconnect_notify(void* self, void* signal) {
     KFindDialog_DisconnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_finddialog_qbase_disconnect_notify(void* self, void* signal) {
-    KFindDialog_QBaseDisconnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
+void k_finddialog_super_disconnect_notify(void* self, void* signal) {
+    KFindDialog_SuperDisconnectNotify((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_finddialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2292,8 +2292,8 @@ void k_finddialog_adjust_position(void* self, void* param1) {
     KFindDialog_AdjustPosition((KFindDialog*)self, (QWidget*)param1);
 }
 
-void k_finddialog_qbase_adjust_position(void* self, void* param1) {
-    KFindDialog_QBaseAdjustPosition((KFindDialog*)self, (QWidget*)param1);
+void k_finddialog_super_adjust_position(void* self, void* param1) {
+    KFindDialog_SuperAdjustPosition((KFindDialog*)self, (QWidget*)param1);
 }
 
 void k_finddialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2304,8 +2304,8 @@ void k_finddialog_update_micro_focus(void* self) {
     KFindDialog_UpdateMicroFocus((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_update_micro_focus(void* self) {
-    KFindDialog_QBaseUpdateMicroFocus((KFindDialog*)self);
+void k_finddialog_super_update_micro_focus(void* self) {
+    KFindDialog_SuperUpdateMicroFocus((KFindDialog*)self);
 }
 
 void k_finddialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2316,8 +2316,8 @@ void k_finddialog_create(void* self) {
     KFindDialog_Create((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_create(void* self) {
-    KFindDialog_QBaseCreate((KFindDialog*)self);
+void k_finddialog_super_create(void* self) {
+    KFindDialog_SuperCreate((KFindDialog*)self);
 }
 
 void k_finddialog_on_create(void* self, void (*callback)()) {
@@ -2328,8 +2328,8 @@ void k_finddialog_destroy(void* self) {
     KFindDialog_Destroy((KFindDialog*)self);
 }
 
-void k_finddialog_qbase_destroy(void* self) {
-    KFindDialog_QBaseDestroy((KFindDialog*)self);
+void k_finddialog_super_destroy(void* self) {
+    KFindDialog_SuperDestroy((KFindDialog*)self);
 }
 
 void k_finddialog_on_destroy(void* self, void (*callback)()) {
@@ -2340,8 +2340,8 @@ bool k_finddialog_focus_next_child(void* self) {
     return KFindDialog_FocusNextChild((KFindDialog*)self);
 }
 
-bool k_finddialog_qbase_focus_next_child(void* self) {
-    return KFindDialog_QBaseFocusNextChild((KFindDialog*)self);
+bool k_finddialog_super_focus_next_child(void* self) {
+    return KFindDialog_SuperFocusNextChild((KFindDialog*)self);
 }
 
 void k_finddialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2352,8 +2352,8 @@ bool k_finddialog_focus_previous_child(void* self) {
     return KFindDialog_FocusPreviousChild((KFindDialog*)self);
 }
 
-bool k_finddialog_qbase_focus_previous_child(void* self) {
-    return KFindDialog_QBaseFocusPreviousChild((KFindDialog*)self);
+bool k_finddialog_super_focus_previous_child(void* self) {
+    return KFindDialog_SuperFocusPreviousChild((KFindDialog*)self);
 }
 
 void k_finddialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2364,8 +2364,8 @@ QObject* k_finddialog_sender(void* self) {
     return KFindDialog_Sender((KFindDialog*)self);
 }
 
-QObject* k_finddialog_qbase_sender(void* self) {
-    return KFindDialog_QBaseSender((KFindDialog*)self);
+QObject* k_finddialog_super_sender(void* self) {
+    return KFindDialog_SuperSender((KFindDialog*)self);
 }
 
 void k_finddialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2376,8 +2376,8 @@ int32_t k_finddialog_sender_signal_index(void* self) {
     return KFindDialog_SenderSignalIndex((KFindDialog*)self);
 }
 
-int32_t k_finddialog_qbase_sender_signal_index(void* self) {
-    return KFindDialog_QBaseSenderSignalIndex((KFindDialog*)self);
+int32_t k_finddialog_super_sender_signal_index(void* self) {
+    return KFindDialog_SuperSenderSignalIndex((KFindDialog*)self);
 }
 
 void k_finddialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2388,8 +2388,8 @@ int32_t k_finddialog_receivers(void* self, const char* signal) {
     return KFindDialog_Receivers((KFindDialog*)self, signal);
 }
 
-int32_t k_finddialog_qbase_receivers(void* self, const char* signal) {
-    return KFindDialog_QBaseReceivers((KFindDialog*)self, signal);
+int32_t k_finddialog_super_receivers(void* self, const char* signal) {
+    return KFindDialog_SuperReceivers((KFindDialog*)self, signal);
 }
 
 void k_finddialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2400,8 +2400,8 @@ bool k_finddialog_is_signal_connected(void* self, void* signal) {
     return KFindDialog_IsSignalConnected((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_finddialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KFindDialog_QBaseIsSignalConnected((KFindDialog*)self, (QMetaMethod*)signal);
+bool k_finddialog_super_is_signal_connected(void* self, void* signal) {
+    return KFindDialog_SuperIsSignalConnected((KFindDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_finddialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2412,8 +2412,8 @@ double k_finddialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KFindDialog_GetDecodedMetricF((KFindDialog*)self, metricA, metricB);
 }
 
-double k_finddialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFindDialog_QBaseGetDecodedMetricF((KFindDialog*)self, metricA, metricB);
+double k_finddialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KFindDialog_SuperGetDecodedMetricF((KFindDialog*)self, metricA, metricB);
 }
 
 void k_finddialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

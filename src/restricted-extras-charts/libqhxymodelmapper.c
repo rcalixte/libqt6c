@@ -24,8 +24,8 @@ void q_hxymodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(
     QHXYModelMapper_OnMetaObject((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_hxymodelmapper_qbase_meta_object(void* self) {
-    return QHXYModelMapper_QBaseMetaObject((QHXYModelMapper*)self);
+const QMetaObject* q_hxymodelmapper_super_meta_object(void* self) {
+    return QHXYModelMapper_SuperMetaObject((QHXYModelMapper*)self);
 }
 
 void* q_hxymodelmapper_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_hxymodelmapper_on_metacast(void* self, void* (*callback)(void*, const cha
     QHXYModelMapper_OnMetacast((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
-void* q_hxymodelmapper_qbase_metacast(void* self, const char* param1) {
-    return QHXYModelMapper_QBaseMetacast((QHXYModelMapper*)self, param1);
+void* q_hxymodelmapper_super_metacast(void* self, const char* param1) {
+    return QHXYModelMapper_SuperMetacast((QHXYModelMapper*)self, param1);
 }
 
 int32_t q_hxymodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_hxymodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QHXYModelMapper_OnMetacall((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_hxymodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QHXYModelMapper_QBaseMetacall((QHXYModelMapper*)self, param1, param2, param3);
+int32_t q_hxymodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QHXYModelMapper_SuperMetacall((QHXYModelMapper*)self, param1, param2, param3);
 }
 
 const char* q_hxymodelmapper_tr(const char* s) {
@@ -384,8 +384,8 @@ bool q_hxymodelmapper_event(void* self, void* event) {
     return QHXYModelMapper_Event((QHXYModelMapper*)self, (QEvent*)event);
 }
 
-bool q_hxymodelmapper_qbase_event(void* self, void* event) {
-    return QHXYModelMapper_QBaseEvent((QHXYModelMapper*)self, (QEvent*)event);
+bool q_hxymodelmapper_super_event(void* self, void* event) {
+    return QHXYModelMapper_SuperEvent((QHXYModelMapper*)self, (QEvent*)event);
 }
 
 void q_hxymodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -396,8 +396,8 @@ bool q_hxymodelmapper_event_filter(void* self, void* watched, void* event) {
     return QHXYModelMapper_EventFilter((QHXYModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_hxymodelmapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return QHXYModelMapper_QBaseEventFilter((QHXYModelMapper*)self, (QObject*)watched, (QEvent*)event);
+bool q_hxymodelmapper_super_event_filter(void* self, void* watched, void* event) {
+    return QHXYModelMapper_SuperEventFilter((QHXYModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_hxymodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -408,8 +408,8 @@ void q_hxymodelmapper_timer_event(void* self, void* event) {
     QHXYModelMapper_TimerEvent((QHXYModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_hxymodelmapper_qbase_timer_event(void* self, void* event) {
-    QHXYModelMapper_QBaseTimerEvent((QHXYModelMapper*)self, (QTimerEvent*)event);
+void q_hxymodelmapper_super_timer_event(void* self, void* event) {
+    QHXYModelMapper_SuperTimerEvent((QHXYModelMapper*)self, (QTimerEvent*)event);
 }
 
 void q_hxymodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void q_hxymodelmapper_child_event(void* self, void* event) {
     QHXYModelMapper_ChildEvent((QHXYModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_hxymodelmapper_qbase_child_event(void* self, void* event) {
-    QHXYModelMapper_QBaseChildEvent((QHXYModelMapper*)self, (QChildEvent*)event);
+void q_hxymodelmapper_super_child_event(void* self, void* event) {
+    QHXYModelMapper_SuperChildEvent((QHXYModelMapper*)self, (QChildEvent*)event);
 }
 
 void q_hxymodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void q_hxymodelmapper_custom_event(void* self, void* event) {
     QHXYModelMapper_CustomEvent((QHXYModelMapper*)self, (QEvent*)event);
 }
 
-void q_hxymodelmapper_qbase_custom_event(void* self, void* event) {
-    QHXYModelMapper_QBaseCustomEvent((QHXYModelMapper*)self, (QEvent*)event);
+void q_hxymodelmapper_super_custom_event(void* self, void* event) {
+    QHXYModelMapper_SuperCustomEvent((QHXYModelMapper*)self, (QEvent*)event);
 }
 
 void q_hxymodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void q_hxymodelmapper_connect_notify(void* self, void* signal) {
     QHXYModelMapper_ConnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hxymodelmapper_qbase_connect_notify(void* self, void* signal) {
-    QHXYModelMapper_QBaseConnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
+void q_hxymodelmapper_super_connect_notify(void* self, void* signal) {
+    QHXYModelMapper_SuperConnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_hxymodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ void q_hxymodelmapper_disconnect_notify(void* self, void* signal) {
     QHXYModelMapper_DisconnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hxymodelmapper_qbase_disconnect_notify(void* self, void* signal) {
-    QHXYModelMapper_QBaseDisconnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
+void q_hxymodelmapper_super_disconnect_notify(void* self, void* signal) {
+    QHXYModelMapper_SuperDisconnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_hxymodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -468,8 +468,8 @@ int32_t q_hxymodelmapper_first(void* self) {
     return QHXYModelMapper_First((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_first(void* self) {
-    return QHXYModelMapper_QBaseFirst((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_first(void* self) {
+    return QHXYModelMapper_SuperFirst((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_first(void* self, int32_t (*callback)()) {
@@ -480,8 +480,8 @@ void q_hxymodelmapper_set_first(void* self, int first) {
     QHXYModelMapper_SetFirst((QHXYModelMapper*)self, first);
 }
 
-void q_hxymodelmapper_qbase_set_first(void* self, int first) {
-    QHXYModelMapper_QBaseSetFirst((QHXYModelMapper*)self, first);
+void q_hxymodelmapper_super_set_first(void* self, int first) {
+    QHXYModelMapper_SuperSetFirst((QHXYModelMapper*)self, first);
 }
 
 void q_hxymodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
@@ -492,8 +492,8 @@ int32_t q_hxymodelmapper_count(void* self) {
     return QHXYModelMapper_Count((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_count(void* self) {
-    return QHXYModelMapper_QBaseCount((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_count(void* self) {
+    return QHXYModelMapper_SuperCount((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_count(void* self, int32_t (*callback)()) {
@@ -504,8 +504,8 @@ void q_hxymodelmapper_set_count(void* self, int count) {
     QHXYModelMapper_SetCount((QHXYModelMapper*)self, count);
 }
 
-void q_hxymodelmapper_qbase_set_count(void* self, int count) {
-    QHXYModelMapper_QBaseSetCount((QHXYModelMapper*)self, count);
+void q_hxymodelmapper_super_set_count(void* self, int count) {
+    QHXYModelMapper_SuperSetCount((QHXYModelMapper*)self, count);
 }
 
 void q_hxymodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
@@ -516,8 +516,8 @@ int32_t q_hxymodelmapper_orientation(void* self) {
     return QHXYModelMapper_Orientation((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_orientation(void* self) {
-    return QHXYModelMapper_QBaseOrientation((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_orientation(void* self) {
+    return QHXYModelMapper_SuperOrientation((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_orientation(void* self, int32_t (*callback)()) {
@@ -528,8 +528,8 @@ void q_hxymodelmapper_set_orientation(void* self, int32_t orientation) {
     QHXYModelMapper_SetOrientation((QHXYModelMapper*)self, orientation);
 }
 
-void q_hxymodelmapper_qbase_set_orientation(void* self, int32_t orientation) {
-    QHXYModelMapper_QBaseSetOrientation((QHXYModelMapper*)self, orientation);
+void q_hxymodelmapper_super_set_orientation(void* self, int32_t orientation) {
+    QHXYModelMapper_SuperSetOrientation((QHXYModelMapper*)self, orientation);
 }
 
 void q_hxymodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t)) {
@@ -540,8 +540,8 @@ int32_t q_hxymodelmapper_x_section(void* self) {
     return QHXYModelMapper_XSection((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_x_section(void* self) {
-    return QHXYModelMapper_QBaseXSection((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_x_section(void* self) {
+    return QHXYModelMapper_SuperXSection((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_x_section(void* self, int32_t (*callback)()) {
@@ -552,8 +552,8 @@ void q_hxymodelmapper_set_x_section(void* self, int xSection) {
     QHXYModelMapper_SetXSection((QHXYModelMapper*)self, xSection);
 }
 
-void q_hxymodelmapper_qbase_set_x_section(void* self, int xSection) {
-    QHXYModelMapper_QBaseSetXSection((QHXYModelMapper*)self, xSection);
+void q_hxymodelmapper_super_set_x_section(void* self, int xSection) {
+    QHXYModelMapper_SuperSetXSection((QHXYModelMapper*)self, xSection);
 }
 
 void q_hxymodelmapper_on_set_x_section(void* self, void (*callback)(void*, int)) {
@@ -564,8 +564,8 @@ int32_t q_hxymodelmapper_y_section(void* self) {
     return QHXYModelMapper_YSection((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_y_section(void* self) {
-    return QHXYModelMapper_QBaseYSection((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_y_section(void* self) {
+    return QHXYModelMapper_SuperYSection((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_y_section(void* self, int32_t (*callback)()) {
@@ -576,8 +576,8 @@ void q_hxymodelmapper_set_y_section(void* self, int ySection) {
     QHXYModelMapper_SetYSection((QHXYModelMapper*)self, ySection);
 }
 
-void q_hxymodelmapper_qbase_set_y_section(void* self, int ySection) {
-    QHXYModelMapper_QBaseSetYSection((QHXYModelMapper*)self, ySection);
+void q_hxymodelmapper_super_set_y_section(void* self, int ySection) {
+    QHXYModelMapper_SuperSetYSection((QHXYModelMapper*)self, ySection);
 }
 
 void q_hxymodelmapper_on_set_y_section(void* self, void (*callback)(void*, int)) {
@@ -588,8 +588,8 @@ QObject* q_hxymodelmapper_sender(void* self) {
     return QHXYModelMapper_Sender((QHXYModelMapper*)self);
 }
 
-QObject* q_hxymodelmapper_qbase_sender(void* self) {
-    return QHXYModelMapper_QBaseSender((QHXYModelMapper*)self);
+QObject* q_hxymodelmapper_super_sender(void* self) {
+    return QHXYModelMapper_SuperSender((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_sender(void* self, QObject* (*callback)()) {
@@ -600,8 +600,8 @@ int32_t q_hxymodelmapper_sender_signal_index(void* self) {
     return QHXYModelMapper_SenderSignalIndex((QHXYModelMapper*)self);
 }
 
-int32_t q_hxymodelmapper_qbase_sender_signal_index(void* self) {
-    return QHXYModelMapper_QBaseSenderSignalIndex((QHXYModelMapper*)self);
+int32_t q_hxymodelmapper_super_sender_signal_index(void* self) {
+    return QHXYModelMapper_SuperSenderSignalIndex((QHXYModelMapper*)self);
 }
 
 void q_hxymodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -612,8 +612,8 @@ int32_t q_hxymodelmapper_receivers(void* self, const char* signal) {
     return QHXYModelMapper_Receivers((QHXYModelMapper*)self, signal);
 }
 
-int32_t q_hxymodelmapper_qbase_receivers(void* self, const char* signal) {
-    return QHXYModelMapper_QBaseReceivers((QHXYModelMapper*)self, signal);
+int32_t q_hxymodelmapper_super_receivers(void* self, const char* signal) {
+    return QHXYModelMapper_SuperReceivers((QHXYModelMapper*)self, signal);
 }
 
 void q_hxymodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -624,8 +624,8 @@ bool q_hxymodelmapper_is_signal_connected(void* self, void* signal) {
     return QHXYModelMapper_IsSignalConnected((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-bool q_hxymodelmapper_qbase_is_signal_connected(void* self, void* signal) {
-    return QHXYModelMapper_QBaseIsSignalConnected((QHXYModelMapper*)self, (QMetaMethod*)signal);
+bool q_hxymodelmapper_super_is_signal_connected(void* self, void* signal) {
+    return QHXYModelMapper_SuperIsSignalConnected((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_hxymodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

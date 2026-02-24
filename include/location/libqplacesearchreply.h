@@ -40,13 +40,17 @@ const QMetaObject* q_placesearchreply_meta_object(void* self);
 ///
 void q_placesearchreply_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_meta_object` instead
+///
+#define q_placesearchreply_qbase_meta_object q_placesearchreply_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlaceSearchReply*
 ///
-const QMetaObject* q_placesearchreply_qbase_meta_object(void* self);
+const QMetaObject* q_placesearchreply_super_meta_object(void* self);
 
 /// @param self QPlaceSearchReply*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_placesearchreply_metacast(void* self, const char* param1);
 ///
 void q_placesearchreply_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_metacast` instead
+///
+#define q_placesearchreply_qbase_metacast q_placesearchreply_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPlaceSearchReply*
 /// @param param1 const char*
 ///
-void* q_placesearchreply_qbase_metacast(void* self, const char* param1);
+void* q_placesearchreply_super_metacast(void* self, const char* param1);
 
 /// @param self QPlaceSearchReply*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_placesearchreply_metacall(void* self, int32_t param1, int param2, void
 ///
 void q_placesearchreply_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_metacall` instead
+///
+#define q_placesearchreply_qbase_metacall q_placesearchreply_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPlaceSearchReply*
@@ -88,7 +100,7 @@ void q_placesearchreply_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_placesearchreply_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_placesearchreply_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -115,6 +127,10 @@ int32_t q_placesearchreply_type(void* self);
 ///
 void q_placesearchreply_on_type(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_type` instead
+///
+#define q_placesearchreply_qbase_type q_placesearchreply_super_type
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#type)
 ///
 /// Base class method implementation
@@ -123,7 +139,7 @@ void q_placesearchreply_on_type(void* self, int32_t (*callback)());
 ///
 /// @return enum QPlaceReply__Type
 ///
-int32_t q_placesearchreply_qbase_type(void* self);
+int32_t q_placesearchreply_super_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#results)
 ///
@@ -167,6 +183,10 @@ void q_placesearchreply_set_results(void* self, libqt_list results);
 ///
 void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, libqt_list));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_results` instead
+///
+#define q_placesearchreply_qbase_set_results q_placesearchreply_super_set_results
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setResults)
 ///
 /// Base class method implementation
@@ -174,7 +194,7 @@ void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, libqt
 /// @param self QPlaceSearchReply*
 /// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placesearchreply_qbase_set_results(void* self, libqt_list results);
+void q_placesearchreply_super_set_results(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setRequest)
 ///
@@ -192,6 +212,10 @@ void q_placesearchreply_set_request(void* self, void* request);
 ///
 void q_placesearchreply_on_set_request(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_request` instead
+///
+#define q_placesearchreply_qbase_set_request q_placesearchreply_super_set_request
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setRequest)
 ///
 /// Base class method implementation
@@ -199,7 +223,7 @@ void q_placesearchreply_on_set_request(void* self, void (*callback)(void*, void*
 /// @param self QPlaceSearchReply*
 /// @param request QPlaceSearchRequest*
 ///
-void q_placesearchreply_qbase_set_request(void* self, void* request);
+void q_placesearchreply_super_set_request(void* self, void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setPreviousPageRequest)
 ///
@@ -217,6 +241,10 @@ void q_placesearchreply_set_previous_page_request(void* self, void* previous);
 ///
 void q_placesearchreply_on_set_previous_page_request(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_previous_page_request` instead
+///
+#define q_placesearchreply_qbase_set_previous_page_request q_placesearchreply_super_set_previous_page_request
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setPreviousPageRequest)
 ///
 /// Base class method implementation
@@ -224,7 +252,7 @@ void q_placesearchreply_on_set_previous_page_request(void* self, void (*callback
 /// @param self QPlaceSearchReply*
 /// @param previous QPlaceSearchRequest*
 ///
-void q_placesearchreply_qbase_set_previous_page_request(void* self, void* previous);
+void q_placesearchreply_super_set_previous_page_request(void* self, void* previous);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setNextPageRequest)
 ///
@@ -242,6 +270,10 @@ void q_placesearchreply_set_next_page_request(void* self, void* next);
 ///
 void q_placesearchreply_on_set_next_page_request(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_next_page_request` instead
+///
+#define q_placesearchreply_qbase_set_next_page_request q_placesearchreply_super_set_next_page_request
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setNextPageRequest)
 ///
 /// Base class method implementation
@@ -249,7 +281,7 @@ void q_placesearchreply_on_set_next_page_request(void* self, void (*callback)(vo
 /// @param self QPlaceSearchReply*
 /// @param next QPlaceSearchRequest*
 ///
-void q_placesearchreply_qbase_set_next_page_request(void* self, void* next);
+void q_placesearchreply_super_set_next_page_request(void* self, void* next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -843,6 +875,10 @@ void q_placesearchreply_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 void q_placesearchreply_abort(void* self);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_abort` instead
+///
+#define q_placesearchreply_qbase_abort q_placesearchreply_super_abort
+
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#abort)
@@ -851,7 +887,7 @@ void q_placesearchreply_abort(void* self);
 ///
 /// @param self QPlaceSearchReply*
 ///
-void q_placesearchreply_qbase_abort(void* self);
+void q_placesearchreply_super_abort(void* self);
 
 /// Inherited from QPlaceReply
 ///
@@ -875,6 +911,10 @@ void q_placesearchreply_on_abort(void* self, void (*callback)());
 ///
 bool q_placesearchreply_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_event` instead
+///
+#define q_placesearchreply_qbase_event q_placesearchreply_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -884,7 +924,7 @@ bool q_placesearchreply_event(void* self, void* event);
 /// @param self QPlaceSearchReply*
 /// @param event QEvent*
 ///
-bool q_placesearchreply_qbase_event(void* self, void* event);
+bool q_placesearchreply_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -909,6 +949,10 @@ void q_placesearchreply_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_placesearchreply_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_event_filter` instead
+///
+#define q_placesearchreply_qbase_event_filter q_placesearchreply_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -919,7 +963,7 @@ bool q_placesearchreply_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_placesearchreply_qbase_event_filter(void* self, void* watched, void* event);
+bool q_placesearchreply_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -943,6 +987,10 @@ void q_placesearchreply_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_placesearchreply_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_timer_event` instead
+///
+#define q_placesearchreply_qbase_timer_event q_placesearchreply_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -952,7 +1000,7 @@ void q_placesearchreply_timer_event(void* self, void* event);
 /// @param self QPlaceSearchReply*
 /// @param event QTimerEvent*
 ///
-void q_placesearchreply_qbase_timer_event(void* self, void* event);
+void q_placesearchreply_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -976,6 +1024,10 @@ void q_placesearchreply_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void q_placesearchreply_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_child_event` instead
+///
+#define q_placesearchreply_qbase_child_event q_placesearchreply_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -985,7 +1037,7 @@ void q_placesearchreply_child_event(void* self, void* event);
 /// @param self QPlaceSearchReply*
 /// @param event QChildEvent*
 ///
-void q_placesearchreply_qbase_child_event(void* self, void* event);
+void q_placesearchreply_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1009,6 +1061,10 @@ void q_placesearchreply_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_placesearchreply_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_custom_event` instead
+///
+#define q_placesearchreply_qbase_custom_event q_placesearchreply_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1018,7 +1074,7 @@ void q_placesearchreply_custom_event(void* self, void* event);
 /// @param self QPlaceSearchReply*
 /// @param event QEvent*
 ///
-void q_placesearchreply_qbase_custom_event(void* self, void* event);
+void q_placesearchreply_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1042,6 +1098,10 @@ void q_placesearchreply_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void q_placesearchreply_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_connect_notify` instead
+///
+#define q_placesearchreply_qbase_connect_notify q_placesearchreply_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1051,7 +1111,7 @@ void q_placesearchreply_connect_notify(void* self, void* signal);
 /// @param self QPlaceSearchReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchreply_qbase_connect_notify(void* self, void* signal);
+void q_placesearchreply_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1075,6 +1135,10 @@ void q_placesearchreply_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_placesearchreply_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_disconnect_notify` instead
+///
+#define q_placesearchreply_qbase_disconnect_notify q_placesearchreply_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1084,7 +1148,7 @@ void q_placesearchreply_disconnect_notify(void* self, void* signal);
 /// @param self QPlaceSearchReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchreply_qbase_disconnect_notify(void* self, void* signal);
+void q_placesearchreply_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1108,6 +1172,10 @@ void q_placesearchreply_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 void q_placesearchreply_set_finished(void* self, bool finished);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_finished` instead
+///
+#define q_placesearchreply_qbase_set_finished q_placesearchreply_super_set_finished
+
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#setFinished)
@@ -1117,7 +1185,7 @@ void q_placesearchreply_set_finished(void* self, bool finished);
 /// @param self QPlaceSearchReply*
 /// @param finished bool
 ///
-void q_placesearchreply_qbase_set_finished(void* self, bool finished);
+void q_placesearchreply_super_set_finished(void* self, bool finished);
 
 /// Inherited from QPlaceReply
 ///
@@ -1142,6 +1210,10 @@ void q_placesearchreply_on_set_finished(void* self, void (*callback)(void*, bool
 ///
 void q_placesearchreply_set_error(void* self, int32_t error, const char* errorString);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_set_error` instead
+///
+#define q_placesearchreply_qbase_set_error q_placesearchreply_super_set_error
+
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#setError)
@@ -1152,7 +1224,7 @@ void q_placesearchreply_set_error(void* self, int32_t error, const char* errorSt
 /// @param error enum QPlaceReply__Error
 /// @param errorString const char*
 ///
-void q_placesearchreply_qbase_set_error(void* self, int32_t error, const char* errorString);
+void q_placesearchreply_super_set_error(void* self, int32_t error, const char* errorString);
 
 /// Inherited from QPlaceReply
 ///
@@ -1175,6 +1247,10 @@ void q_placesearchreply_on_set_error(void* self, void (*callback)(void*, int32_t
 ///
 QObject* q_placesearchreply_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_sender` instead
+///
+#define q_placesearchreply_qbase_sender q_placesearchreply_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1183,7 +1259,7 @@ QObject* q_placesearchreply_sender(void* self);
 ///
 /// @param self QPlaceSearchReply*
 ///
-QObject* q_placesearchreply_qbase_sender(void* self);
+QObject* q_placesearchreply_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1206,6 +1282,10 @@ void q_placesearchreply_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_placesearchreply_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_sender_signal_index` instead
+///
+#define q_placesearchreply_qbase_sender_signal_index q_placesearchreply_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1214,7 +1294,7 @@ int32_t q_placesearchreply_sender_signal_index(void* self);
 ///
 /// @param self QPlaceSearchReply*
 ///
-int32_t q_placesearchreply_qbase_sender_signal_index(void* self);
+int32_t q_placesearchreply_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1238,6 +1318,10 @@ void q_placesearchreply_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_placesearchreply_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_receivers` instead
+///
+#define q_placesearchreply_qbase_receivers q_placesearchreply_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1247,7 +1331,7 @@ int32_t q_placesearchreply_receivers(void* self, const char* signal);
 /// @param self QPlaceSearchReply*
 /// @param signal const char*
 ///
-int32_t q_placesearchreply_qbase_receivers(void* self, const char* signal);
+int32_t q_placesearchreply_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1271,6 +1355,10 @@ void q_placesearchreply_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool q_placesearchreply_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placesearchreply_super_is_signal_connected` instead
+///
+#define q_placesearchreply_qbase_is_signal_connected q_placesearchreply_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1280,7 +1368,7 @@ bool q_placesearchreply_is_signal_connected(void* self, void* signal);
 /// @param self QPlaceSearchReply*
 /// @param signal QMetaMethod*
 ///
-bool q_placesearchreply_qbase_is_signal_connected(void* self, void* signal);
+bool q_placesearchreply_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -53,13 +53,17 @@ const QMetaObject* k_fontsizeaction_meta_object(void* self);
 ///
 void k_fontsizeaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_meta_object` instead
+///
+#define k_fontsizeaction_qbase_meta_object k_fontsizeaction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KFontSizeAction*
 ///
-const QMetaObject* k_fontsizeaction_qbase_meta_object(void* self);
+const QMetaObject* k_fontsizeaction_super_meta_object(void* self);
 
 /// @param self KFontSizeAction*
 /// @param param1 const char*
@@ -73,12 +77,16 @@ void* k_fontsizeaction_metacast(void* self, const char* param1);
 ///
 void k_fontsizeaction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_metacast` instead
+///
+#define k_fontsizeaction_qbase_metacast k_fontsizeaction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KFontSizeAction*
 /// @param param1 const char*
 ///
-void* k_fontsizeaction_qbase_metacast(void* self, const char* param1);
+void* k_fontsizeaction_super_metacast(void* self, const char* param1);
 
 /// @param self KFontSizeAction*
 /// @param param1 enum QMetaObject__Call
@@ -94,6 +102,10 @@ int32_t k_fontsizeaction_metacall(void* self, int32_t param1, int param2, void* 
 ///
 void k_fontsizeaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_metacall` instead
+///
+#define k_fontsizeaction_qbase_metacall k_fontsizeaction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KFontSizeAction*
@@ -101,7 +113,7 @@ void k_fontsizeaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_fontsizeaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_fontsizeaction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -154,6 +166,10 @@ void k_fontsizeaction_slot_action_triggered(void* self, void* action);
 ///
 void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_slot_action_triggered` instead
+///
+#define k_fontsizeaction_qbase_slot_action_triggered k_fontsizeaction_super_slot_action_triggered
+
 /// [Upstream resources](https://api.kde.org/kfontsizeaction.html#slotActionTriggered)
 ///
 /// Base class method implementation
@@ -161,7 +177,7 @@ void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void
 /// @param self KFontSizeAction*
 /// @param action QAction*
 ///
-void k_fontsizeaction_qbase_slot_action_triggered(void* self, void* action);
+void k_fontsizeaction_super_slot_action_triggered(void* self, void* action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1627,6 +1643,10 @@ void k_fontsizeaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QAction* k_fontsizeaction_remove_action(void* self, void* action);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_remove_action` instead
+///
+#define k_fontsizeaction_qbase_remove_action k_fontsizeaction_super_remove_action
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#removeAction)
@@ -1636,7 +1656,7 @@ QAction* k_fontsizeaction_remove_action(void* self, void* action);
 /// @param self KFontSizeAction*
 /// @param action QAction*
 ///
-QAction* k_fontsizeaction_qbase_remove_action(void* self, void* action);
+QAction* k_fontsizeaction_super_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
@@ -1661,6 +1681,10 @@ void k_fontsizeaction_on_remove_action(void* self, QAction* (*callback)(void*, v
 ///
 void k_fontsizeaction_insert_action(void* self, void* before, void* action);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_insert_action` instead
+///
+#define k_fontsizeaction_qbase_insert_action k_fontsizeaction_super_insert_action
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#insertAction)
@@ -1671,7 +1695,7 @@ void k_fontsizeaction_insert_action(void* self, void* before, void* action);
 /// @param before QAction*
 /// @param action QAction*
 ///
-void k_fontsizeaction_qbase_insert_action(void* self, void* before, void* action);
+void k_fontsizeaction_super_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
@@ -1695,6 +1719,10 @@ void k_fontsizeaction_on_insert_action(void* self, void (*callback)(void*, void*
 ///
 QWidget* k_fontsizeaction_create_widget(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_create_widget` instead
+///
+#define k_fontsizeaction_qbase_create_widget k_fontsizeaction_super_create_widget
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#createWidget)
@@ -1704,7 +1732,7 @@ QWidget* k_fontsizeaction_create_widget(void* self, void* parent);
 /// @param self KFontSizeAction*
 /// @param parent QWidget*
 ///
-QWidget* k_fontsizeaction_qbase_create_widget(void* self, void* parent);
+QWidget* k_fontsizeaction_super_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
@@ -1728,6 +1756,10 @@ void k_fontsizeaction_on_create_widget(void* self, QWidget* (*callback)(void*, v
 ///
 void k_fontsizeaction_delete_widget(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_delete_widget` instead
+///
+#define k_fontsizeaction_qbase_delete_widget k_fontsizeaction_super_delete_widget
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#deleteWidget)
@@ -1737,7 +1769,7 @@ void k_fontsizeaction_delete_widget(void* self, void* widget);
 /// @param self KFontSizeAction*
 /// @param widget QWidget*
 ///
-void k_fontsizeaction_qbase_delete_widget(void* self, void* widget);
+void k_fontsizeaction_super_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
@@ -1761,6 +1793,10 @@ void k_fontsizeaction_on_delete_widget(void* self, void (*callback)(void*, void*
 ///
 bool k_fontsizeaction_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_event` instead
+///
+#define k_fontsizeaction_qbase_event k_fontsizeaction_super_event
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#event)
@@ -1770,7 +1806,7 @@ bool k_fontsizeaction_event(void* self, void* event);
 /// @param self KFontSizeAction*
 /// @param event QEvent*
 ///
-bool k_fontsizeaction_qbase_event(void* self, void* event);
+bool k_fontsizeaction_super_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
@@ -1795,6 +1831,10 @@ void k_fontsizeaction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_fontsizeaction_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_event_filter` instead
+///
+#define k_fontsizeaction_qbase_event_filter k_fontsizeaction_super_event_filter
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#eventFilter)
@@ -1805,7 +1845,7 @@ bool k_fontsizeaction_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_fontsizeaction_qbase_event_filter(void* self, void* watched, void* event);
+bool k_fontsizeaction_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
@@ -1829,6 +1869,10 @@ void k_fontsizeaction_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_fontsizeaction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_timer_event` instead
+///
+#define k_fontsizeaction_qbase_timer_event k_fontsizeaction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1838,7 +1882,7 @@ void k_fontsizeaction_timer_event(void* self, void* event);
 /// @param self KFontSizeAction*
 /// @param event QTimerEvent*
 ///
-void k_fontsizeaction_qbase_timer_event(void* self, void* event);
+void k_fontsizeaction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1862,6 +1906,10 @@ void k_fontsizeaction_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void k_fontsizeaction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_child_event` instead
+///
+#define k_fontsizeaction_qbase_child_event k_fontsizeaction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1871,7 +1919,7 @@ void k_fontsizeaction_child_event(void* self, void* event);
 /// @param self KFontSizeAction*
 /// @param event QChildEvent*
 ///
-void k_fontsizeaction_qbase_child_event(void* self, void* event);
+void k_fontsizeaction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1895,6 +1943,10 @@ void k_fontsizeaction_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void k_fontsizeaction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_custom_event` instead
+///
+#define k_fontsizeaction_qbase_custom_event k_fontsizeaction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1904,7 +1956,7 @@ void k_fontsizeaction_custom_event(void* self, void* event);
 /// @param self KFontSizeAction*
 /// @param event QEvent*
 ///
-void k_fontsizeaction_qbase_custom_event(void* self, void* event);
+void k_fontsizeaction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1928,6 +1980,10 @@ void k_fontsizeaction_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void k_fontsizeaction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_connect_notify` instead
+///
+#define k_fontsizeaction_qbase_connect_notify k_fontsizeaction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1937,7 +1993,7 @@ void k_fontsizeaction_connect_notify(void* self, void* signal);
 /// @param self KFontSizeAction*
 /// @param signal QMetaMethod*
 ///
-void k_fontsizeaction_qbase_connect_notify(void* self, void* signal);
+void k_fontsizeaction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1961,6 +2017,10 @@ void k_fontsizeaction_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_fontsizeaction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_disconnect_notify` instead
+///
+#define k_fontsizeaction_qbase_disconnect_notify k_fontsizeaction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1970,7 +2030,7 @@ void k_fontsizeaction_disconnect_notify(void* self, void* signal);
 /// @param self KFontSizeAction*
 /// @param signal QMetaMethod*
 ///
-void k_fontsizeaction_qbase_disconnect_notify(void* self, void* signal);
+void k_fontsizeaction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1994,6 +2054,10 @@ void k_fontsizeaction_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 void k_fontsizeaction_slot_toggled(void* self, bool param1);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_slot_toggled` instead
+///
+#define k_fontsizeaction_qbase_slot_toggled k_fontsizeaction_super_slot_toggled
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotToggled)
@@ -2003,7 +2067,7 @@ void k_fontsizeaction_slot_toggled(void* self, bool param1);
 /// @param self KFontSizeAction*
 /// @param param1 bool
 ///
-void k_fontsizeaction_qbase_slot_toggled(void* self, bool param1);
+void k_fontsizeaction_super_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
@@ -2028,6 +2092,10 @@ void k_fontsizeaction_on_slot_toggled(void* self, void (*callback)(void*, bool))
 ///
 libqt_list k_fontsizeaction_created_widgets(void* self);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_created_widgets` instead
+///
+#define k_fontsizeaction_qbase_created_widgets k_fontsizeaction_super_created_widgets
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -2038,7 +2106,7 @@ libqt_list k_fontsizeaction_created_widgets(void* self);
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_fontsizeaction_qbase_created_widgets(void* self);
+libqt_list k_fontsizeaction_super_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -2061,6 +2129,10 @@ void k_fontsizeaction_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 QObject* k_fontsizeaction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_sender` instead
+///
+#define k_fontsizeaction_qbase_sender k_fontsizeaction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2069,7 +2141,7 @@ QObject* k_fontsizeaction_sender(void* self);
 ///
 /// @param self KFontSizeAction*
 ///
-QObject* k_fontsizeaction_qbase_sender(void* self);
+QObject* k_fontsizeaction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2092,6 +2164,10 @@ void k_fontsizeaction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_fontsizeaction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_sender_signal_index` instead
+///
+#define k_fontsizeaction_qbase_sender_signal_index k_fontsizeaction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2100,7 +2176,7 @@ int32_t k_fontsizeaction_sender_signal_index(void* self);
 ///
 /// @param self KFontSizeAction*
 ///
-int32_t k_fontsizeaction_qbase_sender_signal_index(void* self);
+int32_t k_fontsizeaction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2124,6 +2200,10 @@ void k_fontsizeaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_fontsizeaction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_receivers` instead
+///
+#define k_fontsizeaction_qbase_receivers k_fontsizeaction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2133,7 +2213,7 @@ int32_t k_fontsizeaction_receivers(void* self, const char* signal);
 /// @param self KFontSizeAction*
 /// @param signal const char*
 ///
-int32_t k_fontsizeaction_qbase_receivers(void* self, const char* signal);
+int32_t k_fontsizeaction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2157,6 +2237,10 @@ void k_fontsizeaction_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool k_fontsizeaction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontsizeaction_super_is_signal_connected` instead
+///
+#define k_fontsizeaction_qbase_is_signal_connected k_fontsizeaction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2166,7 +2250,7 @@ bool k_fontsizeaction_is_signal_connected(void* self, void* signal);
 /// @param self KFontSizeAction*
 /// @param signal QMetaMethod*
 ///
-bool k_fontsizeaction_qbase_is_signal_connected(void* self, void* signal);
+bool k_fontsizeaction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

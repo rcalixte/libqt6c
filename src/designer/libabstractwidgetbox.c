@@ -34,8 +34,8 @@ void q_designerwidgetboxinterface_on_meta_object(void* self, const QMetaObject* 
     QDesignerWidgetBoxInterface_OnMetaObject((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerwidgetboxinterface_qbase_meta_object(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseMetaObject((QDesignerWidgetBoxInterface*)self);
+const QMetaObject* q_designerwidgetboxinterface_super_meta_object(void* self) {
+    return QDesignerWidgetBoxInterface_SuperMetaObject((QDesignerWidgetBoxInterface*)self);
 }
 
 void* q_designerwidgetboxinterface_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void q_designerwidgetboxinterface_on_metacast(void* self, void* (*callback)(void
     QDesignerWidgetBoxInterface_OnMetacast((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerwidgetboxinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerWidgetBoxInterface_QBaseMetacast((QDesignerWidgetBoxInterface*)self, param1);
+void* q_designerwidgetboxinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerWidgetBoxInterface_SuperMetacast((QDesignerWidgetBoxInterface*)self, param1);
 }
 
 int32_t q_designerwidgetboxinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_designerwidgetboxinterface_on_metacall(void* self, int32_t (*callback)(vo
     QDesignerWidgetBoxInterface_OnMetacall((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerWidgetBoxInterface_QBaseMetacall((QDesignerWidgetBoxInterface*)self, param1, param2, param3);
+int32_t q_designerwidgetboxinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerWidgetBoxInterface_SuperMetacall((QDesignerWidgetBoxInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerwidgetboxinterface_tr(const char* s) {
@@ -77,8 +77,8 @@ void q_designerwidgetboxinterface_on_category_count(void* self, int32_t (*callba
     QDesignerWidgetBoxInterface_OnCategoryCount((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_category_count(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseCategoryCount((QDesignerWidgetBoxInterface*)self);
+int32_t q_designerwidgetboxinterface_super_category_count(void* self) {
+    return QDesignerWidgetBoxInterface_SuperCategoryCount((QDesignerWidgetBoxInterface*)self);
 }
 
 QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(void* self, int cat_idx) {
@@ -89,8 +89,8 @@ void q_designerwidgetboxinterface_on_category(void* self, QDesignerWidgetBoxInte
     QDesignerWidgetBoxInterface_OnCategory((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_qbase_category(void* self, int cat_idx) {
-    return QDesignerWidgetBoxInterface_QBaseCategory((QDesignerWidgetBoxInterface*)self, cat_idx);
+QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_super_category(void* self, int cat_idx) {
+    return QDesignerWidgetBoxInterface_SuperCategory((QDesignerWidgetBoxInterface*)self, cat_idx);
 }
 
 void q_designerwidgetboxinterface_add_category(void* self, void* cat) {
@@ -101,8 +101,8 @@ void q_designerwidgetboxinterface_on_add_category(void* self, void (*callback)(v
     QDesignerWidgetBoxInterface_OnAddCategory((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_add_category(void* self, void* cat) {
-    QDesignerWidgetBoxInterface_QBaseAddCategory((QDesignerWidgetBoxInterface*)self, (QDesignerWidgetBoxInterface__Category*)cat);
+void q_designerwidgetboxinterface_super_add_category(void* self, void* cat) {
+    QDesignerWidgetBoxInterface_SuperAddCategory((QDesignerWidgetBoxInterface*)self, (QDesignerWidgetBoxInterface__Category*)cat);
 }
 
 void q_designerwidgetboxinterface_remove_category(void* self, int cat_idx) {
@@ -113,8 +113,8 @@ void q_designerwidgetboxinterface_on_remove_category(void* self, void (*callback
     QDesignerWidgetBoxInterface_OnRemoveCategory((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_remove_category(void* self, int cat_idx) {
-    QDesignerWidgetBoxInterface_QBaseRemoveCategory((QDesignerWidgetBoxInterface*)self, cat_idx);
+void q_designerwidgetboxinterface_super_remove_category(void* self, int cat_idx) {
+    QDesignerWidgetBoxInterface_SuperRemoveCategory((QDesignerWidgetBoxInterface*)self, cat_idx);
 }
 
 int32_t q_designerwidgetboxinterface_widget_count(void* self, int cat_idx) {
@@ -125,8 +125,8 @@ void q_designerwidgetboxinterface_on_widget_count(void* self, int32_t (*callback
     QDesignerWidgetBoxInterface_OnWidgetCount((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_widget_count(void* self, int cat_idx) {
-    return QDesignerWidgetBoxInterface_QBaseWidgetCount((QDesignerWidgetBoxInterface*)self, cat_idx);
+int32_t q_designerwidgetboxinterface_super_widget_count(void* self, int cat_idx) {
+    return QDesignerWidgetBoxInterface_SuperWidgetCount((QDesignerWidgetBoxInterface*)self, cat_idx);
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(void* self, int cat_idx, int wgt_idx) {
@@ -137,8 +137,8 @@ void q_designerwidgetboxinterface_on_widget(void* self, QDesignerWidgetBoxInterf
     QDesignerWidgetBoxInterface_OnWidget((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_qbase_widget(void* self, int cat_idx, int wgt_idx) {
-    return QDesignerWidgetBoxInterface_QBaseWidget((QDesignerWidgetBoxInterface*)self, cat_idx, wgt_idx);
+QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_super_widget(void* self, int cat_idx, int wgt_idx) {
+    return QDesignerWidgetBoxInterface_SuperWidget((QDesignerWidgetBoxInterface*)self, cat_idx, wgt_idx);
 }
 
 void q_designerwidgetboxinterface_add_widget(void* self, int cat_idx, void* wgt) {
@@ -149,8 +149,8 @@ void q_designerwidgetboxinterface_on_add_widget(void* self, void (*callback)(voi
     QDesignerWidgetBoxInterface_OnAddWidget((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_add_widget(void* self, int cat_idx, void* wgt) {
-    QDesignerWidgetBoxInterface_QBaseAddWidget((QDesignerWidgetBoxInterface*)self, cat_idx, (QDesignerWidgetBoxInterface__Widget*)wgt);
+void q_designerwidgetboxinterface_super_add_widget(void* self, int cat_idx, void* wgt) {
+    QDesignerWidgetBoxInterface_SuperAddWidget((QDesignerWidgetBoxInterface*)self, cat_idx, (QDesignerWidgetBoxInterface__Widget*)wgt);
 }
 
 void q_designerwidgetboxinterface_remove_widget(void* self, int cat_idx, int wgt_idx) {
@@ -161,8 +161,8 @@ void q_designerwidgetboxinterface_on_remove_widget(void* self, void (*callback)(
     QDesignerWidgetBoxInterface_OnRemoveWidget((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_remove_widget(void* self, int cat_idx, int wgt_idx) {
-    QDesignerWidgetBoxInterface_QBaseRemoveWidget((QDesignerWidgetBoxInterface*)self, cat_idx, wgt_idx);
+void q_designerwidgetboxinterface_super_remove_widget(void* self, int cat_idx, int wgt_idx) {
+    QDesignerWidgetBoxInterface_SuperRemoveWidget((QDesignerWidgetBoxInterface*)self, cat_idx, wgt_idx);
 }
 
 int32_t q_designerwidgetboxinterface_find_or_insert_category(void* self, const char* categoryName) {
@@ -177,8 +177,8 @@ void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(v
     QDesignerWidgetBoxInterface_OnDropWidgets((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_drop_widgets(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list, void* global_mouse_pos) {
-    QDesignerWidgetBoxInterface_QBaseDropWidgets((QDesignerWidgetBoxInterface*)self, item_list, (QPoint*)global_mouse_pos);
+void q_designerwidgetboxinterface_super_drop_widgets(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list, void* global_mouse_pos) {
+    QDesignerWidgetBoxInterface_SuperDropWidgets((QDesignerWidgetBoxInterface*)self, item_list, (QPoint*)global_mouse_pos);
 }
 
 void q_designerwidgetboxinterface_set_file_name(void* self, const char* file_name) {
@@ -189,8 +189,8 @@ void q_designerwidgetboxinterface_on_set_file_name(void* self, void (*callback)(
     QDesignerWidgetBoxInterface_OnSetFileName((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetboxinterface_qbase_set_file_name(void* self, const char* file_name) {
-    QDesignerWidgetBoxInterface_QBaseSetFileName((QDesignerWidgetBoxInterface*)self, qstring(file_name));
+void q_designerwidgetboxinterface_super_set_file_name(void* self, const char* file_name) {
+    QDesignerWidgetBoxInterface_SuperSetFileName((QDesignerWidgetBoxInterface*)self, qstring(file_name));
 }
 
 const char* q_designerwidgetboxinterface_file_name(void* self) {
@@ -204,8 +204,8 @@ void q_designerwidgetboxinterface_on_file_name(void* self, const char* (*callbac
     QDesignerWidgetBoxInterface_OnFileName((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-const char* q_designerwidgetboxinterface_qbase_file_name(void* self) {
-    libqt_string _str = QDesignerWidgetBoxInterface_QBaseFileName((QDesignerWidgetBoxInterface*)self);
+const char* q_designerwidgetboxinterface_super_file_name(void* self) {
+    libqt_string _str = QDesignerWidgetBoxInterface_SuperFileName((QDesignerWidgetBoxInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -219,8 +219,8 @@ void q_designerwidgetboxinterface_on_load(void* self, bool (*callback)()) {
     QDesignerWidgetBoxInterface_OnLoad((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerwidgetboxinterface_qbase_load(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseLoad((QDesignerWidgetBoxInterface*)self);
+bool q_designerwidgetboxinterface_super_load(void* self) {
+    return QDesignerWidgetBoxInterface_SuperLoad((QDesignerWidgetBoxInterface*)self);
 }
 
 bool q_designerwidgetboxinterface_save(void* self) {
@@ -231,8 +231,8 @@ void q_designerwidgetboxinterface_on_save(void* self, bool (*callback)()) {
     QDesignerWidgetBoxInterface_OnSave((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerwidgetboxinterface_qbase_save(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseSave((QDesignerWidgetBoxInterface*)self);
+bool q_designerwidgetboxinterface_super_save(void* self) {
+    return QDesignerWidgetBoxInterface_SuperSave((QDesignerWidgetBoxInterface*)self);
 }
 
 const char* q_designerwidgetboxinterface_tr2(const char* s, const char* c) {
@@ -1634,8 +1634,8 @@ int32_t q_designerwidgetboxinterface_dev_type(void* self) {
     return QDesignerWidgetBoxInterface_DevType((QDesignerWidgetBoxInterface*)self);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_dev_type(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseDevType((QDesignerWidgetBoxInterface*)self);
+int32_t q_designerwidgetboxinterface_super_dev_type(void* self) {
+    return QDesignerWidgetBoxInterface_SuperDevType((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1646,8 +1646,8 @@ void q_designerwidgetboxinterface_set_visible(void* self, bool visible) {
     QDesignerWidgetBoxInterface_SetVisible((QDesignerWidgetBoxInterface*)self, visible);
 }
 
-void q_designerwidgetboxinterface_qbase_set_visible(void* self, bool visible) {
-    QDesignerWidgetBoxInterface_QBaseSetVisible((QDesignerWidgetBoxInterface*)self, visible);
+void q_designerwidgetboxinterface_super_set_visible(void* self, bool visible) {
+    QDesignerWidgetBoxInterface_SuperSetVisible((QDesignerWidgetBoxInterface*)self, visible);
 }
 
 void q_designerwidgetboxinterface_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1658,8 +1658,8 @@ QSize* q_designerwidgetboxinterface_size_hint(void* self) {
     return QDesignerWidgetBoxInterface_SizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
-QSize* q_designerwidgetboxinterface_qbase_size_hint(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseSizeHint((QDesignerWidgetBoxInterface*)self);
+QSize* q_designerwidgetboxinterface_super_size_hint(void* self) {
+    return QDesignerWidgetBoxInterface_SuperSizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1670,8 +1670,8 @@ QSize* q_designerwidgetboxinterface_minimum_size_hint(void* self) {
     return QDesignerWidgetBoxInterface_MinimumSizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
-QSize* q_designerwidgetboxinterface_qbase_minimum_size_hint(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseMinimumSizeHint((QDesignerWidgetBoxInterface*)self);
+QSize* q_designerwidgetboxinterface_super_minimum_size_hint(void* self) {
+    return QDesignerWidgetBoxInterface_SuperMinimumSizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1682,8 +1682,8 @@ int32_t q_designerwidgetboxinterface_height_for_width(void* self, int param1) {
     return QDesignerWidgetBoxInterface_HeightForWidth((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_height_for_width(void* self, int param1) {
-    return QDesignerWidgetBoxInterface_QBaseHeightForWidth((QDesignerWidgetBoxInterface*)self, param1);
+int32_t q_designerwidgetboxinterface_super_height_for_width(void* self, int param1) {
+    return QDesignerWidgetBoxInterface_SuperHeightForWidth((QDesignerWidgetBoxInterface*)self, param1);
 }
 
 void q_designerwidgetboxinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1694,8 +1694,8 @@ bool q_designerwidgetboxinterface_has_height_for_width(void* self) {
     return QDesignerWidgetBoxInterface_HasHeightForWidth((QDesignerWidgetBoxInterface*)self);
 }
 
-bool q_designerwidgetboxinterface_qbase_has_height_for_width(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseHasHeightForWidth((QDesignerWidgetBoxInterface*)self);
+bool q_designerwidgetboxinterface_super_has_height_for_width(void* self) {
+    return QDesignerWidgetBoxInterface_SuperHasHeightForWidth((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1706,8 +1706,8 @@ QPaintEngine* q_designerwidgetboxinterface_paint_engine(void* self) {
     return QDesignerWidgetBoxInterface_PaintEngine((QDesignerWidgetBoxInterface*)self);
 }
 
-QPaintEngine* q_designerwidgetboxinterface_qbase_paint_engine(void* self) {
-    return QDesignerWidgetBoxInterface_QBasePaintEngine((QDesignerWidgetBoxInterface*)self);
+QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(void* self) {
+    return QDesignerWidgetBoxInterface_SuperPaintEngine((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1718,8 +1718,8 @@ bool q_designerwidgetboxinterface_event(void* self, void* event) {
     return QDesignerWidgetBoxInterface_Event((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
-bool q_designerwidgetboxinterface_qbase_event(void* self, void* event) {
-    return QDesignerWidgetBoxInterface_QBaseEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
+bool q_designerwidgetboxinterface_super_event(void* self, void* event) {
+    return QDesignerWidgetBoxInterface_SuperEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void q_designerwidgetboxinterface_mouse_press_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_MousePressEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_mouse_press_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseMousePressEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
+void q_designerwidgetboxinterface_super_mouse_press_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperMousePressEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void q_designerwidgetboxinterface_mouse_release_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_MouseReleaseEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_mouse_release_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseMouseReleaseEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
+void q_designerwidgetboxinterface_super_mouse_release_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperMouseReleaseEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void q_designerwidgetboxinterface_mouse_double_click_event(void* self, void* eve
     QDesignerWidgetBoxInterface_MouseDoubleClickEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_mouse_double_click_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseMouseDoubleClickEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
+void q_designerwidgetboxinterface_super_mouse_double_click_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperMouseDoubleClickEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void q_designerwidgetboxinterface_mouse_move_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_MouseMoveEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_mouse_move_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseMouseMoveEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
+void q_designerwidgetboxinterface_super_mouse_move_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperMouseMoveEvent((QDesignerWidgetBoxInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void q_designerwidgetboxinterface_wheel_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_WheelEvent((QDesignerWidgetBoxInterface*)self, (QWheelEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_wheel_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseWheelEvent((QDesignerWidgetBoxInterface*)self, (QWheelEvent*)event);
+void q_designerwidgetboxinterface_super_wheel_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperWheelEvent((QDesignerWidgetBoxInterface*)self, (QWheelEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void q_designerwidgetboxinterface_key_press_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_KeyPressEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_key_press_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseKeyPressEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
+void q_designerwidgetboxinterface_super_key_press_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperKeyPressEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void q_designerwidgetboxinterface_key_release_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_KeyReleaseEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_key_release_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseKeyReleaseEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
+void q_designerwidgetboxinterface_super_key_release_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperKeyReleaseEvent((QDesignerWidgetBoxInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void q_designerwidgetboxinterface_focus_in_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_FocusInEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_focus_in_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseFocusInEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
+void q_designerwidgetboxinterface_super_focus_in_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperFocusInEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void q_designerwidgetboxinterface_focus_out_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_FocusOutEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_focus_out_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseFocusOutEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
+void q_designerwidgetboxinterface_super_focus_out_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperFocusOutEvent((QDesignerWidgetBoxInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void q_designerwidgetboxinterface_enter_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_EnterEvent((QDesignerWidgetBoxInterface*)self, (QEnterEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_enter_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseEnterEvent((QDesignerWidgetBoxInterface*)self, (QEnterEvent*)event);
+void q_designerwidgetboxinterface_super_enter_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperEnterEvent((QDesignerWidgetBoxInterface*)self, (QEnterEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void q_designerwidgetboxinterface_leave_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_LeaveEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_leave_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseLeaveEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
+void q_designerwidgetboxinterface_super_leave_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperLeaveEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void q_designerwidgetboxinterface_paint_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_PaintEvent((QDesignerWidgetBoxInterface*)self, (QPaintEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_paint_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBasePaintEvent((QDesignerWidgetBoxInterface*)self, (QPaintEvent*)event);
+void q_designerwidgetboxinterface_super_paint_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperPaintEvent((QDesignerWidgetBoxInterface*)self, (QPaintEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void q_designerwidgetboxinterface_move_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_MoveEvent((QDesignerWidgetBoxInterface*)self, (QMoveEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_move_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseMoveEvent((QDesignerWidgetBoxInterface*)self, (QMoveEvent*)event);
+void q_designerwidgetboxinterface_super_move_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperMoveEvent((QDesignerWidgetBoxInterface*)self, (QMoveEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void q_designerwidgetboxinterface_resize_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_ResizeEvent((QDesignerWidgetBoxInterface*)self, (QResizeEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_resize_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseResizeEvent((QDesignerWidgetBoxInterface*)self, (QResizeEvent*)event);
+void q_designerwidgetboxinterface_super_resize_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperResizeEvent((QDesignerWidgetBoxInterface*)self, (QResizeEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void q_designerwidgetboxinterface_close_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_CloseEvent((QDesignerWidgetBoxInterface*)self, (QCloseEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_close_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseCloseEvent((QDesignerWidgetBoxInterface*)self, (QCloseEvent*)event);
+void q_designerwidgetboxinterface_super_close_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperCloseEvent((QDesignerWidgetBoxInterface*)self, (QCloseEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void q_designerwidgetboxinterface_context_menu_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_ContextMenuEvent((QDesignerWidgetBoxInterface*)self, (QContextMenuEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_context_menu_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseContextMenuEvent((QDesignerWidgetBoxInterface*)self, (QContextMenuEvent*)event);
+void q_designerwidgetboxinterface_super_context_menu_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperContextMenuEvent((QDesignerWidgetBoxInterface*)self, (QContextMenuEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void q_designerwidgetboxinterface_tablet_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_TabletEvent((QDesignerWidgetBoxInterface*)self, (QTabletEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_tablet_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseTabletEvent((QDesignerWidgetBoxInterface*)self, (QTabletEvent*)event);
+void q_designerwidgetboxinterface_super_tablet_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperTabletEvent((QDesignerWidgetBoxInterface*)self, (QTabletEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void q_designerwidgetboxinterface_action_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_ActionEvent((QDesignerWidgetBoxInterface*)self, (QActionEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_action_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseActionEvent((QDesignerWidgetBoxInterface*)self, (QActionEvent*)event);
+void q_designerwidgetboxinterface_super_action_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperActionEvent((QDesignerWidgetBoxInterface*)self, (QActionEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void q_designerwidgetboxinterface_drag_enter_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_DragEnterEvent((QDesignerWidgetBoxInterface*)self, (QDragEnterEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_drag_enter_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseDragEnterEvent((QDesignerWidgetBoxInterface*)self, (QDragEnterEvent*)event);
+void q_designerwidgetboxinterface_super_drag_enter_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperDragEnterEvent((QDesignerWidgetBoxInterface*)self, (QDragEnterEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ void q_designerwidgetboxinterface_drag_move_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_DragMoveEvent((QDesignerWidgetBoxInterface*)self, (QDragMoveEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_drag_move_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseDragMoveEvent((QDesignerWidgetBoxInterface*)self, (QDragMoveEvent*)event);
+void q_designerwidgetboxinterface_super_drag_move_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperDragMoveEvent((QDesignerWidgetBoxInterface*)self, (QDragMoveEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ void q_designerwidgetboxinterface_drag_leave_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_DragLeaveEvent((QDesignerWidgetBoxInterface*)self, (QDragLeaveEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_drag_leave_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseDragLeaveEvent((QDesignerWidgetBoxInterface*)self, (QDragLeaveEvent*)event);
+void q_designerwidgetboxinterface_super_drag_leave_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperDragLeaveEvent((QDesignerWidgetBoxInterface*)self, (QDragLeaveEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ void q_designerwidgetboxinterface_drop_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_DropEvent((QDesignerWidgetBoxInterface*)self, (QDropEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_drop_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseDropEvent((QDesignerWidgetBoxInterface*)self, (QDropEvent*)event);
+void q_designerwidgetboxinterface_super_drop_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperDropEvent((QDesignerWidgetBoxInterface*)self, (QDropEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ void q_designerwidgetboxinterface_show_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_ShowEvent((QDesignerWidgetBoxInterface*)self, (QShowEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_show_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseShowEvent((QDesignerWidgetBoxInterface*)self, (QShowEvent*)event);
+void q_designerwidgetboxinterface_super_show_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperShowEvent((QDesignerWidgetBoxInterface*)self, (QShowEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ void q_designerwidgetboxinterface_hide_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_HideEvent((QDesignerWidgetBoxInterface*)self, (QHideEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_hide_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseHideEvent((QDesignerWidgetBoxInterface*)self, (QHideEvent*)event);
+void q_designerwidgetboxinterface_super_hide_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperHideEvent((QDesignerWidgetBoxInterface*)self, (QHideEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2018,8 +2018,8 @@ bool q_designerwidgetboxinterface_native_event(void* self, char* eventType, void
     return QDesignerWidgetBoxInterface_NativeEvent((QDesignerWidgetBoxInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerwidgetboxinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QDesignerWidgetBoxInterface_QBaseNativeEvent((QDesignerWidgetBoxInterface*)self, qstring(eventType), message, result);
+bool q_designerwidgetboxinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QDesignerWidgetBoxInterface_SuperNativeEvent((QDesignerWidgetBoxInterface*)self, qstring(eventType), message, result);
 }
 
 void q_designerwidgetboxinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2030,8 +2030,8 @@ void q_designerwidgetboxinterface_change_event(void* self, void* param1) {
     QDesignerWidgetBoxInterface_ChangeEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)param1);
 }
 
-void q_designerwidgetboxinterface_qbase_change_event(void* self, void* param1) {
-    QDesignerWidgetBoxInterface_QBaseChangeEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)param1);
+void q_designerwidgetboxinterface_super_change_event(void* self, void* param1) {
+    QDesignerWidgetBoxInterface_SuperChangeEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)param1);
 }
 
 void q_designerwidgetboxinterface_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ int32_t q_designerwidgetboxinterface_metric(void* self, int32_t param1) {
     return QDesignerWidgetBoxInterface_Metric((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_metric(void* self, int32_t param1) {
-    return QDesignerWidgetBoxInterface_QBaseMetric((QDesignerWidgetBoxInterface*)self, param1);
+int32_t q_designerwidgetboxinterface_super_metric(void* self, int32_t param1) {
+    return QDesignerWidgetBoxInterface_SuperMetric((QDesignerWidgetBoxInterface*)self, param1);
 }
 
 void q_designerwidgetboxinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2054,8 +2054,8 @@ void q_designerwidgetboxinterface_init_painter(void* self, void* painter) {
     QDesignerWidgetBoxInterface_InitPainter((QDesignerWidgetBoxInterface*)self, (QPainter*)painter);
 }
 
-void q_designerwidgetboxinterface_qbase_init_painter(void* self, void* painter) {
-    QDesignerWidgetBoxInterface_QBaseInitPainter((QDesignerWidgetBoxInterface*)self, (QPainter*)painter);
+void q_designerwidgetboxinterface_super_init_painter(void* self, void* painter) {
+    QDesignerWidgetBoxInterface_SuperInitPainter((QDesignerWidgetBoxInterface*)self, (QPainter*)painter);
 }
 
 void q_designerwidgetboxinterface_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ QPaintDevice* q_designerwidgetboxinterface_redirected(void* self, void* offset) 
     return QDesignerWidgetBoxInterface_Redirected((QDesignerWidgetBoxInterface*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_designerwidgetboxinterface_qbase_redirected(void* self, void* offset) {
-    return QDesignerWidgetBoxInterface_QBaseRedirected((QDesignerWidgetBoxInterface*)self, (QPoint*)offset);
+QPaintDevice* q_designerwidgetboxinterface_super_redirected(void* self, void* offset) {
+    return QDesignerWidgetBoxInterface_SuperRedirected((QDesignerWidgetBoxInterface*)self, (QPoint*)offset);
 }
 
 void q_designerwidgetboxinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ QPainter* q_designerwidgetboxinterface_shared_painter(void* self) {
     return QDesignerWidgetBoxInterface_SharedPainter((QDesignerWidgetBoxInterface*)self);
 }
 
-QPainter* q_designerwidgetboxinterface_qbase_shared_painter(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseSharedPainter((QDesignerWidgetBoxInterface*)self);
+QPainter* q_designerwidgetboxinterface_super_shared_painter(void* self) {
+    return QDesignerWidgetBoxInterface_SuperSharedPainter((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2090,8 +2090,8 @@ void q_designerwidgetboxinterface_input_method_event(void* self, void* param1) {
     QDesignerWidgetBoxInterface_InputMethodEvent((QDesignerWidgetBoxInterface*)self, (QInputMethodEvent*)param1);
 }
 
-void q_designerwidgetboxinterface_qbase_input_method_event(void* self, void* param1) {
-    QDesignerWidgetBoxInterface_QBaseInputMethodEvent((QDesignerWidgetBoxInterface*)self, (QInputMethodEvent*)param1);
+void q_designerwidgetboxinterface_super_input_method_event(void* self, void* param1) {
+    QDesignerWidgetBoxInterface_SuperInputMethodEvent((QDesignerWidgetBoxInterface*)self, (QInputMethodEvent*)param1);
 }
 
 void q_designerwidgetboxinterface_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ QVariant* q_designerwidgetboxinterface_input_method_query(void* self, int32_t pa
     return QDesignerWidgetBoxInterface_InputMethodQuery((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-QVariant* q_designerwidgetboxinterface_qbase_input_method_query(void* self, int32_t param1) {
-    return QDesignerWidgetBoxInterface_QBaseInputMethodQuery((QDesignerWidgetBoxInterface*)self, param1);
+QVariant* q_designerwidgetboxinterface_super_input_method_query(void* self, int32_t param1) {
+    return QDesignerWidgetBoxInterface_SuperInputMethodQuery((QDesignerWidgetBoxInterface*)self, param1);
 }
 
 void q_designerwidgetboxinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2114,8 +2114,8 @@ bool q_designerwidgetboxinterface_focus_next_prev_child(void* self, bool next) {
     return QDesignerWidgetBoxInterface_FocusNextPrevChild((QDesignerWidgetBoxInterface*)self, next);
 }
 
-bool q_designerwidgetboxinterface_qbase_focus_next_prev_child(void* self, bool next) {
-    return QDesignerWidgetBoxInterface_QBaseFocusNextPrevChild((QDesignerWidgetBoxInterface*)self, next);
+bool q_designerwidgetboxinterface_super_focus_next_prev_child(void* self, bool next) {
+    return QDesignerWidgetBoxInterface_SuperFocusNextPrevChild((QDesignerWidgetBoxInterface*)self, next);
 }
 
 void q_designerwidgetboxinterface_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2126,8 +2126,8 @@ bool q_designerwidgetboxinterface_event_filter(void* self, void* watched, void* 
     return QDesignerWidgetBoxInterface_EventFilter((QDesignerWidgetBoxInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerwidgetboxinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerWidgetBoxInterface_QBaseEventFilter((QDesignerWidgetBoxInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerwidgetboxinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerWidgetBoxInterface_SuperEventFilter((QDesignerWidgetBoxInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2138,8 +2138,8 @@ void q_designerwidgetboxinterface_timer_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_TimerEvent((QDesignerWidgetBoxInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseTimerEvent((QDesignerWidgetBoxInterface*)self, (QTimerEvent*)event);
+void q_designerwidgetboxinterface_super_timer_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperTimerEvent((QDesignerWidgetBoxInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2150,8 +2150,8 @@ void q_designerwidgetboxinterface_child_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_ChildEvent((QDesignerWidgetBoxInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_child_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseChildEvent((QDesignerWidgetBoxInterface*)self, (QChildEvent*)event);
+void q_designerwidgetboxinterface_super_child_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperChildEvent((QDesignerWidgetBoxInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2162,8 +2162,8 @@ void q_designerwidgetboxinterface_custom_event(void* self, void* event) {
     QDesignerWidgetBoxInterface_CustomEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
-void q_designerwidgetboxinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerWidgetBoxInterface_QBaseCustomEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
+void q_designerwidgetboxinterface_super_custom_event(void* self, void* event) {
+    QDesignerWidgetBoxInterface_SuperCustomEvent((QDesignerWidgetBoxInterface*)self, (QEvent*)event);
 }
 
 void q_designerwidgetboxinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2174,8 +2174,8 @@ void q_designerwidgetboxinterface_connect_notify(void* self, void* signal) {
     QDesignerWidgetBoxInterface_ConnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetboxinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerWidgetBoxInterface_QBaseConnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
+void q_designerwidgetboxinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerWidgetBoxInterface_SuperConnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetboxinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ void q_designerwidgetboxinterface_disconnect_notify(void* self, void* signal) {
     QDesignerWidgetBoxInterface_DisconnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetboxinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerWidgetBoxInterface_QBaseDisconnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
+void q_designerwidgetboxinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerWidgetBoxInterface_SuperDisconnectNotify((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetboxinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ void q_designerwidgetboxinterface_update_micro_focus(void* self) {
     QDesignerWidgetBoxInterface_UpdateMicroFocus((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_qbase_update_micro_focus(void* self) {
-    QDesignerWidgetBoxInterface_QBaseUpdateMicroFocus((QDesignerWidgetBoxInterface*)self);
+void q_designerwidgetboxinterface_super_update_micro_focus(void* self) {
+    QDesignerWidgetBoxInterface_SuperUpdateMicroFocus((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2210,8 +2210,8 @@ void q_designerwidgetboxinterface_create(void* self) {
     QDesignerWidgetBoxInterface_Create((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_qbase_create(void* self) {
-    QDesignerWidgetBoxInterface_QBaseCreate((QDesignerWidgetBoxInterface*)self);
+void q_designerwidgetboxinterface_super_create(void* self) {
+    QDesignerWidgetBoxInterface_SuperCreate((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_create(void* self, void (*callback)()) {
@@ -2222,8 +2222,8 @@ void q_designerwidgetboxinterface_destroy(void* self) {
     QDesignerWidgetBoxInterface_Destroy((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_qbase_destroy(void* self) {
-    QDesignerWidgetBoxInterface_QBaseDestroy((QDesignerWidgetBoxInterface*)self);
+void q_designerwidgetboxinterface_super_destroy(void* self) {
+    QDesignerWidgetBoxInterface_SuperDestroy((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_destroy(void* self, void (*callback)()) {
@@ -2234,8 +2234,8 @@ bool q_designerwidgetboxinterface_focus_next_child(void* self) {
     return QDesignerWidgetBoxInterface_FocusNextChild((QDesignerWidgetBoxInterface*)self);
 }
 
-bool q_designerwidgetboxinterface_qbase_focus_next_child(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseFocusNextChild((QDesignerWidgetBoxInterface*)self);
+bool q_designerwidgetboxinterface_super_focus_next_child(void* self) {
+    return QDesignerWidgetBoxInterface_SuperFocusNextChild((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2246,8 +2246,8 @@ bool q_designerwidgetboxinterface_focus_previous_child(void* self) {
     return QDesignerWidgetBoxInterface_FocusPreviousChild((QDesignerWidgetBoxInterface*)self);
 }
 
-bool q_designerwidgetboxinterface_qbase_focus_previous_child(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseFocusPreviousChild((QDesignerWidgetBoxInterface*)self);
+bool q_designerwidgetboxinterface_super_focus_previous_child(void* self) {
+    return QDesignerWidgetBoxInterface_SuperFocusPreviousChild((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2258,8 +2258,8 @@ QObject* q_designerwidgetboxinterface_sender(void* self) {
     return QDesignerWidgetBoxInterface_Sender((QDesignerWidgetBoxInterface*)self);
 }
 
-QObject* q_designerwidgetboxinterface_qbase_sender(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseSender((QDesignerWidgetBoxInterface*)self);
+QObject* q_designerwidgetboxinterface_super_sender(void* self) {
+    return QDesignerWidgetBoxInterface_SuperSender((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -2270,8 +2270,8 @@ int32_t q_designerwidgetboxinterface_sender_signal_index(void* self) {
     return QDesignerWidgetBoxInterface_SenderSignalIndex((QDesignerWidgetBoxInterface*)self);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerWidgetBoxInterface_QBaseSenderSignalIndex((QDesignerWidgetBoxInterface*)self);
+int32_t q_designerwidgetboxinterface_super_sender_signal_index(void* self) {
+    return QDesignerWidgetBoxInterface_SuperSenderSignalIndex((QDesignerWidgetBoxInterface*)self);
 }
 
 void q_designerwidgetboxinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2282,8 +2282,8 @@ int32_t q_designerwidgetboxinterface_receivers(void* self, const char* signal) {
     return QDesignerWidgetBoxInterface_Receivers((QDesignerWidgetBoxInterface*)self, signal);
 }
 
-int32_t q_designerwidgetboxinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerWidgetBoxInterface_QBaseReceivers((QDesignerWidgetBoxInterface*)self, signal);
+int32_t q_designerwidgetboxinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerWidgetBoxInterface_SuperReceivers((QDesignerWidgetBoxInterface*)self, signal);
 }
 
 void q_designerwidgetboxinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2294,8 +2294,8 @@ bool q_designerwidgetboxinterface_is_signal_connected(void* self, void* signal) 
     return QDesignerWidgetBoxInterface_IsSignalConnected((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerwidgetboxinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerWidgetBoxInterface_QBaseIsSignalConnected((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
+bool q_designerwidgetboxinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerWidgetBoxInterface_SuperIsSignalConnected((QDesignerWidgetBoxInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetboxinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2306,8 +2306,8 @@ double q_designerwidgetboxinterface_get_decoded_metric_f(void* self, int32_t met
     return QDesignerWidgetBoxInterface_GetDecodedMetricF((QDesignerWidgetBoxInterface*)self, metricA, metricB);
 }
 
-double q_designerwidgetboxinterface_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QDesignerWidgetBoxInterface_QBaseGetDecodedMetricF((QDesignerWidgetBoxInterface*)self, metricA, metricB);
+double q_designerwidgetboxinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QDesignerWidgetBoxInterface_SuperGetDecodedMetricF((QDesignerWidgetBoxInterface*)self, metricA, metricB);
 }
 
 void q_designerwidgetboxinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

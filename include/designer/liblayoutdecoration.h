@@ -47,6 +47,10 @@ libqt_list q_designerlayoutdecorationextension_widgets(void* self, void* layout)
 ///
 void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_widgets` instead
+///
+#define q_designerlayoutdecorationextension_qbase_widgets q_designerlayoutdecorationextension_super_widgets
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#widgets)
 ///
 /// Base class method implementation
@@ -56,7 +60,7 @@ void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list (*cal
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list q_designerlayoutdecorationextension_qbase_widgets(void* self, void* layout);
+libqt_list q_designerlayoutdecorationextension_super_widgets(void* self, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
 ///
@@ -74,6 +78,10 @@ QRect* q_designerlayoutdecorationextension_item_info(void* self, int index);
 ///
 void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_item_info` instead
+///
+#define q_designerlayoutdecorationextension_qbase_item_info q_designerlayoutdecorationextension_super_item_info
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
 ///
 /// Base class method implementation
@@ -81,7 +89,7 @@ void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callb
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param index int
 ///
-QRect* q_designerlayoutdecorationextension_qbase_item_info(void* self, int index);
+QRect* q_designerlayoutdecorationextension_super_item_info(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
@@ -99,6 +107,10 @@ int32_t q_designerlayoutdecorationextension_index_of(void* self, void* widget);
 ///
 void q_designerlayoutdecorationextension_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_index_of` instead
+///
+#define q_designerlayoutdecorationextension_qbase_index_of q_designerlayoutdecorationextension_super_index_of
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
 /// Base class method implementation
@@ -106,7 +118,7 @@ void q_designerlayoutdecorationextension_on_index_of(void* self, int32_t (*callb
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
 ///
-int32_t q_designerlayoutdecorationextension_qbase_index_of(void* self, void* widget);
+int32_t q_designerlayoutdecorationextension_super_index_of(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
@@ -124,6 +136,10 @@ int32_t q_designerlayoutdecorationextension_index_of2(void* self, void* item);
 ///
 void q_designerlayoutdecorationextension_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_index_of2` instead
+///
+#define q_designerlayoutdecorationextension_qbase_index_of2 q_designerlayoutdecorationextension_super_index_of2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
 /// Base class method implementation
@@ -131,7 +147,7 @@ void q_designerlayoutdecorationextension_on_index_of2(void* self, int32_t (*call
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param item QLayoutItem*
 ///
-int32_t q_designerlayoutdecorationextension_qbase_index_of2(void* self, void* item);
+int32_t q_designerlayoutdecorationextension_super_index_of2(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
 ///
@@ -150,6 +166,10 @@ int32_t q_designerlayoutdecorationextension_current_insert_mode(void* self);
 ///
 void q_designerlayoutdecorationextension_on_current_insert_mode(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_current_insert_mode` instead
+///
+#define q_designerlayoutdecorationextension_qbase_current_insert_mode q_designerlayoutdecorationextension_super_current_insert_mode
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
 ///
 /// Base class method implementation
@@ -158,7 +178,7 @@ void q_designerlayoutdecorationextension_on_current_insert_mode(void* self, int3
 ///
 /// @return enum QDesignerLayoutDecorationExtension__InsertMode
 ///
-int32_t q_designerlayoutdecorationextension_qbase_current_insert_mode(void* self);
+int32_t q_designerlayoutdecorationextension_super_current_insert_mode(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
 ///
@@ -175,13 +195,17 @@ int32_t q_designerlayoutdecorationextension_current_index(void* self);
 ///
 void q_designerlayoutdecorationextension_on_current_index(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_current_index` instead
+///
+#define q_designerlayoutdecorationextension_qbase_current_index q_designerlayoutdecorationextension_super_current_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 ///
-int32_t q_designerlayoutdecorationextension_qbase_current_index(void* self);
+int32_t q_designerlayoutdecorationextension_super_current_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
@@ -200,6 +224,10 @@ pair_int_int q_designerlayoutdecorationextension_current_cell(void* self);
 ///
 void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_current_cell` instead
+///
+#define q_designerlayoutdecorationextension_qbase_current_cell q_designerlayoutdecorationextension_super_current_cell
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
 /// Base class method implementation
@@ -208,7 +236,7 @@ void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_in
 ///
 /// @return pair_int_int tuple of int and int
 ///
-pair_int_int q_designerlayoutdecorationextension_qbase_current_cell(void* self);
+pair_int_int q_designerlayoutdecorationextension_super_current_cell(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
@@ -227,6 +255,10 @@ void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget,
 ///
 void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, pair_int_int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_insert_widget` instead
+///
+#define q_designerlayoutdecorationextension_qbase_insert_widget q_designerlayoutdecorationextension_super_insert_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
 /// Base class method implementation
@@ -235,7 +267,7 @@ void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*cal
 /// @param widget QWidget*
 /// @param cell pair_int_int tuple of int and int
 ///
-void q_designerlayoutdecorationextension_qbase_insert_widget(void* self, void* widget, pair_int_int cell);
+void q_designerlayoutdecorationextension_super_insert_widget(void* self, void* widget, pair_int_int cell);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#removeWidget)
 ///
@@ -253,6 +285,10 @@ void q_designerlayoutdecorationextension_remove_widget(void* self, void* widget)
 ///
 void q_designerlayoutdecorationextension_on_remove_widget(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_remove_widget` instead
+///
+#define q_designerlayoutdecorationextension_qbase_remove_widget q_designerlayoutdecorationextension_super_remove_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#removeWidget)
 ///
 /// Base class method implementation
@@ -260,7 +296,7 @@ void q_designerlayoutdecorationextension_on_remove_widget(void* self, void (*cal
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
 ///
-void q_designerlayoutdecorationextension_qbase_remove_widget(void* self, void* widget);
+void q_designerlayoutdecorationextension_super_remove_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertRow)
 ///
@@ -278,6 +314,10 @@ void q_designerlayoutdecorationextension_insert_row(void* self, int row);
 ///
 void q_designerlayoutdecorationextension_on_insert_row(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_insert_row` instead
+///
+#define q_designerlayoutdecorationextension_qbase_insert_row q_designerlayoutdecorationextension_super_insert_row
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertRow)
 ///
 /// Base class method implementation
@@ -285,7 +325,7 @@ void q_designerlayoutdecorationextension_on_insert_row(void* self, void (*callba
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param row int
 ///
-void q_designerlayoutdecorationextension_qbase_insert_row(void* self, int row);
+void q_designerlayoutdecorationextension_super_insert_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertColumn)
 ///
@@ -303,6 +343,10 @@ void q_designerlayoutdecorationextension_insert_column(void* self, int column);
 ///
 void q_designerlayoutdecorationextension_on_insert_column(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_insert_column` instead
+///
+#define q_designerlayoutdecorationextension_qbase_insert_column q_designerlayoutdecorationextension_super_insert_column
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertColumn)
 ///
 /// Base class method implementation
@@ -310,7 +354,7 @@ void q_designerlayoutdecorationextension_on_insert_column(void* self, void (*cal
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param column int
 ///
-void q_designerlayoutdecorationextension_qbase_insert_column(void* self, int column);
+void q_designerlayoutdecorationextension_super_insert_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#simplify)
 ///
@@ -327,13 +371,17 @@ void q_designerlayoutdecorationextension_simplify(void* self);
 ///
 void q_designerlayoutdecorationextension_on_simplify(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_simplify` instead
+///
+#define q_designerlayoutdecorationextension_qbase_simplify q_designerlayoutdecorationextension_super_simplify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#simplify)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 ///
-void q_designerlayoutdecorationextension_qbase_simplify(void* self);
+void q_designerlayoutdecorationextension_super_simplify(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
@@ -351,6 +399,10 @@ int32_t q_designerlayoutdecorationextension_find_item_at(void* self, void* pos);
 ///
 void q_designerlayoutdecorationextension_on_find_item_at(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_find_item_at` instead
+///
+#define q_designerlayoutdecorationextension_qbase_find_item_at q_designerlayoutdecorationextension_super_find_item_at
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
 /// Base class method implementation
@@ -358,7 +410,7 @@ void q_designerlayoutdecorationextension_on_find_item_at(void* self, int32_t (*c
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param pos QPoint*
 ///
-int32_t q_designerlayoutdecorationextension_qbase_find_item_at(void* self, void* pos);
+int32_t q_designerlayoutdecorationextension_super_find_item_at(void* self, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
@@ -377,6 +429,10 @@ int32_t q_designerlayoutdecorationextension_find_item_at2(void* self, int row, i
 ///
 void q_designerlayoutdecorationextension_on_find_item_at2(void* self, int32_t (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_find_item_at2` instead
+///
+#define q_designerlayoutdecorationextension_qbase_find_item_at2 q_designerlayoutdecorationextension_super_find_item_at2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
 /// Base class method implementation
@@ -385,7 +441,7 @@ void q_designerlayoutdecorationextension_on_find_item_at2(void* self, int32_t (*
 /// @param row int
 /// @param column int
 ///
-int32_t q_designerlayoutdecorationextension_qbase_find_item_at2(void* self, int row, int column);
+int32_t q_designerlayoutdecorationextension_super_find_item_at2(void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
 ///
@@ -404,6 +460,10 @@ void q_designerlayoutdecorationextension_adjust_indicator(void* self, void* pos,
 ///
 void q_designerlayoutdecorationextension_on_adjust_indicator(void* self, void (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_adjust_indicator` instead
+///
+#define q_designerlayoutdecorationextension_qbase_adjust_indicator q_designerlayoutdecorationextension_super_adjust_indicator
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
 ///
 /// Base class method implementation
@@ -412,7 +472,7 @@ void q_designerlayoutdecorationextension_on_adjust_indicator(void* self, void (*
 /// @param pos QPoint*
 /// @param index int
 ///
-void q_designerlayoutdecorationextension_qbase_adjust_indicator(void* self, void* pos, int index);
+void q_designerlayoutdecorationextension_super_adjust_indicator(void* self, void* pos, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#dtor.QDesignerLayoutDecorationExtension)
 ///

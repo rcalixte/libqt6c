@@ -53,13 +53,17 @@ const QMetaObject* k_io__faviconrequestjob_meta_object(void* self);
 ///
 void k_io__faviconrequestjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_meta_object` instead
+///
+#define k_io__faviconrequestjob_qbase_meta_object k_io__faviconrequestjob_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-const QMetaObject* k_io__faviconrequestjob_qbase_meta_object(void* self);
+const QMetaObject* k_io__faviconrequestjob_super_meta_object(void* self);
 
 /// @param self KIO__FavIconRequestJob*
 /// @param param1 const char*
@@ -73,12 +77,16 @@ void* k_io__faviconrequestjob_metacast(void* self, const char* param1);
 ///
 void k_io__faviconrequestjob_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_metacast` instead
+///
+#define k_io__faviconrequestjob_qbase_metacast k_io__faviconrequestjob_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KIO__FavIconRequestJob*
 /// @param param1 const char*
 ///
-void* k_io__faviconrequestjob_qbase_metacast(void* self, const char* param1);
+void* k_io__faviconrequestjob_super_metacast(void* self, const char* param1);
 
 /// @param self KIO__FavIconRequestJob*
 /// @param param1 enum QMetaObject__Call
@@ -94,6 +102,10 @@ int32_t k_io__faviconrequestjob_metacall(void* self, int32_t param1, int param2,
 ///
 void k_io__faviconrequestjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_metacall` instead
+///
+#define k_io__faviconrequestjob_qbase_metacall k_io__faviconrequestjob_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KIO__FavIconRequestJob*
@@ -101,7 +113,7 @@ void k_io__faviconrequestjob_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_io__faviconrequestjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_io__faviconrequestjob_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -147,13 +159,17 @@ void k_io__faviconrequestjob_start(void* self);
 ///
 void k_io__faviconrequestjob_on_start(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_start` instead
+///
+#define k_io__faviconrequestjob_qbase_start k_io__faviconrequestjob_super_start
+
 /// [Upstream resources](https://api.kde.org/kio-faviconrequestjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-void k_io__faviconrequestjob_qbase_start(void* self);
+void k_io__faviconrequestjob_super_start(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -905,6 +921,10 @@ void k_io__faviconrequestjob_on_destroyed1(void* self, void (*callback)(void*, v
 ///
 bool k_io__faviconrequestjob_add_subjob(void* self, void* job);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_add_subjob` instead
+///
+#define k_io__faviconrequestjob_qbase_add_subjob k_io__faviconrequestjob_super_add_subjob
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#addSubjob)
@@ -914,7 +934,7 @@ bool k_io__faviconrequestjob_add_subjob(void* self, void* job);
 /// @param self KIO__FavIconRequestJob*
 /// @param job KJob*
 ///
-bool k_io__faviconrequestjob_qbase_add_subjob(void* self, void* job);
+bool k_io__faviconrequestjob_super_add_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
@@ -938,6 +958,10 @@ void k_io__faviconrequestjob_on_add_subjob(void* self, bool (*callback)(void*, v
 ///
 bool k_io__faviconrequestjob_remove_subjob(void* self, void* job);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_remove_subjob` instead
+///
+#define k_io__faviconrequestjob_qbase_remove_subjob k_io__faviconrequestjob_super_remove_subjob
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#removeSubjob)
@@ -947,7 +971,7 @@ bool k_io__faviconrequestjob_remove_subjob(void* self, void* job);
 /// @param self KIO__FavIconRequestJob*
 /// @param job KJob*
 ///
-bool k_io__faviconrequestjob_qbase_remove_subjob(void* self, void* job);
+bool k_io__faviconrequestjob_super_remove_subjob(void* self, void* job);
 
 /// Inherited from KCompositeJob
 ///
@@ -972,6 +996,10 @@ void k_io__faviconrequestjob_on_remove_subjob(void* self, bool (*callback)(void*
 ///
 void k_io__faviconrequestjob_slot_info_message(void* self, void* job, const char* message);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_slot_info_message` instead
+///
+#define k_io__faviconrequestjob_qbase_slot_info_message k_io__faviconrequestjob_super_slot_info_message
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
@@ -982,7 +1010,7 @@ void k_io__faviconrequestjob_slot_info_message(void* self, void* job, const char
 /// @param job KJob*
 /// @param message const char*
 ///
-void k_io__faviconrequestjob_qbase_slot_info_message(void* self, void* job, const char* message);
+void k_io__faviconrequestjob_super_slot_info_message(void* self, void* job, const char* message);
 
 /// Inherited from KCompositeJob
 ///
@@ -1005,6 +1033,10 @@ void k_io__faviconrequestjob_on_slot_info_message(void* self, void (*callback)(v
 ///
 bool k_io__faviconrequestjob_do_kill(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_do_kill` instead
+///
+#define k_io__faviconrequestjob_qbase_do_kill k_io__faviconrequestjob_super_do_kill
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doKill)
@@ -1013,7 +1045,7 @@ bool k_io__faviconrequestjob_do_kill(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-bool k_io__faviconrequestjob_qbase_do_kill(void* self);
+bool k_io__faviconrequestjob_super_do_kill(void* self);
 
 /// Inherited from KJob
 ///
@@ -1036,6 +1068,10 @@ void k_io__faviconrequestjob_on_do_kill(void* self, bool (*callback)());
 ///
 bool k_io__faviconrequestjob_do_suspend(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_do_suspend` instead
+///
+#define k_io__faviconrequestjob_qbase_do_suspend k_io__faviconrequestjob_super_do_suspend
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
@@ -1044,7 +1080,7 @@ bool k_io__faviconrequestjob_do_suspend(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-bool k_io__faviconrequestjob_qbase_do_suspend(void* self);
+bool k_io__faviconrequestjob_super_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
@@ -1067,6 +1103,10 @@ void k_io__faviconrequestjob_on_do_suspend(void* self, bool (*callback)());
 ///
 bool k_io__faviconrequestjob_do_resume(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_do_resume` instead
+///
+#define k_io__faviconrequestjob_qbase_do_resume k_io__faviconrequestjob_super_do_resume
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doResume)
@@ -1075,7 +1115,7 @@ bool k_io__faviconrequestjob_do_resume(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-bool k_io__faviconrequestjob_qbase_do_resume(void* self);
+bool k_io__faviconrequestjob_super_do_resume(void* self);
 
 /// Inherited from KJob
 ///
@@ -1100,6 +1140,10 @@ void k_io__faviconrequestjob_on_do_resume(void* self, bool (*callback)());
 ///
 const char* k_io__faviconrequestjob_error_string(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_error_string` instead
+///
+#define k_io__faviconrequestjob_qbase_error_string k_io__faviconrequestjob_super_error_string
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
@@ -1110,7 +1154,7 @@ const char* k_io__faviconrequestjob_error_string(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-const char* k_io__faviconrequestjob_qbase_error_string(void* self);
+const char* k_io__faviconrequestjob_super_error_string(void* self);
 
 /// Inherited from KJob
 ///
@@ -1134,6 +1178,10 @@ void k_io__faviconrequestjob_on_error_string(void* self, const char* (*callback)
 ///
 bool k_io__faviconrequestjob_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_event` instead
+///
+#define k_io__faviconrequestjob_qbase_event k_io__faviconrequestjob_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1143,7 +1191,7 @@ bool k_io__faviconrequestjob_event(void* self, void* event);
 /// @param self KIO__FavIconRequestJob*
 /// @param event QEvent*
 ///
-bool k_io__faviconrequestjob_qbase_event(void* self, void* event);
+bool k_io__faviconrequestjob_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1168,6 +1216,10 @@ void k_io__faviconrequestjob_on_event(void* self, bool (*callback)(void*, void*)
 ///
 bool k_io__faviconrequestjob_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_event_filter` instead
+///
+#define k_io__faviconrequestjob_qbase_event_filter k_io__faviconrequestjob_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1178,7 +1230,7 @@ bool k_io__faviconrequestjob_event_filter(void* self, void* watched, void* event
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_io__faviconrequestjob_qbase_event_filter(void* self, void* watched, void* event);
+bool k_io__faviconrequestjob_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1202,6 +1254,10 @@ void k_io__faviconrequestjob_on_event_filter(void* self, bool (*callback)(void*,
 ///
 void k_io__faviconrequestjob_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_timer_event` instead
+///
+#define k_io__faviconrequestjob_qbase_timer_event k_io__faviconrequestjob_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1211,7 +1267,7 @@ void k_io__faviconrequestjob_timer_event(void* self, void* event);
 /// @param self KIO__FavIconRequestJob*
 /// @param event QTimerEvent*
 ///
-void k_io__faviconrequestjob_qbase_timer_event(void* self, void* event);
+void k_io__faviconrequestjob_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1235,6 +1291,10 @@ void k_io__faviconrequestjob_on_timer_event(void* self, void (*callback)(void*, 
 ///
 void k_io__faviconrequestjob_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_child_event` instead
+///
+#define k_io__faviconrequestjob_qbase_child_event k_io__faviconrequestjob_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1244,7 +1304,7 @@ void k_io__faviconrequestjob_child_event(void* self, void* event);
 /// @param self KIO__FavIconRequestJob*
 /// @param event QChildEvent*
 ///
-void k_io__faviconrequestjob_qbase_child_event(void* self, void* event);
+void k_io__faviconrequestjob_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1268,6 +1328,10 @@ void k_io__faviconrequestjob_on_child_event(void* self, void (*callback)(void*, 
 ///
 void k_io__faviconrequestjob_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_custom_event` instead
+///
+#define k_io__faviconrequestjob_qbase_custom_event k_io__faviconrequestjob_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1277,7 +1341,7 @@ void k_io__faviconrequestjob_custom_event(void* self, void* event);
 /// @param self KIO__FavIconRequestJob*
 /// @param event QEvent*
 ///
-void k_io__faviconrequestjob_qbase_custom_event(void* self, void* event);
+void k_io__faviconrequestjob_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1301,6 +1365,10 @@ void k_io__faviconrequestjob_on_custom_event(void* self, void (*callback)(void*,
 ///
 void k_io__faviconrequestjob_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_connect_notify` instead
+///
+#define k_io__faviconrequestjob_qbase_connect_notify k_io__faviconrequestjob_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1310,7 +1378,7 @@ void k_io__faviconrequestjob_connect_notify(void* self, void* signal);
 /// @param self KIO__FavIconRequestJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__faviconrequestjob_qbase_connect_notify(void* self, void* signal);
+void k_io__faviconrequestjob_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1334,6 +1402,10 @@ void k_io__faviconrequestjob_on_connect_notify(void* self, void (*callback)(void
 ///
 void k_io__faviconrequestjob_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_disconnect_notify` instead
+///
+#define k_io__faviconrequestjob_qbase_disconnect_notify k_io__faviconrequestjob_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1343,7 +1415,7 @@ void k_io__faviconrequestjob_disconnect_notify(void* self, void* signal);
 /// @param self KIO__FavIconRequestJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__faviconrequestjob_qbase_disconnect_notify(void* self, void* signal);
+void k_io__faviconrequestjob_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1366,6 +1438,10 @@ void k_io__faviconrequestjob_on_disconnect_notify(void* self, void (*callback)(v
 ///
 bool k_io__faviconrequestjob_has_subjobs(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_has_subjobs` instead
+///
+#define k_io__faviconrequestjob_qbase_has_subjobs k_io__faviconrequestjob_super_has_subjobs
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#hasSubjobs)
@@ -1374,7 +1450,7 @@ bool k_io__faviconrequestjob_has_subjobs(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-bool k_io__faviconrequestjob_qbase_has_subjobs(void* self);
+bool k_io__faviconrequestjob_super_has_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1399,6 +1475,10 @@ void k_io__faviconrequestjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 libqt_list k_io__faviconrequestjob_subjobs(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_subjobs` instead
+///
+#define k_io__faviconrequestjob_qbase_subjobs k_io__faviconrequestjob_super_subjobs
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
@@ -1409,7 +1489,7 @@ libqt_list k_io__faviconrequestjob_subjobs(void* self);
 ///
 /// @return libqt_list of KJob*
 ///
-libqt_list k_io__faviconrequestjob_qbase_subjobs(void* self);
+libqt_list k_io__faviconrequestjob_super_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1432,6 +1512,10 @@ void k_io__faviconrequestjob_on_subjobs(void* self, libqt_list (*callback)());
 ///
 void k_io__faviconrequestjob_clear_subjobs(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_clear_subjobs` instead
+///
+#define k_io__faviconrequestjob_qbase_clear_subjobs k_io__faviconrequestjob_super_clear_subjobs
+
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
@@ -1440,7 +1524,7 @@ void k_io__faviconrequestjob_clear_subjobs(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-void k_io__faviconrequestjob_qbase_clear_subjobs(void* self);
+void k_io__faviconrequestjob_super_clear_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1464,6 +1548,10 @@ void k_io__faviconrequestjob_on_clear_subjobs(void* self, void (*callback)());
 ///
 void k_io__faviconrequestjob_set_capabilities(void* self, int32_t capabilities);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_capabilities` instead
+///
+#define k_io__faviconrequestjob_qbase_set_capabilities k_io__faviconrequestjob_super_set_capabilities
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
@@ -1473,7 +1561,7 @@ void k_io__faviconrequestjob_set_capabilities(void* self, int32_t capabilities);
 /// @param self KIO__FavIconRequestJob*
 /// @param capabilities flag of enum KJob__Capability
 ///
-void k_io__faviconrequestjob_qbase_set_capabilities(void* self, int32_t capabilities);
+void k_io__faviconrequestjob_super_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1496,6 +1584,10 @@ void k_io__faviconrequestjob_on_set_capabilities(void* self, void (*callback)(vo
 ///
 bool k_io__faviconrequestjob_is_finished(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_is_finished` instead
+///
+#define k_io__faviconrequestjob_qbase_is_finished k_io__faviconrequestjob_super_is_finished
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
@@ -1504,7 +1596,7 @@ bool k_io__faviconrequestjob_is_finished(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-bool k_io__faviconrequestjob_qbase_is_finished(void* self);
+bool k_io__faviconrequestjob_super_is_finished(void* self);
 
 /// Inherited from KJob
 ///
@@ -1528,6 +1620,10 @@ void k_io__faviconrequestjob_on_is_finished(void* self, bool (*callback)());
 ///
 void k_io__faviconrequestjob_set_error(void* self, int errorCode);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_error` instead
+///
+#define k_io__faviconrequestjob_qbase_set_error k_io__faviconrequestjob_super_set_error
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setError)
@@ -1537,7 +1633,7 @@ void k_io__faviconrequestjob_set_error(void* self, int errorCode);
 /// @param self KIO__FavIconRequestJob*
 /// @param errorCode int
 ///
-void k_io__faviconrequestjob_qbase_set_error(void* self, int errorCode);
+void k_io__faviconrequestjob_super_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
@@ -1561,6 +1657,10 @@ void k_io__faviconrequestjob_on_set_error(void* self, void (*callback)(void*, in
 ///
 void k_io__faviconrequestjob_set_error_text(void* self, const char* errorText);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_error_text` instead
+///
+#define k_io__faviconrequestjob_qbase_set_error_text k_io__faviconrequestjob_super_set_error_text
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
@@ -1570,7 +1670,7 @@ void k_io__faviconrequestjob_set_error_text(void* self, const char* errorText);
 /// @param self KIO__FavIconRequestJob*
 /// @param errorText const char*
 ///
-void k_io__faviconrequestjob_qbase_set_error_text(void* self, const char* errorText);
+void k_io__faviconrequestjob_super_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
@@ -1595,6 +1695,10 @@ void k_io__faviconrequestjob_on_set_error_text(void* self, void (*callback)(void
 ///
 void k_io__faviconrequestjob_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_processed_amount` instead
+///
+#define k_io__faviconrequestjob_qbase_set_processed_amount k_io__faviconrequestjob_super_set_processed_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
@@ -1605,7 +1709,7 @@ void k_io__faviconrequestjob_set_processed_amount(void* self, int32_t unit, uint
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_io__faviconrequestjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_io__faviconrequestjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1630,6 +1734,10 @@ void k_io__faviconrequestjob_on_set_processed_amount(void* self, void (*callback
 ///
 void k_io__faviconrequestjob_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_total_amount` instead
+///
+#define k_io__faviconrequestjob_qbase_set_total_amount k_io__faviconrequestjob_super_set_total_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
@@ -1640,7 +1748,7 @@ void k_io__faviconrequestjob_set_total_amount(void* self, int32_t unit, uint64_t
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_io__faviconrequestjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_io__faviconrequestjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1664,6 +1772,10 @@ void k_io__faviconrequestjob_on_set_total_amount(void* self, void (*callback)(vo
 ///
 void k_io__faviconrequestjob_set_progress_unit(void* self, int32_t unit);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_progress_unit` instead
+///
+#define k_io__faviconrequestjob_qbase_set_progress_unit k_io__faviconrequestjob_super_set_progress_unit
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
@@ -1673,7 +1785,7 @@ void k_io__faviconrequestjob_set_progress_unit(void* self, int32_t unit);
 /// @param self KIO__FavIconRequestJob*
 /// @param unit enum KJob__Unit
 ///
-void k_io__faviconrequestjob_qbase_set_progress_unit(void* self, int32_t unit);
+void k_io__faviconrequestjob_super_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -1697,6 +1809,10 @@ void k_io__faviconrequestjob_on_set_progress_unit(void* self, void (*callback)(v
 ///
 void k_io__faviconrequestjob_set_percent(void* self, uint64_t percentage);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_set_percent` instead
+///
+#define k_io__faviconrequestjob_qbase_set_percent k_io__faviconrequestjob_super_set_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
@@ -1706,7 +1822,7 @@ void k_io__faviconrequestjob_set_percent(void* self, uint64_t percentage);
 /// @param self KIO__FavIconRequestJob*
 /// @param percentage uint64_t
 ///
-void k_io__faviconrequestjob_qbase_set_percent(void* self, uint64_t percentage);
+void k_io__faviconrequestjob_super_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
@@ -1729,6 +1845,10 @@ void k_io__faviconrequestjob_on_set_percent(void* self, void (*callback)(void*, 
 ///
 void k_io__faviconrequestjob_emit_result(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_emit_result` instead
+///
+#define k_io__faviconrequestjob_qbase_emit_result k_io__faviconrequestjob_super_emit_result
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
@@ -1737,7 +1857,7 @@ void k_io__faviconrequestjob_emit_result(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-void k_io__faviconrequestjob_qbase_emit_result(void* self);
+void k_io__faviconrequestjob_super_emit_result(void* self);
 
 /// Inherited from KJob
 ///
@@ -1762,6 +1882,10 @@ void k_io__faviconrequestjob_on_emit_result(void* self, void (*callback)());
 ///
 void k_io__faviconrequestjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_emit_percent` instead
+///
+#define k_io__faviconrequestjob_qbase_emit_percent k_io__faviconrequestjob_super_emit_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
@@ -1772,7 +1896,7 @@ void k_io__faviconrequestjob_emit_percent(void* self, uint64_t processedAmount, 
 /// @param processedAmount uint64_t
 /// @param totalAmount uint64_t
 ///
-void k_io__faviconrequestjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_io__faviconrequestjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
 /// Inherited from KJob
 ///
@@ -1796,6 +1920,10 @@ void k_io__faviconrequestjob_on_emit_percent(void* self, void (*callback)(void*,
 ///
 void k_io__faviconrequestjob_emit_speed(void* self, uint64_t speed);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_emit_speed` instead
+///
+#define k_io__faviconrequestjob_qbase_emit_speed k_io__faviconrequestjob_super_emit_speed
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
@@ -1805,7 +1933,7 @@ void k_io__faviconrequestjob_emit_speed(void* self, uint64_t speed);
 /// @param self KIO__FavIconRequestJob*
 /// @param speed uint64_t
 ///
-void k_io__faviconrequestjob_qbase_emit_speed(void* self, uint64_t speed);
+void k_io__faviconrequestjob_super_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
@@ -1828,6 +1956,10 @@ void k_io__faviconrequestjob_on_emit_speed(void* self, void (*callback)(void*, u
 ///
 void k_io__faviconrequestjob_start_elapsed_timer(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_start_elapsed_timer` instead
+///
+#define k_io__faviconrequestjob_qbase_start_elapsed_timer k_io__faviconrequestjob_super_start_elapsed_timer
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
@@ -1836,7 +1968,7 @@ void k_io__faviconrequestjob_start_elapsed_timer(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-void k_io__faviconrequestjob_qbase_start_elapsed_timer(void* self);
+void k_io__faviconrequestjob_super_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
@@ -1859,6 +1991,10 @@ void k_io__faviconrequestjob_on_start_elapsed_timer(void* self, void (*callback)
 ///
 QObject* k_io__faviconrequestjob_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_sender` instead
+///
+#define k_io__faviconrequestjob_qbase_sender k_io__faviconrequestjob_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1867,7 +2003,7 @@ QObject* k_io__faviconrequestjob_sender(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-QObject* k_io__faviconrequestjob_qbase_sender(void* self);
+QObject* k_io__faviconrequestjob_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1890,6 +2026,10 @@ void k_io__faviconrequestjob_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_io__faviconrequestjob_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_sender_signal_index` instead
+///
+#define k_io__faviconrequestjob_qbase_sender_signal_index k_io__faviconrequestjob_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1898,7 +2038,7 @@ int32_t k_io__faviconrequestjob_sender_signal_index(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-int32_t k_io__faviconrequestjob_qbase_sender_signal_index(void* self);
+int32_t k_io__faviconrequestjob_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1922,6 +2062,10 @@ void k_io__faviconrequestjob_on_sender_signal_index(void* self, int32_t (*callba
 ///
 int32_t k_io__faviconrequestjob_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_receivers` instead
+///
+#define k_io__faviconrequestjob_qbase_receivers k_io__faviconrequestjob_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1931,7 +2075,7 @@ int32_t k_io__faviconrequestjob_receivers(void* self, const char* signal);
 /// @param self KIO__FavIconRequestJob*
 /// @param signal const char*
 ///
-int32_t k_io__faviconrequestjob_qbase_receivers(void* self, const char* signal);
+int32_t k_io__faviconrequestjob_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1955,6 +2099,10 @@ void k_io__faviconrequestjob_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 bool k_io__faviconrequestjob_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__faviconrequestjob_super_is_signal_connected` instead
+///
+#define k_io__faviconrequestjob_qbase_is_signal_connected k_io__faviconrequestjob_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1964,7 +2112,7 @@ bool k_io__faviconrequestjob_is_signal_connected(void* self, void* signal);
 /// @param self KIO__FavIconRequestJob*
 /// @param signal QMetaMethod*
 ///
-bool k_io__faviconrequestjob_qbase_is_signal_connected(void* self, void* signal);
+bool k_io__faviconrequestjob_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

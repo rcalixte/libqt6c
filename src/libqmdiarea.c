@@ -35,8 +35,8 @@ void q_mdiarea_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QMdiArea_OnMetaObject((QMdiArea*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mdiarea_qbase_meta_object(void* self) {
-    return QMdiArea_QBaseMetaObject((QMdiArea*)self);
+const QMetaObject* q_mdiarea_super_meta_object(void* self) {
+    return QMdiArea_SuperMetaObject((QMdiArea*)self);
 }
 
 void* q_mdiarea_metacast(void* self, const char* param1) {
@@ -47,8 +47,8 @@ void q_mdiarea_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QMdiArea_OnMetacast((QMdiArea*)self, (intptr_t)callback);
 }
 
-void* q_mdiarea_qbase_metacast(void* self, const char* param1) {
-    return QMdiArea_QBaseMetacast((QMdiArea*)self, param1);
+void* q_mdiarea_super_metacast(void* self, const char* param1) {
+    return QMdiArea_SuperMetacast((QMdiArea*)self, param1);
 }
 
 int32_t q_mdiarea_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -59,8 +59,8 @@ void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     QMdiArea_OnMetacall((QMdiArea*)self, (intptr_t)callback);
 }
 
-int32_t q_mdiarea_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMdiArea_QBaseMetacall((QMdiArea*)self, param1, param2, param3);
+int32_t q_mdiarea_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMdiArea_SuperMetacall((QMdiArea*)self, param1, param2, param3);
 }
 
 const char* q_mdiarea_tr(const char* s) {
@@ -78,8 +78,8 @@ void q_mdiarea_on_size_hint(void* self, QSize* (*callback)()) {
     QMdiArea_OnSizeHint((QMdiArea*)self, (intptr_t)callback);
 }
 
-QSize* q_mdiarea_qbase_size_hint(void* self) {
-    return QMdiArea_QBaseSizeHint((QMdiArea*)self);
+QSize* q_mdiarea_super_size_hint(void* self) {
+    return QMdiArea_SuperSizeHint((QMdiArea*)self);
 }
 
 QSize* q_mdiarea_minimum_size_hint(void* self) {
@@ -90,8 +90,8 @@ void q_mdiarea_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QMdiArea_OnMinimumSizeHint((QMdiArea*)self, (intptr_t)callback);
 }
 
-QSize* q_mdiarea_qbase_minimum_size_hint(void* self) {
-    return QMdiArea_QBaseMinimumSizeHint((QMdiArea*)self);
+QSize* q_mdiarea_super_minimum_size_hint(void* self) {
+    return QMdiArea_SuperMinimumSizeHint((QMdiArea*)self);
 }
 
 QMdiSubWindow* q_mdiarea_current_sub_window(void* self) {
@@ -231,8 +231,8 @@ void q_mdiarea_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnSetupViewport((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_setup_viewport(void* self, void* viewport) {
-    QMdiArea_QBaseSetupViewport((QMdiArea*)self, (QWidget*)viewport);
+void q_mdiarea_super_setup_viewport(void* self, void* viewport) {
+    QMdiArea_SuperSetupViewport((QMdiArea*)self, (QWidget*)viewport);
 }
 
 bool q_mdiarea_event(void* self, void* event) {
@@ -243,8 +243,8 @@ void q_mdiarea_on_event(void* self, bool (*callback)(void*, void*)) {
     QMdiArea_OnEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-bool q_mdiarea_qbase_event(void* self, void* event) {
-    return QMdiArea_QBaseEvent((QMdiArea*)self, (QEvent*)event);
+bool q_mdiarea_super_event(void* self, void* event) {
+    return QMdiArea_SuperEvent((QMdiArea*)self, (QEvent*)event);
 }
 
 bool q_mdiarea_event_filter(void* self, void* object, void* event) {
@@ -255,8 +255,8 @@ void q_mdiarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
     QMdiArea_OnEventFilter((QMdiArea*)self, (intptr_t)callback);
 }
 
-bool q_mdiarea_qbase_event_filter(void* self, void* object, void* event) {
-    return QMdiArea_QBaseEventFilter((QMdiArea*)self, (QObject*)object, (QEvent*)event);
+bool q_mdiarea_super_event_filter(void* self, void* object, void* event) {
+    return QMdiArea_SuperEventFilter((QMdiArea*)self, (QObject*)object, (QEvent*)event);
 }
 
 void q_mdiarea_paint_event(void* self, void* paintEvent) {
@@ -267,8 +267,8 @@ void q_mdiarea_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnPaintEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_paint_event(void* self, void* paintEvent) {
-    QMdiArea_QBasePaintEvent((QMdiArea*)self, (QPaintEvent*)paintEvent);
+void q_mdiarea_super_paint_event(void* self, void* paintEvent) {
+    QMdiArea_SuperPaintEvent((QMdiArea*)self, (QPaintEvent*)paintEvent);
 }
 
 void q_mdiarea_child_event(void* self, void* childEvent) {
@@ -279,8 +279,8 @@ void q_mdiarea_on_child_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnChildEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_child_event(void* self, void* childEvent) {
-    QMdiArea_QBaseChildEvent((QMdiArea*)self, (QChildEvent*)childEvent);
+void q_mdiarea_super_child_event(void* self, void* childEvent) {
+    QMdiArea_SuperChildEvent((QMdiArea*)self, (QChildEvent*)childEvent);
 }
 
 void q_mdiarea_resize_event(void* self, void* resizeEvent) {
@@ -291,8 +291,8 @@ void q_mdiarea_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnResizeEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_resize_event(void* self, void* resizeEvent) {
-    QMdiArea_QBaseResizeEvent((QMdiArea*)self, (QResizeEvent*)resizeEvent);
+void q_mdiarea_super_resize_event(void* self, void* resizeEvent) {
+    QMdiArea_SuperResizeEvent((QMdiArea*)self, (QResizeEvent*)resizeEvent);
 }
 
 void q_mdiarea_timer_event(void* self, void* timerEvent) {
@@ -303,8 +303,8 @@ void q_mdiarea_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnTimerEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_timer_event(void* self, void* timerEvent) {
-    QMdiArea_QBaseTimerEvent((QMdiArea*)self, (QTimerEvent*)timerEvent);
+void q_mdiarea_super_timer_event(void* self, void* timerEvent) {
+    QMdiArea_SuperTimerEvent((QMdiArea*)self, (QTimerEvent*)timerEvent);
 }
 
 void q_mdiarea_show_event(void* self, void* showEvent) {
@@ -315,8 +315,8 @@ void q_mdiarea_on_show_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnShowEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_show_event(void* self, void* showEvent) {
-    QMdiArea_QBaseShowEvent((QMdiArea*)self, (QShowEvent*)showEvent);
+void q_mdiarea_super_show_event(void* self, void* showEvent) {
+    QMdiArea_SuperShowEvent((QMdiArea*)self, (QShowEvent*)showEvent);
 }
 
 bool q_mdiarea_viewport_event(void* self, void* event) {
@@ -327,8 +327,8 @@ void q_mdiarea_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
     QMdiArea_OnViewportEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-bool q_mdiarea_qbase_viewport_event(void* self, void* event) {
-    return QMdiArea_QBaseViewportEvent((QMdiArea*)self, (QEvent*)event);
+bool q_mdiarea_super_viewport_event(void* self, void* event) {
+    return QMdiArea_SuperViewportEvent((QMdiArea*)self, (QEvent*)event);
 }
 
 void q_mdiarea_scroll_contents_by(void* self, int dx, int dy) {
@@ -339,8 +339,8 @@ void q_mdiarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, in
     QMdiArea_OnScrollContentsBy((QMdiArea*)self, (intptr_t)callback);
 }
 
-void q_mdiarea_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QMdiArea_QBaseScrollContentsBy((QMdiArea*)self, dx, dy);
+void q_mdiarea_super_scroll_contents_by(void* self, int dx, int dy) {
+    QMdiArea_SuperScrollContentsBy((QMdiArea*)self, dx, dy);
 }
 
 const char* q_mdiarea_tr2(const char* s, const char* c) {
@@ -1876,8 +1876,8 @@ void q_mdiarea_mouse_press_event(void* self, void* param1) {
     QMdiArea_MousePressEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
-void q_mdiarea_qbase_mouse_press_event(void* self, void* param1) {
-    QMdiArea_QBaseMousePressEvent((QMdiArea*)self, (QMouseEvent*)param1);
+void q_mdiarea_super_mouse_press_event(void* self, void* param1) {
+    QMdiArea_SuperMousePressEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
 void q_mdiarea_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void q_mdiarea_mouse_release_event(void* self, void* param1) {
     QMdiArea_MouseReleaseEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
-void q_mdiarea_qbase_mouse_release_event(void* self, void* param1) {
-    QMdiArea_QBaseMouseReleaseEvent((QMdiArea*)self, (QMouseEvent*)param1);
+void q_mdiarea_super_mouse_release_event(void* self, void* param1) {
+    QMdiArea_SuperMouseReleaseEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
 void q_mdiarea_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void q_mdiarea_mouse_double_click_event(void* self, void* param1) {
     QMdiArea_MouseDoubleClickEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
-void q_mdiarea_qbase_mouse_double_click_event(void* self, void* param1) {
-    QMdiArea_QBaseMouseDoubleClickEvent((QMdiArea*)self, (QMouseEvent*)param1);
+void q_mdiarea_super_mouse_double_click_event(void* self, void* param1) {
+    QMdiArea_SuperMouseDoubleClickEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
 void q_mdiarea_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void q_mdiarea_mouse_move_event(void* self, void* param1) {
     QMdiArea_MouseMoveEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
-void q_mdiarea_qbase_mouse_move_event(void* self, void* param1) {
-    QMdiArea_QBaseMouseMoveEvent((QMdiArea*)self, (QMouseEvent*)param1);
+void q_mdiarea_super_mouse_move_event(void* self, void* param1) {
+    QMdiArea_SuperMouseMoveEvent((QMdiArea*)self, (QMouseEvent*)param1);
 }
 
 void q_mdiarea_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void q_mdiarea_wheel_event(void* self, void* param1) {
     QMdiArea_WheelEvent((QMdiArea*)self, (QWheelEvent*)param1);
 }
 
-void q_mdiarea_qbase_wheel_event(void* self, void* param1) {
-    QMdiArea_QBaseWheelEvent((QMdiArea*)self, (QWheelEvent*)param1);
+void q_mdiarea_super_wheel_event(void* self, void* param1) {
+    QMdiArea_SuperWheelEvent((QMdiArea*)self, (QWheelEvent*)param1);
 }
 
 void q_mdiarea_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void q_mdiarea_context_menu_event(void* self, void* param1) {
     QMdiArea_ContextMenuEvent((QMdiArea*)self, (QContextMenuEvent*)param1);
 }
 
-void q_mdiarea_qbase_context_menu_event(void* self, void* param1) {
-    QMdiArea_QBaseContextMenuEvent((QMdiArea*)self, (QContextMenuEvent*)param1);
+void q_mdiarea_super_context_menu_event(void* self, void* param1) {
+    QMdiArea_SuperContextMenuEvent((QMdiArea*)self, (QContextMenuEvent*)param1);
 }
 
 void q_mdiarea_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void q_mdiarea_drag_enter_event(void* self, void* param1) {
     QMdiArea_DragEnterEvent((QMdiArea*)self, (QDragEnterEvent*)param1);
 }
 
-void q_mdiarea_qbase_drag_enter_event(void* self, void* param1) {
-    QMdiArea_QBaseDragEnterEvent((QMdiArea*)self, (QDragEnterEvent*)param1);
+void q_mdiarea_super_drag_enter_event(void* self, void* param1) {
+    QMdiArea_SuperDragEnterEvent((QMdiArea*)self, (QDragEnterEvent*)param1);
 }
 
 void q_mdiarea_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void q_mdiarea_drag_move_event(void* self, void* param1) {
     QMdiArea_DragMoveEvent((QMdiArea*)self, (QDragMoveEvent*)param1);
 }
 
-void q_mdiarea_qbase_drag_move_event(void* self, void* param1) {
-    QMdiArea_QBaseDragMoveEvent((QMdiArea*)self, (QDragMoveEvent*)param1);
+void q_mdiarea_super_drag_move_event(void* self, void* param1) {
+    QMdiArea_SuperDragMoveEvent((QMdiArea*)self, (QDragMoveEvent*)param1);
 }
 
 void q_mdiarea_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void q_mdiarea_drag_leave_event(void* self, void* param1) {
     QMdiArea_DragLeaveEvent((QMdiArea*)self, (QDragLeaveEvent*)param1);
 }
 
-void q_mdiarea_qbase_drag_leave_event(void* self, void* param1) {
-    QMdiArea_QBaseDragLeaveEvent((QMdiArea*)self, (QDragLeaveEvent*)param1);
+void q_mdiarea_super_drag_leave_event(void* self, void* param1) {
+    QMdiArea_SuperDragLeaveEvent((QMdiArea*)self, (QDragLeaveEvent*)param1);
 }
 
 void q_mdiarea_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void q_mdiarea_drop_event(void* self, void* param1) {
     QMdiArea_DropEvent((QMdiArea*)self, (QDropEvent*)param1);
 }
 
-void q_mdiarea_qbase_drop_event(void* self, void* param1) {
-    QMdiArea_QBaseDropEvent((QMdiArea*)self, (QDropEvent*)param1);
+void q_mdiarea_super_drop_event(void* self, void* param1) {
+    QMdiArea_SuperDropEvent((QMdiArea*)self, (QDropEvent*)param1);
 }
 
 void q_mdiarea_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void q_mdiarea_key_press_event(void* self, void* param1) {
     QMdiArea_KeyPressEvent((QMdiArea*)self, (QKeyEvent*)param1);
 }
 
-void q_mdiarea_qbase_key_press_event(void* self, void* param1) {
-    QMdiArea_QBaseKeyPressEvent((QMdiArea*)self, (QKeyEvent*)param1);
+void q_mdiarea_super_key_press_event(void* self, void* param1) {
+    QMdiArea_SuperKeyPressEvent((QMdiArea*)self, (QKeyEvent*)param1);
 }
 
 void q_mdiarea_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ QSize* q_mdiarea_viewport_size_hint(void* self) {
     return QMdiArea_ViewportSizeHint((QMdiArea*)self);
 }
 
-QSize* q_mdiarea_qbase_viewport_size_hint(void* self) {
-    return QMdiArea_QBaseViewportSizeHint((QMdiArea*)self);
+QSize* q_mdiarea_super_viewport_size_hint(void* self) {
+    return QMdiArea_SuperViewportSizeHint((QMdiArea*)self);
 }
 
 void q_mdiarea_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2020,8 +2020,8 @@ void q_mdiarea_change_event(void* self, void* param1) {
     QMdiArea_ChangeEvent((QMdiArea*)self, (QEvent*)param1);
 }
 
-void q_mdiarea_qbase_change_event(void* self, void* param1) {
-    QMdiArea_QBaseChangeEvent((QMdiArea*)self, (QEvent*)param1);
+void q_mdiarea_super_change_event(void* self, void* param1) {
+    QMdiArea_SuperChangeEvent((QMdiArea*)self, (QEvent*)param1);
 }
 
 void q_mdiarea_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ void q_mdiarea_init_style_option(void* self, void* option) {
     QMdiArea_InitStyleOption((QMdiArea*)self, (QStyleOptionFrame*)option);
 }
 
-void q_mdiarea_qbase_init_style_option(void* self, void* option) {
-    QMdiArea_QBaseInitStyleOption((QMdiArea*)self, (QStyleOptionFrame*)option);
+void q_mdiarea_super_init_style_option(void* self, void* option) {
+    QMdiArea_SuperInitStyleOption((QMdiArea*)self, (QStyleOptionFrame*)option);
 }
 
 void q_mdiarea_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ int32_t q_mdiarea_dev_type(void* self) {
     return QMdiArea_DevType((QMdiArea*)self);
 }
 
-int32_t q_mdiarea_qbase_dev_type(void* self) {
-    return QMdiArea_QBaseDevType((QMdiArea*)self);
+int32_t q_mdiarea_super_dev_type(void* self) {
+    return QMdiArea_SuperDevType((QMdiArea*)self);
 }
 
 void q_mdiarea_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2056,8 +2056,8 @@ void q_mdiarea_set_visible(void* self, bool visible) {
     QMdiArea_SetVisible((QMdiArea*)self, visible);
 }
 
-void q_mdiarea_qbase_set_visible(void* self, bool visible) {
-    QMdiArea_QBaseSetVisible((QMdiArea*)self, visible);
+void q_mdiarea_super_set_visible(void* self, bool visible) {
+    QMdiArea_SuperSetVisible((QMdiArea*)self, visible);
 }
 
 void q_mdiarea_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2068,8 +2068,8 @@ int32_t q_mdiarea_height_for_width(void* self, int param1) {
     return QMdiArea_HeightForWidth((QMdiArea*)self, param1);
 }
 
-int32_t q_mdiarea_qbase_height_for_width(void* self, int param1) {
-    return QMdiArea_QBaseHeightForWidth((QMdiArea*)self, param1);
+int32_t q_mdiarea_super_height_for_width(void* self, int param1) {
+    return QMdiArea_SuperHeightForWidth((QMdiArea*)self, param1);
 }
 
 void q_mdiarea_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2080,8 +2080,8 @@ bool q_mdiarea_has_height_for_width(void* self) {
     return QMdiArea_HasHeightForWidth((QMdiArea*)self);
 }
 
-bool q_mdiarea_qbase_has_height_for_width(void* self) {
-    return QMdiArea_QBaseHasHeightForWidth((QMdiArea*)self);
+bool q_mdiarea_super_has_height_for_width(void* self) {
+    return QMdiArea_SuperHasHeightForWidth((QMdiArea*)self);
 }
 
 void q_mdiarea_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2092,8 +2092,8 @@ QPaintEngine* q_mdiarea_paint_engine(void* self) {
     return QMdiArea_PaintEngine((QMdiArea*)self);
 }
 
-QPaintEngine* q_mdiarea_qbase_paint_engine(void* self) {
-    return QMdiArea_QBasePaintEngine((QMdiArea*)self);
+QPaintEngine* q_mdiarea_super_paint_engine(void* self) {
+    return QMdiArea_SuperPaintEngine((QMdiArea*)self);
 }
 
 void q_mdiarea_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2104,8 +2104,8 @@ void q_mdiarea_key_release_event(void* self, void* event) {
     QMdiArea_KeyReleaseEvent((QMdiArea*)self, (QKeyEvent*)event);
 }
 
-void q_mdiarea_qbase_key_release_event(void* self, void* event) {
-    QMdiArea_QBaseKeyReleaseEvent((QMdiArea*)self, (QKeyEvent*)event);
+void q_mdiarea_super_key_release_event(void* self, void* event) {
+    QMdiArea_SuperKeyReleaseEvent((QMdiArea*)self, (QKeyEvent*)event);
 }
 
 void q_mdiarea_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2116,8 +2116,8 @@ void q_mdiarea_focus_in_event(void* self, void* event) {
     QMdiArea_FocusInEvent((QMdiArea*)self, (QFocusEvent*)event);
 }
 
-void q_mdiarea_qbase_focus_in_event(void* self, void* event) {
-    QMdiArea_QBaseFocusInEvent((QMdiArea*)self, (QFocusEvent*)event);
+void q_mdiarea_super_focus_in_event(void* self, void* event) {
+    QMdiArea_SuperFocusInEvent((QMdiArea*)self, (QFocusEvent*)event);
 }
 
 void q_mdiarea_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ void q_mdiarea_focus_out_event(void* self, void* event) {
     QMdiArea_FocusOutEvent((QMdiArea*)self, (QFocusEvent*)event);
 }
 
-void q_mdiarea_qbase_focus_out_event(void* self, void* event) {
-    QMdiArea_QBaseFocusOutEvent((QMdiArea*)self, (QFocusEvent*)event);
+void q_mdiarea_super_focus_out_event(void* self, void* event) {
+    QMdiArea_SuperFocusOutEvent((QMdiArea*)self, (QFocusEvent*)event);
 }
 
 void q_mdiarea_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void q_mdiarea_enter_event(void* self, void* event) {
     QMdiArea_EnterEvent((QMdiArea*)self, (QEnterEvent*)event);
 }
 
-void q_mdiarea_qbase_enter_event(void* self, void* event) {
-    QMdiArea_QBaseEnterEvent((QMdiArea*)self, (QEnterEvent*)event);
+void q_mdiarea_super_enter_event(void* self, void* event) {
+    QMdiArea_SuperEnterEvent((QMdiArea*)self, (QEnterEvent*)event);
 }
 
 void q_mdiarea_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void q_mdiarea_leave_event(void* self, void* event) {
     QMdiArea_LeaveEvent((QMdiArea*)self, (QEvent*)event);
 }
 
-void q_mdiarea_qbase_leave_event(void* self, void* event) {
-    QMdiArea_QBaseLeaveEvent((QMdiArea*)self, (QEvent*)event);
+void q_mdiarea_super_leave_event(void* self, void* event) {
+    QMdiArea_SuperLeaveEvent((QMdiArea*)self, (QEvent*)event);
 }
 
 void q_mdiarea_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ void q_mdiarea_move_event(void* self, void* event) {
     QMdiArea_MoveEvent((QMdiArea*)self, (QMoveEvent*)event);
 }
 
-void q_mdiarea_qbase_move_event(void* self, void* event) {
-    QMdiArea_QBaseMoveEvent((QMdiArea*)self, (QMoveEvent*)event);
+void q_mdiarea_super_move_event(void* self, void* event) {
+    QMdiArea_SuperMoveEvent((QMdiArea*)self, (QMoveEvent*)event);
 }
 
 void q_mdiarea_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void q_mdiarea_close_event(void* self, void* event) {
     QMdiArea_CloseEvent((QMdiArea*)self, (QCloseEvent*)event);
 }
 
-void q_mdiarea_qbase_close_event(void* self, void* event) {
-    QMdiArea_QBaseCloseEvent((QMdiArea*)self, (QCloseEvent*)event);
+void q_mdiarea_super_close_event(void* self, void* event) {
+    QMdiArea_SuperCloseEvent((QMdiArea*)self, (QCloseEvent*)event);
 }
 
 void q_mdiarea_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2188,8 +2188,8 @@ void q_mdiarea_tablet_event(void* self, void* event) {
     QMdiArea_TabletEvent((QMdiArea*)self, (QTabletEvent*)event);
 }
 
-void q_mdiarea_qbase_tablet_event(void* self, void* event) {
-    QMdiArea_QBaseTabletEvent((QMdiArea*)self, (QTabletEvent*)event);
+void q_mdiarea_super_tablet_event(void* self, void* event) {
+    QMdiArea_SuperTabletEvent((QMdiArea*)self, (QTabletEvent*)event);
 }
 
 void q_mdiarea_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ void q_mdiarea_action_event(void* self, void* event) {
     QMdiArea_ActionEvent((QMdiArea*)self, (QActionEvent*)event);
 }
 
-void q_mdiarea_qbase_action_event(void* self, void* event) {
-    QMdiArea_QBaseActionEvent((QMdiArea*)self, (QActionEvent*)event);
+void q_mdiarea_super_action_event(void* self, void* event) {
+    QMdiArea_SuperActionEvent((QMdiArea*)self, (QActionEvent*)event);
 }
 
 void q_mdiarea_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2212,8 +2212,8 @@ void q_mdiarea_hide_event(void* self, void* event) {
     QMdiArea_HideEvent((QMdiArea*)self, (QHideEvent*)event);
 }
 
-void q_mdiarea_qbase_hide_event(void* self, void* event) {
-    QMdiArea_QBaseHideEvent((QMdiArea*)self, (QHideEvent*)event);
+void q_mdiarea_super_hide_event(void* self, void* event) {
+    QMdiArea_SuperHideEvent((QMdiArea*)self, (QHideEvent*)event);
 }
 
 void q_mdiarea_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2224,8 +2224,8 @@ bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t
     return QMdiArea_NativeEvent((QMdiArea*)self, qstring(eventType), message, result);
 }
 
-bool q_mdiarea_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QMdiArea_QBaseNativeEvent((QMdiArea*)self, qstring(eventType), message, result);
+bool q_mdiarea_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QMdiArea_SuperNativeEvent((QMdiArea*)self, qstring(eventType), message, result);
 }
 
 void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2236,8 +2236,8 @@ int32_t q_mdiarea_metric(void* self, int32_t param1) {
     return QMdiArea_Metric((QMdiArea*)self, param1);
 }
 
-int32_t q_mdiarea_qbase_metric(void* self, int32_t param1) {
-    return QMdiArea_QBaseMetric((QMdiArea*)self, param1);
+int32_t q_mdiarea_super_metric(void* self, int32_t param1) {
+    return QMdiArea_SuperMetric((QMdiArea*)self, param1);
 }
 
 void q_mdiarea_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2248,8 +2248,8 @@ void q_mdiarea_init_painter(void* self, void* painter) {
     QMdiArea_InitPainter((QMdiArea*)self, (QPainter*)painter);
 }
 
-void q_mdiarea_qbase_init_painter(void* self, void* painter) {
-    QMdiArea_QBaseInitPainter((QMdiArea*)self, (QPainter*)painter);
+void q_mdiarea_super_init_painter(void* self, void* painter) {
+    QMdiArea_SuperInitPainter((QMdiArea*)self, (QPainter*)painter);
 }
 
 void q_mdiarea_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2260,8 +2260,8 @@ QPaintDevice* q_mdiarea_redirected(void* self, void* offset) {
     return QMdiArea_Redirected((QMdiArea*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_mdiarea_qbase_redirected(void* self, void* offset) {
-    return QMdiArea_QBaseRedirected((QMdiArea*)self, (QPoint*)offset);
+QPaintDevice* q_mdiarea_super_redirected(void* self, void* offset) {
+    return QMdiArea_SuperRedirected((QMdiArea*)self, (QPoint*)offset);
 }
 
 void q_mdiarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2272,8 +2272,8 @@ QPainter* q_mdiarea_shared_painter(void* self) {
     return QMdiArea_SharedPainter((QMdiArea*)self);
 }
 
-QPainter* q_mdiarea_qbase_shared_painter(void* self) {
-    return QMdiArea_QBaseSharedPainter((QMdiArea*)self);
+QPainter* q_mdiarea_super_shared_painter(void* self) {
+    return QMdiArea_SuperSharedPainter((QMdiArea*)self);
 }
 
 void q_mdiarea_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2284,8 +2284,8 @@ void q_mdiarea_input_method_event(void* self, void* param1) {
     QMdiArea_InputMethodEvent((QMdiArea*)self, (QInputMethodEvent*)param1);
 }
 
-void q_mdiarea_qbase_input_method_event(void* self, void* param1) {
-    QMdiArea_QBaseInputMethodEvent((QMdiArea*)self, (QInputMethodEvent*)param1);
+void q_mdiarea_super_input_method_event(void* self, void* param1) {
+    QMdiArea_SuperInputMethodEvent((QMdiArea*)self, (QInputMethodEvent*)param1);
 }
 
 void q_mdiarea_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2296,8 +2296,8 @@ QVariant* q_mdiarea_input_method_query(void* self, int32_t param1) {
     return QMdiArea_InputMethodQuery((QMdiArea*)self, param1);
 }
 
-QVariant* q_mdiarea_qbase_input_method_query(void* self, int32_t param1) {
-    return QMdiArea_QBaseInputMethodQuery((QMdiArea*)self, param1);
+QVariant* q_mdiarea_super_input_method_query(void* self, int32_t param1) {
+    return QMdiArea_SuperInputMethodQuery((QMdiArea*)self, param1);
 }
 
 void q_mdiarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2308,8 +2308,8 @@ bool q_mdiarea_focus_next_prev_child(void* self, bool next) {
     return QMdiArea_FocusNextPrevChild((QMdiArea*)self, next);
 }
 
-bool q_mdiarea_qbase_focus_next_prev_child(void* self, bool next) {
-    return QMdiArea_QBaseFocusNextPrevChild((QMdiArea*)self, next);
+bool q_mdiarea_super_focus_next_prev_child(void* self, bool next) {
+    return QMdiArea_SuperFocusNextPrevChild((QMdiArea*)self, next);
 }
 
 void q_mdiarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2320,8 +2320,8 @@ void q_mdiarea_custom_event(void* self, void* event) {
     QMdiArea_CustomEvent((QMdiArea*)self, (QEvent*)event);
 }
 
-void q_mdiarea_qbase_custom_event(void* self, void* event) {
-    QMdiArea_QBaseCustomEvent((QMdiArea*)self, (QEvent*)event);
+void q_mdiarea_super_custom_event(void* self, void* event) {
+    QMdiArea_SuperCustomEvent((QMdiArea*)self, (QEvent*)event);
 }
 
 void q_mdiarea_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2332,8 +2332,8 @@ void q_mdiarea_connect_notify(void* self, void* signal) {
     QMdiArea_ConnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
-void q_mdiarea_qbase_connect_notify(void* self, void* signal) {
-    QMdiArea_QBaseConnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
+void q_mdiarea_super_connect_notify(void* self, void* signal) {
+    QMdiArea_SuperConnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
 void q_mdiarea_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2344,8 +2344,8 @@ void q_mdiarea_disconnect_notify(void* self, void* signal) {
     QMdiArea_DisconnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
-void q_mdiarea_qbase_disconnect_notify(void* self, void* signal) {
-    QMdiArea_QBaseDisconnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
+void q_mdiarea_super_disconnect_notify(void* self, void* signal) {
+    QMdiArea_SuperDisconnectNotify((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
 void q_mdiarea_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2356,8 +2356,8 @@ void q_mdiarea_set_viewport_margins(void* self, int left, int top, int right, in
     QMdiArea_SetViewportMargins((QMdiArea*)self, left, top, right, bottom);
 }
 
-void q_mdiarea_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QMdiArea_QBaseSetViewportMargins((QMdiArea*)self, left, top, right, bottom);
+void q_mdiarea_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QMdiArea_SuperSetViewportMargins((QMdiArea*)self, left, top, right, bottom);
 }
 
 void q_mdiarea_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -2368,8 +2368,8 @@ QMargins* q_mdiarea_viewport_margins(void* self) {
     return QMdiArea_ViewportMargins((QMdiArea*)self);
 }
 
-QMargins* q_mdiarea_qbase_viewport_margins(void* self) {
-    return QMdiArea_QBaseViewportMargins((QMdiArea*)self);
+QMargins* q_mdiarea_super_viewport_margins(void* self) {
+    return QMdiArea_SuperViewportMargins((QMdiArea*)self);
 }
 
 void q_mdiarea_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -2380,8 +2380,8 @@ void q_mdiarea_draw_frame(void* self, void* param1) {
     QMdiArea_DrawFrame((QMdiArea*)self, (QPainter*)param1);
 }
 
-void q_mdiarea_qbase_draw_frame(void* self, void* param1) {
-    QMdiArea_QBaseDrawFrame((QMdiArea*)self, (QPainter*)param1);
+void q_mdiarea_super_draw_frame(void* self, void* param1) {
+    QMdiArea_SuperDrawFrame((QMdiArea*)self, (QPainter*)param1);
 }
 
 void q_mdiarea_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2392,8 +2392,8 @@ void q_mdiarea_update_micro_focus(void* self) {
     QMdiArea_UpdateMicroFocus((QMdiArea*)self);
 }
 
-void q_mdiarea_qbase_update_micro_focus(void* self) {
-    QMdiArea_QBaseUpdateMicroFocus((QMdiArea*)self);
+void q_mdiarea_super_update_micro_focus(void* self) {
+    QMdiArea_SuperUpdateMicroFocus((QMdiArea*)self);
 }
 
 void q_mdiarea_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2404,8 +2404,8 @@ void q_mdiarea_create(void* self) {
     QMdiArea_Create((QMdiArea*)self);
 }
 
-void q_mdiarea_qbase_create(void* self) {
-    QMdiArea_QBaseCreate((QMdiArea*)self);
+void q_mdiarea_super_create(void* self) {
+    QMdiArea_SuperCreate((QMdiArea*)self);
 }
 
 void q_mdiarea_on_create(void* self, void (*callback)()) {
@@ -2416,8 +2416,8 @@ void q_mdiarea_destroy(void* self) {
     QMdiArea_Destroy((QMdiArea*)self);
 }
 
-void q_mdiarea_qbase_destroy(void* self) {
-    QMdiArea_QBaseDestroy((QMdiArea*)self);
+void q_mdiarea_super_destroy(void* self) {
+    QMdiArea_SuperDestroy((QMdiArea*)self);
 }
 
 void q_mdiarea_on_destroy(void* self, void (*callback)()) {
@@ -2428,8 +2428,8 @@ bool q_mdiarea_focus_next_child(void* self) {
     return QMdiArea_FocusNextChild((QMdiArea*)self);
 }
 
-bool q_mdiarea_qbase_focus_next_child(void* self) {
-    return QMdiArea_QBaseFocusNextChild((QMdiArea*)self);
+bool q_mdiarea_super_focus_next_child(void* self) {
+    return QMdiArea_SuperFocusNextChild((QMdiArea*)self);
 }
 
 void q_mdiarea_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2440,8 +2440,8 @@ bool q_mdiarea_focus_previous_child(void* self) {
     return QMdiArea_FocusPreviousChild((QMdiArea*)self);
 }
 
-bool q_mdiarea_qbase_focus_previous_child(void* self) {
-    return QMdiArea_QBaseFocusPreviousChild((QMdiArea*)self);
+bool q_mdiarea_super_focus_previous_child(void* self) {
+    return QMdiArea_SuperFocusPreviousChild((QMdiArea*)self);
 }
 
 void q_mdiarea_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2452,8 +2452,8 @@ QObject* q_mdiarea_sender(void* self) {
     return QMdiArea_Sender((QMdiArea*)self);
 }
 
-QObject* q_mdiarea_qbase_sender(void* self) {
-    return QMdiArea_QBaseSender((QMdiArea*)self);
+QObject* q_mdiarea_super_sender(void* self) {
+    return QMdiArea_SuperSender((QMdiArea*)self);
 }
 
 void q_mdiarea_on_sender(void* self, QObject* (*callback)()) {
@@ -2464,8 +2464,8 @@ int32_t q_mdiarea_sender_signal_index(void* self) {
     return QMdiArea_SenderSignalIndex((QMdiArea*)self);
 }
 
-int32_t q_mdiarea_qbase_sender_signal_index(void* self) {
-    return QMdiArea_QBaseSenderSignalIndex((QMdiArea*)self);
+int32_t q_mdiarea_super_sender_signal_index(void* self) {
+    return QMdiArea_SuperSenderSignalIndex((QMdiArea*)self);
 }
 
 void q_mdiarea_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2476,8 +2476,8 @@ int32_t q_mdiarea_receivers(void* self, const char* signal) {
     return QMdiArea_Receivers((QMdiArea*)self, signal);
 }
 
-int32_t q_mdiarea_qbase_receivers(void* self, const char* signal) {
-    return QMdiArea_QBaseReceivers((QMdiArea*)self, signal);
+int32_t q_mdiarea_super_receivers(void* self, const char* signal) {
+    return QMdiArea_SuperReceivers((QMdiArea*)self, signal);
 }
 
 void q_mdiarea_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2488,8 +2488,8 @@ bool q_mdiarea_is_signal_connected(void* self, void* signal) {
     return QMdiArea_IsSignalConnected((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
-bool q_mdiarea_qbase_is_signal_connected(void* self, void* signal) {
-    return QMdiArea_QBaseIsSignalConnected((QMdiArea*)self, (QMetaMethod*)signal);
+bool q_mdiarea_super_is_signal_connected(void* self, void* signal) {
+    return QMdiArea_SuperIsSignalConnected((QMdiArea*)self, (QMetaMethod*)signal);
 }
 
 void q_mdiarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2500,8 +2500,8 @@ double q_mdiarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
     return QMdiArea_GetDecodedMetricF((QMdiArea*)self, metricA, metricB);
 }
 
-double q_mdiarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QMdiArea_QBaseGetDecodedMetricF((QMdiArea*)self, metricA, metricB);
+double q_mdiarea_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QMdiArea_SuperGetDecodedMetricF((QMdiArea*)self, metricA, metricB);
 }
 
 void q_mdiarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

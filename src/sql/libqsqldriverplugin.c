@@ -22,8 +22,8 @@ void q_sqldriverplugin_on_meta_object(void* self, const QMetaObject* (*callback)
     QSqlDriverPlugin_OnMetaObject((QSqlDriverPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sqldriverplugin_qbase_meta_object(void* self) {
-    return QSqlDriverPlugin_QBaseMetaObject((QSqlDriverPlugin*)self);
+const QMetaObject* q_sqldriverplugin_super_meta_object(void* self) {
+    return QSqlDriverPlugin_SuperMetaObject((QSqlDriverPlugin*)self);
 }
 
 void* q_sqldriverplugin_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_sqldriverplugin_on_metacast(void* self, void* (*callback)(void*, const ch
     QSqlDriverPlugin_OnMetacast((QSqlDriverPlugin*)self, (intptr_t)callback);
 }
 
-void* q_sqldriverplugin_qbase_metacast(void* self, const char* param1) {
-    return QSqlDriverPlugin_QBaseMetacast((QSqlDriverPlugin*)self, param1);
+void* q_sqldriverplugin_super_metacast(void* self, const char* param1) {
+    return QSqlDriverPlugin_SuperMetacast((QSqlDriverPlugin*)self, param1);
 }
 
 int32_t q_sqldriverplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_sqldriverplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QSqlDriverPlugin_OnMetacall((QSqlDriverPlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_sqldriverplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSqlDriverPlugin_QBaseMetacall((QSqlDriverPlugin*)self, param1, param2, param3);
+int32_t q_sqldriverplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSqlDriverPlugin_SuperMetacall((QSqlDriverPlugin*)self, param1, param2, param3);
 }
 
 const char* q_sqldriverplugin_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_sqldriverplugin_on_create(void* self, QSqlDriver* (*callback)(void*, cons
     QSqlDriverPlugin_OnCreate((QSqlDriverPlugin*)self, (intptr_t)callback);
 }
 
-QSqlDriver* q_sqldriverplugin_qbase_create(void* self, const char* key) {
-    return QSqlDriverPlugin_QBaseCreate((QSqlDriverPlugin*)self, qstring(key));
+QSqlDriver* q_sqldriverplugin_super_create(void* self, const char* key) {
+    return QSqlDriverPlugin_SuperCreate((QSqlDriverPlugin*)self, qstring(key));
 }
 
 const char* q_sqldriverplugin_tr2(const char* s, const char* c) {
@@ -298,8 +298,8 @@ bool q_sqldriverplugin_event(void* self, void* event) {
     return QSqlDriverPlugin_Event((QSqlDriverPlugin*)self, (QEvent*)event);
 }
 
-bool q_sqldriverplugin_qbase_event(void* self, void* event) {
-    return QSqlDriverPlugin_QBaseEvent((QSqlDriverPlugin*)self, (QEvent*)event);
+bool q_sqldriverplugin_super_event(void* self, void* event) {
+    return QSqlDriverPlugin_SuperEvent((QSqlDriverPlugin*)self, (QEvent*)event);
 }
 
 void q_sqldriverplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -310,8 +310,8 @@ bool q_sqldriverplugin_event_filter(void* self, void* watched, void* event) {
     return QSqlDriverPlugin_EventFilter((QSqlDriverPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_sqldriverplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSqlDriverPlugin_QBaseEventFilter((QSqlDriverPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool q_sqldriverplugin_super_event_filter(void* self, void* watched, void* event) {
+    return QSqlDriverPlugin_SuperEventFilter((QSqlDriverPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_sqldriverplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -322,8 +322,8 @@ void q_sqldriverplugin_timer_event(void* self, void* event) {
     QSqlDriverPlugin_TimerEvent((QSqlDriverPlugin*)self, (QTimerEvent*)event);
 }
 
-void q_sqldriverplugin_qbase_timer_event(void* self, void* event) {
-    QSqlDriverPlugin_QBaseTimerEvent((QSqlDriverPlugin*)self, (QTimerEvent*)event);
+void q_sqldriverplugin_super_timer_event(void* self, void* event) {
+    QSqlDriverPlugin_SuperTimerEvent((QSqlDriverPlugin*)self, (QTimerEvent*)event);
 }
 
 void q_sqldriverplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ void q_sqldriverplugin_child_event(void* self, void* event) {
     QSqlDriverPlugin_ChildEvent((QSqlDriverPlugin*)self, (QChildEvent*)event);
 }
 
-void q_sqldriverplugin_qbase_child_event(void* self, void* event) {
-    QSqlDriverPlugin_QBaseChildEvent((QSqlDriverPlugin*)self, (QChildEvent*)event);
+void q_sqldriverplugin_super_child_event(void* self, void* event) {
+    QSqlDriverPlugin_SuperChildEvent((QSqlDriverPlugin*)self, (QChildEvent*)event);
 }
 
 void q_sqldriverplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ void q_sqldriverplugin_custom_event(void* self, void* event) {
     QSqlDriverPlugin_CustomEvent((QSqlDriverPlugin*)self, (QEvent*)event);
 }
 
-void q_sqldriverplugin_qbase_custom_event(void* self, void* event) {
-    QSqlDriverPlugin_QBaseCustomEvent((QSqlDriverPlugin*)self, (QEvent*)event);
+void q_sqldriverplugin_super_custom_event(void* self, void* event) {
+    QSqlDriverPlugin_SuperCustomEvent((QSqlDriverPlugin*)self, (QEvent*)event);
 }
 
 void q_sqldriverplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void q_sqldriverplugin_connect_notify(void* self, void* signal) {
     QSqlDriverPlugin_ConnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_sqldriverplugin_qbase_connect_notify(void* self, void* signal) {
-    QSqlDriverPlugin_QBaseConnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
+void q_sqldriverplugin_super_connect_notify(void* self, void* signal) {
+    QSqlDriverPlugin_SuperConnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_sqldriverplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void q_sqldriverplugin_disconnect_notify(void* self, void* signal) {
     QSqlDriverPlugin_DisconnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_sqldriverplugin_qbase_disconnect_notify(void* self, void* signal) {
-    QSqlDriverPlugin_QBaseDisconnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
+void q_sqldriverplugin_super_disconnect_notify(void* self, void* signal) {
+    QSqlDriverPlugin_SuperDisconnectNotify((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_sqldriverplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ QObject* q_sqldriverplugin_sender(void* self) {
     return QSqlDriverPlugin_Sender((QSqlDriverPlugin*)self);
 }
 
-QObject* q_sqldriverplugin_qbase_sender(void* self) {
-    return QSqlDriverPlugin_QBaseSender((QSqlDriverPlugin*)self);
+QObject* q_sqldriverplugin_super_sender(void* self) {
+    return QSqlDriverPlugin_SuperSender((QSqlDriverPlugin*)self);
 }
 
 void q_sqldriverplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -394,8 +394,8 @@ int32_t q_sqldriverplugin_sender_signal_index(void* self) {
     return QSqlDriverPlugin_SenderSignalIndex((QSqlDriverPlugin*)self);
 }
 
-int32_t q_sqldriverplugin_qbase_sender_signal_index(void* self) {
-    return QSqlDriverPlugin_QBaseSenderSignalIndex((QSqlDriverPlugin*)self);
+int32_t q_sqldriverplugin_super_sender_signal_index(void* self) {
+    return QSqlDriverPlugin_SuperSenderSignalIndex((QSqlDriverPlugin*)self);
 }
 
 void q_sqldriverplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -406,8 +406,8 @@ int32_t q_sqldriverplugin_receivers(void* self, const char* signal) {
     return QSqlDriverPlugin_Receivers((QSqlDriverPlugin*)self, signal);
 }
 
-int32_t q_sqldriverplugin_qbase_receivers(void* self, const char* signal) {
-    return QSqlDriverPlugin_QBaseReceivers((QSqlDriverPlugin*)self, signal);
+int32_t q_sqldriverplugin_super_receivers(void* self, const char* signal) {
+    return QSqlDriverPlugin_SuperReceivers((QSqlDriverPlugin*)self, signal);
 }
 
 void q_sqldriverplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -418,8 +418,8 @@ bool q_sqldriverplugin_is_signal_connected(void* self, void* signal) {
     return QSqlDriverPlugin_IsSignalConnected((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool q_sqldriverplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return QSqlDriverPlugin_QBaseIsSignalConnected((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
+bool q_sqldriverplugin_super_is_signal_connected(void* self, void* signal) {
+    return QSqlDriverPlugin_SuperIsSignalConnected((QSqlDriverPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_sqldriverplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

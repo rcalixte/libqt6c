@@ -32,8 +32,8 @@ void k_pageview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KPageView_OnMetaObject((KPageView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pageview_qbase_meta_object(void* self) {
-    return KPageView_QBaseMetaObject((KPageView*)self);
+const QMetaObject* k_pageview_super_meta_object(void* self) {
+    return KPageView_SuperMetaObject((KPageView*)self);
 }
 
 void* k_pageview_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_pageview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KPageView_OnMetacast((KPageView*)self, (intptr_t)callback);
 }
 
-void* k_pageview_qbase_metacast(void* self, const char* param1) {
-    return KPageView_QBaseMetacast((KPageView*)self, param1);
+void* k_pageview_super_metacast(void* self, const char* param1) {
+    return KPageView_SuperMetacast((KPageView*)self, param1);
 }
 
 int32_t k_pageview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_pageview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KPageView_OnMetacall((KPageView*)self, (intptr_t)callback);
 }
 
-int32_t k_pageview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPageView_QBaseMetacall((KPageView*)self, param1, param2, param3);
+int32_t k_pageview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPageView_SuperMetacall((KPageView*)self, param1, param2, param3);
 }
 
 const char* k_pageview_tr(const char* s) {
@@ -135,8 +135,8 @@ void k_pageview_on_create_view(void* self, QAbstractItemView* (*callback)()) {
     KPageView_OnCreateView((KPageView*)self, (intptr_t)callback);
 }
 
-QAbstractItemView* k_pageview_qbase_create_view(void* self) {
-    return KPageView_QBaseCreateView((KPageView*)self);
+QAbstractItemView* k_pageview_super_create_view(void* self) {
+    return KPageView_SuperCreateView((KPageView*)self);
 }
 
 bool k_pageview_show_page_header(void* self) {
@@ -147,8 +147,8 @@ void k_pageview_on_show_page_header(void* self, bool (*callback)()) {
     KPageView_OnShowPageHeader((KPageView*)self, (intptr_t)callback);
 }
 
-bool k_pageview_qbase_show_page_header(void* self) {
-    return KPageView_QBaseShowPageHeader((KPageView*)self);
+bool k_pageview_super_show_page_header(void* self) {
+    return KPageView_SuperShowPageHeader((KPageView*)self);
 }
 
 int32_t k_pageview_view_position(void* self) {
@@ -159,8 +159,8 @@ void k_pageview_on_view_position(void* self, int32_t (*callback)()) {
     KPageView_OnViewPosition((KPageView*)self, (intptr_t)callback);
 }
 
-int32_t k_pageview_qbase_view_position(void* self) {
-    return KPageView_QBaseViewPosition((KPageView*)self);
+int32_t k_pageview_super_view_position(void* self) {
+    return KPageView_SuperViewPosition((KPageView*)self);
 }
 
 const char* k_pageview_tr2(const char* s, const char* c) {
@@ -1562,8 +1562,8 @@ int32_t k_pageview_dev_type(void* self) {
     return KPageView_DevType((KPageView*)self);
 }
 
-int32_t k_pageview_qbase_dev_type(void* self) {
-    return KPageView_QBaseDevType((KPageView*)self);
+int32_t k_pageview_super_dev_type(void* self) {
+    return KPageView_SuperDevType((KPageView*)self);
 }
 
 void k_pageview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1574,8 +1574,8 @@ void k_pageview_set_visible(void* self, bool visible) {
     KPageView_SetVisible((KPageView*)self, visible);
 }
 
-void k_pageview_qbase_set_visible(void* self, bool visible) {
-    KPageView_QBaseSetVisible((KPageView*)self, visible);
+void k_pageview_super_set_visible(void* self, bool visible) {
+    KPageView_SuperSetVisible((KPageView*)self, visible);
 }
 
 void k_pageview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1586,8 +1586,8 @@ QSize* k_pageview_size_hint(void* self) {
     return KPageView_SizeHint((KPageView*)self);
 }
 
-QSize* k_pageview_qbase_size_hint(void* self) {
-    return KPageView_QBaseSizeHint((KPageView*)self);
+QSize* k_pageview_super_size_hint(void* self) {
+    return KPageView_SuperSizeHint((KPageView*)self);
 }
 
 void k_pageview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1598,8 +1598,8 @@ QSize* k_pageview_minimum_size_hint(void* self) {
     return KPageView_MinimumSizeHint((KPageView*)self);
 }
 
-QSize* k_pageview_qbase_minimum_size_hint(void* self) {
-    return KPageView_QBaseMinimumSizeHint((KPageView*)self);
+QSize* k_pageview_super_minimum_size_hint(void* self) {
+    return KPageView_SuperMinimumSizeHint((KPageView*)self);
 }
 
 void k_pageview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1610,8 +1610,8 @@ int32_t k_pageview_height_for_width(void* self, int param1) {
     return KPageView_HeightForWidth((KPageView*)self, param1);
 }
 
-int32_t k_pageview_qbase_height_for_width(void* self, int param1) {
-    return KPageView_QBaseHeightForWidth((KPageView*)self, param1);
+int32_t k_pageview_super_height_for_width(void* self, int param1) {
+    return KPageView_SuperHeightForWidth((KPageView*)self, param1);
 }
 
 void k_pageview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1622,8 +1622,8 @@ bool k_pageview_has_height_for_width(void* self) {
     return KPageView_HasHeightForWidth((KPageView*)self);
 }
 
-bool k_pageview_qbase_has_height_for_width(void* self) {
-    return KPageView_QBaseHasHeightForWidth((KPageView*)self);
+bool k_pageview_super_has_height_for_width(void* self) {
+    return KPageView_SuperHasHeightForWidth((KPageView*)self);
 }
 
 void k_pageview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1634,8 +1634,8 @@ QPaintEngine* k_pageview_paint_engine(void* self) {
     return KPageView_PaintEngine((KPageView*)self);
 }
 
-QPaintEngine* k_pageview_qbase_paint_engine(void* self) {
-    return KPageView_QBasePaintEngine((KPageView*)self);
+QPaintEngine* k_pageview_super_paint_engine(void* self) {
+    return KPageView_SuperPaintEngine((KPageView*)self);
 }
 
 void k_pageview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1646,8 +1646,8 @@ bool k_pageview_event(void* self, void* event) {
     return KPageView_Event((KPageView*)self, (QEvent*)event);
 }
 
-bool k_pageview_qbase_event(void* self, void* event) {
-    return KPageView_QBaseEvent((KPageView*)self, (QEvent*)event);
+bool k_pageview_super_event(void* self, void* event) {
+    return KPageView_SuperEvent((KPageView*)self, (QEvent*)event);
 }
 
 void k_pageview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1658,8 +1658,8 @@ void k_pageview_mouse_press_event(void* self, void* event) {
     KPageView_MousePressEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
-void k_pageview_qbase_mouse_press_event(void* self, void* event) {
-    KPageView_QBaseMousePressEvent((KPageView*)self, (QMouseEvent*)event);
+void k_pageview_super_mouse_press_event(void* self, void* event) {
+    KPageView_SuperMousePressEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
 void k_pageview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1670,8 +1670,8 @@ void k_pageview_mouse_release_event(void* self, void* event) {
     KPageView_MouseReleaseEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
-void k_pageview_qbase_mouse_release_event(void* self, void* event) {
-    KPageView_QBaseMouseReleaseEvent((KPageView*)self, (QMouseEvent*)event);
+void k_pageview_super_mouse_release_event(void* self, void* event) {
+    KPageView_SuperMouseReleaseEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
 void k_pageview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ void k_pageview_mouse_double_click_event(void* self, void* event) {
     KPageView_MouseDoubleClickEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
-void k_pageview_qbase_mouse_double_click_event(void* self, void* event) {
-    KPageView_QBaseMouseDoubleClickEvent((KPageView*)self, (QMouseEvent*)event);
+void k_pageview_super_mouse_double_click_event(void* self, void* event) {
+    KPageView_SuperMouseDoubleClickEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
 void k_pageview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void k_pageview_mouse_move_event(void* self, void* event) {
     KPageView_MouseMoveEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
-void k_pageview_qbase_mouse_move_event(void* self, void* event) {
-    KPageView_QBaseMouseMoveEvent((KPageView*)self, (QMouseEvent*)event);
+void k_pageview_super_mouse_move_event(void* self, void* event) {
+    KPageView_SuperMouseMoveEvent((KPageView*)self, (QMouseEvent*)event);
 }
 
 void k_pageview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void k_pageview_wheel_event(void* self, void* event) {
     KPageView_WheelEvent((KPageView*)self, (QWheelEvent*)event);
 }
 
-void k_pageview_qbase_wheel_event(void* self, void* event) {
-    KPageView_QBaseWheelEvent((KPageView*)self, (QWheelEvent*)event);
+void k_pageview_super_wheel_event(void* self, void* event) {
+    KPageView_SuperWheelEvent((KPageView*)self, (QWheelEvent*)event);
 }
 
 void k_pageview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void k_pageview_key_press_event(void* self, void* event) {
     KPageView_KeyPressEvent((KPageView*)self, (QKeyEvent*)event);
 }
 
-void k_pageview_qbase_key_press_event(void* self, void* event) {
-    KPageView_QBaseKeyPressEvent((KPageView*)self, (QKeyEvent*)event);
+void k_pageview_super_key_press_event(void* self, void* event) {
+    KPageView_SuperKeyPressEvent((KPageView*)self, (QKeyEvent*)event);
 }
 
 void k_pageview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_pageview_key_release_event(void* self, void* event) {
     KPageView_KeyReleaseEvent((KPageView*)self, (QKeyEvent*)event);
 }
 
-void k_pageview_qbase_key_release_event(void* self, void* event) {
-    KPageView_QBaseKeyReleaseEvent((KPageView*)self, (QKeyEvent*)event);
+void k_pageview_super_key_release_event(void* self, void* event) {
+    KPageView_SuperKeyReleaseEvent((KPageView*)self, (QKeyEvent*)event);
 }
 
 void k_pageview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void k_pageview_focus_in_event(void* self, void* event) {
     KPageView_FocusInEvent((KPageView*)self, (QFocusEvent*)event);
 }
 
-void k_pageview_qbase_focus_in_event(void* self, void* event) {
-    KPageView_QBaseFocusInEvent((KPageView*)self, (QFocusEvent*)event);
+void k_pageview_super_focus_in_event(void* self, void* event) {
+    KPageView_SuperFocusInEvent((KPageView*)self, (QFocusEvent*)event);
 }
 
 void k_pageview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void k_pageview_focus_out_event(void* self, void* event) {
     KPageView_FocusOutEvent((KPageView*)self, (QFocusEvent*)event);
 }
 
-void k_pageview_qbase_focus_out_event(void* self, void* event) {
-    KPageView_QBaseFocusOutEvent((KPageView*)self, (QFocusEvent*)event);
+void k_pageview_super_focus_out_event(void* self, void* event) {
+    KPageView_SuperFocusOutEvent((KPageView*)self, (QFocusEvent*)event);
 }
 
 void k_pageview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void k_pageview_enter_event(void* self, void* event) {
     KPageView_EnterEvent((KPageView*)self, (QEnterEvent*)event);
 }
 
-void k_pageview_qbase_enter_event(void* self, void* event) {
-    KPageView_QBaseEnterEvent((KPageView*)self, (QEnterEvent*)event);
+void k_pageview_super_enter_event(void* self, void* event) {
+    KPageView_SuperEnterEvent((KPageView*)self, (QEnterEvent*)event);
 }
 
 void k_pageview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void k_pageview_leave_event(void* self, void* event) {
     KPageView_LeaveEvent((KPageView*)self, (QEvent*)event);
 }
 
-void k_pageview_qbase_leave_event(void* self, void* event) {
-    KPageView_QBaseLeaveEvent((KPageView*)self, (QEvent*)event);
+void k_pageview_super_leave_event(void* self, void* event) {
+    KPageView_SuperLeaveEvent((KPageView*)self, (QEvent*)event);
 }
 
 void k_pageview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void k_pageview_paint_event(void* self, void* event) {
     KPageView_PaintEvent((KPageView*)self, (QPaintEvent*)event);
 }
 
-void k_pageview_qbase_paint_event(void* self, void* event) {
-    KPageView_QBasePaintEvent((KPageView*)self, (QPaintEvent*)event);
+void k_pageview_super_paint_event(void* self, void* event) {
+    KPageView_SuperPaintEvent((KPageView*)self, (QPaintEvent*)event);
 }
 
 void k_pageview_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void k_pageview_move_event(void* self, void* event) {
     KPageView_MoveEvent((KPageView*)self, (QMoveEvent*)event);
 }
 
-void k_pageview_qbase_move_event(void* self, void* event) {
-    KPageView_QBaseMoveEvent((KPageView*)self, (QMoveEvent*)event);
+void k_pageview_super_move_event(void* self, void* event) {
+    KPageView_SuperMoveEvent((KPageView*)self, (QMoveEvent*)event);
 }
 
 void k_pageview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void k_pageview_resize_event(void* self, void* event) {
     KPageView_ResizeEvent((KPageView*)self, (QResizeEvent*)event);
 }
 
-void k_pageview_qbase_resize_event(void* self, void* event) {
-    KPageView_QBaseResizeEvent((KPageView*)self, (QResizeEvent*)event);
+void k_pageview_super_resize_event(void* self, void* event) {
+    KPageView_SuperResizeEvent((KPageView*)self, (QResizeEvent*)event);
 }
 
 void k_pageview_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void k_pageview_close_event(void* self, void* event) {
     KPageView_CloseEvent((KPageView*)self, (QCloseEvent*)event);
 }
 
-void k_pageview_qbase_close_event(void* self, void* event) {
-    KPageView_QBaseCloseEvent((KPageView*)self, (QCloseEvent*)event);
+void k_pageview_super_close_event(void* self, void* event) {
+    KPageView_SuperCloseEvent((KPageView*)self, (QCloseEvent*)event);
 }
 
 void k_pageview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void k_pageview_context_menu_event(void* self, void* event) {
     KPageView_ContextMenuEvent((KPageView*)self, (QContextMenuEvent*)event);
 }
 
-void k_pageview_qbase_context_menu_event(void* self, void* event) {
-    KPageView_QBaseContextMenuEvent((KPageView*)self, (QContextMenuEvent*)event);
+void k_pageview_super_context_menu_event(void* self, void* event) {
+    KPageView_SuperContextMenuEvent((KPageView*)self, (QContextMenuEvent*)event);
 }
 
 void k_pageview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void k_pageview_tablet_event(void* self, void* event) {
     KPageView_TabletEvent((KPageView*)self, (QTabletEvent*)event);
 }
 
-void k_pageview_qbase_tablet_event(void* self, void* event) {
-    KPageView_QBaseTabletEvent((KPageView*)self, (QTabletEvent*)event);
+void k_pageview_super_tablet_event(void* self, void* event) {
+    KPageView_SuperTabletEvent((KPageView*)self, (QTabletEvent*)event);
 }
 
 void k_pageview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void k_pageview_action_event(void* self, void* event) {
     KPageView_ActionEvent((KPageView*)self, (QActionEvent*)event);
 }
 
-void k_pageview_qbase_action_event(void* self, void* event) {
-    KPageView_QBaseActionEvent((KPageView*)self, (QActionEvent*)event);
+void k_pageview_super_action_event(void* self, void* event) {
+    KPageView_SuperActionEvent((KPageView*)self, (QActionEvent*)event);
 }
 
 void k_pageview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_pageview_drag_enter_event(void* self, void* event) {
     KPageView_DragEnterEvent((KPageView*)self, (QDragEnterEvent*)event);
 }
 
-void k_pageview_qbase_drag_enter_event(void* self, void* event) {
-    KPageView_QBaseDragEnterEvent((KPageView*)self, (QDragEnterEvent*)event);
+void k_pageview_super_drag_enter_event(void* self, void* event) {
+    KPageView_SuperDragEnterEvent((KPageView*)self, (QDragEnterEvent*)event);
 }
 
 void k_pageview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_pageview_drag_move_event(void* self, void* event) {
     KPageView_DragMoveEvent((KPageView*)self, (QDragMoveEvent*)event);
 }
 
-void k_pageview_qbase_drag_move_event(void* self, void* event) {
-    KPageView_QBaseDragMoveEvent((KPageView*)self, (QDragMoveEvent*)event);
+void k_pageview_super_drag_move_event(void* self, void* event) {
+    KPageView_SuperDragMoveEvent((KPageView*)self, (QDragMoveEvent*)event);
 }
 
 void k_pageview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_pageview_drag_leave_event(void* self, void* event) {
     KPageView_DragLeaveEvent((KPageView*)self, (QDragLeaveEvent*)event);
 }
 
-void k_pageview_qbase_drag_leave_event(void* self, void* event) {
-    KPageView_QBaseDragLeaveEvent((KPageView*)self, (QDragLeaveEvent*)event);
+void k_pageview_super_drag_leave_event(void* self, void* event) {
+    KPageView_SuperDragLeaveEvent((KPageView*)self, (QDragLeaveEvent*)event);
 }
 
 void k_pageview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_pageview_drop_event(void* self, void* event) {
     KPageView_DropEvent((KPageView*)self, (QDropEvent*)event);
 }
 
-void k_pageview_qbase_drop_event(void* self, void* event) {
-    KPageView_QBaseDropEvent((KPageView*)self, (QDropEvent*)event);
+void k_pageview_super_drop_event(void* self, void* event) {
+    KPageView_SuperDropEvent((KPageView*)self, (QDropEvent*)event);
 }
 
 void k_pageview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_pageview_show_event(void* self, void* event) {
     KPageView_ShowEvent((KPageView*)self, (QShowEvent*)event);
 }
 
-void k_pageview_qbase_show_event(void* self, void* event) {
-    KPageView_QBaseShowEvent((KPageView*)self, (QShowEvent*)event);
+void k_pageview_super_show_event(void* self, void* event) {
+    KPageView_SuperShowEvent((KPageView*)self, (QShowEvent*)event);
 }
 
 void k_pageview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_pageview_hide_event(void* self, void* event) {
     KPageView_HideEvent((KPageView*)self, (QHideEvent*)event);
 }
 
-void k_pageview_qbase_hide_event(void* self, void* event) {
-    KPageView_QBaseHideEvent((KPageView*)self, (QHideEvent*)event);
+void k_pageview_super_hide_event(void* self, void* event) {
+    KPageView_SuperHideEvent((KPageView*)self, (QHideEvent*)event);
 }
 
 void k_pageview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ bool k_pageview_native_event(void* self, char* eventType, void* message, intptr_
     return KPageView_NativeEvent((KPageView*)self, qstring(eventType), message, result);
 }
 
-bool k_pageview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPageView_QBaseNativeEvent((KPageView*)self, qstring(eventType), message, result);
+bool k_pageview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPageView_SuperNativeEvent((KPageView*)self, qstring(eventType), message, result);
 }
 
 void k_pageview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1958,8 +1958,8 @@ void k_pageview_change_event(void* self, void* param1) {
     KPageView_ChangeEvent((KPageView*)self, (QEvent*)param1);
 }
 
-void k_pageview_qbase_change_event(void* self, void* param1) {
-    KPageView_QBaseChangeEvent((KPageView*)self, (QEvent*)param1);
+void k_pageview_super_change_event(void* self, void* param1) {
+    KPageView_SuperChangeEvent((KPageView*)self, (QEvent*)param1);
 }
 
 void k_pageview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ int32_t k_pageview_metric(void* self, int32_t param1) {
     return KPageView_Metric((KPageView*)self, param1);
 }
 
-int32_t k_pageview_qbase_metric(void* self, int32_t param1) {
-    return KPageView_QBaseMetric((KPageView*)self, param1);
+int32_t k_pageview_super_metric(void* self, int32_t param1) {
+    return KPageView_SuperMetric((KPageView*)self, param1);
 }
 
 void k_pageview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1982,8 +1982,8 @@ void k_pageview_init_painter(void* self, void* painter) {
     KPageView_InitPainter((KPageView*)self, (QPainter*)painter);
 }
 
-void k_pageview_qbase_init_painter(void* self, void* painter) {
-    KPageView_QBaseInitPainter((KPageView*)self, (QPainter*)painter);
+void k_pageview_super_init_painter(void* self, void* painter) {
+    KPageView_SuperInitPainter((KPageView*)self, (QPainter*)painter);
 }
 
 void k_pageview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ QPaintDevice* k_pageview_redirected(void* self, void* offset) {
     return KPageView_Redirected((KPageView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_pageview_qbase_redirected(void* self, void* offset) {
-    return KPageView_QBaseRedirected((KPageView*)self, (QPoint*)offset);
+QPaintDevice* k_pageview_super_redirected(void* self, void* offset) {
+    return KPageView_SuperRedirected((KPageView*)self, (QPoint*)offset);
 }
 
 void k_pageview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ QPainter* k_pageview_shared_painter(void* self) {
     return KPageView_SharedPainter((KPageView*)self);
 }
 
-QPainter* k_pageview_qbase_shared_painter(void* self) {
-    return KPageView_QBaseSharedPainter((KPageView*)self);
+QPainter* k_pageview_super_shared_painter(void* self) {
+    return KPageView_SuperSharedPainter((KPageView*)self);
 }
 
 void k_pageview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2018,8 +2018,8 @@ void k_pageview_input_method_event(void* self, void* param1) {
     KPageView_InputMethodEvent((KPageView*)self, (QInputMethodEvent*)param1);
 }
 
-void k_pageview_qbase_input_method_event(void* self, void* param1) {
-    KPageView_QBaseInputMethodEvent((KPageView*)self, (QInputMethodEvent*)param1);
+void k_pageview_super_input_method_event(void* self, void* param1) {
+    KPageView_SuperInputMethodEvent((KPageView*)self, (QInputMethodEvent*)param1);
 }
 
 void k_pageview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ QVariant* k_pageview_input_method_query(void* self, int32_t param1) {
     return KPageView_InputMethodQuery((KPageView*)self, param1);
 }
 
-QVariant* k_pageview_qbase_input_method_query(void* self, int32_t param1) {
-    return KPageView_QBaseInputMethodQuery((KPageView*)self, param1);
+QVariant* k_pageview_super_input_method_query(void* self, int32_t param1) {
+    return KPageView_SuperInputMethodQuery((KPageView*)self, param1);
 }
 
 void k_pageview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2042,8 +2042,8 @@ bool k_pageview_focus_next_prev_child(void* self, bool next) {
     return KPageView_FocusNextPrevChild((KPageView*)self, next);
 }
 
-bool k_pageview_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPageView_QBaseFocusNextPrevChild((KPageView*)self, next);
+bool k_pageview_super_focus_next_prev_child(void* self, bool next) {
+    return KPageView_SuperFocusNextPrevChild((KPageView*)self, next);
 }
 
 void k_pageview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2054,8 +2054,8 @@ bool k_pageview_event_filter(void* self, void* watched, void* event) {
     return KPageView_EventFilter((KPageView*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_pageview_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPageView_QBaseEventFilter((KPageView*)self, (QObject*)watched, (QEvent*)event);
+bool k_pageview_super_event_filter(void* self, void* watched, void* event) {
+    return KPageView_SuperEventFilter((KPageView*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_pageview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_pageview_timer_event(void* self, void* event) {
     KPageView_TimerEvent((KPageView*)self, (QTimerEvent*)event);
 }
 
-void k_pageview_qbase_timer_event(void* self, void* event) {
-    KPageView_QBaseTimerEvent((KPageView*)self, (QTimerEvent*)event);
+void k_pageview_super_timer_event(void* self, void* event) {
+    KPageView_SuperTimerEvent((KPageView*)self, (QTimerEvent*)event);
 }
 
 void k_pageview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void k_pageview_child_event(void* self, void* event) {
     KPageView_ChildEvent((KPageView*)self, (QChildEvent*)event);
 }
 
-void k_pageview_qbase_child_event(void* self, void* event) {
-    KPageView_QBaseChildEvent((KPageView*)self, (QChildEvent*)event);
+void k_pageview_super_child_event(void* self, void* event) {
+    KPageView_SuperChildEvent((KPageView*)self, (QChildEvent*)event);
 }
 
 void k_pageview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ void k_pageview_custom_event(void* self, void* event) {
     KPageView_CustomEvent((KPageView*)self, (QEvent*)event);
 }
 
-void k_pageview_qbase_custom_event(void* self, void* event) {
-    KPageView_QBaseCustomEvent((KPageView*)self, (QEvent*)event);
+void k_pageview_super_custom_event(void* self, void* event) {
+    KPageView_SuperCustomEvent((KPageView*)self, (QEvent*)event);
 }
 
 void k_pageview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ void k_pageview_connect_notify(void* self, void* signal) {
     KPageView_ConnectNotify((KPageView*)self, (QMetaMethod*)signal);
 }
 
-void k_pageview_qbase_connect_notify(void* self, void* signal) {
-    KPageView_QBaseConnectNotify((KPageView*)self, (QMetaMethod*)signal);
+void k_pageview_super_connect_notify(void* self, void* signal) {
+    KPageView_SuperConnectNotify((KPageView*)self, (QMetaMethod*)signal);
 }
 
 void k_pageview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ void k_pageview_disconnect_notify(void* self, void* signal) {
     KPageView_DisconnectNotify((KPageView*)self, (QMetaMethod*)signal);
 }
 
-void k_pageview_qbase_disconnect_notify(void* self, void* signal) {
-    KPageView_QBaseDisconnectNotify((KPageView*)self, (QMetaMethod*)signal);
+void k_pageview_super_disconnect_notify(void* self, void* signal) {
+    KPageView_SuperDisconnectNotify((KPageView*)self, (QMetaMethod*)signal);
 }
 
 void k_pageview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ void k_pageview_update_micro_focus(void* self) {
     KPageView_UpdateMicroFocus((KPageView*)self);
 }
 
-void k_pageview_qbase_update_micro_focus(void* self) {
-    KPageView_QBaseUpdateMicroFocus((KPageView*)self);
+void k_pageview_super_update_micro_focus(void* self) {
+    KPageView_SuperUpdateMicroFocus((KPageView*)self);
 }
 
 void k_pageview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2138,8 +2138,8 @@ void k_pageview_create(void* self) {
     KPageView_Create((KPageView*)self);
 }
 
-void k_pageview_qbase_create(void* self) {
-    KPageView_QBaseCreate((KPageView*)self);
+void k_pageview_super_create(void* self) {
+    KPageView_SuperCreate((KPageView*)self);
 }
 
 void k_pageview_on_create(void* self, void (*callback)()) {
@@ -2150,8 +2150,8 @@ void k_pageview_destroy(void* self) {
     KPageView_Destroy((KPageView*)self);
 }
 
-void k_pageview_qbase_destroy(void* self) {
-    KPageView_QBaseDestroy((KPageView*)self);
+void k_pageview_super_destroy(void* self) {
+    KPageView_SuperDestroy((KPageView*)self);
 }
 
 void k_pageview_on_destroy(void* self, void (*callback)()) {
@@ -2162,8 +2162,8 @@ bool k_pageview_focus_next_child(void* self) {
     return KPageView_FocusNextChild((KPageView*)self);
 }
 
-bool k_pageview_qbase_focus_next_child(void* self) {
-    return KPageView_QBaseFocusNextChild((KPageView*)self);
+bool k_pageview_super_focus_next_child(void* self) {
+    return KPageView_SuperFocusNextChild((KPageView*)self);
 }
 
 void k_pageview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2174,8 +2174,8 @@ bool k_pageview_focus_previous_child(void* self) {
     return KPageView_FocusPreviousChild((KPageView*)self);
 }
 
-bool k_pageview_qbase_focus_previous_child(void* self) {
-    return KPageView_QBaseFocusPreviousChild((KPageView*)self);
+bool k_pageview_super_focus_previous_child(void* self) {
+    return KPageView_SuperFocusPreviousChild((KPageView*)self);
 }
 
 void k_pageview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2186,8 +2186,8 @@ QObject* k_pageview_sender(void* self) {
     return KPageView_Sender((KPageView*)self);
 }
 
-QObject* k_pageview_qbase_sender(void* self) {
-    return KPageView_QBaseSender((KPageView*)self);
+QObject* k_pageview_super_sender(void* self) {
+    return KPageView_SuperSender((KPageView*)self);
 }
 
 void k_pageview_on_sender(void* self, QObject* (*callback)()) {
@@ -2198,8 +2198,8 @@ int32_t k_pageview_sender_signal_index(void* self) {
     return KPageView_SenderSignalIndex((KPageView*)self);
 }
 
-int32_t k_pageview_qbase_sender_signal_index(void* self) {
-    return KPageView_QBaseSenderSignalIndex((KPageView*)self);
+int32_t k_pageview_super_sender_signal_index(void* self) {
+    return KPageView_SuperSenderSignalIndex((KPageView*)self);
 }
 
 void k_pageview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2210,8 +2210,8 @@ int32_t k_pageview_receivers(void* self, const char* signal) {
     return KPageView_Receivers((KPageView*)self, signal);
 }
 
-int32_t k_pageview_qbase_receivers(void* self, const char* signal) {
-    return KPageView_QBaseReceivers((KPageView*)self, signal);
+int32_t k_pageview_super_receivers(void* self, const char* signal) {
+    return KPageView_SuperReceivers((KPageView*)self, signal);
 }
 
 void k_pageview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2222,8 +2222,8 @@ bool k_pageview_is_signal_connected(void* self, void* signal) {
     return KPageView_IsSignalConnected((KPageView*)self, (QMetaMethod*)signal);
 }
 
-bool k_pageview_qbase_is_signal_connected(void* self, void* signal) {
-    return KPageView_QBaseIsSignalConnected((KPageView*)self, (QMetaMethod*)signal);
+bool k_pageview_super_is_signal_connected(void* self, void* signal) {
+    return KPageView_SuperIsSignalConnected((KPageView*)self, (QMetaMethod*)signal);
 }
 
 void k_pageview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2234,8 +2234,8 @@ double k_pageview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return KPageView_GetDecodedMetricF((KPageView*)self, metricA, metricB);
 }
 
-double k_pageview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPageView_QBaseGetDecodedMetricF((KPageView*)self, metricA, metricB);
+double k_pageview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPageView_SuperGetDecodedMetricF((KPageView*)self, metricA, metricB);
 }
 
 void k_pageview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

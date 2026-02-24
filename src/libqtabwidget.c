@@ -32,8 +32,8 @@ void q_tabwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTabWidget_OnMetaObject((QTabWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_tabwidget_qbase_meta_object(void* self) {
-    return QTabWidget_QBaseMetaObject((QTabWidget*)self);
+const QMetaObject* q_tabwidget_super_meta_object(void* self) {
+    return QTabWidget_SuperMetaObject((QTabWidget*)self);
 }
 
 void* q_tabwidget_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_tabwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QTabWidget_OnMetacast((QTabWidget*)self, (intptr_t)callback);
 }
 
-void* q_tabwidget_qbase_metacast(void* self, const char* param1) {
-    return QTabWidget_QBaseMetacast((QTabWidget*)self, param1);
+void* q_tabwidget_super_metacast(void* self, const char* param1) {
+    return QTabWidget_SuperMetacast((QTabWidget*)self, param1);
 }
 
 int32_t q_tabwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_tabwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QTabWidget_OnMetacall((QTabWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_tabwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTabWidget_QBaseMetacall((QTabWidget*)self, param1, param2, param3);
+int32_t q_tabwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTabWidget_SuperMetacall((QTabWidget*)self, param1, param2, param3);
 }
 
 const char* q_tabwidget_tr(const char* s) {
@@ -204,8 +204,8 @@ void q_tabwidget_on_size_hint(void* self, QSize* (*callback)()) {
     QTabWidget_OnSizeHint((QTabWidget*)self, (intptr_t)callback);
 }
 
-QSize* q_tabwidget_qbase_size_hint(void* self) {
-    return QTabWidget_QBaseSizeHint((QTabWidget*)self);
+QSize* q_tabwidget_super_size_hint(void* self) {
+    return QTabWidget_SuperSizeHint((QTabWidget*)self);
 }
 
 QSize* q_tabwidget_minimum_size_hint(void* self) {
@@ -216,8 +216,8 @@ void q_tabwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QTabWidget_OnMinimumSizeHint((QTabWidget*)self, (intptr_t)callback);
 }
 
-QSize* q_tabwidget_qbase_minimum_size_hint(void* self) {
-    return QTabWidget_QBaseMinimumSizeHint((QTabWidget*)self);
+QSize* q_tabwidget_super_minimum_size_hint(void* self) {
+    return QTabWidget_SuperMinimumSizeHint((QTabWidget*)self);
 }
 
 int32_t q_tabwidget_height_for_width(void* self, int width) {
@@ -228,8 +228,8 @@ void q_tabwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)
     QTabWidget_OnHeightForWidth((QTabWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_tabwidget_qbase_height_for_width(void* self, int width) {
-    return QTabWidget_QBaseHeightForWidth((QTabWidget*)self, width);
+int32_t q_tabwidget_super_height_for_width(void* self, int width) {
+    return QTabWidget_SuperHeightForWidth((QTabWidget*)self, width);
 }
 
 bool q_tabwidget_has_height_for_width(void* self) {
@@ -240,8 +240,8 @@ void q_tabwidget_on_has_height_for_width(void* self, bool (*callback)()) {
     QTabWidget_OnHasHeightForWidth((QTabWidget*)self, (intptr_t)callback);
 }
 
-bool q_tabwidget_qbase_has_height_for_width(void* self) {
-    return QTabWidget_QBaseHasHeightForWidth((QTabWidget*)self);
+bool q_tabwidget_super_has_height_for_width(void* self) {
+    return QTabWidget_SuperHasHeightForWidth((QTabWidget*)self);
 }
 
 void q_tabwidget_set_corner_widget(void* self, void* w) {
@@ -348,8 +348,8 @@ void q_tabwidget_on_tab_inserted(void* self, void (*callback)(void*, int)) {
     QTabWidget_OnTabInserted((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_tab_inserted(void* self, int index) {
-    QTabWidget_QBaseTabInserted((QTabWidget*)self, index);
+void q_tabwidget_super_tab_inserted(void* self, int index) {
+    QTabWidget_SuperTabInserted((QTabWidget*)self, index);
 }
 
 void q_tabwidget_tab_removed(void* self, int index) {
@@ -360,8 +360,8 @@ void q_tabwidget_on_tab_removed(void* self, void (*callback)(void*, int)) {
     QTabWidget_OnTabRemoved((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_tab_removed(void* self, int index) {
-    QTabWidget_QBaseTabRemoved((QTabWidget*)self, index);
+void q_tabwidget_super_tab_removed(void* self, int index) {
+    QTabWidget_SuperTabRemoved((QTabWidget*)self, index);
 }
 
 void q_tabwidget_show_event(void* self, void* param1) {
@@ -372,8 +372,8 @@ void q_tabwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnShowEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_show_event(void* self, void* param1) {
-    QTabWidget_QBaseShowEvent((QTabWidget*)self, (QShowEvent*)param1);
+void q_tabwidget_super_show_event(void* self, void* param1) {
+    QTabWidget_SuperShowEvent((QTabWidget*)self, (QShowEvent*)param1);
 }
 
 void q_tabwidget_resize_event(void* self, void* param1) {
@@ -384,8 +384,8 @@ void q_tabwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnResizeEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_resize_event(void* self, void* param1) {
-    QTabWidget_QBaseResizeEvent((QTabWidget*)self, (QResizeEvent*)param1);
+void q_tabwidget_super_resize_event(void* self, void* param1) {
+    QTabWidget_SuperResizeEvent((QTabWidget*)self, (QResizeEvent*)param1);
 }
 
 void q_tabwidget_key_press_event(void* self, void* param1) {
@@ -396,8 +396,8 @@ void q_tabwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) 
     QTabWidget_OnKeyPressEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_key_press_event(void* self, void* param1) {
-    QTabWidget_QBaseKeyPressEvent((QTabWidget*)self, (QKeyEvent*)param1);
+void q_tabwidget_super_key_press_event(void* self, void* param1) {
+    QTabWidget_SuperKeyPressEvent((QTabWidget*)self, (QKeyEvent*)param1);
 }
 
 void q_tabwidget_paint_event(void* self, void* param1) {
@@ -408,8 +408,8 @@ void q_tabwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnPaintEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_paint_event(void* self, void* param1) {
-    QTabWidget_QBasePaintEvent((QTabWidget*)self, (QPaintEvent*)param1);
+void q_tabwidget_super_paint_event(void* self, void* param1) {
+    QTabWidget_SuperPaintEvent((QTabWidget*)self, (QPaintEvent*)param1);
 }
 
 void q_tabwidget_set_tab_bar(void* self, void* tabBar) {
@@ -420,8 +420,8 @@ void q_tabwidget_on_set_tab_bar(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnSetTabBar((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_set_tab_bar(void* self, void* tabBar) {
-    QTabWidget_QBaseSetTabBar((QTabWidget*)self, (QTabBar*)tabBar);
+void q_tabwidget_super_set_tab_bar(void* self, void* tabBar) {
+    QTabWidget_SuperSetTabBar((QTabWidget*)self, (QTabBar*)tabBar);
 }
 
 void q_tabwidget_change_event(void* self, void* param1) {
@@ -432,8 +432,8 @@ void q_tabwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnChangeEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_change_event(void* self, void* param1) {
-    QTabWidget_QBaseChangeEvent((QTabWidget*)self, (QEvent*)param1);
+void q_tabwidget_super_change_event(void* self, void* param1) {
+    QTabWidget_SuperChangeEvent((QTabWidget*)self, (QEvent*)param1);
 }
 
 bool q_tabwidget_event(void* self, void* param1) {
@@ -444,8 +444,8 @@ void q_tabwidget_on_event(void* self, bool (*callback)(void*, void*)) {
     QTabWidget_OnEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-bool q_tabwidget_qbase_event(void* self, void* param1) {
-    return QTabWidget_QBaseEvent((QTabWidget*)self, (QEvent*)param1);
+bool q_tabwidget_super_event(void* self, void* param1) {
+    return QTabWidget_SuperEvent((QTabWidget*)self, (QEvent*)param1);
 }
 
 void q_tabwidget_init_style_option(void* self, void* option) {
@@ -456,8 +456,8 @@ void q_tabwidget_on_init_style_option(void* self, void (*callback)(void*, void*)
     QTabWidget_OnInitStyleOption((QTabWidget*)self, (intptr_t)callback);
 }
 
-void q_tabwidget_qbase_init_style_option(void* self, void* option) {
-    QTabWidget_QBaseInitStyleOption((QTabWidget*)self, (QStyleOptionTabWidgetFrame*)option);
+void q_tabwidget_super_init_style_option(void* self, void* option) {
+    QTabWidget_SuperInitStyleOption((QTabWidget*)self, (QStyleOptionTabWidgetFrame*)option);
 }
 
 const char* q_tabwidget_tr2(const char* s, const char* c) {
@@ -1867,8 +1867,8 @@ int32_t q_tabwidget_dev_type(void* self) {
     return QTabWidget_DevType((QTabWidget*)self);
 }
 
-int32_t q_tabwidget_qbase_dev_type(void* self) {
-    return QTabWidget_QBaseDevType((QTabWidget*)self);
+int32_t q_tabwidget_super_dev_type(void* self) {
+    return QTabWidget_SuperDevType((QTabWidget*)self);
 }
 
 void q_tabwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1879,8 +1879,8 @@ void q_tabwidget_set_visible(void* self, bool visible) {
     QTabWidget_SetVisible((QTabWidget*)self, visible);
 }
 
-void q_tabwidget_qbase_set_visible(void* self, bool visible) {
-    QTabWidget_QBaseSetVisible((QTabWidget*)self, visible);
+void q_tabwidget_super_set_visible(void* self, bool visible) {
+    QTabWidget_SuperSetVisible((QTabWidget*)self, visible);
 }
 
 void q_tabwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1891,8 +1891,8 @@ QPaintEngine* q_tabwidget_paint_engine(void* self) {
     return QTabWidget_PaintEngine((QTabWidget*)self);
 }
 
-QPaintEngine* q_tabwidget_qbase_paint_engine(void* self) {
-    return QTabWidget_QBasePaintEngine((QTabWidget*)self);
+QPaintEngine* q_tabwidget_super_paint_engine(void* self) {
+    return QTabWidget_SuperPaintEngine((QTabWidget*)self);
 }
 
 void q_tabwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1903,8 +1903,8 @@ void q_tabwidget_mouse_press_event(void* self, void* event) {
     QTabWidget_MousePressEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
-void q_tabwidget_qbase_mouse_press_event(void* self, void* event) {
-    QTabWidget_QBaseMousePressEvent((QTabWidget*)self, (QMouseEvent*)event);
+void q_tabwidget_super_mouse_press_event(void* self, void* event) {
+    QTabWidget_SuperMousePressEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
 void q_tabwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void q_tabwidget_mouse_release_event(void* self, void* event) {
     QTabWidget_MouseReleaseEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
-void q_tabwidget_qbase_mouse_release_event(void* self, void* event) {
-    QTabWidget_QBaseMouseReleaseEvent((QTabWidget*)self, (QMouseEvent*)event);
+void q_tabwidget_super_mouse_release_event(void* self, void* event) {
+    QTabWidget_SuperMouseReleaseEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
 void q_tabwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void q_tabwidget_mouse_double_click_event(void* self, void* event) {
     QTabWidget_MouseDoubleClickEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
-void q_tabwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    QTabWidget_QBaseMouseDoubleClickEvent((QTabWidget*)self, (QMouseEvent*)event);
+void q_tabwidget_super_mouse_double_click_event(void* self, void* event) {
+    QTabWidget_SuperMouseDoubleClickEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
 void q_tabwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ void q_tabwidget_mouse_move_event(void* self, void* event) {
     QTabWidget_MouseMoveEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
-void q_tabwidget_qbase_mouse_move_event(void* self, void* event) {
-    QTabWidget_QBaseMouseMoveEvent((QTabWidget*)self, (QMouseEvent*)event);
+void q_tabwidget_super_mouse_move_event(void* self, void* event) {
+    QTabWidget_SuperMouseMoveEvent((QTabWidget*)self, (QMouseEvent*)event);
 }
 
 void q_tabwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void q_tabwidget_wheel_event(void* self, void* event) {
     QTabWidget_WheelEvent((QTabWidget*)self, (QWheelEvent*)event);
 }
 
-void q_tabwidget_qbase_wheel_event(void* self, void* event) {
-    QTabWidget_QBaseWheelEvent((QTabWidget*)self, (QWheelEvent*)event);
+void q_tabwidget_super_wheel_event(void* self, void* event) {
+    QTabWidget_SuperWheelEvent((QTabWidget*)self, (QWheelEvent*)event);
 }
 
 void q_tabwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ void q_tabwidget_key_release_event(void* self, void* event) {
     QTabWidget_KeyReleaseEvent((QTabWidget*)self, (QKeyEvent*)event);
 }
 
-void q_tabwidget_qbase_key_release_event(void* self, void* event) {
-    QTabWidget_QBaseKeyReleaseEvent((QTabWidget*)self, (QKeyEvent*)event);
+void q_tabwidget_super_key_release_event(void* self, void* event) {
+    QTabWidget_SuperKeyReleaseEvent((QTabWidget*)self, (QKeyEvent*)event);
 }
 
 void q_tabwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ void q_tabwidget_focus_in_event(void* self, void* event) {
     QTabWidget_FocusInEvent((QTabWidget*)self, (QFocusEvent*)event);
 }
 
-void q_tabwidget_qbase_focus_in_event(void* self, void* event) {
-    QTabWidget_QBaseFocusInEvent((QTabWidget*)self, (QFocusEvent*)event);
+void q_tabwidget_super_focus_in_event(void* self, void* event) {
+    QTabWidget_SuperFocusInEvent((QTabWidget*)self, (QFocusEvent*)event);
 }
 
 void q_tabwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ void q_tabwidget_focus_out_event(void* self, void* event) {
     QTabWidget_FocusOutEvent((QTabWidget*)self, (QFocusEvent*)event);
 }
 
-void q_tabwidget_qbase_focus_out_event(void* self, void* event) {
-    QTabWidget_QBaseFocusOutEvent((QTabWidget*)self, (QFocusEvent*)event);
+void q_tabwidget_super_focus_out_event(void* self, void* event) {
+    QTabWidget_SuperFocusOutEvent((QTabWidget*)self, (QFocusEvent*)event);
 }
 
 void q_tabwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ void q_tabwidget_enter_event(void* self, void* event) {
     QTabWidget_EnterEvent((QTabWidget*)self, (QEnterEvent*)event);
 }
 
-void q_tabwidget_qbase_enter_event(void* self, void* event) {
-    QTabWidget_QBaseEnterEvent((QTabWidget*)self, (QEnterEvent*)event);
+void q_tabwidget_super_enter_event(void* self, void* event) {
+    QTabWidget_SuperEnterEvent((QTabWidget*)self, (QEnterEvent*)event);
 }
 
 void q_tabwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ void q_tabwidget_leave_event(void* self, void* event) {
     QTabWidget_LeaveEvent((QTabWidget*)self, (QEvent*)event);
 }
 
-void q_tabwidget_qbase_leave_event(void* self, void* event) {
-    QTabWidget_QBaseLeaveEvent((QTabWidget*)self, (QEvent*)event);
+void q_tabwidget_super_leave_event(void* self, void* event) {
+    QTabWidget_SuperLeaveEvent((QTabWidget*)self, (QEvent*)event);
 }
 
 void q_tabwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ void q_tabwidget_move_event(void* self, void* event) {
     QTabWidget_MoveEvent((QTabWidget*)self, (QMoveEvent*)event);
 }
 
-void q_tabwidget_qbase_move_event(void* self, void* event) {
-    QTabWidget_QBaseMoveEvent((QTabWidget*)self, (QMoveEvent*)event);
+void q_tabwidget_super_move_event(void* self, void* event) {
+    QTabWidget_SuperMoveEvent((QTabWidget*)self, (QMoveEvent*)event);
 }
 
 void q_tabwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ void q_tabwidget_close_event(void* self, void* event) {
     QTabWidget_CloseEvent((QTabWidget*)self, (QCloseEvent*)event);
 }
 
-void q_tabwidget_qbase_close_event(void* self, void* event) {
-    QTabWidget_QBaseCloseEvent((QTabWidget*)self, (QCloseEvent*)event);
+void q_tabwidget_super_close_event(void* self, void* event) {
+    QTabWidget_SuperCloseEvent((QTabWidget*)self, (QCloseEvent*)event);
 }
 
 void q_tabwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2047,8 +2047,8 @@ void q_tabwidget_context_menu_event(void* self, void* event) {
     QTabWidget_ContextMenuEvent((QTabWidget*)self, (QContextMenuEvent*)event);
 }
 
-void q_tabwidget_qbase_context_menu_event(void* self, void* event) {
-    QTabWidget_QBaseContextMenuEvent((QTabWidget*)self, (QContextMenuEvent*)event);
+void q_tabwidget_super_context_menu_event(void* self, void* event) {
+    QTabWidget_SuperContextMenuEvent((QTabWidget*)self, (QContextMenuEvent*)event);
 }
 
 void q_tabwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2059,8 +2059,8 @@ void q_tabwidget_tablet_event(void* self, void* event) {
     QTabWidget_TabletEvent((QTabWidget*)self, (QTabletEvent*)event);
 }
 
-void q_tabwidget_qbase_tablet_event(void* self, void* event) {
-    QTabWidget_QBaseTabletEvent((QTabWidget*)self, (QTabletEvent*)event);
+void q_tabwidget_super_tablet_event(void* self, void* event) {
+    QTabWidget_SuperTabletEvent((QTabWidget*)self, (QTabletEvent*)event);
 }
 
 void q_tabwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2071,8 +2071,8 @@ void q_tabwidget_action_event(void* self, void* event) {
     QTabWidget_ActionEvent((QTabWidget*)self, (QActionEvent*)event);
 }
 
-void q_tabwidget_qbase_action_event(void* self, void* event) {
-    QTabWidget_QBaseActionEvent((QTabWidget*)self, (QActionEvent*)event);
+void q_tabwidget_super_action_event(void* self, void* event) {
+    QTabWidget_SuperActionEvent((QTabWidget*)self, (QActionEvent*)event);
 }
 
 void q_tabwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2083,8 +2083,8 @@ void q_tabwidget_drag_enter_event(void* self, void* event) {
     QTabWidget_DragEnterEvent((QTabWidget*)self, (QDragEnterEvent*)event);
 }
 
-void q_tabwidget_qbase_drag_enter_event(void* self, void* event) {
-    QTabWidget_QBaseDragEnterEvent((QTabWidget*)self, (QDragEnterEvent*)event);
+void q_tabwidget_super_drag_enter_event(void* self, void* event) {
+    QTabWidget_SuperDragEnterEvent((QTabWidget*)self, (QDragEnterEvent*)event);
 }
 
 void q_tabwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ void q_tabwidget_drag_move_event(void* self, void* event) {
     QTabWidget_DragMoveEvent((QTabWidget*)self, (QDragMoveEvent*)event);
 }
 
-void q_tabwidget_qbase_drag_move_event(void* self, void* event) {
-    QTabWidget_QBaseDragMoveEvent((QTabWidget*)self, (QDragMoveEvent*)event);
+void q_tabwidget_super_drag_move_event(void* self, void* event) {
+    QTabWidget_SuperDragMoveEvent((QTabWidget*)self, (QDragMoveEvent*)event);
 }
 
 void q_tabwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void q_tabwidget_drag_leave_event(void* self, void* event) {
     QTabWidget_DragLeaveEvent((QTabWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void q_tabwidget_qbase_drag_leave_event(void* self, void* event) {
-    QTabWidget_QBaseDragLeaveEvent((QTabWidget*)self, (QDragLeaveEvent*)event);
+void q_tabwidget_super_drag_leave_event(void* self, void* event) {
+    QTabWidget_SuperDragLeaveEvent((QTabWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void q_tabwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void q_tabwidget_drop_event(void* self, void* event) {
     QTabWidget_DropEvent((QTabWidget*)self, (QDropEvent*)event);
 }
 
-void q_tabwidget_qbase_drop_event(void* self, void* event) {
-    QTabWidget_QBaseDropEvent((QTabWidget*)self, (QDropEvent*)event);
+void q_tabwidget_super_drop_event(void* self, void* event) {
+    QTabWidget_SuperDropEvent((QTabWidget*)self, (QDropEvent*)event);
 }
 
 void q_tabwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ void q_tabwidget_hide_event(void* self, void* event) {
     QTabWidget_HideEvent((QTabWidget*)self, (QHideEvent*)event);
 }
 
-void q_tabwidget_qbase_hide_event(void* self, void* event) {
-    QTabWidget_QBaseHideEvent((QTabWidget*)self, (QHideEvent*)event);
+void q_tabwidget_super_hide_event(void* self, void* event) {
+    QTabWidget_SuperHideEvent((QTabWidget*)self, (QHideEvent*)event);
 }
 
 void q_tabwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2143,8 +2143,8 @@ bool q_tabwidget_native_event(void* self, char* eventType, void* message, intptr
     return QTabWidget_NativeEvent((QTabWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_tabwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QTabWidget_QBaseNativeEvent((QTabWidget*)self, qstring(eventType), message, result);
+bool q_tabwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QTabWidget_SuperNativeEvent((QTabWidget*)self, qstring(eventType), message, result);
 }
 
 void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2155,8 +2155,8 @@ int32_t q_tabwidget_metric(void* self, int32_t param1) {
     return QTabWidget_Metric((QTabWidget*)self, param1);
 }
 
-int32_t q_tabwidget_qbase_metric(void* self, int32_t param1) {
-    return QTabWidget_QBaseMetric((QTabWidget*)self, param1);
+int32_t q_tabwidget_super_metric(void* self, int32_t param1) {
+    return QTabWidget_SuperMetric((QTabWidget*)self, param1);
 }
 
 void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2167,8 +2167,8 @@ void q_tabwidget_init_painter(void* self, void* painter) {
     QTabWidget_InitPainter((QTabWidget*)self, (QPainter*)painter);
 }
 
-void q_tabwidget_qbase_init_painter(void* self, void* painter) {
-    QTabWidget_QBaseInitPainter((QTabWidget*)self, (QPainter*)painter);
+void q_tabwidget_super_init_painter(void* self, void* painter) {
+    QTabWidget_SuperInitPainter((QTabWidget*)self, (QPainter*)painter);
 }
 
 void q_tabwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ QPaintDevice* q_tabwidget_redirected(void* self, void* offset) {
     return QTabWidget_Redirected((QTabWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_tabwidget_qbase_redirected(void* self, void* offset) {
-    return QTabWidget_QBaseRedirected((QTabWidget*)self, (QPoint*)offset);
+QPaintDevice* q_tabwidget_super_redirected(void* self, void* offset) {
+    return QTabWidget_SuperRedirected((QTabWidget*)self, (QPoint*)offset);
 }
 
 void q_tabwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2191,8 +2191,8 @@ QPainter* q_tabwidget_shared_painter(void* self) {
     return QTabWidget_SharedPainter((QTabWidget*)self);
 }
 
-QPainter* q_tabwidget_qbase_shared_painter(void* self) {
-    return QTabWidget_QBaseSharedPainter((QTabWidget*)self);
+QPainter* q_tabwidget_super_shared_painter(void* self) {
+    return QTabWidget_SuperSharedPainter((QTabWidget*)self);
 }
 
 void q_tabwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2203,8 +2203,8 @@ void q_tabwidget_input_method_event(void* self, void* param1) {
     QTabWidget_InputMethodEvent((QTabWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void q_tabwidget_qbase_input_method_event(void* self, void* param1) {
-    QTabWidget_QBaseInputMethodEvent((QTabWidget*)self, (QInputMethodEvent*)param1);
+void q_tabwidget_super_input_method_event(void* self, void* param1) {
+    QTabWidget_SuperInputMethodEvent((QTabWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void q_tabwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2215,8 +2215,8 @@ QVariant* q_tabwidget_input_method_query(void* self, int32_t param1) {
     return QTabWidget_InputMethodQuery((QTabWidget*)self, param1);
 }
 
-QVariant* q_tabwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return QTabWidget_QBaseInputMethodQuery((QTabWidget*)self, param1);
+QVariant* q_tabwidget_super_input_method_query(void* self, int32_t param1) {
+    return QTabWidget_SuperInputMethodQuery((QTabWidget*)self, param1);
 }
 
 void q_tabwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2227,8 +2227,8 @@ bool q_tabwidget_focus_next_prev_child(void* self, bool next) {
     return QTabWidget_FocusNextPrevChild((QTabWidget*)self, next);
 }
 
-bool q_tabwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return QTabWidget_QBaseFocusNextPrevChild((QTabWidget*)self, next);
+bool q_tabwidget_super_focus_next_prev_child(void* self, bool next) {
+    return QTabWidget_SuperFocusNextPrevChild((QTabWidget*)self, next);
 }
 
 void q_tabwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2239,8 +2239,8 @@ bool q_tabwidget_event_filter(void* self, void* watched, void* event) {
     return QTabWidget_EventFilter((QTabWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_tabwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTabWidget_QBaseEventFilter((QTabWidget*)self, (QObject*)watched, (QEvent*)event);
+bool q_tabwidget_super_event_filter(void* self, void* watched, void* event) {
+    return QTabWidget_SuperEventFilter((QTabWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_tabwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2251,8 +2251,8 @@ void q_tabwidget_timer_event(void* self, void* event) {
     QTabWidget_TimerEvent((QTabWidget*)self, (QTimerEvent*)event);
 }
 
-void q_tabwidget_qbase_timer_event(void* self, void* event) {
-    QTabWidget_QBaseTimerEvent((QTabWidget*)self, (QTimerEvent*)event);
+void q_tabwidget_super_timer_event(void* self, void* event) {
+    QTabWidget_SuperTimerEvent((QTabWidget*)self, (QTimerEvent*)event);
 }
 
 void q_tabwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2263,8 +2263,8 @@ void q_tabwidget_child_event(void* self, void* event) {
     QTabWidget_ChildEvent((QTabWidget*)self, (QChildEvent*)event);
 }
 
-void q_tabwidget_qbase_child_event(void* self, void* event) {
-    QTabWidget_QBaseChildEvent((QTabWidget*)self, (QChildEvent*)event);
+void q_tabwidget_super_child_event(void* self, void* event) {
+    QTabWidget_SuperChildEvent((QTabWidget*)self, (QChildEvent*)event);
 }
 
 void q_tabwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2275,8 +2275,8 @@ void q_tabwidget_custom_event(void* self, void* event) {
     QTabWidget_CustomEvent((QTabWidget*)self, (QEvent*)event);
 }
 
-void q_tabwidget_qbase_custom_event(void* self, void* event) {
-    QTabWidget_QBaseCustomEvent((QTabWidget*)self, (QEvent*)event);
+void q_tabwidget_super_custom_event(void* self, void* event) {
+    QTabWidget_SuperCustomEvent((QTabWidget*)self, (QEvent*)event);
 }
 
 void q_tabwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2287,8 +2287,8 @@ void q_tabwidget_connect_notify(void* self, void* signal) {
     QTabWidget_ConnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_tabwidget_qbase_connect_notify(void* self, void* signal) {
-    QTabWidget_QBaseConnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
+void q_tabwidget_super_connect_notify(void* self, void* signal) {
+    QTabWidget_SuperConnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_tabwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2299,8 +2299,8 @@ void q_tabwidget_disconnect_notify(void* self, void* signal) {
     QTabWidget_DisconnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_tabwidget_qbase_disconnect_notify(void* self, void* signal) {
-    QTabWidget_QBaseDisconnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
+void q_tabwidget_super_disconnect_notify(void* self, void* signal) {
+    QTabWidget_SuperDisconnectNotify((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_tabwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2311,8 +2311,8 @@ void q_tabwidget_update_micro_focus(void* self) {
     QTabWidget_UpdateMicroFocus((QTabWidget*)self);
 }
 
-void q_tabwidget_qbase_update_micro_focus(void* self) {
-    QTabWidget_QBaseUpdateMicroFocus((QTabWidget*)self);
+void q_tabwidget_super_update_micro_focus(void* self) {
+    QTabWidget_SuperUpdateMicroFocus((QTabWidget*)self);
 }
 
 void q_tabwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2323,8 +2323,8 @@ void q_tabwidget_create(void* self) {
     QTabWidget_Create((QTabWidget*)self);
 }
 
-void q_tabwidget_qbase_create(void* self) {
-    QTabWidget_QBaseCreate((QTabWidget*)self);
+void q_tabwidget_super_create(void* self) {
+    QTabWidget_SuperCreate((QTabWidget*)self);
 }
 
 void q_tabwidget_on_create(void* self, void (*callback)()) {
@@ -2335,8 +2335,8 @@ void q_tabwidget_destroy(void* self) {
     QTabWidget_Destroy((QTabWidget*)self);
 }
 
-void q_tabwidget_qbase_destroy(void* self) {
-    QTabWidget_QBaseDestroy((QTabWidget*)self);
+void q_tabwidget_super_destroy(void* self) {
+    QTabWidget_SuperDestroy((QTabWidget*)self);
 }
 
 void q_tabwidget_on_destroy(void* self, void (*callback)()) {
@@ -2347,8 +2347,8 @@ bool q_tabwidget_focus_next_child(void* self) {
     return QTabWidget_FocusNextChild((QTabWidget*)self);
 }
 
-bool q_tabwidget_qbase_focus_next_child(void* self) {
-    return QTabWidget_QBaseFocusNextChild((QTabWidget*)self);
+bool q_tabwidget_super_focus_next_child(void* self) {
+    return QTabWidget_SuperFocusNextChild((QTabWidget*)self);
 }
 
 void q_tabwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2359,8 +2359,8 @@ bool q_tabwidget_focus_previous_child(void* self) {
     return QTabWidget_FocusPreviousChild((QTabWidget*)self);
 }
 
-bool q_tabwidget_qbase_focus_previous_child(void* self) {
-    return QTabWidget_QBaseFocusPreviousChild((QTabWidget*)self);
+bool q_tabwidget_super_focus_previous_child(void* self) {
+    return QTabWidget_SuperFocusPreviousChild((QTabWidget*)self);
 }
 
 void q_tabwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2371,8 +2371,8 @@ QObject* q_tabwidget_sender(void* self) {
     return QTabWidget_Sender((QTabWidget*)self);
 }
 
-QObject* q_tabwidget_qbase_sender(void* self) {
-    return QTabWidget_QBaseSender((QTabWidget*)self);
+QObject* q_tabwidget_super_sender(void* self) {
+    return QTabWidget_SuperSender((QTabWidget*)self);
 }
 
 void q_tabwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2383,8 +2383,8 @@ int32_t q_tabwidget_sender_signal_index(void* self) {
     return QTabWidget_SenderSignalIndex((QTabWidget*)self);
 }
 
-int32_t q_tabwidget_qbase_sender_signal_index(void* self) {
-    return QTabWidget_QBaseSenderSignalIndex((QTabWidget*)self);
+int32_t q_tabwidget_super_sender_signal_index(void* self) {
+    return QTabWidget_SuperSenderSignalIndex((QTabWidget*)self);
 }
 
 void q_tabwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2395,8 +2395,8 @@ int32_t q_tabwidget_receivers(void* self, const char* signal) {
     return QTabWidget_Receivers((QTabWidget*)self, signal);
 }
 
-int32_t q_tabwidget_qbase_receivers(void* self, const char* signal) {
-    return QTabWidget_QBaseReceivers((QTabWidget*)self, signal);
+int32_t q_tabwidget_super_receivers(void* self, const char* signal) {
+    return QTabWidget_SuperReceivers((QTabWidget*)self, signal);
 }
 
 void q_tabwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2407,8 +2407,8 @@ bool q_tabwidget_is_signal_connected(void* self, void* signal) {
     return QTabWidget_IsSignalConnected((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
-bool q_tabwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return QTabWidget_QBaseIsSignalConnected((QTabWidget*)self, (QMetaMethod*)signal);
+bool q_tabwidget_super_is_signal_connected(void* self, void* signal) {
+    return QTabWidget_SuperIsSignalConnected((QTabWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_tabwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2419,8 +2419,8 @@ double q_tabwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
     return QTabWidget_GetDecodedMetricF((QTabWidget*)self, metricA, metricB);
 }
 
-double q_tabwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QTabWidget_QBaseGetDecodedMetricF((QTabWidget*)self, metricA, metricB);
+double q_tabwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QTabWidget_SuperGetDecodedMetricF((QTabWidget*)self, metricA, metricB);
 }
 
 void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

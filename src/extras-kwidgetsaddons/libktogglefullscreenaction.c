@@ -24,8 +24,8 @@ void k_togglefullscreenaction_on_meta_object(void* self, const QMetaObject* (*ca
     KToggleFullScreenAction_OnMetaObject((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_togglefullscreenaction_qbase_meta_object(void* self) {
-    return KToggleFullScreenAction_QBaseMetaObject((KToggleFullScreenAction*)self);
+const QMetaObject* k_togglefullscreenaction_super_meta_object(void* self) {
+    return KToggleFullScreenAction_SuperMetaObject((KToggleFullScreenAction*)self);
 }
 
 void* k_togglefullscreenaction_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_togglefullscreenaction_on_metacast(void* self, void* (*callback)(void*, c
     KToggleFullScreenAction_OnMetacast((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 
-void* k_togglefullscreenaction_qbase_metacast(void* self, const char* param1) {
-    return KToggleFullScreenAction_QBaseMetacast((KToggleFullScreenAction*)self, param1);
+void* k_togglefullscreenaction_super_metacast(void* self, const char* param1) {
+    return KToggleFullScreenAction_SuperMetacast((KToggleFullScreenAction*)self, param1);
 }
 
 int32_t k_togglefullscreenaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_togglefullscreenaction_on_metacall(void* self, int32_t (*callback)(void*,
     KToggleFullScreenAction_OnMetacall((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 
-int32_t k_togglefullscreenaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToggleFullScreenAction_QBaseMetacall((KToggleFullScreenAction*)self, param1, param2, param3);
+int32_t k_togglefullscreenaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToggleFullScreenAction_SuperMetacall((KToggleFullScreenAction*)self, param1, param2, param3);
 }
 
 const char* k_togglefullscreenaction_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_togglefullscreenaction_on_event_filter(void* self, bool (*callback)(void*
     KToggleFullScreenAction_OnEventFilter((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 
-bool k_togglefullscreenaction_qbase_event_filter(void* self, void* object, void* event) {
-    return KToggleFullScreenAction_QBaseEventFilter((KToggleFullScreenAction*)self, (QObject*)object, (QEvent*)event);
+bool k_togglefullscreenaction_super_event_filter(void* self, void* object, void* event) {
+    return KToggleFullScreenAction_SuperEventFilter((KToggleFullScreenAction*)self, (QObject*)object, (QEvent*)event);
 }
 
 void k_togglefullscreenaction_slot_toggled(void* self, bool checked) {
@@ -87,8 +87,8 @@ void k_togglefullscreenaction_on_slot_toggled(void* self, void (*callback)(void*
     KToggleFullScreenAction_OnSlotToggled((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 
-void k_togglefullscreenaction_qbase_slot_toggled(void* self, bool checked) {
-    KToggleFullScreenAction_QBaseSlotToggled((KToggleFullScreenAction*)self, checked);
+void k_togglefullscreenaction_super_slot_toggled(void* self, bool checked) {
+    KToggleFullScreenAction_SuperSlotToggled((KToggleFullScreenAction*)self, checked);
 }
 
 const char* k_togglefullscreenaction_tr2(const char* s, const char* c) {
@@ -621,8 +621,8 @@ bool k_togglefullscreenaction_event(void* self, void* param1) {
     return KToggleFullScreenAction_Event((KToggleFullScreenAction*)self, (QEvent*)param1);
 }
 
-bool k_togglefullscreenaction_qbase_event(void* self, void* param1) {
-    return KToggleFullScreenAction_QBaseEvent((KToggleFullScreenAction*)self, (QEvent*)param1);
+bool k_togglefullscreenaction_super_event(void* self, void* param1) {
+    return KToggleFullScreenAction_SuperEvent((KToggleFullScreenAction*)self, (QEvent*)param1);
 }
 
 void k_togglefullscreenaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -633,8 +633,8 @@ void k_togglefullscreenaction_timer_event(void* self, void* event) {
     KToggleFullScreenAction_TimerEvent((KToggleFullScreenAction*)self, (QTimerEvent*)event);
 }
 
-void k_togglefullscreenaction_qbase_timer_event(void* self, void* event) {
-    KToggleFullScreenAction_QBaseTimerEvent((KToggleFullScreenAction*)self, (QTimerEvent*)event);
+void k_togglefullscreenaction_super_timer_event(void* self, void* event) {
+    KToggleFullScreenAction_SuperTimerEvent((KToggleFullScreenAction*)self, (QTimerEvent*)event);
 }
 
 void k_togglefullscreenaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -645,8 +645,8 @@ void k_togglefullscreenaction_child_event(void* self, void* event) {
     KToggleFullScreenAction_ChildEvent((KToggleFullScreenAction*)self, (QChildEvent*)event);
 }
 
-void k_togglefullscreenaction_qbase_child_event(void* self, void* event) {
-    KToggleFullScreenAction_QBaseChildEvent((KToggleFullScreenAction*)self, (QChildEvent*)event);
+void k_togglefullscreenaction_super_child_event(void* self, void* event) {
+    KToggleFullScreenAction_SuperChildEvent((KToggleFullScreenAction*)self, (QChildEvent*)event);
 }
 
 void k_togglefullscreenaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -657,8 +657,8 @@ void k_togglefullscreenaction_custom_event(void* self, void* event) {
     KToggleFullScreenAction_CustomEvent((KToggleFullScreenAction*)self, (QEvent*)event);
 }
 
-void k_togglefullscreenaction_qbase_custom_event(void* self, void* event) {
-    KToggleFullScreenAction_QBaseCustomEvent((KToggleFullScreenAction*)self, (QEvent*)event);
+void k_togglefullscreenaction_super_custom_event(void* self, void* event) {
+    KToggleFullScreenAction_SuperCustomEvent((KToggleFullScreenAction*)self, (QEvent*)event);
 }
 
 void k_togglefullscreenaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -669,8 +669,8 @@ void k_togglefullscreenaction_connect_notify(void* self, void* signal) {
     KToggleFullScreenAction_ConnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
-void k_togglefullscreenaction_qbase_connect_notify(void* self, void* signal) {
-    KToggleFullScreenAction_QBaseConnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
+void k_togglefullscreenaction_super_connect_notify(void* self, void* signal) {
+    KToggleFullScreenAction_SuperConnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
 void k_togglefullscreenaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -681,8 +681,8 @@ void k_togglefullscreenaction_disconnect_notify(void* self, void* signal) {
     KToggleFullScreenAction_DisconnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
-void k_togglefullscreenaction_qbase_disconnect_notify(void* self, void* signal) {
-    KToggleFullScreenAction_QBaseDisconnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
+void k_togglefullscreenaction_super_disconnect_notify(void* self, void* signal) {
+    KToggleFullScreenAction_SuperDisconnectNotify((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
 void k_togglefullscreenaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -693,8 +693,8 @@ QObject* k_togglefullscreenaction_sender(void* self) {
     return KToggleFullScreenAction_Sender((KToggleFullScreenAction*)self);
 }
 
-QObject* k_togglefullscreenaction_qbase_sender(void* self) {
-    return KToggleFullScreenAction_QBaseSender((KToggleFullScreenAction*)self);
+QObject* k_togglefullscreenaction_super_sender(void* self) {
+    return KToggleFullScreenAction_SuperSender((KToggleFullScreenAction*)self);
 }
 
 void k_togglefullscreenaction_on_sender(void* self, QObject* (*callback)()) {
@@ -705,8 +705,8 @@ int32_t k_togglefullscreenaction_sender_signal_index(void* self) {
     return KToggleFullScreenAction_SenderSignalIndex((KToggleFullScreenAction*)self);
 }
 
-int32_t k_togglefullscreenaction_qbase_sender_signal_index(void* self) {
-    return KToggleFullScreenAction_QBaseSenderSignalIndex((KToggleFullScreenAction*)self);
+int32_t k_togglefullscreenaction_super_sender_signal_index(void* self) {
+    return KToggleFullScreenAction_SuperSenderSignalIndex((KToggleFullScreenAction*)self);
 }
 
 void k_togglefullscreenaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -717,8 +717,8 @@ int32_t k_togglefullscreenaction_receivers(void* self, const char* signal) {
     return KToggleFullScreenAction_Receivers((KToggleFullScreenAction*)self, signal);
 }
 
-int32_t k_togglefullscreenaction_qbase_receivers(void* self, const char* signal) {
-    return KToggleFullScreenAction_QBaseReceivers((KToggleFullScreenAction*)self, signal);
+int32_t k_togglefullscreenaction_super_receivers(void* self, const char* signal) {
+    return KToggleFullScreenAction_SuperReceivers((KToggleFullScreenAction*)self, signal);
 }
 
 void k_togglefullscreenaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -729,8 +729,8 @@ bool k_togglefullscreenaction_is_signal_connected(void* self, void* signal) {
     return KToggleFullScreenAction_IsSignalConnected((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_togglefullscreenaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToggleFullScreenAction_QBaseIsSignalConnected((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
+bool k_togglefullscreenaction_super_is_signal_connected(void* self, void* signal) {
+    return KToggleFullScreenAction_SuperIsSignalConnected((KToggleFullScreenAction*)self, (QMetaMethod*)signal);
 }
 
 void k_togglefullscreenaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

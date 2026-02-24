@@ -76,13 +76,17 @@ const QMetaObject* q_printpreviewdialog_meta_object(void* self);
 ///
 void q_printpreviewdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_meta_object` instead
+///
+#define q_printpreviewdialog_qbase_meta_object q_printpreviewdialog_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPrintPreviewDialog*
 ///
-const QMetaObject* q_printpreviewdialog_qbase_meta_object(void* self);
+const QMetaObject* q_printpreviewdialog_super_meta_object(void* self);
 
 /// @param self QPrintPreviewDialog*
 /// @param param1 const char*
@@ -96,12 +100,16 @@ void* q_printpreviewdialog_metacast(void* self, const char* param1);
 ///
 void q_printpreviewdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_metacast` instead
+///
+#define q_printpreviewdialog_qbase_metacast q_printpreviewdialog_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPrintPreviewDialog*
 /// @param param1 const char*
 ///
-void* q_printpreviewdialog_qbase_metacast(void* self, const char* param1);
+void* q_printpreviewdialog_super_metacast(void* self, const char* param1);
 
 /// @param self QPrintPreviewDialog*
 /// @param param1 enum QMetaObject__Call
@@ -117,6 +125,10 @@ int32_t q_printpreviewdialog_metacall(void* self, int32_t param1, int param2, vo
 ///
 void q_printpreviewdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_metacall` instead
+///
+#define q_printpreviewdialog_qbase_metacall q_printpreviewdialog_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPrintPreviewDialog*
@@ -124,7 +136,7 @@ void q_printpreviewdialog_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_printpreviewdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_printpreviewdialog_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -156,6 +168,10 @@ void q_printpreviewdialog_set_visible(void* self, bool visible);
 ///
 void q_printpreviewdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_set_visible` instead
+///
+#define q_printpreviewdialog_qbase_set_visible q_printpreviewdialog_super_set_visible
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintpreviewdialog.html#setVisible)
 ///
 /// Base class method implementation
@@ -163,7 +179,7 @@ void q_printpreviewdialog_on_set_visible(void* self, void (*callback)(void*, boo
 /// @param self QPrintPreviewDialog*
 /// @param visible bool
 ///
-void q_printpreviewdialog_qbase_set_visible(void* self, bool visible);
+void q_printpreviewdialog_super_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintpreviewdialog.html#done)
 ///
@@ -181,6 +197,10 @@ void q_printpreviewdialog_done(void* self, int result);
 ///
 void q_printpreviewdialog_on_done(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_done` instead
+///
+#define q_printpreviewdialog_qbase_done q_printpreviewdialog_super_done
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintpreviewdialog.html#done)
 ///
 /// Base class method implementation
@@ -188,7 +208,7 @@ void q_printpreviewdialog_on_done(void* self, void (*callback)(void*, int));
 /// @param self QPrintPreviewDialog*
 /// @param result int
 ///
-void q_printpreviewdialog_qbase_done(void* self, int result);
+void q_printpreviewdialog_super_done(void* self, int result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintpreviewdialog.html#paintRequested)
 ///
@@ -3285,6 +3305,10 @@ int32_t q_printpreviewdialog_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_printpreviewdialog_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_size_hint` instead
+///
+#define q_printpreviewdialog_qbase_size_hint q_printpreviewdialog_super_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
@@ -3293,7 +3317,7 @@ QSize* q_printpreviewdialog_size_hint(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_qbase_size_hint(void* self);
+QSize* q_printpreviewdialog_super_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3316,6 +3340,10 @@ void q_printpreviewdialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* q_printpreviewdialog_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_minimum_size_hint` instead
+///
+#define q_printpreviewdialog_qbase_minimum_size_hint q_printpreviewdialog_super_minimum_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3324,7 +3352,7 @@ QSize* q_printpreviewdialog_minimum_size_hint(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_qbase_minimum_size_hint(void* self);
+QSize* q_printpreviewdialog_super_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3347,6 +3375,10 @@ void q_printpreviewdialog_on_minimum_size_hint(void* self, QSize* (*callback)())
 ///
 void q_printpreviewdialog_open(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_open` instead
+///
+#define q_printpreviewdialog_qbase_open q_printpreviewdialog_super_open
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3355,7 +3387,7 @@ void q_printpreviewdialog_open(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_open(void* self);
+void q_printpreviewdialog_super_open(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3378,6 +3410,10 @@ void q_printpreviewdialog_on_open(void* self, void (*callback)());
 ///
 int32_t q_printpreviewdialog_exec(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_exec` instead
+///
+#define q_printpreviewdialog_qbase_exec q_printpreviewdialog_super_exec
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
@@ -3386,7 +3422,7 @@ int32_t q_printpreviewdialog_exec(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_qbase_exec(void* self);
+int32_t q_printpreviewdialog_super_exec(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3409,6 +3445,10 @@ void q_printpreviewdialog_on_exec(void* self, int32_t (*callback)());
 ///
 void q_printpreviewdialog_accept(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_accept` instead
+///
+#define q_printpreviewdialog_qbase_accept q_printpreviewdialog_super_accept
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3417,7 +3457,7 @@ void q_printpreviewdialog_accept(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_accept(void* self);
+void q_printpreviewdialog_super_accept(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3440,6 +3480,10 @@ void q_printpreviewdialog_on_accept(void* self, void (*callback)());
 ///
 void q_printpreviewdialog_reject(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_reject` instead
+///
+#define q_printpreviewdialog_qbase_reject q_printpreviewdialog_super_reject
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
@@ -3448,7 +3492,7 @@ void q_printpreviewdialog_reject(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_reject(void* self);
+void q_printpreviewdialog_super_reject(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3472,6 +3516,10 @@ void q_printpreviewdialog_on_reject(void* self, void (*callback)());
 ///
 void q_printpreviewdialog_key_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_key_press_event` instead
+///
+#define q_printpreviewdialog_qbase_key_press_event q_printpreviewdialog_super_key_press_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
@@ -3481,7 +3529,7 @@ void q_printpreviewdialog_key_press_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QKeyEvent*
 ///
-void q_printpreviewdialog_qbase_key_press_event(void* self, void* param1);
+void q_printpreviewdialog_super_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3505,6 +3553,10 @@ void q_printpreviewdialog_on_key_press_event(void* self, void (*callback)(void*,
 ///
 void q_printpreviewdialog_close_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_close_event` instead
+///
+#define q_printpreviewdialog_qbase_close_event q_printpreviewdialog_super_close_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3514,7 +3566,7 @@ void q_printpreviewdialog_close_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QCloseEvent*
 ///
-void q_printpreviewdialog_qbase_close_event(void* self, void* param1);
+void q_printpreviewdialog_super_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3538,6 +3590,10 @@ void q_printpreviewdialog_on_close_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_show_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_show_event` instead
+///
+#define q_printpreviewdialog_qbase_show_event q_printpreviewdialog_super_show_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
@@ -3547,7 +3603,7 @@ void q_printpreviewdialog_show_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QShowEvent*
 ///
-void q_printpreviewdialog_qbase_show_event(void* self, void* param1);
+void q_printpreviewdialog_super_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3571,6 +3627,10 @@ void q_printpreviewdialog_on_show_event(void* self, void (*callback)(void*, void
 ///
 void q_printpreviewdialog_resize_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_resize_event` instead
+///
+#define q_printpreviewdialog_qbase_resize_event q_printpreviewdialog_super_resize_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3580,7 +3640,7 @@ void q_printpreviewdialog_resize_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QResizeEvent*
 ///
-void q_printpreviewdialog_qbase_resize_event(void* self, void* param1);
+void q_printpreviewdialog_super_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3604,6 +3664,10 @@ void q_printpreviewdialog_on_resize_event(void* self, void (*callback)(void*, vo
 ///
 void q_printpreviewdialog_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_context_menu_event` instead
+///
+#define q_printpreviewdialog_qbase_context_menu_event q_printpreviewdialog_super_context_menu_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
@@ -3613,7 +3677,7 @@ void q_printpreviewdialog_context_menu_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QContextMenuEvent*
 ///
-void q_printpreviewdialog_qbase_context_menu_event(void* self, void* param1);
+void q_printpreviewdialog_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3638,6 +3702,10 @@ void q_printpreviewdialog_on_context_menu_event(void* self, void (*callback)(voi
 ///
 bool q_printpreviewdialog_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_event_filter` instead
+///
+#define q_printpreviewdialog_qbase_event_filter q_printpreviewdialog_super_event_filter
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -3648,7 +3716,7 @@ bool q_printpreviewdialog_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_printpreviewdialog_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_printpreviewdialog_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
@@ -3671,6 +3739,10 @@ void q_printpreviewdialog_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 int32_t q_printpreviewdialog_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_dev_type` instead
+///
+#define q_printpreviewdialog_qbase_dev_type q_printpreviewdialog_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3679,7 +3751,7 @@ int32_t q_printpreviewdialog_dev_type(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_qbase_dev_type(void* self);
+int32_t q_printpreviewdialog_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3703,6 +3775,10 @@ void q_printpreviewdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 int32_t q_printpreviewdialog_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_height_for_width` instead
+///
+#define q_printpreviewdialog_qbase_height_for_width q_printpreviewdialog_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3712,7 +3788,7 @@ int32_t q_printpreviewdialog_height_for_width(void* self, int param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 int
 ///
-int32_t q_printpreviewdialog_qbase_height_for_width(void* self, int param1);
+int32_t q_printpreviewdialog_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3735,6 +3811,10 @@ void q_printpreviewdialog_on_height_for_width(void* self, int32_t (*callback)(vo
 ///
 bool q_printpreviewdialog_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_has_height_for_width` instead
+///
+#define q_printpreviewdialog_qbase_has_height_for_width q_printpreviewdialog_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3743,7 +3823,7 @@ bool q_printpreviewdialog_has_height_for_width(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_qbase_has_height_for_width(void* self);
+bool q_printpreviewdialog_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3766,6 +3846,10 @@ void q_printpreviewdialog_on_has_height_for_width(void* self, bool (*callback)()
 ///
 QPaintEngine* q_printpreviewdialog_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_paint_engine` instead
+///
+#define q_printpreviewdialog_qbase_paint_engine q_printpreviewdialog_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3774,7 +3858,7 @@ QPaintEngine* q_printpreviewdialog_paint_engine(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-QPaintEngine* q_printpreviewdialog_qbase_paint_engine(void* self);
+QPaintEngine* q_printpreviewdialog_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3798,6 +3882,10 @@ void q_printpreviewdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(
 ///
 bool q_printpreviewdialog_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_event` instead
+///
+#define q_printpreviewdialog_qbase_event q_printpreviewdialog_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -3807,7 +3895,7 @@ bool q_printpreviewdialog_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QEvent*
 ///
-bool q_printpreviewdialog_qbase_event(void* self, void* event);
+bool q_printpreviewdialog_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3831,6 +3919,10 @@ void q_printpreviewdialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_printpreviewdialog_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_mouse_press_event` instead
+///
+#define q_printpreviewdialog_qbase_mouse_press_event q_printpreviewdialog_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3840,7 +3932,7 @@ void q_printpreviewdialog_mouse_press_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QMouseEvent*
 ///
-void q_printpreviewdialog_qbase_mouse_press_event(void* self, void* event);
+void q_printpreviewdialog_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3864,6 +3956,10 @@ void q_printpreviewdialog_on_mouse_press_event(void* self, void (*callback)(void
 ///
 void q_printpreviewdialog_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_mouse_release_event` instead
+///
+#define q_printpreviewdialog_qbase_mouse_release_event q_printpreviewdialog_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3873,7 +3969,7 @@ void q_printpreviewdialog_mouse_release_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QMouseEvent*
 ///
-void q_printpreviewdialog_qbase_mouse_release_event(void* self, void* event);
+void q_printpreviewdialog_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3897,6 +3993,10 @@ void q_printpreviewdialog_on_mouse_release_event(void* self, void (*callback)(vo
 ///
 void q_printpreviewdialog_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_mouse_double_click_event` instead
+///
+#define q_printpreviewdialog_qbase_mouse_double_click_event q_printpreviewdialog_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3906,7 +4006,7 @@ void q_printpreviewdialog_mouse_double_click_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QMouseEvent*
 ///
-void q_printpreviewdialog_qbase_mouse_double_click_event(void* self, void* event);
+void q_printpreviewdialog_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3930,6 +4030,10 @@ void q_printpreviewdialog_on_mouse_double_click_event(void* self, void (*callbac
 ///
 void q_printpreviewdialog_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_mouse_move_event` instead
+///
+#define q_printpreviewdialog_qbase_mouse_move_event q_printpreviewdialog_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3939,7 +4043,7 @@ void q_printpreviewdialog_mouse_move_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QMouseEvent*
 ///
-void q_printpreviewdialog_qbase_mouse_move_event(void* self, void* event);
+void q_printpreviewdialog_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3963,6 +4067,10 @@ void q_printpreviewdialog_on_mouse_move_event(void* self, void (*callback)(void*
 ///
 void q_printpreviewdialog_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_wheel_event` instead
+///
+#define q_printpreviewdialog_qbase_wheel_event q_printpreviewdialog_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3972,7 +4080,7 @@ void q_printpreviewdialog_wheel_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QWheelEvent*
 ///
-void q_printpreviewdialog_qbase_wheel_event(void* self, void* event);
+void q_printpreviewdialog_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3996,6 +4104,10 @@ void q_printpreviewdialog_on_wheel_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_key_release_event` instead
+///
+#define q_printpreviewdialog_qbase_key_release_event q_printpreviewdialog_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4005,7 +4117,7 @@ void q_printpreviewdialog_key_release_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QKeyEvent*
 ///
-void q_printpreviewdialog_qbase_key_release_event(void* self, void* event);
+void q_printpreviewdialog_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4029,6 +4141,10 @@ void q_printpreviewdialog_on_key_release_event(void* self, void (*callback)(void
 ///
 void q_printpreviewdialog_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_focus_in_event` instead
+///
+#define q_printpreviewdialog_qbase_focus_in_event q_printpreviewdialog_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4038,7 +4154,7 @@ void q_printpreviewdialog_focus_in_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QFocusEvent*
 ///
-void q_printpreviewdialog_qbase_focus_in_event(void* self, void* event);
+void q_printpreviewdialog_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4062,6 +4178,10 @@ void q_printpreviewdialog_on_focus_in_event(void* self, void (*callback)(void*, 
 ///
 void q_printpreviewdialog_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_focus_out_event` instead
+///
+#define q_printpreviewdialog_qbase_focus_out_event q_printpreviewdialog_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4071,7 +4191,7 @@ void q_printpreviewdialog_focus_out_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QFocusEvent*
 ///
-void q_printpreviewdialog_qbase_focus_out_event(void* self, void* event);
+void q_printpreviewdialog_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4095,6 +4215,10 @@ void q_printpreviewdialog_on_focus_out_event(void* self, void (*callback)(void*,
 ///
 void q_printpreviewdialog_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_enter_event` instead
+///
+#define q_printpreviewdialog_qbase_enter_event q_printpreviewdialog_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4104,7 +4228,7 @@ void q_printpreviewdialog_enter_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QEnterEvent*
 ///
-void q_printpreviewdialog_qbase_enter_event(void* self, void* event);
+void q_printpreviewdialog_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4128,6 +4252,10 @@ void q_printpreviewdialog_on_enter_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_leave_event` instead
+///
+#define q_printpreviewdialog_qbase_leave_event q_printpreviewdialog_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4137,7 +4265,7 @@ void q_printpreviewdialog_leave_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QEvent*
 ///
-void q_printpreviewdialog_qbase_leave_event(void* self, void* event);
+void q_printpreviewdialog_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4161,6 +4289,10 @@ void q_printpreviewdialog_on_leave_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_paint_event` instead
+///
+#define q_printpreviewdialog_qbase_paint_event q_printpreviewdialog_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4170,7 +4302,7 @@ void q_printpreviewdialog_paint_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QPaintEvent*
 ///
-void q_printpreviewdialog_qbase_paint_event(void* self, void* event);
+void q_printpreviewdialog_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4194,6 +4326,10 @@ void q_printpreviewdialog_on_paint_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_move_event` instead
+///
+#define q_printpreviewdialog_qbase_move_event q_printpreviewdialog_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4203,7 +4339,7 @@ void q_printpreviewdialog_move_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QMoveEvent*
 ///
-void q_printpreviewdialog_qbase_move_event(void* self, void* event);
+void q_printpreviewdialog_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4227,6 +4363,10 @@ void q_printpreviewdialog_on_move_event(void* self, void (*callback)(void*, void
 ///
 void q_printpreviewdialog_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_tablet_event` instead
+///
+#define q_printpreviewdialog_qbase_tablet_event q_printpreviewdialog_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4236,7 +4376,7 @@ void q_printpreviewdialog_tablet_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QTabletEvent*
 ///
-void q_printpreviewdialog_qbase_tablet_event(void* self, void* event);
+void q_printpreviewdialog_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4260,6 +4400,10 @@ void q_printpreviewdialog_on_tablet_event(void* self, void (*callback)(void*, vo
 ///
 void q_printpreviewdialog_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_action_event` instead
+///
+#define q_printpreviewdialog_qbase_action_event q_printpreviewdialog_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4269,7 +4413,7 @@ void q_printpreviewdialog_action_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QActionEvent*
 ///
-void q_printpreviewdialog_qbase_action_event(void* self, void* event);
+void q_printpreviewdialog_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4293,6 +4437,10 @@ void q_printpreviewdialog_on_action_event(void* self, void (*callback)(void*, vo
 ///
 void q_printpreviewdialog_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_drag_enter_event` instead
+///
+#define q_printpreviewdialog_qbase_drag_enter_event q_printpreviewdialog_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4302,7 +4450,7 @@ void q_printpreviewdialog_drag_enter_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QDragEnterEvent*
 ///
-void q_printpreviewdialog_qbase_drag_enter_event(void* self, void* event);
+void q_printpreviewdialog_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4326,6 +4474,10 @@ void q_printpreviewdialog_on_drag_enter_event(void* self, void (*callback)(void*
 ///
 void q_printpreviewdialog_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_drag_move_event` instead
+///
+#define q_printpreviewdialog_qbase_drag_move_event q_printpreviewdialog_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4335,7 +4487,7 @@ void q_printpreviewdialog_drag_move_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QDragMoveEvent*
 ///
-void q_printpreviewdialog_qbase_drag_move_event(void* self, void* event);
+void q_printpreviewdialog_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4359,6 +4511,10 @@ void q_printpreviewdialog_on_drag_move_event(void* self, void (*callback)(void*,
 ///
 void q_printpreviewdialog_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_drag_leave_event` instead
+///
+#define q_printpreviewdialog_qbase_drag_leave_event q_printpreviewdialog_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4368,7 +4524,7 @@ void q_printpreviewdialog_drag_leave_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QDragLeaveEvent*
 ///
-void q_printpreviewdialog_qbase_drag_leave_event(void* self, void* event);
+void q_printpreviewdialog_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4392,6 +4548,10 @@ void q_printpreviewdialog_on_drag_leave_event(void* self, void (*callback)(void*
 ///
 void q_printpreviewdialog_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_drop_event` instead
+///
+#define q_printpreviewdialog_qbase_drop_event q_printpreviewdialog_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4401,7 +4561,7 @@ void q_printpreviewdialog_drop_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QDropEvent*
 ///
-void q_printpreviewdialog_qbase_drop_event(void* self, void* event);
+void q_printpreviewdialog_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4425,6 +4585,10 @@ void q_printpreviewdialog_on_drop_event(void* self, void (*callback)(void*, void
 ///
 void q_printpreviewdialog_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_hide_event` instead
+///
+#define q_printpreviewdialog_qbase_hide_event q_printpreviewdialog_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4434,7 +4598,7 @@ void q_printpreviewdialog_hide_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QHideEvent*
 ///
-void q_printpreviewdialog_qbase_hide_event(void* self, void* event);
+void q_printpreviewdialog_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4460,6 +4624,10 @@ void q_printpreviewdialog_on_hide_event(void* self, void (*callback)(void*, void
 ///
 bool q_printpreviewdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_native_event` instead
+///
+#define q_printpreviewdialog_qbase_native_event q_printpreviewdialog_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4471,7 +4639,7 @@ bool q_printpreviewdialog_native_event(void* self, char* eventType, void* messag
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_printpreviewdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_printpreviewdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4495,6 +4663,10 @@ void q_printpreviewdialog_on_native_event(void* self, bool (*callback)(void*, li
 ///
 void q_printpreviewdialog_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_change_event` instead
+///
+#define q_printpreviewdialog_qbase_change_event q_printpreviewdialog_super_change_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4504,7 +4676,7 @@ void q_printpreviewdialog_change_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QEvent*
 ///
-void q_printpreviewdialog_qbase_change_event(void* self, void* param1);
+void q_printpreviewdialog_super_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4528,6 +4700,10 @@ void q_printpreviewdialog_on_change_event(void* self, void (*callback)(void*, vo
 ///
 int32_t q_printpreviewdialog_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_metric` instead
+///
+#define q_printpreviewdialog_qbase_metric q_printpreviewdialog_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4537,7 +4713,7 @@ int32_t q_printpreviewdialog_metric(void* self, int32_t param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_printpreviewdialog_qbase_metric(void* self, int32_t param1);
+int32_t q_printpreviewdialog_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4561,6 +4737,10 @@ void q_printpreviewdialog_on_metric(void* self, int32_t (*callback)(void*, int32
 ///
 void q_printpreviewdialog_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_init_painter` instead
+///
+#define q_printpreviewdialog_qbase_init_painter q_printpreviewdialog_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4570,7 +4750,7 @@ void q_printpreviewdialog_init_painter(void* self, void* painter);
 /// @param self QPrintPreviewDialog*
 /// @param painter QPainter*
 ///
-void q_printpreviewdialog_qbase_init_painter(void* self, void* painter);
+void q_printpreviewdialog_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4594,6 +4774,10 @@ void q_printpreviewdialog_on_init_painter(void* self, void (*callback)(void*, vo
 ///
 QPaintDevice* q_printpreviewdialog_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_redirected` instead
+///
+#define q_printpreviewdialog_qbase_redirected q_printpreviewdialog_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4603,7 +4787,7 @@ QPaintDevice* q_printpreviewdialog_redirected(void* self, void* offset);
 /// @param self QPrintPreviewDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_printpreviewdialog_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_printpreviewdialog_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4626,6 +4810,10 @@ void q_printpreviewdialog_on_redirected(void* self, QPaintDevice* (*callback)(vo
 ///
 QPainter* q_printpreviewdialog_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_shared_painter` instead
+///
+#define q_printpreviewdialog_qbase_shared_painter q_printpreviewdialog_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4634,7 +4822,7 @@ QPainter* q_printpreviewdialog_shared_painter(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-QPainter* q_printpreviewdialog_qbase_shared_painter(void* self);
+QPainter* q_printpreviewdialog_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4658,6 +4846,10 @@ void q_printpreviewdialog_on_shared_painter(void* self, QPainter* (*callback)())
 ///
 void q_printpreviewdialog_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_input_method_event` instead
+///
+#define q_printpreviewdialog_qbase_input_method_event q_printpreviewdialog_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4667,7 +4859,7 @@ void q_printpreviewdialog_input_method_event(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QInputMethodEvent*
 ///
-void q_printpreviewdialog_qbase_input_method_event(void* self, void* param1);
+void q_printpreviewdialog_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4691,6 +4883,10 @@ void q_printpreviewdialog_on_input_method_event(void* self, void (*callback)(voi
 ///
 QVariant* q_printpreviewdialog_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_input_method_query` instead
+///
+#define q_printpreviewdialog_qbase_input_method_query q_printpreviewdialog_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4700,7 +4896,7 @@ QVariant* q_printpreviewdialog_input_method_query(void* self, int32_t param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_printpreviewdialog_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_printpreviewdialog_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4724,6 +4920,10 @@ void q_printpreviewdialog_on_input_method_query(void* self, QVariant* (*callback
 ///
 bool q_printpreviewdialog_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_focus_next_prev_child` instead
+///
+#define q_printpreviewdialog_qbase_focus_next_prev_child q_printpreviewdialog_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4733,7 +4933,7 @@ bool q_printpreviewdialog_focus_next_prev_child(void* self, bool next);
 /// @param self QPrintPreviewDialog*
 /// @param next bool
 ///
-bool q_printpreviewdialog_qbase_focus_next_prev_child(void* self, bool next);
+bool q_printpreviewdialog_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4757,6 +4957,10 @@ void q_printpreviewdialog_on_focus_next_prev_child(void* self, bool (*callback)(
 ///
 void q_printpreviewdialog_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_timer_event` instead
+///
+#define q_printpreviewdialog_qbase_timer_event q_printpreviewdialog_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4766,7 +4970,7 @@ void q_printpreviewdialog_timer_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QTimerEvent*
 ///
-void q_printpreviewdialog_qbase_timer_event(void* self, void* event);
+void q_printpreviewdialog_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4790,6 +4994,10 @@ void q_printpreviewdialog_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_child_event` instead
+///
+#define q_printpreviewdialog_qbase_child_event q_printpreviewdialog_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4799,7 +5007,7 @@ void q_printpreviewdialog_child_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QChildEvent*
 ///
-void q_printpreviewdialog_qbase_child_event(void* self, void* event);
+void q_printpreviewdialog_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4823,6 +5031,10 @@ void q_printpreviewdialog_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_printpreviewdialog_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_custom_event` instead
+///
+#define q_printpreviewdialog_qbase_custom_event q_printpreviewdialog_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4832,7 +5044,7 @@ void q_printpreviewdialog_custom_event(void* self, void* event);
 /// @param self QPrintPreviewDialog*
 /// @param event QEvent*
 ///
-void q_printpreviewdialog_qbase_custom_event(void* self, void* event);
+void q_printpreviewdialog_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4856,6 +5068,10 @@ void q_printpreviewdialog_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_printpreviewdialog_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_connect_notify` instead
+///
+#define q_printpreviewdialog_qbase_connect_notify q_printpreviewdialog_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4865,7 +5081,7 @@ void q_printpreviewdialog_connect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_qbase_connect_notify(void* self, void* signal);
+void q_printpreviewdialog_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4889,6 +5105,10 @@ void q_printpreviewdialog_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_printpreviewdialog_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_disconnect_notify` instead
+///
+#define q_printpreviewdialog_qbase_disconnect_notify q_printpreviewdialog_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4898,7 +5118,7 @@ void q_printpreviewdialog_disconnect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_qbase_disconnect_notify(void* self, void* signal);
+void q_printpreviewdialog_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4922,6 +5142,10 @@ void q_printpreviewdialog_on_disconnect_notify(void* self, void (*callback)(void
 ///
 void q_printpreviewdialog_adjust_position(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_adjust_position` instead
+///
+#define q_printpreviewdialog_qbase_adjust_position q_printpreviewdialog_super_adjust_position
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -4931,7 +5155,7 @@ void q_printpreviewdialog_adjust_position(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QWidget*
 ///
-void q_printpreviewdialog_qbase_adjust_position(void* self, void* param1);
+void q_printpreviewdialog_super_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -4954,6 +5178,10 @@ void q_printpreviewdialog_on_adjust_position(void* self, void (*callback)(void*,
 ///
 void q_printpreviewdialog_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_update_micro_focus` instead
+///
+#define q_printpreviewdialog_qbase_update_micro_focus q_printpreviewdialog_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4962,7 +5190,7 @@ void q_printpreviewdialog_update_micro_focus(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_update_micro_focus(void* self);
+void q_printpreviewdialog_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4985,6 +5213,10 @@ void q_printpreviewdialog_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_printpreviewdialog_create(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_create` instead
+///
+#define q_printpreviewdialog_qbase_create q_printpreviewdialog_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4993,7 +5225,7 @@ void q_printpreviewdialog_create(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_create(void* self);
+void q_printpreviewdialog_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5016,6 +5248,10 @@ void q_printpreviewdialog_on_create(void* self, void (*callback)());
 ///
 void q_printpreviewdialog_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_destroy` instead
+///
+#define q_printpreviewdialog_qbase_destroy q_printpreviewdialog_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5024,7 +5260,7 @@ void q_printpreviewdialog_destroy(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_qbase_destroy(void* self);
+void q_printpreviewdialog_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5047,6 +5283,10 @@ void q_printpreviewdialog_on_destroy(void* self, void (*callback)());
 ///
 bool q_printpreviewdialog_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_focus_next_child` instead
+///
+#define q_printpreviewdialog_qbase_focus_next_child q_printpreviewdialog_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5055,7 +5295,7 @@ bool q_printpreviewdialog_focus_next_child(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_qbase_focus_next_child(void* self);
+bool q_printpreviewdialog_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5078,6 +5318,10 @@ void q_printpreviewdialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_printpreviewdialog_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_focus_previous_child` instead
+///
+#define q_printpreviewdialog_qbase_focus_previous_child q_printpreviewdialog_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5086,7 +5330,7 @@ bool q_printpreviewdialog_focus_previous_child(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_qbase_focus_previous_child(void* self);
+bool q_printpreviewdialog_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5109,6 +5353,10 @@ void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*callback)()
 ///
 QObject* q_printpreviewdialog_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_sender` instead
+///
+#define q_printpreviewdialog_qbase_sender q_printpreviewdialog_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5117,7 +5365,7 @@ QObject* q_printpreviewdialog_sender(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-QObject* q_printpreviewdialog_qbase_sender(void* self);
+QObject* q_printpreviewdialog_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5140,6 +5388,10 @@ void q_printpreviewdialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_printpreviewdialog_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_sender_signal_index` instead
+///
+#define q_printpreviewdialog_qbase_sender_signal_index q_printpreviewdialog_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5148,7 +5400,7 @@ int32_t q_printpreviewdialog_sender_signal_index(void* self);
 ///
 /// @param self QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_qbase_sender_signal_index(void* self);
+int32_t q_printpreviewdialog_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5172,6 +5424,10 @@ void q_printpreviewdialog_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_printpreviewdialog_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_receivers` instead
+///
+#define q_printpreviewdialog_qbase_receivers q_printpreviewdialog_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5181,7 +5437,7 @@ int32_t q_printpreviewdialog_receivers(void* self, const char* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal const char*
 ///
-int32_t q_printpreviewdialog_qbase_receivers(void* self, const char* signal);
+int32_t q_printpreviewdialog_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5205,6 +5461,10 @@ void q_printpreviewdialog_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 bool q_printpreviewdialog_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_is_signal_connected` instead
+///
+#define q_printpreviewdialog_qbase_is_signal_connected q_printpreviewdialog_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5214,7 +5474,7 @@ bool q_printpreviewdialog_is_signal_connected(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-bool q_printpreviewdialog_qbase_is_signal_connected(void* self, void* signal);
+bool q_printpreviewdialog_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5239,6 +5499,10 @@ void q_printpreviewdialog_on_is_signal_connected(void* self, bool (*callback)(vo
 ///
 double q_printpreviewdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_printpreviewdialog_super_get_decoded_metric_f` instead
+///
+#define q_printpreviewdialog_qbase_get_decoded_metric_f q_printpreviewdialog_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5249,7 +5513,7 @@ double q_printpreviewdialog_get_decoded_metric_f(void* self, int32_t metricA, in
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_printpreviewdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_printpreviewdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

@@ -40,13 +40,17 @@ const QMetaObject* q_genericplugin_meta_object(void* self);
 ///
 void q_genericplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_meta_object` instead
+///
+#define q_genericplugin_qbase_meta_object q_genericplugin_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGenericPlugin*
 ///
-const QMetaObject* q_genericplugin_qbase_meta_object(void* self);
+const QMetaObject* q_genericplugin_super_meta_object(void* self);
 
 /// @param self QGenericPlugin*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_genericplugin_metacast(void* self, const char* param1);
 ///
 void q_genericplugin_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_metacast` instead
+///
+#define q_genericplugin_qbase_metacast q_genericplugin_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGenericPlugin*
 /// @param param1 const char*
 ///
-void* q_genericplugin_qbase_metacast(void* self, const char* param1);
+void* q_genericplugin_super_metacast(void* self, const char* param1);
 
 /// @param self QGenericPlugin*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_genericplugin_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_genericplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_metacall` instead
+///
+#define q_genericplugin_qbase_metacall q_genericplugin_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGenericPlugin*
@@ -88,7 +100,7 @@ void q_genericplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_genericplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_genericplugin_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -115,6 +127,10 @@ QObject* q_genericplugin_create(void* self, const char* name, const char* spec);
 ///
 void q_genericplugin_on_create(void* self, QObject* (*callback)(void*, const char*, const char*));
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_create` instead
+///
+#define q_genericplugin_qbase_create q_genericplugin_super_create
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericplugin.html#create)
 ///
 /// Base class method implementation
@@ -123,7 +139,7 @@ void q_genericplugin_on_create(void* self, QObject* (*callback)(void*, const cha
 /// @param name const char*
 /// @param spec const char*
 ///
-QObject* q_genericplugin_qbase_create(void* self, const char* name, const char* spec);
+QObject* q_genericplugin_super_create(void* self, const char* name, const char* spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -602,6 +618,10 @@ void q_genericplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_genericplugin_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_event` instead
+///
+#define q_genericplugin_qbase_event q_genericplugin_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -611,7 +631,7 @@ bool q_genericplugin_event(void* self, void* event);
 /// @param self QGenericPlugin*
 /// @param event QEvent*
 ///
-bool q_genericplugin_qbase_event(void* self, void* event);
+bool q_genericplugin_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -636,6 +656,10 @@ void q_genericplugin_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_genericplugin_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_event_filter` instead
+///
+#define q_genericplugin_qbase_event_filter q_genericplugin_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -646,7 +670,7 @@ bool q_genericplugin_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_genericplugin_qbase_event_filter(void* self, void* watched, void* event);
+bool q_genericplugin_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -670,6 +694,10 @@ void q_genericplugin_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_genericplugin_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_timer_event` instead
+///
+#define q_genericplugin_qbase_timer_event q_genericplugin_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -679,7 +707,7 @@ void q_genericplugin_timer_event(void* self, void* event);
 /// @param self QGenericPlugin*
 /// @param event QTimerEvent*
 ///
-void q_genericplugin_qbase_timer_event(void* self, void* event);
+void q_genericplugin_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -703,6 +731,10 @@ void q_genericplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_genericplugin_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_child_event` instead
+///
+#define q_genericplugin_qbase_child_event q_genericplugin_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -712,7 +744,7 @@ void q_genericplugin_child_event(void* self, void* event);
 /// @param self QGenericPlugin*
 /// @param event QChildEvent*
 ///
-void q_genericplugin_qbase_child_event(void* self, void* event);
+void q_genericplugin_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -736,6 +768,10 @@ void q_genericplugin_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_genericplugin_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_custom_event` instead
+///
+#define q_genericplugin_qbase_custom_event q_genericplugin_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -745,7 +781,7 @@ void q_genericplugin_custom_event(void* self, void* event);
 /// @param self QGenericPlugin*
 /// @param event QEvent*
 ///
-void q_genericplugin_qbase_custom_event(void* self, void* event);
+void q_genericplugin_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -769,6 +805,10 @@ void q_genericplugin_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_genericplugin_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_connect_notify` instead
+///
+#define q_genericplugin_qbase_connect_notify q_genericplugin_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -778,7 +818,7 @@ void q_genericplugin_connect_notify(void* self, void* signal);
 /// @param self QGenericPlugin*
 /// @param signal QMetaMethod*
 ///
-void q_genericplugin_qbase_connect_notify(void* self, void* signal);
+void q_genericplugin_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -802,6 +842,10 @@ void q_genericplugin_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_genericplugin_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_disconnect_notify` instead
+///
+#define q_genericplugin_qbase_disconnect_notify q_genericplugin_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -811,7 +855,7 @@ void q_genericplugin_disconnect_notify(void* self, void* signal);
 /// @param self QGenericPlugin*
 /// @param signal QMetaMethod*
 ///
-void q_genericplugin_qbase_disconnect_notify(void* self, void* signal);
+void q_genericplugin_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -834,6 +878,10 @@ void q_genericplugin_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_genericplugin_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_sender` instead
+///
+#define q_genericplugin_qbase_sender q_genericplugin_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -842,7 +890,7 @@ QObject* q_genericplugin_sender(void* self);
 ///
 /// @param self QGenericPlugin*
 ///
-QObject* q_genericplugin_qbase_sender(void* self);
+QObject* q_genericplugin_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -865,6 +913,10 @@ void q_genericplugin_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_genericplugin_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_sender_signal_index` instead
+///
+#define q_genericplugin_qbase_sender_signal_index q_genericplugin_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -873,7 +925,7 @@ int32_t q_genericplugin_sender_signal_index(void* self);
 ///
 /// @param self QGenericPlugin*
 ///
-int32_t q_genericplugin_qbase_sender_signal_index(void* self);
+int32_t q_genericplugin_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -897,6 +949,10 @@ void q_genericplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_genericplugin_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_receivers` instead
+///
+#define q_genericplugin_qbase_receivers q_genericplugin_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -906,7 +962,7 @@ int32_t q_genericplugin_receivers(void* self, const char* signal);
 /// @param self QGenericPlugin*
 /// @param signal const char*
 ///
-int32_t q_genericplugin_qbase_receivers(void* self, const char* signal);
+int32_t q_genericplugin_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -930,6 +986,10 @@ void q_genericplugin_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_genericplugin_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_genericplugin_super_is_signal_connected` instead
+///
+#define q_genericplugin_qbase_is_signal_connected q_genericplugin_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -939,7 +999,7 @@ bool q_genericplugin_is_signal_connected(void* self, void* signal);
 /// @param self QGenericPlugin*
 /// @param signal QMetaMethod*
 ///
-bool q_genericplugin_qbase_is_signal_connected(void* self, void* signal);
+bool q_genericplugin_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

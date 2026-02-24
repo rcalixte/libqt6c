@@ -40,13 +40,17 @@ const QMetaObject* k_io__openfilemanagerwindowjob_meta_object(void* self);
 ///
 void k_io__openfilemanagerwindowjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_meta_object` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_meta_object k_io__openfilemanagerwindowjob_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-const QMetaObject* k_io__openfilemanagerwindowjob_qbase_meta_object(void* self);
+const QMetaObject* k_io__openfilemanagerwindowjob_super_meta_object(void* self);
 
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_io__openfilemanagerwindowjob_metacast(void* self, const char* param1);
 ///
 void k_io__openfilemanagerwindowjob_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_metacast` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_metacast k_io__openfilemanagerwindowjob_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param param1 const char*
 ///
-void* k_io__openfilemanagerwindowjob_qbase_metacast(void* self, const char* param1);
+void* k_io__openfilemanagerwindowjob_super_metacast(void* self, const char* param1);
 
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_io__openfilemanagerwindowjob_metacall(void* self, int32_t param1, int 
 ///
 void k_io__openfilemanagerwindowjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_metacall` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_metacall k_io__openfilemanagerwindowjob_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
@@ -88,7 +100,7 @@ void k_io__openfilemanagerwindowjob_on_metacall(void* self, int32_t (*callback)(
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_io__openfilemanagerwindowjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_io__openfilemanagerwindowjob_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -143,13 +155,17 @@ void k_io__openfilemanagerwindowjob_start(void* self);
 ///
 void k_io__openfilemanagerwindowjob_on_start(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_start` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_start k_io__openfilemanagerwindowjob_super_start
+
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-void k_io__openfilemanagerwindowjob_qbase_start(void* self);
+void k_io__openfilemanagerwindowjob_super_start(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -900,6 +916,10 @@ void k_io__openfilemanagerwindowjob_on_destroyed1(void* self, void (*callback)(v
 ///
 bool k_io__openfilemanagerwindowjob_do_kill(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_do_kill` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_do_kill k_io__openfilemanagerwindowjob_super_do_kill
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doKill)
@@ -908,7 +928,7 @@ bool k_io__openfilemanagerwindowjob_do_kill(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_do_kill(void* self);
+bool k_io__openfilemanagerwindowjob_super_do_kill(void* self);
 
 /// Inherited from KJob
 ///
@@ -931,6 +951,10 @@ void k_io__openfilemanagerwindowjob_on_do_kill(void* self, bool (*callback)());
 ///
 bool k_io__openfilemanagerwindowjob_do_suspend(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_do_suspend` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_do_suspend k_io__openfilemanagerwindowjob_super_do_suspend
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
@@ -939,7 +963,7 @@ bool k_io__openfilemanagerwindowjob_do_suspend(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_do_suspend(void* self);
+bool k_io__openfilemanagerwindowjob_super_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
@@ -962,6 +986,10 @@ void k_io__openfilemanagerwindowjob_on_do_suspend(void* self, bool (*callback)()
 ///
 bool k_io__openfilemanagerwindowjob_do_resume(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_do_resume` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_do_resume k_io__openfilemanagerwindowjob_super_do_resume
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doResume)
@@ -970,7 +998,7 @@ bool k_io__openfilemanagerwindowjob_do_resume(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_do_resume(void* self);
+bool k_io__openfilemanagerwindowjob_super_do_resume(void* self);
 
 /// Inherited from KJob
 ///
@@ -995,6 +1023,10 @@ void k_io__openfilemanagerwindowjob_on_do_resume(void* self, bool (*callback)())
 ///
 const char* k_io__openfilemanagerwindowjob_error_string(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_error_string` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_error_string k_io__openfilemanagerwindowjob_super_error_string
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
@@ -1005,7 +1037,7 @@ const char* k_io__openfilemanagerwindowjob_error_string(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-const char* k_io__openfilemanagerwindowjob_qbase_error_string(void* self);
+const char* k_io__openfilemanagerwindowjob_super_error_string(void* self);
 
 /// Inherited from KJob
 ///
@@ -1029,6 +1061,10 @@ void k_io__openfilemanagerwindowjob_on_error_string(void* self, const char* (*ca
 ///
 bool k_io__openfilemanagerwindowjob_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_event` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_event k_io__openfilemanagerwindowjob_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1038,7 +1074,7 @@ bool k_io__openfilemanagerwindowjob_event(void* self, void* event);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param event QEvent*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_event(void* self, void* event);
+bool k_io__openfilemanagerwindowjob_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1063,6 +1099,10 @@ void k_io__openfilemanagerwindowjob_on_event(void* self, bool (*callback)(void*,
 ///
 bool k_io__openfilemanagerwindowjob_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_event_filter` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_event_filter k_io__openfilemanagerwindowjob_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1073,7 +1113,7 @@ bool k_io__openfilemanagerwindowjob_event_filter(void* self, void* watched, void
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_event_filter(void* self, void* watched, void* event);
+bool k_io__openfilemanagerwindowjob_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1097,6 +1137,10 @@ void k_io__openfilemanagerwindowjob_on_event_filter(void* self, bool (*callback)
 ///
 void k_io__openfilemanagerwindowjob_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_timer_event` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_timer_event k_io__openfilemanagerwindowjob_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1106,7 +1150,7 @@ void k_io__openfilemanagerwindowjob_timer_event(void* self, void* event);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param event QTimerEvent*
 ///
-void k_io__openfilemanagerwindowjob_qbase_timer_event(void* self, void* event);
+void k_io__openfilemanagerwindowjob_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1130,6 +1174,10 @@ void k_io__openfilemanagerwindowjob_on_timer_event(void* self, void (*callback)(
 ///
 void k_io__openfilemanagerwindowjob_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_child_event` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_child_event k_io__openfilemanagerwindowjob_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1139,7 +1187,7 @@ void k_io__openfilemanagerwindowjob_child_event(void* self, void* event);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param event QChildEvent*
 ///
-void k_io__openfilemanagerwindowjob_qbase_child_event(void* self, void* event);
+void k_io__openfilemanagerwindowjob_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1163,6 +1211,10 @@ void k_io__openfilemanagerwindowjob_on_child_event(void* self, void (*callback)(
 ///
 void k_io__openfilemanagerwindowjob_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_custom_event` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_custom_event k_io__openfilemanagerwindowjob_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1172,7 +1224,7 @@ void k_io__openfilemanagerwindowjob_custom_event(void* self, void* event);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param event QEvent*
 ///
-void k_io__openfilemanagerwindowjob_qbase_custom_event(void* self, void* event);
+void k_io__openfilemanagerwindowjob_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1196,6 +1248,10 @@ void k_io__openfilemanagerwindowjob_on_custom_event(void* self, void (*callback)
 ///
 void k_io__openfilemanagerwindowjob_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_connect_notify` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_connect_notify k_io__openfilemanagerwindowjob_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1205,7 +1261,7 @@ void k_io__openfilemanagerwindowjob_connect_notify(void* self, void* signal);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__openfilemanagerwindowjob_qbase_connect_notify(void* self, void* signal);
+void k_io__openfilemanagerwindowjob_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1229,6 +1285,10 @@ void k_io__openfilemanagerwindowjob_on_connect_notify(void* self, void (*callbac
 ///
 void k_io__openfilemanagerwindowjob_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_disconnect_notify` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_disconnect_notify k_io__openfilemanagerwindowjob_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1238,7 +1298,7 @@ void k_io__openfilemanagerwindowjob_disconnect_notify(void* self, void* signal);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__openfilemanagerwindowjob_qbase_disconnect_notify(void* self, void* signal);
+void k_io__openfilemanagerwindowjob_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1262,6 +1322,10 @@ void k_io__openfilemanagerwindowjob_on_disconnect_notify(void* self, void (*call
 ///
 void k_io__openfilemanagerwindowjob_set_capabilities(void* self, int32_t capabilities);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_capabilities` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_capabilities k_io__openfilemanagerwindowjob_super_set_capabilities
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
@@ -1271,7 +1335,7 @@ void k_io__openfilemanagerwindowjob_set_capabilities(void* self, int32_t capabil
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param capabilities flag of enum KJob__Capability
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_capabilities(void* self, int32_t capabilities);
+void k_io__openfilemanagerwindowjob_super_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1294,6 +1358,10 @@ void k_io__openfilemanagerwindowjob_on_set_capabilities(void* self, void (*callb
 ///
 bool k_io__openfilemanagerwindowjob_is_finished(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_is_finished` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_is_finished k_io__openfilemanagerwindowjob_super_is_finished
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
@@ -1302,7 +1370,7 @@ bool k_io__openfilemanagerwindowjob_is_finished(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_is_finished(void* self);
+bool k_io__openfilemanagerwindowjob_super_is_finished(void* self);
 
 /// Inherited from KJob
 ///
@@ -1326,6 +1394,10 @@ void k_io__openfilemanagerwindowjob_on_is_finished(void* self, bool (*callback)(
 ///
 void k_io__openfilemanagerwindowjob_set_error(void* self, int errorCode);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_error` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_error k_io__openfilemanagerwindowjob_super_set_error
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setError)
@@ -1335,7 +1407,7 @@ void k_io__openfilemanagerwindowjob_set_error(void* self, int errorCode);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param errorCode int
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_error(void* self, int errorCode);
+void k_io__openfilemanagerwindowjob_super_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
@@ -1359,6 +1431,10 @@ void k_io__openfilemanagerwindowjob_on_set_error(void* self, void (*callback)(vo
 ///
 void k_io__openfilemanagerwindowjob_set_error_text(void* self, const char* errorText);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_error_text` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_error_text k_io__openfilemanagerwindowjob_super_set_error_text
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
@@ -1368,7 +1444,7 @@ void k_io__openfilemanagerwindowjob_set_error_text(void* self, const char* error
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param errorText const char*
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_error_text(void* self, const char* errorText);
+void k_io__openfilemanagerwindowjob_super_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
@@ -1393,6 +1469,10 @@ void k_io__openfilemanagerwindowjob_on_set_error_text(void* self, void (*callbac
 ///
 void k_io__openfilemanagerwindowjob_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_processed_amount` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_processed_amount k_io__openfilemanagerwindowjob_super_set_processed_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
@@ -1403,7 +1483,7 @@ void k_io__openfilemanagerwindowjob_set_processed_amount(void* self, int32_t uni
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_io__openfilemanagerwindowjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1428,6 +1508,10 @@ void k_io__openfilemanagerwindowjob_on_set_processed_amount(void* self, void (*c
 ///
 void k_io__openfilemanagerwindowjob_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_total_amount` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_total_amount k_io__openfilemanagerwindowjob_super_set_total_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
@@ -1438,7 +1522,7 @@ void k_io__openfilemanagerwindowjob_set_total_amount(void* self, int32_t unit, u
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_io__openfilemanagerwindowjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1462,6 +1546,10 @@ void k_io__openfilemanagerwindowjob_on_set_total_amount(void* self, void (*callb
 ///
 void k_io__openfilemanagerwindowjob_set_progress_unit(void* self, int32_t unit);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_progress_unit` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_progress_unit k_io__openfilemanagerwindowjob_super_set_progress_unit
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
@@ -1471,7 +1559,7 @@ void k_io__openfilemanagerwindowjob_set_progress_unit(void* self, int32_t unit);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param unit enum KJob__Unit
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_progress_unit(void* self, int32_t unit);
+void k_io__openfilemanagerwindowjob_super_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -1495,6 +1583,10 @@ void k_io__openfilemanagerwindowjob_on_set_progress_unit(void* self, void (*call
 ///
 void k_io__openfilemanagerwindowjob_set_percent(void* self, uint64_t percentage);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_set_percent` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_set_percent k_io__openfilemanagerwindowjob_super_set_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
@@ -1504,7 +1596,7 @@ void k_io__openfilemanagerwindowjob_set_percent(void* self, uint64_t percentage)
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param percentage uint64_t
 ///
-void k_io__openfilemanagerwindowjob_qbase_set_percent(void* self, uint64_t percentage);
+void k_io__openfilemanagerwindowjob_super_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
@@ -1527,6 +1619,10 @@ void k_io__openfilemanagerwindowjob_on_set_percent(void* self, void (*callback)(
 ///
 void k_io__openfilemanagerwindowjob_emit_result(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_emit_result` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_emit_result k_io__openfilemanagerwindowjob_super_emit_result
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
@@ -1535,7 +1631,7 @@ void k_io__openfilemanagerwindowjob_emit_result(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-void k_io__openfilemanagerwindowjob_qbase_emit_result(void* self);
+void k_io__openfilemanagerwindowjob_super_emit_result(void* self);
 
 /// Inherited from KJob
 ///
@@ -1560,6 +1656,10 @@ void k_io__openfilemanagerwindowjob_on_emit_result(void* self, void (*callback)(
 ///
 void k_io__openfilemanagerwindowjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_emit_percent` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_emit_percent k_io__openfilemanagerwindowjob_super_emit_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
@@ -1570,7 +1670,7 @@ void k_io__openfilemanagerwindowjob_emit_percent(void* self, uint64_t processedA
 /// @param processedAmount uint64_t
 /// @param totalAmount uint64_t
 ///
-void k_io__openfilemanagerwindowjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_io__openfilemanagerwindowjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
 /// Inherited from KJob
 ///
@@ -1594,6 +1694,10 @@ void k_io__openfilemanagerwindowjob_on_emit_percent(void* self, void (*callback)
 ///
 void k_io__openfilemanagerwindowjob_emit_speed(void* self, uint64_t speed);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_emit_speed` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_emit_speed k_io__openfilemanagerwindowjob_super_emit_speed
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
@@ -1603,7 +1707,7 @@ void k_io__openfilemanagerwindowjob_emit_speed(void* self, uint64_t speed);
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param speed uint64_t
 ///
-void k_io__openfilemanagerwindowjob_qbase_emit_speed(void* self, uint64_t speed);
+void k_io__openfilemanagerwindowjob_super_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
@@ -1626,6 +1730,10 @@ void k_io__openfilemanagerwindowjob_on_emit_speed(void* self, void (*callback)(v
 ///
 void k_io__openfilemanagerwindowjob_start_elapsed_timer(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_start_elapsed_timer` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_start_elapsed_timer k_io__openfilemanagerwindowjob_super_start_elapsed_timer
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
@@ -1634,7 +1742,7 @@ void k_io__openfilemanagerwindowjob_start_elapsed_timer(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-void k_io__openfilemanagerwindowjob_qbase_start_elapsed_timer(void* self);
+void k_io__openfilemanagerwindowjob_super_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
@@ -1657,6 +1765,10 @@ void k_io__openfilemanagerwindowjob_on_start_elapsed_timer(void* self, void (*ca
 ///
 QObject* k_io__openfilemanagerwindowjob_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_sender` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_sender k_io__openfilemanagerwindowjob_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1665,7 +1777,7 @@ QObject* k_io__openfilemanagerwindowjob_sender(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-QObject* k_io__openfilemanagerwindowjob_qbase_sender(void* self);
+QObject* k_io__openfilemanagerwindowjob_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1688,6 +1800,10 @@ void k_io__openfilemanagerwindowjob_on_sender(void* self, QObject* (*callback)()
 ///
 int32_t k_io__openfilemanagerwindowjob_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_sender_signal_index` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_sender_signal_index k_io__openfilemanagerwindowjob_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1696,7 +1812,7 @@ int32_t k_io__openfilemanagerwindowjob_sender_signal_index(void* self);
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
 ///
-int32_t k_io__openfilemanagerwindowjob_qbase_sender_signal_index(void* self);
+int32_t k_io__openfilemanagerwindowjob_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1720,6 +1836,10 @@ void k_io__openfilemanagerwindowjob_on_sender_signal_index(void* self, int32_t (
 ///
 int32_t k_io__openfilemanagerwindowjob_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_receivers` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_receivers k_io__openfilemanagerwindowjob_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1729,7 +1849,7 @@ int32_t k_io__openfilemanagerwindowjob_receivers(void* self, const char* signal)
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param signal const char*
 ///
-int32_t k_io__openfilemanagerwindowjob_qbase_receivers(void* self, const char* signal);
+int32_t k_io__openfilemanagerwindowjob_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1753,6 +1873,10 @@ void k_io__openfilemanagerwindowjob_on_receivers(void* self, int32_t (*callback)
 ///
 bool k_io__openfilemanagerwindowjob_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__openfilemanagerwindowjob_super_is_signal_connected` instead
+///
+#define k_io__openfilemanagerwindowjob_qbase_is_signal_connected k_io__openfilemanagerwindowjob_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1762,7 +1886,7 @@ bool k_io__openfilemanagerwindowjob_is_signal_connected(void* self, void* signal
 /// @param self KIO__OpenFileManagerWindowJob*
 /// @param signal QMetaMethod*
 ///
-bool k_io__openfilemanagerwindowjob_qbase_is_signal_connected(void* self, void* signal);
+bool k_io__openfilemanagerwindowjob_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

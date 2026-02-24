@@ -49,13 +49,17 @@ const QMetaObject* k_parts__part_meta_object(void* self);
 ///
 void k_parts__part_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__part_super_meta_object` instead
+///
+#define k_parts__part_qbase_meta_object k_parts__part_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__Part*
 ///
-const QMetaObject* k_parts__part_qbase_meta_object(void* self);
+const QMetaObject* k_parts__part_super_meta_object(void* self);
 
 /// @param self KParts__Part*
 /// @param param1 const char*
@@ -69,12 +73,16 @@ void* k_parts__part_metacast(void* self, const char* param1);
 ///
 void k_parts__part_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_metacast` instead
+///
+#define k_parts__part_qbase_metacast k_parts__part_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KParts__Part*
 /// @param param1 const char*
 ///
-void* k_parts__part_qbase_metacast(void* self, const char* param1);
+void* k_parts__part_super_metacast(void* self, const char* param1);
 
 /// @param self KParts__Part*
 /// @param param1 enum QMetaObject__Call
@@ -90,6 +98,10 @@ int32_t k_parts__part_metacall(void* self, int32_t param1, int param2, void* par
 ///
 void k_parts__part_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_metacall` instead
+///
+#define k_parts__part_qbase_metacall k_parts__part_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KParts__Part*
@@ -97,7 +109,7 @@ void k_parts__part_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_parts__part_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_parts__part_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -122,13 +134,17 @@ QWidget* k_parts__part_widget(void* self);
 ///
 void k_parts__part_on_widget(void* self, QWidget* (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__part_super_widget` instead
+///
+#define k_parts__part_qbase_widget k_parts__part_super_widget
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__Part*
 ///
-QWidget* k_parts__part_qbase_widget(void* self);
+QWidget* k_parts__part_super_widget(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
 ///
@@ -146,6 +162,10 @@ void k_parts__part_set_manager(void* self, void* manager);
 ///
 void k_parts__part_on_set_manager(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_manager` instead
+///
+#define k_parts__part_qbase_set_manager k_parts__part_super_set_manager
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setManager)
 ///
 /// Base class method implementation
@@ -153,7 +173,7 @@ void k_parts__part_on_set_manager(void* self, void (*callback)(void*, void*));
 /// @param self KParts__Part*
 /// @param manager KParts__PartManager*
 ///
-void k_parts__part_qbase_set_manager(void* self, void* manager);
+void k_parts__part_super_set_manager(void* self, void* manager);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
@@ -192,6 +212,10 @@ KParts__Part* k_parts__part_hit_test(void* self, void* widget, void* globalPos);
 ///
 void k_parts__part_on_hit_test(void* self, KParts__Part* (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_hit_test` instead
+///
+#define k_parts__part_qbase_hit_test k_parts__part_super_hit_test
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hitTest)
 ///
 /// Base class method implementation
@@ -200,7 +224,7 @@ void k_parts__part_on_hit_test(void* self, KParts__Part* (*callback)(void*, void
 /// @param widget QWidget*
 /// @param globalPos QPoint*
 ///
-KParts__Part* k_parts__part_qbase_hit_test(void* self, void* widget, void* globalPos);
+KParts__Part* k_parts__part_super_hit_test(void* self, void* widget, void* globalPos);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#metaData)
 ///
@@ -252,6 +276,10 @@ void k_parts__part_set_widget(void* self, void* widget);
 ///
 void k_parts__part_on_set_widget(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_widget` instead
+///
+#define k_parts__part_qbase_set_widget k_parts__part_super_set_widget
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#setWidget)
 ///
 /// Base class method implementation
@@ -259,7 +287,7 @@ void k_parts__part_on_set_widget(void* self, void (*callback)(void*, void*));
 /// @param self KParts__Part*
 /// @param widget QWidget*
 ///
-void k_parts__part_qbase_set_widget(void* self, void* widget);
+void k_parts__part_super_set_widget(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
 ///
@@ -277,6 +305,10 @@ void k_parts__part_custom_event(void* self, void* event);
 ///
 void k_parts__part_on_custom_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_custom_event` instead
+///
+#define k_parts__part_qbase_custom_event k_parts__part_super_custom_event
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#customEvent)
 ///
 /// Base class method implementation
@@ -284,7 +316,7 @@ void k_parts__part_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KParts__Part*
 /// @param event QEvent*
 ///
-void k_parts__part_qbase_custom_event(void* self, void* event);
+void k_parts__part_super_custom_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
 ///
@@ -302,6 +334,10 @@ void k_parts__part_part_activate_event(void* self, void* event);
 ///
 void k_parts__part_on_part_activate_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_part_activate_event` instead
+///
+#define k_parts__part_qbase_part_activate_event k_parts__part_super_part_activate_event
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#partActivateEvent)
 ///
 /// Base class method implementation
@@ -309,7 +345,7 @@ void k_parts__part_on_part_activate_event(void* self, void (*callback)(void*, vo
 /// @param self KParts__Part*
 /// @param event KParts__PartActivateEvent*
 ///
-void k_parts__part_qbase_part_activate_event(void* self, void* event);
+void k_parts__part_super_part_activate_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#guiActivateEvent)
 ///
@@ -327,6 +363,10 @@ void k_parts__part_gui_activate_event(void* self, void* event);
 ///
 void k_parts__part_on_gui_activate_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_gui_activate_event` instead
+///
+#define k_parts__part_qbase_gui_activate_event k_parts__part_super_gui_activate_event
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#guiActivateEvent)
 ///
 /// Base class method implementation
@@ -334,7 +374,7 @@ void k_parts__part_on_gui_activate_event(void* self, void (*callback)(void*, voi
 /// @param self KParts__Part*
 /// @param event KParts__GUIActivateEvent*
 ///
-void k_parts__part_qbase_gui_activate_event(void* self, void* event);
+void k_parts__part_super_gui_activate_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
 ///
@@ -352,6 +392,10 @@ QWidget* k_parts__part_host_container(void* self, const char* containerName);
 ///
 void k_parts__part_on_host_container(void* self, QWidget* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_parts__part_super_host_container` instead
+///
+#define k_parts__part_qbase_host_container k_parts__part_super_host_container
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#hostContainer)
 ///
 /// Base class method implementation
@@ -359,7 +403,7 @@ void k_parts__part_on_host_container(void* self, QWidget* (*callback)(void*, con
 /// @param self KParts__Part*
 /// @param containerName const char*
 ///
-QWidget* k_parts__part_qbase_host_container(void* self, const char* containerName);
+QWidget* k_parts__part_super_host_container(void* self, const char* containerName);
 
 /// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
@@ -376,13 +420,17 @@ void k_parts__part_slot_widget_destroyed(void* self);
 ///
 void k_parts__part_on_slot_widget_destroyed(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__part_super_slot_widget_destroyed` instead
+///
+#define k_parts__part_qbase_slot_widget_destroyed k_parts__part_super_slot_widget_destroyed
+
 /// [Upstream resources](https://api.kde.org/kparts-part.html#slotWidgetDestroyed)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__Part*
 ///
-void k_parts__part_qbase_slot_widget_destroyed(void* self);
+void k_parts__part_super_slot_widget_destroyed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1098,6 +1146,10 @@ void k_parts__part_replace_x_m_l_file3(void* self, const char* xmlfile, const ch
 ///
 bool k_parts__part_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_event` instead
+///
+#define k_parts__part_qbase_event k_parts__part_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1107,7 +1159,7 @@ bool k_parts__part_event(void* self, void* event);
 /// @param self KParts__Part*
 /// @param event QEvent*
 ///
-bool k_parts__part_qbase_event(void* self, void* event);
+bool k_parts__part_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1132,6 +1184,10 @@ void k_parts__part_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_parts__part_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_event_filter` instead
+///
+#define k_parts__part_qbase_event_filter k_parts__part_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1142,7 +1198,7 @@ bool k_parts__part_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_parts__part_qbase_event_filter(void* self, void* watched, void* event);
+bool k_parts__part_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1166,6 +1222,10 @@ void k_parts__part_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void k_parts__part_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_timer_event` instead
+///
+#define k_parts__part_qbase_timer_event k_parts__part_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1175,7 +1235,7 @@ void k_parts__part_timer_event(void* self, void* event);
 /// @param self KParts__Part*
 /// @param event QTimerEvent*
 ///
-void k_parts__part_qbase_timer_event(void* self, void* event);
+void k_parts__part_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1199,6 +1259,10 @@ void k_parts__part_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_parts__part_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_child_event` instead
+///
+#define k_parts__part_qbase_child_event k_parts__part_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1208,7 +1272,7 @@ void k_parts__part_child_event(void* self, void* event);
 /// @param self KParts__Part*
 /// @param event QChildEvent*
 ///
-void k_parts__part_qbase_child_event(void* self, void* event);
+void k_parts__part_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1232,6 +1296,10 @@ void k_parts__part_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_parts__part_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_connect_notify` instead
+///
+#define k_parts__part_qbase_connect_notify k_parts__part_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1241,7 +1309,7 @@ void k_parts__part_connect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_qbase_connect_notify(void* self, void* signal);
+void k_parts__part_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1265,6 +1333,10 @@ void k_parts__part_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void k_parts__part_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_disconnect_notify` instead
+///
+#define k_parts__part_qbase_disconnect_notify k_parts__part_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1274,7 +1346,7 @@ void k_parts__part_disconnect_notify(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-void k_parts__part_qbase_disconnect_notify(void* self, void* signal);
+void k_parts__part_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1298,6 +1370,10 @@ void k_parts__part_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 QAction* k_parts__part_action2(void* self, void* element);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_action2` instead
+///
+#define k_parts__part_qbase_action2 k_parts__part_super_action2
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
@@ -1307,7 +1383,7 @@ QAction* k_parts__part_action2(void* self, void* element);
 /// @param self KParts__Part*
 /// @param element QDomElement*
 ///
-QAction* k_parts__part_qbase_action2(void* self, void* element);
+QAction* k_parts__part_super_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1330,6 +1406,10 @@ void k_parts__part_on_action2(void* self, QAction* (*callback)(void*, void*));
 ///
 KActionCollection* k_parts__part_action_collection(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_action_collection` instead
+///
+#define k_parts__part_qbase_action_collection k_parts__part_super_action_collection
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
@@ -1338,7 +1418,7 @@ KActionCollection* k_parts__part_action_collection(void* self);
 ///
 /// @param self KParts__Part*
 ///
-KActionCollection* k_parts__part_qbase_action_collection(void* self);
+KActionCollection* k_parts__part_super_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1363,6 +1443,10 @@ void k_parts__part_on_action_collection(void* self, KActionCollection* (*callbac
 ///
 const char* k_parts__part_component_name(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_component_name` instead
+///
+#define k_parts__part_qbase_component_name k_parts__part_super_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
@@ -1373,7 +1457,7 @@ const char* k_parts__part_component_name(void* self);
 ///
 /// @param self KParts__Part*
 ///
-const char* k_parts__part_qbase_component_name(void* self);
+const char* k_parts__part_super_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1396,6 +1480,10 @@ void k_parts__part_on_component_name(void* self, const char* (*callback)());
 ///
 QDomDocument* k_parts__part_dom_document(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_dom_document` instead
+///
+#define k_parts__part_qbase_dom_document k_parts__part_super_dom_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
@@ -1404,7 +1492,7 @@ QDomDocument* k_parts__part_dom_document(void* self);
 ///
 /// @param self KParts__Part*
 ///
-QDomDocument* k_parts__part_qbase_dom_document(void* self);
+QDomDocument* k_parts__part_super_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1429,6 +1517,10 @@ void k_parts__part_on_dom_document(void* self, QDomDocument* (*callback)());
 ///
 const char* k_parts__part_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_xml_file` instead
+///
+#define k_parts__part_qbase_xml_file k_parts__part_super_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
@@ -1439,7 +1531,7 @@ const char* k_parts__part_xml_file(void* self);
 ///
 /// @param self KParts__Part*
 ///
-const char* k_parts__part_qbase_xml_file(void* self);
+const char* k_parts__part_super_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1464,6 +1556,10 @@ void k_parts__part_on_xml_file(void* self, const char* (*callback)());
 ///
 const char* k_parts__part_local_x_m_l_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_local_x_m_l_file` instead
+///
+#define k_parts__part_qbase_local_x_m_l_file k_parts__part_super_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
@@ -1474,7 +1570,7 @@ const char* k_parts__part_local_x_m_l_file(void* self);
 ///
 /// @param self KParts__Part*
 ///
-const char* k_parts__part_qbase_local_x_m_l_file(void* self);
+const char* k_parts__part_super_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1499,6 +1595,10 @@ void k_parts__part_on_local_x_m_l_file(void* self, const char* (*callback)());
 ///
 void k_parts__part_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_component_name` instead
+///
+#define k_parts__part_qbase_set_component_name k_parts__part_super_set_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
@@ -1509,7 +1609,7 @@ void k_parts__part_set_component_name(void* self, const char* componentName, con
 /// @param componentName const char*
 /// @param componentDisplayName const char*
 ///
-void k_parts__part_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
+void k_parts__part_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1535,6 +1635,10 @@ void k_parts__part_on_set_component_name(void* self, void (*callback)(void*, con
 ///
 void k_parts__part_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_x_m_l_file` instead
+///
+#define k_parts__part_qbase_set_x_m_l_file k_parts__part_super_set_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
@@ -1546,7 +1650,7 @@ void k_parts__part_set_x_m_l_file(void* self, const char* file, bool merge, bool
 /// @param merge bool
 /// @param setXMLDoc bool
 ///
-void k_parts__part_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
+void k_parts__part_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1570,6 +1674,10 @@ void k_parts__part_on_set_x_m_l_file(void* self, void (*callback)(void*, const c
 ///
 void k_parts__part_set_local_x_m_l_file(void* self, const char* file);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_local_x_m_l_file` instead
+///
+#define k_parts__part_qbase_set_local_x_m_l_file k_parts__part_super_set_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
@@ -1579,7 +1687,7 @@ void k_parts__part_set_local_x_m_l_file(void* self, const char* file);
 /// @param self KParts__Part*
 /// @param file const char*
 ///
-void k_parts__part_qbase_set_local_x_m_l_file(void* self, const char* file);
+void k_parts__part_super_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1604,6 +1712,10 @@ void k_parts__part_on_set_local_x_m_l_file(void* self, void (*callback)(void*, c
 ///
 void k_parts__part_set_x_m_l(void* self, const char* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_x_m_l` instead
+///
+#define k_parts__part_qbase_set_x_m_l k_parts__part_super_set_x_m_l
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
@@ -1614,7 +1726,7 @@ void k_parts__part_set_x_m_l(void* self, const char* document, bool merge);
 /// @param document const char*
 /// @param merge bool
 ///
-void k_parts__part_qbase_set_x_m_l(void* self, const char* document, bool merge);
+void k_parts__part_super_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1639,6 +1751,10 @@ void k_parts__part_on_set_x_m_l(void* self, void (*callback)(void*, const char*,
 ///
 void k_parts__part_set_d_o_m_document(void* self, void* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_set_d_o_m_document` instead
+///
+#define k_parts__part_qbase_set_d_o_m_document k_parts__part_super_set_d_o_m_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
@@ -1649,7 +1765,7 @@ void k_parts__part_set_d_o_m_document(void* self, void* document, bool merge);
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_parts__part_qbase_set_d_o_m_document(void* self, void* document, bool merge);
+void k_parts__part_super_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1674,6 +1790,10 @@ void k_parts__part_on_set_d_o_m_document(void* self, void (*callback)(void*, voi
 ///
 void k_parts__part_state_changed(void* self, const char* newstate, int32_t reverse);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_state_changed` instead
+///
+#define k_parts__part_qbase_state_changed k_parts__part_super_state_changed
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
@@ -1684,7 +1804,7 @@ void k_parts__part_state_changed(void* self, const char* newstate, int32_t rever
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 ///
-void k_parts__part_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
+void k_parts__part_super_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1707,6 +1827,10 @@ void k_parts__part_on_state_changed(void* self, void (*callback)(void*, const ch
 ///
 QObject* k_parts__part_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_sender` instead
+///
+#define k_parts__part_qbase_sender k_parts__part_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1715,7 +1839,7 @@ QObject* k_parts__part_sender(void* self);
 ///
 /// @param self KParts__Part*
 ///
-QObject* k_parts__part_qbase_sender(void* self);
+QObject* k_parts__part_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1738,6 +1862,10 @@ void k_parts__part_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_parts__part_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_sender_signal_index` instead
+///
+#define k_parts__part_qbase_sender_signal_index k_parts__part_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1746,7 +1874,7 @@ int32_t k_parts__part_sender_signal_index(void* self);
 ///
 /// @param self KParts__Part*
 ///
-int32_t k_parts__part_qbase_sender_signal_index(void* self);
+int32_t k_parts__part_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1770,6 +1898,10 @@ void k_parts__part_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_parts__part_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_receivers` instead
+///
+#define k_parts__part_qbase_receivers k_parts__part_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1779,7 +1911,7 @@ int32_t k_parts__part_receivers(void* self, const char* signal);
 /// @param self KParts__Part*
 /// @param signal const char*
 ///
-int32_t k_parts__part_qbase_receivers(void* self, const char* signal);
+int32_t k_parts__part_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1803,6 +1935,10 @@ void k_parts__part_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 bool k_parts__part_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_is_signal_connected` instead
+///
+#define k_parts__part_qbase_is_signal_connected k_parts__part_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1812,7 +1948,7 @@ bool k_parts__part_is_signal_connected(void* self, void* signal);
 /// @param self KParts__Part*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__part_qbase_is_signal_connected(void* self, void* signal);
+bool k_parts__part_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1837,6 +1973,10 @@ void k_parts__part_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 const char* k_parts__part_standards_xml_file_location(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_standards_xml_file_location` instead
+///
+#define k_parts__part_qbase_standards_xml_file_location k_parts__part_super_standards_xml_file_location
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
@@ -1847,7 +1987,7 @@ const char* k_parts__part_standards_xml_file_location(void* self);
 ///
 /// @param self KParts__Part*
 ///
-const char* k_parts__part_qbase_standards_xml_file_location(void* self);
+const char* k_parts__part_super_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1870,6 +2010,10 @@ void k_parts__part_on_standards_xml_file_location(void* self, const char* (*call
 ///
 void k_parts__part_load_standards_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__part_super_load_standards_xml_file` instead
+///
+#define k_parts__part_qbase_load_standards_xml_file k_parts__part_super_load_standards_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
@@ -1878,7 +2022,7 @@ void k_parts__part_load_standards_xml_file(void* self);
 ///
 /// @param self KParts__Part*
 ///
-void k_parts__part_qbase_load_standards_xml_file(void* self);
+void k_parts__part_super_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///

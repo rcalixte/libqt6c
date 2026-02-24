@@ -36,8 +36,8 @@ void q_inputevent_on_clone(void* self, QInputEvent* (*callback)()) {
     QInputEvent_OnClone((QInputEvent*)self, (intptr_t)callback);
 }
 
-QInputEvent* q_inputevent_qbase_clone(void* self) {
-    return QInputEvent_QBaseClone((QInputEvent*)self);
+QInputEvent* q_inputevent_super_clone(void* self) {
+    return QInputEvent_SuperClone((QInputEvent*)self);
 }
 
 const QInputDevice* q_inputevent_device(void* self) {
@@ -68,8 +68,8 @@ void q_inputevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
     QInputEvent_OnSetTimestamp((QInputEvent*)self, (intptr_t)callback);
 }
 
-void q_inputevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QInputEvent_QBaseSetTimestamp((QInputEvent*)self, timestamp);
+void q_inputevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QInputEvent_SuperSetTimestamp((QInputEvent*)self, timestamp);
 }
 
 int32_t q_inputevent_type(void* self) {
@@ -116,8 +116,8 @@ void q_inputevent_set_accepted(void* self, bool accepted) {
     QInputEvent_SetAccepted((QInputEvent*)self, accepted);
 }
 
-void q_inputevent_qbase_set_accepted(void* self, bool accepted) {
-    QInputEvent_QBaseSetAccepted((QInputEvent*)self, accepted);
+void q_inputevent_super_set_accepted(void* self, bool accepted) {
+    QInputEvent_SuperSetAccepted((QInputEvent*)self, accepted);
 }
 
 void q_inputevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -148,8 +148,8 @@ void q_pointerevent_on_clone(void* self, QPointerEvent* (*callback)()) {
     QPointerEvent_OnClone((QPointerEvent*)self, (intptr_t)callback);
 }
 
-QPointerEvent* q_pointerevent_qbase_clone(void* self) {
-    return QPointerEvent_QBaseClone((QPointerEvent*)self);
+QPointerEvent* q_pointerevent_super_clone(void* self) {
+    return QPointerEvent_SuperClone((QPointerEvent*)self);
 }
 
 const QPointingDevice* q_pointerevent_pointing_device(void* self) {
@@ -168,8 +168,8 @@ void q_pointerevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_
     QPointerEvent_OnSetTimestamp((QPointerEvent*)self, (intptr_t)callback);
 }
 
-void q_pointerevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QPointerEvent_QBaseSetTimestamp((QPointerEvent*)self, timestamp);
+void q_pointerevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QPointerEvent_SuperSetTimestamp((QPointerEvent*)self, timestamp);
 }
 
 int64_t q_pointerevent_point_count(void* self) {
@@ -201,8 +201,8 @@ void q_pointerevent_on_is_begin_event(void* self, bool (*callback)()) {
     QPointerEvent_OnIsBeginEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
-bool q_pointerevent_qbase_is_begin_event(void* self) {
-    return QPointerEvent_QBaseIsBeginEvent((QPointerEvent*)self);
+bool q_pointerevent_super_is_begin_event(void* self) {
+    return QPointerEvent_SuperIsBeginEvent((QPointerEvent*)self);
 }
 
 bool q_pointerevent_is_update_event(void* self) {
@@ -213,8 +213,8 @@ void q_pointerevent_on_is_update_event(void* self, bool (*callback)()) {
     QPointerEvent_OnIsUpdateEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
-bool q_pointerevent_qbase_is_update_event(void* self) {
-    return QPointerEvent_QBaseIsUpdateEvent((QPointerEvent*)self);
+bool q_pointerevent_super_is_update_event(void* self) {
+    return QPointerEvent_SuperIsUpdateEvent((QPointerEvent*)self);
 }
 
 bool q_pointerevent_is_end_event(void* self) {
@@ -225,8 +225,8 @@ void q_pointerevent_on_is_end_event(void* self, bool (*callback)()) {
     QPointerEvent_OnIsEndEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
-bool q_pointerevent_qbase_is_end_event(void* self) {
-    return QPointerEvent_QBaseIsEndEvent((QPointerEvent*)self);
+bool q_pointerevent_super_is_end_event(void* self) {
+    return QPointerEvent_SuperIsEndEvent((QPointerEvent*)self);
 }
 
 bool q_pointerevent_all_points_accepted(void* self) {
@@ -241,8 +241,8 @@ void q_pointerevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
     QPointerEvent_OnSetAccepted((QPointerEvent*)self, (intptr_t)callback);
 }
 
-void q_pointerevent_qbase_set_accepted(void* self, bool accepted) {
-    QPointerEvent_QBaseSetAccepted((QPointerEvent*)self, accepted);
+void q_pointerevent_super_set_accepted(void* self, bool accepted) {
+    QPointerEvent_SuperSetAccepted((QPointerEvent*)self, accepted);
 }
 
 QObject* q_pointerevent_exclusive_grabber(void* self, void* point) {
@@ -514,8 +514,8 @@ void q_enterevent_on_clone(void* self, QEnterEvent* (*callback)()) {
     QEnterEvent_OnClone((QEnterEvent*)self, (intptr_t)callback);
 }
 
-QEnterEvent* q_enterevent_qbase_clone(void* self) {
-    return QEnterEvent_QBaseClone((QEnterEvent*)self);
+QEnterEvent* q_enterevent_super_clone(void* self) {
+    return QEnterEvent_SuperClone((QEnterEvent*)self);
 }
 
 QPoint* q_enterevent_pos(void* self) {
@@ -699,8 +699,8 @@ bool q_enterevent_is_begin_event(void* self) {
     return QEnterEvent_IsBeginEvent((QEnterEvent*)self);
 }
 
-bool q_enterevent_qbase_is_begin_event(void* self) {
-    return QEnterEvent_QBaseIsBeginEvent((QEnterEvent*)self);
+bool q_enterevent_super_is_begin_event(void* self) {
+    return QEnterEvent_SuperIsBeginEvent((QEnterEvent*)self);
 }
 
 void q_enterevent_on_is_begin_event(void* self, bool (*callback)()) {
@@ -711,8 +711,8 @@ bool q_enterevent_is_update_event(void* self) {
     return QEnterEvent_IsUpdateEvent((QEnterEvent*)self);
 }
 
-bool q_enterevent_qbase_is_update_event(void* self) {
-    return QEnterEvent_QBaseIsUpdateEvent((QEnterEvent*)self);
+bool q_enterevent_super_is_update_event(void* self) {
+    return QEnterEvent_SuperIsUpdateEvent((QEnterEvent*)self);
 }
 
 void q_enterevent_on_is_update_event(void* self, bool (*callback)()) {
@@ -723,8 +723,8 @@ bool q_enterevent_is_end_event(void* self) {
     return QEnterEvent_IsEndEvent((QEnterEvent*)self);
 }
 
-bool q_enterevent_qbase_is_end_event(void* self) {
-    return QEnterEvent_QBaseIsEndEvent((QEnterEvent*)self);
+bool q_enterevent_super_is_end_event(void* self) {
+    return QEnterEvent_SuperIsEndEvent((QEnterEvent*)self);
 }
 
 void q_enterevent_on_is_end_event(void* self, bool (*callback)()) {
@@ -735,8 +735,8 @@ void q_enterevent_set_timestamp(void* self, uint64_t timestamp) {
     QEnterEvent_SetTimestamp((QEnterEvent*)self, timestamp);
 }
 
-void q_enterevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QEnterEvent_QBaseSetTimestamp((QEnterEvent*)self, timestamp);
+void q_enterevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QEnterEvent_SuperSetTimestamp((QEnterEvent*)self, timestamp);
 }
 
 void q_enterevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -747,8 +747,8 @@ void q_enterevent_set_accepted(void* self, bool accepted) {
     QEnterEvent_SetAccepted((QEnterEvent*)self, accepted);
 }
 
-void q_enterevent_qbase_set_accepted(void* self, bool accepted) {
-    QEnterEvent_QBaseSetAccepted((QEnterEvent*)self, accepted);
+void q_enterevent_super_set_accepted(void* self, bool accepted) {
+    QEnterEvent_SuperSetAccepted((QEnterEvent*)self, accepted);
 }
 
 void q_enterevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -799,8 +799,8 @@ void q_mouseevent_on_clone(void* self, QMouseEvent* (*callback)()) {
     QMouseEvent_OnClone((QMouseEvent*)self, (intptr_t)callback);
 }
 
-QMouseEvent* q_mouseevent_qbase_clone(void* self) {
-    return QMouseEvent_QBaseClone((QMouseEvent*)self);
+QMouseEvent* q_mouseevent_super_clone(void* self) {
+    return QMouseEvent_SuperClone((QMouseEvent*)self);
 }
 
 QPoint* q_mouseevent_pos(void* self) {
@@ -992,8 +992,8 @@ bool q_mouseevent_is_begin_event(void* self) {
     return QMouseEvent_IsBeginEvent((QMouseEvent*)self);
 }
 
-bool q_mouseevent_qbase_is_begin_event(void* self) {
-    return QMouseEvent_QBaseIsBeginEvent((QMouseEvent*)self);
+bool q_mouseevent_super_is_begin_event(void* self) {
+    return QMouseEvent_SuperIsBeginEvent((QMouseEvent*)self);
 }
 
 void q_mouseevent_on_is_begin_event(void* self, bool (*callback)()) {
@@ -1004,8 +1004,8 @@ bool q_mouseevent_is_update_event(void* self) {
     return QMouseEvent_IsUpdateEvent((QMouseEvent*)self);
 }
 
-bool q_mouseevent_qbase_is_update_event(void* self) {
-    return QMouseEvent_QBaseIsUpdateEvent((QMouseEvent*)self);
+bool q_mouseevent_super_is_update_event(void* self) {
+    return QMouseEvent_SuperIsUpdateEvent((QMouseEvent*)self);
 }
 
 void q_mouseevent_on_is_update_event(void* self, bool (*callback)()) {
@@ -1016,8 +1016,8 @@ bool q_mouseevent_is_end_event(void* self) {
     return QMouseEvent_IsEndEvent((QMouseEvent*)self);
 }
 
-bool q_mouseevent_qbase_is_end_event(void* self) {
-    return QMouseEvent_QBaseIsEndEvent((QMouseEvent*)self);
+bool q_mouseevent_super_is_end_event(void* self) {
+    return QMouseEvent_SuperIsEndEvent((QMouseEvent*)self);
 }
 
 void q_mouseevent_on_is_end_event(void* self, bool (*callback)()) {
@@ -1028,8 +1028,8 @@ void q_mouseevent_set_timestamp(void* self, uint64_t timestamp) {
     QMouseEvent_SetTimestamp((QMouseEvent*)self, timestamp);
 }
 
-void q_mouseevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QMouseEvent_QBaseSetTimestamp((QMouseEvent*)self, timestamp);
+void q_mouseevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QMouseEvent_SuperSetTimestamp((QMouseEvent*)self, timestamp);
 }
 
 void q_mouseevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -1040,8 +1040,8 @@ void q_mouseevent_set_accepted(void* self, bool accepted) {
     QMouseEvent_SetAccepted((QMouseEvent*)self, accepted);
 }
 
-void q_mouseevent_qbase_set_accepted(void* self, bool accepted) {
-    QMouseEvent_QBaseSetAccepted((QMouseEvent*)self, accepted);
+void q_mouseevent_super_set_accepted(void* self, bool accepted) {
+    QMouseEvent_SuperSetAccepted((QMouseEvent*)self, accepted);
 }
 
 void q_mouseevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -1084,8 +1084,8 @@ void q_hoverevent_on_clone(void* self, QHoverEvent* (*callback)()) {
     QHoverEvent_OnClone((QHoverEvent*)self, (intptr_t)callback);
 }
 
-QHoverEvent* q_hoverevent_qbase_clone(void* self) {
-    return QHoverEvent_QBaseClone((QHoverEvent*)self);
+QHoverEvent* q_hoverevent_super_clone(void* self) {
+    return QHoverEvent_SuperClone((QHoverEvent*)self);
 }
 
 QPoint* q_hoverevent_pos(void* self) {
@@ -1104,8 +1104,8 @@ void q_hoverevent_on_is_update_event(void* self, bool (*callback)()) {
     QHoverEvent_OnIsUpdateEvent((QHoverEvent*)self, (intptr_t)callback);
 }
 
-bool q_hoverevent_qbase_is_update_event(void* self) {
-    return QHoverEvent_QBaseIsUpdateEvent((QHoverEvent*)self);
+bool q_hoverevent_super_is_update_event(void* self) {
+    return QHoverEvent_SuperIsUpdateEvent((QHoverEvent*)self);
 }
 
 QPoint* q_hoverevent_old_pos(void* self) {
@@ -1261,8 +1261,8 @@ bool q_hoverevent_is_begin_event(void* self) {
     return QHoverEvent_IsBeginEvent((QHoverEvent*)self);
 }
 
-bool q_hoverevent_qbase_is_begin_event(void* self) {
-    return QHoverEvent_QBaseIsBeginEvent((QHoverEvent*)self);
+bool q_hoverevent_super_is_begin_event(void* self) {
+    return QHoverEvent_SuperIsBeginEvent((QHoverEvent*)self);
 }
 
 void q_hoverevent_on_is_begin_event(void* self, bool (*callback)()) {
@@ -1273,8 +1273,8 @@ bool q_hoverevent_is_end_event(void* self) {
     return QHoverEvent_IsEndEvent((QHoverEvent*)self);
 }
 
-bool q_hoverevent_qbase_is_end_event(void* self) {
-    return QHoverEvent_QBaseIsEndEvent((QHoverEvent*)self);
+bool q_hoverevent_super_is_end_event(void* self) {
+    return QHoverEvent_SuperIsEndEvent((QHoverEvent*)self);
 }
 
 void q_hoverevent_on_is_end_event(void* self, bool (*callback)()) {
@@ -1285,8 +1285,8 @@ void q_hoverevent_set_timestamp(void* self, uint64_t timestamp) {
     QHoverEvent_SetTimestamp((QHoverEvent*)self, timestamp);
 }
 
-void q_hoverevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QHoverEvent_QBaseSetTimestamp((QHoverEvent*)self, timestamp);
+void q_hoverevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QHoverEvent_SuperSetTimestamp((QHoverEvent*)self, timestamp);
 }
 
 void q_hoverevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -1297,8 +1297,8 @@ void q_hoverevent_set_accepted(void* self, bool accepted) {
     QHoverEvent_SetAccepted((QHoverEvent*)self, accepted);
 }
 
-void q_hoverevent_qbase_set_accepted(void* self, bool accepted) {
-    QHoverEvent_QBaseSetAccepted((QHoverEvent*)self, accepted);
+void q_hoverevent_super_set_accepted(void* self, bool accepted) {
+    QHoverEvent_SuperSetAccepted((QHoverEvent*)self, accepted);
 }
 
 void q_hoverevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -1329,8 +1329,8 @@ void q_wheelevent_on_clone(void* self, QWheelEvent* (*callback)()) {
     QWheelEvent_OnClone((QWheelEvent*)self, (intptr_t)callback);
 }
 
-QWheelEvent* q_wheelevent_qbase_clone(void* self) {
-    return QWheelEvent_QBaseClone((QWheelEvent*)self);
+QWheelEvent* q_wheelevent_super_clone(void* self) {
+    return QWheelEvent_SuperClone((QWheelEvent*)self);
 }
 
 QPoint* q_wheelevent_pixel_delta(void* self) {
@@ -1365,8 +1365,8 @@ void q_wheelevent_on_is_begin_event(void* self, bool (*callback)()) {
     QWheelEvent_OnIsBeginEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
-bool q_wheelevent_qbase_is_begin_event(void* self) {
-    return QWheelEvent_QBaseIsBeginEvent((QWheelEvent*)self);
+bool q_wheelevent_super_is_begin_event(void* self) {
+    return QWheelEvent_SuperIsBeginEvent((QWheelEvent*)self);
 }
 
 bool q_wheelevent_is_update_event(void* self) {
@@ -1377,8 +1377,8 @@ void q_wheelevent_on_is_update_event(void* self, bool (*callback)()) {
     QWheelEvent_OnIsUpdateEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
-bool q_wheelevent_qbase_is_update_event(void* self) {
-    return QWheelEvent_QBaseIsUpdateEvent((QWheelEvent*)self);
+bool q_wheelevent_super_is_update_event(void* self) {
+    return QWheelEvent_SuperIsUpdateEvent((QWheelEvent*)self);
 }
 
 bool q_wheelevent_is_end_event(void* self) {
@@ -1389,8 +1389,8 @@ void q_wheelevent_on_is_end_event(void* self, bool (*callback)()) {
     QWheelEvent_OnIsEndEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
-bool q_wheelevent_qbase_is_end_event(void* self) {
-    return QWheelEvent_QBaseIsEndEvent((QWheelEvent*)self);
+bool q_wheelevent_super_is_end_event(void* self) {
+    return QWheelEvent_SuperIsEndEvent((QWheelEvent*)self);
 }
 
 int32_t q_wheelevent_source(void* self) {
@@ -1542,8 +1542,8 @@ void q_wheelevent_set_timestamp(void* self, uint64_t timestamp) {
     QWheelEvent_SetTimestamp((QWheelEvent*)self, timestamp);
 }
 
-void q_wheelevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QWheelEvent_QBaseSetTimestamp((QWheelEvent*)self, timestamp);
+void q_wheelevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QWheelEvent_SuperSetTimestamp((QWheelEvent*)self, timestamp);
 }
 
 void q_wheelevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -1554,8 +1554,8 @@ void q_wheelevent_set_accepted(void* self, bool accepted) {
     QWheelEvent_SetAccepted((QWheelEvent*)self, accepted);
 }
 
-void q_wheelevent_qbase_set_accepted(void* self, bool accepted) {
-    QWheelEvent_QBaseSetAccepted((QWheelEvent*)self, accepted);
+void q_wheelevent_super_set_accepted(void* self, bool accepted) {
+    QWheelEvent_SuperSetAccepted((QWheelEvent*)self, accepted);
 }
 
 void q_wheelevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -1578,8 +1578,8 @@ void q_tabletevent_on_clone(void* self, QTabletEvent* (*callback)()) {
     QTabletEvent_OnClone((QTabletEvent*)self, (intptr_t)callback);
 }
 
-QTabletEvent* q_tabletevent_qbase_clone(void* self) {
-    return QTabletEvent_QBaseClone((QTabletEvent*)self);
+QTabletEvent* q_tabletevent_super_clone(void* self) {
+    return QTabletEvent_SuperClone((QTabletEvent*)self);
 }
 
 QPoint* q_tabletevent_pos(void* self) {
@@ -1795,8 +1795,8 @@ bool q_tabletevent_is_begin_event(void* self) {
     return QTabletEvent_IsBeginEvent((QTabletEvent*)self);
 }
 
-bool q_tabletevent_qbase_is_begin_event(void* self) {
-    return QTabletEvent_QBaseIsBeginEvent((QTabletEvent*)self);
+bool q_tabletevent_super_is_begin_event(void* self) {
+    return QTabletEvent_SuperIsBeginEvent((QTabletEvent*)self);
 }
 
 void q_tabletevent_on_is_begin_event(void* self, bool (*callback)()) {
@@ -1807,8 +1807,8 @@ bool q_tabletevent_is_update_event(void* self) {
     return QTabletEvent_IsUpdateEvent((QTabletEvent*)self);
 }
 
-bool q_tabletevent_qbase_is_update_event(void* self) {
-    return QTabletEvent_QBaseIsUpdateEvent((QTabletEvent*)self);
+bool q_tabletevent_super_is_update_event(void* self) {
+    return QTabletEvent_SuperIsUpdateEvent((QTabletEvent*)self);
 }
 
 void q_tabletevent_on_is_update_event(void* self, bool (*callback)()) {
@@ -1819,8 +1819,8 @@ bool q_tabletevent_is_end_event(void* self) {
     return QTabletEvent_IsEndEvent((QTabletEvent*)self);
 }
 
-bool q_tabletevent_qbase_is_end_event(void* self) {
-    return QTabletEvent_QBaseIsEndEvent((QTabletEvent*)self);
+bool q_tabletevent_super_is_end_event(void* self) {
+    return QTabletEvent_SuperIsEndEvent((QTabletEvent*)self);
 }
 
 void q_tabletevent_on_is_end_event(void* self, bool (*callback)()) {
@@ -1831,8 +1831,8 @@ void q_tabletevent_set_timestamp(void* self, uint64_t timestamp) {
     QTabletEvent_SetTimestamp((QTabletEvent*)self, timestamp);
 }
 
-void q_tabletevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QTabletEvent_QBaseSetTimestamp((QTabletEvent*)self, timestamp);
+void q_tabletevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QTabletEvent_SuperSetTimestamp((QTabletEvent*)self, timestamp);
 }
 
 void q_tabletevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -1843,8 +1843,8 @@ void q_tabletevent_set_accepted(void* self, bool accepted) {
     QTabletEvent_SetAccepted((QTabletEvent*)self, accepted);
 }
 
-void q_tabletevent_qbase_set_accepted(void* self, bool accepted) {
-    QTabletEvent_QBaseSetAccepted((QTabletEvent*)self, accepted);
+void q_tabletevent_super_set_accepted(void* self, bool accepted) {
+    QTabletEvent_SuperSetAccepted((QTabletEvent*)self, accepted);
 }
 
 void q_tabletevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -1875,8 +1875,8 @@ void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*callback)(
     QNativeGestureEvent_OnClone((QNativeGestureEvent*)self, (intptr_t)callback);
 }
 
-QNativeGestureEvent* q_nativegestureevent_qbase_clone(void* self) {
-    return QNativeGestureEvent_QBaseClone((QNativeGestureEvent*)self);
+QNativeGestureEvent* q_nativegestureevent_super_clone(void* self) {
+    return QNativeGestureEvent_SuperClone((QNativeGestureEvent*)self);
 }
 
 int32_t q_nativegestureevent_gesture_type(void* self) {
@@ -2060,8 +2060,8 @@ bool q_nativegestureevent_is_begin_event(void* self) {
     return QNativeGestureEvent_IsBeginEvent((QNativeGestureEvent*)self);
 }
 
-bool q_nativegestureevent_qbase_is_begin_event(void* self) {
-    return QNativeGestureEvent_QBaseIsBeginEvent((QNativeGestureEvent*)self);
+bool q_nativegestureevent_super_is_begin_event(void* self) {
+    return QNativeGestureEvent_SuperIsBeginEvent((QNativeGestureEvent*)self);
 }
 
 void q_nativegestureevent_on_is_begin_event(void* self, bool (*callback)()) {
@@ -2072,8 +2072,8 @@ bool q_nativegestureevent_is_update_event(void* self) {
     return QNativeGestureEvent_IsUpdateEvent((QNativeGestureEvent*)self);
 }
 
-bool q_nativegestureevent_qbase_is_update_event(void* self) {
-    return QNativeGestureEvent_QBaseIsUpdateEvent((QNativeGestureEvent*)self);
+bool q_nativegestureevent_super_is_update_event(void* self) {
+    return QNativeGestureEvent_SuperIsUpdateEvent((QNativeGestureEvent*)self);
 }
 
 void q_nativegestureevent_on_is_update_event(void* self, bool (*callback)()) {
@@ -2084,8 +2084,8 @@ bool q_nativegestureevent_is_end_event(void* self) {
     return QNativeGestureEvent_IsEndEvent((QNativeGestureEvent*)self);
 }
 
-bool q_nativegestureevent_qbase_is_end_event(void* self) {
-    return QNativeGestureEvent_QBaseIsEndEvent((QNativeGestureEvent*)self);
+bool q_nativegestureevent_super_is_end_event(void* self) {
+    return QNativeGestureEvent_SuperIsEndEvent((QNativeGestureEvent*)self);
 }
 
 void q_nativegestureevent_on_is_end_event(void* self, bool (*callback)()) {
@@ -2096,8 +2096,8 @@ void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp) {
     QNativeGestureEvent_SetTimestamp((QNativeGestureEvent*)self, timestamp);
 }
 
-void q_nativegestureevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QNativeGestureEvent_QBaseSetTimestamp((QNativeGestureEvent*)self, timestamp);
+void q_nativegestureevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QNativeGestureEvent_SuperSetTimestamp((QNativeGestureEvent*)self, timestamp);
 }
 
 void q_nativegestureevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -2108,8 +2108,8 @@ void q_nativegestureevent_set_accepted(void* self, bool accepted) {
     QNativeGestureEvent_SetAccepted((QNativeGestureEvent*)self, accepted);
 }
 
-void q_nativegestureevent_qbase_set_accepted(void* self, bool accepted) {
-    QNativeGestureEvent_QBaseSetAccepted((QNativeGestureEvent*)self, accepted);
+void q_nativegestureevent_super_set_accepted(void* self, bool accepted) {
+    QNativeGestureEvent_SuperSetAccepted((QNativeGestureEvent*)self, accepted);
 }
 
 void q_nativegestureevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2164,8 +2164,8 @@ void q_keyevent_on_clone(void* self, QKeyEvent* (*callback)()) {
     QKeyEvent_OnClone((QKeyEvent*)self, (intptr_t)callback);
 }
 
-QKeyEvent* q_keyevent_qbase_clone(void* self) {
-    return QKeyEvent_QBaseClone((QKeyEvent*)self);
+QKeyEvent* q_keyevent_super_clone(void* self) {
+    return QKeyEvent_SuperClone((QKeyEvent*)self);
 }
 
 int32_t q_keyevent_key(void* self) {
@@ -2271,8 +2271,8 @@ void q_keyevent_set_timestamp(void* self, uint64_t timestamp) {
     QKeyEvent_SetTimestamp((QKeyEvent*)self, timestamp);
 }
 
-void q_keyevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QKeyEvent_QBaseSetTimestamp((QKeyEvent*)self, timestamp);
+void q_keyevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QKeyEvent_SuperSetTimestamp((QKeyEvent*)self, timestamp);
 }
 
 void q_keyevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -2283,8 +2283,8 @@ void q_keyevent_set_accepted(void* self, bool accepted) {
     QKeyEvent_SetAccepted((QKeyEvent*)self, accepted);
 }
 
-void q_keyevent_qbase_set_accepted(void* self, bool accepted) {
-    QKeyEvent_QBaseSetAccepted((QKeyEvent*)self, accepted);
+void q_keyevent_super_set_accepted(void* self, bool accepted) {
+    QKeyEvent_SuperSetAccepted((QKeyEvent*)self, accepted);
 }
 
 void q_keyevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2311,8 +2311,8 @@ void q_focusevent_on_clone(void* self, QFocusEvent* (*callback)()) {
     QFocusEvent_OnClone((QFocusEvent*)self, (intptr_t)callback);
 }
 
-QFocusEvent* q_focusevent_qbase_clone(void* self) {
-    return QFocusEvent_QBaseClone((QFocusEvent*)self);
+QFocusEvent* q_focusevent_super_clone(void* self) {
+    return QFocusEvent_SuperClone((QFocusEvent*)self);
 }
 
 bool q_focusevent_got_focus(void* self) {
@@ -2371,8 +2371,8 @@ void q_focusevent_set_accepted(void* self, bool accepted) {
     QFocusEvent_SetAccepted((QFocusEvent*)self, accepted);
 }
 
-void q_focusevent_qbase_set_accepted(void* self, bool accepted) {
-    QFocusEvent_QBaseSetAccepted((QFocusEvent*)self, accepted);
+void q_focusevent_super_set_accepted(void* self, bool accepted) {
+    QFocusEvent_SuperSetAccepted((QFocusEvent*)self, accepted);
 }
 
 void q_focusevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2399,8 +2399,8 @@ void q_paintevent_on_clone(void* self, QPaintEvent* (*callback)()) {
     QPaintEvent_OnClone((QPaintEvent*)self, (intptr_t)callback);
 }
 
-QPaintEvent* q_paintevent_qbase_clone(void* self) {
-    return QPaintEvent_QBaseClone((QPaintEvent*)self);
+QPaintEvent* q_paintevent_super_clone(void* self) {
+    return QPaintEvent_SuperClone((QPaintEvent*)self);
 }
 
 const QRect* q_paintevent_rect(void* self) {
@@ -2455,8 +2455,8 @@ void q_paintevent_set_accepted(void* self, bool accepted) {
     QPaintEvent_SetAccepted((QPaintEvent*)self, accepted);
 }
 
-void q_paintevent_qbase_set_accepted(void* self, bool accepted) {
-    QPaintEvent_QBaseSetAccepted((QPaintEvent*)self, accepted);
+void q_paintevent_super_set_accepted(void* self, bool accepted) {
+    QPaintEvent_SuperSetAccepted((QPaintEvent*)self, accepted);
 }
 
 void q_paintevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2479,8 +2479,8 @@ void q_moveevent_on_clone(void* self, QMoveEvent* (*callback)()) {
     QMoveEvent_OnClone((QMoveEvent*)self, (intptr_t)callback);
 }
 
-QMoveEvent* q_moveevent_qbase_clone(void* self) {
-    return QMoveEvent_QBaseClone((QMoveEvent*)self);
+QMoveEvent* q_moveevent_super_clone(void* self) {
+    return QMoveEvent_SuperClone((QMoveEvent*)self);
 }
 
 const QPoint* q_moveevent_pos(void* self) {
@@ -2535,8 +2535,8 @@ void q_moveevent_set_accepted(void* self, bool accepted) {
     QMoveEvent_SetAccepted((QMoveEvent*)self, accepted);
 }
 
-void q_moveevent_qbase_set_accepted(void* self, bool accepted) {
-    QMoveEvent_QBaseSetAccepted((QMoveEvent*)self, accepted);
+void q_moveevent_super_set_accepted(void* self, bool accepted) {
+    QMoveEvent_SuperSetAccepted((QMoveEvent*)self, accepted);
 }
 
 void q_moveevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2559,8 +2559,8 @@ void q_exposeevent_on_clone(void* self, QExposeEvent* (*callback)()) {
     QExposeEvent_OnClone((QExposeEvent*)self, (intptr_t)callback);
 }
 
-QExposeEvent* q_exposeevent_qbase_clone(void* self) {
-    return QExposeEvent_QBaseClone((QExposeEvent*)self);
+QExposeEvent* q_exposeevent_super_clone(void* self) {
+    return QExposeEvent_SuperClone((QExposeEvent*)self);
 }
 
 const QRegion* q_exposeevent_region(void* self) {
@@ -2611,8 +2611,8 @@ void q_exposeevent_set_accepted(void* self, bool accepted) {
     QExposeEvent_SetAccepted((QExposeEvent*)self, accepted);
 }
 
-void q_exposeevent_qbase_set_accepted(void* self, bool accepted) {
-    QExposeEvent_QBaseSetAccepted((QExposeEvent*)self, accepted);
+void q_exposeevent_super_set_accepted(void* self, bool accepted) {
+    QExposeEvent_SuperSetAccepted((QExposeEvent*)self, accepted);
 }
 
 void q_exposeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2635,8 +2635,8 @@ void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*callba
     QPlatformSurfaceEvent_OnClone((QPlatformSurfaceEvent*)self, (intptr_t)callback);
 }
 
-QPlatformSurfaceEvent* q_platformsurfaceevent_qbase_clone(void* self) {
-    return QPlatformSurfaceEvent_QBaseClone((QPlatformSurfaceEvent*)self);
+QPlatformSurfaceEvent* q_platformsurfaceevent_super_clone(void* self) {
+    return QPlatformSurfaceEvent_SuperClone((QPlatformSurfaceEvent*)self);
 }
 
 int32_t q_platformsurfaceevent_surface_event_type(void* self) {
@@ -2687,8 +2687,8 @@ void q_platformsurfaceevent_set_accepted(void* self, bool accepted) {
     QPlatformSurfaceEvent_SetAccepted((QPlatformSurfaceEvent*)self, accepted);
 }
 
-void q_platformsurfaceevent_qbase_set_accepted(void* self, bool accepted) {
-    QPlatformSurfaceEvent_QBaseSetAccepted((QPlatformSurfaceEvent*)self, accepted);
+void q_platformsurfaceevent_super_set_accepted(void* self, bool accepted) {
+    QPlatformSurfaceEvent_SuperSetAccepted((QPlatformSurfaceEvent*)self, accepted);
 }
 
 void q_platformsurfaceevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2711,8 +2711,8 @@ void q_resizeevent_on_clone(void* self, QResizeEvent* (*callback)()) {
     QResizeEvent_OnClone((QResizeEvent*)self, (intptr_t)callback);
 }
 
-QResizeEvent* q_resizeevent_qbase_clone(void* self) {
-    return QResizeEvent_QBaseClone((QResizeEvent*)self);
+QResizeEvent* q_resizeevent_super_clone(void* self) {
+    return QResizeEvent_SuperClone((QResizeEvent*)self);
 }
 
 const QSize* q_resizeevent_size(void* self) {
@@ -2767,8 +2767,8 @@ void q_resizeevent_set_accepted(void* self, bool accepted) {
     QResizeEvent_SetAccepted((QResizeEvent*)self, accepted);
 }
 
-void q_resizeevent_qbase_set_accepted(void* self, bool accepted) {
-    QResizeEvent_QBaseSetAccepted((QResizeEvent*)self, accepted);
+void q_resizeevent_super_set_accepted(void* self, bool accepted) {
+    QResizeEvent_SuperSetAccepted((QResizeEvent*)self, accepted);
 }
 
 void q_resizeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2791,8 +2791,8 @@ void q_closeevent_on_clone(void* self, QCloseEvent* (*callback)()) {
     QCloseEvent_OnClone((QCloseEvent*)self, (intptr_t)callback);
 }
 
-QCloseEvent* q_closeevent_qbase_clone(void* self) {
-    return QCloseEvent_QBaseClone((QCloseEvent*)self);
+QCloseEvent* q_closeevent_super_clone(void* self) {
+    return QCloseEvent_SuperClone((QCloseEvent*)self);
 }
 
 int32_t q_closeevent_type(void* self) {
@@ -2839,8 +2839,8 @@ void q_closeevent_set_accepted(void* self, bool accepted) {
     QCloseEvent_SetAccepted((QCloseEvent*)self, accepted);
 }
 
-void q_closeevent_qbase_set_accepted(void* self, bool accepted) {
-    QCloseEvent_QBaseSetAccepted((QCloseEvent*)self, accepted);
+void q_closeevent_super_set_accepted(void* self, bool accepted) {
+    QCloseEvent_SuperSetAccepted((QCloseEvent*)self, accepted);
 }
 
 void q_closeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2863,8 +2863,8 @@ void q_icondragevent_on_clone(void* self, QIconDragEvent* (*callback)()) {
     QIconDragEvent_OnClone((QIconDragEvent*)self, (intptr_t)callback);
 }
 
-QIconDragEvent* q_icondragevent_qbase_clone(void* self) {
-    return QIconDragEvent_QBaseClone((QIconDragEvent*)self);
+QIconDragEvent* q_icondragevent_super_clone(void* self) {
+    return QIconDragEvent_SuperClone((QIconDragEvent*)self);
 }
 
 int32_t q_icondragevent_type(void* self) {
@@ -2911,8 +2911,8 @@ void q_icondragevent_set_accepted(void* self, bool accepted) {
     QIconDragEvent_SetAccepted((QIconDragEvent*)self, accepted);
 }
 
-void q_icondragevent_qbase_set_accepted(void* self, bool accepted) {
-    QIconDragEvent_QBaseSetAccepted((QIconDragEvent*)self, accepted);
+void q_icondragevent_super_set_accepted(void* self, bool accepted) {
+    QIconDragEvent_SuperSetAccepted((QIconDragEvent*)self, accepted);
 }
 
 void q_icondragevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -2935,8 +2935,8 @@ void q_showevent_on_clone(void* self, QShowEvent* (*callback)()) {
     QShowEvent_OnClone((QShowEvent*)self, (intptr_t)callback);
 }
 
-QShowEvent* q_showevent_qbase_clone(void* self) {
-    return QShowEvent_QBaseClone((QShowEvent*)self);
+QShowEvent* q_showevent_super_clone(void* self) {
+    return QShowEvent_SuperClone((QShowEvent*)self);
 }
 
 int32_t q_showevent_type(void* self) {
@@ -2983,8 +2983,8 @@ void q_showevent_set_accepted(void* self, bool accepted) {
     QShowEvent_SetAccepted((QShowEvent*)self, accepted);
 }
 
-void q_showevent_qbase_set_accepted(void* self, bool accepted) {
-    QShowEvent_QBaseSetAccepted((QShowEvent*)self, accepted);
+void q_showevent_super_set_accepted(void* self, bool accepted) {
+    QShowEvent_SuperSetAccepted((QShowEvent*)self, accepted);
 }
 
 void q_showevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3007,8 +3007,8 @@ void q_hideevent_on_clone(void* self, QHideEvent* (*callback)()) {
     QHideEvent_OnClone((QHideEvent*)self, (intptr_t)callback);
 }
 
-QHideEvent* q_hideevent_qbase_clone(void* self) {
-    return QHideEvent_QBaseClone((QHideEvent*)self);
+QHideEvent* q_hideevent_super_clone(void* self) {
+    return QHideEvent_SuperClone((QHideEvent*)self);
 }
 
 int32_t q_hideevent_type(void* self) {
@@ -3055,8 +3055,8 @@ void q_hideevent_set_accepted(void* self, bool accepted) {
     QHideEvent_SetAccepted((QHideEvent*)self, accepted);
 }
 
-void q_hideevent_qbase_set_accepted(void* self, bool accepted) {
-    QHideEvent_QBaseSetAccepted((QHideEvent*)self, accepted);
+void q_hideevent_super_set_accepted(void* self, bool accepted) {
+    QHideEvent_SuperSetAccepted((QHideEvent*)self, accepted);
 }
 
 void q_hideevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3087,8 +3087,8 @@ void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*callback)()) {
     QContextMenuEvent_OnClone((QContextMenuEvent*)self, (intptr_t)callback);
 }
 
-QContextMenuEvent* q_contextmenuevent_qbase_clone(void* self) {
-    return QContextMenuEvent_QBaseClone((QContextMenuEvent*)self);
+QContextMenuEvent* q_contextmenuevent_super_clone(void* self) {
+    return QContextMenuEvent_SuperClone((QContextMenuEvent*)self);
 }
 
 int32_t q_contextmenuevent_x(void* self) {
@@ -3183,8 +3183,8 @@ void q_contextmenuevent_set_timestamp(void* self, uint64_t timestamp) {
     QContextMenuEvent_SetTimestamp((QContextMenuEvent*)self, timestamp);
 }
 
-void q_contextmenuevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QContextMenuEvent_QBaseSetTimestamp((QContextMenuEvent*)self, timestamp);
+void q_contextmenuevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QContextMenuEvent_SuperSetTimestamp((QContextMenuEvent*)self, timestamp);
 }
 
 void q_contextmenuevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -3195,8 +3195,8 @@ void q_contextmenuevent_set_accepted(void* self, bool accepted) {
     QContextMenuEvent_SetAccepted((QContextMenuEvent*)self, accepted);
 }
 
-void q_contextmenuevent_qbase_set_accepted(void* self, bool accepted) {
-    QContextMenuEvent_QBaseSetAccepted((QContextMenuEvent*)self, accepted);
+void q_contextmenuevent_super_set_accepted(void* self, bool accepted) {
+    QContextMenuEvent_SuperSetAccepted((QContextMenuEvent*)self, accepted);
 }
 
 void q_contextmenuevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3223,8 +3223,8 @@ void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*callback)()) {
     QInputMethodEvent_OnClone((QInputMethodEvent*)self, (intptr_t)callback);
 }
 
-QInputMethodEvent* q_inputmethodevent_qbase_clone(void* self) {
-    return QInputMethodEvent_QBaseClone((QInputMethodEvent*)self);
+QInputMethodEvent* q_inputmethodevent_super_clone(void* self) {
+    return QInputMethodEvent_SuperClone((QInputMethodEvent*)self);
 }
 
 void q_inputmethodevent_set_commit_string(void* self, const char* commitString) {
@@ -3310,8 +3310,8 @@ void q_inputmethodevent_set_accepted(void* self, bool accepted) {
     QInputMethodEvent_SetAccepted((QInputMethodEvent*)self, accepted);
 }
 
-void q_inputmethodevent_qbase_set_accepted(void* self, bool accepted) {
-    QInputMethodEvent_QBaseSetAccepted((QInputMethodEvent*)self, accepted);
+void q_inputmethodevent_super_set_accepted(void* self, bool accepted) {
+    QInputMethodEvent_SuperSetAccepted((QInputMethodEvent*)self, accepted);
 }
 
 void q_inputmethodevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3334,8 +3334,8 @@ void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*call
     QInputMethodQueryEvent_OnClone((QInputMethodQueryEvent*)self, (intptr_t)callback);
 }
 
-QInputMethodQueryEvent* q_inputmethodqueryevent_qbase_clone(void* self) {
-    return QInputMethodQueryEvent_QBaseClone((QInputMethodQueryEvent*)self);
+QInputMethodQueryEvent* q_inputmethodqueryevent_super_clone(void* self) {
+    return QInputMethodQueryEvent_SuperClone((QInputMethodQueryEvent*)self);
 }
 
 int32_t q_inputmethodqueryevent_queries(void* self) {
@@ -3394,8 +3394,8 @@ void q_inputmethodqueryevent_set_accepted(void* self, bool accepted) {
     QInputMethodQueryEvent_SetAccepted((QInputMethodQueryEvent*)self, accepted);
 }
 
-void q_inputmethodqueryevent_qbase_set_accepted(void* self, bool accepted) {
-    QInputMethodQueryEvent_QBaseSetAccepted((QInputMethodQueryEvent*)self, accepted);
+void q_inputmethodqueryevent_super_set_accepted(void* self, bool accepted) {
+    QInputMethodQueryEvent_SuperSetAccepted((QInputMethodQueryEvent*)self, accepted);
 }
 
 void q_inputmethodqueryevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3422,8 +3422,8 @@ void q_dropevent_on_clone(void* self, QDropEvent* (*callback)()) {
     QDropEvent_OnClone((QDropEvent*)self, (intptr_t)callback);
 }
 
-QDropEvent* q_dropevent_qbase_clone(void* self) {
-    return QDropEvent_QBaseClone((QDropEvent*)self);
+QDropEvent* q_dropevent_super_clone(void* self) {
+    return QDropEvent_SuperClone((QDropEvent*)self);
 }
 
 QPoint* q_dropevent_pos(void* self) {
@@ -3526,8 +3526,8 @@ void q_dropevent_set_accepted(void* self, bool accepted) {
     QDropEvent_SetAccepted((QDropEvent*)self, accepted);
 }
 
-void q_dropevent_qbase_set_accepted(void* self, bool accepted) {
-    QDropEvent_QBaseSetAccepted((QDropEvent*)self, accepted);
+void q_dropevent_super_set_accepted(void* self, bool accepted) {
+    QDropEvent_SuperSetAccepted((QDropEvent*)self, accepted);
 }
 
 void q_dropevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3554,8 +3554,8 @@ void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*callback)()) {
     QDragMoveEvent_OnClone((QDragMoveEvent*)self, (intptr_t)callback);
 }
 
-QDragMoveEvent* q_dragmoveevent_qbase_clone(void* self) {
-    return QDragMoveEvent_QBaseClone((QDragMoveEvent*)self);
+QDragMoveEvent* q_dragmoveevent_super_clone(void* self) {
+    return QDragMoveEvent_SuperClone((QDragMoveEvent*)self);
 }
 
 QRect* q_dragmoveevent_answer_rect(void* self) {
@@ -3670,8 +3670,8 @@ void q_dragmoveevent_set_accepted(void* self, bool accepted) {
     QDragMoveEvent_SetAccepted((QDragMoveEvent*)self, accepted);
 }
 
-void q_dragmoveevent_qbase_set_accepted(void* self, bool accepted) {
-    QDragMoveEvent_QBaseSetAccepted((QDragMoveEvent*)self, accepted);
+void q_dragmoveevent_super_set_accepted(void* self, bool accepted) {
+    QDragMoveEvent_SuperSetAccepted((QDragMoveEvent*)self, accepted);
 }
 
 void q_dragmoveevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3694,8 +3694,8 @@ void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*callback)()) {
     QDragEnterEvent_OnClone((QDragEnterEvent*)self, (intptr_t)callback);
 }
 
-QDragEnterEvent* q_dragenterevent_qbase_clone(void* self) {
-    return QDragEnterEvent_QBaseClone((QDragEnterEvent*)self);
+QDragEnterEvent* q_dragenterevent_super_clone(void* self) {
+    return QDragEnterEvent_SuperClone((QDragEnterEvent*)self);
 }
 
 QRect* q_dragenterevent_answer_rect(void* self) {
@@ -3810,8 +3810,8 @@ void q_dragenterevent_set_accepted(void* self, bool accepted) {
     QDragEnterEvent_SetAccepted((QDragEnterEvent*)self, accepted);
 }
 
-void q_dragenterevent_qbase_set_accepted(void* self, bool accepted) {
-    QDragEnterEvent_QBaseSetAccepted((QDragEnterEvent*)self, accepted);
+void q_dragenterevent_super_set_accepted(void* self, bool accepted) {
+    QDragEnterEvent_SuperSetAccepted((QDragEnterEvent*)self, accepted);
 }
 
 void q_dragenterevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3834,8 +3834,8 @@ void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*callback)()) {
     QDragLeaveEvent_OnClone((QDragLeaveEvent*)self, (intptr_t)callback);
 }
 
-QDragLeaveEvent* q_dragleaveevent_qbase_clone(void* self) {
-    return QDragLeaveEvent_QBaseClone((QDragLeaveEvent*)self);
+QDragLeaveEvent* q_dragleaveevent_super_clone(void* self) {
+    return QDragLeaveEvent_SuperClone((QDragLeaveEvent*)self);
 }
 
 int32_t q_dragleaveevent_type(void* self) {
@@ -3882,8 +3882,8 @@ void q_dragleaveevent_set_accepted(void* self, bool accepted) {
     QDragLeaveEvent_SetAccepted((QDragLeaveEvent*)self, accepted);
 }
 
-void q_dragleaveevent_qbase_set_accepted(void* self, bool accepted) {
-    QDragLeaveEvent_QBaseSetAccepted((QDragLeaveEvent*)self, accepted);
+void q_dragleaveevent_super_set_accepted(void* self, bool accepted) {
+    QDragLeaveEvent_SuperSetAccepted((QDragLeaveEvent*)self, accepted);
 }
 
 void q_dragleaveevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -3906,8 +3906,8 @@ void q_helpevent_on_clone(void* self, QHelpEvent* (*callback)()) {
     QHelpEvent_OnClone((QHelpEvent*)self, (intptr_t)callback);
 }
 
-QHelpEvent* q_helpevent_qbase_clone(void* self) {
-    return QHelpEvent_QBaseClone((QHelpEvent*)self);
+QHelpEvent* q_helpevent_super_clone(void* self) {
+    return QHelpEvent_SuperClone((QHelpEvent*)self);
 }
 
 int32_t q_helpevent_x(void* self) {
@@ -3978,8 +3978,8 @@ void q_helpevent_set_accepted(void* self, bool accepted) {
     QHelpEvent_SetAccepted((QHelpEvent*)self, accepted);
 }
 
-void q_helpevent_qbase_set_accepted(void* self, bool accepted) {
-    QHelpEvent_QBaseSetAccepted((QHelpEvent*)self, accepted);
+void q_helpevent_super_set_accepted(void* self, bool accepted) {
+    QHelpEvent_SuperSetAccepted((QHelpEvent*)self, accepted);
 }
 
 void q_helpevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4002,8 +4002,8 @@ void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*callback)()) {
     QStatusTipEvent_OnClone((QStatusTipEvent*)self, (intptr_t)callback);
 }
 
-QStatusTipEvent* q_statustipevent_qbase_clone(void* self) {
-    return QStatusTipEvent_QBaseClone((QStatusTipEvent*)self);
+QStatusTipEvent* q_statustipevent_super_clone(void* self) {
+    return QStatusTipEvent_SuperClone((QStatusTipEvent*)self);
 }
 
 const char* q_statustipevent_tip(void* self) {
@@ -4057,8 +4057,8 @@ void q_statustipevent_set_accepted(void* self, bool accepted) {
     QStatusTipEvent_SetAccepted((QStatusTipEvent*)self, accepted);
 }
 
-void q_statustipevent_qbase_set_accepted(void* self, bool accepted) {
-    QStatusTipEvent_QBaseSetAccepted((QStatusTipEvent*)self, accepted);
+void q_statustipevent_super_set_accepted(void* self, bool accepted) {
+    QStatusTipEvent_SuperSetAccepted((QStatusTipEvent*)self, accepted);
 }
 
 void q_statustipevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4081,8 +4081,8 @@ void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*call
     QWhatsThisClickedEvent_OnClone((QWhatsThisClickedEvent*)self, (intptr_t)callback);
 }
 
-QWhatsThisClickedEvent* q_whatsthisclickedevent_qbase_clone(void* self) {
-    return QWhatsThisClickedEvent_QBaseClone((QWhatsThisClickedEvent*)self);
+QWhatsThisClickedEvent* q_whatsthisclickedevent_super_clone(void* self) {
+    return QWhatsThisClickedEvent_SuperClone((QWhatsThisClickedEvent*)self);
 }
 
 const char* q_whatsthisclickedevent_href(void* self) {
@@ -4136,8 +4136,8 @@ void q_whatsthisclickedevent_set_accepted(void* self, bool accepted) {
     QWhatsThisClickedEvent_SetAccepted((QWhatsThisClickedEvent*)self, accepted);
 }
 
-void q_whatsthisclickedevent_qbase_set_accepted(void* self, bool accepted) {
-    QWhatsThisClickedEvent_QBaseSetAccepted((QWhatsThisClickedEvent*)self, accepted);
+void q_whatsthisclickedevent_super_set_accepted(void* self, bool accepted) {
+    QWhatsThisClickedEvent_SuperSetAccepted((QWhatsThisClickedEvent*)self, accepted);
 }
 
 void q_whatsthisclickedevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4164,8 +4164,8 @@ void q_actionevent_on_clone(void* self, QActionEvent* (*callback)()) {
     QActionEvent_OnClone((QActionEvent*)self, (intptr_t)callback);
 }
 
-QActionEvent* q_actionevent_qbase_clone(void* self) {
-    return QActionEvent_QBaseClone((QActionEvent*)self);
+QActionEvent* q_actionevent_super_clone(void* self) {
+    return QActionEvent_SuperClone((QActionEvent*)self);
 }
 
 QAction* q_actionevent_action(void* self) {
@@ -4220,8 +4220,8 @@ void q_actionevent_set_accepted(void* self, bool accepted) {
     QActionEvent_SetAccepted((QActionEvent*)self, accepted);
 }
 
-void q_actionevent_qbase_set_accepted(void* self, bool accepted) {
-    QActionEvent_QBaseSetAccepted((QActionEvent*)self, accepted);
+void q_actionevent_super_set_accepted(void* self, bool accepted) {
+    QActionEvent_SuperSetAccepted((QActionEvent*)self, accepted);
 }
 
 void q_actionevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4248,8 +4248,8 @@ void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*callback)()) {
     QFileOpenEvent_OnClone((QFileOpenEvent*)self, (intptr_t)callback);
 }
 
-QFileOpenEvent* q_fileopenevent_qbase_clone(void* self) {
-    return QFileOpenEvent_QBaseClone((QFileOpenEvent*)self);
+QFileOpenEvent* q_fileopenevent_super_clone(void* self) {
+    return QFileOpenEvent_SuperClone((QFileOpenEvent*)self);
 }
 
 const char* q_fileopenevent_file(void* self) {
@@ -4311,8 +4311,8 @@ void q_fileopenevent_set_accepted(void* self, bool accepted) {
     QFileOpenEvent_SetAccepted((QFileOpenEvent*)self, accepted);
 }
 
-void q_fileopenevent_qbase_set_accepted(void* self, bool accepted) {
-    QFileOpenEvent_QBaseSetAccepted((QFileOpenEvent*)self, accepted);
+void q_fileopenevent_super_set_accepted(void* self, bool accepted) {
+    QFileOpenEvent_SuperSetAccepted((QFileOpenEvent*)self, accepted);
 }
 
 void q_fileopenevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4335,8 +4335,8 @@ void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*callback)(
     QToolBarChangeEvent_OnClone((QToolBarChangeEvent*)self, (intptr_t)callback);
 }
 
-QToolBarChangeEvent* q_toolbarchangeevent_qbase_clone(void* self) {
-    return QToolBarChangeEvent_QBaseClone((QToolBarChangeEvent*)self);
+QToolBarChangeEvent* q_toolbarchangeevent_super_clone(void* self) {
+    return QToolBarChangeEvent_SuperClone((QToolBarChangeEvent*)self);
 }
 
 bool q_toolbarchangeevent_toggle(void* self) {
@@ -4387,8 +4387,8 @@ void q_toolbarchangeevent_set_accepted(void* self, bool accepted) {
     QToolBarChangeEvent_SetAccepted((QToolBarChangeEvent*)self, accepted);
 }
 
-void q_toolbarchangeevent_qbase_set_accepted(void* self, bool accepted) {
-    QToolBarChangeEvent_QBaseSetAccepted((QToolBarChangeEvent*)self, accepted);
+void q_toolbarchangeevent_super_set_accepted(void* self, bool accepted) {
+    QToolBarChangeEvent_SuperSetAccepted((QToolBarChangeEvent*)self, accepted);
 }
 
 void q_toolbarchangeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4427,8 +4427,8 @@ void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*callback)()) {
     QShortcutEvent_OnClone((QShortcutEvent*)self, (intptr_t)callback);
 }
 
-QShortcutEvent* q_shortcutevent_qbase_clone(void* self) {
-    return QShortcutEvent_QBaseClone((QShortcutEvent*)self);
+QShortcutEvent* q_shortcutevent_super_clone(void* self) {
+    return QShortcutEvent_SuperClone((QShortcutEvent*)self);
 }
 
 const QKeySequence* q_shortcutevent_key(void* self) {
@@ -4487,8 +4487,8 @@ void q_shortcutevent_set_accepted(void* self, bool accepted) {
     QShortcutEvent_SetAccepted((QShortcutEvent*)self, accepted);
 }
 
-void q_shortcutevent_qbase_set_accepted(void* self, bool accepted) {
-    QShortcutEvent_QBaseSetAccepted((QShortcutEvent*)self, accepted);
+void q_shortcutevent_super_set_accepted(void* self, bool accepted) {
+    QShortcutEvent_SuperSetAccepted((QShortcutEvent*)self, accepted);
 }
 
 void q_shortcutevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4515,8 +4515,8 @@ void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*ca
     QWindowStateChangeEvent_OnClone((QWindowStateChangeEvent*)self, (intptr_t)callback);
 }
 
-QWindowStateChangeEvent* q_windowstatechangeevent_qbase_clone(void* self) {
-    return QWindowStateChangeEvent_QBaseClone((QWindowStateChangeEvent*)self);
+QWindowStateChangeEvent* q_windowstatechangeevent_super_clone(void* self) {
+    return QWindowStateChangeEvent_SuperClone((QWindowStateChangeEvent*)self);
 }
 
 int32_t q_windowstatechangeevent_old_state(void* self) {
@@ -4571,8 +4571,8 @@ void q_windowstatechangeevent_set_accepted(void* self, bool accepted) {
     QWindowStateChangeEvent_SetAccepted((QWindowStateChangeEvent*)self, accepted);
 }
 
-void q_windowstatechangeevent_qbase_set_accepted(void* self, bool accepted) {
-    QWindowStateChangeEvent_QBaseSetAccepted((QWindowStateChangeEvent*)self, accepted);
+void q_windowstatechangeevent_super_set_accepted(void* self, bool accepted) {
+    QWindowStateChangeEvent_SuperSetAccepted((QWindowStateChangeEvent*)self, accepted);
 }
 
 void q_windowstatechangeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4615,8 +4615,8 @@ void q_touchevent_on_clone(void* self, QTouchEvent* (*callback)()) {
     QTouchEvent_OnClone((QTouchEvent*)self, (intptr_t)callback);
 }
 
-QTouchEvent* q_touchevent_qbase_clone(void* self) {
-    return QTouchEvent_QBaseClone((QTouchEvent*)self);
+QTouchEvent* q_touchevent_super_clone(void* self) {
+    return QTouchEvent_SuperClone((QTouchEvent*)self);
 }
 
 QObject* q_touchevent_target(void* self) {
@@ -4640,8 +4640,8 @@ void q_touchevent_on_is_begin_event(void* self, bool (*callback)()) {
     QTouchEvent_OnIsBeginEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
-bool q_touchevent_qbase_is_begin_event(void* self) {
-    return QTouchEvent_QBaseIsBeginEvent((QTouchEvent*)self);
+bool q_touchevent_super_is_begin_event(void* self) {
+    return QTouchEvent_SuperIsBeginEvent((QTouchEvent*)self);
 }
 
 bool q_touchevent_is_update_event(void* self) {
@@ -4652,8 +4652,8 @@ void q_touchevent_on_is_update_event(void* self, bool (*callback)()) {
     QTouchEvent_OnIsUpdateEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
-bool q_touchevent_qbase_is_update_event(void* self) {
-    return QTouchEvent_QBaseIsUpdateEvent((QTouchEvent*)self);
+bool q_touchevent_super_is_update_event(void* self) {
+    return QTouchEvent_SuperIsUpdateEvent((QTouchEvent*)self);
 }
 
 bool q_touchevent_is_end_event(void* self) {
@@ -4664,8 +4664,8 @@ void q_touchevent_on_is_end_event(void* self, bool (*callback)()) {
     QTouchEvent_OnIsEndEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
-bool q_touchevent_qbase_is_end_event(void* self) {
-    return QTouchEvent_QBaseIsEndEvent((QTouchEvent*)self);
+bool q_touchevent_super_is_end_event(void* self) {
+    return QTouchEvent_SuperIsEndEvent((QTouchEvent*)self);
 }
 
 const QPointingDevice* q_touchevent_pointing_device(void* self) {
@@ -4785,8 +4785,8 @@ void q_touchevent_set_timestamp(void* self, uint64_t timestamp) {
     QTouchEvent_SetTimestamp((QTouchEvent*)self, timestamp);
 }
 
-void q_touchevent_qbase_set_timestamp(void* self, uint64_t timestamp) {
-    QTouchEvent_QBaseSetTimestamp((QTouchEvent*)self, timestamp);
+void q_touchevent_super_set_timestamp(void* self, uint64_t timestamp) {
+    QTouchEvent_SuperSetTimestamp((QTouchEvent*)self, timestamp);
 }
 
 void q_touchevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)) {
@@ -4797,8 +4797,8 @@ void q_touchevent_set_accepted(void* self, bool accepted) {
     QTouchEvent_SetAccepted((QTouchEvent*)self, accepted);
 }
 
-void q_touchevent_qbase_set_accepted(void* self, bool accepted) {
-    QTouchEvent_QBaseSetAccepted((QTouchEvent*)self, accepted);
+void q_touchevent_super_set_accepted(void* self, bool accepted) {
+    QTouchEvent_SuperSetAccepted((QTouchEvent*)self, accepted);
 }
 
 void q_touchevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4821,8 +4821,8 @@ void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*callback)(
     QScrollPrepareEvent_OnClone((QScrollPrepareEvent*)self, (intptr_t)callback);
 }
 
-QScrollPrepareEvent* q_scrollprepareevent_qbase_clone(void* self) {
-    return QScrollPrepareEvent_QBaseClone((QScrollPrepareEvent*)self);
+QScrollPrepareEvent* q_scrollprepareevent_super_clone(void* self) {
+    return QScrollPrepareEvent_SuperClone((QScrollPrepareEvent*)self);
 }
 
 QPointF* q_scrollprepareevent_start_pos(void* self) {
@@ -4897,8 +4897,8 @@ void q_scrollprepareevent_set_accepted(void* self, bool accepted) {
     QScrollPrepareEvent_SetAccepted((QScrollPrepareEvent*)self, accepted);
 }
 
-void q_scrollprepareevent_qbase_set_accepted(void* self, bool accepted) {
-    QScrollPrepareEvent_QBaseSetAccepted((QScrollPrepareEvent*)self, accepted);
+void q_scrollprepareevent_super_set_accepted(void* self, bool accepted) {
+    QScrollPrepareEvent_SuperSetAccepted((QScrollPrepareEvent*)self, accepted);
 }
 
 void q_scrollprepareevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -4921,8 +4921,8 @@ void q_scrollevent_on_clone(void* self, QScrollEvent* (*callback)()) {
     QScrollEvent_OnClone((QScrollEvent*)self, (intptr_t)callback);
 }
 
-QScrollEvent* q_scrollevent_qbase_clone(void* self) {
-    return QScrollEvent_QBaseClone((QScrollEvent*)self);
+QScrollEvent* q_scrollevent_super_clone(void* self) {
+    return QScrollEvent_SuperClone((QScrollEvent*)self);
 }
 
 QPointF* q_scrollevent_content_pos(void* self) {
@@ -4981,8 +4981,8 @@ void q_scrollevent_set_accepted(void* self, bool accepted) {
     QScrollEvent_SetAccepted((QScrollEvent*)self, accepted);
 }
 
-void q_scrollevent_qbase_set_accepted(void* self, bool accepted) {
-    QScrollEvent_QBaseSetAccepted((QScrollEvent*)self, accepted);
+void q_scrollevent_super_set_accepted(void* self, bool accepted) {
+    QScrollEvent_SuperSetAccepted((QScrollEvent*)self, accepted);
 }
 
 void q_scrollevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -5005,8 +5005,8 @@ void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChang
     QScreenOrientationChangeEvent_OnClone((QScreenOrientationChangeEvent*)self, (intptr_t)callback);
 }
 
-QScreenOrientationChangeEvent* q_screenorientationchangeevent_qbase_clone(void* self) {
-    return QScreenOrientationChangeEvent_QBaseClone((QScreenOrientationChangeEvent*)self);
+QScreenOrientationChangeEvent* q_screenorientationchangeevent_super_clone(void* self) {
+    return QScreenOrientationChangeEvent_SuperClone((QScreenOrientationChangeEvent*)self);
 }
 
 QScreen* q_screenorientationchangeevent_screen(void* self) {
@@ -5061,8 +5061,8 @@ void q_screenorientationchangeevent_set_accepted(void* self, bool accepted) {
     QScreenOrientationChangeEvent_SetAccepted((QScreenOrientationChangeEvent*)self, accepted);
 }
 
-void q_screenorientationchangeevent_qbase_set_accepted(void* self, bool accepted) {
-    QScreenOrientationChangeEvent_QBaseSetAccepted((QScreenOrientationChangeEvent*)self, accepted);
+void q_screenorientationchangeevent_super_set_accepted(void* self, bool accepted) {
+    QScreenOrientationChangeEvent_SuperSetAccepted((QScreenOrientationChangeEvent*)self, accepted);
 }
 
 void q_screenorientationchangeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -5085,8 +5085,8 @@ void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeE
     QApplicationStateChangeEvent_OnClone((QApplicationStateChangeEvent*)self, (intptr_t)callback);
 }
 
-QApplicationStateChangeEvent* q_applicationstatechangeevent_qbase_clone(void* self) {
-    return QApplicationStateChangeEvent_QBaseClone((QApplicationStateChangeEvent*)self);
+QApplicationStateChangeEvent* q_applicationstatechangeevent_super_clone(void* self) {
+    return QApplicationStateChangeEvent_SuperClone((QApplicationStateChangeEvent*)self);
 }
 
 int32_t q_applicationstatechangeevent_application_state(void* self) {
@@ -5137,8 +5137,8 @@ void q_applicationstatechangeevent_set_accepted(void* self, bool accepted) {
     QApplicationStateChangeEvent_SetAccepted((QApplicationStateChangeEvent*)self, accepted);
 }
 
-void q_applicationstatechangeevent_qbase_set_accepted(void* self, bool accepted) {
-    QApplicationStateChangeEvent_QBaseSetAccepted((QApplicationStateChangeEvent*)self, accepted);
+void q_applicationstatechangeevent_super_set_accepted(void* self, bool accepted) {
+    QApplicationStateChangeEvent_SuperSetAccepted((QApplicationStateChangeEvent*)self, accepted);
 }
 
 void q_applicationstatechangeevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -5161,8 +5161,8 @@ void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*callback)()) {
     QChildWindowEvent_OnClone((QChildWindowEvent*)self, (intptr_t)callback);
 }
 
-QChildWindowEvent* q_childwindowevent_qbase_clone(void* self) {
-    return QChildWindowEvent_QBaseClone((QChildWindowEvent*)self);
+QChildWindowEvent* q_childwindowevent_super_clone(void* self) {
+    return QChildWindowEvent_SuperClone((QChildWindowEvent*)self);
 }
 
 QWindow* q_childwindowevent_child(void* self) {
@@ -5213,8 +5213,8 @@ void q_childwindowevent_set_accepted(void* self, bool accepted) {
     QChildWindowEvent_SetAccepted((QChildWindowEvent*)self, accepted);
 }
 
-void q_childwindowevent_qbase_set_accepted(void* self, bool accepted) {
-    QChildWindowEvent_QBaseSetAccepted((QChildWindowEvent*)self, accepted);
+void q_childwindowevent_super_set_accepted(void* self, bool accepted) {
+    QChildWindowEvent_SuperSetAccepted((QChildWindowEvent*)self, accepted);
 }
 
 void q_childwindowevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {

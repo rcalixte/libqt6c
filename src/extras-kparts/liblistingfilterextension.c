@@ -19,8 +19,8 @@ void k_parts__listingfilterextension_on_meta_object(void* self, const QMetaObjec
     KParts__ListingFilterExtension_OnMetaObject((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__listingfilterextension_qbase_meta_object(void* self) {
-    return KParts__ListingFilterExtension_QBaseMetaObject((KParts__ListingFilterExtension*)self);
+const QMetaObject* k_parts__listingfilterextension_super_meta_object(void* self) {
+    return KParts__ListingFilterExtension_SuperMetaObject((KParts__ListingFilterExtension*)self);
 }
 
 void* k_parts__listingfilterextension_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void k_parts__listingfilterextension_on_metacast(void* self, void* (*callback)(v
     KParts__ListingFilterExtension_OnMetacast((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-void* k_parts__listingfilterextension_qbase_metacast(void* self, const char* param1) {
-    return KParts__ListingFilterExtension_QBaseMetacast((KParts__ListingFilterExtension*)self, param1);
+void* k_parts__listingfilterextension_super_metacast(void* self, const char* param1) {
+    return KParts__ListingFilterExtension_SuperMetacast((KParts__ListingFilterExtension*)self, param1);
 }
 
 int32_t k_parts__listingfilterextension_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void k_parts__listingfilterextension_on_metacall(void* self, int32_t (*callback)
     KParts__ListingFilterExtension_OnMetacall((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__listingfilterextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__ListingFilterExtension_QBaseMetacall((KParts__ListingFilterExtension*)self, param1, param2, param3);
+int32_t k_parts__listingfilterextension_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__ListingFilterExtension_SuperMetacall((KParts__ListingFilterExtension*)self, param1, param2, param3);
 }
 
 const char* k_parts__listingfilterextension_tr(const char* s) {
@@ -66,8 +66,8 @@ void k_parts__listingfilterextension_on_supported_filter_modes(void* self, int32
     KParts__ListingFilterExtension_OnSupportedFilterModes((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__listingfilterextension_qbase_supported_filter_modes(void* self) {
-    return KParts__ListingFilterExtension_QBaseSupportedFilterModes((KParts__ListingFilterExtension*)self);
+int32_t k_parts__listingfilterextension_super_supported_filter_modes(void* self) {
+    return KParts__ListingFilterExtension_SuperSupportedFilterModes((KParts__ListingFilterExtension*)self);
 }
 
 bool k_parts__listingfilterextension_supports_multiple_filters(void* self, int32_t mode) {
@@ -78,8 +78,8 @@ void k_parts__listingfilterextension_on_supports_multiple_filters(void* self, bo
     KParts__ListingFilterExtension_OnSupportsMultipleFilters((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-bool k_parts__listingfilterextension_qbase_supports_multiple_filters(void* self, int32_t mode) {
-    return KParts__ListingFilterExtension_QBaseSupportsMultipleFilters((KParts__ListingFilterExtension*)self, mode);
+bool k_parts__listingfilterextension_super_supports_multiple_filters(void* self, int32_t mode) {
+    return KParts__ListingFilterExtension_SuperSupportsMultipleFilters((KParts__ListingFilterExtension*)self, mode);
 }
 
 QVariant* k_parts__listingfilterextension_filter(void* self, int32_t mode) {
@@ -90,8 +90,8 @@ void k_parts__listingfilterextension_on_filter(void* self, QVariant* (*callback)
     KParts__ListingFilterExtension_OnFilter((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-QVariant* k_parts__listingfilterextension_qbase_filter(void* self, int32_t mode) {
-    return KParts__ListingFilterExtension_QBaseFilter((KParts__ListingFilterExtension*)self, mode);
+QVariant* k_parts__listingfilterextension_super_filter(void* self, int32_t mode) {
+    return KParts__ListingFilterExtension_SuperFilter((KParts__ListingFilterExtension*)self, mode);
 }
 
 void k_parts__listingfilterextension_set_filter(void* self, int32_t mode, void* filter) {
@@ -102,8 +102,8 @@ void k_parts__listingfilterextension_on_set_filter(void* self, void (*callback)(
     KParts__ListingFilterExtension_OnSetFilter((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__listingfilterextension_qbase_set_filter(void* self, int32_t mode, void* filter) {
-    KParts__ListingFilterExtension_QBaseSetFilter((KParts__ListingFilterExtension*)self, mode, (QVariant*)filter);
+void k_parts__listingfilterextension_super_set_filter(void* self, int32_t mode, void* filter) {
+    KParts__ListingFilterExtension_SuperSetFilter((KParts__ListingFilterExtension*)self, mode, (QVariant*)filter);
 }
 
 const char* k_parts__listingfilterextension_tr2(const char* s, const char* c) {
@@ -335,8 +335,8 @@ bool k_parts__listingfilterextension_event(void* self, void* event) {
     return KParts__ListingFilterExtension_Event((KParts__ListingFilterExtension*)self, (QEvent*)event);
 }
 
-bool k_parts__listingfilterextension_qbase_event(void* self, void* event) {
-    return KParts__ListingFilterExtension_QBaseEvent((KParts__ListingFilterExtension*)self, (QEvent*)event);
+bool k_parts__listingfilterextension_super_event(void* self, void* event) {
+    return KParts__ListingFilterExtension_SuperEvent((KParts__ListingFilterExtension*)self, (QEvent*)event);
 }
 
 void k_parts__listingfilterextension_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -347,8 +347,8 @@ bool k_parts__listingfilterextension_event_filter(void* self, void* watched, voi
     return KParts__ListingFilterExtension_EventFilter((KParts__ListingFilterExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_parts__listingfilterextension_qbase_event_filter(void* self, void* watched, void* event) {
-    return KParts__ListingFilterExtension_QBaseEventFilter((KParts__ListingFilterExtension*)self, (QObject*)watched, (QEvent*)event);
+bool k_parts__listingfilterextension_super_event_filter(void* self, void* watched, void* event) {
+    return KParts__ListingFilterExtension_SuperEventFilter((KParts__ListingFilterExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_parts__listingfilterextension_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -359,8 +359,8 @@ void k_parts__listingfilterextension_timer_event(void* self, void* event) {
     KParts__ListingFilterExtension_TimerEvent((KParts__ListingFilterExtension*)self, (QTimerEvent*)event);
 }
 
-void k_parts__listingfilterextension_qbase_timer_event(void* self, void* event) {
-    KParts__ListingFilterExtension_QBaseTimerEvent((KParts__ListingFilterExtension*)self, (QTimerEvent*)event);
+void k_parts__listingfilterextension_super_timer_event(void* self, void* event) {
+    KParts__ListingFilterExtension_SuperTimerEvent((KParts__ListingFilterExtension*)self, (QTimerEvent*)event);
 }
 
 void k_parts__listingfilterextension_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -371,8 +371,8 @@ void k_parts__listingfilterextension_child_event(void* self, void* event) {
     KParts__ListingFilterExtension_ChildEvent((KParts__ListingFilterExtension*)self, (QChildEvent*)event);
 }
 
-void k_parts__listingfilterextension_qbase_child_event(void* self, void* event) {
-    KParts__ListingFilterExtension_QBaseChildEvent((KParts__ListingFilterExtension*)self, (QChildEvent*)event);
+void k_parts__listingfilterextension_super_child_event(void* self, void* event) {
+    KParts__ListingFilterExtension_SuperChildEvent((KParts__ListingFilterExtension*)self, (QChildEvent*)event);
 }
 
 void k_parts__listingfilterextension_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -383,8 +383,8 @@ void k_parts__listingfilterextension_custom_event(void* self, void* event) {
     KParts__ListingFilterExtension_CustomEvent((KParts__ListingFilterExtension*)self, (QEvent*)event);
 }
 
-void k_parts__listingfilterextension_qbase_custom_event(void* self, void* event) {
-    KParts__ListingFilterExtension_QBaseCustomEvent((KParts__ListingFilterExtension*)self, (QEvent*)event);
+void k_parts__listingfilterextension_super_custom_event(void* self, void* event) {
+    KParts__ListingFilterExtension_SuperCustomEvent((KParts__ListingFilterExtension*)self, (QEvent*)event);
 }
 
 void k_parts__listingfilterextension_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -395,8 +395,8 @@ void k_parts__listingfilterextension_connect_notify(void* self, void* signal) {
     KParts__ListingFilterExtension_ConnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__listingfilterextension_qbase_connect_notify(void* self, void* signal) {
-    KParts__ListingFilterExtension_QBaseConnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
+void k_parts__listingfilterextension_super_connect_notify(void* self, void* signal) {
+    KParts__ListingFilterExtension_SuperConnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingfilterextension_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ void k_parts__listingfilterextension_disconnect_notify(void* self, void* signal)
     KParts__ListingFilterExtension_DisconnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__listingfilterextension_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__ListingFilterExtension_QBaseDisconnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
+void k_parts__listingfilterextension_super_disconnect_notify(void* self, void* signal) {
+    KParts__ListingFilterExtension_SuperDisconnectNotify((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingfilterextension_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -419,8 +419,8 @@ QObject* k_parts__listingfilterextension_sender(void* self) {
     return KParts__ListingFilterExtension_Sender((KParts__ListingFilterExtension*)self);
 }
 
-QObject* k_parts__listingfilterextension_qbase_sender(void* self) {
-    return KParts__ListingFilterExtension_QBaseSender((KParts__ListingFilterExtension*)self);
+QObject* k_parts__listingfilterextension_super_sender(void* self) {
+    return KParts__ListingFilterExtension_SuperSender((KParts__ListingFilterExtension*)self);
 }
 
 void k_parts__listingfilterextension_on_sender(void* self, QObject* (*callback)()) {
@@ -431,8 +431,8 @@ int32_t k_parts__listingfilterextension_sender_signal_index(void* self) {
     return KParts__ListingFilterExtension_SenderSignalIndex((KParts__ListingFilterExtension*)self);
 }
 
-int32_t k_parts__listingfilterextension_qbase_sender_signal_index(void* self) {
-    return KParts__ListingFilterExtension_QBaseSenderSignalIndex((KParts__ListingFilterExtension*)self);
+int32_t k_parts__listingfilterextension_super_sender_signal_index(void* self) {
+    return KParts__ListingFilterExtension_SuperSenderSignalIndex((KParts__ListingFilterExtension*)self);
 }
 
 void k_parts__listingfilterextension_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -443,8 +443,8 @@ int32_t k_parts__listingfilterextension_receivers(void* self, const char* signal
     return KParts__ListingFilterExtension_Receivers((KParts__ListingFilterExtension*)self, signal);
 }
 
-int32_t k_parts__listingfilterextension_qbase_receivers(void* self, const char* signal) {
-    return KParts__ListingFilterExtension_QBaseReceivers((KParts__ListingFilterExtension*)self, signal);
+int32_t k_parts__listingfilterextension_super_receivers(void* self, const char* signal) {
+    return KParts__ListingFilterExtension_SuperReceivers((KParts__ListingFilterExtension*)self, signal);
 }
 
 void k_parts__listingfilterextension_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -455,8 +455,8 @@ bool k_parts__listingfilterextension_is_signal_connected(void* self, void* signa
     return KParts__ListingFilterExtension_IsSignalConnected((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__listingfilterextension_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__ListingFilterExtension_QBaseIsSignalConnected((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
+bool k_parts__listingfilterextension_super_is_signal_connected(void* self, void* signal) {
+    return KParts__ListingFilterExtension_SuperIsSignalConnected((KParts__ListingFilterExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingfilterextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

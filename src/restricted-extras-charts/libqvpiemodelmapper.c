@@ -24,8 +24,8 @@ void q_vpiemodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)
     QVPieModelMapper_OnMetaObject((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_vpiemodelmapper_qbase_meta_object(void* self) {
-    return QVPieModelMapper_QBaseMetaObject((QVPieModelMapper*)self);
+const QMetaObject* q_vpiemodelmapper_super_meta_object(void* self) {
+    return QVPieModelMapper_SuperMetaObject((QVPieModelMapper*)self);
 }
 
 void* q_vpiemodelmapper_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_vpiemodelmapper_on_metacast(void* self, void* (*callback)(void*, const ch
     QVPieModelMapper_OnMetacast((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-void* q_vpiemodelmapper_qbase_metacast(void* self, const char* param1) {
-    return QVPieModelMapper_QBaseMetacast((QVPieModelMapper*)self, param1);
+void* q_vpiemodelmapper_super_metacast(void* self, const char* param1) {
+    return QVPieModelMapper_SuperMetacast((QVPieModelMapper*)self, param1);
 }
 
 int32_t q_vpiemodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_vpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QVPieModelMapper_OnMetacall((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_vpiemodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QVPieModelMapper_QBaseMetacall((QVPieModelMapper*)self, param1, param2, param3);
+int32_t q_vpiemodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QVPieModelMapper_SuperMetacall((QVPieModelMapper*)self, param1, param2, param3);
 }
 
 const char* q_vpiemodelmapper_tr(const char* s) {
@@ -384,8 +384,8 @@ bool q_vpiemodelmapper_event(void* self, void* event) {
     return QVPieModelMapper_Event((QVPieModelMapper*)self, (QEvent*)event);
 }
 
-bool q_vpiemodelmapper_qbase_event(void* self, void* event) {
-    return QVPieModelMapper_QBaseEvent((QVPieModelMapper*)self, (QEvent*)event);
+bool q_vpiemodelmapper_super_event(void* self, void* event) {
+    return QVPieModelMapper_SuperEvent((QVPieModelMapper*)self, (QEvent*)event);
 }
 
 void q_vpiemodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -396,8 +396,8 @@ bool q_vpiemodelmapper_event_filter(void* self, void* watched, void* event) {
     return QVPieModelMapper_EventFilter((QVPieModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_vpiemodelmapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return QVPieModelMapper_QBaseEventFilter((QVPieModelMapper*)self, (QObject*)watched, (QEvent*)event);
+bool q_vpiemodelmapper_super_event_filter(void* self, void* watched, void* event) {
+    return QVPieModelMapper_SuperEventFilter((QVPieModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_vpiemodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -408,8 +408,8 @@ void q_vpiemodelmapper_timer_event(void* self, void* event) {
     QVPieModelMapper_TimerEvent((QVPieModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_vpiemodelmapper_qbase_timer_event(void* self, void* event) {
-    QVPieModelMapper_QBaseTimerEvent((QVPieModelMapper*)self, (QTimerEvent*)event);
+void q_vpiemodelmapper_super_timer_event(void* self, void* event) {
+    QVPieModelMapper_SuperTimerEvent((QVPieModelMapper*)self, (QTimerEvent*)event);
 }
 
 void q_vpiemodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void q_vpiemodelmapper_child_event(void* self, void* event) {
     QVPieModelMapper_ChildEvent((QVPieModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_vpiemodelmapper_qbase_child_event(void* self, void* event) {
-    QVPieModelMapper_QBaseChildEvent((QVPieModelMapper*)self, (QChildEvent*)event);
+void q_vpiemodelmapper_super_child_event(void* self, void* event) {
+    QVPieModelMapper_SuperChildEvent((QVPieModelMapper*)self, (QChildEvent*)event);
 }
 
 void q_vpiemodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void q_vpiemodelmapper_custom_event(void* self, void* event) {
     QVPieModelMapper_CustomEvent((QVPieModelMapper*)self, (QEvent*)event);
 }
 
-void q_vpiemodelmapper_qbase_custom_event(void* self, void* event) {
-    QVPieModelMapper_QBaseCustomEvent((QVPieModelMapper*)self, (QEvent*)event);
+void q_vpiemodelmapper_super_custom_event(void* self, void* event) {
+    QVPieModelMapper_SuperCustomEvent((QVPieModelMapper*)self, (QEvent*)event);
 }
 
 void q_vpiemodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void q_vpiemodelmapper_connect_notify(void* self, void* signal) {
     QVPieModelMapper_ConnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vpiemodelmapper_qbase_connect_notify(void* self, void* signal) {
-    QVPieModelMapper_QBaseConnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
+void q_vpiemodelmapper_super_connect_notify(void* self, void* signal) {
+    QVPieModelMapper_SuperConnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vpiemodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ void q_vpiemodelmapper_disconnect_notify(void* self, void* signal) {
     QVPieModelMapper_DisconnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vpiemodelmapper_qbase_disconnect_notify(void* self, void* signal) {
-    QVPieModelMapper_QBaseDisconnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
+void q_vpiemodelmapper_super_disconnect_notify(void* self, void* signal) {
+    QVPieModelMapper_SuperDisconnectNotify((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vpiemodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -468,8 +468,8 @@ int32_t q_vpiemodelmapper_first(void* self) {
     return QVPieModelMapper_First((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_first(void* self) {
-    return QVPieModelMapper_QBaseFirst((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_first(void* self) {
+    return QVPieModelMapper_SuperFirst((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_first(void* self, int32_t (*callback)()) {
@@ -480,8 +480,8 @@ void q_vpiemodelmapper_set_first(void* self, int first) {
     QVPieModelMapper_SetFirst((QVPieModelMapper*)self, first);
 }
 
-void q_vpiemodelmapper_qbase_set_first(void* self, int first) {
-    QVPieModelMapper_QBaseSetFirst((QVPieModelMapper*)self, first);
+void q_vpiemodelmapper_super_set_first(void* self, int first) {
+    QVPieModelMapper_SuperSetFirst((QVPieModelMapper*)self, first);
 }
 
 void q_vpiemodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
@@ -492,8 +492,8 @@ int32_t q_vpiemodelmapper_count(void* self) {
     return QVPieModelMapper_Count((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_count(void* self) {
-    return QVPieModelMapper_QBaseCount((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_count(void* self) {
+    return QVPieModelMapper_SuperCount((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_count(void* self, int32_t (*callback)()) {
@@ -504,8 +504,8 @@ void q_vpiemodelmapper_set_count(void* self, int count) {
     QVPieModelMapper_SetCount((QVPieModelMapper*)self, count);
 }
 
-void q_vpiemodelmapper_qbase_set_count(void* self, int count) {
-    QVPieModelMapper_QBaseSetCount((QVPieModelMapper*)self, count);
+void q_vpiemodelmapper_super_set_count(void* self, int count) {
+    QVPieModelMapper_SuperSetCount((QVPieModelMapper*)self, count);
 }
 
 void q_vpiemodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
@@ -516,8 +516,8 @@ int32_t q_vpiemodelmapper_values_section(void* self) {
     return QVPieModelMapper_ValuesSection((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_values_section(void* self) {
-    return QVPieModelMapper_QBaseValuesSection((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_values_section(void* self) {
+    return QVPieModelMapper_SuperValuesSection((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_values_section(void* self, int32_t (*callback)()) {
@@ -528,8 +528,8 @@ void q_vpiemodelmapper_set_values_section(void* self, int valuesSection) {
     QVPieModelMapper_SetValuesSection((QVPieModelMapper*)self, valuesSection);
 }
 
-void q_vpiemodelmapper_qbase_set_values_section(void* self, int valuesSection) {
-    QVPieModelMapper_QBaseSetValuesSection((QVPieModelMapper*)self, valuesSection);
+void q_vpiemodelmapper_super_set_values_section(void* self, int valuesSection) {
+    QVPieModelMapper_SuperSetValuesSection((QVPieModelMapper*)self, valuesSection);
 }
 
 void q_vpiemodelmapper_on_set_values_section(void* self, void (*callback)(void*, int)) {
@@ -540,8 +540,8 @@ int32_t q_vpiemodelmapper_labels_section(void* self) {
     return QVPieModelMapper_LabelsSection((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_labels_section(void* self) {
-    return QVPieModelMapper_QBaseLabelsSection((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_labels_section(void* self) {
+    return QVPieModelMapper_SuperLabelsSection((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_labels_section(void* self, int32_t (*callback)()) {
@@ -552,8 +552,8 @@ void q_vpiemodelmapper_set_labels_section(void* self, int labelsSection) {
     QVPieModelMapper_SetLabelsSection((QVPieModelMapper*)self, labelsSection);
 }
 
-void q_vpiemodelmapper_qbase_set_labels_section(void* self, int labelsSection) {
-    QVPieModelMapper_QBaseSetLabelsSection((QVPieModelMapper*)self, labelsSection);
+void q_vpiemodelmapper_super_set_labels_section(void* self, int labelsSection) {
+    QVPieModelMapper_SuperSetLabelsSection((QVPieModelMapper*)self, labelsSection);
 }
 
 void q_vpiemodelmapper_on_set_labels_section(void* self, void (*callback)(void*, int)) {
@@ -564,8 +564,8 @@ int32_t q_vpiemodelmapper_orientation(void* self) {
     return QVPieModelMapper_Orientation((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_orientation(void* self) {
-    return QVPieModelMapper_QBaseOrientation((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_orientation(void* self) {
+    return QVPieModelMapper_SuperOrientation((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_orientation(void* self, int32_t (*callback)()) {
@@ -576,8 +576,8 @@ void q_vpiemodelmapper_set_orientation(void* self, int32_t orientation) {
     QVPieModelMapper_SetOrientation((QVPieModelMapper*)self, orientation);
 }
 
-void q_vpiemodelmapper_qbase_set_orientation(void* self, int32_t orientation) {
-    QVPieModelMapper_QBaseSetOrientation((QVPieModelMapper*)self, orientation);
+void q_vpiemodelmapper_super_set_orientation(void* self, int32_t orientation) {
+    QVPieModelMapper_SuperSetOrientation((QVPieModelMapper*)self, orientation);
 }
 
 void q_vpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t)) {
@@ -588,8 +588,8 @@ QObject* q_vpiemodelmapper_sender(void* self) {
     return QVPieModelMapper_Sender((QVPieModelMapper*)self);
 }
 
-QObject* q_vpiemodelmapper_qbase_sender(void* self) {
-    return QVPieModelMapper_QBaseSender((QVPieModelMapper*)self);
+QObject* q_vpiemodelmapper_super_sender(void* self) {
+    return QVPieModelMapper_SuperSender((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_sender(void* self, QObject* (*callback)()) {
@@ -600,8 +600,8 @@ int32_t q_vpiemodelmapper_sender_signal_index(void* self) {
     return QVPieModelMapper_SenderSignalIndex((QVPieModelMapper*)self);
 }
 
-int32_t q_vpiemodelmapper_qbase_sender_signal_index(void* self) {
-    return QVPieModelMapper_QBaseSenderSignalIndex((QVPieModelMapper*)self);
+int32_t q_vpiemodelmapper_super_sender_signal_index(void* self) {
+    return QVPieModelMapper_SuperSenderSignalIndex((QVPieModelMapper*)self);
 }
 
 void q_vpiemodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -612,8 +612,8 @@ int32_t q_vpiemodelmapper_receivers(void* self, const char* signal) {
     return QVPieModelMapper_Receivers((QVPieModelMapper*)self, signal);
 }
 
-int32_t q_vpiemodelmapper_qbase_receivers(void* self, const char* signal) {
-    return QVPieModelMapper_QBaseReceivers((QVPieModelMapper*)self, signal);
+int32_t q_vpiemodelmapper_super_receivers(void* self, const char* signal) {
+    return QVPieModelMapper_SuperReceivers((QVPieModelMapper*)self, signal);
 }
 
 void q_vpiemodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -624,8 +624,8 @@ bool q_vpiemodelmapper_is_signal_connected(void* self, void* signal) {
     return QVPieModelMapper_IsSignalConnected((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-bool q_vpiemodelmapper_qbase_is_signal_connected(void* self, void* signal) {
-    return QVPieModelMapper_QBaseIsSignalConnected((QVPieModelMapper*)self, (QMetaMethod*)signal);
+bool q_vpiemodelmapper_super_is_signal_connected(void* self, void* signal) {
+    return QVPieModelMapper_SuperIsSignalConnected((QVPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vpiemodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

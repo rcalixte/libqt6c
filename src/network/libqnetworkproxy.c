@@ -302,8 +302,8 @@ void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkP
     QNetworkProxyFactory_OnQueryProxy((QNetworkProxyFactory*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_qbase_query_proxy(void* self, void* query) {
-    libqt_list _arr = QNetworkProxyFactory_QBaseQueryProxy((QNetworkProxyFactory*)self, (QNetworkProxyQuery*)query);
+libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_super_query_proxy(void* self, void* query) {
+    libqt_list _arr = QNetworkProxyFactory_SuperQueryProxy((QNetworkProxyFactory*)self, (QNetworkProxyQuery*)query);
     return _arr;
 }
 

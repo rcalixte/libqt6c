@@ -40,13 +40,17 @@ const QMetaObject* q_sciscintilla_meta_object(void* self);
 ///
 void q_sciscintilla_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_meta_object` instead
+///
+#define q_sciscintilla_qbase_meta_object q_sciscintilla_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-const QMetaObject* q_sciscintilla_qbase_meta_object(void* self);
+const QMetaObject* q_sciscintilla_super_meta_object(void* self);
 
 /// @param self QsciScintilla*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_sciscintilla_metacast(void* self, const char* param1);
 ///
 void q_sciscintilla_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_metacast` instead
+///
+#define q_sciscintilla_qbase_metacast q_sciscintilla_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 /// @param param1 const char*
 ///
-void* q_sciscintilla_qbase_metacast(void* self, const char* param1);
+void* q_sciscintilla_super_metacast(void* self, const char* param1);
 
 /// @param self QsciScintilla*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_sciscintilla_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_sciscintilla_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_metacall` instead
+///
+#define q_sciscintilla_qbase_metacall q_sciscintilla_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
@@ -88,7 +100,7 @@ void q_sciscintilla_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_sciscintilla_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_sciscintilla_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -118,6 +130,10 @@ const char** q_sciscintilla_api_context(void* self, int pos, int* context_start,
 ///
 void q_sciscintilla_on_api_context(void* self, const char** (*callback)(void*, int, int*, int*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_api_context` instead
+///
+#define q_sciscintilla_qbase_api_context q_sciscintilla_super_api_context
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -127,7 +143,7 @@ void q_sciscintilla_on_api_context(void* self, const char** (*callback)(void*, i
 /// @param context_start int*
 /// @param last_word_start int*
 ///
-const char** q_sciscintilla_qbase_api_context(void* self, int pos, int* context_start, int* last_word_start);
+const char** q_sciscintilla_super_api_context(void* self, int pos, int* context_start, int* last_word_start);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -452,6 +468,10 @@ bool q_sciscintilla_find_first(void* self, const char* expr, bool re, bool cs, b
 ///
 void q_sciscintilla_on_find_first(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, int, int, bool, bool, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_find_first` instead
+///
+#define q_sciscintilla_qbase_find_first q_sciscintilla_super_find_first
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -469,7 +489,7 @@ void q_sciscintilla_on_find_first(void* self, bool (*callback)(void*, const char
 /// @param posix bool
 /// @param cxx11 bool
 ///
-bool q_sciscintilla_qbase_find_first(void* self, const char* expr, bool re, bool cs, bool wo, bool wrap, bool forward, int line, int index, bool show, bool posix, bool cxx11);
+bool q_sciscintilla_super_find_first(void* self, const char* expr, bool re, bool cs, bool wo, bool wrap, bool forward, int line, int index, bool show, bool posix, bool cxx11);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -494,6 +514,10 @@ bool q_sciscintilla_find_first_in_selection(void* self, const char* expr, bool r
 ///
 void q_sciscintilla_on_find_first_in_selection(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, bool, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_find_first_in_selection` instead
+///
+#define q_sciscintilla_qbase_find_first_in_selection q_sciscintilla_super_find_first_in_selection
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -508,7 +532,7 @@ void q_sciscintilla_on_find_first_in_selection(void* self, bool (*callback)(void
 /// @param posix bool
 /// @param cxx11 bool
 ///
-bool q_sciscintilla_qbase_find_first_in_selection(void* self, const char* expr, bool re, bool cs, bool wo, bool forward, bool show, bool posix, bool cxx11);
+bool q_sciscintilla_super_find_first_in_selection(void* self, const char* expr, bool re, bool cs, bool wo, bool forward, bool show, bool posix, bool cxx11);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -525,13 +549,17 @@ bool q_sciscintilla_find_next(void* self);
 ///
 void q_sciscintilla_on_find_next(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_find_next` instead
+///
+#define q_sciscintilla_qbase_find_next q_sciscintilla_super_find_next
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-bool q_sciscintilla_qbase_find_next(void* self);
+bool q_sciscintilla_super_find_next(void* self);
 
 #if defined(__linux__) || defined(__FreeBSD__)
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -897,6 +925,10 @@ void q_sciscintilla_recolor(void* self, int start, int end);
 ///
 void q_sciscintilla_on_recolor(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_recolor` instead
+///
+#define q_sciscintilla_qbase_recolor q_sciscintilla_super_recolor
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -905,7 +937,7 @@ void q_sciscintilla_on_recolor(void* self, void (*callback)(void*, int, int));
 /// @param start int
 /// @param end int
 ///
-void q_sciscintilla_qbase_recolor(void* self, int start, int end);
+void q_sciscintilla_super_recolor(void* self, int start, int end);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -939,6 +971,10 @@ void q_sciscintilla_replace(void* self, const char* replaceStr);
 ///
 void q_sciscintilla_on_replace(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_replace` instead
+///
+#define q_sciscintilla_qbase_replace q_sciscintilla_super_replace
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -946,7 +982,7 @@ void q_sciscintilla_on_replace(void* self, void (*callback)(void*, const char*))
 /// @param self QsciScintilla*
 /// @param replaceStr const char*
 ///
-void q_sciscintilla_qbase_replace(void* self, const char* replaceStr);
+void q_sciscintilla_super_replace(void* self, const char* replaceStr);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1551,6 +1587,10 @@ void q_sciscintilla_append(void* self, const char* text);
 ///
 void q_sciscintilla_on_append(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_append` instead
+///
+#define q_sciscintilla_qbase_append q_sciscintilla_super_append
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1558,7 +1598,7 @@ void q_sciscintilla_on_append(void* self, void (*callback)(void*, const char*));
 /// @param self QsciScintilla*
 /// @param text const char*
 ///
-void q_sciscintilla_qbase_append(void* self, const char* text);
+void q_sciscintilla_super_append(void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1575,13 +1615,17 @@ void q_sciscintilla_auto_complete_from_all(void* self);
 ///
 void q_sciscintilla_on_auto_complete_from_all(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_auto_complete_from_all` instead
+///
+#define q_sciscintilla_qbase_auto_complete_from_all q_sciscintilla_super_auto_complete_from_all
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_auto_complete_from_all(void* self);
+void q_sciscintilla_super_auto_complete_from_all(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1598,13 +1642,17 @@ void q_sciscintilla_auto_complete_from_a_p_is(void* self);
 ///
 void q_sciscintilla_on_auto_complete_from_a_p_is(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_auto_complete_from_a_p_is` instead
+///
+#define q_sciscintilla_qbase_auto_complete_from_a_p_is q_sciscintilla_super_auto_complete_from_a_p_is
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_auto_complete_from_a_p_is(void* self);
+void q_sciscintilla_super_auto_complete_from_a_p_is(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1621,13 +1669,17 @@ void q_sciscintilla_auto_complete_from_document(void* self);
 ///
 void q_sciscintilla_on_auto_complete_from_document(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_auto_complete_from_document` instead
+///
+#define q_sciscintilla_qbase_auto_complete_from_document q_sciscintilla_super_auto_complete_from_document
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_auto_complete_from_document(void* self);
+void q_sciscintilla_super_auto_complete_from_document(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1644,13 +1696,17 @@ void q_sciscintilla_call_tip(void* self);
 ///
 void q_sciscintilla_on_call_tip(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_call_tip` instead
+///
+#define q_sciscintilla_qbase_call_tip q_sciscintilla_super_call_tip
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_call_tip(void* self);
+void q_sciscintilla_super_call_tip(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1667,13 +1723,17 @@ void q_sciscintilla_clear(void* self);
 ///
 void q_sciscintilla_on_clear(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_clear` instead
+///
+#define q_sciscintilla_qbase_clear q_sciscintilla_super_clear
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_clear(void* self);
+void q_sciscintilla_super_clear(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1690,13 +1750,17 @@ void q_sciscintilla_copy(void* self);
 ///
 void q_sciscintilla_on_copy(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_copy` instead
+///
+#define q_sciscintilla_qbase_copy q_sciscintilla_super_copy
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_copy(void* self);
+void q_sciscintilla_super_copy(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1713,13 +1777,17 @@ void q_sciscintilla_cut(void* self);
 ///
 void q_sciscintilla_on_cut(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_cut` instead
+///
+#define q_sciscintilla_qbase_cut q_sciscintilla_super_cut
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_cut(void* self);
+void q_sciscintilla_super_cut(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1736,13 +1804,17 @@ void q_sciscintilla_ensure_cursor_visible(void* self);
 ///
 void q_sciscintilla_on_ensure_cursor_visible(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_ensure_cursor_visible` instead
+///
+#define q_sciscintilla_qbase_ensure_cursor_visible q_sciscintilla_super_ensure_cursor_visible
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_ensure_cursor_visible(void* self);
+void q_sciscintilla_super_ensure_cursor_visible(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1760,6 +1832,10 @@ void q_sciscintilla_ensure_line_visible(void* self, int line);
 ///
 void q_sciscintilla_on_ensure_line_visible(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_ensure_line_visible` instead
+///
+#define q_sciscintilla_qbase_ensure_line_visible q_sciscintilla_super_ensure_line_visible
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1767,7 +1843,7 @@ void q_sciscintilla_on_ensure_line_visible(void* self, void (*callback)(void*, i
 /// @param self QsciScintilla*
 /// @param line int
 ///
-void q_sciscintilla_qbase_ensure_line_visible(void* self, int line);
+void q_sciscintilla_super_ensure_line_visible(void* self, int line);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1785,6 +1861,10 @@ void q_sciscintilla_fold_all(void* self, bool children);
 ///
 void q_sciscintilla_on_fold_all(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_fold_all` instead
+///
+#define q_sciscintilla_qbase_fold_all q_sciscintilla_super_fold_all
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1792,7 +1872,7 @@ void q_sciscintilla_on_fold_all(void* self, void (*callback)(void*, bool));
 /// @param self QsciScintilla*
 /// @param children bool
 ///
-void q_sciscintilla_qbase_fold_all(void* self, bool children);
+void q_sciscintilla_super_fold_all(void* self, bool children);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1810,6 +1890,10 @@ void q_sciscintilla_fold_line(void* self, int line);
 ///
 void q_sciscintilla_on_fold_line(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_fold_line` instead
+///
+#define q_sciscintilla_qbase_fold_line q_sciscintilla_super_fold_line
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1817,7 +1901,7 @@ void q_sciscintilla_on_fold_line(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param line int
 ///
-void q_sciscintilla_qbase_fold_line(void* self, int line);
+void q_sciscintilla_super_fold_line(void* self, int line);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1835,6 +1919,10 @@ void q_sciscintilla_indent(void* self, int line);
 ///
 void q_sciscintilla_on_indent(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_indent` instead
+///
+#define q_sciscintilla_qbase_indent q_sciscintilla_super_indent
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1842,7 +1930,7 @@ void q_sciscintilla_on_indent(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param line int
 ///
-void q_sciscintilla_qbase_indent(void* self, int line);
+void q_sciscintilla_super_indent(void* self, int line);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1860,6 +1948,10 @@ void q_sciscintilla_insert(void* self, const char* text);
 ///
 void q_sciscintilla_on_insert(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_insert` instead
+///
+#define q_sciscintilla_qbase_insert q_sciscintilla_super_insert
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1867,7 +1959,7 @@ void q_sciscintilla_on_insert(void* self, void (*callback)(void*, const char*));
 /// @param self QsciScintilla*
 /// @param text const char*
 ///
-void q_sciscintilla_qbase_insert(void* self, const char* text);
+void q_sciscintilla_super_insert(void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1887,6 +1979,10 @@ void q_sciscintilla_insert_at(void* self, const char* text, int line, int index)
 ///
 void q_sciscintilla_on_insert_at(void* self, void (*callback)(void*, const char*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_insert_at` instead
+///
+#define q_sciscintilla_qbase_insert_at q_sciscintilla_super_insert_at
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -1896,7 +1992,7 @@ void q_sciscintilla_on_insert_at(void* self, void (*callback)(void*, const char*
 /// @param line int
 /// @param index int
 ///
-void q_sciscintilla_qbase_insert_at(void* self, const char* text, int line, int index);
+void q_sciscintilla_super_insert_at(void* self, const char* text, int line, int index);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1913,13 +2009,17 @@ void q_sciscintilla_move_to_matching_brace(void* self);
 ///
 void q_sciscintilla_on_move_to_matching_brace(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_move_to_matching_brace` instead
+///
+#define q_sciscintilla_qbase_move_to_matching_brace q_sciscintilla_super_move_to_matching_brace
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_move_to_matching_brace(void* self);
+void q_sciscintilla_super_move_to_matching_brace(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1936,13 +2036,17 @@ void q_sciscintilla_paste(void* self);
 ///
 void q_sciscintilla_on_paste(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_paste` instead
+///
+#define q_sciscintilla_qbase_paste q_sciscintilla_super_paste
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_paste(void* self);
+void q_sciscintilla_super_paste(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1959,13 +2063,17 @@ void q_sciscintilla_redo(void* self);
 ///
 void q_sciscintilla_on_redo(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_redo` instead
+///
+#define q_sciscintilla_qbase_redo q_sciscintilla_super_redo
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_redo(void* self);
+void q_sciscintilla_super_redo(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1982,13 +2090,17 @@ void q_sciscintilla_remove_selected_text(void* self);
 ///
 void q_sciscintilla_on_remove_selected_text(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_remove_selected_text` instead
+///
+#define q_sciscintilla_qbase_remove_selected_text q_sciscintilla_super_remove_selected_text
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_remove_selected_text(void* self);
+void q_sciscintilla_super_remove_selected_text(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2006,6 +2118,10 @@ void q_sciscintilla_replace_selected_text(void* self, const char* text);
 ///
 void q_sciscintilla_on_replace_selected_text(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_replace_selected_text` instead
+///
+#define q_sciscintilla_qbase_replace_selected_text q_sciscintilla_super_replace_selected_text
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2013,7 +2129,7 @@ void q_sciscintilla_on_replace_selected_text(void* self, void (*callback)(void*,
 /// @param self QsciScintilla*
 /// @param text const char*
 ///
-void q_sciscintilla_qbase_replace_selected_text(void* self, const char* text);
+void q_sciscintilla_super_replace_selected_text(void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2030,13 +2146,17 @@ void q_sciscintilla_reset_selection_background_color(void* self);
 ///
 void q_sciscintilla_on_reset_selection_background_color(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_reset_selection_background_color` instead
+///
+#define q_sciscintilla_qbase_reset_selection_background_color q_sciscintilla_super_reset_selection_background_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_reset_selection_background_color(void* self);
+void q_sciscintilla_super_reset_selection_background_color(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2053,13 +2173,17 @@ void q_sciscintilla_reset_selection_foreground_color(void* self);
 ///
 void q_sciscintilla_on_reset_selection_foreground_color(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_reset_selection_foreground_color` instead
+///
+#define q_sciscintilla_qbase_reset_selection_foreground_color q_sciscintilla_super_reset_selection_foreground_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_reset_selection_foreground_color(void* self);
+void q_sciscintilla_super_reset_selection_foreground_color(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2077,6 +2201,10 @@ void q_sciscintilla_select_all(void* self, bool selectVal);
 ///
 void q_sciscintilla_on_select_all(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_select_all` instead
+///
+#define q_sciscintilla_qbase_select_all q_sciscintilla_super_select_all
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2084,7 +2212,7 @@ void q_sciscintilla_on_select_all(void* self, void (*callback)(void*, bool));
 /// @param self QsciScintilla*
 /// @param selectVal bool
 ///
-void q_sciscintilla_qbase_select_all(void* self, bool selectVal);
+void q_sciscintilla_super_select_all(void* self, bool selectVal);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2101,13 +2229,17 @@ void q_sciscintilla_select_to_matching_brace(void* self);
 ///
 void q_sciscintilla_on_select_to_matching_brace(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_select_to_matching_brace` instead
+///
+#define q_sciscintilla_qbase_select_to_matching_brace q_sciscintilla_super_select_to_matching_brace
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_select_to_matching_brace(void* self);
+void q_sciscintilla_super_select_to_matching_brace(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2125,6 +2257,10 @@ void q_sciscintilla_set_auto_completion_case_sensitivity(void* self, bool cs);
 ///
 void q_sciscintilla_on_set_auto_completion_case_sensitivity(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_case_sensitivity` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_case_sensitivity q_sciscintilla_super_set_auto_completion_case_sensitivity
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2132,7 +2268,7 @@ void q_sciscintilla_on_set_auto_completion_case_sensitivity(void* self, void (*c
 /// @param self QsciScintilla*
 /// @param cs bool
 ///
-void q_sciscintilla_qbase_set_auto_completion_case_sensitivity(void* self, bool cs);
+void q_sciscintilla_super_set_auto_completion_case_sensitivity(void* self, bool cs);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2150,6 +2286,10 @@ void q_sciscintilla_set_auto_completion_replace_word(void* self, bool replace);
 ///
 void q_sciscintilla_on_set_auto_completion_replace_word(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_replace_word` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_replace_word q_sciscintilla_super_set_auto_completion_replace_word
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2157,7 +2297,7 @@ void q_sciscintilla_on_set_auto_completion_replace_word(void* self, void (*callb
 /// @param self QsciScintilla*
 /// @param replace bool
 ///
-void q_sciscintilla_qbase_set_auto_completion_replace_word(void* self, bool replace);
+void q_sciscintilla_super_set_auto_completion_replace_word(void* self, bool replace);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2175,6 +2315,10 @@ void q_sciscintilla_set_auto_completion_show_single(void* self, bool single);
 ///
 void q_sciscintilla_on_set_auto_completion_show_single(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_show_single` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_show_single q_sciscintilla_super_set_auto_completion_show_single
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2182,7 +2326,7 @@ void q_sciscintilla_on_set_auto_completion_show_single(void* self, void (*callba
 /// @param self QsciScintilla*
 /// @param single bool
 ///
-void q_sciscintilla_qbase_set_auto_completion_show_single(void* self, bool single);
+void q_sciscintilla_super_set_auto_completion_show_single(void* self, bool single);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2200,6 +2344,10 @@ void q_sciscintilla_set_auto_completion_source(void* self, int32_t source);
 ///
 void q_sciscintilla_on_set_auto_completion_source(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_source` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_source q_sciscintilla_super_set_auto_completion_source
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2207,7 +2355,7 @@ void q_sciscintilla_on_set_auto_completion_source(void* self, void (*callback)(v
 /// @param self QsciScintilla*
 /// @param source enum QsciScintilla__AutoCompletionSource
 ///
-void q_sciscintilla_qbase_set_auto_completion_source(void* self, int32_t source);
+void q_sciscintilla_super_set_auto_completion_source(void* self, int32_t source);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2225,6 +2373,10 @@ void q_sciscintilla_set_auto_completion_threshold(void* self, int thresh);
 ///
 void q_sciscintilla_on_set_auto_completion_threshold(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_threshold` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_threshold q_sciscintilla_super_set_auto_completion_threshold
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2232,7 +2384,7 @@ void q_sciscintilla_on_set_auto_completion_threshold(void* self, void (*callback
 /// @param self QsciScintilla*
 /// @param thresh int
 ///
-void q_sciscintilla_qbase_set_auto_completion_threshold(void* self, int thresh);
+void q_sciscintilla_super_set_auto_completion_threshold(void* self, int thresh);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2250,6 +2402,10 @@ void q_sciscintilla_set_auto_completion_use_single(void* self, int32_t single);
 ///
 void q_sciscintilla_on_set_auto_completion_use_single(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_completion_use_single` instead
+///
+#define q_sciscintilla_qbase_set_auto_completion_use_single q_sciscintilla_super_set_auto_completion_use_single
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2257,7 +2413,7 @@ void q_sciscintilla_on_set_auto_completion_use_single(void* self, void (*callbac
 /// @param self QsciScintilla*
 /// @param single enum QsciScintilla__AutoCompletionUseSingle
 ///
-void q_sciscintilla_qbase_set_auto_completion_use_single(void* self, int32_t single);
+void q_sciscintilla_super_set_auto_completion_use_single(void* self, int32_t single);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2275,6 +2431,10 @@ void q_sciscintilla_set_auto_indent(void* self, bool autoindent);
 ///
 void q_sciscintilla_on_set_auto_indent(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_auto_indent` instead
+///
+#define q_sciscintilla_qbase_set_auto_indent q_sciscintilla_super_set_auto_indent
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2282,7 +2442,7 @@ void q_sciscintilla_on_set_auto_indent(void* self, void (*callback)(void*, bool)
 /// @param self QsciScintilla*
 /// @param autoindent bool
 ///
-void q_sciscintilla_qbase_set_auto_indent(void* self, bool autoindent);
+void q_sciscintilla_super_set_auto_indent(void* self, bool autoindent);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2300,6 +2460,10 @@ void q_sciscintilla_set_brace_matching(void* self, int32_t bm);
 ///
 void q_sciscintilla_on_set_brace_matching(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_brace_matching` instead
+///
+#define q_sciscintilla_qbase_set_brace_matching q_sciscintilla_super_set_brace_matching
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2307,7 +2471,7 @@ void q_sciscintilla_on_set_brace_matching(void* self, void (*callback)(void*, in
 /// @param self QsciScintilla*
 /// @param bm enum QsciScintilla__BraceMatch
 ///
-void q_sciscintilla_qbase_set_brace_matching(void* self, int32_t bm);
+void q_sciscintilla_super_set_brace_matching(void* self, int32_t bm);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2325,6 +2489,10 @@ void q_sciscintilla_set_backspace_unindents(void* self, bool unindent);
 ///
 void q_sciscintilla_on_set_backspace_unindents(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_backspace_unindents` instead
+///
+#define q_sciscintilla_qbase_set_backspace_unindents q_sciscintilla_super_set_backspace_unindents
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2332,7 +2500,7 @@ void q_sciscintilla_on_set_backspace_unindents(void* self, void (*callback)(void
 /// @param self QsciScintilla*
 /// @param unindent bool
 ///
-void q_sciscintilla_qbase_set_backspace_unindents(void* self, bool unindent);
+void q_sciscintilla_super_set_backspace_unindents(void* self, bool unindent);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2350,6 +2518,10 @@ void q_sciscintilla_set_caret_foreground_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_caret_foreground_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_caret_foreground_color` instead
+///
+#define q_sciscintilla_qbase_set_caret_foreground_color q_sciscintilla_super_set_caret_foreground_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2357,7 +2529,7 @@ void q_sciscintilla_on_set_caret_foreground_color(void* self, void (*callback)(v
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_caret_foreground_color(void* self, void* col);
+void q_sciscintilla_super_set_caret_foreground_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2375,6 +2547,10 @@ void q_sciscintilla_set_caret_line_background_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_caret_line_background_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_caret_line_background_color` instead
+///
+#define q_sciscintilla_qbase_set_caret_line_background_color q_sciscintilla_super_set_caret_line_background_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2382,7 +2558,7 @@ void q_sciscintilla_on_set_caret_line_background_color(void* self, void (*callba
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_caret_line_background_color(void* self, void* col);
+void q_sciscintilla_super_set_caret_line_background_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2400,6 +2576,10 @@ void q_sciscintilla_set_caret_line_frame_width(void* self, int width);
 ///
 void q_sciscintilla_on_set_caret_line_frame_width(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_caret_line_frame_width` instead
+///
+#define q_sciscintilla_qbase_set_caret_line_frame_width q_sciscintilla_super_set_caret_line_frame_width
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2407,7 +2587,7 @@ void q_sciscintilla_on_set_caret_line_frame_width(void* self, void (*callback)(v
 /// @param self QsciScintilla*
 /// @param width int
 ///
-void q_sciscintilla_qbase_set_caret_line_frame_width(void* self, int width);
+void q_sciscintilla_super_set_caret_line_frame_width(void* self, int width);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2425,6 +2605,10 @@ void q_sciscintilla_set_caret_line_visible(void* self, bool enable);
 ///
 void q_sciscintilla_on_set_caret_line_visible(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_caret_line_visible` instead
+///
+#define q_sciscintilla_qbase_set_caret_line_visible q_sciscintilla_super_set_caret_line_visible
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2432,7 +2616,7 @@ void q_sciscintilla_on_set_caret_line_visible(void* self, void (*callback)(void*
 /// @param self QsciScintilla*
 /// @param enable bool
 ///
-void q_sciscintilla_qbase_set_caret_line_visible(void* self, bool enable);
+void q_sciscintilla_super_set_caret_line_visible(void* self, bool enable);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2450,6 +2634,10 @@ void q_sciscintilla_set_caret_width(void* self, int width);
 ///
 void q_sciscintilla_on_set_caret_width(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_caret_width` instead
+///
+#define q_sciscintilla_qbase_set_caret_width q_sciscintilla_super_set_caret_width
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2457,7 +2645,7 @@ void q_sciscintilla_on_set_caret_width(void* self, void (*callback)(void*, int))
 /// @param self QsciScintilla*
 /// @param width int
 ///
-void q_sciscintilla_qbase_set_caret_width(void* self, int width);
+void q_sciscintilla_super_set_caret_width(void* self, int width);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2475,6 +2663,10 @@ void q_sciscintilla_set_color(void* self, void* c);
 ///
 void q_sciscintilla_on_set_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_color` instead
+///
+#define q_sciscintilla_qbase_set_color q_sciscintilla_super_set_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2482,7 +2674,7 @@ void q_sciscintilla_on_set_color(void* self, void (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param c QColor*
 ///
-void q_sciscintilla_qbase_set_color(void* self, void* c);
+void q_sciscintilla_super_set_color(void* self, void* c);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2501,6 +2693,10 @@ void q_sciscintilla_set_cursor_position(void* self, int line, int index);
 ///
 void q_sciscintilla_on_set_cursor_position(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_cursor_position` instead
+///
+#define q_sciscintilla_qbase_set_cursor_position q_sciscintilla_super_set_cursor_position
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2509,7 +2705,7 @@ void q_sciscintilla_on_set_cursor_position(void* self, void (*callback)(void*, i
 /// @param line int
 /// @param index int
 ///
-void q_sciscintilla_qbase_set_cursor_position(void* self, int line, int index);
+void q_sciscintilla_super_set_cursor_position(void* self, int line, int index);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2527,6 +2723,10 @@ void q_sciscintilla_set_eol_mode(void* self, int32_t mode);
 ///
 void q_sciscintilla_on_set_eol_mode(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_eol_mode` instead
+///
+#define q_sciscintilla_qbase_set_eol_mode q_sciscintilla_super_set_eol_mode
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2534,7 +2734,7 @@ void q_sciscintilla_on_set_eol_mode(void* self, void (*callback)(void*, int32_t)
 /// @param self QsciScintilla*
 /// @param mode enum QsciScintilla__EolMode
 ///
-void q_sciscintilla_qbase_set_eol_mode(void* self, int32_t mode);
+void q_sciscintilla_super_set_eol_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2552,6 +2752,10 @@ void q_sciscintilla_set_eol_visibility(void* self, bool visible);
 ///
 void q_sciscintilla_on_set_eol_visibility(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_eol_visibility` instead
+///
+#define q_sciscintilla_qbase_set_eol_visibility q_sciscintilla_super_set_eol_visibility
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2559,7 +2763,7 @@ void q_sciscintilla_on_set_eol_visibility(void* self, void (*callback)(void*, bo
 /// @param self QsciScintilla*
 /// @param visible bool
 ///
-void q_sciscintilla_qbase_set_eol_visibility(void* self, bool visible);
+void q_sciscintilla_super_set_eol_visibility(void* self, bool visible);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2578,6 +2782,10 @@ void q_sciscintilla_set_folding(void* self, int32_t fold, int margin);
 ///
 void q_sciscintilla_on_set_folding(void* self, void (*callback)(void*, int32_t, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_folding` instead
+///
+#define q_sciscintilla_qbase_set_folding q_sciscintilla_super_set_folding
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2586,7 +2794,7 @@ void q_sciscintilla_on_set_folding(void* self, void (*callback)(void*, int32_t, 
 /// @param fold enum QsciScintilla__FoldStyle
 /// @param margin int
 ///
-void q_sciscintilla_qbase_set_folding(void* self, int32_t fold, int margin);
+void q_sciscintilla_super_set_folding(void* self, int32_t fold, int margin);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2605,6 +2813,10 @@ void q_sciscintilla_set_indentation(void* self, int line, int indentation);
 ///
 void q_sciscintilla_on_set_indentation(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentation` instead
+///
+#define q_sciscintilla_qbase_set_indentation q_sciscintilla_super_set_indentation
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2613,7 +2825,7 @@ void q_sciscintilla_on_set_indentation(void* self, void (*callback)(void*, int, 
 /// @param line int
 /// @param indentation int
 ///
-void q_sciscintilla_qbase_set_indentation(void* self, int line, int indentation);
+void q_sciscintilla_super_set_indentation(void* self, int line, int indentation);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2631,6 +2843,10 @@ void q_sciscintilla_set_indentation_guides(void* self, bool enable);
 ///
 void q_sciscintilla_on_set_indentation_guides(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentation_guides` instead
+///
+#define q_sciscintilla_qbase_set_indentation_guides q_sciscintilla_super_set_indentation_guides
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2638,7 +2854,7 @@ void q_sciscintilla_on_set_indentation_guides(void* self, void (*callback)(void*
 /// @param self QsciScintilla*
 /// @param enable bool
 ///
-void q_sciscintilla_qbase_set_indentation_guides(void* self, bool enable);
+void q_sciscintilla_super_set_indentation_guides(void* self, bool enable);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2656,6 +2872,10 @@ void q_sciscintilla_set_indentation_guides_background_color(void* self, void* co
 ///
 void q_sciscintilla_on_set_indentation_guides_background_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentation_guides_background_color` instead
+///
+#define q_sciscintilla_qbase_set_indentation_guides_background_color q_sciscintilla_super_set_indentation_guides_background_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2663,7 +2883,7 @@ void q_sciscintilla_on_set_indentation_guides_background_color(void* self, void 
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_indentation_guides_background_color(void* self, void* col);
+void q_sciscintilla_super_set_indentation_guides_background_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2681,6 +2901,10 @@ void q_sciscintilla_set_indentation_guides_foreground_color(void* self, void* co
 ///
 void q_sciscintilla_on_set_indentation_guides_foreground_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentation_guides_foreground_color` instead
+///
+#define q_sciscintilla_qbase_set_indentation_guides_foreground_color q_sciscintilla_super_set_indentation_guides_foreground_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2688,7 +2912,7 @@ void q_sciscintilla_on_set_indentation_guides_foreground_color(void* self, void 
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_indentation_guides_foreground_color(void* self, void* col);
+void q_sciscintilla_super_set_indentation_guides_foreground_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2706,6 +2930,10 @@ void q_sciscintilla_set_indentations_use_tabs(void* self, bool tabs);
 ///
 void q_sciscintilla_on_set_indentations_use_tabs(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentations_use_tabs` instead
+///
+#define q_sciscintilla_qbase_set_indentations_use_tabs q_sciscintilla_super_set_indentations_use_tabs
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2713,7 +2941,7 @@ void q_sciscintilla_on_set_indentations_use_tabs(void* self, void (*callback)(vo
 /// @param self QsciScintilla*
 /// @param tabs bool
 ///
-void q_sciscintilla_qbase_set_indentations_use_tabs(void* self, bool tabs);
+void q_sciscintilla_super_set_indentations_use_tabs(void* self, bool tabs);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2731,6 +2959,10 @@ void q_sciscintilla_set_indentation_width(void* self, int width);
 ///
 void q_sciscintilla_on_set_indentation_width(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_indentation_width` instead
+///
+#define q_sciscintilla_qbase_set_indentation_width q_sciscintilla_super_set_indentation_width
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2738,7 +2970,7 @@ void q_sciscintilla_on_set_indentation_width(void* self, void (*callback)(void*,
 /// @param self QsciScintilla*
 /// @param width int
 ///
-void q_sciscintilla_qbase_set_indentation_width(void* self, int width);
+void q_sciscintilla_super_set_indentation_width(void* self, int width);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2756,6 +2988,10 @@ void q_sciscintilla_set_lexer(void* self, void* lexer);
 ///
 void q_sciscintilla_on_set_lexer(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_lexer` instead
+///
+#define q_sciscintilla_qbase_set_lexer q_sciscintilla_super_set_lexer
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2763,7 +2999,7 @@ void q_sciscintilla_on_set_lexer(void* self, void (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param lexer QsciLexer*
 ///
-void q_sciscintilla_qbase_set_lexer(void* self, void* lexer);
+void q_sciscintilla_super_set_lexer(void* self, void* lexer);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2781,6 +3017,10 @@ void q_sciscintilla_set_margins_background_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_margins_background_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margins_background_color` instead
+///
+#define q_sciscintilla_qbase_set_margins_background_color q_sciscintilla_super_set_margins_background_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2788,7 +3028,7 @@ void q_sciscintilla_on_set_margins_background_color(void* self, void (*callback)
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_margins_background_color(void* self, void* col);
+void q_sciscintilla_super_set_margins_background_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2806,6 +3046,10 @@ void q_sciscintilla_set_margins_font(void* self, void* f);
 ///
 void q_sciscintilla_on_set_margins_font(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margins_font` instead
+///
+#define q_sciscintilla_qbase_set_margins_font q_sciscintilla_super_set_margins_font
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2813,7 +3057,7 @@ void q_sciscintilla_on_set_margins_font(void* self, void (*callback)(void*, void
 /// @param self QsciScintilla*
 /// @param f QFont*
 ///
-void q_sciscintilla_qbase_set_margins_font(void* self, void* f);
+void q_sciscintilla_super_set_margins_font(void* self, void* f);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2831,6 +3075,10 @@ void q_sciscintilla_set_margins_foreground_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_margins_foreground_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margins_foreground_color` instead
+///
+#define q_sciscintilla_qbase_set_margins_foreground_color q_sciscintilla_super_set_margins_foreground_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2838,7 +3086,7 @@ void q_sciscintilla_on_set_margins_foreground_color(void* self, void (*callback)
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_margins_foreground_color(void* self, void* col);
+void q_sciscintilla_super_set_margins_foreground_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2857,6 +3105,10 @@ void q_sciscintilla_set_margin_line_numbers(void* self, int margin, bool lnrs);
 ///
 void q_sciscintilla_on_set_margin_line_numbers(void* self, void (*callback)(void*, int, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margin_line_numbers` instead
+///
+#define q_sciscintilla_qbase_set_margin_line_numbers q_sciscintilla_super_set_margin_line_numbers
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2865,7 +3117,7 @@ void q_sciscintilla_on_set_margin_line_numbers(void* self, void (*callback)(void
 /// @param margin int
 /// @param lnrs bool
 ///
-void q_sciscintilla_qbase_set_margin_line_numbers(void* self, int margin, bool lnrs);
+void q_sciscintilla_super_set_margin_line_numbers(void* self, int margin, bool lnrs);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2884,6 +3136,10 @@ void q_sciscintilla_set_margin_marker_mask(void* self, int margin, int mask);
 ///
 void q_sciscintilla_on_set_margin_marker_mask(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margin_marker_mask` instead
+///
+#define q_sciscintilla_qbase_set_margin_marker_mask q_sciscintilla_super_set_margin_marker_mask
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2892,7 +3148,7 @@ void q_sciscintilla_on_set_margin_marker_mask(void* self, void (*callback)(void*
 /// @param margin int
 /// @param mask int
 ///
-void q_sciscintilla_qbase_set_margin_marker_mask(void* self, int margin, int mask);
+void q_sciscintilla_super_set_margin_marker_mask(void* self, int margin, int mask);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2911,6 +3167,10 @@ void q_sciscintilla_set_margin_sensitivity(void* self, int margin, bool sens);
 ///
 void q_sciscintilla_on_set_margin_sensitivity(void* self, void (*callback)(void*, int, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margin_sensitivity` instead
+///
+#define q_sciscintilla_qbase_set_margin_sensitivity q_sciscintilla_super_set_margin_sensitivity
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2919,7 +3179,7 @@ void q_sciscintilla_on_set_margin_sensitivity(void* self, void (*callback)(void*
 /// @param margin int
 /// @param sens bool
 ///
-void q_sciscintilla_qbase_set_margin_sensitivity(void* self, int margin, bool sens);
+void q_sciscintilla_super_set_margin_sensitivity(void* self, int margin, bool sens);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2938,6 +3198,10 @@ void q_sciscintilla_set_margin_width(void* self, int margin, int width);
 ///
 void q_sciscintilla_on_set_margin_width(void* self, void (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margin_width` instead
+///
+#define q_sciscintilla_qbase_set_margin_width q_sciscintilla_super_set_margin_width
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2946,7 +3210,7 @@ void q_sciscintilla_on_set_margin_width(void* self, void (*callback)(void*, int,
 /// @param margin int
 /// @param width int
 ///
-void q_sciscintilla_qbase_set_margin_width(void* self, int margin, int width);
+void q_sciscintilla_super_set_margin_width(void* self, int margin, int width);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2965,6 +3229,10 @@ void q_sciscintilla_set_margin_width2(void* self, int margin, const char* s);
 ///
 void q_sciscintilla_on_set_margin_width2(void* self, void (*callback)(void*, int, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_margin_width2` instead
+///
+#define q_sciscintilla_qbase_set_margin_width2 q_sciscintilla_super_set_margin_width2
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2973,7 +3241,7 @@ void q_sciscintilla_on_set_margin_width2(void* self, void (*callback)(void*, int
 /// @param margin int
 /// @param s const char*
 ///
-void q_sciscintilla_qbase_set_margin_width2(void* self, int margin, const char* s);
+void q_sciscintilla_super_set_margin_width2(void* self, int margin, const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -2991,6 +3259,10 @@ void q_sciscintilla_set_modified(void* self, bool m);
 ///
 void q_sciscintilla_on_set_modified(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_modified` instead
+///
+#define q_sciscintilla_qbase_set_modified q_sciscintilla_super_set_modified
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -2998,7 +3270,7 @@ void q_sciscintilla_on_set_modified(void* self, void (*callback)(void*, bool));
 /// @param self QsciScintilla*
 /// @param m bool
 ///
-void q_sciscintilla_qbase_set_modified(void* self, bool m);
+void q_sciscintilla_super_set_modified(void* self, bool m);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3016,6 +3288,10 @@ void q_sciscintilla_set_paper(void* self, void* c);
 ///
 void q_sciscintilla_on_set_paper(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_paper` instead
+///
+#define q_sciscintilla_qbase_set_paper q_sciscintilla_super_set_paper
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3023,7 +3299,7 @@ void q_sciscintilla_on_set_paper(void* self, void (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param c QColor*
 ///
-void q_sciscintilla_qbase_set_paper(void* self, void* c);
+void q_sciscintilla_super_set_paper(void* self, void* c);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3041,6 +3317,10 @@ void q_sciscintilla_set_read_only(void* self, bool ro);
 ///
 void q_sciscintilla_on_set_read_only(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_read_only` instead
+///
+#define q_sciscintilla_qbase_set_read_only q_sciscintilla_super_set_read_only
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3048,7 +3328,7 @@ void q_sciscintilla_on_set_read_only(void* self, void (*callback)(void*, bool));
 /// @param self QsciScintilla*
 /// @param ro bool
 ///
-void q_sciscintilla_qbase_set_read_only(void* self, bool ro);
+void q_sciscintilla_super_set_read_only(void* self, bool ro);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3069,6 +3349,10 @@ void q_sciscintilla_set_selection(void* self, int lineFrom, int indexFrom, int l
 ///
 void q_sciscintilla_on_set_selection(void* self, void (*callback)(void*, int, int, int, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_selection` instead
+///
+#define q_sciscintilla_qbase_set_selection q_sciscintilla_super_set_selection
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3079,7 +3363,7 @@ void q_sciscintilla_on_set_selection(void* self, void (*callback)(void*, int, in
 /// @param lineTo int
 /// @param indexTo int
 ///
-void q_sciscintilla_qbase_set_selection(void* self, int lineFrom, int indexFrom, int lineTo, int indexTo);
+void q_sciscintilla_super_set_selection(void* self, int lineFrom, int indexFrom, int lineTo, int indexTo);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3097,6 +3381,10 @@ void q_sciscintilla_set_selection_background_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_selection_background_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_selection_background_color` instead
+///
+#define q_sciscintilla_qbase_set_selection_background_color q_sciscintilla_super_set_selection_background_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3104,7 +3392,7 @@ void q_sciscintilla_on_set_selection_background_color(void* self, void (*callbac
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_selection_background_color(void* self, void* col);
+void q_sciscintilla_super_set_selection_background_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3122,6 +3410,10 @@ void q_sciscintilla_set_selection_foreground_color(void* self, void* col);
 ///
 void q_sciscintilla_on_set_selection_foreground_color(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_selection_foreground_color` instead
+///
+#define q_sciscintilla_qbase_set_selection_foreground_color q_sciscintilla_super_set_selection_foreground_color
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3129,7 +3421,7 @@ void q_sciscintilla_on_set_selection_foreground_color(void* self, void (*callbac
 /// @param self QsciScintilla*
 /// @param col QColor*
 ///
-void q_sciscintilla_qbase_set_selection_foreground_color(void* self, void* col);
+void q_sciscintilla_super_set_selection_foreground_color(void* self, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3147,6 +3439,10 @@ void q_sciscintilla_set_tab_indents(void* self, bool indent);
 ///
 void q_sciscintilla_on_set_tab_indents(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_tab_indents` instead
+///
+#define q_sciscintilla_qbase_set_tab_indents q_sciscintilla_super_set_tab_indents
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3154,7 +3450,7 @@ void q_sciscintilla_on_set_tab_indents(void* self, void (*callback)(void*, bool)
 /// @param self QsciScintilla*
 /// @param indent bool
 ///
-void q_sciscintilla_qbase_set_tab_indents(void* self, bool indent);
+void q_sciscintilla_super_set_tab_indents(void* self, bool indent);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3172,6 +3468,10 @@ void q_sciscintilla_set_tab_width(void* self, int width);
 ///
 void q_sciscintilla_on_set_tab_width(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_tab_width` instead
+///
+#define q_sciscintilla_qbase_set_tab_width q_sciscintilla_super_set_tab_width
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3179,7 +3479,7 @@ void q_sciscintilla_on_set_tab_width(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param width int
 ///
-void q_sciscintilla_qbase_set_tab_width(void* self, int width);
+void q_sciscintilla_super_set_tab_width(void* self, int width);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3197,6 +3497,10 @@ void q_sciscintilla_set_text(void* self, const char* text);
 ///
 void q_sciscintilla_on_set_text(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_text` instead
+///
+#define q_sciscintilla_qbase_set_text q_sciscintilla_super_set_text
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3204,7 +3508,7 @@ void q_sciscintilla_on_set_text(void* self, void (*callback)(void*, const char*)
 /// @param self QsciScintilla*
 /// @param text const char*
 ///
-void q_sciscintilla_qbase_set_text(void* self, const char* text);
+void q_sciscintilla_super_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3222,6 +3526,10 @@ void q_sciscintilla_set_utf8(void* self, bool cp);
 ///
 void q_sciscintilla_on_set_utf8(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_utf8` instead
+///
+#define q_sciscintilla_qbase_set_utf8 q_sciscintilla_super_set_utf8
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3229,7 +3537,7 @@ void q_sciscintilla_on_set_utf8(void* self, void (*callback)(void*, bool));
 /// @param self QsciScintilla*
 /// @param cp bool
 ///
-void q_sciscintilla_qbase_set_utf8(void* self, bool cp);
+void q_sciscintilla_super_set_utf8(void* self, bool cp);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3247,6 +3555,10 @@ void q_sciscintilla_set_whitespace_visibility(void* self, int32_t mode);
 ///
 void q_sciscintilla_on_set_whitespace_visibility(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_whitespace_visibility` instead
+///
+#define q_sciscintilla_qbase_set_whitespace_visibility q_sciscintilla_super_set_whitespace_visibility
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3254,7 +3566,7 @@ void q_sciscintilla_on_set_whitespace_visibility(void* self, void (*callback)(vo
 /// @param self QsciScintilla*
 /// @param mode enum QsciScintilla__WhitespaceVisibility
 ///
-void q_sciscintilla_qbase_set_whitespace_visibility(void* self, int32_t mode);
+void q_sciscintilla_super_set_whitespace_visibility(void* self, int32_t mode);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3272,6 +3584,10 @@ void q_sciscintilla_set_wrap_mode(void* self, int32_t mode);
 ///
 void q_sciscintilla_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_wrap_mode` instead
+///
+#define q_sciscintilla_qbase_set_wrap_mode q_sciscintilla_super_set_wrap_mode
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3279,7 +3595,7 @@ void q_sciscintilla_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t
 /// @param self QsciScintilla*
 /// @param mode enum QsciScintilla__WrapMode
 ///
-void q_sciscintilla_qbase_set_wrap_mode(void* self, int32_t mode);
+void q_sciscintilla_super_set_wrap_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3296,13 +3612,17 @@ void q_sciscintilla_undo(void* self);
 ///
 void q_sciscintilla_on_undo(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_undo` instead
+///
+#define q_sciscintilla_qbase_undo q_sciscintilla_super_undo
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_undo(void* self);
+void q_sciscintilla_super_undo(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3320,6 +3640,10 @@ void q_sciscintilla_unindent(void* self, int line);
 ///
 void q_sciscintilla_on_unindent(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_unindent` instead
+///
+#define q_sciscintilla_qbase_unindent q_sciscintilla_super_unindent
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3327,7 +3651,7 @@ void q_sciscintilla_on_unindent(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param line int
 ///
-void q_sciscintilla_qbase_unindent(void* self, int line);
+void q_sciscintilla_super_unindent(void* self, int line);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3345,6 +3669,10 @@ void q_sciscintilla_zoom_in(void* self, int range);
 ///
 void q_sciscintilla_on_zoom_in(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_zoom_in` instead
+///
+#define q_sciscintilla_qbase_zoom_in q_sciscintilla_super_zoom_in
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3352,7 +3680,7 @@ void q_sciscintilla_on_zoom_in(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param range int
 ///
-void q_sciscintilla_qbase_zoom_in(void* self, int range);
+void q_sciscintilla_super_zoom_in(void* self, int range);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3369,13 +3697,17 @@ void q_sciscintilla_zoom_in2(void* self);
 ///
 void q_sciscintilla_on_zoom_in2(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_zoom_in2` instead
+///
+#define q_sciscintilla_qbase_zoom_in2 q_sciscintilla_super_zoom_in2
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_zoom_in2(void* self);
+void q_sciscintilla_super_zoom_in2(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3393,6 +3725,10 @@ void q_sciscintilla_zoom_out(void* self, int range);
 ///
 void q_sciscintilla_on_zoom_out(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_zoom_out` instead
+///
+#define q_sciscintilla_qbase_zoom_out q_sciscintilla_super_zoom_out
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3400,7 +3736,7 @@ void q_sciscintilla_on_zoom_out(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param range int
 ///
-void q_sciscintilla_qbase_zoom_out(void* self, int range);
+void q_sciscintilla_super_zoom_out(void* self, int range);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3417,13 +3753,17 @@ void q_sciscintilla_zoom_out2(void* self);
 ///
 void q_sciscintilla_on_zoom_out2(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_zoom_out2` instead
+///
+#define q_sciscintilla_qbase_zoom_out2 q_sciscintilla_super_zoom_out2
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_zoom_out2(void* self);
+void q_sciscintilla_super_zoom_out2(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3441,6 +3781,10 @@ void q_sciscintilla_zoom_to(void* self, int size);
 ///
 void q_sciscintilla_on_zoom_to(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_zoom_to` instead
+///
+#define q_sciscintilla_qbase_zoom_to q_sciscintilla_super_zoom_to
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3448,7 +3792,7 @@ void q_sciscintilla_on_zoom_to(void* self, void (*callback)(void*, int));
 /// @param self QsciScintilla*
 /// @param size int
 ///
-void q_sciscintilla_qbase_zoom_to(void* self, int size);
+void q_sciscintilla_super_zoom_to(void* self, int size);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3640,6 +3984,10 @@ bool q_sciscintilla_event(void* self, void* e);
 ///
 void q_sciscintilla_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_event` instead
+///
+#define q_sciscintilla_qbase_event q_sciscintilla_super_event
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3647,7 +3995,7 @@ void q_sciscintilla_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param e QEvent*
 ///
-bool q_sciscintilla_qbase_event(void* self, void* e);
+bool q_sciscintilla_super_event(void* self, void* e);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3665,6 +4013,10 @@ void q_sciscintilla_change_event(void* self, void* e);
 ///
 void q_sciscintilla_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_change_event` instead
+///
+#define q_sciscintilla_qbase_change_event q_sciscintilla_super_change_event
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3672,7 +4024,7 @@ void q_sciscintilla_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param e QEvent*
 ///
-void q_sciscintilla_qbase_change_event(void* self, void* e);
+void q_sciscintilla_super_change_event(void* self, void* e);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3690,6 +4042,10 @@ void q_sciscintilla_context_menu_event(void* self, void* e);
 ///
 void q_sciscintilla_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_context_menu_event` instead
+///
+#define q_sciscintilla_qbase_context_menu_event q_sciscintilla_super_context_menu_event
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3697,7 +4053,7 @@ void q_sciscintilla_on_context_menu_event(void* self, void (*callback)(void*, vo
 /// @param self QsciScintilla*
 /// @param e QContextMenuEvent*
 ///
-void q_sciscintilla_qbase_context_menu_event(void* self, void* e);
+void q_sciscintilla_super_context_menu_event(void* self, void* e);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3715,6 +4071,10 @@ void q_sciscintilla_wheel_event(void* self, void* e);
 ///
 void q_sciscintilla_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_wheel_event` instead
+///
+#define q_sciscintilla_qbase_wheel_event q_sciscintilla_super_wheel_event
+
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// Base class method implementation
@@ -3722,7 +4082,7 @@ void q_sciscintilla_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param self QsciScintilla*
 /// @param e QWheelEvent*
 ///
-void q_sciscintilla_qbase_wheel_event(void* self, void* e);
+void q_sciscintilla_super_wheel_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -7674,6 +8034,10 @@ int32_t q_sciscintilla_encode_metric_f(int32_t metric, double value);
 ///
 bool q_sciscintilla_can_insert_from_mime_data(void* self, void* source);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_can_insert_from_mime_data` instead
+///
+#define q_sciscintilla_qbase_can_insert_from_mime_data q_sciscintilla_super_can_insert_from_mime_data
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7683,7 +8047,7 @@ bool q_sciscintilla_can_insert_from_mime_data(void* self, void* source);
 /// @param self QsciScintilla*
 /// @param source QMimeData*
 ///
-bool q_sciscintilla_qbase_can_insert_from_mime_data(void* self, void* source);
+bool q_sciscintilla_super_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7710,6 +8074,10 @@ void q_sciscintilla_on_can_insert_from_mime_data(void* self, bool (*callback)(vo
 ///
 char* q_sciscintilla_from_mime_data(void* self, void* source, bool* rectangular);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_from_mime_data` instead
+///
+#define q_sciscintilla_qbase_from_mime_data q_sciscintilla_super_from_mime_data
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7722,7 +8090,7 @@ char* q_sciscintilla_from_mime_data(void* self, void* source, bool* rectangular)
 /// @param source QMimeData*
 /// @param rectangular bool*
 ///
-char* q_sciscintilla_qbase_from_mime_data(void* self, void* source, bool* rectangular);
+char* q_sciscintilla_super_from_mime_data(void* self, void* source, bool* rectangular);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7747,6 +8115,10 @@ void q_sciscintilla_on_from_mime_data(void* self, libqt_string (*callback)(void*
 ///
 QMimeData* q_sciscintilla_to_mime_data(void* self, char* text, bool rectangular);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_to_mime_data` instead
+///
+#define q_sciscintilla_qbase_to_mime_data q_sciscintilla_super_to_mime_data
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7757,7 +8129,7 @@ QMimeData* q_sciscintilla_to_mime_data(void* self, char* text, bool rectangular)
 /// @param text char*
 /// @param rectangular bool
 ///
-QMimeData* q_sciscintilla_qbase_to_mime_data(void* self, char* text, bool rectangular);
+QMimeData* q_sciscintilla_super_to_mime_data(void* self, char* text, bool rectangular);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7781,6 +8153,10 @@ void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*callback)(void*, li
 ///
 void q_sciscintilla_drag_enter_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_drag_enter_event` instead
+///
+#define q_sciscintilla_qbase_drag_enter_event q_sciscintilla_super_drag_enter_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7790,7 +8166,7 @@ void q_sciscintilla_drag_enter_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QDragEnterEvent*
 ///
-void q_sciscintilla_qbase_drag_enter_event(void* self, void* e);
+void q_sciscintilla_super_drag_enter_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7814,6 +8190,10 @@ void q_sciscintilla_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void q_sciscintilla_drag_leave_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_drag_leave_event` instead
+///
+#define q_sciscintilla_qbase_drag_leave_event q_sciscintilla_super_drag_leave_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7823,7 +8203,7 @@ void q_sciscintilla_drag_leave_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QDragLeaveEvent*
 ///
-void q_sciscintilla_qbase_drag_leave_event(void* self, void* e);
+void q_sciscintilla_super_drag_leave_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7847,6 +8227,10 @@ void q_sciscintilla_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void q_sciscintilla_drag_move_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_drag_move_event` instead
+///
+#define q_sciscintilla_qbase_drag_move_event q_sciscintilla_super_drag_move_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7856,7 +8240,7 @@ void q_sciscintilla_drag_move_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QDragMoveEvent*
 ///
-void q_sciscintilla_qbase_drag_move_event(void* self, void* e);
+void q_sciscintilla_super_drag_move_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7880,6 +8264,10 @@ void q_sciscintilla_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void q_sciscintilla_drop_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_drop_event` instead
+///
+#define q_sciscintilla_qbase_drop_event q_sciscintilla_super_drop_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7889,7 +8277,7 @@ void q_sciscintilla_drop_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QDropEvent*
 ///
-void q_sciscintilla_qbase_drop_event(void* self, void* e);
+void q_sciscintilla_super_drop_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7913,6 +8301,10 @@ void q_sciscintilla_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_focus_in_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_focus_in_event` instead
+///
+#define q_sciscintilla_qbase_focus_in_event q_sciscintilla_super_focus_in_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7922,7 +8314,7 @@ void q_sciscintilla_focus_in_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QFocusEvent*
 ///
-void q_sciscintilla_qbase_focus_in_event(void* self, void* e);
+void q_sciscintilla_super_focus_in_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7946,6 +8338,10 @@ void q_sciscintilla_on_focus_in_event(void* self, void (*callback)(void*, void*)
 ///
 void q_sciscintilla_focus_out_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_focus_out_event` instead
+///
+#define q_sciscintilla_qbase_focus_out_event q_sciscintilla_super_focus_out_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7955,7 +8351,7 @@ void q_sciscintilla_focus_out_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QFocusEvent*
 ///
-void q_sciscintilla_qbase_focus_out_event(void* self, void* e);
+void q_sciscintilla_super_focus_out_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7979,6 +8375,10 @@ void q_sciscintilla_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 bool q_sciscintilla_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_focus_next_prev_child` instead
+///
+#define q_sciscintilla_qbase_focus_next_prev_child q_sciscintilla_super_focus_next_prev_child
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -7988,7 +8388,7 @@ bool q_sciscintilla_focus_next_prev_child(void* self, bool next);
 /// @param self QsciScintilla*
 /// @param next bool
 ///
-bool q_sciscintilla_qbase_focus_next_prev_child(void* self, bool next);
+bool q_sciscintilla_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8012,6 +8412,10 @@ void q_sciscintilla_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 ///
 void q_sciscintilla_key_press_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_key_press_event` instead
+///
+#define q_sciscintilla_qbase_key_press_event q_sciscintilla_super_key_press_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8021,7 +8425,7 @@ void q_sciscintilla_key_press_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QKeyEvent*
 ///
-void q_sciscintilla_qbase_key_press_event(void* self, void* e);
+void q_sciscintilla_super_key_press_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8045,6 +8449,10 @@ void q_sciscintilla_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_sciscintilla_input_method_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_input_method_event` instead
+///
+#define q_sciscintilla_qbase_input_method_event q_sciscintilla_super_input_method_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8054,7 +8462,7 @@ void q_sciscintilla_input_method_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QInputMethodEvent*
 ///
-void q_sciscintilla_qbase_input_method_event(void* self, void* event);
+void q_sciscintilla_super_input_method_event(void* self, void* event);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8078,6 +8486,10 @@ void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 QVariant* q_sciscintilla_input_method_query(void* self, int32_t query);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_input_method_query` instead
+///
+#define q_sciscintilla_qbase_input_method_query q_sciscintilla_super_input_method_query
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8087,7 +8499,7 @@ QVariant* q_sciscintilla_input_method_query(void* self, int32_t query);
 /// @param self QsciScintilla*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_sciscintilla_qbase_input_method_query(void* self, int32_t query);
+QVariant* q_sciscintilla_super_input_method_query(void* self, int32_t query);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8111,6 +8523,10 @@ void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 void q_sciscintilla_mouse_double_click_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_mouse_double_click_event` instead
+///
+#define q_sciscintilla_qbase_mouse_double_click_event q_sciscintilla_super_mouse_double_click_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8120,7 +8536,7 @@ void q_sciscintilla_mouse_double_click_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QMouseEvent*
 ///
-void q_sciscintilla_qbase_mouse_double_click_event(void* self, void* e);
+void q_sciscintilla_super_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8144,6 +8560,10 @@ void q_sciscintilla_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_sciscintilla_mouse_move_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_mouse_move_event` instead
+///
+#define q_sciscintilla_qbase_mouse_move_event q_sciscintilla_super_mouse_move_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8153,7 +8573,7 @@ void q_sciscintilla_mouse_move_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QMouseEvent*
 ///
-void q_sciscintilla_qbase_mouse_move_event(void* self, void* e);
+void q_sciscintilla_super_mouse_move_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8177,6 +8597,10 @@ void q_sciscintilla_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void q_sciscintilla_mouse_press_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_mouse_press_event` instead
+///
+#define q_sciscintilla_qbase_mouse_press_event q_sciscintilla_super_mouse_press_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8186,7 +8610,7 @@ void q_sciscintilla_mouse_press_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QMouseEvent*
 ///
-void q_sciscintilla_qbase_mouse_press_event(void* self, void* e);
+void q_sciscintilla_super_mouse_press_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8210,6 +8634,10 @@ void q_sciscintilla_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_sciscintilla_mouse_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_mouse_release_event` instead
+///
+#define q_sciscintilla_qbase_mouse_release_event q_sciscintilla_super_mouse_release_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8219,7 +8647,7 @@ void q_sciscintilla_mouse_release_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QMouseEvent*
 ///
-void q_sciscintilla_qbase_mouse_release_event(void* self, void* e);
+void q_sciscintilla_super_mouse_release_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8243,6 +8671,10 @@ void q_sciscintilla_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_sciscintilla_paint_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_paint_event` instead
+///
+#define q_sciscintilla_qbase_paint_event q_sciscintilla_super_paint_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8252,7 +8684,7 @@ void q_sciscintilla_paint_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QPaintEvent*
 ///
-void q_sciscintilla_qbase_paint_event(void* self, void* e);
+void q_sciscintilla_super_paint_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8276,6 +8708,10 @@ void q_sciscintilla_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_resize_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_resize_event` instead
+///
+#define q_sciscintilla_qbase_resize_event q_sciscintilla_super_resize_event
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8285,7 +8721,7 @@ void q_sciscintilla_resize_event(void* self, void* e);
 /// @param self QsciScintilla*
 /// @param e QResizeEvent*
 ///
-void q_sciscintilla_qbase_resize_event(void* self, void* e);
+void q_sciscintilla_super_resize_event(void* self, void* e);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8310,6 +8746,10 @@ void q_sciscintilla_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_scroll_contents_by(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_scroll_contents_by` instead
+///
+#define q_sciscintilla_qbase_scroll_contents_by q_sciscintilla_super_scroll_contents_by
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -8320,7 +8760,7 @@ void q_sciscintilla_scroll_contents_by(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void q_sciscintilla_qbase_scroll_contents_by(void* self, int dx, int dy);
+void q_sciscintilla_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -8343,6 +8783,10 @@ void q_sciscintilla_on_scroll_contents_by(void* self, void (*callback)(void*, in
 ///
 QSize* q_sciscintilla_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_minimum_size_hint` instead
+///
+#define q_sciscintilla_qbase_minimum_size_hint q_sciscintilla_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -8351,7 +8795,7 @@ QSize* q_sciscintilla_minimum_size_hint(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QSize* q_sciscintilla_qbase_minimum_size_hint(void* self);
+QSize* q_sciscintilla_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8374,6 +8818,10 @@ void q_sciscintilla_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* q_sciscintilla_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_size_hint` instead
+///
+#define q_sciscintilla_qbase_size_hint q_sciscintilla_super_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
@@ -8382,7 +8830,7 @@ QSize* q_sciscintilla_size_hint(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QSize* q_sciscintilla_qbase_size_hint(void* self);
+QSize* q_sciscintilla_super_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8406,6 +8854,10 @@ void q_sciscintilla_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_sciscintilla_setup_viewport(void* self, void* viewport);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_setup_viewport` instead
+///
+#define q_sciscintilla_qbase_setup_viewport q_sciscintilla_super_setup_viewport
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -8415,7 +8867,7 @@ void q_sciscintilla_setup_viewport(void* self, void* viewport);
 /// @param self QsciScintilla*
 /// @param viewport QWidget*
 ///
-void q_sciscintilla_qbase_setup_viewport(void* self, void* viewport);
+void q_sciscintilla_super_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8440,6 +8892,10 @@ void q_sciscintilla_on_setup_viewport(void* self, void (*callback)(void*, void*)
 ///
 bool q_sciscintilla_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_event_filter` instead
+///
+#define q_sciscintilla_qbase_event_filter q_sciscintilla_super_event_filter
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
@@ -8450,7 +8906,7 @@ bool q_sciscintilla_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_sciscintilla_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_sciscintilla_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8474,6 +8930,10 @@ void q_sciscintilla_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 bool q_sciscintilla_viewport_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_viewport_event` instead
+///
+#define q_sciscintilla_qbase_viewport_event q_sciscintilla_super_viewport_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -8483,7 +8943,7 @@ bool q_sciscintilla_viewport_event(void* self, void* param1);
 /// @param self QsciScintilla*
 /// @param param1 QEvent*
 ///
-bool q_sciscintilla_qbase_viewport_event(void* self, void* param1);
+bool q_sciscintilla_super_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8506,6 +8966,10 @@ void q_sciscintilla_on_viewport_event(void* self, bool (*callback)(void*, void*)
 ///
 QSize* q_sciscintilla_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_viewport_size_hint` instead
+///
+#define q_sciscintilla_qbase_viewport_size_hint q_sciscintilla_super_viewport_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -8514,7 +8978,7 @@ QSize* q_sciscintilla_viewport_size_hint(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QSize* q_sciscintilla_qbase_viewport_size_hint(void* self);
+QSize* q_sciscintilla_super_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8538,6 +9002,10 @@ void q_sciscintilla_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_sciscintilla_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_init_style_option` instead
+///
+#define q_sciscintilla_qbase_init_style_option q_sciscintilla_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -8547,7 +9015,7 @@ void q_sciscintilla_init_style_option(void* self, void* option);
 /// @param self QsciScintilla*
 /// @param option QStyleOptionFrame*
 ///
-void q_sciscintilla_qbase_init_style_option(void* self, void* option);
+void q_sciscintilla_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -8570,6 +9038,10 @@ void q_sciscintilla_on_init_style_option(void* self, void (*callback)(void*, voi
 ///
 int32_t q_sciscintilla_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_dev_type` instead
+///
+#define q_sciscintilla_qbase_dev_type q_sciscintilla_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -8578,7 +9050,7 @@ int32_t q_sciscintilla_dev_type(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-int32_t q_sciscintilla_qbase_dev_type(void* self);
+int32_t q_sciscintilla_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8602,6 +9074,10 @@ void q_sciscintilla_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_sciscintilla_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_visible` instead
+///
+#define q_sciscintilla_qbase_set_visible q_sciscintilla_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -8611,7 +9087,7 @@ void q_sciscintilla_set_visible(void* self, bool visible);
 /// @param self QsciScintilla*
 /// @param visible bool
 ///
-void q_sciscintilla_qbase_set_visible(void* self, bool visible);
+void q_sciscintilla_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -8635,6 +9111,10 @@ void q_sciscintilla_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_sciscintilla_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_height_for_width` instead
+///
+#define q_sciscintilla_qbase_height_for_width q_sciscintilla_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -8644,7 +9124,7 @@ int32_t q_sciscintilla_height_for_width(void* self, int param1);
 /// @param self QsciScintilla*
 /// @param param1 int
 ///
-int32_t q_sciscintilla_qbase_height_for_width(void* self, int param1);
+int32_t q_sciscintilla_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -8667,6 +9147,10 @@ void q_sciscintilla_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool q_sciscintilla_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_has_height_for_width` instead
+///
+#define q_sciscintilla_qbase_has_height_for_width q_sciscintilla_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -8675,7 +9159,7 @@ bool q_sciscintilla_has_height_for_width(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-bool q_sciscintilla_qbase_has_height_for_width(void* self);
+bool q_sciscintilla_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8698,6 +9182,10 @@ void q_sciscintilla_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_sciscintilla_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_paint_engine` instead
+///
+#define q_sciscintilla_qbase_paint_engine q_sciscintilla_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -8706,7 +9194,7 @@ QPaintEngine* q_sciscintilla_paint_engine(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QPaintEngine* q_sciscintilla_qbase_paint_engine(void* self);
+QPaintEngine* q_sciscintilla_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8730,6 +9218,10 @@ void q_sciscintilla_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_sciscintilla_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_key_release_event` instead
+///
+#define q_sciscintilla_qbase_key_release_event q_sciscintilla_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -8739,7 +9231,7 @@ void q_sciscintilla_key_release_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QKeyEvent*
 ///
-void q_sciscintilla_qbase_key_release_event(void* self, void* event);
+void q_sciscintilla_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8763,6 +9255,10 @@ void q_sciscintilla_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_sciscintilla_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_enter_event` instead
+///
+#define q_sciscintilla_qbase_enter_event q_sciscintilla_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -8772,7 +9268,7 @@ void q_sciscintilla_enter_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QEnterEvent*
 ///
-void q_sciscintilla_qbase_enter_event(void* self, void* event);
+void q_sciscintilla_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8796,6 +9292,10 @@ void q_sciscintilla_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_leave_event` instead
+///
+#define q_sciscintilla_qbase_leave_event q_sciscintilla_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -8805,7 +9305,7 @@ void q_sciscintilla_leave_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QEvent*
 ///
-void q_sciscintilla_qbase_leave_event(void* self, void* event);
+void q_sciscintilla_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8829,6 +9329,10 @@ void q_sciscintilla_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_move_event` instead
+///
+#define q_sciscintilla_qbase_move_event q_sciscintilla_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -8838,7 +9342,7 @@ void q_sciscintilla_move_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QMoveEvent*
 ///
-void q_sciscintilla_qbase_move_event(void* self, void* event);
+void q_sciscintilla_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8862,6 +9366,10 @@ void q_sciscintilla_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_close_event` instead
+///
+#define q_sciscintilla_qbase_close_event q_sciscintilla_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -8871,7 +9379,7 @@ void q_sciscintilla_close_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QCloseEvent*
 ///
-void q_sciscintilla_qbase_close_event(void* self, void* event);
+void q_sciscintilla_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8895,6 +9403,10 @@ void q_sciscintilla_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_tablet_event` instead
+///
+#define q_sciscintilla_qbase_tablet_event q_sciscintilla_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -8904,7 +9416,7 @@ void q_sciscintilla_tablet_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QTabletEvent*
 ///
-void q_sciscintilla_qbase_tablet_event(void* self, void* event);
+void q_sciscintilla_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8928,6 +9440,10 @@ void q_sciscintilla_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_action_event` instead
+///
+#define q_sciscintilla_qbase_action_event q_sciscintilla_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -8937,7 +9453,7 @@ void q_sciscintilla_action_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QActionEvent*
 ///
-void q_sciscintilla_qbase_action_event(void* self, void* event);
+void q_sciscintilla_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8961,6 +9477,10 @@ void q_sciscintilla_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_show_event` instead
+///
+#define q_sciscintilla_qbase_show_event q_sciscintilla_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -8970,7 +9490,7 @@ void q_sciscintilla_show_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QShowEvent*
 ///
-void q_sciscintilla_qbase_show_event(void* self, void* event);
+void q_sciscintilla_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8994,6 +9514,10 @@ void q_sciscintilla_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_hide_event` instead
+///
+#define q_sciscintilla_qbase_hide_event q_sciscintilla_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -9003,7 +9527,7 @@ void q_sciscintilla_hide_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QHideEvent*
 ///
-void q_sciscintilla_qbase_hide_event(void* self, void* event);
+void q_sciscintilla_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9029,6 +9553,10 @@ void q_sciscintilla_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_sciscintilla_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_native_event` instead
+///
+#define q_sciscintilla_qbase_native_event q_sciscintilla_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -9040,7 +9568,7 @@ bool q_sciscintilla_native_event(void* self, char* eventType, void* message, int
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_sciscintilla_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_sciscintilla_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -9064,6 +9592,10 @@ void q_sciscintilla_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 int32_t q_sciscintilla_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_metric` instead
+///
+#define q_sciscintilla_qbase_metric q_sciscintilla_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -9073,7 +9605,7 @@ int32_t q_sciscintilla_metric(void* self, int32_t param1);
 /// @param self QsciScintilla*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_sciscintilla_qbase_metric(void* self, int32_t param1);
+int32_t q_sciscintilla_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9097,6 +9629,10 @@ void q_sciscintilla_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_sciscintilla_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_init_painter` instead
+///
+#define q_sciscintilla_qbase_init_painter q_sciscintilla_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -9106,7 +9642,7 @@ void q_sciscintilla_init_painter(void* self, void* painter);
 /// @param self QsciScintilla*
 /// @param painter QPainter*
 ///
-void q_sciscintilla_qbase_init_painter(void* self, void* painter);
+void q_sciscintilla_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -9130,6 +9666,10 @@ void q_sciscintilla_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_sciscintilla_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_redirected` instead
+///
+#define q_sciscintilla_qbase_redirected q_sciscintilla_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -9139,7 +9679,7 @@ QPaintDevice* q_sciscintilla_redirected(void* self, void* offset);
 /// @param self QsciScintilla*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_sciscintilla_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_sciscintilla_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -9162,6 +9702,10 @@ void q_sciscintilla_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* q_sciscintilla_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_shared_painter` instead
+///
+#define q_sciscintilla_qbase_shared_painter q_sciscintilla_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -9170,7 +9714,7 @@ QPainter* q_sciscintilla_shared_painter(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QPainter* q_sciscintilla_qbase_shared_painter(void* self);
+QPainter* q_sciscintilla_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9194,6 +9738,10 @@ void q_sciscintilla_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_sciscintilla_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_timer_event` instead
+///
+#define q_sciscintilla_qbase_timer_event q_sciscintilla_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -9203,7 +9751,7 @@ void q_sciscintilla_timer_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QTimerEvent*
 ///
-void q_sciscintilla_qbase_timer_event(void* self, void* event);
+void q_sciscintilla_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -9227,6 +9775,10 @@ void q_sciscintilla_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_child_event` instead
+///
+#define q_sciscintilla_qbase_child_event q_sciscintilla_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -9236,7 +9788,7 @@ void q_sciscintilla_child_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QChildEvent*
 ///
-void q_sciscintilla_qbase_child_event(void* self, void* event);
+void q_sciscintilla_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -9260,6 +9812,10 @@ void q_sciscintilla_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_custom_event` instead
+///
+#define q_sciscintilla_qbase_custom_event q_sciscintilla_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -9269,7 +9825,7 @@ void q_sciscintilla_custom_event(void* self, void* event);
 /// @param self QsciScintilla*
 /// @param event QEvent*
 ///
-void q_sciscintilla_qbase_custom_event(void* self, void* event);
+void q_sciscintilla_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -9293,6 +9849,10 @@ void q_sciscintilla_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_connect_notify` instead
+///
+#define q_sciscintilla_qbase_connect_notify q_sciscintilla_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -9302,7 +9862,7 @@ void q_sciscintilla_connect_notify(void* self, void* signal);
 /// @param self QsciScintilla*
 /// @param signal QMetaMethod*
 ///
-void q_sciscintilla_qbase_connect_notify(void* self, void* signal);
+void q_sciscintilla_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -9326,6 +9886,10 @@ void q_sciscintilla_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_sciscintilla_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_disconnect_notify` instead
+///
+#define q_sciscintilla_qbase_disconnect_notify q_sciscintilla_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -9335,7 +9899,7 @@ void q_sciscintilla_disconnect_notify(void* self, void* signal);
 /// @param self QsciScintilla*
 /// @param signal QMetaMethod*
 ///
-void q_sciscintilla_qbase_disconnect_notify(void* self, void* signal);
+void q_sciscintilla_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -9358,6 +9922,10 @@ void q_sciscintilla_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_sciscintilla_set_scroll_bars(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_scroll_bars` instead
+///
+#define q_sciscintilla_qbase_set_scroll_bars q_sciscintilla_super_set_scroll_bars
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -9366,7 +9934,7 @@ void q_sciscintilla_set_scroll_bars(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_set_scroll_bars(void* self);
+void q_sciscintilla_super_set_scroll_bars(void* self);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -9391,6 +9959,10 @@ void q_sciscintilla_on_set_scroll_bars(void* self, void (*callback)());
 ///
 bool q_sciscintilla_context_menu_needed(void* self, int x, int y);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_context_menu_needed` instead
+///
+#define q_sciscintilla_qbase_context_menu_needed q_sciscintilla_super_context_menu_needed
+
 /// Inherited from QsciScintillaBase
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
@@ -9401,7 +9973,7 @@ bool q_sciscintilla_context_menu_needed(void* self, int x, int y);
 /// @param x int
 /// @param y int
 ///
-bool q_sciscintilla_qbase_context_menu_needed(void* self, int x, int y);
+bool q_sciscintilla_super_context_menu_needed(void* self, int x, int y);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -9428,6 +10000,10 @@ void q_sciscintilla_on_context_menu_needed(void* self, bool (*callback)(void*, i
 ///
 void q_sciscintilla_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_set_viewport_margins` instead
+///
+#define q_sciscintilla_qbase_set_viewport_margins q_sciscintilla_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -9440,7 +10016,7 @@ void q_sciscintilla_set_viewport_margins(void* self, int left, int top, int righ
 /// @param right int
 /// @param bottom int
 ///
-void q_sciscintilla_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void q_sciscintilla_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -9463,6 +10039,10 @@ void q_sciscintilla_on_set_viewport_margins(void* self, void (*callback)(void*, 
 ///
 QMargins* q_sciscintilla_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_viewport_margins` instead
+///
+#define q_sciscintilla_qbase_viewport_margins q_sciscintilla_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -9471,7 +10051,7 @@ QMargins* q_sciscintilla_viewport_margins(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QMargins* q_sciscintilla_qbase_viewport_margins(void* self);
+QMargins* q_sciscintilla_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -9495,6 +10075,10 @@ void q_sciscintilla_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_sciscintilla_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_draw_frame` instead
+///
+#define q_sciscintilla_qbase_draw_frame q_sciscintilla_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -9504,7 +10088,7 @@ void q_sciscintilla_draw_frame(void* self, void* param1);
 /// @param self QsciScintilla*
 /// @param param1 QPainter*
 ///
-void q_sciscintilla_qbase_draw_frame(void* self, void* param1);
+void q_sciscintilla_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -9527,6 +10111,10 @@ void q_sciscintilla_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_sciscintilla_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_update_micro_focus` instead
+///
+#define q_sciscintilla_qbase_update_micro_focus q_sciscintilla_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -9535,7 +10123,7 @@ void q_sciscintilla_update_micro_focus(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_update_micro_focus(void* self);
+void q_sciscintilla_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9558,6 +10146,10 @@ void q_sciscintilla_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_sciscintilla_create(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_create` instead
+///
+#define q_sciscintilla_qbase_create q_sciscintilla_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -9566,7 +10158,7 @@ void q_sciscintilla_create(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_create(void* self);
+void q_sciscintilla_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9589,6 +10181,10 @@ void q_sciscintilla_on_create(void* self, void (*callback)());
 ///
 void q_sciscintilla_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_destroy` instead
+///
+#define q_sciscintilla_qbase_destroy q_sciscintilla_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -9597,7 +10193,7 @@ void q_sciscintilla_destroy(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-void q_sciscintilla_qbase_destroy(void* self);
+void q_sciscintilla_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9620,6 +10216,10 @@ void q_sciscintilla_on_destroy(void* self, void (*callback)());
 ///
 bool q_sciscintilla_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_focus_next_child` instead
+///
+#define q_sciscintilla_qbase_focus_next_child q_sciscintilla_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -9628,7 +10228,7 @@ bool q_sciscintilla_focus_next_child(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-bool q_sciscintilla_qbase_focus_next_child(void* self);
+bool q_sciscintilla_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9651,6 +10251,10 @@ void q_sciscintilla_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_sciscintilla_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_focus_previous_child` instead
+///
+#define q_sciscintilla_qbase_focus_previous_child q_sciscintilla_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -9659,7 +10263,7 @@ bool q_sciscintilla_focus_previous_child(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-bool q_sciscintilla_qbase_focus_previous_child(void* self);
+bool q_sciscintilla_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9682,6 +10286,10 @@ void q_sciscintilla_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_sciscintilla_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_sender` instead
+///
+#define q_sciscintilla_qbase_sender q_sciscintilla_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -9690,7 +10298,7 @@ QObject* q_sciscintilla_sender(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-QObject* q_sciscintilla_qbase_sender(void* self);
+QObject* q_sciscintilla_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -9713,6 +10321,10 @@ void q_sciscintilla_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_sciscintilla_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_sender_signal_index` instead
+///
+#define q_sciscintilla_qbase_sender_signal_index q_sciscintilla_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -9721,7 +10333,7 @@ int32_t q_sciscintilla_sender_signal_index(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-int32_t q_sciscintilla_qbase_sender_signal_index(void* self);
+int32_t q_sciscintilla_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -9745,6 +10357,10 @@ void q_sciscintilla_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sciscintilla_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_receivers` instead
+///
+#define q_sciscintilla_qbase_receivers q_sciscintilla_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -9754,7 +10370,7 @@ int32_t q_sciscintilla_receivers(void* self, const char* signal);
 /// @param self QsciScintilla*
 /// @param signal const char*
 ///
-int32_t q_sciscintilla_qbase_receivers(void* self, const char* signal);
+int32_t q_sciscintilla_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -9778,6 +10394,10 @@ void q_sciscintilla_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_sciscintilla_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_is_signal_connected` instead
+///
+#define q_sciscintilla_qbase_is_signal_connected q_sciscintilla_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -9787,7 +10407,7 @@ bool q_sciscintilla_is_signal_connected(void* self, void* signal);
 /// @param self QsciScintilla*
 /// @param signal QMetaMethod*
 ///
-bool q_sciscintilla_qbase_is_signal_connected(void* self, void* signal);
+bool q_sciscintilla_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -9812,6 +10432,10 @@ void q_sciscintilla_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 double q_sciscintilla_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_sciscintilla_super_get_decoded_metric_f` instead
+///
+#define q_sciscintilla_qbase_get_decoded_metric_f q_sciscintilla_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -9822,7 +10446,7 @@ double q_sciscintilla_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_sciscintilla_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_sciscintilla_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

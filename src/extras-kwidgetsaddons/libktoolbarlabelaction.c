@@ -24,8 +24,8 @@ void k_toolbarlabelaction_on_meta_object(void* self, const QMetaObject* (*callba
     KToolBarLabelAction_OnMetaObject((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_toolbarlabelaction_qbase_meta_object(void* self) {
-    return KToolBarLabelAction_QBaseMetaObject((KToolBarLabelAction*)self);
+const QMetaObject* k_toolbarlabelaction_super_meta_object(void* self) {
+    return KToolBarLabelAction_SuperMetaObject((KToolBarLabelAction*)self);
 }
 
 void* k_toolbarlabelaction_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_toolbarlabelaction_on_metacast(void* self, void* (*callback)(void*, const
     KToolBarLabelAction_OnMetacast((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-void* k_toolbarlabelaction_qbase_metacast(void* self, const char* param1) {
-    return KToolBarLabelAction_QBaseMetacast((KToolBarLabelAction*)self, param1);
+void* k_toolbarlabelaction_super_metacast(void* self, const char* param1) {
+    return KToolBarLabelAction_SuperMetacast((KToolBarLabelAction*)self, param1);
 }
 
 int32_t k_toolbarlabelaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_toolbarlabelaction_on_metacall(void* self, int32_t (*callback)(void*, int
     KToolBarLabelAction_OnMetacall((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-int32_t k_toolbarlabelaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToolBarLabelAction_QBaseMetacall((KToolBarLabelAction*)self, param1, param2, param3);
+int32_t k_toolbarlabelaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToolBarLabelAction_SuperMetacall((KToolBarLabelAction*)self, param1, param2, param3);
 }
 
 const char* k_toolbarlabelaction_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void
     KToolBarLabelAction_OnCreateWidget((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-QWidget* k_toolbarlabelaction_qbase_create_widget(void* self, void* parent) {
-    return KToolBarLabelAction_QBaseCreateWidget((KToolBarLabelAction*)self, (QWidget*)parent);
+QWidget* k_toolbarlabelaction_super_create_widget(void* self, void* parent) {
+    return KToolBarLabelAction_SuperCreateWidget((KToolBarLabelAction*)self, (QWidget*)parent);
 }
 
 void k_toolbarlabelaction_text_changed(void* self, const char* newText) {
@@ -95,8 +95,8 @@ void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*)) {
     KToolBarLabelAction_OnEvent((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-bool k_toolbarlabelaction_qbase_event(void* self, void* param1) {
-    return KToolBarLabelAction_QBaseEvent((KToolBarLabelAction*)self, (QEvent*)param1);
+bool k_toolbarlabelaction_super_event(void* self, void* param1) {
+    return KToolBarLabelAction_SuperEvent((KToolBarLabelAction*)self, (QEvent*)param1);
 }
 
 bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event) {
@@ -107,8 +107,8 @@ void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, vo
     KToolBarLabelAction_OnEventFilter((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 
-bool k_toolbarlabelaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KToolBarLabelAction_QBaseEventFilter((KToolBarLabelAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_toolbarlabelaction_super_event_filter(void* self, void* watched, void* event) {
+    return KToolBarLabelAction_SuperEventFilter((KToolBarLabelAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_toolbarlabelaction_tr2(const char* s, const char* c) {
@@ -653,8 +653,8 @@ void k_toolbarlabelaction_delete_widget(void* self, void* widget) {
     KToolBarLabelAction_DeleteWidget((KToolBarLabelAction*)self, (QWidget*)widget);
 }
 
-void k_toolbarlabelaction_qbase_delete_widget(void* self, void* widget) {
-    KToolBarLabelAction_QBaseDeleteWidget((KToolBarLabelAction*)self, (QWidget*)widget);
+void k_toolbarlabelaction_super_delete_widget(void* self, void* widget) {
+    KToolBarLabelAction_SuperDeleteWidget((KToolBarLabelAction*)self, (QWidget*)widget);
 }
 
 void k_toolbarlabelaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -665,8 +665,8 @@ void k_toolbarlabelaction_timer_event(void* self, void* event) {
     KToolBarLabelAction_TimerEvent((KToolBarLabelAction*)self, (QTimerEvent*)event);
 }
 
-void k_toolbarlabelaction_qbase_timer_event(void* self, void* event) {
-    KToolBarLabelAction_QBaseTimerEvent((KToolBarLabelAction*)self, (QTimerEvent*)event);
+void k_toolbarlabelaction_super_timer_event(void* self, void* event) {
+    KToolBarLabelAction_SuperTimerEvent((KToolBarLabelAction*)self, (QTimerEvent*)event);
 }
 
 void k_toolbarlabelaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -677,8 +677,8 @@ void k_toolbarlabelaction_child_event(void* self, void* event) {
     KToolBarLabelAction_ChildEvent((KToolBarLabelAction*)self, (QChildEvent*)event);
 }
 
-void k_toolbarlabelaction_qbase_child_event(void* self, void* event) {
-    KToolBarLabelAction_QBaseChildEvent((KToolBarLabelAction*)self, (QChildEvent*)event);
+void k_toolbarlabelaction_super_child_event(void* self, void* event) {
+    KToolBarLabelAction_SuperChildEvent((KToolBarLabelAction*)self, (QChildEvent*)event);
 }
 
 void k_toolbarlabelaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -689,8 +689,8 @@ void k_toolbarlabelaction_custom_event(void* self, void* event) {
     KToolBarLabelAction_CustomEvent((KToolBarLabelAction*)self, (QEvent*)event);
 }
 
-void k_toolbarlabelaction_qbase_custom_event(void* self, void* event) {
-    KToolBarLabelAction_QBaseCustomEvent((KToolBarLabelAction*)self, (QEvent*)event);
+void k_toolbarlabelaction_super_custom_event(void* self, void* event) {
+    KToolBarLabelAction_SuperCustomEvent((KToolBarLabelAction*)self, (QEvent*)event);
 }
 
 void k_toolbarlabelaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -701,8 +701,8 @@ void k_toolbarlabelaction_connect_notify(void* self, void* signal) {
     KToolBarLabelAction_ConnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarlabelaction_qbase_connect_notify(void* self, void* signal) {
-    KToolBarLabelAction_QBaseConnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
+void k_toolbarlabelaction_super_connect_notify(void* self, void* signal) {
+    KToolBarLabelAction_SuperConnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarlabelaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -713,8 +713,8 @@ void k_toolbarlabelaction_disconnect_notify(void* self, void* signal) {
     KToolBarLabelAction_DisconnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarlabelaction_qbase_disconnect_notify(void* self, void* signal) {
-    KToolBarLabelAction_QBaseDisconnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
+void k_toolbarlabelaction_super_disconnect_notify(void* self, void* signal) {
+    KToolBarLabelAction_SuperDisconnectNotify((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarlabelaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -726,8 +726,8 @@ libqt_list /* of QWidget* */ k_toolbarlabelaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_toolbarlabelaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KToolBarLabelAction_QBaseCreatedWidgets((KToolBarLabelAction*)self);
+libqt_list /* of QWidget* */ k_toolbarlabelaction_super_created_widgets(void* self) {
+    libqt_list _arr = KToolBarLabelAction_SuperCreatedWidgets((KToolBarLabelAction*)self);
     return _arr;
 }
 
@@ -739,8 +739,8 @@ QObject* k_toolbarlabelaction_sender(void* self) {
     return KToolBarLabelAction_Sender((KToolBarLabelAction*)self);
 }
 
-QObject* k_toolbarlabelaction_qbase_sender(void* self) {
-    return KToolBarLabelAction_QBaseSender((KToolBarLabelAction*)self);
+QObject* k_toolbarlabelaction_super_sender(void* self) {
+    return KToolBarLabelAction_SuperSender((KToolBarLabelAction*)self);
 }
 
 void k_toolbarlabelaction_on_sender(void* self, QObject* (*callback)()) {
@@ -751,8 +751,8 @@ int32_t k_toolbarlabelaction_sender_signal_index(void* self) {
     return KToolBarLabelAction_SenderSignalIndex((KToolBarLabelAction*)self);
 }
 
-int32_t k_toolbarlabelaction_qbase_sender_signal_index(void* self) {
-    return KToolBarLabelAction_QBaseSenderSignalIndex((KToolBarLabelAction*)self);
+int32_t k_toolbarlabelaction_super_sender_signal_index(void* self) {
+    return KToolBarLabelAction_SuperSenderSignalIndex((KToolBarLabelAction*)self);
 }
 
 void k_toolbarlabelaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -763,8 +763,8 @@ int32_t k_toolbarlabelaction_receivers(void* self, const char* signal) {
     return KToolBarLabelAction_Receivers((KToolBarLabelAction*)self, signal);
 }
 
-int32_t k_toolbarlabelaction_qbase_receivers(void* self, const char* signal) {
-    return KToolBarLabelAction_QBaseReceivers((KToolBarLabelAction*)self, signal);
+int32_t k_toolbarlabelaction_super_receivers(void* self, const char* signal) {
+    return KToolBarLabelAction_SuperReceivers((KToolBarLabelAction*)self, signal);
 }
 
 void k_toolbarlabelaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -775,8 +775,8 @@ bool k_toolbarlabelaction_is_signal_connected(void* self, void* signal) {
     return KToolBarLabelAction_IsSignalConnected((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_toolbarlabelaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToolBarLabelAction_QBaseIsSignalConnected((KToolBarLabelAction*)self, (QMetaMethod*)signal);
+bool k_toolbarlabelaction_super_is_signal_connected(void* self, void* signal) {
+    return KToolBarLabelAction_SuperIsSignalConnected((KToolBarLabelAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

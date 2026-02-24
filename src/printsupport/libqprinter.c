@@ -37,8 +37,8 @@ void q_printer_on_dev_type(void* self, int32_t (*callback)()) {
     QPrinter_OnDevType((QPrinter*)self, (intptr_t)callback);
 }
 
-int32_t q_printer_qbase_dev_type(void* self) {
-    return QPrinter_QBaseDevType((QPrinter*)self);
+int32_t q_printer_super_dev_type(void* self) {
+    return QPrinter_SuperDevType((QPrinter*)self);
 }
 
 void q_printer_set_output_format(void* self, int32_t format) {
@@ -224,8 +224,8 @@ void q_printer_on_new_page(void* self, bool (*callback)()) {
     QPrinter_OnNewPage((QPrinter*)self, (intptr_t)callback);
 }
 
-bool q_printer_qbase_new_page(void* self) {
-    return QPrinter_QBaseNewPage((QPrinter*)self);
+bool q_printer_super_new_page(void* self) {
+    return QPrinter_SuperNewPage((QPrinter*)self);
 }
 
 bool q_printer_abort(void* self) {
@@ -244,8 +244,8 @@ void q_printer_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
     QPrinter_OnPaintEngine((QPrinter*)self, (intptr_t)callback);
 }
 
-QPaintEngine* q_printer_qbase_paint_engine(void* self) {
-    return QPrinter_QBasePaintEngine((QPrinter*)self);
+QPaintEngine* q_printer_super_paint_engine(void* self) {
+    return QPrinter_SuperPaintEngine((QPrinter*)self);
 }
 
 QPrintEngine* q_printer_print_engine(void* self) {
@@ -280,8 +280,8 @@ void q_printer_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPrinter_OnMetric((QPrinter*)self, (intptr_t)callback);
 }
 
-int32_t q_printer_qbase_metric(void* self, int32_t param1) {
-    return QPrinter_QBaseMetric((QPrinter*)self, param1);
+int32_t q_printer_super_metric(void* self, int32_t param1) {
+    return QPrinter_SuperMetric((QPrinter*)self, param1);
 }
 
 void q_printer_set_engines(void* self, void* printEngine, void* paintEngine) {
@@ -292,8 +292,8 @@ void q_printer_on_set_engines(void* self, void (*callback)(void*, void*, void*))
     QPrinter_OnSetEngines((QPrinter*)self, (intptr_t)callback);
 }
 
-void q_printer_qbase_set_engines(void* self, void* printEngine, void* paintEngine) {
-    QPrinter_QBaseSetEngines((QPrinter*)self, (QPrintEngine*)printEngine, (QPaintEngine*)paintEngine);
+void q_printer_super_set_engines(void* self, void* printEngine, void* paintEngine) {
+    QPrinter_SuperSetEngines((QPrinter*)self, (QPrintEngine*)printEngine, (QPaintEngine*)paintEngine);
 }
 
 QPageLayout* q_printer_page_layout(void* self) {
@@ -368,8 +368,8 @@ bool q_printer_set_page_layout(void* self, void* pageLayout) {
     return QPrinter_SetPageLayout((QPrinter*)self, (QPageLayout*)pageLayout);
 }
 
-bool q_printer_qbase_set_page_layout(void* self, void* pageLayout) {
-    return QPrinter_QBaseSetPageLayout((QPrinter*)self, (QPageLayout*)pageLayout);
+bool q_printer_super_set_page_layout(void* self, void* pageLayout) {
+    return QPrinter_SuperSetPageLayout((QPrinter*)self, (QPageLayout*)pageLayout);
 }
 
 void q_printer_on_set_page_layout(void* self, bool (*callback)(void*, void*)) {
@@ -380,8 +380,8 @@ bool q_printer_set_page_size(void* self, void* pageSize) {
     return QPrinter_SetPageSize((QPrinter*)self, (QPageSize*)pageSize);
 }
 
-bool q_printer_qbase_set_page_size(void* self, void* pageSize) {
-    return QPrinter_QBaseSetPageSize((QPrinter*)self, (QPageSize*)pageSize);
+bool q_printer_super_set_page_size(void* self, void* pageSize) {
+    return QPrinter_SuperSetPageSize((QPrinter*)self, (QPageSize*)pageSize);
 }
 
 void q_printer_on_set_page_size(void* self, bool (*callback)(void*, void*)) {
@@ -392,8 +392,8 @@ bool q_printer_set_page_orientation(void* self, int32_t orientation) {
     return QPrinter_SetPageOrientation((QPrinter*)self, orientation);
 }
 
-bool q_printer_qbase_set_page_orientation(void* self, int32_t orientation) {
-    return QPrinter_QBaseSetPageOrientation((QPrinter*)self, orientation);
+bool q_printer_super_set_page_orientation(void* self, int32_t orientation) {
+    return QPrinter_SuperSetPageOrientation((QPrinter*)self, orientation);
 }
 
 void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t)) {
@@ -404,8 +404,8 @@ bool q_printer_set_page_margins(void* self, void* margins, int32_t units) {
     return QPrinter_SetPageMargins((QPrinter*)self, (QMarginsF*)margins, units);
 }
 
-bool q_printer_qbase_set_page_margins(void* self, void* margins, int32_t units) {
-    return QPrinter_QBaseSetPageMargins((QPrinter*)self, (QMarginsF*)margins, units);
+bool q_printer_super_set_page_margins(void* self, void* margins, int32_t units) {
+    return QPrinter_SuperSetPageMargins((QPrinter*)self, (QMarginsF*)margins, units);
 }
 
 void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -416,8 +416,8 @@ void q_printer_set_page_ranges(void* self, void* ranges) {
     QPrinter_SetPageRanges((QPrinter*)self, (QPageRanges*)ranges);
 }
 
-void q_printer_qbase_set_page_ranges(void* self, void* ranges) {
-    QPrinter_QBaseSetPageRanges((QPrinter*)self, (QPageRanges*)ranges);
+void q_printer_super_set_page_ranges(void* self, void* ranges) {
+    QPrinter_SuperSetPageRanges((QPrinter*)self, (QPageRanges*)ranges);
 }
 
 void q_printer_on_set_page_ranges(void* self, void (*callback)(void*, void*)) {
@@ -428,8 +428,8 @@ void q_printer_init_painter(void* self, void* painter) {
     QPrinter_InitPainter((QPrinter*)self, (QPainter*)painter);
 }
 
-void q_printer_qbase_init_painter(void* self, void* painter) {
-    QPrinter_QBaseInitPainter((QPrinter*)self, (QPainter*)painter);
+void q_printer_super_init_painter(void* self, void* painter) {
+    QPrinter_SuperInitPainter((QPrinter*)self, (QPainter*)painter);
 }
 
 void q_printer_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -440,8 +440,8 @@ QPaintDevice* q_printer_redirected(void* self, void* offset) {
     return QPrinter_Redirected((QPrinter*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_printer_qbase_redirected(void* self, void* offset) {
-    return QPrinter_QBaseRedirected((QPrinter*)self, (QPoint*)offset);
+QPaintDevice* q_printer_super_redirected(void* self, void* offset) {
+    return QPrinter_SuperRedirected((QPrinter*)self, (QPoint*)offset);
 }
 
 void q_printer_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -452,8 +452,8 @@ QPainter* q_printer_shared_painter(void* self) {
     return QPrinter_SharedPainter((QPrinter*)self);
 }
 
-QPainter* q_printer_qbase_shared_painter(void* self) {
-    return QPrinter_QBaseSharedPainter((QPrinter*)self);
+QPainter* q_printer_super_shared_painter(void* self) {
+    return QPrinter_SuperSharedPainter((QPrinter*)self);
 }
 
 void q_printer_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -464,8 +464,8 @@ double q_printer_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
     return QPrinter_GetDecodedMetricF((QPrinter*)self, metricA, metricB);
 }
 
-double q_printer_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QPrinter_QBaseGetDecodedMetricF((QPrinter*)self, metricA, metricB);
+double q_printer_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QPrinter_SuperGetDecodedMetricF((QPrinter*)self, metricA, metricB);
 }
 
 void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -797,16 +797,12 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
 		} else {
-			var iterCast, iterClose string
-			if p.UniquePtr {
-				iterCast = "static_cast<qsizetype>("
-				iterClose = ")"
-				t.UniquePtr = true
-			}
+			iterType := ifv(containerType == "std::vector", "size_t", "qsizetype")
+			t.UniquePtr = p.UniquePtr
 
 			afterCall += indent + "// Convert " + containerType + "<> from C++ memory to manually-managed C memory\n"
 			afterCall += indent + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * (" + namePrefix + "_ret" + memberRef + "size())));\n"
-			afterCall += indent + "for (qsizetype " + iterator + " = 0; " + iterator + " < " + iterCast + namePrefix + "_ret" + memberRef + "size()" + iterClose + "; ++" + iterator + ") {\n"
+			afterCall += indent + "for (" + iterType + " " + iterator + " = 0; " + iterator + " < " + namePrefix + "_ret" + memberRef + "size()" + "; ++" + iterator + ") {\n"
 
 			retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr["+iterator+"] = ", t, maybeDerefOpen+namePrefix+"_ret"+maybeDerefClose+"["+iterator+"]")
 			afterCall += retExpr
@@ -1422,7 +1418,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 				if m.IsProtected {
 					cClassName := cabiClassName(className)
 					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi(false)+" "+cClassName+"_"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
-					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi(false)+" "+cClassName+"_QBase"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
+					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi(false)+" "+cClassName+"_Super"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
 				}
 
 				seenCallbacks[callbackType] = struct{}{}
@@ -1900,7 +1896,7 @@ extern "C" {
 			}
 
 			ret.WriteString(maybeMacro + "void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n" + maybeEndMacro)
-			ret.WriteString(maybeMacro + m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
+			ret.WriteString(maybeMacro + m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_Super" + mSafeMethodName + "(" +
 				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n" + maybeEndMacro)
 		}
 
@@ -2395,7 +2391,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				ret.WriteString("// Base class handler implementation\n")
 
 				ret.WriteString(
-					m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
+					m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_Super" + mSafeMethodName + "(" +
 						emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
@@ -2433,7 +2429,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				ret.WriteString("// Base class handler implementation\n")
 
-				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName +
+				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_Super" + mSafeMethodName +
 					"(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 					"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +

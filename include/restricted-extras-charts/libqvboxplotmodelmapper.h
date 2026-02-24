@@ -40,13 +40,17 @@ const QMetaObject* q_vboxplotmodelmapper_meta_object(void* self);
 ///
 void q_vboxplotmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_meta_object` instead
+///
+#define q_vboxplotmodelmapper_qbase_meta_object q_vboxplotmodelmapper_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-const QMetaObject* q_vboxplotmodelmapper_qbase_meta_object(void* self);
+const QMetaObject* q_vboxplotmodelmapper_super_meta_object(void* self);
 
 /// @param self QVBoxPlotModelMapper*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_vboxplotmodelmapper_metacast(void* self, const char* param1);
 ///
 void q_vboxplotmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_metacast` instead
+///
+#define q_vboxplotmodelmapper_qbase_metacast q_vboxplotmodelmapper_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param param1 const char*
 ///
-void* q_vboxplotmodelmapper_qbase_metacast(void* self, const char* param1);
+void* q_vboxplotmodelmapper_super_metacast(void* self, const char* param1);
 
 /// @param self QVBoxPlotModelMapper*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_vboxplotmodelmapper_metacall(void* self, int32_t param1, int param2, v
 ///
 void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_metacall` instead
+///
+#define q_vboxplotmodelmapper_qbase_metacall q_vboxplotmodelmapper_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QVBoxPlotModelMapper*
@@ -88,7 +100,7 @@ void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_vboxplotmodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_vboxplotmodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -731,6 +743,10 @@ void q_vboxplotmodelmapper_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool q_vboxplotmodelmapper_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_event` instead
+///
+#define q_vboxplotmodelmapper_qbase_event q_vboxplotmodelmapper_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -740,7 +756,7 @@ bool q_vboxplotmodelmapper_event(void* self, void* event);
 /// @param self QVBoxPlotModelMapper*
 /// @param event QEvent*
 ///
-bool q_vboxplotmodelmapper_qbase_event(void* self, void* event);
+bool q_vboxplotmodelmapper_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -765,6 +781,10 @@ void q_vboxplotmodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_vboxplotmodelmapper_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_event_filter` instead
+///
+#define q_vboxplotmodelmapper_qbase_event_filter q_vboxplotmodelmapper_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -775,7 +795,7 @@ bool q_vboxplotmodelmapper_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_vboxplotmodelmapper_qbase_event_filter(void* self, void* watched, void* event);
+bool q_vboxplotmodelmapper_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -799,6 +819,10 @@ void q_vboxplotmodelmapper_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void q_vboxplotmodelmapper_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_timer_event` instead
+///
+#define q_vboxplotmodelmapper_qbase_timer_event q_vboxplotmodelmapper_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -808,7 +832,7 @@ void q_vboxplotmodelmapper_timer_event(void* self, void* event);
 /// @param self QVBoxPlotModelMapper*
 /// @param event QTimerEvent*
 ///
-void q_vboxplotmodelmapper_qbase_timer_event(void* self, void* event);
+void q_vboxplotmodelmapper_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -832,6 +856,10 @@ void q_vboxplotmodelmapper_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void q_vboxplotmodelmapper_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_child_event` instead
+///
+#define q_vboxplotmodelmapper_qbase_child_event q_vboxplotmodelmapper_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -841,7 +869,7 @@ void q_vboxplotmodelmapper_child_event(void* self, void* event);
 /// @param self QVBoxPlotModelMapper*
 /// @param event QChildEvent*
 ///
-void q_vboxplotmodelmapper_qbase_child_event(void* self, void* event);
+void q_vboxplotmodelmapper_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -865,6 +893,10 @@ void q_vboxplotmodelmapper_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void q_vboxplotmodelmapper_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_custom_event` instead
+///
+#define q_vboxplotmodelmapper_qbase_custom_event q_vboxplotmodelmapper_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -874,7 +906,7 @@ void q_vboxplotmodelmapper_custom_event(void* self, void* event);
 /// @param self QVBoxPlotModelMapper*
 /// @param event QEvent*
 ///
-void q_vboxplotmodelmapper_qbase_custom_event(void* self, void* event);
+void q_vboxplotmodelmapper_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -898,6 +930,10 @@ void q_vboxplotmodelmapper_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void q_vboxplotmodelmapper_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_connect_notify` instead
+///
+#define q_vboxplotmodelmapper_qbase_connect_notify q_vboxplotmodelmapper_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -907,7 +943,7 @@ void q_vboxplotmodelmapper_connect_notify(void* self, void* signal);
 /// @param self QVBoxPlotModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vboxplotmodelmapper_qbase_connect_notify(void* self, void* signal);
+void q_vboxplotmodelmapper_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,6 +967,10 @@ void q_vboxplotmodelmapper_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void q_vboxplotmodelmapper_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_disconnect_notify` instead
+///
+#define q_vboxplotmodelmapper_qbase_disconnect_notify q_vboxplotmodelmapper_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -940,7 +980,7 @@ void q_vboxplotmodelmapper_disconnect_notify(void* self, void* signal);
 /// @param self QVBoxPlotModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vboxplotmodelmapper_qbase_disconnect_notify(void* self, void* signal);
+void q_vboxplotmodelmapper_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -963,6 +1003,10 @@ void q_vboxplotmodelmapper_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 int32_t q_vboxplotmodelmapper_first(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_first` instead
+///
+#define q_vboxplotmodelmapper_qbase_first q_vboxplotmodelmapper_super_first
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#first)
@@ -971,7 +1015,7 @@ int32_t q_vboxplotmodelmapper_first(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-int32_t q_vboxplotmodelmapper_qbase_first(void* self);
+int32_t q_vboxplotmodelmapper_super_first(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -995,6 +1039,10 @@ void q_vboxplotmodelmapper_on_first(void* self, int32_t (*callback)());
 ///
 void q_vboxplotmodelmapper_set_first(void* self, int first);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_set_first` instead
+///
+#define q_vboxplotmodelmapper_qbase_set_first q_vboxplotmodelmapper_super_set_first
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#setFirst)
@@ -1004,7 +1052,7 @@ void q_vboxplotmodelmapper_set_first(void* self, int first);
 /// @param self QVBoxPlotModelMapper*
 /// @param first int
 ///
-void q_vboxplotmodelmapper_qbase_set_first(void* self, int first);
+void q_vboxplotmodelmapper_super_set_first(void* self, int first);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1027,6 +1075,10 @@ void q_vboxplotmodelmapper_on_set_first(void* self, void (*callback)(void*, int)
 ///
 int32_t q_vboxplotmodelmapper_count(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_count` instead
+///
+#define q_vboxplotmodelmapper_qbase_count q_vboxplotmodelmapper_super_count
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#count)
@@ -1035,7 +1087,7 @@ int32_t q_vboxplotmodelmapper_count(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-int32_t q_vboxplotmodelmapper_qbase_count(void* self);
+int32_t q_vboxplotmodelmapper_super_count(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1059,6 +1111,10 @@ void q_vboxplotmodelmapper_on_count(void* self, int32_t (*callback)());
 ///
 void q_vboxplotmodelmapper_set_count(void* self, int count);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_set_count` instead
+///
+#define q_vboxplotmodelmapper_qbase_set_count q_vboxplotmodelmapper_super_set_count
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#setCount)
@@ -1068,7 +1124,7 @@ void q_vboxplotmodelmapper_set_count(void* self, int count);
 /// @param self QVBoxPlotModelMapper*
 /// @param count int
 ///
-void q_vboxplotmodelmapper_qbase_set_count(void* self, int count);
+void q_vboxplotmodelmapper_super_set_count(void* self, int count);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1091,6 +1147,10 @@ void q_vboxplotmodelmapper_on_set_count(void* self, void (*callback)(void*, int)
 ///
 int32_t q_vboxplotmodelmapper_first_box_set_section(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_first_box_set_section` instead
+///
+#define q_vboxplotmodelmapper_qbase_first_box_set_section q_vboxplotmodelmapper_super_first_box_set_section
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#firstBoxSetSection)
@@ -1099,7 +1159,7 @@ int32_t q_vboxplotmodelmapper_first_box_set_section(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-int32_t q_vboxplotmodelmapper_qbase_first_box_set_section(void* self);
+int32_t q_vboxplotmodelmapper_super_first_box_set_section(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1123,6 +1183,10 @@ void q_vboxplotmodelmapper_on_first_box_set_section(void* self, int32_t (*callba
 ///
 void q_vboxplotmodelmapper_set_first_box_set_section(void* self, int firstBoxSetSection);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_set_first_box_set_section` instead
+///
+#define q_vboxplotmodelmapper_qbase_set_first_box_set_section q_vboxplotmodelmapper_super_set_first_box_set_section
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#setFirstBoxSetSection)
@@ -1132,7 +1196,7 @@ void q_vboxplotmodelmapper_set_first_box_set_section(void* self, int firstBoxSet
 /// @param self QVBoxPlotModelMapper*
 /// @param firstBoxSetSection int
 ///
-void q_vboxplotmodelmapper_qbase_set_first_box_set_section(void* self, int firstBoxSetSection);
+void q_vboxplotmodelmapper_super_set_first_box_set_section(void* self, int firstBoxSetSection);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1155,6 +1219,10 @@ void q_vboxplotmodelmapper_on_set_first_box_set_section(void* self, void (*callb
 ///
 int32_t q_vboxplotmodelmapper_last_box_set_section(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_last_box_set_section` instead
+///
+#define q_vboxplotmodelmapper_qbase_last_box_set_section q_vboxplotmodelmapper_super_last_box_set_section
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#lastBoxSetSection)
@@ -1163,7 +1231,7 @@ int32_t q_vboxplotmodelmapper_last_box_set_section(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-int32_t q_vboxplotmodelmapper_qbase_last_box_set_section(void* self);
+int32_t q_vboxplotmodelmapper_super_last_box_set_section(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1187,6 +1255,10 @@ void q_vboxplotmodelmapper_on_last_box_set_section(void* self, int32_t (*callbac
 ///
 void q_vboxplotmodelmapper_set_last_box_set_section(void* self, int lastBoxSetSection);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_set_last_box_set_section` instead
+///
+#define q_vboxplotmodelmapper_qbase_set_last_box_set_section q_vboxplotmodelmapper_super_set_last_box_set_section
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#setLastBoxSetSection)
@@ -1196,7 +1268,7 @@ void q_vboxplotmodelmapper_set_last_box_set_section(void* self, int lastBoxSetSe
 /// @param self QVBoxPlotModelMapper*
 /// @param lastBoxSetSection int
 ///
-void q_vboxplotmodelmapper_qbase_set_last_box_set_section(void* self, int lastBoxSetSection);
+void q_vboxplotmodelmapper_super_set_last_box_set_section(void* self, int lastBoxSetSection);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1221,6 +1293,10 @@ void q_vboxplotmodelmapper_on_set_last_box_set_section(void* self, void (*callba
 ///
 int32_t q_vboxplotmodelmapper_orientation(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_orientation` instead
+///
+#define q_vboxplotmodelmapper_qbase_orientation q_vboxplotmodelmapper_super_orientation
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#orientation)
@@ -1231,7 +1307,7 @@ int32_t q_vboxplotmodelmapper_orientation(void* self);
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_vboxplotmodelmapper_qbase_orientation(void* self);
+int32_t q_vboxplotmodelmapper_super_orientation(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1255,6 +1331,10 @@ void q_vboxplotmodelmapper_on_orientation(void* self, int32_t (*callback)());
 ///
 void q_vboxplotmodelmapper_set_orientation(void* self, int32_t orientation);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_set_orientation` instead
+///
+#define q_vboxplotmodelmapper_qbase_set_orientation q_vboxplotmodelmapper_super_set_orientation
+
 /// Inherited from QBoxPlotModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotmodelmapper.html#setOrientation)
@@ -1264,7 +1344,7 @@ void q_vboxplotmodelmapper_set_orientation(void* self, int32_t orientation);
 /// @param self QVBoxPlotModelMapper*
 /// @param orientation enum Qt__Orientation
 ///
-void q_vboxplotmodelmapper_qbase_set_orientation(void* self, int32_t orientation);
+void q_vboxplotmodelmapper_super_set_orientation(void* self, int32_t orientation);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1287,6 +1367,10 @@ void q_vboxplotmodelmapper_on_set_orientation(void* self, void (*callback)(void*
 ///
 QObject* q_vboxplotmodelmapper_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_sender` instead
+///
+#define q_vboxplotmodelmapper_qbase_sender q_vboxplotmodelmapper_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1295,7 +1379,7 @@ QObject* q_vboxplotmodelmapper_sender(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-QObject* q_vboxplotmodelmapper_qbase_sender(void* self);
+QObject* q_vboxplotmodelmapper_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1318,6 +1402,10 @@ void q_vboxplotmodelmapper_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_vboxplotmodelmapper_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_sender_signal_index` instead
+///
+#define q_vboxplotmodelmapper_qbase_sender_signal_index q_vboxplotmodelmapper_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1326,7 +1414,7 @@ int32_t q_vboxplotmodelmapper_sender_signal_index(void* self);
 ///
 /// @param self QVBoxPlotModelMapper*
 ///
-int32_t q_vboxplotmodelmapper_qbase_sender_signal_index(void* self);
+int32_t q_vboxplotmodelmapper_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1350,6 +1438,10 @@ void q_vboxplotmodelmapper_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t q_vboxplotmodelmapper_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_receivers` instead
+///
+#define q_vboxplotmodelmapper_qbase_receivers q_vboxplotmodelmapper_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1359,7 +1451,7 @@ int32_t q_vboxplotmodelmapper_receivers(void* self, const char* signal);
 /// @param self QVBoxPlotModelMapper*
 /// @param signal const char*
 ///
-int32_t q_vboxplotmodelmapper_qbase_receivers(void* self, const char* signal);
+int32_t q_vboxplotmodelmapper_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1383,6 +1475,10 @@ void q_vboxplotmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool q_vboxplotmodelmapper_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vboxplotmodelmapper_super_is_signal_connected` instead
+///
+#define q_vboxplotmodelmapper_qbase_is_signal_connected q_vboxplotmodelmapper_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1392,7 +1488,7 @@ bool q_vboxplotmodelmapper_is_signal_connected(void* self, void* signal);
 /// @param self QVBoxPlotModelMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_vboxplotmodelmapper_qbase_is_signal_connected(void* self, void* signal);
+bool q_vboxplotmodelmapper_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

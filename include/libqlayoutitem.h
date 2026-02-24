@@ -48,13 +48,17 @@ QSize* q_layoutitem_size_hint(void* self);
 ///
 void q_layoutitem_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_size_hint` instead
+///
+#define q_layoutitem_qbase_size_hint q_layoutitem_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QSize* q_layoutitem_qbase_size_hint(void* self);
+QSize* q_layoutitem_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumSize)
 ///
@@ -71,13 +75,17 @@ QSize* q_layoutitem_minimum_size(void* self);
 ///
 void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_minimum_size` instead
+///
+#define q_layoutitem_qbase_minimum_size q_layoutitem_super_minimum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QSize* q_layoutitem_qbase_minimum_size(void* self);
+QSize* q_layoutitem_super_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#maximumSize)
 ///
@@ -94,13 +102,17 @@ QSize* q_layoutitem_maximum_size(void* self);
 ///
 void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_maximum_size` instead
+///
+#define q_layoutitem_qbase_maximum_size q_layoutitem_super_maximum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#maximumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QSize* q_layoutitem_qbase_maximum_size(void* self);
+QSize* q_layoutitem_super_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
 ///
@@ -119,6 +131,10 @@ int32_t q_layoutitem_expanding_directions(void* self);
 ///
 void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_expanding_directions` instead
+///
+#define q_layoutitem_qbase_expanding_directions q_layoutitem_super_expanding_directions
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
 ///
 /// Base class method implementation
@@ -127,7 +143,7 @@ void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_layoutitem_qbase_expanding_directions(void* self);
+int32_t q_layoutitem_super_expanding_directions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#setGeometry)
 ///
@@ -145,6 +161,10 @@ void q_layoutitem_set_geometry(void* self, void* geometry);
 ///
 void q_layoutitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_set_geometry` instead
+///
+#define q_layoutitem_qbase_set_geometry q_layoutitem_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#setGeometry)
 ///
 /// Base class method implementation
@@ -152,7 +172,7 @@ void q_layoutitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 /// @param self QLayoutItem*
 /// @param geometry QRect*
 ///
-void q_layoutitem_qbase_set_geometry(void* self, void* geometry);
+void q_layoutitem_super_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#geometry)
 ///
@@ -169,13 +189,17 @@ QRect* q_layoutitem_geometry(void* self);
 ///
 void q_layoutitem_on_geometry(void* self, QRect* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_geometry` instead
+///
+#define q_layoutitem_qbase_geometry q_layoutitem_super_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#geometry)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QRect* q_layoutitem_qbase_geometry(void* self);
+QRect* q_layoutitem_super_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#isEmpty)
 ///
@@ -192,13 +216,17 @@ bool q_layoutitem_is_empty(void* self);
 ///
 void q_layoutitem_on_is_empty(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_is_empty` instead
+///
+#define q_layoutitem_qbase_is_empty q_layoutitem_super_is_empty
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#isEmpty)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-bool q_layoutitem_qbase_is_empty(void* self);
+bool q_layoutitem_super_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
 ///
@@ -215,13 +243,17 @@ bool q_layoutitem_has_height_for_width(void* self);
 ///
 void q_layoutitem_on_has_height_for_width(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_has_height_for_width` instead
+///
+#define q_layoutitem_qbase_has_height_for_width q_layoutitem_super_has_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-bool q_layoutitem_qbase_has_height_for_width(void* self);
+bool q_layoutitem_super_has_height_for_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
 ///
@@ -239,6 +271,10 @@ int32_t q_layoutitem_height_for_width(void* self, int param1);
 ///
 void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_height_for_width` instead
+///
+#define q_layoutitem_qbase_height_for_width q_layoutitem_super_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
 ///
 /// Base class method implementation
@@ -246,7 +282,7 @@ void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(void*, int
 /// @param self QLayoutItem*
 /// @param param1 int
 ///
-int32_t q_layoutitem_qbase_height_for_width(void* self, int param1);
+int32_t q_layoutitem_super_height_for_width(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
@@ -264,6 +300,10 @@ int32_t q_layoutitem_minimum_height_for_width(void* self, int param1);
 ///
 void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_minimum_height_for_width` instead
+///
+#define q_layoutitem_qbase_minimum_height_for_width q_layoutitem_super_minimum_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
 /// Base class method implementation
@@ -271,7 +311,7 @@ void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
 /// @param self QLayoutItem*
 /// @param param1 int
 ///
-int32_t q_layoutitem_qbase_minimum_height_for_width(void* self, int param1);
+int32_t q_layoutitem_super_minimum_height_for_width(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
 ///
@@ -288,13 +328,17 @@ void q_layoutitem_invalidate(void* self);
 ///
 void q_layoutitem_on_invalidate(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_invalidate` instead
+///
+#define q_layoutitem_qbase_invalidate q_layoutitem_super_invalidate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-void q_layoutitem_qbase_invalidate(void* self);
+void q_layoutitem_super_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
 ///
@@ -311,13 +355,17 @@ QWidget* q_layoutitem_widget(void* self);
 ///
 void q_layoutitem_on_widget(void* self, QWidget* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_widget` instead
+///
+#define q_layoutitem_qbase_widget q_layoutitem_super_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QWidget* q_layoutitem_qbase_widget(void* self);
+QWidget* q_layoutitem_super_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
 ///
@@ -334,13 +382,17 @@ QLayout* q_layoutitem_layout(void* self);
 ///
 void q_layoutitem_on_layout(void* self, QLayout* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_layout` instead
+///
+#define q_layoutitem_qbase_layout q_layoutitem_super_layout
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QLayout* q_layoutitem_qbase_layout(void* self);
+QLayout* q_layoutitem_super_layout(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
 ///
@@ -357,13 +409,17 @@ QSpacerItem* q_layoutitem_spacer_item(void* self);
 ///
 void q_layoutitem_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_spacer_item` instead
+///
+#define q_layoutitem_qbase_spacer_item q_layoutitem_super_spacer_item
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
 ///
 /// Base class method implementation
 ///
 /// @param self QLayoutItem*
 ///
-QSpacerItem* q_layoutitem_qbase_spacer_item(void* self);
+QSpacerItem* q_layoutitem_super_spacer_item(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#alignment)
 ///
@@ -397,6 +453,10 @@ int32_t q_layoutitem_control_types(void* self);
 ///
 void q_layoutitem_on_control_types(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_control_types` instead
+///
+#define q_layoutitem_qbase_control_types q_layoutitem_super_control_types
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
 ///
 /// Base class method implementation
@@ -405,7 +465,7 @@ void q_layoutitem_on_control_types(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum QSizePolicy__ControlType
 ///
-int32_t q_layoutitem_qbase_control_types(void* self);
+int32_t q_layoutitem_super_control_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
@@ -423,6 +483,10 @@ void q_layoutitem_operator_assign(void* self, void* param1);
 ///
 void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_layoutitem_super_operator_assign` instead
+///
+#define q_layoutitem_qbase_operator_assign q_layoutitem_super_operator_assign
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
 /// Base class method implementation
@@ -430,7 +494,7 @@ void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*))
 /// @param self QLayoutItem*
 /// @param param1 QLayoutItem*
 ///
-void q_layoutitem_qbase_operator_assign(void* self, void* param1);
+void q_layoutitem_super_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#dtor.QLayoutItem)
 ///
@@ -501,13 +565,17 @@ QSize* q_spaceritem_size_hint(void* self);
 ///
 void q_spaceritem_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_size_hint` instead
+///
+#define q_spaceritem_qbase_size_hint q_spaceritem_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-QSize* q_spaceritem_qbase_size_hint(void* self);
+QSize* q_spaceritem_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#minimumSize)
 ///
@@ -524,13 +592,17 @@ QSize* q_spaceritem_minimum_size(void* self);
 ///
 void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_minimum_size` instead
+///
+#define q_spaceritem_qbase_minimum_size q_spaceritem_super_minimum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#minimumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-QSize* q_spaceritem_qbase_minimum_size(void* self);
+QSize* q_spaceritem_super_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#maximumSize)
 ///
@@ -547,13 +619,17 @@ QSize* q_spaceritem_maximum_size(void* self);
 ///
 void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_maximum_size` instead
+///
+#define q_spaceritem_qbase_maximum_size q_spaceritem_super_maximum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#maximumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-QSize* q_spaceritem_qbase_maximum_size(void* self);
+QSize* q_spaceritem_super_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
 ///
@@ -572,6 +648,10 @@ int32_t q_spaceritem_expanding_directions(void* self);
 ///
 void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_expanding_directions` instead
+///
+#define q_spaceritem_qbase_expanding_directions q_spaceritem_super_expanding_directions
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
 ///
 /// Base class method implementation
@@ -580,7 +660,7 @@ void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_spaceritem_qbase_expanding_directions(void* self);
+int32_t q_spaceritem_super_expanding_directions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#isEmpty)
 ///
@@ -597,13 +677,17 @@ bool q_spaceritem_is_empty(void* self);
 ///
 void q_spaceritem_on_is_empty(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_is_empty` instead
+///
+#define q_spaceritem_qbase_is_empty q_spaceritem_super_is_empty
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#isEmpty)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-bool q_spaceritem_qbase_is_empty(void* self);
+bool q_spaceritem_super_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#setGeometry)
 ///
@@ -621,6 +705,10 @@ void q_spaceritem_set_geometry(void* self, void* geometry);
 ///
 void q_spaceritem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_set_geometry` instead
+///
+#define q_spaceritem_qbase_set_geometry q_spaceritem_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#setGeometry)
 ///
 /// Base class method implementation
@@ -628,7 +716,7 @@ void q_spaceritem_on_set_geometry(void* self, void (*callback)(void*, void*));
 /// @param self QSpacerItem*
 /// @param geometry QRect*
 ///
-void q_spaceritem_qbase_set_geometry(void* self, void* geometry);
+void q_spaceritem_super_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#geometry)
 ///
@@ -645,13 +733,17 @@ QRect* q_spaceritem_geometry(void* self);
 ///
 void q_spaceritem_on_geometry(void* self, QRect* (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_geometry` instead
+///
+#define q_spaceritem_qbase_geometry q_spaceritem_super_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#geometry)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-QRect* q_spaceritem_qbase_geometry(void* self);
+QRect* q_spaceritem_super_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#spacerItem)
 ///
@@ -668,13 +760,17 @@ QSpacerItem* q_spaceritem_spacer_item(void* self);
 ///
 void q_spaceritem_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_spacer_item` instead
+///
+#define q_spaceritem_qbase_spacer_item q_spaceritem_super_spacer_item
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#spacerItem)
 ///
 /// Base class method implementation
 ///
 /// @param self QSpacerItem*
 ///
-QSpacerItem* q_spaceritem_qbase_spacer_item(void* self);
+QSpacerItem* q_spaceritem_super_spacer_item(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#sizePolicy)
 ///
@@ -730,6 +826,10 @@ void q_spaceritem_set_alignment(void* self, int32_t a);
 ///
 bool q_spaceritem_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_has_height_for_width` instead
+///
+#define q_spaceritem_qbase_has_height_for_width q_spaceritem_super_has_height_for_width
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
@@ -738,7 +838,7 @@ bool q_spaceritem_has_height_for_width(void* self);
 ///
 /// @param self QSpacerItem*
 ///
-bool q_spaceritem_qbase_has_height_for_width(void* self);
+bool q_spaceritem_super_has_height_for_width(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -762,6 +862,10 @@ void q_spaceritem_on_has_height_for_width(void* self, bool (*callback)());
 ///
 int32_t q_spaceritem_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_height_for_width` instead
+///
+#define q_spaceritem_qbase_height_for_width q_spaceritem_super_height_for_width
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
@@ -771,7 +875,7 @@ int32_t q_spaceritem_height_for_width(void* self, int param1);
 /// @param self QSpacerItem*
 /// @param param1 int
 ///
-int32_t q_spaceritem_qbase_height_for_width(void* self, int param1);
+int32_t q_spaceritem_super_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
@@ -795,6 +899,10 @@ void q_spaceritem_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 int32_t q_spaceritem_minimum_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_minimum_height_for_width` instead
+///
+#define q_spaceritem_qbase_minimum_height_for_width q_spaceritem_super_minimum_height_for_width
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
@@ -804,7 +912,7 @@ int32_t q_spaceritem_minimum_height_for_width(void* self, int param1);
 /// @param self QSpacerItem*
 /// @param param1 int
 ///
-int32_t q_spaceritem_qbase_minimum_height_for_width(void* self, int param1);
+int32_t q_spaceritem_super_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
@@ -827,6 +935,10 @@ void q_spaceritem_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
 ///
 void q_spaceritem_invalidate(void* self);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_invalidate` instead
+///
+#define q_spaceritem_qbase_invalidate q_spaceritem_super_invalidate
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
@@ -835,7 +947,7 @@ void q_spaceritem_invalidate(void* self);
 ///
 /// @param self QSpacerItem*
 ///
-void q_spaceritem_qbase_invalidate(void* self);
+void q_spaceritem_super_invalidate(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -858,6 +970,10 @@ void q_spaceritem_on_invalidate(void* self, void (*callback)());
 ///
 QWidget* q_spaceritem_widget(void* self);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_widget` instead
+///
+#define q_spaceritem_qbase_widget q_spaceritem_super_widget
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
@@ -866,7 +982,7 @@ QWidget* q_spaceritem_widget(void* self);
 ///
 /// @param self QSpacerItem*
 ///
-QWidget* q_spaceritem_qbase_widget(void* self);
+QWidget* q_spaceritem_super_widget(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -889,6 +1005,10 @@ void q_spaceritem_on_widget(void* self, QWidget* (*callback)());
 ///
 QLayout* q_spaceritem_layout(void* self);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_layout` instead
+///
+#define q_spaceritem_qbase_layout q_spaceritem_super_layout
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
@@ -897,7 +1017,7 @@ QLayout* q_spaceritem_layout(void* self);
 ///
 /// @param self QSpacerItem*
 ///
-QLayout* q_spaceritem_qbase_layout(void* self);
+QLayout* q_spaceritem_super_layout(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -922,6 +1042,10 @@ void q_spaceritem_on_layout(void* self, QLayout* (*callback)());
 ///
 int32_t q_spaceritem_control_types(void* self);
 
+/// @warning DEPRECATED: Use `q_spaceritem_super_control_types` instead
+///
+#define q_spaceritem_qbase_control_types q_spaceritem_super_control_types
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
@@ -932,7 +1056,7 @@ int32_t q_spaceritem_control_types(void* self);
 ///
 /// @return flag of enum QSizePolicy__ControlType
 ///
-int32_t q_spaceritem_qbase_control_types(void* self);
+int32_t q_spaceritem_super_control_types(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -976,13 +1100,17 @@ QSize* q_widgetitem_size_hint(void* self);
 ///
 void q_widgetitem_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_size_hint` instead
+///
+#define q_widgetitem_qbase_size_hint q_widgetitem_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-QSize* q_widgetitem_qbase_size_hint(void* self);
+QSize* q_widgetitem_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumSize)
 ///
@@ -999,13 +1127,17 @@ QSize* q_widgetitem_minimum_size(void* self);
 ///
 void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_minimum_size` instead
+///
+#define q_widgetitem_qbase_minimum_size q_widgetitem_super_minimum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-QSize* q_widgetitem_qbase_minimum_size(void* self);
+QSize* q_widgetitem_super_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#maximumSize)
 ///
@@ -1022,13 +1154,17 @@ QSize* q_widgetitem_maximum_size(void* self);
 ///
 void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_maximum_size` instead
+///
+#define q_widgetitem_qbase_maximum_size q_widgetitem_super_maximum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#maximumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-QSize* q_widgetitem_qbase_maximum_size(void* self);
+QSize* q_widgetitem_super_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
 ///
@@ -1047,6 +1183,10 @@ int32_t q_widgetitem_expanding_directions(void* self);
 ///
 void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_expanding_directions` instead
+///
+#define q_widgetitem_qbase_expanding_directions q_widgetitem_super_expanding_directions
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
 ///
 /// Base class method implementation
@@ -1055,7 +1195,7 @@ void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_widgetitem_qbase_expanding_directions(void* self);
+int32_t q_widgetitem_super_expanding_directions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
 ///
@@ -1072,13 +1212,17 @@ bool q_widgetitem_is_empty(void* self);
 ///
 void q_widgetitem_on_is_empty(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_is_empty` instead
+///
+#define q_widgetitem_qbase_is_empty q_widgetitem_super_is_empty
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-bool q_widgetitem_qbase_is_empty(void* self);
+bool q_widgetitem_super_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#setGeometry)
 ///
@@ -1096,6 +1240,10 @@ void q_widgetitem_set_geometry(void* self, void* geometry);
 ///
 void q_widgetitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_set_geometry` instead
+///
+#define q_widgetitem_qbase_set_geometry q_widgetitem_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#setGeometry)
 ///
 /// Base class method implementation
@@ -1103,7 +1251,7 @@ void q_widgetitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 /// @param self QWidgetItem*
 /// @param geometry QRect*
 ///
-void q_widgetitem_qbase_set_geometry(void* self, void* geometry);
+void q_widgetitem_super_set_geometry(void* self, void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#geometry)
 ///
@@ -1120,13 +1268,17 @@ QRect* q_widgetitem_geometry(void* self);
 ///
 void q_widgetitem_on_geometry(void* self, QRect* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_geometry` instead
+///
+#define q_widgetitem_qbase_geometry q_widgetitem_super_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#geometry)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-QRect* q_widgetitem_qbase_geometry(void* self);
+QRect* q_widgetitem_super_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#widget)
 ///
@@ -1143,13 +1295,17 @@ QWidget* q_widgetitem_widget(void* self);
 ///
 void q_widgetitem_on_widget(void* self, QWidget* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_widget` instead
+///
+#define q_widgetitem_qbase_widget q_widgetitem_super_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#widget)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-QWidget* q_widgetitem_qbase_widget(void* self);
+QWidget* q_widgetitem_super_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#hasHeightForWidth)
 ///
@@ -1166,13 +1322,17 @@ bool q_widgetitem_has_height_for_width(void* self);
 ///
 void q_widgetitem_on_has_height_for_width(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_has_height_for_width` instead
+///
+#define q_widgetitem_qbase_has_height_for_width q_widgetitem_super_has_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#hasHeightForWidth)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItem*
 ///
-bool q_widgetitem_qbase_has_height_for_width(void* self);
+bool q_widgetitem_super_has_height_for_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#heightForWidth)
 ///
@@ -1190,6 +1350,10 @@ int32_t q_widgetitem_height_for_width(void* self, int param1);
 ///
 void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_height_for_width` instead
+///
+#define q_widgetitem_qbase_height_for_width q_widgetitem_super_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#heightForWidth)
 ///
 /// Base class method implementation
@@ -1197,7 +1361,7 @@ void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(void*, int
 /// @param self QWidgetItem*
 /// @param param1 int
 ///
-int32_t q_widgetitem_qbase_height_for_width(void* self, int param1);
+int32_t q_widgetitem_super_height_for_width(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumHeightForWidth)
 ///
@@ -1215,6 +1379,10 @@ int32_t q_widgetitem_minimum_height_for_width(void* self, int param1);
 ///
 void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_minimum_height_for_width` instead
+///
+#define q_widgetitem_qbase_minimum_height_for_width q_widgetitem_super_minimum_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumHeightForWidth)
 ///
 /// Base class method implementation
@@ -1222,7 +1390,7 @@ void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
 /// @param self QWidgetItem*
 /// @param param1 int
 ///
-int32_t q_widgetitem_qbase_minimum_height_for_width(void* self, int param1);
+int32_t q_widgetitem_super_minimum_height_for_width(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
 ///
@@ -1241,6 +1409,10 @@ int32_t q_widgetitem_control_types(void* self);
 ///
 void q_widgetitem_on_control_types(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_control_types` instead
+///
+#define q_widgetitem_qbase_control_types q_widgetitem_super_control_types
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
 ///
 /// Base class method implementation
@@ -1249,7 +1421,7 @@ void q_widgetitem_on_control_types(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum QSizePolicy__ControlType
 ///
-int32_t q_widgetitem_qbase_control_types(void* self);
+int32_t q_widgetitem_super_control_types(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1280,6 +1452,10 @@ void q_widgetitem_set_alignment(void* self, int32_t a);
 ///
 void q_widgetitem_invalidate(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_invalidate` instead
+///
+#define q_widgetitem_qbase_invalidate q_widgetitem_super_invalidate
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
@@ -1288,7 +1464,7 @@ void q_widgetitem_invalidate(void* self);
 ///
 /// @param self QWidgetItem*
 ///
-void q_widgetitem_qbase_invalidate(void* self);
+void q_widgetitem_super_invalidate(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1311,6 +1487,10 @@ void q_widgetitem_on_invalidate(void* self, void (*callback)());
 ///
 QLayout* q_widgetitem_layout(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_layout` instead
+///
+#define q_widgetitem_qbase_layout q_widgetitem_super_layout
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
@@ -1319,7 +1499,7 @@ QLayout* q_widgetitem_layout(void* self);
 ///
 /// @param self QWidgetItem*
 ///
-QLayout* q_widgetitem_qbase_layout(void* self);
+QLayout* q_widgetitem_super_layout(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1342,6 +1522,10 @@ void q_widgetitem_on_layout(void* self, QLayout* (*callback)());
 ///
 QSpacerItem* q_widgetitem_spacer_item(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitem_super_spacer_item` instead
+///
+#define q_widgetitem_qbase_spacer_item q_widgetitem_super_spacer_item
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
@@ -1350,7 +1534,7 @@ QSpacerItem* q_widgetitem_spacer_item(void* self);
 ///
 /// @param self QWidgetItem*
 ///
-QSpacerItem* q_widgetitem_qbase_spacer_item(void* self);
+QSpacerItem* q_widgetitem_super_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1394,13 +1578,17 @@ QSize* q_widgetitemv2_size_hint(void* self);
 ///
 void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_size_hint` instead
+///
+#define q_widgetitemv2_qbase_size_hint q_widgetitemv2_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItemV2*
 ///
-QSize* q_widgetitemv2_qbase_size_hint(void* self);
+QSize* q_widgetitemv2_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#minimumSize)
 ///
@@ -1417,13 +1605,17 @@ QSize* q_widgetitemv2_minimum_size(void* self);
 ///
 void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_minimum_size` instead
+///
+#define q_widgetitemv2_qbase_minimum_size q_widgetitemv2_super_minimum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#minimumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItemV2*
 ///
-QSize* q_widgetitemv2_qbase_minimum_size(void* self);
+QSize* q_widgetitemv2_super_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#maximumSize)
 ///
@@ -1440,13 +1632,17 @@ QSize* q_widgetitemv2_maximum_size(void* self);
 ///
 void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_maximum_size` instead
+///
+#define q_widgetitemv2_qbase_maximum_size q_widgetitemv2_super_maximum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#maximumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidgetItemV2*
 ///
-QSize* q_widgetitemv2_qbase_maximum_size(void* self);
+QSize* q_widgetitemv2_super_maximum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#heightForWidth)
 ///
@@ -1464,6 +1660,10 @@ int32_t q_widgetitemv2_height_for_width(void* self, int width);
 ///
 void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_height_for_width` instead
+///
+#define q_widgetitemv2_qbase_height_for_width q_widgetitemv2_super_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#heightForWidth)
 ///
 /// Base class method implementation
@@ -1471,7 +1671,7 @@ void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(void*, i
 /// @param self QWidgetItemV2*
 /// @param width int
 ///
-int32_t q_widgetitemv2_qbase_height_for_width(void* self, int width);
+int32_t q_widgetitemv2_super_height_for_width(void* self, int width);
 
 /// Inherited from QLayoutItem
 ///
@@ -1504,6 +1704,10 @@ void q_widgetitemv2_set_alignment(void* self, int32_t a);
 ///
 int32_t q_widgetitemv2_expanding_directions(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_expanding_directions` instead
+///
+#define q_widgetitemv2_qbase_expanding_directions q_widgetitemv2_super_expanding_directions
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
@@ -1514,7 +1718,7 @@ int32_t q_widgetitemv2_expanding_directions(void* self);
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_widgetitemv2_qbase_expanding_directions(void* self);
+int32_t q_widgetitemv2_super_expanding_directions(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1537,6 +1741,10 @@ void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)());
 ///
 bool q_widgetitemv2_is_empty(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_is_empty` instead
+///
+#define q_widgetitemv2_qbase_is_empty q_widgetitemv2_super_is_empty
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
@@ -1545,7 +1753,7 @@ bool q_widgetitemv2_is_empty(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-bool q_widgetitemv2_qbase_is_empty(void* self);
+bool q_widgetitemv2_super_is_empty(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1569,6 +1777,10 @@ void q_widgetitemv2_on_is_empty(void* self, bool (*callback)());
 ///
 void q_widgetitemv2_set_geometry(void* self, void* geometry);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_set_geometry` instead
+///
+#define q_widgetitemv2_qbase_set_geometry q_widgetitemv2_super_set_geometry
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#setGeometry)
@@ -1578,7 +1790,7 @@ void q_widgetitemv2_set_geometry(void* self, void* geometry);
 /// @param self QWidgetItemV2*
 /// @param geometry QRect*
 ///
-void q_widgetitemv2_qbase_set_geometry(void* self, void* geometry);
+void q_widgetitemv2_super_set_geometry(void* self, void* geometry);
 
 /// Inherited from QWidgetItem
 ///
@@ -1601,6 +1813,10 @@ void q_widgetitemv2_on_set_geometry(void* self, void (*callback)(void*, void*));
 ///
 QRect* q_widgetitemv2_geometry(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_geometry` instead
+///
+#define q_widgetitemv2_qbase_geometry q_widgetitemv2_super_geometry
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#geometry)
@@ -1609,7 +1825,7 @@ QRect* q_widgetitemv2_geometry(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-QRect* q_widgetitemv2_qbase_geometry(void* self);
+QRect* q_widgetitemv2_super_geometry(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1632,6 +1848,10 @@ void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)());
 ///
 QWidget* q_widgetitemv2_widget(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_widget` instead
+///
+#define q_widgetitemv2_qbase_widget q_widgetitemv2_super_widget
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#widget)
@@ -1640,7 +1860,7 @@ QWidget* q_widgetitemv2_widget(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-QWidget* q_widgetitemv2_qbase_widget(void* self);
+QWidget* q_widgetitemv2_super_widget(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1663,6 +1883,10 @@ void q_widgetitemv2_on_widget(void* self, QWidget* (*callback)());
 ///
 bool q_widgetitemv2_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_has_height_for_width` instead
+///
+#define q_widgetitemv2_qbase_has_height_for_width q_widgetitemv2_super_has_height_for_width
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#hasHeightForWidth)
@@ -1671,7 +1895,7 @@ bool q_widgetitemv2_has_height_for_width(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-bool q_widgetitemv2_qbase_has_height_for_width(void* self);
+bool q_widgetitemv2_super_has_height_for_width(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1695,6 +1919,10 @@ void q_widgetitemv2_on_has_height_for_width(void* self, bool (*callback)());
 ///
 int32_t q_widgetitemv2_minimum_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_minimum_height_for_width` instead
+///
+#define q_widgetitemv2_qbase_minimum_height_for_width q_widgetitemv2_super_minimum_height_for_width
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumHeightForWidth)
@@ -1704,7 +1932,7 @@ int32_t q_widgetitemv2_minimum_height_for_width(void* self, int param1);
 /// @param self QWidgetItemV2*
 /// @param param1 int
 ///
-int32_t q_widgetitemv2_qbase_minimum_height_for_width(void* self, int param1);
+int32_t q_widgetitemv2_super_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QWidgetItem
 ///
@@ -1729,6 +1957,10 @@ void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(
 ///
 int32_t q_widgetitemv2_control_types(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_control_types` instead
+///
+#define q_widgetitemv2_qbase_control_types q_widgetitemv2_super_control_types
+
 /// Inherited from QWidgetItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
@@ -1739,7 +1971,7 @@ int32_t q_widgetitemv2_control_types(void* self);
 ///
 /// @return flag of enum QSizePolicy__ControlType
 ///
-int32_t q_widgetitemv2_qbase_control_types(void* self);
+int32_t q_widgetitemv2_super_control_types(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1762,6 +1994,10 @@ void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)());
 ///
 void q_widgetitemv2_invalidate(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_invalidate` instead
+///
+#define q_widgetitemv2_qbase_invalidate q_widgetitemv2_super_invalidate
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
@@ -1770,7 +2006,7 @@ void q_widgetitemv2_invalidate(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-void q_widgetitemv2_qbase_invalidate(void* self);
+void q_widgetitemv2_super_invalidate(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1793,6 +2029,10 @@ void q_widgetitemv2_on_invalidate(void* self, void (*callback)());
 ///
 QLayout* q_widgetitemv2_layout(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_layout` instead
+///
+#define q_widgetitemv2_qbase_layout q_widgetitemv2_super_layout
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
@@ -1801,7 +2041,7 @@ QLayout* q_widgetitemv2_layout(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-QLayout* q_widgetitemv2_qbase_layout(void* self);
+QLayout* q_widgetitemv2_super_layout(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1824,6 +2064,10 @@ void q_widgetitemv2_on_layout(void* self, QLayout* (*callback)());
 ///
 QSpacerItem* q_widgetitemv2_spacer_item(void* self);
 
+/// @warning DEPRECATED: Use `q_widgetitemv2_super_spacer_item` instead
+///
+#define q_widgetitemv2_qbase_spacer_item q_widgetitemv2_super_spacer_item
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
@@ -1832,7 +2076,7 @@ QSpacerItem* q_widgetitemv2_spacer_item(void* self);
 ///
 /// @param self QWidgetItemV2*
 ///
-QSpacerItem* q_widgetitemv2_qbase_spacer_item(void* self);
+QSpacerItem* q_widgetitemv2_super_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///

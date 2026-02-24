@@ -35,8 +35,8 @@ void k_bookmarkcontextmenu_on_meta_object(void* self, const QMetaObject* (*callb
     KBookmarkContextMenu_OnMetaObject((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_bookmarkcontextmenu_qbase_meta_object(void* self) {
-    return KBookmarkContextMenu_QBaseMetaObject((KBookmarkContextMenu*)self);
+const QMetaObject* k_bookmarkcontextmenu_super_meta_object(void* self) {
+    return KBookmarkContextMenu_SuperMetaObject((KBookmarkContextMenu*)self);
 }
 
 void* k_bookmarkcontextmenu_metacast(void* self, const char* param1) {
@@ -47,8 +47,8 @@ void k_bookmarkcontextmenu_on_metacast(void* self, void* (*callback)(void*, cons
     KBookmarkContextMenu_OnMetacast((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void* k_bookmarkcontextmenu_qbase_metacast(void* self, const char* param1) {
-    return KBookmarkContextMenu_QBaseMetacast((KBookmarkContextMenu*)self, param1);
+void* k_bookmarkcontextmenu_super_metacast(void* self, const char* param1) {
+    return KBookmarkContextMenu_SuperMetacast((KBookmarkContextMenu*)self, param1);
 }
 
 int32_t k_bookmarkcontextmenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -59,8 +59,8 @@ void k_bookmarkcontextmenu_on_metacall(void* self, int32_t (*callback)(void*, in
     KBookmarkContextMenu_OnMetacall((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBookmarkContextMenu_QBaseMetacall((KBookmarkContextMenu*)self, param1, param2, param3);
+int32_t k_bookmarkcontextmenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBookmarkContextMenu_SuperMetacall((KBookmarkContextMenu*)self, param1, param2, param3);
 }
 
 const char* k_bookmarkcontextmenu_tr(const char* s) {
@@ -78,8 +78,8 @@ void k_bookmarkcontextmenu_on_add_actions(void* self, void (*callback)()) {
     KBookmarkContextMenu_OnAddActions((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_actions(void* self) {
-    KBookmarkContextMenu_QBaseAddActions((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_actions(void* self) {
+    KBookmarkContextMenu_SuperAddActions((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_set_browser_mode(void* self, bool browserMode) {
@@ -122,8 +122,8 @@ void k_bookmarkcontextmenu_on_add_bookmark(void* self, void (*callback)()) {
     KBookmarkContextMenu_OnAddBookmark((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_bookmark(void* self) {
-    KBookmarkContextMenu_QBaseAddBookmark((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_bookmark(void* self) {
+    KBookmarkContextMenu_SuperAddBookmark((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_add_folder_actions(void* self) {
@@ -134,8 +134,8 @@ void k_bookmarkcontextmenu_on_add_folder_actions(void* self, void (*callback)())
     KBookmarkContextMenu_OnAddFolderActions((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_folder_actions(void* self) {
-    KBookmarkContextMenu_QBaseAddFolderActions((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_folder_actions(void* self) {
+    KBookmarkContextMenu_SuperAddFolderActions((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_add_properties(void* self) {
@@ -146,8 +146,8 @@ void k_bookmarkcontextmenu_on_add_properties(void* self, void (*callback)()) {
     KBookmarkContextMenu_OnAddProperties((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_properties(void* self) {
-    KBookmarkContextMenu_QBaseAddProperties((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_properties(void* self) {
+    KBookmarkContextMenu_SuperAddProperties((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_add_bookmark_actions(void* self) {
@@ -158,8 +158,8 @@ void k_bookmarkcontextmenu_on_add_bookmark_actions(void* self, void (*callback)(
     KBookmarkContextMenu_OnAddBookmarkActions((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_bookmark_actions(void* self) {
-    KBookmarkContextMenu_QBaseAddBookmarkActions((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_bookmark_actions(void* self) {
+    KBookmarkContextMenu_SuperAddBookmarkActions((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_add_open_folder_in_tabs(void* self) {
@@ -170,8 +170,8 @@ void k_bookmarkcontextmenu_on_add_open_folder_in_tabs(void* self, void (*callbac
     KBookmarkContextMenu_OnAddOpenFolderInTabs((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkcontextmenu_qbase_add_open_folder_in_tabs(void* self) {
-    KBookmarkContextMenu_QBaseAddOpenFolderInTabs((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_add_open_folder_in_tabs(void* self) {
+    KBookmarkContextMenu_SuperAddOpenFolderInTabs((KBookmarkContextMenu*)self);
 }
 
 KBookmarkManager* k_bookmarkcontextmenu_manager(void* self) {
@@ -182,8 +182,8 @@ void k_bookmarkcontextmenu_on_manager(void* self, KBookmarkManager* (*callback)(
     KBookmarkContextMenu_OnManager((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-KBookmarkManager* k_bookmarkcontextmenu_qbase_manager(void* self) {
-    return KBookmarkContextMenu_QBaseManager((KBookmarkContextMenu*)self);
+KBookmarkManager* k_bookmarkcontextmenu_super_manager(void* self) {
+    return KBookmarkContextMenu_SuperManager((KBookmarkContextMenu*)self);
 }
 
 KBookmarkOwner* k_bookmarkcontextmenu_owner(void* self) {
@@ -194,8 +194,8 @@ void k_bookmarkcontextmenu_on_owner(void* self, KBookmarkOwner* (*callback)()) {
     KBookmarkContextMenu_OnOwner((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-KBookmarkOwner* k_bookmarkcontextmenu_qbase_owner(void* self) {
-    return KBookmarkContextMenu_QBaseOwner((KBookmarkContextMenu*)self);
+KBookmarkOwner* k_bookmarkcontextmenu_super_owner(void* self) {
+    return KBookmarkContextMenu_SuperOwner((KBookmarkContextMenu*)self);
 }
 
 KBookmark* k_bookmarkcontextmenu_bookmark(void* self) {
@@ -206,8 +206,8 @@ void k_bookmarkcontextmenu_on_bookmark(void* self, KBookmark* (*callback)()) {
     KBookmarkContextMenu_OnBookmark((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-KBookmark* k_bookmarkcontextmenu_qbase_bookmark(void* self) {
-    return KBookmarkContextMenu_QBaseBookmark((KBookmarkContextMenu*)self);
+KBookmark* k_bookmarkcontextmenu_super_bookmark(void* self) {
+    return KBookmarkContextMenu_SuperBookmark((KBookmarkContextMenu*)self);
 }
 
 const char* k_bookmarkcontextmenu_tr2(const char* s, const char* c) {
@@ -1812,8 +1812,8 @@ QSize* k_bookmarkcontextmenu_size_hint(void* self) {
     return KBookmarkContextMenu_SizeHint((KBookmarkContextMenu*)self);
 }
 
-QSize* k_bookmarkcontextmenu_qbase_size_hint(void* self) {
-    return KBookmarkContextMenu_QBaseSizeHint((KBookmarkContextMenu*)self);
+QSize* k_bookmarkcontextmenu_super_size_hint(void* self) {
+    return KBookmarkContextMenu_SuperSizeHint((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1824,8 +1824,8 @@ void k_bookmarkcontextmenu_change_event(void* self, void* param1) {
     KBookmarkContextMenu_ChangeEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_change_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseChangeEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
+void k_bookmarkcontextmenu_super_change_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperChangeEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_bookmarkcontextmenu_key_press_event(void* self, void* param1) {
     KBookmarkContextMenu_KeyPressEvent((KBookmarkContextMenu*)self, (QKeyEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_key_press_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseKeyPressEvent((KBookmarkContextMenu*)self, (QKeyEvent*)param1);
+void k_bookmarkcontextmenu_super_key_press_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperKeyPressEvent((KBookmarkContextMenu*)self, (QKeyEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_bookmarkcontextmenu_mouse_release_event(void* self, void* param1) {
     KBookmarkContextMenu_MouseReleaseEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_mouse_release_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseMouseReleaseEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
+void k_bookmarkcontextmenu_super_mouse_release_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperMouseReleaseEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_bookmarkcontextmenu_mouse_press_event(void* self, void* param1) {
     KBookmarkContextMenu_MousePressEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_mouse_press_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseMousePressEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
+void k_bookmarkcontextmenu_super_mouse_press_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperMousePressEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_bookmarkcontextmenu_mouse_move_event(void* self, void* param1) {
     KBookmarkContextMenu_MouseMoveEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_mouse_move_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseMouseMoveEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
+void k_bookmarkcontextmenu_super_mouse_move_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperMouseMoveEvent((KBookmarkContextMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_bookmarkcontextmenu_wheel_event(void* self, void* param1) {
     KBookmarkContextMenu_WheelEvent((KBookmarkContextMenu*)self, (QWheelEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_wheel_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseWheelEvent((KBookmarkContextMenu*)self, (QWheelEvent*)param1);
+void k_bookmarkcontextmenu_super_wheel_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperWheelEvent((KBookmarkContextMenu*)self, (QWheelEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_bookmarkcontextmenu_enter_event(void* self, void* param1) {
     KBookmarkContextMenu_EnterEvent((KBookmarkContextMenu*)self, (QEnterEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_enter_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseEnterEvent((KBookmarkContextMenu*)self, (QEnterEvent*)param1);
+void k_bookmarkcontextmenu_super_enter_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperEnterEvent((KBookmarkContextMenu*)self, (QEnterEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ void k_bookmarkcontextmenu_leave_event(void* self, void* param1) {
     KBookmarkContextMenu_LeaveEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_leave_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseLeaveEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
+void k_bookmarkcontextmenu_super_leave_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperLeaveEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ void k_bookmarkcontextmenu_hide_event(void* self, void* param1) {
     KBookmarkContextMenu_HideEvent((KBookmarkContextMenu*)self, (QHideEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_hide_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseHideEvent((KBookmarkContextMenu*)self, (QHideEvent*)param1);
+void k_bookmarkcontextmenu_super_hide_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperHideEvent((KBookmarkContextMenu*)self, (QHideEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ void k_bookmarkcontextmenu_paint_event(void* self, void* param1) {
     KBookmarkContextMenu_PaintEvent((KBookmarkContextMenu*)self, (QPaintEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_paint_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBasePaintEvent((KBookmarkContextMenu*)self, (QPaintEvent*)param1);
+void k_bookmarkcontextmenu_super_paint_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperPaintEvent((KBookmarkContextMenu*)self, (QPaintEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1944,8 +1944,8 @@ void k_bookmarkcontextmenu_action_event(void* self, void* param1) {
     KBookmarkContextMenu_ActionEvent((KBookmarkContextMenu*)self, (QActionEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_action_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseActionEvent((KBookmarkContextMenu*)self, (QActionEvent*)param1);
+void k_bookmarkcontextmenu_super_action_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperActionEvent((KBookmarkContextMenu*)self, (QActionEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ void k_bookmarkcontextmenu_timer_event(void* self, void* param1) {
     KBookmarkContextMenu_TimerEvent((KBookmarkContextMenu*)self, (QTimerEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_timer_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseTimerEvent((KBookmarkContextMenu*)self, (QTimerEvent*)param1);
+void k_bookmarkcontextmenu_super_timer_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperTimerEvent((KBookmarkContextMenu*)self, (QTimerEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1968,8 +1968,8 @@ bool k_bookmarkcontextmenu_event(void* self, void* param1) {
     return KBookmarkContextMenu_Event((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
-bool k_bookmarkcontextmenu_qbase_event(void* self, void* param1) {
-    return KBookmarkContextMenu_QBaseEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
+bool k_bookmarkcontextmenu_super_event(void* self, void* param1) {
+    return KBookmarkContextMenu_SuperEvent((KBookmarkContextMenu*)self, (QEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ bool k_bookmarkcontextmenu_focus_next_prev_child(void* self, bool next) {
     return KBookmarkContextMenu_FocusNextPrevChild((KBookmarkContextMenu*)self, next);
 }
 
-bool k_bookmarkcontextmenu_qbase_focus_next_prev_child(void* self, bool next) {
-    return KBookmarkContextMenu_QBaseFocusNextPrevChild((KBookmarkContextMenu*)self, next);
+bool k_bookmarkcontextmenu_super_focus_next_prev_child(void* self, bool next) {
+    return KBookmarkContextMenu_SuperFocusNextPrevChild((KBookmarkContextMenu*)self, next);
 }
 
 void k_bookmarkcontextmenu_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1992,8 +1992,8 @@ void k_bookmarkcontextmenu_init_style_option(void* self, void* option, void* act
     KBookmarkContextMenu_InitStyleOption((KBookmarkContextMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
-void k_bookmarkcontextmenu_qbase_init_style_option(void* self, void* option, void* action) {
-    KBookmarkContextMenu_QBaseInitStyleOption((KBookmarkContextMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
+void k_bookmarkcontextmenu_super_init_style_option(void* self, void* option, void* action) {
+    KBookmarkContextMenu_SuperInitStyleOption((KBookmarkContextMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
 void k_bookmarkcontextmenu_on_init_style_option(void* self, void (*callback)(void*, void*, void*)) {
@@ -2004,8 +2004,8 @@ int32_t k_bookmarkcontextmenu_dev_type(void* self) {
     return KBookmarkContextMenu_DevType((KBookmarkContextMenu*)self);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_dev_type(void* self) {
-    return KBookmarkContextMenu_QBaseDevType((KBookmarkContextMenu*)self);
+int32_t k_bookmarkcontextmenu_super_dev_type(void* self) {
+    return KBookmarkContextMenu_SuperDevType((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2016,8 +2016,8 @@ void k_bookmarkcontextmenu_set_visible(void* self, bool visible) {
     KBookmarkContextMenu_SetVisible((KBookmarkContextMenu*)self, visible);
 }
 
-void k_bookmarkcontextmenu_qbase_set_visible(void* self, bool visible) {
-    KBookmarkContextMenu_QBaseSetVisible((KBookmarkContextMenu*)self, visible);
+void k_bookmarkcontextmenu_super_set_visible(void* self, bool visible) {
+    KBookmarkContextMenu_SuperSetVisible((KBookmarkContextMenu*)self, visible);
 }
 
 void k_bookmarkcontextmenu_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2028,8 +2028,8 @@ QSize* k_bookmarkcontextmenu_minimum_size_hint(void* self) {
     return KBookmarkContextMenu_MinimumSizeHint((KBookmarkContextMenu*)self);
 }
 
-QSize* k_bookmarkcontextmenu_qbase_minimum_size_hint(void* self) {
-    return KBookmarkContextMenu_QBaseMinimumSizeHint((KBookmarkContextMenu*)self);
+QSize* k_bookmarkcontextmenu_super_minimum_size_hint(void* self) {
+    return KBookmarkContextMenu_SuperMinimumSizeHint((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2040,8 +2040,8 @@ int32_t k_bookmarkcontextmenu_height_for_width(void* self, int param1) {
     return KBookmarkContextMenu_HeightForWidth((KBookmarkContextMenu*)self, param1);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_height_for_width(void* self, int param1) {
-    return KBookmarkContextMenu_QBaseHeightForWidth((KBookmarkContextMenu*)self, param1);
+int32_t k_bookmarkcontextmenu_super_height_for_width(void* self, int param1) {
+    return KBookmarkContextMenu_SuperHeightForWidth((KBookmarkContextMenu*)self, param1);
 }
 
 void k_bookmarkcontextmenu_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2052,8 +2052,8 @@ bool k_bookmarkcontextmenu_has_height_for_width(void* self) {
     return KBookmarkContextMenu_HasHeightForWidth((KBookmarkContextMenu*)self);
 }
 
-bool k_bookmarkcontextmenu_qbase_has_height_for_width(void* self) {
-    return KBookmarkContextMenu_QBaseHasHeightForWidth((KBookmarkContextMenu*)self);
+bool k_bookmarkcontextmenu_super_has_height_for_width(void* self) {
+    return KBookmarkContextMenu_SuperHasHeightForWidth((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2064,8 +2064,8 @@ QPaintEngine* k_bookmarkcontextmenu_paint_engine(void* self) {
     return KBookmarkContextMenu_PaintEngine((KBookmarkContextMenu*)self);
 }
 
-QPaintEngine* k_bookmarkcontextmenu_qbase_paint_engine(void* self) {
-    return KBookmarkContextMenu_QBasePaintEngine((KBookmarkContextMenu*)self);
+QPaintEngine* k_bookmarkcontextmenu_super_paint_engine(void* self) {
+    return KBookmarkContextMenu_SuperPaintEngine((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2076,8 +2076,8 @@ void k_bookmarkcontextmenu_mouse_double_click_event(void* self, void* event) {
     KBookmarkContextMenu_MouseDoubleClickEvent((KBookmarkContextMenu*)self, (QMouseEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_mouse_double_click_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseMouseDoubleClickEvent((KBookmarkContextMenu*)self, (QMouseEvent*)event);
+void k_bookmarkcontextmenu_super_mouse_double_click_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperMouseDoubleClickEvent((KBookmarkContextMenu*)self, (QMouseEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_bookmarkcontextmenu_key_release_event(void* self, void* event) {
     KBookmarkContextMenu_KeyReleaseEvent((KBookmarkContextMenu*)self, (QKeyEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_key_release_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseKeyReleaseEvent((KBookmarkContextMenu*)self, (QKeyEvent*)event);
+void k_bookmarkcontextmenu_super_key_release_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperKeyReleaseEvent((KBookmarkContextMenu*)self, (QKeyEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2100,8 +2100,8 @@ void k_bookmarkcontextmenu_focus_in_event(void* self, void* event) {
     KBookmarkContextMenu_FocusInEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_focus_in_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseFocusInEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
+void k_bookmarkcontextmenu_super_focus_in_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperFocusInEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2112,8 +2112,8 @@ void k_bookmarkcontextmenu_focus_out_event(void* self, void* event) {
     KBookmarkContextMenu_FocusOutEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_focus_out_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseFocusOutEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
+void k_bookmarkcontextmenu_super_focus_out_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperFocusOutEvent((KBookmarkContextMenu*)self, (QFocusEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2124,8 +2124,8 @@ void k_bookmarkcontextmenu_move_event(void* self, void* event) {
     KBookmarkContextMenu_MoveEvent((KBookmarkContextMenu*)self, (QMoveEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_move_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseMoveEvent((KBookmarkContextMenu*)self, (QMoveEvent*)event);
+void k_bookmarkcontextmenu_super_move_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperMoveEvent((KBookmarkContextMenu*)self, (QMoveEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2136,8 +2136,8 @@ void k_bookmarkcontextmenu_resize_event(void* self, void* event) {
     KBookmarkContextMenu_ResizeEvent((KBookmarkContextMenu*)self, (QResizeEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_resize_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseResizeEvent((KBookmarkContextMenu*)self, (QResizeEvent*)event);
+void k_bookmarkcontextmenu_super_resize_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperResizeEvent((KBookmarkContextMenu*)self, (QResizeEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ void k_bookmarkcontextmenu_close_event(void* self, void* event) {
     KBookmarkContextMenu_CloseEvent((KBookmarkContextMenu*)self, (QCloseEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_close_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseCloseEvent((KBookmarkContextMenu*)self, (QCloseEvent*)event);
+void k_bookmarkcontextmenu_super_close_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperCloseEvent((KBookmarkContextMenu*)self, (QCloseEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2160,8 +2160,8 @@ void k_bookmarkcontextmenu_context_menu_event(void* self, void* event) {
     KBookmarkContextMenu_ContextMenuEvent((KBookmarkContextMenu*)self, (QContextMenuEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_context_menu_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseContextMenuEvent((KBookmarkContextMenu*)self, (QContextMenuEvent*)event);
+void k_bookmarkcontextmenu_super_context_menu_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperContextMenuEvent((KBookmarkContextMenu*)self, (QContextMenuEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2172,8 +2172,8 @@ void k_bookmarkcontextmenu_tablet_event(void* self, void* event) {
     KBookmarkContextMenu_TabletEvent((KBookmarkContextMenu*)self, (QTabletEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_tablet_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseTabletEvent((KBookmarkContextMenu*)self, (QTabletEvent*)event);
+void k_bookmarkcontextmenu_super_tablet_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperTabletEvent((KBookmarkContextMenu*)self, (QTabletEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2184,8 +2184,8 @@ void k_bookmarkcontextmenu_drag_enter_event(void* self, void* event) {
     KBookmarkContextMenu_DragEnterEvent((KBookmarkContextMenu*)self, (QDragEnterEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_drag_enter_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseDragEnterEvent((KBookmarkContextMenu*)self, (QDragEnterEvent*)event);
+void k_bookmarkcontextmenu_super_drag_enter_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperDragEnterEvent((KBookmarkContextMenu*)self, (QDragEnterEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2196,8 +2196,8 @@ void k_bookmarkcontextmenu_drag_move_event(void* self, void* event) {
     KBookmarkContextMenu_DragMoveEvent((KBookmarkContextMenu*)self, (QDragMoveEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_drag_move_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseDragMoveEvent((KBookmarkContextMenu*)self, (QDragMoveEvent*)event);
+void k_bookmarkcontextmenu_super_drag_move_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperDragMoveEvent((KBookmarkContextMenu*)self, (QDragMoveEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2208,8 +2208,8 @@ void k_bookmarkcontextmenu_drag_leave_event(void* self, void* event) {
     KBookmarkContextMenu_DragLeaveEvent((KBookmarkContextMenu*)self, (QDragLeaveEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_drag_leave_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseDragLeaveEvent((KBookmarkContextMenu*)self, (QDragLeaveEvent*)event);
+void k_bookmarkcontextmenu_super_drag_leave_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperDragLeaveEvent((KBookmarkContextMenu*)self, (QDragLeaveEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2220,8 +2220,8 @@ void k_bookmarkcontextmenu_drop_event(void* self, void* event) {
     KBookmarkContextMenu_DropEvent((KBookmarkContextMenu*)self, (QDropEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_drop_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseDropEvent((KBookmarkContextMenu*)self, (QDropEvent*)event);
+void k_bookmarkcontextmenu_super_drop_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperDropEvent((KBookmarkContextMenu*)self, (QDropEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2232,8 +2232,8 @@ void k_bookmarkcontextmenu_show_event(void* self, void* event) {
     KBookmarkContextMenu_ShowEvent((KBookmarkContextMenu*)self, (QShowEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_show_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseShowEvent((KBookmarkContextMenu*)self, (QShowEvent*)event);
+void k_bookmarkcontextmenu_super_show_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperShowEvent((KBookmarkContextMenu*)self, (QShowEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2244,8 +2244,8 @@ bool k_bookmarkcontextmenu_native_event(void* self, char* eventType, void* messa
     return KBookmarkContextMenu_NativeEvent((KBookmarkContextMenu*)self, qstring(eventType), message, result);
 }
 
-bool k_bookmarkcontextmenu_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KBookmarkContextMenu_QBaseNativeEvent((KBookmarkContextMenu*)self, qstring(eventType), message, result);
+bool k_bookmarkcontextmenu_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KBookmarkContextMenu_SuperNativeEvent((KBookmarkContextMenu*)self, qstring(eventType), message, result);
 }
 
 void k_bookmarkcontextmenu_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2256,8 +2256,8 @@ int32_t k_bookmarkcontextmenu_metric(void* self, int32_t param1) {
     return KBookmarkContextMenu_Metric((KBookmarkContextMenu*)self, param1);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_metric(void* self, int32_t param1) {
-    return KBookmarkContextMenu_QBaseMetric((KBookmarkContextMenu*)self, param1);
+int32_t k_bookmarkcontextmenu_super_metric(void* self, int32_t param1) {
+    return KBookmarkContextMenu_SuperMetric((KBookmarkContextMenu*)self, param1);
 }
 
 void k_bookmarkcontextmenu_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2268,8 +2268,8 @@ void k_bookmarkcontextmenu_init_painter(void* self, void* painter) {
     KBookmarkContextMenu_InitPainter((KBookmarkContextMenu*)self, (QPainter*)painter);
 }
 
-void k_bookmarkcontextmenu_qbase_init_painter(void* self, void* painter) {
-    KBookmarkContextMenu_QBaseInitPainter((KBookmarkContextMenu*)self, (QPainter*)painter);
+void k_bookmarkcontextmenu_super_init_painter(void* self, void* painter) {
+    KBookmarkContextMenu_SuperInitPainter((KBookmarkContextMenu*)self, (QPainter*)painter);
 }
 
 void k_bookmarkcontextmenu_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2280,8 +2280,8 @@ QPaintDevice* k_bookmarkcontextmenu_redirected(void* self, void* offset) {
     return KBookmarkContextMenu_Redirected((KBookmarkContextMenu*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_bookmarkcontextmenu_qbase_redirected(void* self, void* offset) {
-    return KBookmarkContextMenu_QBaseRedirected((KBookmarkContextMenu*)self, (QPoint*)offset);
+QPaintDevice* k_bookmarkcontextmenu_super_redirected(void* self, void* offset) {
+    return KBookmarkContextMenu_SuperRedirected((KBookmarkContextMenu*)self, (QPoint*)offset);
 }
 
 void k_bookmarkcontextmenu_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2292,8 +2292,8 @@ QPainter* k_bookmarkcontextmenu_shared_painter(void* self) {
     return KBookmarkContextMenu_SharedPainter((KBookmarkContextMenu*)self);
 }
 
-QPainter* k_bookmarkcontextmenu_qbase_shared_painter(void* self) {
-    return KBookmarkContextMenu_QBaseSharedPainter((KBookmarkContextMenu*)self);
+QPainter* k_bookmarkcontextmenu_super_shared_painter(void* self) {
+    return KBookmarkContextMenu_SuperSharedPainter((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2304,8 +2304,8 @@ void k_bookmarkcontextmenu_input_method_event(void* self, void* param1) {
     KBookmarkContextMenu_InputMethodEvent((KBookmarkContextMenu*)self, (QInputMethodEvent*)param1);
 }
 
-void k_bookmarkcontextmenu_qbase_input_method_event(void* self, void* param1) {
-    KBookmarkContextMenu_QBaseInputMethodEvent((KBookmarkContextMenu*)self, (QInputMethodEvent*)param1);
+void k_bookmarkcontextmenu_super_input_method_event(void* self, void* param1) {
+    KBookmarkContextMenu_SuperInputMethodEvent((KBookmarkContextMenu*)self, (QInputMethodEvent*)param1);
 }
 
 void k_bookmarkcontextmenu_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2316,8 +2316,8 @@ QVariant* k_bookmarkcontextmenu_input_method_query(void* self, int32_t param1) {
     return KBookmarkContextMenu_InputMethodQuery((KBookmarkContextMenu*)self, param1);
 }
 
-QVariant* k_bookmarkcontextmenu_qbase_input_method_query(void* self, int32_t param1) {
-    return KBookmarkContextMenu_QBaseInputMethodQuery((KBookmarkContextMenu*)self, param1);
+QVariant* k_bookmarkcontextmenu_super_input_method_query(void* self, int32_t param1) {
+    return KBookmarkContextMenu_SuperInputMethodQuery((KBookmarkContextMenu*)self, param1);
 }
 
 void k_bookmarkcontextmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2328,8 +2328,8 @@ bool k_bookmarkcontextmenu_event_filter(void* self, void* watched, void* event) 
     return KBookmarkContextMenu_EventFilter((KBookmarkContextMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_bookmarkcontextmenu_qbase_event_filter(void* self, void* watched, void* event) {
-    return KBookmarkContextMenu_QBaseEventFilter((KBookmarkContextMenu*)self, (QObject*)watched, (QEvent*)event);
+bool k_bookmarkcontextmenu_super_event_filter(void* self, void* watched, void* event) {
+    return KBookmarkContextMenu_SuperEventFilter((KBookmarkContextMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2340,8 +2340,8 @@ void k_bookmarkcontextmenu_child_event(void* self, void* event) {
     KBookmarkContextMenu_ChildEvent((KBookmarkContextMenu*)self, (QChildEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_child_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseChildEvent((KBookmarkContextMenu*)self, (QChildEvent*)event);
+void k_bookmarkcontextmenu_super_child_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperChildEvent((KBookmarkContextMenu*)self, (QChildEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2352,8 +2352,8 @@ void k_bookmarkcontextmenu_custom_event(void* self, void* event) {
     KBookmarkContextMenu_CustomEvent((KBookmarkContextMenu*)self, (QEvent*)event);
 }
 
-void k_bookmarkcontextmenu_qbase_custom_event(void* self, void* event) {
-    KBookmarkContextMenu_QBaseCustomEvent((KBookmarkContextMenu*)self, (QEvent*)event);
+void k_bookmarkcontextmenu_super_custom_event(void* self, void* event) {
+    KBookmarkContextMenu_SuperCustomEvent((KBookmarkContextMenu*)self, (QEvent*)event);
 }
 
 void k_bookmarkcontextmenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2364,8 +2364,8 @@ void k_bookmarkcontextmenu_connect_notify(void* self, void* signal) {
     KBookmarkContextMenu_ConnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkcontextmenu_qbase_connect_notify(void* self, void* signal) {
-    KBookmarkContextMenu_QBaseConnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
+void k_bookmarkcontextmenu_super_connect_notify(void* self, void* signal) {
+    KBookmarkContextMenu_SuperConnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkcontextmenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2376,8 +2376,8 @@ void k_bookmarkcontextmenu_disconnect_notify(void* self, void* signal) {
     KBookmarkContextMenu_DisconnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkcontextmenu_qbase_disconnect_notify(void* self, void* signal) {
-    KBookmarkContextMenu_QBaseDisconnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
+void k_bookmarkcontextmenu_super_disconnect_notify(void* self, void* signal) {
+    KBookmarkContextMenu_SuperDisconnectNotify((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkcontextmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2388,8 +2388,8 @@ int32_t k_bookmarkcontextmenu_column_count(void* self) {
     return KBookmarkContextMenu_ColumnCount((KBookmarkContextMenu*)self);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_column_count(void* self) {
-    return KBookmarkContextMenu_QBaseColumnCount((KBookmarkContextMenu*)self);
+int32_t k_bookmarkcontextmenu_super_column_count(void* self) {
+    return KBookmarkContextMenu_SuperColumnCount((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_column_count(void* self, int32_t (*callback)()) {
@@ -2400,8 +2400,8 @@ void k_bookmarkcontextmenu_update_micro_focus(void* self) {
     KBookmarkContextMenu_UpdateMicroFocus((KBookmarkContextMenu*)self);
 }
 
-void k_bookmarkcontextmenu_qbase_update_micro_focus(void* self) {
-    KBookmarkContextMenu_QBaseUpdateMicroFocus((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_update_micro_focus(void* self) {
+    KBookmarkContextMenu_SuperUpdateMicroFocus((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2412,8 +2412,8 @@ void k_bookmarkcontextmenu_create(void* self) {
     KBookmarkContextMenu_Create((KBookmarkContextMenu*)self);
 }
 
-void k_bookmarkcontextmenu_qbase_create(void* self) {
-    KBookmarkContextMenu_QBaseCreate((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_create(void* self) {
+    KBookmarkContextMenu_SuperCreate((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_create(void* self, void (*callback)()) {
@@ -2424,8 +2424,8 @@ void k_bookmarkcontextmenu_destroy(void* self) {
     KBookmarkContextMenu_Destroy((KBookmarkContextMenu*)self);
 }
 
-void k_bookmarkcontextmenu_qbase_destroy(void* self) {
-    KBookmarkContextMenu_QBaseDestroy((KBookmarkContextMenu*)self);
+void k_bookmarkcontextmenu_super_destroy(void* self) {
+    KBookmarkContextMenu_SuperDestroy((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_destroy(void* self, void (*callback)()) {
@@ -2436,8 +2436,8 @@ bool k_bookmarkcontextmenu_focus_next_child(void* self) {
     return KBookmarkContextMenu_FocusNextChild((KBookmarkContextMenu*)self);
 }
 
-bool k_bookmarkcontextmenu_qbase_focus_next_child(void* self) {
-    return KBookmarkContextMenu_QBaseFocusNextChild((KBookmarkContextMenu*)self);
+bool k_bookmarkcontextmenu_super_focus_next_child(void* self) {
+    return KBookmarkContextMenu_SuperFocusNextChild((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2448,8 +2448,8 @@ bool k_bookmarkcontextmenu_focus_previous_child(void* self) {
     return KBookmarkContextMenu_FocusPreviousChild((KBookmarkContextMenu*)self);
 }
 
-bool k_bookmarkcontextmenu_qbase_focus_previous_child(void* self) {
-    return KBookmarkContextMenu_QBaseFocusPreviousChild((KBookmarkContextMenu*)self);
+bool k_bookmarkcontextmenu_super_focus_previous_child(void* self) {
+    return KBookmarkContextMenu_SuperFocusPreviousChild((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2460,8 +2460,8 @@ QObject* k_bookmarkcontextmenu_sender(void* self) {
     return KBookmarkContextMenu_Sender((KBookmarkContextMenu*)self);
 }
 
-QObject* k_bookmarkcontextmenu_qbase_sender(void* self) {
-    return KBookmarkContextMenu_QBaseSender((KBookmarkContextMenu*)self);
+QObject* k_bookmarkcontextmenu_super_sender(void* self) {
+    return KBookmarkContextMenu_SuperSender((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_sender(void* self, QObject* (*callback)()) {
@@ -2472,8 +2472,8 @@ int32_t k_bookmarkcontextmenu_sender_signal_index(void* self) {
     return KBookmarkContextMenu_SenderSignalIndex((KBookmarkContextMenu*)self);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_sender_signal_index(void* self) {
-    return KBookmarkContextMenu_QBaseSenderSignalIndex((KBookmarkContextMenu*)self);
+int32_t k_bookmarkcontextmenu_super_sender_signal_index(void* self) {
+    return KBookmarkContextMenu_SuperSenderSignalIndex((KBookmarkContextMenu*)self);
 }
 
 void k_bookmarkcontextmenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2484,8 +2484,8 @@ int32_t k_bookmarkcontextmenu_receivers(void* self, const char* signal) {
     return KBookmarkContextMenu_Receivers((KBookmarkContextMenu*)self, signal);
 }
 
-int32_t k_bookmarkcontextmenu_qbase_receivers(void* self, const char* signal) {
-    return KBookmarkContextMenu_QBaseReceivers((KBookmarkContextMenu*)self, signal);
+int32_t k_bookmarkcontextmenu_super_receivers(void* self, const char* signal) {
+    return KBookmarkContextMenu_SuperReceivers((KBookmarkContextMenu*)self, signal);
 }
 
 void k_bookmarkcontextmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2496,8 +2496,8 @@ bool k_bookmarkcontextmenu_is_signal_connected(void* self, void* signal) {
     return KBookmarkContextMenu_IsSignalConnected((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_bookmarkcontextmenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KBookmarkContextMenu_QBaseIsSignalConnected((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
+bool k_bookmarkcontextmenu_super_is_signal_connected(void* self, void* signal) {
+    return KBookmarkContextMenu_SuperIsSignalConnected((KBookmarkContextMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkcontextmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2508,8 +2508,8 @@ double k_bookmarkcontextmenu_get_decoded_metric_f(void* self, int32_t metricA, i
     return KBookmarkContextMenu_GetDecodedMetricF((KBookmarkContextMenu*)self, metricA, metricB);
 }
 
-double k_bookmarkcontextmenu_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KBookmarkContextMenu_QBaseGetDecodedMetricF((KBookmarkContextMenu*)self, metricA, metricB);
+double k_bookmarkcontextmenu_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KBookmarkContextMenu_SuperGetDecodedMetricF((KBookmarkContextMenu*)self, metricA, metricB);
 }
 
 void k_bookmarkcontextmenu_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

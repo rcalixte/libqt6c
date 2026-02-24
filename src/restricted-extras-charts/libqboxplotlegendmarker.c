@@ -24,8 +24,8 @@ void q_boxplotlegendmarker_on_meta_object(void* self, const QMetaObject* (*callb
     QBoxPlotLegendMarker_OnMetaObject((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_boxplotlegendmarker_qbase_meta_object(void* self) {
-    return QBoxPlotLegendMarker_QBaseMetaObject((QBoxPlotLegendMarker*)self);
+const QMetaObject* q_boxplotlegendmarker_super_meta_object(void* self) {
+    return QBoxPlotLegendMarker_SuperMetaObject((QBoxPlotLegendMarker*)self);
 }
 
 void* q_boxplotlegendmarker_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_boxplotlegendmarker_on_metacast(void* self, void* (*callback)(void*, cons
     QBoxPlotLegendMarker_OnMetacast((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 
-void* q_boxplotlegendmarker_qbase_metacast(void* self, const char* param1) {
-    return QBoxPlotLegendMarker_QBaseMetacast((QBoxPlotLegendMarker*)self, param1);
+void* q_boxplotlegendmarker_super_metacast(void* self, const char* param1) {
+    return QBoxPlotLegendMarker_SuperMetacast((QBoxPlotLegendMarker*)self, param1);
 }
 
 int32_t q_boxplotlegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_boxplotlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, in
     QBoxPlotLegendMarker_OnMetacall((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_boxplotlegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QBoxPlotLegendMarker_QBaseMetacall((QBoxPlotLegendMarker*)self, param1, param2, param3);
+int32_t q_boxplotlegendmarker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QBoxPlotLegendMarker_SuperMetacall((QBoxPlotLegendMarker*)self, param1, param2, param3);
 }
 
 const char* q_boxplotlegendmarker_tr(const char* s) {
@@ -67,8 +67,8 @@ void q_boxplotlegendmarker_on_type(void* self, int32_t (*callback)()) {
     QBoxPlotLegendMarker_OnType((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_boxplotlegendmarker_qbase_type(void* self) {
-    return QBoxPlotLegendMarker_QBaseType((QBoxPlotLegendMarker*)self);
+int32_t q_boxplotlegendmarker_super_type(void* self) {
+    return QBoxPlotLegendMarker_SuperType((QBoxPlotLegendMarker*)self);
 }
 
 QBoxPlotSeries* q_boxplotlegendmarker_series(void* self) {
@@ -79,8 +79,8 @@ void q_boxplotlegendmarker_on_series(void* self, QBoxPlotSeries* (*callback)()) 
     QBoxPlotLegendMarker_OnSeries((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 
-QBoxPlotSeries* q_boxplotlegendmarker_qbase_series(void* self) {
-    return QBoxPlotLegendMarker_QBaseSeries((QBoxPlotLegendMarker*)self);
+QBoxPlotSeries* q_boxplotlegendmarker_super_series(void* self) {
+    return QBoxPlotLegendMarker_SuperSeries((QBoxPlotLegendMarker*)self);
 }
 
 const char* q_boxplotlegendmarker_tr2(const char* s, const char* c) {
@@ -443,8 +443,8 @@ bool q_boxplotlegendmarker_event(void* self, void* event) {
     return QBoxPlotLegendMarker_Event((QBoxPlotLegendMarker*)self, (QEvent*)event);
 }
 
-bool q_boxplotlegendmarker_qbase_event(void* self, void* event) {
-    return QBoxPlotLegendMarker_QBaseEvent((QBoxPlotLegendMarker*)self, (QEvent*)event);
+bool q_boxplotlegendmarker_super_event(void* self, void* event) {
+    return QBoxPlotLegendMarker_SuperEvent((QBoxPlotLegendMarker*)self, (QEvent*)event);
 }
 
 void q_boxplotlegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ bool q_boxplotlegendmarker_event_filter(void* self, void* watched, void* event) 
     return QBoxPlotLegendMarker_EventFilter((QBoxPlotLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_boxplotlegendmarker_qbase_event_filter(void* self, void* watched, void* event) {
-    return QBoxPlotLegendMarker_QBaseEventFilter((QBoxPlotLegendMarker*)self, (QObject*)watched, (QEvent*)event);
+bool q_boxplotlegendmarker_super_event_filter(void* self, void* watched, void* event) {
+    return QBoxPlotLegendMarker_SuperEventFilter((QBoxPlotLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_boxplotlegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -467,8 +467,8 @@ void q_boxplotlegendmarker_timer_event(void* self, void* event) {
     QBoxPlotLegendMarker_TimerEvent((QBoxPlotLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_boxplotlegendmarker_qbase_timer_event(void* self, void* event) {
-    QBoxPlotLegendMarker_QBaseTimerEvent((QBoxPlotLegendMarker*)self, (QTimerEvent*)event);
+void q_boxplotlegendmarker_super_timer_event(void* self, void* event) {
+    QBoxPlotLegendMarker_SuperTimerEvent((QBoxPlotLegendMarker*)self, (QTimerEvent*)event);
 }
 
 void q_boxplotlegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_boxplotlegendmarker_child_event(void* self, void* event) {
     QBoxPlotLegendMarker_ChildEvent((QBoxPlotLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_boxplotlegendmarker_qbase_child_event(void* self, void* event) {
-    QBoxPlotLegendMarker_QBaseChildEvent((QBoxPlotLegendMarker*)self, (QChildEvent*)event);
+void q_boxplotlegendmarker_super_child_event(void* self, void* event) {
+    QBoxPlotLegendMarker_SuperChildEvent((QBoxPlotLegendMarker*)self, (QChildEvent*)event);
 }
 
 void q_boxplotlegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_boxplotlegendmarker_custom_event(void* self, void* event) {
     QBoxPlotLegendMarker_CustomEvent((QBoxPlotLegendMarker*)self, (QEvent*)event);
 }
 
-void q_boxplotlegendmarker_qbase_custom_event(void* self, void* event) {
-    QBoxPlotLegendMarker_QBaseCustomEvent((QBoxPlotLegendMarker*)self, (QEvent*)event);
+void q_boxplotlegendmarker_super_custom_event(void* self, void* event) {
+    QBoxPlotLegendMarker_SuperCustomEvent((QBoxPlotLegendMarker*)self, (QEvent*)event);
 }
 
 void q_boxplotlegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_boxplotlegendmarker_connect_notify(void* self, void* signal) {
     QBoxPlotLegendMarker_ConnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotlegendmarker_qbase_connect_notify(void* self, void* signal) {
-    QBoxPlotLegendMarker_QBaseConnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
+void q_boxplotlegendmarker_super_connect_notify(void* self, void* signal) {
+    QBoxPlotLegendMarker_SuperConnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_boxplotlegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_boxplotlegendmarker_disconnect_notify(void* self, void* signal) {
     QBoxPlotLegendMarker_DisconnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_boxplotlegendmarker_qbase_disconnect_notify(void* self, void* signal) {
-    QBoxPlotLegendMarker_QBaseDisconnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
+void q_boxplotlegendmarker_super_disconnect_notify(void* self, void* signal) {
+    QBoxPlotLegendMarker_SuperDisconnectNotify((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_boxplotlegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ QObject* q_boxplotlegendmarker_sender(void* self) {
     return QBoxPlotLegendMarker_Sender((QBoxPlotLegendMarker*)self);
 }
 
-QObject* q_boxplotlegendmarker_qbase_sender(void* self) {
-    return QBoxPlotLegendMarker_QBaseSender((QBoxPlotLegendMarker*)self);
+QObject* q_boxplotlegendmarker_super_sender(void* self) {
+    return QBoxPlotLegendMarker_SuperSender((QBoxPlotLegendMarker*)self);
 }
 
 void q_boxplotlegendmarker_on_sender(void* self, QObject* (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_boxplotlegendmarker_sender_signal_index(void* self) {
     return QBoxPlotLegendMarker_SenderSignalIndex((QBoxPlotLegendMarker*)self);
 }
 
-int32_t q_boxplotlegendmarker_qbase_sender_signal_index(void* self) {
-    return QBoxPlotLegendMarker_QBaseSenderSignalIndex((QBoxPlotLegendMarker*)self);
+int32_t q_boxplotlegendmarker_super_sender_signal_index(void* self) {
+    return QBoxPlotLegendMarker_SuperSenderSignalIndex((QBoxPlotLegendMarker*)self);
 }
 
 void q_boxplotlegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_boxplotlegendmarker_receivers(void* self, const char* signal) {
     return QBoxPlotLegendMarker_Receivers((QBoxPlotLegendMarker*)self, signal);
 }
 
-int32_t q_boxplotlegendmarker_qbase_receivers(void* self, const char* signal) {
-    return QBoxPlotLegendMarker_QBaseReceivers((QBoxPlotLegendMarker*)self, signal);
+int32_t q_boxplotlegendmarker_super_receivers(void* self, const char* signal) {
+    return QBoxPlotLegendMarker_SuperReceivers((QBoxPlotLegendMarker*)self, signal);
 }
 
 void q_boxplotlegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -563,8 +563,8 @@ bool q_boxplotlegendmarker_is_signal_connected(void* self, void* signal) {
     return QBoxPlotLegendMarker_IsSignalConnected((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-bool q_boxplotlegendmarker_qbase_is_signal_connected(void* self, void* signal) {
-    return QBoxPlotLegendMarker_QBaseIsSignalConnected((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
+bool q_boxplotlegendmarker_super_is_signal_connected(void* self, void* signal) {
+    return QBoxPlotLegendMarker_SuperIsSignalConnected((QBoxPlotLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_boxplotlegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

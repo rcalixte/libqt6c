@@ -29,8 +29,8 @@ void k_busyindicatorwidget_on_meta_object(void* self, const QMetaObject* (*callb
     KBusyIndicatorWidget_OnMetaObject((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_busyindicatorwidget_qbase_meta_object(void* self) {
-    return KBusyIndicatorWidget_QBaseMetaObject((KBusyIndicatorWidget*)self);
+const QMetaObject* k_busyindicatorwidget_super_meta_object(void* self) {
+    return KBusyIndicatorWidget_SuperMetaObject((KBusyIndicatorWidget*)self);
 }
 
 void* k_busyindicatorwidget_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_busyindicatorwidget_on_metacast(void* self, void* (*callback)(void*, cons
     KBusyIndicatorWidget_OnMetacast((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-void* k_busyindicatorwidget_qbase_metacast(void* self, const char* param1) {
-    return KBusyIndicatorWidget_QBaseMetacast((KBusyIndicatorWidget*)self, param1);
+void* k_busyindicatorwidget_super_metacast(void* self, const char* param1) {
+    return KBusyIndicatorWidget_SuperMetacast((KBusyIndicatorWidget*)self, param1);
 }
 
 int32_t k_busyindicatorwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_busyindicatorwidget_on_metacall(void* self, int32_t (*callback)(void*, in
     KBusyIndicatorWidget_OnMetacall((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_busyindicatorwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBusyIndicatorWidget_QBaseMetacall((KBusyIndicatorWidget*)self, param1, param2, param3);
+int32_t k_busyindicatorwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBusyIndicatorWidget_SuperMetacall((KBusyIndicatorWidget*)self, param1, param2, param3);
 }
 
 const char* k_busyindicatorwidget_tr(const char* s) {
@@ -72,8 +72,8 @@ void k_busyindicatorwidget_on_minimum_size_hint(void* self, QSize* (*callback)()
     KBusyIndicatorWidget_OnMinimumSizeHint((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_busyindicatorwidget_qbase_minimum_size_hint(void* self) {
-    return KBusyIndicatorWidget_QBaseMinimumSizeHint((KBusyIndicatorWidget*)self);
+QSize* k_busyindicatorwidget_super_minimum_size_hint(void* self) {
+    return KBusyIndicatorWidget_SuperMinimumSizeHint((KBusyIndicatorWidget*)self);
 }
 
 bool k_busyindicatorwidget_is_running(void* self) {
@@ -100,8 +100,8 @@ void k_busyindicatorwidget_on_show_event(void* self, void (*callback)(void*, voi
     KBusyIndicatorWidget_OnShowEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-void k_busyindicatorwidget_qbase_show_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseShowEvent((KBusyIndicatorWidget*)self, (QShowEvent*)event);
+void k_busyindicatorwidget_super_show_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperShowEvent((KBusyIndicatorWidget*)self, (QShowEvent*)event);
 }
 
 void k_busyindicatorwidget_hide_event(void* self, void* event) {
@@ -112,8 +112,8 @@ void k_busyindicatorwidget_on_hide_event(void* self, void (*callback)(void*, voi
     KBusyIndicatorWidget_OnHideEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-void k_busyindicatorwidget_qbase_hide_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseHideEvent((KBusyIndicatorWidget*)self, (QHideEvent*)event);
+void k_busyindicatorwidget_super_hide_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperHideEvent((KBusyIndicatorWidget*)self, (QHideEvent*)event);
 }
 
 void k_busyindicatorwidget_resize_event(void* self, void* event) {
@@ -124,8 +124,8 @@ void k_busyindicatorwidget_on_resize_event(void* self, void (*callback)(void*, v
     KBusyIndicatorWidget_OnResizeEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-void k_busyindicatorwidget_qbase_resize_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseResizeEvent((KBusyIndicatorWidget*)self, (QResizeEvent*)event);
+void k_busyindicatorwidget_super_resize_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperResizeEvent((KBusyIndicatorWidget*)self, (QResizeEvent*)event);
 }
 
 void k_busyindicatorwidget_paint_event(void* self, void* param1) {
@@ -136,8 +136,8 @@ void k_busyindicatorwidget_on_paint_event(void* self, void (*callback)(void*, vo
     KBusyIndicatorWidget_OnPaintEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-void k_busyindicatorwidget_qbase_paint_event(void* self, void* param1) {
-    KBusyIndicatorWidget_QBasePaintEvent((KBusyIndicatorWidget*)self, (QPaintEvent*)param1);
+void k_busyindicatorwidget_super_paint_event(void* self, void* param1) {
+    KBusyIndicatorWidget_SuperPaintEvent((KBusyIndicatorWidget*)self, (QPaintEvent*)param1);
 }
 
 bool k_busyindicatorwidget_event(void* self, void* event) {
@@ -148,8 +148,8 @@ void k_busyindicatorwidget_on_event(void* self, bool (*callback)(void*, void*)) 
     KBusyIndicatorWidget_OnEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-bool k_busyindicatorwidget_qbase_event(void* self, void* event) {
-    return KBusyIndicatorWidget_QBaseEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
+bool k_busyindicatorwidget_super_event(void* self, void* event) {
+    return KBusyIndicatorWidget_SuperEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
 }
 
 const char* k_busyindicatorwidget_tr2(const char* s, const char* c) {
@@ -1555,8 +1555,8 @@ int32_t k_busyindicatorwidget_dev_type(void* self) {
     return KBusyIndicatorWidget_DevType((KBusyIndicatorWidget*)self);
 }
 
-int32_t k_busyindicatorwidget_qbase_dev_type(void* self) {
-    return KBusyIndicatorWidget_QBaseDevType((KBusyIndicatorWidget*)self);
+int32_t k_busyindicatorwidget_super_dev_type(void* self) {
+    return KBusyIndicatorWidget_SuperDevType((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1567,8 +1567,8 @@ void k_busyindicatorwidget_set_visible(void* self, bool visible) {
     KBusyIndicatorWidget_SetVisible((KBusyIndicatorWidget*)self, visible);
 }
 
-void k_busyindicatorwidget_qbase_set_visible(void* self, bool visible) {
-    KBusyIndicatorWidget_QBaseSetVisible((KBusyIndicatorWidget*)self, visible);
+void k_busyindicatorwidget_super_set_visible(void* self, bool visible) {
+    KBusyIndicatorWidget_SuperSetVisible((KBusyIndicatorWidget*)self, visible);
 }
 
 void k_busyindicatorwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1579,8 +1579,8 @@ QSize* k_busyindicatorwidget_size_hint(void* self) {
     return KBusyIndicatorWidget_SizeHint((KBusyIndicatorWidget*)self);
 }
 
-QSize* k_busyindicatorwidget_qbase_size_hint(void* self) {
-    return KBusyIndicatorWidget_QBaseSizeHint((KBusyIndicatorWidget*)self);
+QSize* k_busyindicatorwidget_super_size_hint(void* self) {
+    return KBusyIndicatorWidget_SuperSizeHint((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1591,8 +1591,8 @@ int32_t k_busyindicatorwidget_height_for_width(void* self, int param1) {
     return KBusyIndicatorWidget_HeightForWidth((KBusyIndicatorWidget*)self, param1);
 }
 
-int32_t k_busyindicatorwidget_qbase_height_for_width(void* self, int param1) {
-    return KBusyIndicatorWidget_QBaseHeightForWidth((KBusyIndicatorWidget*)self, param1);
+int32_t k_busyindicatorwidget_super_height_for_width(void* self, int param1) {
+    return KBusyIndicatorWidget_SuperHeightForWidth((KBusyIndicatorWidget*)self, param1);
 }
 
 void k_busyindicatorwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1603,8 +1603,8 @@ bool k_busyindicatorwidget_has_height_for_width(void* self) {
     return KBusyIndicatorWidget_HasHeightForWidth((KBusyIndicatorWidget*)self);
 }
 
-bool k_busyindicatorwidget_qbase_has_height_for_width(void* self) {
-    return KBusyIndicatorWidget_QBaseHasHeightForWidth((KBusyIndicatorWidget*)self);
+bool k_busyindicatorwidget_super_has_height_for_width(void* self) {
+    return KBusyIndicatorWidget_SuperHasHeightForWidth((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1615,8 +1615,8 @@ QPaintEngine* k_busyindicatorwidget_paint_engine(void* self) {
     return KBusyIndicatorWidget_PaintEngine((KBusyIndicatorWidget*)self);
 }
 
-QPaintEngine* k_busyindicatorwidget_qbase_paint_engine(void* self) {
-    return KBusyIndicatorWidget_QBasePaintEngine((KBusyIndicatorWidget*)self);
+QPaintEngine* k_busyindicatorwidget_super_paint_engine(void* self) {
+    return KBusyIndicatorWidget_SuperPaintEngine((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1627,8 +1627,8 @@ void k_busyindicatorwidget_mouse_press_event(void* self, void* event) {
     KBusyIndicatorWidget_MousePressEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_mouse_press_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseMousePressEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
+void k_busyindicatorwidget_super_mouse_press_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperMousePressEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
 void k_busyindicatorwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1639,8 +1639,8 @@ void k_busyindicatorwidget_mouse_release_event(void* self, void* event) {
     KBusyIndicatorWidget_MouseReleaseEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_mouse_release_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseMouseReleaseEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
+void k_busyindicatorwidget_super_mouse_release_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperMouseReleaseEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
 void k_busyindicatorwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1651,8 +1651,8 @@ void k_busyindicatorwidget_mouse_double_click_event(void* self, void* event) {
     KBusyIndicatorWidget_MouseDoubleClickEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseMouseDoubleClickEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
+void k_busyindicatorwidget_super_mouse_double_click_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperMouseDoubleClickEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
 void k_busyindicatorwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1663,8 +1663,8 @@ void k_busyindicatorwidget_mouse_move_event(void* self, void* event) {
     KBusyIndicatorWidget_MouseMoveEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_mouse_move_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseMouseMoveEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
+void k_busyindicatorwidget_super_mouse_move_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperMouseMoveEvent((KBusyIndicatorWidget*)self, (QMouseEvent*)event);
 }
 
 void k_busyindicatorwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1675,8 +1675,8 @@ void k_busyindicatorwidget_wheel_event(void* self, void* event) {
     KBusyIndicatorWidget_WheelEvent((KBusyIndicatorWidget*)self, (QWheelEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_wheel_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseWheelEvent((KBusyIndicatorWidget*)self, (QWheelEvent*)event);
+void k_busyindicatorwidget_super_wheel_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperWheelEvent((KBusyIndicatorWidget*)self, (QWheelEvent*)event);
 }
 
 void k_busyindicatorwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1687,8 +1687,8 @@ void k_busyindicatorwidget_key_press_event(void* self, void* event) {
     KBusyIndicatorWidget_KeyPressEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_key_press_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseKeyPressEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
+void k_busyindicatorwidget_super_key_press_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperKeyPressEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
 }
 
 void k_busyindicatorwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1699,8 +1699,8 @@ void k_busyindicatorwidget_key_release_event(void* self, void* event) {
     KBusyIndicatorWidget_KeyReleaseEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_key_release_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseKeyReleaseEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
+void k_busyindicatorwidget_super_key_release_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperKeyReleaseEvent((KBusyIndicatorWidget*)self, (QKeyEvent*)event);
 }
 
 void k_busyindicatorwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1711,8 +1711,8 @@ void k_busyindicatorwidget_focus_in_event(void* self, void* event) {
     KBusyIndicatorWidget_FocusInEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_focus_in_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseFocusInEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
+void k_busyindicatorwidget_super_focus_in_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperFocusInEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
 }
 
 void k_busyindicatorwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1723,8 +1723,8 @@ void k_busyindicatorwidget_focus_out_event(void* self, void* event) {
     KBusyIndicatorWidget_FocusOutEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_focus_out_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseFocusOutEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
+void k_busyindicatorwidget_super_focus_out_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperFocusOutEvent((KBusyIndicatorWidget*)self, (QFocusEvent*)event);
 }
 
 void k_busyindicatorwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1735,8 +1735,8 @@ void k_busyindicatorwidget_enter_event(void* self, void* event) {
     KBusyIndicatorWidget_EnterEvent((KBusyIndicatorWidget*)self, (QEnterEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_enter_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseEnterEvent((KBusyIndicatorWidget*)self, (QEnterEvent*)event);
+void k_busyindicatorwidget_super_enter_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperEnterEvent((KBusyIndicatorWidget*)self, (QEnterEvent*)event);
 }
 
 void k_busyindicatorwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1747,8 +1747,8 @@ void k_busyindicatorwidget_leave_event(void* self, void* event) {
     KBusyIndicatorWidget_LeaveEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_leave_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseLeaveEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
+void k_busyindicatorwidget_super_leave_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperLeaveEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
 }
 
 void k_busyindicatorwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1759,8 +1759,8 @@ void k_busyindicatorwidget_move_event(void* self, void* event) {
     KBusyIndicatorWidget_MoveEvent((KBusyIndicatorWidget*)self, (QMoveEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_move_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseMoveEvent((KBusyIndicatorWidget*)self, (QMoveEvent*)event);
+void k_busyindicatorwidget_super_move_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperMoveEvent((KBusyIndicatorWidget*)self, (QMoveEvent*)event);
 }
 
 void k_busyindicatorwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void k_busyindicatorwidget_close_event(void* self, void* event) {
     KBusyIndicatorWidget_CloseEvent((KBusyIndicatorWidget*)self, (QCloseEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_close_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseCloseEvent((KBusyIndicatorWidget*)self, (QCloseEvent*)event);
+void k_busyindicatorwidget_super_close_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperCloseEvent((KBusyIndicatorWidget*)self, (QCloseEvent*)event);
 }
 
 void k_busyindicatorwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1783,8 +1783,8 @@ void k_busyindicatorwidget_context_menu_event(void* self, void* event) {
     KBusyIndicatorWidget_ContextMenuEvent((KBusyIndicatorWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_context_menu_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseContextMenuEvent((KBusyIndicatorWidget*)self, (QContextMenuEvent*)event);
+void k_busyindicatorwidget_super_context_menu_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperContextMenuEvent((KBusyIndicatorWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_busyindicatorwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1795,8 +1795,8 @@ void k_busyindicatorwidget_tablet_event(void* self, void* event) {
     KBusyIndicatorWidget_TabletEvent((KBusyIndicatorWidget*)self, (QTabletEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_tablet_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseTabletEvent((KBusyIndicatorWidget*)self, (QTabletEvent*)event);
+void k_busyindicatorwidget_super_tablet_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperTabletEvent((KBusyIndicatorWidget*)self, (QTabletEvent*)event);
 }
 
 void k_busyindicatorwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void k_busyindicatorwidget_action_event(void* self, void* event) {
     KBusyIndicatorWidget_ActionEvent((KBusyIndicatorWidget*)self, (QActionEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_action_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseActionEvent((KBusyIndicatorWidget*)self, (QActionEvent*)event);
+void k_busyindicatorwidget_super_action_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperActionEvent((KBusyIndicatorWidget*)self, (QActionEvent*)event);
 }
 
 void k_busyindicatorwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void k_busyindicatorwidget_drag_enter_event(void* self, void* event) {
     KBusyIndicatorWidget_DragEnterEvent((KBusyIndicatorWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_drag_enter_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseDragEnterEvent((KBusyIndicatorWidget*)self, (QDragEnterEvent*)event);
+void k_busyindicatorwidget_super_drag_enter_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperDragEnterEvent((KBusyIndicatorWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_busyindicatorwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void k_busyindicatorwidget_drag_move_event(void* self, void* event) {
     KBusyIndicatorWidget_DragMoveEvent((KBusyIndicatorWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_drag_move_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseDragMoveEvent((KBusyIndicatorWidget*)self, (QDragMoveEvent*)event);
+void k_busyindicatorwidget_super_drag_move_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperDragMoveEvent((KBusyIndicatorWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_busyindicatorwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void k_busyindicatorwidget_drag_leave_event(void* self, void* event) {
     KBusyIndicatorWidget_DragLeaveEvent((KBusyIndicatorWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_drag_leave_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseDragLeaveEvent((KBusyIndicatorWidget*)self, (QDragLeaveEvent*)event);
+void k_busyindicatorwidget_super_drag_leave_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperDragLeaveEvent((KBusyIndicatorWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_busyindicatorwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ void k_busyindicatorwidget_drop_event(void* self, void* event) {
     KBusyIndicatorWidget_DropEvent((KBusyIndicatorWidget*)self, (QDropEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_drop_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseDropEvent((KBusyIndicatorWidget*)self, (QDropEvent*)event);
+void k_busyindicatorwidget_super_drop_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperDropEvent((KBusyIndicatorWidget*)self, (QDropEvent*)event);
 }
 
 void k_busyindicatorwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ bool k_busyindicatorwidget_native_event(void* self, char* eventType, void* messa
     return KBusyIndicatorWidget_NativeEvent((KBusyIndicatorWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_busyindicatorwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KBusyIndicatorWidget_QBaseNativeEvent((KBusyIndicatorWidget*)self, qstring(eventType), message, result);
+bool k_busyindicatorwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KBusyIndicatorWidget_SuperNativeEvent((KBusyIndicatorWidget*)self, qstring(eventType), message, result);
 }
 
 void k_busyindicatorwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1879,8 +1879,8 @@ void k_busyindicatorwidget_change_event(void* self, void* param1) {
     KBusyIndicatorWidget_ChangeEvent((KBusyIndicatorWidget*)self, (QEvent*)param1);
 }
 
-void k_busyindicatorwidget_qbase_change_event(void* self, void* param1) {
-    KBusyIndicatorWidget_QBaseChangeEvent((KBusyIndicatorWidget*)self, (QEvent*)param1);
+void k_busyindicatorwidget_super_change_event(void* self, void* param1) {
+    KBusyIndicatorWidget_SuperChangeEvent((KBusyIndicatorWidget*)self, (QEvent*)param1);
 }
 
 void k_busyindicatorwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ int32_t k_busyindicatorwidget_metric(void* self, int32_t param1) {
     return KBusyIndicatorWidget_Metric((KBusyIndicatorWidget*)self, param1);
 }
 
-int32_t k_busyindicatorwidget_qbase_metric(void* self, int32_t param1) {
-    return KBusyIndicatorWidget_QBaseMetric((KBusyIndicatorWidget*)self, param1);
+int32_t k_busyindicatorwidget_super_metric(void* self, int32_t param1) {
+    return KBusyIndicatorWidget_SuperMetric((KBusyIndicatorWidget*)self, param1);
 }
 
 void k_busyindicatorwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1903,8 +1903,8 @@ void k_busyindicatorwidget_init_painter(void* self, void* painter) {
     KBusyIndicatorWidget_InitPainter((KBusyIndicatorWidget*)self, (QPainter*)painter);
 }
 
-void k_busyindicatorwidget_qbase_init_painter(void* self, void* painter) {
-    KBusyIndicatorWidget_QBaseInitPainter((KBusyIndicatorWidget*)self, (QPainter*)painter);
+void k_busyindicatorwidget_super_init_painter(void* self, void* painter) {
+    KBusyIndicatorWidget_SuperInitPainter((KBusyIndicatorWidget*)self, (QPainter*)painter);
 }
 
 void k_busyindicatorwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ QPaintDevice* k_busyindicatorwidget_redirected(void* self, void* offset) {
     return KBusyIndicatorWidget_Redirected((KBusyIndicatorWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_busyindicatorwidget_qbase_redirected(void* self, void* offset) {
-    return KBusyIndicatorWidget_QBaseRedirected((KBusyIndicatorWidget*)self, (QPoint*)offset);
+QPaintDevice* k_busyindicatorwidget_super_redirected(void* self, void* offset) {
+    return KBusyIndicatorWidget_SuperRedirected((KBusyIndicatorWidget*)self, (QPoint*)offset);
 }
 
 void k_busyindicatorwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ QPainter* k_busyindicatorwidget_shared_painter(void* self) {
     return KBusyIndicatorWidget_SharedPainter((KBusyIndicatorWidget*)self);
 }
 
-QPainter* k_busyindicatorwidget_qbase_shared_painter(void* self) {
-    return KBusyIndicatorWidget_QBaseSharedPainter((KBusyIndicatorWidget*)self);
+QPainter* k_busyindicatorwidget_super_shared_painter(void* self) {
+    return KBusyIndicatorWidget_SuperSharedPainter((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1939,8 +1939,8 @@ void k_busyindicatorwidget_input_method_event(void* self, void* param1) {
     KBusyIndicatorWidget_InputMethodEvent((KBusyIndicatorWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_busyindicatorwidget_qbase_input_method_event(void* self, void* param1) {
-    KBusyIndicatorWidget_QBaseInputMethodEvent((KBusyIndicatorWidget*)self, (QInputMethodEvent*)param1);
+void k_busyindicatorwidget_super_input_method_event(void* self, void* param1) {
+    KBusyIndicatorWidget_SuperInputMethodEvent((KBusyIndicatorWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_busyindicatorwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ QVariant* k_busyindicatorwidget_input_method_query(void* self, int32_t param1) {
     return KBusyIndicatorWidget_InputMethodQuery((KBusyIndicatorWidget*)self, param1);
 }
 
-QVariant* k_busyindicatorwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KBusyIndicatorWidget_QBaseInputMethodQuery((KBusyIndicatorWidget*)self, param1);
+QVariant* k_busyindicatorwidget_super_input_method_query(void* self, int32_t param1) {
+    return KBusyIndicatorWidget_SuperInputMethodQuery((KBusyIndicatorWidget*)self, param1);
 }
 
 void k_busyindicatorwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1963,8 +1963,8 @@ bool k_busyindicatorwidget_focus_next_prev_child(void* self, bool next) {
     return KBusyIndicatorWidget_FocusNextPrevChild((KBusyIndicatorWidget*)self, next);
 }
 
-bool k_busyindicatorwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KBusyIndicatorWidget_QBaseFocusNextPrevChild((KBusyIndicatorWidget*)self, next);
+bool k_busyindicatorwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KBusyIndicatorWidget_SuperFocusNextPrevChild((KBusyIndicatorWidget*)self, next);
 }
 
 void k_busyindicatorwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1975,8 +1975,8 @@ bool k_busyindicatorwidget_event_filter(void* self, void* watched, void* event) 
     return KBusyIndicatorWidget_EventFilter((KBusyIndicatorWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_busyindicatorwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KBusyIndicatorWidget_QBaseEventFilter((KBusyIndicatorWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_busyindicatorwidget_super_event_filter(void* self, void* watched, void* event) {
+    return KBusyIndicatorWidget_SuperEventFilter((KBusyIndicatorWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_busyindicatorwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1987,8 +1987,8 @@ void k_busyindicatorwidget_timer_event(void* self, void* event) {
     KBusyIndicatorWidget_TimerEvent((KBusyIndicatorWidget*)self, (QTimerEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_timer_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseTimerEvent((KBusyIndicatorWidget*)self, (QTimerEvent*)event);
+void k_busyindicatorwidget_super_timer_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperTimerEvent((KBusyIndicatorWidget*)self, (QTimerEvent*)event);
 }
 
 void k_busyindicatorwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ void k_busyindicatorwidget_child_event(void* self, void* event) {
     KBusyIndicatorWidget_ChildEvent((KBusyIndicatorWidget*)self, (QChildEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_child_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseChildEvent((KBusyIndicatorWidget*)self, (QChildEvent*)event);
+void k_busyindicatorwidget_super_child_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperChildEvent((KBusyIndicatorWidget*)self, (QChildEvent*)event);
 }
 
 void k_busyindicatorwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ void k_busyindicatorwidget_custom_event(void* self, void* event) {
     KBusyIndicatorWidget_CustomEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
 }
 
-void k_busyindicatorwidget_qbase_custom_event(void* self, void* event) {
-    KBusyIndicatorWidget_QBaseCustomEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
+void k_busyindicatorwidget_super_custom_event(void* self, void* event) {
+    KBusyIndicatorWidget_SuperCustomEvent((KBusyIndicatorWidget*)self, (QEvent*)event);
 }
 
 void k_busyindicatorwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ void k_busyindicatorwidget_connect_notify(void* self, void* signal) {
     KBusyIndicatorWidget_ConnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_busyindicatorwidget_qbase_connect_notify(void* self, void* signal) {
-    KBusyIndicatorWidget_QBaseConnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
+void k_busyindicatorwidget_super_connect_notify(void* self, void* signal) {
+    KBusyIndicatorWidget_SuperConnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_busyindicatorwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ void k_busyindicatorwidget_disconnect_notify(void* self, void* signal) {
     KBusyIndicatorWidget_DisconnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_busyindicatorwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KBusyIndicatorWidget_QBaseDisconnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
+void k_busyindicatorwidget_super_disconnect_notify(void* self, void* signal) {
+    KBusyIndicatorWidget_SuperDisconnectNotify((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_busyindicatorwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2047,8 +2047,8 @@ void k_busyindicatorwidget_update_micro_focus(void* self) {
     KBusyIndicatorWidget_UpdateMicroFocus((KBusyIndicatorWidget*)self);
 }
 
-void k_busyindicatorwidget_qbase_update_micro_focus(void* self) {
-    KBusyIndicatorWidget_QBaseUpdateMicroFocus((KBusyIndicatorWidget*)self);
+void k_busyindicatorwidget_super_update_micro_focus(void* self) {
+    KBusyIndicatorWidget_SuperUpdateMicroFocus((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2059,8 +2059,8 @@ void k_busyindicatorwidget_create(void* self) {
     KBusyIndicatorWidget_Create((KBusyIndicatorWidget*)self);
 }
 
-void k_busyindicatorwidget_qbase_create(void* self) {
-    KBusyIndicatorWidget_QBaseCreate((KBusyIndicatorWidget*)self);
+void k_busyindicatorwidget_super_create(void* self) {
+    KBusyIndicatorWidget_SuperCreate((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_create(void* self, void (*callback)()) {
@@ -2071,8 +2071,8 @@ void k_busyindicatorwidget_destroy(void* self) {
     KBusyIndicatorWidget_Destroy((KBusyIndicatorWidget*)self);
 }
 
-void k_busyindicatorwidget_qbase_destroy(void* self) {
-    KBusyIndicatorWidget_QBaseDestroy((KBusyIndicatorWidget*)self);
+void k_busyindicatorwidget_super_destroy(void* self) {
+    KBusyIndicatorWidget_SuperDestroy((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_destroy(void* self, void (*callback)()) {
@@ -2083,8 +2083,8 @@ bool k_busyindicatorwidget_focus_next_child(void* self) {
     return KBusyIndicatorWidget_FocusNextChild((KBusyIndicatorWidget*)self);
 }
 
-bool k_busyindicatorwidget_qbase_focus_next_child(void* self) {
-    return KBusyIndicatorWidget_QBaseFocusNextChild((KBusyIndicatorWidget*)self);
+bool k_busyindicatorwidget_super_focus_next_child(void* self) {
+    return KBusyIndicatorWidget_SuperFocusNextChild((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2095,8 +2095,8 @@ bool k_busyindicatorwidget_focus_previous_child(void* self) {
     return KBusyIndicatorWidget_FocusPreviousChild((KBusyIndicatorWidget*)self);
 }
 
-bool k_busyindicatorwidget_qbase_focus_previous_child(void* self) {
-    return KBusyIndicatorWidget_QBaseFocusPreviousChild((KBusyIndicatorWidget*)self);
+bool k_busyindicatorwidget_super_focus_previous_child(void* self) {
+    return KBusyIndicatorWidget_SuperFocusPreviousChild((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2107,8 +2107,8 @@ QObject* k_busyindicatorwidget_sender(void* self) {
     return KBusyIndicatorWidget_Sender((KBusyIndicatorWidget*)self);
 }
 
-QObject* k_busyindicatorwidget_qbase_sender(void* self) {
-    return KBusyIndicatorWidget_QBaseSender((KBusyIndicatorWidget*)self);
+QObject* k_busyindicatorwidget_super_sender(void* self) {
+    return KBusyIndicatorWidget_SuperSender((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2119,8 +2119,8 @@ int32_t k_busyindicatorwidget_sender_signal_index(void* self) {
     return KBusyIndicatorWidget_SenderSignalIndex((KBusyIndicatorWidget*)self);
 }
 
-int32_t k_busyindicatorwidget_qbase_sender_signal_index(void* self) {
-    return KBusyIndicatorWidget_QBaseSenderSignalIndex((KBusyIndicatorWidget*)self);
+int32_t k_busyindicatorwidget_super_sender_signal_index(void* self) {
+    return KBusyIndicatorWidget_SuperSenderSignalIndex((KBusyIndicatorWidget*)self);
 }
 
 void k_busyindicatorwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2131,8 +2131,8 @@ int32_t k_busyindicatorwidget_receivers(void* self, const char* signal) {
     return KBusyIndicatorWidget_Receivers((KBusyIndicatorWidget*)self, signal);
 }
 
-int32_t k_busyindicatorwidget_qbase_receivers(void* self, const char* signal) {
-    return KBusyIndicatorWidget_QBaseReceivers((KBusyIndicatorWidget*)self, signal);
+int32_t k_busyindicatorwidget_super_receivers(void* self, const char* signal) {
+    return KBusyIndicatorWidget_SuperReceivers((KBusyIndicatorWidget*)self, signal);
 }
 
 void k_busyindicatorwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2143,8 +2143,8 @@ bool k_busyindicatorwidget_is_signal_connected(void* self, void* signal) {
     return KBusyIndicatorWidget_IsSignalConnected((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_busyindicatorwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KBusyIndicatorWidget_QBaseIsSignalConnected((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
+bool k_busyindicatorwidget_super_is_signal_connected(void* self, void* signal) {
+    return KBusyIndicatorWidget_SuperIsSignalConnected((KBusyIndicatorWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_busyindicatorwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ double k_busyindicatorwidget_get_decoded_metric_f(void* self, int32_t metricA, i
     return KBusyIndicatorWidget_GetDecodedMetricF((KBusyIndicatorWidget*)self, metricA, metricB);
 }
 
-double k_busyindicatorwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KBusyIndicatorWidget_QBaseGetDecodedMetricF((KBusyIndicatorWidget*)self, metricA, metricB);
+double k_busyindicatorwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KBusyIndicatorWidget_SuperGetDecodedMetricF((KBusyIndicatorWidget*)self, metricA, metricB);
 }
 
 void k_busyindicatorwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

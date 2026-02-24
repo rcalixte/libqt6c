@@ -43,13 +43,17 @@ const QMetaObject* q_nmeasatelliteinfosource_meta_object(void* self);
 ///
 void q_nmeasatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_meta_object` instead
+///
+#define q_nmeasatelliteinfosource_qbase_meta_object q_nmeasatelliteinfosource_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-const QMetaObject* q_nmeasatelliteinfosource_qbase_meta_object(void* self);
+const QMetaObject* q_nmeasatelliteinfosource_super_meta_object(void* self);
 
 /// @param self QNmeaSatelliteInfoSource*
 /// @param param1 const char*
@@ -63,12 +67,16 @@ void* q_nmeasatelliteinfosource_metacast(void* self, const char* param1);
 ///
 void q_nmeasatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_metacast` instead
+///
+#define q_nmeasatelliteinfosource_qbase_metacast q_nmeasatelliteinfosource_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
 /// @param param1 const char*
 ///
-void* q_nmeasatelliteinfosource_qbase_metacast(void* self, const char* param1);
+void* q_nmeasatelliteinfosource_super_metacast(void* self, const char* param1);
 
 /// @param self QNmeaSatelliteInfoSource*
 /// @param param1 enum QMetaObject__Call
@@ -84,6 +92,10 @@ int32_t q_nmeasatelliteinfosource_metacall(void* self, int32_t param1, int param
 ///
 void q_nmeasatelliteinfosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_metacall` instead
+///
+#define q_nmeasatelliteinfosource_qbase_metacall q_nmeasatelliteinfosource_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
@@ -91,7 +103,7 @@ void q_nmeasatelliteinfosource_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_nmeasatelliteinfosource_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_nmeasatelliteinfosource_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -138,6 +150,10 @@ void q_nmeasatelliteinfosource_set_update_interval(void* self, int msec);
 ///
 void q_nmeasatelliteinfosource_on_set_update_interval(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_set_update_interval` instead
+///
+#define q_nmeasatelliteinfosource_qbase_set_update_interval q_nmeasatelliteinfosource_super_set_update_interval
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setUpdateInterval)
 ///
 /// Base class method implementation
@@ -145,7 +161,7 @@ void q_nmeasatelliteinfosource_on_set_update_interval(void* self, void (*callbac
 /// @param self QNmeaSatelliteInfoSource*
 /// @param msec int
 ///
-void q_nmeasatelliteinfosource_qbase_set_update_interval(void* self, int msec);
+void q_nmeasatelliteinfosource_super_set_update_interval(void* self, int msec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#minimumUpdateInterval)
 ///
@@ -162,13 +178,17 @@ int32_t q_nmeasatelliteinfosource_minimum_update_interval(void* self);
 ///
 void q_nmeasatelliteinfosource_on_minimum_update_interval(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_minimum_update_interval` instead
+///
+#define q_nmeasatelliteinfosource_qbase_minimum_update_interval q_nmeasatelliteinfosource_super_minimum_update_interval
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#minimumUpdateInterval)
 ///
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-int32_t q_nmeasatelliteinfosource_qbase_minimum_update_interval(void* self);
+int32_t q_nmeasatelliteinfosource_super_minimum_update_interval(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#error)
 ///
@@ -187,6 +207,10 @@ int32_t q_nmeasatelliteinfosource_error(void* self);
 ///
 void q_nmeasatelliteinfosource_on_error(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_error` instead
+///
+#define q_nmeasatelliteinfosource_qbase_error q_nmeasatelliteinfosource_super_error
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#error)
 ///
 /// Base class method implementation
@@ -195,7 +219,7 @@ void q_nmeasatelliteinfosource_on_error(void* self, int32_t (*callback)());
 ///
 /// @return enum QGeoSatelliteInfoSource__Error
 ///
-int32_t q_nmeasatelliteinfosource_qbase_error(void* self);
+int32_t q_nmeasatelliteinfosource_super_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setBackendProperty)
 ///
@@ -214,6 +238,10 @@ bool q_nmeasatelliteinfosource_set_backend_property(void* self, const char* name
 ///
 void q_nmeasatelliteinfosource_on_set_backend_property(void* self, bool (*callback)(void*, const char*, void*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_set_backend_property` instead
+///
+#define q_nmeasatelliteinfosource_qbase_set_backend_property q_nmeasatelliteinfosource_super_set_backend_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setBackendProperty)
 ///
 /// Base class method implementation
@@ -222,7 +250,7 @@ void q_nmeasatelliteinfosource_on_set_backend_property(void* self, bool (*callba
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_nmeasatelliteinfosource_qbase_set_backend_property(void* self, const char* name, void* value);
+bool q_nmeasatelliteinfosource_super_set_backend_property(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#backendProperty)
 ///
@@ -240,6 +268,10 @@ QVariant* q_nmeasatelliteinfosource_backend_property(void* self, const char* nam
 ///
 void q_nmeasatelliteinfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_backend_property` instead
+///
+#define q_nmeasatelliteinfosource_qbase_backend_property q_nmeasatelliteinfosource_super_backend_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#backendProperty)
 ///
 /// Base class method implementation
@@ -247,7 +279,7 @@ void q_nmeasatelliteinfosource_on_backend_property(void* self, QVariant* (*callb
 /// @param self QNmeaSatelliteInfoSource*
 /// @param name const char*
 ///
-QVariant* q_nmeasatelliteinfosource_qbase_backend_property(void* self, const char* name);
+QVariant* q_nmeasatelliteinfosource_super_backend_property(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#startUpdates)
 ///
@@ -264,13 +296,17 @@ void q_nmeasatelliteinfosource_start_updates(void* self);
 ///
 void q_nmeasatelliteinfosource_on_start_updates(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_start_updates` instead
+///
+#define q_nmeasatelliteinfosource_qbase_start_updates q_nmeasatelliteinfosource_super_start_updates
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#startUpdates)
 ///
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-void q_nmeasatelliteinfosource_qbase_start_updates(void* self);
+void q_nmeasatelliteinfosource_super_start_updates(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#stopUpdates)
 ///
@@ -287,13 +323,17 @@ void q_nmeasatelliteinfosource_stop_updates(void* self);
 ///
 void q_nmeasatelliteinfosource_on_stop_updates(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_stop_updates` instead
+///
+#define q_nmeasatelliteinfosource_qbase_stop_updates q_nmeasatelliteinfosource_super_stop_updates
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#stopUpdates)
 ///
 /// Base class method implementation
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-void q_nmeasatelliteinfosource_qbase_stop_updates(void* self);
+void q_nmeasatelliteinfosource_super_stop_updates(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#requestUpdate)
 ///
@@ -311,6 +351,10 @@ void q_nmeasatelliteinfosource_request_update(void* self, int timeout);
 ///
 void q_nmeasatelliteinfosource_on_request_update(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_request_update` instead
+///
+#define q_nmeasatelliteinfosource_qbase_request_update q_nmeasatelliteinfosource_super_request_update
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#requestUpdate)
 ///
 /// Base class method implementation
@@ -318,7 +362,7 @@ void q_nmeasatelliteinfosource_on_request_update(void* self, void (*callback)(vo
 /// @param self QNmeaSatelliteInfoSource*
 /// @param timeout int
 ///
-void q_nmeasatelliteinfosource_qbase_request_update(void* self, int timeout);
+void q_nmeasatelliteinfosource_super_request_update(void* self, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
@@ -340,6 +384,10 @@ int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, 
 ///
 void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea` instead
+///
+#define q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
 /// Base class method implementation
@@ -351,7 +399,7 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, 
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse);
+int32_t q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
@@ -372,6 +420,10 @@ int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self,
 ///
 void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self, int32_t (*callback)(void*, char*, libqt_list));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea2` instead
+///
+#define q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2 q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
 /// Base class method implementation
@@ -382,7 +434,7 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self,
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list pnrsInUse);
+int32_t q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -405,6 +457,10 @@ int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, con
 ///
 void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list, int32_t*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea` instead
+///
+#define q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
 /// Base class method implementation
@@ -417,7 +473,7 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -439,6 +495,10 @@ int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, ch
 ///
 void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, int32_t (*callback)(void*, char*, libqt_list, int32_t*));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea2` instead
+///
+#define q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2 q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
 /// Base class method implementation
@@ -450,7 +510,7 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, in
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setError)
 ///
@@ -468,6 +528,10 @@ void q_nmeasatelliteinfosource_set_error(void* self, int32_t satelliteError);
 ///
 void q_nmeasatelliteinfosource_on_set_error(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_set_error` instead
+///
+#define q_nmeasatelliteinfosource_qbase_set_error q_nmeasatelliteinfosource_super_set_error
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setError)
 ///
 /// Base class method implementation
@@ -475,7 +539,7 @@ void q_nmeasatelliteinfosource_on_set_error(void* self, void (*callback)(void*, 
 /// @param self QNmeaSatelliteInfoSource*
 /// @param satelliteError enum QGeoSatelliteInfoSource__Error
 ///
-void q_nmeasatelliteinfosource_qbase_set_error(void* self, int32_t satelliteError);
+void q_nmeasatelliteinfosource_super_set_error(void* self, int32_t satelliteError);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1070,6 +1134,10 @@ void q_nmeasatelliteinfosource_on_destroyed1(void* self, void (*callback)(void*,
 ///
 bool q_nmeasatelliteinfosource_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_event` instead
+///
+#define q_nmeasatelliteinfosource_qbase_event q_nmeasatelliteinfosource_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1079,7 +1147,7 @@ bool q_nmeasatelliteinfosource_event(void* self, void* event);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param event QEvent*
 ///
-bool q_nmeasatelliteinfosource_qbase_event(void* self, void* event);
+bool q_nmeasatelliteinfosource_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1104,6 +1172,10 @@ void q_nmeasatelliteinfosource_on_event(void* self, bool (*callback)(void*, void
 ///
 bool q_nmeasatelliteinfosource_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_event_filter` instead
+///
+#define q_nmeasatelliteinfosource_qbase_event_filter q_nmeasatelliteinfosource_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1114,7 +1186,7 @@ bool q_nmeasatelliteinfosource_event_filter(void* self, void* watched, void* eve
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_nmeasatelliteinfosource_qbase_event_filter(void* self, void* watched, void* event);
+bool q_nmeasatelliteinfosource_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1138,6 +1210,10 @@ void q_nmeasatelliteinfosource_on_event_filter(void* self, bool (*callback)(void
 ///
 void q_nmeasatelliteinfosource_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_timer_event` instead
+///
+#define q_nmeasatelliteinfosource_qbase_timer_event q_nmeasatelliteinfosource_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1147,7 +1223,7 @@ void q_nmeasatelliteinfosource_timer_event(void* self, void* event);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param event QTimerEvent*
 ///
-void q_nmeasatelliteinfosource_qbase_timer_event(void* self, void* event);
+void q_nmeasatelliteinfosource_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1171,6 +1247,10 @@ void q_nmeasatelliteinfosource_on_timer_event(void* self, void (*callback)(void*
 ///
 void q_nmeasatelliteinfosource_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_child_event` instead
+///
+#define q_nmeasatelliteinfosource_qbase_child_event q_nmeasatelliteinfosource_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1180,7 +1260,7 @@ void q_nmeasatelliteinfosource_child_event(void* self, void* event);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param event QChildEvent*
 ///
-void q_nmeasatelliteinfosource_qbase_child_event(void* self, void* event);
+void q_nmeasatelliteinfosource_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1204,6 +1284,10 @@ void q_nmeasatelliteinfosource_on_child_event(void* self, void (*callback)(void*
 ///
 void q_nmeasatelliteinfosource_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_custom_event` instead
+///
+#define q_nmeasatelliteinfosource_qbase_custom_event q_nmeasatelliteinfosource_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1213,7 +1297,7 @@ void q_nmeasatelliteinfosource_custom_event(void* self, void* event);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param event QEvent*
 ///
-void q_nmeasatelliteinfosource_qbase_custom_event(void* self, void* event);
+void q_nmeasatelliteinfosource_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1237,6 +1321,10 @@ void q_nmeasatelliteinfosource_on_custom_event(void* self, void (*callback)(void
 ///
 void q_nmeasatelliteinfosource_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_connect_notify` instead
+///
+#define q_nmeasatelliteinfosource_qbase_connect_notify q_nmeasatelliteinfosource_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1246,7 +1334,7 @@ void q_nmeasatelliteinfosource_connect_notify(void* self, void* signal);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param signal QMetaMethod*
 ///
-void q_nmeasatelliteinfosource_qbase_connect_notify(void* self, void* signal);
+void q_nmeasatelliteinfosource_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1270,6 +1358,10 @@ void q_nmeasatelliteinfosource_on_connect_notify(void* self, void (*callback)(vo
 ///
 void q_nmeasatelliteinfosource_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_disconnect_notify` instead
+///
+#define q_nmeasatelliteinfosource_qbase_disconnect_notify q_nmeasatelliteinfosource_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1279,7 +1371,7 @@ void q_nmeasatelliteinfosource_disconnect_notify(void* self, void* signal);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param signal QMetaMethod*
 ///
-void q_nmeasatelliteinfosource_qbase_disconnect_notify(void* self, void* signal);
+void q_nmeasatelliteinfosource_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1302,6 +1394,10 @@ void q_nmeasatelliteinfosource_on_disconnect_notify(void* self, void (*callback)
 ///
 QObject* q_nmeasatelliteinfosource_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_sender` instead
+///
+#define q_nmeasatelliteinfosource_qbase_sender q_nmeasatelliteinfosource_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1310,7 +1406,7 @@ QObject* q_nmeasatelliteinfosource_sender(void* self);
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-QObject* q_nmeasatelliteinfosource_qbase_sender(void* self);
+QObject* q_nmeasatelliteinfosource_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1333,6 +1429,10 @@ void q_nmeasatelliteinfosource_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_nmeasatelliteinfosource_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_sender_signal_index` instead
+///
+#define q_nmeasatelliteinfosource_qbase_sender_signal_index q_nmeasatelliteinfosource_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1341,7 +1441,7 @@ int32_t q_nmeasatelliteinfosource_sender_signal_index(void* self);
 ///
 /// @param self QNmeaSatelliteInfoSource*
 ///
-int32_t q_nmeasatelliteinfosource_qbase_sender_signal_index(void* self);
+int32_t q_nmeasatelliteinfosource_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1365,6 +1465,10 @@ void q_nmeasatelliteinfosource_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t q_nmeasatelliteinfosource_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_receivers` instead
+///
+#define q_nmeasatelliteinfosource_qbase_receivers q_nmeasatelliteinfosource_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1374,7 +1478,7 @@ int32_t q_nmeasatelliteinfosource_receivers(void* self, const char* signal);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param signal const char*
 ///
-int32_t q_nmeasatelliteinfosource_qbase_receivers(void* self, const char* signal);
+int32_t q_nmeasatelliteinfosource_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1398,6 +1502,10 @@ void q_nmeasatelliteinfosource_on_receivers(void* self, int32_t (*callback)(void
 ///
 bool q_nmeasatelliteinfosource_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_is_signal_connected` instead
+///
+#define q_nmeasatelliteinfosource_qbase_is_signal_connected q_nmeasatelliteinfosource_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1407,7 +1515,7 @@ bool q_nmeasatelliteinfosource_is_signal_connected(void* self, void* signal);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param signal QMetaMethod*
 ///
-bool q_nmeasatelliteinfosource_qbase_is_signal_connected(void* self, void* signal);
+bool q_nmeasatelliteinfosource_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

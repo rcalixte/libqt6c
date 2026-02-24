@@ -23,8 +23,8 @@ void q_windowcapture_on_meta_object(void* self, const QMetaObject* (*callback)()
     QWindowCapture_OnMetaObject((QWindowCapture*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_windowcapture_qbase_meta_object(void* self) {
-    return QWindowCapture_QBaseMetaObject((QWindowCapture*)self);
+const QMetaObject* q_windowcapture_super_meta_object(void* self) {
+    return QWindowCapture_SuperMetaObject((QWindowCapture*)self);
 }
 
 void* q_windowcapture_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_windowcapture_on_metacast(void* self, void* (*callback)(void*, const char
     QWindowCapture_OnMetacast((QWindowCapture*)self, (intptr_t)callback);
 }
 
-void* q_windowcapture_qbase_metacast(void* self, const char* param1) {
-    return QWindowCapture_QBaseMetacast((QWindowCapture*)self, param1);
+void* q_windowcapture_super_metacast(void* self, const char* param1) {
+    return QWindowCapture_SuperMetacast((QWindowCapture*)self, param1);
 }
 
 int32_t q_windowcapture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_windowcapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QWindowCapture_OnMetacall((QWindowCapture*)self, (intptr_t)callback);
 }
 
-int32_t q_windowcapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWindowCapture_QBaseMetacall((QWindowCapture*)self, param1, param2, param3);
+int32_t q_windowcapture_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWindowCapture_SuperMetacall((QWindowCapture*)self, param1, param2, param3);
 }
 
 const char* q_windowcapture_tr(const char* s) {
@@ -363,8 +363,8 @@ bool q_windowcapture_event(void* self, void* event) {
     return QWindowCapture_Event((QWindowCapture*)self, (QEvent*)event);
 }
 
-bool q_windowcapture_qbase_event(void* self, void* event) {
-    return QWindowCapture_QBaseEvent((QWindowCapture*)self, (QEvent*)event);
+bool q_windowcapture_super_event(void* self, void* event) {
+    return QWindowCapture_SuperEvent((QWindowCapture*)self, (QEvent*)event);
 }
 
 void q_windowcapture_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ bool q_windowcapture_event_filter(void* self, void* watched, void* event) {
     return QWindowCapture_EventFilter((QWindowCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_windowcapture_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWindowCapture_QBaseEventFilter((QWindowCapture*)self, (QObject*)watched, (QEvent*)event);
+bool q_windowcapture_super_event_filter(void* self, void* watched, void* event) {
+    return QWindowCapture_SuperEventFilter((QWindowCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_windowcapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -387,8 +387,8 @@ void q_windowcapture_timer_event(void* self, void* event) {
     QWindowCapture_TimerEvent((QWindowCapture*)self, (QTimerEvent*)event);
 }
 
-void q_windowcapture_qbase_timer_event(void* self, void* event) {
-    QWindowCapture_QBaseTimerEvent((QWindowCapture*)self, (QTimerEvent*)event);
+void q_windowcapture_super_timer_event(void* self, void* event) {
+    QWindowCapture_SuperTimerEvent((QWindowCapture*)self, (QTimerEvent*)event);
 }
 
 void q_windowcapture_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void q_windowcapture_child_event(void* self, void* event) {
     QWindowCapture_ChildEvent((QWindowCapture*)self, (QChildEvent*)event);
 }
 
-void q_windowcapture_qbase_child_event(void* self, void* event) {
-    QWindowCapture_QBaseChildEvent((QWindowCapture*)self, (QChildEvent*)event);
+void q_windowcapture_super_child_event(void* self, void* event) {
+    QWindowCapture_SuperChildEvent((QWindowCapture*)self, (QChildEvent*)event);
 }
 
 void q_windowcapture_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ void q_windowcapture_custom_event(void* self, void* event) {
     QWindowCapture_CustomEvent((QWindowCapture*)self, (QEvent*)event);
 }
 
-void q_windowcapture_qbase_custom_event(void* self, void* event) {
-    QWindowCapture_QBaseCustomEvent((QWindowCapture*)self, (QEvent*)event);
+void q_windowcapture_super_custom_event(void* self, void* event) {
+    QWindowCapture_SuperCustomEvent((QWindowCapture*)self, (QEvent*)event);
 }
 
 void q_windowcapture_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void q_windowcapture_connect_notify(void* self, void* signal) {
     QWindowCapture_ConnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_windowcapture_qbase_connect_notify(void* self, void* signal) {
-    QWindowCapture_QBaseConnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
+void q_windowcapture_super_connect_notify(void* self, void* signal) {
+    QWindowCapture_SuperConnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_windowcapture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ void q_windowcapture_disconnect_notify(void* self, void* signal) {
     QWindowCapture_DisconnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_windowcapture_qbase_disconnect_notify(void* self, void* signal) {
-    QWindowCapture_QBaseDisconnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
+void q_windowcapture_super_disconnect_notify(void* self, void* signal) {
+    QWindowCapture_SuperDisconnectNotify((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_windowcapture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ QObject* q_windowcapture_sender(void* self) {
     return QWindowCapture_Sender((QWindowCapture*)self);
 }
 
-QObject* q_windowcapture_qbase_sender(void* self) {
-    return QWindowCapture_QBaseSender((QWindowCapture*)self);
+QObject* q_windowcapture_super_sender(void* self) {
+    return QWindowCapture_SuperSender((QWindowCapture*)self);
 }
 
 void q_windowcapture_on_sender(void* self, QObject* (*callback)()) {
@@ -459,8 +459,8 @@ int32_t q_windowcapture_sender_signal_index(void* self) {
     return QWindowCapture_SenderSignalIndex((QWindowCapture*)self);
 }
 
-int32_t q_windowcapture_qbase_sender_signal_index(void* self) {
-    return QWindowCapture_QBaseSenderSignalIndex((QWindowCapture*)self);
+int32_t q_windowcapture_super_sender_signal_index(void* self) {
+    return QWindowCapture_SuperSenderSignalIndex((QWindowCapture*)self);
 }
 
 void q_windowcapture_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -471,8 +471,8 @@ int32_t q_windowcapture_receivers(void* self, const char* signal) {
     return QWindowCapture_Receivers((QWindowCapture*)self, signal);
 }
 
-int32_t q_windowcapture_qbase_receivers(void* self, const char* signal) {
-    return QWindowCapture_QBaseReceivers((QWindowCapture*)self, signal);
+int32_t q_windowcapture_super_receivers(void* self, const char* signal) {
+    return QWindowCapture_SuperReceivers((QWindowCapture*)self, signal);
 }
 
 void q_windowcapture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -483,8 +483,8 @@ bool q_windowcapture_is_signal_connected(void* self, void* signal) {
     return QWindowCapture_IsSignalConnected((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
-bool q_windowcapture_qbase_is_signal_connected(void* self, void* signal) {
-    return QWindowCapture_QBaseIsSignalConnected((QWindowCapture*)self, (QMetaMethod*)signal);
+bool q_windowcapture_super_is_signal_connected(void* self, void* signal) {
+    return QWindowCapture_SuperIsSignalConnected((QWindowCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_windowcapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -25,8 +25,8 @@ void q_abstracttransition_on_meta_object(void* self, const QMetaObject* (*callba
     QAbstractTransition_OnMetaObject((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_abstracttransition_qbase_meta_object(void* self) {
-    return QAbstractTransition_QBaseMetaObject((QAbstractTransition*)self);
+const QMetaObject* q_abstracttransition_super_meta_object(void* self) {
+    return QAbstractTransition_SuperMetaObject((QAbstractTransition*)self);
 }
 
 void* q_abstracttransition_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_abstracttransition_on_metacast(void* self, void* (*callback)(void*, const
     QAbstractTransition_OnMetacast((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-void* q_abstracttransition_qbase_metacast(void* self, const char* param1) {
-    return QAbstractTransition_QBaseMetacast((QAbstractTransition*)self, param1);
+void* q_abstracttransition_super_metacast(void* self, const char* param1) {
+    return QAbstractTransition_SuperMetacast((QAbstractTransition*)self, param1);
 }
 
 int32_t q_abstracttransition_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_abstracttransition_on_metacall(void* self, int32_t (*callback)(void*, int
     QAbstractTransition_OnMetacall((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-int32_t q_abstracttransition_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAbstractTransition_QBaseMetacall((QAbstractTransition*)self, param1, param2, param3);
+int32_t q_abstracttransition_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAbstractTransition_SuperMetacall((QAbstractTransition*)self, param1, param2, param3);
 }
 
 const char* q_abstracttransition_tr(const char* s) {
@@ -114,8 +114,8 @@ void q_abstracttransition_on_event_test(void* self, bool (*callback)(void*, void
     QAbstractTransition_OnEventTest((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-bool q_abstracttransition_qbase_event_test(void* self, void* event) {
-    return QAbstractTransition_QBaseEventTest((QAbstractTransition*)self, (QEvent*)event);
+bool q_abstracttransition_super_event_test(void* self, void* event) {
+    return QAbstractTransition_SuperEventTest((QAbstractTransition*)self, (QEvent*)event);
 }
 
 void q_abstracttransition_on_transition(void* self, void* event) {
@@ -126,8 +126,8 @@ void q_abstracttransition_on_on_transition(void* self, void (*callback)(void*, v
     QAbstractTransition_OnOnTransition((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-void q_abstracttransition_qbase_on_transition(void* self, void* event) {
-    QAbstractTransition_QBaseOnTransition((QAbstractTransition*)self, (QEvent*)event);
+void q_abstracttransition_super_on_transition(void* self, void* event) {
+    QAbstractTransition_SuperOnTransition((QAbstractTransition*)self, (QEvent*)event);
 }
 
 bool q_abstracttransition_event(void* self, void* e) {
@@ -138,8 +138,8 @@ void q_abstracttransition_on_event(void* self, bool (*callback)(void*, void*)) {
     QAbstractTransition_OnEvent((QAbstractTransition*)self, (intptr_t)callback);
 }
 
-bool q_abstracttransition_qbase_event(void* self, void* e) {
-    return QAbstractTransition_QBaseEvent((QAbstractTransition*)self, (QEvent*)e);
+bool q_abstracttransition_super_event(void* self, void* e) {
+    return QAbstractTransition_SuperEvent((QAbstractTransition*)self, (QEvent*)e);
 }
 
 const char* q_abstracttransition_tr2(const char* s, const char* c) {
@@ -371,8 +371,8 @@ bool q_abstracttransition_event_filter(void* self, void* watched, void* event) {
     return QAbstractTransition_EventFilter((QAbstractTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_abstracttransition_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAbstractTransition_QBaseEventFilter((QAbstractTransition*)self, (QObject*)watched, (QEvent*)event);
+bool q_abstracttransition_super_event_filter(void* self, void* watched, void* event) {
+    return QAbstractTransition_SuperEventFilter((QAbstractTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_abstracttransition_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -383,8 +383,8 @@ void q_abstracttransition_timer_event(void* self, void* event) {
     QAbstractTransition_TimerEvent((QAbstractTransition*)self, (QTimerEvent*)event);
 }
 
-void q_abstracttransition_qbase_timer_event(void* self, void* event) {
-    QAbstractTransition_QBaseTimerEvent((QAbstractTransition*)self, (QTimerEvent*)event);
+void q_abstracttransition_super_timer_event(void* self, void* event) {
+    QAbstractTransition_SuperTimerEvent((QAbstractTransition*)self, (QTimerEvent*)event);
 }
 
 void q_abstracttransition_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -395,8 +395,8 @@ void q_abstracttransition_child_event(void* self, void* event) {
     QAbstractTransition_ChildEvent((QAbstractTransition*)self, (QChildEvent*)event);
 }
 
-void q_abstracttransition_qbase_child_event(void* self, void* event) {
-    QAbstractTransition_QBaseChildEvent((QAbstractTransition*)self, (QChildEvent*)event);
+void q_abstracttransition_super_child_event(void* self, void* event) {
+    QAbstractTransition_SuperChildEvent((QAbstractTransition*)self, (QChildEvent*)event);
 }
 
 void q_abstracttransition_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ void q_abstracttransition_custom_event(void* self, void* event) {
     QAbstractTransition_CustomEvent((QAbstractTransition*)self, (QEvent*)event);
 }
 
-void q_abstracttransition_qbase_custom_event(void* self, void* event) {
-    QAbstractTransition_QBaseCustomEvent((QAbstractTransition*)self, (QEvent*)event);
+void q_abstracttransition_super_custom_event(void* self, void* event) {
+    QAbstractTransition_SuperCustomEvent((QAbstractTransition*)self, (QEvent*)event);
 }
 
 void q_abstracttransition_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -419,8 +419,8 @@ void q_abstracttransition_connect_notify(void* self, void* signal) {
     QAbstractTransition_ConnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttransition_qbase_connect_notify(void* self, void* signal) {
-    QAbstractTransition_QBaseConnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
+void q_abstracttransition_super_connect_notify(void* self, void* signal) {
+    QAbstractTransition_SuperConnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_abstracttransition_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ void q_abstracttransition_disconnect_notify(void* self, void* signal) {
     QAbstractTransition_DisconnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_abstracttransition_qbase_disconnect_notify(void* self, void* signal) {
-    QAbstractTransition_QBaseDisconnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
+void q_abstracttransition_super_disconnect_notify(void* self, void* signal) {
+    QAbstractTransition_SuperDisconnectNotify((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_abstracttransition_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ QObject* q_abstracttransition_sender(void* self) {
     return QAbstractTransition_Sender((QAbstractTransition*)self);
 }
 
-QObject* q_abstracttransition_qbase_sender(void* self) {
-    return QAbstractTransition_QBaseSender((QAbstractTransition*)self);
+QObject* q_abstracttransition_super_sender(void* self) {
+    return QAbstractTransition_SuperSender((QAbstractTransition*)self);
 }
 
 void q_abstracttransition_on_sender(void* self, QObject* (*callback)()) {
@@ -455,8 +455,8 @@ int32_t q_abstracttransition_sender_signal_index(void* self) {
     return QAbstractTransition_SenderSignalIndex((QAbstractTransition*)self);
 }
 
-int32_t q_abstracttransition_qbase_sender_signal_index(void* self) {
-    return QAbstractTransition_QBaseSenderSignalIndex((QAbstractTransition*)self);
+int32_t q_abstracttransition_super_sender_signal_index(void* self) {
+    return QAbstractTransition_SuperSenderSignalIndex((QAbstractTransition*)self);
 }
 
 void q_abstracttransition_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -467,8 +467,8 @@ int32_t q_abstracttransition_receivers(void* self, const char* signal) {
     return QAbstractTransition_Receivers((QAbstractTransition*)self, signal);
 }
 
-int32_t q_abstracttransition_qbase_receivers(void* self, const char* signal) {
-    return QAbstractTransition_QBaseReceivers((QAbstractTransition*)self, signal);
+int32_t q_abstracttransition_super_receivers(void* self, const char* signal) {
+    return QAbstractTransition_SuperReceivers((QAbstractTransition*)self, signal);
 }
 
 void q_abstracttransition_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -479,8 +479,8 @@ bool q_abstracttransition_is_signal_connected(void* self, void* signal) {
     return QAbstractTransition_IsSignalConnected((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
-bool q_abstracttransition_qbase_is_signal_connected(void* self, void* signal) {
-    return QAbstractTransition_QBaseIsSignalConnected((QAbstractTransition*)self, (QMetaMethod*)signal);
+bool q_abstracttransition_super_is_signal_connected(void* self, void* signal) {
+    return QAbstractTransition_SuperIsSignalConnected((QAbstractTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_abstracttransition_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -58,8 +58,8 @@ void k_parts__guiactivateevent_set_accepted(void* self, bool accepted) {
     KParts__GUIActivateEvent_SetAccepted((KParts__GUIActivateEvent*)self, accepted);
 }
 
-void k_parts__guiactivateevent_qbase_set_accepted(void* self, bool accepted) {
-    KParts__GUIActivateEvent_QBaseSetAccepted((KParts__GUIActivateEvent*)self, accepted);
+void k_parts__guiactivateevent_super_set_accepted(void* self, bool accepted) {
+    KParts__GUIActivateEvent_SuperSetAccepted((KParts__GUIActivateEvent*)self, accepted);
 }
 
 void k_parts__guiactivateevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -70,8 +70,8 @@ QEvent* k_parts__guiactivateevent_clone(void* self) {
     return KParts__GUIActivateEvent_Clone((KParts__GUIActivateEvent*)self);
 }
 
-QEvent* k_parts__guiactivateevent_qbase_clone(void* self) {
-    return KParts__GUIActivateEvent_QBaseClone((KParts__GUIActivateEvent*)self);
+QEvent* k_parts__guiactivateevent_super_clone(void* self) {
+    return KParts__GUIActivateEvent_SuperClone((KParts__GUIActivateEvent*)self);
 }
 
 void k_parts__guiactivateevent_on_clone(void* self, QEvent* (*callback)()) {

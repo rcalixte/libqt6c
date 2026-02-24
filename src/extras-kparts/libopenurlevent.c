@@ -73,8 +73,8 @@ void k_parts__openurlevent_set_accepted(void* self, bool accepted) {
     KParts__OpenUrlEvent_SetAccepted((KParts__OpenUrlEvent*)self, accepted);
 }
 
-void k_parts__openurlevent_qbase_set_accepted(void* self, bool accepted) {
-    KParts__OpenUrlEvent_QBaseSetAccepted((KParts__OpenUrlEvent*)self, accepted);
+void k_parts__openurlevent_super_set_accepted(void* self, bool accepted) {
+    KParts__OpenUrlEvent_SuperSetAccepted((KParts__OpenUrlEvent*)self, accepted);
 }
 
 void k_parts__openurlevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -85,8 +85,8 @@ QEvent* k_parts__openurlevent_clone(void* self) {
     return KParts__OpenUrlEvent_Clone((KParts__OpenUrlEvent*)self);
 }
 
-QEvent* k_parts__openurlevent_qbase_clone(void* self) {
-    return KParts__OpenUrlEvent_QBaseClone((KParts__OpenUrlEvent*)self);
+QEvent* k_parts__openurlevent_super_clone(void* self) {
+    return KParts__OpenUrlEvent_SuperClone((KParts__OpenUrlEvent*)self);
 }
 
 void k_parts__openurlevent_on_clone(void* self, QEvent* (*callback)()) {

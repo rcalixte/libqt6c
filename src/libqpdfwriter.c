@@ -33,8 +33,8 @@ void q_pdfwriter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPdfWriter_OnMetaObject((QPdfWriter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfwriter_qbase_meta_object(void* self) {
-    return QPdfWriter_QBaseMetaObject((QPdfWriter*)self);
+const QMetaObject* q_pdfwriter_super_meta_object(void* self) {
+    return QPdfWriter_SuperMetaObject((QPdfWriter*)self);
 }
 
 void* q_pdfwriter_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_pdfwriter_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QPdfWriter_OnMetacast((QPdfWriter*)self, (intptr_t)callback);
 }
 
-void* q_pdfwriter_qbase_metacast(void* self, const char* param1) {
-    return QPdfWriter_QBaseMetacast((QPdfWriter*)self, param1);
+void* q_pdfwriter_super_metacast(void* self, const char* param1) {
+    return QPdfWriter_SuperMetacast((QPdfWriter*)self, param1);
 }
 
 int32_t q_pdfwriter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QPdfWriter_OnMetacall((QPdfWriter*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfwriter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPdfWriter_QBaseMetacall((QPdfWriter*)self, param1, param2, param3);
+int32_t q_pdfwriter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPdfWriter_SuperMetacall((QPdfWriter*)self, param1, param2, param3);
 }
 
 const char* q_pdfwriter_tr(const char* s) {
@@ -114,8 +114,8 @@ void q_pdfwriter_on_new_page(void* self, bool (*callback)()) {
     QPdfWriter_OnNewPage((QPdfWriter*)self, (intptr_t)callback);
 }
 
-bool q_pdfwriter_qbase_new_page(void* self) {
-    return QPdfWriter_QBaseNewPage((QPdfWriter*)self);
+bool q_pdfwriter_super_new_page(void* self) {
+    return QPdfWriter_SuperNewPage((QPdfWriter*)self);
 }
 
 void q_pdfwriter_set_resolution(void* self, int resolution) {
@@ -165,8 +165,8 @@ void q_pdfwriter_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
     QPdfWriter_OnPaintEngine((QPdfWriter*)self, (intptr_t)callback);
 }
 
-QPaintEngine* q_pdfwriter_qbase_paint_engine(void* self) {
-    return QPdfWriter_QBasePaintEngine((QPdfWriter*)self);
+QPaintEngine* q_pdfwriter_super_paint_engine(void* self) {
+    return QPdfWriter_SuperPaintEngine((QPdfWriter*)self);
 }
 
 int32_t q_pdfwriter_metric(void* self, int32_t id) {
@@ -177,8 +177,8 @@ void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPdfWriter_OnMetric((QPdfWriter*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfwriter_qbase_metric(void* self, int32_t id) {
-    return QPdfWriter_QBaseMetric((QPdfWriter*)self, id);
+int32_t q_pdfwriter_super_metric(void* self, int32_t id) {
+    return QPdfWriter_SuperMetric((QPdfWriter*)self, id);
 }
 
 const char* q_pdfwriter_tr2(const char* s, const char* c) {
@@ -482,8 +482,8 @@ bool q_pdfwriter_event(void* self, void* event) {
     return QPdfWriter_Event((QPdfWriter*)self, (QEvent*)event);
 }
 
-bool q_pdfwriter_qbase_event(void* self, void* event) {
-    return QPdfWriter_QBaseEvent((QPdfWriter*)self, (QEvent*)event);
+bool q_pdfwriter_super_event(void* self, void* event) {
+    return QPdfWriter_SuperEvent((QPdfWriter*)self, (QEvent*)event);
 }
 
 void q_pdfwriter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -494,8 +494,8 @@ bool q_pdfwriter_event_filter(void* self, void* watched, void* event) {
     return QPdfWriter_EventFilter((QPdfWriter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pdfwriter_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPdfWriter_QBaseEventFilter((QPdfWriter*)self, (QObject*)watched, (QEvent*)event);
+bool q_pdfwriter_super_event_filter(void* self, void* watched, void* event) {
+    return QPdfWriter_SuperEventFilter((QPdfWriter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pdfwriter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -506,8 +506,8 @@ void q_pdfwriter_timer_event(void* self, void* event) {
     QPdfWriter_TimerEvent((QPdfWriter*)self, (QTimerEvent*)event);
 }
 
-void q_pdfwriter_qbase_timer_event(void* self, void* event) {
-    QPdfWriter_QBaseTimerEvent((QPdfWriter*)self, (QTimerEvent*)event);
+void q_pdfwriter_super_timer_event(void* self, void* event) {
+    QPdfWriter_SuperTimerEvent((QPdfWriter*)self, (QTimerEvent*)event);
 }
 
 void q_pdfwriter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -518,8 +518,8 @@ void q_pdfwriter_child_event(void* self, void* event) {
     QPdfWriter_ChildEvent((QPdfWriter*)self, (QChildEvent*)event);
 }
 
-void q_pdfwriter_qbase_child_event(void* self, void* event) {
-    QPdfWriter_QBaseChildEvent((QPdfWriter*)self, (QChildEvent*)event);
+void q_pdfwriter_super_child_event(void* self, void* event) {
+    QPdfWriter_SuperChildEvent((QPdfWriter*)self, (QChildEvent*)event);
 }
 
 void q_pdfwriter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -530,8 +530,8 @@ void q_pdfwriter_custom_event(void* self, void* event) {
     QPdfWriter_CustomEvent((QPdfWriter*)self, (QEvent*)event);
 }
 
-void q_pdfwriter_qbase_custom_event(void* self, void* event) {
-    QPdfWriter_QBaseCustomEvent((QPdfWriter*)self, (QEvent*)event);
+void q_pdfwriter_super_custom_event(void* self, void* event) {
+    QPdfWriter_SuperCustomEvent((QPdfWriter*)self, (QEvent*)event);
 }
 
 void q_pdfwriter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -542,8 +542,8 @@ void q_pdfwriter_connect_notify(void* self, void* signal) {
     QPdfWriter_ConnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfwriter_qbase_connect_notify(void* self, void* signal) {
-    QPdfWriter_QBaseConnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
+void q_pdfwriter_super_connect_notify(void* self, void* signal) {
+    QPdfWriter_SuperConnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfwriter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -554,8 +554,8 @@ void q_pdfwriter_disconnect_notify(void* self, void* signal) {
     QPdfWriter_DisconnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfwriter_qbase_disconnect_notify(void* self, void* signal) {
-    QPdfWriter_QBaseDisconnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
+void q_pdfwriter_super_disconnect_notify(void* self, void* signal) {
+    QPdfWriter_SuperDisconnectNotify((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfwriter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -566,8 +566,8 @@ bool q_pdfwriter_set_page_layout(void* self, void* pageLayout) {
     return QPdfWriter_SetPageLayout((QPdfWriter*)self, (QPageLayout*)pageLayout);
 }
 
-bool q_pdfwriter_qbase_set_page_layout(void* self, void* pageLayout) {
-    return QPdfWriter_QBaseSetPageLayout((QPdfWriter*)self, (QPageLayout*)pageLayout);
+bool q_pdfwriter_super_set_page_layout(void* self, void* pageLayout) {
+    return QPdfWriter_SuperSetPageLayout((QPdfWriter*)self, (QPageLayout*)pageLayout);
 }
 
 void q_pdfwriter_on_set_page_layout(void* self, bool (*callback)(void*, void*)) {
@@ -578,8 +578,8 @@ bool q_pdfwriter_set_page_size(void* self, void* pageSize) {
     return QPdfWriter_SetPageSize((QPdfWriter*)self, (QPageSize*)pageSize);
 }
 
-bool q_pdfwriter_qbase_set_page_size(void* self, void* pageSize) {
-    return QPdfWriter_QBaseSetPageSize((QPdfWriter*)self, (QPageSize*)pageSize);
+bool q_pdfwriter_super_set_page_size(void* self, void* pageSize) {
+    return QPdfWriter_SuperSetPageSize((QPdfWriter*)self, (QPageSize*)pageSize);
 }
 
 void q_pdfwriter_on_set_page_size(void* self, bool (*callback)(void*, void*)) {
@@ -590,8 +590,8 @@ bool q_pdfwriter_set_page_orientation(void* self, int32_t orientation) {
     return QPdfWriter_SetPageOrientation((QPdfWriter*)self, orientation);
 }
 
-bool q_pdfwriter_qbase_set_page_orientation(void* self, int32_t orientation) {
-    return QPdfWriter_QBaseSetPageOrientation((QPdfWriter*)self, orientation);
+bool q_pdfwriter_super_set_page_orientation(void* self, int32_t orientation) {
+    return QPdfWriter_SuperSetPageOrientation((QPdfWriter*)self, orientation);
 }
 
 void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t)) {
@@ -602,8 +602,8 @@ bool q_pdfwriter_set_page_margins(void* self, void* margins, int32_t units) {
     return QPdfWriter_SetPageMargins((QPdfWriter*)self, (QMarginsF*)margins, units);
 }
 
-bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int32_t units) {
-    return QPdfWriter_QBaseSetPageMargins((QPdfWriter*)self, (QMarginsF*)margins, units);
+bool q_pdfwriter_super_set_page_margins(void* self, void* margins, int32_t units) {
+    return QPdfWriter_SuperSetPageMargins((QPdfWriter*)self, (QMarginsF*)margins, units);
 }
 
 void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -614,8 +614,8 @@ void q_pdfwriter_set_page_ranges(void* self, void* ranges) {
     QPdfWriter_SetPageRanges((QPdfWriter*)self, (QPageRanges*)ranges);
 }
 
-void q_pdfwriter_qbase_set_page_ranges(void* self, void* ranges) {
-    QPdfWriter_QBaseSetPageRanges((QPdfWriter*)self, (QPageRanges*)ranges);
+void q_pdfwriter_super_set_page_ranges(void* self, void* ranges) {
+    QPdfWriter_SuperSetPageRanges((QPdfWriter*)self, (QPageRanges*)ranges);
 }
 
 void q_pdfwriter_on_set_page_ranges(void* self, void (*callback)(void*, void*)) {
@@ -626,8 +626,8 @@ int32_t q_pdfwriter_dev_type(void* self) {
     return QPdfWriter_DevType((QPdfWriter*)self);
 }
 
-int32_t q_pdfwriter_qbase_dev_type(void* self) {
-    return QPdfWriter_QBaseDevType((QPdfWriter*)self);
+int32_t q_pdfwriter_super_dev_type(void* self) {
+    return QPdfWriter_SuperDevType((QPdfWriter*)self);
 }
 
 void q_pdfwriter_on_dev_type(void* self, int32_t (*callback)()) {
@@ -638,8 +638,8 @@ void q_pdfwriter_init_painter(void* self, void* painter) {
     QPdfWriter_InitPainter((QPdfWriter*)self, (QPainter*)painter);
 }
 
-void q_pdfwriter_qbase_init_painter(void* self, void* painter) {
-    QPdfWriter_QBaseInitPainter((QPdfWriter*)self, (QPainter*)painter);
+void q_pdfwriter_super_init_painter(void* self, void* painter) {
+    QPdfWriter_SuperInitPainter((QPdfWriter*)self, (QPainter*)painter);
 }
 
 void q_pdfwriter_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -650,8 +650,8 @@ QPaintDevice* q_pdfwriter_redirected(void* self, void* offset) {
     return QPdfWriter_Redirected((QPdfWriter*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_pdfwriter_qbase_redirected(void* self, void* offset) {
-    return QPdfWriter_QBaseRedirected((QPdfWriter*)self, (QPoint*)offset);
+QPaintDevice* q_pdfwriter_super_redirected(void* self, void* offset) {
+    return QPdfWriter_SuperRedirected((QPdfWriter*)self, (QPoint*)offset);
 }
 
 void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -662,8 +662,8 @@ QPainter* q_pdfwriter_shared_painter(void* self) {
     return QPdfWriter_SharedPainter((QPdfWriter*)self);
 }
 
-QPainter* q_pdfwriter_qbase_shared_painter(void* self) {
-    return QPdfWriter_QBaseSharedPainter((QPdfWriter*)self);
+QPainter* q_pdfwriter_super_shared_painter(void* self) {
+    return QPdfWriter_SuperSharedPainter((QPdfWriter*)self);
 }
 
 void q_pdfwriter_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -674,8 +674,8 @@ QObject* q_pdfwriter_sender(void* self) {
     return QPdfWriter_Sender((QPdfWriter*)self);
 }
 
-QObject* q_pdfwriter_qbase_sender(void* self) {
-    return QPdfWriter_QBaseSender((QPdfWriter*)self);
+QObject* q_pdfwriter_super_sender(void* self) {
+    return QPdfWriter_SuperSender((QPdfWriter*)self);
 }
 
 void q_pdfwriter_on_sender(void* self, QObject* (*callback)()) {
@@ -686,8 +686,8 @@ int32_t q_pdfwriter_sender_signal_index(void* self) {
     return QPdfWriter_SenderSignalIndex((QPdfWriter*)self);
 }
 
-int32_t q_pdfwriter_qbase_sender_signal_index(void* self) {
-    return QPdfWriter_QBaseSenderSignalIndex((QPdfWriter*)self);
+int32_t q_pdfwriter_super_sender_signal_index(void* self) {
+    return QPdfWriter_SuperSenderSignalIndex((QPdfWriter*)self);
 }
 
 void q_pdfwriter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -698,8 +698,8 @@ int32_t q_pdfwriter_receivers(void* self, const char* signal) {
     return QPdfWriter_Receivers((QPdfWriter*)self, signal);
 }
 
-int32_t q_pdfwriter_qbase_receivers(void* self, const char* signal) {
-    return QPdfWriter_QBaseReceivers((QPdfWriter*)self, signal);
+int32_t q_pdfwriter_super_receivers(void* self, const char* signal) {
+    return QPdfWriter_SuperReceivers((QPdfWriter*)self, signal);
 }
 
 void q_pdfwriter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -710,8 +710,8 @@ bool q_pdfwriter_is_signal_connected(void* self, void* signal) {
     return QPdfWriter_IsSignalConnected((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
-bool q_pdfwriter_qbase_is_signal_connected(void* self, void* signal) {
-    return QPdfWriter_QBaseIsSignalConnected((QPdfWriter*)self, (QMetaMethod*)signal);
+bool q_pdfwriter_super_is_signal_connected(void* self, void* signal) {
+    return QPdfWriter_SuperIsSignalConnected((QPdfWriter*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfwriter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -722,8 +722,8 @@ double q_pdfwriter_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
     return QPdfWriter_GetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
 }
 
-double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QPdfWriter_QBaseGetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
+double q_pdfwriter_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QPdfWriter_SuperGetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
 }
 
 void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

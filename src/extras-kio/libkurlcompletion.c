@@ -24,8 +24,8 @@ void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)()
     KUrlCompletion_OnMetaObject((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urlcompletion_qbase_meta_object(void* self) {
-    return KUrlCompletion_QBaseMetaObject((KUrlCompletion*)self);
+const QMetaObject* k_urlcompletion_super_meta_object(void* self) {
+    return KUrlCompletion_SuperMetaObject((KUrlCompletion*)self);
 }
 
 void* k_urlcompletion_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_urlcompletion_on_metacast(void* self, void* (*callback)(void*, const char
     KUrlCompletion_OnMetacast((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void* k_urlcompletion_qbase_metacast(void* self, const char* param1) {
-    return KUrlCompletion_QBaseMetacast((KUrlCompletion*)self, param1);
+void* k_urlcompletion_super_metacast(void* self, const char* param1) {
+    return KUrlCompletion_SuperMetacast((KUrlCompletion*)self, param1);
 }
 
 int32_t k_urlcompletion_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_urlcompletion_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KUrlCompletion_OnMetacall((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-int32_t k_urlcompletion_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlCompletion_QBaseMetacall((KUrlCompletion*)self, param1, param2, param3);
+int32_t k_urlcompletion_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlCompletion_SuperMetacall((KUrlCompletion*)self, param1, param2, param3);
 }
 
 const char* k_urlcompletion_tr(const char* s) {
@@ -70,8 +70,8 @@ void k_urlcompletion_on_make_completion(void* self, const char* (*callback)(void
     KUrlCompletion_OnMakeCompletion((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-const char* k_urlcompletion_qbase_make_completion(void* self, const char* text) {
-    libqt_string _str = KUrlCompletion_QBaseMakeCompletion((KUrlCompletion*)self, qstring(text));
+const char* k_urlcompletion_super_make_completion(void* self, const char* text) {
+    libqt_string _str = KUrlCompletion_SuperMakeCompletion((KUrlCompletion*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -85,8 +85,8 @@ void k_urlcompletion_on_set_dir(void* self, void (*callback)(void*, void*)) {
     KUrlCompletion_OnSetDir((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_set_dir(void* self, void* dir) {
-    KUrlCompletion_QBaseSetDir((KUrlCompletion*)self, (QUrl*)dir);
+void k_urlcompletion_super_set_dir(void* self, void* dir) {
+    KUrlCompletion_SuperSetDir((KUrlCompletion*)self, (QUrl*)dir);
 }
 
 QUrl* k_urlcompletion_dir(void* self) {
@@ -97,8 +97,8 @@ void k_urlcompletion_on_dir(void* self, QUrl* (*callback)()) {
     KUrlCompletion_OnDir((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-QUrl* k_urlcompletion_qbase_dir(void* self) {
-    return KUrlCompletion_QBaseDir((KUrlCompletion*)self);
+QUrl* k_urlcompletion_super_dir(void* self) {
+    return KUrlCompletion_SuperDir((KUrlCompletion*)self);
 }
 
 bool k_urlcompletion_is_running(void* self) {
@@ -109,8 +109,8 @@ void k_urlcompletion_on_is_running(void* self, bool (*callback)()) {
     KUrlCompletion_OnIsRunning((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-bool k_urlcompletion_qbase_is_running(void* self) {
-    return KUrlCompletion_QBaseIsRunning((KUrlCompletion*)self);
+bool k_urlcompletion_super_is_running(void* self) {
+    return KUrlCompletion_SuperIsRunning((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_stop(void* self) {
@@ -121,8 +121,8 @@ void k_urlcompletion_on_stop(void* self, void (*callback)()) {
     KUrlCompletion_OnStop((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_stop(void* self) {
-    KUrlCompletion_QBaseStop((KUrlCompletion*)self);
+void k_urlcompletion_super_stop(void* self) {
+    KUrlCompletion_SuperStop((KUrlCompletion*)self);
 }
 
 int32_t k_urlcompletion_mode(void* self) {
@@ -133,8 +133,8 @@ void k_urlcompletion_on_mode(void* self, int32_t (*callback)()) {
     KUrlCompletion_OnMode((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-int32_t k_urlcompletion_qbase_mode(void* self) {
-    return KUrlCompletion_QBaseMode((KUrlCompletion*)self);
+int32_t k_urlcompletion_super_mode(void* self) {
+    return KUrlCompletion_SuperMode((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_set_mode(void* self, int32_t mode) {
@@ -145,8 +145,8 @@ void k_urlcompletion_on_set_mode(void* self, void (*callback)(void*, int32_t)) {
     KUrlCompletion_OnSetMode((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_set_mode(void* self, int32_t mode) {
-    KUrlCompletion_QBaseSetMode((KUrlCompletion*)self, mode);
+void k_urlcompletion_super_set_mode(void* self, int32_t mode) {
+    KUrlCompletion_SuperSetMode((KUrlCompletion*)self, mode);
 }
 
 bool k_urlcompletion_replace_env(void* self) {
@@ -157,8 +157,8 @@ void k_urlcompletion_on_replace_env(void* self, bool (*callback)()) {
     KUrlCompletion_OnReplaceEnv((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-bool k_urlcompletion_qbase_replace_env(void* self) {
-    return KUrlCompletion_QBaseReplaceEnv((KUrlCompletion*)self);
+bool k_urlcompletion_super_replace_env(void* self) {
+    return KUrlCompletion_SuperReplaceEnv((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_set_replace_env(void* self, bool replace) {
@@ -169,8 +169,8 @@ void k_urlcompletion_on_set_replace_env(void* self, void (*callback)(void*, bool
     KUrlCompletion_OnSetReplaceEnv((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_set_replace_env(void* self, bool replace) {
-    KUrlCompletion_QBaseSetReplaceEnv((KUrlCompletion*)self, replace);
+void k_urlcompletion_super_set_replace_env(void* self, bool replace) {
+    KUrlCompletion_SuperSetReplaceEnv((KUrlCompletion*)self, replace);
 }
 
 bool k_urlcompletion_replace_home(void* self) {
@@ -181,8 +181,8 @@ void k_urlcompletion_on_replace_home(void* self, bool (*callback)()) {
     KUrlCompletion_OnReplaceHome((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-bool k_urlcompletion_qbase_replace_home(void* self) {
-    return KUrlCompletion_QBaseReplaceHome((KUrlCompletion*)self);
+bool k_urlcompletion_super_replace_home(void* self) {
+    return KUrlCompletion_SuperReplaceHome((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_set_replace_home(void* self, bool replace) {
@@ -193,8 +193,8 @@ void k_urlcompletion_on_set_replace_home(void* self, void (*callback)(void*, boo
     KUrlCompletion_OnSetReplaceHome((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_set_replace_home(void* self, bool replace) {
-    KUrlCompletion_QBaseSetReplaceHome((KUrlCompletion*)self, replace);
+void k_urlcompletion_super_set_replace_home(void* self, bool replace) {
+    KUrlCompletion_SuperSetReplaceHome((KUrlCompletion*)self, replace);
 }
 
 const char* k_urlcompletion_replaced_path(void* self, const char* text) {
@@ -264,7 +264,7 @@ void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*,
     KUrlCompletion_OnPostProcessMatches((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_post_process_matches(void* self, const char* matches[static 1]) {
+void k_urlcompletion_super_post_process_matches(void* self, const char* matches[static 1]) {
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
@@ -275,7 +275,7 @@ void k_urlcompletion_qbase_post_process_matches(void* self, const char* matches[
         matches_qstr[i] = qstring(matches[i]);
     }
     libqt_list matches_list = qlist(matches_qstr, matches_len);
-    KUrlCompletion_QBasePostProcessMatches((KUrlCompletion*)self, matches_list);
+    KUrlCompletion_SuperPostProcessMatches((KUrlCompletion*)self, matches_list);
 }
 
 void k_urlcompletion_post_process_matches2(void* self, void* matches) {
@@ -286,8 +286,8 @@ void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(void*
     KUrlCompletion_OnPostProcessMatches2((KUrlCompletion*)self, (intptr_t)callback);
 }
 
-void k_urlcompletion_qbase_post_process_matches2(void* self, void* matches) {
-    KUrlCompletion_QBasePostProcessMatches2((KUrlCompletion*)self, (KCompletionMatches*)matches);
+void k_urlcompletion_super_post_process_matches2(void* self, void* matches) {
+    KUrlCompletion_SuperPostProcessMatches2((KUrlCompletion*)self, (KCompletionMatches*)matches);
 }
 
 const char* k_urlcompletion_tr2(const char* s, const char* c) {
@@ -717,8 +717,8 @@ const char* k_urlcompletion_last_match(void* self) {
     return _ret;
 }
 
-const char* k_urlcompletion_qbase_last_match(void* self) {
-    libqt_string _str = KUrlCompletion_QBaseLastMatch((KUrlCompletion*)self);
+const char* k_urlcompletion_super_last_match(void* self) {
+    libqt_string _str = KUrlCompletion_SuperLastMatch((KUrlCompletion*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -732,8 +732,8 @@ void k_urlcompletion_set_completion_mode(void* self, int32_t mode) {
     KUrlCompletion_SetCompletionMode((KUrlCompletion*)self, mode);
 }
 
-void k_urlcompletion_qbase_set_completion_mode(void* self, int32_t mode) {
-    KUrlCompletion_QBaseSetCompletionMode((KUrlCompletion*)self, mode);
+void k_urlcompletion_super_set_completion_mode(void* self, int32_t mode) {
+    KUrlCompletion_SuperSetCompletionMode((KUrlCompletion*)self, mode);
 }
 
 void k_urlcompletion_on_set_completion_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -744,8 +744,8 @@ void k_urlcompletion_set_order(void* self, int32_t order) {
     KUrlCompletion_SetOrder((KUrlCompletion*)self, order);
 }
 
-void k_urlcompletion_qbase_set_order(void* self, int32_t order) {
-    KUrlCompletion_QBaseSetOrder((KUrlCompletion*)self, order);
+void k_urlcompletion_super_set_order(void* self, int32_t order) {
+    KUrlCompletion_SuperSetOrder((KUrlCompletion*)self, order);
 }
 
 void k_urlcompletion_on_set_order(void* self, void (*callback)(void*, int32_t)) {
@@ -756,8 +756,8 @@ void k_urlcompletion_set_ignore_case(void* self, bool ignoreCase) {
     KUrlCompletion_SetIgnoreCase((KUrlCompletion*)self, ignoreCase);
 }
 
-void k_urlcompletion_qbase_set_ignore_case(void* self, bool ignoreCase) {
-    KUrlCompletion_QBaseSetIgnoreCase((KUrlCompletion*)self, ignoreCase);
+void k_urlcompletion_super_set_ignore_case(void* self, bool ignoreCase) {
+    KUrlCompletion_SuperSetIgnoreCase((KUrlCompletion*)self, ignoreCase);
 }
 
 void k_urlcompletion_on_set_ignore_case(void* self, void (*callback)(void*, bool)) {
@@ -768,8 +768,8 @@ void k_urlcompletion_set_sounds_enabled(void* self, bool enable) {
     KUrlCompletion_SetSoundsEnabled((KUrlCompletion*)self, enable);
 }
 
-void k_urlcompletion_qbase_set_sounds_enabled(void* self, bool enable) {
-    KUrlCompletion_QBaseSetSoundsEnabled((KUrlCompletion*)self, enable);
+void k_urlcompletion_super_set_sounds_enabled(void* self, bool enable) {
+    KUrlCompletion_SuperSetSoundsEnabled((KUrlCompletion*)self, enable);
 }
 
 void k_urlcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool)) {
@@ -791,7 +791,7 @@ void k_urlcompletion_set_items(void* self, const char* itemList[static 1]) {
     free(itemList_qstr);
 }
 
-void k_urlcompletion_qbase_set_items(void* self, const char* itemList[static 1]) {
+void k_urlcompletion_super_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
@@ -802,7 +802,7 @@ void k_urlcompletion_qbase_set_items(void* self, const char* itemList[static 1])
         itemList_qstr[i] = qstring(itemList[i]);
     }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
-    KUrlCompletion_QBaseSetItems((KUrlCompletion*)self, itemList_list);
+    KUrlCompletion_SuperSetItems((KUrlCompletion*)self, itemList_list);
     free(itemList_qstr);
 }
 
@@ -814,8 +814,8 @@ void k_urlcompletion_clear(void* self) {
     KUrlCompletion_Clear((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_qbase_clear(void* self) {
-    KUrlCompletion_QBaseClear((KUrlCompletion*)self);
+void k_urlcompletion_super_clear(void* self) {
+    KUrlCompletion_SuperClear((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_on_clear(void* self, void (*callback)()) {
@@ -826,8 +826,8 @@ bool k_urlcompletion_event(void* self, void* event) {
     return KUrlCompletion_Event((KUrlCompletion*)self, (QEvent*)event);
 }
 
-bool k_urlcompletion_qbase_event(void* self, void* event) {
-    return KUrlCompletion_QBaseEvent((KUrlCompletion*)self, (QEvent*)event);
+bool k_urlcompletion_super_event(void* self, void* event) {
+    return KUrlCompletion_SuperEvent((KUrlCompletion*)self, (QEvent*)event);
 }
 
 void k_urlcompletion_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -838,8 +838,8 @@ bool k_urlcompletion_event_filter(void* self, void* watched, void* event) {
     return KUrlCompletion_EventFilter((KUrlCompletion*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_urlcompletion_qbase_event_filter(void* self, void* watched, void* event) {
-    return KUrlCompletion_QBaseEventFilter((KUrlCompletion*)self, (QObject*)watched, (QEvent*)event);
+bool k_urlcompletion_super_event_filter(void* self, void* watched, void* event) {
+    return KUrlCompletion_SuperEventFilter((KUrlCompletion*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_urlcompletion_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -850,8 +850,8 @@ void k_urlcompletion_timer_event(void* self, void* event) {
     KUrlCompletion_TimerEvent((KUrlCompletion*)self, (QTimerEvent*)event);
 }
 
-void k_urlcompletion_qbase_timer_event(void* self, void* event) {
-    KUrlCompletion_QBaseTimerEvent((KUrlCompletion*)self, (QTimerEvent*)event);
+void k_urlcompletion_super_timer_event(void* self, void* event) {
+    KUrlCompletion_SuperTimerEvent((KUrlCompletion*)self, (QTimerEvent*)event);
 }
 
 void k_urlcompletion_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -862,8 +862,8 @@ void k_urlcompletion_child_event(void* self, void* event) {
     KUrlCompletion_ChildEvent((KUrlCompletion*)self, (QChildEvent*)event);
 }
 
-void k_urlcompletion_qbase_child_event(void* self, void* event) {
-    KUrlCompletion_QBaseChildEvent((KUrlCompletion*)self, (QChildEvent*)event);
+void k_urlcompletion_super_child_event(void* self, void* event) {
+    KUrlCompletion_SuperChildEvent((KUrlCompletion*)self, (QChildEvent*)event);
 }
 
 void k_urlcompletion_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -874,8 +874,8 @@ void k_urlcompletion_custom_event(void* self, void* event) {
     KUrlCompletion_CustomEvent((KUrlCompletion*)self, (QEvent*)event);
 }
 
-void k_urlcompletion_qbase_custom_event(void* self, void* event) {
-    KUrlCompletion_QBaseCustomEvent((KUrlCompletion*)self, (QEvent*)event);
+void k_urlcompletion_super_custom_event(void* self, void* event) {
+    KUrlCompletion_SuperCustomEvent((KUrlCompletion*)self, (QEvent*)event);
 }
 
 void k_urlcompletion_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -886,8 +886,8 @@ void k_urlcompletion_connect_notify(void* self, void* signal) {
     KUrlCompletion_ConnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcompletion_qbase_connect_notify(void* self, void* signal) {
-    KUrlCompletion_QBaseConnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
+void k_urlcompletion_super_connect_notify(void* self, void* signal) {
+    KUrlCompletion_SuperConnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcompletion_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -898,8 +898,8 @@ void k_urlcompletion_disconnect_notify(void* self, void* signal) {
     KUrlCompletion_DisconnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcompletion_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlCompletion_QBaseDisconnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
+void k_urlcompletion_super_disconnect_notify(void* self, void* signal) {
+    KUrlCompletion_SuperDisconnectNotify((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcompletion_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -910,8 +910,8 @@ void k_urlcompletion_set_should_auto_suggest(void* self, bool shouldAutosuggest)
     KUrlCompletion_SetShouldAutoSuggest((KUrlCompletion*)self, shouldAutosuggest);
 }
 
-void k_urlcompletion_qbase_set_should_auto_suggest(void* self, bool shouldAutosuggest) {
-    KUrlCompletion_QBaseSetShouldAutoSuggest((KUrlCompletion*)self, shouldAutosuggest);
+void k_urlcompletion_super_set_should_auto_suggest(void* self, bool shouldAutosuggest) {
+    KUrlCompletion_SuperSetShouldAutoSuggest((KUrlCompletion*)self, shouldAutosuggest);
 }
 
 void k_urlcompletion_on_set_should_auto_suggest(void* self, void (*callback)(void*, bool)) {
@@ -922,8 +922,8 @@ QObject* k_urlcompletion_sender(void* self) {
     return KUrlCompletion_Sender((KUrlCompletion*)self);
 }
 
-QObject* k_urlcompletion_qbase_sender(void* self) {
-    return KUrlCompletion_QBaseSender((KUrlCompletion*)self);
+QObject* k_urlcompletion_super_sender(void* self) {
+    return KUrlCompletion_SuperSender((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_on_sender(void* self, QObject* (*callback)()) {
@@ -934,8 +934,8 @@ int32_t k_urlcompletion_sender_signal_index(void* self) {
     return KUrlCompletion_SenderSignalIndex((KUrlCompletion*)self);
 }
 
-int32_t k_urlcompletion_qbase_sender_signal_index(void* self) {
-    return KUrlCompletion_QBaseSenderSignalIndex((KUrlCompletion*)self);
+int32_t k_urlcompletion_super_sender_signal_index(void* self) {
+    return KUrlCompletion_SuperSenderSignalIndex((KUrlCompletion*)self);
 }
 
 void k_urlcompletion_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -946,8 +946,8 @@ int32_t k_urlcompletion_receivers(void* self, const char* signal) {
     return KUrlCompletion_Receivers((KUrlCompletion*)self, signal);
 }
 
-int32_t k_urlcompletion_qbase_receivers(void* self, const char* signal) {
-    return KUrlCompletion_QBaseReceivers((KUrlCompletion*)self, signal);
+int32_t k_urlcompletion_super_receivers(void* self, const char* signal) {
+    return KUrlCompletion_SuperReceivers((KUrlCompletion*)self, signal);
 }
 
 void k_urlcompletion_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -958,8 +958,8 @@ bool k_urlcompletion_is_signal_connected(void* self, void* signal) {
     return KUrlCompletion_IsSignalConnected((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
-bool k_urlcompletion_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlCompletion_QBaseIsSignalConnected((KUrlCompletion*)self, (QMetaMethod*)signal);
+bool k_urlcompletion_super_is_signal_connected(void* self, void* signal) {
+    return KUrlCompletion_SuperIsSignalConnected((KUrlCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcompletion_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -15,8 +15,8 @@ void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callbac
     KTextEditor__MovingRangeFeedback_OnRangeEmpty((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_range_empty(void* self, void* range) {
-    KTextEditor__MovingRangeFeedback_QBaseRangeEmpty((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range);
+void k_texteditor__movingrangefeedback_super_range_empty(void* self, void* range) {
+    KTextEditor__MovingRangeFeedback_SuperRangeEmpty((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range);
 }
 
 void k_texteditor__movingrangefeedback_range_invalid(void* self, void* range) {
@@ -27,8 +27,8 @@ void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callb
     KTextEditor__MovingRangeFeedback_OnRangeInvalid((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_range_invalid(void* self, void* range) {
-    KTextEditor__MovingRangeFeedback_QBaseRangeInvalid((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range);
+void k_texteditor__movingrangefeedback_super_range_invalid(void* self, void* range) {
+    KTextEditor__MovingRangeFeedback_SuperRangeInvalid((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range);
 }
 
 void k_texteditor__movingrangefeedback_mouse_entered_range(void* self, void* range, void* view) {
@@ -39,8 +39,8 @@ void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (
     KTextEditor__MovingRangeFeedback_OnMouseEnteredRange((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_mouse_entered_range(void* self, void* range, void* view) {
-    KTextEditor__MovingRangeFeedback_QBaseMouseEnteredRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
+void k_texteditor__movingrangefeedback_super_mouse_entered_range(void* self, void* range, void* view) {
+    KTextEditor__MovingRangeFeedback_SuperMouseEnteredRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
 }
 
 void k_texteditor__movingrangefeedback_mouse_exited_range(void* self, void* range, void* view) {
@@ -51,8 +51,8 @@ void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*
     KTextEditor__MovingRangeFeedback_OnMouseExitedRange((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_mouse_exited_range(void* self, void* range, void* view) {
-    KTextEditor__MovingRangeFeedback_QBaseMouseExitedRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
+void k_texteditor__movingrangefeedback_super_mouse_exited_range(void* self, void* range, void* view) {
+    KTextEditor__MovingRangeFeedback_SuperMouseExitedRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
 }
 
 void k_texteditor__movingrangefeedback_caret_entered_range(void* self, void* range, void* view) {
@@ -63,8 +63,8 @@ void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (
     KTextEditor__MovingRangeFeedback_OnCaretEnteredRange((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_caret_entered_range(void* self, void* range, void* view) {
-    KTextEditor__MovingRangeFeedback_QBaseCaretEnteredRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
+void k_texteditor__movingrangefeedback_super_caret_entered_range(void* self, void* range, void* view) {
+    KTextEditor__MovingRangeFeedback_SuperCaretEnteredRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
 }
 
 void k_texteditor__movingrangefeedback_caret_exited_range(void* self, void* range, void* view) {
@@ -75,8 +75,8 @@ void k_texteditor__movingrangefeedback_on_caret_exited_range(void* self, void (*
     KTextEditor__MovingRangeFeedback_OnCaretExitedRange((KTextEditor__MovingRangeFeedback*)self, (intptr_t)callback);
 }
 
-void k_texteditor__movingrangefeedback_qbase_caret_exited_range(void* self, void* range, void* view) {
-    KTextEditor__MovingRangeFeedback_QBaseCaretExitedRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
+void k_texteditor__movingrangefeedback_super_caret_exited_range(void* self, void* range, void* view) {
+    KTextEditor__MovingRangeFeedback_SuperCaretExitedRange((KTextEditor__MovingRangeFeedback*)self, (KTextEditor__MovingRange*)range, (KTextEditor__View*)view);
 }
 
 void k_texteditor__movingrangefeedback_delete(void* self) {

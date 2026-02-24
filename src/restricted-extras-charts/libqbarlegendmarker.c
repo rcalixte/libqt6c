@@ -25,8 +25,8 @@ void q_barlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)
     QBarLegendMarker_OnMetaObject((QBarLegendMarker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_barlegendmarker_qbase_meta_object(void* self) {
-    return QBarLegendMarker_QBaseMetaObject((QBarLegendMarker*)self);
+const QMetaObject* q_barlegendmarker_super_meta_object(void* self) {
+    return QBarLegendMarker_SuperMetaObject((QBarLegendMarker*)self);
 }
 
 void* q_barlegendmarker_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_barlegendmarker_on_metacast(void* self, void* (*callback)(void*, const ch
     QBarLegendMarker_OnMetacast((QBarLegendMarker*)self, (intptr_t)callback);
 }
 
-void* q_barlegendmarker_qbase_metacast(void* self, const char* param1) {
-    return QBarLegendMarker_QBaseMetacast((QBarLegendMarker*)self, param1);
+void* q_barlegendmarker_super_metacast(void* self, const char* param1) {
+    return QBarLegendMarker_SuperMetacast((QBarLegendMarker*)self, param1);
 }
 
 int32_t q_barlegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QBarLegendMarker_OnMetacall((QBarLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_barlegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QBarLegendMarker_QBaseMetacall((QBarLegendMarker*)self, param1, param2, param3);
+int32_t q_barlegendmarker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QBarLegendMarker_SuperMetacall((QBarLegendMarker*)self, param1, param2, param3);
 }
 
 const char* q_barlegendmarker_tr(const char* s) {
@@ -68,8 +68,8 @@ void q_barlegendmarker_on_type(void* self, int32_t (*callback)()) {
     QBarLegendMarker_OnType((QBarLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_barlegendmarker_qbase_type(void* self) {
-    return QBarLegendMarker_QBaseType((QBarLegendMarker*)self);
+int32_t q_barlegendmarker_super_type(void* self) {
+    return QBarLegendMarker_SuperType((QBarLegendMarker*)self);
 }
 
 QAbstractBarSeries* q_barlegendmarker_series(void* self) {
@@ -80,8 +80,8 @@ void q_barlegendmarker_on_series(void* self, QAbstractBarSeries* (*callback)()) 
     QBarLegendMarker_OnSeries((QBarLegendMarker*)self, (intptr_t)callback);
 }
 
-QAbstractBarSeries* q_barlegendmarker_qbase_series(void* self) {
-    return QBarLegendMarker_QBaseSeries((QBarLegendMarker*)self);
+QAbstractBarSeries* q_barlegendmarker_super_series(void* self) {
+    return QBarLegendMarker_SuperSeries((QBarLegendMarker*)self);
 }
 
 QBarSet* q_barlegendmarker_barset(void* self) {
@@ -448,8 +448,8 @@ bool q_barlegendmarker_event(void* self, void* event) {
     return QBarLegendMarker_Event((QBarLegendMarker*)self, (QEvent*)event);
 }
 
-bool q_barlegendmarker_qbase_event(void* self, void* event) {
-    return QBarLegendMarker_QBaseEvent((QBarLegendMarker*)self, (QEvent*)event);
+bool q_barlegendmarker_super_event(void* self, void* event) {
+    return QBarLegendMarker_SuperEvent((QBarLegendMarker*)self, (QEvent*)event);
 }
 
 void q_barlegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -460,8 +460,8 @@ bool q_barlegendmarker_event_filter(void* self, void* watched, void* event) {
     return QBarLegendMarker_EventFilter((QBarLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_barlegendmarker_qbase_event_filter(void* self, void* watched, void* event) {
-    return QBarLegendMarker_QBaseEventFilter((QBarLegendMarker*)self, (QObject*)watched, (QEvent*)event);
+bool q_barlegendmarker_super_event_filter(void* self, void* watched, void* event) {
+    return QBarLegendMarker_SuperEventFilter((QBarLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_barlegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -472,8 +472,8 @@ void q_barlegendmarker_timer_event(void* self, void* event) {
     QBarLegendMarker_TimerEvent((QBarLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_barlegendmarker_qbase_timer_event(void* self, void* event) {
-    QBarLegendMarker_QBaseTimerEvent((QBarLegendMarker*)self, (QTimerEvent*)event);
+void q_barlegendmarker_super_timer_event(void* self, void* event) {
+    QBarLegendMarker_SuperTimerEvent((QBarLegendMarker*)self, (QTimerEvent*)event);
 }
 
 void q_barlegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -484,8 +484,8 @@ void q_barlegendmarker_child_event(void* self, void* event) {
     QBarLegendMarker_ChildEvent((QBarLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_barlegendmarker_qbase_child_event(void* self, void* event) {
-    QBarLegendMarker_QBaseChildEvent((QBarLegendMarker*)self, (QChildEvent*)event);
+void q_barlegendmarker_super_child_event(void* self, void* event) {
+    QBarLegendMarker_SuperChildEvent((QBarLegendMarker*)self, (QChildEvent*)event);
 }
 
 void q_barlegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -496,8 +496,8 @@ void q_barlegendmarker_custom_event(void* self, void* event) {
     QBarLegendMarker_CustomEvent((QBarLegendMarker*)self, (QEvent*)event);
 }
 
-void q_barlegendmarker_qbase_custom_event(void* self, void* event) {
-    QBarLegendMarker_QBaseCustomEvent((QBarLegendMarker*)self, (QEvent*)event);
+void q_barlegendmarker_super_custom_event(void* self, void* event) {
+    QBarLegendMarker_SuperCustomEvent((QBarLegendMarker*)self, (QEvent*)event);
 }
 
 void q_barlegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -508,8 +508,8 @@ void q_barlegendmarker_connect_notify(void* self, void* signal) {
     QBarLegendMarker_ConnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_barlegendmarker_qbase_connect_notify(void* self, void* signal) {
-    QBarLegendMarker_QBaseConnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
+void q_barlegendmarker_super_connect_notify(void* self, void* signal) {
+    QBarLegendMarker_SuperConnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_barlegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -520,8 +520,8 @@ void q_barlegendmarker_disconnect_notify(void* self, void* signal) {
     QBarLegendMarker_DisconnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_barlegendmarker_qbase_disconnect_notify(void* self, void* signal) {
-    QBarLegendMarker_QBaseDisconnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
+void q_barlegendmarker_super_disconnect_notify(void* self, void* signal) {
+    QBarLegendMarker_SuperDisconnectNotify((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_barlegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -532,8 +532,8 @@ QObject* q_barlegendmarker_sender(void* self) {
     return QBarLegendMarker_Sender((QBarLegendMarker*)self);
 }
 
-QObject* q_barlegendmarker_qbase_sender(void* self) {
-    return QBarLegendMarker_QBaseSender((QBarLegendMarker*)self);
+QObject* q_barlegendmarker_super_sender(void* self) {
+    return QBarLegendMarker_SuperSender((QBarLegendMarker*)self);
 }
 
 void q_barlegendmarker_on_sender(void* self, QObject* (*callback)()) {
@@ -544,8 +544,8 @@ int32_t q_barlegendmarker_sender_signal_index(void* self) {
     return QBarLegendMarker_SenderSignalIndex((QBarLegendMarker*)self);
 }
 
-int32_t q_barlegendmarker_qbase_sender_signal_index(void* self) {
-    return QBarLegendMarker_QBaseSenderSignalIndex((QBarLegendMarker*)self);
+int32_t q_barlegendmarker_super_sender_signal_index(void* self) {
+    return QBarLegendMarker_SuperSenderSignalIndex((QBarLegendMarker*)self);
 }
 
 void q_barlegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -556,8 +556,8 @@ int32_t q_barlegendmarker_receivers(void* self, const char* signal) {
     return QBarLegendMarker_Receivers((QBarLegendMarker*)self, signal);
 }
 
-int32_t q_barlegendmarker_qbase_receivers(void* self, const char* signal) {
-    return QBarLegendMarker_QBaseReceivers((QBarLegendMarker*)self, signal);
+int32_t q_barlegendmarker_super_receivers(void* self, const char* signal) {
+    return QBarLegendMarker_SuperReceivers((QBarLegendMarker*)self, signal);
 }
 
 void q_barlegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -568,8 +568,8 @@ bool q_barlegendmarker_is_signal_connected(void* self, void* signal) {
     return QBarLegendMarker_IsSignalConnected((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-bool q_barlegendmarker_qbase_is_signal_connected(void* self, void* signal) {
-    return QBarLegendMarker_QBaseIsSignalConnected((QBarLegendMarker*)self, (QMetaMethod*)signal);
+bool q_barlegendmarker_super_is_signal_connected(void* self, void* signal) {
+    return QBarLegendMarker_SuperIsSignalConnected((QBarLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_barlegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

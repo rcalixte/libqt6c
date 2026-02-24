@@ -40,13 +40,17 @@ const QMetaObject* q_gesture_meta_object(void* self);
 ///
 void q_gesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_gesture_super_meta_object` instead
+///
+#define q_gesture_qbase_meta_object q_gesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGesture*
 ///
-const QMetaObject* q_gesture_qbase_meta_object(void* self);
+const QMetaObject* q_gesture_super_meta_object(void* self);
 
 /// @param self QGesture*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_gesture_metacast(void* self, const char* param1);
 ///
 void q_gesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_gesture_super_metacast` instead
+///
+#define q_gesture_qbase_metacast q_gesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGesture*
 /// @param param1 const char*
 ///
-void* q_gesture_qbase_metacast(void* self, const char* param1);
+void* q_gesture_super_metacast(void* self, const char* param1);
 
 /// @param self QGesture*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_gesture_metacall(void* self, int32_t param1, int param2, void* param3)
 ///
 void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_gesture_super_metacall` instead
+///
+#define q_gesture_qbase_metacall q_gesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGesture*
@@ -88,7 +100,7 @@ void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_gesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_gesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -631,6 +643,10 @@ void q_gesture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_gesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_gesture_super_event` instead
+///
+#define q_gesture_qbase_event q_gesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -640,7 +656,7 @@ bool q_gesture_event(void* self, void* event);
 /// @param self QGesture*
 /// @param event QEvent*
 ///
-bool q_gesture_qbase_event(void* self, void* event);
+bool q_gesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -665,6 +681,10 @@ void q_gesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_gesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_gesture_super_event_filter` instead
+///
+#define q_gesture_qbase_event_filter q_gesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -675,7 +695,7 @@ bool q_gesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_gesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_gesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -699,6 +719,10 @@ void q_gesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void q_gesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_gesture_super_timer_event` instead
+///
+#define q_gesture_qbase_timer_event q_gesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -708,7 +732,7 @@ void q_gesture_timer_event(void* self, void* event);
 /// @param self QGesture*
 /// @param event QTimerEvent*
 ///
-void q_gesture_qbase_timer_event(void* self, void* event);
+void q_gesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -732,6 +756,10 @@ void q_gesture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_gesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_gesture_super_child_event` instead
+///
+#define q_gesture_qbase_child_event q_gesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -741,7 +769,7 @@ void q_gesture_child_event(void* self, void* event);
 /// @param self QGesture*
 /// @param event QChildEvent*
 ///
-void q_gesture_qbase_child_event(void* self, void* event);
+void q_gesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -765,6 +793,10 @@ void q_gesture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_gesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_gesture_super_custom_event` instead
+///
+#define q_gesture_qbase_custom_event q_gesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -774,7 +806,7 @@ void q_gesture_custom_event(void* self, void* event);
 /// @param self QGesture*
 /// @param event QEvent*
 ///
-void q_gesture_qbase_custom_event(void* self, void* event);
+void q_gesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -798,6 +830,10 @@ void q_gesture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_gesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_gesture_super_connect_notify` instead
+///
+#define q_gesture_qbase_connect_notify q_gesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -807,7 +843,7 @@ void q_gesture_connect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_qbase_connect_notify(void* self, void* signal);
+void q_gesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -831,6 +867,10 @@ void q_gesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_gesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_gesture_super_disconnect_notify` instead
+///
+#define q_gesture_qbase_disconnect_notify q_gesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -840,7 +880,7 @@ void q_gesture_disconnect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_qbase_disconnect_notify(void* self, void* signal);
+void q_gesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -863,6 +903,10 @@ void q_gesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_gesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_gesture_super_sender` instead
+///
+#define q_gesture_qbase_sender q_gesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -871,7 +915,7 @@ QObject* q_gesture_sender(void* self);
 ///
 /// @param self QGesture*
 ///
-QObject* q_gesture_qbase_sender(void* self);
+QObject* q_gesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -894,6 +938,10 @@ void q_gesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_gesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_gesture_super_sender_signal_index` instead
+///
+#define q_gesture_qbase_sender_signal_index q_gesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -902,7 +950,7 @@ int32_t q_gesture_sender_signal_index(void* self);
 ///
 /// @param self QGesture*
 ///
-int32_t q_gesture_qbase_sender_signal_index(void* self);
+int32_t q_gesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -926,6 +974,10 @@ void q_gesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_gesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_gesture_super_receivers` instead
+///
+#define q_gesture_qbase_receivers q_gesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -935,7 +987,7 @@ int32_t q_gesture_receivers(void* self, const char* signal);
 /// @param self QGesture*
 /// @param signal const char*
 ///
-int32_t q_gesture_qbase_receivers(void* self, const char* signal);
+int32_t q_gesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -959,6 +1011,10 @@ void q_gesture_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 bool q_gesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_gesture_super_is_signal_connected` instead
+///
+#define q_gesture_qbase_is_signal_connected q_gesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -968,7 +1024,7 @@ bool q_gesture_is_signal_connected(void* self, void* signal);
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_gesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_gesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1029,13 +1085,17 @@ const QMetaObject* q_pangesture_meta_object(void* self);
 ///
 void q_pangesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_pangesture_super_meta_object` instead
+///
+#define q_pangesture_qbase_meta_object q_pangesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPanGesture*
 ///
-const QMetaObject* q_pangesture_qbase_meta_object(void* self);
+const QMetaObject* q_pangesture_super_meta_object(void* self);
 
 /// @param self QPanGesture*
 /// @param param1 const char*
@@ -1049,12 +1109,16 @@ void* q_pangesture_metacast(void* self, const char* param1);
 ///
 void q_pangesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_pangesture_super_metacast` instead
+///
+#define q_pangesture_qbase_metacast q_pangesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPanGesture*
 /// @param param1 const char*
 ///
-void* q_pangesture_qbase_metacast(void* self, const char* param1);
+void* q_pangesture_super_metacast(void* self, const char* param1);
 
 /// @param self QPanGesture*
 /// @param param1 enum QMetaObject__Call
@@ -1070,6 +1134,10 @@ int32_t q_pangesture_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_pangesture_super_metacall` instead
+///
+#define q_pangesture_qbase_metacall q_pangesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPanGesture*
@@ -1077,7 +1145,7 @@ void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_pangesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_pangesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1681,6 +1749,10 @@ void q_pangesture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_pangesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_event` instead
+///
+#define q_pangesture_qbase_event q_pangesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1690,7 +1762,7 @@ bool q_pangesture_event(void* self, void* event);
 /// @param self QPanGesture*
 /// @param event QEvent*
 ///
-bool q_pangesture_qbase_event(void* self, void* event);
+bool q_pangesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1715,6 +1787,10 @@ void q_pangesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_pangesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_event_filter` instead
+///
+#define q_pangesture_qbase_event_filter q_pangesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1725,7 +1801,7 @@ bool q_pangesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_pangesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_pangesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1749,6 +1825,10 @@ void q_pangesture_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_pangesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_timer_event` instead
+///
+#define q_pangesture_qbase_timer_event q_pangesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1758,7 +1838,7 @@ void q_pangesture_timer_event(void* self, void* event);
 /// @param self QPanGesture*
 /// @param event QTimerEvent*
 ///
-void q_pangesture_qbase_timer_event(void* self, void* event);
+void q_pangesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1782,6 +1862,10 @@ void q_pangesture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pangesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_child_event` instead
+///
+#define q_pangesture_qbase_child_event q_pangesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1791,7 +1875,7 @@ void q_pangesture_child_event(void* self, void* event);
 /// @param self QPanGesture*
 /// @param event QChildEvent*
 ///
-void q_pangesture_qbase_child_event(void* self, void* event);
+void q_pangesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1815,6 +1899,10 @@ void q_pangesture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pangesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_custom_event` instead
+///
+#define q_pangesture_qbase_custom_event q_pangesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1824,7 +1912,7 @@ void q_pangesture_custom_event(void* self, void* event);
 /// @param self QPanGesture*
 /// @param event QEvent*
 ///
-void q_pangesture_qbase_custom_event(void* self, void* event);
+void q_pangesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1848,6 +1936,10 @@ void q_pangesture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pangesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_connect_notify` instead
+///
+#define q_pangesture_qbase_connect_notify q_pangesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1857,7 +1949,7 @@ void q_pangesture_connect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_qbase_connect_notify(void* self, void* signal);
+void q_pangesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1881,6 +1973,10 @@ void q_pangesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_pangesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_disconnect_notify` instead
+///
+#define q_pangesture_qbase_disconnect_notify q_pangesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1890,7 +1986,7 @@ void q_pangesture_disconnect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_qbase_disconnect_notify(void* self, void* signal);
+void q_pangesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1913,6 +2009,10 @@ void q_pangesture_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_pangesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_sender` instead
+///
+#define q_pangesture_qbase_sender q_pangesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1921,7 +2021,7 @@ QObject* q_pangesture_sender(void* self);
 ///
 /// @param self QPanGesture*
 ///
-QObject* q_pangesture_qbase_sender(void* self);
+QObject* q_pangesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1944,6 +2044,10 @@ void q_pangesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_pangesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_sender_signal_index` instead
+///
+#define q_pangesture_qbase_sender_signal_index q_pangesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1952,7 +2056,7 @@ int32_t q_pangesture_sender_signal_index(void* self);
 ///
 /// @param self QPanGesture*
 ///
-int32_t q_pangesture_qbase_sender_signal_index(void* self);
+int32_t q_pangesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1976,6 +2080,10 @@ void q_pangesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_pangesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_receivers` instead
+///
+#define q_pangesture_qbase_receivers q_pangesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1985,7 +2093,7 @@ int32_t q_pangesture_receivers(void* self, const char* signal);
 /// @param self QPanGesture*
 /// @param signal const char*
 ///
-int32_t q_pangesture_qbase_receivers(void* self, const char* signal);
+int32_t q_pangesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2009,6 +2117,10 @@ void q_pangesture_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_pangesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pangesture_super_is_signal_connected` instead
+///
+#define q_pangesture_qbase_is_signal_connected q_pangesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2018,7 +2130,7 @@ bool q_pangesture_is_signal_connected(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pangesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_pangesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2079,13 +2191,17 @@ const QMetaObject* q_pinchgesture_meta_object(void* self);
 ///
 void q_pinchgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_meta_object` instead
+///
+#define q_pinchgesture_qbase_meta_object q_pinchgesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPinchGesture*
 ///
-const QMetaObject* q_pinchgesture_qbase_meta_object(void* self);
+const QMetaObject* q_pinchgesture_super_meta_object(void* self);
 
 /// @param self QPinchGesture*
 /// @param param1 const char*
@@ -2099,12 +2215,16 @@ void* q_pinchgesture_metacast(void* self, const char* param1);
 ///
 void q_pinchgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_metacast` instead
+///
+#define q_pinchgesture_qbase_metacast q_pinchgesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPinchGesture*
 /// @param param1 const char*
 ///
-void* q_pinchgesture_qbase_metacast(void* self, const char* param1);
+void* q_pinchgesture_super_metacast(void* self, const char* param1);
 
 /// @param self QPinchGesture*
 /// @param param1 enum QMetaObject__Call
@@ -2120,6 +2240,10 @@ int32_t q_pinchgesture_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_metacall` instead
+///
+#define q_pinchgesture_qbase_metacall q_pinchgesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPinchGesture*
@@ -2127,7 +2251,7 @@ void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_pinchgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_pinchgesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2833,6 +2957,10 @@ void q_pinchgesture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_pinchgesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_event` instead
+///
+#define q_pinchgesture_qbase_event q_pinchgesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2842,7 +2970,7 @@ bool q_pinchgesture_event(void* self, void* event);
 /// @param self QPinchGesture*
 /// @param event QEvent*
 ///
-bool q_pinchgesture_qbase_event(void* self, void* event);
+bool q_pinchgesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2867,6 +2995,10 @@ void q_pinchgesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_pinchgesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_event_filter` instead
+///
+#define q_pinchgesture_qbase_event_filter q_pinchgesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2877,7 +3009,7 @@ bool q_pinchgesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_pinchgesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_pinchgesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2901,6 +3033,10 @@ void q_pinchgesture_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_pinchgesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_timer_event` instead
+///
+#define q_pinchgesture_qbase_timer_event q_pinchgesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2910,7 +3046,7 @@ void q_pinchgesture_timer_event(void* self, void* event);
 /// @param self QPinchGesture*
 /// @param event QTimerEvent*
 ///
-void q_pinchgesture_qbase_timer_event(void* self, void* event);
+void q_pinchgesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2934,6 +3070,10 @@ void q_pinchgesture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pinchgesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_child_event` instead
+///
+#define q_pinchgesture_qbase_child_event q_pinchgesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2943,7 +3083,7 @@ void q_pinchgesture_child_event(void* self, void* event);
 /// @param self QPinchGesture*
 /// @param event QChildEvent*
 ///
-void q_pinchgesture_qbase_child_event(void* self, void* event);
+void q_pinchgesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2967,6 +3107,10 @@ void q_pinchgesture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pinchgesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_custom_event` instead
+///
+#define q_pinchgesture_qbase_custom_event q_pinchgesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2976,7 +3120,7 @@ void q_pinchgesture_custom_event(void* self, void* event);
 /// @param self QPinchGesture*
 /// @param event QEvent*
 ///
-void q_pinchgesture_qbase_custom_event(void* self, void* event);
+void q_pinchgesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3000,6 +3144,10 @@ void q_pinchgesture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pinchgesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_connect_notify` instead
+///
+#define q_pinchgesture_qbase_connect_notify q_pinchgesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -3009,7 +3157,7 @@ void q_pinchgesture_connect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_qbase_connect_notify(void* self, void* signal);
+void q_pinchgesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3033,6 +3181,10 @@ void q_pinchgesture_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_pinchgesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_disconnect_notify` instead
+///
+#define q_pinchgesture_qbase_disconnect_notify q_pinchgesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3042,7 +3194,7 @@ void q_pinchgesture_disconnect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_qbase_disconnect_notify(void* self, void* signal);
+void q_pinchgesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3065,6 +3217,10 @@ void q_pinchgesture_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_pinchgesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_sender` instead
+///
+#define q_pinchgesture_qbase_sender q_pinchgesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3073,7 +3229,7 @@ QObject* q_pinchgesture_sender(void* self);
 ///
 /// @param self QPinchGesture*
 ///
-QObject* q_pinchgesture_qbase_sender(void* self);
+QObject* q_pinchgesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3096,6 +3252,10 @@ void q_pinchgesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_pinchgesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_sender_signal_index` instead
+///
+#define q_pinchgesture_qbase_sender_signal_index q_pinchgesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3104,7 +3264,7 @@ int32_t q_pinchgesture_sender_signal_index(void* self);
 ///
 /// @param self QPinchGesture*
 ///
-int32_t q_pinchgesture_qbase_sender_signal_index(void* self);
+int32_t q_pinchgesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3128,6 +3288,10 @@ void q_pinchgesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_pinchgesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_receivers` instead
+///
+#define q_pinchgesture_qbase_receivers q_pinchgesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3137,7 +3301,7 @@ int32_t q_pinchgesture_receivers(void* self, const char* signal);
 /// @param self QPinchGesture*
 /// @param signal const char*
 ///
-int32_t q_pinchgesture_qbase_receivers(void* self, const char* signal);
+int32_t q_pinchgesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3161,6 +3325,10 @@ void q_pinchgesture_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_pinchgesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pinchgesture_super_is_signal_connected` instead
+///
+#define q_pinchgesture_qbase_is_signal_connected q_pinchgesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3170,7 +3338,7 @@ bool q_pinchgesture_is_signal_connected(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pinchgesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_pinchgesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3231,13 +3399,17 @@ const QMetaObject* q_swipegesture_meta_object(void* self);
 ///
 void q_swipegesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_meta_object` instead
+///
+#define q_swipegesture_qbase_meta_object q_swipegesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QSwipeGesture*
 ///
-const QMetaObject* q_swipegesture_qbase_meta_object(void* self);
+const QMetaObject* q_swipegesture_super_meta_object(void* self);
 
 /// @param self QSwipeGesture*
 /// @param param1 const char*
@@ -3251,12 +3423,16 @@ void* q_swipegesture_metacast(void* self, const char* param1);
 ///
 void q_swipegesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_metacast` instead
+///
+#define q_swipegesture_qbase_metacast q_swipegesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QSwipeGesture*
 /// @param param1 const char*
 ///
-void* q_swipegesture_qbase_metacast(void* self, const char* param1);
+void* q_swipegesture_super_metacast(void* self, const char* param1);
 
 /// @param self QSwipeGesture*
 /// @param param1 enum QMetaObject__Call
@@ -3272,6 +3448,10 @@ int32_t q_swipegesture_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_metacall` instead
+///
+#define q_swipegesture_qbase_metacall q_swipegesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QSwipeGesture*
@@ -3279,7 +3459,7 @@ void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_swipegesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_swipegesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3867,6 +4047,10 @@ void q_swipegesture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_swipegesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_event` instead
+///
+#define q_swipegesture_qbase_event q_swipegesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -3876,7 +4060,7 @@ bool q_swipegesture_event(void* self, void* event);
 /// @param self QSwipeGesture*
 /// @param event QEvent*
 ///
-bool q_swipegesture_qbase_event(void* self, void* event);
+bool q_swipegesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3901,6 +4085,10 @@ void q_swipegesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_swipegesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_event_filter` instead
+///
+#define q_swipegesture_qbase_event_filter q_swipegesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3911,7 +4099,7 @@ bool q_swipegesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_swipegesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_swipegesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -3935,6 +4123,10 @@ void q_swipegesture_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_swipegesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_timer_event` instead
+///
+#define q_swipegesture_qbase_timer_event q_swipegesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3944,7 +4136,7 @@ void q_swipegesture_timer_event(void* self, void* event);
 /// @param self QSwipeGesture*
 /// @param event QTimerEvent*
 ///
-void q_swipegesture_qbase_timer_event(void* self, void* event);
+void q_swipegesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3968,6 +4160,10 @@ void q_swipegesture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_swipegesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_child_event` instead
+///
+#define q_swipegesture_qbase_child_event q_swipegesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -3977,7 +4173,7 @@ void q_swipegesture_child_event(void* self, void* event);
 /// @param self QSwipeGesture*
 /// @param event QChildEvent*
 ///
-void q_swipegesture_qbase_child_event(void* self, void* event);
+void q_swipegesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4001,6 +4197,10 @@ void q_swipegesture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_swipegesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_custom_event` instead
+///
+#define q_swipegesture_qbase_custom_event q_swipegesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4010,7 +4210,7 @@ void q_swipegesture_custom_event(void* self, void* event);
 /// @param self QSwipeGesture*
 /// @param event QEvent*
 ///
-void q_swipegesture_qbase_custom_event(void* self, void* event);
+void q_swipegesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4034,6 +4234,10 @@ void q_swipegesture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_swipegesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_connect_notify` instead
+///
+#define q_swipegesture_qbase_connect_notify q_swipegesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4043,7 +4247,7 @@ void q_swipegesture_connect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_qbase_connect_notify(void* self, void* signal);
+void q_swipegesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4067,6 +4271,10 @@ void q_swipegesture_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_swipegesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_disconnect_notify` instead
+///
+#define q_swipegesture_qbase_disconnect_notify q_swipegesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4076,7 +4284,7 @@ void q_swipegesture_disconnect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_qbase_disconnect_notify(void* self, void* signal);
+void q_swipegesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4099,6 +4307,10 @@ void q_swipegesture_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_swipegesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_sender` instead
+///
+#define q_swipegesture_qbase_sender q_swipegesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4107,7 +4319,7 @@ QObject* q_swipegesture_sender(void* self);
 ///
 /// @param self QSwipeGesture*
 ///
-QObject* q_swipegesture_qbase_sender(void* self);
+QObject* q_swipegesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -4130,6 +4342,10 @@ void q_swipegesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_swipegesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_sender_signal_index` instead
+///
+#define q_swipegesture_qbase_sender_signal_index q_swipegesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -4138,7 +4354,7 @@ int32_t q_swipegesture_sender_signal_index(void* self);
 ///
 /// @param self QSwipeGesture*
 ///
-int32_t q_swipegesture_qbase_sender_signal_index(void* self);
+int32_t q_swipegesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -4162,6 +4378,10 @@ void q_swipegesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_swipegesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_receivers` instead
+///
+#define q_swipegesture_qbase_receivers q_swipegesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4171,7 +4391,7 @@ int32_t q_swipegesture_receivers(void* self, const char* signal);
 /// @param self QSwipeGesture*
 /// @param signal const char*
 ///
-int32_t q_swipegesture_qbase_receivers(void* self, const char* signal);
+int32_t q_swipegesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4195,6 +4415,10 @@ void q_swipegesture_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_swipegesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_swipegesture_super_is_signal_connected` instead
+///
+#define q_swipegesture_qbase_is_signal_connected q_swipegesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -4204,7 +4428,7 @@ bool q_swipegesture_is_signal_connected(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_swipegesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_swipegesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4265,13 +4489,17 @@ const QMetaObject* q_tapgesture_meta_object(void* self);
 ///
 void q_tapgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_meta_object` instead
+///
+#define q_tapgesture_qbase_meta_object q_tapgesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QTapGesture*
 ///
-const QMetaObject* q_tapgesture_qbase_meta_object(void* self);
+const QMetaObject* q_tapgesture_super_meta_object(void* self);
 
 /// @param self QTapGesture*
 /// @param param1 const char*
@@ -4285,12 +4513,16 @@ void* q_tapgesture_metacast(void* self, const char* param1);
 ///
 void q_tapgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_metacast` instead
+///
+#define q_tapgesture_qbase_metacast q_tapgesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QTapGesture*
 /// @param param1 const char*
 ///
-void* q_tapgesture_qbase_metacast(void* self, const char* param1);
+void* q_tapgesture_super_metacast(void* self, const char* param1);
 
 /// @param self QTapGesture*
 /// @param param1 enum QMetaObject__Call
@@ -4306,6 +4538,10 @@ int32_t q_tapgesture_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_metacall` instead
+///
+#define q_tapgesture_qbase_metacall q_tapgesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QTapGesture*
@@ -4313,7 +4549,7 @@ void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_tapgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_tapgesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4885,6 +5121,10 @@ void q_tapgesture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_tapgesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_event` instead
+///
+#define q_tapgesture_qbase_event q_tapgesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -4894,7 +5134,7 @@ bool q_tapgesture_event(void* self, void* event);
 /// @param self QTapGesture*
 /// @param event QEvent*
 ///
-bool q_tapgesture_qbase_event(void* self, void* event);
+bool q_tapgesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4919,6 +5159,10 @@ void q_tapgesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_tapgesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_event_filter` instead
+///
+#define q_tapgesture_qbase_event_filter q_tapgesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4929,7 +5173,7 @@ bool q_tapgesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_tapgesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_tapgesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4953,6 +5197,10 @@ void q_tapgesture_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_tapgesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_timer_event` instead
+///
+#define q_tapgesture_qbase_timer_event q_tapgesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4962,7 +5210,7 @@ void q_tapgesture_timer_event(void* self, void* event);
 /// @param self QTapGesture*
 /// @param event QTimerEvent*
 ///
-void q_tapgesture_qbase_timer_event(void* self, void* event);
+void q_tapgesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4986,6 +5234,10 @@ void q_tapgesture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tapgesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_child_event` instead
+///
+#define q_tapgesture_qbase_child_event q_tapgesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4995,7 +5247,7 @@ void q_tapgesture_child_event(void* self, void* event);
 /// @param self QTapGesture*
 /// @param event QChildEvent*
 ///
-void q_tapgesture_qbase_child_event(void* self, void* event);
+void q_tapgesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5019,6 +5271,10 @@ void q_tapgesture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tapgesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_custom_event` instead
+///
+#define q_tapgesture_qbase_custom_event q_tapgesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5028,7 +5284,7 @@ void q_tapgesture_custom_event(void* self, void* event);
 /// @param self QTapGesture*
 /// @param event QEvent*
 ///
-void q_tapgesture_qbase_custom_event(void* self, void* event);
+void q_tapgesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5052,6 +5308,10 @@ void q_tapgesture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tapgesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_connect_notify` instead
+///
+#define q_tapgesture_qbase_connect_notify q_tapgesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5061,7 +5321,7 @@ void q_tapgesture_connect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_qbase_connect_notify(void* self, void* signal);
+void q_tapgesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5085,6 +5345,10 @@ void q_tapgesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_tapgesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_disconnect_notify` instead
+///
+#define q_tapgesture_qbase_disconnect_notify q_tapgesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5094,7 +5358,7 @@ void q_tapgesture_disconnect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_qbase_disconnect_notify(void* self, void* signal);
+void q_tapgesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5117,6 +5381,10 @@ void q_tapgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_tapgesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_sender` instead
+///
+#define q_tapgesture_qbase_sender q_tapgesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5125,7 +5393,7 @@ QObject* q_tapgesture_sender(void* self);
 ///
 /// @param self QTapGesture*
 ///
-QObject* q_tapgesture_qbase_sender(void* self);
+QObject* q_tapgesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5148,6 +5416,10 @@ void q_tapgesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_tapgesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_sender_signal_index` instead
+///
+#define q_tapgesture_qbase_sender_signal_index q_tapgesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5156,7 +5428,7 @@ int32_t q_tapgesture_sender_signal_index(void* self);
 ///
 /// @param self QTapGesture*
 ///
-int32_t q_tapgesture_qbase_sender_signal_index(void* self);
+int32_t q_tapgesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5180,6 +5452,10 @@ void q_tapgesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_tapgesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_receivers` instead
+///
+#define q_tapgesture_qbase_receivers q_tapgesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5189,7 +5465,7 @@ int32_t q_tapgesture_receivers(void* self, const char* signal);
 /// @param self QTapGesture*
 /// @param signal const char*
 ///
-int32_t q_tapgesture_qbase_receivers(void* self, const char* signal);
+int32_t q_tapgesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5213,6 +5489,10 @@ void q_tapgesture_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_tapgesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapgesture_super_is_signal_connected` instead
+///
+#define q_tapgesture_qbase_is_signal_connected q_tapgesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5222,7 +5502,7 @@ bool q_tapgesture_is_signal_connected(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapgesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_tapgesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5283,13 +5563,17 @@ const QMetaObject* q_tapandholdgesture_meta_object(void* self);
 ///
 void q_tapandholdgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_meta_object` instead
+///
+#define q_tapandholdgesture_qbase_meta_object q_tapandholdgesture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QTapAndHoldGesture*
 ///
-const QMetaObject* q_tapandholdgesture_qbase_meta_object(void* self);
+const QMetaObject* q_tapandholdgesture_super_meta_object(void* self);
 
 /// @param self QTapAndHoldGesture*
 /// @param param1 const char*
@@ -5303,12 +5587,16 @@ void* q_tapandholdgesture_metacast(void* self, const char* param1);
 ///
 void q_tapandholdgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_metacast` instead
+///
+#define q_tapandholdgesture_qbase_metacast q_tapandholdgesture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QTapAndHoldGesture*
 /// @param param1 const char*
 ///
-void* q_tapandholdgesture_qbase_metacast(void* self, const char* param1);
+void* q_tapandholdgesture_super_metacast(void* self, const char* param1);
 
 /// @param self QTapAndHoldGesture*
 /// @param param1 enum QMetaObject__Call
@@ -5324,6 +5612,10 @@ int32_t q_tapandholdgesture_metacall(void* self, int32_t param1, int param2, voi
 ///
 void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_metacall` instead
+///
+#define q_tapandholdgesture_qbase_metacall q_tapandholdgesture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QTapAndHoldGesture*
@@ -5331,7 +5623,7 @@ void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_tapandholdgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_tapandholdgesture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -5913,6 +6205,10 @@ void q_tapandholdgesture_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool q_tapandholdgesture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_event` instead
+///
+#define q_tapandholdgesture_qbase_event q_tapandholdgesture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -5922,7 +6218,7 @@ bool q_tapandholdgesture_event(void* self, void* event);
 /// @param self QTapAndHoldGesture*
 /// @param event QEvent*
 ///
-bool q_tapandholdgesture_qbase_event(void* self, void* event);
+bool q_tapandholdgesture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5947,6 +6243,10 @@ void q_tapandholdgesture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_tapandholdgesture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_event_filter` instead
+///
+#define q_tapandholdgesture_qbase_event_filter q_tapandholdgesture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5957,7 +6257,7 @@ bool q_tapandholdgesture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_tapandholdgesture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_tapandholdgesture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -5981,6 +6281,10 @@ void q_tapandholdgesture_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_tapandholdgesture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_timer_event` instead
+///
+#define q_tapandholdgesture_qbase_timer_event q_tapandholdgesture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5990,7 +6294,7 @@ void q_tapandholdgesture_timer_event(void* self, void* event);
 /// @param self QTapAndHoldGesture*
 /// @param event QTimerEvent*
 ///
-void q_tapandholdgesture_qbase_timer_event(void* self, void* event);
+void q_tapandholdgesture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6014,6 +6318,10 @@ void q_tapandholdgesture_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void q_tapandholdgesture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_child_event` instead
+///
+#define q_tapandholdgesture_qbase_child_event q_tapandholdgesture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6023,7 +6331,7 @@ void q_tapandholdgesture_child_event(void* self, void* event);
 /// @param self QTapAndHoldGesture*
 /// @param event QChildEvent*
 ///
-void q_tapandholdgesture_qbase_child_event(void* self, void* event);
+void q_tapandholdgesture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6047,6 +6355,10 @@ void q_tapandholdgesture_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_tapandholdgesture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_custom_event` instead
+///
+#define q_tapandholdgesture_qbase_custom_event q_tapandholdgesture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6056,7 +6368,7 @@ void q_tapandholdgesture_custom_event(void* self, void* event);
 /// @param self QTapAndHoldGesture*
 /// @param event QEvent*
 ///
-void q_tapandholdgesture_qbase_custom_event(void* self, void* event);
+void q_tapandholdgesture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6080,6 +6392,10 @@ void q_tapandholdgesture_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void q_tapandholdgesture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_connect_notify` instead
+///
+#define q_tapandholdgesture_qbase_connect_notify q_tapandholdgesture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6089,7 +6405,7 @@ void q_tapandholdgesture_connect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_qbase_connect_notify(void* self, void* signal);
+void q_tapandholdgesture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6113,6 +6429,10 @@ void q_tapandholdgesture_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_tapandholdgesture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_disconnect_notify` instead
+///
+#define q_tapandholdgesture_qbase_disconnect_notify q_tapandholdgesture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6122,7 +6442,7 @@ void q_tapandholdgesture_disconnect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_qbase_disconnect_notify(void* self, void* signal);
+void q_tapandholdgesture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6145,6 +6465,10 @@ void q_tapandholdgesture_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* q_tapandholdgesture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_sender` instead
+///
+#define q_tapandholdgesture_qbase_sender q_tapandholdgesture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6153,7 +6477,7 @@ QObject* q_tapandholdgesture_sender(void* self);
 ///
 /// @param self QTapAndHoldGesture*
 ///
-QObject* q_tapandholdgesture_qbase_sender(void* self);
+QObject* q_tapandholdgesture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6176,6 +6500,10 @@ void q_tapandholdgesture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_tapandholdgesture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_sender_signal_index` instead
+///
+#define q_tapandholdgesture_qbase_sender_signal_index q_tapandholdgesture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6184,7 +6512,7 @@ int32_t q_tapandholdgesture_sender_signal_index(void* self);
 ///
 /// @param self QTapAndHoldGesture*
 ///
-int32_t q_tapandholdgesture_qbase_sender_signal_index(void* self);
+int32_t q_tapandholdgesture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6208,6 +6536,10 @@ void q_tapandholdgesture_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_tapandholdgesture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_receivers` instead
+///
+#define q_tapandholdgesture_qbase_receivers q_tapandholdgesture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6217,7 +6549,7 @@ int32_t q_tapandholdgesture_receivers(void* self, const char* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal const char*
 ///
-int32_t q_tapandholdgesture_qbase_receivers(void* self, const char* signal);
+int32_t q_tapandholdgesture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6241,6 +6573,10 @@ void q_tapandholdgesture_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool q_tapandholdgesture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_tapandholdgesture_super_is_signal_connected` instead
+///
+#define q_tapandholdgesture_qbase_is_signal_connected q_tapandholdgesture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6250,7 +6586,7 @@ bool q_tapandholdgesture_is_signal_connected(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapandholdgesture_qbase_is_signal_connected(void* self, void* signal);
+bool q_tapandholdgesture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6473,6 +6809,10 @@ int32_t q_gestureevent_register_event_type1(int hint);
 ///
 QEvent* q_gestureevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_gestureevent_super_clone` instead
+///
+#define q_gestureevent_qbase_clone q_gestureevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -6481,7 +6821,7 @@ QEvent* q_gestureevent_clone(void* self);
 ///
 /// @param self QGestureEvent*
 ///
-QEvent* q_gestureevent_qbase_clone(void* self);
+QEvent* q_gestureevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///

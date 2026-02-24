@@ -40,13 +40,17 @@ const QMetaObject* q_finalstate_meta_object(void* self);
 ///
 void q_finalstate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_finalstate_super_meta_object` instead
+///
+#define q_finalstate_qbase_meta_object q_finalstate_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QFinalState*
 ///
-const QMetaObject* q_finalstate_qbase_meta_object(void* self);
+const QMetaObject* q_finalstate_super_meta_object(void* self);
 
 /// @param self QFinalState*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_finalstate_metacast(void* self, const char* param1);
 ///
 void q_finalstate_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_finalstate_super_metacast` instead
+///
+#define q_finalstate_qbase_metacast q_finalstate_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QFinalState*
 /// @param param1 const char*
 ///
-void* q_finalstate_qbase_metacast(void* self, const char* param1);
+void* q_finalstate_super_metacast(void* self, const char* param1);
 
 /// @param self QFinalState*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_finalstate_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_finalstate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_finalstate_super_metacall` instead
+///
+#define q_finalstate_qbase_metacall q_finalstate_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QFinalState*
@@ -88,7 +100,7 @@ void q_finalstate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_finalstate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_finalstate_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void q_finalstate_on_entry(void* self, void* event);
 ///
 void q_finalstate_on_on_entry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_finalstate_super_on_entry` instead
+///
+#define q_finalstate_qbase_on_entry q_finalstate_super_on_entry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfinalstate.html#onEntry)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_finalstate_on_on_entry(void* self, void (*callback)(void*, void*));
 /// @param self QFinalState*
 /// @param event QEvent*
 ///
-void q_finalstate_qbase_on_entry(void* self, void* event);
+void q_finalstate_super_on_entry(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfinalstate.html#onExit)
 ///
@@ -139,6 +155,10 @@ void q_finalstate_on_exit(void* self, void* event);
 ///
 void q_finalstate_on_on_exit(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_finalstate_super_on_exit` instead
+///
+#define q_finalstate_qbase_on_exit q_finalstate_super_on_exit
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfinalstate.html#onExit)
 ///
 /// Base class method implementation
@@ -146,7 +166,7 @@ void q_finalstate_on_on_exit(void* self, void (*callback)(void*, void*));
 /// @param self QFinalState*
 /// @param event QEvent*
 ///
-void q_finalstate_qbase_on_exit(void* self, void* event);
+void q_finalstate_super_on_exit(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfinalstate.html#event)
 ///
@@ -164,6 +184,10 @@ bool q_finalstate_event(void* self, void* e);
 ///
 void q_finalstate_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_finalstate_super_event` instead
+///
+#define q_finalstate_qbase_event q_finalstate_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfinalstate.html#event)
 ///
 /// Base class method implementation
@@ -171,7 +195,7 @@ void q_finalstate_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QFinalState*
 /// @param e QEvent*
 ///
-bool q_finalstate_qbase_event(void* self, void* e);
+bool q_finalstate_super_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -693,6 +717,10 @@ void q_finalstate_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_finalstate_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_event_filter` instead
+///
+#define q_finalstate_qbase_event_filter q_finalstate_super_event_filter
+
 /// Inherited from QAbstractState
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#eventFilter)
@@ -703,7 +731,7 @@ bool q_finalstate_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_finalstate_qbase_event_filter(void* self, void* watched, void* event);
+bool q_finalstate_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QAbstractState
 ///
@@ -727,6 +755,10 @@ void q_finalstate_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_finalstate_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_timer_event` instead
+///
+#define q_finalstate_qbase_timer_event q_finalstate_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -736,7 +768,7 @@ void q_finalstate_timer_event(void* self, void* event);
 /// @param self QFinalState*
 /// @param event QTimerEvent*
 ///
-void q_finalstate_qbase_timer_event(void* self, void* event);
+void q_finalstate_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -760,6 +792,10 @@ void q_finalstate_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_finalstate_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_child_event` instead
+///
+#define q_finalstate_qbase_child_event q_finalstate_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -769,7 +805,7 @@ void q_finalstate_child_event(void* self, void* event);
 /// @param self QFinalState*
 /// @param event QChildEvent*
 ///
-void q_finalstate_qbase_child_event(void* self, void* event);
+void q_finalstate_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -793,6 +829,10 @@ void q_finalstate_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_finalstate_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_custom_event` instead
+///
+#define q_finalstate_qbase_custom_event q_finalstate_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -802,7 +842,7 @@ void q_finalstate_custom_event(void* self, void* event);
 /// @param self QFinalState*
 /// @param event QEvent*
 ///
-void q_finalstate_qbase_custom_event(void* self, void* event);
+void q_finalstate_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -826,6 +866,10 @@ void q_finalstate_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_finalstate_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_connect_notify` instead
+///
+#define q_finalstate_qbase_connect_notify q_finalstate_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -835,7 +879,7 @@ void q_finalstate_connect_notify(void* self, void* signal);
 /// @param self QFinalState*
 /// @param signal QMetaMethod*
 ///
-void q_finalstate_qbase_connect_notify(void* self, void* signal);
+void q_finalstate_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -859,6 +903,10 @@ void q_finalstate_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_finalstate_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_disconnect_notify` instead
+///
+#define q_finalstate_qbase_disconnect_notify q_finalstate_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -868,7 +916,7 @@ void q_finalstate_disconnect_notify(void* self, void* signal);
 /// @param self QFinalState*
 /// @param signal QMetaMethod*
 ///
-void q_finalstate_qbase_disconnect_notify(void* self, void* signal);
+void q_finalstate_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -891,6 +939,10 @@ void q_finalstate_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_finalstate_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_sender` instead
+///
+#define q_finalstate_qbase_sender q_finalstate_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -899,7 +951,7 @@ QObject* q_finalstate_sender(void* self);
 ///
 /// @param self QFinalState*
 ///
-QObject* q_finalstate_qbase_sender(void* self);
+QObject* q_finalstate_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -922,6 +974,10 @@ void q_finalstate_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_finalstate_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_sender_signal_index` instead
+///
+#define q_finalstate_qbase_sender_signal_index q_finalstate_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -930,7 +986,7 @@ int32_t q_finalstate_sender_signal_index(void* self);
 ///
 /// @param self QFinalState*
 ///
-int32_t q_finalstate_qbase_sender_signal_index(void* self);
+int32_t q_finalstate_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -954,6 +1010,10 @@ void q_finalstate_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_finalstate_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_receivers` instead
+///
+#define q_finalstate_qbase_receivers q_finalstate_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -963,7 +1023,7 @@ int32_t q_finalstate_receivers(void* self, const char* signal);
 /// @param self QFinalState*
 /// @param signal const char*
 ///
-int32_t q_finalstate_qbase_receivers(void* self, const char* signal);
+int32_t q_finalstate_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -987,6 +1047,10 @@ void q_finalstate_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_finalstate_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_finalstate_super_is_signal_connected` instead
+///
+#define q_finalstate_qbase_is_signal_connected q_finalstate_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -996,7 +1060,7 @@ bool q_finalstate_is_signal_connected(void* self, void* signal);
 /// @param self QFinalState*
 /// @param signal QMetaMethod*
 ///
-bool q_finalstate_qbase_is_signal_connected(void* self, void* signal);
+bool q_finalstate_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

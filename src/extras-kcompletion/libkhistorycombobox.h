@@ -57,13 +57,17 @@ const QMetaObject* k_historycombobox_meta_object(void* self);
 ///
 void k_historycombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_meta_object` instead
+///
+#define k_historycombobox_qbase_meta_object k_historycombobox_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KHistoryComboBox*
 ///
-const QMetaObject* k_historycombobox_qbase_meta_object(void* self);
+const QMetaObject* k_historycombobox_super_meta_object(void* self);
 
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
@@ -77,12 +81,16 @@ void* k_historycombobox_metacast(void* self, const char* param1);
 ///
 void k_historycombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_metacast` instead
+///
+#define k_historycombobox_qbase_metacast k_historycombobox_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
 ///
-void* k_historycombobox_qbase_metacast(void* self, const char* param1);
+void* k_historycombobox_super_metacast(void* self, const char* param1);
 
 /// @param self KHistoryComboBox*
 /// @param param1 enum QMetaObject__Call
@@ -98,6 +106,10 @@ int32_t k_historycombobox_metacall(void* self, int32_t param1, int param2, void*
 ///
 void k_historycombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_metacall` instead
+///
+#define k_historycombobox_qbase_metacall k_historycombobox_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KHistoryComboBox*
@@ -105,7 +117,7 @@ void k_historycombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_historycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_historycombobox_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -193,6 +205,10 @@ void k_historycombobox_key_press_event(void* self, void* param1);
 ///
 void k_historycombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_key_press_event` instead
+///
+#define k_historycombobox_qbase_key_press_event k_historycombobox_super_key_press_event
+
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -200,7 +216,7 @@ void k_historycombobox_on_key_press_event(void* self, void (*callback)(void*, vo
 /// @param self KHistoryComboBox*
 /// @param param1 QKeyEvent*
 ///
-void k_historycombobox_qbase_key_press_event(void* self, void* param1);
+void k_historycombobox_super_key_press_event(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#wheelEvent)
 ///
@@ -218,6 +234,10 @@ void k_historycombobox_wheel_event(void* self, void* ev);
 ///
 void k_historycombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_wheel_event` instead
+///
+#define k_historycombobox_qbase_wheel_event k_historycombobox_super_wheel_event
+
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -225,7 +245,7 @@ void k_historycombobox_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param self KHistoryComboBox*
 /// @param ev QWheelEvent*
 ///
-void k_historycombobox_qbase_wheel_event(void* self, void* ev);
+void k_historycombobox_super_wheel_event(void* self, void* ev);
 
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
@@ -243,6 +263,10 @@ void k_historycombobox_insert_items(void* self, const char* items[static 1]);
 ///
 void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char**));
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_insert_items` instead
+///
+#define k_historycombobox_qbase_insert_items k_historycombobox_super_insert_items
+
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
 /// Base class method implementation
@@ -250,7 +274,7 @@ void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const
 /// @param self KHistoryComboBox*
 /// @param items const char**
 ///
-void k_historycombobox_qbase_insert_items(void* self, const char* items[static 1]);
+void k_historycombobox_super_insert_items(void* self, const char* items[static 1]);
 
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
@@ -267,13 +291,17 @@ bool k_historycombobox_use_completion(void* self);
 ///
 void k_historycombobox_on_use_completion(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_use_completion` instead
+///
+#define k_historycombobox_qbase_use_completion k_historycombobox_super_use_completion
+
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
 /// Base class method implementation
 ///
 /// @param self KHistoryComboBox*
 ///
-bool k_historycombobox_qbase_use_completion(void* self);
+bool k_historycombobox_super_use_completion(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4425,6 +4453,10 @@ KCompletion* k_historycombobox_completion_object1(void* self, bool handleSignals
 ///
 void k_historycombobox_set_auto_completion(void* self, bool autocomplete);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_auto_completion` instead
+///
+#define k_historycombobox_qbase_set_auto_completion k_historycombobox_super_set_auto_completion
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setAutoCompletion)
@@ -4434,7 +4466,7 @@ void k_historycombobox_set_auto_completion(void* self, bool autocomplete);
 /// @param self KHistoryComboBox*
 /// @param autocomplete bool
 ///
-void k_historycombobox_qbase_set_auto_completion(void* self, bool autocomplete);
+void k_historycombobox_super_set_auto_completion(void* self, bool autocomplete);
 
 /// Inherited from KComboBox
 ///
@@ -4458,6 +4490,10 @@ void k_historycombobox_on_set_auto_completion(void* self, void (*callback)(void*
 ///
 void k_historycombobox_set_line_edit(void* self, void* lineEdit);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_line_edit` instead
+///
+#define k_historycombobox_qbase_set_line_edit k_historycombobox_super_set_line_edit
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setLineEdit)
@@ -4467,7 +4503,7 @@ void k_historycombobox_set_line_edit(void* self, void* lineEdit);
 /// @param self KHistoryComboBox*
 /// @param lineEdit QLineEdit*
 ///
-void k_historycombobox_qbase_set_line_edit(void* self, void* lineEdit);
+void k_historycombobox_super_set_line_edit(void* self, void* lineEdit);
 
 /// Inherited from KComboBox
 ///
@@ -4490,6 +4526,10 @@ void k_historycombobox_on_set_line_edit(void* self, void (*callback)(void*, void
 ///
 QSize* k_historycombobox_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_minimum_size_hint` instead
+///
+#define k_historycombobox_qbase_minimum_size_hint k_historycombobox_super_minimum_size_hint
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#minimumSizeHint)
@@ -4498,7 +4538,7 @@ QSize* k_historycombobox_minimum_size_hint(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-QSize* k_historycombobox_qbase_minimum_size_hint(void* self);
+QSize* k_historycombobox_super_minimum_size_hint(void* self);
 
 /// Inherited from KComboBox
 ///
@@ -4522,6 +4562,10 @@ void k_historycombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_historycombobox_set_completed_text(void* self, const char* completedText);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_completed_text` instead
+///
+#define k_historycombobox_qbase_set_completed_text k_historycombobox_super_set_completed_text
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedText)
@@ -4531,7 +4575,7 @@ void k_historycombobox_set_completed_text(void* self, const char* completedText)
 /// @param self KHistoryComboBox*
 /// @param completedText const char*
 ///
-void k_historycombobox_qbase_set_completed_text(void* self, const char* completedText);
+void k_historycombobox_super_set_completed_text(void* self, const char* completedText);
 
 /// Inherited from KComboBox
 ///
@@ -4556,6 +4600,10 @@ void k_historycombobox_on_set_completed_text(void* self, void (*callback)(void*,
 ///
 void k_historycombobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_completed_items` instead
+///
+#define k_historycombobox_qbase_set_completed_items k_historycombobox_super_set_completed_items
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedItems)
@@ -4566,7 +4614,7 @@ void k_historycombobox_set_completed_items(void* self, const char* items[static 
 /// @param items const char**
 /// @param autoSuggest bool
 ///
-void k_historycombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
+void k_historycombobox_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///
@@ -4590,6 +4638,10 @@ void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*
 ///
 void k_historycombobox_make_completion(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_make_completion` instead
+///
+#define k_historycombobox_qbase_make_completion k_historycombobox_super_make_completion
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#makeCompletion)
@@ -4599,7 +4651,7 @@ void k_historycombobox_make_completion(void* self, const char* param1);
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
 ///
-void k_historycombobox_qbase_make_completion(void* self, const char* param1);
+void k_historycombobox_super_make_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
@@ -4623,6 +4675,10 @@ void k_historycombobox_on_make_completion(void* self, void (*callback)(void*, co
 ///
 void k_historycombobox_set_model(void* self, void* model);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_model` instead
+///
+#define k_historycombobox_qbase_set_model k_historycombobox_super_set_model
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
@@ -4632,7 +4688,7 @@ void k_historycombobox_set_model(void* self, void* model);
 /// @param self KHistoryComboBox*
 /// @param model QAbstractItemModel*
 ///
-void k_historycombobox_qbase_set_model(void* self, void* model);
+void k_historycombobox_super_set_model(void* self, void* model);
 
 /// Inherited from QComboBox
 ///
@@ -4655,6 +4711,10 @@ void k_historycombobox_on_set_model(void* self, void (*callback)(void*, void*));
 ///
 QSize* k_historycombobox_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_size_hint` instead
+///
+#define k_historycombobox_qbase_size_hint k_historycombobox_super_size_hint
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
@@ -4663,7 +4723,7 @@ QSize* k_historycombobox_size_hint(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-QSize* k_historycombobox_qbase_size_hint(void* self);
+QSize* k_historycombobox_super_size_hint(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4686,6 +4746,10 @@ void k_historycombobox_on_size_hint(void* self, QSize* (*callback)());
 ///
 void k_historycombobox_show_popup(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_show_popup` instead
+///
+#define k_historycombobox_qbase_show_popup k_historycombobox_super_show_popup
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
@@ -4694,7 +4758,7 @@ void k_historycombobox_show_popup(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-void k_historycombobox_qbase_show_popup(void* self);
+void k_historycombobox_super_show_popup(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4717,6 +4781,10 @@ void k_historycombobox_on_show_popup(void* self, void (*callback)());
 ///
 void k_historycombobox_hide_popup(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_hide_popup` instead
+///
+#define k_historycombobox_qbase_hide_popup k_historycombobox_super_hide_popup
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
@@ -4725,7 +4793,7 @@ void k_historycombobox_hide_popup(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-void k_historycombobox_qbase_hide_popup(void* self);
+void k_historycombobox_super_hide_popup(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4749,6 +4817,10 @@ void k_historycombobox_on_hide_popup(void* self, void (*callback)());
 ///
 bool k_historycombobox_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_event` instead
+///
+#define k_historycombobox_qbase_event k_historycombobox_super_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
@@ -4758,7 +4830,7 @@ bool k_historycombobox_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QEvent*
 ///
-bool k_historycombobox_qbase_event(void* self, void* event);
+bool k_historycombobox_super_event(void* self, void* event);
 
 /// Inherited from QComboBox
 ///
@@ -4782,6 +4854,10 @@ void k_historycombobox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 QVariant* k_historycombobox_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_input_method_query` instead
+///
+#define k_historycombobox_qbase_input_method_query k_historycombobox_super_input_method_query
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
@@ -4791,7 +4867,7 @@ QVariant* k_historycombobox_input_method_query(void* self, int32_t param1);
 /// @param self KHistoryComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_historycombobox_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_historycombobox_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4815,6 +4891,10 @@ void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 void k_historycombobox_focus_in_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_focus_in_event` instead
+///
+#define k_historycombobox_qbase_focus_in_event k_historycombobox_super_focus_in_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
@@ -4824,7 +4904,7 @@ void k_historycombobox_focus_in_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QFocusEvent*
 ///
-void k_historycombobox_qbase_focus_in_event(void* self, void* e);
+void k_historycombobox_super_focus_in_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4848,6 +4928,10 @@ void k_historycombobox_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 void k_historycombobox_focus_out_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_focus_out_event` instead
+///
+#define k_historycombobox_qbase_focus_out_event k_historycombobox_super_focus_out_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
@@ -4857,7 +4941,7 @@ void k_historycombobox_focus_out_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QFocusEvent*
 ///
-void k_historycombobox_qbase_focus_out_event(void* self, void* e);
+void k_historycombobox_super_focus_out_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4881,6 +4965,10 @@ void k_historycombobox_on_focus_out_event(void* self, void (*callback)(void*, vo
 ///
 void k_historycombobox_change_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_change_event` instead
+///
+#define k_historycombobox_qbase_change_event k_historycombobox_super_change_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
@@ -4890,7 +4978,7 @@ void k_historycombobox_change_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QEvent*
 ///
-void k_historycombobox_qbase_change_event(void* self, void* e);
+void k_historycombobox_super_change_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4914,6 +5002,10 @@ void k_historycombobox_on_change_event(void* self, void (*callback)(void*, void*
 ///
 void k_historycombobox_resize_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_resize_event` instead
+///
+#define k_historycombobox_qbase_resize_event k_historycombobox_super_resize_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
@@ -4923,7 +5015,7 @@ void k_historycombobox_resize_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QResizeEvent*
 ///
-void k_historycombobox_qbase_resize_event(void* self, void* e);
+void k_historycombobox_super_resize_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4947,6 +5039,10 @@ void k_historycombobox_on_resize_event(void* self, void (*callback)(void*, void*
 ///
 void k_historycombobox_paint_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_paint_event` instead
+///
+#define k_historycombobox_qbase_paint_event k_historycombobox_super_paint_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
@@ -4956,7 +5052,7 @@ void k_historycombobox_paint_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QPaintEvent*
 ///
-void k_historycombobox_qbase_paint_event(void* self, void* e);
+void k_historycombobox_super_paint_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4980,6 +5076,10 @@ void k_historycombobox_on_paint_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_show_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_show_event` instead
+///
+#define k_historycombobox_qbase_show_event k_historycombobox_super_show_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
@@ -4989,7 +5089,7 @@ void k_historycombobox_show_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QShowEvent*
 ///
-void k_historycombobox_qbase_show_event(void* self, void* e);
+void k_historycombobox_super_show_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5013,6 +5113,10 @@ void k_historycombobox_on_show_event(void* self, void (*callback)(void*, void*))
 ///
 void k_historycombobox_hide_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_hide_event` instead
+///
+#define k_historycombobox_qbase_hide_event k_historycombobox_super_hide_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
@@ -5022,7 +5126,7 @@ void k_historycombobox_hide_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QHideEvent*
 ///
-void k_historycombobox_qbase_hide_event(void* self, void* e);
+void k_historycombobox_super_hide_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5046,6 +5150,10 @@ void k_historycombobox_on_hide_event(void* self, void (*callback)(void*, void*))
 ///
 void k_historycombobox_mouse_press_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_mouse_press_event` instead
+///
+#define k_historycombobox_qbase_mouse_press_event k_historycombobox_super_mouse_press_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
@@ -5055,7 +5163,7 @@ void k_historycombobox_mouse_press_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QMouseEvent*
 ///
-void k_historycombobox_qbase_mouse_press_event(void* self, void* e);
+void k_historycombobox_super_mouse_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5079,6 +5187,10 @@ void k_historycombobox_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 void k_historycombobox_mouse_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_mouse_release_event` instead
+///
+#define k_historycombobox_qbase_mouse_release_event k_historycombobox_super_mouse_release_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
@@ -5088,7 +5200,7 @@ void k_historycombobox_mouse_release_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QMouseEvent*
 ///
-void k_historycombobox_qbase_mouse_release_event(void* self, void* e);
+void k_historycombobox_super_mouse_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5112,6 +5224,10 @@ void k_historycombobox_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void k_historycombobox_key_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_key_release_event` instead
+///
+#define k_historycombobox_qbase_key_release_event k_historycombobox_super_key_release_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
@@ -5121,7 +5237,7 @@ void k_historycombobox_key_release_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QKeyEvent*
 ///
-void k_historycombobox_qbase_key_release_event(void* self, void* e);
+void k_historycombobox_super_key_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5145,6 +5261,10 @@ void k_historycombobox_on_key_release_event(void* self, void (*callback)(void*, 
 ///
 void k_historycombobox_context_menu_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_context_menu_event` instead
+///
+#define k_historycombobox_qbase_context_menu_event k_historycombobox_super_context_menu_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
@@ -5154,7 +5274,7 @@ void k_historycombobox_context_menu_event(void* self, void* e);
 /// @param self KHistoryComboBox*
 /// @param e QContextMenuEvent*
 ///
-void k_historycombobox_qbase_context_menu_event(void* self, void* e);
+void k_historycombobox_super_context_menu_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5178,6 +5298,10 @@ void k_historycombobox_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 void k_historycombobox_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_input_method_event` instead
+///
+#define k_historycombobox_qbase_input_method_event k_historycombobox_super_input_method_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
@@ -5187,7 +5311,7 @@ void k_historycombobox_input_method_event(void* self, void* param1);
 /// @param self KHistoryComboBox*
 /// @param param1 QInputMethodEvent*
 ///
-void k_historycombobox_qbase_input_method_event(void* self, void* param1);
+void k_historycombobox_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QComboBox
 ///
@@ -5211,6 +5335,10 @@ void k_historycombobox_on_input_method_event(void* self, void (*callback)(void*,
 ///
 void k_historycombobox_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_init_style_option` instead
+///
+#define k_historycombobox_qbase_init_style_option k_historycombobox_super_init_style_option
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
@@ -5220,7 +5348,7 @@ void k_historycombobox_init_style_option(void* self, void* option);
 /// @param self KHistoryComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_historycombobox_qbase_init_style_option(void* self, void* option);
+void k_historycombobox_super_init_style_option(void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -5243,6 +5371,10 @@ void k_historycombobox_on_init_style_option(void* self, void (*callback)(void*, 
 ///
 int32_t k_historycombobox_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_dev_type` instead
+///
+#define k_historycombobox_qbase_dev_type k_historycombobox_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5251,7 +5383,7 @@ int32_t k_historycombobox_dev_type(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-int32_t k_historycombobox_qbase_dev_type(void* self);
+int32_t k_historycombobox_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5275,6 +5407,10 @@ void k_historycombobox_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_historycombobox_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_visible` instead
+///
+#define k_historycombobox_qbase_set_visible k_historycombobox_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5284,7 +5420,7 @@ void k_historycombobox_set_visible(void* self, bool visible);
 /// @param self KHistoryComboBox*
 /// @param visible bool
 ///
-void k_historycombobox_qbase_set_visible(void* self, bool visible);
+void k_historycombobox_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -5308,6 +5444,10 @@ void k_historycombobox_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 int32_t k_historycombobox_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_height_for_width` instead
+///
+#define k_historycombobox_qbase_height_for_width k_historycombobox_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5317,7 +5457,7 @@ int32_t k_historycombobox_height_for_width(void* self, int param1);
 /// @param self KHistoryComboBox*
 /// @param param1 int
 ///
-int32_t k_historycombobox_qbase_height_for_width(void* self, int param1);
+int32_t k_historycombobox_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5340,6 +5480,10 @@ void k_historycombobox_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool k_historycombobox_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_has_height_for_width` instead
+///
+#define k_historycombobox_qbase_has_height_for_width k_historycombobox_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5348,7 +5492,7 @@ bool k_historycombobox_has_height_for_width(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-bool k_historycombobox_qbase_has_height_for_width(void* self);
+bool k_historycombobox_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5371,6 +5515,10 @@ void k_historycombobox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_historycombobox_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_paint_engine` instead
+///
+#define k_historycombobox_qbase_paint_engine k_historycombobox_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5379,7 +5527,7 @@ QPaintEngine* k_historycombobox_paint_engine(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-QPaintEngine* k_historycombobox_qbase_paint_engine(void* self);
+QPaintEngine* k_historycombobox_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5403,6 +5551,10 @@ void k_historycombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_historycombobox_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_mouse_double_click_event` instead
+///
+#define k_historycombobox_qbase_mouse_double_click_event k_historycombobox_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -5412,7 +5564,7 @@ void k_historycombobox_mouse_double_click_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QMouseEvent*
 ///
-void k_historycombobox_qbase_mouse_double_click_event(void* self, void* event);
+void k_historycombobox_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5436,6 +5588,10 @@ void k_historycombobox_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void k_historycombobox_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_mouse_move_event` instead
+///
+#define k_historycombobox_qbase_mouse_move_event k_historycombobox_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -5445,7 +5601,7 @@ void k_historycombobox_mouse_move_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QMouseEvent*
 ///
-void k_historycombobox_qbase_mouse_move_event(void* self, void* event);
+void k_historycombobox_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5469,6 +5625,10 @@ void k_historycombobox_on_mouse_move_event(void* self, void (*callback)(void*, v
 ///
 void k_historycombobox_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_enter_event` instead
+///
+#define k_historycombobox_qbase_enter_event k_historycombobox_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5478,7 +5638,7 @@ void k_historycombobox_enter_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QEnterEvent*
 ///
-void k_historycombobox_qbase_enter_event(void* self, void* event);
+void k_historycombobox_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5502,6 +5662,10 @@ void k_historycombobox_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_leave_event` instead
+///
+#define k_historycombobox_qbase_leave_event k_historycombobox_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5511,7 +5675,7 @@ void k_historycombobox_leave_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QEvent*
 ///
-void k_historycombobox_qbase_leave_event(void* self, void* event);
+void k_historycombobox_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5535,6 +5699,10 @@ void k_historycombobox_on_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_move_event` instead
+///
+#define k_historycombobox_qbase_move_event k_historycombobox_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5544,7 +5712,7 @@ void k_historycombobox_move_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QMoveEvent*
 ///
-void k_historycombobox_qbase_move_event(void* self, void* event);
+void k_historycombobox_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5568,6 +5736,10 @@ void k_historycombobox_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_historycombobox_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_close_event` instead
+///
+#define k_historycombobox_qbase_close_event k_historycombobox_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5577,7 +5749,7 @@ void k_historycombobox_close_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QCloseEvent*
 ///
-void k_historycombobox_qbase_close_event(void* self, void* event);
+void k_historycombobox_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5601,6 +5773,10 @@ void k_historycombobox_on_close_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_tablet_event` instead
+///
+#define k_historycombobox_qbase_tablet_event k_historycombobox_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5610,7 +5786,7 @@ void k_historycombobox_tablet_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QTabletEvent*
 ///
-void k_historycombobox_qbase_tablet_event(void* self, void* event);
+void k_historycombobox_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5634,6 +5810,10 @@ void k_historycombobox_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 void k_historycombobox_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_action_event` instead
+///
+#define k_historycombobox_qbase_action_event k_historycombobox_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5643,7 +5823,7 @@ void k_historycombobox_action_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QActionEvent*
 ///
-void k_historycombobox_qbase_action_event(void* self, void* event);
+void k_historycombobox_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5667,6 +5847,10 @@ void k_historycombobox_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void k_historycombobox_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_drag_enter_event` instead
+///
+#define k_historycombobox_qbase_drag_enter_event k_historycombobox_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -5676,7 +5860,7 @@ void k_historycombobox_drag_enter_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QDragEnterEvent*
 ///
-void k_historycombobox_qbase_drag_enter_event(void* self, void* event);
+void k_historycombobox_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5700,6 +5884,10 @@ void k_historycombobox_on_drag_enter_event(void* self, void (*callback)(void*, v
 ///
 void k_historycombobox_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_drag_move_event` instead
+///
+#define k_historycombobox_qbase_drag_move_event k_historycombobox_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -5709,7 +5897,7 @@ void k_historycombobox_drag_move_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QDragMoveEvent*
 ///
-void k_historycombobox_qbase_drag_move_event(void* self, void* event);
+void k_historycombobox_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5733,6 +5921,10 @@ void k_historycombobox_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 void k_historycombobox_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_drag_leave_event` instead
+///
+#define k_historycombobox_qbase_drag_leave_event k_historycombobox_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5742,7 +5934,7 @@ void k_historycombobox_drag_leave_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QDragLeaveEvent*
 ///
-void k_historycombobox_qbase_drag_leave_event(void* self, void* event);
+void k_historycombobox_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5766,6 +5958,10 @@ void k_historycombobox_on_drag_leave_event(void* self, void (*callback)(void*, v
 ///
 void k_historycombobox_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_drop_event` instead
+///
+#define k_historycombobox_qbase_drop_event k_historycombobox_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5775,7 +5971,7 @@ void k_historycombobox_drop_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QDropEvent*
 ///
-void k_historycombobox_qbase_drop_event(void* self, void* event);
+void k_historycombobox_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5801,6 +5997,10 @@ void k_historycombobox_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 bool k_historycombobox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_native_event` instead
+///
+#define k_historycombobox_qbase_native_event k_historycombobox_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5812,7 +6012,7 @@ bool k_historycombobox_native_event(void* self, char* eventType, void* message, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_historycombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_historycombobox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5836,6 +6036,10 @@ void k_historycombobox_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 int32_t k_historycombobox_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_metric` instead
+///
+#define k_historycombobox_qbase_metric k_historycombobox_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5845,7 +6049,7 @@ int32_t k_historycombobox_metric(void* self, int32_t param1);
 /// @param self KHistoryComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_historycombobox_qbase_metric(void* self, int32_t param1);
+int32_t k_historycombobox_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5869,6 +6073,10 @@ void k_historycombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void k_historycombobox_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_init_painter` instead
+///
+#define k_historycombobox_qbase_init_painter k_historycombobox_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5878,7 +6086,7 @@ void k_historycombobox_init_painter(void* self, void* painter);
 /// @param self KHistoryComboBox*
 /// @param painter QPainter*
 ///
-void k_historycombobox_qbase_init_painter(void* self, void* painter);
+void k_historycombobox_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5902,6 +6110,10 @@ void k_historycombobox_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* k_historycombobox_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_redirected` instead
+///
+#define k_historycombobox_qbase_redirected k_historycombobox_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5911,7 +6123,7 @@ QPaintDevice* k_historycombobox_redirected(void* self, void* offset);
 /// @param self KHistoryComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_historycombobox_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_historycombobox_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5934,6 +6146,10 @@ void k_historycombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 QPainter* k_historycombobox_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_shared_painter` instead
+///
+#define k_historycombobox_qbase_shared_painter k_historycombobox_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5942,7 +6158,7 @@ QPainter* k_historycombobox_shared_painter(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-QPainter* k_historycombobox_qbase_shared_painter(void* self);
+QPainter* k_historycombobox_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5966,6 +6182,10 @@ void k_historycombobox_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 bool k_historycombobox_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_focus_next_prev_child` instead
+///
+#define k_historycombobox_qbase_focus_next_prev_child k_historycombobox_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5975,7 +6195,7 @@ bool k_historycombobox_focus_next_prev_child(void* self, bool next);
 /// @param self KHistoryComboBox*
 /// @param next bool
 ///
-bool k_historycombobox_qbase_focus_next_prev_child(void* self, bool next);
+bool k_historycombobox_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -6000,6 +6220,10 @@ void k_historycombobox_on_focus_next_prev_child(void* self, bool (*callback)(voi
 ///
 bool k_historycombobox_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_event_filter` instead
+///
+#define k_historycombobox_qbase_event_filter k_historycombobox_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -6010,7 +6234,7 @@ bool k_historycombobox_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_historycombobox_qbase_event_filter(void* self, void* watched, void* event);
+bool k_historycombobox_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -6034,6 +6258,10 @@ void k_historycombobox_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void k_historycombobox_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_timer_event` instead
+///
+#define k_historycombobox_qbase_timer_event k_historycombobox_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6043,7 +6271,7 @@ void k_historycombobox_timer_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QTimerEvent*
 ///
-void k_historycombobox_qbase_timer_event(void* self, void* event);
+void k_historycombobox_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6067,6 +6295,10 @@ void k_historycombobox_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_child_event` instead
+///
+#define k_historycombobox_qbase_child_event k_historycombobox_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6076,7 +6308,7 @@ void k_historycombobox_child_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QChildEvent*
 ///
-void k_historycombobox_qbase_child_event(void* self, void* event);
+void k_historycombobox_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6100,6 +6332,10 @@ void k_historycombobox_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_historycombobox_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_custom_event` instead
+///
+#define k_historycombobox_qbase_custom_event k_historycombobox_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6109,7 +6345,7 @@ void k_historycombobox_custom_event(void* self, void* event);
 /// @param self KHistoryComboBox*
 /// @param event QEvent*
 ///
-void k_historycombobox_qbase_custom_event(void* self, void* event);
+void k_historycombobox_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6133,6 +6369,10 @@ void k_historycombobox_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void k_historycombobox_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_connect_notify` instead
+///
+#define k_historycombobox_qbase_connect_notify k_historycombobox_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6142,7 +6382,7 @@ void k_historycombobox_connect_notify(void* self, void* signal);
 /// @param self KHistoryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_historycombobox_qbase_connect_notify(void* self, void* signal);
+void k_historycombobox_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6166,6 +6406,10 @@ void k_historycombobox_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_historycombobox_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_disconnect_notify` instead
+///
+#define k_historycombobox_qbase_disconnect_notify k_historycombobox_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6175,7 +6419,7 @@ void k_historycombobox_disconnect_notify(void* self, void* signal);
 /// @param self KHistoryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_historycombobox_qbase_disconnect_notify(void* self, void* signal);
+void k_historycombobox_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6200,6 +6444,10 @@ void k_historycombobox_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void k_historycombobox_set_completion_object(void* self, void* completionObject, bool handleSignals);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_completion_object` instead
+///
+#define k_historycombobox_qbase_set_completion_object k_historycombobox_super_set_completion_object
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionObject)
@@ -6210,7 +6458,7 @@ void k_historycombobox_set_completion_object(void* self, void* completionObject,
 /// @param completionObject KCompletion*
 /// @param handleSignals bool
 ///
-void k_historycombobox_qbase_set_completion_object(void* self, void* completionObject, bool handleSignals);
+void k_historycombobox_super_set_completion_object(void* self, void* completionObject, bool handleSignals);
 
 /// Inherited from KCompletionBase
 ///
@@ -6234,6 +6482,10 @@ void k_historycombobox_on_set_completion_object(void* self, void (*callback)(voi
 ///
 void k_historycombobox_set_handle_signals(void* self, bool handle);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_handle_signals` instead
+///
+#define k_historycombobox_qbase_set_handle_signals k_historycombobox_super_set_handle_signals
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setHandleSignals)
@@ -6243,7 +6495,7 @@ void k_historycombobox_set_handle_signals(void* self, bool handle);
 /// @param self KHistoryComboBox*
 /// @param handle bool
 ///
-void k_historycombobox_qbase_set_handle_signals(void* self, bool handle);
+void k_historycombobox_super_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
@@ -6267,6 +6519,10 @@ void k_historycombobox_on_set_handle_signals(void* self, void (*callback)(void*,
 ///
 void k_historycombobox_set_completion_mode(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_completion_mode` instead
+///
+#define k_historycombobox_qbase_set_completion_mode k_historycombobox_super_set_completion_mode
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionMode)
@@ -6276,7 +6532,7 @@ void k_historycombobox_set_completion_mode(void* self, int32_t mode);
 /// @param self KHistoryComboBox*
 /// @param mode enum KCompletion__CompletionMode
 ///
-void k_historycombobox_qbase_set_completion_mode(void* self, int32_t mode);
+void k_historycombobox_super_set_completion_mode(void* self, int32_t mode);
 
 /// Inherited from KCompletionBase
 ///
@@ -6301,6 +6557,10 @@ void k_historycombobox_on_set_completion_mode(void* self, void (*callback)(void*
 ///
 void k_historycombobox_virtual_hook(void* self, int id, void* data);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_virtual_hook` instead
+///
+#define k_historycombobox_qbase_virtual_hook k_historycombobox_super_virtual_hook
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#virtual_hook)
@@ -6311,7 +6571,7 @@ void k_historycombobox_virtual_hook(void* self, int id, void* data);
 /// @param id int
 /// @param data void*
 ///
-void k_historycombobox_qbase_virtual_hook(void* self, int id, void* data);
+void k_historycombobox_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
@@ -6334,6 +6594,10 @@ void k_historycombobox_on_virtual_hook(void* self, void (*callback)(void*, int, 
 ///
 void k_historycombobox_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_update_micro_focus` instead
+///
+#define k_historycombobox_qbase_update_micro_focus k_historycombobox_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6342,7 +6606,7 @@ void k_historycombobox_update_micro_focus(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-void k_historycombobox_qbase_update_micro_focus(void* self);
+void k_historycombobox_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6365,6 +6629,10 @@ void k_historycombobox_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_historycombobox_create(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_create` instead
+///
+#define k_historycombobox_qbase_create k_historycombobox_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -6373,7 +6641,7 @@ void k_historycombobox_create(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-void k_historycombobox_qbase_create(void* self);
+void k_historycombobox_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6396,6 +6664,10 @@ void k_historycombobox_on_create(void* self, void (*callback)());
 ///
 void k_historycombobox_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_destroy` instead
+///
+#define k_historycombobox_qbase_destroy k_historycombobox_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6404,7 +6676,7 @@ void k_historycombobox_destroy(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-void k_historycombobox_qbase_destroy(void* self);
+void k_historycombobox_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6427,6 +6699,10 @@ void k_historycombobox_on_destroy(void* self, void (*callback)());
 ///
 bool k_historycombobox_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_focus_next_child` instead
+///
+#define k_historycombobox_qbase_focus_next_child k_historycombobox_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -6435,7 +6711,7 @@ bool k_historycombobox_focus_next_child(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-bool k_historycombobox_qbase_focus_next_child(void* self);
+bool k_historycombobox_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6458,6 +6734,10 @@ void k_historycombobox_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_historycombobox_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_focus_previous_child` instead
+///
+#define k_historycombobox_qbase_focus_previous_child k_historycombobox_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6466,7 +6746,7 @@ bool k_historycombobox_focus_previous_child(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-bool k_historycombobox_qbase_focus_previous_child(void* self);
+bool k_historycombobox_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6489,6 +6769,10 @@ void k_historycombobox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_historycombobox_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_sender` instead
+///
+#define k_historycombobox_qbase_sender k_historycombobox_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6497,7 +6781,7 @@ QObject* k_historycombobox_sender(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-QObject* k_historycombobox_qbase_sender(void* self);
+QObject* k_historycombobox_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6520,6 +6804,10 @@ void k_historycombobox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_historycombobox_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_sender_signal_index` instead
+///
+#define k_historycombobox_qbase_sender_signal_index k_historycombobox_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6528,7 +6816,7 @@ int32_t k_historycombobox_sender_signal_index(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-int32_t k_historycombobox_qbase_sender_signal_index(void* self);
+int32_t k_historycombobox_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6552,6 +6840,10 @@ void k_historycombobox_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_historycombobox_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_receivers` instead
+///
+#define k_historycombobox_qbase_receivers k_historycombobox_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6561,7 +6853,7 @@ int32_t k_historycombobox_receivers(void* self, const char* signal);
 /// @param self KHistoryComboBox*
 /// @param signal const char*
 ///
-int32_t k_historycombobox_qbase_receivers(void* self, const char* signal);
+int32_t k_historycombobox_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6585,6 +6877,10 @@ void k_historycombobox_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool k_historycombobox_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_is_signal_connected` instead
+///
+#define k_historycombobox_qbase_is_signal_connected k_historycombobox_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6594,7 +6890,7 @@ bool k_historycombobox_is_signal_connected(void* self, void* signal);
 /// @param self KHistoryComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_historycombobox_qbase_is_signal_connected(void* self, void* signal);
+bool k_historycombobox_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6619,6 +6915,10 @@ void k_historycombobox_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 double k_historycombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_get_decoded_metric_f` instead
+///
+#define k_historycombobox_qbase_get_decoded_metric_f k_historycombobox_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -6629,7 +6929,7 @@ double k_historycombobox_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_historycombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_historycombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6668,6 +6968,10 @@ void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 libqt_map k_historycombobox_key_binding_map(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_key_binding_map` instead
+///
+#define k_historycombobox_qbase_key_binding_map k_historycombobox_super_key_binding_map
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
@@ -6692,7 +6996,7 @@ libqt_map k_historycombobox_key_binding_map(void* self);
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_historycombobox_qbase_key_binding_map(void* self);
+libqt_map k_historycombobox_super_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6716,6 +7020,10 @@ void k_historycombobox_on_key_binding_map(void* self, libqt_map (*callback)());
 ///
 void k_historycombobox_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_key_binding_map` instead
+///
+#define k_historycombobox_qbase_set_key_binding_map k_historycombobox_super_set_key_binding_map
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
@@ -6725,7 +7033,7 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// @param self KHistoryComboBox*
 /// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
-void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
+void k_historycombobox_super_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6749,6 +7057,10 @@ void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*
 ///
 void k_historycombobox_set_delegate(void* self, void* delegate);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_set_delegate` instead
+///
+#define k_historycombobox_qbase_set_delegate k_historycombobox_super_set_delegate
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
@@ -6758,7 +7070,7 @@ void k_historycombobox_set_delegate(void* self, void* delegate);
 /// @param self KHistoryComboBox*
 /// @param delegate KCompletionBase*
 ///
-void k_historycombobox_qbase_set_delegate(void* self, void* delegate);
+void k_historycombobox_super_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
@@ -6781,6 +7093,10 @@ void k_historycombobox_on_set_delegate(void* self, void (*callback)(void*, void*
 ///
 KCompletionBase* k_historycombobox_delegate(void* self);
 
+/// @warning DEPRECATED: Use `k_historycombobox_super_delegate` instead
+///
+#define k_historycombobox_qbase_delegate k_historycombobox_super_delegate
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
@@ -6789,7 +7105,7 @@ KCompletionBase* k_historycombobox_delegate(void* self);
 ///
 /// @param self KHistoryComboBox*
 ///
-KCompletionBase* k_historycombobox_qbase_delegate(void* self);
+KCompletionBase* k_historycombobox_super_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///

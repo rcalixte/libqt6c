@@ -50,8 +50,8 @@ void k_texteditor__command_on_meta_object(void* self, const QMetaObject* (*callb
     KTextEditor__Command_OnMetaObject((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_texteditor__command_qbase_meta_object(void* self) {
-    return KTextEditor__Command_QBaseMetaObject((KTextEditor__Command*)self);
+const QMetaObject* k_texteditor__command_super_meta_object(void* self) {
+    return KTextEditor__Command_SuperMetaObject((KTextEditor__Command*)self);
 }
 
 void* k_texteditor__command_metacast(void* self, const char* param1) {
@@ -62,8 +62,8 @@ void k_texteditor__command_on_metacast(void* self, void* (*callback)(void*, cons
     KTextEditor__Command_OnMetacast((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-void* k_texteditor__command_qbase_metacast(void* self, const char* param1) {
-    return KTextEditor__Command_QBaseMetacast((KTextEditor__Command*)self, param1);
+void* k_texteditor__command_super_metacast(void* self, const char* param1) {
+    return KTextEditor__Command_SuperMetacast((KTextEditor__Command*)self, param1);
 }
 
 int32_t k_texteditor__command_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -74,8 +74,8 @@ void k_texteditor__command_on_metacall(void* self, int32_t (*callback)(void*, in
     KTextEditor__Command_OnMetacall((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__command_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTextEditor__Command_QBaseMetacall((KTextEditor__Command*)self, param1, param2, param3);
+int32_t k_texteditor__command_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTextEditor__Command_SuperMetacall((KTextEditor__Command*)self, param1, param2, param3);
 }
 
 const char* k_texteditor__command_tr(const char* s) {
@@ -112,8 +112,8 @@ void k_texteditor__command_on_supports_range(void* self, bool (*callback)(void*,
     KTextEditor__Command_OnSupportsRange((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__command_qbase_supports_range(void* self, const char* cmd) {
-    return KTextEditor__Command_QBaseSupportsRange((KTextEditor__Command*)self, qstring(cmd));
+bool k_texteditor__command_super_supports_range(void* self, const char* cmd) {
+    return KTextEditor__Command_SuperSupportsRange((KTextEditor__Command*)self, qstring(cmd));
 }
 
 bool k_texteditor__command_exec(void* self, void* view, const char* cmd, const char* msg, void* range) {
@@ -124,8 +124,8 @@ void k_texteditor__command_on_exec(void* self, bool (*callback)(void*, void*, co
     KTextEditor__Command_OnExec((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__command_qbase_exec(void* self, void* view, const char* cmd, const char* msg, void* range) {
-    return KTextEditor__Command_QBaseExec((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmd), qstring(msg), (KTextEditor__Range*)range);
+bool k_texteditor__command_super_exec(void* self, void* view, const char* cmd, const char* msg, void* range) {
+    return KTextEditor__Command_SuperExec((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmd), qstring(msg), (KTextEditor__Range*)range);
 }
 
 bool k_texteditor__command_help(void* self, void* view, const char* cmd, const char* msg) {
@@ -136,8 +136,8 @@ void k_texteditor__command_on_help(void* self, bool (*callback)(void*, void*, co
     KTextEditor__Command_OnHelp((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__command_qbase_help(void* self, void* view, const char* cmd, const char* msg) {
-    return KTextEditor__Command_QBaseHelp((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmd), qstring(msg));
+bool k_texteditor__command_super_help(void* self, void* view, const char* cmd, const char* msg) {
+    return KTextEditor__Command_SuperHelp((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmd), qstring(msg));
 }
 
 KCompletion* k_texteditor__command_completion_object(void* self, void* view, const char* cmdname) {
@@ -148,8 +148,8 @@ void k_texteditor__command_on_completion_object(void* self, KCompletion* (*callb
     KTextEditor__Command_OnCompletionObject((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-KCompletion* k_texteditor__command_qbase_completion_object(void* self, void* view, const char* cmdname) {
-    return KTextEditor__Command_QBaseCompletionObject((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmdname));
+KCompletion* k_texteditor__command_super_completion_object(void* self, void* view, const char* cmdname) {
+    return KTextEditor__Command_SuperCompletionObject((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(cmdname));
 }
 
 bool k_texteditor__command_wants_to_process_text(void* self, const char* cmdname) {
@@ -160,8 +160,8 @@ void k_texteditor__command_on_wants_to_process_text(void* self, bool (*callback)
     KTextEditor__Command_OnWantsToProcessText((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__command_qbase_wants_to_process_text(void* self, const char* cmdname) {
-    return KTextEditor__Command_QBaseWantsToProcessText((KTextEditor__Command*)self, qstring(cmdname));
+bool k_texteditor__command_super_wants_to_process_text(void* self, const char* cmdname) {
+    return KTextEditor__Command_SuperWantsToProcessText((KTextEditor__Command*)self, qstring(cmdname));
 }
 
 void k_texteditor__command_process_text(void* self, void* view, const char* text) {
@@ -172,8 +172,8 @@ void k_texteditor__command_on_process_text(void* self, void (*callback)(void*, v
     KTextEditor__Command_OnProcessText((KTextEditor__Command*)self, (intptr_t)callback);
 }
 
-void k_texteditor__command_qbase_process_text(void* self, void* view, const char* text) {
-    KTextEditor__Command_QBaseProcessText((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(text));
+void k_texteditor__command_super_process_text(void* self, void* view, const char* text) {
+    KTextEditor__Command_SuperProcessText((KTextEditor__Command*)self, (KTextEditor__View*)view, qstring(text));
 }
 
 const char* k_texteditor__command_tr2(const char* s, const char* c) {
@@ -405,8 +405,8 @@ bool k_texteditor__command_event(void* self, void* event) {
     return KTextEditor__Command_Event((KTextEditor__Command*)self, (QEvent*)event);
 }
 
-bool k_texteditor__command_qbase_event(void* self, void* event) {
-    return KTextEditor__Command_QBaseEvent((KTextEditor__Command*)self, (QEvent*)event);
+bool k_texteditor__command_super_event(void* self, void* event) {
+    return KTextEditor__Command_SuperEvent((KTextEditor__Command*)self, (QEvent*)event);
 }
 
 void k_texteditor__command_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -417,8 +417,8 @@ bool k_texteditor__command_event_filter(void* self, void* watched, void* event) 
     return KTextEditor__Command_EventFilter((KTextEditor__Command*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_texteditor__command_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTextEditor__Command_QBaseEventFilter((KTextEditor__Command*)self, (QObject*)watched, (QEvent*)event);
+bool k_texteditor__command_super_event_filter(void* self, void* watched, void* event) {
+    return KTextEditor__Command_SuperEventFilter((KTextEditor__Command*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_texteditor__command_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -429,8 +429,8 @@ void k_texteditor__command_timer_event(void* self, void* event) {
     KTextEditor__Command_TimerEvent((KTextEditor__Command*)self, (QTimerEvent*)event);
 }
 
-void k_texteditor__command_qbase_timer_event(void* self, void* event) {
-    KTextEditor__Command_QBaseTimerEvent((KTextEditor__Command*)self, (QTimerEvent*)event);
+void k_texteditor__command_super_timer_event(void* self, void* event) {
+    KTextEditor__Command_SuperTimerEvent((KTextEditor__Command*)self, (QTimerEvent*)event);
 }
 
 void k_texteditor__command_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -441,8 +441,8 @@ void k_texteditor__command_child_event(void* self, void* event) {
     KTextEditor__Command_ChildEvent((KTextEditor__Command*)self, (QChildEvent*)event);
 }
 
-void k_texteditor__command_qbase_child_event(void* self, void* event) {
-    KTextEditor__Command_QBaseChildEvent((KTextEditor__Command*)self, (QChildEvent*)event);
+void k_texteditor__command_super_child_event(void* self, void* event) {
+    KTextEditor__Command_SuperChildEvent((KTextEditor__Command*)self, (QChildEvent*)event);
 }
 
 void k_texteditor__command_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -453,8 +453,8 @@ void k_texteditor__command_custom_event(void* self, void* event) {
     KTextEditor__Command_CustomEvent((KTextEditor__Command*)self, (QEvent*)event);
 }
 
-void k_texteditor__command_qbase_custom_event(void* self, void* event) {
-    KTextEditor__Command_QBaseCustomEvent((KTextEditor__Command*)self, (QEvent*)event);
+void k_texteditor__command_super_custom_event(void* self, void* event) {
+    KTextEditor__Command_SuperCustomEvent((KTextEditor__Command*)self, (QEvent*)event);
 }
 
 void k_texteditor__command_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -465,8 +465,8 @@ void k_texteditor__command_connect_notify(void* self, void* signal) {
     KTextEditor__Command_ConnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__command_qbase_connect_notify(void* self, void* signal) {
-    KTextEditor__Command_QBaseConnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
+void k_texteditor__command_super_connect_notify(void* self, void* signal) {
+    KTextEditor__Command_SuperConnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__command_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void k_texteditor__command_disconnect_notify(void* self, void* signal) {
     KTextEditor__Command_DisconnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__command_qbase_disconnect_notify(void* self, void* signal) {
-    KTextEditor__Command_QBaseDisconnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
+void k_texteditor__command_super_disconnect_notify(void* self, void* signal) {
+    KTextEditor__Command_SuperDisconnectNotify((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__command_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -489,8 +489,8 @@ QObject* k_texteditor__command_sender(void* self) {
     return KTextEditor__Command_Sender((KTextEditor__Command*)self);
 }
 
-QObject* k_texteditor__command_qbase_sender(void* self) {
-    return KTextEditor__Command_QBaseSender((KTextEditor__Command*)self);
+QObject* k_texteditor__command_super_sender(void* self) {
+    return KTextEditor__Command_SuperSender((KTextEditor__Command*)self);
 }
 
 void k_texteditor__command_on_sender(void* self, QObject* (*callback)()) {
@@ -501,8 +501,8 @@ int32_t k_texteditor__command_sender_signal_index(void* self) {
     return KTextEditor__Command_SenderSignalIndex((KTextEditor__Command*)self);
 }
 
-int32_t k_texteditor__command_qbase_sender_signal_index(void* self) {
-    return KTextEditor__Command_QBaseSenderSignalIndex((KTextEditor__Command*)self);
+int32_t k_texteditor__command_super_sender_signal_index(void* self) {
+    return KTextEditor__Command_SuperSenderSignalIndex((KTextEditor__Command*)self);
 }
 
 void k_texteditor__command_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -513,8 +513,8 @@ int32_t k_texteditor__command_receivers(void* self, const char* signal) {
     return KTextEditor__Command_Receivers((KTextEditor__Command*)self, signal);
 }
 
-int32_t k_texteditor__command_qbase_receivers(void* self, const char* signal) {
-    return KTextEditor__Command_QBaseReceivers((KTextEditor__Command*)self, signal);
+int32_t k_texteditor__command_super_receivers(void* self, const char* signal) {
+    return KTextEditor__Command_SuperReceivers((KTextEditor__Command*)self, signal);
 }
 
 void k_texteditor__command_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -525,8 +525,8 @@ bool k_texteditor__command_is_signal_connected(void* self, void* signal) {
     return KTextEditor__Command_IsSignalConnected((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
-bool k_texteditor__command_qbase_is_signal_connected(void* self, void* signal) {
-    return KTextEditor__Command_QBaseIsSignalConnected((KTextEditor__Command*)self, (QMetaMethod*)signal);
+bool k_texteditor__command_super_is_signal_connected(void* self, void* signal) {
+    return KTextEditor__Command_SuperIsSignalConnected((KTextEditor__Command*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__command_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

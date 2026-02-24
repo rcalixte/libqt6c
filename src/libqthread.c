@@ -23,8 +23,8 @@ void q_thread_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QThread_OnMetaObject((QThread*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_thread_qbase_meta_object(void* self) {
-    return QThread_QBaseMetaObject((QThread*)self);
+const QMetaObject* q_thread_super_meta_object(void* self) {
+    return QThread_SuperMetaObject((QThread*)self);
 }
 
 void* q_thread_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_thread_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QThread_OnMetacast((QThread*)self, (intptr_t)callback);
 }
 
-void* q_thread_qbase_metacast(void* self, const char* param1) {
-    return QThread_QBaseMetacast((QThread*)self, param1);
+void* q_thread_super_metacast(void* self, const char* param1) {
+    return QThread_SuperMetacast((QThread*)self, param1);
 }
 
 int32_t q_thread_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QThread_OnMetacall((QThread*)self, (intptr_t)callback);
 }
 
-int32_t q_thread_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QThread_QBaseMetacall((QThread*)self, param1, param2, param3);
+int32_t q_thread_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QThread_SuperMetacall((QThread*)self, param1, param2, param3);
 }
 
 const char* q_thread_tr(const char* s) {
@@ -126,8 +126,8 @@ void q_thread_on_event(void* self, bool (*callback)(void*, void*)) {
     QThread_OnEvent((QThread*)self, (intptr_t)callback);
 }
 
-bool q_thread_qbase_event(void* self, void* event) {
-    return QThread_QBaseEvent((QThread*)self, (QEvent*)event);
+bool q_thread_super_event(void* self, void* event) {
+    return QThread_SuperEvent((QThread*)self, (QEvent*)event);
 }
 
 int32_t q_thread_loop_level(void* self) {
@@ -186,8 +186,8 @@ void q_thread_on_run(void* self, void (*callback)()) {
     QThread_OnRun((QThread*)self, (intptr_t)callback);
 }
 
-void q_thread_qbase_run(void* self) {
-    QThread_QBaseRun((QThread*)self);
+void q_thread_super_run(void* self) {
+    QThread_SuperRun((QThread*)self);
 }
 
 int32_t q_thread_exec(void* self) {
@@ -198,8 +198,8 @@ void q_thread_on_exec(void* self, int32_t (*callback)()) {
     QThread_OnExec((QThread*)self, (intptr_t)callback);
 }
 
-int32_t q_thread_qbase_exec(void* self) {
-    return QThread_QBaseExec((QThread*)self);
+int32_t q_thread_super_exec(void* self) {
+    return QThread_SuperExec((QThread*)self);
 }
 
 const char* q_thread_tr2(const char* s, const char* c) {
@@ -443,8 +443,8 @@ bool q_thread_event_filter(void* self, void* watched, void* event) {
     return QThread_EventFilter((QThread*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_thread_qbase_event_filter(void* self, void* watched, void* event) {
-    return QThread_QBaseEventFilter((QThread*)self, (QObject*)watched, (QEvent*)event);
+bool q_thread_super_event_filter(void* self, void* watched, void* event) {
+    return QThread_SuperEventFilter((QThread*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_thread_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -455,8 +455,8 @@ void q_thread_timer_event(void* self, void* event) {
     QThread_TimerEvent((QThread*)self, (QTimerEvent*)event);
 }
 
-void q_thread_qbase_timer_event(void* self, void* event) {
-    QThread_QBaseTimerEvent((QThread*)self, (QTimerEvent*)event);
+void q_thread_super_timer_event(void* self, void* event) {
+    QThread_SuperTimerEvent((QThread*)self, (QTimerEvent*)event);
 }
 
 void q_thread_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_thread_child_event(void* self, void* event) {
     QThread_ChildEvent((QThread*)self, (QChildEvent*)event);
 }
 
-void q_thread_qbase_child_event(void* self, void* event) {
-    QThread_QBaseChildEvent((QThread*)self, (QChildEvent*)event);
+void q_thread_super_child_event(void* self, void* event) {
+    QThread_SuperChildEvent((QThread*)self, (QChildEvent*)event);
 }
 
 void q_thread_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_thread_custom_event(void* self, void* event) {
     QThread_CustomEvent((QThread*)self, (QEvent*)event);
 }
 
-void q_thread_qbase_custom_event(void* self, void* event) {
-    QThread_QBaseCustomEvent((QThread*)self, (QEvent*)event);
+void q_thread_super_custom_event(void* self, void* event) {
+    QThread_SuperCustomEvent((QThread*)self, (QEvent*)event);
 }
 
 void q_thread_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_thread_connect_notify(void* self, void* signal) {
     QThread_ConnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
-void q_thread_qbase_connect_notify(void* self, void* signal) {
-    QThread_QBaseConnectNotify((QThread*)self, (QMetaMethod*)signal);
+void q_thread_super_connect_notify(void* self, void* signal) {
+    QThread_SuperConnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
 void q_thread_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_thread_disconnect_notify(void* self, void* signal) {
     QThread_DisconnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
-void q_thread_qbase_disconnect_notify(void* self, void* signal) {
-    QThread_QBaseDisconnectNotify((QThread*)self, (QMetaMethod*)signal);
+void q_thread_super_disconnect_notify(void* self, void* signal) {
+    QThread_SuperDisconnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
 void q_thread_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ QObject* q_thread_sender(void* self) {
     return QThread_Sender((QThread*)self);
 }
 
-QObject* q_thread_qbase_sender(void* self) {
-    return QThread_QBaseSender((QThread*)self);
+QObject* q_thread_super_sender(void* self) {
+    return QThread_SuperSender((QThread*)self);
 }
 
 void q_thread_on_sender(void* self, QObject* (*callback)()) {
@@ -527,8 +527,8 @@ int32_t q_thread_sender_signal_index(void* self) {
     return QThread_SenderSignalIndex((QThread*)self);
 }
 
-int32_t q_thread_qbase_sender_signal_index(void* self) {
-    return QThread_QBaseSenderSignalIndex((QThread*)self);
+int32_t q_thread_super_sender_signal_index(void* self) {
+    return QThread_SuperSenderSignalIndex((QThread*)self);
 }
 
 void q_thread_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_thread_receivers(void* self, const char* signal) {
     return QThread_Receivers((QThread*)self, signal);
 }
 
-int32_t q_thread_qbase_receivers(void* self, const char* signal) {
-    return QThread_QBaseReceivers((QThread*)self, signal);
+int32_t q_thread_super_receivers(void* self, const char* signal) {
+    return QThread_SuperReceivers((QThread*)self, signal);
 }
 
 void q_thread_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -551,8 +551,8 @@ bool q_thread_is_signal_connected(void* self, void* signal) {
     return QThread_IsSignalConnected((QThread*)self, (QMetaMethod*)signal);
 }
 
-bool q_thread_qbase_is_signal_connected(void* self, void* signal) {
-    return QThread_QBaseIsSignalConnected((QThread*)self, (QMetaMethod*)signal);
+bool q_thread_super_is_signal_connected(void* self, void* signal) {
+    return QThread_SuperIsSignalConnected((QThread*)self, (QMetaMethod*)signal);
 }
 
 void q_thread_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

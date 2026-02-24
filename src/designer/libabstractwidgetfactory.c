@@ -24,8 +24,8 @@ void q_designerwidgetfactoryinterface_on_meta_object(void* self, const QMetaObje
     QDesignerWidgetFactoryInterface_OnMetaObject((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerwidgetfactoryinterface_qbase_meta_object(void* self) {
-    return QDesignerWidgetFactoryInterface_QBaseMetaObject((QDesignerWidgetFactoryInterface*)self);
+const QMetaObject* q_designerwidgetfactoryinterface_super_meta_object(void* self) {
+    return QDesignerWidgetFactoryInterface_SuperMetaObject((QDesignerWidgetFactoryInterface*)self);
 }
 
 void* q_designerwidgetfactoryinterface_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_designerwidgetfactoryinterface_on_metacast(void* self, void* (*callback)(
     QDesignerWidgetFactoryInterface_OnMetacast((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerwidgetfactoryinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerWidgetFactoryInterface_QBaseMetacast((QDesignerWidgetFactoryInterface*)self, param1);
+void* q_designerwidgetfactoryinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerWidgetFactoryInterface_SuperMetacast((QDesignerWidgetFactoryInterface*)self, param1);
 }
 
 int32_t q_designerwidgetfactoryinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_designerwidgetfactoryinterface_on_metacall(void* self, int32_t (*callback
     QDesignerWidgetFactoryInterface_OnMetacall((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerwidgetfactoryinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerWidgetFactoryInterface_QBaseMetacall((QDesignerWidgetFactoryInterface*)self, param1, param2, param3);
+int32_t q_designerwidgetfactoryinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerWidgetFactoryInterface_SuperMetacall((QDesignerWidgetFactoryInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerwidgetfactoryinterface_tr(const char* s) {
@@ -67,8 +67,8 @@ void q_designerwidgetfactoryinterface_on_core(void* self, QDesignerFormEditorInt
     QDesignerWidgetFactoryInterface_OnCore((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designerwidgetfactoryinterface_qbase_core(void* self) {
-    return QDesignerWidgetFactoryInterface_QBaseCore((QDesignerWidgetFactoryInterface*)self);
+QDesignerFormEditorInterface* q_designerwidgetfactoryinterface_super_core(void* self) {
+    return QDesignerWidgetFactoryInterface_SuperCore((QDesignerWidgetFactoryInterface*)self);
 }
 
 QWidget* q_designerwidgetfactoryinterface_container_of_widget(void* self, void* w) {
@@ -79,8 +79,8 @@ void q_designerwidgetfactoryinterface_on_container_of_widget(void* self, QWidget
     QDesignerWidgetFactoryInterface_OnContainerOfWidget((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-QWidget* q_designerwidgetfactoryinterface_qbase_container_of_widget(void* self, void* w) {
-    return QDesignerWidgetFactoryInterface_QBaseContainerOfWidget((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
+QWidget* q_designerwidgetfactoryinterface_super_container_of_widget(void* self, void* w) {
+    return QDesignerWidgetFactoryInterface_SuperContainerOfWidget((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
 }
 
 QWidget* q_designerwidgetfactoryinterface_widget_of_container(void* self, void* w) {
@@ -91,8 +91,8 @@ void q_designerwidgetfactoryinterface_on_widget_of_container(void* self, QWidget
     QDesignerWidgetFactoryInterface_OnWidgetOfContainer((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-QWidget* q_designerwidgetfactoryinterface_qbase_widget_of_container(void* self, void* w) {
-    return QDesignerWidgetFactoryInterface_QBaseWidgetOfContainer((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
+QWidget* q_designerwidgetfactoryinterface_super_widget_of_container(void* self, void* w) {
+    return QDesignerWidgetFactoryInterface_SuperWidgetOfContainer((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
 }
 
 QWidget* q_designerwidgetfactoryinterface_create_widget(void* self, const char* name, void* parentWidget) {
@@ -103,8 +103,8 @@ void q_designerwidgetfactoryinterface_on_create_widget(void* self, QWidget* (*ca
     QDesignerWidgetFactoryInterface_OnCreateWidget((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-QWidget* q_designerwidgetfactoryinterface_qbase_create_widget(void* self, const char* name, void* parentWidget) {
-    return QDesignerWidgetFactoryInterface_QBaseCreateWidget((QDesignerWidgetFactoryInterface*)self, qstring(name), (QWidget*)parentWidget);
+QWidget* q_designerwidgetfactoryinterface_super_create_widget(void* self, const char* name, void* parentWidget) {
+    return QDesignerWidgetFactoryInterface_SuperCreateWidget((QDesignerWidgetFactoryInterface*)self, qstring(name), (QWidget*)parentWidget);
 }
 
 QLayout* q_designerwidgetfactoryinterface_create_layout(void* self, void* widget, void* layout, int type) {
@@ -115,8 +115,8 @@ void q_designerwidgetfactoryinterface_on_create_layout(void* self, QLayout* (*ca
     QDesignerWidgetFactoryInterface_OnCreateLayout((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-QLayout* q_designerwidgetfactoryinterface_qbase_create_layout(void* self, void* widget, void* layout, int type) {
-    return QDesignerWidgetFactoryInterface_QBaseCreateLayout((QDesignerWidgetFactoryInterface*)self, (QWidget*)widget, (QLayout*)layout, type);
+QLayout* q_designerwidgetfactoryinterface_super_create_layout(void* self, void* widget, void* layout, int type) {
+    return QDesignerWidgetFactoryInterface_SuperCreateLayout((QDesignerWidgetFactoryInterface*)self, (QWidget*)widget, (QLayout*)layout, type);
 }
 
 bool q_designerwidgetfactoryinterface_is_passive_interactor(void* self, void* widget) {
@@ -127,8 +127,8 @@ void q_designerwidgetfactoryinterface_on_is_passive_interactor(void* self, bool 
     QDesignerWidgetFactoryInterface_OnIsPassiveInteractor((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerwidgetfactoryinterface_qbase_is_passive_interactor(void* self, void* widget) {
-    return QDesignerWidgetFactoryInterface_QBaseIsPassiveInteractor((QDesignerWidgetFactoryInterface*)self, (QWidget*)widget);
+bool q_designerwidgetfactoryinterface_super_is_passive_interactor(void* self, void* widget) {
+    return QDesignerWidgetFactoryInterface_SuperIsPassiveInteractor((QDesignerWidgetFactoryInterface*)self, (QWidget*)widget);
 }
 
 void q_designerwidgetfactoryinterface_initialize(void* self, void* object) {
@@ -139,8 +139,8 @@ void q_designerwidgetfactoryinterface_on_initialize(void* self, void (*callback)
     QDesignerWidgetFactoryInterface_OnInitialize((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetfactoryinterface_qbase_initialize(void* self, void* object) {
-    QDesignerWidgetFactoryInterface_QBaseInitialize((QDesignerWidgetFactoryInterface*)self, (QObject*)object);
+void q_designerwidgetfactoryinterface_super_initialize(void* self, void* object) {
+    QDesignerWidgetFactoryInterface_SuperInitialize((QDesignerWidgetFactoryInterface*)self, (QObject*)object);
 }
 
 const char* q_designerwidgetfactoryinterface_tr2(const char* s, const char* c) {
@@ -372,8 +372,8 @@ bool q_designerwidgetfactoryinterface_event(void* self, void* event) {
     return QDesignerWidgetFactoryInterface_Event((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
 }
 
-bool q_designerwidgetfactoryinterface_qbase_event(void* self, void* event) {
-    return QDesignerWidgetFactoryInterface_QBaseEvent((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
+bool q_designerwidgetfactoryinterface_super_event(void* self, void* event) {
+    return QDesignerWidgetFactoryInterface_SuperEvent((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
 }
 
 void q_designerwidgetfactoryinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -384,8 +384,8 @@ bool q_designerwidgetfactoryinterface_event_filter(void* self, void* watched, vo
     return QDesignerWidgetFactoryInterface_EventFilter((QDesignerWidgetFactoryInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerwidgetfactoryinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerWidgetFactoryInterface_QBaseEventFilter((QDesignerWidgetFactoryInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerwidgetfactoryinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerWidgetFactoryInterface_SuperEventFilter((QDesignerWidgetFactoryInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerwidgetfactoryinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -396,8 +396,8 @@ void q_designerwidgetfactoryinterface_timer_event(void* self, void* event) {
     QDesignerWidgetFactoryInterface_TimerEvent((QDesignerWidgetFactoryInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerwidgetfactoryinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerWidgetFactoryInterface_QBaseTimerEvent((QDesignerWidgetFactoryInterface*)self, (QTimerEvent*)event);
+void q_designerwidgetfactoryinterface_super_timer_event(void* self, void* event) {
+    QDesignerWidgetFactoryInterface_SuperTimerEvent((QDesignerWidgetFactoryInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerwidgetfactoryinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -408,8 +408,8 @@ void q_designerwidgetfactoryinterface_child_event(void* self, void* event) {
     QDesignerWidgetFactoryInterface_ChildEvent((QDesignerWidgetFactoryInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerwidgetfactoryinterface_qbase_child_event(void* self, void* event) {
-    QDesignerWidgetFactoryInterface_QBaseChildEvent((QDesignerWidgetFactoryInterface*)self, (QChildEvent*)event);
+void q_designerwidgetfactoryinterface_super_child_event(void* self, void* event) {
+    QDesignerWidgetFactoryInterface_SuperChildEvent((QDesignerWidgetFactoryInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerwidgetfactoryinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void q_designerwidgetfactoryinterface_custom_event(void* self, void* event) {
     QDesignerWidgetFactoryInterface_CustomEvent((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
 }
 
-void q_designerwidgetfactoryinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerWidgetFactoryInterface_QBaseCustomEvent((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
+void q_designerwidgetfactoryinterface_super_custom_event(void* self, void* event) {
+    QDesignerWidgetFactoryInterface_SuperCustomEvent((QDesignerWidgetFactoryInterface*)self, (QEvent*)event);
 }
 
 void q_designerwidgetfactoryinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void q_designerwidgetfactoryinterface_connect_notify(void* self, void* signal) {
     QDesignerWidgetFactoryInterface_ConnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetfactoryinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerWidgetFactoryInterface_QBaseConnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
+void q_designerwidgetfactoryinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerWidgetFactoryInterface_SuperConnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetfactoryinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void q_designerwidgetfactoryinterface_disconnect_notify(void* self, void* signal
     QDesignerWidgetFactoryInterface_DisconnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerwidgetfactoryinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerWidgetFactoryInterface_QBaseDisconnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
+void q_designerwidgetfactoryinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerWidgetFactoryInterface_SuperDisconnectNotify((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetfactoryinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ QObject* q_designerwidgetfactoryinterface_sender(void* self) {
     return QDesignerWidgetFactoryInterface_Sender((QDesignerWidgetFactoryInterface*)self);
 }
 
-QObject* q_designerwidgetfactoryinterface_qbase_sender(void* self) {
-    return QDesignerWidgetFactoryInterface_QBaseSender((QDesignerWidgetFactoryInterface*)self);
+QObject* q_designerwidgetfactoryinterface_super_sender(void* self) {
+    return QDesignerWidgetFactoryInterface_SuperSender((QDesignerWidgetFactoryInterface*)self);
 }
 
 void q_designerwidgetfactoryinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -468,8 +468,8 @@ int32_t q_designerwidgetfactoryinterface_sender_signal_index(void* self) {
     return QDesignerWidgetFactoryInterface_SenderSignalIndex((QDesignerWidgetFactoryInterface*)self);
 }
 
-int32_t q_designerwidgetfactoryinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerWidgetFactoryInterface_QBaseSenderSignalIndex((QDesignerWidgetFactoryInterface*)self);
+int32_t q_designerwidgetfactoryinterface_super_sender_signal_index(void* self) {
+    return QDesignerWidgetFactoryInterface_SuperSenderSignalIndex((QDesignerWidgetFactoryInterface*)self);
 }
 
 void q_designerwidgetfactoryinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -480,8 +480,8 @@ int32_t q_designerwidgetfactoryinterface_receivers(void* self, const char* signa
     return QDesignerWidgetFactoryInterface_Receivers((QDesignerWidgetFactoryInterface*)self, signal);
 }
 
-int32_t q_designerwidgetfactoryinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerWidgetFactoryInterface_QBaseReceivers((QDesignerWidgetFactoryInterface*)self, signal);
+int32_t q_designerwidgetfactoryinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerWidgetFactoryInterface_SuperReceivers((QDesignerWidgetFactoryInterface*)self, signal);
 }
 
 void q_designerwidgetfactoryinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -492,8 +492,8 @@ bool q_designerwidgetfactoryinterface_is_signal_connected(void* self, void* sign
     return QDesignerWidgetFactoryInterface_IsSignalConnected((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerwidgetfactoryinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerWidgetFactoryInterface_QBaseIsSignalConnected((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
+bool q_designerwidgetfactoryinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerWidgetFactoryInterface_SuperIsSignalConnected((QDesignerWidgetFactoryInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerwidgetfactoryinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

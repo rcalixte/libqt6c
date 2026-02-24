@@ -33,6 +33,10 @@ void k_texteditor__sessionconfiginterface_read_session_config(void* self, void* 
 ///
 void k_texteditor__sessionconfiginterface_on_read_session_config(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__sessionconfiginterface_super_read_session_config` instead
+///
+#define k_texteditor__sessionconfiginterface_qbase_read_session_config k_texteditor__sessionconfiginterface_super_read_session_config
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#readSessionConfig)
 ///
 /// Base class method implementation
@@ -40,7 +44,7 @@ void k_texteditor__sessionconfiginterface_on_read_session_config(void* self, voi
 /// @param self KTextEditor__SessionConfigInterface*
 /// @param config KConfigGroup*
 ///
-void k_texteditor__sessionconfiginterface_qbase_read_session_config(void* self, void* config);
+void k_texteditor__sessionconfiginterface_super_read_session_config(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
 ///
@@ -58,6 +62,10 @@ void k_texteditor__sessionconfiginterface_write_session_config(void* self, void*
 ///
 void k_texteditor__sessionconfiginterface_on_write_session_config(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__sessionconfiginterface_super_write_session_config` instead
+///
+#define k_texteditor__sessionconfiginterface_qbase_write_session_config k_texteditor__sessionconfiginterface_super_write_session_config
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-sessionconfiginterface.html#writeSessionConfig)
 ///
 /// Base class method implementation
@@ -65,7 +73,7 @@ void k_texteditor__sessionconfiginterface_on_write_session_config(void* self, vo
 /// @param self KTextEditor__SessionConfigInterface*
 /// @param config KConfigGroup*
 ///
-void k_texteditor__sessionconfiginterface_qbase_write_session_config(void* self, void* config);
+void k_texteditor__sessionconfiginterface_super_write_session_config(void* self, void* config);
 
 /// Delete this object from C++ memory.
 ///

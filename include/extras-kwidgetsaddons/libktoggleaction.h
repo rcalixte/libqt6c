@@ -53,13 +53,17 @@ const QMetaObject* k_toggleaction_meta_object(void* self);
 ///
 void k_toggleaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_meta_object` instead
+///
+#define k_toggleaction_qbase_meta_object k_toggleaction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KToggleAction*
 ///
-const QMetaObject* k_toggleaction_qbase_meta_object(void* self);
+const QMetaObject* k_toggleaction_super_meta_object(void* self);
 
 /// @param self KToggleAction*
 /// @param param1 const char*
@@ -73,12 +77,16 @@ void* k_toggleaction_metacast(void* self, const char* param1);
 ///
 void k_toggleaction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_metacast` instead
+///
+#define k_toggleaction_qbase_metacast k_toggleaction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KToggleAction*
 /// @param param1 const char*
 ///
-void* k_toggleaction_qbase_metacast(void* self, const char* param1);
+void* k_toggleaction_super_metacast(void* self, const char* param1);
 
 /// @param self KToggleAction*
 /// @param param1 enum QMetaObject__Call
@@ -94,6 +102,10 @@ int32_t k_toggleaction_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_toggleaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_metacall` instead
+///
+#define k_toggleaction_qbase_metacall k_toggleaction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KToggleAction*
@@ -101,7 +113,7 @@ void k_toggleaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_toggleaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_toggleaction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -134,6 +146,10 @@ void k_toggleaction_slot_toggled(void* self, bool checked);
 ///
 void k_toggleaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_slot_toggled` instead
+///
+#define k_toggleaction_qbase_slot_toggled k_toggleaction_super_slot_toggled
+
 /// [Upstream resources](https://api.kde.org/ktoggleaction.html#slotToggled)
 ///
 /// Base class method implementation
@@ -141,7 +157,7 @@ void k_toggleaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 /// @param self KToggleAction*
 /// @param checked bool
 ///
-void k_toggleaction_qbase_slot_toggled(void* self, bool checked);
+void k_toggleaction_super_slot_toggled(void* self, bool checked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1238,6 +1254,10 @@ void k_toggleaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_toggleaction_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_event` instead
+///
+#define k_toggleaction_qbase_event k_toggleaction_super_event
+
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#event)
@@ -1247,7 +1267,7 @@ bool k_toggleaction_event(void* self, void* param1);
 /// @param self KToggleAction*
 /// @param param1 QEvent*
 ///
-bool k_toggleaction_qbase_event(void* self, void* param1);
+bool k_toggleaction_super_event(void* self, void* param1);
 
 /// Inherited from QAction
 ///
@@ -1272,6 +1292,10 @@ void k_toggleaction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_toggleaction_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_event_filter` instead
+///
+#define k_toggleaction_qbase_event_filter k_toggleaction_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1282,7 +1306,7 @@ bool k_toggleaction_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_toggleaction_qbase_event_filter(void* self, void* watched, void* event);
+bool k_toggleaction_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1306,6 +1330,10 @@ void k_toggleaction_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void k_toggleaction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_timer_event` instead
+///
+#define k_toggleaction_qbase_timer_event k_toggleaction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1315,7 +1343,7 @@ void k_toggleaction_timer_event(void* self, void* event);
 /// @param self KToggleAction*
 /// @param event QTimerEvent*
 ///
-void k_toggleaction_qbase_timer_event(void* self, void* event);
+void k_toggleaction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1339,6 +1367,10 @@ void k_toggleaction_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_toggleaction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_child_event` instead
+///
+#define k_toggleaction_qbase_child_event k_toggleaction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1348,7 +1380,7 @@ void k_toggleaction_child_event(void* self, void* event);
 /// @param self KToggleAction*
 /// @param event QChildEvent*
 ///
-void k_toggleaction_qbase_child_event(void* self, void* event);
+void k_toggleaction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1372,6 +1404,10 @@ void k_toggleaction_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_toggleaction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_custom_event` instead
+///
+#define k_toggleaction_qbase_custom_event k_toggleaction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1381,7 +1417,7 @@ void k_toggleaction_custom_event(void* self, void* event);
 /// @param self KToggleAction*
 /// @param event QEvent*
 ///
-void k_toggleaction_qbase_custom_event(void* self, void* event);
+void k_toggleaction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1405,6 +1441,10 @@ void k_toggleaction_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_toggleaction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_connect_notify` instead
+///
+#define k_toggleaction_qbase_connect_notify k_toggleaction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1414,7 +1454,7 @@ void k_toggleaction_connect_notify(void* self, void* signal);
 /// @param self KToggleAction*
 /// @param signal QMetaMethod*
 ///
-void k_toggleaction_qbase_connect_notify(void* self, void* signal);
+void k_toggleaction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1438,6 +1478,10 @@ void k_toggleaction_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_toggleaction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_disconnect_notify` instead
+///
+#define k_toggleaction_qbase_disconnect_notify k_toggleaction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1447,7 +1491,7 @@ void k_toggleaction_disconnect_notify(void* self, void* signal);
 /// @param self KToggleAction*
 /// @param signal QMetaMethod*
 ///
-void k_toggleaction_qbase_disconnect_notify(void* self, void* signal);
+void k_toggleaction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1470,6 +1514,10 @@ void k_toggleaction_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* k_toggleaction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_sender` instead
+///
+#define k_toggleaction_qbase_sender k_toggleaction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1478,7 +1526,7 @@ QObject* k_toggleaction_sender(void* self);
 ///
 /// @param self KToggleAction*
 ///
-QObject* k_toggleaction_qbase_sender(void* self);
+QObject* k_toggleaction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1501,6 +1549,10 @@ void k_toggleaction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_toggleaction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_sender_signal_index` instead
+///
+#define k_toggleaction_qbase_sender_signal_index k_toggleaction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1509,7 +1561,7 @@ int32_t k_toggleaction_sender_signal_index(void* self);
 ///
 /// @param self KToggleAction*
 ///
-int32_t k_toggleaction_qbase_sender_signal_index(void* self);
+int32_t k_toggleaction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1533,6 +1585,10 @@ void k_toggleaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_toggleaction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_receivers` instead
+///
+#define k_toggleaction_qbase_receivers k_toggleaction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1542,7 +1598,7 @@ int32_t k_toggleaction_receivers(void* self, const char* signal);
 /// @param self KToggleAction*
 /// @param signal const char*
 ///
-int32_t k_toggleaction_qbase_receivers(void* self, const char* signal);
+int32_t k_toggleaction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1566,6 +1622,10 @@ void k_toggleaction_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_toggleaction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toggleaction_super_is_signal_connected` instead
+///
+#define k_toggleaction_qbase_is_signal_connected k_toggleaction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1575,7 +1635,7 @@ bool k_toggleaction_is_signal_connected(void* self, void* signal);
 /// @param self KToggleAction*
 /// @param signal QMetaMethod*
 ///
-bool k_toggleaction_qbase_is_signal_connected(void* self, void* signal);
+bool k_toggleaction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

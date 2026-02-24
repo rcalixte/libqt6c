@@ -40,13 +40,17 @@ const QMetaObject* q_sqldriver_meta_object(void* self);
 ///
 void q_sqldriver_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_meta_object` instead
+///
+#define q_sqldriver_qbase_meta_object q_sqldriver_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-const QMetaObject* q_sqldriver_qbase_meta_object(void* self);
+const QMetaObject* q_sqldriver_super_meta_object(void* self);
 
 /// @param self QSqlDriver*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_sqldriver_metacast(void* self, const char* param1);
 ///
 void q_sqldriver_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_metacast` instead
+///
+#define q_sqldriver_qbase_metacast q_sqldriver_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 /// @param param1 const char*
 ///
-void* q_sqldriver_qbase_metacast(void* self, const char* param1);
+void* q_sqldriver_super_metacast(void* self, const char* param1);
 
 /// @param self QSqlDriver*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_sqldriver_metacall(void* self, int32_t param1, int param2, void* param
 ///
 void q_sqldriver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_metacall` instead
+///
+#define q_sqldriver_qbase_metacall q_sqldriver_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
@@ -88,7 +100,7 @@ void q_sqldriver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_sqldriver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_sqldriver_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -113,13 +125,17 @@ bool q_sqldriver_is_open(void* self);
 ///
 void q_sqldriver_on_is_open(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_is_open` instead
+///
+#define q_sqldriver_qbase_is_open q_sqldriver_super_is_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpen)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-bool q_sqldriver_qbase_is_open(void* self);
+bool q_sqldriver_super_is_open(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isOpenError)
 ///
@@ -142,13 +158,17 @@ bool q_sqldriver_begin_transaction(void* self);
 ///
 void q_sqldriver_on_begin_transaction(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_begin_transaction` instead
+///
+#define q_sqldriver_qbase_begin_transaction q_sqldriver_super_begin_transaction
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#beginTransaction)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-bool q_sqldriver_qbase_begin_transaction(void* self);
+bool q_sqldriver_super_begin_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#commitTransaction)
 ///
@@ -165,13 +185,17 @@ bool q_sqldriver_commit_transaction(void* self);
 ///
 void q_sqldriver_on_commit_transaction(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_commit_transaction` instead
+///
+#define q_sqldriver_qbase_commit_transaction q_sqldriver_super_commit_transaction
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#commitTransaction)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-bool q_sqldriver_qbase_commit_transaction(void* self);
+bool q_sqldriver_super_commit_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#rollbackTransaction)
 ///
@@ -188,13 +212,17 @@ bool q_sqldriver_rollback_transaction(void* self);
 ///
 void q_sqldriver_on_rollback_transaction(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_rollback_transaction` instead
+///
+#define q_sqldriver_qbase_rollback_transaction q_sqldriver_super_rollback_transaction
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#rollbackTransaction)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-bool q_sqldriver_qbase_rollback_transaction(void* self);
+bool q_sqldriver_super_rollback_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#tables)
 ///
@@ -214,6 +242,10 @@ const char** q_sqldriver_tables(void* self, int32_t tableType);
 ///
 void q_sqldriver_on_tables(void* self, const char** (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_tables` instead
+///
+#define q_sqldriver_qbase_tables q_sqldriver_super_tables
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#tables)
 ///
 /// Base class method implementation
@@ -221,7 +253,7 @@ void q_sqldriver_on_tables(void* self, const char** (*callback)(void*, int32_t))
 /// @param self QSqlDriver*
 /// @param tableType enum QSql__TableType
 ///
-const char** q_sqldriver_qbase_tables(void* self, int32_t tableType);
+const char** q_sqldriver_super_tables(void* self, int32_t tableType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#primaryIndex)
 ///
@@ -239,6 +271,10 @@ QSqlIndex* q_sqldriver_primary_index(void* self, const char* tableName);
 ///
 void q_sqldriver_on_primary_index(void* self, QSqlIndex* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_primary_index` instead
+///
+#define q_sqldriver_qbase_primary_index q_sqldriver_super_primary_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#primaryIndex)
 ///
 /// Base class method implementation
@@ -246,7 +282,7 @@ void q_sqldriver_on_primary_index(void* self, QSqlIndex* (*callback)(void*, cons
 /// @param self QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlIndex* q_sqldriver_qbase_primary_index(void* self, const char* tableName);
+QSqlIndex* q_sqldriver_super_primary_index(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#record)
 ///
@@ -264,6 +300,10 @@ QSqlRecord* q_sqldriver_record(void* self, const char* tableName);
 ///
 void q_sqldriver_on_record(void* self, QSqlRecord* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_record` instead
+///
+#define q_sqldriver_qbase_record q_sqldriver_super_record
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#record)
 ///
 /// Base class method implementation
@@ -271,7 +311,7 @@ void q_sqldriver_on_record(void* self, QSqlRecord* (*callback)(void*, const char
 /// @param self QSqlDriver*
 /// @param tableName const char*
 ///
-QSqlRecord* q_sqldriver_qbase_record(void* self, const char* tableName);
+QSqlRecord* q_sqldriver_super_record(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
@@ -292,6 +332,10 @@ const char* q_sqldriver_format_value(void* self, void* field, bool trimStrings);
 ///
 void q_sqldriver_on_format_value(void* self, const char* (*callback)(void*, void*, bool));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_format_value` instead
+///
+#define q_sqldriver_qbase_format_value q_sqldriver_super_format_value
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
 /// Base class method implementation
@@ -300,7 +344,7 @@ void q_sqldriver_on_format_value(void* self, const char* (*callback)(void*, void
 /// @param field QSqlField*
 /// @param trimStrings bool
 ///
-const char* q_sqldriver_qbase_format_value(void* self, void* field, bool trimStrings);
+const char* q_sqldriver_super_format_value(void* self, void* field, bool trimStrings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
@@ -321,6 +365,10 @@ const char* q_sqldriver_escape_identifier(void* self, const char* identifier, in
 ///
 void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_escape_identifier` instead
+///
+#define q_sqldriver_qbase_escape_identifier q_sqldriver_super_escape_identifier
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
 /// Base class method implementation
@@ -329,7 +377,7 @@ void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*,
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_super_escape_identifier(void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
@@ -352,6 +400,10 @@ const char* q_sqldriver_sql_statement(void* self, int32_t type, const char* tabl
 ///
 void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int32_t, const char*, void*, bool));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_sql_statement` instead
+///
+#define q_sqldriver_qbase_sql_statement q_sqldriver_super_sql_statement
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// Base class method implementation
@@ -362,7 +414,7 @@ void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int
 /// @param rec QSqlRecord*
 /// @param preparedStatement bool
 ///
-const char* q_sqldriver_qbase_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
+const char* q_sqldriver_super_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#lastError)
 ///
@@ -385,13 +437,17 @@ QVariant* q_sqldriver_handle(void* self);
 ///
 void q_sqldriver_on_handle(void* self, QVariant* (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_handle` instead
+///
+#define q_sqldriver_qbase_handle q_sqldriver_super_handle
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#handle)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-QVariant* q_sqldriver_qbase_handle(void* self);
+QVariant* q_sqldriver_super_handle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#hasFeature)
 ///
@@ -409,6 +465,10 @@ bool q_sqldriver_has_feature(void* self, int32_t f);
 ///
 void q_sqldriver_on_has_feature(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_has_feature` instead
+///
+#define q_sqldriver_qbase_has_feature q_sqldriver_super_has_feature
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#hasFeature)
 ///
 /// Base class method implementation
@@ -416,7 +476,7 @@ void q_sqldriver_on_has_feature(void* self, bool (*callback)(void*, int32_t));
 /// @param self QSqlDriver*
 /// @param f enum QSqlDriver__DriverFeature
 ///
-bool q_sqldriver_qbase_has_feature(void* self, int32_t f);
+bool q_sqldriver_super_has_feature(void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#close)
 ///
@@ -433,13 +493,17 @@ void q_sqldriver_close(void* self);
 ///
 void q_sqldriver_on_close(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_close` instead
+///
+#define q_sqldriver_qbase_close q_sqldriver_super_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-void q_sqldriver_qbase_close(void* self);
+void q_sqldriver_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#createResult)
 ///
@@ -456,13 +520,17 @@ QSqlResult* q_sqldriver_create_result(void* self);
 ///
 void q_sqldriver_on_create_result(void* self, QSqlResult* (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_create_result` instead
+///
+#define q_sqldriver_qbase_create_result q_sqldriver_super_create_result
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#createResult)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-QSqlResult* q_sqldriver_qbase_create_result(void* self);
+QSqlResult* q_sqldriver_super_create_result(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#open)
 ///
@@ -485,6 +553,10 @@ bool q_sqldriver_open(void* self, const char* db, const char* user, const char* 
 ///
 void q_sqldriver_on_open(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, int, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_open` instead
+///
+#define q_sqldriver_qbase_open q_sqldriver_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#open)
 ///
 /// Base class method implementation
@@ -497,7 +569,7 @@ void q_sqldriver_on_open(void* self, bool (*callback)(void*, const char*, const 
 /// @param port int
 /// @param connOpts const char*
 ///
-bool q_sqldriver_qbase_open(void* self, const char* db, const char* user, const char* password, const char* host, int port, const char* connOpts);
+bool q_sqldriver_super_open(void* self, const char* db, const char* user, const char* password, const char* host, int port, const char* connOpts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribeToNotification)
 ///
@@ -515,6 +587,10 @@ bool q_sqldriver_subscribe_to_notification(void* self, const char* name);
 ///
 void q_sqldriver_on_subscribe_to_notification(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_subscribe_to_notification` instead
+///
+#define q_sqldriver_qbase_subscribe_to_notification q_sqldriver_super_subscribe_to_notification
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribeToNotification)
 ///
 /// Base class method implementation
@@ -522,7 +598,7 @@ void q_sqldriver_on_subscribe_to_notification(void* self, bool (*callback)(void*
 /// @param self QSqlDriver*
 /// @param name const char*
 ///
-bool q_sqldriver_qbase_subscribe_to_notification(void* self, const char* name);
+bool q_sqldriver_super_subscribe_to_notification(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#unsubscribeFromNotification)
 ///
@@ -540,6 +616,10 @@ bool q_sqldriver_unsubscribe_from_notification(void* self, const char* name);
 ///
 void q_sqldriver_on_unsubscribe_from_notification(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_unsubscribe_from_notification` instead
+///
+#define q_sqldriver_qbase_unsubscribe_from_notification q_sqldriver_super_unsubscribe_from_notification
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#unsubscribeFromNotification)
 ///
 /// Base class method implementation
@@ -547,7 +627,7 @@ void q_sqldriver_on_unsubscribe_from_notification(void* self, bool (*callback)(v
 /// @param self QSqlDriver*
 /// @param name const char*
 ///
-bool q_sqldriver_qbase_unsubscribe_from_notification(void* self, const char* name);
+bool q_sqldriver_super_unsubscribe_from_notification(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribedToNotifications)
 ///
@@ -566,13 +646,17 @@ const char** q_sqldriver_subscribed_to_notifications(void* self);
 ///
 void q_sqldriver_on_subscribed_to_notifications(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_subscribed_to_notifications` instead
+///
+#define q_sqldriver_qbase_subscribed_to_notifications q_sqldriver_super_subscribed_to_notifications
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribedToNotifications)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-const char** q_sqldriver_qbase_subscribed_to_notifications(void* self);
+const char** q_sqldriver_super_subscribed_to_notifications(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
@@ -591,6 +675,10 @@ bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32
 ///
 void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_is_identifier_escaped` instead
+///
+#define q_sqldriver_qbase_is_identifier_escaped q_sqldriver_super_is_identifier_escaped
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
 /// Base class method implementation
@@ -599,7 +687,7 @@ void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, co
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier, int32_t type);
+bool q_sqldriver_super_is_identifier_escaped(void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
@@ -620,6 +708,10 @@ const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int
 ///
 void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_strip_delimiters` instead
+///
+#define q_sqldriver_qbase_strip_delimiters q_sqldriver_super_strip_delimiters
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
 /// Base class method implementation
@@ -628,7 +720,7 @@ void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, 
 /// @param identifier const char*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-const char* q_sqldriver_qbase_strip_delimiters(void* self, const char* identifier, int32_t type);
+const char* q_sqldriver_super_strip_delimiters(void* self, const char* identifier, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setNumericalPrecisionPolicy)
 ///
@@ -669,6 +761,10 @@ int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t type);
 ///
 void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_maximum_identifier_length` instead
+///
+#define q_sqldriver_qbase_maximum_identifier_length q_sqldriver_super_maximum_identifier_length
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
 /// Base class method implementation
@@ -676,7 +772,7 @@ void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(vo
 /// @param self QSqlDriver*
 /// @param type enum QSqlDriver__IdentifierType
 ///
-int32_t q_sqldriver_qbase_maximum_identifier_length(void* self, int32_t type);
+int32_t q_sqldriver_super_maximum_identifier_length(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#cancelQuery)
 ///
@@ -693,13 +789,17 @@ bool q_sqldriver_cancel_query(void* self);
 ///
 void q_sqldriver_on_cancel_query(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_cancel_query` instead
+///
+#define q_sqldriver_qbase_cancel_query q_sqldriver_super_cancel_query
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#cancelQuery)
 ///
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
 ///
-bool q_sqldriver_qbase_cancel_query(void* self);
+bool q_sqldriver_super_cancel_query(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#notification)
 ///
@@ -733,6 +833,10 @@ void q_sqldriver_set_open(void* self, bool o);
 ///
 void q_sqldriver_on_set_open(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_set_open` instead
+///
+#define q_sqldriver_qbase_set_open q_sqldriver_super_set_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setOpen)
 ///
 /// Base class method implementation
@@ -740,7 +844,7 @@ void q_sqldriver_on_set_open(void* self, void (*callback)(void*, bool));
 /// @param self QSqlDriver*
 /// @param o bool
 ///
-void q_sqldriver_qbase_set_open(void* self, bool o);
+void q_sqldriver_super_set_open(void* self, bool o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setOpenError)
 ///
@@ -758,6 +862,10 @@ void q_sqldriver_set_open_error(void* self, bool e);
 ///
 void q_sqldriver_on_set_open_error(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_set_open_error` instead
+///
+#define q_sqldriver_qbase_set_open_error q_sqldriver_super_set_open_error
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setOpenError)
 ///
 /// Base class method implementation
@@ -765,7 +873,7 @@ void q_sqldriver_on_set_open_error(void* self, void (*callback)(void*, bool));
 /// @param self QSqlDriver*
 /// @param e bool
 ///
-void q_sqldriver_qbase_set_open_error(void* self, bool e);
+void q_sqldriver_super_set_open_error(void* self, bool e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setLastError)
 ///
@@ -783,6 +891,10 @@ void q_sqldriver_set_last_error(void* self, void* e);
 ///
 void q_sqldriver_on_set_last_error(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_set_last_error` instead
+///
+#define q_sqldriver_qbase_set_last_error q_sqldriver_super_set_last_error
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#setLastError)
 ///
 /// Base class method implementation
@@ -790,7 +902,7 @@ void q_sqldriver_on_set_last_error(void* self, void (*callback)(void*, void*));
 /// @param self QSqlDriver*
 /// @param e QSqlError*
 ///
-void q_sqldriver_qbase_set_last_error(void* self, void* e);
+void q_sqldriver_super_set_last_error(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1269,6 +1381,10 @@ void q_sqldriver_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_sqldriver_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_event` instead
+///
+#define q_sqldriver_qbase_event q_sqldriver_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1278,7 +1394,7 @@ bool q_sqldriver_event(void* self, void* event);
 /// @param self QSqlDriver*
 /// @param event QEvent*
 ///
-bool q_sqldriver_qbase_event(void* self, void* event);
+bool q_sqldriver_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1303,6 +1419,10 @@ void q_sqldriver_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_sqldriver_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_event_filter` instead
+///
+#define q_sqldriver_qbase_event_filter q_sqldriver_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1313,7 +1433,7 @@ bool q_sqldriver_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_sqldriver_qbase_event_filter(void* self, void* watched, void* event);
+bool q_sqldriver_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1337,6 +1457,10 @@ void q_sqldriver_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_sqldriver_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_timer_event` instead
+///
+#define q_sqldriver_qbase_timer_event q_sqldriver_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1346,7 +1470,7 @@ void q_sqldriver_timer_event(void* self, void* event);
 /// @param self QSqlDriver*
 /// @param event QTimerEvent*
 ///
-void q_sqldriver_qbase_timer_event(void* self, void* event);
+void q_sqldriver_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1370,6 +1494,10 @@ void q_sqldriver_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sqldriver_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_child_event` instead
+///
+#define q_sqldriver_qbase_child_event q_sqldriver_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1379,7 +1507,7 @@ void q_sqldriver_child_event(void* self, void* event);
 /// @param self QSqlDriver*
 /// @param event QChildEvent*
 ///
-void q_sqldriver_qbase_child_event(void* self, void* event);
+void q_sqldriver_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1403,6 +1531,10 @@ void q_sqldriver_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sqldriver_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_custom_event` instead
+///
+#define q_sqldriver_qbase_custom_event q_sqldriver_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1412,7 +1544,7 @@ void q_sqldriver_custom_event(void* self, void* event);
 /// @param self QSqlDriver*
 /// @param event QEvent*
 ///
-void q_sqldriver_qbase_custom_event(void* self, void* event);
+void q_sqldriver_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1436,6 +1568,10 @@ void q_sqldriver_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sqldriver_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_connect_notify` instead
+///
+#define q_sqldriver_qbase_connect_notify q_sqldriver_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1445,7 +1581,7 @@ void q_sqldriver_connect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_qbase_connect_notify(void* self, void* signal);
+void q_sqldriver_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1469,6 +1605,10 @@ void q_sqldriver_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_sqldriver_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_disconnect_notify` instead
+///
+#define q_sqldriver_qbase_disconnect_notify q_sqldriver_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1478,7 +1618,7 @@ void q_sqldriver_disconnect_notify(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-void q_sqldriver_qbase_disconnect_notify(void* self, void* signal);
+void q_sqldriver_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1501,6 +1641,10 @@ void q_sqldriver_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 QObject* q_sqldriver_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_sender` instead
+///
+#define q_sqldriver_qbase_sender q_sqldriver_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1509,7 +1653,7 @@ QObject* q_sqldriver_sender(void* self);
 ///
 /// @param self QSqlDriver*
 ///
-QObject* q_sqldriver_qbase_sender(void* self);
+QObject* q_sqldriver_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1532,6 +1676,10 @@ void q_sqldriver_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_sqldriver_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_sender_signal_index` instead
+///
+#define q_sqldriver_qbase_sender_signal_index q_sqldriver_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1540,7 +1688,7 @@ int32_t q_sqldriver_sender_signal_index(void* self);
 ///
 /// @param self QSqlDriver*
 ///
-int32_t q_sqldriver_qbase_sender_signal_index(void* self);
+int32_t q_sqldriver_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1564,6 +1712,10 @@ void q_sqldriver_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sqldriver_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_receivers` instead
+///
+#define q_sqldriver_qbase_receivers q_sqldriver_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1573,7 +1725,7 @@ int32_t q_sqldriver_receivers(void* self, const char* signal);
 /// @param self QSqlDriver*
 /// @param signal const char*
 ///
-int32_t q_sqldriver_qbase_receivers(void* self, const char* signal);
+int32_t q_sqldriver_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1597,6 +1749,10 @@ void q_sqldriver_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_sqldriver_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_sqldriver_super_is_signal_connected` instead
+///
+#define q_sqldriver_qbase_is_signal_connected q_sqldriver_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1606,7 +1762,7 @@ bool q_sqldriver_is_signal_connected(void* self, void* signal);
 /// @param self QSqlDriver*
 /// @param signal QMetaMethod*
 ///
-bool q_sqldriver_qbase_is_signal_connected(void* self, void* signal);
+bool q_sqldriver_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

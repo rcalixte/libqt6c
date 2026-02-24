@@ -40,13 +40,17 @@ const QMetaObject* q_candlestickmodelmapper_meta_object(void* self);
 ///
 void q_candlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_meta_object` instead
+///
+#define q_candlestickmodelmapper_qbase_meta_object q_candlestickmodelmapper_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-const QMetaObject* q_candlestickmodelmapper_qbase_meta_object(void* self);
+const QMetaObject* q_candlestickmodelmapper_super_meta_object(void* self);
 
 /// @param self QCandlestickModelMapper*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_candlestickmodelmapper_metacast(void* self, const char* param1);
 ///
 void q_candlestickmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_metacast` instead
+///
+#define q_candlestickmodelmapper_qbase_metacast q_candlestickmodelmapper_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 /// @param param1 const char*
 ///
-void* q_candlestickmodelmapper_qbase_metacast(void* self, const char* param1);
+void* q_candlestickmodelmapper_super_metacast(void* self, const char* param1);
 
 /// @param self QCandlestickModelMapper*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_candlestickmodelmapper_metacall(void* self, int32_t param1, int param2
 ///
 void q_candlestickmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_metacall` instead
+///
+#define q_candlestickmodelmapper_qbase_metacall q_candlestickmodelmapper_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
@@ -88,7 +100,7 @@ void q_candlestickmodelmapper_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_candlestickmodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_candlestickmodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -141,6 +153,10 @@ int32_t q_candlestickmodelmapper_orientation(void* self);
 ///
 void q_candlestickmodelmapper_on_orientation(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_orientation` instead
+///
+#define q_candlestickmodelmapper_qbase_orientation q_candlestickmodelmapper_super_orientation
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#orientation)
 ///
 /// Base class method implementation
@@ -149,7 +165,7 @@ void q_candlestickmodelmapper_on_orientation(void* self, int32_t (*callback)());
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_candlestickmodelmapper_qbase_orientation(void* self);
+int32_t q_candlestickmodelmapper_super_orientation(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#modelReplaced)
 ///
@@ -193,6 +209,10 @@ void q_candlestickmodelmapper_set_timestamp(void* self, int timestamp);
 ///
 void q_candlestickmodelmapper_on_set_timestamp(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_timestamp` instead
+///
+#define q_candlestickmodelmapper_qbase_set_timestamp q_candlestickmodelmapper_super_set_timestamp
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setTimestamp)
 ///
 /// Base class method implementation
@@ -200,7 +220,7 @@ void q_candlestickmodelmapper_on_set_timestamp(void* self, void (*callback)(void
 /// @param self QCandlestickModelMapper*
 /// @param timestamp int
 ///
-void q_candlestickmodelmapper_qbase_set_timestamp(void* self, int timestamp);
+void q_candlestickmodelmapper_super_set_timestamp(void* self, int timestamp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#timestamp)
 ///
@@ -217,13 +237,17 @@ int32_t q_candlestickmodelmapper_timestamp(void* self);
 ///
 void q_candlestickmodelmapper_on_timestamp(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_timestamp` instead
+///
+#define q_candlestickmodelmapper_qbase_timestamp q_candlestickmodelmapper_super_timestamp
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#timestamp)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_timestamp(void* self);
+int32_t q_candlestickmodelmapper_super_timestamp(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setOpen)
 ///
@@ -241,6 +265,10 @@ void q_candlestickmodelmapper_set_open(void* self, int open);
 ///
 void q_candlestickmodelmapper_on_set_open(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_open` instead
+///
+#define q_candlestickmodelmapper_qbase_set_open q_candlestickmodelmapper_super_set_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setOpen)
 ///
 /// Base class method implementation
@@ -248,7 +276,7 @@ void q_candlestickmodelmapper_on_set_open(void* self, void (*callback)(void*, in
 /// @param self QCandlestickModelMapper*
 /// @param open int
 ///
-void q_candlestickmodelmapper_qbase_set_open(void* self, int open);
+void q_candlestickmodelmapper_super_set_open(void* self, int open);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#open)
 ///
@@ -265,13 +293,17 @@ int32_t q_candlestickmodelmapper_open(void* self);
 ///
 void q_candlestickmodelmapper_on_open(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_open` instead
+///
+#define q_candlestickmodelmapper_qbase_open q_candlestickmodelmapper_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#open)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_open(void* self);
+int32_t q_candlestickmodelmapper_super_open(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setHigh)
 ///
@@ -289,6 +321,10 @@ void q_candlestickmodelmapper_set_high(void* self, int high);
 ///
 void q_candlestickmodelmapper_on_set_high(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_high` instead
+///
+#define q_candlestickmodelmapper_qbase_set_high q_candlestickmodelmapper_super_set_high
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setHigh)
 ///
 /// Base class method implementation
@@ -296,7 +332,7 @@ void q_candlestickmodelmapper_on_set_high(void* self, void (*callback)(void*, in
 /// @param self QCandlestickModelMapper*
 /// @param high int
 ///
-void q_candlestickmodelmapper_qbase_set_high(void* self, int high);
+void q_candlestickmodelmapper_super_set_high(void* self, int high);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#high)
 ///
@@ -313,13 +349,17 @@ int32_t q_candlestickmodelmapper_high(void* self);
 ///
 void q_candlestickmodelmapper_on_high(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_high` instead
+///
+#define q_candlestickmodelmapper_qbase_high q_candlestickmodelmapper_super_high
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#high)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_high(void* self);
+int32_t q_candlestickmodelmapper_super_high(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setLow)
 ///
@@ -337,6 +377,10 @@ void q_candlestickmodelmapper_set_low(void* self, int low);
 ///
 void q_candlestickmodelmapper_on_set_low(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_low` instead
+///
+#define q_candlestickmodelmapper_qbase_set_low q_candlestickmodelmapper_super_set_low
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setLow)
 ///
 /// Base class method implementation
@@ -344,7 +388,7 @@ void q_candlestickmodelmapper_on_set_low(void* self, void (*callback)(void*, int
 /// @param self QCandlestickModelMapper*
 /// @param low int
 ///
-void q_candlestickmodelmapper_qbase_set_low(void* self, int low);
+void q_candlestickmodelmapper_super_set_low(void* self, int low);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#low)
 ///
@@ -361,13 +405,17 @@ int32_t q_candlestickmodelmapper_low(void* self);
 ///
 void q_candlestickmodelmapper_on_low(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_low` instead
+///
+#define q_candlestickmodelmapper_qbase_low q_candlestickmodelmapper_super_low
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#low)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_low(void* self);
+int32_t q_candlestickmodelmapper_super_low(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setClose)
 ///
@@ -385,6 +433,10 @@ void q_candlestickmodelmapper_set_close(void* self, int close);
 ///
 void q_candlestickmodelmapper_on_set_close(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_close` instead
+///
+#define q_candlestickmodelmapper_qbase_set_close q_candlestickmodelmapper_super_set_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setClose)
 ///
 /// Base class method implementation
@@ -392,7 +444,7 @@ void q_candlestickmodelmapper_on_set_close(void* self, void (*callback)(void*, i
 /// @param self QCandlestickModelMapper*
 /// @param close int
 ///
-void q_candlestickmodelmapper_qbase_set_close(void* self, int close);
+void q_candlestickmodelmapper_super_set_close(void* self, int close);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#close)
 ///
@@ -409,13 +461,17 @@ int32_t q_candlestickmodelmapper_close(void* self);
 ///
 void q_candlestickmodelmapper_on_close(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_close` instead
+///
+#define q_candlestickmodelmapper_qbase_close q_candlestickmodelmapper_super_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_close(void* self);
+int32_t q_candlestickmodelmapper_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setFirstSetSection)
 ///
@@ -433,6 +489,10 @@ void q_candlestickmodelmapper_set_first_set_section(void* self, int firstSetSect
 ///
 void q_candlestickmodelmapper_on_set_first_set_section(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_first_set_section` instead
+///
+#define q_candlestickmodelmapper_qbase_set_first_set_section q_candlestickmodelmapper_super_set_first_set_section
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setFirstSetSection)
 ///
 /// Base class method implementation
@@ -440,7 +500,7 @@ void q_candlestickmodelmapper_on_set_first_set_section(void* self, void (*callba
 /// @param self QCandlestickModelMapper*
 /// @param firstSetSection int
 ///
-void q_candlestickmodelmapper_qbase_set_first_set_section(void* self, int firstSetSection);
+void q_candlestickmodelmapper_super_set_first_set_section(void* self, int firstSetSection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#firstSetSection)
 ///
@@ -457,13 +517,17 @@ int32_t q_candlestickmodelmapper_first_set_section(void* self);
 ///
 void q_candlestickmodelmapper_on_first_set_section(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_first_set_section` instead
+///
+#define q_candlestickmodelmapper_qbase_first_set_section q_candlestickmodelmapper_super_first_set_section
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#firstSetSection)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_first_set_section(void* self);
+int32_t q_candlestickmodelmapper_super_first_set_section(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setLastSetSection)
 ///
@@ -481,6 +545,10 @@ void q_candlestickmodelmapper_set_last_set_section(void* self, int lastSetSectio
 ///
 void q_candlestickmodelmapper_on_set_last_set_section(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_set_last_set_section` instead
+///
+#define q_candlestickmodelmapper_qbase_set_last_set_section q_candlestickmodelmapper_super_set_last_set_section
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#setLastSetSection)
 ///
 /// Base class method implementation
@@ -488,7 +556,7 @@ void q_candlestickmodelmapper_on_set_last_set_section(void* self, void (*callbac
 /// @param self QCandlestickModelMapper*
 /// @param lastSetSection int
 ///
-void q_candlestickmodelmapper_qbase_set_last_set_section(void* self, int lastSetSection);
+void q_candlestickmodelmapper_super_set_last_set_section(void* self, int lastSetSection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#lastSetSection)
 ///
@@ -505,13 +573,17 @@ int32_t q_candlestickmodelmapper_last_set_section(void* self);
 ///
 void q_candlestickmodelmapper_on_last_set_section(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_last_set_section` instead
+///
+#define q_candlestickmodelmapper_qbase_last_set_section q_candlestickmodelmapper_super_last_set_section
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#lastSetSection)
 ///
 /// Base class method implementation
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_last_set_section(void* self);
+int32_t q_candlestickmodelmapper_super_last_set_section(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -990,6 +1062,10 @@ void q_candlestickmodelmapper_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 bool q_candlestickmodelmapper_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_event` instead
+///
+#define q_candlestickmodelmapper_qbase_event q_candlestickmodelmapper_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -999,7 +1075,7 @@ bool q_candlestickmodelmapper_event(void* self, void* event);
 /// @param self QCandlestickModelMapper*
 /// @param event QEvent*
 ///
-bool q_candlestickmodelmapper_qbase_event(void* self, void* event);
+bool q_candlestickmodelmapper_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1024,6 +1100,10 @@ void q_candlestickmodelmapper_on_event(void* self, bool (*callback)(void*, void*
 ///
 bool q_candlestickmodelmapper_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_event_filter` instead
+///
+#define q_candlestickmodelmapper_qbase_event_filter q_candlestickmodelmapper_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1034,7 +1114,7 @@ bool q_candlestickmodelmapper_event_filter(void* self, void* watched, void* even
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_candlestickmodelmapper_qbase_event_filter(void* self, void* watched, void* event);
+bool q_candlestickmodelmapper_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1058,6 +1138,10 @@ void q_candlestickmodelmapper_on_event_filter(void* self, bool (*callback)(void*
 ///
 void q_candlestickmodelmapper_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_timer_event` instead
+///
+#define q_candlestickmodelmapper_qbase_timer_event q_candlestickmodelmapper_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1067,7 +1151,7 @@ void q_candlestickmodelmapper_timer_event(void* self, void* event);
 /// @param self QCandlestickModelMapper*
 /// @param event QTimerEvent*
 ///
-void q_candlestickmodelmapper_qbase_timer_event(void* self, void* event);
+void q_candlestickmodelmapper_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1091,6 +1175,10 @@ void q_candlestickmodelmapper_on_timer_event(void* self, void (*callback)(void*,
 ///
 void q_candlestickmodelmapper_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_child_event` instead
+///
+#define q_candlestickmodelmapper_qbase_child_event q_candlestickmodelmapper_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1100,7 +1188,7 @@ void q_candlestickmodelmapper_child_event(void* self, void* event);
 /// @param self QCandlestickModelMapper*
 /// @param event QChildEvent*
 ///
-void q_candlestickmodelmapper_qbase_child_event(void* self, void* event);
+void q_candlestickmodelmapper_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1124,6 +1212,10 @@ void q_candlestickmodelmapper_on_child_event(void* self, void (*callback)(void*,
 ///
 void q_candlestickmodelmapper_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_custom_event` instead
+///
+#define q_candlestickmodelmapper_qbase_custom_event q_candlestickmodelmapper_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1133,7 +1225,7 @@ void q_candlestickmodelmapper_custom_event(void* self, void* event);
 /// @param self QCandlestickModelMapper*
 /// @param event QEvent*
 ///
-void q_candlestickmodelmapper_qbase_custom_event(void* self, void* event);
+void q_candlestickmodelmapper_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1157,6 +1249,10 @@ void q_candlestickmodelmapper_on_custom_event(void* self, void (*callback)(void*
 ///
 void q_candlestickmodelmapper_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_connect_notify` instead
+///
+#define q_candlestickmodelmapper_qbase_connect_notify q_candlestickmodelmapper_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1166,7 +1262,7 @@ void q_candlestickmodelmapper_connect_notify(void* self, void* signal);
 /// @param self QCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_candlestickmodelmapper_qbase_connect_notify(void* self, void* signal);
+void q_candlestickmodelmapper_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1190,6 +1286,10 @@ void q_candlestickmodelmapper_on_connect_notify(void* self, void (*callback)(voi
 ///
 void q_candlestickmodelmapper_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_disconnect_notify` instead
+///
+#define q_candlestickmodelmapper_qbase_disconnect_notify q_candlestickmodelmapper_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1199,7 +1299,7 @@ void q_candlestickmodelmapper_disconnect_notify(void* self, void* signal);
 /// @param self QCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_candlestickmodelmapper_qbase_disconnect_notify(void* self, void* signal);
+void q_candlestickmodelmapper_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1222,6 +1322,10 @@ void q_candlestickmodelmapper_on_disconnect_notify(void* self, void (*callback)(
 ///
 QObject* q_candlestickmodelmapper_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_sender` instead
+///
+#define q_candlestickmodelmapper_qbase_sender q_candlestickmodelmapper_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1230,7 +1334,7 @@ QObject* q_candlestickmodelmapper_sender(void* self);
 ///
 /// @param self QCandlestickModelMapper*
 ///
-QObject* q_candlestickmodelmapper_qbase_sender(void* self);
+QObject* q_candlestickmodelmapper_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1253,6 +1357,10 @@ void q_candlestickmodelmapper_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_candlestickmodelmapper_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_sender_signal_index` instead
+///
+#define q_candlestickmodelmapper_qbase_sender_signal_index q_candlestickmodelmapper_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1261,7 +1369,7 @@ int32_t q_candlestickmodelmapper_sender_signal_index(void* self);
 ///
 /// @param self QCandlestickModelMapper*
 ///
-int32_t q_candlestickmodelmapper_qbase_sender_signal_index(void* self);
+int32_t q_candlestickmodelmapper_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1285,6 +1393,10 @@ void q_candlestickmodelmapper_on_sender_signal_index(void* self, int32_t (*callb
 ///
 int32_t q_candlestickmodelmapper_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_receivers` instead
+///
+#define q_candlestickmodelmapper_qbase_receivers q_candlestickmodelmapper_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1294,7 +1406,7 @@ int32_t q_candlestickmodelmapper_receivers(void* self, const char* signal);
 /// @param self QCandlestickModelMapper*
 /// @param signal const char*
 ///
-int32_t q_candlestickmodelmapper_qbase_receivers(void* self, const char* signal);
+int32_t q_candlestickmodelmapper_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1318,6 +1430,10 @@ void q_candlestickmodelmapper_on_receivers(void* self, int32_t (*callback)(void*
 ///
 bool q_candlestickmodelmapper_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_candlestickmodelmapper_super_is_signal_connected` instead
+///
+#define q_candlestickmodelmapper_qbase_is_signal_connected q_candlestickmodelmapper_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1327,7 +1443,7 @@ bool q_candlestickmodelmapper_is_signal_connected(void* self, void* signal);
 /// @param self QCandlestickModelMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_candlestickmodelmapper_qbase_is_signal_connected(void* self, void* signal);
+bool q_candlestickmodelmapper_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

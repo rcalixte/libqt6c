@@ -18,8 +18,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_should_start_comple
     KTextEditor__CodeCompletionModelControllerInterface_OnShouldStartCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_start_completion(void* self, void* view, const char* insertedText, bool userInsertion, void* position) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseShouldStartCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, qstring(insertedText), userInsertion, (KTextEditor__Cursor*)position);
+bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_start_completion(void* self, void* view, const char* insertedText, bool userInsertion, void* position) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperShouldStartCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, qstring(insertedText), userInsertion, (KTextEditor__Cursor*)position);
 }
 
 KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_completion_range(void* self, void* view, void* position) {
@@ -30,8 +30,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_completion_range(vo
     KTextEditor__CodeCompletionModelControllerInterface_OnCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_qbase_completion_range(void* self, void* view, void* position) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Cursor*)position);
+KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_super_completion_range(void* self, void* view, void* position) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Cursor*)position);
 }
 
 KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_update_completion_range(void* self, void* view, void* range) {
@@ -42,8 +42,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_update_completion_r
     KTextEditor__CodeCompletionModelControllerInterface_OnUpdateCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_qbase_update_completion_range(void* self, void* view, void* range) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseUpdateCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range);
+KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_super_update_completion_range(void* self, void* view, void* range) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperUpdateCompletionRange((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range);
 }
 
 const char* k_texteditor__codecompletionmodelcontrollerinterface_filter_string(void* self, void* view, void* range, void* position) {
@@ -57,8 +57,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_filter_string(void*
     KTextEditor__CodeCompletionModelControllerInterface_OnFilterString((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-const char* k_texteditor__codecompletionmodelcontrollerinterface_qbase_filter_string(void* self, void* view, void* range, void* position) {
-    libqt_string _str = KTextEditor__CodeCompletionModelControllerInterface_QBaseFilterString((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range, (KTextEditor__Cursor*)position);
+const char* k_texteditor__codecompletionmodelcontrollerinterface_super_filter_string(void* self, void* view, void* range, void* position) {
+    libqt_string _str = KTextEditor__CodeCompletionModelControllerInterface_SuperFilterString((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range, (KTextEditor__Cursor*)position);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -72,8 +72,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_should_abort_comple
     KTextEditor__CodeCompletionModelControllerInterface_OnShouldAbortCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_abort_completion(void* self, void* view, void* range, const char* currentCompletion) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseShouldAbortCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range, qstring(currentCompletion));
+bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_abort_completion(void* self, void* view, void* range, const char* currentCompletion) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperShouldAbortCompletion((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view, (KTextEditor__Range*)range, qstring(currentCompletion));
 }
 
 bool k_texteditor__codecompletionmodelcontrollerinterface_should_execute(void* self, void* selected, void* inserted) {
@@ -84,8 +84,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_should_execute(void
     KTextEditor__CodeCompletionModelControllerInterface_OnShouldExecute((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_execute(void* self, void* selected, void* inserted) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseShouldExecute((KTextEditor__CodeCompletionModelControllerInterface*)self, (QModelIndex*)selected, (QChar*)inserted);
+bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_execute(void* self, void* selected, void* inserted) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperShouldExecute((KTextEditor__CodeCompletionModelControllerInterface*)self, (QModelIndex*)selected, (QChar*)inserted);
 }
 
 void k_texteditor__codecompletionmodelcontrollerinterface_aborted(void* self, void* view) {
@@ -96,8 +96,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_aborted(void* self,
     KTextEditor__CodeCompletionModelControllerInterface_OnAborted((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-void k_texteditor__codecompletionmodelcontrollerinterface_qbase_aborted(void* self, void* view) {
-    KTextEditor__CodeCompletionModelControllerInterface_QBaseAborted((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view);
+void k_texteditor__codecompletionmodelcontrollerinterface_super_aborted(void* self, void* view) {
+    KTextEditor__CodeCompletionModelControllerInterface_SuperAborted((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__View*)view);
 }
 
 int32_t k_texteditor__codecompletionmodelcontrollerinterface_matching_item(void* self, void* matched) {
@@ -108,8 +108,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_matching_item(void*
     KTextEditor__CodeCompletionModelControllerInterface_OnMatchingItem((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__codecompletionmodelcontrollerinterface_qbase_matching_item(void* self, void* matched) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseMatchingItem((KTextEditor__CodeCompletionModelControllerInterface*)self, (QModelIndex*)matched);
+int32_t k_texteditor__codecompletionmodelcontrollerinterface_super_matching_item(void* self, void* matched) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperMatchingItem((KTextEditor__CodeCompletionModelControllerInterface*)self, (QModelIndex*)matched);
 }
 
 bool k_texteditor__codecompletionmodelcontrollerinterface_should_hide_items_with_equal_names(void* self) {
@@ -120,8 +120,8 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_w
     KTextEditor__CodeCompletionModelControllerInterface_OnShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_hide_items_with_equal_names(void* self) {
-    return KTextEditor__CodeCompletionModelControllerInterface_QBaseShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self);
+bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_hide_items_with_equal_names(void* self) {
+    return KTextEditor__CodeCompletionModelControllerInterface_SuperShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self);
 }
 
 void k_texteditor__codecompletionmodelcontrollerinterface_operator_assign(void* self, void* param1) {

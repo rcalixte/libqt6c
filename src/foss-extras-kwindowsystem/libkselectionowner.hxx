@@ -419,29 +419,29 @@ class VirtualKSelectionOwner final : public KSelectionOwner {
 
     // Friend functions
     friend bool KSelectionOwner_GenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor);
-    friend bool KSelectionOwner_QBaseGenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor);
+    friend bool KSelectionOwner_SuperGenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor);
     friend void KSelectionOwner_ReplyTargets(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor);
-    friend void KSelectionOwner_QBaseReplyTargets(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor);
+    friend void KSelectionOwner_SuperReplyTargets(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor);
     friend void KSelectionOwner_GetAtoms(KSelectionOwner* self);
-    friend void KSelectionOwner_QBaseGetAtoms(KSelectionOwner* self);
+    friend void KSelectionOwner_SuperGetAtoms(KSelectionOwner* self);
     friend void KSelectionOwner_ChildEvent(KSelectionOwner* self, QChildEvent* event);
-    friend void KSelectionOwner_QBaseChildEvent(KSelectionOwner* self, QChildEvent* event);
+    friend void KSelectionOwner_SuperChildEvent(KSelectionOwner* self, QChildEvent* event);
     friend void KSelectionOwner_CustomEvent(KSelectionOwner* self, QEvent* event);
-    friend void KSelectionOwner_QBaseCustomEvent(KSelectionOwner* self, QEvent* event);
+    friend void KSelectionOwner_SuperCustomEvent(KSelectionOwner* self, QEvent* event);
     friend void KSelectionOwner_ConnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
-    friend void KSelectionOwner_QBaseConnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
+    friend void KSelectionOwner_SuperConnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
     friend void KSelectionOwner_DisconnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
-    friend void KSelectionOwner_QBaseDisconnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
+    friend void KSelectionOwner_SuperDisconnectNotify(KSelectionOwner* self, const QMetaMethod* signal);
     friend void KSelectionOwner_SetData(KSelectionOwner* self, uint32_t extra1, uint32_t extra2);
-    friend void KSelectionOwner_QBaseSetData(KSelectionOwner* self, uint32_t extra1, uint32_t extra2);
+    friend void KSelectionOwner_SuperSetData(KSelectionOwner* self, uint32_t extra1, uint32_t extra2);
     friend QObject* KSelectionOwner_Sender(const KSelectionOwner* self);
-    friend QObject* KSelectionOwner_QBaseSender(const KSelectionOwner* self);
+    friend QObject* KSelectionOwner_SuperSender(const KSelectionOwner* self);
     friend int KSelectionOwner_SenderSignalIndex(const KSelectionOwner* self);
-    friend int KSelectionOwner_QBaseSenderSignalIndex(const KSelectionOwner* self);
+    friend int KSelectionOwner_SuperSenderSignalIndex(const KSelectionOwner* self);
     friend int KSelectionOwner_Receivers(const KSelectionOwner* self, const char* signal);
-    friend int KSelectionOwner_QBaseReceivers(const KSelectionOwner* self, const char* signal);
+    friend int KSelectionOwner_SuperReceivers(const KSelectionOwner* self, const char* signal);
     friend bool KSelectionOwner_IsSignalConnected(const KSelectionOwner* self, const QMetaMethod* signal);
-    friend bool KSelectionOwner_QBaseIsSignalConnected(const KSelectionOwner* self, const QMetaMethod* signal);
+    friend bool KSelectionOwner_SuperIsSignalConnected(const KSelectionOwner* self, const QMetaMethod* signal);
 };
 
 #endif

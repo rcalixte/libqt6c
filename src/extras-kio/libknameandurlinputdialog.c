@@ -27,8 +27,8 @@ void k_nameandurlinputdialog_on_meta_object(void* self, const QMetaObject* (*cal
     KNameAndUrlInputDialog_OnMetaObject((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nameandurlinputdialog_qbase_meta_object(void* self) {
-    return KNameAndUrlInputDialog_QBaseMetaObject((KNameAndUrlInputDialog*)self);
+const QMetaObject* k_nameandurlinputdialog_super_meta_object(void* self) {
+    return KNameAndUrlInputDialog_SuperMetaObject((KNameAndUrlInputDialog*)self);
 }
 
 void* k_nameandurlinputdialog_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void k_nameandurlinputdialog_on_metacast(void* self, void* (*callback)(void*, co
     KNameAndUrlInputDialog_OnMetacast((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
-void* k_nameandurlinputdialog_qbase_metacast(void* self, const char* param1) {
-    return KNameAndUrlInputDialog_QBaseMetacast((KNameAndUrlInputDialog*)self, param1);
+void* k_nameandurlinputdialog_super_metacast(void* self, const char* param1) {
+    return KNameAndUrlInputDialog_SuperMetacast((KNameAndUrlInputDialog*)self, param1);
 }
 
 int32_t k_nameandurlinputdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void k_nameandurlinputdialog_on_metacall(void* self, int32_t (*callback)(void*, 
     KNameAndUrlInputDialog_OnMetacall((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_nameandurlinputdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNameAndUrlInputDialog_QBaseMetacall((KNameAndUrlInputDialog*)self, param1, param2, param3);
+int32_t k_nameandurlinputdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNameAndUrlInputDialog_SuperMetacall((KNameAndUrlInputDialog*)self, param1, param2, param3);
 }
 
 const char* k_nameandurlinputdialog_tr(const char* s) {
@@ -1531,8 +1531,8 @@ void k_nameandurlinputdialog_set_visible(void* self, bool visible) {
     KNameAndUrlInputDialog_SetVisible((KNameAndUrlInputDialog*)self, visible);
 }
 
-void k_nameandurlinputdialog_qbase_set_visible(void* self, bool visible) {
-    KNameAndUrlInputDialog_QBaseSetVisible((KNameAndUrlInputDialog*)self, visible);
+void k_nameandurlinputdialog_super_set_visible(void* self, bool visible) {
+    KNameAndUrlInputDialog_SuperSetVisible((KNameAndUrlInputDialog*)self, visible);
 }
 
 void k_nameandurlinputdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1543,8 +1543,8 @@ QSize* k_nameandurlinputdialog_size_hint(void* self) {
     return KNameAndUrlInputDialog_SizeHint((KNameAndUrlInputDialog*)self);
 }
 
-QSize* k_nameandurlinputdialog_qbase_size_hint(void* self) {
-    return KNameAndUrlInputDialog_QBaseSizeHint((KNameAndUrlInputDialog*)self);
+QSize* k_nameandurlinputdialog_super_size_hint(void* self) {
+    return KNameAndUrlInputDialog_SuperSizeHint((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1555,8 +1555,8 @@ QSize* k_nameandurlinputdialog_minimum_size_hint(void* self) {
     return KNameAndUrlInputDialog_MinimumSizeHint((KNameAndUrlInputDialog*)self);
 }
 
-QSize* k_nameandurlinputdialog_qbase_minimum_size_hint(void* self) {
-    return KNameAndUrlInputDialog_QBaseMinimumSizeHint((KNameAndUrlInputDialog*)self);
+QSize* k_nameandurlinputdialog_super_minimum_size_hint(void* self) {
+    return KNameAndUrlInputDialog_SuperMinimumSizeHint((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1567,8 +1567,8 @@ void k_nameandurlinputdialog_open(void* self) {
     KNameAndUrlInputDialog_Open((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_open(void* self) {
-    KNameAndUrlInputDialog_QBaseOpen((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_open(void* self) {
+    KNameAndUrlInputDialog_SuperOpen((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_open(void* self, void (*callback)()) {
@@ -1579,8 +1579,8 @@ int32_t k_nameandurlinputdialog_exec(void* self) {
     return KNameAndUrlInputDialog_Exec((KNameAndUrlInputDialog*)self);
 }
 
-int32_t k_nameandurlinputdialog_qbase_exec(void* self) {
-    return KNameAndUrlInputDialog_QBaseExec((KNameAndUrlInputDialog*)self);
+int32_t k_nameandurlinputdialog_super_exec(void* self) {
+    return KNameAndUrlInputDialog_SuperExec((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1591,8 +1591,8 @@ void k_nameandurlinputdialog_done(void* self, int param1) {
     KNameAndUrlInputDialog_Done((KNameAndUrlInputDialog*)self, param1);
 }
 
-void k_nameandurlinputdialog_qbase_done(void* self, int param1) {
-    KNameAndUrlInputDialog_QBaseDone((KNameAndUrlInputDialog*)self, param1);
+void k_nameandurlinputdialog_super_done(void* self, int param1) {
+    KNameAndUrlInputDialog_SuperDone((KNameAndUrlInputDialog*)self, param1);
 }
 
 void k_nameandurlinputdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1603,8 +1603,8 @@ void k_nameandurlinputdialog_accept(void* self) {
     KNameAndUrlInputDialog_Accept((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_accept(void* self) {
-    KNameAndUrlInputDialog_QBaseAccept((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_accept(void* self) {
+    KNameAndUrlInputDialog_SuperAccept((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_accept(void* self, void (*callback)()) {
@@ -1615,8 +1615,8 @@ void k_nameandurlinputdialog_reject(void* self) {
     KNameAndUrlInputDialog_Reject((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_reject(void* self) {
-    KNameAndUrlInputDialog_QBaseReject((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_reject(void* self) {
+    KNameAndUrlInputDialog_SuperReject((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_reject(void* self, void (*callback)()) {
@@ -1627,8 +1627,8 @@ void k_nameandurlinputdialog_key_press_event(void* self, void* param1) {
     KNameAndUrlInputDialog_KeyPressEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_key_press_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseKeyPressEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)param1);
+void k_nameandurlinputdialog_super_key_press_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperKeyPressEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1639,8 +1639,8 @@ void k_nameandurlinputdialog_close_event(void* self, void* param1) {
     KNameAndUrlInputDialog_CloseEvent((KNameAndUrlInputDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_close_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseCloseEvent((KNameAndUrlInputDialog*)self, (QCloseEvent*)param1);
+void k_nameandurlinputdialog_super_close_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperCloseEvent((KNameAndUrlInputDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1651,8 +1651,8 @@ void k_nameandurlinputdialog_show_event(void* self, void* param1) {
     KNameAndUrlInputDialog_ShowEvent((KNameAndUrlInputDialog*)self, (QShowEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_show_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseShowEvent((KNameAndUrlInputDialog*)self, (QShowEvent*)param1);
+void k_nameandurlinputdialog_super_show_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperShowEvent((KNameAndUrlInputDialog*)self, (QShowEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1663,8 +1663,8 @@ void k_nameandurlinputdialog_resize_event(void* self, void* param1) {
     KNameAndUrlInputDialog_ResizeEvent((KNameAndUrlInputDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_resize_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseResizeEvent((KNameAndUrlInputDialog*)self, (QResizeEvent*)param1);
+void k_nameandurlinputdialog_super_resize_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperResizeEvent((KNameAndUrlInputDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1675,8 +1675,8 @@ void k_nameandurlinputdialog_context_menu_event(void* self, void* param1) {
     KNameAndUrlInputDialog_ContextMenuEvent((KNameAndUrlInputDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_context_menu_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseContextMenuEvent((KNameAndUrlInputDialog*)self, (QContextMenuEvent*)param1);
+void k_nameandurlinputdialog_super_context_menu_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperContextMenuEvent((KNameAndUrlInputDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1687,8 +1687,8 @@ bool k_nameandurlinputdialog_event_filter(void* self, void* param1, void* param2
     return KNameAndUrlInputDialog_EventFilter((KNameAndUrlInputDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_nameandurlinputdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KNameAndUrlInputDialog_QBaseEventFilter((KNameAndUrlInputDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_nameandurlinputdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KNameAndUrlInputDialog_SuperEventFilter((KNameAndUrlInputDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_nameandurlinputdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1699,8 +1699,8 @@ int32_t k_nameandurlinputdialog_dev_type(void* self) {
     return KNameAndUrlInputDialog_DevType((KNameAndUrlInputDialog*)self);
 }
 
-int32_t k_nameandurlinputdialog_qbase_dev_type(void* self) {
-    return KNameAndUrlInputDialog_QBaseDevType((KNameAndUrlInputDialog*)self);
+int32_t k_nameandurlinputdialog_super_dev_type(void* self) {
+    return KNameAndUrlInputDialog_SuperDevType((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1711,8 +1711,8 @@ int32_t k_nameandurlinputdialog_height_for_width(void* self, int param1) {
     return KNameAndUrlInputDialog_HeightForWidth((KNameAndUrlInputDialog*)self, param1);
 }
 
-int32_t k_nameandurlinputdialog_qbase_height_for_width(void* self, int param1) {
-    return KNameAndUrlInputDialog_QBaseHeightForWidth((KNameAndUrlInputDialog*)self, param1);
+int32_t k_nameandurlinputdialog_super_height_for_width(void* self, int param1) {
+    return KNameAndUrlInputDialog_SuperHeightForWidth((KNameAndUrlInputDialog*)self, param1);
 }
 
 void k_nameandurlinputdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1723,8 +1723,8 @@ bool k_nameandurlinputdialog_has_height_for_width(void* self) {
     return KNameAndUrlInputDialog_HasHeightForWidth((KNameAndUrlInputDialog*)self);
 }
 
-bool k_nameandurlinputdialog_qbase_has_height_for_width(void* self) {
-    return KNameAndUrlInputDialog_QBaseHasHeightForWidth((KNameAndUrlInputDialog*)self);
+bool k_nameandurlinputdialog_super_has_height_for_width(void* self) {
+    return KNameAndUrlInputDialog_SuperHasHeightForWidth((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1735,8 +1735,8 @@ QPaintEngine* k_nameandurlinputdialog_paint_engine(void* self) {
     return KNameAndUrlInputDialog_PaintEngine((KNameAndUrlInputDialog*)self);
 }
 
-QPaintEngine* k_nameandurlinputdialog_qbase_paint_engine(void* self) {
-    return KNameAndUrlInputDialog_QBasePaintEngine((KNameAndUrlInputDialog*)self);
+QPaintEngine* k_nameandurlinputdialog_super_paint_engine(void* self) {
+    return KNameAndUrlInputDialog_SuperPaintEngine((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1747,8 +1747,8 @@ bool k_nameandurlinputdialog_event(void* self, void* event) {
     return KNameAndUrlInputDialog_Event((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
-bool k_nameandurlinputdialog_qbase_event(void* self, void* event) {
-    return KNameAndUrlInputDialog_QBaseEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
+bool k_nameandurlinputdialog_super_event(void* self, void* event) {
+    return KNameAndUrlInputDialog_SuperEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1759,8 +1759,8 @@ void k_nameandurlinputdialog_mouse_press_event(void* self, void* event) {
     KNameAndUrlInputDialog_MousePressEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_mouse_press_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseMousePressEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
+void k_nameandurlinputdialog_super_mouse_press_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperMousePressEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void k_nameandurlinputdialog_mouse_release_event(void* self, void* event) {
     KNameAndUrlInputDialog_MouseReleaseEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_mouse_release_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseMouseReleaseEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
+void k_nameandurlinputdialog_super_mouse_release_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperMouseReleaseEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1783,8 +1783,8 @@ void k_nameandurlinputdialog_mouse_double_click_event(void* self, void* event) {
     KNameAndUrlInputDialog_MouseDoubleClickEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseMouseDoubleClickEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
+void k_nameandurlinputdialog_super_mouse_double_click_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperMouseDoubleClickEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1795,8 +1795,8 @@ void k_nameandurlinputdialog_mouse_move_event(void* self, void* event) {
     KNameAndUrlInputDialog_MouseMoveEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_mouse_move_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseMouseMoveEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
+void k_nameandurlinputdialog_super_mouse_move_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperMouseMoveEvent((KNameAndUrlInputDialog*)self, (QMouseEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void k_nameandurlinputdialog_wheel_event(void* self, void* event) {
     KNameAndUrlInputDialog_WheelEvent((KNameAndUrlInputDialog*)self, (QWheelEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_wheel_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseWheelEvent((KNameAndUrlInputDialog*)self, (QWheelEvent*)event);
+void k_nameandurlinputdialog_super_wheel_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperWheelEvent((KNameAndUrlInputDialog*)self, (QWheelEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void k_nameandurlinputdialog_key_release_event(void* self, void* event) {
     KNameAndUrlInputDialog_KeyReleaseEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_key_release_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseKeyReleaseEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)event);
+void k_nameandurlinputdialog_super_key_release_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperKeyReleaseEvent((KNameAndUrlInputDialog*)self, (QKeyEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void k_nameandurlinputdialog_focus_in_event(void* self, void* event) {
     KNameAndUrlInputDialog_FocusInEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_focus_in_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseFocusInEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
+void k_nameandurlinputdialog_super_focus_in_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperFocusInEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void k_nameandurlinputdialog_focus_out_event(void* self, void* event) {
     KNameAndUrlInputDialog_FocusOutEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_focus_out_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseFocusOutEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
+void k_nameandurlinputdialog_super_focus_out_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperFocusOutEvent((KNameAndUrlInputDialog*)self, (QFocusEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ void k_nameandurlinputdialog_enter_event(void* self, void* event) {
     KNameAndUrlInputDialog_EnterEvent((KNameAndUrlInputDialog*)self, (QEnterEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_enter_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseEnterEvent((KNameAndUrlInputDialog*)self, (QEnterEvent*)event);
+void k_nameandurlinputdialog_super_enter_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperEnterEvent((KNameAndUrlInputDialog*)self, (QEnterEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ void k_nameandurlinputdialog_leave_event(void* self, void* event) {
     KNameAndUrlInputDialog_LeaveEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_leave_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseLeaveEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
+void k_nameandurlinputdialog_super_leave_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperLeaveEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void k_nameandurlinputdialog_paint_event(void* self, void* event) {
     KNameAndUrlInputDialog_PaintEvent((KNameAndUrlInputDialog*)self, (QPaintEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_paint_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBasePaintEvent((KNameAndUrlInputDialog*)self, (QPaintEvent*)event);
+void k_nameandurlinputdialog_super_paint_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperPaintEvent((KNameAndUrlInputDialog*)self, (QPaintEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void k_nameandurlinputdialog_move_event(void* self, void* event) {
     KNameAndUrlInputDialog_MoveEvent((KNameAndUrlInputDialog*)self, (QMoveEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_move_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseMoveEvent((KNameAndUrlInputDialog*)self, (QMoveEvent*)event);
+void k_nameandurlinputdialog_super_move_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperMoveEvent((KNameAndUrlInputDialog*)self, (QMoveEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void k_nameandurlinputdialog_tablet_event(void* self, void* event) {
     KNameAndUrlInputDialog_TabletEvent((KNameAndUrlInputDialog*)self, (QTabletEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_tablet_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseTabletEvent((KNameAndUrlInputDialog*)self, (QTabletEvent*)event);
+void k_nameandurlinputdialog_super_tablet_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperTabletEvent((KNameAndUrlInputDialog*)self, (QTabletEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void k_nameandurlinputdialog_action_event(void* self, void* event) {
     KNameAndUrlInputDialog_ActionEvent((KNameAndUrlInputDialog*)self, (QActionEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_action_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseActionEvent((KNameAndUrlInputDialog*)self, (QActionEvent*)event);
+void k_nameandurlinputdialog_super_action_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperActionEvent((KNameAndUrlInputDialog*)self, (QActionEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void k_nameandurlinputdialog_drag_enter_event(void* self, void* event) {
     KNameAndUrlInputDialog_DragEnterEvent((KNameAndUrlInputDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_drag_enter_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseDragEnterEvent((KNameAndUrlInputDialog*)self, (QDragEnterEvent*)event);
+void k_nameandurlinputdialog_super_drag_enter_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperDragEnterEvent((KNameAndUrlInputDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ void k_nameandurlinputdialog_drag_move_event(void* self, void* event) {
     KNameAndUrlInputDialog_DragMoveEvent((KNameAndUrlInputDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_drag_move_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseDragMoveEvent((KNameAndUrlInputDialog*)self, (QDragMoveEvent*)event);
+void k_nameandurlinputdialog_super_drag_move_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperDragMoveEvent((KNameAndUrlInputDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void k_nameandurlinputdialog_drag_leave_event(void* self, void* event) {
     KNameAndUrlInputDialog_DragLeaveEvent((KNameAndUrlInputDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_drag_leave_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseDragLeaveEvent((KNameAndUrlInputDialog*)self, (QDragLeaveEvent*)event);
+void k_nameandurlinputdialog_super_drag_leave_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperDragLeaveEvent((KNameAndUrlInputDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ void k_nameandurlinputdialog_drop_event(void* self, void* event) {
     KNameAndUrlInputDialog_DropEvent((KNameAndUrlInputDialog*)self, (QDropEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_drop_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseDropEvent((KNameAndUrlInputDialog*)self, (QDropEvent*)event);
+void k_nameandurlinputdialog_super_drop_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperDropEvent((KNameAndUrlInputDialog*)self, (QDropEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ void k_nameandurlinputdialog_hide_event(void* self, void* event) {
     KNameAndUrlInputDialog_HideEvent((KNameAndUrlInputDialog*)self, (QHideEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_hide_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseHideEvent((KNameAndUrlInputDialog*)self, (QHideEvent*)event);
+void k_nameandurlinputdialog_super_hide_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperHideEvent((KNameAndUrlInputDialog*)self, (QHideEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ bool k_nameandurlinputdialog_native_event(void* self, char* eventType, void* mes
     return KNameAndUrlInputDialog_NativeEvent((KNameAndUrlInputDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_nameandurlinputdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KNameAndUrlInputDialog_QBaseNativeEvent((KNameAndUrlInputDialog*)self, qstring(eventType), message, result);
+bool k_nameandurlinputdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KNameAndUrlInputDialog_SuperNativeEvent((KNameAndUrlInputDialog*)self, qstring(eventType), message, result);
 }
 
 void k_nameandurlinputdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1999,8 +1999,8 @@ void k_nameandurlinputdialog_change_event(void* self, void* param1) {
     KNameAndUrlInputDialog_ChangeEvent((KNameAndUrlInputDialog*)self, (QEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_change_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseChangeEvent((KNameAndUrlInputDialog*)self, (QEvent*)param1);
+void k_nameandurlinputdialog_super_change_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperChangeEvent((KNameAndUrlInputDialog*)self, (QEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ int32_t k_nameandurlinputdialog_metric(void* self, int32_t param1) {
     return KNameAndUrlInputDialog_Metric((KNameAndUrlInputDialog*)self, param1);
 }
 
-int32_t k_nameandurlinputdialog_qbase_metric(void* self, int32_t param1) {
-    return KNameAndUrlInputDialog_QBaseMetric((KNameAndUrlInputDialog*)self, param1);
+int32_t k_nameandurlinputdialog_super_metric(void* self, int32_t param1) {
+    return KNameAndUrlInputDialog_SuperMetric((KNameAndUrlInputDialog*)self, param1);
 }
 
 void k_nameandurlinputdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2023,8 +2023,8 @@ void k_nameandurlinputdialog_init_painter(void* self, void* painter) {
     KNameAndUrlInputDialog_InitPainter((KNameAndUrlInputDialog*)self, (QPainter*)painter);
 }
 
-void k_nameandurlinputdialog_qbase_init_painter(void* self, void* painter) {
-    KNameAndUrlInputDialog_QBaseInitPainter((KNameAndUrlInputDialog*)self, (QPainter*)painter);
+void k_nameandurlinputdialog_super_init_painter(void* self, void* painter) {
+    KNameAndUrlInputDialog_SuperInitPainter((KNameAndUrlInputDialog*)self, (QPainter*)painter);
 }
 
 void k_nameandurlinputdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ QPaintDevice* k_nameandurlinputdialog_redirected(void* self, void* offset) {
     return KNameAndUrlInputDialog_Redirected((KNameAndUrlInputDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_nameandurlinputdialog_qbase_redirected(void* self, void* offset) {
-    return KNameAndUrlInputDialog_QBaseRedirected((KNameAndUrlInputDialog*)self, (QPoint*)offset);
+QPaintDevice* k_nameandurlinputdialog_super_redirected(void* self, void* offset) {
+    return KNameAndUrlInputDialog_SuperRedirected((KNameAndUrlInputDialog*)self, (QPoint*)offset);
 }
 
 void k_nameandurlinputdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2047,8 +2047,8 @@ QPainter* k_nameandurlinputdialog_shared_painter(void* self) {
     return KNameAndUrlInputDialog_SharedPainter((KNameAndUrlInputDialog*)self);
 }
 
-QPainter* k_nameandurlinputdialog_qbase_shared_painter(void* self) {
-    return KNameAndUrlInputDialog_QBaseSharedPainter((KNameAndUrlInputDialog*)self);
+QPainter* k_nameandurlinputdialog_super_shared_painter(void* self) {
+    return KNameAndUrlInputDialog_SuperSharedPainter((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2059,8 +2059,8 @@ void k_nameandurlinputdialog_input_method_event(void* self, void* param1) {
     KNameAndUrlInputDialog_InputMethodEvent((KNameAndUrlInputDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_input_method_event(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseInputMethodEvent((KNameAndUrlInputDialog*)self, (QInputMethodEvent*)param1);
+void k_nameandurlinputdialog_super_input_method_event(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperInputMethodEvent((KNameAndUrlInputDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_nameandurlinputdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2071,8 +2071,8 @@ QVariant* k_nameandurlinputdialog_input_method_query(void* self, int32_t param1)
     return KNameAndUrlInputDialog_InputMethodQuery((KNameAndUrlInputDialog*)self, param1);
 }
 
-QVariant* k_nameandurlinputdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KNameAndUrlInputDialog_QBaseInputMethodQuery((KNameAndUrlInputDialog*)self, param1);
+QVariant* k_nameandurlinputdialog_super_input_method_query(void* self, int32_t param1) {
+    return KNameAndUrlInputDialog_SuperInputMethodQuery((KNameAndUrlInputDialog*)self, param1);
 }
 
 void k_nameandurlinputdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2083,8 +2083,8 @@ bool k_nameandurlinputdialog_focus_next_prev_child(void* self, bool next) {
     return KNameAndUrlInputDialog_FocusNextPrevChild((KNameAndUrlInputDialog*)self, next);
 }
 
-bool k_nameandurlinputdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KNameAndUrlInputDialog_QBaseFocusNextPrevChild((KNameAndUrlInputDialog*)self, next);
+bool k_nameandurlinputdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KNameAndUrlInputDialog_SuperFocusNextPrevChild((KNameAndUrlInputDialog*)self, next);
 }
 
 void k_nameandurlinputdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2095,8 +2095,8 @@ void k_nameandurlinputdialog_timer_event(void* self, void* event) {
     KNameAndUrlInputDialog_TimerEvent((KNameAndUrlInputDialog*)self, (QTimerEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_timer_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseTimerEvent((KNameAndUrlInputDialog*)self, (QTimerEvent*)event);
+void k_nameandurlinputdialog_super_timer_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperTimerEvent((KNameAndUrlInputDialog*)self, (QTimerEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void k_nameandurlinputdialog_child_event(void* self, void* event) {
     KNameAndUrlInputDialog_ChildEvent((KNameAndUrlInputDialog*)self, (QChildEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_child_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseChildEvent((KNameAndUrlInputDialog*)self, (QChildEvent*)event);
+void k_nameandurlinputdialog_super_child_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperChildEvent((KNameAndUrlInputDialog*)self, (QChildEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void k_nameandurlinputdialog_custom_event(void* self, void* event) {
     KNameAndUrlInputDialog_CustomEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
-void k_nameandurlinputdialog_qbase_custom_event(void* self, void* event) {
-    KNameAndUrlInputDialog_QBaseCustomEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
+void k_nameandurlinputdialog_super_custom_event(void* self, void* event) {
+    KNameAndUrlInputDialog_SuperCustomEvent((KNameAndUrlInputDialog*)self, (QEvent*)event);
 }
 
 void k_nameandurlinputdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ void k_nameandurlinputdialog_connect_notify(void* self, void* signal) {
     KNameAndUrlInputDialog_ConnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_nameandurlinputdialog_qbase_connect_notify(void* self, void* signal) {
-    KNameAndUrlInputDialog_QBaseConnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
+void k_nameandurlinputdialog_super_connect_notify(void* self, void* signal) {
+    KNameAndUrlInputDialog_SuperConnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nameandurlinputdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2143,8 +2143,8 @@ void k_nameandurlinputdialog_disconnect_notify(void* self, void* signal) {
     KNameAndUrlInputDialog_DisconnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_nameandurlinputdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KNameAndUrlInputDialog_QBaseDisconnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
+void k_nameandurlinputdialog_super_disconnect_notify(void* self, void* signal) {
+    KNameAndUrlInputDialog_SuperDisconnectNotify((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nameandurlinputdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ void k_nameandurlinputdialog_adjust_position(void* self, void* param1) {
     KNameAndUrlInputDialog_AdjustPosition((KNameAndUrlInputDialog*)self, (QWidget*)param1);
 }
 
-void k_nameandurlinputdialog_qbase_adjust_position(void* self, void* param1) {
-    KNameAndUrlInputDialog_QBaseAdjustPosition((KNameAndUrlInputDialog*)self, (QWidget*)param1);
+void k_nameandurlinputdialog_super_adjust_position(void* self, void* param1) {
+    KNameAndUrlInputDialog_SuperAdjustPosition((KNameAndUrlInputDialog*)self, (QWidget*)param1);
 }
 
 void k_nameandurlinputdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2167,8 +2167,8 @@ void k_nameandurlinputdialog_update_micro_focus(void* self) {
     KNameAndUrlInputDialog_UpdateMicroFocus((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_update_micro_focus(void* self) {
-    KNameAndUrlInputDialog_QBaseUpdateMicroFocus((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_update_micro_focus(void* self) {
+    KNameAndUrlInputDialog_SuperUpdateMicroFocus((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2179,8 +2179,8 @@ void k_nameandurlinputdialog_create(void* self) {
     KNameAndUrlInputDialog_Create((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_create(void* self) {
-    KNameAndUrlInputDialog_QBaseCreate((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_create(void* self) {
+    KNameAndUrlInputDialog_SuperCreate((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_create(void* self, void (*callback)()) {
@@ -2191,8 +2191,8 @@ void k_nameandurlinputdialog_destroy(void* self) {
     KNameAndUrlInputDialog_Destroy((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_qbase_destroy(void* self) {
-    KNameAndUrlInputDialog_QBaseDestroy((KNameAndUrlInputDialog*)self);
+void k_nameandurlinputdialog_super_destroy(void* self) {
+    KNameAndUrlInputDialog_SuperDestroy((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_destroy(void* self, void (*callback)()) {
@@ -2203,8 +2203,8 @@ bool k_nameandurlinputdialog_focus_next_child(void* self) {
     return KNameAndUrlInputDialog_FocusNextChild((KNameAndUrlInputDialog*)self);
 }
 
-bool k_nameandurlinputdialog_qbase_focus_next_child(void* self) {
-    return KNameAndUrlInputDialog_QBaseFocusNextChild((KNameAndUrlInputDialog*)self);
+bool k_nameandurlinputdialog_super_focus_next_child(void* self) {
+    return KNameAndUrlInputDialog_SuperFocusNextChild((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2215,8 +2215,8 @@ bool k_nameandurlinputdialog_focus_previous_child(void* self) {
     return KNameAndUrlInputDialog_FocusPreviousChild((KNameAndUrlInputDialog*)self);
 }
 
-bool k_nameandurlinputdialog_qbase_focus_previous_child(void* self) {
-    return KNameAndUrlInputDialog_QBaseFocusPreviousChild((KNameAndUrlInputDialog*)self);
+bool k_nameandurlinputdialog_super_focus_previous_child(void* self) {
+    return KNameAndUrlInputDialog_SuperFocusPreviousChild((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2227,8 +2227,8 @@ QObject* k_nameandurlinputdialog_sender(void* self) {
     return KNameAndUrlInputDialog_Sender((KNameAndUrlInputDialog*)self);
 }
 
-QObject* k_nameandurlinputdialog_qbase_sender(void* self) {
-    return KNameAndUrlInputDialog_QBaseSender((KNameAndUrlInputDialog*)self);
+QObject* k_nameandurlinputdialog_super_sender(void* self) {
+    return KNameAndUrlInputDialog_SuperSender((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2239,8 +2239,8 @@ int32_t k_nameandurlinputdialog_sender_signal_index(void* self) {
     return KNameAndUrlInputDialog_SenderSignalIndex((KNameAndUrlInputDialog*)self);
 }
 
-int32_t k_nameandurlinputdialog_qbase_sender_signal_index(void* self) {
-    return KNameAndUrlInputDialog_QBaseSenderSignalIndex((KNameAndUrlInputDialog*)self);
+int32_t k_nameandurlinputdialog_super_sender_signal_index(void* self) {
+    return KNameAndUrlInputDialog_SuperSenderSignalIndex((KNameAndUrlInputDialog*)self);
 }
 
 void k_nameandurlinputdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2251,8 +2251,8 @@ int32_t k_nameandurlinputdialog_receivers(void* self, const char* signal) {
     return KNameAndUrlInputDialog_Receivers((KNameAndUrlInputDialog*)self, signal);
 }
 
-int32_t k_nameandurlinputdialog_qbase_receivers(void* self, const char* signal) {
-    return KNameAndUrlInputDialog_QBaseReceivers((KNameAndUrlInputDialog*)self, signal);
+int32_t k_nameandurlinputdialog_super_receivers(void* self, const char* signal) {
+    return KNameAndUrlInputDialog_SuperReceivers((KNameAndUrlInputDialog*)self, signal);
 }
 
 void k_nameandurlinputdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2263,8 +2263,8 @@ bool k_nameandurlinputdialog_is_signal_connected(void* self, void* signal) {
     return KNameAndUrlInputDialog_IsSignalConnected((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_nameandurlinputdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KNameAndUrlInputDialog_QBaseIsSignalConnected((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
+bool k_nameandurlinputdialog_super_is_signal_connected(void* self, void* signal) {
+    return KNameAndUrlInputDialog_SuperIsSignalConnected((KNameAndUrlInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nameandurlinputdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2275,8 +2275,8 @@ double k_nameandurlinputdialog_get_decoded_metric_f(void* self, int32_t metricA,
     return KNameAndUrlInputDialog_GetDecodedMetricF((KNameAndUrlInputDialog*)self, metricA, metricB);
 }
 
-double k_nameandurlinputdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KNameAndUrlInputDialog_QBaseGetDecodedMetricF((KNameAndUrlInputDialog*)self, metricA, metricB);
+double k_nameandurlinputdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KNameAndUrlInputDialog_SuperGetDecodedMetricF((KNameAndUrlInputDialog*)self, metricA, metricB);
 }
 
 void k_nameandurlinputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

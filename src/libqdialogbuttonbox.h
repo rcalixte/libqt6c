@@ -93,13 +93,17 @@ const QMetaObject* q_dialogbuttonbox_meta_object(void* self);
 ///
 void q_dialogbuttonbox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_meta_object` instead
+///
+#define q_dialogbuttonbox_qbase_meta_object q_dialogbuttonbox_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QDialogButtonBox*
 ///
-const QMetaObject* q_dialogbuttonbox_qbase_meta_object(void* self);
+const QMetaObject* q_dialogbuttonbox_super_meta_object(void* self);
 
 /// @param self QDialogButtonBox*
 /// @param param1 const char*
@@ -113,12 +117,16 @@ void* q_dialogbuttonbox_metacast(void* self, const char* param1);
 ///
 void q_dialogbuttonbox_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_metacast` instead
+///
+#define q_dialogbuttonbox_qbase_metacast q_dialogbuttonbox_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QDialogButtonBox*
 /// @param param1 const char*
 ///
-void* q_dialogbuttonbox_qbase_metacast(void* self, const char* param1);
+void* q_dialogbuttonbox_super_metacast(void* self, const char* param1);
 
 /// @param self QDialogButtonBox*
 /// @param param1 enum QMetaObject__Call
@@ -134,6 +142,10 @@ int32_t q_dialogbuttonbox_metacall(void* self, int32_t param1, int param2, void*
 ///
 void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_metacall` instead
+///
+#define q_dialogbuttonbox_qbase_metacall q_dialogbuttonbox_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QDialogButtonBox*
@@ -141,7 +153,7 @@ void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_dialogbuttonbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_dialogbuttonbox_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -332,6 +344,10 @@ void q_dialogbuttonbox_change_event(void* self, void* event);
 ///
 void q_dialogbuttonbox_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_change_event` instead
+///
+#define q_dialogbuttonbox_qbase_change_event q_dialogbuttonbox_super_change_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialogbuttonbox.html#changeEvent)
 ///
 /// Base class method implementation
@@ -339,7 +355,7 @@ void q_dialogbuttonbox_on_change_event(void* self, void (*callback)(void*, void*
 /// @param self QDialogButtonBox*
 /// @param event QEvent*
 ///
-void q_dialogbuttonbox_qbase_change_event(void* self, void* event);
+void q_dialogbuttonbox_super_change_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialogbuttonbox.html#event)
 ///
@@ -357,6 +373,10 @@ bool q_dialogbuttonbox_event(void* self, void* event);
 ///
 void q_dialogbuttonbox_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_event` instead
+///
+#define q_dialogbuttonbox_qbase_event q_dialogbuttonbox_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialogbuttonbox.html#event)
 ///
 /// Base class method implementation
@@ -364,7 +384,7 @@ void q_dialogbuttonbox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QDialogButtonBox*
 /// @param event QEvent*
 ///
-bool q_dialogbuttonbox_qbase_event(void* self, void* event);
+bool q_dialogbuttonbox_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3352,6 +3372,10 @@ int32_t q_dialogbuttonbox_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_dialogbuttonbox_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_dev_type` instead
+///
+#define q_dialogbuttonbox_qbase_dev_type q_dialogbuttonbox_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3360,7 +3384,7 @@ int32_t q_dialogbuttonbox_dev_type(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-int32_t q_dialogbuttonbox_qbase_dev_type(void* self);
+int32_t q_dialogbuttonbox_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3384,6 +3408,10 @@ void q_dialogbuttonbox_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_dialogbuttonbox_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_set_visible` instead
+///
+#define q_dialogbuttonbox_qbase_set_visible q_dialogbuttonbox_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3393,7 +3421,7 @@ void q_dialogbuttonbox_set_visible(void* self, bool visible);
 /// @param self QDialogButtonBox*
 /// @param visible bool
 ///
-void q_dialogbuttonbox_qbase_set_visible(void* self, bool visible);
+void q_dialogbuttonbox_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -3416,6 +3444,10 @@ void q_dialogbuttonbox_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 QSize* q_dialogbuttonbox_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_size_hint` instead
+///
+#define q_dialogbuttonbox_qbase_size_hint q_dialogbuttonbox_super_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3424,7 +3456,7 @@ QSize* q_dialogbuttonbox_size_hint(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-QSize* q_dialogbuttonbox_qbase_size_hint(void* self);
+QSize* q_dialogbuttonbox_super_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3447,6 +3479,10 @@ void q_dialogbuttonbox_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* q_dialogbuttonbox_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_minimum_size_hint` instead
+///
+#define q_dialogbuttonbox_qbase_minimum_size_hint q_dialogbuttonbox_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -3455,7 +3491,7 @@ QSize* q_dialogbuttonbox_minimum_size_hint(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-QSize* q_dialogbuttonbox_qbase_minimum_size_hint(void* self);
+QSize* q_dialogbuttonbox_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3479,6 +3515,10 @@ void q_dialogbuttonbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t q_dialogbuttonbox_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_height_for_width` instead
+///
+#define q_dialogbuttonbox_qbase_height_for_width q_dialogbuttonbox_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3488,7 +3528,7 @@ int32_t q_dialogbuttonbox_height_for_width(void* self, int param1);
 /// @param self QDialogButtonBox*
 /// @param param1 int
 ///
-int32_t q_dialogbuttonbox_qbase_height_for_width(void* self, int param1);
+int32_t q_dialogbuttonbox_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3511,6 +3551,10 @@ void q_dialogbuttonbox_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool q_dialogbuttonbox_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_has_height_for_width` instead
+///
+#define q_dialogbuttonbox_qbase_has_height_for_width q_dialogbuttonbox_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3519,7 +3563,7 @@ bool q_dialogbuttonbox_has_height_for_width(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-bool q_dialogbuttonbox_qbase_has_height_for_width(void* self);
+bool q_dialogbuttonbox_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3542,6 +3586,10 @@ void q_dialogbuttonbox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_dialogbuttonbox_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_paint_engine` instead
+///
+#define q_dialogbuttonbox_qbase_paint_engine q_dialogbuttonbox_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3550,7 +3598,7 @@ QPaintEngine* q_dialogbuttonbox_paint_engine(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-QPaintEngine* q_dialogbuttonbox_qbase_paint_engine(void* self);
+QPaintEngine* q_dialogbuttonbox_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3574,6 +3622,10 @@ void q_dialogbuttonbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_dialogbuttonbox_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_mouse_press_event` instead
+///
+#define q_dialogbuttonbox_qbase_mouse_press_event q_dialogbuttonbox_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3583,7 +3635,7 @@ void q_dialogbuttonbox_mouse_press_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QMouseEvent*
 ///
-void q_dialogbuttonbox_qbase_mouse_press_event(void* self, void* event);
+void q_dialogbuttonbox_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3607,6 +3659,10 @@ void q_dialogbuttonbox_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 void q_dialogbuttonbox_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_mouse_release_event` instead
+///
+#define q_dialogbuttonbox_qbase_mouse_release_event q_dialogbuttonbox_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3616,7 +3672,7 @@ void q_dialogbuttonbox_mouse_release_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QMouseEvent*
 ///
-void q_dialogbuttonbox_qbase_mouse_release_event(void* self, void* event);
+void q_dialogbuttonbox_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3640,6 +3696,10 @@ void q_dialogbuttonbox_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void q_dialogbuttonbox_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_mouse_double_click_event` instead
+///
+#define q_dialogbuttonbox_qbase_mouse_double_click_event q_dialogbuttonbox_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3649,7 +3709,7 @@ void q_dialogbuttonbox_mouse_double_click_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QMouseEvent*
 ///
-void q_dialogbuttonbox_qbase_mouse_double_click_event(void* self, void* event);
+void q_dialogbuttonbox_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3673,6 +3733,10 @@ void q_dialogbuttonbox_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void q_dialogbuttonbox_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_mouse_move_event` instead
+///
+#define q_dialogbuttonbox_qbase_mouse_move_event q_dialogbuttonbox_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3682,7 +3746,7 @@ void q_dialogbuttonbox_mouse_move_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QMouseEvent*
 ///
-void q_dialogbuttonbox_qbase_mouse_move_event(void* self, void* event);
+void q_dialogbuttonbox_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3706,6 +3770,10 @@ void q_dialogbuttonbox_on_mouse_move_event(void* self, void (*callback)(void*, v
 ///
 void q_dialogbuttonbox_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_wheel_event` instead
+///
+#define q_dialogbuttonbox_qbase_wheel_event q_dialogbuttonbox_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3715,7 +3783,7 @@ void q_dialogbuttonbox_wheel_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QWheelEvent*
 ///
-void q_dialogbuttonbox_qbase_wheel_event(void* self, void* event);
+void q_dialogbuttonbox_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3739,6 +3807,10 @@ void q_dialogbuttonbox_on_wheel_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_key_press_event` instead
+///
+#define q_dialogbuttonbox_qbase_key_press_event q_dialogbuttonbox_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3748,7 +3820,7 @@ void q_dialogbuttonbox_key_press_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QKeyEvent*
 ///
-void q_dialogbuttonbox_qbase_key_press_event(void* self, void* event);
+void q_dialogbuttonbox_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3772,6 +3844,10 @@ void q_dialogbuttonbox_on_key_press_event(void* self, void (*callback)(void*, vo
 ///
 void q_dialogbuttonbox_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_key_release_event` instead
+///
+#define q_dialogbuttonbox_qbase_key_release_event q_dialogbuttonbox_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3781,7 +3857,7 @@ void q_dialogbuttonbox_key_release_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QKeyEvent*
 ///
-void q_dialogbuttonbox_qbase_key_release_event(void* self, void* event);
+void q_dialogbuttonbox_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3805,6 +3881,10 @@ void q_dialogbuttonbox_on_key_release_event(void* self, void (*callback)(void*, 
 ///
 void q_dialogbuttonbox_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_focus_in_event` instead
+///
+#define q_dialogbuttonbox_qbase_focus_in_event q_dialogbuttonbox_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3814,7 +3894,7 @@ void q_dialogbuttonbox_focus_in_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QFocusEvent*
 ///
-void q_dialogbuttonbox_qbase_focus_in_event(void* self, void* event);
+void q_dialogbuttonbox_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3838,6 +3918,10 @@ void q_dialogbuttonbox_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 void q_dialogbuttonbox_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_focus_out_event` instead
+///
+#define q_dialogbuttonbox_qbase_focus_out_event q_dialogbuttonbox_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3847,7 +3931,7 @@ void q_dialogbuttonbox_focus_out_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QFocusEvent*
 ///
-void q_dialogbuttonbox_qbase_focus_out_event(void* self, void* event);
+void q_dialogbuttonbox_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3871,6 +3955,10 @@ void q_dialogbuttonbox_on_focus_out_event(void* self, void (*callback)(void*, vo
 ///
 void q_dialogbuttonbox_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_enter_event` instead
+///
+#define q_dialogbuttonbox_qbase_enter_event q_dialogbuttonbox_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -3880,7 +3968,7 @@ void q_dialogbuttonbox_enter_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QEnterEvent*
 ///
-void q_dialogbuttonbox_qbase_enter_event(void* self, void* event);
+void q_dialogbuttonbox_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3904,6 +3992,10 @@ void q_dialogbuttonbox_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_leave_event` instead
+///
+#define q_dialogbuttonbox_qbase_leave_event q_dialogbuttonbox_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3913,7 +4005,7 @@ void q_dialogbuttonbox_leave_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QEvent*
 ///
-void q_dialogbuttonbox_qbase_leave_event(void* self, void* event);
+void q_dialogbuttonbox_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3937,6 +4029,10 @@ void q_dialogbuttonbox_on_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_paint_event` instead
+///
+#define q_dialogbuttonbox_qbase_paint_event q_dialogbuttonbox_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -3946,7 +4042,7 @@ void q_dialogbuttonbox_paint_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QPaintEvent*
 ///
-void q_dialogbuttonbox_qbase_paint_event(void* self, void* event);
+void q_dialogbuttonbox_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3970,6 +4066,10 @@ void q_dialogbuttonbox_on_paint_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_move_event` instead
+///
+#define q_dialogbuttonbox_qbase_move_event q_dialogbuttonbox_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3979,7 +4079,7 @@ void q_dialogbuttonbox_move_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QMoveEvent*
 ///
-void q_dialogbuttonbox_qbase_move_event(void* self, void* event);
+void q_dialogbuttonbox_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4003,6 +4103,10 @@ void q_dialogbuttonbox_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_dialogbuttonbox_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_resize_event` instead
+///
+#define q_dialogbuttonbox_qbase_resize_event q_dialogbuttonbox_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4012,7 +4116,7 @@ void q_dialogbuttonbox_resize_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QResizeEvent*
 ///
-void q_dialogbuttonbox_qbase_resize_event(void* self, void* event);
+void q_dialogbuttonbox_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4036,6 +4140,10 @@ void q_dialogbuttonbox_on_resize_event(void* self, void (*callback)(void*, void*
 ///
 void q_dialogbuttonbox_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_close_event` instead
+///
+#define q_dialogbuttonbox_qbase_close_event q_dialogbuttonbox_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4045,7 +4153,7 @@ void q_dialogbuttonbox_close_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QCloseEvent*
 ///
-void q_dialogbuttonbox_qbase_close_event(void* self, void* event);
+void q_dialogbuttonbox_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4069,6 +4177,10 @@ void q_dialogbuttonbox_on_close_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_context_menu_event` instead
+///
+#define q_dialogbuttonbox_qbase_context_menu_event q_dialogbuttonbox_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4078,7 +4190,7 @@ void q_dialogbuttonbox_context_menu_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QContextMenuEvent*
 ///
-void q_dialogbuttonbox_qbase_context_menu_event(void* self, void* event);
+void q_dialogbuttonbox_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4102,6 +4214,10 @@ void q_dialogbuttonbox_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 void q_dialogbuttonbox_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_tablet_event` instead
+///
+#define q_dialogbuttonbox_qbase_tablet_event q_dialogbuttonbox_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4111,7 +4227,7 @@ void q_dialogbuttonbox_tablet_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QTabletEvent*
 ///
-void q_dialogbuttonbox_qbase_tablet_event(void* self, void* event);
+void q_dialogbuttonbox_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4135,6 +4251,10 @@ void q_dialogbuttonbox_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 void q_dialogbuttonbox_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_action_event` instead
+///
+#define q_dialogbuttonbox_qbase_action_event q_dialogbuttonbox_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4144,7 +4264,7 @@ void q_dialogbuttonbox_action_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QActionEvent*
 ///
-void q_dialogbuttonbox_qbase_action_event(void* self, void* event);
+void q_dialogbuttonbox_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4168,6 +4288,10 @@ void q_dialogbuttonbox_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void q_dialogbuttonbox_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_drag_enter_event` instead
+///
+#define q_dialogbuttonbox_qbase_drag_enter_event q_dialogbuttonbox_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4177,7 +4301,7 @@ void q_dialogbuttonbox_drag_enter_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QDragEnterEvent*
 ///
-void q_dialogbuttonbox_qbase_drag_enter_event(void* self, void* event);
+void q_dialogbuttonbox_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4201,6 +4325,10 @@ void q_dialogbuttonbox_on_drag_enter_event(void* self, void (*callback)(void*, v
 ///
 void q_dialogbuttonbox_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_drag_move_event` instead
+///
+#define q_dialogbuttonbox_qbase_drag_move_event q_dialogbuttonbox_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4210,7 +4338,7 @@ void q_dialogbuttonbox_drag_move_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QDragMoveEvent*
 ///
-void q_dialogbuttonbox_qbase_drag_move_event(void* self, void* event);
+void q_dialogbuttonbox_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4234,6 +4362,10 @@ void q_dialogbuttonbox_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 void q_dialogbuttonbox_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_drag_leave_event` instead
+///
+#define q_dialogbuttonbox_qbase_drag_leave_event q_dialogbuttonbox_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4243,7 +4375,7 @@ void q_dialogbuttonbox_drag_leave_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QDragLeaveEvent*
 ///
-void q_dialogbuttonbox_qbase_drag_leave_event(void* self, void* event);
+void q_dialogbuttonbox_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4267,6 +4399,10 @@ void q_dialogbuttonbox_on_drag_leave_event(void* self, void (*callback)(void*, v
 ///
 void q_dialogbuttonbox_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_drop_event` instead
+///
+#define q_dialogbuttonbox_qbase_drop_event q_dialogbuttonbox_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4276,7 +4412,7 @@ void q_dialogbuttonbox_drop_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QDropEvent*
 ///
-void q_dialogbuttonbox_qbase_drop_event(void* self, void* event);
+void q_dialogbuttonbox_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4300,6 +4436,10 @@ void q_dialogbuttonbox_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 void q_dialogbuttonbox_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_show_event` instead
+///
+#define q_dialogbuttonbox_qbase_show_event q_dialogbuttonbox_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4309,7 +4449,7 @@ void q_dialogbuttonbox_show_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QShowEvent*
 ///
-void q_dialogbuttonbox_qbase_show_event(void* self, void* event);
+void q_dialogbuttonbox_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4333,6 +4473,10 @@ void q_dialogbuttonbox_on_show_event(void* self, void (*callback)(void*, void*))
 ///
 void q_dialogbuttonbox_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_hide_event` instead
+///
+#define q_dialogbuttonbox_qbase_hide_event q_dialogbuttonbox_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4342,7 +4486,7 @@ void q_dialogbuttonbox_hide_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QHideEvent*
 ///
-void q_dialogbuttonbox_qbase_hide_event(void* self, void* event);
+void q_dialogbuttonbox_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4368,6 +4512,10 @@ void q_dialogbuttonbox_on_hide_event(void* self, void (*callback)(void*, void*))
 ///
 bool q_dialogbuttonbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_native_event` instead
+///
+#define q_dialogbuttonbox_qbase_native_event q_dialogbuttonbox_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4379,7 +4527,7 @@ bool q_dialogbuttonbox_native_event(void* self, char* eventType, void* message, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_dialogbuttonbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_dialogbuttonbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4403,6 +4551,10 @@ void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 int32_t q_dialogbuttonbox_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_metric` instead
+///
+#define q_dialogbuttonbox_qbase_metric q_dialogbuttonbox_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4412,7 +4564,7 @@ int32_t q_dialogbuttonbox_metric(void* self, int32_t param1);
 /// @param self QDialogButtonBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_dialogbuttonbox_qbase_metric(void* self, int32_t param1);
+int32_t q_dialogbuttonbox_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4436,6 +4588,10 @@ void q_dialogbuttonbox_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void q_dialogbuttonbox_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_init_painter` instead
+///
+#define q_dialogbuttonbox_qbase_init_painter q_dialogbuttonbox_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4445,7 +4601,7 @@ void q_dialogbuttonbox_init_painter(void* self, void* painter);
 /// @param self QDialogButtonBox*
 /// @param painter QPainter*
 ///
-void q_dialogbuttonbox_qbase_init_painter(void* self, void* painter);
+void q_dialogbuttonbox_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4469,6 +4625,10 @@ void q_dialogbuttonbox_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* q_dialogbuttonbox_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_redirected` instead
+///
+#define q_dialogbuttonbox_qbase_redirected q_dialogbuttonbox_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4478,7 +4638,7 @@ QPaintDevice* q_dialogbuttonbox_redirected(void* self, void* offset);
 /// @param self QDialogButtonBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_dialogbuttonbox_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_dialogbuttonbox_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4501,6 +4661,10 @@ void q_dialogbuttonbox_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 QPainter* q_dialogbuttonbox_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_shared_painter` instead
+///
+#define q_dialogbuttonbox_qbase_shared_painter q_dialogbuttonbox_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4509,7 +4673,7 @@ QPainter* q_dialogbuttonbox_shared_painter(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-QPainter* q_dialogbuttonbox_qbase_shared_painter(void* self);
+QPainter* q_dialogbuttonbox_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4533,6 +4697,10 @@ void q_dialogbuttonbox_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_dialogbuttonbox_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_input_method_event` instead
+///
+#define q_dialogbuttonbox_qbase_input_method_event q_dialogbuttonbox_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4542,7 +4710,7 @@ void q_dialogbuttonbox_input_method_event(void* self, void* param1);
 /// @param self QDialogButtonBox*
 /// @param param1 QInputMethodEvent*
 ///
-void q_dialogbuttonbox_qbase_input_method_event(void* self, void* param1);
+void q_dialogbuttonbox_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4566,6 +4734,10 @@ void q_dialogbuttonbox_on_input_method_event(void* self, void (*callback)(void*,
 ///
 QVariant* q_dialogbuttonbox_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_input_method_query` instead
+///
+#define q_dialogbuttonbox_qbase_input_method_query q_dialogbuttonbox_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4575,7 +4747,7 @@ QVariant* q_dialogbuttonbox_input_method_query(void* self, int32_t param1);
 /// @param self QDialogButtonBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_dialogbuttonbox_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_dialogbuttonbox_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4599,6 +4771,10 @@ void q_dialogbuttonbox_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 bool q_dialogbuttonbox_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_focus_next_prev_child` instead
+///
+#define q_dialogbuttonbox_qbase_focus_next_prev_child q_dialogbuttonbox_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4608,7 +4784,7 @@ bool q_dialogbuttonbox_focus_next_prev_child(void* self, bool next);
 /// @param self QDialogButtonBox*
 /// @param next bool
 ///
-bool q_dialogbuttonbox_qbase_focus_next_prev_child(void* self, bool next);
+bool q_dialogbuttonbox_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4633,6 +4809,10 @@ void q_dialogbuttonbox_on_focus_next_prev_child(void* self, bool (*callback)(voi
 ///
 bool q_dialogbuttonbox_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_event_filter` instead
+///
+#define q_dialogbuttonbox_qbase_event_filter q_dialogbuttonbox_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4643,7 +4823,7 @@ bool q_dialogbuttonbox_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_dialogbuttonbox_qbase_event_filter(void* self, void* watched, void* event);
+bool q_dialogbuttonbox_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4667,6 +4847,10 @@ void q_dialogbuttonbox_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_dialogbuttonbox_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_timer_event` instead
+///
+#define q_dialogbuttonbox_qbase_timer_event q_dialogbuttonbox_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4676,7 +4860,7 @@ void q_dialogbuttonbox_timer_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QTimerEvent*
 ///
-void q_dialogbuttonbox_qbase_timer_event(void* self, void* event);
+void q_dialogbuttonbox_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4700,6 +4884,10 @@ void q_dialogbuttonbox_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_child_event` instead
+///
+#define q_dialogbuttonbox_qbase_child_event q_dialogbuttonbox_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4709,7 +4897,7 @@ void q_dialogbuttonbox_child_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QChildEvent*
 ///
-void q_dialogbuttonbox_qbase_child_event(void* self, void* event);
+void q_dialogbuttonbox_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4733,6 +4921,10 @@ void q_dialogbuttonbox_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dialogbuttonbox_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_custom_event` instead
+///
+#define q_dialogbuttonbox_qbase_custom_event q_dialogbuttonbox_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4742,7 +4934,7 @@ void q_dialogbuttonbox_custom_event(void* self, void* event);
 /// @param self QDialogButtonBox*
 /// @param event QEvent*
 ///
-void q_dialogbuttonbox_qbase_custom_event(void* self, void* event);
+void q_dialogbuttonbox_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4766,6 +4958,10 @@ void q_dialogbuttonbox_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void q_dialogbuttonbox_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_connect_notify` instead
+///
+#define q_dialogbuttonbox_qbase_connect_notify q_dialogbuttonbox_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4775,7 +4971,7 @@ void q_dialogbuttonbox_connect_notify(void* self, void* signal);
 /// @param self QDialogButtonBox*
 /// @param signal QMetaMethod*
 ///
-void q_dialogbuttonbox_qbase_connect_notify(void* self, void* signal);
+void q_dialogbuttonbox_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4799,6 +4995,10 @@ void q_dialogbuttonbox_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_dialogbuttonbox_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_disconnect_notify` instead
+///
+#define q_dialogbuttonbox_qbase_disconnect_notify q_dialogbuttonbox_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4808,7 +5008,7 @@ void q_dialogbuttonbox_disconnect_notify(void* self, void* signal);
 /// @param self QDialogButtonBox*
 /// @param signal QMetaMethod*
 ///
-void q_dialogbuttonbox_qbase_disconnect_notify(void* self, void* signal);
+void q_dialogbuttonbox_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4831,6 +5031,10 @@ void q_dialogbuttonbox_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void q_dialogbuttonbox_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_update_micro_focus` instead
+///
+#define q_dialogbuttonbox_qbase_update_micro_focus q_dialogbuttonbox_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4839,7 +5043,7 @@ void q_dialogbuttonbox_update_micro_focus(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-void q_dialogbuttonbox_qbase_update_micro_focus(void* self);
+void q_dialogbuttonbox_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4862,6 +5066,10 @@ void q_dialogbuttonbox_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_dialogbuttonbox_create(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_create` instead
+///
+#define q_dialogbuttonbox_qbase_create q_dialogbuttonbox_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4870,7 +5078,7 @@ void q_dialogbuttonbox_create(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-void q_dialogbuttonbox_qbase_create(void* self);
+void q_dialogbuttonbox_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4893,6 +5101,10 @@ void q_dialogbuttonbox_on_create(void* self, void (*callback)());
 ///
 void q_dialogbuttonbox_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_destroy` instead
+///
+#define q_dialogbuttonbox_qbase_destroy q_dialogbuttonbox_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4901,7 +5113,7 @@ void q_dialogbuttonbox_destroy(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-void q_dialogbuttonbox_qbase_destroy(void* self);
+void q_dialogbuttonbox_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4924,6 +5136,10 @@ void q_dialogbuttonbox_on_destroy(void* self, void (*callback)());
 ///
 bool q_dialogbuttonbox_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_focus_next_child` instead
+///
+#define q_dialogbuttonbox_qbase_focus_next_child q_dialogbuttonbox_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -4932,7 +5148,7 @@ bool q_dialogbuttonbox_focus_next_child(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-bool q_dialogbuttonbox_qbase_focus_next_child(void* self);
+bool q_dialogbuttonbox_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4955,6 +5171,10 @@ void q_dialogbuttonbox_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_dialogbuttonbox_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_focus_previous_child` instead
+///
+#define q_dialogbuttonbox_qbase_focus_previous_child q_dialogbuttonbox_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -4963,7 +5183,7 @@ bool q_dialogbuttonbox_focus_previous_child(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-bool q_dialogbuttonbox_qbase_focus_previous_child(void* self);
+bool q_dialogbuttonbox_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4986,6 +5206,10 @@ void q_dialogbuttonbox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_dialogbuttonbox_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_sender` instead
+///
+#define q_dialogbuttonbox_qbase_sender q_dialogbuttonbox_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4994,7 +5218,7 @@ QObject* q_dialogbuttonbox_sender(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-QObject* q_dialogbuttonbox_qbase_sender(void* self);
+QObject* q_dialogbuttonbox_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5017,6 +5241,10 @@ void q_dialogbuttonbox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_dialogbuttonbox_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_sender_signal_index` instead
+///
+#define q_dialogbuttonbox_qbase_sender_signal_index q_dialogbuttonbox_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5025,7 +5253,7 @@ int32_t q_dialogbuttonbox_sender_signal_index(void* self);
 ///
 /// @param self QDialogButtonBox*
 ///
-int32_t q_dialogbuttonbox_qbase_sender_signal_index(void* self);
+int32_t q_dialogbuttonbox_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5049,6 +5277,10 @@ void q_dialogbuttonbox_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_dialogbuttonbox_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_receivers` instead
+///
+#define q_dialogbuttonbox_qbase_receivers q_dialogbuttonbox_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5058,7 +5290,7 @@ int32_t q_dialogbuttonbox_receivers(void* self, const char* signal);
 /// @param self QDialogButtonBox*
 /// @param signal const char*
 ///
-int32_t q_dialogbuttonbox_qbase_receivers(void* self, const char* signal);
+int32_t q_dialogbuttonbox_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5082,6 +5314,10 @@ void q_dialogbuttonbox_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool q_dialogbuttonbox_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_is_signal_connected` instead
+///
+#define q_dialogbuttonbox_qbase_is_signal_connected q_dialogbuttonbox_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5091,7 +5327,7 @@ bool q_dialogbuttonbox_is_signal_connected(void* self, void* signal);
 /// @param self QDialogButtonBox*
 /// @param signal QMetaMethod*
 ///
-bool q_dialogbuttonbox_qbase_is_signal_connected(void* self, void* signal);
+bool q_dialogbuttonbox_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5116,6 +5352,10 @@ void q_dialogbuttonbox_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 double q_dialogbuttonbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_dialogbuttonbox_super_get_decoded_metric_f` instead
+///
+#define q_dialogbuttonbox_qbase_get_decoded_metric_f q_dialogbuttonbox_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5126,7 +5366,7 @@ double q_dialogbuttonbox_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_dialogbuttonbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_dialogbuttonbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

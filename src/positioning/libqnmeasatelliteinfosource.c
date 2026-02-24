@@ -26,8 +26,8 @@ void q_nmeasatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*c
     QNmeaSatelliteInfoSource_OnMetaObject((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_nmeasatelliteinfosource_qbase_meta_object(void* self) {
-    return QNmeaSatelliteInfoSource_QBaseMetaObject((QNmeaSatelliteInfoSource*)self);
+const QMetaObject* q_nmeasatelliteinfosource_super_meta_object(void* self) {
+    return QNmeaSatelliteInfoSource_SuperMetaObject((QNmeaSatelliteInfoSource*)self);
 }
 
 void* q_nmeasatelliteinfosource_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_nmeasatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, 
     QNmeaSatelliteInfoSource_OnMetacast((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void* q_nmeasatelliteinfosource_qbase_metacast(void* self, const char* param1) {
-    return QNmeaSatelliteInfoSource_QBaseMetacast((QNmeaSatelliteInfoSource*)self, param1);
+void* q_nmeasatelliteinfosource_super_metacast(void* self, const char* param1) {
+    return QNmeaSatelliteInfoSource_SuperMetacast((QNmeaSatelliteInfoSource*)self, param1);
 }
 
 int32_t q_nmeasatelliteinfosource_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_nmeasatelliteinfosource_on_metacall(void* self, int32_t (*callback)(void*
     QNmeaSatelliteInfoSource_OnMetacall((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QNmeaSatelliteInfoSource_QBaseMetacall((QNmeaSatelliteInfoSource*)self, param1, param2, param3);
+int32_t q_nmeasatelliteinfosource_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QNmeaSatelliteInfoSource_SuperMetacall((QNmeaSatelliteInfoSource*)self, param1, param2, param3);
 }
 
 const char* q_nmeasatelliteinfosource_tr(const char* s) {
@@ -81,8 +81,8 @@ void q_nmeasatelliteinfosource_on_set_update_interval(void* self, void (*callbac
     QNmeaSatelliteInfoSource_OnSetUpdateInterval((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_qbase_set_update_interval(void* self, int msec) {
-    QNmeaSatelliteInfoSource_QBaseSetUpdateInterval((QNmeaSatelliteInfoSource*)self, msec);
+void q_nmeasatelliteinfosource_super_set_update_interval(void* self, int msec) {
+    QNmeaSatelliteInfoSource_SuperSetUpdateInterval((QNmeaSatelliteInfoSource*)self, msec);
 }
 
 int32_t q_nmeasatelliteinfosource_minimum_update_interval(void* self) {
@@ -93,8 +93,8 @@ void q_nmeasatelliteinfosource_on_minimum_update_interval(void* self, int32_t (*
     QNmeaSatelliteInfoSource_OnMinimumUpdateInterval((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_minimum_update_interval(void* self) {
-    return QNmeaSatelliteInfoSource_QBaseMinimumUpdateInterval((QNmeaSatelliteInfoSource*)self);
+int32_t q_nmeasatelliteinfosource_super_minimum_update_interval(void* self) {
+    return QNmeaSatelliteInfoSource_SuperMinimumUpdateInterval((QNmeaSatelliteInfoSource*)self);
 }
 
 int32_t q_nmeasatelliteinfosource_error(void* self) {
@@ -105,8 +105,8 @@ void q_nmeasatelliteinfosource_on_error(void* self, int32_t (*callback)()) {
     QNmeaSatelliteInfoSource_OnError((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_error(void* self) {
-    return QNmeaSatelliteInfoSource_QBaseError((QNmeaSatelliteInfoSource*)self);
+int32_t q_nmeasatelliteinfosource_super_error(void* self) {
+    return QNmeaSatelliteInfoSource_SuperError((QNmeaSatelliteInfoSource*)self);
 }
 
 bool q_nmeasatelliteinfosource_set_backend_property(void* self, const char* name, void* value) {
@@ -117,8 +117,8 @@ void q_nmeasatelliteinfosource_on_set_backend_property(void* self, bool (*callba
     QNmeaSatelliteInfoSource_OnSetBackendProperty((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-bool q_nmeasatelliteinfosource_qbase_set_backend_property(void* self, const char* name, void* value) {
-    return QNmeaSatelliteInfoSource_QBaseSetBackendProperty((QNmeaSatelliteInfoSource*)self, qstring(name), (QVariant*)value);
+bool q_nmeasatelliteinfosource_super_set_backend_property(void* self, const char* name, void* value) {
+    return QNmeaSatelliteInfoSource_SuperSetBackendProperty((QNmeaSatelliteInfoSource*)self, qstring(name), (QVariant*)value);
 }
 
 QVariant* q_nmeasatelliteinfosource_backend_property(void* self, const char* name) {
@@ -129,8 +129,8 @@ void q_nmeasatelliteinfosource_on_backend_property(void* self, QVariant* (*callb
     QNmeaSatelliteInfoSource_OnBackendProperty((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-QVariant* q_nmeasatelliteinfosource_qbase_backend_property(void* self, const char* name) {
-    return QNmeaSatelliteInfoSource_QBaseBackendProperty((QNmeaSatelliteInfoSource*)self, qstring(name));
+QVariant* q_nmeasatelliteinfosource_super_backend_property(void* self, const char* name) {
+    return QNmeaSatelliteInfoSource_SuperBackendProperty((QNmeaSatelliteInfoSource*)self, qstring(name));
 }
 
 void q_nmeasatelliteinfosource_start_updates(void* self) {
@@ -141,8 +141,8 @@ void q_nmeasatelliteinfosource_on_start_updates(void* self, void (*callback)()) 
     QNmeaSatelliteInfoSource_OnStartUpdates((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_qbase_start_updates(void* self) {
-    QNmeaSatelliteInfoSource_QBaseStartUpdates((QNmeaSatelliteInfoSource*)self);
+void q_nmeasatelliteinfosource_super_start_updates(void* self) {
+    QNmeaSatelliteInfoSource_SuperStartUpdates((QNmeaSatelliteInfoSource*)self);
 }
 
 void q_nmeasatelliteinfosource_stop_updates(void* self) {
@@ -153,8 +153,8 @@ void q_nmeasatelliteinfosource_on_stop_updates(void* self, void (*callback)()) {
     QNmeaSatelliteInfoSource_OnStopUpdates((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_qbase_stop_updates(void* self) {
-    QNmeaSatelliteInfoSource_QBaseStopUpdates((QNmeaSatelliteInfoSource*)self);
+void q_nmeasatelliteinfosource_super_stop_updates(void* self) {
+    QNmeaSatelliteInfoSource_SuperStopUpdates((QNmeaSatelliteInfoSource*)self);
 }
 
 void q_nmeasatelliteinfosource_request_update(void* self, int timeout) {
@@ -165,8 +165,8 @@ void q_nmeasatelliteinfosource_on_request_update(void* self, void (*callback)(vo
     QNmeaSatelliteInfoSource_OnRequestUpdate((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_qbase_request_update(void* self, int timeout) {
-    QNmeaSatelliteInfoSource_QBaseRequestUpdate((QNmeaSatelliteInfoSource*)self, timeout);
+void q_nmeasatelliteinfosource_super_request_update(void* self, int timeout) {
+    QNmeaSatelliteInfoSource_SuperRequestUpdate((QNmeaSatelliteInfoSource*)self, timeout);
 }
 
 int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse) {
@@ -177,8 +177,8 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, 
     QNmeaSatelliteInfoSource_OnParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse) {
-    return QNmeaSatelliteInfoSource_QBaseParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, data, size, pnrsInUse);
+int32_t q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse) {
+    return QNmeaSatelliteInfoSource_SuperParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, data, size, pnrsInUse);
 }
 
 int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list /* of int */ pnrsInUse) {
@@ -189,8 +189,8 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self,
     QNmeaSatelliteInfoSource_OnParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list /* of int */ pnrsInUse) {
-    return QNmeaSatelliteInfoSource_QBaseParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), pnrsInUse);
+int32_t q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list /* of int */ pnrsInUse) {
+    return QNmeaSatelliteInfoSource_SuperParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), pnrsInUse);
 }
 
 int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
@@ -201,8 +201,8 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
-    return QNmeaSatelliteInfoSource_QBaseParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
+int32_t q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
+    return QNmeaSatelliteInfoSource_SuperParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
 }
 
 int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
@@ -213,8 +213,8 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, in
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
-    return QNmeaSatelliteInfoSource_QBaseParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
+int32_t q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
+    return QNmeaSatelliteInfoSource_SuperParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
 }
 
 void q_nmeasatelliteinfosource_set_error(void* self, int32_t satelliteError) {
@@ -225,8 +225,8 @@ void q_nmeasatelliteinfosource_on_set_error(void* self, void (*callback)(void*, 
     QNmeaSatelliteInfoSource_OnSetError((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_qbase_set_error(void* self, int32_t satelliteError) {
-    QNmeaSatelliteInfoSource_QBaseSetError((QNmeaSatelliteInfoSource*)self, satelliteError);
+void q_nmeasatelliteinfosource_super_set_error(void* self, int32_t satelliteError) {
+    QNmeaSatelliteInfoSource_SuperSetError((QNmeaSatelliteInfoSource*)self, satelliteError);
 }
 
 const char* q_nmeasatelliteinfosource_tr2(const char* s, const char* c) {
@@ -578,8 +578,8 @@ bool q_nmeasatelliteinfosource_event(void* self, void* event) {
     return QNmeaSatelliteInfoSource_Event((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
 }
 
-bool q_nmeasatelliteinfosource_qbase_event(void* self, void* event) {
-    return QNmeaSatelliteInfoSource_QBaseEvent((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
+bool q_nmeasatelliteinfosource_super_event(void* self, void* event) {
+    return QNmeaSatelliteInfoSource_SuperEvent((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
 }
 
 void q_nmeasatelliteinfosource_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -590,8 +590,8 @@ bool q_nmeasatelliteinfosource_event_filter(void* self, void* watched, void* eve
     return QNmeaSatelliteInfoSource_EventFilter((QNmeaSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_nmeasatelliteinfosource_qbase_event_filter(void* self, void* watched, void* event) {
-    return QNmeaSatelliteInfoSource_QBaseEventFilter((QNmeaSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
+bool q_nmeasatelliteinfosource_super_event_filter(void* self, void* watched, void* event) {
+    return QNmeaSatelliteInfoSource_SuperEventFilter((QNmeaSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_nmeasatelliteinfosource_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -602,8 +602,8 @@ void q_nmeasatelliteinfosource_timer_event(void* self, void* event) {
     QNmeaSatelliteInfoSource_TimerEvent((QNmeaSatelliteInfoSource*)self, (QTimerEvent*)event);
 }
 
-void q_nmeasatelliteinfosource_qbase_timer_event(void* self, void* event) {
-    QNmeaSatelliteInfoSource_QBaseTimerEvent((QNmeaSatelliteInfoSource*)self, (QTimerEvent*)event);
+void q_nmeasatelliteinfosource_super_timer_event(void* self, void* event) {
+    QNmeaSatelliteInfoSource_SuperTimerEvent((QNmeaSatelliteInfoSource*)self, (QTimerEvent*)event);
 }
 
 void q_nmeasatelliteinfosource_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -614,8 +614,8 @@ void q_nmeasatelliteinfosource_child_event(void* self, void* event) {
     QNmeaSatelliteInfoSource_ChildEvent((QNmeaSatelliteInfoSource*)self, (QChildEvent*)event);
 }
 
-void q_nmeasatelliteinfosource_qbase_child_event(void* self, void* event) {
-    QNmeaSatelliteInfoSource_QBaseChildEvent((QNmeaSatelliteInfoSource*)self, (QChildEvent*)event);
+void q_nmeasatelliteinfosource_super_child_event(void* self, void* event) {
+    QNmeaSatelliteInfoSource_SuperChildEvent((QNmeaSatelliteInfoSource*)self, (QChildEvent*)event);
 }
 
 void q_nmeasatelliteinfosource_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -626,8 +626,8 @@ void q_nmeasatelliteinfosource_custom_event(void* self, void* event) {
     QNmeaSatelliteInfoSource_CustomEvent((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
 }
 
-void q_nmeasatelliteinfosource_qbase_custom_event(void* self, void* event) {
-    QNmeaSatelliteInfoSource_QBaseCustomEvent((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
+void q_nmeasatelliteinfosource_super_custom_event(void* self, void* event) {
+    QNmeaSatelliteInfoSource_SuperCustomEvent((QNmeaSatelliteInfoSource*)self, (QEvent*)event);
 }
 
 void q_nmeasatelliteinfosource_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -638,8 +638,8 @@ void q_nmeasatelliteinfosource_connect_notify(void* self, void* signal) {
     QNmeaSatelliteInfoSource_ConnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeasatelliteinfosource_qbase_connect_notify(void* self, void* signal) {
-    QNmeaSatelliteInfoSource_QBaseConnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
+void q_nmeasatelliteinfosource_super_connect_notify(void* self, void* signal) {
+    QNmeaSatelliteInfoSource_SuperConnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_nmeasatelliteinfosource_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -650,8 +650,8 @@ void q_nmeasatelliteinfosource_disconnect_notify(void* self, void* signal) {
     QNmeaSatelliteInfoSource_DisconnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_nmeasatelliteinfosource_qbase_disconnect_notify(void* self, void* signal) {
-    QNmeaSatelliteInfoSource_QBaseDisconnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
+void q_nmeasatelliteinfosource_super_disconnect_notify(void* self, void* signal) {
+    QNmeaSatelliteInfoSource_SuperDisconnectNotify((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_nmeasatelliteinfosource_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -662,8 +662,8 @@ QObject* q_nmeasatelliteinfosource_sender(void* self) {
     return QNmeaSatelliteInfoSource_Sender((QNmeaSatelliteInfoSource*)self);
 }
 
-QObject* q_nmeasatelliteinfosource_qbase_sender(void* self) {
-    return QNmeaSatelliteInfoSource_QBaseSender((QNmeaSatelliteInfoSource*)self);
+QObject* q_nmeasatelliteinfosource_super_sender(void* self) {
+    return QNmeaSatelliteInfoSource_SuperSender((QNmeaSatelliteInfoSource*)self);
 }
 
 void q_nmeasatelliteinfosource_on_sender(void* self, QObject* (*callback)()) {
@@ -674,8 +674,8 @@ int32_t q_nmeasatelliteinfosource_sender_signal_index(void* self) {
     return QNmeaSatelliteInfoSource_SenderSignalIndex((QNmeaSatelliteInfoSource*)self);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_sender_signal_index(void* self) {
-    return QNmeaSatelliteInfoSource_QBaseSenderSignalIndex((QNmeaSatelliteInfoSource*)self);
+int32_t q_nmeasatelliteinfosource_super_sender_signal_index(void* self) {
+    return QNmeaSatelliteInfoSource_SuperSenderSignalIndex((QNmeaSatelliteInfoSource*)self);
 }
 
 void q_nmeasatelliteinfosource_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -686,8 +686,8 @@ int32_t q_nmeasatelliteinfosource_receivers(void* self, const char* signal) {
     return QNmeaSatelliteInfoSource_Receivers((QNmeaSatelliteInfoSource*)self, signal);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_receivers(void* self, const char* signal) {
-    return QNmeaSatelliteInfoSource_QBaseReceivers((QNmeaSatelliteInfoSource*)self, signal);
+int32_t q_nmeasatelliteinfosource_super_receivers(void* self, const char* signal) {
+    return QNmeaSatelliteInfoSource_SuperReceivers((QNmeaSatelliteInfoSource*)self, signal);
 }
 
 void q_nmeasatelliteinfosource_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -698,8 +698,8 @@ bool q_nmeasatelliteinfosource_is_signal_connected(void* self, void* signal) {
     return QNmeaSatelliteInfoSource_IsSignalConnected((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-bool q_nmeasatelliteinfosource_qbase_is_signal_connected(void* self, void* signal) {
-    return QNmeaSatelliteInfoSource_QBaseIsSignalConnected((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
+bool q_nmeasatelliteinfosource_super_is_signal_connected(void* self, void* signal) {
+    return QNmeaSatelliteInfoSource_SuperIsSignalConnected((QNmeaSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_nmeasatelliteinfosource_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

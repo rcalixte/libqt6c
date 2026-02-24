@@ -49,8 +49,8 @@ void q_openglwindow_on_meta_object(void* self, const QMetaObject* (*callback)())
     QOpenGLWindow_OnMetaObject((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglwindow_qbase_meta_object(void* self) {
-    return QOpenGLWindow_QBaseMetaObject((QOpenGLWindow*)self);
+const QMetaObject* q_openglwindow_super_meta_object(void* self) {
+    return QOpenGLWindow_SuperMetaObject((QOpenGLWindow*)self);
 }
 
 void* q_openglwindow_metacast(void* self, const char* param1) {
@@ -61,8 +61,8 @@ void q_openglwindow_on_metacast(void* self, void* (*callback)(void*, const char*
     QOpenGLWindow_OnMetacast((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void* q_openglwindow_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLWindow_QBaseMetacast((QOpenGLWindow*)self, param1);
+void* q_openglwindow_super_metacast(void* self, const char* param1) {
+    return QOpenGLWindow_SuperMetacast((QOpenGLWindow*)self, param1);
 }
 
 int32_t q_openglwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -73,8 +73,8 @@ void q_openglwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QOpenGLWindow_OnMetacall((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_openglwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLWindow_QBaseMetacall((QOpenGLWindow*)self, param1, param2, param3);
+int32_t q_openglwindow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLWindow_SuperMetacall((QOpenGLWindow*)self, param1, param2, param3);
 }
 
 const char* q_openglwindow_tr(const char* s) {
@@ -132,8 +132,8 @@ void q_openglwindow_on_initialize_g_l(void* self, void (*callback)()) {
     QOpenGLWindow_OnInitializeGL((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_initialize_g_l(void* self) {
-    QOpenGLWindow_QBaseInitializeGL((QOpenGLWindow*)self);
+void q_openglwindow_super_initialize_g_l(void* self) {
+    QOpenGLWindow_SuperInitializeGL((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_resize_g_l(void* self, int w, int h) {
@@ -144,8 +144,8 @@ void q_openglwindow_on_resize_g_l(void* self, void (*callback)(void*, int, int))
     QOpenGLWindow_OnResizeGL((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_resize_g_l(void* self, int w, int h) {
-    QOpenGLWindow_QBaseResizeGL((QOpenGLWindow*)self, w, h);
+void q_openglwindow_super_resize_g_l(void* self, int w, int h) {
+    QOpenGLWindow_SuperResizeGL((QOpenGLWindow*)self, w, h);
 }
 
 void q_openglwindow_paint_g_l(void* self) {
@@ -156,8 +156,8 @@ void q_openglwindow_on_paint_g_l(void* self, void (*callback)()) {
     QOpenGLWindow_OnPaintGL((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_paint_g_l(void* self) {
-    QOpenGLWindow_QBasePaintGL((QOpenGLWindow*)self);
+void q_openglwindow_super_paint_g_l(void* self) {
+    QOpenGLWindow_SuperPaintGL((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_paint_under_g_l(void* self) {
@@ -168,8 +168,8 @@ void q_openglwindow_on_paint_under_g_l(void* self, void (*callback)()) {
     QOpenGLWindow_OnPaintUnderGL((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_paint_under_g_l(void* self) {
-    QOpenGLWindow_QBasePaintUnderGL((QOpenGLWindow*)self);
+void q_openglwindow_super_paint_under_g_l(void* self) {
+    QOpenGLWindow_SuperPaintUnderGL((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_paint_over_g_l(void* self) {
@@ -180,8 +180,8 @@ void q_openglwindow_on_paint_over_g_l(void* self, void (*callback)()) {
     QOpenGLWindow_OnPaintOverGL((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_paint_over_g_l(void* self) {
-    QOpenGLWindow_QBasePaintOverGL((QOpenGLWindow*)self);
+void q_openglwindow_super_paint_over_g_l(void* self) {
+    QOpenGLWindow_SuperPaintOverGL((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_paint_event(void* self, void* event) {
@@ -192,8 +192,8 @@ void q_openglwindow_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QOpenGLWindow_OnPaintEvent((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_paint_event(void* self, void* event) {
-    QOpenGLWindow_QBasePaintEvent((QOpenGLWindow*)self, (QPaintEvent*)event);
+void q_openglwindow_super_paint_event(void* self, void* event) {
+    QOpenGLWindow_SuperPaintEvent((QOpenGLWindow*)self, (QPaintEvent*)event);
 }
 
 void q_openglwindow_resize_event(void* self, void* event) {
@@ -204,8 +204,8 @@ void q_openglwindow_on_resize_event(void* self, void (*callback)(void*, void*)) 
     QOpenGLWindow_OnResizeEvent((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-void q_openglwindow_qbase_resize_event(void* self, void* event) {
-    QOpenGLWindow_QBaseResizeEvent((QOpenGLWindow*)self, (QResizeEvent*)event);
+void q_openglwindow_super_resize_event(void* self, void* event) {
+    QOpenGLWindow_SuperResizeEvent((QOpenGLWindow*)self, (QResizeEvent*)event);
 }
 
 int32_t q_openglwindow_metric(void* self, int32_t metric) {
@@ -216,8 +216,8 @@ void q_openglwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QOpenGLWindow_OnMetric((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_openglwindow_qbase_metric(void* self, int32_t metric) {
-    return QOpenGLWindow_QBaseMetric((QOpenGLWindow*)self, metric);
+int32_t q_openglwindow_super_metric(void* self, int32_t metric) {
+    return QOpenGLWindow_SuperMetric((QOpenGLWindow*)self, metric);
 }
 
 QPaintDevice* q_openglwindow_redirected(void* self, void* param1) {
@@ -228,8 +228,8 @@ void q_openglwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
     QOpenGLWindow_OnRedirected((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_openglwindow_qbase_redirected(void* self, void* param1) {
-    return QOpenGLWindow_QBaseRedirected((QOpenGLWindow*)self, (QPoint*)param1);
+QPaintDevice* q_openglwindow_super_redirected(void* self, void* param1) {
+    return QOpenGLWindow_SuperRedirected((QOpenGLWindow*)self, (QPoint*)param1);
 }
 
 const char* q_openglwindow_tr2(const char* s, const char* c) {
@@ -1111,8 +1111,8 @@ void q_openglwindow_expose_event(void* self, void* param1) {
     QOpenGLWindow_ExposeEvent((QOpenGLWindow*)self, (QExposeEvent*)param1);
 }
 
-void q_openglwindow_qbase_expose_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseExposeEvent((QOpenGLWindow*)self, (QExposeEvent*)param1);
+void q_openglwindow_super_expose_event(void* self, void* param1) {
+    QOpenGLWindow_SuperExposeEvent((QOpenGLWindow*)self, (QExposeEvent*)param1);
 }
 
 void q_openglwindow_on_expose_event(void* self, void (*callback)(void*, void*)) {
@@ -1123,8 +1123,8 @@ bool q_openglwindow_event(void* self, void* event) {
     return QOpenGLWindow_Event((QOpenGLWindow*)self, (QEvent*)event);
 }
 
-bool q_openglwindow_qbase_event(void* self, void* event) {
-    return QOpenGLWindow_QBaseEvent((QOpenGLWindow*)self, (QEvent*)event);
+bool q_openglwindow_super_event(void* self, void* event) {
+    return QOpenGLWindow_SuperEvent((QOpenGLWindow*)self, (QEvent*)event);
 }
 
 void q_openglwindow_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1135,8 +1135,8 @@ int32_t q_openglwindow_surface_type(void* self) {
     return QOpenGLWindow_SurfaceType((QOpenGLWindow*)self);
 }
 
-int32_t q_openglwindow_qbase_surface_type(void* self) {
-    return QOpenGLWindow_QBaseSurfaceType((QOpenGLWindow*)self);
+int32_t q_openglwindow_super_surface_type(void* self) {
+    return QOpenGLWindow_SuperSurfaceType((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_surface_type(void* self, int32_t (*callback)()) {
@@ -1147,8 +1147,8 @@ QSurfaceFormat* q_openglwindow_format(void* self) {
     return QOpenGLWindow_Format((QOpenGLWindow*)self);
 }
 
-QSurfaceFormat* q_openglwindow_qbase_format(void* self) {
-    return QOpenGLWindow_QBaseFormat((QOpenGLWindow*)self);
+QSurfaceFormat* q_openglwindow_super_format(void* self) {
+    return QOpenGLWindow_SuperFormat((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_format(void* self, QSurfaceFormat* (*callback)()) {
@@ -1159,8 +1159,8 @@ QSize* q_openglwindow_size(void* self) {
     return QOpenGLWindow_Size((QOpenGLWindow*)self);
 }
 
-QSize* q_openglwindow_qbase_size(void* self) {
-    return QOpenGLWindow_QBaseSize((QOpenGLWindow*)self);
+QSize* q_openglwindow_super_size(void* self) {
+    return QOpenGLWindow_SuperSize((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_size(void* self, QSize* (*callback)()) {
@@ -1171,8 +1171,8 @@ QAccessibleInterface* q_openglwindow_accessible_root(void* self) {
     return QOpenGLWindow_AccessibleRoot((QOpenGLWindow*)self);
 }
 
-QAccessibleInterface* q_openglwindow_qbase_accessible_root(void* self) {
-    return QOpenGLWindow_QBaseAccessibleRoot((QOpenGLWindow*)self);
+QAccessibleInterface* q_openglwindow_super_accessible_root(void* self) {
+    return QOpenGLWindow_SuperAccessibleRoot((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)()) {
@@ -1183,8 +1183,8 @@ QObject* q_openglwindow_focus_object(void* self) {
     return QOpenGLWindow_FocusObject((QOpenGLWindow*)self);
 }
 
-QObject* q_openglwindow_qbase_focus_object(void* self) {
-    return QOpenGLWindow_QBaseFocusObject((QOpenGLWindow*)self);
+QObject* q_openglwindow_super_focus_object(void* self) {
+    return QOpenGLWindow_SuperFocusObject((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_focus_object(void* self, QObject* (*callback)()) {
@@ -1195,8 +1195,8 @@ void q_openglwindow_move_event(void* self, void* param1) {
     QOpenGLWindow_MoveEvent((QOpenGLWindow*)self, (QMoveEvent*)param1);
 }
 
-void q_openglwindow_qbase_move_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseMoveEvent((QOpenGLWindow*)self, (QMoveEvent*)param1);
+void q_openglwindow_super_move_event(void* self, void* param1) {
+    QOpenGLWindow_SuperMoveEvent((QOpenGLWindow*)self, (QMoveEvent*)param1);
 }
 
 void q_openglwindow_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1207,8 +1207,8 @@ void q_openglwindow_focus_in_event(void* self, void* param1) {
     QOpenGLWindow_FocusInEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
 }
 
-void q_openglwindow_qbase_focus_in_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseFocusInEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
+void q_openglwindow_super_focus_in_event(void* self, void* param1) {
+    QOpenGLWindow_SuperFocusInEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
 }
 
 void q_openglwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1219,8 +1219,8 @@ void q_openglwindow_focus_out_event(void* self, void* param1) {
     QOpenGLWindow_FocusOutEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
 }
 
-void q_openglwindow_qbase_focus_out_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseFocusOutEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
+void q_openglwindow_super_focus_out_event(void* self, void* param1) {
+    QOpenGLWindow_SuperFocusOutEvent((QOpenGLWindow*)self, (QFocusEvent*)param1);
 }
 
 void q_openglwindow_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1231,8 +1231,8 @@ void q_openglwindow_show_event(void* self, void* param1) {
     QOpenGLWindow_ShowEvent((QOpenGLWindow*)self, (QShowEvent*)param1);
 }
 
-void q_openglwindow_qbase_show_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseShowEvent((QOpenGLWindow*)self, (QShowEvent*)param1);
+void q_openglwindow_super_show_event(void* self, void* param1) {
+    QOpenGLWindow_SuperShowEvent((QOpenGLWindow*)self, (QShowEvent*)param1);
 }
 
 void q_openglwindow_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1243,8 +1243,8 @@ void q_openglwindow_hide_event(void* self, void* param1) {
     QOpenGLWindow_HideEvent((QOpenGLWindow*)self, (QHideEvent*)param1);
 }
 
-void q_openglwindow_qbase_hide_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseHideEvent((QOpenGLWindow*)self, (QHideEvent*)param1);
+void q_openglwindow_super_hide_event(void* self, void* param1) {
+    QOpenGLWindow_SuperHideEvent((QOpenGLWindow*)self, (QHideEvent*)param1);
 }
 
 void q_openglwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1255,8 +1255,8 @@ void q_openglwindow_close_event(void* self, void* param1) {
     QOpenGLWindow_CloseEvent((QOpenGLWindow*)self, (QCloseEvent*)param1);
 }
 
-void q_openglwindow_qbase_close_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseCloseEvent((QOpenGLWindow*)self, (QCloseEvent*)param1);
+void q_openglwindow_super_close_event(void* self, void* param1) {
+    QOpenGLWindow_SuperCloseEvent((QOpenGLWindow*)self, (QCloseEvent*)param1);
 }
 
 void q_openglwindow_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1267,8 +1267,8 @@ void q_openglwindow_key_press_event(void* self, void* param1) {
     QOpenGLWindow_KeyPressEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
 }
 
-void q_openglwindow_qbase_key_press_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseKeyPressEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
+void q_openglwindow_super_key_press_event(void* self, void* param1) {
+    QOpenGLWindow_SuperKeyPressEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
 }
 
 void q_openglwindow_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1279,8 +1279,8 @@ void q_openglwindow_key_release_event(void* self, void* param1) {
     QOpenGLWindow_KeyReleaseEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
 }
 
-void q_openglwindow_qbase_key_release_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseKeyReleaseEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
+void q_openglwindow_super_key_release_event(void* self, void* param1) {
+    QOpenGLWindow_SuperKeyReleaseEvent((QOpenGLWindow*)self, (QKeyEvent*)param1);
 }
 
 void q_openglwindow_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1291,8 +1291,8 @@ void q_openglwindow_mouse_press_event(void* self, void* param1) {
     QOpenGLWindow_MousePressEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_openglwindow_qbase_mouse_press_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseMousePressEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
+void q_openglwindow_super_mouse_press_event(void* self, void* param1) {
+    QOpenGLWindow_SuperMousePressEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_openglwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1303,8 +1303,8 @@ void q_openglwindow_mouse_release_event(void* self, void* param1) {
     QOpenGLWindow_MouseReleaseEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_openglwindow_qbase_mouse_release_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseMouseReleaseEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
+void q_openglwindow_super_mouse_release_event(void* self, void* param1) {
+    QOpenGLWindow_SuperMouseReleaseEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_openglwindow_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1315,8 +1315,8 @@ void q_openglwindow_mouse_double_click_event(void* self, void* param1) {
     QOpenGLWindow_MouseDoubleClickEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_openglwindow_qbase_mouse_double_click_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseMouseDoubleClickEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
+void q_openglwindow_super_mouse_double_click_event(void* self, void* param1) {
+    QOpenGLWindow_SuperMouseDoubleClickEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_openglwindow_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1327,8 +1327,8 @@ void q_openglwindow_mouse_move_event(void* self, void* param1) {
     QOpenGLWindow_MouseMoveEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_openglwindow_qbase_mouse_move_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseMouseMoveEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
+void q_openglwindow_super_mouse_move_event(void* self, void* param1) {
+    QOpenGLWindow_SuperMouseMoveEvent((QOpenGLWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_openglwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1339,8 +1339,8 @@ void q_openglwindow_wheel_event(void* self, void* param1) {
     QOpenGLWindow_WheelEvent((QOpenGLWindow*)self, (QWheelEvent*)param1);
 }
 
-void q_openglwindow_qbase_wheel_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseWheelEvent((QOpenGLWindow*)self, (QWheelEvent*)param1);
+void q_openglwindow_super_wheel_event(void* self, void* param1) {
+    QOpenGLWindow_SuperWheelEvent((QOpenGLWindow*)self, (QWheelEvent*)param1);
 }
 
 void q_openglwindow_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1351,8 +1351,8 @@ void q_openglwindow_touch_event(void* self, void* param1) {
     QOpenGLWindow_TouchEvent((QOpenGLWindow*)self, (QTouchEvent*)param1);
 }
 
-void q_openglwindow_qbase_touch_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseTouchEvent((QOpenGLWindow*)self, (QTouchEvent*)param1);
+void q_openglwindow_super_touch_event(void* self, void* param1) {
+    QOpenGLWindow_SuperTouchEvent((QOpenGLWindow*)self, (QTouchEvent*)param1);
 }
 
 void q_openglwindow_on_touch_event(void* self, void (*callback)(void*, void*)) {
@@ -1363,8 +1363,8 @@ void q_openglwindow_tablet_event(void* self, void* param1) {
     QOpenGLWindow_TabletEvent((QOpenGLWindow*)self, (QTabletEvent*)param1);
 }
 
-void q_openglwindow_qbase_tablet_event(void* self, void* param1) {
-    QOpenGLWindow_QBaseTabletEvent((QOpenGLWindow*)self, (QTabletEvent*)param1);
+void q_openglwindow_super_tablet_event(void* self, void* param1) {
+    QOpenGLWindow_SuperTabletEvent((QOpenGLWindow*)self, (QTabletEvent*)param1);
 }
 
 void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1375,8 +1375,8 @@ bool q_openglwindow_native_event(void* self, char* eventType, void* message, int
     return QOpenGLWindow_NativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_openglwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QOpenGLWindow_QBaseNativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
+bool q_openglwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QOpenGLWindow_SuperNativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 
 void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1387,8 +1387,8 @@ bool q_openglwindow_event_filter(void* self, void* watched, void* event) {
     return QOpenGLWindow_EventFilter((QOpenGLWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_openglwindow_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLWindow_QBaseEventFilter((QOpenGLWindow*)self, (QObject*)watched, (QEvent*)event);
+bool q_openglwindow_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLWindow_SuperEventFilter((QOpenGLWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_openglwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1399,8 +1399,8 @@ void q_openglwindow_timer_event(void* self, void* event) {
     QOpenGLWindow_TimerEvent((QOpenGLWindow*)self, (QTimerEvent*)event);
 }
 
-void q_openglwindow_qbase_timer_event(void* self, void* event) {
-    QOpenGLWindow_QBaseTimerEvent((QOpenGLWindow*)self, (QTimerEvent*)event);
+void q_openglwindow_super_timer_event(void* self, void* event) {
+    QOpenGLWindow_SuperTimerEvent((QOpenGLWindow*)self, (QTimerEvent*)event);
 }
 
 void q_openglwindow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1411,8 +1411,8 @@ void q_openglwindow_child_event(void* self, void* event) {
     QOpenGLWindow_ChildEvent((QOpenGLWindow*)self, (QChildEvent*)event);
 }
 
-void q_openglwindow_qbase_child_event(void* self, void* event) {
-    QOpenGLWindow_QBaseChildEvent((QOpenGLWindow*)self, (QChildEvent*)event);
+void q_openglwindow_super_child_event(void* self, void* event) {
+    QOpenGLWindow_SuperChildEvent((QOpenGLWindow*)self, (QChildEvent*)event);
 }
 
 void q_openglwindow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1423,8 +1423,8 @@ void q_openglwindow_custom_event(void* self, void* event) {
     QOpenGLWindow_CustomEvent((QOpenGLWindow*)self, (QEvent*)event);
 }
 
-void q_openglwindow_qbase_custom_event(void* self, void* event) {
-    QOpenGLWindow_QBaseCustomEvent((QOpenGLWindow*)self, (QEvent*)event);
+void q_openglwindow_super_custom_event(void* self, void* event) {
+    QOpenGLWindow_SuperCustomEvent((QOpenGLWindow*)self, (QEvent*)event);
 }
 
 void q_openglwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1435,8 +1435,8 @@ void q_openglwindow_connect_notify(void* self, void* signal) {
     QOpenGLWindow_ConnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_openglwindow_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLWindow_QBaseConnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
+void q_openglwindow_super_connect_notify(void* self, void* signal) {
+    QOpenGLWindow_SuperConnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_openglwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1447,8 +1447,8 @@ void q_openglwindow_disconnect_notify(void* self, void* signal) {
     QOpenGLWindow_DisconnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_openglwindow_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLWindow_QBaseDisconnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
+void q_openglwindow_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLWindow_SuperDisconnectNotify((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_openglwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1459,8 +1459,8 @@ int32_t q_openglwindow_dev_type(void* self) {
     return QOpenGLWindow_DevType((QOpenGLWindow*)self);
 }
 
-int32_t q_openglwindow_qbase_dev_type(void* self) {
-    return QOpenGLWindow_QBaseDevType((QOpenGLWindow*)self);
+int32_t q_openglwindow_super_dev_type(void* self) {
+    return QOpenGLWindow_SuperDevType((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1471,8 +1471,8 @@ void q_openglwindow_init_painter(void* self, void* painter) {
     QOpenGLWindow_InitPainter((QOpenGLWindow*)self, (QPainter*)painter);
 }
 
-void q_openglwindow_qbase_init_painter(void* self, void* painter) {
-    QOpenGLWindow_QBaseInitPainter((QOpenGLWindow*)self, (QPainter*)painter);
+void q_openglwindow_super_init_painter(void* self, void* painter) {
+    QOpenGLWindow_SuperInitPainter((QOpenGLWindow*)self, (QPainter*)painter);
 }
 
 void q_openglwindow_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1483,8 +1483,8 @@ QPainter* q_openglwindow_shared_painter(void* self) {
     return QOpenGLWindow_SharedPainter((QOpenGLWindow*)self);
 }
 
-QPainter* q_openglwindow_qbase_shared_painter(void* self) {
-    return QOpenGLWindow_QBaseSharedPainter((QOpenGLWindow*)self);
+QPainter* q_openglwindow_super_shared_painter(void* self) {
+    return QOpenGLWindow_SuperSharedPainter((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1495,8 +1495,8 @@ void* q_openglwindow_resolve_interface(void* self, const char* name, int revisio
     return QOpenGLWindow_ResolveInterface((QOpenGLWindow*)self, name, revision);
 }
 
-void* q_openglwindow_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QOpenGLWindow_QBaseResolveInterface((QOpenGLWindow*)self, name, revision);
+void* q_openglwindow_super_resolve_interface(void* self, const char* name, int revision) {
+    return QOpenGLWindow_SuperResolveInterface((QOpenGLWindow*)self, name, revision);
 }
 
 void q_openglwindow_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
@@ -1507,8 +1507,8 @@ QObject* q_openglwindow_sender(void* self) {
     return QOpenGLWindow_Sender((QOpenGLWindow*)self);
 }
 
-QObject* q_openglwindow_qbase_sender(void* self) {
-    return QOpenGLWindow_QBaseSender((QOpenGLWindow*)self);
+QObject* q_openglwindow_super_sender(void* self) {
+    return QOpenGLWindow_SuperSender((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_sender(void* self, QObject* (*callback)()) {
@@ -1519,8 +1519,8 @@ int32_t q_openglwindow_sender_signal_index(void* self) {
     return QOpenGLWindow_SenderSignalIndex((QOpenGLWindow*)self);
 }
 
-int32_t q_openglwindow_qbase_sender_signal_index(void* self) {
-    return QOpenGLWindow_QBaseSenderSignalIndex((QOpenGLWindow*)self);
+int32_t q_openglwindow_super_sender_signal_index(void* self) {
+    return QOpenGLWindow_SuperSenderSignalIndex((QOpenGLWindow*)self);
 }
 
 void q_openglwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1531,8 +1531,8 @@ int32_t q_openglwindow_receivers(void* self, const char* signal) {
     return QOpenGLWindow_Receivers((QOpenGLWindow*)self, signal);
 }
 
-int32_t q_openglwindow_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLWindow_QBaseReceivers((QOpenGLWindow*)self, signal);
+int32_t q_openglwindow_super_receivers(void* self, const char* signal) {
+    return QOpenGLWindow_SuperReceivers((QOpenGLWindow*)self, signal);
 }
 
 void q_openglwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1543,8 +1543,8 @@ bool q_openglwindow_is_signal_connected(void* self, void* signal) {
     return QOpenGLWindow_IsSignalConnected((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
-bool q_openglwindow_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLWindow_QBaseIsSignalConnected((QOpenGLWindow*)self, (QMetaMethod*)signal);
+bool q_openglwindow_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLWindow_SuperIsSignalConnected((QOpenGLWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_openglwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1555,8 +1555,8 @@ double q_openglwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return QOpenGLWindow_GetDecodedMetricF((QOpenGLWindow*)self, metricA, metricB);
 }
 
-double q_openglwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QOpenGLWindow_QBaseGetDecodedMetricF((QOpenGLWindow*)self, metricA, metricB);
+double q_openglwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QOpenGLWindow_SuperGetDecodedMetricF((QOpenGLWindow*)self, metricA, metricB);
 }
 
 void q_openglwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

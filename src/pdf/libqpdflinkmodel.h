@@ -40,13 +40,17 @@ const QMetaObject* q_pdflinkmodel_meta_object(void* self);
 ///
 void q_pdflinkmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_meta_object` instead
+///
+#define q_pdflinkmodel_qbase_meta_object q_pdflinkmodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPdfLinkModel*
 ///
-const QMetaObject* q_pdflinkmodel_qbase_meta_object(void* self);
+const QMetaObject* q_pdflinkmodel_super_meta_object(void* self);
 
 /// @param self QPdfLinkModel*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_pdflinkmodel_metacast(void* self, const char* param1);
 ///
 void q_pdflinkmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_metacast` instead
+///
+#define q_pdflinkmodel_qbase_metacast q_pdflinkmodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPdfLinkModel*
 /// @param param1 const char*
 ///
-void* q_pdflinkmodel_qbase_metacast(void* self, const char* param1);
+void* q_pdflinkmodel_super_metacast(void* self, const char* param1);
 
 /// @param self QPdfLinkModel*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_pdflinkmodel_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_pdflinkmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_metacall` instead
+///
+#define q_pdflinkmodel_qbase_metacall q_pdflinkmodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPdfLinkModel*
@@ -88,7 +100,7 @@ void q_pdflinkmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_pdflinkmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_pdflinkmodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -132,6 +144,10 @@ libqt_map q_pdflinkmodel_role_names(void* self);
 ///
 void q_pdflinkmodel_on_role_names(void* self, libqt_map (*callback)());
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_role_names` instead
+///
+#define q_pdflinkmodel_qbase_role_names q_pdflinkmodel_super_role_names
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#roleNames)
 ///
 /// Base class method implementation
@@ -140,7 +156,7 @@ void q_pdflinkmodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_pdflinkmodel_qbase_role_names(void* self);
+libqt_map q_pdflinkmodel_super_role_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#rowCount)
 ///
@@ -158,6 +174,10 @@ int32_t q_pdflinkmodel_row_count(void* self, void* parent);
 ///
 void q_pdflinkmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_row_count` instead
+///
+#define q_pdflinkmodel_qbase_row_count q_pdflinkmodel_super_row_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -165,7 +185,7 @@ void q_pdflinkmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 /// @param self QPdfLinkModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_pdflinkmodel_qbase_row_count(void* self, void* parent);
+int32_t q_pdflinkmodel_super_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#data)
 ///
@@ -184,6 +204,10 @@ QVariant* q_pdflinkmodel_data(void* self, void* index, int role);
 ///
 void q_pdflinkmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_data` instead
+///
+#define q_pdflinkmodel_qbase_data q_pdflinkmodel_super_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#data)
 ///
 /// Base class method implementation
@@ -192,7 +216,7 @@ void q_pdflinkmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_pdflinkmodel_qbase_data(void* self, void* index, int role);
+QVariant* q_pdflinkmodel_super_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#page)
 ///
@@ -297,6 +321,10 @@ QModelIndex* q_pdflinkmodel_parent(void* self, void* child);
 ///
 void q_pdflinkmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_parent` instead
+///
+#define q_pdflinkmodel_qbase_parent q_pdflinkmodel_super_parent
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
@@ -306,7 +334,7 @@ void q_pdflinkmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)
 /// @param self QPdfLinkModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* q_pdflinkmodel_qbase_parent(void* self, void* child);
+QModelIndex* q_pdflinkmodel_super_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -328,6 +356,10 @@ int32_t q_pdflinkmodel_column_count(void* self, void* parent);
 ///
 void q_pdflinkmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_column_count` instead
+///
+#define q_pdflinkmodel_qbase_column_count q_pdflinkmodel_super_column_count
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
@@ -337,7 +369,7 @@ void q_pdflinkmodel_on_column_count(void* self, int32_t (*callback)(void*, void*
 /// @param self QPdfLinkModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_pdflinkmodel_qbase_column_count(void* self, void* parent);
+int32_t q_pdflinkmodel_super_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -359,6 +391,10 @@ bool q_pdflinkmodel_has_children(void* self, void* parent);
 ///
 void q_pdflinkmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_has_children` instead
+///
+#define q_pdflinkmodel_qbase_has_children q_pdflinkmodel_super_has_children
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
@@ -368,7 +404,7 @@ void q_pdflinkmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 /// @param self QPdfLinkModel*
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_has_children(void* self, void* parent);
+bool q_pdflinkmodel_super_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1119,6 +1155,10 @@ void q_pdflinkmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QModelIndex* q_pdflinkmodel_index(void* self, int row, int column, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_index` instead
+///
+#define q_pdflinkmodel_qbase_index q_pdflinkmodel_super_index
+
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
@@ -1130,7 +1170,7 @@ QModelIndex* q_pdflinkmodel_index(void* self, int row, int column, void* parent)
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_pdflinkmodel_qbase_index(void* self, int row, int column, void* parent);
+QModelIndex* q_pdflinkmodel_super_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1156,6 +1196,10 @@ void q_pdflinkmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, in
 ///
 QModelIndex* q_pdflinkmodel_sibling(void* self, int row, int column, void* idx);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_sibling` instead
+///
+#define q_pdflinkmodel_qbase_sibling q_pdflinkmodel_super_sibling
+
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#sibling)
@@ -1167,7 +1211,7 @@ QModelIndex* q_pdflinkmodel_sibling(void* self, int row, int column, void* idx);
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_pdflinkmodel_qbase_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_pdflinkmodel_super_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1195,6 +1239,10 @@ void q_pdflinkmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, 
 ///
 bool q_pdflinkmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_drop_mime_data` instead
+///
+#define q_pdflinkmodel_qbase_drop_mime_data q_pdflinkmodel_super_drop_mime_data
+
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#dropMimeData)
@@ -1208,7 +1256,7 @@ bool q_pdflinkmodel_drop_mime_data(void* self, void* data, int32_t action, int r
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_pdflinkmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1234,6 +1282,10 @@ void q_pdflinkmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*,
 ///
 int32_t q_pdflinkmodel_flags(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_flags` instead
+///
+#define q_pdflinkmodel_qbase_flags q_pdflinkmodel_super_flags
+
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
@@ -1245,7 +1297,7 @@ int32_t q_pdflinkmodel_flags(void* self, void* index);
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_pdflinkmodel_qbase_flags(void* self, void* index);
+int32_t q_pdflinkmodel_super_flags(void* self, void* index);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1271,6 +1323,10 @@ void q_pdflinkmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 ///
 bool q_pdflinkmodel_set_data(void* self, void* index, void* value, int role);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_set_data` instead
+///
+#define q_pdflinkmodel_qbase_set_data q_pdflinkmodel_super_set_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
@@ -1282,7 +1338,7 @@ bool q_pdflinkmodel_set_data(void* self, void* index, void* value, int role);
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_pdflinkmodel_qbase_set_data(void* self, void* index, void* value, int role);
+bool q_pdflinkmodel_super_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1308,6 +1364,10 @@ void q_pdflinkmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*
 ///
 QVariant* q_pdflinkmodel_header_data(void* self, int section, int32_t orientation, int role);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_header_data` instead
+///
+#define q_pdflinkmodel_qbase_header_data q_pdflinkmodel_super_header_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
@@ -1319,7 +1379,7 @@ QVariant* q_pdflinkmodel_header_data(void* self, int section, int32_t orientatio
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_pdflinkmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_pdflinkmodel_super_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1346,6 +1406,10 @@ void q_pdflinkmodel_on_header_data(void* self, QVariant* (*callback)(void*, int,
 ///
 bool q_pdflinkmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_set_header_data` instead
+///
+#define q_pdflinkmodel_qbase_set_header_data q_pdflinkmodel_super_set_header_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
@@ -1358,7 +1422,7 @@ bool q_pdflinkmodel_set_header_data(void* self, int section, int32_t orientation
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_pdflinkmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_pdflinkmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1395,6 +1459,10 @@ void q_pdflinkmodel_on_set_header_data(void* self, bool (*callback)(void*, int, 
 ///
 libqt_map q_pdflinkmodel_item_data(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_item_data` instead
+///
+#define q_pdflinkmodel_qbase_item_data q_pdflinkmodel_super_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -1417,7 +1485,7 @@ libqt_map q_pdflinkmodel_item_data(void* self, void* index);
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_pdflinkmodel_qbase_item_data(void* self, void* index);
+libqt_map q_pdflinkmodel_super_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1442,6 +1510,10 @@ void q_pdflinkmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*)
 ///
 bool q_pdflinkmodel_set_item_data(void* self, void* index, libqt_map roles);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_set_item_data` instead
+///
+#define q_pdflinkmodel_qbase_set_item_data q_pdflinkmodel_super_set_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -1452,7 +1524,7 @@ bool q_pdflinkmodel_set_item_data(void* self, void* index, libqt_map roles);
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_pdflinkmodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
+bool q_pdflinkmodel_super_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1476,6 +1548,10 @@ void q_pdflinkmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, 
 ///
 bool q_pdflinkmodel_clear_item_data(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_clear_item_data` instead
+///
+#define q_pdflinkmodel_qbase_clear_item_data q_pdflinkmodel_super_clear_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
@@ -1485,7 +1561,7 @@ bool q_pdflinkmodel_clear_item_data(void* self, void* index);
 /// @param self QPdfLinkModel*
 /// @param index QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_clear_item_data(void* self, void* index);
+bool q_pdflinkmodel_super_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1510,6 +1586,10 @@ void q_pdflinkmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*
 ///
 const char** q_pdflinkmodel_mime_types(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_mime_types` instead
+///
+#define q_pdflinkmodel_qbase_mime_types q_pdflinkmodel_super_mime_types
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -1520,7 +1600,7 @@ const char** q_pdflinkmodel_mime_types(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-const char** q_pdflinkmodel_qbase_mime_types(void* self);
+const char** q_pdflinkmodel_super_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1544,6 +1624,10 @@ void q_pdflinkmodel_on_mime_types(void* self, const char** (*callback)());
 ///
 QMimeData* q_pdflinkmodel_mime_data(void* self, libqt_list indexes);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_mime_data` instead
+///
+#define q_pdflinkmodel_qbase_mime_data q_pdflinkmodel_super_mime_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
@@ -1553,7 +1637,7 @@ QMimeData* q_pdflinkmodel_mime_data(void* self, libqt_list indexes);
 /// @param self QPdfLinkModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_pdflinkmodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* q_pdflinkmodel_super_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1581,6 +1665,10 @@ void q_pdflinkmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt
 ///
 bool q_pdflinkmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_can_drop_mime_data` instead
+///
+#define q_pdflinkmodel_qbase_can_drop_mime_data q_pdflinkmodel_super_can_drop_mime_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
@@ -1594,7 +1682,7 @@ bool q_pdflinkmodel_can_drop_mime_data(void* self, void* data, int32_t action, i
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_pdflinkmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1619,6 +1707,10 @@ void q_pdflinkmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, vo
 ///
 int32_t q_pdflinkmodel_supported_drop_actions(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_supported_drop_actions` instead
+///
+#define q_pdflinkmodel_qbase_supported_drop_actions q_pdflinkmodel_super_supported_drop_actions
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -1629,7 +1721,7 @@ int32_t q_pdflinkmodel_supported_drop_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_pdflinkmodel_qbase_supported_drop_actions(void* self);
+int32_t q_pdflinkmodel_super_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1654,6 +1746,10 @@ void q_pdflinkmodel_on_supported_drop_actions(void* self, int32_t (*callback)())
 ///
 int32_t q_pdflinkmodel_supported_drag_actions(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_supported_drag_actions` instead
+///
+#define q_pdflinkmodel_qbase_supported_drag_actions q_pdflinkmodel_super_supported_drag_actions
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
@@ -1664,7 +1760,7 @@ int32_t q_pdflinkmodel_supported_drag_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_pdflinkmodel_qbase_supported_drag_actions(void* self);
+int32_t q_pdflinkmodel_super_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1690,6 +1786,10 @@ void q_pdflinkmodel_on_supported_drag_actions(void* self, int32_t (*callback)())
 ///
 bool q_pdflinkmodel_insert_rows(void* self, int row, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_insert_rows` instead
+///
+#define q_pdflinkmodel_qbase_insert_rows q_pdflinkmodel_super_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
@@ -1701,7 +1801,7 @@ bool q_pdflinkmodel_insert_rows(void* self, int row, int count, void* parent);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
+bool q_pdflinkmodel_super_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1727,6 +1827,10 @@ void q_pdflinkmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int,
 ///
 bool q_pdflinkmodel_insert_columns(void* self, int column, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_insert_columns` instead
+///
+#define q_pdflinkmodel_qbase_insert_columns q_pdflinkmodel_super_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -1738,7 +1842,7 @@ bool q_pdflinkmodel_insert_columns(void* self, int column, int count, void* pare
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
+bool q_pdflinkmodel_super_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1764,6 +1868,10 @@ void q_pdflinkmodel_on_insert_columns(void* self, bool (*callback)(void*, int, i
 ///
 bool q_pdflinkmodel_remove_rows(void* self, int row, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_remove_rows` instead
+///
+#define q_pdflinkmodel_qbase_remove_rows q_pdflinkmodel_super_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -1775,7 +1883,7 @@ bool q_pdflinkmodel_remove_rows(void* self, int row, int count, void* parent);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
+bool q_pdflinkmodel_super_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1801,6 +1909,10 @@ void q_pdflinkmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int,
 ///
 bool q_pdflinkmodel_remove_columns(void* self, int column, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_remove_columns` instead
+///
+#define q_pdflinkmodel_qbase_remove_columns q_pdflinkmodel_super_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
@@ -1812,7 +1924,7 @@ bool q_pdflinkmodel_remove_columns(void* self, int column, int count, void* pare
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
+bool q_pdflinkmodel_super_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1840,6 +1952,10 @@ void q_pdflinkmodel_on_remove_columns(void* self, bool (*callback)(void*, int, i
 ///
 bool q_pdflinkmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_move_rows` instead
+///
+#define q_pdflinkmodel_qbase_move_rows q_pdflinkmodel_super_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
@@ -1853,7 +1969,7 @@ bool q_pdflinkmodel_move_rows(void* self, void* sourceParent, int sourceRow, int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_pdflinkmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_pdflinkmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1881,6 +1997,10 @@ void q_pdflinkmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int,
 ///
 bool q_pdflinkmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_move_columns` instead
+///
+#define q_pdflinkmodel_qbase_move_columns q_pdflinkmodel_super_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -1894,7 +2014,7 @@ bool q_pdflinkmodel_move_columns(void* self, void* sourceParent, int sourceColum
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_pdflinkmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_pdflinkmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1918,6 +2038,10 @@ void q_pdflinkmodel_on_move_columns(void* self, bool (*callback)(void*, void*, i
 ///
 void q_pdflinkmodel_fetch_more(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_fetch_more` instead
+///
+#define q_pdflinkmodel_qbase_fetch_more q_pdflinkmodel_super_fetch_more
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -1927,7 +2051,7 @@ void q_pdflinkmodel_fetch_more(void* self, void* parent);
 /// @param self QPdfLinkModel*
 /// @param parent QModelIndex*
 ///
-void q_pdflinkmodel_qbase_fetch_more(void* self, void* parent);
+void q_pdflinkmodel_super_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1951,6 +2075,10 @@ void q_pdflinkmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 ///
 bool q_pdflinkmodel_can_fetch_more(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_can_fetch_more` instead
+///
+#define q_pdflinkmodel_qbase_can_fetch_more q_pdflinkmodel_super_can_fetch_more
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
@@ -1960,7 +2088,7 @@ bool q_pdflinkmodel_can_fetch_more(void* self, void* parent);
 /// @param self QPdfLinkModel*
 /// @param parent QModelIndex*
 ///
-bool q_pdflinkmodel_qbase_can_fetch_more(void* self, void* parent);
+bool q_pdflinkmodel_super_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1985,6 +2113,10 @@ void q_pdflinkmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)
 ///
 void q_pdflinkmodel_sort(void* self, int column, int32_t order);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_sort` instead
+///
+#define q_pdflinkmodel_qbase_sort q_pdflinkmodel_super_sort
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -1995,7 +2127,7 @@ void q_pdflinkmodel_sort(void* self, int column, int32_t order);
 /// @param column int
 /// @param order enum Qt__SortOrder
 ///
-void q_pdflinkmodel_qbase_sort(void* self, int column, int32_t order);
+void q_pdflinkmodel_super_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2019,6 +2151,10 @@ void q_pdflinkmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 ///
 QModelIndex* q_pdflinkmodel_buddy(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_buddy` instead
+///
+#define q_pdflinkmodel_qbase_buddy q_pdflinkmodel_super_buddy
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
@@ -2028,7 +2164,7 @@ QModelIndex* q_pdflinkmodel_buddy(void* self, void* index);
 /// @param self QPdfLinkModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_pdflinkmodel_qbase_buddy(void* self, void* index);
+QModelIndex* q_pdflinkmodel_super_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2058,6 +2194,10 @@ void q_pdflinkmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*))
 ///
 libqt_list q_pdflinkmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_match` instead
+///
+#define q_pdflinkmodel_qbase_match q_pdflinkmodel_super_match
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2073,7 +2213,7 @@ libqt_list q_pdflinkmodel_match(void* self, void* start, int role, void* value, 
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_pdflinkmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_pdflinkmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2097,6 +2237,10 @@ void q_pdflinkmodel_on_match(void* self, libqt_list (*callback)(void*, void*, in
 ///
 QSize* q_pdflinkmodel_span(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_span` instead
+///
+#define q_pdflinkmodel_qbase_span q_pdflinkmodel_super_span
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
@@ -2106,7 +2250,7 @@ QSize* q_pdflinkmodel_span(void* self, void* index);
 /// @param self QPdfLinkModel*
 /// @param index QModelIndex*
 ///
-QSize* q_pdflinkmodel_qbase_span(void* self, void* index);
+QSize* q_pdflinkmodel_super_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2131,6 +2275,10 @@ void q_pdflinkmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 void q_pdflinkmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_multi_data` instead
+///
+#define q_pdflinkmodel_qbase_multi_data q_pdflinkmodel_super_multi_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2141,7 +2289,7 @@ void q_pdflinkmodel_multi_data(void* self, void* index, void* roleDataSpan);
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_pdflinkmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
+void q_pdflinkmodel_super_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2164,6 +2312,10 @@ void q_pdflinkmodel_on_multi_data(void* self, void (*callback)(void*, void*, voi
 ///
 bool q_pdflinkmodel_submit(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_submit` instead
+///
+#define q_pdflinkmodel_qbase_submit q_pdflinkmodel_super_submit
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2172,7 +2324,7 @@ bool q_pdflinkmodel_submit(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-bool q_pdflinkmodel_qbase_submit(void* self);
+bool q_pdflinkmodel_super_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2195,6 +2347,10 @@ void q_pdflinkmodel_on_submit(void* self, bool (*callback)());
 ///
 void q_pdflinkmodel_revert(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_revert` instead
+///
+#define q_pdflinkmodel_qbase_revert q_pdflinkmodel_super_revert
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
@@ -2203,7 +2359,7 @@ void q_pdflinkmodel_revert(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_revert(void* self);
+void q_pdflinkmodel_super_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2226,6 +2382,10 @@ void q_pdflinkmodel_on_revert(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_reset_internal_data(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_reset_internal_data` instead
+///
+#define q_pdflinkmodel_qbase_reset_internal_data q_pdflinkmodel_super_reset_internal_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2234,7 +2394,7 @@ void q_pdflinkmodel_reset_internal_data(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_reset_internal_data(void* self);
+void q_pdflinkmodel_super_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2258,6 +2418,10 @@ void q_pdflinkmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 bool q_pdflinkmodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_event` instead
+///
+#define q_pdflinkmodel_qbase_event q_pdflinkmodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2267,7 +2431,7 @@ bool q_pdflinkmodel_event(void* self, void* event);
 /// @param self QPdfLinkModel*
 /// @param event QEvent*
 ///
-bool q_pdflinkmodel_qbase_event(void* self, void* event);
+bool q_pdflinkmodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2292,6 +2456,10 @@ void q_pdflinkmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_pdflinkmodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_event_filter` instead
+///
+#define q_pdflinkmodel_qbase_event_filter q_pdflinkmodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2302,7 +2470,7 @@ bool q_pdflinkmodel_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_pdflinkmodel_qbase_event_filter(void* self, void* watched, void* event);
+bool q_pdflinkmodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2326,6 +2494,10 @@ void q_pdflinkmodel_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_pdflinkmodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_timer_event` instead
+///
+#define q_pdflinkmodel_qbase_timer_event q_pdflinkmodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2335,7 +2507,7 @@ void q_pdflinkmodel_timer_event(void* self, void* event);
 /// @param self QPdfLinkModel*
 /// @param event QTimerEvent*
 ///
-void q_pdflinkmodel_qbase_timer_event(void* self, void* event);
+void q_pdflinkmodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2359,6 +2531,10 @@ void q_pdflinkmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pdflinkmodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_child_event` instead
+///
+#define q_pdflinkmodel_qbase_child_event q_pdflinkmodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2368,7 +2544,7 @@ void q_pdflinkmodel_child_event(void* self, void* event);
 /// @param self QPdfLinkModel*
 /// @param event QChildEvent*
 ///
-void q_pdflinkmodel_qbase_child_event(void* self, void* event);
+void q_pdflinkmodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2392,6 +2568,10 @@ void q_pdflinkmodel_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pdflinkmodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_custom_event` instead
+///
+#define q_pdflinkmodel_qbase_custom_event q_pdflinkmodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2401,7 +2581,7 @@ void q_pdflinkmodel_custom_event(void* self, void* event);
 /// @param self QPdfLinkModel*
 /// @param event QEvent*
 ///
-void q_pdflinkmodel_qbase_custom_event(void* self, void* event);
+void q_pdflinkmodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2425,6 +2605,10 @@ void q_pdflinkmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pdflinkmodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_connect_notify` instead
+///
+#define q_pdflinkmodel_qbase_connect_notify q_pdflinkmodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2434,7 +2618,7 @@ void q_pdflinkmodel_connect_notify(void* self, void* signal);
 /// @param self QPdfLinkModel*
 /// @param signal QMetaMethod*
 ///
-void q_pdflinkmodel_qbase_connect_notify(void* self, void* signal);
+void q_pdflinkmodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2458,6 +2642,10 @@ void q_pdflinkmodel_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_pdflinkmodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_disconnect_notify` instead
+///
+#define q_pdflinkmodel_qbase_disconnect_notify q_pdflinkmodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2467,7 +2655,7 @@ void q_pdflinkmodel_disconnect_notify(void* self, void* signal);
 /// @param self QPdfLinkModel*
 /// @param signal QMetaMethod*
 ///
-void q_pdflinkmodel_qbase_disconnect_notify(void* self, void* signal);
+void q_pdflinkmodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2492,6 +2680,10 @@ void q_pdflinkmodel_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QModelIndex* q_pdflinkmodel_create_index(void* self, int row, int column);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_create_index` instead
+///
+#define q_pdflinkmodel_qbase_create_index q_pdflinkmodel_super_create_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2502,7 +2694,7 @@ QModelIndex* q_pdflinkmodel_create_index(void* self, int row, int column);
 /// @param row int
 /// @param column int
 ///
-QModelIndex* q_pdflinkmodel_qbase_create_index(void* self, int row, int column);
+QModelIndex* q_pdflinkmodel_super_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2527,6 +2719,10 @@ void q_pdflinkmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, 
 ///
 void q_pdflinkmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_encode_data` instead
+///
+#define q_pdflinkmodel_qbase_encode_data q_pdflinkmodel_super_encode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2537,7 +2733,7 @@ void q_pdflinkmodel_encode_data(void* self, libqt_list indexes, void* stream);
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_pdflinkmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void q_pdflinkmodel_super_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2564,6 +2760,10 @@ void q_pdflinkmodel_on_encode_data(void* self, void (*callback)(void*, libqt_lis
 ///
 bool q_pdflinkmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_decode_data` instead
+///
+#define q_pdflinkmodel_qbase_decode_data q_pdflinkmodel_super_decode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
@@ -2576,7 +2776,7 @@ bool q_pdflinkmodel_decode_data(void* self, int row, int column, void* parent, v
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool q_pdflinkmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool q_pdflinkmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2602,6 +2802,10 @@ void q_pdflinkmodel_on_decode_data(void* self, bool (*callback)(void*, int, int,
 ///
 void q_pdflinkmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_insert_rows` instead
+///
+#define q_pdflinkmodel_qbase_begin_insert_rows q_pdflinkmodel_super_begin_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2613,7 +2817,7 @@ void q_pdflinkmodel_begin_insert_rows(void* self, void* parent, int first, int l
 /// @param first int
 /// @param last int
 ///
-void q_pdflinkmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
+void q_pdflinkmodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2636,6 +2840,10 @@ void q_pdflinkmodel_on_begin_insert_rows(void* self, void (*callback)(void*, voi
 ///
 void q_pdflinkmodel_end_insert_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_insert_rows` instead
+///
+#define q_pdflinkmodel_qbase_end_insert_rows q_pdflinkmodel_super_end_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
@@ -2644,7 +2852,7 @@ void q_pdflinkmodel_end_insert_rows(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_insert_rows(void* self);
+void q_pdflinkmodel_super_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2670,6 +2878,10 @@ void q_pdflinkmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_remove_rows` instead
+///
+#define q_pdflinkmodel_qbase_begin_remove_rows q_pdflinkmodel_super_begin_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -2681,7 +2893,7 @@ void q_pdflinkmodel_begin_remove_rows(void* self, void* parent, int first, int l
 /// @param first int
 /// @param last int
 ///
-void q_pdflinkmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
+void q_pdflinkmodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2704,6 +2916,10 @@ void q_pdflinkmodel_on_begin_remove_rows(void* self, void (*callback)(void*, voi
 ///
 void q_pdflinkmodel_end_remove_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_remove_rows` instead
+///
+#define q_pdflinkmodel_qbase_end_remove_rows q_pdflinkmodel_super_end_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
@@ -2712,7 +2928,7 @@ void q_pdflinkmodel_end_remove_rows(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_remove_rows(void* self);
+void q_pdflinkmodel_super_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2740,6 +2956,10 @@ void q_pdflinkmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_pdflinkmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_move_rows` instead
+///
+#define q_pdflinkmodel_qbase_begin_move_rows q_pdflinkmodel_super_begin_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -2753,7 +2973,7 @@ bool q_pdflinkmodel_begin_move_rows(void* self, void* sourceParent, int sourceFi
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool q_pdflinkmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool q_pdflinkmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2776,6 +2996,10 @@ void q_pdflinkmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*
 ///
 void q_pdflinkmodel_end_move_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_move_rows` instead
+///
+#define q_pdflinkmodel_qbase_end_move_rows q_pdflinkmodel_super_end_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -2784,7 +3008,7 @@ void q_pdflinkmodel_end_move_rows(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_move_rows(void* self);
+void q_pdflinkmodel_super_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2810,6 +3034,10 @@ void q_pdflinkmodel_on_end_move_rows(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_insert_columns` instead
+///
+#define q_pdflinkmodel_qbase_begin_insert_columns q_pdflinkmodel_super_begin_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
@@ -2821,7 +3049,7 @@ void q_pdflinkmodel_begin_insert_columns(void* self, void* parent, int first, in
 /// @param first int
 /// @param last int
 ///
-void q_pdflinkmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
+void q_pdflinkmodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2844,6 +3072,10 @@ void q_pdflinkmodel_on_begin_insert_columns(void* self, void (*callback)(void*, 
 ///
 void q_pdflinkmodel_end_insert_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_insert_columns` instead
+///
+#define q_pdflinkmodel_qbase_end_insert_columns q_pdflinkmodel_super_end_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -2852,7 +3084,7 @@ void q_pdflinkmodel_end_insert_columns(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_insert_columns(void* self);
+void q_pdflinkmodel_super_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2878,6 +3110,10 @@ void q_pdflinkmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_remove_columns` instead
+///
+#define q_pdflinkmodel_qbase_begin_remove_columns q_pdflinkmodel_super_begin_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -2889,7 +3125,7 @@ void q_pdflinkmodel_begin_remove_columns(void* self, void* parent, int first, in
 /// @param first int
 /// @param last int
 ///
-void q_pdflinkmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
+void q_pdflinkmodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2912,6 +3148,10 @@ void q_pdflinkmodel_on_begin_remove_columns(void* self, void (*callback)(void*, 
 ///
 void q_pdflinkmodel_end_remove_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_remove_columns` instead
+///
+#define q_pdflinkmodel_qbase_end_remove_columns q_pdflinkmodel_super_end_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
@@ -2920,7 +3160,7 @@ void q_pdflinkmodel_end_remove_columns(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_remove_columns(void* self);
+void q_pdflinkmodel_super_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2948,6 +3188,10 @@ void q_pdflinkmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_pdflinkmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_move_columns` instead
+///
+#define q_pdflinkmodel_qbase_begin_move_columns q_pdflinkmodel_super_begin_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -2961,7 +3205,7 @@ bool q_pdflinkmodel_begin_move_columns(void* self, void* sourceParent, int sourc
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool q_pdflinkmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool q_pdflinkmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2984,6 +3228,10 @@ void q_pdflinkmodel_on_begin_move_columns(void* self, bool (*callback)(void*, vo
 ///
 void q_pdflinkmodel_end_move_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_move_columns` instead
+///
+#define q_pdflinkmodel_qbase_end_move_columns q_pdflinkmodel_super_end_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -2992,7 +3240,7 @@ void q_pdflinkmodel_end_move_columns(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_move_columns(void* self);
+void q_pdflinkmodel_super_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3015,6 +3263,10 @@ void q_pdflinkmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_begin_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_begin_reset_model` instead
+///
+#define q_pdflinkmodel_qbase_begin_reset_model q_pdflinkmodel_super_begin_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3023,7 +3275,7 @@ void q_pdflinkmodel_begin_reset_model(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_begin_reset_model(void* self);
+void q_pdflinkmodel_super_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3046,6 +3298,10 @@ void q_pdflinkmodel_on_begin_reset_model(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_end_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_end_reset_model` instead
+///
+#define q_pdflinkmodel_qbase_end_reset_model q_pdflinkmodel_super_end_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
@@ -3054,7 +3310,7 @@ void q_pdflinkmodel_end_reset_model(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-void q_pdflinkmodel_qbase_end_reset_model(void* self);
+void q_pdflinkmodel_super_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3079,6 +3335,10 @@ void q_pdflinkmodel_on_end_reset_model(void* self, void (*callback)());
 ///
 void q_pdflinkmodel_change_persistent_index(void* self, void* from, void* to);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_change_persistent_index` instead
+///
+#define q_pdflinkmodel_qbase_change_persistent_index q_pdflinkmodel_super_change_persistent_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
@@ -3089,7 +3349,7 @@ void q_pdflinkmodel_change_persistent_index(void* self, void* from, void* to);
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void q_pdflinkmodel_qbase_change_persistent_index(void* self, void* from, void* to);
+void q_pdflinkmodel_super_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3114,6 +3374,10 @@ void q_pdflinkmodel_on_change_persistent_index(void* self, void (*callback)(void
 ///
 void q_pdflinkmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_change_persistent_index_list` instead
+///
+#define q_pdflinkmodel_qbase_change_persistent_index_list q_pdflinkmodel_super_change_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3124,7 +3388,7 @@ void q_pdflinkmodel_change_persistent_index_list(void* self, libqt_list from, li
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_pdflinkmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_pdflinkmodel_super_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3149,6 +3413,10 @@ void q_pdflinkmodel_on_change_persistent_index_list(void* self, void (*callback)
 ///
 libqt_list q_pdflinkmodel_persistent_index_list(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_persistent_index_list` instead
+///
+#define q_pdflinkmodel_qbase_persistent_index_list q_pdflinkmodel_super_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3159,7 +3427,7 @@ libqt_list q_pdflinkmodel_persistent_index_list(void* self);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_pdflinkmodel_qbase_persistent_index_list(void* self);
+libqt_list q_pdflinkmodel_super_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3182,6 +3450,10 @@ void q_pdflinkmodel_on_persistent_index_list(void* self, libqt_list (*callback)(
 ///
 QObject* q_pdflinkmodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_sender` instead
+///
+#define q_pdflinkmodel_qbase_sender q_pdflinkmodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3190,7 +3462,7 @@ QObject* q_pdflinkmodel_sender(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-QObject* q_pdflinkmodel_qbase_sender(void* self);
+QObject* q_pdflinkmodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3213,6 +3485,10 @@ void q_pdflinkmodel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_pdflinkmodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_sender_signal_index` instead
+///
+#define q_pdflinkmodel_qbase_sender_signal_index q_pdflinkmodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3221,7 +3497,7 @@ int32_t q_pdflinkmodel_sender_signal_index(void* self);
 ///
 /// @param self QPdfLinkModel*
 ///
-int32_t q_pdflinkmodel_qbase_sender_signal_index(void* self);
+int32_t q_pdflinkmodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3245,6 +3521,10 @@ void q_pdflinkmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_pdflinkmodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_receivers` instead
+///
+#define q_pdflinkmodel_qbase_receivers q_pdflinkmodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3254,7 +3534,7 @@ int32_t q_pdflinkmodel_receivers(void* self, const char* signal);
 /// @param self QPdfLinkModel*
 /// @param signal const char*
 ///
-int32_t q_pdflinkmodel_qbase_receivers(void* self, const char* signal);
+int32_t q_pdflinkmodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3278,6 +3558,10 @@ void q_pdflinkmodel_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_pdflinkmodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_pdflinkmodel_super_is_signal_connected` instead
+///
+#define q_pdflinkmodel_qbase_is_signal_connected q_pdflinkmodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3287,7 +3571,7 @@ bool q_pdflinkmodel_is_signal_connected(void* self, void* signal);
 /// @param self QPdfLinkModel*
 /// @param signal QMetaMethod*
 ///
-bool q_pdflinkmodel_qbase_is_signal_connected(void* self, void* signal);
+bool q_pdflinkmodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

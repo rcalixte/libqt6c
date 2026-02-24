@@ -39,8 +39,8 @@ void q_webengineprofile_on_meta_object(void* self, const QMetaObject* (*callback
     QWebEngineProfile_OnMetaObject((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_webengineprofile_qbase_meta_object(void* self) {
-    return QWebEngineProfile_QBaseMetaObject((QWebEngineProfile*)self);
+const QMetaObject* q_webengineprofile_super_meta_object(void* self) {
+    return QWebEngineProfile_SuperMetaObject((QWebEngineProfile*)self);
 }
 
 void* q_webengineprofile_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_webengineprofile_on_metacast(void* self, void* (*callback)(void*, const c
     QWebEngineProfile_OnMetacast((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
-void* q_webengineprofile_qbase_metacast(void* self, const char* param1) {
-    return QWebEngineProfile_QBaseMetacast((QWebEngineProfile*)self, param1);
+void* q_webengineprofile_super_metacast(void* self, const char* param1) {
+    return QWebEngineProfile_SuperMetacast((QWebEngineProfile*)self, param1);
 }
 
 int32_t q_webengineprofile_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_webengineprofile_on_metacall(void* self, int32_t (*callback)(void*, int32
     QWebEngineProfile_OnMetacall((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
-int32_t q_webengineprofile_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWebEngineProfile_QBaseMetacall((QWebEngineProfile*)self, param1, param2, param3);
+int32_t q_webengineprofile_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWebEngineProfile_SuperMetacall((QWebEngineProfile*)self, param1, param2, param3);
 }
 
 const char* q_webengineprofile_tr(const char* s) {
@@ -550,8 +550,8 @@ bool q_webengineprofile_event(void* self, void* event) {
     return QWebEngineProfile_Event((QWebEngineProfile*)self, (QEvent*)event);
 }
 
-bool q_webengineprofile_qbase_event(void* self, void* event) {
-    return QWebEngineProfile_QBaseEvent((QWebEngineProfile*)self, (QEvent*)event);
+bool q_webengineprofile_super_event(void* self, void* event) {
+    return QWebEngineProfile_SuperEvent((QWebEngineProfile*)self, (QEvent*)event);
 }
 
 void q_webengineprofile_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -562,8 +562,8 @@ bool q_webengineprofile_event_filter(void* self, void* watched, void* event) {
     return QWebEngineProfile_EventFilter((QWebEngineProfile*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_webengineprofile_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWebEngineProfile_QBaseEventFilter((QWebEngineProfile*)self, (QObject*)watched, (QEvent*)event);
+bool q_webengineprofile_super_event_filter(void* self, void* watched, void* event) {
+    return QWebEngineProfile_SuperEventFilter((QWebEngineProfile*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_webengineprofile_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -574,8 +574,8 @@ void q_webengineprofile_timer_event(void* self, void* event) {
     QWebEngineProfile_TimerEvent((QWebEngineProfile*)self, (QTimerEvent*)event);
 }
 
-void q_webengineprofile_qbase_timer_event(void* self, void* event) {
-    QWebEngineProfile_QBaseTimerEvent((QWebEngineProfile*)self, (QTimerEvent*)event);
+void q_webengineprofile_super_timer_event(void* self, void* event) {
+    QWebEngineProfile_SuperTimerEvent((QWebEngineProfile*)self, (QTimerEvent*)event);
 }
 
 void q_webengineprofile_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -586,8 +586,8 @@ void q_webengineprofile_child_event(void* self, void* event) {
     QWebEngineProfile_ChildEvent((QWebEngineProfile*)self, (QChildEvent*)event);
 }
 
-void q_webengineprofile_qbase_child_event(void* self, void* event) {
-    QWebEngineProfile_QBaseChildEvent((QWebEngineProfile*)self, (QChildEvent*)event);
+void q_webengineprofile_super_child_event(void* self, void* event) {
+    QWebEngineProfile_SuperChildEvent((QWebEngineProfile*)self, (QChildEvent*)event);
 }
 
 void q_webengineprofile_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -598,8 +598,8 @@ void q_webengineprofile_custom_event(void* self, void* event) {
     QWebEngineProfile_CustomEvent((QWebEngineProfile*)self, (QEvent*)event);
 }
 
-void q_webengineprofile_qbase_custom_event(void* self, void* event) {
-    QWebEngineProfile_QBaseCustomEvent((QWebEngineProfile*)self, (QEvent*)event);
+void q_webengineprofile_super_custom_event(void* self, void* event) {
+    QWebEngineProfile_SuperCustomEvent((QWebEngineProfile*)self, (QEvent*)event);
 }
 
 void q_webengineprofile_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -610,8 +610,8 @@ void q_webengineprofile_connect_notify(void* self, void* signal) {
     QWebEngineProfile_ConnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineprofile_qbase_connect_notify(void* self, void* signal) {
-    QWebEngineProfile_QBaseConnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
+void q_webengineprofile_super_connect_notify(void* self, void* signal) {
+    QWebEngineProfile_SuperConnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineprofile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -622,8 +622,8 @@ void q_webengineprofile_disconnect_notify(void* self, void* signal) {
     QWebEngineProfile_DisconnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineprofile_qbase_disconnect_notify(void* self, void* signal) {
-    QWebEngineProfile_QBaseDisconnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
+void q_webengineprofile_super_disconnect_notify(void* self, void* signal) {
+    QWebEngineProfile_SuperDisconnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -634,8 +634,8 @@ QObject* q_webengineprofile_sender(void* self) {
     return QWebEngineProfile_Sender((QWebEngineProfile*)self);
 }
 
-QObject* q_webengineprofile_qbase_sender(void* self) {
-    return QWebEngineProfile_QBaseSender((QWebEngineProfile*)self);
+QObject* q_webengineprofile_super_sender(void* self) {
+    return QWebEngineProfile_SuperSender((QWebEngineProfile*)self);
 }
 
 void q_webengineprofile_on_sender(void* self, QObject* (*callback)()) {
@@ -646,8 +646,8 @@ int32_t q_webengineprofile_sender_signal_index(void* self) {
     return QWebEngineProfile_SenderSignalIndex((QWebEngineProfile*)self);
 }
 
-int32_t q_webengineprofile_qbase_sender_signal_index(void* self) {
-    return QWebEngineProfile_QBaseSenderSignalIndex((QWebEngineProfile*)self);
+int32_t q_webengineprofile_super_sender_signal_index(void* self) {
+    return QWebEngineProfile_SuperSenderSignalIndex((QWebEngineProfile*)self);
 }
 
 void q_webengineprofile_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -658,8 +658,8 @@ int32_t q_webengineprofile_receivers(void* self, const char* signal) {
     return QWebEngineProfile_Receivers((QWebEngineProfile*)self, signal);
 }
 
-int32_t q_webengineprofile_qbase_receivers(void* self, const char* signal) {
-    return QWebEngineProfile_QBaseReceivers((QWebEngineProfile*)self, signal);
+int32_t q_webengineprofile_super_receivers(void* self, const char* signal) {
+    return QWebEngineProfile_SuperReceivers((QWebEngineProfile*)self, signal);
 }
 
 void q_webengineprofile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -670,8 +670,8 @@ bool q_webengineprofile_is_signal_connected(void* self, void* signal) {
     return QWebEngineProfile_IsSignalConnected((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-bool q_webengineprofile_qbase_is_signal_connected(void* self, void* signal) {
-    return QWebEngineProfile_QBaseIsSignalConnected((QWebEngineProfile*)self, (QMetaMethod*)signal);
+bool q_webengineprofile_super_is_signal_connected(void* self, void* signal) {
+    return QWebEngineProfile_SuperIsSignalConnected((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineprofile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

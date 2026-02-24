@@ -22,8 +22,8 @@ void q_webengineurlschemehandler_on_meta_object(void* self, const QMetaObject* (
     QWebEngineUrlSchemeHandler_OnMetaObject((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_webengineurlschemehandler_qbase_meta_object(void* self) {
-    return QWebEngineUrlSchemeHandler_QBaseMetaObject((QWebEngineUrlSchemeHandler*)self);
+const QMetaObject* q_webengineurlschemehandler_super_meta_object(void* self) {
+    return QWebEngineUrlSchemeHandler_SuperMetaObject((QWebEngineUrlSchemeHandler*)self);
 }
 
 void* q_webengineurlschemehandler_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_webengineurlschemehandler_on_metacast(void* self, void* (*callback)(void*
     QWebEngineUrlSchemeHandler_OnMetacast((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
 }
 
-void* q_webengineurlschemehandler_qbase_metacast(void* self, const char* param1) {
-    return QWebEngineUrlSchemeHandler_QBaseMetacast((QWebEngineUrlSchemeHandler*)self, param1);
+void* q_webengineurlschemehandler_super_metacast(void* self, const char* param1) {
+    return QWebEngineUrlSchemeHandler_SuperMetacast((QWebEngineUrlSchemeHandler*)self, param1);
 }
 
 int32_t q_webengineurlschemehandler_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_webengineurlschemehandler_on_metacall(void* self, int32_t (*callback)(voi
     QWebEngineUrlSchemeHandler_OnMetacall((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
 }
 
-int32_t q_webengineurlschemehandler_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWebEngineUrlSchemeHandler_QBaseMetacall((QWebEngineUrlSchemeHandler*)self, param1, param2, param3);
+int32_t q_webengineurlschemehandler_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWebEngineUrlSchemeHandler_SuperMetacall((QWebEngineUrlSchemeHandler*)self, param1, param2, param3);
 }
 
 const char* q_webengineurlschemehandler_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_webengineurlschemehandler_on_request_started(void* self, void (*callback)
     QWebEngineUrlSchemeHandler_OnRequestStarted((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
 }
 
-void q_webengineurlschemehandler_qbase_request_started(void* self, void* param1) {
-    QWebEngineUrlSchemeHandler_QBaseRequestStarted((QWebEngineUrlSchemeHandler*)self, (QWebEngineUrlRequestJob*)param1);
+void q_webengineurlschemehandler_super_request_started(void* self, void* param1) {
+    QWebEngineUrlSchemeHandler_SuperRequestStarted((QWebEngineUrlSchemeHandler*)self, (QWebEngineUrlRequestJob*)param1);
 }
 
 const char* q_webengineurlschemehandler_tr2(const char* s, const char* c) {
@@ -298,8 +298,8 @@ bool q_webengineurlschemehandler_event(void* self, void* event) {
     return QWebEngineUrlSchemeHandler_Event((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
 }
 
-bool q_webengineurlschemehandler_qbase_event(void* self, void* event) {
-    return QWebEngineUrlSchemeHandler_QBaseEvent((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
+bool q_webengineurlschemehandler_super_event(void* self, void* event) {
+    return QWebEngineUrlSchemeHandler_SuperEvent((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
 }
 
 void q_webengineurlschemehandler_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -310,8 +310,8 @@ bool q_webengineurlschemehandler_event_filter(void* self, void* watched, void* e
     return QWebEngineUrlSchemeHandler_EventFilter((QWebEngineUrlSchemeHandler*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_webengineurlschemehandler_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWebEngineUrlSchemeHandler_QBaseEventFilter((QWebEngineUrlSchemeHandler*)self, (QObject*)watched, (QEvent*)event);
+bool q_webengineurlschemehandler_super_event_filter(void* self, void* watched, void* event) {
+    return QWebEngineUrlSchemeHandler_SuperEventFilter((QWebEngineUrlSchemeHandler*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_webengineurlschemehandler_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -322,8 +322,8 @@ void q_webengineurlschemehandler_timer_event(void* self, void* event) {
     QWebEngineUrlSchemeHandler_TimerEvent((QWebEngineUrlSchemeHandler*)self, (QTimerEvent*)event);
 }
 
-void q_webengineurlschemehandler_qbase_timer_event(void* self, void* event) {
-    QWebEngineUrlSchemeHandler_QBaseTimerEvent((QWebEngineUrlSchemeHandler*)self, (QTimerEvent*)event);
+void q_webengineurlschemehandler_super_timer_event(void* self, void* event) {
+    QWebEngineUrlSchemeHandler_SuperTimerEvent((QWebEngineUrlSchemeHandler*)self, (QTimerEvent*)event);
 }
 
 void q_webengineurlschemehandler_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ void q_webengineurlschemehandler_child_event(void* self, void* event) {
     QWebEngineUrlSchemeHandler_ChildEvent((QWebEngineUrlSchemeHandler*)self, (QChildEvent*)event);
 }
 
-void q_webengineurlschemehandler_qbase_child_event(void* self, void* event) {
-    QWebEngineUrlSchemeHandler_QBaseChildEvent((QWebEngineUrlSchemeHandler*)self, (QChildEvent*)event);
+void q_webengineurlschemehandler_super_child_event(void* self, void* event) {
+    QWebEngineUrlSchemeHandler_SuperChildEvent((QWebEngineUrlSchemeHandler*)self, (QChildEvent*)event);
 }
 
 void q_webengineurlschemehandler_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ void q_webengineurlschemehandler_custom_event(void* self, void* event) {
     QWebEngineUrlSchemeHandler_CustomEvent((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
 }
 
-void q_webengineurlschemehandler_qbase_custom_event(void* self, void* event) {
-    QWebEngineUrlSchemeHandler_QBaseCustomEvent((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
+void q_webengineurlschemehandler_super_custom_event(void* self, void* event) {
+    QWebEngineUrlSchemeHandler_SuperCustomEvent((QWebEngineUrlSchemeHandler*)self, (QEvent*)event);
 }
 
 void q_webengineurlschemehandler_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void q_webengineurlschemehandler_connect_notify(void* self, void* signal) {
     QWebEngineUrlSchemeHandler_ConnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineurlschemehandler_qbase_connect_notify(void* self, void* signal) {
-    QWebEngineUrlSchemeHandler_QBaseConnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
+void q_webengineurlschemehandler_super_connect_notify(void* self, void* signal) {
+    QWebEngineUrlSchemeHandler_SuperConnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineurlschemehandler_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void q_webengineurlschemehandler_disconnect_notify(void* self, void* signal) {
     QWebEngineUrlSchemeHandler_DisconnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineurlschemehandler_qbase_disconnect_notify(void* self, void* signal) {
-    QWebEngineUrlSchemeHandler_QBaseDisconnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
+void q_webengineurlschemehandler_super_disconnect_notify(void* self, void* signal) {
+    QWebEngineUrlSchemeHandler_SuperDisconnectNotify((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineurlschemehandler_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ QObject* q_webengineurlschemehandler_sender(void* self) {
     return QWebEngineUrlSchemeHandler_Sender((QWebEngineUrlSchemeHandler*)self);
 }
 
-QObject* q_webengineurlschemehandler_qbase_sender(void* self) {
-    return QWebEngineUrlSchemeHandler_QBaseSender((QWebEngineUrlSchemeHandler*)self);
+QObject* q_webengineurlschemehandler_super_sender(void* self) {
+    return QWebEngineUrlSchemeHandler_SuperSender((QWebEngineUrlSchemeHandler*)self);
 }
 
 void q_webengineurlschemehandler_on_sender(void* self, QObject* (*callback)()) {
@@ -394,8 +394,8 @@ int32_t q_webengineurlschemehandler_sender_signal_index(void* self) {
     return QWebEngineUrlSchemeHandler_SenderSignalIndex((QWebEngineUrlSchemeHandler*)self);
 }
 
-int32_t q_webengineurlschemehandler_qbase_sender_signal_index(void* self) {
-    return QWebEngineUrlSchemeHandler_QBaseSenderSignalIndex((QWebEngineUrlSchemeHandler*)self);
+int32_t q_webengineurlschemehandler_super_sender_signal_index(void* self) {
+    return QWebEngineUrlSchemeHandler_SuperSenderSignalIndex((QWebEngineUrlSchemeHandler*)self);
 }
 
 void q_webengineurlschemehandler_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -406,8 +406,8 @@ int32_t q_webengineurlschemehandler_receivers(void* self, const char* signal) {
     return QWebEngineUrlSchemeHandler_Receivers((QWebEngineUrlSchemeHandler*)self, signal);
 }
 
-int32_t q_webengineurlschemehandler_qbase_receivers(void* self, const char* signal) {
-    return QWebEngineUrlSchemeHandler_QBaseReceivers((QWebEngineUrlSchemeHandler*)self, signal);
+int32_t q_webengineurlschemehandler_super_receivers(void* self, const char* signal) {
+    return QWebEngineUrlSchemeHandler_SuperReceivers((QWebEngineUrlSchemeHandler*)self, signal);
 }
 
 void q_webengineurlschemehandler_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -418,8 +418,8 @@ bool q_webengineurlschemehandler_is_signal_connected(void* self, void* signal) {
     return QWebEngineUrlSchemeHandler_IsSignalConnected((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
-bool q_webengineurlschemehandler_qbase_is_signal_connected(void* self, void* signal) {
-    return QWebEngineUrlSchemeHandler_QBaseIsSignalConnected((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
+bool q_webengineurlschemehandler_super_is_signal_connected(void* self, void* signal) {
+    return QWebEngineUrlSchemeHandler_SuperIsSignalConnected((QWebEngineUrlSchemeHandler*)self, (QMetaMethod*)signal);
 }
 
 void q_webengineurlschemehandler_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

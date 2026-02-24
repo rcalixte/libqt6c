@@ -39,8 +39,8 @@ void q_splitter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QSplitter_OnMetaObject((QSplitter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_splitter_qbase_meta_object(void* self) {
-    return QSplitter_QBaseMetaObject((QSplitter*)self);
+const QMetaObject* q_splitter_super_meta_object(void* self) {
+    return QSplitter_SuperMetaObject((QSplitter*)self);
 }
 
 void* q_splitter_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_splitter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QSplitter_OnMetacast((QSplitter*)self, (intptr_t)callback);
 }
 
-void* q_splitter_qbase_metacast(void* self, const char* param1) {
-    return QSplitter_QBaseMetacast((QSplitter*)self, param1);
+void* q_splitter_super_metacast(void* self, const char* param1) {
+    return QSplitter_SuperMetacast((QSplitter*)self, param1);
 }
 
 int32_t q_splitter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QSplitter_OnMetacall((QSplitter*)self, (intptr_t)callback);
 }
 
-int32_t q_splitter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSplitter_QBaseMetacall((QSplitter*)self, param1, param2, param3);
+int32_t q_splitter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSplitter_SuperMetacall((QSplitter*)self, param1, param2, param3);
 }
 
 const char* q_splitter_tr(const char* s) {
@@ -130,8 +130,8 @@ void q_splitter_on_size_hint(void* self, QSize* (*callback)()) {
     QSplitter_OnSizeHint((QSplitter*)self, (intptr_t)callback);
 }
 
-QSize* q_splitter_qbase_size_hint(void* self) {
-    return QSplitter_QBaseSizeHint((QSplitter*)self);
+QSize* q_splitter_super_size_hint(void* self) {
+    return QSplitter_SuperSizeHint((QSplitter*)self);
 }
 
 QSize* q_splitter_minimum_size_hint(void* self) {
@@ -142,8 +142,8 @@ void q_splitter_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QSplitter_OnMinimumSizeHint((QSplitter*)self, (intptr_t)callback);
 }
 
-QSize* q_splitter_qbase_minimum_size_hint(void* self) {
-    return QSplitter_QBaseMinimumSizeHint((QSplitter*)self);
+QSize* q_splitter_super_minimum_size_hint(void* self) {
+    return QSplitter_SuperMinimumSizeHint((QSplitter*)self);
 }
 
 libqt_list /* of int */ q_splitter_sizes(void* self) {
@@ -214,8 +214,8 @@ void q_splitter_on_create_handle(void* self, QSplitterHandle* (*callback)()) {
     QSplitter_OnCreateHandle((QSplitter*)self, (intptr_t)callback);
 }
 
-QSplitterHandle* q_splitter_qbase_create_handle(void* self) {
-    return QSplitter_QBaseCreateHandle((QSplitter*)self);
+QSplitterHandle* q_splitter_super_create_handle(void* self) {
+    return QSplitter_SuperCreateHandle((QSplitter*)self);
 }
 
 void q_splitter_child_event(void* self, void* param1) {
@@ -226,8 +226,8 @@ void q_splitter_on_child_event(void* self, void (*callback)(void*, void*)) {
     QSplitter_OnChildEvent((QSplitter*)self, (intptr_t)callback);
 }
 
-void q_splitter_qbase_child_event(void* self, void* param1) {
-    QSplitter_QBaseChildEvent((QSplitter*)self, (QChildEvent*)param1);
+void q_splitter_super_child_event(void* self, void* param1) {
+    QSplitter_SuperChildEvent((QSplitter*)self, (QChildEvent*)param1);
 }
 
 bool q_splitter_event(void* self, void* param1) {
@@ -238,8 +238,8 @@ void q_splitter_on_event(void* self, bool (*callback)(void*, void*)) {
     QSplitter_OnEvent((QSplitter*)self, (intptr_t)callback);
 }
 
-bool q_splitter_qbase_event(void* self, void* param1) {
-    return QSplitter_QBaseEvent((QSplitter*)self, (QEvent*)param1);
+bool q_splitter_super_event(void* self, void* param1) {
+    return QSplitter_SuperEvent((QSplitter*)self, (QEvent*)param1);
 }
 
 void q_splitter_resize_event(void* self, void* param1) {
@@ -250,8 +250,8 @@ void q_splitter_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QSplitter_OnResizeEvent((QSplitter*)self, (intptr_t)callback);
 }
 
-void q_splitter_qbase_resize_event(void* self, void* param1) {
-    QSplitter_QBaseResizeEvent((QSplitter*)self, (QResizeEvent*)param1);
+void q_splitter_super_resize_event(void* self, void* param1) {
+    QSplitter_SuperResizeEvent((QSplitter*)self, (QResizeEvent*)param1);
 }
 
 void q_splitter_change_event(void* self, void* param1) {
@@ -262,8 +262,8 @@ void q_splitter_on_change_event(void* self, void (*callback)(void*, void*)) {
     QSplitter_OnChangeEvent((QSplitter*)self, (intptr_t)callback);
 }
 
-void q_splitter_qbase_change_event(void* self, void* param1) {
-    QSplitter_QBaseChangeEvent((QSplitter*)self, (QEvent*)param1);
+void q_splitter_super_change_event(void* self, void* param1) {
+    QSplitter_SuperChangeEvent((QSplitter*)self, (QEvent*)param1);
 }
 
 void q_splitter_move_splitter(void* self, int pos, int index) {
@@ -274,8 +274,8 @@ void q_splitter_on_move_splitter(void* self, void (*callback)(void*, int, int)) 
     QSplitter_OnMoveSplitter((QSplitter*)self, (intptr_t)callback);
 }
 
-void q_splitter_qbase_move_splitter(void* self, int pos, int index) {
-    QSplitter_QBaseMoveSplitter((QSplitter*)self, pos, index);
+void q_splitter_super_move_splitter(void* self, int pos, int index) {
+    QSplitter_SuperMoveSplitter((QSplitter*)self, pos, index);
 }
 
 void q_splitter_set_rubber_band(void* self, int position) {
@@ -286,8 +286,8 @@ void q_splitter_on_set_rubber_band(void* self, void (*callback)(void*, int)) {
     QSplitter_OnSetRubberBand((QSplitter*)self, (intptr_t)callback);
 }
 
-void q_splitter_qbase_set_rubber_band(void* self, int position) {
-    QSplitter_QBaseSetRubberBand((QSplitter*)self, position);
+void q_splitter_super_set_rubber_band(void* self, int position) {
+    QSplitter_SuperSetRubberBand((QSplitter*)self, position);
 }
 
 int32_t q_splitter_closest_legal_position(void* self, int param1, int param2) {
@@ -298,8 +298,8 @@ void q_splitter_on_closest_legal_position(void* self, int32_t (*callback)(void*,
     QSplitter_OnClosestLegalPosition((QSplitter*)self, (intptr_t)callback);
 }
 
-int32_t q_splitter_qbase_closest_legal_position(void* self, int param1, int param2) {
-    return QSplitter_QBaseClosestLegalPosition((QSplitter*)self, param1, param2);
+int32_t q_splitter_super_closest_legal_position(void* self, int param1, int param2) {
+    return QSplitter_SuperClosestLegalPosition((QSplitter*)self, param1, param2);
 }
 
 const char* q_splitter_tr2(const char* s, const char* c) {
@@ -1757,8 +1757,8 @@ void q_splitter_paint_event(void* self, void* param1) {
     QSplitter_PaintEvent((QSplitter*)self, (QPaintEvent*)param1);
 }
 
-void q_splitter_qbase_paint_event(void* self, void* param1) {
-    QSplitter_QBasePaintEvent((QSplitter*)self, (QPaintEvent*)param1);
+void q_splitter_super_paint_event(void* self, void* param1) {
+    QSplitter_SuperPaintEvent((QSplitter*)self, (QPaintEvent*)param1);
 }
 
 void q_splitter_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void q_splitter_init_style_option(void* self, void* option) {
     QSplitter_InitStyleOption((QSplitter*)self, (QStyleOptionFrame*)option);
 }
 
-void q_splitter_qbase_init_style_option(void* self, void* option) {
-    QSplitter_QBaseInitStyleOption((QSplitter*)self, (QStyleOptionFrame*)option);
+void q_splitter_super_init_style_option(void* self, void* option) {
+    QSplitter_SuperInitStyleOption((QSplitter*)self, (QStyleOptionFrame*)option);
 }
 
 void q_splitter_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ int32_t q_splitter_dev_type(void* self) {
     return QSplitter_DevType((QSplitter*)self);
 }
 
-int32_t q_splitter_qbase_dev_type(void* self) {
-    return QSplitter_QBaseDevType((QSplitter*)self);
+int32_t q_splitter_super_dev_type(void* self) {
+    return QSplitter_SuperDevType((QSplitter*)self);
 }
 
 void q_splitter_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1793,8 +1793,8 @@ void q_splitter_set_visible(void* self, bool visible) {
     QSplitter_SetVisible((QSplitter*)self, visible);
 }
 
-void q_splitter_qbase_set_visible(void* self, bool visible) {
-    QSplitter_QBaseSetVisible((QSplitter*)self, visible);
+void q_splitter_super_set_visible(void* self, bool visible) {
+    QSplitter_SuperSetVisible((QSplitter*)self, visible);
 }
 
 void q_splitter_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1805,8 +1805,8 @@ int32_t q_splitter_height_for_width(void* self, int param1) {
     return QSplitter_HeightForWidth((QSplitter*)self, param1);
 }
 
-int32_t q_splitter_qbase_height_for_width(void* self, int param1) {
-    return QSplitter_QBaseHeightForWidth((QSplitter*)self, param1);
+int32_t q_splitter_super_height_for_width(void* self, int param1) {
+    return QSplitter_SuperHeightForWidth((QSplitter*)self, param1);
 }
 
 void q_splitter_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1817,8 +1817,8 @@ bool q_splitter_has_height_for_width(void* self) {
     return QSplitter_HasHeightForWidth((QSplitter*)self);
 }
 
-bool q_splitter_qbase_has_height_for_width(void* self) {
-    return QSplitter_QBaseHasHeightForWidth((QSplitter*)self);
+bool q_splitter_super_has_height_for_width(void* self) {
+    return QSplitter_SuperHasHeightForWidth((QSplitter*)self);
 }
 
 void q_splitter_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1829,8 +1829,8 @@ QPaintEngine* q_splitter_paint_engine(void* self) {
     return QSplitter_PaintEngine((QSplitter*)self);
 }
 
-QPaintEngine* q_splitter_qbase_paint_engine(void* self) {
-    return QSplitter_QBasePaintEngine((QSplitter*)self);
+QPaintEngine* q_splitter_super_paint_engine(void* self) {
+    return QSplitter_SuperPaintEngine((QSplitter*)self);
 }
 
 void q_splitter_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1841,8 +1841,8 @@ void q_splitter_mouse_press_event(void* self, void* event) {
     QSplitter_MousePressEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
-void q_splitter_qbase_mouse_press_event(void* self, void* event) {
-    QSplitter_QBaseMousePressEvent((QSplitter*)self, (QMouseEvent*)event);
+void q_splitter_super_mouse_press_event(void* self, void* event) {
+    QSplitter_SuperMousePressEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
 void q_splitter_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void q_splitter_mouse_release_event(void* self, void* event) {
     QSplitter_MouseReleaseEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
-void q_splitter_qbase_mouse_release_event(void* self, void* event) {
-    QSplitter_QBaseMouseReleaseEvent((QSplitter*)self, (QMouseEvent*)event);
+void q_splitter_super_mouse_release_event(void* self, void* event) {
+    QSplitter_SuperMouseReleaseEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
 void q_splitter_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void q_splitter_mouse_double_click_event(void* self, void* event) {
     QSplitter_MouseDoubleClickEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
-void q_splitter_qbase_mouse_double_click_event(void* self, void* event) {
-    QSplitter_QBaseMouseDoubleClickEvent((QSplitter*)self, (QMouseEvent*)event);
+void q_splitter_super_mouse_double_click_event(void* self, void* event) {
+    QSplitter_SuperMouseDoubleClickEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
 void q_splitter_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void q_splitter_mouse_move_event(void* self, void* event) {
     QSplitter_MouseMoveEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
-void q_splitter_qbase_mouse_move_event(void* self, void* event) {
-    QSplitter_QBaseMouseMoveEvent((QSplitter*)self, (QMouseEvent*)event);
+void q_splitter_super_mouse_move_event(void* self, void* event) {
+    QSplitter_SuperMouseMoveEvent((QSplitter*)self, (QMouseEvent*)event);
 }
 
 void q_splitter_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void q_splitter_wheel_event(void* self, void* event) {
     QSplitter_WheelEvent((QSplitter*)self, (QWheelEvent*)event);
 }
 
-void q_splitter_qbase_wheel_event(void* self, void* event) {
-    QSplitter_QBaseWheelEvent((QSplitter*)self, (QWheelEvent*)event);
+void q_splitter_super_wheel_event(void* self, void* event) {
+    QSplitter_SuperWheelEvent((QSplitter*)self, (QWheelEvent*)event);
 }
 
 void q_splitter_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void q_splitter_key_press_event(void* self, void* event) {
     QSplitter_KeyPressEvent((QSplitter*)self, (QKeyEvent*)event);
 }
 
-void q_splitter_qbase_key_press_event(void* self, void* event) {
-    QSplitter_QBaseKeyPressEvent((QSplitter*)self, (QKeyEvent*)event);
+void q_splitter_super_key_press_event(void* self, void* event) {
+    QSplitter_SuperKeyPressEvent((QSplitter*)self, (QKeyEvent*)event);
 }
 
 void q_splitter_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void q_splitter_key_release_event(void* self, void* event) {
     QSplitter_KeyReleaseEvent((QSplitter*)self, (QKeyEvent*)event);
 }
 
-void q_splitter_qbase_key_release_event(void* self, void* event) {
-    QSplitter_QBaseKeyReleaseEvent((QSplitter*)self, (QKeyEvent*)event);
+void q_splitter_super_key_release_event(void* self, void* event) {
+    QSplitter_SuperKeyReleaseEvent((QSplitter*)self, (QKeyEvent*)event);
 }
 
 void q_splitter_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void q_splitter_focus_in_event(void* self, void* event) {
     QSplitter_FocusInEvent((QSplitter*)self, (QFocusEvent*)event);
 }
 
-void q_splitter_qbase_focus_in_event(void* self, void* event) {
-    QSplitter_QBaseFocusInEvent((QSplitter*)self, (QFocusEvent*)event);
+void q_splitter_super_focus_in_event(void* self, void* event) {
+    QSplitter_SuperFocusInEvent((QSplitter*)self, (QFocusEvent*)event);
 }
 
 void q_splitter_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void q_splitter_focus_out_event(void* self, void* event) {
     QSplitter_FocusOutEvent((QSplitter*)self, (QFocusEvent*)event);
 }
 
-void q_splitter_qbase_focus_out_event(void* self, void* event) {
-    QSplitter_QBaseFocusOutEvent((QSplitter*)self, (QFocusEvent*)event);
+void q_splitter_super_focus_out_event(void* self, void* event) {
+    QSplitter_SuperFocusOutEvent((QSplitter*)self, (QFocusEvent*)event);
 }
 
 void q_splitter_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void q_splitter_enter_event(void* self, void* event) {
     QSplitter_EnterEvent((QSplitter*)self, (QEnterEvent*)event);
 }
 
-void q_splitter_qbase_enter_event(void* self, void* event) {
-    QSplitter_QBaseEnterEvent((QSplitter*)self, (QEnterEvent*)event);
+void q_splitter_super_enter_event(void* self, void* event) {
+    QSplitter_SuperEnterEvent((QSplitter*)self, (QEnterEvent*)event);
 }
 
 void q_splitter_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void q_splitter_leave_event(void* self, void* event) {
     QSplitter_LeaveEvent((QSplitter*)self, (QEvent*)event);
 }
 
-void q_splitter_qbase_leave_event(void* self, void* event) {
-    QSplitter_QBaseLeaveEvent((QSplitter*)self, (QEvent*)event);
+void q_splitter_super_leave_event(void* self, void* event) {
+    QSplitter_SuperLeaveEvent((QSplitter*)self, (QEvent*)event);
 }
 
 void q_splitter_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void q_splitter_move_event(void* self, void* event) {
     QSplitter_MoveEvent((QSplitter*)self, (QMoveEvent*)event);
 }
 
-void q_splitter_qbase_move_event(void* self, void* event) {
-    QSplitter_QBaseMoveEvent((QSplitter*)self, (QMoveEvent*)event);
+void q_splitter_super_move_event(void* self, void* event) {
+    QSplitter_SuperMoveEvent((QSplitter*)self, (QMoveEvent*)event);
 }
 
 void q_splitter_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void q_splitter_close_event(void* self, void* event) {
     QSplitter_CloseEvent((QSplitter*)self, (QCloseEvent*)event);
 }
 
-void q_splitter_qbase_close_event(void* self, void* event) {
-    QSplitter_QBaseCloseEvent((QSplitter*)self, (QCloseEvent*)event);
+void q_splitter_super_close_event(void* self, void* event) {
+    QSplitter_SuperCloseEvent((QSplitter*)self, (QCloseEvent*)event);
 }
 
 void q_splitter_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void q_splitter_context_menu_event(void* self, void* event) {
     QSplitter_ContextMenuEvent((QSplitter*)self, (QContextMenuEvent*)event);
 }
 
-void q_splitter_qbase_context_menu_event(void* self, void* event) {
-    QSplitter_QBaseContextMenuEvent((QSplitter*)self, (QContextMenuEvent*)event);
+void q_splitter_super_context_menu_event(void* self, void* event) {
+    QSplitter_SuperContextMenuEvent((QSplitter*)self, (QContextMenuEvent*)event);
 }
 
 void q_splitter_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void q_splitter_tablet_event(void* self, void* event) {
     QSplitter_TabletEvent((QSplitter*)self, (QTabletEvent*)event);
 }
 
-void q_splitter_qbase_tablet_event(void* self, void* event) {
-    QSplitter_QBaseTabletEvent((QSplitter*)self, (QTabletEvent*)event);
+void q_splitter_super_tablet_event(void* self, void* event) {
+    QSplitter_SuperTabletEvent((QSplitter*)self, (QTabletEvent*)event);
 }
 
 void q_splitter_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void q_splitter_action_event(void* self, void* event) {
     QSplitter_ActionEvent((QSplitter*)self, (QActionEvent*)event);
 }
 
-void q_splitter_qbase_action_event(void* self, void* event) {
-    QSplitter_QBaseActionEvent((QSplitter*)self, (QActionEvent*)event);
+void q_splitter_super_action_event(void* self, void* event) {
+    QSplitter_SuperActionEvent((QSplitter*)self, (QActionEvent*)event);
 }
 
 void q_splitter_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void q_splitter_drag_enter_event(void* self, void* event) {
     QSplitter_DragEnterEvent((QSplitter*)self, (QDragEnterEvent*)event);
 }
 
-void q_splitter_qbase_drag_enter_event(void* self, void* event) {
-    QSplitter_QBaseDragEnterEvent((QSplitter*)self, (QDragEnterEvent*)event);
+void q_splitter_super_drag_enter_event(void* self, void* event) {
+    QSplitter_SuperDragEnterEvent((QSplitter*)self, (QDragEnterEvent*)event);
 }
 
 void q_splitter_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void q_splitter_drag_move_event(void* self, void* event) {
     QSplitter_DragMoveEvent((QSplitter*)self, (QDragMoveEvent*)event);
 }
 
-void q_splitter_qbase_drag_move_event(void* self, void* event) {
-    QSplitter_QBaseDragMoveEvent((QSplitter*)self, (QDragMoveEvent*)event);
+void q_splitter_super_drag_move_event(void* self, void* event) {
+    QSplitter_SuperDragMoveEvent((QSplitter*)self, (QDragMoveEvent*)event);
 }
 
 void q_splitter_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ void q_splitter_drag_leave_event(void* self, void* event) {
     QSplitter_DragLeaveEvent((QSplitter*)self, (QDragLeaveEvent*)event);
 }
 
-void q_splitter_qbase_drag_leave_event(void* self, void* event) {
-    QSplitter_QBaseDragLeaveEvent((QSplitter*)self, (QDragLeaveEvent*)event);
+void q_splitter_super_drag_leave_event(void* self, void* event) {
+    QSplitter_SuperDragLeaveEvent((QSplitter*)self, (QDragLeaveEvent*)event);
 }
 
 void q_splitter_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ void q_splitter_drop_event(void* self, void* event) {
     QSplitter_DropEvent((QSplitter*)self, (QDropEvent*)event);
 }
 
-void q_splitter_qbase_drop_event(void* self, void* event) {
-    QSplitter_QBaseDropEvent((QSplitter*)self, (QDropEvent*)event);
+void q_splitter_super_drop_event(void* self, void* event) {
+    QSplitter_SuperDropEvent((QSplitter*)self, (QDropEvent*)event);
 }
 
 void q_splitter_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2081,8 +2081,8 @@ void q_splitter_show_event(void* self, void* event) {
     QSplitter_ShowEvent((QSplitter*)self, (QShowEvent*)event);
 }
 
-void q_splitter_qbase_show_event(void* self, void* event) {
-    QSplitter_QBaseShowEvent((QSplitter*)self, (QShowEvent*)event);
+void q_splitter_super_show_event(void* self, void* event) {
+    QSplitter_SuperShowEvent((QSplitter*)self, (QShowEvent*)event);
 }
 
 void q_splitter_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ void q_splitter_hide_event(void* self, void* event) {
     QSplitter_HideEvent((QSplitter*)self, (QHideEvent*)event);
 }
 
-void q_splitter_qbase_hide_event(void* self, void* event) {
-    QSplitter_QBaseHideEvent((QSplitter*)self, (QHideEvent*)event);
+void q_splitter_super_hide_event(void* self, void* event) {
+    QSplitter_SuperHideEvent((QSplitter*)self, (QHideEvent*)event);
 }
 
 void q_splitter_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ bool q_splitter_native_event(void* self, char* eventType, void* message, intptr_
     return QSplitter_NativeEvent((QSplitter*)self, qstring(eventType), message, result);
 }
 
-bool q_splitter_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QSplitter_QBaseNativeEvent((QSplitter*)self, qstring(eventType), message, result);
+bool q_splitter_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QSplitter_SuperNativeEvent((QSplitter*)self, qstring(eventType), message, result);
 }
 
 void q_splitter_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2117,8 +2117,8 @@ int32_t q_splitter_metric(void* self, int32_t param1) {
     return QSplitter_Metric((QSplitter*)self, param1);
 }
 
-int32_t q_splitter_qbase_metric(void* self, int32_t param1) {
-    return QSplitter_QBaseMetric((QSplitter*)self, param1);
+int32_t q_splitter_super_metric(void* self, int32_t param1) {
+    return QSplitter_SuperMetric((QSplitter*)self, param1);
 }
 
 void q_splitter_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2129,8 +2129,8 @@ void q_splitter_init_painter(void* self, void* painter) {
     QSplitter_InitPainter((QSplitter*)self, (QPainter*)painter);
 }
 
-void q_splitter_qbase_init_painter(void* self, void* painter) {
-    QSplitter_QBaseInitPainter((QSplitter*)self, (QPainter*)painter);
+void q_splitter_super_init_painter(void* self, void* painter) {
+    QSplitter_SuperInitPainter((QSplitter*)self, (QPainter*)painter);
 }
 
 void q_splitter_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2141,8 +2141,8 @@ QPaintDevice* q_splitter_redirected(void* self, void* offset) {
     return QSplitter_Redirected((QSplitter*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_splitter_qbase_redirected(void* self, void* offset) {
-    return QSplitter_QBaseRedirected((QSplitter*)self, (QPoint*)offset);
+QPaintDevice* q_splitter_super_redirected(void* self, void* offset) {
+    return QSplitter_SuperRedirected((QSplitter*)self, (QPoint*)offset);
 }
 
 void q_splitter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2153,8 +2153,8 @@ QPainter* q_splitter_shared_painter(void* self) {
     return QSplitter_SharedPainter((QSplitter*)self);
 }
 
-QPainter* q_splitter_qbase_shared_painter(void* self) {
-    return QSplitter_QBaseSharedPainter((QSplitter*)self);
+QPainter* q_splitter_super_shared_painter(void* self) {
+    return QSplitter_SuperSharedPainter((QSplitter*)self);
 }
 
 void q_splitter_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2165,8 +2165,8 @@ void q_splitter_input_method_event(void* self, void* param1) {
     QSplitter_InputMethodEvent((QSplitter*)self, (QInputMethodEvent*)param1);
 }
 
-void q_splitter_qbase_input_method_event(void* self, void* param1) {
-    QSplitter_QBaseInputMethodEvent((QSplitter*)self, (QInputMethodEvent*)param1);
+void q_splitter_super_input_method_event(void* self, void* param1) {
+    QSplitter_SuperInputMethodEvent((QSplitter*)self, (QInputMethodEvent*)param1);
 }
 
 void q_splitter_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ QVariant* q_splitter_input_method_query(void* self, int32_t param1) {
     return QSplitter_InputMethodQuery((QSplitter*)self, param1);
 }
 
-QVariant* q_splitter_qbase_input_method_query(void* self, int32_t param1) {
-    return QSplitter_QBaseInputMethodQuery((QSplitter*)self, param1);
+QVariant* q_splitter_super_input_method_query(void* self, int32_t param1) {
+    return QSplitter_SuperInputMethodQuery((QSplitter*)self, param1);
 }
 
 void q_splitter_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2189,8 +2189,8 @@ bool q_splitter_focus_next_prev_child(void* self, bool next) {
     return QSplitter_FocusNextPrevChild((QSplitter*)self, next);
 }
 
-bool q_splitter_qbase_focus_next_prev_child(void* self, bool next) {
-    return QSplitter_QBaseFocusNextPrevChild((QSplitter*)self, next);
+bool q_splitter_super_focus_next_prev_child(void* self, bool next) {
+    return QSplitter_SuperFocusNextPrevChild((QSplitter*)self, next);
 }
 
 void q_splitter_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2201,8 +2201,8 @@ bool q_splitter_event_filter(void* self, void* watched, void* event) {
     return QSplitter_EventFilter((QSplitter*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_splitter_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSplitter_QBaseEventFilter((QSplitter*)self, (QObject*)watched, (QEvent*)event);
+bool q_splitter_super_event_filter(void* self, void* watched, void* event) {
+    return QSplitter_SuperEventFilter((QSplitter*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_splitter_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2213,8 +2213,8 @@ void q_splitter_timer_event(void* self, void* event) {
     QSplitter_TimerEvent((QSplitter*)self, (QTimerEvent*)event);
 }
 
-void q_splitter_qbase_timer_event(void* self, void* event) {
-    QSplitter_QBaseTimerEvent((QSplitter*)self, (QTimerEvent*)event);
+void q_splitter_super_timer_event(void* self, void* event) {
+    QSplitter_SuperTimerEvent((QSplitter*)self, (QTimerEvent*)event);
 }
 
 void q_splitter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2225,8 +2225,8 @@ void q_splitter_custom_event(void* self, void* event) {
     QSplitter_CustomEvent((QSplitter*)self, (QEvent*)event);
 }
 
-void q_splitter_qbase_custom_event(void* self, void* event) {
-    QSplitter_QBaseCustomEvent((QSplitter*)self, (QEvent*)event);
+void q_splitter_super_custom_event(void* self, void* event) {
+    QSplitter_SuperCustomEvent((QSplitter*)self, (QEvent*)event);
 }
 
 void q_splitter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2237,8 +2237,8 @@ void q_splitter_connect_notify(void* self, void* signal) {
     QSplitter_ConnectNotify((QSplitter*)self, (QMetaMethod*)signal);
 }
 
-void q_splitter_qbase_connect_notify(void* self, void* signal) {
-    QSplitter_QBaseConnectNotify((QSplitter*)self, (QMetaMethod*)signal);
+void q_splitter_super_connect_notify(void* self, void* signal) {
+    QSplitter_SuperConnectNotify((QSplitter*)self, (QMetaMethod*)signal);
 }
 
 void q_splitter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2249,8 +2249,8 @@ void q_splitter_disconnect_notify(void* self, void* signal) {
     QSplitter_DisconnectNotify((QSplitter*)self, (QMetaMethod*)signal);
 }
 
-void q_splitter_qbase_disconnect_notify(void* self, void* signal) {
-    QSplitter_QBaseDisconnectNotify((QSplitter*)self, (QMetaMethod*)signal);
+void q_splitter_super_disconnect_notify(void* self, void* signal) {
+    QSplitter_SuperDisconnectNotify((QSplitter*)self, (QMetaMethod*)signal);
 }
 
 void q_splitter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ void q_splitter_draw_frame(void* self, void* param1) {
     QSplitter_DrawFrame((QSplitter*)self, (QPainter*)param1);
 }
 
-void q_splitter_qbase_draw_frame(void* self, void* param1) {
-    QSplitter_QBaseDrawFrame((QSplitter*)self, (QPainter*)param1);
+void q_splitter_super_draw_frame(void* self, void* param1) {
+    QSplitter_SuperDrawFrame((QSplitter*)self, (QPainter*)param1);
 }
 
 void q_splitter_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2273,8 +2273,8 @@ void q_splitter_update_micro_focus(void* self) {
     QSplitter_UpdateMicroFocus((QSplitter*)self);
 }
 
-void q_splitter_qbase_update_micro_focus(void* self) {
-    QSplitter_QBaseUpdateMicroFocus((QSplitter*)self);
+void q_splitter_super_update_micro_focus(void* self) {
+    QSplitter_SuperUpdateMicroFocus((QSplitter*)self);
 }
 
 void q_splitter_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2285,8 +2285,8 @@ void q_splitter_create(void* self) {
     QSplitter_Create((QSplitter*)self);
 }
 
-void q_splitter_qbase_create(void* self) {
-    QSplitter_QBaseCreate((QSplitter*)self);
+void q_splitter_super_create(void* self) {
+    QSplitter_SuperCreate((QSplitter*)self);
 }
 
 void q_splitter_on_create(void* self, void (*callback)()) {
@@ -2297,8 +2297,8 @@ void q_splitter_destroy(void* self) {
     QSplitter_Destroy((QSplitter*)self);
 }
 
-void q_splitter_qbase_destroy(void* self) {
-    QSplitter_QBaseDestroy((QSplitter*)self);
+void q_splitter_super_destroy(void* self) {
+    QSplitter_SuperDestroy((QSplitter*)self);
 }
 
 void q_splitter_on_destroy(void* self, void (*callback)()) {
@@ -2309,8 +2309,8 @@ bool q_splitter_focus_next_child(void* self) {
     return QSplitter_FocusNextChild((QSplitter*)self);
 }
 
-bool q_splitter_qbase_focus_next_child(void* self) {
-    return QSplitter_QBaseFocusNextChild((QSplitter*)self);
+bool q_splitter_super_focus_next_child(void* self) {
+    return QSplitter_SuperFocusNextChild((QSplitter*)self);
 }
 
 void q_splitter_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2321,8 +2321,8 @@ bool q_splitter_focus_previous_child(void* self) {
     return QSplitter_FocusPreviousChild((QSplitter*)self);
 }
 
-bool q_splitter_qbase_focus_previous_child(void* self) {
-    return QSplitter_QBaseFocusPreviousChild((QSplitter*)self);
+bool q_splitter_super_focus_previous_child(void* self) {
+    return QSplitter_SuperFocusPreviousChild((QSplitter*)self);
 }
 
 void q_splitter_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2333,8 +2333,8 @@ QObject* q_splitter_sender(void* self) {
     return QSplitter_Sender((QSplitter*)self);
 }
 
-QObject* q_splitter_qbase_sender(void* self) {
-    return QSplitter_QBaseSender((QSplitter*)self);
+QObject* q_splitter_super_sender(void* self) {
+    return QSplitter_SuperSender((QSplitter*)self);
 }
 
 void q_splitter_on_sender(void* self, QObject* (*callback)()) {
@@ -2345,8 +2345,8 @@ int32_t q_splitter_sender_signal_index(void* self) {
     return QSplitter_SenderSignalIndex((QSplitter*)self);
 }
 
-int32_t q_splitter_qbase_sender_signal_index(void* self) {
-    return QSplitter_QBaseSenderSignalIndex((QSplitter*)self);
+int32_t q_splitter_super_sender_signal_index(void* self) {
+    return QSplitter_SuperSenderSignalIndex((QSplitter*)self);
 }
 
 void q_splitter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2357,8 +2357,8 @@ int32_t q_splitter_receivers(void* self, const char* signal) {
     return QSplitter_Receivers((QSplitter*)self, signal);
 }
 
-int32_t q_splitter_qbase_receivers(void* self, const char* signal) {
-    return QSplitter_QBaseReceivers((QSplitter*)self, signal);
+int32_t q_splitter_super_receivers(void* self, const char* signal) {
+    return QSplitter_SuperReceivers((QSplitter*)self, signal);
 }
 
 void q_splitter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2369,8 +2369,8 @@ bool q_splitter_is_signal_connected(void* self, void* signal) {
     return QSplitter_IsSignalConnected((QSplitter*)self, (QMetaMethod*)signal);
 }
 
-bool q_splitter_qbase_is_signal_connected(void* self, void* signal) {
-    return QSplitter_QBaseIsSignalConnected((QSplitter*)self, (QMetaMethod*)signal);
+bool q_splitter_super_is_signal_connected(void* self, void* signal) {
+    return QSplitter_SuperIsSignalConnected((QSplitter*)self, (QMetaMethod*)signal);
 }
 
 void q_splitter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2381,8 +2381,8 @@ double q_splitter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return QSplitter_GetDecodedMetricF((QSplitter*)self, metricA, metricB);
 }
 
-double q_splitter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QSplitter_QBaseGetDecodedMetricF((QSplitter*)self, metricA, metricB);
+double q_splitter_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QSplitter_SuperGetDecodedMetricF((QSplitter*)self, metricA, metricB);
 }
 
 void q_splitter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2409,8 +2409,8 @@ void q_splitterhandle_on_meta_object(void* self, const QMetaObject* (*callback)(
     QSplitterHandle_OnMetaObject((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_splitterhandle_qbase_meta_object(void* self) {
-    return QSplitterHandle_QBaseMetaObject((QSplitterHandle*)self);
+const QMetaObject* q_splitterhandle_super_meta_object(void* self) {
+    return QSplitterHandle_SuperMetaObject((QSplitterHandle*)self);
 }
 
 void* q_splitterhandle_metacast(void* self, const char* param1) {
@@ -2421,8 +2421,8 @@ void q_splitterhandle_on_metacast(void* self, void* (*callback)(void*, const cha
     QSplitterHandle_OnMetacast((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void* q_splitterhandle_qbase_metacast(void* self, const char* param1) {
-    return QSplitterHandle_QBaseMetacast((QSplitterHandle*)self, param1);
+void* q_splitterhandle_super_metacast(void* self, const char* param1) {
+    return QSplitterHandle_SuperMetacast((QSplitterHandle*)self, param1);
 }
 
 int32_t q_splitterhandle_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2433,8 +2433,8 @@ void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QSplitterHandle_OnMetacall((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-int32_t q_splitterhandle_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSplitterHandle_QBaseMetacall((QSplitterHandle*)self, param1, param2, param3);
+int32_t q_splitterhandle_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSplitterHandle_SuperMetacall((QSplitterHandle*)self, param1, param2, param3);
 }
 
 const char* q_splitterhandle_tr(const char* s) {
@@ -2468,8 +2468,8 @@ void q_splitterhandle_on_size_hint(void* self, QSize* (*callback)()) {
     QSplitterHandle_OnSizeHint((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-QSize* q_splitterhandle_qbase_size_hint(void* self) {
-    return QSplitterHandle_QBaseSizeHint((QSplitterHandle*)self);
+QSize* q_splitterhandle_super_size_hint(void* self) {
+    return QSplitterHandle_SuperSizeHint((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_paint_event(void* self, void* param1) {
@@ -2480,8 +2480,8 @@ void q_splitterhandle_on_paint_event(void* self, void (*callback)(void*, void*))
     QSplitterHandle_OnPaintEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_paint_event(void* self, void* param1) {
-    QSplitterHandle_QBasePaintEvent((QSplitterHandle*)self, (QPaintEvent*)param1);
+void q_splitterhandle_super_paint_event(void* self, void* param1) {
+    QSplitterHandle_SuperPaintEvent((QSplitterHandle*)self, (QPaintEvent*)param1);
 }
 
 void q_splitterhandle_mouse_move_event(void* self, void* param1) {
@@ -2492,8 +2492,8 @@ void q_splitterhandle_on_mouse_move_event(void* self, void (*callback)(void*, vo
     QSplitterHandle_OnMouseMoveEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_mouse_move_event(void* self, void* param1) {
-    QSplitterHandle_QBaseMouseMoveEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
+void q_splitterhandle_super_mouse_move_event(void* self, void* param1) {
+    QSplitterHandle_SuperMouseMoveEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
 }
 
 void q_splitterhandle_mouse_press_event(void* self, void* param1) {
@@ -2504,8 +2504,8 @@ void q_splitterhandle_on_mouse_press_event(void* self, void (*callback)(void*, v
     QSplitterHandle_OnMousePressEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_mouse_press_event(void* self, void* param1) {
-    QSplitterHandle_QBaseMousePressEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
+void q_splitterhandle_super_mouse_press_event(void* self, void* param1) {
+    QSplitterHandle_SuperMousePressEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
 }
 
 void q_splitterhandle_mouse_release_event(void* self, void* param1) {
@@ -2516,8 +2516,8 @@ void q_splitterhandle_on_mouse_release_event(void* self, void (*callback)(void*,
     QSplitterHandle_OnMouseReleaseEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_mouse_release_event(void* self, void* param1) {
-    QSplitterHandle_QBaseMouseReleaseEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
+void q_splitterhandle_super_mouse_release_event(void* self, void* param1) {
+    QSplitterHandle_SuperMouseReleaseEvent((QSplitterHandle*)self, (QMouseEvent*)param1);
 }
 
 void q_splitterhandle_resize_event(void* self, void* param1) {
@@ -2528,8 +2528,8 @@ void q_splitterhandle_on_resize_event(void* self, void (*callback)(void*, void*)
     QSplitterHandle_OnResizeEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_resize_event(void* self, void* param1) {
-    QSplitterHandle_QBaseResizeEvent((QSplitterHandle*)self, (QResizeEvent*)param1);
+void q_splitterhandle_super_resize_event(void* self, void* param1) {
+    QSplitterHandle_SuperResizeEvent((QSplitterHandle*)self, (QResizeEvent*)param1);
 }
 
 bool q_splitterhandle_event(void* self, void* param1) {
@@ -2540,8 +2540,8 @@ void q_splitterhandle_on_event(void* self, bool (*callback)(void*, void*)) {
     QSplitterHandle_OnEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-bool q_splitterhandle_qbase_event(void* self, void* param1) {
-    return QSplitterHandle_QBaseEvent((QSplitterHandle*)self, (QEvent*)param1);
+bool q_splitterhandle_super_event(void* self, void* param1) {
+    return QSplitterHandle_SuperEvent((QSplitterHandle*)self, (QEvent*)param1);
 }
 
 void q_splitterhandle_move_splitter(void* self, int p) {
@@ -2552,8 +2552,8 @@ void q_splitterhandle_on_move_splitter(void* self, void (*callback)(void*, int))
     QSplitterHandle_OnMoveSplitter((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-void q_splitterhandle_qbase_move_splitter(void* self, int p) {
-    QSplitterHandle_QBaseMoveSplitter((QSplitterHandle*)self, p);
+void q_splitterhandle_super_move_splitter(void* self, int p) {
+    QSplitterHandle_SuperMoveSplitter((QSplitterHandle*)self, p);
 }
 
 int32_t q_splitterhandle_closest_legal_position(void* self, int p) {
@@ -2564,8 +2564,8 @@ void q_splitterhandle_on_closest_legal_position(void* self, int32_t (*callback)(
     QSplitterHandle_OnClosestLegalPosition((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-int32_t q_splitterhandle_qbase_closest_legal_position(void* self, int p) {
-    return QSplitterHandle_QBaseClosestLegalPosition((QSplitterHandle*)self, p);
+int32_t q_splitterhandle_super_closest_legal_position(void* self, int p) {
+    return QSplitterHandle_SuperClosestLegalPosition((QSplitterHandle*)self, p);
 }
 
 const char* q_splitterhandle_tr2(const char* s, const char* c) {
@@ -3967,8 +3967,8 @@ int32_t q_splitterhandle_dev_type(void* self) {
     return QSplitterHandle_DevType((QSplitterHandle*)self);
 }
 
-int32_t q_splitterhandle_qbase_dev_type(void* self) {
-    return QSplitterHandle_QBaseDevType((QSplitterHandle*)self);
+int32_t q_splitterhandle_super_dev_type(void* self) {
+    return QSplitterHandle_SuperDevType((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_dev_type(void* self, int32_t (*callback)()) {
@@ -3979,8 +3979,8 @@ void q_splitterhandle_set_visible(void* self, bool visible) {
     QSplitterHandle_SetVisible((QSplitterHandle*)self, visible);
 }
 
-void q_splitterhandle_qbase_set_visible(void* self, bool visible) {
-    QSplitterHandle_QBaseSetVisible((QSplitterHandle*)self, visible);
+void q_splitterhandle_super_set_visible(void* self, bool visible) {
+    QSplitterHandle_SuperSetVisible((QSplitterHandle*)self, visible);
 }
 
 void q_splitterhandle_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -3991,8 +3991,8 @@ QSize* q_splitterhandle_minimum_size_hint(void* self) {
     return QSplitterHandle_MinimumSizeHint((QSplitterHandle*)self);
 }
 
-QSize* q_splitterhandle_qbase_minimum_size_hint(void* self) {
-    return QSplitterHandle_QBaseMinimumSizeHint((QSplitterHandle*)self);
+QSize* q_splitterhandle_super_minimum_size_hint(void* self) {
+    return QSplitterHandle_SuperMinimumSizeHint((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -4003,8 +4003,8 @@ int32_t q_splitterhandle_height_for_width(void* self, int param1) {
     return QSplitterHandle_HeightForWidth((QSplitterHandle*)self, param1);
 }
 
-int32_t q_splitterhandle_qbase_height_for_width(void* self, int param1) {
-    return QSplitterHandle_QBaseHeightForWidth((QSplitterHandle*)self, param1);
+int32_t q_splitterhandle_super_height_for_width(void* self, int param1) {
+    return QSplitterHandle_SuperHeightForWidth((QSplitterHandle*)self, param1);
 }
 
 void q_splitterhandle_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -4015,8 +4015,8 @@ bool q_splitterhandle_has_height_for_width(void* self) {
     return QSplitterHandle_HasHeightForWidth((QSplitterHandle*)self);
 }
 
-bool q_splitterhandle_qbase_has_height_for_width(void* self) {
-    return QSplitterHandle_QBaseHasHeightForWidth((QSplitterHandle*)self);
+bool q_splitterhandle_super_has_height_for_width(void* self) {
+    return QSplitterHandle_SuperHasHeightForWidth((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -4027,8 +4027,8 @@ QPaintEngine* q_splitterhandle_paint_engine(void* self) {
     return QSplitterHandle_PaintEngine((QSplitterHandle*)self);
 }
 
-QPaintEngine* q_splitterhandle_qbase_paint_engine(void* self) {
-    return QSplitterHandle_QBasePaintEngine((QSplitterHandle*)self);
+QPaintEngine* q_splitterhandle_super_paint_engine(void* self) {
+    return QSplitterHandle_SuperPaintEngine((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -4039,8 +4039,8 @@ void q_splitterhandle_mouse_double_click_event(void* self, void* event) {
     QSplitterHandle_MouseDoubleClickEvent((QSplitterHandle*)self, (QMouseEvent*)event);
 }
 
-void q_splitterhandle_qbase_mouse_double_click_event(void* self, void* event) {
-    QSplitterHandle_QBaseMouseDoubleClickEvent((QSplitterHandle*)self, (QMouseEvent*)event);
+void q_splitterhandle_super_mouse_double_click_event(void* self, void* event) {
+    QSplitterHandle_SuperMouseDoubleClickEvent((QSplitterHandle*)self, (QMouseEvent*)event);
 }
 
 void q_splitterhandle_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -4051,8 +4051,8 @@ void q_splitterhandle_wheel_event(void* self, void* event) {
     QSplitterHandle_WheelEvent((QSplitterHandle*)self, (QWheelEvent*)event);
 }
 
-void q_splitterhandle_qbase_wheel_event(void* self, void* event) {
-    QSplitterHandle_QBaseWheelEvent((QSplitterHandle*)self, (QWheelEvent*)event);
+void q_splitterhandle_super_wheel_event(void* self, void* event) {
+    QSplitterHandle_SuperWheelEvent((QSplitterHandle*)self, (QWheelEvent*)event);
 }
 
 void q_splitterhandle_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -4063,8 +4063,8 @@ void q_splitterhandle_key_press_event(void* self, void* event) {
     QSplitterHandle_KeyPressEvent((QSplitterHandle*)self, (QKeyEvent*)event);
 }
 
-void q_splitterhandle_qbase_key_press_event(void* self, void* event) {
-    QSplitterHandle_QBaseKeyPressEvent((QSplitterHandle*)self, (QKeyEvent*)event);
+void q_splitterhandle_super_key_press_event(void* self, void* event) {
+    QSplitterHandle_SuperKeyPressEvent((QSplitterHandle*)self, (QKeyEvent*)event);
 }
 
 void q_splitterhandle_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4075,8 +4075,8 @@ void q_splitterhandle_key_release_event(void* self, void* event) {
     QSplitterHandle_KeyReleaseEvent((QSplitterHandle*)self, (QKeyEvent*)event);
 }
 
-void q_splitterhandle_qbase_key_release_event(void* self, void* event) {
-    QSplitterHandle_QBaseKeyReleaseEvent((QSplitterHandle*)self, (QKeyEvent*)event);
+void q_splitterhandle_super_key_release_event(void* self, void* event) {
+    QSplitterHandle_SuperKeyReleaseEvent((QSplitterHandle*)self, (QKeyEvent*)event);
 }
 
 void q_splitterhandle_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4087,8 +4087,8 @@ void q_splitterhandle_focus_in_event(void* self, void* event) {
     QSplitterHandle_FocusInEvent((QSplitterHandle*)self, (QFocusEvent*)event);
 }
 
-void q_splitterhandle_qbase_focus_in_event(void* self, void* event) {
-    QSplitterHandle_QBaseFocusInEvent((QSplitterHandle*)self, (QFocusEvent*)event);
+void q_splitterhandle_super_focus_in_event(void* self, void* event) {
+    QSplitterHandle_SuperFocusInEvent((QSplitterHandle*)self, (QFocusEvent*)event);
 }
 
 void q_splitterhandle_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -4099,8 +4099,8 @@ void q_splitterhandle_focus_out_event(void* self, void* event) {
     QSplitterHandle_FocusOutEvent((QSplitterHandle*)self, (QFocusEvent*)event);
 }
 
-void q_splitterhandle_qbase_focus_out_event(void* self, void* event) {
-    QSplitterHandle_QBaseFocusOutEvent((QSplitterHandle*)self, (QFocusEvent*)event);
+void q_splitterhandle_super_focus_out_event(void* self, void* event) {
+    QSplitterHandle_SuperFocusOutEvent((QSplitterHandle*)self, (QFocusEvent*)event);
 }
 
 void q_splitterhandle_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -4111,8 +4111,8 @@ void q_splitterhandle_enter_event(void* self, void* event) {
     QSplitterHandle_EnterEvent((QSplitterHandle*)self, (QEnterEvent*)event);
 }
 
-void q_splitterhandle_qbase_enter_event(void* self, void* event) {
-    QSplitterHandle_QBaseEnterEvent((QSplitterHandle*)self, (QEnterEvent*)event);
+void q_splitterhandle_super_enter_event(void* self, void* event) {
+    QSplitterHandle_SuperEnterEvent((QSplitterHandle*)self, (QEnterEvent*)event);
 }
 
 void q_splitterhandle_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4123,8 +4123,8 @@ void q_splitterhandle_leave_event(void* self, void* event) {
     QSplitterHandle_LeaveEvent((QSplitterHandle*)self, (QEvent*)event);
 }
 
-void q_splitterhandle_qbase_leave_event(void* self, void* event) {
-    QSplitterHandle_QBaseLeaveEvent((QSplitterHandle*)self, (QEvent*)event);
+void q_splitterhandle_super_leave_event(void* self, void* event) {
+    QSplitterHandle_SuperLeaveEvent((QSplitterHandle*)self, (QEvent*)event);
 }
 
 void q_splitterhandle_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4135,8 +4135,8 @@ void q_splitterhandle_move_event(void* self, void* event) {
     QSplitterHandle_MoveEvent((QSplitterHandle*)self, (QMoveEvent*)event);
 }
 
-void q_splitterhandle_qbase_move_event(void* self, void* event) {
-    QSplitterHandle_QBaseMoveEvent((QSplitterHandle*)self, (QMoveEvent*)event);
+void q_splitterhandle_super_move_event(void* self, void* event) {
+    QSplitterHandle_SuperMoveEvent((QSplitterHandle*)self, (QMoveEvent*)event);
 }
 
 void q_splitterhandle_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4147,8 +4147,8 @@ void q_splitterhandle_close_event(void* self, void* event) {
     QSplitterHandle_CloseEvent((QSplitterHandle*)self, (QCloseEvent*)event);
 }
 
-void q_splitterhandle_qbase_close_event(void* self, void* event) {
-    QSplitterHandle_QBaseCloseEvent((QSplitterHandle*)self, (QCloseEvent*)event);
+void q_splitterhandle_super_close_event(void* self, void* event) {
+    QSplitterHandle_SuperCloseEvent((QSplitterHandle*)self, (QCloseEvent*)event);
 }
 
 void q_splitterhandle_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -4159,8 +4159,8 @@ void q_splitterhandle_context_menu_event(void* self, void* event) {
     QSplitterHandle_ContextMenuEvent((QSplitterHandle*)self, (QContextMenuEvent*)event);
 }
 
-void q_splitterhandle_qbase_context_menu_event(void* self, void* event) {
-    QSplitterHandle_QBaseContextMenuEvent((QSplitterHandle*)self, (QContextMenuEvent*)event);
+void q_splitterhandle_super_context_menu_event(void* self, void* event) {
+    QSplitterHandle_SuperContextMenuEvent((QSplitterHandle*)self, (QContextMenuEvent*)event);
 }
 
 void q_splitterhandle_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -4171,8 +4171,8 @@ void q_splitterhandle_tablet_event(void* self, void* event) {
     QSplitterHandle_TabletEvent((QSplitterHandle*)self, (QTabletEvent*)event);
 }
 
-void q_splitterhandle_qbase_tablet_event(void* self, void* event) {
-    QSplitterHandle_QBaseTabletEvent((QSplitterHandle*)self, (QTabletEvent*)event);
+void q_splitterhandle_super_tablet_event(void* self, void* event) {
+    QSplitterHandle_SuperTabletEvent((QSplitterHandle*)self, (QTabletEvent*)event);
 }
 
 void q_splitterhandle_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -4183,8 +4183,8 @@ void q_splitterhandle_action_event(void* self, void* event) {
     QSplitterHandle_ActionEvent((QSplitterHandle*)self, (QActionEvent*)event);
 }
 
-void q_splitterhandle_qbase_action_event(void* self, void* event) {
-    QSplitterHandle_QBaseActionEvent((QSplitterHandle*)self, (QActionEvent*)event);
+void q_splitterhandle_super_action_event(void* self, void* event) {
+    QSplitterHandle_SuperActionEvent((QSplitterHandle*)self, (QActionEvent*)event);
 }
 
 void q_splitterhandle_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -4195,8 +4195,8 @@ void q_splitterhandle_drag_enter_event(void* self, void* event) {
     QSplitterHandle_DragEnterEvent((QSplitterHandle*)self, (QDragEnterEvent*)event);
 }
 
-void q_splitterhandle_qbase_drag_enter_event(void* self, void* event) {
-    QSplitterHandle_QBaseDragEnterEvent((QSplitterHandle*)self, (QDragEnterEvent*)event);
+void q_splitterhandle_super_drag_enter_event(void* self, void* event) {
+    QSplitterHandle_SuperDragEnterEvent((QSplitterHandle*)self, (QDragEnterEvent*)event);
 }
 
 void q_splitterhandle_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4207,8 +4207,8 @@ void q_splitterhandle_drag_move_event(void* self, void* event) {
     QSplitterHandle_DragMoveEvent((QSplitterHandle*)self, (QDragMoveEvent*)event);
 }
 
-void q_splitterhandle_qbase_drag_move_event(void* self, void* event) {
-    QSplitterHandle_QBaseDragMoveEvent((QSplitterHandle*)self, (QDragMoveEvent*)event);
+void q_splitterhandle_super_drag_move_event(void* self, void* event) {
+    QSplitterHandle_SuperDragMoveEvent((QSplitterHandle*)self, (QDragMoveEvent*)event);
 }
 
 void q_splitterhandle_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4219,8 +4219,8 @@ void q_splitterhandle_drag_leave_event(void* self, void* event) {
     QSplitterHandle_DragLeaveEvent((QSplitterHandle*)self, (QDragLeaveEvent*)event);
 }
 
-void q_splitterhandle_qbase_drag_leave_event(void* self, void* event) {
-    QSplitterHandle_QBaseDragLeaveEvent((QSplitterHandle*)self, (QDragLeaveEvent*)event);
+void q_splitterhandle_super_drag_leave_event(void* self, void* event) {
+    QSplitterHandle_SuperDragLeaveEvent((QSplitterHandle*)self, (QDragLeaveEvent*)event);
 }
 
 void q_splitterhandle_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4231,8 +4231,8 @@ void q_splitterhandle_drop_event(void* self, void* event) {
     QSplitterHandle_DropEvent((QSplitterHandle*)self, (QDropEvent*)event);
 }
 
-void q_splitterhandle_qbase_drop_event(void* self, void* event) {
-    QSplitterHandle_QBaseDropEvent((QSplitterHandle*)self, (QDropEvent*)event);
+void q_splitterhandle_super_drop_event(void* self, void* event) {
+    QSplitterHandle_SuperDropEvent((QSplitterHandle*)self, (QDropEvent*)event);
 }
 
 void q_splitterhandle_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -4243,8 +4243,8 @@ void q_splitterhandle_show_event(void* self, void* event) {
     QSplitterHandle_ShowEvent((QSplitterHandle*)self, (QShowEvent*)event);
 }
 
-void q_splitterhandle_qbase_show_event(void* self, void* event) {
-    QSplitterHandle_QBaseShowEvent((QSplitterHandle*)self, (QShowEvent*)event);
+void q_splitterhandle_super_show_event(void* self, void* event) {
+    QSplitterHandle_SuperShowEvent((QSplitterHandle*)self, (QShowEvent*)event);
 }
 
 void q_splitterhandle_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -4255,8 +4255,8 @@ void q_splitterhandle_hide_event(void* self, void* event) {
     QSplitterHandle_HideEvent((QSplitterHandle*)self, (QHideEvent*)event);
 }
 
-void q_splitterhandle_qbase_hide_event(void* self, void* event) {
-    QSplitterHandle_QBaseHideEvent((QSplitterHandle*)self, (QHideEvent*)event);
+void q_splitterhandle_super_hide_event(void* self, void* event) {
+    QSplitterHandle_SuperHideEvent((QSplitterHandle*)self, (QHideEvent*)event);
 }
 
 void q_splitterhandle_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -4267,8 +4267,8 @@ bool q_splitterhandle_native_event(void* self, char* eventType, void* message, i
     return QSplitterHandle_NativeEvent((QSplitterHandle*)self, qstring(eventType), message, result);
 }
 
-bool q_splitterhandle_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QSplitterHandle_QBaseNativeEvent((QSplitterHandle*)self, qstring(eventType), message, result);
+bool q_splitterhandle_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QSplitterHandle_SuperNativeEvent((QSplitterHandle*)self, qstring(eventType), message, result);
 }
 
 void q_splitterhandle_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -4279,8 +4279,8 @@ void q_splitterhandle_change_event(void* self, void* param1) {
     QSplitterHandle_ChangeEvent((QSplitterHandle*)self, (QEvent*)param1);
 }
 
-void q_splitterhandle_qbase_change_event(void* self, void* param1) {
-    QSplitterHandle_QBaseChangeEvent((QSplitterHandle*)self, (QEvent*)param1);
+void q_splitterhandle_super_change_event(void* self, void* param1) {
+    QSplitterHandle_SuperChangeEvent((QSplitterHandle*)self, (QEvent*)param1);
 }
 
 void q_splitterhandle_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -4291,8 +4291,8 @@ int32_t q_splitterhandle_metric(void* self, int32_t param1) {
     return QSplitterHandle_Metric((QSplitterHandle*)self, param1);
 }
 
-int32_t q_splitterhandle_qbase_metric(void* self, int32_t param1) {
-    return QSplitterHandle_QBaseMetric((QSplitterHandle*)self, param1);
+int32_t q_splitterhandle_super_metric(void* self, int32_t param1) {
+    return QSplitterHandle_SuperMetric((QSplitterHandle*)self, param1);
 }
 
 void q_splitterhandle_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -4303,8 +4303,8 @@ void q_splitterhandle_init_painter(void* self, void* painter) {
     QSplitterHandle_InitPainter((QSplitterHandle*)self, (QPainter*)painter);
 }
 
-void q_splitterhandle_qbase_init_painter(void* self, void* painter) {
-    QSplitterHandle_QBaseInitPainter((QSplitterHandle*)self, (QPainter*)painter);
+void q_splitterhandle_super_init_painter(void* self, void* painter) {
+    QSplitterHandle_SuperInitPainter((QSplitterHandle*)self, (QPainter*)painter);
 }
 
 void q_splitterhandle_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -4315,8 +4315,8 @@ QPaintDevice* q_splitterhandle_redirected(void* self, void* offset) {
     return QSplitterHandle_Redirected((QSplitterHandle*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_splitterhandle_qbase_redirected(void* self, void* offset) {
-    return QSplitterHandle_QBaseRedirected((QSplitterHandle*)self, (QPoint*)offset);
+QPaintDevice* q_splitterhandle_super_redirected(void* self, void* offset) {
+    return QSplitterHandle_SuperRedirected((QSplitterHandle*)self, (QPoint*)offset);
 }
 
 void q_splitterhandle_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -4327,8 +4327,8 @@ QPainter* q_splitterhandle_shared_painter(void* self) {
     return QSplitterHandle_SharedPainter((QSplitterHandle*)self);
 }
 
-QPainter* q_splitterhandle_qbase_shared_painter(void* self) {
-    return QSplitterHandle_QBaseSharedPainter((QSplitterHandle*)self);
+QPainter* q_splitterhandle_super_shared_painter(void* self) {
+    return QSplitterHandle_SuperSharedPainter((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -4339,8 +4339,8 @@ void q_splitterhandle_input_method_event(void* self, void* param1) {
     QSplitterHandle_InputMethodEvent((QSplitterHandle*)self, (QInputMethodEvent*)param1);
 }
 
-void q_splitterhandle_qbase_input_method_event(void* self, void* param1) {
-    QSplitterHandle_QBaseInputMethodEvent((QSplitterHandle*)self, (QInputMethodEvent*)param1);
+void q_splitterhandle_super_input_method_event(void* self, void* param1) {
+    QSplitterHandle_SuperInputMethodEvent((QSplitterHandle*)self, (QInputMethodEvent*)param1);
 }
 
 void q_splitterhandle_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -4351,8 +4351,8 @@ QVariant* q_splitterhandle_input_method_query(void* self, int32_t param1) {
     return QSplitterHandle_InputMethodQuery((QSplitterHandle*)self, param1);
 }
 
-QVariant* q_splitterhandle_qbase_input_method_query(void* self, int32_t param1) {
-    return QSplitterHandle_QBaseInputMethodQuery((QSplitterHandle*)self, param1);
+QVariant* q_splitterhandle_super_input_method_query(void* self, int32_t param1) {
+    return QSplitterHandle_SuperInputMethodQuery((QSplitterHandle*)self, param1);
 }
 
 void q_splitterhandle_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -4363,8 +4363,8 @@ bool q_splitterhandle_focus_next_prev_child(void* self, bool next) {
     return QSplitterHandle_FocusNextPrevChild((QSplitterHandle*)self, next);
 }
 
-bool q_splitterhandle_qbase_focus_next_prev_child(void* self, bool next) {
-    return QSplitterHandle_QBaseFocusNextPrevChild((QSplitterHandle*)self, next);
+bool q_splitterhandle_super_focus_next_prev_child(void* self, bool next) {
+    return QSplitterHandle_SuperFocusNextPrevChild((QSplitterHandle*)self, next);
 }
 
 void q_splitterhandle_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -4375,8 +4375,8 @@ bool q_splitterhandle_event_filter(void* self, void* watched, void* event) {
     return QSplitterHandle_EventFilter((QSplitterHandle*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_splitterhandle_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSplitterHandle_QBaseEventFilter((QSplitterHandle*)self, (QObject*)watched, (QEvent*)event);
+bool q_splitterhandle_super_event_filter(void* self, void* watched, void* event) {
+    return QSplitterHandle_SuperEventFilter((QSplitterHandle*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_splitterhandle_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -4387,8 +4387,8 @@ void q_splitterhandle_timer_event(void* self, void* event) {
     QSplitterHandle_TimerEvent((QSplitterHandle*)self, (QTimerEvent*)event);
 }
 
-void q_splitterhandle_qbase_timer_event(void* self, void* event) {
-    QSplitterHandle_QBaseTimerEvent((QSplitterHandle*)self, (QTimerEvent*)event);
+void q_splitterhandle_super_timer_event(void* self, void* event) {
+    QSplitterHandle_SuperTimerEvent((QSplitterHandle*)self, (QTimerEvent*)event);
 }
 
 void q_splitterhandle_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -4399,8 +4399,8 @@ void q_splitterhandle_child_event(void* self, void* event) {
     QSplitterHandle_ChildEvent((QSplitterHandle*)self, (QChildEvent*)event);
 }
 
-void q_splitterhandle_qbase_child_event(void* self, void* event) {
-    QSplitterHandle_QBaseChildEvent((QSplitterHandle*)self, (QChildEvent*)event);
+void q_splitterhandle_super_child_event(void* self, void* event) {
+    QSplitterHandle_SuperChildEvent((QSplitterHandle*)self, (QChildEvent*)event);
 }
 
 void q_splitterhandle_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -4411,8 +4411,8 @@ void q_splitterhandle_custom_event(void* self, void* event) {
     QSplitterHandle_CustomEvent((QSplitterHandle*)self, (QEvent*)event);
 }
 
-void q_splitterhandle_qbase_custom_event(void* self, void* event) {
-    QSplitterHandle_QBaseCustomEvent((QSplitterHandle*)self, (QEvent*)event);
+void q_splitterhandle_super_custom_event(void* self, void* event) {
+    QSplitterHandle_SuperCustomEvent((QSplitterHandle*)self, (QEvent*)event);
 }
 
 void q_splitterhandle_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -4423,8 +4423,8 @@ void q_splitterhandle_connect_notify(void* self, void* signal) {
     QSplitterHandle_ConnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
-void q_splitterhandle_qbase_connect_notify(void* self, void* signal) {
-    QSplitterHandle_QBaseConnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
+void q_splitterhandle_super_connect_notify(void* self, void* signal) {
+    QSplitterHandle_SuperConnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
 void q_splitterhandle_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4435,8 +4435,8 @@ void q_splitterhandle_disconnect_notify(void* self, void* signal) {
     QSplitterHandle_DisconnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
-void q_splitterhandle_qbase_disconnect_notify(void* self, void* signal) {
-    QSplitterHandle_QBaseDisconnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
+void q_splitterhandle_super_disconnect_notify(void* self, void* signal) {
+    QSplitterHandle_SuperDisconnectNotify((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
 void q_splitterhandle_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4447,8 +4447,8 @@ void q_splitterhandle_update_micro_focus(void* self) {
     QSplitterHandle_UpdateMicroFocus((QSplitterHandle*)self);
 }
 
-void q_splitterhandle_qbase_update_micro_focus(void* self) {
-    QSplitterHandle_QBaseUpdateMicroFocus((QSplitterHandle*)self);
+void q_splitterhandle_super_update_micro_focus(void* self) {
+    QSplitterHandle_SuperUpdateMicroFocus((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_update_micro_focus(void* self, void (*callback)()) {
@@ -4459,8 +4459,8 @@ void q_splitterhandle_create(void* self) {
     QSplitterHandle_Create((QSplitterHandle*)self);
 }
 
-void q_splitterhandle_qbase_create(void* self) {
-    QSplitterHandle_QBaseCreate((QSplitterHandle*)self);
+void q_splitterhandle_super_create(void* self) {
+    QSplitterHandle_SuperCreate((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_create(void* self, void (*callback)()) {
@@ -4471,8 +4471,8 @@ void q_splitterhandle_destroy(void* self) {
     QSplitterHandle_Destroy((QSplitterHandle*)self);
 }
 
-void q_splitterhandle_qbase_destroy(void* self) {
-    QSplitterHandle_QBaseDestroy((QSplitterHandle*)self);
+void q_splitterhandle_super_destroy(void* self) {
+    QSplitterHandle_SuperDestroy((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_destroy(void* self, void (*callback)()) {
@@ -4483,8 +4483,8 @@ bool q_splitterhandle_focus_next_child(void* self) {
     return QSplitterHandle_FocusNextChild((QSplitterHandle*)self);
 }
 
-bool q_splitterhandle_qbase_focus_next_child(void* self) {
-    return QSplitterHandle_QBaseFocusNextChild((QSplitterHandle*)self);
+bool q_splitterhandle_super_focus_next_child(void* self) {
+    return QSplitterHandle_SuperFocusNextChild((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_focus_next_child(void* self, bool (*callback)()) {
@@ -4495,8 +4495,8 @@ bool q_splitterhandle_focus_previous_child(void* self) {
     return QSplitterHandle_FocusPreviousChild((QSplitterHandle*)self);
 }
 
-bool q_splitterhandle_qbase_focus_previous_child(void* self) {
-    return QSplitterHandle_QBaseFocusPreviousChild((QSplitterHandle*)self);
+bool q_splitterhandle_super_focus_previous_child(void* self) {
+    return QSplitterHandle_SuperFocusPreviousChild((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -4507,8 +4507,8 @@ QObject* q_splitterhandle_sender(void* self) {
     return QSplitterHandle_Sender((QSplitterHandle*)self);
 }
 
-QObject* q_splitterhandle_qbase_sender(void* self) {
-    return QSplitterHandle_QBaseSender((QSplitterHandle*)self);
+QObject* q_splitterhandle_super_sender(void* self) {
+    return QSplitterHandle_SuperSender((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_sender(void* self, QObject* (*callback)()) {
@@ -4519,8 +4519,8 @@ int32_t q_splitterhandle_sender_signal_index(void* self) {
     return QSplitterHandle_SenderSignalIndex((QSplitterHandle*)self);
 }
 
-int32_t q_splitterhandle_qbase_sender_signal_index(void* self) {
-    return QSplitterHandle_QBaseSenderSignalIndex((QSplitterHandle*)self);
+int32_t q_splitterhandle_super_sender_signal_index(void* self) {
+    return QSplitterHandle_SuperSenderSignalIndex((QSplitterHandle*)self);
 }
 
 void q_splitterhandle_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -4531,8 +4531,8 @@ int32_t q_splitterhandle_receivers(void* self, const char* signal) {
     return QSplitterHandle_Receivers((QSplitterHandle*)self, signal);
 }
 
-int32_t q_splitterhandle_qbase_receivers(void* self, const char* signal) {
-    return QSplitterHandle_QBaseReceivers((QSplitterHandle*)self, signal);
+int32_t q_splitterhandle_super_receivers(void* self, const char* signal) {
+    return QSplitterHandle_SuperReceivers((QSplitterHandle*)self, signal);
 }
 
 void q_splitterhandle_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -4543,8 +4543,8 @@ bool q_splitterhandle_is_signal_connected(void* self, void* signal) {
     return QSplitterHandle_IsSignalConnected((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
-bool q_splitterhandle_qbase_is_signal_connected(void* self, void* signal) {
-    return QSplitterHandle_QBaseIsSignalConnected((QSplitterHandle*)self, (QMetaMethod*)signal);
+bool q_splitterhandle_super_is_signal_connected(void* self, void* signal) {
+    return QSplitterHandle_SuperIsSignalConnected((QSplitterHandle*)self, (QMetaMethod*)signal);
 }
 
 void q_splitterhandle_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -4555,8 +4555,8 @@ double q_splitterhandle_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return QSplitterHandle_GetDecodedMetricF((QSplitterHandle*)self, metricA, metricB);
 }
 
-double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QSplitterHandle_QBaseGetDecodedMetricF((QSplitterHandle*)self, metricA, metricB);
+double q_splitterhandle_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QSplitterHandle_SuperGetDecodedMetricF((QSplitterHandle*)self, metricA, metricB);
 }
 
 void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

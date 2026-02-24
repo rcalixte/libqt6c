@@ -23,8 +23,8 @@ void q_signon__authservice_on_meta_object(void* self, const QMetaObject* (*callb
     SignOn__AuthService_OnMetaObject((SignOn__AuthService*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_signon__authservice_qbase_meta_object(void* self) {
-    return SignOn__AuthService_QBaseMetaObject((SignOn__AuthService*)self);
+const QMetaObject* q_signon__authservice_super_meta_object(void* self) {
+    return SignOn__AuthService_SuperMetaObject((SignOn__AuthService*)self);
 }
 
 void* q_signon__authservice_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_signon__authservice_on_metacast(void* self, void* (*callback)(void*, cons
     SignOn__AuthService_OnMetacast((SignOn__AuthService*)self, (intptr_t)callback);
 }
 
-void* q_signon__authservice_qbase_metacast(void* self, const char* param1) {
-    return SignOn__AuthService_QBaseMetacast((SignOn__AuthService*)self, param1);
+void* q_signon__authservice_super_metacast(void* self, const char* param1) {
+    return SignOn__AuthService_SuperMetacast((SignOn__AuthService*)self, param1);
 }
 
 int32_t q_signon__authservice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_signon__authservice_on_metacall(void* self, int32_t (*callback)(void*, in
     SignOn__AuthService_OnMetacall((SignOn__AuthService*)self, (intptr_t)callback);
 }
 
-int32_t q_signon__authservice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return SignOn__AuthService_QBaseMetacall((SignOn__AuthService*)self, param1, param2, param3);
+int32_t q_signon__authservice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return SignOn__AuthService_SuperMetacall((SignOn__AuthService*)self, param1, param2, param3);
 }
 
 const char* q_signon__authservice_tr(const char* s) {
@@ -365,8 +365,8 @@ bool q_signon__authservice_event(void* self, void* event) {
     return SignOn__AuthService_Event((SignOn__AuthService*)self, (QEvent*)event);
 }
 
-bool q_signon__authservice_qbase_event(void* self, void* event) {
-    return SignOn__AuthService_QBaseEvent((SignOn__AuthService*)self, (QEvent*)event);
+bool q_signon__authservice_super_event(void* self, void* event) {
+    return SignOn__AuthService_SuperEvent((SignOn__AuthService*)self, (QEvent*)event);
 }
 
 void q_signon__authservice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -377,8 +377,8 @@ bool q_signon__authservice_event_filter(void* self, void* watched, void* event) 
     return SignOn__AuthService_EventFilter((SignOn__AuthService*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_signon__authservice_qbase_event_filter(void* self, void* watched, void* event) {
-    return SignOn__AuthService_QBaseEventFilter((SignOn__AuthService*)self, (QObject*)watched, (QEvent*)event);
+bool q_signon__authservice_super_event_filter(void* self, void* watched, void* event) {
+    return SignOn__AuthService_SuperEventFilter((SignOn__AuthService*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_signon__authservice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -389,8 +389,8 @@ void q_signon__authservice_timer_event(void* self, void* event) {
     SignOn__AuthService_TimerEvent((SignOn__AuthService*)self, (QTimerEvent*)event);
 }
 
-void q_signon__authservice_qbase_timer_event(void* self, void* event) {
-    SignOn__AuthService_QBaseTimerEvent((SignOn__AuthService*)self, (QTimerEvent*)event);
+void q_signon__authservice_super_timer_event(void* self, void* event) {
+    SignOn__AuthService_SuperTimerEvent((SignOn__AuthService*)self, (QTimerEvent*)event);
 }
 
 void q_signon__authservice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -401,8 +401,8 @@ void q_signon__authservice_child_event(void* self, void* event) {
     SignOn__AuthService_ChildEvent((SignOn__AuthService*)self, (QChildEvent*)event);
 }
 
-void q_signon__authservice_qbase_child_event(void* self, void* event) {
-    SignOn__AuthService_QBaseChildEvent((SignOn__AuthService*)self, (QChildEvent*)event);
+void q_signon__authservice_super_child_event(void* self, void* event) {
+    SignOn__AuthService_SuperChildEvent((SignOn__AuthService*)self, (QChildEvent*)event);
 }
 
 void q_signon__authservice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -413,8 +413,8 @@ void q_signon__authservice_custom_event(void* self, void* event) {
     SignOn__AuthService_CustomEvent((SignOn__AuthService*)self, (QEvent*)event);
 }
 
-void q_signon__authservice_qbase_custom_event(void* self, void* event) {
-    SignOn__AuthService_QBaseCustomEvent((SignOn__AuthService*)self, (QEvent*)event);
+void q_signon__authservice_super_custom_event(void* self, void* event) {
+    SignOn__AuthService_SuperCustomEvent((SignOn__AuthService*)self, (QEvent*)event);
 }
 
 void q_signon__authservice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -425,8 +425,8 @@ void q_signon__authservice_connect_notify(void* self, void* signal) {
     SignOn__AuthService_ConnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
-void q_signon__authservice_qbase_connect_notify(void* self, void* signal) {
-    SignOn__AuthService_QBaseConnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
+void q_signon__authservice_super_connect_notify(void* self, void* signal) {
+    SignOn__AuthService_SuperConnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
 void q_signon__authservice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -437,8 +437,8 @@ void q_signon__authservice_disconnect_notify(void* self, void* signal) {
     SignOn__AuthService_DisconnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
-void q_signon__authservice_qbase_disconnect_notify(void* self, void* signal) {
-    SignOn__AuthService_QBaseDisconnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
+void q_signon__authservice_super_disconnect_notify(void* self, void* signal) {
+    SignOn__AuthService_SuperDisconnectNotify((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
 void q_signon__authservice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -449,8 +449,8 @@ QObject* q_signon__authservice_sender(void* self) {
     return SignOn__AuthService_Sender((SignOn__AuthService*)self);
 }
 
-QObject* q_signon__authservice_qbase_sender(void* self) {
-    return SignOn__AuthService_QBaseSender((SignOn__AuthService*)self);
+QObject* q_signon__authservice_super_sender(void* self) {
+    return SignOn__AuthService_SuperSender((SignOn__AuthService*)self);
 }
 
 void q_signon__authservice_on_sender(void* self, QObject* (*callback)()) {
@@ -461,8 +461,8 @@ int32_t q_signon__authservice_sender_signal_index(void* self) {
     return SignOn__AuthService_SenderSignalIndex((SignOn__AuthService*)self);
 }
 
-int32_t q_signon__authservice_qbase_sender_signal_index(void* self) {
-    return SignOn__AuthService_QBaseSenderSignalIndex((SignOn__AuthService*)self);
+int32_t q_signon__authservice_super_sender_signal_index(void* self) {
+    return SignOn__AuthService_SuperSenderSignalIndex((SignOn__AuthService*)self);
 }
 
 void q_signon__authservice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -473,8 +473,8 @@ int32_t q_signon__authservice_receivers(void* self, const char* signal) {
     return SignOn__AuthService_Receivers((SignOn__AuthService*)self, signal);
 }
 
-int32_t q_signon__authservice_qbase_receivers(void* self, const char* signal) {
-    return SignOn__AuthService_QBaseReceivers((SignOn__AuthService*)self, signal);
+int32_t q_signon__authservice_super_receivers(void* self, const char* signal) {
+    return SignOn__AuthService_SuperReceivers((SignOn__AuthService*)self, signal);
 }
 
 void q_signon__authservice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -485,8 +485,8 @@ bool q_signon__authservice_is_signal_connected(void* self, void* signal) {
     return SignOn__AuthService_IsSignalConnected((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
-bool q_signon__authservice_qbase_is_signal_connected(void* self, void* signal) {
-    return SignOn__AuthService_QBaseIsSignalConnected((SignOn__AuthService*)self, (QMetaMethod*)signal);
+bool q_signon__authservice_super_is_signal_connected(void* self, void* signal) {
+    return SignOn__AuthService_SuperIsSignalConnected((SignOn__AuthService*)self, (QMetaMethod*)signal);
 }
 
 void q_signon__authservice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

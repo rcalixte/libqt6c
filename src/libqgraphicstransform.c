@@ -23,8 +23,8 @@ void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callbac
     QGraphicsTransform_OnMetaObject((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicstransform_qbase_meta_object(void* self) {
-    return QGraphicsTransform_QBaseMetaObject((QGraphicsTransform*)self);
+const QMetaObject* q_graphicstransform_super_meta_object(void* self) {
+    return QGraphicsTransform_SuperMetaObject((QGraphicsTransform*)self);
 }
 
 void* q_graphicstransform_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_graphicstransform_on_metacast(void* self, void* (*callback)(void*, const 
     QGraphicsTransform_OnMetacast((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-void* q_graphicstransform_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsTransform_QBaseMetacast((QGraphicsTransform*)self, param1);
+void* q_graphicstransform_super_metacast(void* self, const char* param1) {
+    return QGraphicsTransform_SuperMetacast((QGraphicsTransform*)self, param1);
 }
 
 int32_t q_graphicstransform_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int3
     QGraphicsTransform_OnMetacall((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicstransform_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsTransform_QBaseMetacall((QGraphicsTransform*)self, param1, param2, param3);
+int32_t q_graphicstransform_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsTransform_SuperMetacall((QGraphicsTransform*)self, param1, param2, param3);
 }
 
 const char* q_graphicstransform_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_graphicstransform_on_apply_to(void* self, void (*callback)(void*, void*))
     QGraphicsTransform_OnApplyTo((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-void q_graphicstransform_qbase_apply_to(void* self, void* matrix) {
-    QGraphicsTransform_QBaseApplyTo((QGraphicsTransform*)self, (QMatrix4x4*)matrix);
+void q_graphicstransform_super_apply_to(void* self, void* matrix) {
+    QGraphicsTransform_SuperApplyTo((QGraphicsTransform*)self, (QMatrix4x4*)matrix);
 }
 
 void q_graphicstransform_update(void* self) {
@@ -78,8 +78,8 @@ void q_graphicstransform_on_update(void* self, void (*callback)()) {
     QGraphicsTransform_OnUpdate((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-void q_graphicstransform_qbase_update(void* self) {
-    QGraphicsTransform_QBaseUpdate((QGraphicsTransform*)self);
+void q_graphicstransform_super_update(void* self) {
+    QGraphicsTransform_SuperUpdate((QGraphicsTransform*)self);
 }
 
 const char* q_graphicstransform_tr2(const char* s, const char* c) {
@@ -311,8 +311,8 @@ bool q_graphicstransform_event(void* self, void* event) {
     return QGraphicsTransform_Event((QGraphicsTransform*)self, (QEvent*)event);
 }
 
-bool q_graphicstransform_qbase_event(void* self, void* event) {
-    return QGraphicsTransform_QBaseEvent((QGraphicsTransform*)self, (QEvent*)event);
+bool q_graphicstransform_super_event(void* self, void* event) {
+    return QGraphicsTransform_SuperEvent((QGraphicsTransform*)self, (QEvent*)event);
 }
 
 void q_graphicstransform_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -323,8 +323,8 @@ bool q_graphicstransform_event_filter(void* self, void* watched, void* event) {
     return QGraphicsTransform_EventFilter((QGraphicsTransform*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicstransform_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsTransform_QBaseEventFilter((QGraphicsTransform*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicstransform_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsTransform_SuperEventFilter((QGraphicsTransform*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicstransform_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -335,8 +335,8 @@ void q_graphicstransform_timer_event(void* self, void* event) {
     QGraphicsTransform_TimerEvent((QGraphicsTransform*)self, (QTimerEvent*)event);
 }
 
-void q_graphicstransform_qbase_timer_event(void* self, void* event) {
-    QGraphicsTransform_QBaseTimerEvent((QGraphicsTransform*)self, (QTimerEvent*)event);
+void q_graphicstransform_super_timer_event(void* self, void* event) {
+    QGraphicsTransform_SuperTimerEvent((QGraphicsTransform*)self, (QTimerEvent*)event);
 }
 
 void q_graphicstransform_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -347,8 +347,8 @@ void q_graphicstransform_child_event(void* self, void* event) {
     QGraphicsTransform_ChildEvent((QGraphicsTransform*)self, (QChildEvent*)event);
 }
 
-void q_graphicstransform_qbase_child_event(void* self, void* event) {
-    QGraphicsTransform_QBaseChildEvent((QGraphicsTransform*)self, (QChildEvent*)event);
+void q_graphicstransform_super_child_event(void* self, void* event) {
+    QGraphicsTransform_SuperChildEvent((QGraphicsTransform*)self, (QChildEvent*)event);
 }
 
 void q_graphicstransform_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -359,8 +359,8 @@ void q_graphicstransform_custom_event(void* self, void* event) {
     QGraphicsTransform_CustomEvent((QGraphicsTransform*)self, (QEvent*)event);
 }
 
-void q_graphicstransform_qbase_custom_event(void* self, void* event) {
-    QGraphicsTransform_QBaseCustomEvent((QGraphicsTransform*)self, (QEvent*)event);
+void q_graphicstransform_super_custom_event(void* self, void* event) {
+    QGraphicsTransform_SuperCustomEvent((QGraphicsTransform*)self, (QEvent*)event);
 }
 
 void q_graphicstransform_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -371,8 +371,8 @@ void q_graphicstransform_connect_notify(void* self, void* signal) {
     QGraphicsTransform_ConnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicstransform_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsTransform_QBaseConnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
+void q_graphicstransform_super_connect_notify(void* self, void* signal) {
+    QGraphicsTransform_SuperConnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstransform_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -383,8 +383,8 @@ void q_graphicstransform_disconnect_notify(void* self, void* signal) {
     QGraphicsTransform_DisconnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicstransform_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsTransform_QBaseDisconnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
+void q_graphicstransform_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsTransform_SuperDisconnectNotify((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstransform_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -395,8 +395,8 @@ QObject* q_graphicstransform_sender(void* self) {
     return QGraphicsTransform_Sender((QGraphicsTransform*)self);
 }
 
-QObject* q_graphicstransform_qbase_sender(void* self) {
-    return QGraphicsTransform_QBaseSender((QGraphicsTransform*)self);
+QObject* q_graphicstransform_super_sender(void* self) {
+    return QGraphicsTransform_SuperSender((QGraphicsTransform*)self);
 }
 
 void q_graphicstransform_on_sender(void* self, QObject* (*callback)()) {
@@ -407,8 +407,8 @@ int32_t q_graphicstransform_sender_signal_index(void* self) {
     return QGraphicsTransform_SenderSignalIndex((QGraphicsTransform*)self);
 }
 
-int32_t q_graphicstransform_qbase_sender_signal_index(void* self) {
-    return QGraphicsTransform_QBaseSenderSignalIndex((QGraphicsTransform*)self);
+int32_t q_graphicstransform_super_sender_signal_index(void* self) {
+    return QGraphicsTransform_SuperSenderSignalIndex((QGraphicsTransform*)self);
 }
 
 void q_graphicstransform_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -419,8 +419,8 @@ int32_t q_graphicstransform_receivers(void* self, const char* signal) {
     return QGraphicsTransform_Receivers((QGraphicsTransform*)self, signal);
 }
 
-int32_t q_graphicstransform_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsTransform_QBaseReceivers((QGraphicsTransform*)self, signal);
+int32_t q_graphicstransform_super_receivers(void* self, const char* signal) {
+    return QGraphicsTransform_SuperReceivers((QGraphicsTransform*)self, signal);
 }
 
 void q_graphicstransform_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -431,8 +431,8 @@ bool q_graphicstransform_is_signal_connected(void* self, void* signal) {
     return QGraphicsTransform_IsSignalConnected((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicstransform_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsTransform_QBaseIsSignalConnected((QGraphicsTransform*)self, (QMetaMethod*)signal);
+bool q_graphicstransform_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsTransform_SuperIsSignalConnected((QGraphicsTransform*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstransform_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -463,8 +463,8 @@ void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)()
     QGraphicsScale_OnMetaObject((QGraphicsScale*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsscale_qbase_meta_object(void* self) {
-    return QGraphicsScale_QBaseMetaObject((QGraphicsScale*)self);
+const QMetaObject* q_graphicsscale_super_meta_object(void* self) {
+    return QGraphicsScale_SuperMetaObject((QGraphicsScale*)self);
 }
 
 void* q_graphicsscale_metacast(void* self, const char* param1) {
@@ -475,8 +475,8 @@ void q_graphicsscale_on_metacast(void* self, void* (*callback)(void*, const char
     QGraphicsScale_OnMetacast((QGraphicsScale*)self, (intptr_t)callback);
 }
 
-void* q_graphicsscale_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsScale_QBaseMetacast((QGraphicsScale*)self, param1);
+void* q_graphicsscale_super_metacast(void* self, const char* param1) {
+    return QGraphicsScale_SuperMetacast((QGraphicsScale*)self, param1);
 }
 
 int32_t q_graphicsscale_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -487,8 +487,8 @@ void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QGraphicsScale_OnMetacall((QGraphicsScale*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsscale_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsScale_QBaseMetacall((QGraphicsScale*)self, param1, param2, param3);
+int32_t q_graphicsscale_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsScale_SuperMetacall((QGraphicsScale*)self, param1, param2, param3);
 }
 
 const char* q_graphicsscale_tr(const char* s) {
@@ -538,8 +538,8 @@ void q_graphicsscale_on_apply_to(void* self, void (*callback)(void*, void*)) {
     QGraphicsScale_OnApplyTo((QGraphicsScale*)self, (intptr_t)callback);
 }
 
-void q_graphicsscale_qbase_apply_to(void* self, void* matrix) {
-    QGraphicsScale_QBaseApplyTo((QGraphicsScale*)self, (QMatrix4x4*)matrix);
+void q_graphicsscale_super_apply_to(void* self, void* matrix) {
+    QGraphicsScale_SuperApplyTo((QGraphicsScale*)self, (QMatrix4x4*)matrix);
 }
 
 void q_graphicsscale_origin_changed(void* self) {
@@ -811,8 +811,8 @@ bool q_graphicsscale_event(void* self, void* event) {
     return QGraphicsScale_Event((QGraphicsScale*)self, (QEvent*)event);
 }
 
-bool q_graphicsscale_qbase_event(void* self, void* event) {
-    return QGraphicsScale_QBaseEvent((QGraphicsScale*)self, (QEvent*)event);
+bool q_graphicsscale_super_event(void* self, void* event) {
+    return QGraphicsScale_SuperEvent((QGraphicsScale*)self, (QEvent*)event);
 }
 
 void q_graphicsscale_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -823,8 +823,8 @@ bool q_graphicsscale_event_filter(void* self, void* watched, void* event) {
     return QGraphicsScale_EventFilter((QGraphicsScale*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsscale_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsScale_QBaseEventFilter((QGraphicsScale*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsscale_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsScale_SuperEventFilter((QGraphicsScale*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsscale_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -835,8 +835,8 @@ void q_graphicsscale_timer_event(void* self, void* event) {
     QGraphicsScale_TimerEvent((QGraphicsScale*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsscale_qbase_timer_event(void* self, void* event) {
-    QGraphicsScale_QBaseTimerEvent((QGraphicsScale*)self, (QTimerEvent*)event);
+void q_graphicsscale_super_timer_event(void* self, void* event) {
+    QGraphicsScale_SuperTimerEvent((QGraphicsScale*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsscale_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -847,8 +847,8 @@ void q_graphicsscale_child_event(void* self, void* event) {
     QGraphicsScale_ChildEvent((QGraphicsScale*)self, (QChildEvent*)event);
 }
 
-void q_graphicsscale_qbase_child_event(void* self, void* event) {
-    QGraphicsScale_QBaseChildEvent((QGraphicsScale*)self, (QChildEvent*)event);
+void q_graphicsscale_super_child_event(void* self, void* event) {
+    QGraphicsScale_SuperChildEvent((QGraphicsScale*)self, (QChildEvent*)event);
 }
 
 void q_graphicsscale_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -859,8 +859,8 @@ void q_graphicsscale_custom_event(void* self, void* event) {
     QGraphicsScale_CustomEvent((QGraphicsScale*)self, (QEvent*)event);
 }
 
-void q_graphicsscale_qbase_custom_event(void* self, void* event) {
-    QGraphicsScale_QBaseCustomEvent((QGraphicsScale*)self, (QEvent*)event);
+void q_graphicsscale_super_custom_event(void* self, void* event) {
+    QGraphicsScale_SuperCustomEvent((QGraphicsScale*)self, (QEvent*)event);
 }
 
 void q_graphicsscale_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -871,8 +871,8 @@ void q_graphicsscale_connect_notify(void* self, void* signal) {
     QGraphicsScale_ConnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscale_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsScale_QBaseConnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
+void q_graphicsscale_super_connect_notify(void* self, void* signal) {
+    QGraphicsScale_SuperConnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsscale_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -883,8 +883,8 @@ void q_graphicsscale_disconnect_notify(void* self, void* signal) {
     QGraphicsScale_DisconnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsscale_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsScale_QBaseDisconnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
+void q_graphicsscale_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsScale_SuperDisconnectNotify((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsscale_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -895,8 +895,8 @@ void q_graphicsscale_update(void* self) {
     QGraphicsScale_Update((QGraphicsScale*)self);
 }
 
-void q_graphicsscale_qbase_update(void* self) {
-    QGraphicsScale_QBaseUpdate((QGraphicsScale*)self);
+void q_graphicsscale_super_update(void* self) {
+    QGraphicsScale_SuperUpdate((QGraphicsScale*)self);
 }
 
 void q_graphicsscale_on_update(void* self, void (*callback)()) {
@@ -907,8 +907,8 @@ QObject* q_graphicsscale_sender(void* self) {
     return QGraphicsScale_Sender((QGraphicsScale*)self);
 }
 
-QObject* q_graphicsscale_qbase_sender(void* self) {
-    return QGraphicsScale_QBaseSender((QGraphicsScale*)self);
+QObject* q_graphicsscale_super_sender(void* self) {
+    return QGraphicsScale_SuperSender((QGraphicsScale*)self);
 }
 
 void q_graphicsscale_on_sender(void* self, QObject* (*callback)()) {
@@ -919,8 +919,8 @@ int32_t q_graphicsscale_sender_signal_index(void* self) {
     return QGraphicsScale_SenderSignalIndex((QGraphicsScale*)self);
 }
 
-int32_t q_graphicsscale_qbase_sender_signal_index(void* self) {
-    return QGraphicsScale_QBaseSenderSignalIndex((QGraphicsScale*)self);
+int32_t q_graphicsscale_super_sender_signal_index(void* self) {
+    return QGraphicsScale_SuperSenderSignalIndex((QGraphicsScale*)self);
 }
 
 void q_graphicsscale_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -931,8 +931,8 @@ int32_t q_graphicsscale_receivers(void* self, const char* signal) {
     return QGraphicsScale_Receivers((QGraphicsScale*)self, signal);
 }
 
-int32_t q_graphicsscale_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsScale_QBaseReceivers((QGraphicsScale*)self, signal);
+int32_t q_graphicsscale_super_receivers(void* self, const char* signal) {
+    return QGraphicsScale_SuperReceivers((QGraphicsScale*)self, signal);
 }
 
 void q_graphicsscale_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -943,8 +943,8 @@ bool q_graphicsscale_is_signal_connected(void* self, void* signal) {
     return QGraphicsScale_IsSignalConnected((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsscale_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsScale_QBaseIsSignalConnected((QGraphicsScale*)self, (QMetaMethod*)signal);
+bool q_graphicsscale_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsScale_SuperIsSignalConnected((QGraphicsScale*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsscale_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -975,8 +975,8 @@ void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback
     QGraphicsRotation_OnMetaObject((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsrotation_qbase_meta_object(void* self) {
-    return QGraphicsRotation_QBaseMetaObject((QGraphicsRotation*)self);
+const QMetaObject* q_graphicsrotation_super_meta_object(void* self) {
+    return QGraphicsRotation_SuperMetaObject((QGraphicsRotation*)self);
 }
 
 void* q_graphicsrotation_metacast(void* self, const char* param1) {
@@ -987,8 +987,8 @@ void q_graphicsrotation_on_metacast(void* self, void* (*callback)(void*, const c
     QGraphicsRotation_OnMetacast((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
-void* q_graphicsrotation_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsRotation_QBaseMetacast((QGraphicsRotation*)self, param1);
+void* q_graphicsrotation_super_metacast(void* self, const char* param1) {
+    return QGraphicsRotation_SuperMetacast((QGraphicsRotation*)self, param1);
 }
 
 int32_t q_graphicsrotation_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -999,8 +999,8 @@ void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int32
     QGraphicsRotation_OnMetacall((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsrotation_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsRotation_QBaseMetacall((QGraphicsRotation*)self, param1, param2, param3);
+int32_t q_graphicsrotation_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsRotation_SuperMetacall((QGraphicsRotation*)self, param1, param2, param3);
 }
 
 const char* q_graphicsrotation_tr(const char* s) {
@@ -1046,8 +1046,8 @@ void q_graphicsrotation_on_apply_to(void* self, void (*callback)(void*, void*)) 
     QGraphicsRotation_OnApplyTo((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
-void q_graphicsrotation_qbase_apply_to(void* self, void* matrix) {
-    QGraphicsRotation_QBaseApplyTo((QGraphicsRotation*)self, (QMatrix4x4*)matrix);
+void q_graphicsrotation_super_apply_to(void* self, void* matrix) {
+    QGraphicsRotation_SuperApplyTo((QGraphicsRotation*)self, (QMatrix4x4*)matrix);
 }
 
 void q_graphicsrotation_origin_changed(void* self) {
@@ -1303,8 +1303,8 @@ bool q_graphicsrotation_event(void* self, void* event) {
     return QGraphicsRotation_Event((QGraphicsRotation*)self, (QEvent*)event);
 }
 
-bool q_graphicsrotation_qbase_event(void* self, void* event) {
-    return QGraphicsRotation_QBaseEvent((QGraphicsRotation*)self, (QEvent*)event);
+bool q_graphicsrotation_super_event(void* self, void* event) {
+    return QGraphicsRotation_SuperEvent((QGraphicsRotation*)self, (QEvent*)event);
 }
 
 void q_graphicsrotation_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1315,8 +1315,8 @@ bool q_graphicsrotation_event_filter(void* self, void* watched, void* event) {
     return QGraphicsRotation_EventFilter((QGraphicsRotation*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsrotation_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsRotation_QBaseEventFilter((QGraphicsRotation*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsrotation_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsRotation_SuperEventFilter((QGraphicsRotation*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsrotation_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1327,8 +1327,8 @@ void q_graphicsrotation_timer_event(void* self, void* event) {
     QGraphicsRotation_TimerEvent((QGraphicsRotation*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsrotation_qbase_timer_event(void* self, void* event) {
-    QGraphicsRotation_QBaseTimerEvent((QGraphicsRotation*)self, (QTimerEvent*)event);
+void q_graphicsrotation_super_timer_event(void* self, void* event) {
+    QGraphicsRotation_SuperTimerEvent((QGraphicsRotation*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsrotation_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1339,8 +1339,8 @@ void q_graphicsrotation_child_event(void* self, void* event) {
     QGraphicsRotation_ChildEvent((QGraphicsRotation*)self, (QChildEvent*)event);
 }
 
-void q_graphicsrotation_qbase_child_event(void* self, void* event) {
-    QGraphicsRotation_QBaseChildEvent((QGraphicsRotation*)self, (QChildEvent*)event);
+void q_graphicsrotation_super_child_event(void* self, void* event) {
+    QGraphicsRotation_SuperChildEvent((QGraphicsRotation*)self, (QChildEvent*)event);
 }
 
 void q_graphicsrotation_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1351,8 +1351,8 @@ void q_graphicsrotation_custom_event(void* self, void* event) {
     QGraphicsRotation_CustomEvent((QGraphicsRotation*)self, (QEvent*)event);
 }
 
-void q_graphicsrotation_qbase_custom_event(void* self, void* event) {
-    QGraphicsRotation_QBaseCustomEvent((QGraphicsRotation*)self, (QEvent*)event);
+void q_graphicsrotation_super_custom_event(void* self, void* event) {
+    QGraphicsRotation_SuperCustomEvent((QGraphicsRotation*)self, (QEvent*)event);
 }
 
 void q_graphicsrotation_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1363,8 +1363,8 @@ void q_graphicsrotation_connect_notify(void* self, void* signal) {
     QGraphicsRotation_ConnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsrotation_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsRotation_QBaseConnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
+void q_graphicsrotation_super_connect_notify(void* self, void* signal) {
+    QGraphicsRotation_SuperConnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsrotation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1375,8 +1375,8 @@ void q_graphicsrotation_disconnect_notify(void* self, void* signal) {
     QGraphicsRotation_DisconnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsrotation_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsRotation_QBaseDisconnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
+void q_graphicsrotation_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsRotation_SuperDisconnectNotify((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsrotation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1387,8 +1387,8 @@ void q_graphicsrotation_update(void* self) {
     QGraphicsRotation_Update((QGraphicsRotation*)self);
 }
 
-void q_graphicsrotation_qbase_update(void* self) {
-    QGraphicsRotation_QBaseUpdate((QGraphicsRotation*)self);
+void q_graphicsrotation_super_update(void* self) {
+    QGraphicsRotation_SuperUpdate((QGraphicsRotation*)self);
 }
 
 void q_graphicsrotation_on_update(void* self, void (*callback)()) {
@@ -1399,8 +1399,8 @@ QObject* q_graphicsrotation_sender(void* self) {
     return QGraphicsRotation_Sender((QGraphicsRotation*)self);
 }
 
-QObject* q_graphicsrotation_qbase_sender(void* self) {
-    return QGraphicsRotation_QBaseSender((QGraphicsRotation*)self);
+QObject* q_graphicsrotation_super_sender(void* self) {
+    return QGraphicsRotation_SuperSender((QGraphicsRotation*)self);
 }
 
 void q_graphicsrotation_on_sender(void* self, QObject* (*callback)()) {
@@ -1411,8 +1411,8 @@ int32_t q_graphicsrotation_sender_signal_index(void* self) {
     return QGraphicsRotation_SenderSignalIndex((QGraphicsRotation*)self);
 }
 
-int32_t q_graphicsrotation_qbase_sender_signal_index(void* self) {
-    return QGraphicsRotation_QBaseSenderSignalIndex((QGraphicsRotation*)self);
+int32_t q_graphicsrotation_super_sender_signal_index(void* self) {
+    return QGraphicsRotation_SuperSenderSignalIndex((QGraphicsRotation*)self);
 }
 
 void q_graphicsrotation_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1423,8 +1423,8 @@ int32_t q_graphicsrotation_receivers(void* self, const char* signal) {
     return QGraphicsRotation_Receivers((QGraphicsRotation*)self, signal);
 }
 
-int32_t q_graphicsrotation_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsRotation_QBaseReceivers((QGraphicsRotation*)self, signal);
+int32_t q_graphicsrotation_super_receivers(void* self, const char* signal) {
+    return QGraphicsRotation_SuperReceivers((QGraphicsRotation*)self, signal);
 }
 
 void q_graphicsrotation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1435,8 +1435,8 @@ bool q_graphicsrotation_is_signal_connected(void* self, void* signal) {
     return QGraphicsRotation_IsSignalConnected((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsrotation_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsRotation_QBaseIsSignalConnected((QGraphicsRotation*)self, (QMetaMethod*)signal);
+bool q_graphicsrotation_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsRotation_SuperIsSignalConnected((QGraphicsRotation*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsrotation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

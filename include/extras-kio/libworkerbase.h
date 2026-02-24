@@ -344,13 +344,17 @@ void k_io__workerbase_app_connection_made(void* self);
 ///
 void k_io__workerbase_on_app_connection_made(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_app_connection_made` instead
+///
+#define k_io__workerbase_qbase_app_connection_made k_io__workerbase_super_app_connection_made
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#appConnectionMade)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-void k_io__workerbase_qbase_app_connection_made(void* self);
+void k_io__workerbase_super_app_connection_made(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
@@ -371,6 +375,10 @@ void k_io__workerbase_set_host(void* self, const char* host, unsigned short port
 ///
 void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char*, unsigned short, const char*, const char*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_set_host` instead
+///
+#define k_io__workerbase_qbase_set_host k_io__workerbase_super_set_host
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
 /// Base class method implementation
@@ -381,7 +389,7 @@ void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char
 /// @param user const char*
 /// @param pass const char*
 ///
-void k_io__workerbase_qbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
+void k_io__workerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
@@ -398,13 +406,17 @@ KIO__WorkerResult* k_io__workerbase_open_connection(void* self);
 ///
 void k_io__workerbase_on_open_connection(void* self, KIO__WorkerResult* (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_open_connection` instead
+///
+#define k_io__workerbase_qbase_open_connection k_io__workerbase_super_open_connection
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_open_connection(void* self);
+KIO__WorkerResult* k_io__workerbase_super_open_connection(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
@@ -421,13 +433,17 @@ void k_io__workerbase_close_connection(void* self);
 ///
 void k_io__workerbase_on_close_connection(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_close_connection` instead
+///
+#define k_io__workerbase_qbase_close_connection k_io__workerbase_super_close_connection
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-void k_io__workerbase_qbase_close_connection(void* self);
+void k_io__workerbase_super_close_connection(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#get)
 ///
@@ -445,6 +461,10 @@ KIO__WorkerResult* k_io__workerbase_get(void* self, void* url);
 ///
 void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_get` instead
+///
+#define k_io__workerbase_qbase_get k_io__workerbase_super_get
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#get)
 ///
 /// Base class method implementation
@@ -452,7 +472,7 @@ void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_get(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_get(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
@@ -471,6 +491,10 @@ KIO__WorkerResult* k_io__workerbase_open(void* self, void* url, int32_t mode);
 ///
 void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_open` instead
+///
+#define k_io__workerbase_qbase_open k_io__workerbase_super_open
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#open)
 ///
 /// Base class method implementation
@@ -479,7 +503,7 @@ void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param url QUrl*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_open(void* self, void* url, int32_t mode);
+KIO__WorkerResult* k_io__workerbase_super_open(void* self, void* url, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
@@ -497,6 +521,10 @@ KIO__WorkerResult* k_io__workerbase_read(void* self, uint64_t size);
 ///
 void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_read` instead
+///
+#define k_io__workerbase_qbase_read k_io__workerbase_super_read
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// Base class method implementation
@@ -504,7 +532,7 @@ void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param self KIO__WorkerBase*
 /// @param size uint64_t
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_read(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_super_read(void* self, uint64_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
@@ -522,6 +550,10 @@ KIO__WorkerResult* k_io__workerbase_write(void* self, char* data);
 ///
 void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_write` instead
+///
+#define k_io__workerbase_qbase_write k_io__workerbase_super_write
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Base class method implementation
@@ -529,7 +561,7 @@ void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param self KIO__WorkerBase*
 /// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, char* data);
+KIO__WorkerResult* k_io__workerbase_super_write(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
@@ -547,6 +579,10 @@ KIO__WorkerResult* k_io__workerbase_seek(void* self, uint64_t offset);
 ///
 void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_seek` instead
+///
+#define k_io__workerbase_qbase_seek k_io__workerbase_super_seek
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// Base class method implementation
@@ -554,7 +590,7 @@ void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param self KIO__WorkerBase*
 /// @param offset uint64_t
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_seek(void* self, uint64_t offset);
+KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uint64_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
@@ -572,6 +608,10 @@ KIO__WorkerResult* k_io__workerbase_truncate(void* self, uint64_t size);
 ///
 void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_truncate` instead
+///
+#define k_io__workerbase_qbase_truncate k_io__workerbase_super_truncate
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// Base class method implementation
@@ -579,7 +619,7 @@ void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(voi
 /// @param self KIO__WorkerBase*
 /// @param size uint64_t
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_truncate(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uint64_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
@@ -596,13 +636,17 @@ KIO__WorkerResult* k_io__workerbase_close(void* self);
 ///
 void k_io__workerbase_on_close(void* self, KIO__WorkerResult* (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_close` instead
+///
+#define k_io__workerbase_qbase_close k_io__workerbase_super_close
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_close(void* self);
+KIO__WorkerResult* k_io__workerbase_super_close(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#put)
 ///
@@ -622,6 +666,10 @@ KIO__WorkerResult* k_io__workerbase_put(void* self, void* url, int permissions, 
 ///
 void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_put` instead
+///
+#define k_io__workerbase_qbase_put k_io__workerbase_super_put
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#put)
 ///
 /// Base class method implementation
@@ -631,7 +679,7 @@ void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_put(void* self, void* url, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_put(void* self, void* url, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#stat)
 ///
@@ -649,6 +697,10 @@ KIO__WorkerResult* k_io__workerbase_stat(void* self, void* url);
 ///
 void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_stat` instead
+///
+#define k_io__workerbase_qbase_stat k_io__workerbase_super_stat
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#stat)
 ///
 /// Base class method implementation
@@ -656,7 +708,7 @@ void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_stat(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_stat(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimetype)
 ///
@@ -674,6 +726,10 @@ KIO__WorkerResult* k_io__workerbase_mimetype(void* self, void* url);
 ///
 void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_mimetype` instead
+///
+#define k_io__workerbase_qbase_mimetype k_io__workerbase_super_mimetype
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mimetype)
 ///
 /// Base class method implementation
@@ -681,7 +737,7 @@ void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(voi
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_mimetype(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_mimetype(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listDir)
 ///
@@ -699,6 +755,10 @@ KIO__WorkerResult* k_io__workerbase_list_dir(void* self, void* url);
 ///
 void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_list_dir` instead
+///
+#define k_io__workerbase_qbase_list_dir k_io__workerbase_super_list_dir
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listDir)
 ///
 /// Base class method implementation
@@ -706,7 +766,7 @@ void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(voi
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_list_dir(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_list_dir(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mkdir)
 ///
@@ -725,6 +785,10 @@ KIO__WorkerResult* k_io__workerbase_mkdir(void* self, void* url, int permissions
 ///
 void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_mkdir` instead
+///
+#define k_io__workerbase_qbase_mkdir k_io__workerbase_super_mkdir
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mkdir)
 ///
 /// Base class method implementation
@@ -733,7 +797,7 @@ void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_mkdir(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_super_mkdir(void* self, void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#rename)
 ///
@@ -753,6 +817,10 @@ KIO__WorkerResult* k_io__workerbase_rename(void* self, void* src, void* dest, in
 ///
 void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_rename` instead
+///
+#define k_io__workerbase_qbase_rename k_io__workerbase_super_rename
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#rename)
 ///
 /// Base class method implementation
@@ -762,7 +830,7 @@ void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_rename(void* self, void* src, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_rename(void* self, void* src, void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#symlink)
 ///
@@ -782,6 +850,10 @@ KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, void
 ///
 void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_symlink` instead
+///
+#define k_io__workerbase_qbase_symlink k_io__workerbase_super_symlink
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#symlink)
 ///
 /// Base class method implementation
@@ -791,7 +863,7 @@ void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_symlink(void* self, const char* target, void* dest, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_symlink(void* self, const char* target, void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chmod)
 ///
@@ -810,6 +882,10 @@ KIO__WorkerResult* k_io__workerbase_chmod(void* self, void* url, int permissions
 ///
 void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_chmod` instead
+///
+#define k_io__workerbase_qbase_chmod k_io__workerbase_super_chmod
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chmod)
 ///
 /// Base class method implementation
@@ -818,7 +894,7 @@ void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_chmod(void* self, void* url, int permissions);
+KIO__WorkerResult* k_io__workerbase_super_chmod(void* self, void* url, int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
@@ -838,6 +914,10 @@ KIO__WorkerResult* k_io__workerbase_chown(void* self, void* url, const char* own
 ///
 void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*, void*, const char*, const char*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_chown` instead
+///
+#define k_io__workerbase_qbase_chown k_io__workerbase_super_chown
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#chown)
 ///
 /// Base class method implementation
@@ -847,7 +927,7 @@ void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*,
 /// @param owner const char*
 /// @param group const char*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_chown(void* self, void* url, const char* owner, const char* group);
+KIO__WorkerResult* k_io__workerbase_super_chown(void* self, void* url, const char* owner, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setModificationTime)
 ///
@@ -866,6 +946,10 @@ KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, void* url,
 ///
 void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_set_modification_time` instead
+///
+#define k_io__workerbase_qbase_set_modification_time k_io__workerbase_super_set_modification_time
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setModificationTime)
 ///
 /// Base class method implementation
@@ -874,7 +958,7 @@ void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*
 /// @param url QUrl*
 /// @param mtime QDateTime*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_set_modification_time(void* self, void* url, void* mtime);
+KIO__WorkerResult* k_io__workerbase_super_set_modification_time(void* self, void* url, void* mtime);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#copy)
 ///
@@ -895,6 +979,10 @@ KIO__WorkerResult* k_io__workerbase_copy(void* self, void* src, void* dest, int 
 ///
 void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_copy` instead
+///
+#define k_io__workerbase_qbase_copy k_io__workerbase_super_copy
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#copy)
 ///
 /// Base class method implementation
@@ -905,7 +993,7 @@ void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// @param permissions int
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
+KIO__WorkerResult* k_io__workerbase_super_copy(void* self, void* src, void* dest, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#del)
 ///
@@ -924,6 +1012,10 @@ KIO__WorkerResult* k_io__workerbase_del(void* self, void* url, bool isfile);
 ///
 void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_del` instead
+///
+#define k_io__workerbase_qbase_del k_io__workerbase_super_del
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#del)
 ///
 /// Base class method implementation
@@ -932,7 +1024,7 @@ void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, v
 /// @param url QUrl*
 /// @param isfile bool
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_del(void* self, void* url, bool isfile);
+KIO__WorkerResult* k_io__workerbase_super_del(void* self, void* url, bool isfile);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
@@ -950,6 +1042,10 @@ KIO__WorkerResult* k_io__workerbase_special(void* self, char* data);
 ///
 void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_special` instead
+///
+#define k_io__workerbase_qbase_special k_io__workerbase_super_special
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Base class method implementation
@@ -957,7 +1053,7 @@ void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void
 /// @param self KIO__WorkerBase*
 /// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, char* data);
+KIO__WorkerResult* k_io__workerbase_super_special(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
@@ -975,6 +1071,10 @@ KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, void* url
 ///
 void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_file_system_free_space` instead
+///
+#define k_io__workerbase_qbase_file_system_free_space k_io__workerbase_super_file_system_free_space
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
 /// Base class method implementation
@@ -982,7 +1082,7 @@ void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (
 /// @param self KIO__WorkerBase*
 /// @param url QUrl*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_file_system_free_space(void* self, void* url);
+KIO__WorkerResult* k_io__workerbase_super_file_system_free_space(void* self, void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
@@ -999,13 +1099,17 @@ void k_io__workerbase_worker_status2(void* self);
 ///
 void k_io__workerbase_on_worker_status2(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_worker_status2` instead
+///
+#define k_io__workerbase_qbase_worker_status2 k_io__workerbase_super_worker_status2
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-void k_io__workerbase_qbase_worker_status2(void* self);
+void k_io__workerbase_super_worker_status2(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
@@ -1022,13 +1126,17 @@ void k_io__workerbase_reparse_configuration(void* self);
 ///
 void k_io__workerbase_on_reparse_configuration(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__workerbase_super_reparse_configuration` instead
+///
+#define k_io__workerbase_qbase_reparse_configuration k_io__workerbase_super_reparse_configuration
+
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#reparseConfiguration)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
 ///
-void k_io__workerbase_qbase_reparse_configuration(void* self);
+void k_io__workerbase_super_reparse_configuration(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#connectTimeout)
 ///

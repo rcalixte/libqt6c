@@ -58,13 +58,17 @@ const char* k_urifiltersearchprovider_icon_name(void* self);
 ///
 void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_urifiltersearchprovider_super_icon_name` instead
+///
+#define k_urifiltersearchprovider_qbase_icon_name k_urifiltersearchprovider_super_icon_name
+
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Base class method implementation
 ///
 /// @param self KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_qbase_icon_name(void* self);
+const char* k_urifiltersearchprovider_super_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#keys)
 ///
@@ -105,6 +109,10 @@ void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* de
 ///
 void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_urifiltersearchprovider_super_set_desktop_entry_name` instead
+///
+#define k_urifiltersearchprovider_qbase_set_desktop_entry_name k_urifiltersearchprovider_super_set_desktop_entry_name
+
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
 /// Base class method implementation
@@ -112,7 +120,7 @@ void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*call
 /// @param self KUriFilterSearchProvider*
 /// @param desktopEntryName const char*
 ///
-void k_urifiltersearchprovider_qbase_set_desktop_entry_name(void* self, const char* desktopEntryName);
+void k_urifiltersearchprovider_super_set_desktop_entry_name(void* self, const char* desktopEntryName);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
@@ -130,6 +138,10 @@ void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName);
 ///
 void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_urifiltersearchprovider_super_set_icon_name` instead
+///
+#define k_urifiltersearchprovider_qbase_set_icon_name k_urifiltersearchprovider_super_set_icon_name
+
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
 /// Base class method implementation
@@ -137,7 +149,7 @@ void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(voi
 /// @param self KUriFilterSearchProvider*
 /// @param iconName const char*
 ///
-void k_urifiltersearchprovider_qbase_set_icon_name(void* self, const char* iconName);
+void k_urifiltersearchprovider_super_set_icon_name(void* self, const char* iconName);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
@@ -155,6 +167,10 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 ///
 void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**));
 
+/// @warning DEPRECATED: Use `k_urifiltersearchprovider_super_set_keys` instead
+///
+#define k_urifiltersearchprovider_qbase_set_keys k_urifiltersearchprovider_super_set_keys
+
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
 /// Base class method implementation
@@ -162,7 +178,7 @@ void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, c
 /// @param self KUriFilterSearchProvider*
 /// @param keys const char**
 ///
-void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[static 1]);
+void k_urifiltersearchprovider_super_set_keys(void* self, const char* keys[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
@@ -180,6 +196,10 @@ void k_urifiltersearchprovider_set_name(void* self, const char* name);
 ///
 void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_urifiltersearchprovider_super_set_name` instead
+///
+#define k_urifiltersearchprovider_qbase_set_name k_urifiltersearchprovider_super_set_name
+
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
 /// Base class method implementation
@@ -187,7 +207,7 @@ void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, c
 /// @param self KUriFilterSearchProvider*
 /// @param name const char*
 ///
-void k_urifiltersearchprovider_qbase_set_name(void* self, const char* name);
+void k_urifiltersearchprovider_super_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#dtor.KUriFilterSearchProvider)
 ///

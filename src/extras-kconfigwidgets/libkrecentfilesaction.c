@@ -33,8 +33,8 @@ void k_recentfilesaction_on_meta_object(void* self, const QMetaObject* (*callbac
     KRecentFilesAction_OnMetaObject((KRecentFilesAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_recentfilesaction_qbase_meta_object(void* self) {
-    return KRecentFilesAction_QBaseMetaObject((KRecentFilesAction*)self);
+const QMetaObject* k_recentfilesaction_super_meta_object(void* self) {
+    return KRecentFilesAction_SuperMetaObject((KRecentFilesAction*)self);
 }
 
 void* k_recentfilesaction_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void k_recentfilesaction_on_metacast(void* self, void* (*callback)(void*, const 
     KRecentFilesAction_OnMetacast((KRecentFilesAction*)self, (intptr_t)callback);
 }
 
-void* k_recentfilesaction_qbase_metacast(void* self, const char* param1) {
-    return KRecentFilesAction_QBaseMetacast((KRecentFilesAction*)self, param1);
+void* k_recentfilesaction_super_metacast(void* self, const char* param1) {
+    return KRecentFilesAction_SuperMetacast((KRecentFilesAction*)self, param1);
 }
 
 int32_t k_recentfilesaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void k_recentfilesaction_on_metacall(void* self, int32_t (*callback)(void*, int3
     KRecentFilesAction_OnMetacall((KRecentFilesAction*)self, (intptr_t)callback);
 }
 
-int32_t k_recentfilesaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KRecentFilesAction_QBaseMetacall((KRecentFilesAction*)self, param1, param2, param3);
+int32_t k_recentfilesaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KRecentFilesAction_SuperMetacall((KRecentFilesAction*)self, param1, param2, param3);
 }
 
 const char* k_recentfilesaction_tr(const char* s) {
@@ -80,8 +80,8 @@ void k_recentfilesaction_on_remove_action(void* self, QAction* (*callback)(void*
     KRecentFilesAction_OnRemoveAction((KRecentFilesAction*)self, (intptr_t)callback);
 }
 
-QAction* k_recentfilesaction_qbase_remove_action(void* self, void* action) {
-    return KRecentFilesAction_QBaseRemoveAction((KRecentFilesAction*)self, (QAction*)action);
+QAction* k_recentfilesaction_super_remove_action(void* self, void* action) {
+    return KRecentFilesAction_SuperRemoveAction((KRecentFilesAction*)self, (QAction*)action);
 }
 
 int32_t k_recentfilesaction_max_items(void* self) {
@@ -125,8 +125,8 @@ void k_recentfilesaction_on_clear(void* self, void (*callback)()) {
     KRecentFilesAction_OnClear((KRecentFilesAction*)self, (intptr_t)callback);
 }
 
-void k_recentfilesaction_qbase_clear(void* self) {
-    KRecentFilesAction_QBaseClear((KRecentFilesAction*)self);
+void k_recentfilesaction_super_clear(void* self) {
+    KRecentFilesAction_SuperClear((KRecentFilesAction*)self);
 }
 
 void k_recentfilesaction_url_selected(void* self, void* url) {
@@ -865,8 +865,8 @@ void k_recentfilesaction_insert_action(void* self, void* before, void* action) {
     KRecentFilesAction_InsertAction((KRecentFilesAction*)self, (QAction*)before, (QAction*)action);
 }
 
-void k_recentfilesaction_qbase_insert_action(void* self, void* before, void* action) {
-    KRecentFilesAction_QBaseInsertAction((KRecentFilesAction*)self, (QAction*)before, (QAction*)action);
+void k_recentfilesaction_super_insert_action(void* self, void* before, void* action) {
+    KRecentFilesAction_SuperInsertAction((KRecentFilesAction*)self, (QAction*)before, (QAction*)action);
 }
 
 void k_recentfilesaction_on_insert_action(void* self, void (*callback)(void*, void*, void*)) {
@@ -877,8 +877,8 @@ void k_recentfilesaction_slot_action_triggered(void* self, void* action) {
     KRecentFilesAction_SlotActionTriggered((KRecentFilesAction*)self, (QAction*)action);
 }
 
-void k_recentfilesaction_qbase_slot_action_triggered(void* self, void* action) {
-    KRecentFilesAction_QBaseSlotActionTriggered((KRecentFilesAction*)self, (QAction*)action);
+void k_recentfilesaction_super_slot_action_triggered(void* self, void* action) {
+    KRecentFilesAction_SuperSlotActionTriggered((KRecentFilesAction*)self, (QAction*)action);
 }
 
 void k_recentfilesaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*)) {
@@ -889,8 +889,8 @@ QWidget* k_recentfilesaction_create_widget(void* self, void* parent) {
     return KRecentFilesAction_CreateWidget((KRecentFilesAction*)self, (QWidget*)parent);
 }
 
-QWidget* k_recentfilesaction_qbase_create_widget(void* self, void* parent) {
-    return KRecentFilesAction_QBaseCreateWidget((KRecentFilesAction*)self, (QWidget*)parent);
+QWidget* k_recentfilesaction_super_create_widget(void* self, void* parent) {
+    return KRecentFilesAction_SuperCreateWidget((KRecentFilesAction*)self, (QWidget*)parent);
 }
 
 void k_recentfilesaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*)) {
@@ -901,8 +901,8 @@ void k_recentfilesaction_delete_widget(void* self, void* widget) {
     KRecentFilesAction_DeleteWidget((KRecentFilesAction*)self, (QWidget*)widget);
 }
 
-void k_recentfilesaction_qbase_delete_widget(void* self, void* widget) {
-    KRecentFilesAction_QBaseDeleteWidget((KRecentFilesAction*)self, (QWidget*)widget);
+void k_recentfilesaction_super_delete_widget(void* self, void* widget) {
+    KRecentFilesAction_SuperDeleteWidget((KRecentFilesAction*)self, (QWidget*)widget);
 }
 
 void k_recentfilesaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -913,8 +913,8 @@ bool k_recentfilesaction_event(void* self, void* event) {
     return KRecentFilesAction_Event((KRecentFilesAction*)self, (QEvent*)event);
 }
 
-bool k_recentfilesaction_qbase_event(void* self, void* event) {
-    return KRecentFilesAction_QBaseEvent((KRecentFilesAction*)self, (QEvent*)event);
+bool k_recentfilesaction_super_event(void* self, void* event) {
+    return KRecentFilesAction_SuperEvent((KRecentFilesAction*)self, (QEvent*)event);
 }
 
 void k_recentfilesaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -925,8 +925,8 @@ bool k_recentfilesaction_event_filter(void* self, void* watched, void* event) {
     return KRecentFilesAction_EventFilter((KRecentFilesAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_recentfilesaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KRecentFilesAction_QBaseEventFilter((KRecentFilesAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_recentfilesaction_super_event_filter(void* self, void* watched, void* event) {
+    return KRecentFilesAction_SuperEventFilter((KRecentFilesAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_recentfilesaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -937,8 +937,8 @@ void k_recentfilesaction_timer_event(void* self, void* event) {
     KRecentFilesAction_TimerEvent((KRecentFilesAction*)self, (QTimerEvent*)event);
 }
 
-void k_recentfilesaction_qbase_timer_event(void* self, void* event) {
-    KRecentFilesAction_QBaseTimerEvent((KRecentFilesAction*)self, (QTimerEvent*)event);
+void k_recentfilesaction_super_timer_event(void* self, void* event) {
+    KRecentFilesAction_SuperTimerEvent((KRecentFilesAction*)self, (QTimerEvent*)event);
 }
 
 void k_recentfilesaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -949,8 +949,8 @@ void k_recentfilesaction_child_event(void* self, void* event) {
     KRecentFilesAction_ChildEvent((KRecentFilesAction*)self, (QChildEvent*)event);
 }
 
-void k_recentfilesaction_qbase_child_event(void* self, void* event) {
-    KRecentFilesAction_QBaseChildEvent((KRecentFilesAction*)self, (QChildEvent*)event);
+void k_recentfilesaction_super_child_event(void* self, void* event) {
+    KRecentFilesAction_SuperChildEvent((KRecentFilesAction*)self, (QChildEvent*)event);
 }
 
 void k_recentfilesaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -961,8 +961,8 @@ void k_recentfilesaction_custom_event(void* self, void* event) {
     KRecentFilesAction_CustomEvent((KRecentFilesAction*)self, (QEvent*)event);
 }
 
-void k_recentfilesaction_qbase_custom_event(void* self, void* event) {
-    KRecentFilesAction_QBaseCustomEvent((KRecentFilesAction*)self, (QEvent*)event);
+void k_recentfilesaction_super_custom_event(void* self, void* event) {
+    KRecentFilesAction_SuperCustomEvent((KRecentFilesAction*)self, (QEvent*)event);
 }
 
 void k_recentfilesaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -973,8 +973,8 @@ void k_recentfilesaction_connect_notify(void* self, void* signal) {
     KRecentFilesAction_ConnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
-void k_recentfilesaction_qbase_connect_notify(void* self, void* signal) {
-    KRecentFilesAction_QBaseConnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
+void k_recentfilesaction_super_connect_notify(void* self, void* signal) {
+    KRecentFilesAction_SuperConnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -985,8 +985,8 @@ void k_recentfilesaction_disconnect_notify(void* self, void* signal) {
     KRecentFilesAction_DisconnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
-void k_recentfilesaction_qbase_disconnect_notify(void* self, void* signal) {
-    KRecentFilesAction_QBaseDisconnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
+void k_recentfilesaction_super_disconnect_notify(void* self, void* signal) {
+    KRecentFilesAction_SuperDisconnectNotify((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -997,8 +997,8 @@ void k_recentfilesaction_slot_toggled(void* self, bool param1) {
     KRecentFilesAction_SlotToggled((KRecentFilesAction*)self, param1);
 }
 
-void k_recentfilesaction_qbase_slot_toggled(void* self, bool param1) {
-    KRecentFilesAction_QBaseSlotToggled((KRecentFilesAction*)self, param1);
+void k_recentfilesaction_super_slot_toggled(void* self, bool param1) {
+    KRecentFilesAction_SuperSlotToggled((KRecentFilesAction*)self, param1);
 }
 
 void k_recentfilesaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
@@ -1010,8 +1010,8 @@ libqt_list /* of QWidget* */ k_recentfilesaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_recentfilesaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KRecentFilesAction_QBaseCreatedWidgets((KRecentFilesAction*)self);
+libqt_list /* of QWidget* */ k_recentfilesaction_super_created_widgets(void* self) {
+    libqt_list _arr = KRecentFilesAction_SuperCreatedWidgets((KRecentFilesAction*)self);
     return _arr;
 }
 
@@ -1023,8 +1023,8 @@ QObject* k_recentfilesaction_sender(void* self) {
     return KRecentFilesAction_Sender((KRecentFilesAction*)self);
 }
 
-QObject* k_recentfilesaction_qbase_sender(void* self) {
-    return KRecentFilesAction_QBaseSender((KRecentFilesAction*)self);
+QObject* k_recentfilesaction_super_sender(void* self) {
+    return KRecentFilesAction_SuperSender((KRecentFilesAction*)self);
 }
 
 void k_recentfilesaction_on_sender(void* self, QObject* (*callback)()) {
@@ -1035,8 +1035,8 @@ int32_t k_recentfilesaction_sender_signal_index(void* self) {
     return KRecentFilesAction_SenderSignalIndex((KRecentFilesAction*)self);
 }
 
-int32_t k_recentfilesaction_qbase_sender_signal_index(void* self) {
-    return KRecentFilesAction_QBaseSenderSignalIndex((KRecentFilesAction*)self);
+int32_t k_recentfilesaction_super_sender_signal_index(void* self) {
+    return KRecentFilesAction_SuperSenderSignalIndex((KRecentFilesAction*)self);
 }
 
 void k_recentfilesaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1047,8 +1047,8 @@ int32_t k_recentfilesaction_receivers(void* self, const char* signal) {
     return KRecentFilesAction_Receivers((KRecentFilesAction*)self, signal);
 }
 
-int32_t k_recentfilesaction_qbase_receivers(void* self, const char* signal) {
-    return KRecentFilesAction_QBaseReceivers((KRecentFilesAction*)self, signal);
+int32_t k_recentfilesaction_super_receivers(void* self, const char* signal) {
+    return KRecentFilesAction_SuperReceivers((KRecentFilesAction*)self, signal);
 }
 
 void k_recentfilesaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1059,8 +1059,8 @@ bool k_recentfilesaction_is_signal_connected(void* self, void* signal) {
     return KRecentFilesAction_IsSignalConnected((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_recentfilesaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KRecentFilesAction_QBaseIsSignalConnected((KRecentFilesAction*)self, (QMetaMethod*)signal);
+bool k_recentfilesaction_super_is_signal_connected(void* self, void* signal) {
+    return KRecentFilesAction_SuperIsSignalConnected((KRecentFilesAction*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

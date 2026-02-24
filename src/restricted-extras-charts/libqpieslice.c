@@ -34,8 +34,8 @@ void q_pieslice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPieSlice_OnMetaObject((QPieSlice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pieslice_qbase_meta_object(void* self) {
-    return QPieSlice_QBaseMetaObject((QPieSlice*)self);
+const QMetaObject* q_pieslice_super_meta_object(void* self) {
+    return QPieSlice_SuperMetaObject((QPieSlice*)self);
 }
 
 void* q_pieslice_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void q_pieslice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QPieSlice_OnMetacast((QPieSlice*)self, (intptr_t)callback);
 }
 
-void* q_pieslice_qbase_metacast(void* self, const char* param1) {
-    return QPieSlice_QBaseMetacast((QPieSlice*)self, param1);
+void* q_pieslice_super_metacast(void* self, const char* param1) {
+    return QPieSlice_SuperMetacast((QPieSlice*)self, param1);
 }
 
 int32_t q_pieslice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_pieslice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QPieSlice_OnMetacall((QPieSlice*)self, (intptr_t)callback);
 }
 
-int32_t q_pieslice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPieSlice_QBaseMetacall((QPieSlice*)self, param1, param2, param3);
+int32_t q_pieslice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPieSlice_SuperMetacall((QPieSlice*)self, param1, param2, param3);
 }
 
 const char* q_pieslice_tr(const char* s) {
@@ -597,8 +597,8 @@ bool q_pieslice_event(void* self, void* event) {
     return QPieSlice_Event((QPieSlice*)self, (QEvent*)event);
 }
 
-bool q_pieslice_qbase_event(void* self, void* event) {
-    return QPieSlice_QBaseEvent((QPieSlice*)self, (QEvent*)event);
+bool q_pieslice_super_event(void* self, void* event) {
+    return QPieSlice_SuperEvent((QPieSlice*)self, (QEvent*)event);
 }
 
 void q_pieslice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -609,8 +609,8 @@ bool q_pieslice_event_filter(void* self, void* watched, void* event) {
     return QPieSlice_EventFilter((QPieSlice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pieslice_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPieSlice_QBaseEventFilter((QPieSlice*)self, (QObject*)watched, (QEvent*)event);
+bool q_pieslice_super_event_filter(void* self, void* watched, void* event) {
+    return QPieSlice_SuperEventFilter((QPieSlice*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pieslice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -621,8 +621,8 @@ void q_pieslice_timer_event(void* self, void* event) {
     QPieSlice_TimerEvent((QPieSlice*)self, (QTimerEvent*)event);
 }
 
-void q_pieslice_qbase_timer_event(void* self, void* event) {
-    QPieSlice_QBaseTimerEvent((QPieSlice*)self, (QTimerEvent*)event);
+void q_pieslice_super_timer_event(void* self, void* event) {
+    QPieSlice_SuperTimerEvent((QPieSlice*)self, (QTimerEvent*)event);
 }
 
 void q_pieslice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -633,8 +633,8 @@ void q_pieslice_child_event(void* self, void* event) {
     QPieSlice_ChildEvent((QPieSlice*)self, (QChildEvent*)event);
 }
 
-void q_pieslice_qbase_child_event(void* self, void* event) {
-    QPieSlice_QBaseChildEvent((QPieSlice*)self, (QChildEvent*)event);
+void q_pieslice_super_child_event(void* self, void* event) {
+    QPieSlice_SuperChildEvent((QPieSlice*)self, (QChildEvent*)event);
 }
 
 void q_pieslice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -645,8 +645,8 @@ void q_pieslice_custom_event(void* self, void* event) {
     QPieSlice_CustomEvent((QPieSlice*)self, (QEvent*)event);
 }
 
-void q_pieslice_qbase_custom_event(void* self, void* event) {
-    QPieSlice_QBaseCustomEvent((QPieSlice*)self, (QEvent*)event);
+void q_pieslice_super_custom_event(void* self, void* event) {
+    QPieSlice_SuperCustomEvent((QPieSlice*)self, (QEvent*)event);
 }
 
 void q_pieslice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -657,8 +657,8 @@ void q_pieslice_connect_notify(void* self, void* signal) {
     QPieSlice_ConnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
-void q_pieslice_qbase_connect_notify(void* self, void* signal) {
-    QPieSlice_QBaseConnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
+void q_pieslice_super_connect_notify(void* self, void* signal) {
+    QPieSlice_SuperConnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
 void q_pieslice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -669,8 +669,8 @@ void q_pieslice_disconnect_notify(void* self, void* signal) {
     QPieSlice_DisconnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
-void q_pieslice_qbase_disconnect_notify(void* self, void* signal) {
-    QPieSlice_QBaseDisconnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
+void q_pieslice_super_disconnect_notify(void* self, void* signal) {
+    QPieSlice_SuperDisconnectNotify((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
 void q_pieslice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -681,8 +681,8 @@ QObject* q_pieslice_sender(void* self) {
     return QPieSlice_Sender((QPieSlice*)self);
 }
 
-QObject* q_pieslice_qbase_sender(void* self) {
-    return QPieSlice_QBaseSender((QPieSlice*)self);
+QObject* q_pieslice_super_sender(void* self) {
+    return QPieSlice_SuperSender((QPieSlice*)self);
 }
 
 void q_pieslice_on_sender(void* self, QObject* (*callback)()) {
@@ -693,8 +693,8 @@ int32_t q_pieslice_sender_signal_index(void* self) {
     return QPieSlice_SenderSignalIndex((QPieSlice*)self);
 }
 
-int32_t q_pieslice_qbase_sender_signal_index(void* self) {
-    return QPieSlice_QBaseSenderSignalIndex((QPieSlice*)self);
+int32_t q_pieslice_super_sender_signal_index(void* self) {
+    return QPieSlice_SuperSenderSignalIndex((QPieSlice*)self);
 }
 
 void q_pieslice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -705,8 +705,8 @@ int32_t q_pieslice_receivers(void* self, const char* signal) {
     return QPieSlice_Receivers((QPieSlice*)self, signal);
 }
 
-int32_t q_pieslice_qbase_receivers(void* self, const char* signal) {
-    return QPieSlice_QBaseReceivers((QPieSlice*)self, signal);
+int32_t q_pieslice_super_receivers(void* self, const char* signal) {
+    return QPieSlice_SuperReceivers((QPieSlice*)self, signal);
 }
 
 void q_pieslice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -717,8 +717,8 @@ bool q_pieslice_is_signal_connected(void* self, void* signal) {
     return QPieSlice_IsSignalConnected((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
-bool q_pieslice_qbase_is_signal_connected(void* self, void* signal) {
-    return QPieSlice_QBaseIsSignalConnected((QPieSlice*)self, (QMetaMethod*)signal);
+bool q_pieslice_super_is_signal_connected(void* self, void* signal) {
+    return QPieSlice_SuperIsSignalConnected((QPieSlice*)self, (QMetaMethod*)signal);
 }
 
 void q_pieslice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

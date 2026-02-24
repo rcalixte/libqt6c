@@ -204,6 +204,10 @@ const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* pub
 ///
 void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callback)(void*, const char*, const char*));
 
+/// @warning DEPRECATED: Use `q_xmlstreamentityresolver_super_resolve_entity` instead
+///
+#define q_xmlstreamentityresolver_qbase_resolve_entity q_xmlstreamentityresolver_super_resolve_entity
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
 ///
 /// Base class method implementation
@@ -212,7 +216,7 @@ void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callb
 /// @param publicId const char*
 /// @param systemId const char*
 ///
-const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const char* publicId, const char* systemId);
+const char* q_xmlstreamentityresolver_super_resolve_entity(void* self, const char* publicId, const char* systemId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
 ///
@@ -232,6 +236,10 @@ const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, cons
 ///
 void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_xmlstreamentityresolver_super_resolve_undeclared_entity` instead
+///
+#define q_xmlstreamentityresolver_qbase_resolve_undeclared_entity q_xmlstreamentityresolver_super_resolve_undeclared_entity
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
 ///
 /// Base class method implementation
@@ -239,7 +247,7 @@ void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const ch
 /// @param self QXmlStreamEntityResolver*
 /// @param name const char*
 ///
-const char* q_xmlstreamentityresolver_qbase_resolve_undeclared_entity(void* self, const char* name);
+const char* q_xmlstreamentityresolver_super_resolve_undeclared_entity(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#dtor.QXmlStreamEntityResolver)
 ///

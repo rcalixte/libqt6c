@@ -22,8 +22,8 @@ void q_iodevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QIODevice_OnMetaObject((QIODevice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_iodevice_qbase_meta_object(void* self) {
-    return QIODevice_QBaseMetaObject((QIODevice*)self);
+const QMetaObject* q_iodevice_super_meta_object(void* self) {
+    return QIODevice_SuperMetaObject((QIODevice*)self);
 }
 
 void* q_iodevice_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_iodevice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QIODevice_OnMetacast((QIODevice*)self, (intptr_t)callback);
 }
 
-void* q_iodevice_qbase_metacast(void* self, const char* param1) {
-    return QIODevice_QBaseMetacast((QIODevice*)self, param1);
+void* q_iodevice_super_metacast(void* self, const char* param1) {
+    return QIODevice_SuperMetacast((QIODevice*)self, param1);
 }
 
 int32_t q_iodevice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_iodevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QIODevice_OnMetacall((QIODevice*)self, (intptr_t)callback);
 }
 
-int32_t q_iodevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QIODevice_QBaseMetacall((QIODevice*)self, param1, param2, param3);
+int32_t q_iodevice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QIODevice_SuperMetacall((QIODevice*)self, param1, param2, param3);
 }
 
 const char* q_iodevice_tr(const char* s) {
@@ -89,8 +89,8 @@ void q_iodevice_on_is_sequential(void* self, bool (*callback)()) {
     QIODevice_OnIsSequential((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_is_sequential(void* self) {
-    return QIODevice_QBaseIsSequential((QIODevice*)self);
+bool q_iodevice_super_is_sequential(void* self) {
+    return QIODevice_SuperIsSequential((QIODevice*)self);
 }
 
 int32_t q_iodevice_read_channel_count(void* self) {
@@ -125,8 +125,8 @@ void q_iodevice_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QIODevice_OnOpen((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_open(void* self, int32_t mode) {
-    return QIODevice_QBaseOpen((QIODevice*)self, mode);
+bool q_iodevice_super_open(void* self, int32_t mode) {
+    return QIODevice_SuperOpen((QIODevice*)self, mode);
 }
 
 void q_iodevice_close(void* self) {
@@ -137,8 +137,8 @@ void q_iodevice_on_close(void* self, void (*callback)()) {
     QIODevice_OnClose((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_iodevice_qbase_close(void* self) {
-    QIODevice_QBaseClose((QIODevice*)self);
+void q_iodevice_super_close(void* self) {
+    QIODevice_SuperClose((QIODevice*)self);
 }
 
 long long q_iodevice_pos(void* self) {
@@ -149,8 +149,8 @@ void q_iodevice_on_pos(void* self, long long (*callback)()) {
     QIODevice_OnPos((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_pos(void* self) {
-    return QIODevice_QBasePos((QIODevice*)self);
+long long q_iodevice_super_pos(void* self) {
+    return QIODevice_SuperPos((QIODevice*)self);
 }
 
 long long q_iodevice_size(void* self) {
@@ -161,8 +161,8 @@ void q_iodevice_on_size(void* self, long long (*callback)()) {
     QIODevice_OnSize((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_size(void* self) {
-    return QIODevice_QBaseSize((QIODevice*)self);
+long long q_iodevice_super_size(void* self) {
+    return QIODevice_SuperSize((QIODevice*)self);
 }
 
 bool q_iodevice_seek(void* self, long long pos) {
@@ -173,8 +173,8 @@ void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long)) {
     QIODevice_OnSeek((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_seek(void* self, long long pos) {
-    return QIODevice_QBaseSeek((QIODevice*)self, pos);
+bool q_iodevice_super_seek(void* self, long long pos) {
+    return QIODevice_SuperSeek((QIODevice*)self, pos);
 }
 
 bool q_iodevice_at_end(void* self) {
@@ -185,8 +185,8 @@ void q_iodevice_on_at_end(void* self, bool (*callback)()) {
     QIODevice_OnAtEnd((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_at_end(void* self) {
-    return QIODevice_QBaseAtEnd((QIODevice*)self);
+bool q_iodevice_super_at_end(void* self) {
+    return QIODevice_SuperAtEnd((QIODevice*)self);
 }
 
 bool q_iodevice_reset(void* self) {
@@ -197,8 +197,8 @@ void q_iodevice_on_reset(void* self, bool (*callback)()) {
     QIODevice_OnReset((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_reset(void* self) {
-    return QIODevice_QBaseReset((QIODevice*)self);
+bool q_iodevice_super_reset(void* self) {
+    return QIODevice_SuperReset((QIODevice*)self);
 }
 
 long long q_iodevice_bytes_available(void* self) {
@@ -209,8 +209,8 @@ void q_iodevice_on_bytes_available(void* self, long long (*callback)()) {
     QIODevice_OnBytesAvailable((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_bytes_available(void* self) {
-    return QIODevice_QBaseBytesAvailable((QIODevice*)self);
+long long q_iodevice_super_bytes_available(void* self) {
+    return QIODevice_SuperBytesAvailable((QIODevice*)self);
 }
 
 long long q_iodevice_bytes_to_write(void* self) {
@@ -221,8 +221,8 @@ void q_iodevice_on_bytes_to_write(void* self, long long (*callback)()) {
     QIODevice_OnBytesToWrite((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_bytes_to_write(void* self) {
-    return QIODevice_QBaseBytesToWrite((QIODevice*)self);
+long long q_iodevice_super_bytes_to_write(void* self) {
+    return QIODevice_SuperBytesToWrite((QIODevice*)self);
 }
 
 long long q_iodevice_read(void* self, char* data, long long maxlen) {
@@ -262,8 +262,8 @@ void q_iodevice_on_can_read_line(void* self, bool (*callback)()) {
     QIODevice_OnCanReadLine((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_can_read_line(void* self) {
-    return QIODevice_QBaseCanReadLine((QIODevice*)self);
+bool q_iodevice_super_can_read_line(void* self) {
+    return QIODevice_SuperCanReadLine((QIODevice*)self);
 }
 
 void q_iodevice_start_transaction(void* self) {
@@ -317,8 +317,8 @@ void q_iodevice_on_wait_for_ready_read(void* self, bool (*callback)(void*, int))
     QIODevice_OnWaitForReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_wait_for_ready_read(void* self, int msecs) {
-    return QIODevice_QBaseWaitForReadyRead((QIODevice*)self, msecs);
+bool q_iodevice_super_wait_for_ready_read(void* self, int msecs) {
+    return QIODevice_SuperWaitForReadyRead((QIODevice*)self, msecs);
 }
 
 bool q_iodevice_wait_for_bytes_written(void* self, int msecs) {
@@ -329,8 +329,8 @@ void q_iodevice_on_wait_for_bytes_written(void* self, bool (*callback)(void*, in
     QIODevice_OnWaitForBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_wait_for_bytes_written(void* self, int msecs) {
-    return QIODevice_QBaseWaitForBytesWritten((QIODevice*)self, msecs);
+bool q_iodevice_super_wait_for_bytes_written(void* self, int msecs) {
+    return QIODevice_SuperWaitForBytesWritten((QIODevice*)self, msecs);
 }
 
 void q_iodevice_unget_char(void* self, char c) {
@@ -408,8 +408,8 @@ void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, lon
     QIODevice_OnReadData((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_read_data(void* self, char* data, long long maxlen) {
-    return QIODevice_QBaseReadData((QIODevice*)self, data, maxlen);
+long long q_iodevice_super_read_data(void* self, char* data, long long maxlen) {
+    return QIODevice_SuperReadData((QIODevice*)self, data, maxlen);
 }
 
 long long q_iodevice_read_line_data(void* self, char* data, long long maxlen) {
@@ -420,8 +420,8 @@ void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*
     QIODevice_OnReadLineData((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_read_line_data(void* self, char* data, long long maxlen) {
-    return QIODevice_QBaseReadLineData((QIODevice*)self, data, maxlen);
+long long q_iodevice_super_read_line_data(void* self, char* data, long long maxlen) {
+    return QIODevice_SuperReadLineData((QIODevice*)self, data, maxlen);
 }
 
 long long q_iodevice_skip_data(void* self, long long maxSize) {
@@ -432,8 +432,8 @@ void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long)
     QIODevice_OnSkipData((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_skip_data(void* self, long long maxSize) {
-    return QIODevice_QBaseSkipData((QIODevice*)self, maxSize);
+long long q_iodevice_super_skip_data(void* self, long long maxSize) {
+    return QIODevice_SuperSkipData((QIODevice*)self, maxSize);
 }
 
 long long q_iodevice_write_data(void* self, const char* data, long long lenVal) {
@@ -444,8 +444,8 @@ void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const cha
     QIODevice_OnWriteData((QIODevice*)self, (intptr_t)callback);
 }
 
-long long q_iodevice_qbase_write_data(void* self, const char* data, long long lenVal) {
-    return QIODevice_QBaseWriteData((QIODevice*)self, data, lenVal);
+long long q_iodevice_super_write_data(void* self, const char* data, long long lenVal) {
+    return QIODevice_SuperWriteData((QIODevice*)self, data, lenVal);
 }
 
 void q_iodevice_set_open_mode(void* self, int32_t openMode) {
@@ -456,8 +456,8 @@ void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QIODevice_OnSetOpenMode((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_iodevice_qbase_set_open_mode(void* self, int32_t openMode) {
-    QIODevice_QBaseSetOpenMode((QIODevice*)self, openMode);
+void q_iodevice_super_set_open_mode(void* self, int32_t openMode) {
+    QIODevice_SuperSetOpenMode((QIODevice*)self, openMode);
 }
 
 void q_iodevice_set_error_string(void* self, const char* errorString) {
@@ -468,8 +468,8 @@ void q_iodevice_on_set_error_string(void* self, void (*callback)(void*, const ch
     QIODevice_OnSetErrorString((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_iodevice_qbase_set_error_string(void* self, const char* errorString) {
-    QIODevice_QBaseSetErrorString((QIODevice*)self, qstring(errorString));
+void q_iodevice_super_set_error_string(void* self, const char* errorString) {
+    QIODevice_SuperSetErrorString((QIODevice*)self, qstring(errorString));
 }
 
 const char* q_iodevice_tr2(const char* s, const char* c) {
@@ -708,8 +708,8 @@ bool q_iodevice_event(void* self, void* event) {
     return QIODevice_Event((QIODevice*)self, (QEvent*)event);
 }
 
-bool q_iodevice_qbase_event(void* self, void* event) {
-    return QIODevice_QBaseEvent((QIODevice*)self, (QEvent*)event);
+bool q_iodevice_super_event(void* self, void* event) {
+    return QIODevice_SuperEvent((QIODevice*)self, (QEvent*)event);
 }
 
 void q_iodevice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -720,8 +720,8 @@ bool q_iodevice_event_filter(void* self, void* watched, void* event) {
     return QIODevice_EventFilter((QIODevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_iodevice_qbase_event_filter(void* self, void* watched, void* event) {
-    return QIODevice_QBaseEventFilter((QIODevice*)self, (QObject*)watched, (QEvent*)event);
+bool q_iodevice_super_event_filter(void* self, void* watched, void* event) {
+    return QIODevice_SuperEventFilter((QIODevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_iodevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -732,8 +732,8 @@ void q_iodevice_timer_event(void* self, void* event) {
     QIODevice_TimerEvent((QIODevice*)self, (QTimerEvent*)event);
 }
 
-void q_iodevice_qbase_timer_event(void* self, void* event) {
-    QIODevice_QBaseTimerEvent((QIODevice*)self, (QTimerEvent*)event);
+void q_iodevice_super_timer_event(void* self, void* event) {
+    QIODevice_SuperTimerEvent((QIODevice*)self, (QTimerEvent*)event);
 }
 
 void q_iodevice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -744,8 +744,8 @@ void q_iodevice_child_event(void* self, void* event) {
     QIODevice_ChildEvent((QIODevice*)self, (QChildEvent*)event);
 }
 
-void q_iodevice_qbase_child_event(void* self, void* event) {
-    QIODevice_QBaseChildEvent((QIODevice*)self, (QChildEvent*)event);
+void q_iodevice_super_child_event(void* self, void* event) {
+    QIODevice_SuperChildEvent((QIODevice*)self, (QChildEvent*)event);
 }
 
 void q_iodevice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -756,8 +756,8 @@ void q_iodevice_custom_event(void* self, void* event) {
     QIODevice_CustomEvent((QIODevice*)self, (QEvent*)event);
 }
 
-void q_iodevice_qbase_custom_event(void* self, void* event) {
-    QIODevice_QBaseCustomEvent((QIODevice*)self, (QEvent*)event);
+void q_iodevice_super_custom_event(void* self, void* event) {
+    QIODevice_SuperCustomEvent((QIODevice*)self, (QEvent*)event);
 }
 
 void q_iodevice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -768,8 +768,8 @@ void q_iodevice_connect_notify(void* self, void* signal) {
     QIODevice_ConnectNotify((QIODevice*)self, (QMetaMethod*)signal);
 }
 
-void q_iodevice_qbase_connect_notify(void* self, void* signal) {
-    QIODevice_QBaseConnectNotify((QIODevice*)self, (QMetaMethod*)signal);
+void q_iodevice_super_connect_notify(void* self, void* signal) {
+    QIODevice_SuperConnectNotify((QIODevice*)self, (QMetaMethod*)signal);
 }
 
 void q_iodevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -780,8 +780,8 @@ void q_iodevice_disconnect_notify(void* self, void* signal) {
     QIODevice_DisconnectNotify((QIODevice*)self, (QMetaMethod*)signal);
 }
 
-void q_iodevice_qbase_disconnect_notify(void* self, void* signal) {
-    QIODevice_QBaseDisconnectNotify((QIODevice*)self, (QMetaMethod*)signal);
+void q_iodevice_super_disconnect_notify(void* self, void* signal) {
+    QIODevice_SuperDisconnectNotify((QIODevice*)self, (QMetaMethod*)signal);
 }
 
 void q_iodevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -792,8 +792,8 @@ QObject* q_iodevice_sender(void* self) {
     return QIODevice_Sender((QIODevice*)self);
 }
 
-QObject* q_iodevice_qbase_sender(void* self) {
-    return QIODevice_QBaseSender((QIODevice*)self);
+QObject* q_iodevice_super_sender(void* self) {
+    return QIODevice_SuperSender((QIODevice*)self);
 }
 
 void q_iodevice_on_sender(void* self, QObject* (*callback)()) {
@@ -804,8 +804,8 @@ int32_t q_iodevice_sender_signal_index(void* self) {
     return QIODevice_SenderSignalIndex((QIODevice*)self);
 }
 
-int32_t q_iodevice_qbase_sender_signal_index(void* self) {
-    return QIODevice_QBaseSenderSignalIndex((QIODevice*)self);
+int32_t q_iodevice_super_sender_signal_index(void* self) {
+    return QIODevice_SuperSenderSignalIndex((QIODevice*)self);
 }
 
 void q_iodevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -816,8 +816,8 @@ int32_t q_iodevice_receivers(void* self, const char* signal) {
     return QIODevice_Receivers((QIODevice*)self, signal);
 }
 
-int32_t q_iodevice_qbase_receivers(void* self, const char* signal) {
-    return QIODevice_QBaseReceivers((QIODevice*)self, signal);
+int32_t q_iodevice_super_receivers(void* self, const char* signal) {
+    return QIODevice_SuperReceivers((QIODevice*)self, signal);
 }
 
 void q_iodevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -828,8 +828,8 @@ bool q_iodevice_is_signal_connected(void* self, void* signal) {
     return QIODevice_IsSignalConnected((QIODevice*)self, (QMetaMethod*)signal);
 }
 
-bool q_iodevice_qbase_is_signal_connected(void* self, void* signal) {
-    return QIODevice_QBaseIsSignalConnected((QIODevice*)self, (QMetaMethod*)signal);
+bool q_iodevice_super_is_signal_connected(void* self, void* signal) {
+    return QIODevice_SuperIsSignalConnected((QIODevice*)self, (QMetaMethod*)signal);
 }
 
 void q_iodevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

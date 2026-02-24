@@ -28,8 +28,8 @@ void q_scilexernasm_on_meta_object(void* self, const QMetaObject* (*callback)())
     QsciLexerNASM_OnMetaObject((QsciLexerNASM*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scilexernasm_qbase_meta_object(void* self) {
-    return QsciLexerNASM_QBaseMetaObject((QsciLexerNASM*)self);
+const QMetaObject* q_scilexernasm_super_meta_object(void* self) {
+    return QsciLexerNASM_SuperMetaObject((QsciLexerNASM*)self);
 }
 
 void* q_scilexernasm_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_scilexernasm_on_metacast(void* self, void* (*callback)(void*, const char*
     QsciLexerNASM_OnMetacast((QsciLexerNASM*)self, (intptr_t)callback);
 }
 
-void* q_scilexernasm_qbase_metacast(void* self, const char* param1) {
-    return QsciLexerNASM_QBaseMetacast((QsciLexerNASM*)self, param1);
+void* q_scilexernasm_super_metacast(void* self, const char* param1) {
+    return QsciLexerNASM_SuperMetacast((QsciLexerNASM*)self, param1);
 }
 
 int32_t q_scilexernasm_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_scilexernasm_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QsciLexerNASM_OnMetacall((QsciLexerNASM*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexernasm_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciLexerNASM_QBaseMetacall((QsciLexerNASM*)self, param1, param2, param3);
+int32_t q_scilexernasm_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciLexerNASM_SuperMetacall((QsciLexerNASM*)self, param1, param2, param3);
 }
 
 const char* q_scilexernasm_tr(const char* s) {
@@ -412,8 +412,8 @@ void q_scilexernasm_set_fold_comments(void* self, bool fold) {
     QsciLexerNASM_SetFoldComments((QsciLexerNASM*)self, fold);
 }
 
-void q_scilexernasm_qbase_set_fold_comments(void* self, bool fold) {
-    QsciLexerNASM_QBaseSetFoldComments((QsciLexerNASM*)self, fold);
+void q_scilexernasm_super_set_fold_comments(void* self, bool fold) {
+    QsciLexerNASM_SuperSetFoldComments((QsciLexerNASM*)self, fold);
 }
 
 void q_scilexernasm_on_set_fold_comments(void* self, void (*callback)(void*, bool)) {
@@ -424,8 +424,8 @@ void q_scilexernasm_set_fold_compact(void* self, bool fold) {
     QsciLexerNASM_SetFoldCompact((QsciLexerNASM*)self, fold);
 }
 
-void q_scilexernasm_qbase_set_fold_compact(void* self, bool fold) {
-    QsciLexerNASM_QBaseSetFoldCompact((QsciLexerNASM*)self, fold);
+void q_scilexernasm_super_set_fold_compact(void* self, bool fold) {
+    QsciLexerNASM_SuperSetFoldCompact((QsciLexerNASM*)self, fold);
 }
 
 void q_scilexernasm_on_set_fold_compact(void* self, void (*callback)(void*, bool)) {
@@ -436,8 +436,8 @@ void q_scilexernasm_set_comment_delimiter(void* self, void* delimeter) {
     QsciLexerNASM_SetCommentDelimiter((QsciLexerNASM*)self, (QChar*)delimeter);
 }
 
-void q_scilexernasm_qbase_set_comment_delimiter(void* self, void* delimeter) {
-    QsciLexerNASM_QBaseSetCommentDelimiter((QsciLexerNASM*)self, (QChar*)delimeter);
+void q_scilexernasm_super_set_comment_delimiter(void* self, void* delimeter) {
+    QsciLexerNASM_SuperSetCommentDelimiter((QsciLexerNASM*)self, (QChar*)delimeter);
 }
 
 void q_scilexernasm_on_set_comment_delimiter(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ void q_scilexernasm_set_fold_syntax_based(void* self, bool syntax_based) {
     QsciLexerNASM_SetFoldSyntaxBased((QsciLexerNASM*)self, syntax_based);
 }
 
-void q_scilexernasm_qbase_set_fold_syntax_based(void* self, bool syntax_based) {
-    QsciLexerNASM_QBaseSetFoldSyntaxBased((QsciLexerNASM*)self, syntax_based);
+void q_scilexernasm_super_set_fold_syntax_based(void* self, bool syntax_based) {
+    QsciLexerNASM_SuperSetFoldSyntaxBased((QsciLexerNASM*)self, syntax_based);
 }
 
 void q_scilexernasm_on_set_fold_syntax_based(void* self, void (*callback)(void*, bool)) {
@@ -460,8 +460,8 @@ int32_t q_scilexernasm_lexer_id(void* self) {
     return QsciLexerNASM_LexerId((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_lexer_id(void* self) {
-    return QsciLexerNASM_QBaseLexerId((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_lexer_id(void* self) {
+    return QsciLexerNASM_SuperLexerId((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_lexer_id(void* self, int32_t (*callback)()) {
@@ -472,8 +472,8 @@ const char* q_scilexernasm_auto_completion_fillups(void* self) {
     return QsciLexerNASM_AutoCompletionFillups((QsciLexerNASM*)self);
 }
 
-const char* q_scilexernasm_qbase_auto_completion_fillups(void* self) {
-    return QsciLexerNASM_QBaseAutoCompletionFillups((QsciLexerNASM*)self);
+const char* q_scilexernasm_super_auto_completion_fillups(void* self) {
+    return QsciLexerNASM_SuperAutoCompletionFillups((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_auto_completion_fillups(void* self, const char* (*callback)()) {
@@ -499,8 +499,8 @@ const char** q_scilexernasm_auto_completion_word_separators(void* self) {
     return _ret;
 }
 
-const char** q_scilexernasm_qbase_auto_completion_word_separators(void* self) {
-    libqt_list _arr = QsciLexerNASM_QBaseAutoCompletionWordSeparators((QsciLexerNASM*)self);
+const char** q_scilexernasm_super_auto_completion_word_separators(void* self) {
+    libqt_list _arr = QsciLexerNASM_SuperAutoCompletionWordSeparators((QsciLexerNASM*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -526,8 +526,8 @@ const char* q_scilexernasm_block_end(void* self, int* style) {
     return QsciLexerNASM_BlockEnd((QsciLexerNASM*)self, style);
 }
 
-const char* q_scilexernasm_qbase_block_end(void* self, int* style) {
-    return QsciLexerNASM_QBaseBlockEnd((QsciLexerNASM*)self, style);
+const char* q_scilexernasm_super_block_end(void* self, int* style) {
+    return QsciLexerNASM_SuperBlockEnd((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_block_end(void* self, const char* (*callback)(void*, int*)) {
@@ -538,8 +538,8 @@ int32_t q_scilexernasm_block_lookback(void* self) {
     return QsciLexerNASM_BlockLookback((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_block_lookback(void* self) {
-    return QsciLexerNASM_QBaseBlockLookback((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_block_lookback(void* self) {
+    return QsciLexerNASM_SuperBlockLookback((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_block_lookback(void* self, int32_t (*callback)()) {
@@ -550,8 +550,8 @@ const char* q_scilexernasm_block_start(void* self, int* style) {
     return QsciLexerNASM_BlockStart((QsciLexerNASM*)self, style);
 }
 
-const char* q_scilexernasm_qbase_block_start(void* self, int* style) {
-    return QsciLexerNASM_QBaseBlockStart((QsciLexerNASM*)self, style);
+const char* q_scilexernasm_super_block_start(void* self, int* style) {
+    return QsciLexerNASM_SuperBlockStart((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_block_start(void* self, const char* (*callback)(void*, int*)) {
@@ -562,8 +562,8 @@ const char* q_scilexernasm_block_start_keyword(void* self, int* style) {
     return QsciLexerNASM_BlockStartKeyword((QsciLexerNASM*)self, style);
 }
 
-const char* q_scilexernasm_qbase_block_start_keyword(void* self, int* style) {
-    return QsciLexerNASM_QBaseBlockStartKeyword((QsciLexerNASM*)self, style);
+const char* q_scilexernasm_super_block_start_keyword(void* self, int* style) {
+    return QsciLexerNASM_SuperBlockStartKeyword((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
@@ -574,8 +574,8 @@ int32_t q_scilexernasm_brace_style(void* self) {
     return QsciLexerNASM_BraceStyle((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_brace_style(void* self) {
-    return QsciLexerNASM_QBaseBraceStyle((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_brace_style(void* self) {
+    return QsciLexerNASM_SuperBraceStyle((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_brace_style(void* self, int32_t (*callback)()) {
@@ -586,8 +586,8 @@ bool q_scilexernasm_case_sensitive(void* self) {
     return QsciLexerNASM_CaseSensitive((QsciLexerNASM*)self);
 }
 
-bool q_scilexernasm_qbase_case_sensitive(void* self) {
-    return QsciLexerNASM_QBaseCaseSensitive((QsciLexerNASM*)self);
+bool q_scilexernasm_super_case_sensitive(void* self) {
+    return QsciLexerNASM_SuperCaseSensitive((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_case_sensitive(void* self, bool (*callback)()) {
@@ -598,8 +598,8 @@ QColor* q_scilexernasm_color(void* self, int style) {
     return QsciLexerNASM_Color((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_color(void* self, int style) {
-    return QsciLexerNASM_QBaseColor((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_super_color(void* self, int style) {
+    return QsciLexerNASM_SuperColor((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_color(void* self, QColor* (*callback)(void*, int)) {
@@ -610,8 +610,8 @@ bool q_scilexernasm_eol_fill(void* self, int style) {
     return QsciLexerNASM_EolFill((QsciLexerNASM*)self, style);
 }
 
-bool q_scilexernasm_qbase_eol_fill(void* self, int style) {
-    return QsciLexerNASM_QBaseEolFill((QsciLexerNASM*)self, style);
+bool q_scilexernasm_super_eol_fill(void* self, int style) {
+    return QsciLexerNASM_SuperEolFill((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -622,8 +622,8 @@ QFont* q_scilexernasm_font(void* self, int style) {
     return QsciLexerNASM_Font((QsciLexerNASM*)self, style);
 }
 
-QFont* q_scilexernasm_qbase_font(void* self, int style) {
-    return QsciLexerNASM_QBaseFont((QsciLexerNASM*)self, style);
+QFont* q_scilexernasm_super_font(void* self, int style) {
+    return QsciLexerNASM_SuperFont((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_font(void* self, QFont* (*callback)(void*, int)) {
@@ -634,8 +634,8 @@ int32_t q_scilexernasm_indentation_guide_view(void* self) {
     return QsciLexerNASM_IndentationGuideView((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_indentation_guide_view(void* self) {
-    return QsciLexerNASM_QBaseIndentationGuideView((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_indentation_guide_view(void* self) {
+    return QsciLexerNASM_SuperIndentationGuideView((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_indentation_guide_view(void* self, int32_t (*callback)()) {
@@ -646,8 +646,8 @@ const char* q_scilexernasm_keywords(void* self, int set) {
     return QsciLexerNASM_Keywords((QsciLexerNASM*)self, set);
 }
 
-const char* q_scilexernasm_qbase_keywords(void* self, int set) {
-    return QsciLexerNASM_QBaseKeywords((QsciLexerNASM*)self, set);
+const char* q_scilexernasm_super_keywords(void* self, int set) {
+    return QsciLexerNASM_SuperKeywords((QsciLexerNASM*)self, set);
 }
 
 void q_scilexernasm_on_keywords(void* self, const char* (*callback)(void*, int)) {
@@ -658,8 +658,8 @@ int32_t q_scilexernasm_default_style(void* self) {
     return QsciLexerNASM_DefaultStyle((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_default_style(void* self) {
-    return QsciLexerNASM_QBaseDefaultStyle((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_default_style(void* self) {
+    return QsciLexerNASM_SuperDefaultStyle((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_default_style(void* self, int32_t (*callback)()) {
@@ -673,8 +673,8 @@ const char* q_scilexernasm_description(void* self, int style) {
     return _ret;
 }
 
-const char* q_scilexernasm_qbase_description(void* self, int style) {
-    libqt_string _str = QsciLexerNASM_QBaseDescription((QsciLexerNASM*)self, style);
+const char* q_scilexernasm_super_description(void* self, int style) {
+    libqt_string _str = QsciLexerNASM_SuperDescription((QsciLexerNASM*)self, style);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -688,8 +688,8 @@ QColor* q_scilexernasm_paper(void* self, int style) {
     return QsciLexerNASM_Paper((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_paper(void* self, int style) {
-    return QsciLexerNASM_QBasePaper((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_super_paper(void* self, int style) {
+    return QsciLexerNASM_SuperPaper((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_paper(void* self, QColor* (*callback)(void*, int)) {
@@ -700,8 +700,8 @@ QColor* q_scilexernasm_default_color2(void* self, int style) {
     return QsciLexerNASM_DefaultColor2((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_default_color2(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultColor2((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_super_default_color2(void* self, int style) {
+    return QsciLexerNASM_SuperDefaultColor2((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
@@ -712,8 +712,8 @@ bool q_scilexernasm_default_eol_fill(void* self, int style) {
     return QsciLexerNASM_DefaultEolFill((QsciLexerNASM*)self, style);
 }
 
-bool q_scilexernasm_qbase_default_eol_fill(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultEolFill((QsciLexerNASM*)self, style);
+bool q_scilexernasm_super_default_eol_fill(void* self, int style) {
+    return QsciLexerNASM_SuperDefaultEolFill((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_default_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -724,8 +724,8 @@ QFont* q_scilexernasm_default_font2(void* self, int style) {
     return QsciLexerNASM_DefaultFont2((QsciLexerNASM*)self, style);
 }
 
-QFont* q_scilexernasm_qbase_default_font2(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultFont2((QsciLexerNASM*)self, style);
+QFont* q_scilexernasm_super_default_font2(void* self, int style) {
+    return QsciLexerNASM_SuperDefaultFont2((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
@@ -736,8 +736,8 @@ QColor* q_scilexernasm_default_paper2(void* self, int style) {
     return QsciLexerNASM_DefaultPaper2((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_default_paper2(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultPaper2((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_super_default_paper2(void* self, int style) {
+    return QsciLexerNASM_SuperDefaultPaper2((QsciLexerNASM*)self, style);
 }
 
 void q_scilexernasm_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
@@ -748,8 +748,8 @@ void q_scilexernasm_set_editor(void* self, void* editor) {
     QsciLexerNASM_SetEditor((QsciLexerNASM*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexernasm_qbase_set_editor(void* self, void* editor) {
-    QsciLexerNASM_QBaseSetEditor((QsciLexerNASM*)self, (QsciScintilla*)editor);
+void q_scilexernasm_super_set_editor(void* self, void* editor) {
+    QsciLexerNASM_SuperSetEditor((QsciLexerNASM*)self, (QsciScintilla*)editor);
 }
 
 void q_scilexernasm_on_set_editor(void* self, void (*callback)(void*, void*)) {
@@ -760,8 +760,8 @@ void q_scilexernasm_refresh_properties(void* self) {
     QsciLexerNASM_RefreshProperties((QsciLexerNASM*)self);
 }
 
-void q_scilexernasm_qbase_refresh_properties(void* self) {
-    QsciLexerNASM_QBaseRefreshProperties((QsciLexerNASM*)self);
+void q_scilexernasm_super_refresh_properties(void* self) {
+    QsciLexerNASM_SuperRefreshProperties((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_refresh_properties(void* self, void (*callback)()) {
@@ -772,8 +772,8 @@ int32_t q_scilexernasm_style_bits_needed(void* self) {
     return QsciLexerNASM_StyleBitsNeeded((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_style_bits_needed(void* self) {
-    return QsciLexerNASM_QBaseStyleBitsNeeded((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_style_bits_needed(void* self) {
+    return QsciLexerNASM_SuperStyleBitsNeeded((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_style_bits_needed(void* self, int32_t (*callback)()) {
@@ -784,8 +784,8 @@ const char* q_scilexernasm_word_characters(void* self) {
     return QsciLexerNASM_WordCharacters((QsciLexerNASM*)self);
 }
 
-const char* q_scilexernasm_qbase_word_characters(void* self) {
-    return QsciLexerNASM_QBaseWordCharacters((QsciLexerNASM*)self);
+const char* q_scilexernasm_super_word_characters(void* self) {
+    return QsciLexerNASM_SuperWordCharacters((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_word_characters(void* self, const char* (*callback)()) {
@@ -796,8 +796,8 @@ void q_scilexernasm_set_auto_indent_style(void* self, int autoindentstyle) {
     QsciLexerNASM_SetAutoIndentStyle((QsciLexerNASM*)self, autoindentstyle);
 }
 
-void q_scilexernasm_qbase_set_auto_indent_style(void* self, int autoindentstyle) {
-    QsciLexerNASM_QBaseSetAutoIndentStyle((QsciLexerNASM*)self, autoindentstyle);
+void q_scilexernasm_super_set_auto_indent_style(void* self, int autoindentstyle) {
+    QsciLexerNASM_SuperSetAutoIndentStyle((QsciLexerNASM*)self, autoindentstyle);
 }
 
 void q_scilexernasm_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
@@ -808,8 +808,8 @@ void q_scilexernasm_set_color(void* self, void* c, int style) {
     QsciLexerNASM_SetColor((QsciLexerNASM*)self, (QColor*)c, style);
 }
 
-void q_scilexernasm_qbase_set_color(void* self, void* c, int style) {
-    QsciLexerNASM_QBaseSetColor((QsciLexerNASM*)self, (QColor*)c, style);
+void q_scilexernasm_super_set_color(void* self, void* c, int style) {
+    QsciLexerNASM_SuperSetColor((QsciLexerNASM*)self, (QColor*)c, style);
 }
 
 void q_scilexernasm_on_set_color(void* self, void (*callback)(void*, void*, int)) {
@@ -820,8 +820,8 @@ void q_scilexernasm_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerNASM_SetEolFill((QsciLexerNASM*)self, eoffill, style);
 }
 
-void q_scilexernasm_qbase_set_eol_fill(void* self, bool eoffill, int style) {
-    QsciLexerNASM_QBaseSetEolFill((QsciLexerNASM*)self, eoffill, style);
+void q_scilexernasm_super_set_eol_fill(void* self, bool eoffill, int style) {
+    QsciLexerNASM_SuperSetEolFill((QsciLexerNASM*)self, eoffill, style);
 }
 
 void q_scilexernasm_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
@@ -832,8 +832,8 @@ void q_scilexernasm_set_font(void* self, void* f, int style) {
     QsciLexerNASM_SetFont((QsciLexerNASM*)self, (QFont*)f, style);
 }
 
-void q_scilexernasm_qbase_set_font(void* self, void* f, int style) {
-    QsciLexerNASM_QBaseSetFont((QsciLexerNASM*)self, (QFont*)f, style);
+void q_scilexernasm_super_set_font(void* self, void* f, int style) {
+    QsciLexerNASM_SuperSetFont((QsciLexerNASM*)self, (QFont*)f, style);
 }
 
 void q_scilexernasm_on_set_font(void* self, void (*callback)(void*, void*, int)) {
@@ -844,8 +844,8 @@ void q_scilexernasm_set_paper(void* self, void* c, int style) {
     QsciLexerNASM_SetPaper((QsciLexerNASM*)self, (QColor*)c, style);
 }
 
-void q_scilexernasm_qbase_set_paper(void* self, void* c, int style) {
-    QsciLexerNASM_QBaseSetPaper((QsciLexerNASM*)self, (QColor*)c, style);
+void q_scilexernasm_super_set_paper(void* self, void* c, int style) {
+    QsciLexerNASM_SuperSetPaper((QsciLexerNASM*)self, (QColor*)c, style);
 }
 
 void q_scilexernasm_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
@@ -856,8 +856,8 @@ bool q_scilexernasm_read_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerNASM_ReadProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexernasm_qbase_read_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerNASM_QBaseReadProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexernasm_super_read_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerNASM_SuperReadProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexernasm_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -868,8 +868,8 @@ bool q_scilexernasm_write_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerNASM_WriteProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexernasm_qbase_write_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerNASM_QBaseWriteProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexernasm_super_write_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerNASM_SuperWriteProperties((QsciLexerNASM*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexernasm_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -880,8 +880,8 @@ bool q_scilexernasm_event(void* self, void* event) {
     return QsciLexerNASM_Event((QsciLexerNASM*)self, (QEvent*)event);
 }
 
-bool q_scilexernasm_qbase_event(void* self, void* event) {
-    return QsciLexerNASM_QBaseEvent((QsciLexerNASM*)self, (QEvent*)event);
+bool q_scilexernasm_super_event(void* self, void* event) {
+    return QsciLexerNASM_SuperEvent((QsciLexerNASM*)self, (QEvent*)event);
 }
 
 void q_scilexernasm_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -892,8 +892,8 @@ bool q_scilexernasm_event_filter(void* self, void* watched, void* event) {
     return QsciLexerNASM_EventFilter((QsciLexerNASM*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scilexernasm_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciLexerNASM_QBaseEventFilter((QsciLexerNASM*)self, (QObject*)watched, (QEvent*)event);
+bool q_scilexernasm_super_event_filter(void* self, void* watched, void* event) {
+    return QsciLexerNASM_SuperEventFilter((QsciLexerNASM*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scilexernasm_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -904,8 +904,8 @@ void q_scilexernasm_timer_event(void* self, void* event) {
     QsciLexerNASM_TimerEvent((QsciLexerNASM*)self, (QTimerEvent*)event);
 }
 
-void q_scilexernasm_qbase_timer_event(void* self, void* event) {
-    QsciLexerNASM_QBaseTimerEvent((QsciLexerNASM*)self, (QTimerEvent*)event);
+void q_scilexernasm_super_timer_event(void* self, void* event) {
+    QsciLexerNASM_SuperTimerEvent((QsciLexerNASM*)self, (QTimerEvent*)event);
 }
 
 void q_scilexernasm_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -916,8 +916,8 @@ void q_scilexernasm_child_event(void* self, void* event) {
     QsciLexerNASM_ChildEvent((QsciLexerNASM*)self, (QChildEvent*)event);
 }
 
-void q_scilexernasm_qbase_child_event(void* self, void* event) {
-    QsciLexerNASM_QBaseChildEvent((QsciLexerNASM*)self, (QChildEvent*)event);
+void q_scilexernasm_super_child_event(void* self, void* event) {
+    QsciLexerNASM_SuperChildEvent((QsciLexerNASM*)self, (QChildEvent*)event);
 }
 
 void q_scilexernasm_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -928,8 +928,8 @@ void q_scilexernasm_custom_event(void* self, void* event) {
     QsciLexerNASM_CustomEvent((QsciLexerNASM*)self, (QEvent*)event);
 }
 
-void q_scilexernasm_qbase_custom_event(void* self, void* event) {
-    QsciLexerNASM_QBaseCustomEvent((QsciLexerNASM*)self, (QEvent*)event);
+void q_scilexernasm_super_custom_event(void* self, void* event) {
+    QsciLexerNASM_SuperCustomEvent((QsciLexerNASM*)self, (QEvent*)event);
 }
 
 void q_scilexernasm_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -940,8 +940,8 @@ void q_scilexernasm_connect_notify(void* self, void* signal) {
     QsciLexerNASM_ConnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexernasm_qbase_connect_notify(void* self, void* signal) {
-    QsciLexerNASM_QBaseConnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
+void q_scilexernasm_super_connect_notify(void* self, void* signal) {
+    QsciLexerNASM_SuperConnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexernasm_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -952,8 +952,8 @@ void q_scilexernasm_disconnect_notify(void* self, void* signal) {
     QsciLexerNASM_DisconnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexernasm_qbase_disconnect_notify(void* self, void* signal) {
-    QsciLexerNASM_QBaseDisconnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
+void q_scilexernasm_super_disconnect_notify(void* self, void* signal) {
+    QsciLexerNASM_SuperDisconnectNotify((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexernasm_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -967,8 +967,8 @@ char* q_scilexernasm_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-char* q_scilexernasm_qbase_text_as_bytes(void* self, const char* text) {
-    libqt_string _str = QsciLexerNASM_QBaseTextAsBytes((QsciLexerNASM*)self, qstring(text));
+char* q_scilexernasm_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerNASM_SuperTextAsBytes((QsciLexerNASM*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -985,8 +985,8 @@ const char* q_scilexernasm_bytes_as_text(void* self, const char* bytes, int size
     return _ret;
 }
 
-const char* q_scilexernasm_qbase_bytes_as_text(void* self, const char* bytes, int size) {
-    libqt_string _str = QsciLexerNASM_QBaseBytesAsText((QsciLexerNASM*)self, bytes, size);
+const char* q_scilexernasm_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerNASM_SuperBytesAsText((QsciLexerNASM*)self, bytes, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1000,8 +1000,8 @@ QObject* q_scilexernasm_sender(void* self) {
     return QsciLexerNASM_Sender((QsciLexerNASM*)self);
 }
 
-QObject* q_scilexernasm_qbase_sender(void* self) {
-    return QsciLexerNASM_QBaseSender((QsciLexerNASM*)self);
+QObject* q_scilexernasm_super_sender(void* self) {
+    return QsciLexerNASM_SuperSender((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_sender(void* self, QObject* (*callback)()) {
@@ -1012,8 +1012,8 @@ int32_t q_scilexernasm_sender_signal_index(void* self) {
     return QsciLexerNASM_SenderSignalIndex((QsciLexerNASM*)self);
 }
 
-int32_t q_scilexernasm_qbase_sender_signal_index(void* self) {
-    return QsciLexerNASM_QBaseSenderSignalIndex((QsciLexerNASM*)self);
+int32_t q_scilexernasm_super_sender_signal_index(void* self) {
+    return QsciLexerNASM_SuperSenderSignalIndex((QsciLexerNASM*)self);
 }
 
 void q_scilexernasm_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1024,8 +1024,8 @@ int32_t q_scilexernasm_receivers(void* self, const char* signal) {
     return QsciLexerNASM_Receivers((QsciLexerNASM*)self, signal);
 }
 
-int32_t q_scilexernasm_qbase_receivers(void* self, const char* signal) {
-    return QsciLexerNASM_QBaseReceivers((QsciLexerNASM*)self, signal);
+int32_t q_scilexernasm_super_receivers(void* self, const char* signal) {
+    return QsciLexerNASM_SuperReceivers((QsciLexerNASM*)self, signal);
 }
 
 void q_scilexernasm_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1036,8 +1036,8 @@ bool q_scilexernasm_is_signal_connected(void* self, void* signal) {
     return QsciLexerNASM_IsSignalConnected((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
-bool q_scilexernasm_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciLexerNASM_QBaseIsSignalConnected((QsciLexerNASM*)self, (QMetaMethod*)signal);
+bool q_scilexernasm_super_is_signal_connected(void* self, void* signal) {
+    return QsciLexerNASM_SuperIsSignalConnected((QsciLexerNASM*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexernasm_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

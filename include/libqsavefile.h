@@ -57,13 +57,17 @@ const QMetaObject* q_savefile_meta_object(void* self);
 ///
 void q_savefile_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_savefile_super_meta_object` instead
+///
+#define q_savefile_qbase_meta_object q_savefile_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QSaveFile*
 ///
-const QMetaObject* q_savefile_qbase_meta_object(void* self);
+const QMetaObject* q_savefile_super_meta_object(void* self);
 
 /// @param self QSaveFile*
 /// @param param1 const char*
@@ -77,12 +81,16 @@ void* q_savefile_metacast(void* self, const char* param1);
 ///
 void q_savefile_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_savefile_super_metacast` instead
+///
+#define q_savefile_qbase_metacast q_savefile_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QSaveFile*
 /// @param param1 const char*
 ///
-void* q_savefile_qbase_metacast(void* self, const char* param1);
+void* q_savefile_super_metacast(void* self, const char* param1);
 
 /// @param self QSaveFile*
 /// @param param1 enum QMetaObject__Call
@@ -98,6 +106,10 @@ int32_t q_savefile_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_savefile_super_metacall` instead
+///
+#define q_savefile_qbase_metacall q_savefile_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QSaveFile*
@@ -105,7 +117,7 @@ void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_savefile_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_savefile_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -132,13 +144,17 @@ const char* q_savefile_file_name(void* self);
 ///
 void q_savefile_on_file_name(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `q_savefile_super_file_name` instead
+///
+#define q_savefile_qbase_file_name q_savefile_super_file_name
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsavefile.html#fileName)
 ///
 /// Base class method implementation
 ///
 /// @param self QSaveFile*
 ///
-const char* q_savefile_qbase_file_name(void* self);
+const char* q_savefile_super_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsavefile.html#setFileName)
 ///
@@ -163,6 +179,10 @@ bool q_savefile_open(void* self, int32_t flags);
 ///
 void q_savefile_on_open(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_savefile_super_open` instead
+///
+#define q_savefile_qbase_open q_savefile_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsavefile.html#open)
 ///
 /// Base class method implementation
@@ -170,7 +190,7 @@ void q_savefile_on_open(void* self, bool (*callback)(void*, int32_t));
 /// @param self QSaveFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool q_savefile_qbase_open(void* self, int32_t flags);
+bool q_savefile_super_open(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsavefile.html#commit)
 ///
@@ -214,6 +234,10 @@ long long q_savefile_write_data(void* self, const char* data, long long lenVal);
 ///
 void q_savefile_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
+/// @warning DEPRECATED: Use `q_savefile_super_write_data` instead
+///
+#define q_savefile_qbase_write_data q_savefile_super_write_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsavefile.html#writeData)
 ///
 /// Base class method implementation
@@ -222,7 +246,7 @@ void q_savefile_on_write_data(void* self, long long (*callback)(void*, const cha
 /// @param data const char*
 /// @param lenVal long long
 ///
-long long q_savefile_qbase_write_data(void* self, const char* data, long long lenVal);
+long long q_savefile_super_write_data(void* self, const char* data, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1187,6 +1211,10 @@ void q_savefile_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_savefile_is_sequential(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_is_sequential` instead
+///
+#define q_savefile_qbase_is_sequential q_savefile_super_is_sequential
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
@@ -1195,7 +1223,7 @@ bool q_savefile_is_sequential(void* self);
 ///
 /// @param self QSaveFile*
 ///
-bool q_savefile_qbase_is_sequential(void* self);
+bool q_savefile_super_is_sequential(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1218,6 +1246,10 @@ void q_savefile_on_is_sequential(void* self, bool (*callback)());
 ///
 long long q_savefile_pos(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_pos` instead
+///
+#define q_savefile_qbase_pos q_savefile_super_pos
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#pos)
@@ -1226,7 +1258,7 @@ long long q_savefile_pos(void* self);
 ///
 /// @param self QSaveFile*
 ///
-long long q_savefile_qbase_pos(void* self);
+long long q_savefile_super_pos(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1250,6 +1282,10 @@ void q_savefile_on_pos(void* self, long long (*callback)());
 ///
 bool q_savefile_seek(void* self, long long offset);
 
+/// @warning DEPRECATED: Use `q_savefile_super_seek` instead
+///
+#define q_savefile_qbase_seek q_savefile_super_seek
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#seek)
@@ -1259,7 +1295,7 @@ bool q_savefile_seek(void* self, long long offset);
 /// @param self QSaveFile*
 /// @param offset long long
 ///
-bool q_savefile_qbase_seek(void* self, long long offset);
+bool q_savefile_super_seek(void* self, long long offset);
 
 /// Inherited from QFileDevice
 ///
@@ -1282,6 +1318,10 @@ void q_savefile_on_seek(void* self, bool (*callback)(void*, long long));
 ///
 bool q_savefile_at_end(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_at_end` instead
+///
+#define q_savefile_qbase_at_end q_savefile_super_at_end
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
@@ -1290,7 +1330,7 @@ bool q_savefile_at_end(void* self);
 ///
 /// @param self QSaveFile*
 ///
-bool q_savefile_qbase_at_end(void* self);
+bool q_savefile_super_at_end(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1313,6 +1353,10 @@ void q_savefile_on_at_end(void* self, bool (*callback)());
 ///
 long long q_savefile_size(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_size` instead
+///
+#define q_savefile_qbase_size q_savefile_super_size
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#size)
@@ -1321,7 +1365,7 @@ long long q_savefile_size(void* self);
 ///
 /// @param self QSaveFile*
 ///
-long long q_savefile_qbase_size(void* self);
+long long q_savefile_super_size(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1345,6 +1389,10 @@ void q_savefile_on_size(void* self, long long (*callback)());
 ///
 bool q_savefile_resize(void* self, long long sz);
 
+/// @warning DEPRECATED: Use `q_savefile_super_resize` instead
+///
+#define q_savefile_qbase_resize q_savefile_super_resize
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#resize)
@@ -1354,7 +1402,7 @@ bool q_savefile_resize(void* self, long long sz);
 /// @param self QSaveFile*
 /// @param sz long long
 ///
-bool q_savefile_qbase_resize(void* self, long long sz);
+bool q_savefile_super_resize(void* self, long long sz);
 
 /// Inherited from QFileDevice
 ///
@@ -1379,6 +1427,10 @@ void q_savefile_on_resize(void* self, bool (*callback)(void*, long long));
 ///
 int32_t q_savefile_permissions(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_permissions` instead
+///
+#define q_savefile_qbase_permissions q_savefile_super_permissions
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
@@ -1389,7 +1441,7 @@ int32_t q_savefile_permissions(void* self);
 ///
 /// @return flag of enum QFileDevice__Permission
 ///
-int32_t q_savefile_qbase_permissions(void* self);
+int32_t q_savefile_super_permissions(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1413,6 +1465,10 @@ void q_savefile_on_permissions(void* self, int32_t (*callback)());
 ///
 bool q_savefile_set_permissions(void* self, int32_t permissionSpec);
 
+/// @warning DEPRECATED: Use `q_savefile_super_set_permissions` instead
+///
+#define q_savefile_qbase_set_permissions q_savefile_super_set_permissions
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
@@ -1422,7 +1478,7 @@ bool q_savefile_set_permissions(void* self, int32_t permissionSpec);
 /// @param self QSaveFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
 ///
-bool q_savefile_qbase_set_permissions(void* self, int32_t permissionSpec);
+bool q_savefile_super_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFileDevice
 ///
@@ -1447,6 +1503,10 @@ void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int32_t))
 ///
 long long q_savefile_read_data(void* self, char* data, long long maxlen);
 
+/// @warning DEPRECATED: Use `q_savefile_super_read_data` instead
+///
+#define q_savefile_qbase_read_data q_savefile_super_read_data
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#readData)
@@ -1457,7 +1517,7 @@ long long q_savefile_read_data(void* self, char* data, long long maxlen);
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_savefile_qbase_read_data(void* self, char* data, long long maxlen);
+long long q_savefile_super_read_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1482,6 +1542,10 @@ void q_savefile_on_read_data(void* self, long long (*callback)(void*, char*, lon
 ///
 long long q_savefile_read_line_data(void* self, char* data, long long maxlen);
 
+/// @warning DEPRECATED: Use `q_savefile_super_read_line_data` instead
+///
+#define q_savefile_qbase_read_line_data q_savefile_super_read_line_data
+
 /// Inherited from QFileDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#readLineData)
@@ -1492,7 +1556,7 @@ long long q_savefile_read_line_data(void* self, char* data, long long maxlen);
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_savefile_qbase_read_line_data(void* self, char* data, long long maxlen);
+long long q_savefile_super_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1515,6 +1579,10 @@ void q_savefile_on_read_line_data(void* self, long long (*callback)(void*, char*
 ///
 bool q_savefile_reset(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_reset` instead
+///
+#define q_savefile_qbase_reset q_savefile_super_reset
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
@@ -1523,7 +1591,7 @@ bool q_savefile_reset(void* self);
 ///
 /// @param self QSaveFile*
 ///
-bool q_savefile_qbase_reset(void* self);
+bool q_savefile_super_reset(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1546,6 +1614,10 @@ void q_savefile_on_reset(void* self, bool (*callback)());
 ///
 long long q_savefile_bytes_available(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_bytes_available` instead
+///
+#define q_savefile_qbase_bytes_available q_savefile_super_bytes_available
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
@@ -1554,7 +1626,7 @@ long long q_savefile_bytes_available(void* self);
 ///
 /// @param self QSaveFile*
 ///
-long long q_savefile_qbase_bytes_available(void* self);
+long long q_savefile_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1577,6 +1649,10 @@ void q_savefile_on_bytes_available(void* self, long long (*callback)());
 ///
 long long q_savefile_bytes_to_write(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_bytes_to_write` instead
+///
+#define q_savefile_qbase_bytes_to_write q_savefile_super_bytes_to_write
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
@@ -1585,7 +1661,7 @@ long long q_savefile_bytes_to_write(void* self);
 ///
 /// @param self QSaveFile*
 ///
-long long q_savefile_qbase_bytes_to_write(void* self);
+long long q_savefile_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1608,6 +1684,10 @@ void q_savefile_on_bytes_to_write(void* self, long long (*callback)());
 ///
 bool q_savefile_can_read_line(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_can_read_line` instead
+///
+#define q_savefile_qbase_can_read_line q_savefile_super_can_read_line
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
@@ -1616,7 +1696,7 @@ bool q_savefile_can_read_line(void* self);
 ///
 /// @param self QSaveFile*
 ///
-bool q_savefile_qbase_can_read_line(void* self);
+bool q_savefile_super_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1640,6 +1720,10 @@ void q_savefile_on_can_read_line(void* self, bool (*callback)());
 ///
 bool q_savefile_wait_for_ready_read(void* self, int msecs);
 
+/// @warning DEPRECATED: Use `q_savefile_super_wait_for_ready_read` instead
+///
+#define q_savefile_qbase_wait_for_ready_read q_savefile_super_wait_for_ready_read
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -1649,7 +1733,7 @@ bool q_savefile_wait_for_ready_read(void* self, int msecs);
 /// @param self QSaveFile*
 /// @param msecs int
 ///
-bool q_savefile_qbase_wait_for_ready_read(void* self, int msecs);
+bool q_savefile_super_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
@@ -1673,6 +1757,10 @@ void q_savefile_on_wait_for_ready_read(void* self, bool (*callback)(void*, int))
 ///
 bool q_savefile_wait_for_bytes_written(void* self, int msecs);
 
+/// @warning DEPRECATED: Use `q_savefile_super_wait_for_bytes_written` instead
+///
+#define q_savefile_qbase_wait_for_bytes_written q_savefile_super_wait_for_bytes_written
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
@@ -1682,7 +1770,7 @@ bool q_savefile_wait_for_bytes_written(void* self, int msecs);
 /// @param self QSaveFile*
 /// @param msecs int
 ///
-bool q_savefile_qbase_wait_for_bytes_written(void* self, int msecs);
+bool q_savefile_super_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
@@ -1706,6 +1794,10 @@ void q_savefile_on_wait_for_bytes_written(void* self, bool (*callback)(void*, in
 ///
 long long q_savefile_skip_data(void* self, long long maxSize);
 
+/// @warning DEPRECATED: Use `q_savefile_super_skip_data` instead
+///
+#define q_savefile_qbase_skip_data q_savefile_super_skip_data
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -1715,7 +1807,7 @@ long long q_savefile_skip_data(void* self, long long maxSize);
 /// @param self QSaveFile*
 /// @param maxSize long long
 ///
-long long q_savefile_qbase_skip_data(void* self, long long maxSize);
+long long q_savefile_super_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1739,6 +1831,10 @@ void q_savefile_on_skip_data(void* self, long long (*callback)(void*, long long)
 ///
 bool q_savefile_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_savefile_super_event` instead
+///
+#define q_savefile_qbase_event q_savefile_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1748,7 +1844,7 @@ bool q_savefile_event(void* self, void* event);
 /// @param self QSaveFile*
 /// @param event QEvent*
 ///
-bool q_savefile_qbase_event(void* self, void* event);
+bool q_savefile_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1773,6 +1869,10 @@ void q_savefile_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_savefile_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_savefile_super_event_filter` instead
+///
+#define q_savefile_qbase_event_filter q_savefile_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1783,7 +1883,7 @@ bool q_savefile_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_savefile_qbase_event_filter(void* self, void* watched, void* event);
+bool q_savefile_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1807,6 +1907,10 @@ void q_savefile_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_savefile_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_savefile_super_timer_event` instead
+///
+#define q_savefile_qbase_timer_event q_savefile_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1816,7 +1920,7 @@ void q_savefile_timer_event(void* self, void* event);
 /// @param self QSaveFile*
 /// @param event QTimerEvent*
 ///
-void q_savefile_qbase_timer_event(void* self, void* event);
+void q_savefile_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1840,6 +1944,10 @@ void q_savefile_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_savefile_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_savefile_super_child_event` instead
+///
+#define q_savefile_qbase_child_event q_savefile_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1849,7 +1957,7 @@ void q_savefile_child_event(void* self, void* event);
 /// @param self QSaveFile*
 /// @param event QChildEvent*
 ///
-void q_savefile_qbase_child_event(void* self, void* event);
+void q_savefile_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1873,6 +1981,10 @@ void q_savefile_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_savefile_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_savefile_super_custom_event` instead
+///
+#define q_savefile_qbase_custom_event q_savefile_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1882,7 +1994,7 @@ void q_savefile_custom_event(void* self, void* event);
 /// @param self QSaveFile*
 /// @param event QEvent*
 ///
-void q_savefile_qbase_custom_event(void* self, void* event);
+void q_savefile_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1906,6 +2018,10 @@ void q_savefile_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_savefile_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_savefile_super_connect_notify` instead
+///
+#define q_savefile_qbase_connect_notify q_savefile_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1915,7 +2031,7 @@ void q_savefile_connect_notify(void* self, void* signal);
 /// @param self QSaveFile*
 /// @param signal QMetaMethod*
 ///
-void q_savefile_qbase_connect_notify(void* self, void* signal);
+void q_savefile_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1939,6 +2055,10 @@ void q_savefile_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_savefile_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_savefile_super_disconnect_notify` instead
+///
+#define q_savefile_qbase_disconnect_notify q_savefile_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1948,7 +2068,7 @@ void q_savefile_disconnect_notify(void* self, void* signal);
 /// @param self QSaveFile*
 /// @param signal QMetaMethod*
 ///
-void q_savefile_qbase_disconnect_notify(void* self, void* signal);
+void q_savefile_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1972,6 +2092,10 @@ void q_savefile_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_savefile_set_open_mode(void* self, int32_t openMode);
 
+/// @warning DEPRECATED: Use `q_savefile_super_set_open_mode` instead
+///
+#define q_savefile_qbase_set_open_mode q_savefile_super_set_open_mode
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -1981,7 +2105,7 @@ void q_savefile_set_open_mode(void* self, int32_t openMode);
 /// @param self QSaveFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_savefile_qbase_set_open_mode(void* self, int32_t openMode);
+void q_savefile_super_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2005,6 +2129,10 @@ void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 ///
 void q_savefile_set_error_string(void* self, const char* errorString);
 
+/// @warning DEPRECATED: Use `q_savefile_super_set_error_string` instead
+///
+#define q_savefile_qbase_set_error_string q_savefile_super_set_error_string
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -2014,7 +2142,7 @@ void q_savefile_set_error_string(void* self, const char* errorString);
 /// @param self QSaveFile*
 /// @param errorString const char*
 ///
-void q_savefile_qbase_set_error_string(void* self, const char* errorString);
+void q_savefile_super_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
@@ -2037,6 +2165,10 @@ void q_savefile_on_set_error_string(void* self, void (*callback)(void*, const ch
 ///
 QObject* q_savefile_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_sender` instead
+///
+#define q_savefile_qbase_sender q_savefile_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2045,7 +2177,7 @@ QObject* q_savefile_sender(void* self);
 ///
 /// @param self QSaveFile*
 ///
-QObject* q_savefile_qbase_sender(void* self);
+QObject* q_savefile_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2068,6 +2200,10 @@ void q_savefile_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_savefile_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_savefile_super_sender_signal_index` instead
+///
+#define q_savefile_qbase_sender_signal_index q_savefile_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2076,7 +2212,7 @@ int32_t q_savefile_sender_signal_index(void* self);
 ///
 /// @param self QSaveFile*
 ///
-int32_t q_savefile_qbase_sender_signal_index(void* self);
+int32_t q_savefile_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2100,6 +2236,10 @@ void q_savefile_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_savefile_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_savefile_super_receivers` instead
+///
+#define q_savefile_qbase_receivers q_savefile_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2109,7 +2249,7 @@ int32_t q_savefile_receivers(void* self, const char* signal);
 /// @param self QSaveFile*
 /// @param signal const char*
 ///
-int32_t q_savefile_qbase_receivers(void* self, const char* signal);
+int32_t q_savefile_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2133,6 +2273,10 @@ void q_savefile_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_savefile_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_savefile_super_is_signal_connected` instead
+///
+#define q_savefile_qbase_is_signal_connected q_savefile_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2142,7 +2286,7 @@ bool q_savefile_is_signal_connected(void* self, void* signal);
 /// @param self QSaveFile*
 /// @param signal QMetaMethod*
 ///
-bool q_savefile_qbase_is_signal_connected(void* self, void* signal);
+bool q_savefile_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

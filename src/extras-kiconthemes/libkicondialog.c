@@ -30,8 +30,8 @@ void k_icondialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KIconDialog_OnMetaObject((KIconDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_icondialog_qbase_meta_object(void* self) {
-    return KIconDialog_QBaseMetaObject((KIconDialog*)self);
+const QMetaObject* k_icondialog_super_meta_object(void* self) {
+    return KIconDialog_SuperMetaObject((KIconDialog*)self);
 }
 
 void* k_icondialog_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_icondialog_on_metacast(void* self, void* (*callback)(void*, const char*))
     KIconDialog_OnMetacast((KIconDialog*)self, (intptr_t)callback);
 }
 
-void* k_icondialog_qbase_metacast(void* self, const char* param1) {
-    return KIconDialog_QBaseMetacast((KIconDialog*)self, param1);
+void* k_icondialog_super_metacast(void* self, const char* param1) {
+    return KIconDialog_SuperMetacast((KIconDialog*)self, param1);
 }
 
 int32_t k_icondialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_icondialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KIconDialog_OnMetacall((KIconDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_icondialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIconDialog_QBaseMetacall((KIconDialog*)self, param1, param2, param3);
+int32_t k_icondialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIconDialog_SuperMetacall((KIconDialog*)self, param1, param2, param3);
 }
 
 const char* k_icondialog_tr(const char* s) {
@@ -127,8 +127,8 @@ void k_icondialog_on_show_event(void* self, void (*callback)(void*, void*)) {
     KIconDialog_OnShowEvent((KIconDialog*)self, (intptr_t)callback);
 }
 
-void k_icondialog_qbase_show_event(void* self, void* event) {
-    KIconDialog_QBaseShowEvent((KIconDialog*)self, (QShowEvent*)event);
+void k_icondialog_super_show_event(void* self, void* event) {
+    KIconDialog_SuperShowEvent((KIconDialog*)self, (QShowEvent*)event);
 }
 
 void k_icondialog_slot_ok(void* self) {
@@ -139,8 +139,8 @@ void k_icondialog_on_slot_ok(void* self, void (*callback)()) {
     KIconDialog_OnSlotOk((KIconDialog*)self, (intptr_t)callback);
 }
 
-void k_icondialog_qbase_slot_ok(void* self) {
-    KIconDialog_QBaseSlotOk((KIconDialog*)self);
+void k_icondialog_super_slot_ok(void* self) {
+    KIconDialog_SuperSlotOk((KIconDialog*)self);
 }
 
 const char* k_icondialog_tr2(const char* s, const char* c) {
@@ -1659,8 +1659,8 @@ void k_icondialog_set_visible(void* self, bool visible) {
     KIconDialog_SetVisible((KIconDialog*)self, visible);
 }
 
-void k_icondialog_qbase_set_visible(void* self, bool visible) {
-    KIconDialog_QBaseSetVisible((KIconDialog*)self, visible);
+void k_icondialog_super_set_visible(void* self, bool visible) {
+    KIconDialog_SuperSetVisible((KIconDialog*)self, visible);
 }
 
 void k_icondialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1671,8 +1671,8 @@ QSize* k_icondialog_size_hint(void* self) {
     return KIconDialog_SizeHint((KIconDialog*)self);
 }
 
-QSize* k_icondialog_qbase_size_hint(void* self) {
-    return KIconDialog_QBaseSizeHint((KIconDialog*)self);
+QSize* k_icondialog_super_size_hint(void* self) {
+    return KIconDialog_SuperSizeHint((KIconDialog*)self);
 }
 
 void k_icondialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1683,8 +1683,8 @@ QSize* k_icondialog_minimum_size_hint(void* self) {
     return KIconDialog_MinimumSizeHint((KIconDialog*)self);
 }
 
-QSize* k_icondialog_qbase_minimum_size_hint(void* self) {
-    return KIconDialog_QBaseMinimumSizeHint((KIconDialog*)self);
+QSize* k_icondialog_super_minimum_size_hint(void* self) {
+    return KIconDialog_SuperMinimumSizeHint((KIconDialog*)self);
 }
 
 void k_icondialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1695,8 +1695,8 @@ void k_icondialog_open(void* self) {
     KIconDialog_Open((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_open(void* self) {
-    KIconDialog_QBaseOpen((KIconDialog*)self);
+void k_icondialog_super_open(void* self) {
+    KIconDialog_SuperOpen((KIconDialog*)self);
 }
 
 void k_icondialog_on_open(void* self, void (*callback)()) {
@@ -1707,8 +1707,8 @@ int32_t k_icondialog_exec(void* self) {
     return KIconDialog_Exec((KIconDialog*)self);
 }
 
-int32_t k_icondialog_qbase_exec(void* self) {
-    return KIconDialog_QBaseExec((KIconDialog*)self);
+int32_t k_icondialog_super_exec(void* self) {
+    return KIconDialog_SuperExec((KIconDialog*)self);
 }
 
 void k_icondialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1719,8 +1719,8 @@ void k_icondialog_done(void* self, int param1) {
     KIconDialog_Done((KIconDialog*)self, param1);
 }
 
-void k_icondialog_qbase_done(void* self, int param1) {
-    KIconDialog_QBaseDone((KIconDialog*)self, param1);
+void k_icondialog_super_done(void* self, int param1) {
+    KIconDialog_SuperDone((KIconDialog*)self, param1);
 }
 
 void k_icondialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1731,8 +1731,8 @@ void k_icondialog_accept(void* self) {
     KIconDialog_Accept((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_accept(void* self) {
-    KIconDialog_QBaseAccept((KIconDialog*)self);
+void k_icondialog_super_accept(void* self) {
+    KIconDialog_SuperAccept((KIconDialog*)self);
 }
 
 void k_icondialog_on_accept(void* self, void (*callback)()) {
@@ -1743,8 +1743,8 @@ void k_icondialog_reject(void* self) {
     KIconDialog_Reject((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_reject(void* self) {
-    KIconDialog_QBaseReject((KIconDialog*)self);
+void k_icondialog_super_reject(void* self) {
+    KIconDialog_SuperReject((KIconDialog*)self);
 }
 
 void k_icondialog_on_reject(void* self, void (*callback)()) {
@@ -1755,8 +1755,8 @@ void k_icondialog_key_press_event(void* self, void* param1) {
     KIconDialog_KeyPressEvent((KIconDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_icondialog_qbase_key_press_event(void* self, void* param1) {
-    KIconDialog_QBaseKeyPressEvent((KIconDialog*)self, (QKeyEvent*)param1);
+void k_icondialog_super_key_press_event(void* self, void* param1) {
+    KIconDialog_SuperKeyPressEvent((KIconDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_icondialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1767,8 +1767,8 @@ void k_icondialog_close_event(void* self, void* param1) {
     KIconDialog_CloseEvent((KIconDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_icondialog_qbase_close_event(void* self, void* param1) {
-    KIconDialog_QBaseCloseEvent((KIconDialog*)self, (QCloseEvent*)param1);
+void k_icondialog_super_close_event(void* self, void* param1) {
+    KIconDialog_SuperCloseEvent((KIconDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_icondialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1779,8 +1779,8 @@ void k_icondialog_resize_event(void* self, void* param1) {
     KIconDialog_ResizeEvent((KIconDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_icondialog_qbase_resize_event(void* self, void* param1) {
-    KIconDialog_QBaseResizeEvent((KIconDialog*)self, (QResizeEvent*)param1);
+void k_icondialog_super_resize_event(void* self, void* param1) {
+    KIconDialog_SuperResizeEvent((KIconDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_icondialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1791,8 +1791,8 @@ void k_icondialog_context_menu_event(void* self, void* param1) {
     KIconDialog_ContextMenuEvent((KIconDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_icondialog_qbase_context_menu_event(void* self, void* param1) {
-    KIconDialog_QBaseContextMenuEvent((KIconDialog*)self, (QContextMenuEvent*)param1);
+void k_icondialog_super_context_menu_event(void* self, void* param1) {
+    KIconDialog_SuperContextMenuEvent((KIconDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_icondialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1803,8 +1803,8 @@ bool k_icondialog_event_filter(void* self, void* param1, void* param2) {
     return KIconDialog_EventFilter((KIconDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_icondialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KIconDialog_QBaseEventFilter((KIconDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_icondialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KIconDialog_SuperEventFilter((KIconDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_icondialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1815,8 +1815,8 @@ int32_t k_icondialog_dev_type(void* self) {
     return KIconDialog_DevType((KIconDialog*)self);
 }
 
-int32_t k_icondialog_qbase_dev_type(void* self) {
-    return KIconDialog_QBaseDevType((KIconDialog*)self);
+int32_t k_icondialog_super_dev_type(void* self) {
+    return KIconDialog_SuperDevType((KIconDialog*)self);
 }
 
 void k_icondialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1827,8 +1827,8 @@ int32_t k_icondialog_height_for_width(void* self, int param1) {
     return KIconDialog_HeightForWidth((KIconDialog*)self, param1);
 }
 
-int32_t k_icondialog_qbase_height_for_width(void* self, int param1) {
-    return KIconDialog_QBaseHeightForWidth((KIconDialog*)self, param1);
+int32_t k_icondialog_super_height_for_width(void* self, int param1) {
+    return KIconDialog_SuperHeightForWidth((KIconDialog*)self, param1);
 }
 
 void k_icondialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1839,8 +1839,8 @@ bool k_icondialog_has_height_for_width(void* self) {
     return KIconDialog_HasHeightForWidth((KIconDialog*)self);
 }
 
-bool k_icondialog_qbase_has_height_for_width(void* self) {
-    return KIconDialog_QBaseHasHeightForWidth((KIconDialog*)self);
+bool k_icondialog_super_has_height_for_width(void* self) {
+    return KIconDialog_SuperHasHeightForWidth((KIconDialog*)self);
 }
 
 void k_icondialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1851,8 +1851,8 @@ QPaintEngine* k_icondialog_paint_engine(void* self) {
     return KIconDialog_PaintEngine((KIconDialog*)self);
 }
 
-QPaintEngine* k_icondialog_qbase_paint_engine(void* self) {
-    return KIconDialog_QBasePaintEngine((KIconDialog*)self);
+QPaintEngine* k_icondialog_super_paint_engine(void* self) {
+    return KIconDialog_SuperPaintEngine((KIconDialog*)self);
 }
 
 void k_icondialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1863,8 +1863,8 @@ bool k_icondialog_event(void* self, void* event) {
     return KIconDialog_Event((KIconDialog*)self, (QEvent*)event);
 }
 
-bool k_icondialog_qbase_event(void* self, void* event) {
-    return KIconDialog_QBaseEvent((KIconDialog*)self, (QEvent*)event);
+bool k_icondialog_super_event(void* self, void* event) {
+    return KIconDialog_SuperEvent((KIconDialog*)self, (QEvent*)event);
 }
 
 void k_icondialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1875,8 +1875,8 @@ void k_icondialog_mouse_press_event(void* self, void* event) {
     KIconDialog_MousePressEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
-void k_icondialog_qbase_mouse_press_event(void* self, void* event) {
-    KIconDialog_QBaseMousePressEvent((KIconDialog*)self, (QMouseEvent*)event);
+void k_icondialog_super_mouse_press_event(void* self, void* event) {
+    KIconDialog_SuperMousePressEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
 void k_icondialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ void k_icondialog_mouse_release_event(void* self, void* event) {
     KIconDialog_MouseReleaseEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
-void k_icondialog_qbase_mouse_release_event(void* self, void* event) {
-    KIconDialog_QBaseMouseReleaseEvent((KIconDialog*)self, (QMouseEvent*)event);
+void k_icondialog_super_mouse_release_event(void* self, void* event) {
+    KIconDialog_SuperMouseReleaseEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
 void k_icondialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ void k_icondialog_mouse_double_click_event(void* self, void* event) {
     KIconDialog_MouseDoubleClickEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
-void k_icondialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KIconDialog_QBaseMouseDoubleClickEvent((KIconDialog*)self, (QMouseEvent*)event);
+void k_icondialog_super_mouse_double_click_event(void* self, void* event) {
+    KIconDialog_SuperMouseDoubleClickEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
 void k_icondialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1911,8 +1911,8 @@ void k_icondialog_mouse_move_event(void* self, void* event) {
     KIconDialog_MouseMoveEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
-void k_icondialog_qbase_mouse_move_event(void* self, void* event) {
-    KIconDialog_QBaseMouseMoveEvent((KIconDialog*)self, (QMouseEvent*)event);
+void k_icondialog_super_mouse_move_event(void* self, void* event) {
+    KIconDialog_SuperMouseMoveEvent((KIconDialog*)self, (QMouseEvent*)event);
 }
 
 void k_icondialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1923,8 +1923,8 @@ void k_icondialog_wheel_event(void* self, void* event) {
     KIconDialog_WheelEvent((KIconDialog*)self, (QWheelEvent*)event);
 }
 
-void k_icondialog_qbase_wheel_event(void* self, void* event) {
-    KIconDialog_QBaseWheelEvent((KIconDialog*)self, (QWheelEvent*)event);
+void k_icondialog_super_wheel_event(void* self, void* event) {
+    KIconDialog_SuperWheelEvent((KIconDialog*)self, (QWheelEvent*)event);
 }
 
 void k_icondialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1935,8 +1935,8 @@ void k_icondialog_key_release_event(void* self, void* event) {
     KIconDialog_KeyReleaseEvent((KIconDialog*)self, (QKeyEvent*)event);
 }
 
-void k_icondialog_qbase_key_release_event(void* self, void* event) {
-    KIconDialog_QBaseKeyReleaseEvent((KIconDialog*)self, (QKeyEvent*)event);
+void k_icondialog_super_key_release_event(void* self, void* event) {
+    KIconDialog_SuperKeyReleaseEvent((KIconDialog*)self, (QKeyEvent*)event);
 }
 
 void k_icondialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1947,8 +1947,8 @@ void k_icondialog_focus_in_event(void* self, void* event) {
     KIconDialog_FocusInEvent((KIconDialog*)self, (QFocusEvent*)event);
 }
 
-void k_icondialog_qbase_focus_in_event(void* self, void* event) {
-    KIconDialog_QBaseFocusInEvent((KIconDialog*)self, (QFocusEvent*)event);
+void k_icondialog_super_focus_in_event(void* self, void* event) {
+    KIconDialog_SuperFocusInEvent((KIconDialog*)self, (QFocusEvent*)event);
 }
 
 void k_icondialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1959,8 +1959,8 @@ void k_icondialog_focus_out_event(void* self, void* event) {
     KIconDialog_FocusOutEvent((KIconDialog*)self, (QFocusEvent*)event);
 }
 
-void k_icondialog_qbase_focus_out_event(void* self, void* event) {
-    KIconDialog_QBaseFocusOutEvent((KIconDialog*)self, (QFocusEvent*)event);
+void k_icondialog_super_focus_out_event(void* self, void* event) {
+    KIconDialog_SuperFocusOutEvent((KIconDialog*)self, (QFocusEvent*)event);
 }
 
 void k_icondialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ void k_icondialog_enter_event(void* self, void* event) {
     KIconDialog_EnterEvent((KIconDialog*)self, (QEnterEvent*)event);
 }
 
-void k_icondialog_qbase_enter_event(void* self, void* event) {
-    KIconDialog_QBaseEnterEvent((KIconDialog*)self, (QEnterEvent*)event);
+void k_icondialog_super_enter_event(void* self, void* event) {
+    KIconDialog_SuperEnterEvent((KIconDialog*)self, (QEnterEvent*)event);
 }
 
 void k_icondialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ void k_icondialog_leave_event(void* self, void* event) {
     KIconDialog_LeaveEvent((KIconDialog*)self, (QEvent*)event);
 }
 
-void k_icondialog_qbase_leave_event(void* self, void* event) {
-    KIconDialog_QBaseLeaveEvent((KIconDialog*)self, (QEvent*)event);
+void k_icondialog_super_leave_event(void* self, void* event) {
+    KIconDialog_SuperLeaveEvent((KIconDialog*)self, (QEvent*)event);
 }
 
 void k_icondialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1995,8 +1995,8 @@ void k_icondialog_paint_event(void* self, void* event) {
     KIconDialog_PaintEvent((KIconDialog*)self, (QPaintEvent*)event);
 }
 
-void k_icondialog_qbase_paint_event(void* self, void* event) {
-    KIconDialog_QBasePaintEvent((KIconDialog*)self, (QPaintEvent*)event);
+void k_icondialog_super_paint_event(void* self, void* event) {
+    KIconDialog_SuperPaintEvent((KIconDialog*)self, (QPaintEvent*)event);
 }
 
 void k_icondialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ void k_icondialog_move_event(void* self, void* event) {
     KIconDialog_MoveEvent((KIconDialog*)self, (QMoveEvent*)event);
 }
 
-void k_icondialog_qbase_move_event(void* self, void* event) {
-    KIconDialog_QBaseMoveEvent((KIconDialog*)self, (QMoveEvent*)event);
+void k_icondialog_super_move_event(void* self, void* event) {
+    KIconDialog_SuperMoveEvent((KIconDialog*)self, (QMoveEvent*)event);
 }
 
 void k_icondialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2019,8 +2019,8 @@ void k_icondialog_tablet_event(void* self, void* event) {
     KIconDialog_TabletEvent((KIconDialog*)self, (QTabletEvent*)event);
 }
 
-void k_icondialog_qbase_tablet_event(void* self, void* event) {
-    KIconDialog_QBaseTabletEvent((KIconDialog*)self, (QTabletEvent*)event);
+void k_icondialog_super_tablet_event(void* self, void* event) {
+    KIconDialog_SuperTabletEvent((KIconDialog*)self, (QTabletEvent*)event);
 }
 
 void k_icondialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ void k_icondialog_action_event(void* self, void* event) {
     KIconDialog_ActionEvent((KIconDialog*)self, (QActionEvent*)event);
 }
 
-void k_icondialog_qbase_action_event(void* self, void* event) {
-    KIconDialog_QBaseActionEvent((KIconDialog*)self, (QActionEvent*)event);
+void k_icondialog_super_action_event(void* self, void* event) {
+    KIconDialog_SuperActionEvent((KIconDialog*)self, (QActionEvent*)event);
 }
 
 void k_icondialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2043,8 +2043,8 @@ void k_icondialog_drag_enter_event(void* self, void* event) {
     KIconDialog_DragEnterEvent((KIconDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_icondialog_qbase_drag_enter_event(void* self, void* event) {
-    KIconDialog_QBaseDragEnterEvent((KIconDialog*)self, (QDragEnterEvent*)event);
+void k_icondialog_super_drag_enter_event(void* self, void* event) {
+    KIconDialog_SuperDragEnterEvent((KIconDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_icondialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2055,8 +2055,8 @@ void k_icondialog_drag_move_event(void* self, void* event) {
     KIconDialog_DragMoveEvent((KIconDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_icondialog_qbase_drag_move_event(void* self, void* event) {
-    KIconDialog_QBaseDragMoveEvent((KIconDialog*)self, (QDragMoveEvent*)event);
+void k_icondialog_super_drag_move_event(void* self, void* event) {
+    KIconDialog_SuperDragMoveEvent((KIconDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_icondialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ void k_icondialog_drag_leave_event(void* self, void* event) {
     KIconDialog_DragLeaveEvent((KIconDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_icondialog_qbase_drag_leave_event(void* self, void* event) {
-    KIconDialog_QBaseDragLeaveEvent((KIconDialog*)self, (QDragLeaveEvent*)event);
+void k_icondialog_super_drag_leave_event(void* self, void* event) {
+    KIconDialog_SuperDragLeaveEvent((KIconDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_icondialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2079,8 +2079,8 @@ void k_icondialog_drop_event(void* self, void* event) {
     KIconDialog_DropEvent((KIconDialog*)self, (QDropEvent*)event);
 }
 
-void k_icondialog_qbase_drop_event(void* self, void* event) {
-    KIconDialog_QBaseDropEvent((KIconDialog*)self, (QDropEvent*)event);
+void k_icondialog_super_drop_event(void* self, void* event) {
+    KIconDialog_SuperDropEvent((KIconDialog*)self, (QDropEvent*)event);
 }
 
 void k_icondialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ void k_icondialog_hide_event(void* self, void* event) {
     KIconDialog_HideEvent((KIconDialog*)self, (QHideEvent*)event);
 }
 
-void k_icondialog_qbase_hide_event(void* self, void* event) {
-    KIconDialog_QBaseHideEvent((KIconDialog*)self, (QHideEvent*)event);
+void k_icondialog_super_hide_event(void* self, void* event) {
+    KIconDialog_SuperHideEvent((KIconDialog*)self, (QHideEvent*)event);
 }
 
 void k_icondialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ bool k_icondialog_native_event(void* self, char* eventType, void* message, intpt
     return KIconDialog_NativeEvent((KIconDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_icondialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KIconDialog_QBaseNativeEvent((KIconDialog*)self, qstring(eventType), message, result);
+bool k_icondialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KIconDialog_SuperNativeEvent((KIconDialog*)self, qstring(eventType), message, result);
 }
 
 void k_icondialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2115,8 +2115,8 @@ void k_icondialog_change_event(void* self, void* param1) {
     KIconDialog_ChangeEvent((KIconDialog*)self, (QEvent*)param1);
 }
 
-void k_icondialog_qbase_change_event(void* self, void* param1) {
-    KIconDialog_QBaseChangeEvent((KIconDialog*)self, (QEvent*)param1);
+void k_icondialog_super_change_event(void* self, void* param1) {
+    KIconDialog_SuperChangeEvent((KIconDialog*)self, (QEvent*)param1);
 }
 
 void k_icondialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ int32_t k_icondialog_metric(void* self, int32_t param1) {
     return KIconDialog_Metric((KIconDialog*)self, param1);
 }
 
-int32_t k_icondialog_qbase_metric(void* self, int32_t param1) {
-    return KIconDialog_QBaseMetric((KIconDialog*)self, param1);
+int32_t k_icondialog_super_metric(void* self, int32_t param1) {
+    return KIconDialog_SuperMetric((KIconDialog*)self, param1);
 }
 
 void k_icondialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2139,8 +2139,8 @@ void k_icondialog_init_painter(void* self, void* painter) {
     KIconDialog_InitPainter((KIconDialog*)self, (QPainter*)painter);
 }
 
-void k_icondialog_qbase_init_painter(void* self, void* painter) {
-    KIconDialog_QBaseInitPainter((KIconDialog*)self, (QPainter*)painter);
+void k_icondialog_super_init_painter(void* self, void* painter) {
+    KIconDialog_SuperInitPainter((KIconDialog*)self, (QPainter*)painter);
 }
 
 void k_icondialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2151,8 +2151,8 @@ QPaintDevice* k_icondialog_redirected(void* self, void* offset) {
     return KIconDialog_Redirected((KIconDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_icondialog_qbase_redirected(void* self, void* offset) {
-    return KIconDialog_QBaseRedirected((KIconDialog*)self, (QPoint*)offset);
+QPaintDevice* k_icondialog_super_redirected(void* self, void* offset) {
+    return KIconDialog_SuperRedirected((KIconDialog*)self, (QPoint*)offset);
 }
 
 void k_icondialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2163,8 +2163,8 @@ QPainter* k_icondialog_shared_painter(void* self) {
     return KIconDialog_SharedPainter((KIconDialog*)self);
 }
 
-QPainter* k_icondialog_qbase_shared_painter(void* self) {
-    return KIconDialog_QBaseSharedPainter((KIconDialog*)self);
+QPainter* k_icondialog_super_shared_painter(void* self) {
+    return KIconDialog_SuperSharedPainter((KIconDialog*)self);
 }
 
 void k_icondialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2175,8 +2175,8 @@ void k_icondialog_input_method_event(void* self, void* param1) {
     KIconDialog_InputMethodEvent((KIconDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_icondialog_qbase_input_method_event(void* self, void* param1) {
-    KIconDialog_QBaseInputMethodEvent((KIconDialog*)self, (QInputMethodEvent*)param1);
+void k_icondialog_super_input_method_event(void* self, void* param1) {
+    KIconDialog_SuperInputMethodEvent((KIconDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_icondialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2187,8 +2187,8 @@ QVariant* k_icondialog_input_method_query(void* self, int32_t param1) {
     return KIconDialog_InputMethodQuery((KIconDialog*)self, param1);
 }
 
-QVariant* k_icondialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KIconDialog_QBaseInputMethodQuery((KIconDialog*)self, param1);
+QVariant* k_icondialog_super_input_method_query(void* self, int32_t param1) {
+    return KIconDialog_SuperInputMethodQuery((KIconDialog*)self, param1);
 }
 
 void k_icondialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2199,8 +2199,8 @@ bool k_icondialog_focus_next_prev_child(void* self, bool next) {
     return KIconDialog_FocusNextPrevChild((KIconDialog*)self, next);
 }
 
-bool k_icondialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KIconDialog_QBaseFocusNextPrevChild((KIconDialog*)self, next);
+bool k_icondialog_super_focus_next_prev_child(void* self, bool next) {
+    return KIconDialog_SuperFocusNextPrevChild((KIconDialog*)self, next);
 }
 
 void k_icondialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2211,8 +2211,8 @@ void k_icondialog_timer_event(void* self, void* event) {
     KIconDialog_TimerEvent((KIconDialog*)self, (QTimerEvent*)event);
 }
 
-void k_icondialog_qbase_timer_event(void* self, void* event) {
-    KIconDialog_QBaseTimerEvent((KIconDialog*)self, (QTimerEvent*)event);
+void k_icondialog_super_timer_event(void* self, void* event) {
+    KIconDialog_SuperTimerEvent((KIconDialog*)self, (QTimerEvent*)event);
 }
 
 void k_icondialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2223,8 +2223,8 @@ void k_icondialog_child_event(void* self, void* event) {
     KIconDialog_ChildEvent((KIconDialog*)self, (QChildEvent*)event);
 }
 
-void k_icondialog_qbase_child_event(void* self, void* event) {
-    KIconDialog_QBaseChildEvent((KIconDialog*)self, (QChildEvent*)event);
+void k_icondialog_super_child_event(void* self, void* event) {
+    KIconDialog_SuperChildEvent((KIconDialog*)self, (QChildEvent*)event);
 }
 
 void k_icondialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2235,8 +2235,8 @@ void k_icondialog_custom_event(void* self, void* event) {
     KIconDialog_CustomEvent((KIconDialog*)self, (QEvent*)event);
 }
 
-void k_icondialog_qbase_custom_event(void* self, void* event) {
-    KIconDialog_QBaseCustomEvent((KIconDialog*)self, (QEvent*)event);
+void k_icondialog_super_custom_event(void* self, void* event) {
+    KIconDialog_SuperCustomEvent((KIconDialog*)self, (QEvent*)event);
 }
 
 void k_icondialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2247,8 +2247,8 @@ void k_icondialog_connect_notify(void* self, void* signal) {
     KIconDialog_ConnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_icondialog_qbase_connect_notify(void* self, void* signal) {
-    KIconDialog_QBaseConnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
+void k_icondialog_super_connect_notify(void* self, void* signal) {
+    KIconDialog_SuperConnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_icondialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2259,8 +2259,8 @@ void k_icondialog_disconnect_notify(void* self, void* signal) {
     KIconDialog_DisconnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_icondialog_qbase_disconnect_notify(void* self, void* signal) {
-    KIconDialog_QBaseDisconnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
+void k_icondialog_super_disconnect_notify(void* self, void* signal) {
+    KIconDialog_SuperDisconnectNotify((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_icondialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2271,8 +2271,8 @@ void k_icondialog_adjust_position(void* self, void* param1) {
     KIconDialog_AdjustPosition((KIconDialog*)self, (QWidget*)param1);
 }
 
-void k_icondialog_qbase_adjust_position(void* self, void* param1) {
-    KIconDialog_QBaseAdjustPosition((KIconDialog*)self, (QWidget*)param1);
+void k_icondialog_super_adjust_position(void* self, void* param1) {
+    KIconDialog_SuperAdjustPosition((KIconDialog*)self, (QWidget*)param1);
 }
 
 void k_icondialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2283,8 +2283,8 @@ void k_icondialog_update_micro_focus(void* self) {
     KIconDialog_UpdateMicroFocus((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_update_micro_focus(void* self) {
-    KIconDialog_QBaseUpdateMicroFocus((KIconDialog*)self);
+void k_icondialog_super_update_micro_focus(void* self) {
+    KIconDialog_SuperUpdateMicroFocus((KIconDialog*)self);
 }
 
 void k_icondialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2295,8 +2295,8 @@ void k_icondialog_create(void* self) {
     KIconDialog_Create((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_create(void* self) {
-    KIconDialog_QBaseCreate((KIconDialog*)self);
+void k_icondialog_super_create(void* self) {
+    KIconDialog_SuperCreate((KIconDialog*)self);
 }
 
 void k_icondialog_on_create(void* self, void (*callback)()) {
@@ -2307,8 +2307,8 @@ void k_icondialog_destroy(void* self) {
     KIconDialog_Destroy((KIconDialog*)self);
 }
 
-void k_icondialog_qbase_destroy(void* self) {
-    KIconDialog_QBaseDestroy((KIconDialog*)self);
+void k_icondialog_super_destroy(void* self) {
+    KIconDialog_SuperDestroy((KIconDialog*)self);
 }
 
 void k_icondialog_on_destroy(void* self, void (*callback)()) {
@@ -2319,8 +2319,8 @@ bool k_icondialog_focus_next_child(void* self) {
     return KIconDialog_FocusNextChild((KIconDialog*)self);
 }
 
-bool k_icondialog_qbase_focus_next_child(void* self) {
-    return KIconDialog_QBaseFocusNextChild((KIconDialog*)self);
+bool k_icondialog_super_focus_next_child(void* self) {
+    return KIconDialog_SuperFocusNextChild((KIconDialog*)self);
 }
 
 void k_icondialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2331,8 +2331,8 @@ bool k_icondialog_focus_previous_child(void* self) {
     return KIconDialog_FocusPreviousChild((KIconDialog*)self);
 }
 
-bool k_icondialog_qbase_focus_previous_child(void* self) {
-    return KIconDialog_QBaseFocusPreviousChild((KIconDialog*)self);
+bool k_icondialog_super_focus_previous_child(void* self) {
+    return KIconDialog_SuperFocusPreviousChild((KIconDialog*)self);
 }
 
 void k_icondialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2343,8 +2343,8 @@ QObject* k_icondialog_sender(void* self) {
     return KIconDialog_Sender((KIconDialog*)self);
 }
 
-QObject* k_icondialog_qbase_sender(void* self) {
-    return KIconDialog_QBaseSender((KIconDialog*)self);
+QObject* k_icondialog_super_sender(void* self) {
+    return KIconDialog_SuperSender((KIconDialog*)self);
 }
 
 void k_icondialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2355,8 +2355,8 @@ int32_t k_icondialog_sender_signal_index(void* self) {
     return KIconDialog_SenderSignalIndex((KIconDialog*)self);
 }
 
-int32_t k_icondialog_qbase_sender_signal_index(void* self) {
-    return KIconDialog_QBaseSenderSignalIndex((KIconDialog*)self);
+int32_t k_icondialog_super_sender_signal_index(void* self) {
+    return KIconDialog_SuperSenderSignalIndex((KIconDialog*)self);
 }
 
 void k_icondialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2367,8 +2367,8 @@ int32_t k_icondialog_receivers(void* self, const char* signal) {
     return KIconDialog_Receivers((KIconDialog*)self, signal);
 }
 
-int32_t k_icondialog_qbase_receivers(void* self, const char* signal) {
-    return KIconDialog_QBaseReceivers((KIconDialog*)self, signal);
+int32_t k_icondialog_super_receivers(void* self, const char* signal) {
+    return KIconDialog_SuperReceivers((KIconDialog*)self, signal);
 }
 
 void k_icondialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2379,8 +2379,8 @@ bool k_icondialog_is_signal_connected(void* self, void* signal) {
     return KIconDialog_IsSignalConnected((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_icondialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KIconDialog_QBaseIsSignalConnected((KIconDialog*)self, (QMetaMethod*)signal);
+bool k_icondialog_super_is_signal_connected(void* self, void* signal) {
+    return KIconDialog_SuperIsSignalConnected((KIconDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_icondialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2391,8 +2391,8 @@ double k_icondialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KIconDialog_GetDecodedMetricF((KIconDialog*)self, metricA, metricB);
 }
 
-double k_icondialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KIconDialog_QBaseGetDecodedMetricF((KIconDialog*)self, metricA, metricB);
+double k_icondialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KIconDialog_SuperGetDecodedMetricF((KIconDialog*)self, metricA, metricB);
 }
 
 void k_icondialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

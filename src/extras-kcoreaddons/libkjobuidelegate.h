@@ -40,13 +40,17 @@ const QMetaObject* k_jobuidelegate_meta_object(void* self);
 ///
 void k_jobuidelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_meta_object` instead
+///
+#define k_jobuidelegate_qbase_meta_object k_jobuidelegate_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 ///
-const QMetaObject* k_jobuidelegate_qbase_meta_object(void* self);
+const QMetaObject* k_jobuidelegate_super_meta_object(void* self);
 
 /// @param self KJobUiDelegate*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_jobuidelegate_metacast(void* self, const char* param1);
 ///
 void k_jobuidelegate_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_metacast` instead
+///
+#define k_jobuidelegate_qbase_metacast k_jobuidelegate_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 /// @param param1 const char*
 ///
-void* k_jobuidelegate_qbase_metacast(void* self, const char* param1);
+void* k_jobuidelegate_super_metacast(void* self, const char* param1);
 
 /// @param self KJobUiDelegate*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_jobuidelegate_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void k_jobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_metacall` instead
+///
+#define k_jobuidelegate_qbase_metacall k_jobuidelegate_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
@@ -88,7 +100,7 @@ void k_jobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_jobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_jobuidelegate_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ bool k_jobuidelegate_set_job(void* self, void* job);
 ///
 void k_jobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_set_job` instead
+///
+#define k_jobuidelegate_qbase_set_job k_jobuidelegate_super_set_job
+
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#setJob)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void k_jobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*));
 /// @param self KJobUiDelegate*
 /// @param job KJob*
 ///
-bool k_jobuidelegate_qbase_set_job(void* self, void* job);
+bool k_jobuidelegate_super_set_job(void* self, void* job);
 
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#job)
 ///
@@ -138,13 +154,17 @@ KJob* k_jobuidelegate_job(void* self);
 ///
 void k_jobuidelegate_on_job(void* self, KJob* (*callback)());
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_job` instead
+///
+#define k_jobuidelegate_qbase_job k_jobuidelegate_super_job
+
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#job)
 ///
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 ///
-KJob* k_jobuidelegate_qbase_job(void* self);
+KJob* k_jobuidelegate_super_job(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#showErrorMessage)
 ///
@@ -161,13 +181,17 @@ void k_jobuidelegate_show_error_message(void* self);
 ///
 void k_jobuidelegate_on_show_error_message(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_show_error_message` instead
+///
+#define k_jobuidelegate_qbase_show_error_message k_jobuidelegate_super_show_error_message
+
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#showErrorMessage)
 ///
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 ///
-void k_jobuidelegate_qbase_show_error_message(void* self);
+void k_jobuidelegate_super_show_error_message(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#setAutoErrorHandlingEnabled)
 ///
@@ -212,6 +236,10 @@ void k_jobuidelegate_slot_warning(void* self, void* job, const char* message);
 ///
 void k_jobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_slot_warning` instead
+///
+#define k_jobuidelegate_qbase_slot_warning k_jobuidelegate_super_slot_warning
+
 /// [Upstream resources](https://api.kde.org/kjobuidelegate.html#slotWarning)
 ///
 /// Base class method implementation
@@ -220,7 +248,7 @@ void k_jobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, 
 /// @param job KJob*
 /// @param message const char*
 ///
-void k_jobuidelegate_qbase_slot_warning(void* self, void* job, const char* message);
+void k_jobuidelegate_super_slot_warning(void* self, void* job, const char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -699,6 +727,10 @@ void k_jobuidelegate_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_jobuidelegate_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_event` instead
+///
+#define k_jobuidelegate_qbase_event k_jobuidelegate_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -708,7 +740,7 @@ bool k_jobuidelegate_event(void* self, void* event);
 /// @param self KJobUiDelegate*
 /// @param event QEvent*
 ///
-bool k_jobuidelegate_qbase_event(void* self, void* event);
+bool k_jobuidelegate_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -733,6 +765,10 @@ void k_jobuidelegate_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_jobuidelegate_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_event_filter` instead
+///
+#define k_jobuidelegate_qbase_event_filter k_jobuidelegate_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -743,7 +779,7 @@ bool k_jobuidelegate_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_jobuidelegate_qbase_event_filter(void* self, void* watched, void* event);
+bool k_jobuidelegate_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -767,6 +803,10 @@ void k_jobuidelegate_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void k_jobuidelegate_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_timer_event` instead
+///
+#define k_jobuidelegate_qbase_timer_event k_jobuidelegate_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -776,7 +816,7 @@ void k_jobuidelegate_timer_event(void* self, void* event);
 /// @param self KJobUiDelegate*
 /// @param event QTimerEvent*
 ///
-void k_jobuidelegate_qbase_timer_event(void* self, void* event);
+void k_jobuidelegate_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -800,6 +840,10 @@ void k_jobuidelegate_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_jobuidelegate_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_child_event` instead
+///
+#define k_jobuidelegate_qbase_child_event k_jobuidelegate_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -809,7 +853,7 @@ void k_jobuidelegate_child_event(void* self, void* event);
 /// @param self KJobUiDelegate*
 /// @param event QChildEvent*
 ///
-void k_jobuidelegate_qbase_child_event(void* self, void* event);
+void k_jobuidelegate_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -833,6 +877,10 @@ void k_jobuidelegate_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_jobuidelegate_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_custom_event` instead
+///
+#define k_jobuidelegate_qbase_custom_event k_jobuidelegate_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -842,7 +890,7 @@ void k_jobuidelegate_custom_event(void* self, void* event);
 /// @param self KJobUiDelegate*
 /// @param event QEvent*
 ///
-void k_jobuidelegate_qbase_custom_event(void* self, void* event);
+void k_jobuidelegate_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -866,6 +914,10 @@ void k_jobuidelegate_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void k_jobuidelegate_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_connect_notify` instead
+///
+#define k_jobuidelegate_qbase_connect_notify k_jobuidelegate_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -875,7 +927,7 @@ void k_jobuidelegate_connect_notify(void* self, void* signal);
 /// @param self KJobUiDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_jobuidelegate_qbase_connect_notify(void* self, void* signal);
+void k_jobuidelegate_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -899,6 +951,10 @@ void k_jobuidelegate_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_jobuidelegate_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_disconnect_notify` instead
+///
+#define k_jobuidelegate_qbase_disconnect_notify k_jobuidelegate_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -908,7 +964,7 @@ void k_jobuidelegate_disconnect_notify(void* self, void* signal);
 /// @param self KJobUiDelegate*
 /// @param signal QMetaMethod*
 ///
-void k_jobuidelegate_qbase_disconnect_notify(void* self, void* signal);
+void k_jobuidelegate_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,6 +987,10 @@ void k_jobuidelegate_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* k_jobuidelegate_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_sender` instead
+///
+#define k_jobuidelegate_qbase_sender k_jobuidelegate_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -939,7 +999,7 @@ QObject* k_jobuidelegate_sender(void* self);
 ///
 /// @param self KJobUiDelegate*
 ///
-QObject* k_jobuidelegate_qbase_sender(void* self);
+QObject* k_jobuidelegate_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -962,6 +1022,10 @@ void k_jobuidelegate_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_jobuidelegate_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_sender_signal_index` instead
+///
+#define k_jobuidelegate_qbase_sender_signal_index k_jobuidelegate_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -970,7 +1034,7 @@ int32_t k_jobuidelegate_sender_signal_index(void* self);
 ///
 /// @param self KJobUiDelegate*
 ///
-int32_t k_jobuidelegate_qbase_sender_signal_index(void* self);
+int32_t k_jobuidelegate_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -994,6 +1058,10 @@ void k_jobuidelegate_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_jobuidelegate_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_receivers` instead
+///
+#define k_jobuidelegate_qbase_receivers k_jobuidelegate_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1003,7 +1071,7 @@ int32_t k_jobuidelegate_receivers(void* self, const char* signal);
 /// @param self KJobUiDelegate*
 /// @param signal const char*
 ///
-int32_t k_jobuidelegate_qbase_receivers(void* self, const char* signal);
+int32_t k_jobuidelegate_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1027,6 +1095,10 @@ void k_jobuidelegate_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool k_jobuidelegate_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_jobuidelegate_super_is_signal_connected` instead
+///
+#define k_jobuidelegate_qbase_is_signal_connected k_jobuidelegate_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1036,7 +1108,7 @@ bool k_jobuidelegate_is_signal_connected(void* self, void* signal);
 /// @param self KJobUiDelegate*
 /// @param signal QMetaMethod*
 ///
-bool k_jobuidelegate_qbase_is_signal_connected(void* self, void* signal);
+bool k_jobuidelegate_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

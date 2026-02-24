@@ -65,13 +65,17 @@ bool q_accessiblewidget_is_valid(void* self);
 ///
 void q_accessiblewidget_on_is_valid(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_is_valid` instead
+///
+#define q_accessiblewidget_qbase_is_valid q_accessiblewidget_super_is_valid
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#isValid)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-bool q_accessiblewidget_qbase_is_valid(void* self);
+bool q_accessiblewidget_super_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#window)
 ///
@@ -88,13 +92,17 @@ QWindow* q_accessiblewidget_window(void* self);
 ///
 void q_accessiblewidget_on_window(void* self, QWindow* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_window` instead
+///
+#define q_accessiblewidget_qbase_window q_accessiblewidget_super_window
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#window)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QWindow* q_accessiblewidget_qbase_window(void* self);
+QWindow* q_accessiblewidget_super_window(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#childCount)
 ///
@@ -111,13 +119,17 @@ int32_t q_accessiblewidget_child_count(void* self);
 ///
 void q_accessiblewidget_on_child_count(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_child_count` instead
+///
+#define q_accessiblewidget_qbase_child_count q_accessiblewidget_super_child_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#childCount)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-int32_t q_accessiblewidget_qbase_child_count(void* self);
+int32_t q_accessiblewidget_super_child_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#indexOfChild)
 ///
@@ -135,6 +147,10 @@ int32_t q_accessiblewidget_index_of_child(void* self, void* child);
 ///
 void q_accessiblewidget_on_index_of_child(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_index_of_child` instead
+///
+#define q_accessiblewidget_qbase_index_of_child q_accessiblewidget_super_index_of_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#indexOfChild)
 ///
 /// Base class method implementation
@@ -142,7 +158,7 @@ void q_accessiblewidget_on_index_of_child(void* self, int32_t (*callback)(void*,
 /// @param self QAccessibleWidget*
 /// @param child QAccessibleInterface*
 ///
-int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child);
+int32_t q_accessiblewidget_super_index_of_child(void* self, void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
@@ -162,6 +178,10 @@ libqt_list q_accessiblewidget_relations(void* self, int32_t match);
 ///
 void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_relations` instead
+///
+#define q_accessiblewidget_qbase_relations q_accessiblewidget_super_relations
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
 /// Base class method implementation
@@ -171,7 +191,7 @@ void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, i
 ///
 /// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
-libqt_list q_accessiblewidget_qbase_relations(void* self, int32_t match);
+libqt_list q_accessiblewidget_super_relations(void* self, int32_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///
@@ -188,13 +208,17 @@ QAccessibleInterface* q_accessiblewidget_focus_child(void* self);
 ///
 void q_accessiblewidget_on_focus_child(void* self, QAccessibleInterface* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_focus_child` instead
+///
+#define q_accessiblewidget_qbase_focus_child q_accessiblewidget_super_focus_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_qbase_focus_child(void* self);
+QAccessibleInterface* q_accessiblewidget_super_focus_child(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#rect)
 ///
@@ -211,13 +235,17 @@ QRect* q_accessiblewidget_rect(void* self);
 ///
 void q_accessiblewidget_on_rect(void* self, QRect* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_rect` instead
+///
+#define q_accessiblewidget_qbase_rect q_accessiblewidget_super_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#rect)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QRect* q_accessiblewidget_qbase_rect(void* self);
+QRect* q_accessiblewidget_super_rect(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parent)
 ///
@@ -234,13 +262,17 @@ QAccessibleInterface* q_accessiblewidget_parent(void* self);
 ///
 void q_accessiblewidget_on_parent(void* self, QAccessibleInterface* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_parent` instead
+///
+#define q_accessiblewidget_qbase_parent q_accessiblewidget_super_parent
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parent)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QAccessibleInterface* q_accessiblewidget_qbase_parent(void* self);
+QAccessibleInterface* q_accessiblewidget_super_parent(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#child)
 ///
@@ -258,6 +290,10 @@ QAccessibleInterface* q_accessiblewidget_child(void* self, int index);
 ///
 void q_accessiblewidget_on_child(void* self, QAccessibleInterface* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_child` instead
+///
+#define q_accessiblewidget_qbase_child q_accessiblewidget_super_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#child)
 ///
 /// Base class method implementation
@@ -265,7 +301,7 @@ void q_accessiblewidget_on_child(void* self, QAccessibleInterface* (*callback)(v
 /// @param self QAccessibleWidget*
 /// @param index int
 ///
-QAccessibleInterface* q_accessiblewidget_qbase_child(void* self, int index);
+QAccessibleInterface* q_accessiblewidget_super_child(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
@@ -285,6 +321,10 @@ const char* q_accessiblewidget_text(void* self, int32_t t);
 ///
 void q_accessiblewidget_on_text(void* self, const char* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_text` instead
+///
+#define q_accessiblewidget_qbase_text q_accessiblewidget_super_text
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#text)
 ///
 /// Base class method implementation
@@ -292,7 +332,7 @@ void q_accessiblewidget_on_text(void* self, const char* (*callback)(void*, int32
 /// @param self QAccessibleWidget*
 /// @param t enum QAccessible__Text
 ///
-const char* q_accessiblewidget_qbase_text(void* self, int32_t t);
+const char* q_accessiblewidget_super_text(void* self, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#role)
 ///
@@ -311,6 +351,10 @@ int32_t q_accessiblewidget_role(void* self);
 ///
 void q_accessiblewidget_on_role(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_role` instead
+///
+#define q_accessiblewidget_qbase_role q_accessiblewidget_super_role
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#role)
 ///
 /// Base class method implementation
@@ -319,7 +363,7 @@ void q_accessiblewidget_on_role(void* self, int32_t (*callback)());
 ///
 /// @return enum QAccessible__Role
 ///
-int32_t q_accessiblewidget_qbase_role(void* self);
+int32_t q_accessiblewidget_super_role(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#state)
 ///
@@ -336,13 +380,17 @@ QAccessible__State* q_accessiblewidget_state(void* self);
 ///
 void q_accessiblewidget_on_state(void* self, QAccessible__State* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_state` instead
+///
+#define q_accessiblewidget_qbase_state q_accessiblewidget_super_state
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#state)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QAccessible__State* q_accessiblewidget_qbase_state(void* self);
+QAccessible__State* q_accessiblewidget_super_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#foregroundColor)
 ///
@@ -359,13 +407,17 @@ QColor* q_accessiblewidget_foreground_color(void* self);
 ///
 void q_accessiblewidget_on_foreground_color(void* self, QColor* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_foreground_color` instead
+///
+#define q_accessiblewidget_qbase_foreground_color q_accessiblewidget_super_foreground_color
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#foregroundColor)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_qbase_foreground_color(void* self);
+QColor* q_accessiblewidget_super_foreground_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#backgroundColor)
 ///
@@ -382,13 +434,17 @@ QColor* q_accessiblewidget_background_color(void* self);
 ///
 void q_accessiblewidget_on_background_color(void* self, QColor* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_background_color` instead
+///
+#define q_accessiblewidget_qbase_background_color q_accessiblewidget_super_background_color
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#backgroundColor)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QColor* q_accessiblewidget_qbase_background_color(void* self);
+QColor* q_accessiblewidget_super_background_color(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#interface_cast)
 ///
@@ -406,6 +462,10 @@ void* q_accessiblewidget_interface_cast(void* self, int32_t t);
 ///
 void q_accessiblewidget_on_interface_cast(void* self, void* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_interface_cast` instead
+///
+#define q_accessiblewidget_qbase_interface_cast q_accessiblewidget_super_interface_cast
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#interface_cast)
 ///
 /// Base class method implementation
@@ -413,7 +473,7 @@ void q_accessiblewidget_on_interface_cast(void* self, void* (*callback)(void*, i
 /// @param self QAccessibleWidget*
 /// @param t enum QAccessible__InterfaceType
 ///
-void* q_accessiblewidget_qbase_interface_cast(void* self, int32_t t);
+void* q_accessiblewidget_super_interface_cast(void* self, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#actionNames)
 ///
@@ -432,13 +492,17 @@ const char** q_accessiblewidget_action_names(void* self);
 ///
 void q_accessiblewidget_on_action_names(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_action_names` instead
+///
+#define q_accessiblewidget_qbase_action_names q_accessiblewidget_super_action_names
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#actionNames)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-const char** q_accessiblewidget_qbase_action_names(void* self);
+const char** q_accessiblewidget_super_action_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#doAction)
 ///
@@ -456,6 +520,10 @@ void q_accessiblewidget_do_action(void* self, const char* actionName);
 ///
 void q_accessiblewidget_on_do_action(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_do_action` instead
+///
+#define q_accessiblewidget_qbase_do_action q_accessiblewidget_super_do_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#doAction)
 ///
 /// Base class method implementation
@@ -463,7 +531,7 @@ void q_accessiblewidget_on_do_action(void* self, void (*callback)(void*, const c
 /// @param self QAccessibleWidget*
 /// @param actionName const char*
 ///
-void q_accessiblewidget_qbase_do_action(void* self, const char* actionName);
+void q_accessiblewidget_super_do_action(void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#keyBindingsForAction)
 ///
@@ -483,6 +551,10 @@ const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* 
 ///
 void q_accessiblewidget_on_key_bindings_for_action(void* self, const char** (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_key_bindings_for_action` instead
+///
+#define q_accessiblewidget_qbase_key_bindings_for_action q_accessiblewidget_super_key_bindings_for_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#keyBindingsForAction)
 ///
 /// Base class method implementation
@@ -490,7 +562,7 @@ void q_accessiblewidget_on_key_bindings_for_action(void* self, const char** (*ca
 /// @param self QAccessibleWidget*
 /// @param actionName const char*
 ///
-const char** q_accessiblewidget_qbase_key_bindings_for_action(void* self, const char* actionName);
+const char** q_accessiblewidget_super_key_bindings_for_action(void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#widget)
 ///
@@ -507,13 +579,17 @@ QWidget* q_accessiblewidget_widget(void* self);
 ///
 void q_accessiblewidget_on_widget(void* self, QWidget* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_widget` instead
+///
+#define q_accessiblewidget_qbase_widget q_accessiblewidget_super_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#widget)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QWidget* q_accessiblewidget_qbase_widget(void* self);
+QWidget* q_accessiblewidget_super_widget(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parentObject)
 ///
@@ -530,13 +606,17 @@ QObject* q_accessiblewidget_parent_object(void* self);
 ///
 void q_accessiblewidget_on_parent_object(void* self, QObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_parent_object` instead
+///
+#define q_accessiblewidget_qbase_parent_object q_accessiblewidget_super_parent_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#parentObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QAccessibleWidget*
 ///
-QObject* q_accessiblewidget_qbase_parent_object(void* self);
+QObject* q_accessiblewidget_super_parent_object(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#addControllingSignal)
 ///
@@ -554,6 +634,10 @@ void q_accessiblewidget_add_controlling_signal(void* self, const char* signal);
 ///
 void q_accessiblewidget_on_add_controlling_signal(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_add_controlling_signal` instead
+///
+#define q_accessiblewidget_qbase_add_controlling_signal q_accessiblewidget_super_add_controlling_signal
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#addControllingSignal)
 ///
 /// Base class method implementation
@@ -561,7 +645,7 @@ void q_accessiblewidget_on_add_controlling_signal(void* self, void (*callback)(v
 /// @param self QAccessibleWidget*
 /// @param signal const char*
 ///
-void q_accessiblewidget_qbase_add_controlling_signal(void* self, const char* signal);
+void q_accessiblewidget_super_add_controlling_signal(void* self, const char* signal);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -782,6 +866,10 @@ const char* q_accessiblewidget_tr3(const char* sourceText, const char* disambigu
 ///
 QObject* q_accessiblewidget_object(void* self);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_object` instead
+///
+#define q_accessiblewidget_qbase_object q_accessiblewidget_super_object
+
 /// Inherited from QAccessibleObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleobject.html#object)
@@ -790,7 +878,7 @@ QObject* q_accessiblewidget_object(void* self);
 ///
 /// @param self QAccessibleWidget*
 ///
-QObject* q_accessiblewidget_qbase_object(void* self);
+QObject* q_accessiblewidget_super_object(void* self);
 
 /// Inherited from QAccessibleObject
 ///
@@ -815,6 +903,10 @@ void q_accessiblewidget_on_object(void* self, QObject* (*callback)());
 ///
 void q_accessiblewidget_set_text(void* self, int32_t t, const char* text);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_set_text` instead
+///
+#define q_accessiblewidget_qbase_set_text q_accessiblewidget_super_set_text
+
 /// Inherited from QAccessibleObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleobject.html#setText)
@@ -825,7 +917,7 @@ void q_accessiblewidget_set_text(void* self, int32_t t, const char* text);
 /// @param t enum QAccessible__Text
 /// @param text const char*
 ///
-void q_accessiblewidget_qbase_set_text(void* self, int32_t t, const char* text);
+void q_accessiblewidget_super_set_text(void* self, int32_t t, const char* text);
 
 /// Inherited from QAccessibleObject
 ///
@@ -850,6 +942,10 @@ void q_accessiblewidget_on_set_text(void* self, void (*callback)(void*, int32_t,
 ///
 QAccessibleInterface* q_accessiblewidget_child_at(void* self, int x, int y);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_child_at` instead
+///
+#define q_accessiblewidget_qbase_child_at q_accessiblewidget_super_child_at
+
 /// Inherited from QAccessibleObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleobject.html#childAt)
@@ -860,7 +956,7 @@ QAccessibleInterface* q_accessiblewidget_child_at(void* self, int x, int y);
 /// @param x int
 /// @param y int
 ///
-QAccessibleInterface* q_accessiblewidget_qbase_child_at(void* self, int x, int y);
+QAccessibleInterface* q_accessiblewidget_super_child_at(void* self, int x, int y);
 
 /// Inherited from QAccessibleObject
 ///
@@ -885,6 +981,10 @@ void q_accessiblewidget_on_child_at(void* self, QAccessibleInterface* (*callback
 ///
 void q_accessiblewidget_virtual_hook(void* self, int id, void* data);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_virtual_hook` instead
+///
+#define q_accessiblewidget_qbase_virtual_hook q_accessiblewidget_super_virtual_hook
+
 /// Inherited from QAccessibleInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#virtual_hook)
@@ -895,7 +995,7 @@ void q_accessiblewidget_virtual_hook(void* self, int id, void* data);
 /// @param id int
 /// @param data void*
 ///
-void q_accessiblewidget_qbase_virtual_hook(void* self, int id, void* data);
+void q_accessiblewidget_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -921,6 +1021,10 @@ void q_accessiblewidget_on_virtual_hook(void* self, void (*callback)(void*, int,
 ///
 const char* q_accessiblewidget_localized_action_name(void* self, const char* name);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_localized_action_name` instead
+///
+#define q_accessiblewidget_qbase_localized_action_name q_accessiblewidget_super_localized_action_name
+
 /// Inherited from QAccessibleActionInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionName)
@@ -932,7 +1036,7 @@ const char* q_accessiblewidget_localized_action_name(void* self, const char* nam
 /// @param self QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_qbase_localized_action_name(void* self, const char* name);
+const char* q_accessiblewidget_super_localized_action_name(void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///
@@ -958,6 +1062,10 @@ void q_accessiblewidget_on_localized_action_name(void* self, const char* (*callb
 ///
 const char* q_accessiblewidget_localized_action_description(void* self, const char* name);
 
+/// @warning DEPRECATED: Use `q_accessiblewidget_super_localized_action_description` instead
+///
+#define q_accessiblewidget_qbase_localized_action_description q_accessiblewidget_super_localized_action_description
+
 /// Inherited from QAccessibleActionInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionDescription)
@@ -969,7 +1077,7 @@ const char* q_accessiblewidget_localized_action_description(void* self, const ch
 /// @param self QAccessibleWidget*
 /// @param name const char*
 ///
-const char* q_accessiblewidget_qbase_localized_action_description(void* self, const char* name);
+const char* q_accessiblewidget_super_localized_action_description(void* self, const char* name);
 
 /// Inherited from QAccessibleActionInterface
 ///

@@ -31,8 +31,8 @@ void q_signaltransition_on_meta_object(void* self, const QMetaObject* (*callback
     QSignalTransition_OnMetaObject((QSignalTransition*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_signaltransition_qbase_meta_object(void* self) {
-    return QSignalTransition_QBaseMetaObject((QSignalTransition*)self);
+const QMetaObject* q_signaltransition_super_meta_object(void* self) {
+    return QSignalTransition_SuperMetaObject((QSignalTransition*)self);
 }
 
 void* q_signaltransition_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_signaltransition_on_metacast(void* self, void* (*callback)(void*, const c
     QSignalTransition_OnMetacast((QSignalTransition*)self, (intptr_t)callback);
 }
 
-void* q_signaltransition_qbase_metacast(void* self, const char* param1) {
-    return QSignalTransition_QBaseMetacast((QSignalTransition*)self, param1);
+void* q_signaltransition_super_metacast(void* self, const char* param1) {
+    return QSignalTransition_SuperMetacast((QSignalTransition*)self, param1);
 }
 
 int32_t q_signaltransition_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_signaltransition_on_metacall(void* self, int32_t (*callback)(void*, int32
     QSignalTransition_OnMetacall((QSignalTransition*)self, (intptr_t)callback);
 }
 
-int32_t q_signaltransition_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSignalTransition_QBaseMetacall((QSignalTransition*)self, param1, param2, param3);
+int32_t q_signaltransition_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSignalTransition_SuperMetacall((QSignalTransition*)self, param1, param2, param3);
 }
 
 const char* q_signaltransition_tr(const char* s) {
@@ -93,8 +93,8 @@ void q_signaltransition_on_event_test(void* self, bool (*callback)(void*, void*)
     QSignalTransition_OnEventTest((QSignalTransition*)self, (intptr_t)callback);
 }
 
-bool q_signaltransition_qbase_event_test(void* self, void* event) {
-    return QSignalTransition_QBaseEventTest((QSignalTransition*)self, (QEvent*)event);
+bool q_signaltransition_super_event_test(void* self, void* event) {
+    return QSignalTransition_SuperEventTest((QSignalTransition*)self, (QEvent*)event);
 }
 
 void q_signaltransition_on_transition(void* self, void* event) {
@@ -105,8 +105,8 @@ void q_signaltransition_on_on_transition(void* self, void (*callback)(void*, voi
     QSignalTransition_OnOnTransition((QSignalTransition*)self, (intptr_t)callback);
 }
 
-void q_signaltransition_qbase_on_transition(void* self, void* event) {
-    QSignalTransition_QBaseOnTransition((QSignalTransition*)self, (QEvent*)event);
+void q_signaltransition_super_on_transition(void* self, void* event) {
+    QSignalTransition_SuperOnTransition((QSignalTransition*)self, (QEvent*)event);
 }
 
 bool q_signaltransition_event(void* self, void* e) {
@@ -117,8 +117,8 @@ void q_signaltransition_on_event(void* self, bool (*callback)(void*, void*)) {
     QSignalTransition_OnEvent((QSignalTransition*)self, (intptr_t)callback);
 }
 
-bool q_signaltransition_qbase_event(void* self, void* e) {
-    return QSignalTransition_QBaseEvent((QSignalTransition*)self, (QEvent*)e);
+bool q_signaltransition_super_event(void* self, void* e) {
+    return QSignalTransition_SuperEvent((QSignalTransition*)self, (QEvent*)e);
 }
 
 const char* q_signaltransition_tr2(const char* s, const char* c) {
@@ -396,8 +396,8 @@ bool q_signaltransition_event_filter(void* self, void* watched, void* event) {
     return QSignalTransition_EventFilter((QSignalTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_signaltransition_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSignalTransition_QBaseEventFilter((QSignalTransition*)self, (QObject*)watched, (QEvent*)event);
+bool q_signaltransition_super_event_filter(void* self, void* watched, void* event) {
+    return QSignalTransition_SuperEventFilter((QSignalTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_signaltransition_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -408,8 +408,8 @@ void q_signaltransition_timer_event(void* self, void* event) {
     QSignalTransition_TimerEvent((QSignalTransition*)self, (QTimerEvent*)event);
 }
 
-void q_signaltransition_qbase_timer_event(void* self, void* event) {
-    QSignalTransition_QBaseTimerEvent((QSignalTransition*)self, (QTimerEvent*)event);
+void q_signaltransition_super_timer_event(void* self, void* event) {
+    QSignalTransition_SuperTimerEvent((QSignalTransition*)self, (QTimerEvent*)event);
 }
 
 void q_signaltransition_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void q_signaltransition_child_event(void* self, void* event) {
     QSignalTransition_ChildEvent((QSignalTransition*)self, (QChildEvent*)event);
 }
 
-void q_signaltransition_qbase_child_event(void* self, void* event) {
-    QSignalTransition_QBaseChildEvent((QSignalTransition*)self, (QChildEvent*)event);
+void q_signaltransition_super_child_event(void* self, void* event) {
+    QSignalTransition_SuperChildEvent((QSignalTransition*)self, (QChildEvent*)event);
 }
 
 void q_signaltransition_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void q_signaltransition_custom_event(void* self, void* event) {
     QSignalTransition_CustomEvent((QSignalTransition*)self, (QEvent*)event);
 }
 
-void q_signaltransition_qbase_custom_event(void* self, void* event) {
-    QSignalTransition_QBaseCustomEvent((QSignalTransition*)self, (QEvent*)event);
+void q_signaltransition_super_custom_event(void* self, void* event) {
+    QSignalTransition_SuperCustomEvent((QSignalTransition*)self, (QEvent*)event);
 }
 
 void q_signaltransition_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void q_signaltransition_connect_notify(void* self, void* signal) {
     QSignalTransition_ConnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_signaltransition_qbase_connect_notify(void* self, void* signal) {
-    QSignalTransition_QBaseConnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
+void q_signaltransition_super_connect_notify(void* self, void* signal) {
+    QSignalTransition_SuperConnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_signaltransition_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ void q_signaltransition_disconnect_notify(void* self, void* signal) {
     QSignalTransition_DisconnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_signaltransition_qbase_disconnect_notify(void* self, void* signal) {
-    QSignalTransition_QBaseDisconnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
+void q_signaltransition_super_disconnect_notify(void* self, void* signal) {
+    QSignalTransition_SuperDisconnectNotify((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_signaltransition_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -468,8 +468,8 @@ QObject* q_signaltransition_sender(void* self) {
     return QSignalTransition_Sender((QSignalTransition*)self);
 }
 
-QObject* q_signaltransition_qbase_sender(void* self) {
-    return QSignalTransition_QBaseSender((QSignalTransition*)self);
+QObject* q_signaltransition_super_sender(void* self) {
+    return QSignalTransition_SuperSender((QSignalTransition*)self);
 }
 
 void q_signaltransition_on_sender(void* self, QObject* (*callback)()) {
@@ -480,8 +480,8 @@ int32_t q_signaltransition_sender_signal_index(void* self) {
     return QSignalTransition_SenderSignalIndex((QSignalTransition*)self);
 }
 
-int32_t q_signaltransition_qbase_sender_signal_index(void* self) {
-    return QSignalTransition_QBaseSenderSignalIndex((QSignalTransition*)self);
+int32_t q_signaltransition_super_sender_signal_index(void* self) {
+    return QSignalTransition_SuperSenderSignalIndex((QSignalTransition*)self);
 }
 
 void q_signaltransition_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -492,8 +492,8 @@ int32_t q_signaltransition_receivers(void* self, const char* signal) {
     return QSignalTransition_Receivers((QSignalTransition*)self, signal);
 }
 
-int32_t q_signaltransition_qbase_receivers(void* self, const char* signal) {
-    return QSignalTransition_QBaseReceivers((QSignalTransition*)self, signal);
+int32_t q_signaltransition_super_receivers(void* self, const char* signal) {
+    return QSignalTransition_SuperReceivers((QSignalTransition*)self, signal);
 }
 
 void q_signaltransition_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -504,8 +504,8 @@ bool q_signaltransition_is_signal_connected(void* self, void* signal) {
     return QSignalTransition_IsSignalConnected((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
-bool q_signaltransition_qbase_is_signal_connected(void* self, void* signal) {
-    return QSignalTransition_QBaseIsSignalConnected((QSignalTransition*)self, (QMetaMethod*)signal);
+bool q_signaltransition_super_is_signal_connected(void* self, void* signal) {
+    return QSignalTransition_SuperIsSignalConnected((QSignalTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_signaltransition_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -23,8 +23,8 @@ void k_newfilemenu_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KNewFileMenu_OnMetaObject((KNewFileMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_newfilemenu_qbase_meta_object(void* self) {
-    return KNewFileMenu_QBaseMetaObject((KNewFileMenu*)self);
+const QMetaObject* k_newfilemenu_super_meta_object(void* self) {
+    return KNewFileMenu_SuperMetaObject((KNewFileMenu*)self);
 }
 
 void* k_newfilemenu_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_newfilemenu_on_metacast(void* self, void* (*callback)(void*, const char*)
     KNewFileMenu_OnMetacast((KNewFileMenu*)self, (intptr_t)callback);
 }
 
-void* k_newfilemenu_qbase_metacast(void* self, const char* param1) {
-    return KNewFileMenu_QBaseMetacast((KNewFileMenu*)self, param1);
+void* k_newfilemenu_super_metacast(void* self, const char* param1) {
+    return KNewFileMenu_SuperMetacast((KNewFileMenu*)self, param1);
 }
 
 int32_t k_newfilemenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_newfilemenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KNewFileMenu_OnMetacall((KNewFileMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_newfilemenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNewFileMenu_QBaseMetacall((KNewFileMenu*)self, param1, param2, param3);
+int32_t k_newfilemenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNewFileMenu_SuperMetacall((KNewFileMenu*)self, param1, param2, param3);
 }
 
 const char* k_newfilemenu_tr(const char* s) {
@@ -212,8 +212,8 @@ void k_newfilemenu_on_slot_result(void* self, void (*callback)(void*, void*)) {
     KNewFileMenu_OnSlotResult((KNewFileMenu*)self, (intptr_t)callback);
 }
 
-void k_newfilemenu_qbase_slot_result(void* self, void* job) {
-    KNewFileMenu_QBaseSlotResult((KNewFileMenu*)self, (KJob*)job);
+void k_newfilemenu_super_slot_result(void* self, void* job) {
+    KNewFileMenu_SuperSlotResult((KNewFileMenu*)self, (KJob*)job);
 }
 
 const char* k_newfilemenu_tr2(const char* s, const char* c) {
@@ -786,8 +786,8 @@ QWidget* k_newfilemenu_create_widget(void* self, void* parent) {
     return KNewFileMenu_CreateWidget((KNewFileMenu*)self, (QWidget*)parent);
 }
 
-QWidget* k_newfilemenu_qbase_create_widget(void* self, void* parent) {
-    return KNewFileMenu_QBaseCreateWidget((KNewFileMenu*)self, (QWidget*)parent);
+QWidget* k_newfilemenu_super_create_widget(void* self, void* parent) {
+    return KNewFileMenu_SuperCreateWidget((KNewFileMenu*)self, (QWidget*)parent);
 }
 
 void k_newfilemenu_on_create_widget(void* self, QWidget* (*callback)(void*, void*)) {
@@ -798,8 +798,8 @@ bool k_newfilemenu_event(void* self, void* param1) {
     return KNewFileMenu_Event((KNewFileMenu*)self, (QEvent*)param1);
 }
 
-bool k_newfilemenu_qbase_event(void* self, void* param1) {
-    return KNewFileMenu_QBaseEvent((KNewFileMenu*)self, (QEvent*)param1);
+bool k_newfilemenu_super_event(void* self, void* param1) {
+    return KNewFileMenu_SuperEvent((KNewFileMenu*)self, (QEvent*)param1);
 }
 
 void k_newfilemenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -810,8 +810,8 @@ bool k_newfilemenu_event_filter(void* self, void* param1, void* param2) {
     return KNewFileMenu_EventFilter((KNewFileMenu*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_newfilemenu_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KNewFileMenu_QBaseEventFilter((KNewFileMenu*)self, (QObject*)param1, (QEvent*)param2);
+bool k_newfilemenu_super_event_filter(void* self, void* param1, void* param2) {
+    return KNewFileMenu_SuperEventFilter((KNewFileMenu*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_newfilemenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -822,8 +822,8 @@ void k_newfilemenu_delete_widget(void* self, void* widget) {
     KNewFileMenu_DeleteWidget((KNewFileMenu*)self, (QWidget*)widget);
 }
 
-void k_newfilemenu_qbase_delete_widget(void* self, void* widget) {
-    KNewFileMenu_QBaseDeleteWidget((KNewFileMenu*)self, (QWidget*)widget);
+void k_newfilemenu_super_delete_widget(void* self, void* widget) {
+    KNewFileMenu_SuperDeleteWidget((KNewFileMenu*)self, (QWidget*)widget);
 }
 
 void k_newfilemenu_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -834,8 +834,8 @@ void k_newfilemenu_timer_event(void* self, void* event) {
     KNewFileMenu_TimerEvent((KNewFileMenu*)self, (QTimerEvent*)event);
 }
 
-void k_newfilemenu_qbase_timer_event(void* self, void* event) {
-    KNewFileMenu_QBaseTimerEvent((KNewFileMenu*)self, (QTimerEvent*)event);
+void k_newfilemenu_super_timer_event(void* self, void* event) {
+    KNewFileMenu_SuperTimerEvent((KNewFileMenu*)self, (QTimerEvent*)event);
 }
 
 void k_newfilemenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -846,8 +846,8 @@ void k_newfilemenu_child_event(void* self, void* event) {
     KNewFileMenu_ChildEvent((KNewFileMenu*)self, (QChildEvent*)event);
 }
 
-void k_newfilemenu_qbase_child_event(void* self, void* event) {
-    KNewFileMenu_QBaseChildEvent((KNewFileMenu*)self, (QChildEvent*)event);
+void k_newfilemenu_super_child_event(void* self, void* event) {
+    KNewFileMenu_SuperChildEvent((KNewFileMenu*)self, (QChildEvent*)event);
 }
 
 void k_newfilemenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -858,8 +858,8 @@ void k_newfilemenu_custom_event(void* self, void* event) {
     KNewFileMenu_CustomEvent((KNewFileMenu*)self, (QEvent*)event);
 }
 
-void k_newfilemenu_qbase_custom_event(void* self, void* event) {
-    KNewFileMenu_QBaseCustomEvent((KNewFileMenu*)self, (QEvent*)event);
+void k_newfilemenu_super_custom_event(void* self, void* event) {
+    KNewFileMenu_SuperCustomEvent((KNewFileMenu*)self, (QEvent*)event);
 }
 
 void k_newfilemenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -870,8 +870,8 @@ void k_newfilemenu_connect_notify(void* self, void* signal) {
     KNewFileMenu_ConnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_newfilemenu_qbase_connect_notify(void* self, void* signal) {
-    KNewFileMenu_QBaseConnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
+void k_newfilemenu_super_connect_notify(void* self, void* signal) {
+    KNewFileMenu_SuperConnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_newfilemenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -882,8 +882,8 @@ void k_newfilemenu_disconnect_notify(void* self, void* signal) {
     KNewFileMenu_DisconnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_newfilemenu_qbase_disconnect_notify(void* self, void* signal) {
-    KNewFileMenu_QBaseDisconnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
+void k_newfilemenu_super_disconnect_notify(void* self, void* signal) {
+    KNewFileMenu_SuperDisconnectNotify((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_newfilemenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -895,8 +895,8 @@ libqt_list /* of QWidget* */ k_newfilemenu_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_newfilemenu_qbase_created_widgets(void* self) {
-    libqt_list _arr = KNewFileMenu_QBaseCreatedWidgets((KNewFileMenu*)self);
+libqt_list /* of QWidget* */ k_newfilemenu_super_created_widgets(void* self) {
+    libqt_list _arr = KNewFileMenu_SuperCreatedWidgets((KNewFileMenu*)self);
     return _arr;
 }
 
@@ -908,8 +908,8 @@ QObject* k_newfilemenu_sender(void* self) {
     return KNewFileMenu_Sender((KNewFileMenu*)self);
 }
 
-QObject* k_newfilemenu_qbase_sender(void* self) {
-    return KNewFileMenu_QBaseSender((KNewFileMenu*)self);
+QObject* k_newfilemenu_super_sender(void* self) {
+    return KNewFileMenu_SuperSender((KNewFileMenu*)self);
 }
 
 void k_newfilemenu_on_sender(void* self, QObject* (*callback)()) {
@@ -920,8 +920,8 @@ int32_t k_newfilemenu_sender_signal_index(void* self) {
     return KNewFileMenu_SenderSignalIndex((KNewFileMenu*)self);
 }
 
-int32_t k_newfilemenu_qbase_sender_signal_index(void* self) {
-    return KNewFileMenu_QBaseSenderSignalIndex((KNewFileMenu*)self);
+int32_t k_newfilemenu_super_sender_signal_index(void* self) {
+    return KNewFileMenu_SuperSenderSignalIndex((KNewFileMenu*)self);
 }
 
 void k_newfilemenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -932,8 +932,8 @@ int32_t k_newfilemenu_receivers(void* self, const char* signal) {
     return KNewFileMenu_Receivers((KNewFileMenu*)self, signal);
 }
 
-int32_t k_newfilemenu_qbase_receivers(void* self, const char* signal) {
-    return KNewFileMenu_QBaseReceivers((KNewFileMenu*)self, signal);
+int32_t k_newfilemenu_super_receivers(void* self, const char* signal) {
+    return KNewFileMenu_SuperReceivers((KNewFileMenu*)self, signal);
 }
 
 void k_newfilemenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -944,8 +944,8 @@ bool k_newfilemenu_is_signal_connected(void* self, void* signal) {
     return KNewFileMenu_IsSignalConnected((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_newfilemenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KNewFileMenu_QBaseIsSignalConnected((KNewFileMenu*)self, (QMetaMethod*)signal);
+bool k_newfilemenu_super_is_signal_connected(void* self, void* signal) {
+    return KNewFileMenu_SuperIsSignalConnected((KNewFileMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_newfilemenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

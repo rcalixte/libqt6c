@@ -26,8 +26,8 @@ void k_xmlguifactory_on_meta_object(void* self, const QMetaObject* (*callback)()
     KXMLGUIFactory_OnMetaObject((KXMLGUIFactory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_xmlguifactory_qbase_meta_object(void* self) {
-    return KXMLGUIFactory_QBaseMetaObject((KXMLGUIFactory*)self);
+const QMetaObject* k_xmlguifactory_super_meta_object(void* self) {
+    return KXMLGUIFactory_SuperMetaObject((KXMLGUIFactory*)self);
 }
 
 void* k_xmlguifactory_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_xmlguifactory_on_metacast(void* self, void* (*callback)(void*, const char
     KXMLGUIFactory_OnMetacast((KXMLGUIFactory*)self, (intptr_t)callback);
 }
 
-void* k_xmlguifactory_qbase_metacast(void* self, const char* param1) {
-    return KXMLGUIFactory_QBaseMetacast((KXMLGUIFactory*)self, param1);
+void* k_xmlguifactory_super_metacast(void* self, const char* param1) {
+    return KXMLGUIFactory_SuperMetacast((KXMLGUIFactory*)self, param1);
 }
 
 int32_t k_xmlguifactory_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_xmlguifactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KXMLGUIFactory_OnMetacall((KXMLGUIFactory*)self, (intptr_t)callback);
 }
 
-int32_t k_xmlguifactory_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KXMLGUIFactory_QBaseMetacall((KXMLGUIFactory*)self, param1, param2, param3);
+int32_t k_xmlguifactory_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KXMLGUIFactory_SuperMetacall((KXMLGUIFactory*)self, param1, param2, param3);
 }
 
 const char* k_xmlguifactory_tr(const char* s) {
@@ -410,8 +410,8 @@ bool k_xmlguifactory_event(void* self, void* event) {
     return KXMLGUIFactory_Event((KXMLGUIFactory*)self, (QEvent*)event);
 }
 
-bool k_xmlguifactory_qbase_event(void* self, void* event) {
-    return KXMLGUIFactory_QBaseEvent((KXMLGUIFactory*)self, (QEvent*)event);
+bool k_xmlguifactory_super_event(void* self, void* event) {
+    return KXMLGUIFactory_SuperEvent((KXMLGUIFactory*)self, (QEvent*)event);
 }
 
 void k_xmlguifactory_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -422,8 +422,8 @@ bool k_xmlguifactory_event_filter(void* self, void* watched, void* event) {
     return KXMLGUIFactory_EventFilter((KXMLGUIFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_xmlguifactory_qbase_event_filter(void* self, void* watched, void* event) {
-    return KXMLGUIFactory_QBaseEventFilter((KXMLGUIFactory*)self, (QObject*)watched, (QEvent*)event);
+bool k_xmlguifactory_super_event_filter(void* self, void* watched, void* event) {
+    return KXMLGUIFactory_SuperEventFilter((KXMLGUIFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_xmlguifactory_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -434,8 +434,8 @@ void k_xmlguifactory_timer_event(void* self, void* event) {
     KXMLGUIFactory_TimerEvent((KXMLGUIFactory*)self, (QTimerEvent*)event);
 }
 
-void k_xmlguifactory_qbase_timer_event(void* self, void* event) {
-    KXMLGUIFactory_QBaseTimerEvent((KXMLGUIFactory*)self, (QTimerEvent*)event);
+void k_xmlguifactory_super_timer_event(void* self, void* event) {
+    KXMLGUIFactory_SuperTimerEvent((KXMLGUIFactory*)self, (QTimerEvent*)event);
 }
 
 void k_xmlguifactory_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -446,8 +446,8 @@ void k_xmlguifactory_child_event(void* self, void* event) {
     KXMLGUIFactory_ChildEvent((KXMLGUIFactory*)self, (QChildEvent*)event);
 }
 
-void k_xmlguifactory_qbase_child_event(void* self, void* event) {
-    KXMLGUIFactory_QBaseChildEvent((KXMLGUIFactory*)self, (QChildEvent*)event);
+void k_xmlguifactory_super_child_event(void* self, void* event) {
+    KXMLGUIFactory_SuperChildEvent((KXMLGUIFactory*)self, (QChildEvent*)event);
 }
 
 void k_xmlguifactory_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -458,8 +458,8 @@ void k_xmlguifactory_custom_event(void* self, void* event) {
     KXMLGUIFactory_CustomEvent((KXMLGUIFactory*)self, (QEvent*)event);
 }
 
-void k_xmlguifactory_qbase_custom_event(void* self, void* event) {
-    KXMLGUIFactory_QBaseCustomEvent((KXMLGUIFactory*)self, (QEvent*)event);
+void k_xmlguifactory_super_custom_event(void* self, void* event) {
+    KXMLGUIFactory_SuperCustomEvent((KXMLGUIFactory*)self, (QEvent*)event);
 }
 
 void k_xmlguifactory_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -470,8 +470,8 @@ void k_xmlguifactory_connect_notify(void* self, void* signal) {
     KXMLGUIFactory_ConnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_xmlguifactory_qbase_connect_notify(void* self, void* signal) {
-    KXMLGUIFactory_QBaseConnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
+void k_xmlguifactory_super_connect_notify(void* self, void* signal) {
+    KXMLGUIFactory_SuperConnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_xmlguifactory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -482,8 +482,8 @@ void k_xmlguifactory_disconnect_notify(void* self, void* signal) {
     KXMLGUIFactory_DisconnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_xmlguifactory_qbase_disconnect_notify(void* self, void* signal) {
-    KXMLGUIFactory_QBaseDisconnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
+void k_xmlguifactory_super_disconnect_notify(void* self, void* signal) {
+    KXMLGUIFactory_SuperDisconnectNotify((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_xmlguifactory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -494,8 +494,8 @@ QObject* k_xmlguifactory_sender(void* self) {
     return KXMLGUIFactory_Sender((KXMLGUIFactory*)self);
 }
 
-QObject* k_xmlguifactory_qbase_sender(void* self) {
-    return KXMLGUIFactory_QBaseSender((KXMLGUIFactory*)self);
+QObject* k_xmlguifactory_super_sender(void* self) {
+    return KXMLGUIFactory_SuperSender((KXMLGUIFactory*)self);
 }
 
 void k_xmlguifactory_on_sender(void* self, QObject* (*callback)()) {
@@ -506,8 +506,8 @@ int32_t k_xmlguifactory_sender_signal_index(void* self) {
     return KXMLGUIFactory_SenderSignalIndex((KXMLGUIFactory*)self);
 }
 
-int32_t k_xmlguifactory_qbase_sender_signal_index(void* self) {
-    return KXMLGUIFactory_QBaseSenderSignalIndex((KXMLGUIFactory*)self);
+int32_t k_xmlguifactory_super_sender_signal_index(void* self) {
+    return KXMLGUIFactory_SuperSenderSignalIndex((KXMLGUIFactory*)self);
 }
 
 void k_xmlguifactory_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -518,8 +518,8 @@ int32_t k_xmlguifactory_receivers(void* self, const char* signal) {
     return KXMLGUIFactory_Receivers((KXMLGUIFactory*)self, signal);
 }
 
-int32_t k_xmlguifactory_qbase_receivers(void* self, const char* signal) {
-    return KXMLGUIFactory_QBaseReceivers((KXMLGUIFactory*)self, signal);
+int32_t k_xmlguifactory_super_receivers(void* self, const char* signal) {
+    return KXMLGUIFactory_SuperReceivers((KXMLGUIFactory*)self, signal);
 }
 
 void k_xmlguifactory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -530,8 +530,8 @@ bool k_xmlguifactory_is_signal_connected(void* self, void* signal) {
     return KXMLGUIFactory_IsSignalConnected((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
-bool k_xmlguifactory_qbase_is_signal_connected(void* self, void* signal) {
-    return KXMLGUIFactory_QBaseIsSignalConnected((KXMLGUIFactory*)self, (QMetaMethod*)signal);
+bool k_xmlguifactory_super_is_signal_connected(void* self, void* signal) {
+    return KXMLGUIFactory_SuperIsSignalConnected((KXMLGUIFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_xmlguifactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

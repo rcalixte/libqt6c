@@ -59,13 +59,17 @@ const QMetaObject* k_linkitemselectionmodel_meta_object(void* self);
 ///
 void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_meta_object` instead
+///
+#define k_linkitemselectionmodel_qbase_meta_object k_linkitemselectionmodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-const QMetaObject* k_linkitemselectionmodel_qbase_meta_object(void* self);
+const QMetaObject* k_linkitemselectionmodel_super_meta_object(void* self);
 
 /// @param self KLinkItemSelectionModel*
 /// @param param1 const char*
@@ -79,12 +83,16 @@ void* k_linkitemselectionmodel_metacast(void* self, const char* param1);
 ///
 void k_linkitemselectionmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_metacast` instead
+///
+#define k_linkitemselectionmodel_qbase_metacast k_linkitemselectionmodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KLinkItemSelectionModel*
 /// @param param1 const char*
 ///
-void* k_linkitemselectionmodel_qbase_metacast(void* self, const char* param1);
+void* k_linkitemselectionmodel_super_metacast(void* self, const char* param1);
 
 /// @param self KLinkItemSelectionModel*
 /// @param param1 enum QMetaObject__Call
@@ -100,6 +108,10 @@ int32_t k_linkitemselectionmodel_metacall(void* self, int32_t param1, int param2
 ///
 void k_linkitemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_metacall` instead
+///
+#define k_linkitemselectionmodel_qbase_metacall k_linkitemselectionmodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KLinkItemSelectionModel*
@@ -107,7 +119,7 @@ void k_linkitemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_linkitemselectionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_linkitemselectionmodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -147,6 +159,10 @@ void k_linkitemselectionmodel_select(void* self, void* index, int32_t command);
 ///
 void k_linkitemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_select` instead
+///
+#define k_linkitemselectionmodel_qbase_select k_linkitemselectionmodel_super_select
+
 /// [Upstream resources](https://api.kde.org/klinkitemselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -155,7 +171,7 @@ void k_linkitemselectionmodel_on_select(void* self, void (*callback)(void*, void
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_linkitemselectionmodel_qbase_select(void* self, void* index, int32_t command);
+void k_linkitemselectionmodel_super_select(void* self, void* index, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/klinkitemselectionmodel.html#select)
 ///
@@ -174,6 +190,10 @@ void k_linkitemselectionmodel_select2(void* self, void* selection, int32_t comma
 ///
 void k_linkitemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_select2` instead
+///
+#define k_linkitemselectionmodel_qbase_select2 k_linkitemselectionmodel_super_select2
+
 /// [Upstream resources](https://api.kde.org/klinkitemselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -182,7 +202,7 @@ void k_linkitemselectionmodel_on_select2(void* self, void (*callback)(void*, voi
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_linkitemselectionmodel_qbase_select2(void* self, void* selection, int32_t command);
+void k_linkitemselectionmodel_super_select2(void* self, void* selection, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/klinkitemselectionmodel.html#linkedItemSelectionModelChanged)
 ///
@@ -963,6 +983,10 @@ void k_linkitemselectionmodel_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 void k_linkitemselectionmodel_set_current_index(void* self, void* index, int32_t command);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_set_current_index` instead
+///
+#define k_linkitemselectionmodel_qbase_set_current_index k_linkitemselectionmodel_super_set_current_index
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
@@ -973,7 +997,7 @@ void k_linkitemselectionmodel_set_current_index(void* self, void* index, int32_t
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_linkitemselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command);
+void k_linkitemselectionmodel_super_set_current_index(void* self, void* index, int32_t command);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -996,6 +1020,10 @@ void k_linkitemselectionmodel_on_set_current_index(void* self, void (*callback)(
 ///
 void k_linkitemselectionmodel_clear(void* self);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_clear` instead
+///
+#define k_linkitemselectionmodel_qbase_clear k_linkitemselectionmodel_super_clear
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
@@ -1004,7 +1032,7 @@ void k_linkitemselectionmodel_clear(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-void k_linkitemselectionmodel_qbase_clear(void* self);
+void k_linkitemselectionmodel_super_clear(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1027,6 +1055,10 @@ void k_linkitemselectionmodel_on_clear(void* self, void (*callback)());
 ///
 void k_linkitemselectionmodel_reset(void* self);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_reset` instead
+///
+#define k_linkitemselectionmodel_qbase_reset k_linkitemselectionmodel_super_reset
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
@@ -1035,7 +1067,7 @@ void k_linkitemselectionmodel_reset(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-void k_linkitemselectionmodel_qbase_reset(void* self);
+void k_linkitemselectionmodel_super_reset(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1058,6 +1090,10 @@ void k_linkitemselectionmodel_on_reset(void* self, void (*callback)());
 ///
 void k_linkitemselectionmodel_clear_current_index(void* self);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_clear_current_index` instead
+///
+#define k_linkitemselectionmodel_qbase_clear_current_index k_linkitemselectionmodel_super_clear_current_index
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
@@ -1066,7 +1102,7 @@ void k_linkitemselectionmodel_clear_current_index(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-void k_linkitemselectionmodel_qbase_clear_current_index(void* self);
+void k_linkitemselectionmodel_super_clear_current_index(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1090,6 +1126,10 @@ void k_linkitemselectionmodel_on_clear_current_index(void* self, void (*callback
 ///
 bool k_linkitemselectionmodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_event` instead
+///
+#define k_linkitemselectionmodel_qbase_event k_linkitemselectionmodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1099,7 +1139,7 @@ bool k_linkitemselectionmodel_event(void* self, void* event);
 /// @param self KLinkItemSelectionModel*
 /// @param event QEvent*
 ///
-bool k_linkitemselectionmodel_qbase_event(void* self, void* event);
+bool k_linkitemselectionmodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1124,6 +1164,10 @@ void k_linkitemselectionmodel_on_event(void* self, bool (*callback)(void*, void*
 ///
 bool k_linkitemselectionmodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_event_filter` instead
+///
+#define k_linkitemselectionmodel_qbase_event_filter k_linkitemselectionmodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1134,7 +1178,7 @@ bool k_linkitemselectionmodel_event_filter(void* self, void* watched, void* even
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_linkitemselectionmodel_qbase_event_filter(void* self, void* watched, void* event);
+bool k_linkitemselectionmodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1158,6 +1202,10 @@ void k_linkitemselectionmodel_on_event_filter(void* self, bool (*callback)(void*
 ///
 void k_linkitemselectionmodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_timer_event` instead
+///
+#define k_linkitemselectionmodel_qbase_timer_event k_linkitemselectionmodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1167,7 +1215,7 @@ void k_linkitemselectionmodel_timer_event(void* self, void* event);
 /// @param self KLinkItemSelectionModel*
 /// @param event QTimerEvent*
 ///
-void k_linkitemselectionmodel_qbase_timer_event(void* self, void* event);
+void k_linkitemselectionmodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1191,6 +1239,10 @@ void k_linkitemselectionmodel_on_timer_event(void* self, void (*callback)(void*,
 ///
 void k_linkitemselectionmodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_child_event` instead
+///
+#define k_linkitemselectionmodel_qbase_child_event k_linkitemselectionmodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1200,7 +1252,7 @@ void k_linkitemselectionmodel_child_event(void* self, void* event);
 /// @param self KLinkItemSelectionModel*
 /// @param event QChildEvent*
 ///
-void k_linkitemselectionmodel_qbase_child_event(void* self, void* event);
+void k_linkitemselectionmodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1224,6 +1276,10 @@ void k_linkitemselectionmodel_on_child_event(void* self, void (*callback)(void*,
 ///
 void k_linkitemselectionmodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_custom_event` instead
+///
+#define k_linkitemselectionmodel_qbase_custom_event k_linkitemselectionmodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1233,7 +1289,7 @@ void k_linkitemselectionmodel_custom_event(void* self, void* event);
 /// @param self KLinkItemSelectionModel*
 /// @param event QEvent*
 ///
-void k_linkitemselectionmodel_qbase_custom_event(void* self, void* event);
+void k_linkitemselectionmodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1257,6 +1313,10 @@ void k_linkitemselectionmodel_on_custom_event(void* self, void (*callback)(void*
 ///
 void k_linkitemselectionmodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_connect_notify` instead
+///
+#define k_linkitemselectionmodel_qbase_connect_notify k_linkitemselectionmodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1266,7 +1326,7 @@ void k_linkitemselectionmodel_connect_notify(void* self, void* signal);
 /// @param self KLinkItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_linkitemselectionmodel_qbase_connect_notify(void* self, void* signal);
+void k_linkitemselectionmodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1290,6 +1350,10 @@ void k_linkitemselectionmodel_on_connect_notify(void* self, void (*callback)(voi
 ///
 void k_linkitemselectionmodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_disconnect_notify` instead
+///
+#define k_linkitemselectionmodel_qbase_disconnect_notify k_linkitemselectionmodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1299,7 +1363,7 @@ void k_linkitemselectionmodel_disconnect_notify(void* self, void* signal);
 /// @param self KLinkItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_linkitemselectionmodel_qbase_disconnect_notify(void* self, void* signal);
+void k_linkitemselectionmodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1324,6 +1388,10 @@ void k_linkitemselectionmodel_on_disconnect_notify(void* self, void (*callback)(
 ///
 void k_linkitemselectionmodel_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_emit_selection_changed` instead
+///
+#define k_linkitemselectionmodel_qbase_emit_selection_changed k_linkitemselectionmodel_super_emit_selection_changed
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
@@ -1334,7 +1402,7 @@ void k_linkitemselectionmodel_emit_selection_changed(void* self, void* newSelect
 /// @param newSelection QItemSelection*
 /// @param oldSelection QItemSelection*
 ///
-void k_linkitemselectionmodel_qbase_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
+void k_linkitemselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1357,6 +1425,10 @@ void k_linkitemselectionmodel_on_emit_selection_changed(void* self, void (*callb
 ///
 QObject* k_linkitemselectionmodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_sender` instead
+///
+#define k_linkitemselectionmodel_qbase_sender k_linkitemselectionmodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1365,7 +1437,7 @@ QObject* k_linkitemselectionmodel_sender(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-QObject* k_linkitemselectionmodel_qbase_sender(void* self);
+QObject* k_linkitemselectionmodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1388,6 +1460,10 @@ void k_linkitemselectionmodel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_linkitemselectionmodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_sender_signal_index` instead
+///
+#define k_linkitemselectionmodel_qbase_sender_signal_index k_linkitemselectionmodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1396,7 +1472,7 @@ int32_t k_linkitemselectionmodel_sender_signal_index(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-int32_t k_linkitemselectionmodel_qbase_sender_signal_index(void* self);
+int32_t k_linkitemselectionmodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1420,6 +1496,10 @@ void k_linkitemselectionmodel_on_sender_signal_index(void* self, int32_t (*callb
 ///
 int32_t k_linkitemselectionmodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_receivers` instead
+///
+#define k_linkitemselectionmodel_qbase_receivers k_linkitemselectionmodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1429,7 +1509,7 @@ int32_t k_linkitemselectionmodel_receivers(void* self, const char* signal);
 /// @param self KLinkItemSelectionModel*
 /// @param signal const char*
 ///
-int32_t k_linkitemselectionmodel_qbase_receivers(void* self, const char* signal);
+int32_t k_linkitemselectionmodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1453,6 +1533,10 @@ void k_linkitemselectionmodel_on_receivers(void* self, int32_t (*callback)(void*
 ///
 bool k_linkitemselectionmodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_linkitemselectionmodel_super_is_signal_connected` instead
+///
+#define k_linkitemselectionmodel_qbase_is_signal_connected k_linkitemselectionmodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1462,7 +1546,7 @@ bool k_linkitemselectionmodel_is_signal_connected(void* self, void* signal);
 /// @param self KLinkItemSelectionModel*
 /// @param signal QMetaMethod*
 ///
-bool k_linkitemselectionmodel_qbase_is_signal_connected(void* self, void* signal);
+bool k_linkitemselectionmodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

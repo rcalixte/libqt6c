@@ -104,8 +104,8 @@ void q_opengldebuglogger_on_meta_object(void* self, const QMetaObject* (*callbac
     QOpenGLDebugLogger_OnMetaObject((QOpenGLDebugLogger*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_opengldebuglogger_qbase_meta_object(void* self) {
-    return QOpenGLDebugLogger_QBaseMetaObject((QOpenGLDebugLogger*)self);
+const QMetaObject* q_opengldebuglogger_super_meta_object(void* self) {
+    return QOpenGLDebugLogger_SuperMetaObject((QOpenGLDebugLogger*)self);
 }
 
 void* q_opengldebuglogger_metacast(void* self, const char* param1) {
@@ -116,8 +116,8 @@ void q_opengldebuglogger_on_metacast(void* self, void* (*callback)(void*, const 
     QOpenGLDebugLogger_OnMetacast((QOpenGLDebugLogger*)self, (intptr_t)callback);
 }
 
-void* q_opengldebuglogger_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLDebugLogger_QBaseMetacast((QOpenGLDebugLogger*)self, param1);
+void* q_opengldebuglogger_super_metacast(void* self, const char* param1) {
+    return QOpenGLDebugLogger_SuperMetacast((QOpenGLDebugLogger*)self, param1);
 }
 
 int32_t q_opengldebuglogger_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -128,8 +128,8 @@ void q_opengldebuglogger_on_metacall(void* self, int32_t (*callback)(void*, int3
     QOpenGLDebugLogger_OnMetacall((QOpenGLDebugLogger*)self, (intptr_t)callback);
 }
 
-int32_t q_opengldebuglogger_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLDebugLogger_QBaseMetacall((QOpenGLDebugLogger*)self, param1, param2, param3);
+int32_t q_opengldebuglogger_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLDebugLogger_SuperMetacall((QOpenGLDebugLogger*)self, param1, param2, param3);
 }
 
 const char* q_opengldebuglogger_tr(const char* s) {
@@ -485,8 +485,8 @@ bool q_opengldebuglogger_event(void* self, void* event) {
     return QOpenGLDebugLogger_Event((QOpenGLDebugLogger*)self, (QEvent*)event);
 }
 
-bool q_opengldebuglogger_qbase_event(void* self, void* event) {
-    return QOpenGLDebugLogger_QBaseEvent((QOpenGLDebugLogger*)self, (QEvent*)event);
+bool q_opengldebuglogger_super_event(void* self, void* event) {
+    return QOpenGLDebugLogger_SuperEvent((QOpenGLDebugLogger*)self, (QEvent*)event);
 }
 
 void q_opengldebuglogger_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -497,8 +497,8 @@ bool q_opengldebuglogger_event_filter(void* self, void* watched, void* event) {
     return QOpenGLDebugLogger_EventFilter((QOpenGLDebugLogger*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_opengldebuglogger_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLDebugLogger_QBaseEventFilter((QOpenGLDebugLogger*)self, (QObject*)watched, (QEvent*)event);
+bool q_opengldebuglogger_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLDebugLogger_SuperEventFilter((QOpenGLDebugLogger*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_opengldebuglogger_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -509,8 +509,8 @@ void q_opengldebuglogger_timer_event(void* self, void* event) {
     QOpenGLDebugLogger_TimerEvent((QOpenGLDebugLogger*)self, (QTimerEvent*)event);
 }
 
-void q_opengldebuglogger_qbase_timer_event(void* self, void* event) {
-    QOpenGLDebugLogger_QBaseTimerEvent((QOpenGLDebugLogger*)self, (QTimerEvent*)event);
+void q_opengldebuglogger_super_timer_event(void* self, void* event) {
+    QOpenGLDebugLogger_SuperTimerEvent((QOpenGLDebugLogger*)self, (QTimerEvent*)event);
 }
 
 void q_opengldebuglogger_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -521,8 +521,8 @@ void q_opengldebuglogger_child_event(void* self, void* event) {
     QOpenGLDebugLogger_ChildEvent((QOpenGLDebugLogger*)self, (QChildEvent*)event);
 }
 
-void q_opengldebuglogger_qbase_child_event(void* self, void* event) {
-    QOpenGLDebugLogger_QBaseChildEvent((QOpenGLDebugLogger*)self, (QChildEvent*)event);
+void q_opengldebuglogger_super_child_event(void* self, void* event) {
+    QOpenGLDebugLogger_SuperChildEvent((QOpenGLDebugLogger*)self, (QChildEvent*)event);
 }
 
 void q_opengldebuglogger_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -533,8 +533,8 @@ void q_opengldebuglogger_custom_event(void* self, void* event) {
     QOpenGLDebugLogger_CustomEvent((QOpenGLDebugLogger*)self, (QEvent*)event);
 }
 
-void q_opengldebuglogger_qbase_custom_event(void* self, void* event) {
-    QOpenGLDebugLogger_QBaseCustomEvent((QOpenGLDebugLogger*)self, (QEvent*)event);
+void q_opengldebuglogger_super_custom_event(void* self, void* event) {
+    QOpenGLDebugLogger_SuperCustomEvent((QOpenGLDebugLogger*)self, (QEvent*)event);
 }
 
 void q_opengldebuglogger_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -545,8 +545,8 @@ void q_opengldebuglogger_connect_notify(void* self, void* signal) {
     QOpenGLDebugLogger_ConnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
-void q_opengldebuglogger_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLDebugLogger_QBaseConnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
+void q_opengldebuglogger_super_connect_notify(void* self, void* signal) {
+    QOpenGLDebugLogger_SuperConnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
 void q_opengldebuglogger_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -557,8 +557,8 @@ void q_opengldebuglogger_disconnect_notify(void* self, void* signal) {
     QOpenGLDebugLogger_DisconnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
-void q_opengldebuglogger_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLDebugLogger_QBaseDisconnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
+void q_opengldebuglogger_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLDebugLogger_SuperDisconnectNotify((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
 void q_opengldebuglogger_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -569,8 +569,8 @@ QObject* q_opengldebuglogger_sender(void* self) {
     return QOpenGLDebugLogger_Sender((QOpenGLDebugLogger*)self);
 }
 
-QObject* q_opengldebuglogger_qbase_sender(void* self) {
-    return QOpenGLDebugLogger_QBaseSender((QOpenGLDebugLogger*)self);
+QObject* q_opengldebuglogger_super_sender(void* self) {
+    return QOpenGLDebugLogger_SuperSender((QOpenGLDebugLogger*)self);
 }
 
 void q_opengldebuglogger_on_sender(void* self, QObject* (*callback)()) {
@@ -581,8 +581,8 @@ int32_t q_opengldebuglogger_sender_signal_index(void* self) {
     return QOpenGLDebugLogger_SenderSignalIndex((QOpenGLDebugLogger*)self);
 }
 
-int32_t q_opengldebuglogger_qbase_sender_signal_index(void* self) {
-    return QOpenGLDebugLogger_QBaseSenderSignalIndex((QOpenGLDebugLogger*)self);
+int32_t q_opengldebuglogger_super_sender_signal_index(void* self) {
+    return QOpenGLDebugLogger_SuperSenderSignalIndex((QOpenGLDebugLogger*)self);
 }
 
 void q_opengldebuglogger_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -593,8 +593,8 @@ int32_t q_opengldebuglogger_receivers(void* self, const char* signal) {
     return QOpenGLDebugLogger_Receivers((QOpenGLDebugLogger*)self, signal);
 }
 
-int32_t q_opengldebuglogger_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLDebugLogger_QBaseReceivers((QOpenGLDebugLogger*)self, signal);
+int32_t q_opengldebuglogger_super_receivers(void* self, const char* signal) {
+    return QOpenGLDebugLogger_SuperReceivers((QOpenGLDebugLogger*)self, signal);
 }
 
 void q_opengldebuglogger_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -605,8 +605,8 @@ bool q_opengldebuglogger_is_signal_connected(void* self, void* signal) {
     return QOpenGLDebugLogger_IsSignalConnected((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
-bool q_opengldebuglogger_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLDebugLogger_QBaseIsSignalConnected((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
+bool q_opengldebuglogger_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLDebugLogger_SuperIsSignalConnected((QOpenGLDebugLogger*)self, (QMetaMethod*)signal);
 }
 
 void q_opengldebuglogger_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -40,13 +40,17 @@ const QMetaObject* k_overlayiconplugin_meta_object(void* self);
 ///
 void k_overlayiconplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_meta_object` instead
+///
+#define k_overlayiconplugin_qbase_meta_object k_overlayiconplugin_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KOverlayIconPlugin*
 ///
-const QMetaObject* k_overlayiconplugin_qbase_meta_object(void* self);
+const QMetaObject* k_overlayiconplugin_super_meta_object(void* self);
 
 /// @param self KOverlayIconPlugin*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_overlayiconplugin_metacast(void* self, const char* param1);
 ///
 void k_overlayiconplugin_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_metacast` instead
+///
+#define k_overlayiconplugin_qbase_metacast k_overlayiconplugin_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KOverlayIconPlugin*
 /// @param param1 const char*
 ///
-void* k_overlayiconplugin_qbase_metacast(void* self, const char* param1);
+void* k_overlayiconplugin_super_metacast(void* self, const char* param1);
 
 /// @param self KOverlayIconPlugin*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_overlayiconplugin_metacall(void* self, int32_t param1, int param2, voi
 ///
 void k_overlayiconplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_metacall` instead
+///
+#define k_overlayiconplugin_qbase_metacall k_overlayiconplugin_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KOverlayIconPlugin*
@@ -88,7 +100,7 @@ void k_overlayiconplugin_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_overlayiconplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_overlayiconplugin_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -116,6 +128,10 @@ const char** k_overlayiconplugin_get_overlays(void* self, void* item);
 ///
 void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_get_overlays` instead
+///
+#define k_overlayiconplugin_qbase_get_overlays k_overlayiconplugin_super_get_overlays
+
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#getOverlays)
 ///
 /// Base class method implementation
@@ -123,7 +139,7 @@ void k_overlayiconplugin_on_get_overlays(void* self, const char** (*callback)(vo
 /// @param self KOverlayIconPlugin*
 /// @param item QUrl*
 ///
-const char** k_overlayiconplugin_qbase_get_overlays(void* self, void* item);
+const char** k_overlayiconplugin_super_get_overlays(void* self, void* item);
 
 /// [Upstream resources](https://api.kde.org/koverlayiconplugin.html#overlaysChanged)
 ///
@@ -617,6 +633,10 @@ void k_overlayiconplugin_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool k_overlayiconplugin_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_event` instead
+///
+#define k_overlayiconplugin_qbase_event k_overlayiconplugin_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -626,7 +646,7 @@ bool k_overlayiconplugin_event(void* self, void* event);
 /// @param self KOverlayIconPlugin*
 /// @param event QEvent*
 ///
-bool k_overlayiconplugin_qbase_event(void* self, void* event);
+bool k_overlayiconplugin_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -651,6 +671,10 @@ void k_overlayiconplugin_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_overlayiconplugin_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_event_filter` instead
+///
+#define k_overlayiconplugin_qbase_event_filter k_overlayiconplugin_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -661,7 +685,7 @@ bool k_overlayiconplugin_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_overlayiconplugin_qbase_event_filter(void* self, void* watched, void* event);
+bool k_overlayiconplugin_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -685,6 +709,10 @@ void k_overlayiconplugin_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_overlayiconplugin_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_timer_event` instead
+///
+#define k_overlayiconplugin_qbase_timer_event k_overlayiconplugin_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -694,7 +722,7 @@ void k_overlayiconplugin_timer_event(void* self, void* event);
 /// @param self KOverlayIconPlugin*
 /// @param event QTimerEvent*
 ///
-void k_overlayiconplugin_qbase_timer_event(void* self, void* event);
+void k_overlayiconplugin_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -718,6 +746,10 @@ void k_overlayiconplugin_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void k_overlayiconplugin_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_child_event` instead
+///
+#define k_overlayiconplugin_qbase_child_event k_overlayiconplugin_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -727,7 +759,7 @@ void k_overlayiconplugin_child_event(void* self, void* event);
 /// @param self KOverlayIconPlugin*
 /// @param event QChildEvent*
 ///
-void k_overlayiconplugin_qbase_child_event(void* self, void* event);
+void k_overlayiconplugin_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -751,6 +783,10 @@ void k_overlayiconplugin_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_overlayiconplugin_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_custom_event` instead
+///
+#define k_overlayiconplugin_qbase_custom_event k_overlayiconplugin_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -760,7 +796,7 @@ void k_overlayiconplugin_custom_event(void* self, void* event);
 /// @param self KOverlayIconPlugin*
 /// @param event QEvent*
 ///
-void k_overlayiconplugin_qbase_custom_event(void* self, void* event);
+void k_overlayiconplugin_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -784,6 +820,10 @@ void k_overlayiconplugin_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void k_overlayiconplugin_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_connect_notify` instead
+///
+#define k_overlayiconplugin_qbase_connect_notify k_overlayiconplugin_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -793,7 +833,7 @@ void k_overlayiconplugin_connect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_qbase_connect_notify(void* self, void* signal);
+void k_overlayiconplugin_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -817,6 +857,10 @@ void k_overlayiconplugin_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_overlayiconplugin_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_disconnect_notify` instead
+///
+#define k_overlayiconplugin_qbase_disconnect_notify k_overlayiconplugin_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -826,7 +870,7 @@ void k_overlayiconplugin_disconnect_notify(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_overlayiconplugin_qbase_disconnect_notify(void* self, void* signal);
+void k_overlayiconplugin_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -849,6 +893,10 @@ void k_overlayiconplugin_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* k_overlayiconplugin_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_sender` instead
+///
+#define k_overlayiconplugin_qbase_sender k_overlayiconplugin_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -857,7 +905,7 @@ QObject* k_overlayiconplugin_sender(void* self);
 ///
 /// @param self KOverlayIconPlugin*
 ///
-QObject* k_overlayiconplugin_qbase_sender(void* self);
+QObject* k_overlayiconplugin_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -880,6 +928,10 @@ void k_overlayiconplugin_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_overlayiconplugin_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_sender_signal_index` instead
+///
+#define k_overlayiconplugin_qbase_sender_signal_index k_overlayiconplugin_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -888,7 +940,7 @@ int32_t k_overlayiconplugin_sender_signal_index(void* self);
 ///
 /// @param self KOverlayIconPlugin*
 ///
-int32_t k_overlayiconplugin_qbase_sender_signal_index(void* self);
+int32_t k_overlayiconplugin_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -912,6 +964,10 @@ void k_overlayiconplugin_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_overlayiconplugin_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_receivers` instead
+///
+#define k_overlayiconplugin_qbase_receivers k_overlayiconplugin_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -921,7 +977,7 @@ int32_t k_overlayiconplugin_receivers(void* self, const char* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal const char*
 ///
-int32_t k_overlayiconplugin_qbase_receivers(void* self, const char* signal);
+int32_t k_overlayiconplugin_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -945,6 +1001,10 @@ void k_overlayiconplugin_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool k_overlayiconplugin_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_overlayiconplugin_super_is_signal_connected` instead
+///
+#define k_overlayiconplugin_qbase_is_signal_connected k_overlayiconplugin_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -954,7 +1014,7 @@ bool k_overlayiconplugin_is_signal_connected(void* self, void* signal);
 /// @param self KOverlayIconPlugin*
 /// @param signal QMetaMethod*
 ///
-bool k_overlayiconplugin_qbase_is_signal_connected(void* self, void* signal);
+bool k_overlayiconplugin_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

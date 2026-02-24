@@ -49,13 +49,17 @@ const QMetaObject* q_timeline_meta_object(void* self);
 ///
 void q_timeline_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_timeline_super_meta_object` instead
+///
+#define q_timeline_qbase_meta_object q_timeline_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QTimeLine*
 ///
-const QMetaObject* q_timeline_qbase_meta_object(void* self);
+const QMetaObject* q_timeline_super_meta_object(void* self);
 
 /// @param self QTimeLine*
 /// @param param1 const char*
@@ -69,12 +73,16 @@ void* q_timeline_metacast(void* self, const char* param1);
 ///
 void q_timeline_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_timeline_super_metacast` instead
+///
+#define q_timeline_qbase_metacast q_timeline_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QTimeLine*
 /// @param param1 const char*
 ///
-void* q_timeline_qbase_metacast(void* self, const char* param1);
+void* q_timeline_super_metacast(void* self, const char* param1);
 
 /// @param self QTimeLine*
 /// @param param1 enum QMetaObject__Call
@@ -90,6 +98,10 @@ int32_t q_timeline_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_timeline_super_metacall` instead
+///
+#define q_timeline_qbase_metacall q_timeline_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QTimeLine*
@@ -97,7 +109,7 @@ void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_timeline_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_timeline_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -257,6 +269,10 @@ double q_timeline_value_for_time(void* self, int msec);
 ///
 void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_timeline_super_value_for_time` instead
+///
+#define q_timeline_qbase_value_for_time q_timeline_super_value_for_time
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimeline.html#valueForTime)
 ///
 /// Base class method implementation
@@ -264,7 +280,7 @@ void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int));
 /// @param self QTimeLine*
 /// @param msec int
 ///
-double q_timeline_qbase_value_for_time(void* self, int msec);
+double q_timeline_super_value_for_time(void* self, int msec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimeline.html#start)
 ///
@@ -320,6 +336,10 @@ void q_timeline_timer_event(void* self, void* event);
 ///
 void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_timeline_super_timer_event` instead
+///
+#define q_timeline_qbase_timer_event q_timeline_super_timer_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimeline.html#timerEvent)
 ///
 /// Base class method implementation
@@ -327,7 +347,7 @@ void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param self QTimeLine*
 /// @param event QTimerEvent*
 ///
-void q_timeline_qbase_timer_event(void* self, void* event);
+void q_timeline_super_timer_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -806,6 +826,10 @@ void q_timeline_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_timeline_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeline_super_event` instead
+///
+#define q_timeline_qbase_event q_timeline_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -815,7 +839,7 @@ bool q_timeline_event(void* self, void* event);
 /// @param self QTimeLine*
 /// @param event QEvent*
 ///
-bool q_timeline_qbase_event(void* self, void* event);
+bool q_timeline_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -840,6 +864,10 @@ void q_timeline_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_timeline_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_timeline_super_event_filter` instead
+///
+#define q_timeline_qbase_event_filter q_timeline_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -850,7 +878,7 @@ bool q_timeline_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_timeline_qbase_event_filter(void* self, void* watched, void* event);
+bool q_timeline_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -874,6 +902,10 @@ void q_timeline_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_timeline_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeline_super_child_event` instead
+///
+#define q_timeline_qbase_child_event q_timeline_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -883,7 +915,7 @@ void q_timeline_child_event(void* self, void* event);
 /// @param self QTimeLine*
 /// @param event QChildEvent*
 ///
-void q_timeline_qbase_child_event(void* self, void* event);
+void q_timeline_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -907,6 +939,10 @@ void q_timeline_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeline_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeline_super_custom_event` instead
+///
+#define q_timeline_qbase_custom_event q_timeline_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -916,7 +952,7 @@ void q_timeline_custom_event(void* self, void* event);
 /// @param self QTimeLine*
 /// @param event QEvent*
 ///
-void q_timeline_qbase_custom_event(void* self, void* event);
+void q_timeline_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -940,6 +976,10 @@ void q_timeline_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeline_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeline_super_connect_notify` instead
+///
+#define q_timeline_qbase_connect_notify q_timeline_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -949,7 +989,7 @@ void q_timeline_connect_notify(void* self, void* signal);
 /// @param self QTimeLine*
 /// @param signal QMetaMethod*
 ///
-void q_timeline_qbase_connect_notify(void* self, void* signal);
+void q_timeline_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -973,6 +1013,10 @@ void q_timeline_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_timeline_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeline_super_disconnect_notify` instead
+///
+#define q_timeline_qbase_disconnect_notify q_timeline_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -982,7 +1026,7 @@ void q_timeline_disconnect_notify(void* self, void* signal);
 /// @param self QTimeLine*
 /// @param signal QMetaMethod*
 ///
-void q_timeline_qbase_disconnect_notify(void* self, void* signal);
+void q_timeline_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1005,6 +1049,10 @@ void q_timeline_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_timeline_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_timeline_super_sender` instead
+///
+#define q_timeline_qbase_sender q_timeline_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1013,7 +1061,7 @@ QObject* q_timeline_sender(void* self);
 ///
 /// @param self QTimeLine*
 ///
-QObject* q_timeline_qbase_sender(void* self);
+QObject* q_timeline_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1036,6 +1084,10 @@ void q_timeline_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_timeline_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_timeline_super_sender_signal_index` instead
+///
+#define q_timeline_qbase_sender_signal_index q_timeline_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1044,7 +1096,7 @@ int32_t q_timeline_sender_signal_index(void* self);
 ///
 /// @param self QTimeLine*
 ///
-int32_t q_timeline_qbase_sender_signal_index(void* self);
+int32_t q_timeline_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1068,6 +1120,10 @@ void q_timeline_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_timeline_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_timeline_super_receivers` instead
+///
+#define q_timeline_qbase_receivers q_timeline_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1077,7 +1133,7 @@ int32_t q_timeline_receivers(void* self, const char* signal);
 /// @param self QTimeLine*
 /// @param signal const char*
 ///
-int32_t q_timeline_qbase_receivers(void* self, const char* signal);
+int32_t q_timeline_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1101,6 +1157,10 @@ void q_timeline_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_timeline_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeline_super_is_signal_connected` instead
+///
+#define q_timeline_qbase_is_signal_connected q_timeline_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1110,7 +1170,7 @@ bool q_timeline_is_signal_connected(void* self, void* signal);
 /// @param self QTimeLine*
 /// @param signal QMetaMethod*
 ///
-bool q_timeline_qbase_is_signal_connected(void* self, void* signal);
+bool q_timeline_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

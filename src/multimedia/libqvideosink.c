@@ -23,8 +23,8 @@ void q_videosink_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QVideoSink_OnMetaObject((QVideoSink*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_videosink_qbase_meta_object(void* self) {
-    return QVideoSink_QBaseMetaObject((QVideoSink*)self);
+const QMetaObject* q_videosink_super_meta_object(void* self) {
+    return QVideoSink_SuperMetaObject((QVideoSink*)self);
 }
 
 void* q_videosink_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_videosink_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QVideoSink_OnMetacast((QVideoSink*)self, (intptr_t)callback);
 }
 
-void* q_videosink_qbase_metacast(void* self, const char* param1) {
-    return QVideoSink_QBaseMetacast((QVideoSink*)self, param1);
+void* q_videosink_super_metacast(void* self, const char* param1) {
+    return QVideoSink_SuperMetacast((QVideoSink*)self, param1);
 }
 
 int32_t q_videosink_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_videosink_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QVideoSink_OnMetacall((QVideoSink*)self, (intptr_t)callback);
 }
 
-int32_t q_videosink_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QVideoSink_QBaseMetacall((QVideoSink*)self, param1, param2, param3);
+int32_t q_videosink_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QVideoSink_SuperMetacall((QVideoSink*)self, param1, param2, param3);
 }
 
 const char* q_videosink_tr(const char* s) {
@@ -334,8 +334,8 @@ bool q_videosink_event(void* self, void* event) {
     return QVideoSink_Event((QVideoSink*)self, (QEvent*)event);
 }
 
-bool q_videosink_qbase_event(void* self, void* event) {
-    return QVideoSink_QBaseEvent((QVideoSink*)self, (QEvent*)event);
+bool q_videosink_super_event(void* self, void* event) {
+    return QVideoSink_SuperEvent((QVideoSink*)self, (QEvent*)event);
 }
 
 void q_videosink_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ bool q_videosink_event_filter(void* self, void* watched, void* event) {
     return QVideoSink_EventFilter((QVideoSink*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_videosink_qbase_event_filter(void* self, void* watched, void* event) {
-    return QVideoSink_QBaseEventFilter((QVideoSink*)self, (QObject*)watched, (QEvent*)event);
+bool q_videosink_super_event_filter(void* self, void* watched, void* event) {
+    return QVideoSink_SuperEventFilter((QVideoSink*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_videosink_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -358,8 +358,8 @@ void q_videosink_timer_event(void* self, void* event) {
     QVideoSink_TimerEvent((QVideoSink*)self, (QTimerEvent*)event);
 }
 
-void q_videosink_qbase_timer_event(void* self, void* event) {
-    QVideoSink_QBaseTimerEvent((QVideoSink*)self, (QTimerEvent*)event);
+void q_videosink_super_timer_event(void* self, void* event) {
+    QVideoSink_SuperTimerEvent((QVideoSink*)self, (QTimerEvent*)event);
 }
 
 void q_videosink_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void q_videosink_child_event(void* self, void* event) {
     QVideoSink_ChildEvent((QVideoSink*)self, (QChildEvent*)event);
 }
 
-void q_videosink_qbase_child_event(void* self, void* event) {
-    QVideoSink_QBaseChildEvent((QVideoSink*)self, (QChildEvent*)event);
+void q_videosink_super_child_event(void* self, void* event) {
+    QVideoSink_SuperChildEvent((QVideoSink*)self, (QChildEvent*)event);
 }
 
 void q_videosink_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ void q_videosink_custom_event(void* self, void* event) {
     QVideoSink_CustomEvent((QVideoSink*)self, (QEvent*)event);
 }
 
-void q_videosink_qbase_custom_event(void* self, void* event) {
-    QVideoSink_QBaseCustomEvent((QVideoSink*)self, (QEvent*)event);
+void q_videosink_super_custom_event(void* self, void* event) {
+    QVideoSink_SuperCustomEvent((QVideoSink*)self, (QEvent*)event);
 }
 
 void q_videosink_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ void q_videosink_connect_notify(void* self, void* signal) {
     QVideoSink_ConnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
-void q_videosink_qbase_connect_notify(void* self, void* signal) {
-    QVideoSink_QBaseConnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
+void q_videosink_super_connect_notify(void* self, void* signal) {
+    QVideoSink_SuperConnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
 void q_videosink_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ void q_videosink_disconnect_notify(void* self, void* signal) {
     QVideoSink_DisconnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
-void q_videosink_qbase_disconnect_notify(void* self, void* signal) {
-    QVideoSink_QBaseDisconnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
+void q_videosink_super_disconnect_notify(void* self, void* signal) {
+    QVideoSink_SuperDisconnectNotify((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
 void q_videosink_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ QObject* q_videosink_sender(void* self) {
     return QVideoSink_Sender((QVideoSink*)self);
 }
 
-QObject* q_videosink_qbase_sender(void* self) {
-    return QVideoSink_QBaseSender((QVideoSink*)self);
+QObject* q_videosink_super_sender(void* self) {
+    return QVideoSink_SuperSender((QVideoSink*)self);
 }
 
 void q_videosink_on_sender(void* self, QObject* (*callback)()) {
@@ -430,8 +430,8 @@ int32_t q_videosink_sender_signal_index(void* self) {
     return QVideoSink_SenderSignalIndex((QVideoSink*)self);
 }
 
-int32_t q_videosink_qbase_sender_signal_index(void* self) {
-    return QVideoSink_QBaseSenderSignalIndex((QVideoSink*)self);
+int32_t q_videosink_super_sender_signal_index(void* self) {
+    return QVideoSink_SuperSenderSignalIndex((QVideoSink*)self);
 }
 
 void q_videosink_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -442,8 +442,8 @@ int32_t q_videosink_receivers(void* self, const char* signal) {
     return QVideoSink_Receivers((QVideoSink*)self, signal);
 }
 
-int32_t q_videosink_qbase_receivers(void* self, const char* signal) {
-    return QVideoSink_QBaseReceivers((QVideoSink*)self, signal);
+int32_t q_videosink_super_receivers(void* self, const char* signal) {
+    return QVideoSink_SuperReceivers((QVideoSink*)self, signal);
 }
 
 void q_videosink_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -454,8 +454,8 @@ bool q_videosink_is_signal_connected(void* self, void* signal) {
     return QVideoSink_IsSignalConnected((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
-bool q_videosink_qbase_is_signal_connected(void* self, void* signal) {
-    return QVideoSink_QBaseIsSignalConnected((QVideoSink*)self, (QMetaMethod*)signal);
+bool q_videosink_super_is_signal_connected(void* self, void* signal) {
+    return QVideoSink_SuperIsSignalConnected((QVideoSink*)self, (QMetaMethod*)signal);
 }
 
 void q_videosink_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

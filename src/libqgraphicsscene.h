@@ -80,13 +80,17 @@ const QMetaObject* q_graphicsscene_meta_object(void* self);
 ///
 void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_meta_object` instead
+///
+#define q_graphicsscene_qbase_meta_object q_graphicsscene_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsScene*
 ///
-const QMetaObject* q_graphicsscene_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsscene_super_meta_object(void* self);
 
 /// @param self QGraphicsScene*
 /// @param param1 const char*
@@ -100,12 +104,16 @@ void* q_graphicsscene_metacast(void* self, const char* param1);
 ///
 void q_graphicsscene_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_metacast` instead
+///
+#define q_graphicsscene_qbase_metacast q_graphicsscene_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsScene*
 /// @param param1 const char*
 ///
-void* q_graphicsscene_qbase_metacast(void* self, const char* param1);
+void* q_graphicsscene_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsScene*
 /// @param param1 enum QMetaObject__Call
@@ -121,6 +129,10 @@ int32_t q_graphicsscene_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_metacall` instead
+///
+#define q_graphicsscene_qbase_metacall q_graphicsscene_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsScene*
@@ -128,7 +140,7 @@ void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsscene_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsscene_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -524,6 +536,10 @@ QVariant* q_graphicsscene_input_method_query(void* self, int32_t query);
 ///
 void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_input_method_query` instead
+///
+#define q_graphicsscene_qbase_input_method_query q_graphicsscene_super_input_method_query
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
 ///
 /// Base class method implementation
@@ -531,7 +547,7 @@ void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(voi
 /// @param self QGraphicsScene*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsscene_qbase_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsscene_super_input_method_query(void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#views)
 ///
@@ -712,6 +728,10 @@ bool q_graphicsscene_event(void* self, void* event);
 ///
 void q_graphicsscene_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_event` instead
+///
+#define q_graphicsscene_qbase_event q_graphicsscene_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#event)
 ///
 /// Base class method implementation
@@ -719,7 +739,7 @@ void q_graphicsscene_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QGraphicsScene*
 /// @param event QEvent*
 ///
-bool q_graphicsscene_qbase_event(void* self, void* event);
+bool q_graphicsscene_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#eventFilter)
 ///
@@ -738,6 +758,10 @@ bool q_graphicsscene_event_filter(void* self, void* watched, void* event);
 ///
 void q_graphicsscene_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_event_filter` instead
+///
+#define q_graphicsscene_qbase_event_filter q_graphicsscene_super_event_filter
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#eventFilter)
 ///
 /// Base class method implementation
@@ -746,7 +770,7 @@ void q_graphicsscene_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsscene_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsscene_super_event_filter(void* self, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#contextMenuEvent)
 ///
@@ -764,6 +788,10 @@ void q_graphicsscene_context_menu_event(void* self, void* event);
 ///
 void q_graphicsscene_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_context_menu_event` instead
+///
+#define q_graphicsscene_qbase_context_menu_event q_graphicsscene_super_context_menu_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#contextMenuEvent)
 ///
 /// Base class method implementation
@@ -771,7 +799,7 @@ void q_graphicsscene_on_context_menu_event(void* self, void (*callback)(void*, v
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
-void q_graphicsscene_qbase_context_menu_event(void* self, void* event);
+void q_graphicsscene_super_context_menu_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragEnterEvent)
 ///
@@ -789,6 +817,10 @@ void q_graphicsscene_drag_enter_event(void* self, void* event);
 ///
 void q_graphicsscene_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_drag_enter_event` instead
+///
+#define q_graphicsscene_qbase_drag_enter_event q_graphicsscene_super_drag_enter_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -796,7 +828,7 @@ void q_graphicsscene_on_drag_enter_event(void* self, void (*callback)(void*, voi
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_graphicsscene_qbase_drag_enter_event(void* self, void* event);
+void q_graphicsscene_super_drag_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragMoveEvent)
 ///
@@ -814,6 +846,10 @@ void q_graphicsscene_drag_move_event(void* self, void* event);
 ///
 void q_graphicsscene_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_drag_move_event` instead
+///
+#define q_graphicsscene_qbase_drag_move_event q_graphicsscene_super_drag_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -821,7 +857,7 @@ void q_graphicsscene_on_drag_move_event(void* self, void (*callback)(void*, void
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_graphicsscene_qbase_drag_move_event(void* self, void* event);
+void q_graphicsscene_super_drag_move_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragLeaveEvent)
 ///
@@ -839,6 +875,10 @@ void q_graphicsscene_drag_leave_event(void* self, void* event);
 ///
 void q_graphicsscene_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_drag_leave_event` instead
+///
+#define q_graphicsscene_qbase_drag_leave_event q_graphicsscene_super_drag_leave_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dragLeaveEvent)
 ///
 /// Base class method implementation
@@ -846,7 +886,7 @@ void q_graphicsscene_on_drag_leave_event(void* self, void (*callback)(void*, voi
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_graphicsscene_qbase_drag_leave_event(void* self, void* event);
+void q_graphicsscene_super_drag_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dropEvent)
 ///
@@ -864,6 +904,10 @@ void q_graphicsscene_drop_event(void* self, void* event);
 ///
 void q_graphicsscene_on_drop_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_drop_event` instead
+///
+#define q_graphicsscene_qbase_drop_event q_graphicsscene_super_drop_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#dropEvent)
 ///
 /// Base class method implementation
@@ -871,7 +915,7 @@ void q_graphicsscene_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
-void q_graphicsscene_qbase_drop_event(void* self, void* event);
+void q_graphicsscene_super_drop_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusInEvent)
 ///
@@ -889,6 +933,10 @@ void q_graphicsscene_focus_in_event(void* self, void* event);
 ///
 void q_graphicsscene_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_focus_in_event` instead
+///
+#define q_graphicsscene_qbase_focus_in_event q_graphicsscene_super_focus_in_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -896,7 +944,7 @@ void q_graphicsscene_on_focus_in_event(void* self, void (*callback)(void*, void*
 /// @param self QGraphicsScene*
 /// @param event QFocusEvent*
 ///
-void q_graphicsscene_qbase_focus_in_event(void* self, void* event);
+void q_graphicsscene_super_focus_in_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusOutEvent)
 ///
@@ -914,6 +962,10 @@ void q_graphicsscene_focus_out_event(void* self, void* event);
 ///
 void q_graphicsscene_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_focus_out_event` instead
+///
+#define q_graphicsscene_qbase_focus_out_event q_graphicsscene_super_focus_out_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -921,7 +973,7 @@ void q_graphicsscene_on_focus_out_event(void* self, void (*callback)(void*, void
 /// @param self QGraphicsScene*
 /// @param event QFocusEvent*
 ///
-void q_graphicsscene_qbase_focus_out_event(void* self, void* event);
+void q_graphicsscene_super_focus_out_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#helpEvent)
 ///
@@ -939,6 +991,10 @@ void q_graphicsscene_help_event(void* self, void* event);
 ///
 void q_graphicsscene_on_help_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_help_event` instead
+///
+#define q_graphicsscene_qbase_help_event q_graphicsscene_super_help_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#helpEvent)
 ///
 /// Base class method implementation
@@ -946,7 +1002,7 @@ void q_graphicsscene_on_help_event(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneHelpEvent*
 ///
-void q_graphicsscene_qbase_help_event(void* self, void* event);
+void q_graphicsscene_super_help_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#keyPressEvent)
 ///
@@ -964,6 +1020,10 @@ void q_graphicsscene_key_press_event(void* self, void* event);
 ///
 void q_graphicsscene_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_key_press_event` instead
+///
+#define q_graphicsscene_qbase_key_press_event q_graphicsscene_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -971,7 +1031,7 @@ void q_graphicsscene_on_key_press_event(void* self, void (*callback)(void*, void
 /// @param self QGraphicsScene*
 /// @param event QKeyEvent*
 ///
-void q_graphicsscene_qbase_key_press_event(void* self, void* event);
+void q_graphicsscene_super_key_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#keyReleaseEvent)
 ///
@@ -989,6 +1049,10 @@ void q_graphicsscene_key_release_event(void* self, void* event);
 ///
 void q_graphicsscene_on_key_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_key_release_event` instead
+///
+#define q_graphicsscene_qbase_key_release_event q_graphicsscene_super_key_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#keyReleaseEvent)
 ///
 /// Base class method implementation
@@ -996,7 +1060,7 @@ void q_graphicsscene_on_key_release_event(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsScene*
 /// @param event QKeyEvent*
 ///
-void q_graphicsscene_qbase_key_release_event(void* self, void* event);
+void q_graphicsscene_super_key_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mousePressEvent)
 ///
@@ -1014,6 +1078,10 @@ void q_graphicsscene_mouse_press_event(void* self, void* event);
 ///
 void q_graphicsscene_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_mouse_press_event` instead
+///
+#define q_graphicsscene_qbase_mouse_press_event q_graphicsscene_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -1021,7 +1089,7 @@ void q_graphicsscene_on_mouse_press_event(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_graphicsscene_qbase_mouse_press_event(void* self, void* event);
+void q_graphicsscene_super_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseMoveEvent)
 ///
@@ -1039,6 +1107,10 @@ void q_graphicsscene_mouse_move_event(void* self, void* event);
 ///
 void q_graphicsscene_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_mouse_move_event` instead
+///
+#define q_graphicsscene_qbase_mouse_move_event q_graphicsscene_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -1046,7 +1118,7 @@ void q_graphicsscene_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_graphicsscene_qbase_mouse_move_event(void* self, void* event);
+void q_graphicsscene_super_mouse_move_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseReleaseEvent)
 ///
@@ -1064,6 +1136,10 @@ void q_graphicsscene_mouse_release_event(void* self, void* event);
 ///
 void q_graphicsscene_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_mouse_release_event` instead
+///
+#define q_graphicsscene_qbase_mouse_release_event q_graphicsscene_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -1071,7 +1147,7 @@ void q_graphicsscene_on_mouse_release_event(void* self, void (*callback)(void*, 
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_graphicsscene_qbase_mouse_release_event(void* self, void* event);
+void q_graphicsscene_super_mouse_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseDoubleClickEvent)
 ///
@@ -1089,6 +1165,10 @@ void q_graphicsscene_mouse_double_click_event(void* self, void* event);
 ///
 void q_graphicsscene_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_mouse_double_click_event` instead
+///
+#define q_graphicsscene_qbase_mouse_double_click_event q_graphicsscene_super_mouse_double_click_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -1096,7 +1176,7 @@ void q_graphicsscene_on_mouse_double_click_event(void* self, void (*callback)(vo
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneMouseEvent*
 ///
-void q_graphicsscene_qbase_mouse_double_click_event(void* self, void* event);
+void q_graphicsscene_super_mouse_double_click_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#wheelEvent)
 ///
@@ -1114,6 +1194,10 @@ void q_graphicsscene_wheel_event(void* self, void* event);
 ///
 void q_graphicsscene_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_wheel_event` instead
+///
+#define q_graphicsscene_qbase_wheel_event q_graphicsscene_super_wheel_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -1121,7 +1205,7 @@ void q_graphicsscene_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsScene*
 /// @param event QGraphicsSceneWheelEvent*
 ///
-void q_graphicsscene_qbase_wheel_event(void* self, void* event);
+void q_graphicsscene_super_wheel_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodEvent)
 ///
@@ -1139,6 +1223,10 @@ void q_graphicsscene_input_method_event(void* self, void* event);
 ///
 void q_graphicsscene_on_input_method_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_input_method_event` instead
+///
+#define q_graphicsscene_qbase_input_method_event q_graphicsscene_super_input_method_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodEvent)
 ///
 /// Base class method implementation
@@ -1146,7 +1234,7 @@ void q_graphicsscene_on_input_method_event(void* self, void (*callback)(void*, v
 /// @param self QGraphicsScene*
 /// @param event QInputMethodEvent*
 ///
-void q_graphicsscene_qbase_input_method_event(void* self, void* event);
+void q_graphicsscene_super_input_method_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawBackground)
 ///
@@ -1165,6 +1253,10 @@ void q_graphicsscene_draw_background(void* self, void* painter, void* rect);
 ///
 void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_draw_background` instead
+///
+#define q_graphicsscene_qbase_draw_background q_graphicsscene_super_draw_background
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawBackground)
 ///
 /// Base class method implementation
@@ -1173,7 +1265,7 @@ void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_qbase_draw_background(void* self, void* painter, void* rect);
+void q_graphicsscene_super_draw_background(void* self, void* painter, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
 ///
@@ -1192,6 +1284,10 @@ void q_graphicsscene_draw_foreground(void* self, void* painter, void* rect);
 ///
 void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_draw_foreground` instead
+///
+#define q_graphicsscene_qbase_draw_foreground q_graphicsscene_super_draw_foreground
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
 ///
 /// Base class method implementation
@@ -1200,7 +1296,7 @@ void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_qbase_draw_foreground(void* self, void* painter, void* rect);
+void q_graphicsscene_super_draw_foreground(void* self, void* painter, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
 ///
@@ -1222,6 +1318,10 @@ void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** 
 ///
 void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_draw_items` instead
+///
+#define q_graphicsscene_qbase_draw_items q_graphicsscene_super_draw_items
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
 ///
 /// Base class method implementation
@@ -1233,7 +1333,7 @@ void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, in
 /// @param options QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsscene_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
+void q_graphicsscene_super_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusNextPrevChild)
 ///
@@ -1251,6 +1351,10 @@ bool q_graphicsscene_focus_next_prev_child(void* self, bool next);
 ///
 void q_graphicsscene_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_focus_next_prev_child` instead
+///
+#define q_graphicsscene_qbase_focus_next_prev_child q_graphicsscene_super_focus_next_prev_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusNextPrevChild)
 ///
 /// Base class method implementation
@@ -1258,7 +1362,7 @@ void q_graphicsscene_on_focus_next_prev_child(void* self, bool (*callback)(void*
 /// @param self QGraphicsScene*
 /// @param next bool
 ///
-bool q_graphicsscene_qbase_focus_next_prev_child(void* self, bool next);
+bool q_graphicsscene_super_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#changed)
 ///
@@ -2169,6 +2273,10 @@ void q_graphicsscene_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsscene_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_timer_event` instead
+///
+#define q_graphicsscene_qbase_timer_event q_graphicsscene_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2178,7 +2286,7 @@ void q_graphicsscene_timer_event(void* self, void* event);
 /// @param self QGraphicsScene*
 /// @param event QTimerEvent*
 ///
-void q_graphicsscene_qbase_timer_event(void* self, void* event);
+void q_graphicsscene_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2202,6 +2310,10 @@ void q_graphicsscene_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsscene_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_child_event` instead
+///
+#define q_graphicsscene_qbase_child_event q_graphicsscene_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2211,7 +2323,7 @@ void q_graphicsscene_child_event(void* self, void* event);
 /// @param self QGraphicsScene*
 /// @param event QChildEvent*
 ///
-void q_graphicsscene_qbase_child_event(void* self, void* event);
+void q_graphicsscene_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2235,6 +2347,10 @@ void q_graphicsscene_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsscene_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_custom_event` instead
+///
+#define q_graphicsscene_qbase_custom_event q_graphicsscene_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2244,7 +2360,7 @@ void q_graphicsscene_custom_event(void* self, void* event);
 /// @param self QGraphicsScene*
 /// @param event QEvent*
 ///
-void q_graphicsscene_qbase_custom_event(void* self, void* event);
+void q_graphicsscene_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2268,6 +2384,10 @@ void q_graphicsscene_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicsscene_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_connect_notify` instead
+///
+#define q_graphicsscene_qbase_connect_notify q_graphicsscene_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2277,7 +2397,7 @@ void q_graphicsscene_connect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_qbase_connect_notify(void* self, void* signal);
+void q_graphicsscene_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2301,6 +2421,10 @@ void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsscene_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_disconnect_notify` instead
+///
+#define q_graphicsscene_qbase_disconnect_notify q_graphicsscene_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2310,7 +2434,7 @@ void q_graphicsscene_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsscene_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2333,6 +2457,10 @@ void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_graphicsscene_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_sender` instead
+///
+#define q_graphicsscene_qbase_sender q_graphicsscene_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2341,7 +2469,7 @@ QObject* q_graphicsscene_sender(void* self);
 ///
 /// @param self QGraphicsScene*
 ///
-QObject* q_graphicsscene_qbase_sender(void* self);
+QObject* q_graphicsscene_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2364,6 +2492,10 @@ void q_graphicsscene_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsscene_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_sender_signal_index` instead
+///
+#define q_graphicsscene_qbase_sender_signal_index q_graphicsscene_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2372,7 +2504,7 @@ int32_t q_graphicsscene_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsScene*
 ///
-int32_t q_graphicsscene_qbase_sender_signal_index(void* self);
+int32_t q_graphicsscene_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2396,6 +2528,10 @@ void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_graphicsscene_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_receivers` instead
+///
+#define q_graphicsscene_qbase_receivers q_graphicsscene_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2405,7 +2541,7 @@ int32_t q_graphicsscene_receivers(void* self, const char* signal);
 /// @param self QGraphicsScene*
 /// @param signal const char*
 ///
-int32_t q_graphicsscene_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsscene_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2429,6 +2565,10 @@ void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_graphicsscene_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscene_super_is_signal_connected` instead
+///
+#define q_graphicsscene_qbase_is_signal_connected q_graphicsscene_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2438,7 +2578,7 @@ bool q_graphicsscene_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsscene_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsscene_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -22,8 +22,8 @@ void k_job_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KJob_OnMetaObject((KJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_job_qbase_meta_object(void* self) {
-    return KJob_QBaseMetaObject((KJob*)self);
+const QMetaObject* k_job_super_meta_object(void* self) {
+    return KJob_SuperMetaObject((KJob*)self);
 }
 
 void* k_job_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_job_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KJob_OnMetacast((KJob*)self, (intptr_t)callback);
 }
 
-void* k_job_qbase_metacast(void* self, const char* param1) {
-    return KJob_QBaseMetacast((KJob*)self, param1);
+void* k_job_super_metacast(void* self, const char* param1) {
+    return KJob_SuperMetacast((KJob*)self, param1);
 }
 
 int32_t k_job_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_job_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void
     KJob_OnMetacall((KJob*)self, (intptr_t)callback);
 }
 
-int32_t k_job_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KJob_QBaseMetacall((KJob*)self, param1, param2, param3);
+int32_t k_job_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KJob_SuperMetacall((KJob*)self, param1, param2, param3);
 }
 
 const char* k_job_tr(const char* s) {
@@ -81,8 +81,8 @@ void k_job_on_start(void* self, void (*callback)()) {
     KJob_OnStart((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_start(void* self) {
-    KJob_QBaseStart((KJob*)self);
+void k_job_super_start(void* self) {
+    KJob_SuperStart((KJob*)self);
 }
 
 bool k_job_kill(void* self) {
@@ -105,8 +105,8 @@ void k_job_on_do_kill(void* self, bool (*callback)()) {
     KJob_OnDoKill((KJob*)self, (intptr_t)callback);
 }
 
-bool k_job_qbase_do_kill(void* self) {
-    return KJob_QBaseDoKill((KJob*)self);
+bool k_job_super_do_kill(void* self) {
+    return KJob_SuperDoKill((KJob*)self);
 }
 
 bool k_job_do_suspend(void* self) {
@@ -117,8 +117,8 @@ void k_job_on_do_suspend(void* self, bool (*callback)()) {
     KJob_OnDoSuspend((KJob*)self, (intptr_t)callback);
 }
 
-bool k_job_qbase_do_suspend(void* self) {
-    return KJob_QBaseDoSuspend((KJob*)self);
+bool k_job_super_do_suspend(void* self) {
+    return KJob_SuperDoSuspend((KJob*)self);
 }
 
 bool k_job_do_resume(void* self) {
@@ -129,8 +129,8 @@ void k_job_on_do_resume(void* self, bool (*callback)()) {
     KJob_OnDoResume((KJob*)self, (intptr_t)callback);
 }
 
-bool k_job_qbase_do_resume(void* self) {
-    return KJob_QBaseDoResume((KJob*)self);
+bool k_job_super_do_resume(void* self) {
+    return KJob_SuperDoResume((KJob*)self);
 }
 
 void k_job_set_capabilities(void* self, int32_t capabilities) {
@@ -141,8 +141,8 @@ void k_job_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
     KJob_OnSetCapabilities((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KJob_QBaseSetCapabilities((KJob*)self, capabilities);
+void k_job_super_set_capabilities(void* self, int32_t capabilities) {
+    KJob_SuperSetCapabilities((KJob*)self, capabilities);
 }
 
 bool k_job_exec(void* self) {
@@ -171,8 +171,8 @@ void k_job_on_error_string(void* self, const char* (*callback)()) {
     KJob_OnErrorString((KJob*)self, (intptr_t)callback);
 }
 
-const char* k_job_qbase_error_string(void* self) {
-    libqt_string _str = KJob_QBaseErrorString((KJob*)self);
+const char* k_job_super_error_string(void* self) {
+    libqt_string _str = KJob_SuperErrorString((KJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -262,8 +262,8 @@ void k_job_on_is_finished(void* self, bool (*callback)()) {
     KJob_OnIsFinished((KJob*)self, (intptr_t)callback);
 }
 
-bool k_job_qbase_is_finished(void* self) {
-    return KJob_QBaseIsFinished((KJob*)self);
+bool k_job_super_is_finished(void* self) {
+    return KJob_SuperIsFinished((KJob*)self);
 }
 
 void k_job_set_error(void* self, int errorCode) {
@@ -274,8 +274,8 @@ void k_job_on_set_error(void* self, void (*callback)(void*, int)) {
     KJob_OnSetError((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_error(void* self, int errorCode) {
-    KJob_QBaseSetError((KJob*)self, errorCode);
+void k_job_super_set_error(void* self, int errorCode) {
+    KJob_SuperSetError((KJob*)self, errorCode);
 }
 
 void k_job_set_error_text(void* self, const char* errorText) {
@@ -286,8 +286,8 @@ void k_job_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
     KJob_OnSetErrorText((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_error_text(void* self, const char* errorText) {
-    KJob_QBaseSetErrorText((KJob*)self, qstring(errorText));
+void k_job_super_set_error_text(void* self, const char* errorText) {
+    KJob_SuperSetErrorText((KJob*)self, qstring(errorText));
 }
 
 void k_job_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
@@ -298,8 +298,8 @@ void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, 
     KJob_OnSetProcessedAmount((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KJob_QBaseSetProcessedAmount((KJob*)self, unit, amount);
+void k_job_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KJob_SuperSetProcessedAmount((KJob*)self, unit, amount);
 }
 
 void k_job_set_total_amount(void* self, int32_t unit, uint64_t amount) {
@@ -310,8 +310,8 @@ void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint
     KJob_OnSetTotalAmount((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KJob_QBaseSetTotalAmount((KJob*)self, unit, amount);
+void k_job_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KJob_SuperSetTotalAmount((KJob*)self, unit, amount);
 }
 
 void k_job_set_progress_unit(void* self, int32_t unit) {
@@ -322,8 +322,8 @@ void k_job_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
     KJob_OnSetProgressUnit((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_progress_unit(void* self, int32_t unit) {
-    KJob_QBaseSetProgressUnit((KJob*)self, unit);
+void k_job_super_set_progress_unit(void* self, int32_t unit) {
+    KJob_SuperSetProgressUnit((KJob*)self, unit);
 }
 
 void k_job_set_percent(void* self, uint64_t percentage) {
@@ -334,8 +334,8 @@ void k_job_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
     KJob_OnSetPercent((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_percent(void* self, uint64_t percentage) {
-    KJob_QBaseSetPercent((KJob*)self, percentage);
+void k_job_super_set_percent(void* self, uint64_t percentage) {
+    KJob_SuperSetPercent((KJob*)self, percentage);
 }
 
 void k_job_emit_result(void* self) {
@@ -346,8 +346,8 @@ void k_job_on_emit_result(void* self, void (*callback)()) {
     KJob_OnEmitResult((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_emit_result(void* self) {
-    KJob_QBaseEmitResult((KJob*)self);
+void k_job_super_emit_result(void* self) {
+    KJob_SuperEmitResult((KJob*)self);
 }
 
 void k_job_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
@@ -358,8 +358,8 @@ void k_job_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_
     KJob_OnEmitPercent((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KJob_QBaseEmitPercent((KJob*)self, processedAmount, totalAmount);
+void k_job_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KJob_SuperEmitPercent((KJob*)self, processedAmount, totalAmount);
 }
 
 void k_job_emit_speed(void* self, uint64_t speed) {
@@ -370,8 +370,8 @@ void k_job_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
     KJob_OnEmitSpeed((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_emit_speed(void* self, uint64_t speed) {
-    KJob_QBaseEmitSpeed((KJob*)self, speed);
+void k_job_super_emit_speed(void* self, uint64_t speed) {
+    KJob_SuperEmitSpeed((KJob*)self, speed);
 }
 
 void k_job_start_elapsed_timer(void* self) {
@@ -382,8 +382,8 @@ void k_job_on_start_elapsed_timer(void* self, void (*callback)()) {
     KJob_OnStartElapsedTimer((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_start_elapsed_timer(void* self) {
-    KJob_QBaseStartElapsedTimer((KJob*)self);
+void k_job_super_start_elapsed_timer(void* self) {
+    KJob_SuperStartElapsedTimer((KJob*)self);
 }
 
 const char* k_job_tr2(const char* s, const char* c) {
@@ -623,8 +623,8 @@ bool k_job_event(void* self, void* event) {
     return KJob_Event((KJob*)self, (QEvent*)event);
 }
 
-bool k_job_qbase_event(void* self, void* event) {
-    return KJob_QBaseEvent((KJob*)self, (QEvent*)event);
+bool k_job_super_event(void* self, void* event) {
+    return KJob_SuperEvent((KJob*)self, (QEvent*)event);
 }
 
 void k_job_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -635,8 +635,8 @@ bool k_job_event_filter(void* self, void* watched, void* event) {
     return KJob_EventFilter((KJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_job_qbase_event_filter(void* self, void* watched, void* event) {
-    return KJob_QBaseEventFilter((KJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_job_super_event_filter(void* self, void* watched, void* event) {
+    return KJob_SuperEventFilter((KJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_job_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -647,8 +647,8 @@ void k_job_timer_event(void* self, void* event) {
     KJob_TimerEvent((KJob*)self, (QTimerEvent*)event);
 }
 
-void k_job_qbase_timer_event(void* self, void* event) {
-    KJob_QBaseTimerEvent((KJob*)self, (QTimerEvent*)event);
+void k_job_super_timer_event(void* self, void* event) {
+    KJob_SuperTimerEvent((KJob*)self, (QTimerEvent*)event);
 }
 
 void k_job_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -659,8 +659,8 @@ void k_job_child_event(void* self, void* event) {
     KJob_ChildEvent((KJob*)self, (QChildEvent*)event);
 }
 
-void k_job_qbase_child_event(void* self, void* event) {
-    KJob_QBaseChildEvent((KJob*)self, (QChildEvent*)event);
+void k_job_super_child_event(void* self, void* event) {
+    KJob_SuperChildEvent((KJob*)self, (QChildEvent*)event);
 }
 
 void k_job_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -671,8 +671,8 @@ void k_job_custom_event(void* self, void* event) {
     KJob_CustomEvent((KJob*)self, (QEvent*)event);
 }
 
-void k_job_qbase_custom_event(void* self, void* event) {
-    KJob_QBaseCustomEvent((KJob*)self, (QEvent*)event);
+void k_job_super_custom_event(void* self, void* event) {
+    KJob_SuperCustomEvent((KJob*)self, (QEvent*)event);
 }
 
 void k_job_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -683,8 +683,8 @@ void k_job_connect_notify(void* self, void* signal) {
     KJob_ConnectNotify((KJob*)self, (QMetaMethod*)signal);
 }
 
-void k_job_qbase_connect_notify(void* self, void* signal) {
-    KJob_QBaseConnectNotify((KJob*)self, (QMetaMethod*)signal);
+void k_job_super_connect_notify(void* self, void* signal) {
+    KJob_SuperConnectNotify((KJob*)self, (QMetaMethod*)signal);
 }
 
 void k_job_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -695,8 +695,8 @@ void k_job_disconnect_notify(void* self, void* signal) {
     KJob_DisconnectNotify((KJob*)self, (QMetaMethod*)signal);
 }
 
-void k_job_qbase_disconnect_notify(void* self, void* signal) {
-    KJob_QBaseDisconnectNotify((KJob*)self, (QMetaMethod*)signal);
+void k_job_super_disconnect_notify(void* self, void* signal) {
+    KJob_SuperDisconnectNotify((KJob*)self, (QMetaMethod*)signal);
 }
 
 void k_job_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -707,8 +707,8 @@ QObject* k_job_sender(void* self) {
     return KJob_Sender((KJob*)self);
 }
 
-QObject* k_job_qbase_sender(void* self) {
-    return KJob_QBaseSender((KJob*)self);
+QObject* k_job_super_sender(void* self) {
+    return KJob_SuperSender((KJob*)self);
 }
 
 void k_job_on_sender(void* self, QObject* (*callback)()) {
@@ -719,8 +719,8 @@ int32_t k_job_sender_signal_index(void* self) {
     return KJob_SenderSignalIndex((KJob*)self);
 }
 
-int32_t k_job_qbase_sender_signal_index(void* self) {
-    return KJob_QBaseSenderSignalIndex((KJob*)self);
+int32_t k_job_super_sender_signal_index(void* self) {
+    return KJob_SuperSenderSignalIndex((KJob*)self);
 }
 
 void k_job_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -731,8 +731,8 @@ int32_t k_job_receivers(void* self, const char* signal) {
     return KJob_Receivers((KJob*)self, signal);
 }
 
-int32_t k_job_qbase_receivers(void* self, const char* signal) {
-    return KJob_QBaseReceivers((KJob*)self, signal);
+int32_t k_job_super_receivers(void* self, const char* signal) {
+    return KJob_SuperReceivers((KJob*)self, signal);
 }
 
 void k_job_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -743,8 +743,8 @@ bool k_job_is_signal_connected(void* self, void* signal) {
     return KJob_IsSignalConnected((KJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_job_qbase_is_signal_connected(void* self, void* signal) {
-    return KJob_QBaseIsSignalConnected((KJob*)self, (QMetaMethod*)signal);
+bool k_job_super_is_signal_connected(void* self, void* signal) {
+    return KJob_SuperIsSignalConnected((KJob*)self, (QMetaMethod*)signal);
 }
 
 void k_job_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

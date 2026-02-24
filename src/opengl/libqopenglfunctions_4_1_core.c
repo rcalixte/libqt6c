@@ -14,8 +14,8 @@ void q_openglfunctions_4_1_core_on_initialize_open_g_l_functions(void* self, boo
     QOpenGLFunctions_4_1_Core_OnInitializeOpenGLFunctions((QOpenGLFunctions_4_1_Core*)self, (intptr_t)callback);
 }
 
-bool q_openglfunctions_4_1_core_qbase_initialize_open_g_l_functions(void* self) {
-    return QOpenGLFunctions_4_1_Core_QBaseInitializeOpenGLFunctions((QOpenGLFunctions_4_1_Core*)self);
+bool q_openglfunctions_4_1_core_super_initialize_open_g_l_functions(void* self) {
+    return QOpenGLFunctions_4_1_Core_SuperInitializeOpenGLFunctions((QOpenGLFunctions_4_1_Core*)self);
 }
 
 void q_openglfunctions_4_1_core_gl_viewport(void* self, int32_t x, int32_t y, int32_t width, int32_t height) {
@@ -1658,8 +1658,8 @@ bool q_openglfunctions_4_1_core_is_initialized(void* self) {
     return QOpenGLFunctions_4_1_Core_IsInitialized((QOpenGLFunctions_4_1_Core*)self);
 }
 
-bool q_openglfunctions_4_1_core_qbase_is_initialized(void* self) {
-    return QOpenGLFunctions_4_1_Core_QBaseIsInitialized((QOpenGLFunctions_4_1_Core*)self);
+bool q_openglfunctions_4_1_core_super_is_initialized(void* self) {
+    return QOpenGLFunctions_4_1_Core_SuperIsInitialized((QOpenGLFunctions_4_1_Core*)self);
 }
 
 void q_openglfunctions_4_1_core_on_is_initialized(void* self, bool (*callback)()) {
@@ -1670,8 +1670,8 @@ void q_openglfunctions_4_1_core_set_owning_context(void* self, void* context) {
     QOpenGLFunctions_4_1_Core_SetOwningContext((QOpenGLFunctions_4_1_Core*)self, (QOpenGLContext*)context);
 }
 
-void q_openglfunctions_4_1_core_qbase_set_owning_context(void* self, void* context) {
-    QOpenGLFunctions_4_1_Core_QBaseSetOwningContext((QOpenGLFunctions_4_1_Core*)self, (QOpenGLContext*)context);
+void q_openglfunctions_4_1_core_super_set_owning_context(void* self, void* context) {
+    QOpenGLFunctions_4_1_Core_SuperSetOwningContext((QOpenGLFunctions_4_1_Core*)self, (QOpenGLContext*)context);
 }
 
 void q_openglfunctions_4_1_core_on_set_owning_context(void* self, void (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ QOpenGLContext* q_openglfunctions_4_1_core_owning_context(void* self) {
     return QOpenGLFunctions_4_1_Core_OwningContext((QOpenGLFunctions_4_1_Core*)self);
 }
 
-QOpenGLContext* q_openglfunctions_4_1_core_qbase_owning_context(void* self) {
-    return QOpenGLFunctions_4_1_Core_QBaseOwningContext((QOpenGLFunctions_4_1_Core*)self);
+QOpenGLContext* q_openglfunctions_4_1_core_super_owning_context(void* self) {
+    return QOpenGLFunctions_4_1_Core_SuperOwningContext((QOpenGLFunctions_4_1_Core*)self);
 }
 
 void q_openglfunctions_4_1_core_on_owning_context(void* self, QOpenGLContext* (*callback)()) {

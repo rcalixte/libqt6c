@@ -57,8 +57,8 @@ void k_io__applicationlauncherjob_on_start(void* self, void (*callback)()) {
     KIO__ApplicationLauncherJob_OnStart((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_qbase_start(void* self) {
-    KIO__ApplicationLauncherJob_QBaseStart((KIO__ApplicationLauncherJob*)self);
+void k_io__applicationlauncherjob_super_start(void* self) {
+    KIO__ApplicationLauncherJob_SuperStart((KIO__ApplicationLauncherJob*)self);
 }
 
 long long k_io__applicationlauncherjob_pid(void* self) {
@@ -433,8 +433,8 @@ const QMetaObject* k_io__applicationlauncherjob_meta_object(void* self) {
     return KIO__ApplicationLauncherJob_MetaObject((KIO__ApplicationLauncherJob*)self);
 }
 
-const QMetaObject* k_io__applicationlauncherjob_qbase_meta_object(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseMetaObject((KIO__ApplicationLauncherJob*)self);
+const QMetaObject* k_io__applicationlauncherjob_super_meta_object(void* self) {
+    return KIO__ApplicationLauncherJob_SuperMetaObject((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -445,8 +445,8 @@ void* k_io__applicationlauncherjob_metacast(void* self, const char* param1) {
     return KIO__ApplicationLauncherJob_Metacast((KIO__ApplicationLauncherJob*)self, param1);
 }
 
-void* k_io__applicationlauncherjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__ApplicationLauncherJob_QBaseMetacast((KIO__ApplicationLauncherJob*)self, param1);
+void* k_io__applicationlauncherjob_super_metacast(void* self, const char* param1) {
+    return KIO__ApplicationLauncherJob_SuperMetacast((KIO__ApplicationLauncherJob*)self, param1);
 }
 
 void k_io__applicationlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -457,8 +457,8 @@ int32_t k_io__applicationlauncherjob_metacall(void* self, int32_t param1, int pa
     return KIO__ApplicationLauncherJob_Metacall((KIO__ApplicationLauncherJob*)self, param1, param2, param3);
 }
 
-int32_t k_io__applicationlauncherjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__ApplicationLauncherJob_QBaseMetacall((KIO__ApplicationLauncherJob*)self, param1, param2, param3);
+int32_t k_io__applicationlauncherjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__ApplicationLauncherJob_SuperMetacall((KIO__ApplicationLauncherJob*)self, param1, param2, param3);
 }
 
 void k_io__applicationlauncherjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -469,8 +469,8 @@ bool k_io__applicationlauncherjob_do_kill(void* self) {
     return KIO__ApplicationLauncherJob_DoKill((KIO__ApplicationLauncherJob*)self);
 }
 
-bool k_io__applicationlauncherjob_qbase_do_kill(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseDoKill((KIO__ApplicationLauncherJob*)self);
+bool k_io__applicationlauncherjob_super_do_kill(void* self) {
+    return KIO__ApplicationLauncherJob_SuperDoKill((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_do_kill(void* self, bool (*callback)()) {
@@ -481,8 +481,8 @@ bool k_io__applicationlauncherjob_do_suspend(void* self) {
     return KIO__ApplicationLauncherJob_DoSuspend((KIO__ApplicationLauncherJob*)self);
 }
 
-bool k_io__applicationlauncherjob_qbase_do_suspend(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseDoSuspend((KIO__ApplicationLauncherJob*)self);
+bool k_io__applicationlauncherjob_super_do_suspend(void* self) {
+    return KIO__ApplicationLauncherJob_SuperDoSuspend((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -493,8 +493,8 @@ bool k_io__applicationlauncherjob_do_resume(void* self) {
     return KIO__ApplicationLauncherJob_DoResume((KIO__ApplicationLauncherJob*)self);
 }
 
-bool k_io__applicationlauncherjob_qbase_do_resume(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseDoResume((KIO__ApplicationLauncherJob*)self);
+bool k_io__applicationlauncherjob_super_do_resume(void* self) {
+    return KIO__ApplicationLauncherJob_SuperDoResume((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_do_resume(void* self, bool (*callback)()) {
@@ -508,8 +508,8 @@ const char* k_io__applicationlauncherjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__applicationlauncherjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__ApplicationLauncherJob_QBaseErrorString((KIO__ApplicationLauncherJob*)self);
+const char* k_io__applicationlauncherjob_super_error_string(void* self) {
+    libqt_string _str = KIO__ApplicationLauncherJob_SuperErrorString((KIO__ApplicationLauncherJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -523,8 +523,8 @@ bool k_io__applicationlauncherjob_event(void* self, void* event) {
     return KIO__ApplicationLauncherJob_Event((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
 }
 
-bool k_io__applicationlauncherjob_qbase_event(void* self, void* event) {
-    return KIO__ApplicationLauncherJob_QBaseEvent((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
+bool k_io__applicationlauncherjob_super_event(void* self, void* event) {
+    return KIO__ApplicationLauncherJob_SuperEvent((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
 }
 
 void k_io__applicationlauncherjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -535,8 +535,8 @@ bool k_io__applicationlauncherjob_event_filter(void* self, void* watched, void* 
     return KIO__ApplicationLauncherJob_EventFilter((KIO__ApplicationLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__applicationlauncherjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__ApplicationLauncherJob_QBaseEventFilter((KIO__ApplicationLauncherJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__applicationlauncherjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__ApplicationLauncherJob_SuperEventFilter((KIO__ApplicationLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__applicationlauncherjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -547,8 +547,8 @@ void k_io__applicationlauncherjob_timer_event(void* self, void* event) {
     KIO__ApplicationLauncherJob_TimerEvent((KIO__ApplicationLauncherJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__applicationlauncherjob_qbase_timer_event(void* self, void* event) {
-    KIO__ApplicationLauncherJob_QBaseTimerEvent((KIO__ApplicationLauncherJob*)self, (QTimerEvent*)event);
+void k_io__applicationlauncherjob_super_timer_event(void* self, void* event) {
+    KIO__ApplicationLauncherJob_SuperTimerEvent((KIO__ApplicationLauncherJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__applicationlauncherjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ void k_io__applicationlauncherjob_child_event(void* self, void* event) {
     KIO__ApplicationLauncherJob_ChildEvent((KIO__ApplicationLauncherJob*)self, (QChildEvent*)event);
 }
 
-void k_io__applicationlauncherjob_qbase_child_event(void* self, void* event) {
-    KIO__ApplicationLauncherJob_QBaseChildEvent((KIO__ApplicationLauncherJob*)self, (QChildEvent*)event);
+void k_io__applicationlauncherjob_super_child_event(void* self, void* event) {
+    KIO__ApplicationLauncherJob_SuperChildEvent((KIO__ApplicationLauncherJob*)self, (QChildEvent*)event);
 }
 
 void k_io__applicationlauncherjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -571,8 +571,8 @@ void k_io__applicationlauncherjob_custom_event(void* self, void* event) {
     KIO__ApplicationLauncherJob_CustomEvent((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
 }
 
-void k_io__applicationlauncherjob_qbase_custom_event(void* self, void* event) {
-    KIO__ApplicationLauncherJob_QBaseCustomEvent((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
+void k_io__applicationlauncherjob_super_custom_event(void* self, void* event) {
+    KIO__ApplicationLauncherJob_SuperCustomEvent((KIO__ApplicationLauncherJob*)self, (QEvent*)event);
 }
 
 void k_io__applicationlauncherjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -583,8 +583,8 @@ void k_io__applicationlauncherjob_connect_notify(void* self, void* signal) {
     KIO__ApplicationLauncherJob_ConnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__applicationlauncherjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__ApplicationLauncherJob_QBaseConnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
+void k_io__applicationlauncherjob_super_connect_notify(void* self, void* signal) {
+    KIO__ApplicationLauncherJob_SuperConnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__applicationlauncherjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -595,8 +595,8 @@ void k_io__applicationlauncherjob_disconnect_notify(void* self, void* signal) {
     KIO__ApplicationLauncherJob_DisconnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__applicationlauncherjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__ApplicationLauncherJob_QBaseDisconnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
+void k_io__applicationlauncherjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__ApplicationLauncherJob_SuperDisconnectNotify((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__applicationlauncherjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -607,8 +607,8 @@ void k_io__applicationlauncherjob_set_capabilities(void* self, int32_t capabilit
     KIO__ApplicationLauncherJob_SetCapabilities((KIO__ApplicationLauncherJob*)self, capabilities);
 }
 
-void k_io__applicationlauncherjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__ApplicationLauncherJob_QBaseSetCapabilities((KIO__ApplicationLauncherJob*)self, capabilities);
+void k_io__applicationlauncherjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__ApplicationLauncherJob_SuperSetCapabilities((KIO__ApplicationLauncherJob*)self, capabilities);
 }
 
 void k_io__applicationlauncherjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -619,8 +619,8 @@ bool k_io__applicationlauncherjob_is_finished(void* self) {
     return KIO__ApplicationLauncherJob_IsFinished((KIO__ApplicationLauncherJob*)self);
 }
 
-bool k_io__applicationlauncherjob_qbase_is_finished(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseIsFinished((KIO__ApplicationLauncherJob*)self);
+bool k_io__applicationlauncherjob_super_is_finished(void* self) {
+    return KIO__ApplicationLauncherJob_SuperIsFinished((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_is_finished(void* self, bool (*callback)()) {
@@ -631,8 +631,8 @@ void k_io__applicationlauncherjob_set_error(void* self, int errorCode) {
     KIO__ApplicationLauncherJob_SetError((KIO__ApplicationLauncherJob*)self, errorCode);
 }
 
-void k_io__applicationlauncherjob_qbase_set_error(void* self, int errorCode) {
-    KIO__ApplicationLauncherJob_QBaseSetError((KIO__ApplicationLauncherJob*)self, errorCode);
+void k_io__applicationlauncherjob_super_set_error(void* self, int errorCode) {
+    KIO__ApplicationLauncherJob_SuperSetError((KIO__ApplicationLauncherJob*)self, errorCode);
 }
 
 void k_io__applicationlauncherjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -643,8 +643,8 @@ void k_io__applicationlauncherjob_set_error_text(void* self, const char* errorTe
     KIO__ApplicationLauncherJob_SetErrorText((KIO__ApplicationLauncherJob*)self, qstring(errorText));
 }
 
-void k_io__applicationlauncherjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__ApplicationLauncherJob_QBaseSetErrorText((KIO__ApplicationLauncherJob*)self, qstring(errorText));
+void k_io__applicationlauncherjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__ApplicationLauncherJob_SuperSetErrorText((KIO__ApplicationLauncherJob*)self, qstring(errorText));
 }
 
 void k_io__applicationlauncherjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -655,8 +655,8 @@ void k_io__applicationlauncherjob_set_processed_amount(void* self, int32_t unit,
     KIO__ApplicationLauncherJob_SetProcessedAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__ApplicationLauncherJob_QBaseSetProcessedAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
+void k_io__applicationlauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__ApplicationLauncherJob_SuperSetProcessedAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
 void k_io__applicationlauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -667,8 +667,8 @@ void k_io__applicationlauncherjob_set_total_amount(void* self, int32_t unit, uin
     KIO__ApplicationLauncherJob_SetTotalAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__ApplicationLauncherJob_QBaseSetTotalAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
+void k_io__applicationlauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__ApplicationLauncherJob_SuperSetTotalAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
 void k_io__applicationlauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -679,8 +679,8 @@ void k_io__applicationlauncherjob_set_progress_unit(void* self, int32_t unit) {
     KIO__ApplicationLauncherJob_SetProgressUnit((KIO__ApplicationLauncherJob*)self, unit);
 }
 
-void k_io__applicationlauncherjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__ApplicationLauncherJob_QBaseSetProgressUnit((KIO__ApplicationLauncherJob*)self, unit);
+void k_io__applicationlauncherjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__ApplicationLauncherJob_SuperSetProgressUnit((KIO__ApplicationLauncherJob*)self, unit);
 }
 
 void k_io__applicationlauncherjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -691,8 +691,8 @@ void k_io__applicationlauncherjob_set_percent(void* self, uint64_t percentage) {
     KIO__ApplicationLauncherJob_SetPercent((KIO__ApplicationLauncherJob*)self, percentage);
 }
 
-void k_io__applicationlauncherjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__ApplicationLauncherJob_QBaseSetPercent((KIO__ApplicationLauncherJob*)self, percentage);
+void k_io__applicationlauncherjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__ApplicationLauncherJob_SuperSetPercent((KIO__ApplicationLauncherJob*)self, percentage);
 }
 
 void k_io__applicationlauncherjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -703,8 +703,8 @@ void k_io__applicationlauncherjob_emit_result(void* self) {
     KIO__ApplicationLauncherJob_EmitResult((KIO__ApplicationLauncherJob*)self);
 }
 
-void k_io__applicationlauncherjob_qbase_emit_result(void* self) {
-    KIO__ApplicationLauncherJob_QBaseEmitResult((KIO__ApplicationLauncherJob*)self);
+void k_io__applicationlauncherjob_super_emit_result(void* self) {
+    KIO__ApplicationLauncherJob_SuperEmitResult((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_emit_result(void* self, void (*callback)()) {
@@ -715,8 +715,8 @@ void k_io__applicationlauncherjob_emit_percent(void* self, uint64_t processedAmo
     KIO__ApplicationLauncherJob_EmitPercent((KIO__ApplicationLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__applicationlauncherjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__ApplicationLauncherJob_QBaseEmitPercent((KIO__ApplicationLauncherJob*)self, processedAmount, totalAmount);
+void k_io__applicationlauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__ApplicationLauncherJob_SuperEmitPercent((KIO__ApplicationLauncherJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__applicationlauncherjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -727,8 +727,8 @@ void k_io__applicationlauncherjob_emit_speed(void* self, uint64_t speed) {
     KIO__ApplicationLauncherJob_EmitSpeed((KIO__ApplicationLauncherJob*)self, speed);
 }
 
-void k_io__applicationlauncherjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__ApplicationLauncherJob_QBaseEmitSpeed((KIO__ApplicationLauncherJob*)self, speed);
+void k_io__applicationlauncherjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__ApplicationLauncherJob_SuperEmitSpeed((KIO__ApplicationLauncherJob*)self, speed);
 }
 
 void k_io__applicationlauncherjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -739,8 +739,8 @@ void k_io__applicationlauncherjob_start_elapsed_timer(void* self) {
     KIO__ApplicationLauncherJob_StartElapsedTimer((KIO__ApplicationLauncherJob*)self);
 }
 
-void k_io__applicationlauncherjob_qbase_start_elapsed_timer(void* self) {
-    KIO__ApplicationLauncherJob_QBaseStartElapsedTimer((KIO__ApplicationLauncherJob*)self);
+void k_io__applicationlauncherjob_super_start_elapsed_timer(void* self) {
+    KIO__ApplicationLauncherJob_SuperStartElapsedTimer((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -751,8 +751,8 @@ QObject* k_io__applicationlauncherjob_sender(void* self) {
     return KIO__ApplicationLauncherJob_Sender((KIO__ApplicationLauncherJob*)self);
 }
 
-QObject* k_io__applicationlauncherjob_qbase_sender(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseSender((KIO__ApplicationLauncherJob*)self);
+QObject* k_io__applicationlauncherjob_super_sender(void* self) {
+    return KIO__ApplicationLauncherJob_SuperSender((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_sender(void* self, QObject* (*callback)()) {
@@ -763,8 +763,8 @@ int32_t k_io__applicationlauncherjob_sender_signal_index(void* self) {
     return KIO__ApplicationLauncherJob_SenderSignalIndex((KIO__ApplicationLauncherJob*)self);
 }
 
-int32_t k_io__applicationlauncherjob_qbase_sender_signal_index(void* self) {
-    return KIO__ApplicationLauncherJob_QBaseSenderSignalIndex((KIO__ApplicationLauncherJob*)self);
+int32_t k_io__applicationlauncherjob_super_sender_signal_index(void* self) {
+    return KIO__ApplicationLauncherJob_SuperSenderSignalIndex((KIO__ApplicationLauncherJob*)self);
 }
 
 void k_io__applicationlauncherjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -775,8 +775,8 @@ int32_t k_io__applicationlauncherjob_receivers(void* self, const char* signal) {
     return KIO__ApplicationLauncherJob_Receivers((KIO__ApplicationLauncherJob*)self, signal);
 }
 
-int32_t k_io__applicationlauncherjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__ApplicationLauncherJob_QBaseReceivers((KIO__ApplicationLauncherJob*)self, signal);
+int32_t k_io__applicationlauncherjob_super_receivers(void* self, const char* signal) {
+    return KIO__ApplicationLauncherJob_SuperReceivers((KIO__ApplicationLauncherJob*)self, signal);
 }
 
 void k_io__applicationlauncherjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -787,8 +787,8 @@ bool k_io__applicationlauncherjob_is_signal_connected(void* self, void* signal) 
     return KIO__ApplicationLauncherJob_IsSignalConnected((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__applicationlauncherjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__ApplicationLauncherJob_QBaseIsSignalConnected((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
+bool k_io__applicationlauncherjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__ApplicationLauncherJob_SuperIsSignalConnected((KIO__ApplicationLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__applicationlauncherjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

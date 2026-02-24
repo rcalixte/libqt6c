@@ -14,8 +14,8 @@ void q_openglfunctions_1_2_on_initialize_open_g_l_functions(void* self, bool (*c
     QOpenGLFunctions_1_2_OnInitializeOpenGLFunctions((QOpenGLFunctions_1_2*)self, (intptr_t)callback);
 }
 
-bool q_openglfunctions_1_2_qbase_initialize_open_g_l_functions(void* self) {
-    return QOpenGLFunctions_1_2_QBaseInitializeOpenGLFunctions((QOpenGLFunctions_1_2*)self);
+bool q_openglfunctions_1_2_super_initialize_open_g_l_functions(void* self) {
+    return QOpenGLFunctions_1_2_SuperInitializeOpenGLFunctions((QOpenGLFunctions_1_2*)self);
 }
 
 void q_openglfunctions_1_2_gl_viewport(void* self, int32_t x, int32_t y, int32_t width, int32_t height) {
@@ -1514,8 +1514,8 @@ bool q_openglfunctions_1_2_is_initialized(void* self) {
     return QOpenGLFunctions_1_2_IsInitialized((QOpenGLFunctions_1_2*)self);
 }
 
-bool q_openglfunctions_1_2_qbase_is_initialized(void* self) {
-    return QOpenGLFunctions_1_2_QBaseIsInitialized((QOpenGLFunctions_1_2*)self);
+bool q_openglfunctions_1_2_super_is_initialized(void* self) {
+    return QOpenGLFunctions_1_2_SuperIsInitialized((QOpenGLFunctions_1_2*)self);
 }
 
 void q_openglfunctions_1_2_on_is_initialized(void* self, bool (*callback)()) {
@@ -1526,8 +1526,8 @@ void q_openglfunctions_1_2_set_owning_context(void* self, void* context) {
     QOpenGLFunctions_1_2_SetOwningContext((QOpenGLFunctions_1_2*)self, (QOpenGLContext*)context);
 }
 
-void q_openglfunctions_1_2_qbase_set_owning_context(void* self, void* context) {
-    QOpenGLFunctions_1_2_QBaseSetOwningContext((QOpenGLFunctions_1_2*)self, (QOpenGLContext*)context);
+void q_openglfunctions_1_2_super_set_owning_context(void* self, void* context) {
+    QOpenGLFunctions_1_2_SuperSetOwningContext((QOpenGLFunctions_1_2*)self, (QOpenGLContext*)context);
 }
 
 void q_openglfunctions_1_2_on_set_owning_context(void* self, void (*callback)(void*, void*)) {
@@ -1538,8 +1538,8 @@ QOpenGLContext* q_openglfunctions_1_2_owning_context(void* self) {
     return QOpenGLFunctions_1_2_OwningContext((QOpenGLFunctions_1_2*)self);
 }
 
-QOpenGLContext* q_openglfunctions_1_2_qbase_owning_context(void* self) {
-    return QOpenGLFunctions_1_2_QBaseOwningContext((QOpenGLFunctions_1_2*)self);
+QOpenGLContext* q_openglfunctions_1_2_super_owning_context(void* self) {
+    return QOpenGLFunctions_1_2_SuperOwningContext((QOpenGLFunctions_1_2*)self);
 }
 
 void q_openglfunctions_1_2_on_owning_context(void* self, QOpenGLContext* (*callback)()) {

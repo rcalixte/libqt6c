@@ -78,6 +78,10 @@ int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_macroexpanderbase_super_expand_plain_macro` instead
+///
+#define k_macroexpanderbase_qbase_expand_plain_macro k_macroexpanderbase_super_expand_plain_macro
+
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -87,7 +91,7 @@ void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
@@ -107,6 +111,10 @@ int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, in
 ///
 void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_macroexpanderbase_super_expand_escaped_macro` instead
+///
+#define k_macroexpanderbase_qbase_expand_escaped_macro k_macroexpanderbase_super_expand_escaped_macro
+
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
 /// Base class method implementation
@@ -116,7 +124,7 @@ void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#dtor.KMacroExpanderBase)
 ///
@@ -158,6 +166,10 @@ int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_plain_macro` instead
+///
+#define k_wordmacroexpander_qbase_expand_plain_macro k_wordmacroexpander_super_expand_plain_macro
+
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -167,7 +179,7 @@ void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
@@ -187,6 +199,10 @@ int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_escaped_macro` instead
+///
+#define k_wordmacroexpander_qbase_expand_escaped_macro k_wordmacroexpander_super_expand_escaped_macro
+
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
 /// Base class method implementation
@@ -196,7 +212,7 @@ void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
@@ -215,6 +231,10 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
 ///
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
 
+/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_macro` instead
+///
+#define k_wordmacroexpander_qbase_expand_macro k_wordmacroexpander_super_expand_macro
+
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
 /// Base class method implementation
@@ -223,7 +243,7 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
 /// @param str const char*
 /// @param retVal const char**
 ///
-bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const char* retVal[static 1]);
+bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///
@@ -310,6 +330,10 @@ int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_plain_macro` instead
+///
+#define k_charmacroexpander_qbase_expand_plain_macro k_charmacroexpander_super_expand_plain_macro
+
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -319,7 +343,7 @@ void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
@@ -339,6 +363,10 @@ int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
+/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_escaped_macro` instead
+///
+#define k_charmacroexpander_qbase_expand_escaped_macro k_charmacroexpander_super_expand_escaped_macro
+
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
 /// Base class method implementation
@@ -348,7 +376,7 @@ void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param pos int
 /// @param retVal const char**
 ///
-int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
@@ -367,6 +395,10 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[
 ///
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
 
+/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_macro` instead
+///
+#define k_charmacroexpander_qbase_expand_macro k_charmacroexpander_super_expand_macro
+
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
 /// Base class method implementation
@@ -375,7 +407,7 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
 /// @param chr QChar*
 /// @param retVal const char**
 ///
-bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* retVal[static 1]);
+bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///

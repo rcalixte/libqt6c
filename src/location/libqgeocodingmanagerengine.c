@@ -76,8 +76,8 @@ void q_geocodingmanagerengine_on_meta_object(void* self, const QMetaObject* (*ca
     QGeoCodingManagerEngine_OnMetaObject((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_geocodingmanagerengine_qbase_meta_object(void* self) {
-    return QGeoCodingManagerEngine_QBaseMetaObject((QGeoCodingManagerEngine*)self);
+const QMetaObject* q_geocodingmanagerengine_super_meta_object(void* self) {
+    return QGeoCodingManagerEngine_SuperMetaObject((QGeoCodingManagerEngine*)self);
 }
 
 void* q_geocodingmanagerengine_metacast(void* self, const char* param1) {
@@ -88,8 +88,8 @@ void q_geocodingmanagerengine_on_metacast(void* self, void* (*callback)(void*, c
     QGeoCodingManagerEngine_OnMetacast((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-void* q_geocodingmanagerengine_qbase_metacast(void* self, const char* param1) {
-    return QGeoCodingManagerEngine_QBaseMetacast((QGeoCodingManagerEngine*)self, param1);
+void* q_geocodingmanagerengine_super_metacast(void* self, const char* param1) {
+    return QGeoCodingManagerEngine_SuperMetacast((QGeoCodingManagerEngine*)self, param1);
 }
 
 int32_t q_geocodingmanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -100,8 +100,8 @@ void q_geocodingmanagerengine_on_metacall(void* self, int32_t (*callback)(void*,
     QGeoCodingManagerEngine_OnMetacall((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-int32_t q_geocodingmanagerengine_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoCodingManagerEngine_QBaseMetacall((QGeoCodingManagerEngine*)self, param1, param2, param3);
+int32_t q_geocodingmanagerengine_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoCodingManagerEngine_SuperMetacall((QGeoCodingManagerEngine*)self, param1, param2, param3);
 }
 
 const char* q_geocodingmanagerengine_tr(const char* s) {
@@ -130,8 +130,8 @@ void q_geocodingmanagerengine_on_geocode(void* self, QGeoCodeReply* (*callback)(
     QGeoCodingManagerEngine_OnGeocode((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoCodeReply* q_geocodingmanagerengine_qbase_geocode(void* self, void* address, void* bounds) {
-    return QGeoCodingManagerEngine_QBaseGeocode((QGeoCodingManagerEngine*)self, (QGeoAddress*)address, (QGeoShape*)bounds);
+QGeoCodeReply* q_geocodingmanagerengine_super_geocode(void* self, void* address, void* bounds) {
+    return QGeoCodingManagerEngine_SuperGeocode((QGeoCodingManagerEngine*)self, (QGeoAddress*)address, (QGeoShape*)bounds);
 }
 
 QGeoCodeReply* q_geocodingmanagerengine_geocode2(void* self, const char* address, int limit, int offset, void* bounds) {
@@ -142,8 +142,8 @@ void q_geocodingmanagerengine_on_geocode2(void* self, QGeoCodeReply* (*callback)
     QGeoCodingManagerEngine_OnGeocode2((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoCodeReply* q_geocodingmanagerengine_qbase_geocode2(void* self, const char* address, int limit, int offset, void* bounds) {
-    return QGeoCodingManagerEngine_QBaseGeocode2((QGeoCodingManagerEngine*)self, qstring(address), limit, offset, (QGeoShape*)bounds);
+QGeoCodeReply* q_geocodingmanagerengine_super_geocode2(void* self, const char* address, int limit, int offset, void* bounds) {
+    return QGeoCodingManagerEngine_SuperGeocode2((QGeoCodingManagerEngine*)self, qstring(address), limit, offset, (QGeoShape*)bounds);
 }
 
 QGeoCodeReply* q_geocodingmanagerengine_reverse_geocode(void* self, void* coordinate, void* bounds) {
@@ -154,8 +154,8 @@ void q_geocodingmanagerengine_on_reverse_geocode(void* self, QGeoCodeReply* (*ca
     QGeoCodingManagerEngine_OnReverseGeocode((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoCodeReply* q_geocodingmanagerengine_qbase_reverse_geocode(void* self, void* coordinate, void* bounds) {
-    return QGeoCodingManagerEngine_QBaseReverseGeocode((QGeoCodingManagerEngine*)self, (QGeoCoordinate*)coordinate, (QGeoShape*)bounds);
+QGeoCodeReply* q_geocodingmanagerengine_super_reverse_geocode(void* self, void* coordinate, void* bounds) {
+    return QGeoCodingManagerEngine_SuperReverseGeocode((QGeoCodingManagerEngine*)self, (QGeoCoordinate*)coordinate, (QGeoShape*)bounds);
 }
 
 void q_geocodingmanagerengine_set_locale(void* self, void* locale) {
@@ -419,8 +419,8 @@ bool q_geocodingmanagerengine_event(void* self, void* event) {
     return QGeoCodingManagerEngine_Event((QGeoCodingManagerEngine*)self, (QEvent*)event);
 }
 
-bool q_geocodingmanagerengine_qbase_event(void* self, void* event) {
-    return QGeoCodingManagerEngine_QBaseEvent((QGeoCodingManagerEngine*)self, (QEvent*)event);
+bool q_geocodingmanagerengine_super_event(void* self, void* event) {
+    return QGeoCodingManagerEngine_SuperEvent((QGeoCodingManagerEngine*)self, (QEvent*)event);
 }
 
 void q_geocodingmanagerengine_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ bool q_geocodingmanagerengine_event_filter(void* self, void* watched, void* even
     return QGeoCodingManagerEngine_EventFilter((QGeoCodingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_geocodingmanagerengine_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoCodingManagerEngine_QBaseEventFilter((QGeoCodingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
+bool q_geocodingmanagerengine_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoCodingManagerEngine_SuperEventFilter((QGeoCodingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_geocodingmanagerengine_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -443,8 +443,8 @@ void q_geocodingmanagerengine_timer_event(void* self, void* event) {
     QGeoCodingManagerEngine_TimerEvent((QGeoCodingManagerEngine*)self, (QTimerEvent*)event);
 }
 
-void q_geocodingmanagerengine_qbase_timer_event(void* self, void* event) {
-    QGeoCodingManagerEngine_QBaseTimerEvent((QGeoCodingManagerEngine*)self, (QTimerEvent*)event);
+void q_geocodingmanagerengine_super_timer_event(void* self, void* event) {
+    QGeoCodingManagerEngine_SuperTimerEvent((QGeoCodingManagerEngine*)self, (QTimerEvent*)event);
 }
 
 void q_geocodingmanagerengine_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ void q_geocodingmanagerengine_child_event(void* self, void* event) {
     QGeoCodingManagerEngine_ChildEvent((QGeoCodingManagerEngine*)self, (QChildEvent*)event);
 }
 
-void q_geocodingmanagerengine_qbase_child_event(void* self, void* event) {
-    QGeoCodingManagerEngine_QBaseChildEvent((QGeoCodingManagerEngine*)self, (QChildEvent*)event);
+void q_geocodingmanagerengine_super_child_event(void* self, void* event) {
+    QGeoCodingManagerEngine_SuperChildEvent((QGeoCodingManagerEngine*)self, (QChildEvent*)event);
 }
 
 void q_geocodingmanagerengine_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_geocodingmanagerengine_custom_event(void* self, void* event) {
     QGeoCodingManagerEngine_CustomEvent((QGeoCodingManagerEngine*)self, (QEvent*)event);
 }
 
-void q_geocodingmanagerengine_qbase_custom_event(void* self, void* event) {
-    QGeoCodingManagerEngine_QBaseCustomEvent((QGeoCodingManagerEngine*)self, (QEvent*)event);
+void q_geocodingmanagerengine_super_custom_event(void* self, void* event) {
+    QGeoCodingManagerEngine_SuperCustomEvent((QGeoCodingManagerEngine*)self, (QEvent*)event);
 }
 
 void q_geocodingmanagerengine_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_geocodingmanagerengine_connect_notify(void* self, void* signal) {
     QGeoCodingManagerEngine_ConnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_geocodingmanagerengine_qbase_connect_notify(void* self, void* signal) {
-    QGeoCodingManagerEngine_QBaseConnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
+void q_geocodingmanagerengine_super_connect_notify(void* self, void* signal) {
+    QGeoCodingManagerEngine_SuperConnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodingmanagerengine_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_geocodingmanagerengine_disconnect_notify(void* self, void* signal) {
     QGeoCodingManagerEngine_DisconnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_geocodingmanagerengine_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoCodingManagerEngine_QBaseDisconnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
+void q_geocodingmanagerengine_super_disconnect_notify(void* self, void* signal) {
+    QGeoCodingManagerEngine_SuperDisconnectNotify((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodingmanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ QObject* q_geocodingmanagerengine_sender(void* self) {
     return QGeoCodingManagerEngine_Sender((QGeoCodingManagerEngine*)self);
 }
 
-QObject* q_geocodingmanagerengine_qbase_sender(void* self) {
-    return QGeoCodingManagerEngine_QBaseSender((QGeoCodingManagerEngine*)self);
+QObject* q_geocodingmanagerengine_super_sender(void* self) {
+    return QGeoCodingManagerEngine_SuperSender((QGeoCodingManagerEngine*)self);
 }
 
 void q_geocodingmanagerengine_on_sender(void* self, QObject* (*callback)()) {
@@ -515,8 +515,8 @@ int32_t q_geocodingmanagerengine_sender_signal_index(void* self) {
     return QGeoCodingManagerEngine_SenderSignalIndex((QGeoCodingManagerEngine*)self);
 }
 
-int32_t q_geocodingmanagerengine_qbase_sender_signal_index(void* self) {
-    return QGeoCodingManagerEngine_QBaseSenderSignalIndex((QGeoCodingManagerEngine*)self);
+int32_t q_geocodingmanagerengine_super_sender_signal_index(void* self) {
+    return QGeoCodingManagerEngine_SuperSenderSignalIndex((QGeoCodingManagerEngine*)self);
 }
 
 void q_geocodingmanagerengine_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -527,8 +527,8 @@ int32_t q_geocodingmanagerengine_receivers(void* self, const char* signal) {
     return QGeoCodingManagerEngine_Receivers((QGeoCodingManagerEngine*)self, signal);
 }
 
-int32_t q_geocodingmanagerengine_qbase_receivers(void* self, const char* signal) {
-    return QGeoCodingManagerEngine_QBaseReceivers((QGeoCodingManagerEngine*)self, signal);
+int32_t q_geocodingmanagerengine_super_receivers(void* self, const char* signal) {
+    return QGeoCodingManagerEngine_SuperReceivers((QGeoCodingManagerEngine*)self, signal);
 }
 
 void q_geocodingmanagerengine_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -539,8 +539,8 @@ bool q_geocodingmanagerengine_is_signal_connected(void* self, void* signal) {
     return QGeoCodingManagerEngine_IsSignalConnected((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-bool q_geocodingmanagerengine_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoCodingManagerEngine_QBaseIsSignalConnected((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
+bool q_geocodingmanagerengine_super_is_signal_connected(void* self, void* signal) {
+    return QGeoCodingManagerEngine_SuperIsSignalConnected((QGeoCodingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodingmanagerengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

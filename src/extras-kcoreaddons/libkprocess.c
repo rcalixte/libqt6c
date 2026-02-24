@@ -24,8 +24,8 @@ void k_process_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KProcess_OnMetaObject((KProcess*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_process_qbase_meta_object(void* self) {
-    return KProcess_QBaseMetaObject((KProcess*)self);
+const QMetaObject* k_process_super_meta_object(void* self) {
+    return KProcess_SuperMetaObject((KProcess*)self);
 }
 
 void* k_process_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_process_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KProcess_OnMetacast((KProcess*)self, (intptr_t)callback);
 }
 
-void* k_process_qbase_metacast(void* self, const char* param1) {
-    return KProcess_QBaseMetacast((KProcess*)self, param1);
+void* k_process_super_metacast(void* self, const char* param1) {
+    return KProcess_SuperMetacast((KProcess*)self, param1);
 }
 
 int32_t k_process_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_process_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     KProcess_OnMetacall((KProcess*)self, (intptr_t)callback);
 }
 
-int32_t k_process_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KProcess_QBaseMetacall((KProcess*)self, param1, param2, param3);
+int32_t k_process_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KProcess_SuperMetacall((KProcess*)self, param1, param2, param3);
 }
 
 const char* k_process_tr(const char* s) {
@@ -1048,8 +1048,8 @@ bool k_process_open(void* self, int32_t mode) {
     return KProcess_Open((KProcess*)self, mode);
 }
 
-bool k_process_qbase_open(void* self, int32_t mode) {
-    return KProcess_QBaseOpen((KProcess*)self, mode);
+bool k_process_super_open(void* self, int32_t mode) {
+    return KProcess_SuperOpen((KProcess*)self, mode);
 }
 
 void k_process_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -1060,8 +1060,8 @@ bool k_process_wait_for_ready_read(void* self, int msecs) {
     return KProcess_WaitForReadyRead((KProcess*)self, msecs);
 }
 
-bool k_process_qbase_wait_for_ready_read(void* self, int msecs) {
-    return KProcess_QBaseWaitForReadyRead((KProcess*)self, msecs);
+bool k_process_super_wait_for_ready_read(void* self, int msecs) {
+    return KProcess_SuperWaitForReadyRead((KProcess*)self, msecs);
 }
 
 void k_process_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
@@ -1072,8 +1072,8 @@ bool k_process_wait_for_bytes_written(void* self, int msecs) {
     return KProcess_WaitForBytesWritten((KProcess*)self, msecs);
 }
 
-bool k_process_qbase_wait_for_bytes_written(void* self, int msecs) {
-    return KProcess_QBaseWaitForBytesWritten((KProcess*)self, msecs);
+bool k_process_super_wait_for_bytes_written(void* self, int msecs) {
+    return KProcess_SuperWaitForBytesWritten((KProcess*)self, msecs);
 }
 
 void k_process_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
@@ -1084,8 +1084,8 @@ long long k_process_bytes_to_write(void* self) {
     return KProcess_BytesToWrite((KProcess*)self);
 }
 
-long long k_process_qbase_bytes_to_write(void* self) {
-    return KProcess_QBaseBytesToWrite((KProcess*)self);
+long long k_process_super_bytes_to_write(void* self) {
+    return KProcess_SuperBytesToWrite((KProcess*)self);
 }
 
 void k_process_on_bytes_to_write(void* self, long long (*callback)()) {
@@ -1096,8 +1096,8 @@ bool k_process_is_sequential(void* self) {
     return KProcess_IsSequential((KProcess*)self);
 }
 
-bool k_process_qbase_is_sequential(void* self) {
-    return KProcess_QBaseIsSequential((KProcess*)self);
+bool k_process_super_is_sequential(void* self) {
+    return KProcess_SuperIsSequential((KProcess*)self);
 }
 
 void k_process_on_is_sequential(void* self, bool (*callback)()) {
@@ -1108,8 +1108,8 @@ void k_process_close(void* self) {
     KProcess_Close((KProcess*)self);
 }
 
-void k_process_qbase_close(void* self) {
-    KProcess_QBaseClose((KProcess*)self);
+void k_process_super_close(void* self) {
+    KProcess_SuperClose((KProcess*)self);
 }
 
 void k_process_on_close(void* self, void (*callback)()) {
@@ -1120,8 +1120,8 @@ long long k_process_read_data(void* self, char* data, long long maxlen) {
     return KProcess_ReadData((KProcess*)self, data, maxlen);
 }
 
-long long k_process_qbase_read_data(void* self, char* data, long long maxlen) {
-    return KProcess_QBaseReadData((KProcess*)self, data, maxlen);
+long long k_process_super_read_data(void* self, char* data, long long maxlen) {
+    return KProcess_SuperReadData((KProcess*)self, data, maxlen);
 }
 
 void k_process_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -1132,8 +1132,8 @@ long long k_process_write_data(void* self, const char* data, long long lenVal) {
     return KProcess_WriteData((KProcess*)self, data, lenVal);
 }
 
-long long k_process_qbase_write_data(void* self, const char* data, long long lenVal) {
-    return KProcess_QBaseWriteData((KProcess*)self, data, lenVal);
+long long k_process_super_write_data(void* self, const char* data, long long lenVal) {
+    return KProcess_SuperWriteData((KProcess*)self, data, lenVal);
 }
 
 void k_process_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
@@ -1144,8 +1144,8 @@ long long k_process_pos(void* self) {
     return KProcess_Pos((KProcess*)self);
 }
 
-long long k_process_qbase_pos(void* self) {
-    return KProcess_QBasePos((KProcess*)self);
+long long k_process_super_pos(void* self) {
+    return KProcess_SuperPos((KProcess*)self);
 }
 
 void k_process_on_pos(void* self, long long (*callback)()) {
@@ -1156,8 +1156,8 @@ long long k_process_size(void* self) {
     return KProcess_Size((KProcess*)self);
 }
 
-long long k_process_qbase_size(void* self) {
-    return KProcess_QBaseSize((KProcess*)self);
+long long k_process_super_size(void* self) {
+    return KProcess_SuperSize((KProcess*)self);
 }
 
 void k_process_on_size(void* self, long long (*callback)()) {
@@ -1168,8 +1168,8 @@ bool k_process_seek(void* self, long long pos) {
     return KProcess_Seek((KProcess*)self, pos);
 }
 
-bool k_process_qbase_seek(void* self, long long pos) {
-    return KProcess_QBaseSeek((KProcess*)self, pos);
+bool k_process_super_seek(void* self, long long pos) {
+    return KProcess_SuperSeek((KProcess*)self, pos);
 }
 
 void k_process_on_seek(void* self, bool (*callback)(void*, long long)) {
@@ -1180,8 +1180,8 @@ bool k_process_at_end(void* self) {
     return KProcess_AtEnd((KProcess*)self);
 }
 
-bool k_process_qbase_at_end(void* self) {
-    return KProcess_QBaseAtEnd((KProcess*)self);
+bool k_process_super_at_end(void* self) {
+    return KProcess_SuperAtEnd((KProcess*)self);
 }
 
 void k_process_on_at_end(void* self, bool (*callback)()) {
@@ -1192,8 +1192,8 @@ bool k_process_reset(void* self) {
     return KProcess_Reset((KProcess*)self);
 }
 
-bool k_process_qbase_reset(void* self) {
-    return KProcess_QBaseReset((KProcess*)self);
+bool k_process_super_reset(void* self) {
+    return KProcess_SuperReset((KProcess*)self);
 }
 
 void k_process_on_reset(void* self, bool (*callback)()) {
@@ -1204,8 +1204,8 @@ long long k_process_bytes_available(void* self) {
     return KProcess_BytesAvailable((KProcess*)self);
 }
 
-long long k_process_qbase_bytes_available(void* self) {
-    return KProcess_QBaseBytesAvailable((KProcess*)self);
+long long k_process_super_bytes_available(void* self) {
+    return KProcess_SuperBytesAvailable((KProcess*)self);
 }
 
 void k_process_on_bytes_available(void* self, long long (*callback)()) {
@@ -1216,8 +1216,8 @@ bool k_process_can_read_line(void* self) {
     return KProcess_CanReadLine((KProcess*)self);
 }
 
-bool k_process_qbase_can_read_line(void* self) {
-    return KProcess_QBaseCanReadLine((KProcess*)self);
+bool k_process_super_can_read_line(void* self) {
+    return KProcess_SuperCanReadLine((KProcess*)self);
 }
 
 void k_process_on_can_read_line(void* self, bool (*callback)()) {
@@ -1228,8 +1228,8 @@ long long k_process_read_line_data(void* self, char* data, long long maxlen) {
     return KProcess_ReadLineData((KProcess*)self, data, maxlen);
 }
 
-long long k_process_qbase_read_line_data(void* self, char* data, long long maxlen) {
-    return KProcess_QBaseReadLineData((KProcess*)self, data, maxlen);
+long long k_process_super_read_line_data(void* self, char* data, long long maxlen) {
+    return KProcess_SuperReadLineData((KProcess*)self, data, maxlen);
 }
 
 void k_process_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -1240,8 +1240,8 @@ long long k_process_skip_data(void* self, long long maxSize) {
     return KProcess_SkipData((KProcess*)self, maxSize);
 }
 
-long long k_process_qbase_skip_data(void* self, long long maxSize) {
-    return KProcess_QBaseSkipData((KProcess*)self, maxSize);
+long long k_process_super_skip_data(void* self, long long maxSize) {
+    return KProcess_SuperSkipData((KProcess*)self, maxSize);
 }
 
 void k_process_on_skip_data(void* self, long long (*callback)(void*, long long)) {
@@ -1252,8 +1252,8 @@ bool k_process_event(void* self, void* event) {
     return KProcess_Event((KProcess*)self, (QEvent*)event);
 }
 
-bool k_process_qbase_event(void* self, void* event) {
-    return KProcess_QBaseEvent((KProcess*)self, (QEvent*)event);
+bool k_process_super_event(void* self, void* event) {
+    return KProcess_SuperEvent((KProcess*)self, (QEvent*)event);
 }
 
 void k_process_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1264,8 +1264,8 @@ bool k_process_event_filter(void* self, void* watched, void* event) {
     return KProcess_EventFilter((KProcess*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_process_qbase_event_filter(void* self, void* watched, void* event) {
-    return KProcess_QBaseEventFilter((KProcess*)self, (QObject*)watched, (QEvent*)event);
+bool k_process_super_event_filter(void* self, void* watched, void* event) {
+    return KProcess_SuperEventFilter((KProcess*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_process_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1276,8 +1276,8 @@ void k_process_timer_event(void* self, void* event) {
     KProcess_TimerEvent((KProcess*)self, (QTimerEvent*)event);
 }
 
-void k_process_qbase_timer_event(void* self, void* event) {
-    KProcess_QBaseTimerEvent((KProcess*)self, (QTimerEvent*)event);
+void k_process_super_timer_event(void* self, void* event) {
+    KProcess_SuperTimerEvent((KProcess*)self, (QTimerEvent*)event);
 }
 
 void k_process_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1288,8 +1288,8 @@ void k_process_child_event(void* self, void* event) {
     KProcess_ChildEvent((KProcess*)self, (QChildEvent*)event);
 }
 
-void k_process_qbase_child_event(void* self, void* event) {
-    KProcess_QBaseChildEvent((KProcess*)self, (QChildEvent*)event);
+void k_process_super_child_event(void* self, void* event) {
+    KProcess_SuperChildEvent((KProcess*)self, (QChildEvent*)event);
 }
 
 void k_process_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1300,8 +1300,8 @@ void k_process_custom_event(void* self, void* event) {
     KProcess_CustomEvent((KProcess*)self, (QEvent*)event);
 }
 
-void k_process_qbase_custom_event(void* self, void* event) {
-    KProcess_QBaseCustomEvent((KProcess*)self, (QEvent*)event);
+void k_process_super_custom_event(void* self, void* event) {
+    KProcess_SuperCustomEvent((KProcess*)self, (QEvent*)event);
 }
 
 void k_process_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1312,8 +1312,8 @@ void k_process_connect_notify(void* self, void* signal) {
     KProcess_ConnectNotify((KProcess*)self, (QMetaMethod*)signal);
 }
 
-void k_process_qbase_connect_notify(void* self, void* signal) {
-    KProcess_QBaseConnectNotify((KProcess*)self, (QMetaMethod*)signal);
+void k_process_super_connect_notify(void* self, void* signal) {
+    KProcess_SuperConnectNotify((KProcess*)self, (QMetaMethod*)signal);
 }
 
 void k_process_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1324,8 +1324,8 @@ void k_process_disconnect_notify(void* self, void* signal) {
     KProcess_DisconnectNotify((KProcess*)self, (QMetaMethod*)signal);
 }
 
-void k_process_qbase_disconnect_notify(void* self, void* signal) {
-    KProcess_QBaseDisconnectNotify((KProcess*)self, (QMetaMethod*)signal);
+void k_process_super_disconnect_notify(void* self, void* signal) {
+    KProcess_SuperDisconnectNotify((KProcess*)self, (QMetaMethod*)signal);
 }
 
 void k_process_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1336,8 +1336,8 @@ void k_process_set_process_state(void* self, int32_t state) {
     KProcess_SetProcessState((KProcess*)self, state);
 }
 
-void k_process_qbase_set_process_state(void* self, int32_t state) {
-    KProcess_QBaseSetProcessState((KProcess*)self, state);
+void k_process_super_set_process_state(void* self, int32_t state) {
+    KProcess_SuperSetProcessState((KProcess*)self, state);
 }
 
 void k_process_on_set_process_state(void* self, void (*callback)(void*, int32_t)) {
@@ -1348,8 +1348,8 @@ void k_process_set_open_mode(void* self, int32_t openMode) {
     KProcess_SetOpenMode((KProcess*)self, openMode);
 }
 
-void k_process_qbase_set_open_mode(void* self, int32_t openMode) {
-    KProcess_QBaseSetOpenMode((KProcess*)self, openMode);
+void k_process_super_set_open_mode(void* self, int32_t openMode) {
+    KProcess_SuperSetOpenMode((KProcess*)self, openMode);
 }
 
 void k_process_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -1360,8 +1360,8 @@ void k_process_set_error_string(void* self, const char* errorString) {
     KProcess_SetErrorString((KProcess*)self, qstring(errorString));
 }
 
-void k_process_qbase_set_error_string(void* self, const char* errorString) {
-    KProcess_QBaseSetErrorString((KProcess*)self, qstring(errorString));
+void k_process_super_set_error_string(void* self, const char* errorString) {
+    KProcess_SuperSetErrorString((KProcess*)self, qstring(errorString));
 }
 
 void k_process_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -1372,8 +1372,8 @@ QObject* k_process_sender(void* self) {
     return KProcess_Sender((KProcess*)self);
 }
 
-QObject* k_process_qbase_sender(void* self) {
-    return KProcess_QBaseSender((KProcess*)self);
+QObject* k_process_super_sender(void* self) {
+    return KProcess_SuperSender((KProcess*)self);
 }
 
 void k_process_on_sender(void* self, QObject* (*callback)()) {
@@ -1384,8 +1384,8 @@ int32_t k_process_sender_signal_index(void* self) {
     return KProcess_SenderSignalIndex((KProcess*)self);
 }
 
-int32_t k_process_qbase_sender_signal_index(void* self) {
-    return KProcess_QBaseSenderSignalIndex((KProcess*)self);
+int32_t k_process_super_sender_signal_index(void* self) {
+    return KProcess_SuperSenderSignalIndex((KProcess*)self);
 }
 
 void k_process_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1396,8 +1396,8 @@ int32_t k_process_receivers(void* self, const char* signal) {
     return KProcess_Receivers((KProcess*)self, signal);
 }
 
-int32_t k_process_qbase_receivers(void* self, const char* signal) {
-    return KProcess_QBaseReceivers((KProcess*)self, signal);
+int32_t k_process_super_receivers(void* self, const char* signal) {
+    return KProcess_SuperReceivers((KProcess*)self, signal);
 }
 
 void k_process_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1408,8 +1408,8 @@ bool k_process_is_signal_connected(void* self, void* signal) {
     return KProcess_IsSignalConnected((KProcess*)self, (QMetaMethod*)signal);
 }
 
-bool k_process_qbase_is_signal_connected(void* self, void* signal) {
-    return KProcess_QBaseIsSignalConnected((KProcess*)self, (QMetaMethod*)signal);
+bool k_process_super_is_signal_connected(void* self, void* signal) {
+    return KProcess_SuperIsSignalConnected((KProcess*)self, (QMetaMethod*)signal);
 }
 
 void k_process_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

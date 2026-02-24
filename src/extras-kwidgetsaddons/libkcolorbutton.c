@@ -49,8 +49,8 @@ void k_colorbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KColorButton_OnMetaObject((KColorButton*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_colorbutton_qbase_meta_object(void* self) {
-    return KColorButton_QBaseMetaObject((KColorButton*)self);
+const QMetaObject* k_colorbutton_super_meta_object(void* self) {
+    return KColorButton_SuperMetaObject((KColorButton*)self);
 }
 
 void* k_colorbutton_metacast(void* self, const char* param1) {
@@ -61,8 +61,8 @@ void k_colorbutton_on_metacast(void* self, void* (*callback)(void*, const char*)
     KColorButton_OnMetacast((KColorButton*)self, (intptr_t)callback);
 }
 
-void* k_colorbutton_qbase_metacast(void* self, const char* param1) {
-    return KColorButton_QBaseMetacast((KColorButton*)self, param1);
+void* k_colorbutton_super_metacast(void* self, const char* param1) {
+    return KColorButton_SuperMetacast((KColorButton*)self, param1);
 }
 
 int32_t k_colorbutton_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -73,8 +73,8 @@ void k_colorbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KColorButton_OnMetacall((KColorButton*)self, (intptr_t)callback);
 }
 
-int32_t k_colorbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColorButton_QBaseMetacall((KColorButton*)self, param1, param2, param3);
+int32_t k_colorbutton_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColorButton_SuperMetacall((KColorButton*)self, param1, param2, param3);
 }
 
 const char* k_colorbutton_tr(const char* s) {
@@ -116,8 +116,8 @@ void k_colorbutton_on_size_hint(void* self, QSize* (*callback)()) {
     KColorButton_OnSizeHint((KColorButton*)self, (intptr_t)callback);
 }
 
-QSize* k_colorbutton_qbase_size_hint(void* self) {
-    return KColorButton_QBaseSizeHint((KColorButton*)self);
+QSize* k_colorbutton_super_size_hint(void* self) {
+    return KColorButton_SuperSizeHint((KColorButton*)self);
 }
 
 QSize* k_colorbutton_minimum_size_hint(void* self) {
@@ -128,8 +128,8 @@ void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     KColorButton_OnMinimumSizeHint((KColorButton*)self, (intptr_t)callback);
 }
 
-QSize* k_colorbutton_qbase_minimum_size_hint(void* self) {
-    return KColorButton_QBaseMinimumSizeHint((KColorButton*)self);
+QSize* k_colorbutton_super_minimum_size_hint(void* self) {
+    return KColorButton_SuperMinimumSizeHint((KColorButton*)self);
 }
 
 void k_colorbutton_changed(void* self, void* newColor) {
@@ -148,8 +148,8 @@ void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KColorButton_OnPaintEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_paint_event(void* self, void* pe) {
-    KColorButton_QBasePaintEvent((KColorButton*)self, (QPaintEvent*)pe);
+void k_colorbutton_super_paint_event(void* self, void* pe) {
+    KColorButton_SuperPaintEvent((KColorButton*)self, (QPaintEvent*)pe);
 }
 
 void k_colorbutton_drag_enter_event(void* self, void* param1) {
@@ -160,8 +160,8 @@ void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*
     KColorButton_OnDragEnterEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_drag_enter_event(void* self, void* param1) {
-    KColorButton_QBaseDragEnterEvent((KColorButton*)self, (QDragEnterEvent*)param1);
+void k_colorbutton_super_drag_enter_event(void* self, void* param1) {
+    KColorButton_SuperDragEnterEvent((KColorButton*)self, (QDragEnterEvent*)param1);
 }
 
 void k_colorbutton_drop_event(void* self, void* param1) {
@@ -172,8 +172,8 @@ void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*)) {
     KColorButton_OnDropEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_drop_event(void* self, void* param1) {
-    KColorButton_QBaseDropEvent((KColorButton*)self, (QDropEvent*)param1);
+void k_colorbutton_super_drop_event(void* self, void* param1) {
+    KColorButton_SuperDropEvent((KColorButton*)self, (QDropEvent*)param1);
 }
 
 void k_colorbutton_mouse_press_event(void* self, void* e) {
@@ -184,8 +184,8 @@ void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void
     KColorButton_OnMousePressEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_mouse_press_event(void* self, void* e) {
-    KColorButton_QBaseMousePressEvent((KColorButton*)self, (QMouseEvent*)e);
+void k_colorbutton_super_mouse_press_event(void* self, void* e) {
+    KColorButton_SuperMousePressEvent((KColorButton*)self, (QMouseEvent*)e);
 }
 
 void k_colorbutton_mouse_move_event(void* self, void* e) {
@@ -196,8 +196,8 @@ void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*
     KColorButton_OnMouseMoveEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_mouse_move_event(void* self, void* e) {
-    KColorButton_QBaseMouseMoveEvent((KColorButton*)self, (QMouseEvent*)e);
+void k_colorbutton_super_mouse_move_event(void* self, void* e) {
+    KColorButton_SuperMouseMoveEvent((KColorButton*)self, (QMouseEvent*)e);
 }
 
 void k_colorbutton_key_press_event(void* self, void* e) {
@@ -208,8 +208,8 @@ void k_colorbutton_on_key_press_event(void* self, void (*callback)(void*, void*)
     KColorButton_OnKeyPressEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-void k_colorbutton_qbase_key_press_event(void* self, void* e) {
-    KColorButton_QBaseKeyPressEvent((KColorButton*)self, (QKeyEvent*)e);
+void k_colorbutton_super_key_press_event(void* self, void* e) {
+    KColorButton_SuperKeyPressEvent((KColorButton*)self, (QKeyEvent*)e);
 }
 
 const char* k_colorbutton_tr2(const char* s, const char* c) {
@@ -1794,8 +1794,8 @@ bool k_colorbutton_event(void* self, void* e) {
     return KColorButton_Event((KColorButton*)self, (QEvent*)e);
 }
 
-bool k_colorbutton_qbase_event(void* self, void* e) {
-    return KColorButton_QBaseEvent((KColorButton*)self, (QEvent*)e);
+bool k_colorbutton_super_event(void* self, void* e) {
+    return KColorButton_SuperEvent((KColorButton*)self, (QEvent*)e);
 }
 
 void k_colorbutton_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_colorbutton_focus_in_event(void* self, void* param1) {
     KColorButton_FocusInEvent((KColorButton*)self, (QFocusEvent*)param1);
 }
 
-void k_colorbutton_qbase_focus_in_event(void* self, void* param1) {
-    KColorButton_QBaseFocusInEvent((KColorButton*)self, (QFocusEvent*)param1);
+void k_colorbutton_super_focus_in_event(void* self, void* param1) {
+    KColorButton_SuperFocusInEvent((KColorButton*)self, (QFocusEvent*)param1);
 }
 
 void k_colorbutton_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_colorbutton_focus_out_event(void* self, void* param1) {
     KColorButton_FocusOutEvent((KColorButton*)self, (QFocusEvent*)param1);
 }
 
-void k_colorbutton_qbase_focus_out_event(void* self, void* param1) {
-    KColorButton_QBaseFocusOutEvent((KColorButton*)self, (QFocusEvent*)param1);
+void k_colorbutton_super_focus_out_event(void* self, void* param1) {
+    KColorButton_SuperFocusOutEvent((KColorButton*)self, (QFocusEvent*)param1);
 }
 
 void k_colorbutton_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_colorbutton_init_style_option(void* self, void* option) {
     KColorButton_InitStyleOption((KColorButton*)self, (QStyleOptionButton*)option);
 }
 
-void k_colorbutton_qbase_init_style_option(void* self, void* option) {
-    KColorButton_QBaseInitStyleOption((KColorButton*)self, (QStyleOptionButton*)option);
+void k_colorbutton_super_init_style_option(void* self, void* option) {
+    KColorButton_SuperInitStyleOption((KColorButton*)self, (QStyleOptionButton*)option);
 }
 
 void k_colorbutton_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ bool k_colorbutton_hit_button(void* self, void* pos) {
     return KColorButton_HitButton((KColorButton*)self, (QPoint*)pos);
 }
 
-bool k_colorbutton_qbase_hit_button(void* self, void* pos) {
-    return KColorButton_QBaseHitButton((KColorButton*)self, (QPoint*)pos);
+bool k_colorbutton_super_hit_button(void* self, void* pos) {
+    return KColorButton_SuperHitButton((KColorButton*)self, (QPoint*)pos);
 }
 
 void k_colorbutton_on_hit_button(void* self, bool (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_colorbutton_check_state_set(void* self) {
     KColorButton_CheckStateSet((KColorButton*)self);
 }
 
-void k_colorbutton_qbase_check_state_set(void* self) {
-    KColorButton_QBaseCheckStateSet((KColorButton*)self);
+void k_colorbutton_super_check_state_set(void* self) {
+    KColorButton_SuperCheckStateSet((KColorButton*)self);
 }
 
 void k_colorbutton_on_check_state_set(void* self, void (*callback)()) {
@@ -1866,8 +1866,8 @@ void k_colorbutton_next_check_state(void* self) {
     KColorButton_NextCheckState((KColorButton*)self);
 }
 
-void k_colorbutton_qbase_next_check_state(void* self) {
-    KColorButton_QBaseNextCheckState((KColorButton*)self);
+void k_colorbutton_super_next_check_state(void* self) {
+    KColorButton_SuperNextCheckState((KColorButton*)self);
 }
 
 void k_colorbutton_on_next_check_state(void* self, void (*callback)()) {
@@ -1878,8 +1878,8 @@ void k_colorbutton_key_release_event(void* self, void* e) {
     KColorButton_KeyReleaseEvent((KColorButton*)self, (QKeyEvent*)e);
 }
 
-void k_colorbutton_qbase_key_release_event(void* self, void* e) {
-    KColorButton_QBaseKeyReleaseEvent((KColorButton*)self, (QKeyEvent*)e);
+void k_colorbutton_super_key_release_event(void* self, void* e) {
+    KColorButton_SuperKeyReleaseEvent((KColorButton*)self, (QKeyEvent*)e);
 }
 
 void k_colorbutton_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void k_colorbutton_mouse_release_event(void* self, void* e) {
     KColorButton_MouseReleaseEvent((KColorButton*)self, (QMouseEvent*)e);
 }
 
-void k_colorbutton_qbase_mouse_release_event(void* self, void* e) {
-    KColorButton_QBaseMouseReleaseEvent((KColorButton*)self, (QMouseEvent*)e);
+void k_colorbutton_super_mouse_release_event(void* self, void* e) {
+    KColorButton_SuperMouseReleaseEvent((KColorButton*)self, (QMouseEvent*)e);
 }
 
 void k_colorbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_colorbutton_change_event(void* self, void* e) {
     KColorButton_ChangeEvent((KColorButton*)self, (QEvent*)e);
 }
 
-void k_colorbutton_qbase_change_event(void* self, void* e) {
-    KColorButton_QBaseChangeEvent((KColorButton*)self, (QEvent*)e);
+void k_colorbutton_super_change_event(void* self, void* e) {
+    KColorButton_SuperChangeEvent((KColorButton*)self, (QEvent*)e);
 }
 
 void k_colorbutton_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_colorbutton_timer_event(void* self, void* e) {
     KColorButton_TimerEvent((KColorButton*)self, (QTimerEvent*)e);
 }
 
-void k_colorbutton_qbase_timer_event(void* self, void* e) {
-    KColorButton_QBaseTimerEvent((KColorButton*)self, (QTimerEvent*)e);
+void k_colorbutton_super_timer_event(void* self, void* e) {
+    KColorButton_SuperTimerEvent((KColorButton*)self, (QTimerEvent*)e);
 }
 
 void k_colorbutton_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ int32_t k_colorbutton_dev_type(void* self) {
     return KColorButton_DevType((KColorButton*)self);
 }
 
-int32_t k_colorbutton_qbase_dev_type(void* self) {
-    return KColorButton_QBaseDevType((KColorButton*)self);
+int32_t k_colorbutton_super_dev_type(void* self) {
+    return KColorButton_SuperDevType((KColorButton*)self);
 }
 
 void k_colorbutton_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1938,8 +1938,8 @@ void k_colorbutton_set_visible(void* self, bool visible) {
     KColorButton_SetVisible((KColorButton*)self, visible);
 }
 
-void k_colorbutton_qbase_set_visible(void* self, bool visible) {
-    KColorButton_QBaseSetVisible((KColorButton*)self, visible);
+void k_colorbutton_super_set_visible(void* self, bool visible) {
+    KColorButton_SuperSetVisible((KColorButton*)self, visible);
 }
 
 void k_colorbutton_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1950,8 +1950,8 @@ int32_t k_colorbutton_height_for_width(void* self, int param1) {
     return KColorButton_HeightForWidth((KColorButton*)self, param1);
 }
 
-int32_t k_colorbutton_qbase_height_for_width(void* self, int param1) {
-    return KColorButton_QBaseHeightForWidth((KColorButton*)self, param1);
+int32_t k_colorbutton_super_height_for_width(void* self, int param1) {
+    return KColorButton_SuperHeightForWidth((KColorButton*)self, param1);
 }
 
 void k_colorbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1962,8 +1962,8 @@ bool k_colorbutton_has_height_for_width(void* self) {
     return KColorButton_HasHeightForWidth((KColorButton*)self);
 }
 
-bool k_colorbutton_qbase_has_height_for_width(void* self) {
-    return KColorButton_QBaseHasHeightForWidth((KColorButton*)self);
+bool k_colorbutton_super_has_height_for_width(void* self) {
+    return KColorButton_SuperHasHeightForWidth((KColorButton*)self);
 }
 
 void k_colorbutton_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1974,8 +1974,8 @@ QPaintEngine* k_colorbutton_paint_engine(void* self) {
     return KColorButton_PaintEngine((KColorButton*)self);
 }
 
-QPaintEngine* k_colorbutton_qbase_paint_engine(void* self) {
-    return KColorButton_QBasePaintEngine((KColorButton*)self);
+QPaintEngine* k_colorbutton_super_paint_engine(void* self) {
+    return KColorButton_SuperPaintEngine((KColorButton*)self);
 }
 
 void k_colorbutton_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1986,8 +1986,8 @@ void k_colorbutton_mouse_double_click_event(void* self, void* event) {
     KColorButton_MouseDoubleClickEvent((KColorButton*)self, (QMouseEvent*)event);
 }
 
-void k_colorbutton_qbase_mouse_double_click_event(void* self, void* event) {
-    KColorButton_QBaseMouseDoubleClickEvent((KColorButton*)self, (QMouseEvent*)event);
+void k_colorbutton_super_mouse_double_click_event(void* self, void* event) {
+    KColorButton_SuperMouseDoubleClickEvent((KColorButton*)self, (QMouseEvent*)event);
 }
 
 void k_colorbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void k_colorbutton_wheel_event(void* self, void* event) {
     KColorButton_WheelEvent((KColorButton*)self, (QWheelEvent*)event);
 }
 
-void k_colorbutton_qbase_wheel_event(void* self, void* event) {
-    KColorButton_QBaseWheelEvent((KColorButton*)self, (QWheelEvent*)event);
+void k_colorbutton_super_wheel_event(void* self, void* event) {
+    KColorButton_SuperWheelEvent((KColorButton*)self, (QWheelEvent*)event);
 }
 
 void k_colorbutton_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_colorbutton_enter_event(void* self, void* event) {
     KColorButton_EnterEvent((KColorButton*)self, (QEnterEvent*)event);
 }
 
-void k_colorbutton_qbase_enter_event(void* self, void* event) {
-    KColorButton_QBaseEnterEvent((KColorButton*)self, (QEnterEvent*)event);
+void k_colorbutton_super_enter_event(void* self, void* event) {
+    KColorButton_SuperEnterEvent((KColorButton*)self, (QEnterEvent*)event);
 }
 
 void k_colorbutton_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_colorbutton_leave_event(void* self, void* event) {
     KColorButton_LeaveEvent((KColorButton*)self, (QEvent*)event);
 }
 
-void k_colorbutton_qbase_leave_event(void* self, void* event) {
-    KColorButton_QBaseLeaveEvent((KColorButton*)self, (QEvent*)event);
+void k_colorbutton_super_leave_event(void* self, void* event) {
+    KColorButton_SuperLeaveEvent((KColorButton*)self, (QEvent*)event);
 }
 
 void k_colorbutton_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_colorbutton_move_event(void* self, void* event) {
     KColorButton_MoveEvent((KColorButton*)self, (QMoveEvent*)event);
 }
 
-void k_colorbutton_qbase_move_event(void* self, void* event) {
-    KColorButton_QBaseMoveEvent((KColorButton*)self, (QMoveEvent*)event);
+void k_colorbutton_super_move_event(void* self, void* event) {
+    KColorButton_SuperMoveEvent((KColorButton*)self, (QMoveEvent*)event);
 }
 
 void k_colorbutton_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_colorbutton_resize_event(void* self, void* event) {
     KColorButton_ResizeEvent((KColorButton*)self, (QResizeEvent*)event);
 }
 
-void k_colorbutton_qbase_resize_event(void* self, void* event) {
-    KColorButton_QBaseResizeEvent((KColorButton*)self, (QResizeEvent*)event);
+void k_colorbutton_super_resize_event(void* self, void* event) {
+    KColorButton_SuperResizeEvent((KColorButton*)self, (QResizeEvent*)event);
 }
 
 void k_colorbutton_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_colorbutton_close_event(void* self, void* event) {
     KColorButton_CloseEvent((KColorButton*)self, (QCloseEvent*)event);
 }
 
-void k_colorbutton_qbase_close_event(void* self, void* event) {
-    KColorButton_QBaseCloseEvent((KColorButton*)self, (QCloseEvent*)event);
+void k_colorbutton_super_close_event(void* self, void* event) {
+    KColorButton_SuperCloseEvent((KColorButton*)self, (QCloseEvent*)event);
 }
 
 void k_colorbutton_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_colorbutton_context_menu_event(void* self, void* event) {
     KColorButton_ContextMenuEvent((KColorButton*)self, (QContextMenuEvent*)event);
 }
 
-void k_colorbutton_qbase_context_menu_event(void* self, void* event) {
-    KColorButton_QBaseContextMenuEvent((KColorButton*)self, (QContextMenuEvent*)event);
+void k_colorbutton_super_context_menu_event(void* self, void* event) {
+    KColorButton_SuperContextMenuEvent((KColorButton*)self, (QContextMenuEvent*)event);
 }
 
 void k_colorbutton_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void k_colorbutton_tablet_event(void* self, void* event) {
     KColorButton_TabletEvent((KColorButton*)self, (QTabletEvent*)event);
 }
 
-void k_colorbutton_qbase_tablet_event(void* self, void* event) {
-    KColorButton_QBaseTabletEvent((KColorButton*)self, (QTabletEvent*)event);
+void k_colorbutton_super_tablet_event(void* self, void* event) {
+    KColorButton_SuperTabletEvent((KColorButton*)self, (QTabletEvent*)event);
 }
 
 void k_colorbutton_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void k_colorbutton_action_event(void* self, void* event) {
     KColorButton_ActionEvent((KColorButton*)self, (QActionEvent*)event);
 }
 
-void k_colorbutton_qbase_action_event(void* self, void* event) {
-    KColorButton_QBaseActionEvent((KColorButton*)self, (QActionEvent*)event);
+void k_colorbutton_super_action_event(void* self, void* event) {
+    KColorButton_SuperActionEvent((KColorButton*)self, (QActionEvent*)event);
 }
 
 void k_colorbutton_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void k_colorbutton_drag_move_event(void* self, void* event) {
     KColorButton_DragMoveEvent((KColorButton*)self, (QDragMoveEvent*)event);
 }
 
-void k_colorbutton_qbase_drag_move_event(void* self, void* event) {
-    KColorButton_QBaseDragMoveEvent((KColorButton*)self, (QDragMoveEvent*)event);
+void k_colorbutton_super_drag_move_event(void* self, void* event) {
+    KColorButton_SuperDragMoveEvent((KColorButton*)self, (QDragMoveEvent*)event);
 }
 
 void k_colorbutton_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ void k_colorbutton_drag_leave_event(void* self, void* event) {
     KColorButton_DragLeaveEvent((KColorButton*)self, (QDragLeaveEvent*)event);
 }
 
-void k_colorbutton_qbase_drag_leave_event(void* self, void* event) {
-    KColorButton_QBaseDragLeaveEvent((KColorButton*)self, (QDragLeaveEvent*)event);
+void k_colorbutton_super_drag_leave_event(void* self, void* event) {
+    KColorButton_SuperDragLeaveEvent((KColorButton*)self, (QDragLeaveEvent*)event);
 }
 
 void k_colorbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2130,8 +2130,8 @@ void k_colorbutton_show_event(void* self, void* event) {
     KColorButton_ShowEvent((KColorButton*)self, (QShowEvent*)event);
 }
 
-void k_colorbutton_qbase_show_event(void* self, void* event) {
-    KColorButton_QBaseShowEvent((KColorButton*)self, (QShowEvent*)event);
+void k_colorbutton_super_show_event(void* self, void* event) {
+    KColorButton_SuperShowEvent((KColorButton*)self, (QShowEvent*)event);
 }
 
 void k_colorbutton_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2142,8 +2142,8 @@ void k_colorbutton_hide_event(void* self, void* event) {
     KColorButton_HideEvent((KColorButton*)self, (QHideEvent*)event);
 }
 
-void k_colorbutton_qbase_hide_event(void* self, void* event) {
-    KColorButton_QBaseHideEvent((KColorButton*)self, (QHideEvent*)event);
+void k_colorbutton_super_hide_event(void* self, void* event) {
+    KColorButton_SuperHideEvent((KColorButton*)self, (QHideEvent*)event);
 }
 
 void k_colorbutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2154,8 +2154,8 @@ bool k_colorbutton_native_event(void* self, char* eventType, void* message, intp
     return KColorButton_NativeEvent((KColorButton*)self, qstring(eventType), message, result);
 }
 
-bool k_colorbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KColorButton_QBaseNativeEvent((KColorButton*)self, qstring(eventType), message, result);
+bool k_colorbutton_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KColorButton_SuperNativeEvent((KColorButton*)self, qstring(eventType), message, result);
 }
 
 void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2166,8 +2166,8 @@ int32_t k_colorbutton_metric(void* self, int32_t param1) {
     return KColorButton_Metric((KColorButton*)self, param1);
 }
 
-int32_t k_colorbutton_qbase_metric(void* self, int32_t param1) {
-    return KColorButton_QBaseMetric((KColorButton*)self, param1);
+int32_t k_colorbutton_super_metric(void* self, int32_t param1) {
+    return KColorButton_SuperMetric((KColorButton*)self, param1);
 }
 
 void k_colorbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2178,8 +2178,8 @@ void k_colorbutton_init_painter(void* self, void* painter) {
     KColorButton_InitPainter((KColorButton*)self, (QPainter*)painter);
 }
 
-void k_colorbutton_qbase_init_painter(void* self, void* painter) {
-    KColorButton_QBaseInitPainter((KColorButton*)self, (QPainter*)painter);
+void k_colorbutton_super_init_painter(void* self, void* painter) {
+    KColorButton_SuperInitPainter((KColorButton*)self, (QPainter*)painter);
 }
 
 void k_colorbutton_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ QPaintDevice* k_colorbutton_redirected(void* self, void* offset) {
     return KColorButton_Redirected((KColorButton*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_colorbutton_qbase_redirected(void* self, void* offset) {
-    return KColorButton_QBaseRedirected((KColorButton*)self, (QPoint*)offset);
+QPaintDevice* k_colorbutton_super_redirected(void* self, void* offset) {
+    return KColorButton_SuperRedirected((KColorButton*)self, (QPoint*)offset);
 }
 
 void k_colorbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2202,8 +2202,8 @@ QPainter* k_colorbutton_shared_painter(void* self) {
     return KColorButton_SharedPainter((KColorButton*)self);
 }
 
-QPainter* k_colorbutton_qbase_shared_painter(void* self) {
-    return KColorButton_QBaseSharedPainter((KColorButton*)self);
+QPainter* k_colorbutton_super_shared_painter(void* self) {
+    return KColorButton_SuperSharedPainter((KColorButton*)self);
 }
 
 void k_colorbutton_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2214,8 +2214,8 @@ void k_colorbutton_input_method_event(void* self, void* param1) {
     KColorButton_InputMethodEvent((KColorButton*)self, (QInputMethodEvent*)param1);
 }
 
-void k_colorbutton_qbase_input_method_event(void* self, void* param1) {
-    KColorButton_QBaseInputMethodEvent((KColorButton*)self, (QInputMethodEvent*)param1);
+void k_colorbutton_super_input_method_event(void* self, void* param1) {
+    KColorButton_SuperInputMethodEvent((KColorButton*)self, (QInputMethodEvent*)param1);
 }
 
 void k_colorbutton_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2226,8 +2226,8 @@ QVariant* k_colorbutton_input_method_query(void* self, int32_t param1) {
     return KColorButton_InputMethodQuery((KColorButton*)self, param1);
 }
 
-QVariant* k_colorbutton_qbase_input_method_query(void* self, int32_t param1) {
-    return KColorButton_QBaseInputMethodQuery((KColorButton*)self, param1);
+QVariant* k_colorbutton_super_input_method_query(void* self, int32_t param1) {
+    return KColorButton_SuperInputMethodQuery((KColorButton*)self, param1);
 }
 
 void k_colorbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2238,8 +2238,8 @@ bool k_colorbutton_focus_next_prev_child(void* self, bool next) {
     return KColorButton_FocusNextPrevChild((KColorButton*)self, next);
 }
 
-bool k_colorbutton_qbase_focus_next_prev_child(void* self, bool next) {
-    return KColorButton_QBaseFocusNextPrevChild((KColorButton*)self, next);
+bool k_colorbutton_super_focus_next_prev_child(void* self, bool next) {
+    return KColorButton_SuperFocusNextPrevChild((KColorButton*)self, next);
 }
 
 void k_colorbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2250,8 +2250,8 @@ bool k_colorbutton_event_filter(void* self, void* watched, void* event) {
     return KColorButton_EventFilter((KColorButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_colorbutton_qbase_event_filter(void* self, void* watched, void* event) {
-    return KColorButton_QBaseEventFilter((KColorButton*)self, (QObject*)watched, (QEvent*)event);
+bool k_colorbutton_super_event_filter(void* self, void* watched, void* event) {
+    return KColorButton_SuperEventFilter((KColorButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_colorbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2262,8 +2262,8 @@ void k_colorbutton_child_event(void* self, void* event) {
     KColorButton_ChildEvent((KColorButton*)self, (QChildEvent*)event);
 }
 
-void k_colorbutton_qbase_child_event(void* self, void* event) {
-    KColorButton_QBaseChildEvent((KColorButton*)self, (QChildEvent*)event);
+void k_colorbutton_super_child_event(void* self, void* event) {
+    KColorButton_SuperChildEvent((KColorButton*)self, (QChildEvent*)event);
 }
 
 void k_colorbutton_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void k_colorbutton_custom_event(void* self, void* event) {
     KColorButton_CustomEvent((KColorButton*)self, (QEvent*)event);
 }
 
-void k_colorbutton_qbase_custom_event(void* self, void* event) {
-    KColorButton_QBaseCustomEvent((KColorButton*)self, (QEvent*)event);
+void k_colorbutton_super_custom_event(void* self, void* event) {
+    KColorButton_SuperCustomEvent((KColorButton*)self, (QEvent*)event);
 }
 
 void k_colorbutton_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2286,8 +2286,8 @@ void k_colorbutton_connect_notify(void* self, void* signal) {
     KColorButton_ConnectNotify((KColorButton*)self, (QMetaMethod*)signal);
 }
 
-void k_colorbutton_qbase_connect_notify(void* self, void* signal) {
-    KColorButton_QBaseConnectNotify((KColorButton*)self, (QMetaMethod*)signal);
+void k_colorbutton_super_connect_notify(void* self, void* signal) {
+    KColorButton_SuperConnectNotify((KColorButton*)self, (QMetaMethod*)signal);
 }
 
 void k_colorbutton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2298,8 +2298,8 @@ void k_colorbutton_disconnect_notify(void* self, void* signal) {
     KColorButton_DisconnectNotify((KColorButton*)self, (QMetaMethod*)signal);
 }
 
-void k_colorbutton_qbase_disconnect_notify(void* self, void* signal) {
-    KColorButton_QBaseDisconnectNotify((KColorButton*)self, (QMetaMethod*)signal);
+void k_colorbutton_super_disconnect_notify(void* self, void* signal) {
+    KColorButton_SuperDisconnectNotify((KColorButton*)self, (QMetaMethod*)signal);
 }
 
 void k_colorbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2310,8 +2310,8 @@ void k_colorbutton_update_micro_focus(void* self) {
     KColorButton_UpdateMicroFocus((KColorButton*)self);
 }
 
-void k_colorbutton_qbase_update_micro_focus(void* self) {
-    KColorButton_QBaseUpdateMicroFocus((KColorButton*)self);
+void k_colorbutton_super_update_micro_focus(void* self) {
+    KColorButton_SuperUpdateMicroFocus((KColorButton*)self);
 }
 
 void k_colorbutton_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2322,8 +2322,8 @@ void k_colorbutton_create(void* self) {
     KColorButton_Create((KColorButton*)self);
 }
 
-void k_colorbutton_qbase_create(void* self) {
-    KColorButton_QBaseCreate((KColorButton*)self);
+void k_colorbutton_super_create(void* self) {
+    KColorButton_SuperCreate((KColorButton*)self);
 }
 
 void k_colorbutton_on_create(void* self, void (*callback)()) {
@@ -2334,8 +2334,8 @@ void k_colorbutton_destroy(void* self) {
     KColorButton_Destroy((KColorButton*)self);
 }
 
-void k_colorbutton_qbase_destroy(void* self) {
-    KColorButton_QBaseDestroy((KColorButton*)self);
+void k_colorbutton_super_destroy(void* self) {
+    KColorButton_SuperDestroy((KColorButton*)self);
 }
 
 void k_colorbutton_on_destroy(void* self, void (*callback)()) {
@@ -2346,8 +2346,8 @@ bool k_colorbutton_focus_next_child(void* self) {
     return KColorButton_FocusNextChild((KColorButton*)self);
 }
 
-bool k_colorbutton_qbase_focus_next_child(void* self) {
-    return KColorButton_QBaseFocusNextChild((KColorButton*)self);
+bool k_colorbutton_super_focus_next_child(void* self) {
+    return KColorButton_SuperFocusNextChild((KColorButton*)self);
 }
 
 void k_colorbutton_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2358,8 +2358,8 @@ bool k_colorbutton_focus_previous_child(void* self) {
     return KColorButton_FocusPreviousChild((KColorButton*)self);
 }
 
-bool k_colorbutton_qbase_focus_previous_child(void* self) {
-    return KColorButton_QBaseFocusPreviousChild((KColorButton*)self);
+bool k_colorbutton_super_focus_previous_child(void* self) {
+    return KColorButton_SuperFocusPreviousChild((KColorButton*)self);
 }
 
 void k_colorbutton_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2370,8 +2370,8 @@ QObject* k_colorbutton_sender(void* self) {
     return KColorButton_Sender((KColorButton*)self);
 }
 
-QObject* k_colorbutton_qbase_sender(void* self) {
-    return KColorButton_QBaseSender((KColorButton*)self);
+QObject* k_colorbutton_super_sender(void* self) {
+    return KColorButton_SuperSender((KColorButton*)self);
 }
 
 void k_colorbutton_on_sender(void* self, QObject* (*callback)()) {
@@ -2382,8 +2382,8 @@ int32_t k_colorbutton_sender_signal_index(void* self) {
     return KColorButton_SenderSignalIndex((KColorButton*)self);
 }
 
-int32_t k_colorbutton_qbase_sender_signal_index(void* self) {
-    return KColorButton_QBaseSenderSignalIndex((KColorButton*)self);
+int32_t k_colorbutton_super_sender_signal_index(void* self) {
+    return KColorButton_SuperSenderSignalIndex((KColorButton*)self);
 }
 
 void k_colorbutton_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2394,8 +2394,8 @@ int32_t k_colorbutton_receivers(void* self, const char* signal) {
     return KColorButton_Receivers((KColorButton*)self, signal);
 }
 
-int32_t k_colorbutton_qbase_receivers(void* self, const char* signal) {
-    return KColorButton_QBaseReceivers((KColorButton*)self, signal);
+int32_t k_colorbutton_super_receivers(void* self, const char* signal) {
+    return KColorButton_SuperReceivers((KColorButton*)self, signal);
 }
 
 void k_colorbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2406,8 +2406,8 @@ bool k_colorbutton_is_signal_connected(void* self, void* signal) {
     return KColorButton_IsSignalConnected((KColorButton*)self, (QMetaMethod*)signal);
 }
 
-bool k_colorbutton_qbase_is_signal_connected(void* self, void* signal) {
-    return KColorButton_QBaseIsSignalConnected((KColorButton*)self, (QMetaMethod*)signal);
+bool k_colorbutton_super_is_signal_connected(void* self, void* signal) {
+    return KColorButton_SuperIsSignalConnected((KColorButton*)self, (QMetaMethod*)signal);
 }
 
 void k_colorbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2418,8 +2418,8 @@ double k_colorbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KColorButton_GetDecodedMetricF((KColorButton*)self, metricA, metricB);
 }
 
-double k_colorbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KColorButton_QBaseGetDecodedMetricF((KColorButton*)self, metricA, metricB);
+double k_colorbutton_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KColorButton_SuperGetDecodedMetricF((KColorButton*)self, metricA, metricB);
 }
 
 void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -30,8 +30,8 @@ void q_sciprinter_on_format_page(void* self, void (*callback)(void*, void*, bool
     QsciPrinter_OnFormatPage((QsciPrinter*)self, (intptr_t)callback);
 }
 
-void q_sciprinter_qbase_format_page(void* self, void* painter, bool drawing, void* area, int pagenr) {
-    QsciPrinter_QBaseFormatPage((QsciPrinter*)self, (QPainter*)painter, drawing, (QRect*)area, pagenr);
+void q_sciprinter_super_format_page(void* self, void* painter, bool drawing, void* area, int pagenr) {
+    QsciPrinter_SuperFormatPage((QsciPrinter*)self, (QPainter*)painter, drawing, (QRect*)area, pagenr);
 }
 
 int32_t q_sciprinter_magnification(void* self) {
@@ -46,8 +46,8 @@ void q_sciprinter_on_set_magnification(void* self, void (*callback)(void*, int))
     QsciPrinter_OnSetMagnification((QsciPrinter*)self, (intptr_t)callback);
 }
 
-void q_sciprinter_qbase_set_magnification(void* self, int magnification) {
-    QsciPrinter_QBaseSetMagnification((QsciPrinter*)self, magnification);
+void q_sciprinter_super_set_magnification(void* self, int magnification) {
+    QsciPrinter_SuperSetMagnification((QsciPrinter*)self, magnification);
 }
 
 int32_t q_sciprinter_print_range(void* self, void* qsb, void* painter, int from, int to) {
@@ -58,8 +58,8 @@ void q_sciprinter_on_print_range(void* self, int32_t (*callback)(void*, void*, v
     QsciPrinter_OnPrintRange((QsciPrinter*)self, (intptr_t)callback);
 }
 
-int32_t q_sciprinter_qbase_print_range(void* self, void* qsb, void* painter, int from, int to) {
-    return QsciPrinter_QBasePrintRange((QsciPrinter*)self, (QsciScintillaBase*)qsb, (QPainter*)painter, from, to);
+int32_t q_sciprinter_super_print_range(void* self, void* qsb, void* painter, int from, int to) {
+    return QsciPrinter_SuperPrintRange((QsciPrinter*)self, (QsciScintillaBase*)qsb, (QPainter*)painter, from, to);
 }
 
 int32_t q_sciprinter_print_range2(void* self, void* qsb, int from, int to) {
@@ -70,8 +70,8 @@ void q_sciprinter_on_print_range2(void* self, int32_t (*callback)(void*, void*, 
     QsciPrinter_OnPrintRange2((QsciPrinter*)self, (intptr_t)callback);
 }
 
-int32_t q_sciprinter_qbase_print_range2(void* self, void* qsb, int from, int to) {
-    return QsciPrinter_QBasePrintRange2((QsciPrinter*)self, (QsciScintillaBase*)qsb, from, to);
+int32_t q_sciprinter_super_print_range2(void* self, void* qsb, int from, int to) {
+    return QsciPrinter_SuperPrintRange2((QsciPrinter*)self, (QsciScintillaBase*)qsb, from, to);
 }
 
 int32_t q_sciprinter_wrap_mode(void* self) {
@@ -86,8 +86,8 @@ void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t))
     QsciPrinter_OnSetWrapMode((QsciPrinter*)self, (intptr_t)callback);
 }
 
-void q_sciprinter_qbase_set_wrap_mode(void* self, int32_t wmode) {
-    QsciPrinter_QBaseSetWrapMode((QsciPrinter*)self, wmode);
+void q_sciprinter_super_set_wrap_mode(void* self, int32_t wmode) {
+    QsciPrinter_SuperSetWrapMode((QsciPrinter*)self, wmode);
 }
 
 void q_sciprinter_set_output_format(void* self, int32_t format) {
@@ -365,8 +365,8 @@ int32_t q_sciprinter_dev_type(void* self) {
     return QsciPrinter_DevType((QsciPrinter*)self);
 }
 
-int32_t q_sciprinter_qbase_dev_type(void* self) {
-    return QsciPrinter_QBaseDevType((QsciPrinter*)self);
+int32_t q_sciprinter_super_dev_type(void* self) {
+    return QsciPrinter_SuperDevType((QsciPrinter*)self);
 }
 
 void q_sciprinter_on_dev_type(void* self, int32_t (*callback)()) {
@@ -377,8 +377,8 @@ bool q_sciprinter_new_page(void* self) {
     return QsciPrinter_NewPage((QsciPrinter*)self);
 }
 
-bool q_sciprinter_qbase_new_page(void* self) {
-    return QsciPrinter_QBaseNewPage((QsciPrinter*)self);
+bool q_sciprinter_super_new_page(void* self) {
+    return QsciPrinter_SuperNewPage((QsciPrinter*)self);
 }
 
 void q_sciprinter_on_new_page(void* self, bool (*callback)()) {
@@ -389,8 +389,8 @@ QPaintEngine* q_sciprinter_paint_engine(void* self) {
     return QsciPrinter_PaintEngine((QsciPrinter*)self);
 }
 
-QPaintEngine* q_sciprinter_qbase_paint_engine(void* self) {
-    return QsciPrinter_QBasePaintEngine((QsciPrinter*)self);
+QPaintEngine* q_sciprinter_super_paint_engine(void* self) {
+    return QsciPrinter_SuperPaintEngine((QsciPrinter*)self);
 }
 
 void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -401,8 +401,8 @@ int32_t q_sciprinter_metric(void* self, int32_t param1) {
     return QsciPrinter_Metric((QsciPrinter*)self, param1);
 }
 
-int32_t q_sciprinter_qbase_metric(void* self, int32_t param1) {
-    return QsciPrinter_QBaseMetric((QsciPrinter*)self, param1);
+int32_t q_sciprinter_super_metric(void* self, int32_t param1) {
+    return QsciPrinter_SuperMetric((QsciPrinter*)self, param1);
 }
 
 void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -413,8 +413,8 @@ bool q_sciprinter_set_page_layout(void* self, void* pageLayout) {
     return QsciPrinter_SetPageLayout((QsciPrinter*)self, (QPageLayout*)pageLayout);
 }
 
-bool q_sciprinter_qbase_set_page_layout(void* self, void* pageLayout) {
-    return QsciPrinter_QBaseSetPageLayout((QsciPrinter*)self, (QPageLayout*)pageLayout);
+bool q_sciprinter_super_set_page_layout(void* self, void* pageLayout) {
+    return QsciPrinter_SuperSetPageLayout((QsciPrinter*)self, (QPageLayout*)pageLayout);
 }
 
 void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, void*)) {
@@ -425,8 +425,8 @@ bool q_sciprinter_set_page_size(void* self, void* pageSize) {
     return QsciPrinter_SetPageSize((QsciPrinter*)self, (QPageSize*)pageSize);
 }
 
-bool q_sciprinter_qbase_set_page_size(void* self, void* pageSize) {
-    return QsciPrinter_QBaseSetPageSize((QsciPrinter*)self, (QPageSize*)pageSize);
+bool q_sciprinter_super_set_page_size(void* self, void* pageSize) {
+    return QsciPrinter_SuperSetPageSize((QsciPrinter*)self, (QPageSize*)pageSize);
 }
 
 void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, void*)) {
@@ -437,8 +437,8 @@ bool q_sciprinter_set_page_orientation(void* self, int32_t orientation) {
     return QsciPrinter_SetPageOrientation((QsciPrinter*)self, orientation);
 }
 
-bool q_sciprinter_qbase_set_page_orientation(void* self, int32_t orientation) {
-    return QsciPrinter_QBaseSetPageOrientation((QsciPrinter*)self, orientation);
+bool q_sciprinter_super_set_page_orientation(void* self, int32_t orientation) {
+    return QsciPrinter_SuperSetPageOrientation((QsciPrinter*)self, orientation);
 }
 
 void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t)) {
@@ -449,8 +449,8 @@ bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units) {
     return QsciPrinter_SetPageMargins((QsciPrinter*)self, (QMarginsF*)margins, units);
 }
 
-bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int32_t units) {
-    return QsciPrinter_QBaseSetPageMargins((QsciPrinter*)self, (QMarginsF*)margins, units);
+bool q_sciprinter_super_set_page_margins(void* self, void* margins, int32_t units) {
+    return QsciPrinter_SuperSetPageMargins((QsciPrinter*)self, (QMarginsF*)margins, units);
 }
 
 void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -461,8 +461,8 @@ void q_sciprinter_set_page_ranges(void* self, void* ranges) {
     QsciPrinter_SetPageRanges((QsciPrinter*)self, (QPageRanges*)ranges);
 }
 
-void q_sciprinter_qbase_set_page_ranges(void* self, void* ranges) {
-    QsciPrinter_QBaseSetPageRanges((QsciPrinter*)self, (QPageRanges*)ranges);
+void q_sciprinter_super_set_page_ranges(void* self, void* ranges) {
+    QsciPrinter_SuperSetPageRanges((QsciPrinter*)self, (QPageRanges*)ranges);
 }
 
 void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, void*)) {
@@ -473,8 +473,8 @@ void q_sciprinter_init_painter(void* self, void* painter) {
     QsciPrinter_InitPainter((QsciPrinter*)self, (QPainter*)painter);
 }
 
-void q_sciprinter_qbase_init_painter(void* self, void* painter) {
-    QsciPrinter_QBaseInitPainter((QsciPrinter*)self, (QPainter*)painter);
+void q_sciprinter_super_init_painter(void* self, void* painter) {
+    QsciPrinter_SuperInitPainter((QsciPrinter*)self, (QPainter*)painter);
 }
 
 void q_sciprinter_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -485,8 +485,8 @@ QPaintDevice* q_sciprinter_redirected(void* self, void* offset) {
     return QsciPrinter_Redirected((QsciPrinter*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_sciprinter_qbase_redirected(void* self, void* offset) {
-    return QsciPrinter_QBaseRedirected((QsciPrinter*)self, (QPoint*)offset);
+QPaintDevice* q_sciprinter_super_redirected(void* self, void* offset) {
+    return QsciPrinter_SuperRedirected((QsciPrinter*)self, (QPoint*)offset);
 }
 
 void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -497,8 +497,8 @@ QPainter* q_sciprinter_shared_painter(void* self) {
     return QsciPrinter_SharedPainter((QsciPrinter*)self);
 }
 
-QPainter* q_sciprinter_qbase_shared_painter(void* self) {
-    return QsciPrinter_QBaseSharedPainter((QsciPrinter*)self);
+QPainter* q_sciprinter_super_shared_painter(void* self) {
+    return QsciPrinter_SuperSharedPainter((QsciPrinter*)self);
 }
 
 void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -509,8 +509,8 @@ void q_sciprinter_set_engines(void* self, void* printEngine, void* paintEngine) 
     QsciPrinter_SetEngines((QsciPrinter*)self, (QPrintEngine*)printEngine, (QPaintEngine*)paintEngine);
 }
 
-void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEngine) {
-    QsciPrinter_QBaseSetEngines((QsciPrinter*)self, (QPrintEngine*)printEngine, (QPaintEngine*)paintEngine);
+void q_sciprinter_super_set_engines(void* self, void* printEngine, void* paintEngine) {
+    QsciPrinter_SuperSetEngines((QsciPrinter*)self, (QPrintEngine*)printEngine, (QPaintEngine*)paintEngine);
 }
 
 void q_sciprinter_on_set_engines(void* self, void (*callback)(void*, void*, void*)) {
@@ -521,8 +521,8 @@ double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QsciPrinter_GetDecodedMetricF((QsciPrinter*)self, metricA, metricB);
 }
 
-double q_sciprinter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QsciPrinter_QBaseGetDecodedMetricF((QsciPrinter*)self, metricA, metricB);
+double q_sciprinter_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QsciPrinter_SuperGetDecodedMetricF((QsciPrinter*)self, metricA, metricB);
 }
 
 void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

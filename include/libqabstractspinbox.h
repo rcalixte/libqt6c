@@ -40,13 +40,17 @@ const QMetaObject* q_abstractspinbox_meta_object(void* self);
 ///
 void q_abstractspinbox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_meta_object` instead
+///
+#define q_abstractspinbox_qbase_meta_object q_abstractspinbox_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 ///
-const QMetaObject* q_abstractspinbox_qbase_meta_object(void* self);
+const QMetaObject* q_abstractspinbox_super_meta_object(void* self);
 
 /// @param self QAbstractSpinBox*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_abstractspinbox_metacast(void* self, const char* param1);
 ///
 void q_abstractspinbox_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_metacast` instead
+///
+#define q_abstractspinbox_qbase_metacast q_abstractspinbox_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 /// @param param1 const char*
 ///
-void* q_abstractspinbox_qbase_metacast(void* self, const char* param1);
+void* q_abstractspinbox_super_metacast(void* self, const char* param1);
 
 /// @param self QAbstractSpinBox*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_abstractspinbox_metacall(void* self, int32_t param1, int param2, void*
 ///
 void q_abstractspinbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_metacall` instead
+///
+#define q_abstractspinbox_qbase_metacall q_abstractspinbox_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
@@ -88,7 +100,7 @@ void q_abstractspinbox_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_abstractspinbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_abstractspinbox_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -265,13 +277,17 @@ QSize* q_abstractspinbox_size_hint(void* self);
 ///
 void q_abstractspinbox_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_size_hint` instead
+///
+#define q_abstractspinbox_qbase_size_hint q_abstractspinbox_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 ///
-QSize* q_abstractspinbox_qbase_size_hint(void* self);
+QSize* q_abstractspinbox_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
@@ -288,13 +304,17 @@ QSize* q_abstractspinbox_minimum_size_hint(void* self);
 ///
 void q_abstractspinbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_minimum_size_hint` instead
+///
+#define q_abstractspinbox_qbase_minimum_size_hint q_abstractspinbox_super_minimum_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 ///
-QSize* q_abstractspinbox_qbase_minimum_size_hint(void* self);
+QSize* q_abstractspinbox_super_minimum_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#interpretText)
 ///
@@ -318,6 +338,10 @@ bool q_abstractspinbox_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_event` instead
+///
+#define q_abstractspinbox_qbase_event q_abstractspinbox_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#event)
 ///
 /// Base class method implementation
@@ -325,7 +349,7 @@ void q_abstractspinbox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QAbstractSpinBox*
 /// @param event QEvent*
 ///
-bool q_abstractspinbox_qbase_event(void* self, void* event);
+bool q_abstractspinbox_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
@@ -343,6 +367,10 @@ QVariant* q_abstractspinbox_input_method_query(void* self, int32_t param1);
 ///
 void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_input_method_query` instead
+///
+#define q_abstractspinbox_qbase_input_method_query q_abstractspinbox_super_input_method_query
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Base class method implementation
@@ -350,7 +378,7 @@ void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*callback)(v
 /// @param self QAbstractSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_abstractspinbox_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_abstractspinbox_super_input_method_query(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#validate)
 ///
@@ -371,6 +399,10 @@ int32_t q_abstractspinbox_validate(void* self, const char* input, int* pos);
 ///
 void q_abstractspinbox_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_validate` instead
+///
+#define q_abstractspinbox_qbase_validate q_abstractspinbox_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#validate)
 ///
 /// Base class method implementation
@@ -381,7 +413,7 @@ void q_abstractspinbox_on_validate(void* self, int32_t (*callback)(void*, const 
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_abstractspinbox_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_abstractspinbox_super_validate(void* self, const char* input, int* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#fixup)
 ///
@@ -399,6 +431,10 @@ void q_abstractspinbox_fixup(void* self, const char* input);
 ///
 void q_abstractspinbox_on_fixup(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_fixup` instead
+///
+#define q_abstractspinbox_qbase_fixup q_abstractspinbox_super_fixup
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#fixup)
 ///
 /// Base class method implementation
@@ -406,7 +442,7 @@ void q_abstractspinbox_on_fixup(void* self, void (*callback)(void*, const char*)
 /// @param self QAbstractSpinBox*
 /// @param input const char*
 ///
-void q_abstractspinbox_qbase_fixup(void* self, const char* input);
+void q_abstractspinbox_super_fixup(void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
 ///
@@ -424,6 +460,10 @@ void q_abstractspinbox_step_by(void* self, int steps);
 ///
 void q_abstractspinbox_on_step_by(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_step_by` instead
+///
+#define q_abstractspinbox_qbase_step_by q_abstractspinbox_super_step_by
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
 ///
 /// Base class method implementation
@@ -431,7 +471,7 @@ void q_abstractspinbox_on_step_by(void* self, void (*callback)(void*, int));
 /// @param self QAbstractSpinBox*
 /// @param steps int
 ///
-void q_abstractspinbox_qbase_step_by(void* self, int steps);
+void q_abstractspinbox_super_step_by(void* self, int steps);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepUp)
 ///
@@ -466,13 +506,17 @@ void q_abstractspinbox_clear(void* self);
 ///
 void q_abstractspinbox_on_clear(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_clear` instead
+///
+#define q_abstractspinbox_qbase_clear q_abstractspinbox_super_clear
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 ///
-void q_abstractspinbox_qbase_clear(void* self);
+void q_abstractspinbox_super_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
@@ -490,6 +534,10 @@ void q_abstractspinbox_resize_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_resize_event` instead
+///
+#define q_abstractspinbox_qbase_resize_event q_abstractspinbox_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -497,7 +545,7 @@ void q_abstractspinbox_on_resize_event(void* self, void (*callback)(void*, void*
 /// @param self QAbstractSpinBox*
 /// @param event QResizeEvent*
 ///
-void q_abstractspinbox_qbase_resize_event(void* self, void* event);
+void q_abstractspinbox_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
 ///
@@ -515,6 +563,10 @@ void q_abstractspinbox_key_press_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_key_press_event` instead
+///
+#define q_abstractspinbox_qbase_key_press_event q_abstractspinbox_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -522,7 +574,7 @@ void q_abstractspinbox_on_key_press_event(void* self, void (*callback)(void*, vo
 /// @param self QAbstractSpinBox*
 /// @param event QKeyEvent*
 ///
-void q_abstractspinbox_qbase_key_press_event(void* self, void* event);
+void q_abstractspinbox_super_key_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
@@ -540,6 +592,10 @@ void q_abstractspinbox_key_release_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_key_release_event` instead
+///
+#define q_abstractspinbox_qbase_key_release_event q_abstractspinbox_super_key_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Base class method implementation
@@ -547,7 +603,7 @@ void q_abstractspinbox_on_key_release_event(void* self, void (*callback)(void*, 
 /// @param self QAbstractSpinBox*
 /// @param event QKeyEvent*
 ///
-void q_abstractspinbox_qbase_key_release_event(void* self, void* event);
+void q_abstractspinbox_super_key_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
 ///
@@ -565,6 +621,10 @@ void q_abstractspinbox_wheel_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_wheel_event` instead
+///
+#define q_abstractspinbox_qbase_wheel_event q_abstractspinbox_super_wheel_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -572,7 +632,7 @@ void q_abstractspinbox_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param self QAbstractSpinBox*
 /// @param event QWheelEvent*
 ///
-void q_abstractspinbox_qbase_wheel_event(void* self, void* event);
+void q_abstractspinbox_super_wheel_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
 ///
@@ -590,6 +650,10 @@ void q_abstractspinbox_focus_in_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_focus_in_event` instead
+///
+#define q_abstractspinbox_qbase_focus_in_event q_abstractspinbox_super_focus_in_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -597,7 +661,7 @@ void q_abstractspinbox_on_focus_in_event(void* self, void (*callback)(void*, voi
 /// @param self QAbstractSpinBox*
 /// @param event QFocusEvent*
 ///
-void q_abstractspinbox_qbase_focus_in_event(void* self, void* event);
+void q_abstractspinbox_super_focus_in_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
@@ -615,6 +679,10 @@ void q_abstractspinbox_focus_out_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_focus_out_event` instead
+///
+#define q_abstractspinbox_qbase_focus_out_event q_abstractspinbox_super_focus_out_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -622,7 +690,7 @@ void q_abstractspinbox_on_focus_out_event(void* self, void (*callback)(void*, vo
 /// @param self QAbstractSpinBox*
 /// @param event QFocusEvent*
 ///
-void q_abstractspinbox_qbase_focus_out_event(void* self, void* event);
+void q_abstractspinbox_super_focus_out_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
@@ -640,6 +708,10 @@ void q_abstractspinbox_context_menu_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_context_menu_event` instead
+///
+#define q_abstractspinbox_qbase_context_menu_event q_abstractspinbox_super_context_menu_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Base class method implementation
@@ -647,7 +719,7 @@ void q_abstractspinbox_on_context_menu_event(void* self, void (*callback)(void*,
 /// @param self QAbstractSpinBox*
 /// @param event QContextMenuEvent*
 ///
-void q_abstractspinbox_qbase_context_menu_event(void* self, void* event);
+void q_abstractspinbox_super_context_menu_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
@@ -665,6 +737,10 @@ void q_abstractspinbox_change_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_change_event` instead
+///
+#define q_abstractspinbox_qbase_change_event q_abstractspinbox_super_change_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Base class method implementation
@@ -672,7 +748,7 @@ void q_abstractspinbox_on_change_event(void* self, void (*callback)(void*, void*
 /// @param self QAbstractSpinBox*
 /// @param event QEvent*
 ///
-void q_abstractspinbox_qbase_change_event(void* self, void* event);
+void q_abstractspinbox_super_change_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
@@ -690,6 +766,10 @@ void q_abstractspinbox_close_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_close_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_close_event` instead
+///
+#define q_abstractspinbox_qbase_close_event q_abstractspinbox_super_close_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Base class method implementation
@@ -697,7 +777,7 @@ void q_abstractspinbox_on_close_event(void* self, void (*callback)(void*, void*)
 /// @param self QAbstractSpinBox*
 /// @param event QCloseEvent*
 ///
-void q_abstractspinbox_qbase_close_event(void* self, void* event);
+void q_abstractspinbox_super_close_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
@@ -715,6 +795,10 @@ void q_abstractspinbox_hide_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_hide_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_hide_event` instead
+///
+#define q_abstractspinbox_qbase_hide_event q_abstractspinbox_super_hide_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Base class method implementation
@@ -722,7 +806,7 @@ void q_abstractspinbox_on_hide_event(void* self, void (*callback)(void*, void*))
 /// @param self QAbstractSpinBox*
 /// @param event QHideEvent*
 ///
-void q_abstractspinbox_qbase_hide_event(void* self, void* event);
+void q_abstractspinbox_super_hide_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
 ///
@@ -740,6 +824,10 @@ void q_abstractspinbox_mouse_press_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_mouse_press_event` instead
+///
+#define q_abstractspinbox_qbase_mouse_press_event q_abstractspinbox_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -747,7 +835,7 @@ void q_abstractspinbox_on_mouse_press_event(void* self, void (*callback)(void*, 
 /// @param self QAbstractSpinBox*
 /// @param event QMouseEvent*
 ///
-void q_abstractspinbox_qbase_mouse_press_event(void* self, void* event);
+void q_abstractspinbox_super_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
@@ -765,6 +853,10 @@ void q_abstractspinbox_mouse_release_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_mouse_release_event` instead
+///
+#define q_abstractspinbox_qbase_mouse_release_event q_abstractspinbox_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -772,7 +864,7 @@ void q_abstractspinbox_on_mouse_release_event(void* self, void (*callback)(void*
 /// @param self QAbstractSpinBox*
 /// @param event QMouseEvent*
 ///
-void q_abstractspinbox_qbase_mouse_release_event(void* self, void* event);
+void q_abstractspinbox_super_mouse_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
@@ -790,6 +882,10 @@ void q_abstractspinbox_mouse_move_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_mouse_move_event` instead
+///
+#define q_abstractspinbox_qbase_mouse_move_event q_abstractspinbox_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -797,7 +893,7 @@ void q_abstractspinbox_on_mouse_move_event(void* self, void (*callback)(void*, v
 /// @param self QAbstractSpinBox*
 /// @param event QMouseEvent*
 ///
-void q_abstractspinbox_qbase_mouse_move_event(void* self, void* event);
+void q_abstractspinbox_super_mouse_move_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
@@ -815,6 +911,10 @@ void q_abstractspinbox_timer_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_timer_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_timer_event` instead
+///
+#define q_abstractspinbox_qbase_timer_event q_abstractspinbox_super_timer_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Base class method implementation
@@ -822,7 +922,7 @@ void q_abstractspinbox_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param self QAbstractSpinBox*
 /// @param event QTimerEvent*
 ///
-void q_abstractspinbox_qbase_timer_event(void* self, void* event);
+void q_abstractspinbox_super_timer_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
 ///
@@ -840,6 +940,10 @@ void q_abstractspinbox_paint_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_paint_event` instead
+///
+#define q_abstractspinbox_qbase_paint_event q_abstractspinbox_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
 ///
 /// Base class method implementation
@@ -847,7 +951,7 @@ void q_abstractspinbox_on_paint_event(void* self, void (*callback)(void*, void*)
 /// @param self QAbstractSpinBox*
 /// @param event QPaintEvent*
 ///
-void q_abstractspinbox_qbase_paint_event(void* self, void* event);
+void q_abstractspinbox_super_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
@@ -865,6 +969,10 @@ void q_abstractspinbox_show_event(void* self, void* event);
 ///
 void q_abstractspinbox_on_show_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_show_event` instead
+///
+#define q_abstractspinbox_qbase_show_event q_abstractspinbox_super_show_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Base class method implementation
@@ -872,7 +980,7 @@ void q_abstractspinbox_on_show_event(void* self, void (*callback)(void*, void*))
 /// @param self QAbstractSpinBox*
 /// @param event QShowEvent*
 ///
-void q_abstractspinbox_qbase_show_event(void* self, void* event);
+void q_abstractspinbox_super_show_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
 ///
@@ -890,6 +998,10 @@ void q_abstractspinbox_init_style_option(void* self, void* option);
 ///
 void q_abstractspinbox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_init_style_option` instead
+///
+#define q_abstractspinbox_qbase_init_style_option q_abstractspinbox_super_init_style_option
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
 ///
 /// Base class method implementation
@@ -897,7 +1009,7 @@ void q_abstractspinbox_on_init_style_option(void* self, void (*callback)(void*, 
 /// @param self QAbstractSpinBox*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_abstractspinbox_qbase_init_style_option(void* self, void* option);
+void q_abstractspinbox_super_init_style_option(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
@@ -914,13 +1026,17 @@ QLineEdit* q_abstractspinbox_line_edit(void* self);
 ///
 void q_abstractspinbox_on_line_edit(void* self, QLineEdit* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_line_edit` instead
+///
+#define q_abstractspinbox_qbase_line_edit q_abstractspinbox_super_line_edit
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractSpinBox*
 ///
-QLineEdit* q_abstractspinbox_qbase_line_edit(void* self);
+QLineEdit* q_abstractspinbox_super_line_edit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
@@ -938,6 +1054,10 @@ void q_abstractspinbox_set_line_edit(void* self, void* edit);
 ///
 void q_abstractspinbox_on_set_line_edit(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_set_line_edit` instead
+///
+#define q_abstractspinbox_qbase_set_line_edit q_abstractspinbox_super_set_line_edit
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Base class method implementation
@@ -945,7 +1065,7 @@ void q_abstractspinbox_on_set_line_edit(void* self, void (*callback)(void*, void
 /// @param self QAbstractSpinBox*
 /// @param edit QLineEdit*
 ///
-void q_abstractspinbox_qbase_set_line_edit(void* self, void* edit);
+void q_abstractspinbox_super_set_line_edit(void* self, void* edit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
@@ -964,6 +1084,10 @@ int32_t q_abstractspinbox_step_enabled(void* self);
 ///
 void q_abstractspinbox_on_step_enabled(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_step_enabled` instead
+///
+#define q_abstractspinbox_qbase_step_enabled q_abstractspinbox_super_step_enabled
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
 /// Base class method implementation
@@ -972,7 +1096,7 @@ void q_abstractspinbox_on_step_enabled(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_abstractspinbox_qbase_step_enabled(void* self);
+int32_t q_abstractspinbox_super_step_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
@@ -3973,6 +4097,10 @@ int32_t q_abstractspinbox_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_abstractspinbox_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_dev_type` instead
+///
+#define q_abstractspinbox_qbase_dev_type q_abstractspinbox_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3981,7 +4109,7 @@ int32_t q_abstractspinbox_dev_type(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-int32_t q_abstractspinbox_qbase_dev_type(void* self);
+int32_t q_abstractspinbox_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4005,6 +4133,10 @@ void q_abstractspinbox_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_abstractspinbox_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_set_visible` instead
+///
+#define q_abstractspinbox_qbase_set_visible q_abstractspinbox_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4014,7 +4146,7 @@ void q_abstractspinbox_set_visible(void* self, bool visible);
 /// @param self QAbstractSpinBox*
 /// @param visible bool
 ///
-void q_abstractspinbox_qbase_set_visible(void* self, bool visible);
+void q_abstractspinbox_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -4038,6 +4170,10 @@ void q_abstractspinbox_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 int32_t q_abstractspinbox_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_height_for_width` instead
+///
+#define q_abstractspinbox_qbase_height_for_width q_abstractspinbox_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4047,7 +4183,7 @@ int32_t q_abstractspinbox_height_for_width(void* self, int param1);
 /// @param self QAbstractSpinBox*
 /// @param param1 int
 ///
-int32_t q_abstractspinbox_qbase_height_for_width(void* self, int param1);
+int32_t q_abstractspinbox_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4070,6 +4206,10 @@ void q_abstractspinbox_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool q_abstractspinbox_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_has_height_for_width` instead
+///
+#define q_abstractspinbox_qbase_has_height_for_width q_abstractspinbox_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4078,7 +4218,7 @@ bool q_abstractspinbox_has_height_for_width(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-bool q_abstractspinbox_qbase_has_height_for_width(void* self);
+bool q_abstractspinbox_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4101,6 +4241,10 @@ void q_abstractspinbox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_abstractspinbox_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_paint_engine` instead
+///
+#define q_abstractspinbox_qbase_paint_engine q_abstractspinbox_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -4109,7 +4253,7 @@ QPaintEngine* q_abstractspinbox_paint_engine(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-QPaintEngine* q_abstractspinbox_qbase_paint_engine(void* self);
+QPaintEngine* q_abstractspinbox_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4133,6 +4277,10 @@ void q_abstractspinbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_abstractspinbox_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_mouse_double_click_event` instead
+///
+#define q_abstractspinbox_qbase_mouse_double_click_event q_abstractspinbox_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4142,7 +4290,7 @@ void q_abstractspinbox_mouse_double_click_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QMouseEvent*
 ///
-void q_abstractspinbox_qbase_mouse_double_click_event(void* self, void* event);
+void q_abstractspinbox_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4166,6 +4314,10 @@ void q_abstractspinbox_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void q_abstractspinbox_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_enter_event` instead
+///
+#define q_abstractspinbox_qbase_enter_event q_abstractspinbox_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4175,7 +4327,7 @@ void q_abstractspinbox_enter_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QEnterEvent*
 ///
-void q_abstractspinbox_qbase_enter_event(void* self, void* event);
+void q_abstractspinbox_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4199,6 +4351,10 @@ void q_abstractspinbox_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void q_abstractspinbox_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_leave_event` instead
+///
+#define q_abstractspinbox_qbase_leave_event q_abstractspinbox_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4208,7 +4364,7 @@ void q_abstractspinbox_leave_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QEvent*
 ///
-void q_abstractspinbox_qbase_leave_event(void* self, void* event);
+void q_abstractspinbox_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4232,6 +4388,10 @@ void q_abstractspinbox_on_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void q_abstractspinbox_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_move_event` instead
+///
+#define q_abstractspinbox_qbase_move_event q_abstractspinbox_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4241,7 +4401,7 @@ void q_abstractspinbox_move_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QMoveEvent*
 ///
-void q_abstractspinbox_qbase_move_event(void* self, void* event);
+void q_abstractspinbox_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4265,6 +4425,10 @@ void q_abstractspinbox_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_abstractspinbox_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_tablet_event` instead
+///
+#define q_abstractspinbox_qbase_tablet_event q_abstractspinbox_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4274,7 +4438,7 @@ void q_abstractspinbox_tablet_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QTabletEvent*
 ///
-void q_abstractspinbox_qbase_tablet_event(void* self, void* event);
+void q_abstractspinbox_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4298,6 +4462,10 @@ void q_abstractspinbox_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 void q_abstractspinbox_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_action_event` instead
+///
+#define q_abstractspinbox_qbase_action_event q_abstractspinbox_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4307,7 +4475,7 @@ void q_abstractspinbox_action_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QActionEvent*
 ///
-void q_abstractspinbox_qbase_action_event(void* self, void* event);
+void q_abstractspinbox_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4331,6 +4499,10 @@ void q_abstractspinbox_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void q_abstractspinbox_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_drag_enter_event` instead
+///
+#define q_abstractspinbox_qbase_drag_enter_event q_abstractspinbox_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4340,7 +4512,7 @@ void q_abstractspinbox_drag_enter_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QDragEnterEvent*
 ///
-void q_abstractspinbox_qbase_drag_enter_event(void* self, void* event);
+void q_abstractspinbox_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4364,6 +4536,10 @@ void q_abstractspinbox_on_drag_enter_event(void* self, void (*callback)(void*, v
 ///
 void q_abstractspinbox_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_drag_move_event` instead
+///
+#define q_abstractspinbox_qbase_drag_move_event q_abstractspinbox_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4373,7 +4549,7 @@ void q_abstractspinbox_drag_move_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QDragMoveEvent*
 ///
-void q_abstractspinbox_qbase_drag_move_event(void* self, void* event);
+void q_abstractspinbox_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4397,6 +4573,10 @@ void q_abstractspinbox_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 void q_abstractspinbox_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_drag_leave_event` instead
+///
+#define q_abstractspinbox_qbase_drag_leave_event q_abstractspinbox_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4406,7 +4586,7 @@ void q_abstractspinbox_drag_leave_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QDragLeaveEvent*
 ///
-void q_abstractspinbox_qbase_drag_leave_event(void* self, void* event);
+void q_abstractspinbox_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4430,6 +4610,10 @@ void q_abstractspinbox_on_drag_leave_event(void* self, void (*callback)(void*, v
 ///
 void q_abstractspinbox_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_drop_event` instead
+///
+#define q_abstractspinbox_qbase_drop_event q_abstractspinbox_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4439,7 +4623,7 @@ void q_abstractspinbox_drop_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QDropEvent*
 ///
-void q_abstractspinbox_qbase_drop_event(void* self, void* event);
+void q_abstractspinbox_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4465,6 +4649,10 @@ void q_abstractspinbox_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 bool q_abstractspinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_native_event` instead
+///
+#define q_abstractspinbox_qbase_native_event q_abstractspinbox_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4476,7 +4664,7 @@ bool q_abstractspinbox_native_event(void* self, char* eventType, void* message, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstractspinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstractspinbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4500,6 +4688,10 @@ void q_abstractspinbox_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 int32_t q_abstractspinbox_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_metric` instead
+///
+#define q_abstractspinbox_qbase_metric q_abstractspinbox_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4509,7 +4701,7 @@ int32_t q_abstractspinbox_metric(void* self, int32_t param1);
 /// @param self QAbstractSpinBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_abstractspinbox_qbase_metric(void* self, int32_t param1);
+int32_t q_abstractspinbox_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4533,6 +4725,10 @@ void q_abstractspinbox_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void q_abstractspinbox_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_init_painter` instead
+///
+#define q_abstractspinbox_qbase_init_painter q_abstractspinbox_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4542,7 +4738,7 @@ void q_abstractspinbox_init_painter(void* self, void* painter);
 /// @param self QAbstractSpinBox*
 /// @param painter QPainter*
 ///
-void q_abstractspinbox_qbase_init_painter(void* self, void* painter);
+void q_abstractspinbox_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4566,6 +4762,10 @@ void q_abstractspinbox_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* q_abstractspinbox_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_redirected` instead
+///
+#define q_abstractspinbox_qbase_redirected q_abstractspinbox_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4575,7 +4775,7 @@ QPaintDevice* q_abstractspinbox_redirected(void* self, void* offset);
 /// @param self QAbstractSpinBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_abstractspinbox_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_abstractspinbox_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4598,6 +4798,10 @@ void q_abstractspinbox_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 QPainter* q_abstractspinbox_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_shared_painter` instead
+///
+#define q_abstractspinbox_qbase_shared_painter q_abstractspinbox_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4606,7 +4810,7 @@ QPainter* q_abstractspinbox_shared_painter(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-QPainter* q_abstractspinbox_qbase_shared_painter(void* self);
+QPainter* q_abstractspinbox_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4630,6 +4834,10 @@ void q_abstractspinbox_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_abstractspinbox_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_input_method_event` instead
+///
+#define q_abstractspinbox_qbase_input_method_event q_abstractspinbox_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4639,7 +4847,7 @@ void q_abstractspinbox_input_method_event(void* self, void* param1);
 /// @param self QAbstractSpinBox*
 /// @param param1 QInputMethodEvent*
 ///
-void q_abstractspinbox_qbase_input_method_event(void* self, void* param1);
+void q_abstractspinbox_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4663,6 +4871,10 @@ void q_abstractspinbox_on_input_method_event(void* self, void (*callback)(void*,
 ///
 bool q_abstractspinbox_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_focus_next_prev_child` instead
+///
+#define q_abstractspinbox_qbase_focus_next_prev_child q_abstractspinbox_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4672,7 +4884,7 @@ bool q_abstractspinbox_focus_next_prev_child(void* self, bool next);
 /// @param self QAbstractSpinBox*
 /// @param next bool
 ///
-bool q_abstractspinbox_qbase_focus_next_prev_child(void* self, bool next);
+bool q_abstractspinbox_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4697,6 +4909,10 @@ void q_abstractspinbox_on_focus_next_prev_child(void* self, bool (*callback)(voi
 ///
 bool q_abstractspinbox_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_event_filter` instead
+///
+#define q_abstractspinbox_qbase_event_filter q_abstractspinbox_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4707,7 +4923,7 @@ bool q_abstractspinbox_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_abstractspinbox_qbase_event_filter(void* self, void* watched, void* event);
+bool q_abstractspinbox_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4731,6 +4947,10 @@ void q_abstractspinbox_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_abstractspinbox_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_child_event` instead
+///
+#define q_abstractspinbox_qbase_child_event q_abstractspinbox_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4740,7 +4960,7 @@ void q_abstractspinbox_child_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QChildEvent*
 ///
-void q_abstractspinbox_qbase_child_event(void* self, void* event);
+void q_abstractspinbox_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4764,6 +4984,10 @@ void q_abstractspinbox_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_abstractspinbox_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_custom_event` instead
+///
+#define q_abstractspinbox_qbase_custom_event q_abstractspinbox_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4773,7 +4997,7 @@ void q_abstractspinbox_custom_event(void* self, void* event);
 /// @param self QAbstractSpinBox*
 /// @param event QEvent*
 ///
-void q_abstractspinbox_qbase_custom_event(void* self, void* event);
+void q_abstractspinbox_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4797,6 +5021,10 @@ void q_abstractspinbox_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void q_abstractspinbox_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_connect_notify` instead
+///
+#define q_abstractspinbox_qbase_connect_notify q_abstractspinbox_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4806,7 +5034,7 @@ void q_abstractspinbox_connect_notify(void* self, void* signal);
 /// @param self QAbstractSpinBox*
 /// @param signal QMetaMethod*
 ///
-void q_abstractspinbox_qbase_connect_notify(void* self, void* signal);
+void q_abstractspinbox_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4830,6 +5058,10 @@ void q_abstractspinbox_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_abstractspinbox_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_disconnect_notify` instead
+///
+#define q_abstractspinbox_qbase_disconnect_notify q_abstractspinbox_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4839,7 +5071,7 @@ void q_abstractspinbox_disconnect_notify(void* self, void* signal);
 /// @param self QAbstractSpinBox*
 /// @param signal QMetaMethod*
 ///
-void q_abstractspinbox_qbase_disconnect_notify(void* self, void* signal);
+void q_abstractspinbox_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4862,6 +5094,10 @@ void q_abstractspinbox_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void q_abstractspinbox_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_update_micro_focus` instead
+///
+#define q_abstractspinbox_qbase_update_micro_focus q_abstractspinbox_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4870,7 +5106,7 @@ void q_abstractspinbox_update_micro_focus(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-void q_abstractspinbox_qbase_update_micro_focus(void* self);
+void q_abstractspinbox_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4893,6 +5129,10 @@ void q_abstractspinbox_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_abstractspinbox_create(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_create` instead
+///
+#define q_abstractspinbox_qbase_create q_abstractspinbox_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4901,7 +5141,7 @@ void q_abstractspinbox_create(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-void q_abstractspinbox_qbase_create(void* self);
+void q_abstractspinbox_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4924,6 +5164,10 @@ void q_abstractspinbox_on_create(void* self, void (*callback)());
 ///
 void q_abstractspinbox_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_destroy` instead
+///
+#define q_abstractspinbox_qbase_destroy q_abstractspinbox_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4932,7 +5176,7 @@ void q_abstractspinbox_destroy(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-void q_abstractspinbox_qbase_destroy(void* self);
+void q_abstractspinbox_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4955,6 +5199,10 @@ void q_abstractspinbox_on_destroy(void* self, void (*callback)());
 ///
 bool q_abstractspinbox_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_focus_next_child` instead
+///
+#define q_abstractspinbox_qbase_focus_next_child q_abstractspinbox_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -4963,7 +5211,7 @@ bool q_abstractspinbox_focus_next_child(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-bool q_abstractspinbox_qbase_focus_next_child(void* self);
+bool q_abstractspinbox_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4986,6 +5234,10 @@ void q_abstractspinbox_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_abstractspinbox_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_focus_previous_child` instead
+///
+#define q_abstractspinbox_qbase_focus_previous_child q_abstractspinbox_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -4994,7 +5246,7 @@ bool q_abstractspinbox_focus_previous_child(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-bool q_abstractspinbox_qbase_focus_previous_child(void* self);
+bool q_abstractspinbox_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5017,6 +5269,10 @@ void q_abstractspinbox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_abstractspinbox_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_sender` instead
+///
+#define q_abstractspinbox_qbase_sender q_abstractspinbox_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5025,7 +5281,7 @@ QObject* q_abstractspinbox_sender(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-QObject* q_abstractspinbox_qbase_sender(void* self);
+QObject* q_abstractspinbox_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5048,6 +5304,10 @@ void q_abstractspinbox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_abstractspinbox_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_sender_signal_index` instead
+///
+#define q_abstractspinbox_qbase_sender_signal_index q_abstractspinbox_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5056,7 +5316,7 @@ int32_t q_abstractspinbox_sender_signal_index(void* self);
 ///
 /// @param self QAbstractSpinBox*
 ///
-int32_t q_abstractspinbox_qbase_sender_signal_index(void* self);
+int32_t q_abstractspinbox_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5080,6 +5340,10 @@ void q_abstractspinbox_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_abstractspinbox_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_receivers` instead
+///
+#define q_abstractspinbox_qbase_receivers q_abstractspinbox_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5089,7 +5353,7 @@ int32_t q_abstractspinbox_receivers(void* self, const char* signal);
 /// @param self QAbstractSpinBox*
 /// @param signal const char*
 ///
-int32_t q_abstractspinbox_qbase_receivers(void* self, const char* signal);
+int32_t q_abstractspinbox_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5113,6 +5377,10 @@ void q_abstractspinbox_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool q_abstractspinbox_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_is_signal_connected` instead
+///
+#define q_abstractspinbox_qbase_is_signal_connected q_abstractspinbox_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5122,7 +5390,7 @@ bool q_abstractspinbox_is_signal_connected(void* self, void* signal);
 /// @param self QAbstractSpinBox*
 /// @param signal QMetaMethod*
 ///
-bool q_abstractspinbox_qbase_is_signal_connected(void* self, void* signal);
+bool q_abstractspinbox_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5147,6 +5415,10 @@ void q_abstractspinbox_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 double q_abstractspinbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_abstractspinbox_super_get_decoded_metric_f` instead
+///
+#define q_abstractspinbox_qbase_get_decoded_metric_f q_abstractspinbox_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5157,7 +5429,7 @@ double q_abstractspinbox_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_abstractspinbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_abstractspinbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

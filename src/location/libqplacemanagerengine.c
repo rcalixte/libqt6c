@@ -91,8 +91,8 @@ void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callba
     QPlaceManagerEngine_OnMetaObject((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_placemanagerengine_qbase_meta_object(void* self) {
-    return QPlaceManagerEngine_QBaseMetaObject((QPlaceManagerEngine*)self);
+const QMetaObject* q_placemanagerengine_super_meta_object(void* self) {
+    return QPlaceManagerEngine_SuperMetaObject((QPlaceManagerEngine*)self);
 }
 
 void* q_placemanagerengine_metacast(void* self, const char* param1) {
@@ -103,8 +103,8 @@ void q_placemanagerengine_on_metacast(void* self, void* (*callback)(void*, const
     QPlaceManagerEngine_OnMetacast((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-void* q_placemanagerengine_qbase_metacast(void* self, const char* param1) {
-    return QPlaceManagerEngine_QBaseMetacast((QPlaceManagerEngine*)self, param1);
+void* q_placemanagerengine_super_metacast(void* self, const char* param1) {
+    return QPlaceManagerEngine_SuperMetacast((QPlaceManagerEngine*)self, param1);
 }
 
 int32_t q_placemanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -115,8 +115,8 @@ void q_placemanagerengine_on_metacall(void* self, int32_t (*callback)(void*, int
     QPlaceManagerEngine_OnMetacall((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-int32_t q_placemanagerengine_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPlaceManagerEngine_QBaseMetacall((QPlaceManagerEngine*)self, param1, param2, param3);
+int32_t q_placemanagerengine_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPlaceManagerEngine_SuperMetacall((QPlaceManagerEngine*)self, param1, param2, param3);
 }
 
 const char* q_placemanagerengine_tr(const char* s) {
@@ -145,8 +145,8 @@ void q_placemanagerengine_on_get_place_details(void* self, QPlaceDetailsReply* (
     QPlaceManagerEngine_OnGetPlaceDetails((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceDetailsReply* q_placemanagerengine_qbase_get_place_details(void* self, const char* placeId) {
-    return QPlaceManagerEngine_QBaseGetPlaceDetails((QPlaceManagerEngine*)self, qstring(placeId));
+QPlaceDetailsReply* q_placemanagerengine_super_get_place_details(void* self, const char* placeId) {
+    return QPlaceManagerEngine_SuperGetPlaceDetails((QPlaceManagerEngine*)self, qstring(placeId));
 }
 
 QPlaceContentReply* q_placemanagerengine_get_place_content(void* self, void* request) {
@@ -157,8 +157,8 @@ void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (
     QPlaceManagerEngine_OnGetPlaceContent((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceContentReply* q_placemanagerengine_qbase_get_place_content(void* self, void* request) {
-    return QPlaceManagerEngine_QBaseGetPlaceContent((QPlaceManagerEngine*)self, (QPlaceContentRequest*)request);
+QPlaceContentReply* q_placemanagerengine_super_get_place_content(void* self, void* request) {
+    return QPlaceManagerEngine_SuperGetPlaceContent((QPlaceManagerEngine*)self, (QPlaceContentRequest*)request);
 }
 
 QPlaceSearchReply* q_placemanagerengine_search(void* self, void* request) {
@@ -169,8 +169,8 @@ void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(v
     QPlaceManagerEngine_OnSearch((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceSearchReply* q_placemanagerengine_qbase_search(void* self, void* request) {
-    return QPlaceManagerEngine_QBaseSearch((QPlaceManagerEngine*)self, (QPlaceSearchRequest*)request);
+QPlaceSearchReply* q_placemanagerengine_super_search(void* self, void* request) {
+    return QPlaceManagerEngine_SuperSearch((QPlaceManagerEngine*)self, (QPlaceSearchRequest*)request);
 }
 
 QPlaceSearchSuggestionReply* q_placemanagerengine_search_suggestions(void* self, void* request) {
@@ -181,8 +181,8 @@ void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggesti
     QPlaceManagerEngine_OnSearchSuggestions((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceSearchSuggestionReply* q_placemanagerengine_qbase_search_suggestions(void* self, void* request) {
-    return QPlaceManagerEngine_QBaseSearchSuggestions((QPlaceManagerEngine*)self, (QPlaceSearchRequest*)request);
+QPlaceSearchSuggestionReply* q_placemanagerengine_super_search_suggestions(void* self, void* request) {
+    return QPlaceManagerEngine_SuperSearchSuggestions((QPlaceManagerEngine*)self, (QPlaceSearchRequest*)request);
 }
 
 QPlaceIdReply* q_placemanagerengine_save_place(void* self, void* place) {
@@ -193,8 +193,8 @@ void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(v
     QPlaceManagerEngine_OnSavePlace((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceIdReply* q_placemanagerengine_qbase_save_place(void* self, void* place) {
-    return QPlaceManagerEngine_QBaseSavePlace((QPlaceManagerEngine*)self, (QPlace*)place);
+QPlaceIdReply* q_placemanagerengine_super_save_place(void* self, void* place) {
+    return QPlaceManagerEngine_SuperSavePlace((QPlaceManagerEngine*)self, (QPlace*)place);
 }
 
 QPlaceIdReply* q_placemanagerengine_remove_place(void* self, const char* placeId) {
@@ -205,8 +205,8 @@ void q_placemanagerengine_on_remove_place(void* self, QPlaceIdReply* (*callback)
     QPlaceManagerEngine_OnRemovePlace((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceIdReply* q_placemanagerengine_qbase_remove_place(void* self, const char* placeId) {
-    return QPlaceManagerEngine_QBaseRemovePlace((QPlaceManagerEngine*)self, qstring(placeId));
+QPlaceIdReply* q_placemanagerengine_super_remove_place(void* self, const char* placeId) {
+    return QPlaceManagerEngine_SuperRemovePlace((QPlaceManagerEngine*)self, qstring(placeId));
 }
 
 QPlaceIdReply* q_placemanagerengine_save_category(void* self, void* category, const char* parentId) {
@@ -217,8 +217,8 @@ void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback
     QPlaceManagerEngine_OnSaveCategory((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceIdReply* q_placemanagerengine_qbase_save_category(void* self, void* category, const char* parentId) {
-    return QPlaceManagerEngine_QBaseSaveCategory((QPlaceManagerEngine*)self, (QPlaceCategory*)category, qstring(parentId));
+QPlaceIdReply* q_placemanagerengine_super_save_category(void* self, void* category, const char* parentId) {
+    return QPlaceManagerEngine_SuperSaveCategory((QPlaceManagerEngine*)self, (QPlaceCategory*)category, qstring(parentId));
 }
 
 QPlaceIdReply* q_placemanagerengine_remove_category(void* self, const char* categoryId) {
@@ -229,8 +229,8 @@ void q_placemanagerengine_on_remove_category(void* self, QPlaceIdReply* (*callba
     QPlaceManagerEngine_OnRemoveCategory((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceIdReply* q_placemanagerengine_qbase_remove_category(void* self, const char* categoryId) {
-    return QPlaceManagerEngine_QBaseRemoveCategory((QPlaceManagerEngine*)self, qstring(categoryId));
+QPlaceIdReply* q_placemanagerengine_super_remove_category(void* self, const char* categoryId) {
+    return QPlaceManagerEngine_SuperRemoveCategory((QPlaceManagerEngine*)self, qstring(categoryId));
 }
 
 QPlaceReply* q_placemanagerengine_initialize_categories(void* self) {
@@ -241,8 +241,8 @@ void q_placemanagerengine_on_initialize_categories(void* self, QPlaceReply* (*ca
     QPlaceManagerEngine_OnInitializeCategories((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceReply* q_placemanagerengine_qbase_initialize_categories(void* self) {
-    return QPlaceManagerEngine_QBaseInitializeCategories((QPlaceManagerEngine*)self);
+QPlaceReply* q_placemanagerengine_super_initialize_categories(void* self) {
+    return QPlaceManagerEngine_SuperInitializeCategories((QPlaceManagerEngine*)self);
 }
 
 const char* q_placemanagerengine_parent_category_id(void* self, const char* categoryId) {
@@ -256,8 +256,8 @@ void q_placemanagerengine_on_parent_category_id(void* self, const char* (*callba
     QPlaceManagerEngine_OnParentCategoryId((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-const char* q_placemanagerengine_qbase_parent_category_id(void* self, const char* categoryId) {
-    libqt_string _str = QPlaceManagerEngine_QBaseParentCategoryId((QPlaceManagerEngine*)self, qstring(categoryId));
+const char* q_placemanagerengine_super_parent_category_id(void* self, const char* categoryId) {
+    libqt_string _str = QPlaceManagerEngine_SuperParentCategoryId((QPlaceManagerEngine*)self, qstring(categoryId));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -286,8 +286,8 @@ void q_placemanagerengine_on_child_category_ids(void* self, const char** (*callb
     QPlaceManagerEngine_OnChildCategoryIds((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-const char** q_placemanagerengine_qbase_child_category_ids(void* self, const char* categoryId) {
-    libqt_list _arr = QPlaceManagerEngine_QBaseChildCategoryIds((QPlaceManagerEngine*)self, qstring(categoryId));
+const char** q_placemanagerengine_super_child_category_ids(void* self, const char* categoryId) {
+    libqt_list _arr = QPlaceManagerEngine_SuperChildCategoryIds((QPlaceManagerEngine*)self, qstring(categoryId));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -313,8 +313,8 @@ void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(vo
     QPlaceManagerEngine_OnCategory((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceCategory* q_placemanagerengine_qbase_category(void* self, const char* categoryId) {
-    return QPlaceManagerEngine_QBaseCategory((QPlaceManagerEngine*)self, qstring(categoryId));
+QPlaceCategory* q_placemanagerengine_super_category(void* self, const char* categoryId) {
+    return QPlaceManagerEngine_SuperCategory((QPlaceManagerEngine*)self, qstring(categoryId));
 }
 
 libqt_list /* of QPlaceCategory* */ q_placemanagerengine_child_categories(void* self, const char* parentId) {
@@ -326,8 +326,8 @@ void q_placemanagerengine_on_child_categories(void* self, libqt_list /* of QPlac
     QPlaceManagerEngine_OnChildCategories((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPlaceCategory* */ q_placemanagerengine_qbase_child_categories(void* self, const char* parentId) {
-    libqt_list _arr = QPlaceManagerEngine_QBaseChildCategories((QPlaceManagerEngine*)self, qstring(parentId));
+libqt_list /* of QPlaceCategory* */ q_placemanagerengine_super_child_categories(void* self, const char* parentId) {
+    libqt_list _arr = QPlaceManagerEngine_SuperChildCategories((QPlaceManagerEngine*)self, qstring(parentId));
     return _arr;
 }
 
@@ -340,8 +340,8 @@ void q_placemanagerengine_on_locales(void* self, libqt_list /* of QLocale* */ (*
     QPlaceManagerEngine_OnLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QLocale* */ q_placemanagerengine_qbase_locales(void* self) {
-    libqt_list _arr = QPlaceManagerEngine_QBaseLocales((QPlaceManagerEngine*)self);
+libqt_list /* of QLocale* */ q_placemanagerengine_super_locales(void* self) {
+    libqt_list _arr = QPlaceManagerEngine_SuperLocales((QPlaceManagerEngine*)self);
     return _arr;
 }
 
@@ -353,8 +353,8 @@ void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, lib
     QPlaceManagerEngine_OnSetLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_placemanagerengine_qbase_set_locales(void* self, libqt_list /* of QLocale* */ locales) {
-    QPlaceManagerEngine_QBaseSetLocales((QPlaceManagerEngine*)self, locales);
+void q_placemanagerengine_super_set_locales(void* self, libqt_list /* of QLocale* */ locales) {
+    QPlaceManagerEngine_SuperSetLocales((QPlaceManagerEngine*)self, locales);
 }
 
 QUrl* q_placemanagerengine_construct_icon_url(void* self, void* icon, void* size) {
@@ -365,8 +365,8 @@ void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(vo
     QPlaceManagerEngine_OnConstructIconUrl((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QUrl* q_placemanagerengine_qbase_construct_icon_url(void* self, void* icon, void* size) {
-    return QPlaceManagerEngine_QBaseConstructIconUrl((QPlaceManagerEngine*)self, (QPlaceIcon*)icon, (QSize*)size);
+QUrl* q_placemanagerengine_super_construct_icon_url(void* self, void* icon, void* size) {
+    return QPlaceManagerEngine_SuperConstructIconUrl((QPlaceManagerEngine*)self, (QPlaceIcon*)icon, (QSize*)size);
 }
 
 QPlace* q_placemanagerengine_compatible_place(void* self, void* original) {
@@ -377,8 +377,8 @@ void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(vo
     QPlaceManagerEngine_OnCompatiblePlace((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlace* q_placemanagerengine_qbase_compatible_place(void* self, void* original) {
-    return QPlaceManagerEngine_QBaseCompatiblePlace((QPlaceManagerEngine*)self, (QPlace*)original);
+QPlace* q_placemanagerengine_super_compatible_place(void* self, void* original) {
+    return QPlaceManagerEngine_SuperCompatiblePlace((QPlaceManagerEngine*)self, (QPlace*)original);
 }
 
 QPlaceMatchReply* q_placemanagerengine_matching_places(void* self, void* request) {
@@ -389,8 +389,8 @@ void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*cal
     QPlaceManagerEngine_OnMatchingPlaces((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceMatchReply* q_placemanagerengine_qbase_matching_places(void* self, void* request) {
-    return QPlaceManagerEngine_QBaseMatchingPlaces((QPlaceManagerEngine*)self, (QPlaceMatchRequest*)request);
+QPlaceMatchReply* q_placemanagerengine_super_matching_places(void* self, void* request) {
+    return QPlaceManagerEngine_SuperMatchingPlaces((QPlaceManagerEngine*)self, (QPlaceMatchRequest*)request);
 }
 
 void q_placemanagerengine_finished(void* self, void* reply) {
@@ -473,8 +473,8 @@ void q_placemanagerengine_on_manager(void* self, QPlaceManager* (*callback)()) {
     QPlaceManagerEngine_OnManager((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-QPlaceManager* q_placemanagerengine_qbase_manager(void* self) {
-    return QPlaceManagerEngine_QBaseManager((QPlaceManagerEngine*)self);
+QPlaceManager* q_placemanagerengine_super_manager(void* self) {
+    return QPlaceManagerEngine_SuperManager((QPlaceManagerEngine*)self);
 }
 
 const char* q_placemanagerengine_tr2(const char* s, const char* c) {
@@ -714,8 +714,8 @@ bool q_placemanagerengine_event(void* self, void* event) {
     return QPlaceManagerEngine_Event((QPlaceManagerEngine*)self, (QEvent*)event);
 }
 
-bool q_placemanagerengine_qbase_event(void* self, void* event) {
-    return QPlaceManagerEngine_QBaseEvent((QPlaceManagerEngine*)self, (QEvent*)event);
+bool q_placemanagerengine_super_event(void* self, void* event) {
+    return QPlaceManagerEngine_SuperEvent((QPlaceManagerEngine*)self, (QEvent*)event);
 }
 
 void q_placemanagerengine_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -726,8 +726,8 @@ bool q_placemanagerengine_event_filter(void* self, void* watched, void* event) {
     return QPlaceManagerEngine_EventFilter((QPlaceManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_placemanagerengine_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPlaceManagerEngine_QBaseEventFilter((QPlaceManagerEngine*)self, (QObject*)watched, (QEvent*)event);
+bool q_placemanagerengine_super_event_filter(void* self, void* watched, void* event) {
+    return QPlaceManagerEngine_SuperEventFilter((QPlaceManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_placemanagerengine_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -738,8 +738,8 @@ void q_placemanagerengine_timer_event(void* self, void* event) {
     QPlaceManagerEngine_TimerEvent((QPlaceManagerEngine*)self, (QTimerEvent*)event);
 }
 
-void q_placemanagerengine_qbase_timer_event(void* self, void* event) {
-    QPlaceManagerEngine_QBaseTimerEvent((QPlaceManagerEngine*)self, (QTimerEvent*)event);
+void q_placemanagerengine_super_timer_event(void* self, void* event) {
+    QPlaceManagerEngine_SuperTimerEvent((QPlaceManagerEngine*)self, (QTimerEvent*)event);
 }
 
 void q_placemanagerengine_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -750,8 +750,8 @@ void q_placemanagerengine_child_event(void* self, void* event) {
     QPlaceManagerEngine_ChildEvent((QPlaceManagerEngine*)self, (QChildEvent*)event);
 }
 
-void q_placemanagerengine_qbase_child_event(void* self, void* event) {
-    QPlaceManagerEngine_QBaseChildEvent((QPlaceManagerEngine*)self, (QChildEvent*)event);
+void q_placemanagerengine_super_child_event(void* self, void* event) {
+    QPlaceManagerEngine_SuperChildEvent((QPlaceManagerEngine*)self, (QChildEvent*)event);
 }
 
 void q_placemanagerengine_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -762,8 +762,8 @@ void q_placemanagerengine_custom_event(void* self, void* event) {
     QPlaceManagerEngine_CustomEvent((QPlaceManagerEngine*)self, (QEvent*)event);
 }
 
-void q_placemanagerengine_qbase_custom_event(void* self, void* event) {
-    QPlaceManagerEngine_QBaseCustomEvent((QPlaceManagerEngine*)self, (QEvent*)event);
+void q_placemanagerengine_super_custom_event(void* self, void* event) {
+    QPlaceManagerEngine_SuperCustomEvent((QPlaceManagerEngine*)self, (QEvent*)event);
 }
 
 void q_placemanagerengine_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -774,8 +774,8 @@ void q_placemanagerengine_connect_notify(void* self, void* signal) {
     QPlaceManagerEngine_ConnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_placemanagerengine_qbase_connect_notify(void* self, void* signal) {
-    QPlaceManagerEngine_QBaseConnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
+void q_placemanagerengine_super_connect_notify(void* self, void* signal) {
+    QPlaceManagerEngine_SuperConnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_placemanagerengine_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -786,8 +786,8 @@ void q_placemanagerengine_disconnect_notify(void* self, void* signal) {
     QPlaceManagerEngine_DisconnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_placemanagerengine_qbase_disconnect_notify(void* self, void* signal) {
-    QPlaceManagerEngine_QBaseDisconnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
+void q_placemanagerengine_super_disconnect_notify(void* self, void* signal) {
+    QPlaceManagerEngine_SuperDisconnectNotify((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_placemanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -798,8 +798,8 @@ QObject* q_placemanagerengine_sender(void* self) {
     return QPlaceManagerEngine_Sender((QPlaceManagerEngine*)self);
 }
 
-QObject* q_placemanagerengine_qbase_sender(void* self) {
-    return QPlaceManagerEngine_QBaseSender((QPlaceManagerEngine*)self);
+QObject* q_placemanagerengine_super_sender(void* self) {
+    return QPlaceManagerEngine_SuperSender((QPlaceManagerEngine*)self);
 }
 
 void q_placemanagerengine_on_sender(void* self, QObject* (*callback)()) {
@@ -810,8 +810,8 @@ int32_t q_placemanagerengine_sender_signal_index(void* self) {
     return QPlaceManagerEngine_SenderSignalIndex((QPlaceManagerEngine*)self);
 }
 
-int32_t q_placemanagerengine_qbase_sender_signal_index(void* self) {
-    return QPlaceManagerEngine_QBaseSenderSignalIndex((QPlaceManagerEngine*)self);
+int32_t q_placemanagerengine_super_sender_signal_index(void* self) {
+    return QPlaceManagerEngine_SuperSenderSignalIndex((QPlaceManagerEngine*)self);
 }
 
 void q_placemanagerengine_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -822,8 +822,8 @@ int32_t q_placemanagerengine_receivers(void* self, const char* signal) {
     return QPlaceManagerEngine_Receivers((QPlaceManagerEngine*)self, signal);
 }
 
-int32_t q_placemanagerengine_qbase_receivers(void* self, const char* signal) {
-    return QPlaceManagerEngine_QBaseReceivers((QPlaceManagerEngine*)self, signal);
+int32_t q_placemanagerengine_super_receivers(void* self, const char* signal) {
+    return QPlaceManagerEngine_SuperReceivers((QPlaceManagerEngine*)self, signal);
 }
 
 void q_placemanagerengine_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -834,8 +834,8 @@ bool q_placemanagerengine_is_signal_connected(void* self, void* signal) {
     return QPlaceManagerEngine_IsSignalConnected((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-bool q_placemanagerengine_qbase_is_signal_connected(void* self, void* signal) {
-    return QPlaceManagerEngine_QBaseIsSignalConnected((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
+bool q_placemanagerengine_super_is_signal_connected(void* self, void* signal) {
+    return QPlaceManagerEngine_SuperIsSignalConnected((QPlaceManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_placemanagerengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

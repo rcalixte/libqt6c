@@ -26,8 +26,8 @@ void k_columnheadersmodel_on_meta_object(void* self, const QMetaObject* (*callba
     KColumnHeadersModel_OnMetaObject((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_columnheadersmodel_qbase_meta_object(void* self) {
-    return KColumnHeadersModel_QBaseMetaObject((KColumnHeadersModel*)self);
+const QMetaObject* k_columnheadersmodel_super_meta_object(void* self) {
+    return KColumnHeadersModel_SuperMetaObject((KColumnHeadersModel*)self);
 }
 
 void* k_columnheadersmodel_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_columnheadersmodel_on_metacast(void* self, void* (*callback)(void*, const
     KColumnHeadersModel_OnMetacast((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-void* k_columnheadersmodel_qbase_metacast(void* self, const char* param1) {
-    return KColumnHeadersModel_QBaseMetacast((KColumnHeadersModel*)self, param1);
+void* k_columnheadersmodel_super_metacast(void* self, const char* param1) {
+    return KColumnHeadersModel_SuperMetacast((KColumnHeadersModel*)self, param1);
 }
 
 int32_t k_columnheadersmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_columnheadersmodel_on_metacall(void* self, int32_t (*callback)(void*, int
     KColumnHeadersModel_OnMetacall((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-int32_t k_columnheadersmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColumnHeadersModel_QBaseMetacall((KColumnHeadersModel*)self, param1, param2, param3);
+int32_t k_columnheadersmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColumnHeadersModel_SuperMetacall((KColumnHeadersModel*)self, param1, param2, param3);
 }
 
 const char* k_columnheadersmodel_tr(const char* s) {
@@ -69,8 +69,8 @@ void k_columnheadersmodel_on_row_count(void* self, int32_t (*callback)(void*, vo
     KColumnHeadersModel_OnRowCount((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-int32_t k_columnheadersmodel_qbase_row_count(void* self, void* parent) {
-    return KColumnHeadersModel_QBaseRowCount((KColumnHeadersModel*)self, (QModelIndex*)parent);
+int32_t k_columnheadersmodel_super_row_count(void* self, void* parent) {
+    return KColumnHeadersModel_SuperRowCount((KColumnHeadersModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* k_columnheadersmodel_data(void* self, void* index, int role) {
@@ -81,8 +81,8 @@ void k_columnheadersmodel_on_data(void* self, QVariant* (*callback)(void*, void*
     KColumnHeadersModel_OnData((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_columnheadersmodel_qbase_data(void* self, void* index, int role) {
-    return KColumnHeadersModel_QBaseData((KColumnHeadersModel*)self, (QModelIndex*)index, role);
+QVariant* k_columnheadersmodel_super_data(void* self, void* index, int role) {
+    return KColumnHeadersModel_SuperData((KColumnHeadersModel*)self, (QModelIndex*)index, role);
 }
 
 libqt_map /* of int to char* */ k_columnheadersmodel_role_names(void* self) {
@@ -122,9 +122,9 @@ void k_columnheadersmodel_on_role_names(void* self, libqt_map /* of int to char*
     KColumnHeadersModel_OnRoleNames((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_columnheadersmodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_columnheadersmodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KColumnHeadersModel_QBaseRoleNames((KColumnHeadersModel*)self);
+    libqt_map _out = KColumnHeadersModel_SuperRoleNames((KColumnHeadersModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -229,8 +229,8 @@ void k_columnheadersmodel_on_parent(void* self, QModelIndex* (*callback)(void*, 
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_columnheadersmodel_qbase_parent(void* self, void* child) {
-    return QAbstractItemModel_QBaseParent((QAbstractItemModel*)self, (QModelIndex*)child);
+QModelIndex* k_columnheadersmodel_super_parent(void* self, void* child) {
+    return QAbstractItemModel_SuperParent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
 int32_t k_columnheadersmodel_column_count(void* self, void* parent) {
@@ -241,8 +241,8 @@ void k_columnheadersmodel_on_column_count(void* self, int32_t (*callback)(void*,
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int32_t k_columnheadersmodel_qbase_column_count(void* self, void* parent) {
-    return QAbstractItemModel_QBaseColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
+int32_t k_columnheadersmodel_super_column_count(void* self, void* parent) {
+    return QAbstractItemModel_SuperColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_columnheadersmodel_has_children(void* self, void* parent) {
@@ -253,8 +253,8 @@ void k_columnheadersmodel_on_has_children(void* self, bool (*callback)(void*, vo
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_columnheadersmodel_qbase_has_children(void* self, void* parent) {
-    return QAbstractItemModel_QBaseHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_has_children(void* self, void* parent) {
+    return QAbstractItemModel_SuperHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_columnheadersmodel_insert_row(void* self, int row) {
@@ -592,8 +592,8 @@ QModelIndex* k_columnheadersmodel_index(void* self, int row, int column, void* p
     return KColumnHeadersModel_Index((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_columnheadersmodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KColumnHeadersModel_QBaseIndex((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_columnheadersmodel_super_index(void* self, int row, int column, void* parent) {
+    return KColumnHeadersModel_SuperIndex((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -604,8 +604,8 @@ QModelIndex* k_columnheadersmodel_sibling(void* self, int row, int column, void*
     return KColumnHeadersModel_Sibling((KColumnHeadersModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_columnheadersmodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KColumnHeadersModel_QBaseSibling((KColumnHeadersModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_columnheadersmodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KColumnHeadersModel_SuperSibling((KColumnHeadersModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_columnheadersmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -616,8 +616,8 @@ bool k_columnheadersmodel_drop_mime_data(void* self, void* data, int32_t action,
     return KColumnHeadersModel_DropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KColumnHeadersModel_QBaseDropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KColumnHeadersModel_SuperDropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -628,8 +628,8 @@ int32_t k_columnheadersmodel_flags(void* self, void* index) {
     return KColumnHeadersModel_Flags((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_columnheadersmodel_qbase_flags(void* self, void* index) {
-    return KColumnHeadersModel_QBaseFlags((KColumnHeadersModel*)self, (QModelIndex*)index);
+int32_t k_columnheadersmodel_super_flags(void* self, void* index) {
+    return KColumnHeadersModel_SuperFlags((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
 void k_columnheadersmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -640,8 +640,8 @@ bool k_columnheadersmodel_set_data(void* self, void* index, void* value, int rol
     return KColumnHeadersModel_SetData((KColumnHeadersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_columnheadersmodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KColumnHeadersModel_QBaseSetData((KColumnHeadersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_columnheadersmodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KColumnHeadersModel_SuperSetData((KColumnHeadersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_columnheadersmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -652,8 +652,8 @@ QVariant* k_columnheadersmodel_header_data(void* self, int section, int32_t orie
     return KColumnHeadersModel_HeaderData((KColumnHeadersModel*)self, section, orientation, role);
 }
 
-QVariant* k_columnheadersmodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KColumnHeadersModel_QBaseHeaderData((KColumnHeadersModel*)self, section, orientation, role);
+QVariant* k_columnheadersmodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KColumnHeadersModel_SuperHeaderData((KColumnHeadersModel*)self, section, orientation, role);
 }
 
 void k_columnheadersmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -664,8 +664,8 @@ bool k_columnheadersmodel_set_header_data(void* self, int section, int32_t orien
     return KColumnHeadersModel_SetHeaderData((KColumnHeadersModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_columnheadersmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KColumnHeadersModel_QBaseSetHeaderData((KColumnHeadersModel*)self, section, orientation, (QVariant*)value, role);
+bool k_columnheadersmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KColumnHeadersModel_SuperSetHeaderData((KColumnHeadersModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_columnheadersmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -682,9 +682,9 @@ libqt_map /* of int to QVariant* */ k_columnheadersmodel_item_data(void* self, v
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_columnheadersmodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_columnheadersmodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KColumnHeadersModel_QBaseItemData((KColumnHeadersModel*)self, (QModelIndex*)index);
+    libqt_map _out = KColumnHeadersModel_SuperItemData((KColumnHeadersModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -725,7 +725,7 @@ bool k_columnheadersmodel_set_item_data(void* self, void* index, libqt_map /* of
     return _out;
 }
 
-bool k_columnheadersmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_columnheadersmodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -748,7 +748,7 @@ bool k_columnheadersmodel_qbase_set_item_data(void* self, void* index, libqt_map
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KColumnHeadersModel_QBaseSetItemData((KColumnHeadersModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KColumnHeadersModel_SuperSetItemData((KColumnHeadersModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -762,8 +762,8 @@ bool k_columnheadersmodel_clear_item_data(void* self, void* index) {
     return KColumnHeadersModel_ClearItemData((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
-bool k_columnheadersmodel_qbase_clear_item_data(void* self, void* index) {
-    return KColumnHeadersModel_QBaseClearItemData((KColumnHeadersModel*)self, (QModelIndex*)index);
+bool k_columnheadersmodel_super_clear_item_data(void* self, void* index) {
+    return KColumnHeadersModel_SuperClearItemData((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
 void k_columnheadersmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -789,8 +789,8 @@ const char** k_columnheadersmodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_columnheadersmodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KColumnHeadersModel_QBaseMimeTypes((KColumnHeadersModel*)self);
+const char** k_columnheadersmodel_super_mime_types(void* self) {
+    libqt_list _arr = KColumnHeadersModel_SuperMimeTypes((KColumnHeadersModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -816,8 +816,8 @@ QMimeData* k_columnheadersmodel_mime_data(void* self, libqt_list /* of QModelInd
     return KColumnHeadersModel_MimeData((KColumnHeadersModel*)self, indexes);
 }
 
-QMimeData* k_columnheadersmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KColumnHeadersModel_QBaseMimeData((KColumnHeadersModel*)self, indexes);
+QMimeData* k_columnheadersmodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KColumnHeadersModel_SuperMimeData((KColumnHeadersModel*)self, indexes);
 }
 
 void k_columnheadersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -828,8 +828,8 @@ bool k_columnheadersmodel_can_drop_mime_data(void* self, void* data, int32_t act
     return KColumnHeadersModel_CanDropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KColumnHeadersModel_QBaseCanDropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KColumnHeadersModel_SuperCanDropMimeData((KColumnHeadersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -840,8 +840,8 @@ int32_t k_columnheadersmodel_supported_drop_actions(void* self) {
     return KColumnHeadersModel_SupportedDropActions((KColumnHeadersModel*)self);
 }
 
-int32_t k_columnheadersmodel_qbase_supported_drop_actions(void* self) {
-    return KColumnHeadersModel_QBaseSupportedDropActions((KColumnHeadersModel*)self);
+int32_t k_columnheadersmodel_super_supported_drop_actions(void* self) {
+    return KColumnHeadersModel_SuperSupportedDropActions((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -852,8 +852,8 @@ int32_t k_columnheadersmodel_supported_drag_actions(void* self) {
     return KColumnHeadersModel_SupportedDragActions((KColumnHeadersModel*)self);
 }
 
-int32_t k_columnheadersmodel_qbase_supported_drag_actions(void* self) {
-    return KColumnHeadersModel_QBaseSupportedDragActions((KColumnHeadersModel*)self);
+int32_t k_columnheadersmodel_super_supported_drag_actions(void* self) {
+    return KColumnHeadersModel_SuperSupportedDragActions((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -864,8 +864,8 @@ bool k_columnheadersmodel_insert_rows(void* self, int row, int count, void* pare
     return KColumnHeadersModel_InsertRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KColumnHeadersModel_QBaseInsertRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KColumnHeadersModel_SuperInsertRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -876,8 +876,8 @@ bool k_columnheadersmodel_insert_columns(void* self, int column, int count, void
     return KColumnHeadersModel_InsertColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KColumnHeadersModel_QBaseInsertColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KColumnHeadersModel_SuperInsertColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -888,8 +888,8 @@ bool k_columnheadersmodel_remove_rows(void* self, int row, int count, void* pare
     return KColumnHeadersModel_RemoveRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KColumnHeadersModel_QBaseRemoveRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KColumnHeadersModel_SuperRemoveRows((KColumnHeadersModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -900,8 +900,8 @@ bool k_columnheadersmodel_remove_columns(void* self, int column, int count, void
     return KColumnHeadersModel_RemoveColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KColumnHeadersModel_QBaseRemoveColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KColumnHeadersModel_SuperRemoveColumns((KColumnHeadersModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -912,8 +912,8 @@ bool k_columnheadersmodel_move_rows(void* self, void* sourceParent, int sourceRo
     return KColumnHeadersModel_MoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_columnheadersmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KColumnHeadersModel_QBaseMoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_columnheadersmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KColumnHeadersModel_SuperMoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_columnheadersmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -924,8 +924,8 @@ bool k_columnheadersmodel_move_columns(void* self, void* sourceParent, int sourc
     return KColumnHeadersModel_MoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_columnheadersmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KColumnHeadersModel_QBaseMoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_columnheadersmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KColumnHeadersModel_SuperMoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_columnheadersmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -936,8 +936,8 @@ void k_columnheadersmodel_fetch_more(void* self, void* parent) {
     KColumnHeadersModel_FetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
 }
 
-void k_columnheadersmodel_qbase_fetch_more(void* self, void* parent) {
-    KColumnHeadersModel_QBaseFetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
+void k_columnheadersmodel_super_fetch_more(void* self, void* parent) {
+    KColumnHeadersModel_SuperFetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -948,8 +948,8 @@ bool k_columnheadersmodel_can_fetch_more(void* self, void* parent) {
     return KColumnHeadersModel_CanFetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
 }
 
-bool k_columnheadersmodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KColumnHeadersModel_QBaseCanFetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
+bool k_columnheadersmodel_super_can_fetch_more(void* self, void* parent) {
+    return KColumnHeadersModel_SuperCanFetchMore((KColumnHeadersModel*)self, (QModelIndex*)parent);
 }
 
 void k_columnheadersmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -960,8 +960,8 @@ void k_columnheadersmodel_sort(void* self, int column, int32_t order) {
     KColumnHeadersModel_Sort((KColumnHeadersModel*)self, column, order);
 }
 
-void k_columnheadersmodel_qbase_sort(void* self, int column, int32_t order) {
-    KColumnHeadersModel_QBaseSort((KColumnHeadersModel*)self, column, order);
+void k_columnheadersmodel_super_sort(void* self, int column, int32_t order) {
+    KColumnHeadersModel_SuperSort((KColumnHeadersModel*)self, column, order);
 }
 
 void k_columnheadersmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -972,8 +972,8 @@ QModelIndex* k_columnheadersmodel_buddy(void* self, void* index) {
     return KColumnHeadersModel_Buddy((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_columnheadersmodel_qbase_buddy(void* self, void* index) {
-    return KColumnHeadersModel_QBaseBuddy((KColumnHeadersModel*)self, (QModelIndex*)index);
+QModelIndex* k_columnheadersmodel_super_buddy(void* self, void* index) {
+    return KColumnHeadersModel_SuperBuddy((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
 void k_columnheadersmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -985,8 +985,8 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_match(void* self, void* st
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KColumnHeadersModel_QBaseMatch((KColumnHeadersModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_columnheadersmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KColumnHeadersModel_SuperMatch((KColumnHeadersModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -998,8 +998,8 @@ QSize* k_columnheadersmodel_span(void* self, void* index) {
     return KColumnHeadersModel_Span((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_columnheadersmodel_qbase_span(void* self, void* index) {
-    return KColumnHeadersModel_QBaseSpan((KColumnHeadersModel*)self, (QModelIndex*)index);
+QSize* k_columnheadersmodel_super_span(void* self, void* index) {
+    return KColumnHeadersModel_SuperSpan((KColumnHeadersModel*)self, (QModelIndex*)index);
 }
 
 void k_columnheadersmodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -1010,8 +1010,8 @@ void k_columnheadersmodel_multi_data(void* self, void* index, void* roleDataSpan
     KColumnHeadersModel_MultiData((KColumnHeadersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_columnheadersmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KColumnHeadersModel_QBaseMultiData((KColumnHeadersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_columnheadersmodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KColumnHeadersModel_SuperMultiData((KColumnHeadersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_columnheadersmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1022,8 +1022,8 @@ bool k_columnheadersmodel_submit(void* self) {
     return KColumnHeadersModel_Submit((KColumnHeadersModel*)self);
 }
 
-bool k_columnheadersmodel_qbase_submit(void* self) {
-    return KColumnHeadersModel_QBaseSubmit((KColumnHeadersModel*)self);
+bool k_columnheadersmodel_super_submit(void* self) {
+    return KColumnHeadersModel_SuperSubmit((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_submit(void* self, bool (*callback)()) {
@@ -1034,8 +1034,8 @@ void k_columnheadersmodel_revert(void* self) {
     KColumnHeadersModel_Revert((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_revert(void* self) {
-    KColumnHeadersModel_QBaseRevert((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_revert(void* self) {
+    KColumnHeadersModel_SuperRevert((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_revert(void* self, void (*callback)()) {
@@ -1046,8 +1046,8 @@ void k_columnheadersmodel_reset_internal_data(void* self) {
     KColumnHeadersModel_ResetInternalData((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_reset_internal_data(void* self) {
-    KColumnHeadersModel_QBaseResetInternalData((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_reset_internal_data(void* self) {
+    KColumnHeadersModel_SuperResetInternalData((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1058,8 +1058,8 @@ bool k_columnheadersmodel_event(void* self, void* event) {
     return KColumnHeadersModel_Event((KColumnHeadersModel*)self, (QEvent*)event);
 }
 
-bool k_columnheadersmodel_qbase_event(void* self, void* event) {
-    return KColumnHeadersModel_QBaseEvent((KColumnHeadersModel*)self, (QEvent*)event);
+bool k_columnheadersmodel_super_event(void* self, void* event) {
+    return KColumnHeadersModel_SuperEvent((KColumnHeadersModel*)self, (QEvent*)event);
 }
 
 void k_columnheadersmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1070,8 +1070,8 @@ bool k_columnheadersmodel_event_filter(void* self, void* watched, void* event) {
     return KColumnHeadersModel_EventFilter((KColumnHeadersModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_columnheadersmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KColumnHeadersModel_QBaseEventFilter((KColumnHeadersModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_columnheadersmodel_super_event_filter(void* self, void* watched, void* event) {
+    return KColumnHeadersModel_SuperEventFilter((KColumnHeadersModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_columnheadersmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1082,8 +1082,8 @@ void k_columnheadersmodel_timer_event(void* self, void* event) {
     KColumnHeadersModel_TimerEvent((KColumnHeadersModel*)self, (QTimerEvent*)event);
 }
 
-void k_columnheadersmodel_qbase_timer_event(void* self, void* event) {
-    KColumnHeadersModel_QBaseTimerEvent((KColumnHeadersModel*)self, (QTimerEvent*)event);
+void k_columnheadersmodel_super_timer_event(void* self, void* event) {
+    KColumnHeadersModel_SuperTimerEvent((KColumnHeadersModel*)self, (QTimerEvent*)event);
 }
 
 void k_columnheadersmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1094,8 +1094,8 @@ void k_columnheadersmodel_child_event(void* self, void* event) {
     KColumnHeadersModel_ChildEvent((KColumnHeadersModel*)self, (QChildEvent*)event);
 }
 
-void k_columnheadersmodel_qbase_child_event(void* self, void* event) {
-    KColumnHeadersModel_QBaseChildEvent((KColumnHeadersModel*)self, (QChildEvent*)event);
+void k_columnheadersmodel_super_child_event(void* self, void* event) {
+    KColumnHeadersModel_SuperChildEvent((KColumnHeadersModel*)self, (QChildEvent*)event);
 }
 
 void k_columnheadersmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1106,8 +1106,8 @@ void k_columnheadersmodel_custom_event(void* self, void* event) {
     KColumnHeadersModel_CustomEvent((KColumnHeadersModel*)self, (QEvent*)event);
 }
 
-void k_columnheadersmodel_qbase_custom_event(void* self, void* event) {
-    KColumnHeadersModel_QBaseCustomEvent((KColumnHeadersModel*)self, (QEvent*)event);
+void k_columnheadersmodel_super_custom_event(void* self, void* event) {
+    KColumnHeadersModel_SuperCustomEvent((KColumnHeadersModel*)self, (QEvent*)event);
 }
 
 void k_columnheadersmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1118,8 +1118,8 @@ void k_columnheadersmodel_connect_notify(void* self, void* signal) {
     KColumnHeadersModel_ConnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
-void k_columnheadersmodel_qbase_connect_notify(void* self, void* signal) {
-    KColumnHeadersModel_QBaseConnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
+void k_columnheadersmodel_super_connect_notify(void* self, void* signal) {
+    KColumnHeadersModel_SuperConnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_columnheadersmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1130,8 +1130,8 @@ void k_columnheadersmodel_disconnect_notify(void* self, void* signal) {
     KColumnHeadersModel_DisconnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
-void k_columnheadersmodel_qbase_disconnect_notify(void* self, void* signal) {
-    KColumnHeadersModel_QBaseDisconnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
+void k_columnheadersmodel_super_disconnect_notify(void* self, void* signal) {
+    KColumnHeadersModel_SuperDisconnectNotify((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_columnheadersmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1142,8 +1142,8 @@ QModelIndex* k_columnheadersmodel_create_index(void* self, int row, int column) 
     return KColumnHeadersModel_CreateIndex((KColumnHeadersModel*)self, row, column);
 }
 
-QModelIndex* k_columnheadersmodel_qbase_create_index(void* self, int row, int column) {
-    return KColumnHeadersModel_QBaseCreateIndex((KColumnHeadersModel*)self, row, column);
+QModelIndex* k_columnheadersmodel_super_create_index(void* self, int row, int column) {
+    return KColumnHeadersModel_SuperCreateIndex((KColumnHeadersModel*)self, row, column);
 }
 
 void k_columnheadersmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1154,8 +1154,8 @@ void k_columnheadersmodel_encode_data(void* self, libqt_list /* of QModelIndex* 
     KColumnHeadersModel_EncodeData((KColumnHeadersModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_columnheadersmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KColumnHeadersModel_QBaseEncodeData((KColumnHeadersModel*)self, indexes, (QDataStream*)stream);
+void k_columnheadersmodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KColumnHeadersModel_SuperEncodeData((KColumnHeadersModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_columnheadersmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1166,8 +1166,8 @@ bool k_columnheadersmodel_decode_data(void* self, int row, int column, void* par
     return KColumnHeadersModel_DecodeData((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_columnheadersmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KColumnHeadersModel_QBaseDecodeData((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_columnheadersmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KColumnHeadersModel_SuperDecodeData((KColumnHeadersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_columnheadersmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1178,8 +1178,8 @@ void k_columnheadersmodel_begin_insert_rows(void* self, void* parent, int first,
     KColumnHeadersModel_BeginInsertRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_columnheadersmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KColumnHeadersModel_QBaseBeginInsertRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
+void k_columnheadersmodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KColumnHeadersModel_SuperBeginInsertRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_columnheadersmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1190,8 +1190,8 @@ void k_columnheadersmodel_end_insert_rows(void* self) {
     KColumnHeadersModel_EndInsertRows((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_insert_rows(void* self) {
-    KColumnHeadersModel_QBaseEndInsertRows((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_insert_rows(void* self) {
+    KColumnHeadersModel_SuperEndInsertRows((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1202,8 +1202,8 @@ void k_columnheadersmodel_begin_remove_rows(void* self, void* parent, int first,
     KColumnHeadersModel_BeginRemoveRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_columnheadersmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KColumnHeadersModel_QBaseBeginRemoveRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
+void k_columnheadersmodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KColumnHeadersModel_SuperBeginRemoveRows((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_columnheadersmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1214,8 +1214,8 @@ void k_columnheadersmodel_end_remove_rows(void* self) {
     KColumnHeadersModel_EndRemoveRows((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_remove_rows(void* self) {
-    KColumnHeadersModel_QBaseEndRemoveRows((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_remove_rows(void* self) {
+    KColumnHeadersModel_SuperEndRemoveRows((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1226,8 +1226,8 @@ bool k_columnheadersmodel_begin_move_rows(void* self, void* sourceParent, int so
     return KColumnHeadersModel_BeginMoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_columnheadersmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KColumnHeadersModel_QBaseBeginMoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_columnheadersmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KColumnHeadersModel_SuperBeginMoveRows((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_columnheadersmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1238,8 +1238,8 @@ void k_columnheadersmodel_end_move_rows(void* self) {
     KColumnHeadersModel_EndMoveRows((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_move_rows(void* self) {
-    KColumnHeadersModel_QBaseEndMoveRows((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_move_rows(void* self) {
+    KColumnHeadersModel_SuperEndMoveRows((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1250,8 +1250,8 @@ void k_columnheadersmodel_begin_insert_columns(void* self, void* parent, int fir
     KColumnHeadersModel_BeginInsertColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_columnheadersmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KColumnHeadersModel_QBaseBeginInsertColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
+void k_columnheadersmodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KColumnHeadersModel_SuperBeginInsertColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_columnheadersmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1262,8 +1262,8 @@ void k_columnheadersmodel_end_insert_columns(void* self) {
     KColumnHeadersModel_EndInsertColumns((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_insert_columns(void* self) {
-    KColumnHeadersModel_QBaseEndInsertColumns((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_insert_columns(void* self) {
+    KColumnHeadersModel_SuperEndInsertColumns((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1274,8 +1274,8 @@ void k_columnheadersmodel_begin_remove_columns(void* self, void* parent, int fir
     KColumnHeadersModel_BeginRemoveColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_columnheadersmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KColumnHeadersModel_QBaseBeginRemoveColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
+void k_columnheadersmodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KColumnHeadersModel_SuperBeginRemoveColumns((KColumnHeadersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_columnheadersmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1286,8 +1286,8 @@ void k_columnheadersmodel_end_remove_columns(void* self) {
     KColumnHeadersModel_EndRemoveColumns((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_remove_columns(void* self) {
-    KColumnHeadersModel_QBaseEndRemoveColumns((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_remove_columns(void* self) {
+    KColumnHeadersModel_SuperEndRemoveColumns((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1298,8 +1298,8 @@ bool k_columnheadersmodel_begin_move_columns(void* self, void* sourceParent, int
     return KColumnHeadersModel_BeginMoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_columnheadersmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KColumnHeadersModel_QBaseBeginMoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_columnheadersmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KColumnHeadersModel_SuperBeginMoveColumns((KColumnHeadersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_columnheadersmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1310,8 +1310,8 @@ void k_columnheadersmodel_end_move_columns(void* self) {
     KColumnHeadersModel_EndMoveColumns((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_move_columns(void* self) {
-    KColumnHeadersModel_QBaseEndMoveColumns((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_move_columns(void* self) {
+    KColumnHeadersModel_SuperEndMoveColumns((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1322,8 +1322,8 @@ void k_columnheadersmodel_begin_reset_model(void* self) {
     KColumnHeadersModel_BeginResetModel((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_begin_reset_model(void* self) {
-    KColumnHeadersModel_QBaseBeginResetModel((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_begin_reset_model(void* self) {
+    KColumnHeadersModel_SuperBeginResetModel((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1334,8 +1334,8 @@ void k_columnheadersmodel_end_reset_model(void* self) {
     KColumnHeadersModel_EndResetModel((KColumnHeadersModel*)self);
 }
 
-void k_columnheadersmodel_qbase_end_reset_model(void* self) {
-    KColumnHeadersModel_QBaseEndResetModel((KColumnHeadersModel*)self);
+void k_columnheadersmodel_super_end_reset_model(void* self) {
+    KColumnHeadersModel_SuperEndResetModel((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1346,8 +1346,8 @@ void k_columnheadersmodel_change_persistent_index(void* self, void* from, void* 
     KColumnHeadersModel_ChangePersistentIndex((KColumnHeadersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_columnheadersmodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KColumnHeadersModel_QBaseChangePersistentIndex((KColumnHeadersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_columnheadersmodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KColumnHeadersModel_SuperChangePersistentIndex((KColumnHeadersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_columnheadersmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1358,8 +1358,8 @@ void k_columnheadersmodel_change_persistent_index_list(void* self, libqt_list /*
     KColumnHeadersModel_ChangePersistentIndexList((KColumnHeadersModel*)self, from, to);
 }
 
-void k_columnheadersmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KColumnHeadersModel_QBaseChangePersistentIndexList((KColumnHeadersModel*)self, from, to);
+void k_columnheadersmodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KColumnHeadersModel_SuperChangePersistentIndexList((KColumnHeadersModel*)self, from, to);
 }
 
 void k_columnheadersmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1371,8 +1371,8 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_persistent_index_list(void
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KColumnHeadersModel_QBasePersistentIndexList((KColumnHeadersModel*)self);
+libqt_list /* of QModelIndex* */ k_columnheadersmodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KColumnHeadersModel_SuperPersistentIndexList((KColumnHeadersModel*)self);
     return _arr;
 }
 
@@ -1384,8 +1384,8 @@ QObject* k_columnheadersmodel_sender(void* self) {
     return KColumnHeadersModel_Sender((KColumnHeadersModel*)self);
 }
 
-QObject* k_columnheadersmodel_qbase_sender(void* self) {
-    return KColumnHeadersModel_QBaseSender((KColumnHeadersModel*)self);
+QObject* k_columnheadersmodel_super_sender(void* self) {
+    return KColumnHeadersModel_SuperSender((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1396,8 +1396,8 @@ int32_t k_columnheadersmodel_sender_signal_index(void* self) {
     return KColumnHeadersModel_SenderSignalIndex((KColumnHeadersModel*)self);
 }
 
-int32_t k_columnheadersmodel_qbase_sender_signal_index(void* self) {
-    return KColumnHeadersModel_QBaseSenderSignalIndex((KColumnHeadersModel*)self);
+int32_t k_columnheadersmodel_super_sender_signal_index(void* self) {
+    return KColumnHeadersModel_SuperSenderSignalIndex((KColumnHeadersModel*)self);
 }
 
 void k_columnheadersmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1408,8 +1408,8 @@ int32_t k_columnheadersmodel_receivers(void* self, const char* signal) {
     return KColumnHeadersModel_Receivers((KColumnHeadersModel*)self, signal);
 }
 
-int32_t k_columnheadersmodel_qbase_receivers(void* self, const char* signal) {
-    return KColumnHeadersModel_QBaseReceivers((KColumnHeadersModel*)self, signal);
+int32_t k_columnheadersmodel_super_receivers(void* self, const char* signal) {
+    return KColumnHeadersModel_SuperReceivers((KColumnHeadersModel*)self, signal);
 }
 
 void k_columnheadersmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1420,8 +1420,8 @@ bool k_columnheadersmodel_is_signal_connected(void* self, void* signal) {
     return KColumnHeadersModel_IsSignalConnected((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_columnheadersmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KColumnHeadersModel_QBaseIsSignalConnected((KColumnHeadersModel*)self, (QMetaMethod*)signal);
+bool k_columnheadersmodel_super_is_signal_connected(void* self, void* signal) {
+    return KColumnHeadersModel_SuperIsSignalConnected((KColumnHeadersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_columnheadersmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -33,8 +33,8 @@ void q_dbusinterface_on_meta_object(void* self, const QMetaObject* (*callback)()
     QDBusInterface_OnMetaObject((QDBusInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbusinterface_qbase_meta_object(void* self) {
-    return QDBusInterface_QBaseMetaObject((QDBusInterface*)self);
+const QMetaObject* q_dbusinterface_super_meta_object(void* self) {
+    return QDBusInterface_SuperMetaObject((QDBusInterface*)self);
 }
 
 void* q_dbusinterface_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_dbusinterface_on_metacast(void* self, void* (*callback)(void*, const char
     QDBusInterface_OnMetacast((QDBusInterface*)self, (intptr_t)callback);
 }
 
-void* q_dbusinterface_qbase_metacast(void* self, const char* param1) {
-    return QDBusInterface_QBaseMetacast((QDBusInterface*)self, param1);
+void* q_dbusinterface_super_metacast(void* self, const char* param1) {
+    return QDBusInterface_SuperMetacast((QDBusInterface*)self, param1);
 }
 
 int32_t q_dbusinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_dbusinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QDBusInterface_OnMetacall((QDBusInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_dbusinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDBusInterface_QBaseMetacall((QDBusInterface*)self, param1, param2, param3);
+int32_t q_dbusinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDBusInterface_SuperMetacall((QDBusInterface*)self, param1, param2, param3);
 }
 
 const char* q_dbusinterface_tr(const char* s) {
@@ -374,8 +374,8 @@ void q_dbusinterface_connect_notify(void* self, void* signal) {
     QDBusInterface_ConnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusinterface_qbase_connect_notify(void* self, void* signal) {
-    QDBusInterface_QBaseConnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
+void q_dbusinterface_super_connect_notify(void* self, void* signal) {
+    QDBusInterface_SuperConnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void q_dbusinterface_disconnect_notify(void* self, void* signal) {
     QDBusInterface_DisconnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDBusInterface_QBaseDisconnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
+void q_dbusinterface_super_disconnect_notify(void* self, void* signal) {
+    QDBusInterface_SuperDisconnectNotify((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ bool q_dbusinterface_event(void* self, void* event) {
     return QDBusInterface_Event((QDBusInterface*)self, (QEvent*)event);
 }
 
-bool q_dbusinterface_qbase_event(void* self, void* event) {
-    return QDBusInterface_QBaseEvent((QDBusInterface*)self, (QEvent*)event);
+bool q_dbusinterface_super_event(void* self, void* event) {
+    return QDBusInterface_SuperEvent((QDBusInterface*)self, (QEvent*)event);
 }
 
 void q_dbusinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ bool q_dbusinterface_event_filter(void* self, void* watched, void* event) {
     return QDBusInterface_EventFilter((QDBusInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_dbusinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDBusInterface_QBaseEventFilter((QDBusInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_dbusinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDBusInterface_SuperEventFilter((QDBusInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_dbusinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -422,8 +422,8 @@ void q_dbusinterface_timer_event(void* self, void* event) {
     QDBusInterface_TimerEvent((QDBusInterface*)self, (QTimerEvent*)event);
 }
 
-void q_dbusinterface_qbase_timer_event(void* self, void* event) {
-    QDBusInterface_QBaseTimerEvent((QDBusInterface*)self, (QTimerEvent*)event);
+void q_dbusinterface_super_timer_event(void* self, void* event) {
+    QDBusInterface_SuperTimerEvent((QDBusInterface*)self, (QTimerEvent*)event);
 }
 
 void q_dbusinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -434,8 +434,8 @@ void q_dbusinterface_child_event(void* self, void* event) {
     QDBusInterface_ChildEvent((QDBusInterface*)self, (QChildEvent*)event);
 }
 
-void q_dbusinterface_qbase_child_event(void* self, void* event) {
-    QDBusInterface_QBaseChildEvent((QDBusInterface*)self, (QChildEvent*)event);
+void q_dbusinterface_super_child_event(void* self, void* event) {
+    QDBusInterface_SuperChildEvent((QDBusInterface*)self, (QChildEvent*)event);
 }
 
 void q_dbusinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -446,8 +446,8 @@ void q_dbusinterface_custom_event(void* self, void* event) {
     QDBusInterface_CustomEvent((QDBusInterface*)self, (QEvent*)event);
 }
 
-void q_dbusinterface_qbase_custom_event(void* self, void* event) {
-    QDBusInterface_QBaseCustomEvent((QDBusInterface*)self, (QEvent*)event);
+void q_dbusinterface_super_custom_event(void* self, void* event) {
+    QDBusInterface_SuperCustomEvent((QDBusInterface*)self, (QEvent*)event);
 }
 
 void q_dbusinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -458,8 +458,8 @@ QVariant* q_dbusinterface_internal_prop_get(void* self, const char* propname) {
     return QDBusInterface_InternalPropGet((QDBusInterface*)self, propname);
 }
 
-QVariant* q_dbusinterface_qbase_internal_prop_get(void* self, const char* propname) {
-    return QDBusInterface_QBaseInternalPropGet((QDBusInterface*)self, propname);
+QVariant* q_dbusinterface_super_internal_prop_get(void* self, const char* propname) {
+    return QDBusInterface_SuperInternalPropGet((QDBusInterface*)self, propname);
 }
 
 void q_dbusinterface_on_internal_prop_get(void* self, QVariant* (*callback)(void*, const char*)) {
@@ -470,8 +470,8 @@ void q_dbusinterface_internal_prop_set(void* self, const char* propname, void* v
     QDBusInterface_InternalPropSet((QDBusInterface*)self, propname, (QVariant*)value);
 }
 
-void q_dbusinterface_qbase_internal_prop_set(void* self, const char* propname, void* value) {
-    QDBusInterface_QBaseInternalPropSet((QDBusInterface*)self, propname, (QVariant*)value);
+void q_dbusinterface_super_internal_prop_set(void* self, const char* propname, void* value) {
+    QDBusInterface_SuperInternalPropSet((QDBusInterface*)self, propname, (QVariant*)value);
 }
 
 void q_dbusinterface_on_internal_prop_set(void* self, void (*callback)(void*, const char*, void*)) {
@@ -482,8 +482,8 @@ QDBusMessage* q_dbusinterface_internal_const_call(void* self, int32_t mode, cons
     return QDBusInterface_InternalConstCall((QDBusInterface*)self, mode, qstring(method));
 }
 
-QDBusMessage* q_dbusinterface_qbase_internal_const_call(void* self, int32_t mode, const char* method) {
-    return QDBusInterface_QBaseInternalConstCall((QDBusInterface*)self, mode, qstring(method));
+QDBusMessage* q_dbusinterface_super_internal_const_call(void* self, int32_t mode, const char* method) {
+    return QDBusInterface_SuperInternalConstCall((QDBusInterface*)self, mode, qstring(method));
 }
 
 void q_dbusinterface_on_internal_const_call(void* self, QDBusMessage* (*callback)(void*, int32_t, const char*)) {
@@ -494,8 +494,8 @@ QObject* q_dbusinterface_sender(void* self) {
     return QDBusInterface_Sender((QDBusInterface*)self);
 }
 
-QObject* q_dbusinterface_qbase_sender(void* self) {
-    return QDBusInterface_QBaseSender((QDBusInterface*)self);
+QObject* q_dbusinterface_super_sender(void* self) {
+    return QDBusInterface_SuperSender((QDBusInterface*)self);
 }
 
 void q_dbusinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -506,8 +506,8 @@ int32_t q_dbusinterface_sender_signal_index(void* self) {
     return QDBusInterface_SenderSignalIndex((QDBusInterface*)self);
 }
 
-int32_t q_dbusinterface_qbase_sender_signal_index(void* self) {
-    return QDBusInterface_QBaseSenderSignalIndex((QDBusInterface*)self);
+int32_t q_dbusinterface_super_sender_signal_index(void* self) {
+    return QDBusInterface_SuperSenderSignalIndex((QDBusInterface*)self);
 }
 
 void q_dbusinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -518,8 +518,8 @@ int32_t q_dbusinterface_receivers(void* self, const char* signal) {
     return QDBusInterface_Receivers((QDBusInterface*)self, signal);
 }
 
-int32_t q_dbusinterface_qbase_receivers(void* self, const char* signal) {
-    return QDBusInterface_QBaseReceivers((QDBusInterface*)self, signal);
+int32_t q_dbusinterface_super_receivers(void* self, const char* signal) {
+    return QDBusInterface_SuperReceivers((QDBusInterface*)self, signal);
 }
 
 void q_dbusinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -530,8 +530,8 @@ bool q_dbusinterface_is_signal_connected(void* self, void* signal) {
     return QDBusInterface_IsSignalConnected((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_dbusinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDBusInterface_QBaseIsSignalConnected((QDBusInterface*)self, (QMetaMethod*)signal);
+bool q_dbusinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDBusInterface_SuperIsSignalConnected((QDBusInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

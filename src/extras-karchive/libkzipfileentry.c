@@ -61,8 +61,8 @@ void k_zipfileentry_on_data(void* self, libqt_string (*callback)()) {
     KZipFileEntry_OnData((KZipFileEntry*)self, (intptr_t)callback);
 }
 
-char* k_zipfileentry_qbase_data(void* self) {
-    libqt_string _str = KZipFileEntry_QBaseData((KZipFileEntry*)self);
+char* k_zipfileentry_super_data(void* self) {
+    libqt_string _str = KZipFileEntry_SuperData((KZipFileEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -76,8 +76,8 @@ void k_zipfileentry_on_create_device(void* self, QIODevice* (*callback)()) {
     KZipFileEntry_OnCreateDevice((KZipFileEntry*)self, (intptr_t)callback);
 }
 
-QIODevice* k_zipfileentry_qbase_create_device(void* self) {
-    return KZipFileEntry_QBaseCreateDevice((KZipFileEntry*)self);
+QIODevice* k_zipfileentry_super_create_device(void* self) {
+    return KZipFileEntry_SuperCreateDevice((KZipFileEntry*)self);
 }
 
 long long k_zipfileentry_position(void* self) {
@@ -136,8 +136,8 @@ bool k_zipfileentry_is_file(void* self) {
     return KZipFileEntry_IsFile((KZipFileEntry*)self);
 }
 
-bool k_zipfileentry_qbase_is_file(void* self) {
-    return KZipFileEntry_QBaseIsFile((KZipFileEntry*)self);
+bool k_zipfileentry_super_is_file(void* self) {
+    return KZipFileEntry_SuperIsFile((KZipFileEntry*)self);
 }
 
 void k_zipfileentry_on_is_file(void* self, bool (*callback)()) {
@@ -148,8 +148,8 @@ void k_zipfileentry_virtual_hook(void* self, int id, void* data) {
     KZipFileEntry_VirtualHook((KZipFileEntry*)self, id, data);
 }
 
-void k_zipfileentry_qbase_virtual_hook(void* self, int id, void* data) {
-    KZipFileEntry_QBaseVirtualHook((KZipFileEntry*)self, id, data);
+void k_zipfileentry_super_virtual_hook(void* self, int id, void* data) {
+    KZipFileEntry_SuperVirtualHook((KZipFileEntry*)self, id, data);
 }
 
 void k_zipfileentry_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
@@ -160,8 +160,8 @@ bool k_zipfileentry_is_directory(void* self) {
     return KZipFileEntry_IsDirectory((KZipFileEntry*)self);
 }
 
-bool k_zipfileentry_qbase_is_directory(void* self) {
-    return KZipFileEntry_QBaseIsDirectory((KZipFileEntry*)self);
+bool k_zipfileentry_super_is_directory(void* self) {
+    return KZipFileEntry_SuperIsDirectory((KZipFileEntry*)self);
 }
 
 void k_zipfileentry_on_is_directory(void* self, bool (*callback)()) {
@@ -172,8 +172,8 @@ KArchive* k_zipfileentry_archive(void* self) {
     return KZipFileEntry_Archive((KZipFileEntry*)self);
 }
 
-KArchive* k_zipfileentry_qbase_archive(void* self) {
-    return KZipFileEntry_QBaseArchive((KZipFileEntry*)self);
+KArchive* k_zipfileentry_super_archive(void* self) {
+    return KZipFileEntry_SuperArchive((KZipFileEntry*)self);
 }
 
 void k_zipfileentry_on_archive(void* self, KArchive* (*callback)()) {

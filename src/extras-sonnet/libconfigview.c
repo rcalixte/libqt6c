@@ -29,8 +29,8 @@ void k_sonnet__configview_on_meta_object(void* self, const QMetaObject* (*callba
     Sonnet__ConfigView_OnMetaObject((Sonnet__ConfigView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sonnet__configview_qbase_meta_object(void* self) {
-    return Sonnet__ConfigView_QBaseMetaObject((Sonnet__ConfigView*)self);
+const QMetaObject* k_sonnet__configview_super_meta_object(void* self) {
+    return Sonnet__ConfigView_SuperMetaObject((Sonnet__ConfigView*)self);
 }
 
 void* k_sonnet__configview_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_sonnet__configview_on_metacast(void* self, void* (*callback)(void*, const
     Sonnet__ConfigView_OnMetacast((Sonnet__ConfigView*)self, (intptr_t)callback);
 }
 
-void* k_sonnet__configview_qbase_metacast(void* self, const char* param1) {
-    return Sonnet__ConfigView_QBaseMetacast((Sonnet__ConfigView*)self, param1);
+void* k_sonnet__configview_super_metacast(void* self, const char* param1) {
+    return Sonnet__ConfigView_SuperMetacast((Sonnet__ConfigView*)self, param1);
 }
 
 int32_t k_sonnet__configview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_sonnet__configview_on_metacall(void* self, int32_t (*callback)(void*, int
     Sonnet__ConfigView_OnMetacall((Sonnet__ConfigView*)self, (intptr_t)callback);
 }
 
-int32_t k_sonnet__configview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Sonnet__ConfigView_QBaseMetacall((Sonnet__ConfigView*)self, param1, param2, param3);
+int32_t k_sonnet__configview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Sonnet__ConfigView_SuperMetacall((Sonnet__ConfigView*)self, param1, param2, param3);
 }
 
 const char* k_sonnet__configview_tr(const char* s) {
@@ -1566,8 +1566,8 @@ int32_t k_sonnet__configview_dev_type(void* self) {
     return Sonnet__ConfigView_DevType((Sonnet__ConfigView*)self);
 }
 
-int32_t k_sonnet__configview_qbase_dev_type(void* self) {
-    return Sonnet__ConfigView_QBaseDevType((Sonnet__ConfigView*)self);
+int32_t k_sonnet__configview_super_dev_type(void* self) {
+    return Sonnet__ConfigView_SuperDevType((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1578,8 +1578,8 @@ void k_sonnet__configview_set_visible(void* self, bool visible) {
     Sonnet__ConfigView_SetVisible((Sonnet__ConfigView*)self, visible);
 }
 
-void k_sonnet__configview_qbase_set_visible(void* self, bool visible) {
-    Sonnet__ConfigView_QBaseSetVisible((Sonnet__ConfigView*)self, visible);
+void k_sonnet__configview_super_set_visible(void* self, bool visible) {
+    Sonnet__ConfigView_SuperSetVisible((Sonnet__ConfigView*)self, visible);
 }
 
 void k_sonnet__configview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1590,8 +1590,8 @@ QSize* k_sonnet__configview_size_hint(void* self) {
     return Sonnet__ConfigView_SizeHint((Sonnet__ConfigView*)self);
 }
 
-QSize* k_sonnet__configview_qbase_size_hint(void* self) {
-    return Sonnet__ConfigView_QBaseSizeHint((Sonnet__ConfigView*)self);
+QSize* k_sonnet__configview_super_size_hint(void* self) {
+    return Sonnet__ConfigView_SuperSizeHint((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1602,8 +1602,8 @@ QSize* k_sonnet__configview_minimum_size_hint(void* self) {
     return Sonnet__ConfigView_MinimumSizeHint((Sonnet__ConfigView*)self);
 }
 
-QSize* k_sonnet__configview_qbase_minimum_size_hint(void* self) {
-    return Sonnet__ConfigView_QBaseMinimumSizeHint((Sonnet__ConfigView*)self);
+QSize* k_sonnet__configview_super_minimum_size_hint(void* self) {
+    return Sonnet__ConfigView_SuperMinimumSizeHint((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1614,8 +1614,8 @@ int32_t k_sonnet__configview_height_for_width(void* self, int param1) {
     return Sonnet__ConfigView_HeightForWidth((Sonnet__ConfigView*)self, param1);
 }
 
-int32_t k_sonnet__configview_qbase_height_for_width(void* self, int param1) {
-    return Sonnet__ConfigView_QBaseHeightForWidth((Sonnet__ConfigView*)self, param1);
+int32_t k_sonnet__configview_super_height_for_width(void* self, int param1) {
+    return Sonnet__ConfigView_SuperHeightForWidth((Sonnet__ConfigView*)self, param1);
 }
 
 void k_sonnet__configview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1626,8 +1626,8 @@ bool k_sonnet__configview_has_height_for_width(void* self) {
     return Sonnet__ConfigView_HasHeightForWidth((Sonnet__ConfigView*)self);
 }
 
-bool k_sonnet__configview_qbase_has_height_for_width(void* self) {
-    return Sonnet__ConfigView_QBaseHasHeightForWidth((Sonnet__ConfigView*)self);
+bool k_sonnet__configview_super_has_height_for_width(void* self) {
+    return Sonnet__ConfigView_SuperHasHeightForWidth((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1638,8 +1638,8 @@ QPaintEngine* k_sonnet__configview_paint_engine(void* self) {
     return Sonnet__ConfigView_PaintEngine((Sonnet__ConfigView*)self);
 }
 
-QPaintEngine* k_sonnet__configview_qbase_paint_engine(void* self) {
-    return Sonnet__ConfigView_QBasePaintEngine((Sonnet__ConfigView*)self);
+QPaintEngine* k_sonnet__configview_super_paint_engine(void* self) {
+    return Sonnet__ConfigView_SuperPaintEngine((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1650,8 +1650,8 @@ bool k_sonnet__configview_event(void* self, void* event) {
     return Sonnet__ConfigView_Event((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
-bool k_sonnet__configview_qbase_event(void* self, void* event) {
-    return Sonnet__ConfigView_QBaseEvent((Sonnet__ConfigView*)self, (QEvent*)event);
+bool k_sonnet__configview_super_event(void* self, void* event) {
+    return Sonnet__ConfigView_SuperEvent((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
 void k_sonnet__configview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1662,8 +1662,8 @@ void k_sonnet__configview_mouse_press_event(void* self, void* event) {
     Sonnet__ConfigView_MousePressEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__configview_qbase_mouse_press_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseMousePressEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
+void k_sonnet__configview_super_mouse_press_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperMousePressEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__configview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1674,8 +1674,8 @@ void k_sonnet__configview_mouse_release_event(void* self, void* event) {
     Sonnet__ConfigView_MouseReleaseEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__configview_qbase_mouse_release_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseMouseReleaseEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
+void k_sonnet__configview_super_mouse_release_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperMouseReleaseEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__configview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1686,8 +1686,8 @@ void k_sonnet__configview_mouse_double_click_event(void* self, void* event) {
     Sonnet__ConfigView_MouseDoubleClickEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__configview_qbase_mouse_double_click_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseMouseDoubleClickEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
+void k_sonnet__configview_super_mouse_double_click_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperMouseDoubleClickEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__configview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1698,8 +1698,8 @@ void k_sonnet__configview_mouse_move_event(void* self, void* event) {
     Sonnet__ConfigView_MouseMoveEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__configview_qbase_mouse_move_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseMouseMoveEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
+void k_sonnet__configview_super_mouse_move_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperMouseMoveEvent((Sonnet__ConfigView*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__configview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1710,8 +1710,8 @@ void k_sonnet__configview_wheel_event(void* self, void* event) {
     Sonnet__ConfigView_WheelEvent((Sonnet__ConfigView*)self, (QWheelEvent*)event);
 }
 
-void k_sonnet__configview_qbase_wheel_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseWheelEvent((Sonnet__ConfigView*)self, (QWheelEvent*)event);
+void k_sonnet__configview_super_wheel_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperWheelEvent((Sonnet__ConfigView*)self, (QWheelEvent*)event);
 }
 
 void k_sonnet__configview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1722,8 +1722,8 @@ void k_sonnet__configview_key_press_event(void* self, void* event) {
     Sonnet__ConfigView_KeyPressEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
 }
 
-void k_sonnet__configview_qbase_key_press_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseKeyPressEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
+void k_sonnet__configview_super_key_press_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperKeyPressEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
 }
 
 void k_sonnet__configview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1734,8 +1734,8 @@ void k_sonnet__configview_key_release_event(void* self, void* event) {
     Sonnet__ConfigView_KeyReleaseEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
 }
 
-void k_sonnet__configview_qbase_key_release_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseKeyReleaseEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
+void k_sonnet__configview_super_key_release_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperKeyReleaseEvent((Sonnet__ConfigView*)self, (QKeyEvent*)event);
 }
 
 void k_sonnet__configview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1746,8 +1746,8 @@ void k_sonnet__configview_focus_in_event(void* self, void* event) {
     Sonnet__ConfigView_FocusInEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
 }
 
-void k_sonnet__configview_qbase_focus_in_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseFocusInEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
+void k_sonnet__configview_super_focus_in_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperFocusInEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
 }
 
 void k_sonnet__configview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1758,8 +1758,8 @@ void k_sonnet__configview_focus_out_event(void* self, void* event) {
     Sonnet__ConfigView_FocusOutEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
 }
 
-void k_sonnet__configview_qbase_focus_out_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseFocusOutEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
+void k_sonnet__configview_super_focus_out_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperFocusOutEvent((Sonnet__ConfigView*)self, (QFocusEvent*)event);
 }
 
 void k_sonnet__configview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1770,8 +1770,8 @@ void k_sonnet__configview_enter_event(void* self, void* event) {
     Sonnet__ConfigView_EnterEvent((Sonnet__ConfigView*)self, (QEnterEvent*)event);
 }
 
-void k_sonnet__configview_qbase_enter_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseEnterEvent((Sonnet__ConfigView*)self, (QEnterEvent*)event);
+void k_sonnet__configview_super_enter_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperEnterEvent((Sonnet__ConfigView*)self, (QEnterEvent*)event);
 }
 
 void k_sonnet__configview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1782,8 +1782,8 @@ void k_sonnet__configview_leave_event(void* self, void* event) {
     Sonnet__ConfigView_LeaveEvent((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
-void k_sonnet__configview_qbase_leave_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseLeaveEvent((Sonnet__ConfigView*)self, (QEvent*)event);
+void k_sonnet__configview_super_leave_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperLeaveEvent((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
 void k_sonnet__configview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_sonnet__configview_paint_event(void* self, void* event) {
     Sonnet__ConfigView_PaintEvent((Sonnet__ConfigView*)self, (QPaintEvent*)event);
 }
 
-void k_sonnet__configview_qbase_paint_event(void* self, void* event) {
-    Sonnet__ConfigView_QBasePaintEvent((Sonnet__ConfigView*)self, (QPaintEvent*)event);
+void k_sonnet__configview_super_paint_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperPaintEvent((Sonnet__ConfigView*)self, (QPaintEvent*)event);
 }
 
 void k_sonnet__configview_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_sonnet__configview_move_event(void* self, void* event) {
     Sonnet__ConfigView_MoveEvent((Sonnet__ConfigView*)self, (QMoveEvent*)event);
 }
 
-void k_sonnet__configview_qbase_move_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseMoveEvent((Sonnet__ConfigView*)self, (QMoveEvent*)event);
+void k_sonnet__configview_super_move_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperMoveEvent((Sonnet__ConfigView*)self, (QMoveEvent*)event);
 }
 
 void k_sonnet__configview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_sonnet__configview_resize_event(void* self, void* event) {
     Sonnet__ConfigView_ResizeEvent((Sonnet__ConfigView*)self, (QResizeEvent*)event);
 }
 
-void k_sonnet__configview_qbase_resize_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseResizeEvent((Sonnet__ConfigView*)self, (QResizeEvent*)event);
+void k_sonnet__configview_super_resize_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperResizeEvent((Sonnet__ConfigView*)self, (QResizeEvent*)event);
 }
 
 void k_sonnet__configview_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_sonnet__configview_close_event(void* self, void* event) {
     Sonnet__ConfigView_CloseEvent((Sonnet__ConfigView*)self, (QCloseEvent*)event);
 }
 
-void k_sonnet__configview_qbase_close_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseCloseEvent((Sonnet__ConfigView*)self, (QCloseEvent*)event);
+void k_sonnet__configview_super_close_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperCloseEvent((Sonnet__ConfigView*)self, (QCloseEvent*)event);
 }
 
 void k_sonnet__configview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_sonnet__configview_context_menu_event(void* self, void* event) {
     Sonnet__ConfigView_ContextMenuEvent((Sonnet__ConfigView*)self, (QContextMenuEvent*)event);
 }
 
-void k_sonnet__configview_qbase_context_menu_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseContextMenuEvent((Sonnet__ConfigView*)self, (QContextMenuEvent*)event);
+void k_sonnet__configview_super_context_menu_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperContextMenuEvent((Sonnet__ConfigView*)self, (QContextMenuEvent*)event);
 }
 
 void k_sonnet__configview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_sonnet__configview_tablet_event(void* self, void* event) {
     Sonnet__ConfigView_TabletEvent((Sonnet__ConfigView*)self, (QTabletEvent*)event);
 }
 
-void k_sonnet__configview_qbase_tablet_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseTabletEvent((Sonnet__ConfigView*)self, (QTabletEvent*)event);
+void k_sonnet__configview_super_tablet_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperTabletEvent((Sonnet__ConfigView*)self, (QTabletEvent*)event);
 }
 
 void k_sonnet__configview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ void k_sonnet__configview_action_event(void* self, void* event) {
     Sonnet__ConfigView_ActionEvent((Sonnet__ConfigView*)self, (QActionEvent*)event);
 }
 
-void k_sonnet__configview_qbase_action_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseActionEvent((Sonnet__ConfigView*)self, (QActionEvent*)event);
+void k_sonnet__configview_super_action_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperActionEvent((Sonnet__ConfigView*)self, (QActionEvent*)event);
 }
 
 void k_sonnet__configview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ void k_sonnet__configview_drag_enter_event(void* self, void* event) {
     Sonnet__ConfigView_DragEnterEvent((Sonnet__ConfigView*)self, (QDragEnterEvent*)event);
 }
 
-void k_sonnet__configview_qbase_drag_enter_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseDragEnterEvent((Sonnet__ConfigView*)self, (QDragEnterEvent*)event);
+void k_sonnet__configview_super_drag_enter_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperDragEnterEvent((Sonnet__ConfigView*)self, (QDragEnterEvent*)event);
 }
 
 void k_sonnet__configview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void k_sonnet__configview_drag_move_event(void* self, void* event) {
     Sonnet__ConfigView_DragMoveEvent((Sonnet__ConfigView*)self, (QDragMoveEvent*)event);
 }
 
-void k_sonnet__configview_qbase_drag_move_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseDragMoveEvent((Sonnet__ConfigView*)self, (QDragMoveEvent*)event);
+void k_sonnet__configview_super_drag_move_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperDragMoveEvent((Sonnet__ConfigView*)self, (QDragMoveEvent*)event);
 }
 
 void k_sonnet__configview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_sonnet__configview_drag_leave_event(void* self, void* event) {
     Sonnet__ConfigView_DragLeaveEvent((Sonnet__ConfigView*)self, (QDragLeaveEvent*)event);
 }
 
-void k_sonnet__configview_qbase_drag_leave_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseDragLeaveEvent((Sonnet__ConfigView*)self, (QDragLeaveEvent*)event);
+void k_sonnet__configview_super_drag_leave_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperDragLeaveEvent((Sonnet__ConfigView*)self, (QDragLeaveEvent*)event);
 }
 
 void k_sonnet__configview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_sonnet__configview_drop_event(void* self, void* event) {
     Sonnet__ConfigView_DropEvent((Sonnet__ConfigView*)self, (QDropEvent*)event);
 }
 
-void k_sonnet__configview_qbase_drop_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseDropEvent((Sonnet__ConfigView*)self, (QDropEvent*)event);
+void k_sonnet__configview_super_drop_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperDropEvent((Sonnet__ConfigView*)self, (QDropEvent*)event);
 }
 
 void k_sonnet__configview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ void k_sonnet__configview_show_event(void* self, void* event) {
     Sonnet__ConfigView_ShowEvent((Sonnet__ConfigView*)self, (QShowEvent*)event);
 }
 
-void k_sonnet__configview_qbase_show_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseShowEvent((Sonnet__ConfigView*)self, (QShowEvent*)event);
+void k_sonnet__configview_super_show_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperShowEvent((Sonnet__ConfigView*)self, (QShowEvent*)event);
 }
 
 void k_sonnet__configview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void k_sonnet__configview_hide_event(void* self, void* event) {
     Sonnet__ConfigView_HideEvent((Sonnet__ConfigView*)self, (QHideEvent*)event);
 }
 
-void k_sonnet__configview_qbase_hide_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseHideEvent((Sonnet__ConfigView*)self, (QHideEvent*)event);
+void k_sonnet__configview_super_hide_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperHideEvent((Sonnet__ConfigView*)self, (QHideEvent*)event);
 }
 
 void k_sonnet__configview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ bool k_sonnet__configview_native_event(void* self, char* eventType, void* messag
     return Sonnet__ConfigView_NativeEvent((Sonnet__ConfigView*)self, qstring(eventType), message, result);
 }
 
-bool k_sonnet__configview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return Sonnet__ConfigView_QBaseNativeEvent((Sonnet__ConfigView*)self, qstring(eventType), message, result);
+bool k_sonnet__configview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return Sonnet__ConfigView_SuperNativeEvent((Sonnet__ConfigView*)self, qstring(eventType), message, result);
 }
 
 void k_sonnet__configview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1962,8 +1962,8 @@ void k_sonnet__configview_change_event(void* self, void* param1) {
     Sonnet__ConfigView_ChangeEvent((Sonnet__ConfigView*)self, (QEvent*)param1);
 }
 
-void k_sonnet__configview_qbase_change_event(void* self, void* param1) {
-    Sonnet__ConfigView_QBaseChangeEvent((Sonnet__ConfigView*)self, (QEvent*)param1);
+void k_sonnet__configview_super_change_event(void* self, void* param1) {
+    Sonnet__ConfigView_SuperChangeEvent((Sonnet__ConfigView*)self, (QEvent*)param1);
 }
 
 void k_sonnet__configview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ int32_t k_sonnet__configview_metric(void* self, int32_t param1) {
     return Sonnet__ConfigView_Metric((Sonnet__ConfigView*)self, param1);
 }
 
-int32_t k_sonnet__configview_qbase_metric(void* self, int32_t param1) {
-    return Sonnet__ConfigView_QBaseMetric((Sonnet__ConfigView*)self, param1);
+int32_t k_sonnet__configview_super_metric(void* self, int32_t param1) {
+    return Sonnet__ConfigView_SuperMetric((Sonnet__ConfigView*)self, param1);
 }
 
 void k_sonnet__configview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1986,8 +1986,8 @@ void k_sonnet__configview_init_painter(void* self, void* painter) {
     Sonnet__ConfigView_InitPainter((Sonnet__ConfigView*)self, (QPainter*)painter);
 }
 
-void k_sonnet__configview_qbase_init_painter(void* self, void* painter) {
-    Sonnet__ConfigView_QBaseInitPainter((Sonnet__ConfigView*)self, (QPainter*)painter);
+void k_sonnet__configview_super_init_painter(void* self, void* painter) {
+    Sonnet__ConfigView_SuperInitPainter((Sonnet__ConfigView*)self, (QPainter*)painter);
 }
 
 void k_sonnet__configview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ QPaintDevice* k_sonnet__configview_redirected(void* self, void* offset) {
     return Sonnet__ConfigView_Redirected((Sonnet__ConfigView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_sonnet__configview_qbase_redirected(void* self, void* offset) {
-    return Sonnet__ConfigView_QBaseRedirected((Sonnet__ConfigView*)self, (QPoint*)offset);
+QPaintDevice* k_sonnet__configview_super_redirected(void* self, void* offset) {
+    return Sonnet__ConfigView_SuperRedirected((Sonnet__ConfigView*)self, (QPoint*)offset);
 }
 
 void k_sonnet__configview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ QPainter* k_sonnet__configview_shared_painter(void* self) {
     return Sonnet__ConfigView_SharedPainter((Sonnet__ConfigView*)self);
 }
 
-QPainter* k_sonnet__configview_qbase_shared_painter(void* self) {
-    return Sonnet__ConfigView_QBaseSharedPainter((Sonnet__ConfigView*)self);
+QPainter* k_sonnet__configview_super_shared_painter(void* self) {
+    return Sonnet__ConfigView_SuperSharedPainter((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2022,8 +2022,8 @@ void k_sonnet__configview_input_method_event(void* self, void* param1) {
     Sonnet__ConfigView_InputMethodEvent((Sonnet__ConfigView*)self, (QInputMethodEvent*)param1);
 }
 
-void k_sonnet__configview_qbase_input_method_event(void* self, void* param1) {
-    Sonnet__ConfigView_QBaseInputMethodEvent((Sonnet__ConfigView*)self, (QInputMethodEvent*)param1);
+void k_sonnet__configview_super_input_method_event(void* self, void* param1) {
+    Sonnet__ConfigView_SuperInputMethodEvent((Sonnet__ConfigView*)self, (QInputMethodEvent*)param1);
 }
 
 void k_sonnet__configview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ QVariant* k_sonnet__configview_input_method_query(void* self, int32_t param1) {
     return Sonnet__ConfigView_InputMethodQuery((Sonnet__ConfigView*)self, param1);
 }
 
-QVariant* k_sonnet__configview_qbase_input_method_query(void* self, int32_t param1) {
-    return Sonnet__ConfigView_QBaseInputMethodQuery((Sonnet__ConfigView*)self, param1);
+QVariant* k_sonnet__configview_super_input_method_query(void* self, int32_t param1) {
+    return Sonnet__ConfigView_SuperInputMethodQuery((Sonnet__ConfigView*)self, param1);
 }
 
 void k_sonnet__configview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2046,8 +2046,8 @@ bool k_sonnet__configview_focus_next_prev_child(void* self, bool next) {
     return Sonnet__ConfigView_FocusNextPrevChild((Sonnet__ConfigView*)self, next);
 }
 
-bool k_sonnet__configview_qbase_focus_next_prev_child(void* self, bool next) {
-    return Sonnet__ConfigView_QBaseFocusNextPrevChild((Sonnet__ConfigView*)self, next);
+bool k_sonnet__configview_super_focus_next_prev_child(void* self, bool next) {
+    return Sonnet__ConfigView_SuperFocusNextPrevChild((Sonnet__ConfigView*)self, next);
 }
 
 void k_sonnet__configview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2058,8 +2058,8 @@ bool k_sonnet__configview_event_filter(void* self, void* watched, void* event) {
     return Sonnet__ConfigView_EventFilter((Sonnet__ConfigView*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_sonnet__configview_qbase_event_filter(void* self, void* watched, void* event) {
-    return Sonnet__ConfigView_QBaseEventFilter((Sonnet__ConfigView*)self, (QObject*)watched, (QEvent*)event);
+bool k_sonnet__configview_super_event_filter(void* self, void* watched, void* event) {
+    return Sonnet__ConfigView_SuperEventFilter((Sonnet__ConfigView*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_sonnet__configview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_sonnet__configview_timer_event(void* self, void* event) {
     Sonnet__ConfigView_TimerEvent((Sonnet__ConfigView*)self, (QTimerEvent*)event);
 }
 
-void k_sonnet__configview_qbase_timer_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseTimerEvent((Sonnet__ConfigView*)self, (QTimerEvent*)event);
+void k_sonnet__configview_super_timer_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperTimerEvent((Sonnet__ConfigView*)self, (QTimerEvent*)event);
 }
 
 void k_sonnet__configview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void k_sonnet__configview_child_event(void* self, void* event) {
     Sonnet__ConfigView_ChildEvent((Sonnet__ConfigView*)self, (QChildEvent*)event);
 }
 
-void k_sonnet__configview_qbase_child_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseChildEvent((Sonnet__ConfigView*)self, (QChildEvent*)event);
+void k_sonnet__configview_super_child_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperChildEvent((Sonnet__ConfigView*)self, (QChildEvent*)event);
 }
 
 void k_sonnet__configview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void k_sonnet__configview_custom_event(void* self, void* event) {
     Sonnet__ConfigView_CustomEvent((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
-void k_sonnet__configview_qbase_custom_event(void* self, void* event) {
-    Sonnet__ConfigView_QBaseCustomEvent((Sonnet__ConfigView*)self, (QEvent*)event);
+void k_sonnet__configview_super_custom_event(void* self, void* event) {
+    Sonnet__ConfigView_SuperCustomEvent((Sonnet__ConfigView*)self, (QEvent*)event);
 }
 
 void k_sonnet__configview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void k_sonnet__configview_connect_notify(void* self, void* signal) {
     Sonnet__ConfigView_ConnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__configview_qbase_connect_notify(void* self, void* signal) {
-    Sonnet__ConfigView_QBaseConnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
+void k_sonnet__configview_super_connect_notify(void* self, void* signal) {
+    Sonnet__ConfigView_SuperConnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__configview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ void k_sonnet__configview_disconnect_notify(void* self, void* signal) {
     Sonnet__ConfigView_DisconnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__configview_qbase_disconnect_notify(void* self, void* signal) {
-    Sonnet__ConfigView_QBaseDisconnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
+void k_sonnet__configview_super_disconnect_notify(void* self, void* signal) {
+    Sonnet__ConfigView_SuperDisconnectNotify((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__configview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2130,8 +2130,8 @@ void k_sonnet__configview_update_micro_focus(void* self) {
     Sonnet__ConfigView_UpdateMicroFocus((Sonnet__ConfigView*)self);
 }
 
-void k_sonnet__configview_qbase_update_micro_focus(void* self) {
-    Sonnet__ConfigView_QBaseUpdateMicroFocus((Sonnet__ConfigView*)self);
+void k_sonnet__configview_super_update_micro_focus(void* self) {
+    Sonnet__ConfigView_SuperUpdateMicroFocus((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2142,8 +2142,8 @@ void k_sonnet__configview_create(void* self) {
     Sonnet__ConfigView_Create((Sonnet__ConfigView*)self);
 }
 
-void k_sonnet__configview_qbase_create(void* self) {
-    Sonnet__ConfigView_QBaseCreate((Sonnet__ConfigView*)self);
+void k_sonnet__configview_super_create(void* self) {
+    Sonnet__ConfigView_SuperCreate((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_create(void* self, void (*callback)()) {
@@ -2154,8 +2154,8 @@ void k_sonnet__configview_destroy(void* self) {
     Sonnet__ConfigView_Destroy((Sonnet__ConfigView*)self);
 }
 
-void k_sonnet__configview_qbase_destroy(void* self) {
-    Sonnet__ConfigView_QBaseDestroy((Sonnet__ConfigView*)self);
+void k_sonnet__configview_super_destroy(void* self) {
+    Sonnet__ConfigView_SuperDestroy((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_destroy(void* self, void (*callback)()) {
@@ -2166,8 +2166,8 @@ bool k_sonnet__configview_focus_next_child(void* self) {
     return Sonnet__ConfigView_FocusNextChild((Sonnet__ConfigView*)self);
 }
 
-bool k_sonnet__configview_qbase_focus_next_child(void* self) {
-    return Sonnet__ConfigView_QBaseFocusNextChild((Sonnet__ConfigView*)self);
+bool k_sonnet__configview_super_focus_next_child(void* self) {
+    return Sonnet__ConfigView_SuperFocusNextChild((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2178,8 +2178,8 @@ bool k_sonnet__configview_focus_previous_child(void* self) {
     return Sonnet__ConfigView_FocusPreviousChild((Sonnet__ConfigView*)self);
 }
 
-bool k_sonnet__configview_qbase_focus_previous_child(void* self) {
-    return Sonnet__ConfigView_QBaseFocusPreviousChild((Sonnet__ConfigView*)self);
+bool k_sonnet__configview_super_focus_previous_child(void* self) {
+    return Sonnet__ConfigView_SuperFocusPreviousChild((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2190,8 +2190,8 @@ QObject* k_sonnet__configview_sender(void* self) {
     return Sonnet__ConfigView_Sender((Sonnet__ConfigView*)self);
 }
 
-QObject* k_sonnet__configview_qbase_sender(void* self) {
-    return Sonnet__ConfigView_QBaseSender((Sonnet__ConfigView*)self);
+QObject* k_sonnet__configview_super_sender(void* self) {
+    return Sonnet__ConfigView_SuperSender((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_sender(void* self, QObject* (*callback)()) {
@@ -2202,8 +2202,8 @@ int32_t k_sonnet__configview_sender_signal_index(void* self) {
     return Sonnet__ConfigView_SenderSignalIndex((Sonnet__ConfigView*)self);
 }
 
-int32_t k_sonnet__configview_qbase_sender_signal_index(void* self) {
-    return Sonnet__ConfigView_QBaseSenderSignalIndex((Sonnet__ConfigView*)self);
+int32_t k_sonnet__configview_super_sender_signal_index(void* self) {
+    return Sonnet__ConfigView_SuperSenderSignalIndex((Sonnet__ConfigView*)self);
 }
 
 void k_sonnet__configview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2214,8 +2214,8 @@ int32_t k_sonnet__configview_receivers(void* self, const char* signal) {
     return Sonnet__ConfigView_Receivers((Sonnet__ConfigView*)self, signal);
 }
 
-int32_t k_sonnet__configview_qbase_receivers(void* self, const char* signal) {
-    return Sonnet__ConfigView_QBaseReceivers((Sonnet__ConfigView*)self, signal);
+int32_t k_sonnet__configview_super_receivers(void* self, const char* signal) {
+    return Sonnet__ConfigView_SuperReceivers((Sonnet__ConfigView*)self, signal);
 }
 
 void k_sonnet__configview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2226,8 +2226,8 @@ bool k_sonnet__configview_is_signal_connected(void* self, void* signal) {
     return Sonnet__ConfigView_IsSignalConnected((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
-bool k_sonnet__configview_qbase_is_signal_connected(void* self, void* signal) {
-    return Sonnet__ConfigView_QBaseIsSignalConnected((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
+bool k_sonnet__configview_super_is_signal_connected(void* self, void* signal) {
+    return Sonnet__ConfigView_SuperIsSignalConnected((Sonnet__ConfigView*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__configview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2238,8 +2238,8 @@ double k_sonnet__configview_get_decoded_metric_f(void* self, int32_t metricA, in
     return Sonnet__ConfigView_GetDecodedMetricF((Sonnet__ConfigView*)self, metricA, metricB);
 }
 
-double k_sonnet__configview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return Sonnet__ConfigView_QBaseGetDecodedMetricF((Sonnet__ConfigView*)self, metricA, metricB);
+double k_sonnet__configview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return Sonnet__ConfigView_SuperGetDecodedMetricF((Sonnet__ConfigView*)self, metricA, metricB);
 }
 
 void k_sonnet__configview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

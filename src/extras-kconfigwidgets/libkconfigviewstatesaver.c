@@ -24,8 +24,8 @@ void k_configviewstatesaver_on_meta_object(void* self, const QMetaObject* (*call
     KConfigViewStateSaver_OnMetaObject((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_configviewstatesaver_qbase_meta_object(void* self) {
-    return KConfigViewStateSaver_QBaseMetaObject((KConfigViewStateSaver*)self);
+const QMetaObject* k_configviewstatesaver_super_meta_object(void* self) {
+    return KConfigViewStateSaver_SuperMetaObject((KConfigViewStateSaver*)self);
 }
 
 void* k_configviewstatesaver_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_configviewstatesaver_on_metacast(void* self, void* (*callback)(void*, con
     KConfigViewStateSaver_OnMetacast((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
-void* k_configviewstatesaver_qbase_metacast(void* self, const char* param1) {
-    return KConfigViewStateSaver_QBaseMetacast((KConfigViewStateSaver*)self, param1);
+void* k_configviewstatesaver_super_metacast(void* self, const char* param1) {
+    return KConfigViewStateSaver_SuperMetacast((KConfigViewStateSaver*)self, param1);
 }
 
 int32_t k_configviewstatesaver_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_configviewstatesaver_on_metacall(void* self, int32_t (*callback)(void*, i
     KConfigViewStateSaver_OnMetacall((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
-int32_t k_configviewstatesaver_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KConfigViewStateSaver_QBaseMetacall((KConfigViewStateSaver*)self, param1, param2, param3);
+int32_t k_configviewstatesaver_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KConfigViewStateSaver_SuperMetacall((KConfigViewStateSaver*)self, param1, param2, param3);
 }
 
 const char* k_configviewstatesaver_tr(const char* s) {
@@ -399,8 +399,8 @@ QModelIndex* k_configviewstatesaver_index_from_config_string(void* self, void* m
     return KConfigViewStateSaver_IndexFromConfigString((KConfigViewStateSaver*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
-QModelIndex* k_configviewstatesaver_qbase_index_from_config_string(void* self, void* model, const char* key) {
-    return KConfigViewStateSaver_QBaseIndexFromConfigString((KConfigViewStateSaver*)self, (QAbstractItemModel*)model, qstring(key));
+QModelIndex* k_configviewstatesaver_super_index_from_config_string(void* self, void* model, const char* key) {
+    return KConfigViewStateSaver_SuperIndexFromConfigString((KConfigViewStateSaver*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
 void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*)) {
@@ -414,8 +414,8 @@ const char* k_configviewstatesaver_index_to_config_string(void* self, void* inde
     return _ret;
 }
 
-const char* k_configviewstatesaver_qbase_index_to_config_string(void* self, void* index) {
-    libqt_string _str = KConfigViewStateSaver_QBaseIndexToConfigString((KConfigViewStateSaver*)self, (QModelIndex*)index);
+const char* k_configviewstatesaver_super_index_to_config_string(void* self, void* index) {
+    libqt_string _str = KConfigViewStateSaver_SuperIndexToConfigString((KConfigViewStateSaver*)self, (QModelIndex*)index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -429,8 +429,8 @@ bool k_configviewstatesaver_event(void* self, void* event) {
     return KConfigViewStateSaver_Event((KConfigViewStateSaver*)self, (QEvent*)event);
 }
 
-bool k_configviewstatesaver_qbase_event(void* self, void* event) {
-    return KConfigViewStateSaver_QBaseEvent((KConfigViewStateSaver*)self, (QEvent*)event);
+bool k_configviewstatesaver_super_event(void* self, void* event) {
+    return KConfigViewStateSaver_SuperEvent((KConfigViewStateSaver*)self, (QEvent*)event);
 }
 
 void k_configviewstatesaver_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -441,8 +441,8 @@ bool k_configviewstatesaver_event_filter(void* self, void* watched, void* event)
     return KConfigViewStateSaver_EventFilter((KConfigViewStateSaver*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_configviewstatesaver_qbase_event_filter(void* self, void* watched, void* event) {
-    return KConfigViewStateSaver_QBaseEventFilter((KConfigViewStateSaver*)self, (QObject*)watched, (QEvent*)event);
+bool k_configviewstatesaver_super_event_filter(void* self, void* watched, void* event) {
+    return KConfigViewStateSaver_SuperEventFilter((KConfigViewStateSaver*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_configviewstatesaver_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -453,8 +453,8 @@ void k_configviewstatesaver_timer_event(void* self, void* event) {
     KConfigViewStateSaver_TimerEvent((KConfigViewStateSaver*)self, (QTimerEvent*)event);
 }
 
-void k_configviewstatesaver_qbase_timer_event(void* self, void* event) {
-    KConfigViewStateSaver_QBaseTimerEvent((KConfigViewStateSaver*)self, (QTimerEvent*)event);
+void k_configviewstatesaver_super_timer_event(void* self, void* event) {
+    KConfigViewStateSaver_SuperTimerEvent((KConfigViewStateSaver*)self, (QTimerEvent*)event);
 }
 
 void k_configviewstatesaver_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -465,8 +465,8 @@ void k_configviewstatesaver_child_event(void* self, void* event) {
     KConfigViewStateSaver_ChildEvent((KConfigViewStateSaver*)self, (QChildEvent*)event);
 }
 
-void k_configviewstatesaver_qbase_child_event(void* self, void* event) {
-    KConfigViewStateSaver_QBaseChildEvent((KConfigViewStateSaver*)self, (QChildEvent*)event);
+void k_configviewstatesaver_super_child_event(void* self, void* event) {
+    KConfigViewStateSaver_SuperChildEvent((KConfigViewStateSaver*)self, (QChildEvent*)event);
 }
 
 void k_configviewstatesaver_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void k_configviewstatesaver_custom_event(void* self, void* event) {
     KConfigViewStateSaver_CustomEvent((KConfigViewStateSaver*)self, (QEvent*)event);
 }
 
-void k_configviewstatesaver_qbase_custom_event(void* self, void* event) {
-    KConfigViewStateSaver_QBaseCustomEvent((KConfigViewStateSaver*)self, (QEvent*)event);
+void k_configviewstatesaver_super_custom_event(void* self, void* event) {
+    KConfigViewStateSaver_SuperCustomEvent((KConfigViewStateSaver*)self, (QEvent*)event);
 }
 
 void k_configviewstatesaver_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -489,8 +489,8 @@ void k_configviewstatesaver_connect_notify(void* self, void* signal) {
     KConfigViewStateSaver_ConnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
-void k_configviewstatesaver_qbase_connect_notify(void* self, void* signal) {
-    KConfigViewStateSaver_QBaseConnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
+void k_configviewstatesaver_super_connect_notify(void* self, void* signal) {
+    KConfigViewStateSaver_SuperConnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_configviewstatesaver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -501,8 +501,8 @@ void k_configviewstatesaver_disconnect_notify(void* self, void* signal) {
     KConfigViewStateSaver_DisconnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
-void k_configviewstatesaver_qbase_disconnect_notify(void* self, void* signal) {
-    KConfigViewStateSaver_QBaseDisconnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
+void k_configviewstatesaver_super_disconnect_notify(void* self, void* signal) {
+    KConfigViewStateSaver_SuperDisconnectNotify((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_configviewstatesaver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -513,8 +513,8 @@ QObject* k_configviewstatesaver_sender(void* self) {
     return KConfigViewStateSaver_Sender((KConfigViewStateSaver*)self);
 }
 
-QObject* k_configviewstatesaver_qbase_sender(void* self) {
-    return KConfigViewStateSaver_QBaseSender((KConfigViewStateSaver*)self);
+QObject* k_configviewstatesaver_super_sender(void* self) {
+    return KConfigViewStateSaver_SuperSender((KConfigViewStateSaver*)self);
 }
 
 void k_configviewstatesaver_on_sender(void* self, QObject* (*callback)()) {
@@ -525,8 +525,8 @@ int32_t k_configviewstatesaver_sender_signal_index(void* self) {
     return KConfigViewStateSaver_SenderSignalIndex((KConfigViewStateSaver*)self);
 }
 
-int32_t k_configviewstatesaver_qbase_sender_signal_index(void* self) {
-    return KConfigViewStateSaver_QBaseSenderSignalIndex((KConfigViewStateSaver*)self);
+int32_t k_configviewstatesaver_super_sender_signal_index(void* self) {
+    return KConfigViewStateSaver_SuperSenderSignalIndex((KConfigViewStateSaver*)self);
 }
 
 void k_configviewstatesaver_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -537,8 +537,8 @@ int32_t k_configviewstatesaver_receivers(void* self, const char* signal) {
     return KConfigViewStateSaver_Receivers((KConfigViewStateSaver*)self, signal);
 }
 
-int32_t k_configviewstatesaver_qbase_receivers(void* self, const char* signal) {
-    return KConfigViewStateSaver_QBaseReceivers((KConfigViewStateSaver*)self, signal);
+int32_t k_configviewstatesaver_super_receivers(void* self, const char* signal) {
+    return KConfigViewStateSaver_SuperReceivers((KConfigViewStateSaver*)self, signal);
 }
 
 void k_configviewstatesaver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -549,8 +549,8 @@ bool k_configviewstatesaver_is_signal_connected(void* self, void* signal) {
     return KConfigViewStateSaver_IsSignalConnected((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
-bool k_configviewstatesaver_qbase_is_signal_connected(void* self, void* signal) {
-    return KConfigViewStateSaver_QBaseIsSignalConnected((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
+bool k_configviewstatesaver_super_is_signal_connected(void* self, void* signal) {
+    return KConfigViewStateSaver_SuperIsSignalConnected((KConfigViewStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_configviewstatesaver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

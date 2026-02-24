@@ -21,8 +21,8 @@ void k_modifierkeyinfo_on_meta_object(void* self, const QMetaObject* (*callback)
     KModifierKeyInfo_OnMetaObject((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_modifierkeyinfo_qbase_meta_object(void* self) {
-    return KModifierKeyInfo_QBaseMetaObject((KModifierKeyInfo*)self);
+const QMetaObject* k_modifierkeyinfo_super_meta_object(void* self) {
+    return KModifierKeyInfo_SuperMetaObject((KModifierKeyInfo*)self);
 }
 
 void* k_modifierkeyinfo_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_modifierkeyinfo_on_metacast(void* self, void* (*callback)(void*, const ch
     KModifierKeyInfo_OnMetacast((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 
-void* k_modifierkeyinfo_qbase_metacast(void* self, const char* param1) {
-    return KModifierKeyInfo_QBaseMetacast((KModifierKeyInfo*)self, param1);
+void* k_modifierkeyinfo_super_metacast(void* self, const char* param1) {
+    return KModifierKeyInfo_SuperMetacast((KModifierKeyInfo*)self, param1);
 }
 
 int32_t k_modifierkeyinfo_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_modifierkeyinfo_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KModifierKeyInfo_OnMetacall((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 
-int32_t k_modifierkeyinfo_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KModifierKeyInfo_QBaseMetacall((KModifierKeyInfo*)self, param1, param2, param3);
+int32_t k_modifierkeyinfo_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KModifierKeyInfo_SuperMetacall((KModifierKeyInfo*)self, param1, param2, param3);
 }
 
 const char* k_modifierkeyinfo_tr(const char* s) {
@@ -366,8 +366,8 @@ bool k_modifierkeyinfo_event(void* self, void* event) {
     return KModifierKeyInfo_Event((KModifierKeyInfo*)self, (QEvent*)event);
 }
 
-bool k_modifierkeyinfo_qbase_event(void* self, void* event) {
-    return KModifierKeyInfo_QBaseEvent((KModifierKeyInfo*)self, (QEvent*)event);
+bool k_modifierkeyinfo_super_event(void* self, void* event) {
+    return KModifierKeyInfo_SuperEvent((KModifierKeyInfo*)self, (QEvent*)event);
 }
 
 void k_modifierkeyinfo_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ bool k_modifierkeyinfo_event_filter(void* self, void* watched, void* event) {
     return KModifierKeyInfo_EventFilter((KModifierKeyInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_modifierkeyinfo_qbase_event_filter(void* self, void* watched, void* event) {
-    return KModifierKeyInfo_QBaseEventFilter((KModifierKeyInfo*)self, (QObject*)watched, (QEvent*)event);
+bool k_modifierkeyinfo_super_event_filter(void* self, void* watched, void* event) {
+    return KModifierKeyInfo_SuperEventFilter((KModifierKeyInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_modifierkeyinfo_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -390,8 +390,8 @@ void k_modifierkeyinfo_timer_event(void* self, void* event) {
     KModifierKeyInfo_TimerEvent((KModifierKeyInfo*)self, (QTimerEvent*)event);
 }
 
-void k_modifierkeyinfo_qbase_timer_event(void* self, void* event) {
-    KModifierKeyInfo_QBaseTimerEvent((KModifierKeyInfo*)self, (QTimerEvent*)event);
+void k_modifierkeyinfo_super_timer_event(void* self, void* event) {
+    KModifierKeyInfo_SuperTimerEvent((KModifierKeyInfo*)self, (QTimerEvent*)event);
 }
 
 void k_modifierkeyinfo_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -402,8 +402,8 @@ void k_modifierkeyinfo_child_event(void* self, void* event) {
     KModifierKeyInfo_ChildEvent((KModifierKeyInfo*)self, (QChildEvent*)event);
 }
 
-void k_modifierkeyinfo_qbase_child_event(void* self, void* event) {
-    KModifierKeyInfo_QBaseChildEvent((KModifierKeyInfo*)self, (QChildEvent*)event);
+void k_modifierkeyinfo_super_child_event(void* self, void* event) {
+    KModifierKeyInfo_SuperChildEvent((KModifierKeyInfo*)self, (QChildEvent*)event);
 }
 
 void k_modifierkeyinfo_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -414,8 +414,8 @@ void k_modifierkeyinfo_custom_event(void* self, void* event) {
     KModifierKeyInfo_CustomEvent((KModifierKeyInfo*)self, (QEvent*)event);
 }
 
-void k_modifierkeyinfo_qbase_custom_event(void* self, void* event) {
-    KModifierKeyInfo_QBaseCustomEvent((KModifierKeyInfo*)self, (QEvent*)event);
+void k_modifierkeyinfo_super_custom_event(void* self, void* event) {
+    KModifierKeyInfo_SuperCustomEvent((KModifierKeyInfo*)self, (QEvent*)event);
 }
 
 void k_modifierkeyinfo_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ void k_modifierkeyinfo_connect_notify(void* self, void* signal) {
     KModifierKeyInfo_ConnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_modifierkeyinfo_qbase_connect_notify(void* self, void* signal) {
-    KModifierKeyInfo_QBaseConnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
+void k_modifierkeyinfo_super_connect_notify(void* self, void* signal) {
+    KModifierKeyInfo_SuperConnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_modifierkeyinfo_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -438,8 +438,8 @@ void k_modifierkeyinfo_disconnect_notify(void* self, void* signal) {
     KModifierKeyInfo_DisconnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_modifierkeyinfo_qbase_disconnect_notify(void* self, void* signal) {
-    KModifierKeyInfo_QBaseDisconnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
+void k_modifierkeyinfo_super_disconnect_notify(void* self, void* signal) {
+    KModifierKeyInfo_SuperDisconnectNotify((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_modifierkeyinfo_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ QObject* k_modifierkeyinfo_sender(void* self) {
     return KModifierKeyInfo_Sender((KModifierKeyInfo*)self);
 }
 
-QObject* k_modifierkeyinfo_qbase_sender(void* self) {
-    return KModifierKeyInfo_QBaseSender((KModifierKeyInfo*)self);
+QObject* k_modifierkeyinfo_super_sender(void* self) {
+    return KModifierKeyInfo_SuperSender((KModifierKeyInfo*)self);
 }
 
 void k_modifierkeyinfo_on_sender(void* self, QObject* (*callback)()) {
@@ -462,8 +462,8 @@ int32_t k_modifierkeyinfo_sender_signal_index(void* self) {
     return KModifierKeyInfo_SenderSignalIndex((KModifierKeyInfo*)self);
 }
 
-int32_t k_modifierkeyinfo_qbase_sender_signal_index(void* self) {
-    return KModifierKeyInfo_QBaseSenderSignalIndex((KModifierKeyInfo*)self);
+int32_t k_modifierkeyinfo_super_sender_signal_index(void* self) {
+    return KModifierKeyInfo_SuperSenderSignalIndex((KModifierKeyInfo*)self);
 }
 
 void k_modifierkeyinfo_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -474,8 +474,8 @@ int32_t k_modifierkeyinfo_receivers(void* self, const char* signal) {
     return KModifierKeyInfo_Receivers((KModifierKeyInfo*)self, signal);
 }
 
-int32_t k_modifierkeyinfo_qbase_receivers(void* self, const char* signal) {
-    return KModifierKeyInfo_QBaseReceivers((KModifierKeyInfo*)self, signal);
+int32_t k_modifierkeyinfo_super_receivers(void* self, const char* signal) {
+    return KModifierKeyInfo_SuperReceivers((KModifierKeyInfo*)self, signal);
 }
 
 void k_modifierkeyinfo_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -486,8 +486,8 @@ bool k_modifierkeyinfo_is_signal_connected(void* self, void* signal) {
     return KModifierKeyInfo_IsSignalConnected((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
-bool k_modifierkeyinfo_qbase_is_signal_connected(void* self, void* signal) {
-    return KModifierKeyInfo_QBaseIsSignalConnected((KModifierKeyInfo*)self, (QMetaMethod*)signal);
+bool k_modifierkeyinfo_super_is_signal_connected(void* self, void* signal) {
+    return KModifierKeyInfo_SuperIsSignalConnected((KModifierKeyInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_modifierkeyinfo_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

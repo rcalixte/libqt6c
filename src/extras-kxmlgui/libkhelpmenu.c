@@ -41,8 +41,8 @@ void k_helpmenu_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KHelpMenu_OnMetaObject((KHelpMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_helpmenu_qbase_meta_object(void* self) {
-    return KHelpMenu_QBaseMetaObject((KHelpMenu*)self);
+const QMetaObject* k_helpmenu_super_meta_object(void* self) {
+    return KHelpMenu_SuperMetaObject((KHelpMenu*)self);
 }
 
 void* k_helpmenu_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_helpmenu_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KHelpMenu_OnMetacast((KHelpMenu*)self, (intptr_t)callback);
 }
 
-void* k_helpmenu_qbase_metacast(void* self, const char* param1) {
-    return KHelpMenu_QBaseMetacast((KHelpMenu*)self, param1);
+void* k_helpmenu_super_metacast(void* self, const char* param1) {
+    return KHelpMenu_SuperMetacast((KHelpMenu*)self, param1);
 }
 
 int32_t k_helpmenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_helpmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KHelpMenu_OnMetacall((KHelpMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_helpmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KHelpMenu_QBaseMetacall((KHelpMenu*)self, param1, param2, param3);
+int32_t k_helpmenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KHelpMenu_SuperMetacall((KHelpMenu*)self, param1, param2, param3);
 }
 
 const char* k_helpmenu_tr(const char* s) {
@@ -353,8 +353,8 @@ bool k_helpmenu_event(void* self, void* event) {
     return KHelpMenu_Event((KHelpMenu*)self, (QEvent*)event);
 }
 
-bool k_helpmenu_qbase_event(void* self, void* event) {
-    return KHelpMenu_QBaseEvent((KHelpMenu*)self, (QEvent*)event);
+bool k_helpmenu_super_event(void* self, void* event) {
+    return KHelpMenu_SuperEvent((KHelpMenu*)self, (QEvent*)event);
 }
 
 void k_helpmenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -365,8 +365,8 @@ bool k_helpmenu_event_filter(void* self, void* watched, void* event) {
     return KHelpMenu_EventFilter((KHelpMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_helpmenu_qbase_event_filter(void* self, void* watched, void* event) {
-    return KHelpMenu_QBaseEventFilter((KHelpMenu*)self, (QObject*)watched, (QEvent*)event);
+bool k_helpmenu_super_event_filter(void* self, void* watched, void* event) {
+    return KHelpMenu_SuperEventFilter((KHelpMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_helpmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -377,8 +377,8 @@ void k_helpmenu_timer_event(void* self, void* event) {
     KHelpMenu_TimerEvent((KHelpMenu*)self, (QTimerEvent*)event);
 }
 
-void k_helpmenu_qbase_timer_event(void* self, void* event) {
-    KHelpMenu_QBaseTimerEvent((KHelpMenu*)self, (QTimerEvent*)event);
+void k_helpmenu_super_timer_event(void* self, void* event) {
+    KHelpMenu_SuperTimerEvent((KHelpMenu*)self, (QTimerEvent*)event);
 }
 
 void k_helpmenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -389,8 +389,8 @@ void k_helpmenu_child_event(void* self, void* event) {
     KHelpMenu_ChildEvent((KHelpMenu*)self, (QChildEvent*)event);
 }
 
-void k_helpmenu_qbase_child_event(void* self, void* event) {
-    KHelpMenu_QBaseChildEvent((KHelpMenu*)self, (QChildEvent*)event);
+void k_helpmenu_super_child_event(void* self, void* event) {
+    KHelpMenu_SuperChildEvent((KHelpMenu*)self, (QChildEvent*)event);
 }
 
 void k_helpmenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -401,8 +401,8 @@ void k_helpmenu_custom_event(void* self, void* event) {
     KHelpMenu_CustomEvent((KHelpMenu*)self, (QEvent*)event);
 }
 
-void k_helpmenu_qbase_custom_event(void* self, void* event) {
-    KHelpMenu_QBaseCustomEvent((KHelpMenu*)self, (QEvent*)event);
+void k_helpmenu_super_custom_event(void* self, void* event) {
+    KHelpMenu_SuperCustomEvent((KHelpMenu*)self, (QEvent*)event);
 }
 
 void k_helpmenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -413,8 +413,8 @@ void k_helpmenu_connect_notify(void* self, void* signal) {
     KHelpMenu_ConnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_helpmenu_qbase_connect_notify(void* self, void* signal) {
-    KHelpMenu_QBaseConnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
+void k_helpmenu_super_connect_notify(void* self, void* signal) {
+    KHelpMenu_SuperConnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_helpmenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -425,8 +425,8 @@ void k_helpmenu_disconnect_notify(void* self, void* signal) {
     KHelpMenu_DisconnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_helpmenu_qbase_disconnect_notify(void* self, void* signal) {
-    KHelpMenu_QBaseDisconnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
+void k_helpmenu_super_disconnect_notify(void* self, void* signal) {
+    KHelpMenu_SuperDisconnectNotify((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_helpmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -437,8 +437,8 @@ QObject* k_helpmenu_sender(void* self) {
     return KHelpMenu_Sender((KHelpMenu*)self);
 }
 
-QObject* k_helpmenu_qbase_sender(void* self) {
-    return KHelpMenu_QBaseSender((KHelpMenu*)self);
+QObject* k_helpmenu_super_sender(void* self) {
+    return KHelpMenu_SuperSender((KHelpMenu*)self);
 }
 
 void k_helpmenu_on_sender(void* self, QObject* (*callback)()) {
@@ -449,8 +449,8 @@ int32_t k_helpmenu_sender_signal_index(void* self) {
     return KHelpMenu_SenderSignalIndex((KHelpMenu*)self);
 }
 
-int32_t k_helpmenu_qbase_sender_signal_index(void* self) {
-    return KHelpMenu_QBaseSenderSignalIndex((KHelpMenu*)self);
+int32_t k_helpmenu_super_sender_signal_index(void* self) {
+    return KHelpMenu_SuperSenderSignalIndex((KHelpMenu*)self);
 }
 
 void k_helpmenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -461,8 +461,8 @@ int32_t k_helpmenu_receivers(void* self, const char* signal) {
     return KHelpMenu_Receivers((KHelpMenu*)self, signal);
 }
 
-int32_t k_helpmenu_qbase_receivers(void* self, const char* signal) {
-    return KHelpMenu_QBaseReceivers((KHelpMenu*)self, signal);
+int32_t k_helpmenu_super_receivers(void* self, const char* signal) {
+    return KHelpMenu_SuperReceivers((KHelpMenu*)self, signal);
 }
 
 void k_helpmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -473,8 +473,8 @@ bool k_helpmenu_is_signal_connected(void* self, void* signal) {
     return KHelpMenu_IsSignalConnected((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_helpmenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KHelpMenu_QBaseIsSignalConnected((KHelpMenu*)self, (QMetaMethod*)signal);
+bool k_helpmenu_super_is_signal_connected(void* self, void* signal) {
+    return KHelpMenu_SuperIsSignalConnected((KHelpMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_helpmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

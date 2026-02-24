@@ -42,8 +42,8 @@ void k_datepickerpopup_on_meta_object(void* self, const QMetaObject* (*callback)
     KDatePickerPopup_OnMetaObject((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_datepickerpopup_qbase_meta_object(void* self) {
-    return KDatePickerPopup_QBaseMetaObject((KDatePickerPopup*)self);
+const QMetaObject* k_datepickerpopup_super_meta_object(void* self) {
+    return KDatePickerPopup_SuperMetaObject((KDatePickerPopup*)self);
 }
 
 void* k_datepickerpopup_metacast(void* self, const char* param1) {
@@ -54,8 +54,8 @@ void k_datepickerpopup_on_metacast(void* self, void* (*callback)(void*, const ch
     KDatePickerPopup_OnMetacast((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
-void* k_datepickerpopup_qbase_metacast(void* self, const char* param1) {
-    return KDatePickerPopup_QBaseMetacast((KDatePickerPopup*)self, param1);
+void* k_datepickerpopup_super_metacast(void* self, const char* param1) {
+    return KDatePickerPopup_SuperMetacast((KDatePickerPopup*)self, param1);
 }
 
 int32_t k_datepickerpopup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -66,8 +66,8 @@ void k_datepickerpopup_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KDatePickerPopup_OnMetacall((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
-int32_t k_datepickerpopup_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDatePickerPopup_QBaseMetacall((KDatePickerPopup*)self, param1, param2, param3);
+int32_t k_datepickerpopup_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDatePickerPopup_SuperMetacall((KDatePickerPopup*)self, param1, param2, param3);
 }
 
 const char* k_datepickerpopup_tr(const char* s) {
@@ -1772,8 +1772,8 @@ QSize* k_datepickerpopup_size_hint(void* self) {
     return KDatePickerPopup_SizeHint((KDatePickerPopup*)self);
 }
 
-QSize* k_datepickerpopup_qbase_size_hint(void* self) {
-    return KDatePickerPopup_QBaseSizeHint((KDatePickerPopup*)self);
+QSize* k_datepickerpopup_super_size_hint(void* self) {
+    return KDatePickerPopup_SuperSizeHint((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1784,8 +1784,8 @@ void k_datepickerpopup_change_event(void* self, void* param1) {
     KDatePickerPopup_ChangeEvent((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_change_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseChangeEvent((KDatePickerPopup*)self, (QEvent*)param1);
+void k_datepickerpopup_super_change_event(void* self, void* param1) {
+    KDatePickerPopup_SuperChangeEvent((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
 void k_datepickerpopup_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1796,8 +1796,8 @@ void k_datepickerpopup_key_press_event(void* self, void* param1) {
     KDatePickerPopup_KeyPressEvent((KDatePickerPopup*)self, (QKeyEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_key_press_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseKeyPressEvent((KDatePickerPopup*)self, (QKeyEvent*)param1);
+void k_datepickerpopup_super_key_press_event(void* self, void* param1) {
+    KDatePickerPopup_SuperKeyPressEvent((KDatePickerPopup*)self, (QKeyEvent*)param1);
 }
 
 void k_datepickerpopup_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1808,8 +1808,8 @@ void k_datepickerpopup_mouse_release_event(void* self, void* param1) {
     KDatePickerPopup_MouseReleaseEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_mouse_release_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseMouseReleaseEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
+void k_datepickerpopup_super_mouse_release_event(void* self, void* param1) {
+    KDatePickerPopup_SuperMouseReleaseEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
 void k_datepickerpopup_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1820,8 +1820,8 @@ void k_datepickerpopup_mouse_press_event(void* self, void* param1) {
     KDatePickerPopup_MousePressEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_mouse_press_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseMousePressEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
+void k_datepickerpopup_super_mouse_press_event(void* self, void* param1) {
+    KDatePickerPopup_SuperMousePressEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
 void k_datepickerpopup_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1832,8 +1832,8 @@ void k_datepickerpopup_mouse_move_event(void* self, void* param1) {
     KDatePickerPopup_MouseMoveEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_mouse_move_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseMouseMoveEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
+void k_datepickerpopup_super_mouse_move_event(void* self, void* param1) {
+    KDatePickerPopup_SuperMouseMoveEvent((KDatePickerPopup*)self, (QMouseEvent*)param1);
 }
 
 void k_datepickerpopup_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1844,8 +1844,8 @@ void k_datepickerpopup_wheel_event(void* self, void* param1) {
     KDatePickerPopup_WheelEvent((KDatePickerPopup*)self, (QWheelEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_wheel_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseWheelEvent((KDatePickerPopup*)self, (QWheelEvent*)param1);
+void k_datepickerpopup_super_wheel_event(void* self, void* param1) {
+    KDatePickerPopup_SuperWheelEvent((KDatePickerPopup*)self, (QWheelEvent*)param1);
 }
 
 void k_datepickerpopup_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1856,8 +1856,8 @@ void k_datepickerpopup_enter_event(void* self, void* param1) {
     KDatePickerPopup_EnterEvent((KDatePickerPopup*)self, (QEnterEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_enter_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseEnterEvent((KDatePickerPopup*)self, (QEnterEvent*)param1);
+void k_datepickerpopup_super_enter_event(void* self, void* param1) {
+    KDatePickerPopup_SuperEnterEvent((KDatePickerPopup*)self, (QEnterEvent*)param1);
 }
 
 void k_datepickerpopup_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1868,8 +1868,8 @@ void k_datepickerpopup_leave_event(void* self, void* param1) {
     KDatePickerPopup_LeaveEvent((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_leave_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseLeaveEvent((KDatePickerPopup*)self, (QEvent*)param1);
+void k_datepickerpopup_super_leave_event(void* self, void* param1) {
+    KDatePickerPopup_SuperLeaveEvent((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
 void k_datepickerpopup_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1880,8 +1880,8 @@ void k_datepickerpopup_hide_event(void* self, void* param1) {
     KDatePickerPopup_HideEvent((KDatePickerPopup*)self, (QHideEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_hide_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseHideEvent((KDatePickerPopup*)self, (QHideEvent*)param1);
+void k_datepickerpopup_super_hide_event(void* self, void* param1) {
+    KDatePickerPopup_SuperHideEvent((KDatePickerPopup*)self, (QHideEvent*)param1);
 }
 
 void k_datepickerpopup_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1892,8 +1892,8 @@ void k_datepickerpopup_paint_event(void* self, void* param1) {
     KDatePickerPopup_PaintEvent((KDatePickerPopup*)self, (QPaintEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_paint_event(void* self, void* param1) {
-    KDatePickerPopup_QBasePaintEvent((KDatePickerPopup*)self, (QPaintEvent*)param1);
+void k_datepickerpopup_super_paint_event(void* self, void* param1) {
+    KDatePickerPopup_SuperPaintEvent((KDatePickerPopup*)self, (QPaintEvent*)param1);
 }
 
 void k_datepickerpopup_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1904,8 +1904,8 @@ void k_datepickerpopup_action_event(void* self, void* param1) {
     KDatePickerPopup_ActionEvent((KDatePickerPopup*)self, (QActionEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_action_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseActionEvent((KDatePickerPopup*)self, (QActionEvent*)param1);
+void k_datepickerpopup_super_action_event(void* self, void* param1) {
+    KDatePickerPopup_SuperActionEvent((KDatePickerPopup*)self, (QActionEvent*)param1);
 }
 
 void k_datepickerpopup_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1916,8 +1916,8 @@ void k_datepickerpopup_timer_event(void* self, void* param1) {
     KDatePickerPopup_TimerEvent((KDatePickerPopup*)self, (QTimerEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_timer_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseTimerEvent((KDatePickerPopup*)self, (QTimerEvent*)param1);
+void k_datepickerpopup_super_timer_event(void* self, void* param1) {
+    KDatePickerPopup_SuperTimerEvent((KDatePickerPopup*)self, (QTimerEvent*)param1);
 }
 
 void k_datepickerpopup_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1928,8 +1928,8 @@ bool k_datepickerpopup_event(void* self, void* param1) {
     return KDatePickerPopup_Event((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
-bool k_datepickerpopup_qbase_event(void* self, void* param1) {
-    return KDatePickerPopup_QBaseEvent((KDatePickerPopup*)self, (QEvent*)param1);
+bool k_datepickerpopup_super_event(void* self, void* param1) {
+    return KDatePickerPopup_SuperEvent((KDatePickerPopup*)self, (QEvent*)param1);
 }
 
 void k_datepickerpopup_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1940,8 +1940,8 @@ bool k_datepickerpopup_focus_next_prev_child(void* self, bool next) {
     return KDatePickerPopup_FocusNextPrevChild((KDatePickerPopup*)self, next);
 }
 
-bool k_datepickerpopup_qbase_focus_next_prev_child(void* self, bool next) {
-    return KDatePickerPopup_QBaseFocusNextPrevChild((KDatePickerPopup*)self, next);
+bool k_datepickerpopup_super_focus_next_prev_child(void* self, bool next) {
+    return KDatePickerPopup_SuperFocusNextPrevChild((KDatePickerPopup*)self, next);
 }
 
 void k_datepickerpopup_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1952,8 +1952,8 @@ void k_datepickerpopup_init_style_option(void* self, void* option, void* action)
     KDatePickerPopup_InitStyleOption((KDatePickerPopup*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
-void k_datepickerpopup_qbase_init_style_option(void* self, void* option, void* action) {
-    KDatePickerPopup_QBaseInitStyleOption((KDatePickerPopup*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
+void k_datepickerpopup_super_init_style_option(void* self, void* option, void* action) {
+    KDatePickerPopup_SuperInitStyleOption((KDatePickerPopup*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
 void k_datepickerpopup_on_init_style_option(void* self, void (*callback)(void*, void*, void*)) {
@@ -1964,8 +1964,8 @@ int32_t k_datepickerpopup_dev_type(void* self) {
     return KDatePickerPopup_DevType((KDatePickerPopup*)self);
 }
 
-int32_t k_datepickerpopup_qbase_dev_type(void* self) {
-    return KDatePickerPopup_QBaseDevType((KDatePickerPopup*)self);
+int32_t k_datepickerpopup_super_dev_type(void* self) {
+    return KDatePickerPopup_SuperDevType((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1976,8 +1976,8 @@ void k_datepickerpopup_set_visible(void* self, bool visible) {
     KDatePickerPopup_SetVisible((KDatePickerPopup*)self, visible);
 }
 
-void k_datepickerpopup_qbase_set_visible(void* self, bool visible) {
-    KDatePickerPopup_QBaseSetVisible((KDatePickerPopup*)self, visible);
+void k_datepickerpopup_super_set_visible(void* self, bool visible) {
+    KDatePickerPopup_SuperSetVisible((KDatePickerPopup*)self, visible);
 }
 
 void k_datepickerpopup_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1988,8 +1988,8 @@ QSize* k_datepickerpopup_minimum_size_hint(void* self) {
     return KDatePickerPopup_MinimumSizeHint((KDatePickerPopup*)self);
 }
 
-QSize* k_datepickerpopup_qbase_minimum_size_hint(void* self) {
-    return KDatePickerPopup_QBaseMinimumSizeHint((KDatePickerPopup*)self);
+QSize* k_datepickerpopup_super_minimum_size_hint(void* self) {
+    return KDatePickerPopup_SuperMinimumSizeHint((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2000,8 +2000,8 @@ int32_t k_datepickerpopup_height_for_width(void* self, int param1) {
     return KDatePickerPopup_HeightForWidth((KDatePickerPopup*)self, param1);
 }
 
-int32_t k_datepickerpopup_qbase_height_for_width(void* self, int param1) {
-    return KDatePickerPopup_QBaseHeightForWidth((KDatePickerPopup*)self, param1);
+int32_t k_datepickerpopup_super_height_for_width(void* self, int param1) {
+    return KDatePickerPopup_SuperHeightForWidth((KDatePickerPopup*)self, param1);
 }
 
 void k_datepickerpopup_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2012,8 +2012,8 @@ bool k_datepickerpopup_has_height_for_width(void* self) {
     return KDatePickerPopup_HasHeightForWidth((KDatePickerPopup*)self);
 }
 
-bool k_datepickerpopup_qbase_has_height_for_width(void* self) {
-    return KDatePickerPopup_QBaseHasHeightForWidth((KDatePickerPopup*)self);
+bool k_datepickerpopup_super_has_height_for_width(void* self) {
+    return KDatePickerPopup_SuperHasHeightForWidth((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2024,8 +2024,8 @@ QPaintEngine* k_datepickerpopup_paint_engine(void* self) {
     return KDatePickerPopup_PaintEngine((KDatePickerPopup*)self);
 }
 
-QPaintEngine* k_datepickerpopup_qbase_paint_engine(void* self) {
-    return KDatePickerPopup_QBasePaintEngine((KDatePickerPopup*)self);
+QPaintEngine* k_datepickerpopup_super_paint_engine(void* self) {
+    return KDatePickerPopup_SuperPaintEngine((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2036,8 +2036,8 @@ void k_datepickerpopup_mouse_double_click_event(void* self, void* event) {
     KDatePickerPopup_MouseDoubleClickEvent((KDatePickerPopup*)self, (QMouseEvent*)event);
 }
 
-void k_datepickerpopup_qbase_mouse_double_click_event(void* self, void* event) {
-    KDatePickerPopup_QBaseMouseDoubleClickEvent((KDatePickerPopup*)self, (QMouseEvent*)event);
+void k_datepickerpopup_super_mouse_double_click_event(void* self, void* event) {
+    KDatePickerPopup_SuperMouseDoubleClickEvent((KDatePickerPopup*)self, (QMouseEvent*)event);
 }
 
 void k_datepickerpopup_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2048,8 +2048,8 @@ void k_datepickerpopup_key_release_event(void* self, void* event) {
     KDatePickerPopup_KeyReleaseEvent((KDatePickerPopup*)self, (QKeyEvent*)event);
 }
 
-void k_datepickerpopup_qbase_key_release_event(void* self, void* event) {
-    KDatePickerPopup_QBaseKeyReleaseEvent((KDatePickerPopup*)self, (QKeyEvent*)event);
+void k_datepickerpopup_super_key_release_event(void* self, void* event) {
+    KDatePickerPopup_SuperKeyReleaseEvent((KDatePickerPopup*)self, (QKeyEvent*)event);
 }
 
 void k_datepickerpopup_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2060,8 +2060,8 @@ void k_datepickerpopup_focus_in_event(void* self, void* event) {
     KDatePickerPopup_FocusInEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
 }
 
-void k_datepickerpopup_qbase_focus_in_event(void* self, void* event) {
-    KDatePickerPopup_QBaseFocusInEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
+void k_datepickerpopup_super_focus_in_event(void* self, void* event) {
+    KDatePickerPopup_SuperFocusInEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
 }
 
 void k_datepickerpopup_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2072,8 +2072,8 @@ void k_datepickerpopup_focus_out_event(void* self, void* event) {
     KDatePickerPopup_FocusOutEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
 }
 
-void k_datepickerpopup_qbase_focus_out_event(void* self, void* event) {
-    KDatePickerPopup_QBaseFocusOutEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
+void k_datepickerpopup_super_focus_out_event(void* self, void* event) {
+    KDatePickerPopup_SuperFocusOutEvent((KDatePickerPopup*)self, (QFocusEvent*)event);
 }
 
 void k_datepickerpopup_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2084,8 +2084,8 @@ void k_datepickerpopup_move_event(void* self, void* event) {
     KDatePickerPopup_MoveEvent((KDatePickerPopup*)self, (QMoveEvent*)event);
 }
 
-void k_datepickerpopup_qbase_move_event(void* self, void* event) {
-    KDatePickerPopup_QBaseMoveEvent((KDatePickerPopup*)self, (QMoveEvent*)event);
+void k_datepickerpopup_super_move_event(void* self, void* event) {
+    KDatePickerPopup_SuperMoveEvent((KDatePickerPopup*)self, (QMoveEvent*)event);
 }
 
 void k_datepickerpopup_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2096,8 +2096,8 @@ void k_datepickerpopup_resize_event(void* self, void* event) {
     KDatePickerPopup_ResizeEvent((KDatePickerPopup*)self, (QResizeEvent*)event);
 }
 
-void k_datepickerpopup_qbase_resize_event(void* self, void* event) {
-    KDatePickerPopup_QBaseResizeEvent((KDatePickerPopup*)self, (QResizeEvent*)event);
+void k_datepickerpopup_super_resize_event(void* self, void* event) {
+    KDatePickerPopup_SuperResizeEvent((KDatePickerPopup*)self, (QResizeEvent*)event);
 }
 
 void k_datepickerpopup_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2108,8 +2108,8 @@ void k_datepickerpopup_close_event(void* self, void* event) {
     KDatePickerPopup_CloseEvent((KDatePickerPopup*)self, (QCloseEvent*)event);
 }
 
-void k_datepickerpopup_qbase_close_event(void* self, void* event) {
-    KDatePickerPopup_QBaseCloseEvent((KDatePickerPopup*)self, (QCloseEvent*)event);
+void k_datepickerpopup_super_close_event(void* self, void* event) {
+    KDatePickerPopup_SuperCloseEvent((KDatePickerPopup*)self, (QCloseEvent*)event);
 }
 
 void k_datepickerpopup_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2120,8 +2120,8 @@ void k_datepickerpopup_context_menu_event(void* self, void* event) {
     KDatePickerPopup_ContextMenuEvent((KDatePickerPopup*)self, (QContextMenuEvent*)event);
 }
 
-void k_datepickerpopup_qbase_context_menu_event(void* self, void* event) {
-    KDatePickerPopup_QBaseContextMenuEvent((KDatePickerPopup*)self, (QContextMenuEvent*)event);
+void k_datepickerpopup_super_context_menu_event(void* self, void* event) {
+    KDatePickerPopup_SuperContextMenuEvent((KDatePickerPopup*)self, (QContextMenuEvent*)event);
 }
 
 void k_datepickerpopup_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2132,8 +2132,8 @@ void k_datepickerpopup_tablet_event(void* self, void* event) {
     KDatePickerPopup_TabletEvent((KDatePickerPopup*)self, (QTabletEvent*)event);
 }
 
-void k_datepickerpopup_qbase_tablet_event(void* self, void* event) {
-    KDatePickerPopup_QBaseTabletEvent((KDatePickerPopup*)self, (QTabletEvent*)event);
+void k_datepickerpopup_super_tablet_event(void* self, void* event) {
+    KDatePickerPopup_SuperTabletEvent((KDatePickerPopup*)self, (QTabletEvent*)event);
 }
 
 void k_datepickerpopup_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2144,8 +2144,8 @@ void k_datepickerpopup_drag_enter_event(void* self, void* event) {
     KDatePickerPopup_DragEnterEvent((KDatePickerPopup*)self, (QDragEnterEvent*)event);
 }
 
-void k_datepickerpopup_qbase_drag_enter_event(void* self, void* event) {
-    KDatePickerPopup_QBaseDragEnterEvent((KDatePickerPopup*)self, (QDragEnterEvent*)event);
+void k_datepickerpopup_super_drag_enter_event(void* self, void* event) {
+    KDatePickerPopup_SuperDragEnterEvent((KDatePickerPopup*)self, (QDragEnterEvent*)event);
 }
 
 void k_datepickerpopup_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2156,8 +2156,8 @@ void k_datepickerpopup_drag_move_event(void* self, void* event) {
     KDatePickerPopup_DragMoveEvent((KDatePickerPopup*)self, (QDragMoveEvent*)event);
 }
 
-void k_datepickerpopup_qbase_drag_move_event(void* self, void* event) {
-    KDatePickerPopup_QBaseDragMoveEvent((KDatePickerPopup*)self, (QDragMoveEvent*)event);
+void k_datepickerpopup_super_drag_move_event(void* self, void* event) {
+    KDatePickerPopup_SuperDragMoveEvent((KDatePickerPopup*)self, (QDragMoveEvent*)event);
 }
 
 void k_datepickerpopup_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2168,8 +2168,8 @@ void k_datepickerpopup_drag_leave_event(void* self, void* event) {
     KDatePickerPopup_DragLeaveEvent((KDatePickerPopup*)self, (QDragLeaveEvent*)event);
 }
 
-void k_datepickerpopup_qbase_drag_leave_event(void* self, void* event) {
-    KDatePickerPopup_QBaseDragLeaveEvent((KDatePickerPopup*)self, (QDragLeaveEvent*)event);
+void k_datepickerpopup_super_drag_leave_event(void* self, void* event) {
+    KDatePickerPopup_SuperDragLeaveEvent((KDatePickerPopup*)self, (QDragLeaveEvent*)event);
 }
 
 void k_datepickerpopup_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2180,8 +2180,8 @@ void k_datepickerpopup_drop_event(void* self, void* event) {
     KDatePickerPopup_DropEvent((KDatePickerPopup*)self, (QDropEvent*)event);
 }
 
-void k_datepickerpopup_qbase_drop_event(void* self, void* event) {
-    KDatePickerPopup_QBaseDropEvent((KDatePickerPopup*)self, (QDropEvent*)event);
+void k_datepickerpopup_super_drop_event(void* self, void* event) {
+    KDatePickerPopup_SuperDropEvent((KDatePickerPopup*)self, (QDropEvent*)event);
 }
 
 void k_datepickerpopup_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2192,8 +2192,8 @@ void k_datepickerpopup_show_event(void* self, void* event) {
     KDatePickerPopup_ShowEvent((KDatePickerPopup*)self, (QShowEvent*)event);
 }
 
-void k_datepickerpopup_qbase_show_event(void* self, void* event) {
-    KDatePickerPopup_QBaseShowEvent((KDatePickerPopup*)self, (QShowEvent*)event);
+void k_datepickerpopup_super_show_event(void* self, void* event) {
+    KDatePickerPopup_SuperShowEvent((KDatePickerPopup*)self, (QShowEvent*)event);
 }
 
 void k_datepickerpopup_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2204,8 +2204,8 @@ bool k_datepickerpopup_native_event(void* self, char* eventType, void* message, 
     return KDatePickerPopup_NativeEvent((KDatePickerPopup*)self, qstring(eventType), message, result);
 }
 
-bool k_datepickerpopup_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KDatePickerPopup_QBaseNativeEvent((KDatePickerPopup*)self, qstring(eventType), message, result);
+bool k_datepickerpopup_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KDatePickerPopup_SuperNativeEvent((KDatePickerPopup*)self, qstring(eventType), message, result);
 }
 
 void k_datepickerpopup_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2216,8 +2216,8 @@ int32_t k_datepickerpopup_metric(void* self, int32_t param1) {
     return KDatePickerPopup_Metric((KDatePickerPopup*)self, param1);
 }
 
-int32_t k_datepickerpopup_qbase_metric(void* self, int32_t param1) {
-    return KDatePickerPopup_QBaseMetric((KDatePickerPopup*)self, param1);
+int32_t k_datepickerpopup_super_metric(void* self, int32_t param1) {
+    return KDatePickerPopup_SuperMetric((KDatePickerPopup*)self, param1);
 }
 
 void k_datepickerpopup_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2228,8 +2228,8 @@ void k_datepickerpopup_init_painter(void* self, void* painter) {
     KDatePickerPopup_InitPainter((KDatePickerPopup*)self, (QPainter*)painter);
 }
 
-void k_datepickerpopup_qbase_init_painter(void* self, void* painter) {
-    KDatePickerPopup_QBaseInitPainter((KDatePickerPopup*)self, (QPainter*)painter);
+void k_datepickerpopup_super_init_painter(void* self, void* painter) {
+    KDatePickerPopup_SuperInitPainter((KDatePickerPopup*)self, (QPainter*)painter);
 }
 
 void k_datepickerpopup_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2240,8 +2240,8 @@ QPaintDevice* k_datepickerpopup_redirected(void* self, void* offset) {
     return KDatePickerPopup_Redirected((KDatePickerPopup*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_datepickerpopup_qbase_redirected(void* self, void* offset) {
-    return KDatePickerPopup_QBaseRedirected((KDatePickerPopup*)self, (QPoint*)offset);
+QPaintDevice* k_datepickerpopup_super_redirected(void* self, void* offset) {
+    return KDatePickerPopup_SuperRedirected((KDatePickerPopup*)self, (QPoint*)offset);
 }
 
 void k_datepickerpopup_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2252,8 +2252,8 @@ QPainter* k_datepickerpopup_shared_painter(void* self) {
     return KDatePickerPopup_SharedPainter((KDatePickerPopup*)self);
 }
 
-QPainter* k_datepickerpopup_qbase_shared_painter(void* self) {
-    return KDatePickerPopup_QBaseSharedPainter((KDatePickerPopup*)self);
+QPainter* k_datepickerpopup_super_shared_painter(void* self) {
+    return KDatePickerPopup_SuperSharedPainter((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2264,8 +2264,8 @@ void k_datepickerpopup_input_method_event(void* self, void* param1) {
     KDatePickerPopup_InputMethodEvent((KDatePickerPopup*)self, (QInputMethodEvent*)param1);
 }
 
-void k_datepickerpopup_qbase_input_method_event(void* self, void* param1) {
-    KDatePickerPopup_QBaseInputMethodEvent((KDatePickerPopup*)self, (QInputMethodEvent*)param1);
+void k_datepickerpopup_super_input_method_event(void* self, void* param1) {
+    KDatePickerPopup_SuperInputMethodEvent((KDatePickerPopup*)self, (QInputMethodEvent*)param1);
 }
 
 void k_datepickerpopup_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2276,8 +2276,8 @@ QVariant* k_datepickerpopup_input_method_query(void* self, int32_t param1) {
     return KDatePickerPopup_InputMethodQuery((KDatePickerPopup*)self, param1);
 }
 
-QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int32_t param1) {
-    return KDatePickerPopup_QBaseInputMethodQuery((KDatePickerPopup*)self, param1);
+QVariant* k_datepickerpopup_super_input_method_query(void* self, int32_t param1) {
+    return KDatePickerPopup_SuperInputMethodQuery((KDatePickerPopup*)self, param1);
 }
 
 void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2288,8 +2288,8 @@ bool k_datepickerpopup_event_filter(void* self, void* watched, void* event) {
     return KDatePickerPopup_EventFilter((KDatePickerPopup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_datepickerpopup_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDatePickerPopup_QBaseEventFilter((KDatePickerPopup*)self, (QObject*)watched, (QEvent*)event);
+bool k_datepickerpopup_super_event_filter(void* self, void* watched, void* event) {
+    return KDatePickerPopup_SuperEventFilter((KDatePickerPopup*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_datepickerpopup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2300,8 +2300,8 @@ void k_datepickerpopup_child_event(void* self, void* event) {
     KDatePickerPopup_ChildEvent((KDatePickerPopup*)self, (QChildEvent*)event);
 }
 
-void k_datepickerpopup_qbase_child_event(void* self, void* event) {
-    KDatePickerPopup_QBaseChildEvent((KDatePickerPopup*)self, (QChildEvent*)event);
+void k_datepickerpopup_super_child_event(void* self, void* event) {
+    KDatePickerPopup_SuperChildEvent((KDatePickerPopup*)self, (QChildEvent*)event);
 }
 
 void k_datepickerpopup_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2312,8 +2312,8 @@ void k_datepickerpopup_custom_event(void* self, void* event) {
     KDatePickerPopup_CustomEvent((KDatePickerPopup*)self, (QEvent*)event);
 }
 
-void k_datepickerpopup_qbase_custom_event(void* self, void* event) {
-    KDatePickerPopup_QBaseCustomEvent((KDatePickerPopup*)self, (QEvent*)event);
+void k_datepickerpopup_super_custom_event(void* self, void* event) {
+    KDatePickerPopup_SuperCustomEvent((KDatePickerPopup*)self, (QEvent*)event);
 }
 
 void k_datepickerpopup_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2324,8 +2324,8 @@ void k_datepickerpopup_connect_notify(void* self, void* signal) {
     KDatePickerPopup_ConnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
-void k_datepickerpopup_qbase_connect_notify(void* self, void* signal) {
-    KDatePickerPopup_QBaseConnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
+void k_datepickerpopup_super_connect_notify(void* self, void* signal) {
+    KDatePickerPopup_SuperConnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
 void k_datepickerpopup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2336,8 +2336,8 @@ void k_datepickerpopup_disconnect_notify(void* self, void* signal) {
     KDatePickerPopup_DisconnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
-void k_datepickerpopup_qbase_disconnect_notify(void* self, void* signal) {
-    KDatePickerPopup_QBaseDisconnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
+void k_datepickerpopup_super_disconnect_notify(void* self, void* signal) {
+    KDatePickerPopup_SuperDisconnectNotify((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
 void k_datepickerpopup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2348,8 +2348,8 @@ int32_t k_datepickerpopup_column_count(void* self) {
     return KDatePickerPopup_ColumnCount((KDatePickerPopup*)self);
 }
 
-int32_t k_datepickerpopup_qbase_column_count(void* self) {
-    return KDatePickerPopup_QBaseColumnCount((KDatePickerPopup*)self);
+int32_t k_datepickerpopup_super_column_count(void* self) {
+    return KDatePickerPopup_SuperColumnCount((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_column_count(void* self, int32_t (*callback)()) {
@@ -2360,8 +2360,8 @@ void k_datepickerpopup_update_micro_focus(void* self) {
     KDatePickerPopup_UpdateMicroFocus((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_qbase_update_micro_focus(void* self) {
-    KDatePickerPopup_QBaseUpdateMicroFocus((KDatePickerPopup*)self);
+void k_datepickerpopup_super_update_micro_focus(void* self) {
+    KDatePickerPopup_SuperUpdateMicroFocus((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2372,8 +2372,8 @@ void k_datepickerpopup_create(void* self) {
     KDatePickerPopup_Create((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_qbase_create(void* self) {
-    KDatePickerPopup_QBaseCreate((KDatePickerPopup*)self);
+void k_datepickerpopup_super_create(void* self) {
+    KDatePickerPopup_SuperCreate((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_create(void* self, void (*callback)()) {
@@ -2384,8 +2384,8 @@ void k_datepickerpopup_destroy(void* self) {
     KDatePickerPopup_Destroy((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_qbase_destroy(void* self) {
-    KDatePickerPopup_QBaseDestroy((KDatePickerPopup*)self);
+void k_datepickerpopup_super_destroy(void* self) {
+    KDatePickerPopup_SuperDestroy((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_destroy(void* self, void (*callback)()) {
@@ -2396,8 +2396,8 @@ bool k_datepickerpopup_focus_next_child(void* self) {
     return KDatePickerPopup_FocusNextChild((KDatePickerPopup*)self);
 }
 
-bool k_datepickerpopup_qbase_focus_next_child(void* self) {
-    return KDatePickerPopup_QBaseFocusNextChild((KDatePickerPopup*)self);
+bool k_datepickerpopup_super_focus_next_child(void* self) {
+    return KDatePickerPopup_SuperFocusNextChild((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2408,8 +2408,8 @@ bool k_datepickerpopup_focus_previous_child(void* self) {
     return KDatePickerPopup_FocusPreviousChild((KDatePickerPopup*)self);
 }
 
-bool k_datepickerpopup_qbase_focus_previous_child(void* self) {
-    return KDatePickerPopup_QBaseFocusPreviousChild((KDatePickerPopup*)self);
+bool k_datepickerpopup_super_focus_previous_child(void* self) {
+    return KDatePickerPopup_SuperFocusPreviousChild((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2420,8 +2420,8 @@ QObject* k_datepickerpopup_sender(void* self) {
     return KDatePickerPopup_Sender((KDatePickerPopup*)self);
 }
 
-QObject* k_datepickerpopup_qbase_sender(void* self) {
-    return KDatePickerPopup_QBaseSender((KDatePickerPopup*)self);
+QObject* k_datepickerpopup_super_sender(void* self) {
+    return KDatePickerPopup_SuperSender((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_sender(void* self, QObject* (*callback)()) {
@@ -2432,8 +2432,8 @@ int32_t k_datepickerpopup_sender_signal_index(void* self) {
     return KDatePickerPopup_SenderSignalIndex((KDatePickerPopup*)self);
 }
 
-int32_t k_datepickerpopup_qbase_sender_signal_index(void* self) {
-    return KDatePickerPopup_QBaseSenderSignalIndex((KDatePickerPopup*)self);
+int32_t k_datepickerpopup_super_sender_signal_index(void* self) {
+    return KDatePickerPopup_SuperSenderSignalIndex((KDatePickerPopup*)self);
 }
 
 void k_datepickerpopup_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2444,8 +2444,8 @@ int32_t k_datepickerpopup_receivers(void* self, const char* signal) {
     return KDatePickerPopup_Receivers((KDatePickerPopup*)self, signal);
 }
 
-int32_t k_datepickerpopup_qbase_receivers(void* self, const char* signal) {
-    return KDatePickerPopup_QBaseReceivers((KDatePickerPopup*)self, signal);
+int32_t k_datepickerpopup_super_receivers(void* self, const char* signal) {
+    return KDatePickerPopup_SuperReceivers((KDatePickerPopup*)self, signal);
 }
 
 void k_datepickerpopup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2456,8 +2456,8 @@ bool k_datepickerpopup_is_signal_connected(void* self, void* signal) {
     return KDatePickerPopup_IsSignalConnected((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
-bool k_datepickerpopup_qbase_is_signal_connected(void* self, void* signal) {
-    return KDatePickerPopup_QBaseIsSignalConnected((KDatePickerPopup*)self, (QMetaMethod*)signal);
+bool k_datepickerpopup_super_is_signal_connected(void* self, void* signal) {
+    return KDatePickerPopup_SuperIsSignalConnected((KDatePickerPopup*)self, (QMetaMethod*)signal);
 }
 
 void k_datepickerpopup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2468,8 +2468,8 @@ double k_datepickerpopup_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KDatePickerPopup_GetDecodedMetricF((KDatePickerPopup*)self, metricA, metricB);
 }
 
-double k_datepickerpopup_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KDatePickerPopup_QBaseGetDecodedMetricF((KDatePickerPopup*)self, metricA, metricB);
+double k_datepickerpopup_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KDatePickerPopup_SuperGetDecodedMetricF((KDatePickerPopup*)self, metricA, metricB);
 }
 
 void k_datepickerpopup_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

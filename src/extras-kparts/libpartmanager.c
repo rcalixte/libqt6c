@@ -23,8 +23,8 @@ void k_parts__partmanager_on_meta_object(void* self, const QMetaObject* (*callba
     KParts__PartManager_OnMetaObject((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__partmanager_qbase_meta_object(void* self) {
-    return KParts__PartManager_QBaseMetaObject((KParts__PartManager*)self);
+const QMetaObject* k_parts__partmanager_super_meta_object(void* self) {
+    return KParts__PartManager_SuperMetaObject((KParts__PartManager*)self);
 }
 
 void* k_parts__partmanager_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_parts__partmanager_on_metacast(void* self, void* (*callback)(void*, const
     KParts__PartManager_OnMetacast((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void* k_parts__partmanager_qbase_metacast(void* self, const char* param1) {
-    return KParts__PartManager_QBaseMetacast((KParts__PartManager*)self, param1);
+void* k_parts__partmanager_super_metacast(void* self, const char* param1) {
+    return KParts__PartManager_SuperMetacast((KParts__PartManager*)self, param1);
 }
 
 int32_t k_parts__partmanager_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_parts__partmanager_on_metacall(void* self, int32_t (*callback)(void*, int
     KParts__PartManager_OnMetacall((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__partmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__PartManager_QBaseMetacall((KParts__PartManager*)self, param1, param2, param3);
+int32_t k_parts__partmanager_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__PartManager_SuperMetacall((KParts__PartManager*)self, param1, param2, param3);
 }
 
 const char* k_parts__partmanager_tr(const char* s) {
@@ -98,8 +98,8 @@ void k_parts__partmanager_on_event_filter(void* self, bool (*callback)(void*, vo
     KParts__PartManager_OnEventFilter((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-bool k_parts__partmanager_qbase_event_filter(void* self, void* obj, void* ev) {
-    return KParts__PartManager_QBaseEventFilter((KParts__PartManager*)self, (QObject*)obj, (QEvent*)ev);
+bool k_parts__partmanager_super_event_filter(void* self, void* obj, void* ev) {
+    return KParts__PartManager_SuperEventFilter((KParts__PartManager*)self, (QObject*)obj, (QEvent*)ev);
 }
 
 void k_parts__partmanager_add_part(void* self, void* part, bool setActive) {
@@ -110,8 +110,8 @@ void k_parts__partmanager_on_add_part(void* self, void (*callback)(void*, void*,
     KParts__PartManager_OnAddPart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_add_part(void* self, void* part, bool setActive) {
-    KParts__PartManager_QBaseAddPart((KParts__PartManager*)self, (KParts__Part*)part, setActive);
+void k_parts__partmanager_super_add_part(void* self, void* part, bool setActive) {
+    KParts__PartManager_SuperAddPart((KParts__PartManager*)self, (KParts__Part*)part, setActive);
 }
 
 void k_parts__partmanager_remove_part(void* self, void* part) {
@@ -122,8 +122,8 @@ void k_parts__partmanager_on_remove_part(void* self, void (*callback)(void*, voi
     KParts__PartManager_OnRemovePart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_remove_part(void* self, void* part) {
-    KParts__PartManager_QBaseRemovePart((KParts__PartManager*)self, (KParts__Part*)part);
+void k_parts__partmanager_super_remove_part(void* self, void* part) {
+    KParts__PartManager_SuperRemovePart((KParts__PartManager*)self, (KParts__Part*)part);
 }
 
 void k_parts__partmanager_replace_part(void* self, void* oldPart, void* newPart, bool setActive) {
@@ -134,8 +134,8 @@ void k_parts__partmanager_on_replace_part(void* self, void (*callback)(void*, vo
     KParts__PartManager_OnReplacePart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_replace_part(void* self, void* oldPart, void* newPart, bool setActive) {
-    KParts__PartManager_QBaseReplacePart((KParts__PartManager*)self, (KParts__Part*)oldPart, (KParts__Part*)newPart, setActive);
+void k_parts__partmanager_super_replace_part(void* self, void* oldPart, void* newPart, bool setActive) {
+    KParts__PartManager_SuperReplacePart((KParts__PartManager*)self, (KParts__Part*)oldPart, (KParts__Part*)newPart, setActive);
 }
 
 void k_parts__partmanager_set_active_part(void* self, void* part, void* widget) {
@@ -146,8 +146,8 @@ void k_parts__partmanager_on_set_active_part(void* self, void (*callback)(void*,
     KParts__PartManager_OnSetActivePart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_set_active_part(void* self, void* part, void* widget) {
-    KParts__PartManager_QBaseSetActivePart((KParts__PartManager*)self, (KParts__Part*)part, (QWidget*)widget);
+void k_parts__partmanager_super_set_active_part(void* self, void* part, void* widget) {
+    KParts__PartManager_SuperSetActivePart((KParts__PartManager*)self, (KParts__Part*)part, (QWidget*)widget);
 }
 
 KParts__Part* k_parts__partmanager_active_part(void* self) {
@@ -158,8 +158,8 @@ void k_parts__partmanager_on_active_part(void* self, KParts__Part* (*callback)()
     KParts__PartManager_OnActivePart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-KParts__Part* k_parts__partmanager_qbase_active_part(void* self) {
-    return KParts__PartManager_QBaseActivePart((KParts__PartManager*)self);
+KParts__Part* k_parts__partmanager_super_active_part(void* self) {
+    return KParts__PartManager_SuperActivePart((KParts__PartManager*)self);
 }
 
 QWidget* k_parts__partmanager_active_widget(void* self) {
@@ -170,8 +170,8 @@ void k_parts__partmanager_on_active_widget(void* self, QWidget* (*callback)()) {
     KParts__PartManager_OnActiveWidget((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-QWidget* k_parts__partmanager_qbase_active_widget(void* self) {
-    return KParts__PartManager_QBaseActiveWidget((KParts__PartManager*)self);
+QWidget* k_parts__partmanager_super_active_widget(void* self) {
+    return KParts__PartManager_SuperActiveWidget((KParts__PartManager*)self);
 }
 
 libqt_list /* of KParts__Part* */ k_parts__partmanager_parts(void* self) {
@@ -223,8 +223,8 @@ void k_parts__partmanager_on_set_ignore_explict_focus_requests(void* self, void 
     KParts__PartManager_OnSetIgnoreExplictFocusRequests((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_set_ignore_explict_focus_requests(void* self, bool ignoreExplictFocusRequests) {
-    KParts__PartManager_QBaseSetIgnoreExplictFocusRequests((KParts__PartManager*)self, ignoreExplictFocusRequests);
+void k_parts__partmanager_super_set_ignore_explict_focus_requests(void* self, bool ignoreExplictFocusRequests) {
+    KParts__PartManager_SuperSetIgnoreExplictFocusRequests((KParts__PartManager*)self, ignoreExplictFocusRequests);
 }
 
 void k_parts__partmanager_slot_object_destroyed(void* self) {
@@ -235,8 +235,8 @@ void k_parts__partmanager_on_slot_object_destroyed(void* self, void (*callback)(
     KParts__PartManager_OnSlotObjectDestroyed((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_slot_object_destroyed(void* self) {
-    KParts__PartManager_QBaseSlotObjectDestroyed((KParts__PartManager*)self);
+void k_parts__partmanager_super_slot_object_destroyed(void* self) {
+    KParts__PartManager_SuperSlotObjectDestroyed((KParts__PartManager*)self);
 }
 
 void k_parts__partmanager_slot_widget_destroyed(void* self) {
@@ -247,8 +247,8 @@ void k_parts__partmanager_on_slot_widget_destroyed(void* self, void (*callback)(
     KParts__PartManager_OnSlotWidgetDestroyed((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_slot_widget_destroyed(void* self) {
-    KParts__PartManager_QBaseSlotWidgetDestroyed((KParts__PartManager*)self);
+void k_parts__partmanager_super_slot_widget_destroyed(void* self) {
+    KParts__PartManager_SuperSlotWidgetDestroyed((KParts__PartManager*)self);
 }
 
 void k_parts__partmanager_slot_managed_top_level_widget_destroyed(void* self) {
@@ -259,8 +259,8 @@ void k_parts__partmanager_on_slot_managed_top_level_widget_destroyed(void* self,
     KParts__PartManager_OnSlotManagedTopLevelWidgetDestroyed((KParts__PartManager*)self, (intptr_t)callback);
 }
 
-void k_parts__partmanager_qbase_slot_managed_top_level_widget_destroyed(void* self) {
-    KParts__PartManager_QBaseSlotManagedTopLevelWidgetDestroyed((KParts__PartManager*)self);
+void k_parts__partmanager_super_slot_managed_top_level_widget_destroyed(void* self) {
+    KParts__PartManager_SuperSlotManagedTopLevelWidgetDestroyed((KParts__PartManager*)self);
 }
 
 const char* k_parts__partmanager_tr2(const char* s, const char* c) {
@@ -492,8 +492,8 @@ bool k_parts__partmanager_event(void* self, void* event) {
     return KParts__PartManager_Event((KParts__PartManager*)self, (QEvent*)event);
 }
 
-bool k_parts__partmanager_qbase_event(void* self, void* event) {
-    return KParts__PartManager_QBaseEvent((KParts__PartManager*)self, (QEvent*)event);
+bool k_parts__partmanager_super_event(void* self, void* event) {
+    return KParts__PartManager_SuperEvent((KParts__PartManager*)self, (QEvent*)event);
 }
 
 void k_parts__partmanager_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -504,8 +504,8 @@ void k_parts__partmanager_timer_event(void* self, void* event) {
     KParts__PartManager_TimerEvent((KParts__PartManager*)self, (QTimerEvent*)event);
 }
 
-void k_parts__partmanager_qbase_timer_event(void* self, void* event) {
-    KParts__PartManager_QBaseTimerEvent((KParts__PartManager*)self, (QTimerEvent*)event);
+void k_parts__partmanager_super_timer_event(void* self, void* event) {
+    KParts__PartManager_SuperTimerEvent((KParts__PartManager*)self, (QTimerEvent*)event);
 }
 
 void k_parts__partmanager_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -516,8 +516,8 @@ void k_parts__partmanager_child_event(void* self, void* event) {
     KParts__PartManager_ChildEvent((KParts__PartManager*)self, (QChildEvent*)event);
 }
 
-void k_parts__partmanager_qbase_child_event(void* self, void* event) {
-    KParts__PartManager_QBaseChildEvent((KParts__PartManager*)self, (QChildEvent*)event);
+void k_parts__partmanager_super_child_event(void* self, void* event) {
+    KParts__PartManager_SuperChildEvent((KParts__PartManager*)self, (QChildEvent*)event);
 }
 
 void k_parts__partmanager_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -528,8 +528,8 @@ void k_parts__partmanager_custom_event(void* self, void* event) {
     KParts__PartManager_CustomEvent((KParts__PartManager*)self, (QEvent*)event);
 }
 
-void k_parts__partmanager_qbase_custom_event(void* self, void* event) {
-    KParts__PartManager_QBaseCustomEvent((KParts__PartManager*)self, (QEvent*)event);
+void k_parts__partmanager_super_custom_event(void* self, void* event) {
+    KParts__PartManager_SuperCustomEvent((KParts__PartManager*)self, (QEvent*)event);
 }
 
 void k_parts__partmanager_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -540,8 +540,8 @@ void k_parts__partmanager_connect_notify(void* self, void* signal) {
     KParts__PartManager_ConnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__partmanager_qbase_connect_notify(void* self, void* signal) {
-    KParts__PartManager_QBaseConnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
+void k_parts__partmanager_super_connect_notify(void* self, void* signal) {
+    KParts__PartManager_SuperConnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__partmanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -552,8 +552,8 @@ void k_parts__partmanager_disconnect_notify(void* self, void* signal) {
     KParts__PartManager_DisconnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__partmanager_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__PartManager_QBaseDisconnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
+void k_parts__partmanager_super_disconnect_notify(void* self, void* signal) {
+    KParts__PartManager_SuperDisconnectNotify((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__partmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -564,8 +564,8 @@ QObject* k_parts__partmanager_sender(void* self) {
     return KParts__PartManager_Sender((KParts__PartManager*)self);
 }
 
-QObject* k_parts__partmanager_qbase_sender(void* self) {
-    return KParts__PartManager_QBaseSender((KParts__PartManager*)self);
+QObject* k_parts__partmanager_super_sender(void* self) {
+    return KParts__PartManager_SuperSender((KParts__PartManager*)self);
 }
 
 void k_parts__partmanager_on_sender(void* self, QObject* (*callback)()) {
@@ -576,8 +576,8 @@ int32_t k_parts__partmanager_sender_signal_index(void* self) {
     return KParts__PartManager_SenderSignalIndex((KParts__PartManager*)self);
 }
 
-int32_t k_parts__partmanager_qbase_sender_signal_index(void* self) {
-    return KParts__PartManager_QBaseSenderSignalIndex((KParts__PartManager*)self);
+int32_t k_parts__partmanager_super_sender_signal_index(void* self) {
+    return KParts__PartManager_SuperSenderSignalIndex((KParts__PartManager*)self);
 }
 
 void k_parts__partmanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -588,8 +588,8 @@ int32_t k_parts__partmanager_receivers(void* self, const char* signal) {
     return KParts__PartManager_Receivers((KParts__PartManager*)self, signal);
 }
 
-int32_t k_parts__partmanager_qbase_receivers(void* self, const char* signal) {
-    return KParts__PartManager_QBaseReceivers((KParts__PartManager*)self, signal);
+int32_t k_parts__partmanager_super_receivers(void* self, const char* signal) {
+    return KParts__PartManager_SuperReceivers((KParts__PartManager*)self, signal);
 }
 
 void k_parts__partmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -600,8 +600,8 @@ bool k_parts__partmanager_is_signal_connected(void* self, void* signal) {
     return KParts__PartManager_IsSignalConnected((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__partmanager_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__PartManager_QBaseIsSignalConnected((KParts__PartManager*)self, (QMetaMethod*)signal);
+bool k_parts__partmanager_super_is_signal_connected(void* self, void* signal) {
+    return KParts__PartManager_SuperIsSignalConnected((KParts__PartManager*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__partmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

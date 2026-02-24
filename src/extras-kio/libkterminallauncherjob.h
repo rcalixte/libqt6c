@@ -43,13 +43,17 @@ const QMetaObject* k_terminallauncherjob_meta_object(void* self);
 ///
 void k_terminallauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_meta_object` instead
+///
+#define k_terminallauncherjob_qbase_meta_object k_terminallauncherjob_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KTerminalLauncherJob*
 ///
-const QMetaObject* k_terminallauncherjob_qbase_meta_object(void* self);
+const QMetaObject* k_terminallauncherjob_super_meta_object(void* self);
 
 /// @param self KTerminalLauncherJob*
 /// @param param1 const char*
@@ -63,12 +67,16 @@ void* k_terminallauncherjob_metacast(void* self, const char* param1);
 ///
 void k_terminallauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_metacast` instead
+///
+#define k_terminallauncherjob_qbase_metacast k_terminallauncherjob_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KTerminalLauncherJob*
 /// @param param1 const char*
 ///
-void* k_terminallauncherjob_qbase_metacast(void* self, const char* param1);
+void* k_terminallauncherjob_super_metacast(void* self, const char* param1);
 
 /// @param self KTerminalLauncherJob*
 /// @param param1 enum QMetaObject__Call
@@ -84,6 +92,10 @@ int32_t k_terminallauncherjob_metacall(void* self, int32_t param1, int param2, v
 ///
 void k_terminallauncherjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_metacall` instead
+///
+#define k_terminallauncherjob_qbase_metacall k_terminallauncherjob_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KTerminalLauncherJob*
@@ -91,7 +103,7 @@ void k_terminallauncherjob_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_terminallauncherjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_terminallauncherjob_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -137,13 +149,17 @@ void k_terminallauncherjob_start(void* self);
 ///
 void k_terminallauncherjob_on_start(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_start` instead
+///
+#define k_terminallauncherjob_qbase_start k_terminallauncherjob_super_start
+
 /// [Upstream resources](https://api.kde.org/kterminallauncherjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KTerminalLauncherJob*
 ///
-void k_terminallauncherjob_qbase_start(void* self);
+void k_terminallauncherjob_super_start(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -894,6 +910,10 @@ void k_terminallauncherjob_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_terminallauncherjob_do_kill(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_do_kill` instead
+///
+#define k_terminallauncherjob_qbase_do_kill k_terminallauncherjob_super_do_kill
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doKill)
@@ -902,7 +922,7 @@ bool k_terminallauncherjob_do_kill(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-bool k_terminallauncherjob_qbase_do_kill(void* self);
+bool k_terminallauncherjob_super_do_kill(void* self);
 
 /// Inherited from KJob
 ///
@@ -925,6 +945,10 @@ void k_terminallauncherjob_on_do_kill(void* self, bool (*callback)());
 ///
 bool k_terminallauncherjob_do_suspend(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_do_suspend` instead
+///
+#define k_terminallauncherjob_qbase_do_suspend k_terminallauncherjob_super_do_suspend
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
@@ -933,7 +957,7 @@ bool k_terminallauncherjob_do_suspend(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-bool k_terminallauncherjob_qbase_do_suspend(void* self);
+bool k_terminallauncherjob_super_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
@@ -956,6 +980,10 @@ void k_terminallauncherjob_on_do_suspend(void* self, bool (*callback)());
 ///
 bool k_terminallauncherjob_do_resume(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_do_resume` instead
+///
+#define k_terminallauncherjob_qbase_do_resume k_terminallauncherjob_super_do_resume
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doResume)
@@ -964,7 +992,7 @@ bool k_terminallauncherjob_do_resume(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-bool k_terminallauncherjob_qbase_do_resume(void* self);
+bool k_terminallauncherjob_super_do_resume(void* self);
 
 /// Inherited from KJob
 ///
@@ -989,6 +1017,10 @@ void k_terminallauncherjob_on_do_resume(void* self, bool (*callback)());
 ///
 const char* k_terminallauncherjob_error_string(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_error_string` instead
+///
+#define k_terminallauncherjob_qbase_error_string k_terminallauncherjob_super_error_string
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
@@ -999,7 +1031,7 @@ const char* k_terminallauncherjob_error_string(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-const char* k_terminallauncherjob_qbase_error_string(void* self);
+const char* k_terminallauncherjob_super_error_string(void* self);
 
 /// Inherited from KJob
 ///
@@ -1023,6 +1055,10 @@ void k_terminallauncherjob_on_error_string(void* self, const char* (*callback)()
 ///
 bool k_terminallauncherjob_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_event` instead
+///
+#define k_terminallauncherjob_qbase_event k_terminallauncherjob_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1032,7 +1068,7 @@ bool k_terminallauncherjob_event(void* self, void* event);
 /// @param self KTerminalLauncherJob*
 /// @param event QEvent*
 ///
-bool k_terminallauncherjob_qbase_event(void* self, void* event);
+bool k_terminallauncherjob_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1057,6 +1093,10 @@ void k_terminallauncherjob_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_terminallauncherjob_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_event_filter` instead
+///
+#define k_terminallauncherjob_qbase_event_filter k_terminallauncherjob_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1067,7 +1107,7 @@ bool k_terminallauncherjob_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_terminallauncherjob_qbase_event_filter(void* self, void* watched, void* event);
+bool k_terminallauncherjob_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1091,6 +1131,10 @@ void k_terminallauncherjob_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_terminallauncherjob_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_timer_event` instead
+///
+#define k_terminallauncherjob_qbase_timer_event k_terminallauncherjob_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1100,7 +1144,7 @@ void k_terminallauncherjob_timer_event(void* self, void* event);
 /// @param self KTerminalLauncherJob*
 /// @param event QTimerEvent*
 ///
-void k_terminallauncherjob_qbase_timer_event(void* self, void* event);
+void k_terminallauncherjob_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1124,6 +1168,10 @@ void k_terminallauncherjob_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void k_terminallauncherjob_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_child_event` instead
+///
+#define k_terminallauncherjob_qbase_child_event k_terminallauncherjob_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1133,7 +1181,7 @@ void k_terminallauncherjob_child_event(void* self, void* event);
 /// @param self KTerminalLauncherJob*
 /// @param event QChildEvent*
 ///
-void k_terminallauncherjob_qbase_child_event(void* self, void* event);
+void k_terminallauncherjob_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1157,6 +1205,10 @@ void k_terminallauncherjob_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_terminallauncherjob_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_custom_event` instead
+///
+#define k_terminallauncherjob_qbase_custom_event k_terminallauncherjob_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1166,7 +1218,7 @@ void k_terminallauncherjob_custom_event(void* self, void* event);
 /// @param self KTerminalLauncherJob*
 /// @param event QEvent*
 ///
-void k_terminallauncherjob_qbase_custom_event(void* self, void* event);
+void k_terminallauncherjob_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1190,6 +1242,10 @@ void k_terminallauncherjob_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_terminallauncherjob_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_connect_notify` instead
+///
+#define k_terminallauncherjob_qbase_connect_notify k_terminallauncherjob_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1199,7 +1255,7 @@ void k_terminallauncherjob_connect_notify(void* self, void* signal);
 /// @param self KTerminalLauncherJob*
 /// @param signal QMetaMethod*
 ///
-void k_terminallauncherjob_qbase_connect_notify(void* self, void* signal);
+void k_terminallauncherjob_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1223,6 +1279,10 @@ void k_terminallauncherjob_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_terminallauncherjob_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_disconnect_notify` instead
+///
+#define k_terminallauncherjob_qbase_disconnect_notify k_terminallauncherjob_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1232,7 +1292,7 @@ void k_terminallauncherjob_disconnect_notify(void* self, void* signal);
 /// @param self KTerminalLauncherJob*
 /// @param signal QMetaMethod*
 ///
-void k_terminallauncherjob_qbase_disconnect_notify(void* self, void* signal);
+void k_terminallauncherjob_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1256,6 +1316,10 @@ void k_terminallauncherjob_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 void k_terminallauncherjob_set_capabilities(void* self, int32_t capabilities);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_capabilities` instead
+///
+#define k_terminallauncherjob_qbase_set_capabilities k_terminallauncherjob_super_set_capabilities
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
@@ -1265,7 +1329,7 @@ void k_terminallauncherjob_set_capabilities(void* self, int32_t capabilities);
 /// @param self KTerminalLauncherJob*
 /// @param capabilities flag of enum KJob__Capability
 ///
-void k_terminallauncherjob_qbase_set_capabilities(void* self, int32_t capabilities);
+void k_terminallauncherjob_super_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1288,6 +1352,10 @@ void k_terminallauncherjob_on_set_capabilities(void* self, void (*callback)(void
 ///
 bool k_terminallauncherjob_is_finished(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_is_finished` instead
+///
+#define k_terminallauncherjob_qbase_is_finished k_terminallauncherjob_super_is_finished
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
@@ -1296,7 +1364,7 @@ bool k_terminallauncherjob_is_finished(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-bool k_terminallauncherjob_qbase_is_finished(void* self);
+bool k_terminallauncherjob_super_is_finished(void* self);
 
 /// Inherited from KJob
 ///
@@ -1320,6 +1388,10 @@ void k_terminallauncherjob_on_is_finished(void* self, bool (*callback)());
 ///
 void k_terminallauncherjob_set_error(void* self, int errorCode);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_error` instead
+///
+#define k_terminallauncherjob_qbase_set_error k_terminallauncherjob_super_set_error
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setError)
@@ -1329,7 +1401,7 @@ void k_terminallauncherjob_set_error(void* self, int errorCode);
 /// @param self KTerminalLauncherJob*
 /// @param errorCode int
 ///
-void k_terminallauncherjob_qbase_set_error(void* self, int errorCode);
+void k_terminallauncherjob_super_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
@@ -1353,6 +1425,10 @@ void k_terminallauncherjob_on_set_error(void* self, void (*callback)(void*, int)
 ///
 void k_terminallauncherjob_set_error_text(void* self, const char* errorText);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_error_text` instead
+///
+#define k_terminallauncherjob_qbase_set_error_text k_terminallauncherjob_super_set_error_text
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
@@ -1362,7 +1438,7 @@ void k_terminallauncherjob_set_error_text(void* self, const char* errorText);
 /// @param self KTerminalLauncherJob*
 /// @param errorText const char*
 ///
-void k_terminallauncherjob_qbase_set_error_text(void* self, const char* errorText);
+void k_terminallauncherjob_super_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
@@ -1387,6 +1463,10 @@ void k_terminallauncherjob_on_set_error_text(void* self, void (*callback)(void*,
 ///
 void k_terminallauncherjob_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_processed_amount` instead
+///
+#define k_terminallauncherjob_qbase_set_processed_amount k_terminallauncherjob_super_set_processed_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
@@ -1397,7 +1477,7 @@ void k_terminallauncherjob_set_processed_amount(void* self, int32_t unit, uint64
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_terminallauncherjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_terminallauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1422,6 +1502,10 @@ void k_terminallauncherjob_on_set_processed_amount(void* self, void (*callback)(
 ///
 void k_terminallauncherjob_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_total_amount` instead
+///
+#define k_terminallauncherjob_qbase_set_total_amount k_terminallauncherjob_super_set_total_amount
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
@@ -1432,7 +1516,7 @@ void k_terminallauncherjob_set_total_amount(void* self, int32_t unit, uint64_t a
 /// @param unit enum KJob__Unit
 /// @param amount uint64_t
 ///
-void k_terminallauncherjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_terminallauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
@@ -1456,6 +1540,10 @@ void k_terminallauncherjob_on_set_total_amount(void* self, void (*callback)(void
 ///
 void k_terminallauncherjob_set_progress_unit(void* self, int32_t unit);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_progress_unit` instead
+///
+#define k_terminallauncherjob_qbase_set_progress_unit k_terminallauncherjob_super_set_progress_unit
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
@@ -1465,7 +1553,7 @@ void k_terminallauncherjob_set_progress_unit(void* self, int32_t unit);
 /// @param self KTerminalLauncherJob*
 /// @param unit enum KJob__Unit
 ///
-void k_terminallauncherjob_qbase_set_progress_unit(void* self, int32_t unit);
+void k_terminallauncherjob_super_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -1489,6 +1577,10 @@ void k_terminallauncherjob_on_set_progress_unit(void* self, void (*callback)(voi
 ///
 void k_terminallauncherjob_set_percent(void* self, uint64_t percentage);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_set_percent` instead
+///
+#define k_terminallauncherjob_qbase_set_percent k_terminallauncherjob_super_set_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
@@ -1498,7 +1590,7 @@ void k_terminallauncherjob_set_percent(void* self, uint64_t percentage);
 /// @param self KTerminalLauncherJob*
 /// @param percentage uint64_t
 ///
-void k_terminallauncherjob_qbase_set_percent(void* self, uint64_t percentage);
+void k_terminallauncherjob_super_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
@@ -1521,6 +1613,10 @@ void k_terminallauncherjob_on_set_percent(void* self, void (*callback)(void*, ui
 ///
 void k_terminallauncherjob_emit_result(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_emit_result` instead
+///
+#define k_terminallauncherjob_qbase_emit_result k_terminallauncherjob_super_emit_result
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
@@ -1529,7 +1625,7 @@ void k_terminallauncherjob_emit_result(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-void k_terminallauncherjob_qbase_emit_result(void* self);
+void k_terminallauncherjob_super_emit_result(void* self);
 
 /// Inherited from KJob
 ///
@@ -1554,6 +1650,10 @@ void k_terminallauncherjob_on_emit_result(void* self, void (*callback)());
 ///
 void k_terminallauncherjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_emit_percent` instead
+///
+#define k_terminallauncherjob_qbase_emit_percent k_terminallauncherjob_super_emit_percent
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
@@ -1564,7 +1664,7 @@ void k_terminallauncherjob_emit_percent(void* self, uint64_t processedAmount, ui
 /// @param processedAmount uint64_t
 /// @param totalAmount uint64_t
 ///
-void k_terminallauncherjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_terminallauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
 
 /// Inherited from KJob
 ///
@@ -1588,6 +1688,10 @@ void k_terminallauncherjob_on_emit_percent(void* self, void (*callback)(void*, u
 ///
 void k_terminallauncherjob_emit_speed(void* self, uint64_t speed);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_emit_speed` instead
+///
+#define k_terminallauncherjob_qbase_emit_speed k_terminallauncherjob_super_emit_speed
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
@@ -1597,7 +1701,7 @@ void k_terminallauncherjob_emit_speed(void* self, uint64_t speed);
 /// @param self KTerminalLauncherJob*
 /// @param speed uint64_t
 ///
-void k_terminallauncherjob_qbase_emit_speed(void* self, uint64_t speed);
+void k_terminallauncherjob_super_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
@@ -1620,6 +1724,10 @@ void k_terminallauncherjob_on_emit_speed(void* self, void (*callback)(void*, uin
 ///
 void k_terminallauncherjob_start_elapsed_timer(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_start_elapsed_timer` instead
+///
+#define k_terminallauncherjob_qbase_start_elapsed_timer k_terminallauncherjob_super_start_elapsed_timer
+
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
@@ -1628,7 +1736,7 @@ void k_terminallauncherjob_start_elapsed_timer(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-void k_terminallauncherjob_qbase_start_elapsed_timer(void* self);
+void k_terminallauncherjob_super_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
@@ -1651,6 +1759,10 @@ void k_terminallauncherjob_on_start_elapsed_timer(void* self, void (*callback)()
 ///
 QObject* k_terminallauncherjob_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_sender` instead
+///
+#define k_terminallauncherjob_qbase_sender k_terminallauncherjob_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1659,7 +1771,7 @@ QObject* k_terminallauncherjob_sender(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-QObject* k_terminallauncherjob_qbase_sender(void* self);
+QObject* k_terminallauncherjob_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1682,6 +1794,10 @@ void k_terminallauncherjob_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_terminallauncherjob_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_sender_signal_index` instead
+///
+#define k_terminallauncherjob_qbase_sender_signal_index k_terminallauncherjob_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1690,7 +1806,7 @@ int32_t k_terminallauncherjob_sender_signal_index(void* self);
 ///
 /// @param self KTerminalLauncherJob*
 ///
-int32_t k_terminallauncherjob_qbase_sender_signal_index(void* self);
+int32_t k_terminallauncherjob_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1714,6 +1830,10 @@ void k_terminallauncherjob_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_terminallauncherjob_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_receivers` instead
+///
+#define k_terminallauncherjob_qbase_receivers k_terminallauncherjob_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1723,7 +1843,7 @@ int32_t k_terminallauncherjob_receivers(void* self, const char* signal);
 /// @param self KTerminalLauncherJob*
 /// @param signal const char*
 ///
-int32_t k_terminallauncherjob_qbase_receivers(void* self, const char* signal);
+int32_t k_terminallauncherjob_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1747,6 +1867,10 @@ void k_terminallauncherjob_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_terminallauncherjob_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_terminallauncherjob_super_is_signal_connected` instead
+///
+#define k_terminallauncherjob_qbase_is_signal_connected k_terminallauncherjob_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1756,7 +1880,7 @@ bool k_terminallauncherjob_is_signal_connected(void* self, void* signal);
 /// @param self KTerminalLauncherJob*
 /// @param signal QMetaMethod*
 ///
-bool k_terminallauncherjob_qbase_is_signal_connected(void* self, void* signal);
+bool k_terminallauncherjob_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

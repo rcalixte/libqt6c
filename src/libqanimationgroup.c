@@ -22,8 +22,8 @@ void q_animationgroup_on_meta_object(void* self, const QMetaObject* (*callback)(
     QAnimationGroup_OnMetaObject((QAnimationGroup*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_animationgroup_qbase_meta_object(void* self) {
-    return QAnimationGroup_QBaseMetaObject((QAnimationGroup*)self);
+const QMetaObject* q_animationgroup_super_meta_object(void* self) {
+    return QAnimationGroup_SuperMetaObject((QAnimationGroup*)self);
 }
 
 void* q_animationgroup_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_animationgroup_on_metacast(void* self, void* (*callback)(void*, const cha
     QAnimationGroup_OnMetacast((QAnimationGroup*)self, (intptr_t)callback);
 }
 
-void* q_animationgroup_qbase_metacast(void* self, const char* param1) {
-    return QAnimationGroup_QBaseMetacast((QAnimationGroup*)self, param1);
+void* q_animationgroup_super_metacast(void* self, const char* param1) {
+    return QAnimationGroup_SuperMetacast((QAnimationGroup*)self, param1);
 }
 
 int32_t q_animationgroup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_animationgroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QAnimationGroup_OnMetacall((QAnimationGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_animationgroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAnimationGroup_QBaseMetacall((QAnimationGroup*)self, param1, param2, param3);
+int32_t q_animationgroup_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAnimationGroup_SuperMetacall((QAnimationGroup*)self, param1, param2, param3);
 }
 
 const char* q_animationgroup_tr(const char* s) {
@@ -97,8 +97,8 @@ void q_animationgroup_on_event(void* self, bool (*callback)(void*, void*)) {
     QAnimationGroup_OnEvent((QAnimationGroup*)self, (intptr_t)callback);
 }
 
-bool q_animationgroup_qbase_event(void* self, void* event) {
-    return QAnimationGroup_QBaseEvent((QAnimationGroup*)self, (QEvent*)event);
+bool q_animationgroup_super_event(void* self, void* event) {
+    return QAnimationGroup_SuperEvent((QAnimationGroup*)self, (QEvent*)event);
 }
 
 const char* q_animationgroup_tr2(const char* s, const char* c) {
@@ -430,8 +430,8 @@ int32_t q_animationgroup_duration(void* self) {
     return QAnimationGroup_Duration((QAnimationGroup*)self);
 }
 
-int32_t q_animationgroup_qbase_duration(void* self) {
-    return QAnimationGroup_QBaseDuration((QAnimationGroup*)self);
+int32_t q_animationgroup_super_duration(void* self) {
+    return QAnimationGroup_SuperDuration((QAnimationGroup*)self);
 }
 
 void q_animationgroup_on_duration(void* self, int32_t (*callback)()) {
@@ -442,8 +442,8 @@ void q_animationgroup_update_current_time(void* self, int currentTime) {
     QAnimationGroup_UpdateCurrentTime((QAnimationGroup*)self, currentTime);
 }
 
-void q_animationgroup_qbase_update_current_time(void* self, int currentTime) {
-    QAnimationGroup_QBaseUpdateCurrentTime((QAnimationGroup*)self, currentTime);
+void q_animationgroup_super_update_current_time(void* self, int currentTime) {
+    QAnimationGroup_SuperUpdateCurrentTime((QAnimationGroup*)self, currentTime);
 }
 
 void q_animationgroup_on_update_current_time(void* self, void (*callback)(void*, int)) {
@@ -454,8 +454,8 @@ void q_animationgroup_update_state(void* self, int32_t newState, int32_t oldStat
     QAnimationGroup_UpdateState((QAnimationGroup*)self, newState, oldState);
 }
 
-void q_animationgroup_qbase_update_state(void* self, int32_t newState, int32_t oldState) {
-    QAnimationGroup_QBaseUpdateState((QAnimationGroup*)self, newState, oldState);
+void q_animationgroup_super_update_state(void* self, int32_t newState, int32_t oldState) {
+    QAnimationGroup_SuperUpdateState((QAnimationGroup*)self, newState, oldState);
 }
 
 void q_animationgroup_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t)) {
@@ -466,8 +466,8 @@ void q_animationgroup_update_direction(void* self, int32_t direction) {
     QAnimationGroup_UpdateDirection((QAnimationGroup*)self, direction);
 }
 
-void q_animationgroup_qbase_update_direction(void* self, int32_t direction) {
-    QAnimationGroup_QBaseUpdateDirection((QAnimationGroup*)self, direction);
+void q_animationgroup_super_update_direction(void* self, int32_t direction) {
+    QAnimationGroup_SuperUpdateDirection((QAnimationGroup*)self, direction);
 }
 
 void q_animationgroup_on_update_direction(void* self, void (*callback)(void*, int32_t)) {
@@ -478,8 +478,8 @@ bool q_animationgroup_event_filter(void* self, void* watched, void* event) {
     return QAnimationGroup_EventFilter((QAnimationGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_animationgroup_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAnimationGroup_QBaseEventFilter((QAnimationGroup*)self, (QObject*)watched, (QEvent*)event);
+bool q_animationgroup_super_event_filter(void* self, void* watched, void* event) {
+    return QAnimationGroup_SuperEventFilter((QAnimationGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_animationgroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -490,8 +490,8 @@ void q_animationgroup_timer_event(void* self, void* event) {
     QAnimationGroup_TimerEvent((QAnimationGroup*)self, (QTimerEvent*)event);
 }
 
-void q_animationgroup_qbase_timer_event(void* self, void* event) {
-    QAnimationGroup_QBaseTimerEvent((QAnimationGroup*)self, (QTimerEvent*)event);
+void q_animationgroup_super_timer_event(void* self, void* event) {
+    QAnimationGroup_SuperTimerEvent((QAnimationGroup*)self, (QTimerEvent*)event);
 }
 
 void q_animationgroup_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -502,8 +502,8 @@ void q_animationgroup_child_event(void* self, void* event) {
     QAnimationGroup_ChildEvent((QAnimationGroup*)self, (QChildEvent*)event);
 }
 
-void q_animationgroup_qbase_child_event(void* self, void* event) {
-    QAnimationGroup_QBaseChildEvent((QAnimationGroup*)self, (QChildEvent*)event);
+void q_animationgroup_super_child_event(void* self, void* event) {
+    QAnimationGroup_SuperChildEvent((QAnimationGroup*)self, (QChildEvent*)event);
 }
 
 void q_animationgroup_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -514,8 +514,8 @@ void q_animationgroup_custom_event(void* self, void* event) {
     QAnimationGroup_CustomEvent((QAnimationGroup*)self, (QEvent*)event);
 }
 
-void q_animationgroup_qbase_custom_event(void* self, void* event) {
-    QAnimationGroup_QBaseCustomEvent((QAnimationGroup*)self, (QEvent*)event);
+void q_animationgroup_super_custom_event(void* self, void* event) {
+    QAnimationGroup_SuperCustomEvent((QAnimationGroup*)self, (QEvent*)event);
 }
 
 void q_animationgroup_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -526,8 +526,8 @@ void q_animationgroup_connect_notify(void* self, void* signal) {
     QAnimationGroup_ConnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_animationgroup_qbase_connect_notify(void* self, void* signal) {
-    QAnimationGroup_QBaseConnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
+void q_animationgroup_super_connect_notify(void* self, void* signal) {
+    QAnimationGroup_SuperConnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_animationgroup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -538,8 +538,8 @@ void q_animationgroup_disconnect_notify(void* self, void* signal) {
     QAnimationGroup_DisconnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_animationgroup_qbase_disconnect_notify(void* self, void* signal) {
-    QAnimationGroup_QBaseDisconnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
+void q_animationgroup_super_disconnect_notify(void* self, void* signal) {
+    QAnimationGroup_SuperDisconnectNotify((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_animationgroup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -550,8 +550,8 @@ QObject* q_animationgroup_sender(void* self) {
     return QAnimationGroup_Sender((QAnimationGroup*)self);
 }
 
-QObject* q_animationgroup_qbase_sender(void* self) {
-    return QAnimationGroup_QBaseSender((QAnimationGroup*)self);
+QObject* q_animationgroup_super_sender(void* self) {
+    return QAnimationGroup_SuperSender((QAnimationGroup*)self);
 }
 
 void q_animationgroup_on_sender(void* self, QObject* (*callback)()) {
@@ -562,8 +562,8 @@ int32_t q_animationgroup_sender_signal_index(void* self) {
     return QAnimationGroup_SenderSignalIndex((QAnimationGroup*)self);
 }
 
-int32_t q_animationgroup_qbase_sender_signal_index(void* self) {
-    return QAnimationGroup_QBaseSenderSignalIndex((QAnimationGroup*)self);
+int32_t q_animationgroup_super_sender_signal_index(void* self) {
+    return QAnimationGroup_SuperSenderSignalIndex((QAnimationGroup*)self);
 }
 
 void q_animationgroup_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -574,8 +574,8 @@ int32_t q_animationgroup_receivers(void* self, const char* signal) {
     return QAnimationGroup_Receivers((QAnimationGroup*)self, signal);
 }
 
-int32_t q_animationgroup_qbase_receivers(void* self, const char* signal) {
-    return QAnimationGroup_QBaseReceivers((QAnimationGroup*)self, signal);
+int32_t q_animationgroup_super_receivers(void* self, const char* signal) {
+    return QAnimationGroup_SuperReceivers((QAnimationGroup*)self, signal);
 }
 
 void q_animationgroup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -586,8 +586,8 @@ bool q_animationgroup_is_signal_connected(void* self, void* signal) {
     return QAnimationGroup_IsSignalConnected((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-bool q_animationgroup_qbase_is_signal_connected(void* self, void* signal) {
-    return QAnimationGroup_QBaseIsSignalConnected((QAnimationGroup*)self, (QMetaMethod*)signal);
+bool q_animationgroup_super_is_signal_connected(void* self, void* signal) {
+    return QAnimationGroup_SuperIsSignalConnected((QAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_animationgroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

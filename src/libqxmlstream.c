@@ -108,8 +108,8 @@ void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callb
     QXmlStreamEntityResolver_OnResolveEntity((QXmlStreamEntityResolver*)self, (intptr_t)callback);
 }
 
-const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const char* publicId, const char* systemId) {
-    libqt_string _str = QXmlStreamEntityResolver_QBaseResolveEntity((QXmlStreamEntityResolver*)self, qstring(publicId), qstring(systemId));
+const char* q_xmlstreamentityresolver_super_resolve_entity(void* self, const char* publicId, const char* systemId) {
+    libqt_string _str = QXmlStreamEntityResolver_SuperResolveEntity((QXmlStreamEntityResolver*)self, qstring(publicId), qstring(systemId));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -126,8 +126,8 @@ void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const ch
     QXmlStreamEntityResolver_OnResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, (intptr_t)callback);
 }
 
-const char* q_xmlstreamentityresolver_qbase_resolve_undeclared_entity(void* self, const char* name) {
-    libqt_string _str = QXmlStreamEntityResolver_QBaseResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, qstring(name));
+const char* q_xmlstreamentityresolver_super_resolve_undeclared_entity(void* self, const char* name) {
+    libqt_string _str = QXmlStreamEntityResolver_SuperResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

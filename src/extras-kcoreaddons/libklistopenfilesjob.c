@@ -19,8 +19,8 @@ void k_listopenfilesjob_on_meta_object(void* self, const QMetaObject* (*callback
     KListOpenFilesJob_OnMetaObject((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_listopenfilesjob_qbase_meta_object(void* self) {
-    return KListOpenFilesJob_QBaseMetaObject((KListOpenFilesJob*)self);
+const QMetaObject* k_listopenfilesjob_super_meta_object(void* self) {
+    return KListOpenFilesJob_SuperMetaObject((KListOpenFilesJob*)self);
 }
 
 void* k_listopenfilesjob_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void k_listopenfilesjob_on_metacast(void* self, void* (*callback)(void*, const c
     KListOpenFilesJob_OnMetacast((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void* k_listopenfilesjob_qbase_metacast(void* self, const char* param1) {
-    return KListOpenFilesJob_QBaseMetacast((KListOpenFilesJob*)self, param1);
+void* k_listopenfilesjob_super_metacast(void* self, const char* param1) {
+    return KListOpenFilesJob_SuperMetacast((KListOpenFilesJob*)self, param1);
 }
 
 int32_t k_listopenfilesjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void k_listopenfilesjob_on_metacall(void* self, int32_t (*callback)(void*, int32
     KListOpenFilesJob_OnMetacall((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-int32_t k_listopenfilesjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KListOpenFilesJob_QBaseMetacall((KListOpenFilesJob*)self, param1, param2, param3);
+int32_t k_listopenfilesjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KListOpenFilesJob_SuperMetacall((KListOpenFilesJob*)self, param1, param2, param3);
 }
 
 const char* k_listopenfilesjob_tr(const char* s) {
@@ -62,8 +62,8 @@ void k_listopenfilesjob_on_start(void* self, void (*callback)()) {
     KListOpenFilesJob_OnStart((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_qbase_start(void* self) {
-    KListOpenFilesJob_QBaseStart((KListOpenFilesJob*)self);
+void k_listopenfilesjob_super_start(void* self) {
+    KListOpenFilesJob_SuperStart((KListOpenFilesJob*)self);
 }
 
 libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_list(void* self) {
@@ -427,8 +427,8 @@ bool k_listopenfilesjob_do_kill(void* self) {
     return KListOpenFilesJob_DoKill((KListOpenFilesJob*)self);
 }
 
-bool k_listopenfilesjob_qbase_do_kill(void* self) {
-    return KListOpenFilesJob_QBaseDoKill((KListOpenFilesJob*)self);
+bool k_listopenfilesjob_super_do_kill(void* self) {
+    return KListOpenFilesJob_SuperDoKill((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_do_kill(void* self, bool (*callback)()) {
@@ -439,8 +439,8 @@ bool k_listopenfilesjob_do_suspend(void* self) {
     return KListOpenFilesJob_DoSuspend((KListOpenFilesJob*)self);
 }
 
-bool k_listopenfilesjob_qbase_do_suspend(void* self) {
-    return KListOpenFilesJob_QBaseDoSuspend((KListOpenFilesJob*)self);
+bool k_listopenfilesjob_super_do_suspend(void* self) {
+    return KListOpenFilesJob_SuperDoSuspend((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -451,8 +451,8 @@ bool k_listopenfilesjob_do_resume(void* self) {
     return KListOpenFilesJob_DoResume((KListOpenFilesJob*)self);
 }
 
-bool k_listopenfilesjob_qbase_do_resume(void* self) {
-    return KListOpenFilesJob_QBaseDoResume((KListOpenFilesJob*)self);
+bool k_listopenfilesjob_super_do_resume(void* self) {
+    return KListOpenFilesJob_SuperDoResume((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)()) {
@@ -466,8 +466,8 @@ const char* k_listopenfilesjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_listopenfilesjob_qbase_error_string(void* self) {
-    libqt_string _str = KListOpenFilesJob_QBaseErrorString((KListOpenFilesJob*)self);
+const char* k_listopenfilesjob_super_error_string(void* self) {
+    libqt_string _str = KListOpenFilesJob_SuperErrorString((KListOpenFilesJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -481,8 +481,8 @@ bool k_listopenfilesjob_event(void* self, void* event) {
     return KListOpenFilesJob_Event((KListOpenFilesJob*)self, (QEvent*)event);
 }
 
-bool k_listopenfilesjob_qbase_event(void* self, void* event) {
-    return KListOpenFilesJob_QBaseEvent((KListOpenFilesJob*)self, (QEvent*)event);
+bool k_listopenfilesjob_super_event(void* self, void* event) {
+    return KListOpenFilesJob_SuperEvent((KListOpenFilesJob*)self, (QEvent*)event);
 }
 
 void k_listopenfilesjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -493,8 +493,8 @@ bool k_listopenfilesjob_event_filter(void* self, void* watched, void* event) {
     return KListOpenFilesJob_EventFilter((KListOpenFilesJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_listopenfilesjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KListOpenFilesJob_QBaseEventFilter((KListOpenFilesJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_listopenfilesjob_super_event_filter(void* self, void* watched, void* event) {
+    return KListOpenFilesJob_SuperEventFilter((KListOpenFilesJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_listopenfilesjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -505,8 +505,8 @@ void k_listopenfilesjob_timer_event(void* self, void* event) {
     KListOpenFilesJob_TimerEvent((KListOpenFilesJob*)self, (QTimerEvent*)event);
 }
 
-void k_listopenfilesjob_qbase_timer_event(void* self, void* event) {
-    KListOpenFilesJob_QBaseTimerEvent((KListOpenFilesJob*)self, (QTimerEvent*)event);
+void k_listopenfilesjob_super_timer_event(void* self, void* event) {
+    KListOpenFilesJob_SuperTimerEvent((KListOpenFilesJob*)self, (QTimerEvent*)event);
 }
 
 void k_listopenfilesjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -517,8 +517,8 @@ void k_listopenfilesjob_child_event(void* self, void* event) {
     KListOpenFilesJob_ChildEvent((KListOpenFilesJob*)self, (QChildEvent*)event);
 }
 
-void k_listopenfilesjob_qbase_child_event(void* self, void* event) {
-    KListOpenFilesJob_QBaseChildEvent((KListOpenFilesJob*)self, (QChildEvent*)event);
+void k_listopenfilesjob_super_child_event(void* self, void* event) {
+    KListOpenFilesJob_SuperChildEvent((KListOpenFilesJob*)self, (QChildEvent*)event);
 }
 
 void k_listopenfilesjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -529,8 +529,8 @@ void k_listopenfilesjob_custom_event(void* self, void* event) {
     KListOpenFilesJob_CustomEvent((KListOpenFilesJob*)self, (QEvent*)event);
 }
 
-void k_listopenfilesjob_qbase_custom_event(void* self, void* event) {
-    KListOpenFilesJob_QBaseCustomEvent((KListOpenFilesJob*)self, (QEvent*)event);
+void k_listopenfilesjob_super_custom_event(void* self, void* event) {
+    KListOpenFilesJob_SuperCustomEvent((KListOpenFilesJob*)self, (QEvent*)event);
 }
 
 void k_listopenfilesjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -541,8 +541,8 @@ void k_listopenfilesjob_connect_notify(void* self, void* signal) {
     KListOpenFilesJob_ConnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
-void k_listopenfilesjob_qbase_connect_notify(void* self, void* signal) {
-    KListOpenFilesJob_QBaseConnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
+void k_listopenfilesjob_super_connect_notify(void* self, void* signal) {
+    KListOpenFilesJob_SuperConnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
 void k_listopenfilesjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -553,8 +553,8 @@ void k_listopenfilesjob_disconnect_notify(void* self, void* signal) {
     KListOpenFilesJob_DisconnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
-void k_listopenfilesjob_qbase_disconnect_notify(void* self, void* signal) {
-    KListOpenFilesJob_QBaseDisconnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
+void k_listopenfilesjob_super_disconnect_notify(void* self, void* signal) {
+    KListOpenFilesJob_SuperDisconnectNotify((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
 void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -565,8 +565,8 @@ void k_listopenfilesjob_set_capabilities(void* self, int32_t capabilities) {
     KListOpenFilesJob_SetCapabilities((KListOpenFilesJob*)self, capabilities);
 }
 
-void k_listopenfilesjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KListOpenFilesJob_QBaseSetCapabilities((KListOpenFilesJob*)self, capabilities);
+void k_listopenfilesjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KListOpenFilesJob_SuperSetCapabilities((KListOpenFilesJob*)self, capabilities);
 }
 
 void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -577,8 +577,8 @@ bool k_listopenfilesjob_is_finished(void* self) {
     return KListOpenFilesJob_IsFinished((KListOpenFilesJob*)self);
 }
 
-bool k_listopenfilesjob_qbase_is_finished(void* self) {
-    return KListOpenFilesJob_QBaseIsFinished((KListOpenFilesJob*)self);
+bool k_listopenfilesjob_super_is_finished(void* self) {
+    return KListOpenFilesJob_SuperIsFinished((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_is_finished(void* self, bool (*callback)()) {
@@ -589,8 +589,8 @@ void k_listopenfilesjob_set_error(void* self, int errorCode) {
     KListOpenFilesJob_SetError((KListOpenFilesJob*)self, errorCode);
 }
 
-void k_listopenfilesjob_qbase_set_error(void* self, int errorCode) {
-    KListOpenFilesJob_QBaseSetError((KListOpenFilesJob*)self, errorCode);
+void k_listopenfilesjob_super_set_error(void* self, int errorCode) {
+    KListOpenFilesJob_SuperSetError((KListOpenFilesJob*)self, errorCode);
 }
 
 void k_listopenfilesjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -601,8 +601,8 @@ void k_listopenfilesjob_set_error_text(void* self, const char* errorText) {
     KListOpenFilesJob_SetErrorText((KListOpenFilesJob*)self, qstring(errorText));
 }
 
-void k_listopenfilesjob_qbase_set_error_text(void* self, const char* errorText) {
-    KListOpenFilesJob_QBaseSetErrorText((KListOpenFilesJob*)self, qstring(errorText));
+void k_listopenfilesjob_super_set_error_text(void* self, const char* errorText) {
+    KListOpenFilesJob_SuperSetErrorText((KListOpenFilesJob*)self, qstring(errorText));
 }
 
 void k_listopenfilesjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -613,8 +613,8 @@ void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uint64_t 
     KListOpenFilesJob_SetProcessedAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KListOpenFilesJob_QBaseSetProcessedAmount((KListOpenFilesJob*)self, unit, amount);
+void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KListOpenFilesJob_SuperSetProcessedAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
 void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -625,8 +625,8 @@ void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uint64_t amou
     KListOpenFilesJob_SetTotalAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KListOpenFilesJob_QBaseSetTotalAmount((KListOpenFilesJob*)self, unit, amount);
+void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KListOpenFilesJob_SuperSetTotalAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
 void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -637,8 +637,8 @@ void k_listopenfilesjob_set_progress_unit(void* self, int32_t unit) {
     KListOpenFilesJob_SetProgressUnit((KListOpenFilesJob*)self, unit);
 }
 
-void k_listopenfilesjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KListOpenFilesJob_QBaseSetProgressUnit((KListOpenFilesJob*)self, unit);
+void k_listopenfilesjob_super_set_progress_unit(void* self, int32_t unit) {
+    KListOpenFilesJob_SuperSetProgressUnit((KListOpenFilesJob*)self, unit);
 }
 
 void k_listopenfilesjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -649,8 +649,8 @@ void k_listopenfilesjob_set_percent(void* self, uint64_t percentage) {
     KListOpenFilesJob_SetPercent((KListOpenFilesJob*)self, percentage);
 }
 
-void k_listopenfilesjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KListOpenFilesJob_QBaseSetPercent((KListOpenFilesJob*)self, percentage);
+void k_listopenfilesjob_super_set_percent(void* self, uint64_t percentage) {
+    KListOpenFilesJob_SuperSetPercent((KListOpenFilesJob*)self, percentage);
 }
 
 void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -661,8 +661,8 @@ void k_listopenfilesjob_emit_result(void* self) {
     KListOpenFilesJob_EmitResult((KListOpenFilesJob*)self);
 }
 
-void k_listopenfilesjob_qbase_emit_result(void* self) {
-    KListOpenFilesJob_QBaseEmitResult((KListOpenFilesJob*)self);
+void k_listopenfilesjob_super_emit_result(void* self) {
+    KListOpenFilesJob_SuperEmitResult((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_emit_result(void* self, void (*callback)()) {
@@ -673,8 +673,8 @@ void k_listopenfilesjob_emit_percent(void* self, uint64_t processedAmount, uint6
     KListOpenFilesJob_EmitPercent((KListOpenFilesJob*)self, processedAmount, totalAmount);
 }
 
-void k_listopenfilesjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KListOpenFilesJob_QBaseEmitPercent((KListOpenFilesJob*)self, processedAmount, totalAmount);
+void k_listopenfilesjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KListOpenFilesJob_SuperEmitPercent((KListOpenFilesJob*)self, processedAmount, totalAmount);
 }
 
 void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -685,8 +685,8 @@ void k_listopenfilesjob_emit_speed(void* self, uint64_t speed) {
     KListOpenFilesJob_EmitSpeed((KListOpenFilesJob*)self, speed);
 }
 
-void k_listopenfilesjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KListOpenFilesJob_QBaseEmitSpeed((KListOpenFilesJob*)self, speed);
+void k_listopenfilesjob_super_emit_speed(void* self, uint64_t speed) {
+    KListOpenFilesJob_SuperEmitSpeed((KListOpenFilesJob*)self, speed);
 }
 
 void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -697,8 +697,8 @@ void k_listopenfilesjob_start_elapsed_timer(void* self) {
     KListOpenFilesJob_StartElapsedTimer((KListOpenFilesJob*)self);
 }
 
-void k_listopenfilesjob_qbase_start_elapsed_timer(void* self) {
-    KListOpenFilesJob_QBaseStartElapsedTimer((KListOpenFilesJob*)self);
+void k_listopenfilesjob_super_start_elapsed_timer(void* self) {
+    KListOpenFilesJob_SuperStartElapsedTimer((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -709,8 +709,8 @@ QObject* k_listopenfilesjob_sender(void* self) {
     return KListOpenFilesJob_Sender((KListOpenFilesJob*)self);
 }
 
-QObject* k_listopenfilesjob_qbase_sender(void* self) {
-    return KListOpenFilesJob_QBaseSender((KListOpenFilesJob*)self);
+QObject* k_listopenfilesjob_super_sender(void* self) {
+    return KListOpenFilesJob_SuperSender((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_sender(void* self, QObject* (*callback)()) {
@@ -721,8 +721,8 @@ int32_t k_listopenfilesjob_sender_signal_index(void* self) {
     return KListOpenFilesJob_SenderSignalIndex((KListOpenFilesJob*)self);
 }
 
-int32_t k_listopenfilesjob_qbase_sender_signal_index(void* self) {
-    return KListOpenFilesJob_QBaseSenderSignalIndex((KListOpenFilesJob*)self);
+int32_t k_listopenfilesjob_super_sender_signal_index(void* self) {
+    return KListOpenFilesJob_SuperSenderSignalIndex((KListOpenFilesJob*)self);
 }
 
 void k_listopenfilesjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -733,8 +733,8 @@ int32_t k_listopenfilesjob_receivers(void* self, const char* signal) {
     return KListOpenFilesJob_Receivers((KListOpenFilesJob*)self, signal);
 }
 
-int32_t k_listopenfilesjob_qbase_receivers(void* self, const char* signal) {
-    return KListOpenFilesJob_QBaseReceivers((KListOpenFilesJob*)self, signal);
+int32_t k_listopenfilesjob_super_receivers(void* self, const char* signal) {
+    return KListOpenFilesJob_SuperReceivers((KListOpenFilesJob*)self, signal);
 }
 
 void k_listopenfilesjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -745,8 +745,8 @@ bool k_listopenfilesjob_is_signal_connected(void* self, void* signal) {
     return KListOpenFilesJob_IsSignalConnected((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_listopenfilesjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KListOpenFilesJob_QBaseIsSignalConnected((KListOpenFilesJob*)self, (QMetaMethod*)signal);
+bool k_listopenfilesjob_super_is_signal_connected(void* self, void* signal) {
+    return KListOpenFilesJob_SuperIsSignalConnected((KListOpenFilesJob*)self, (QMetaMethod*)signal);
 }
 
 void k_listopenfilesjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

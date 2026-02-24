@@ -57,13 +57,17 @@ const QMetaObject* q_chartview_meta_object(void* self);
 ///
 void q_chartview_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_chartview_super_meta_object` instead
+///
+#define q_chartview_qbase_meta_object q_chartview_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QChartView*
 ///
-const QMetaObject* q_chartview_qbase_meta_object(void* self);
+const QMetaObject* q_chartview_super_meta_object(void* self);
 
 /// @param self QChartView*
 /// @param param1 const char*
@@ -77,12 +81,16 @@ void* q_chartview_metacast(void* self, const char* param1);
 ///
 void q_chartview_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_metacast` instead
+///
+#define q_chartview_qbase_metacast q_chartview_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QChartView*
 /// @param param1 const char*
 ///
-void* q_chartview_qbase_metacast(void* self, const char* param1);
+void* q_chartview_super_metacast(void* self, const char* param1);
 
 /// @param self QChartView*
 /// @param param1 enum QMetaObject__Call
@@ -98,6 +106,10 @@ int32_t q_chartview_metacall(void* self, int32_t param1, int param2, void* param
 ///
 void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_metacall` instead
+///
+#define q_chartview_qbase_metacall q_chartview_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QChartView*
@@ -105,7 +117,7 @@ void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_chartview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_chartview_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -159,6 +171,10 @@ void q_chartview_resize_event(void* self, void* event);
 ///
 void q_chartview_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_resize_event` instead
+///
+#define q_chartview_qbase_resize_event q_chartview_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -166,7 +182,7 @@ void q_chartview_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param self QChartView*
 /// @param event QResizeEvent*
 ///
-void q_chartview_qbase_resize_event(void* self, void* event);
+void q_chartview_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mousePressEvent)
 ///
@@ -184,6 +200,10 @@ void q_chartview_mouse_press_event(void* self, void* event);
 ///
 void q_chartview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_mouse_press_event` instead
+///
+#define q_chartview_qbase_mouse_press_event q_chartview_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -191,7 +211,7 @@ void q_chartview_on_mouse_press_event(void* self, void (*callback)(void*, void*)
 /// @param self QChartView*
 /// @param event QMouseEvent*
 ///
-void q_chartview_qbase_mouse_press_event(void* self, void* event);
+void q_chartview_super_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mouseMoveEvent)
 ///
@@ -209,6 +229,10 @@ void q_chartview_mouse_move_event(void* self, void* event);
 ///
 void q_chartview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_mouse_move_event` instead
+///
+#define q_chartview_qbase_mouse_move_event q_chartview_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -216,7 +240,7 @@ void q_chartview_on_mouse_move_event(void* self, void (*callback)(void*, void*))
 /// @param self QChartView*
 /// @param event QMouseEvent*
 ///
-void q_chartview_qbase_mouse_move_event(void* self, void* event);
+void q_chartview_super_mouse_move_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mouseReleaseEvent)
 ///
@@ -234,6 +258,10 @@ void q_chartview_mouse_release_event(void* self, void* event);
 ///
 void q_chartview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_chartview_super_mouse_release_event` instead
+///
+#define q_chartview_qbase_mouse_release_event q_chartview_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -241,7 +269,7 @@ void q_chartview_on_mouse_release_event(void* self, void (*callback)(void*, void
 /// @param self QChartView*
 /// @param event QMouseEvent*
 ///
-void q_chartview_qbase_mouse_release_event(void* self, void* event);
+void q_chartview_super_mouse_release_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4348,6 +4376,10 @@ int32_t q_chartview_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_chartview_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_size_hint` instead
+///
+#define q_chartview_qbase_size_hint q_chartview_super_size_hint
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#sizeHint)
@@ -4356,7 +4388,7 @@ QSize* q_chartview_size_hint(void* self);
 ///
 /// @param self QChartView*
 ///
-QSize* q_chartview_qbase_size_hint(void* self);
+QSize* q_chartview_super_size_hint(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -4380,6 +4412,10 @@ void q_chartview_on_size_hint(void* self, QSize* (*callback)());
 ///
 QVariant* q_chartview_input_method_query(void* self, int32_t query);
 
+/// @warning DEPRECATED: Use `q_chartview_super_input_method_query` instead
+///
+#define q_chartview_qbase_input_method_query q_chartview_super_input_method_query
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#inputMethodQuery)
@@ -4389,7 +4425,7 @@ QVariant* q_chartview_input_method_query(void* self, int32_t query);
 /// @param self QChartView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_chartview_qbase_input_method_query(void* self, int32_t query);
+QVariant* q_chartview_super_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsView
 ///
@@ -4413,6 +4449,10 @@ void q_chartview_on_input_method_query(void* self, QVariant* (*callback)(void*, 
 ///
 void q_chartview_setup_viewport(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `q_chartview_super_setup_viewport` instead
+///
+#define q_chartview_qbase_setup_viewport q_chartview_super_setup_viewport
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#setupViewport)
@@ -4422,7 +4462,7 @@ void q_chartview_setup_viewport(void* self, void* widget);
 /// @param self QChartView*
 /// @param widget QWidget*
 ///
-void q_chartview_qbase_setup_viewport(void* self, void* widget);
+void q_chartview_super_setup_viewport(void* self, void* widget);
 
 /// Inherited from QGraphicsView
 ///
@@ -4446,6 +4486,10 @@ void q_chartview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 ///
 bool q_chartview_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_event` instead
+///
+#define q_chartview_qbase_event q_chartview_super_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#event)
@@ -4455,7 +4499,7 @@ bool q_chartview_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QEvent*
 ///
-bool q_chartview_qbase_event(void* self, void* event);
+bool q_chartview_super_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4479,6 +4523,10 @@ void q_chartview_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_chartview_viewport_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_viewport_event` instead
+///
+#define q_chartview_qbase_viewport_event q_chartview_super_viewport_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#viewportEvent)
@@ -4488,7 +4536,7 @@ bool q_chartview_viewport_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QEvent*
 ///
-bool q_chartview_qbase_viewport_event(void* self, void* event);
+bool q_chartview_super_viewport_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4512,6 +4560,10 @@ void q_chartview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_chartview_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_context_menu_event` instead
+///
+#define q_chartview_qbase_context_menu_event q_chartview_super_context_menu_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#contextMenuEvent)
@@ -4521,7 +4573,7 @@ void q_chartview_context_menu_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QContextMenuEvent*
 ///
-void q_chartview_qbase_context_menu_event(void* self, void* event);
+void q_chartview_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4545,6 +4597,10 @@ void q_chartview_on_context_menu_event(void* self, void (*callback)(void*, void*
 ///
 void q_chartview_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_drag_enter_event` instead
+///
+#define q_chartview_qbase_drag_enter_event q_chartview_super_drag_enter_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#dragEnterEvent)
@@ -4554,7 +4610,7 @@ void q_chartview_drag_enter_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QDragEnterEvent*
 ///
-void q_chartview_qbase_drag_enter_event(void* self, void* event);
+void q_chartview_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4578,6 +4634,10 @@ void q_chartview_on_drag_enter_event(void* self, void (*callback)(void*, void*))
 ///
 void q_chartview_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_drag_leave_event` instead
+///
+#define q_chartview_qbase_drag_leave_event q_chartview_super_drag_leave_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#dragLeaveEvent)
@@ -4587,7 +4647,7 @@ void q_chartview_drag_leave_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QDragLeaveEvent*
 ///
-void q_chartview_qbase_drag_leave_event(void* self, void* event);
+void q_chartview_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4611,6 +4671,10 @@ void q_chartview_on_drag_leave_event(void* self, void (*callback)(void*, void*))
 ///
 void q_chartview_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_drag_move_event` instead
+///
+#define q_chartview_qbase_drag_move_event q_chartview_super_drag_move_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#dragMoveEvent)
@@ -4620,7 +4684,7 @@ void q_chartview_drag_move_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QDragMoveEvent*
 ///
-void q_chartview_qbase_drag_move_event(void* self, void* event);
+void q_chartview_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4644,6 +4708,10 @@ void q_chartview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_drop_event` instead
+///
+#define q_chartview_qbase_drop_event q_chartview_super_drop_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#dropEvent)
@@ -4653,7 +4721,7 @@ void q_chartview_drop_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QDropEvent*
 ///
-void q_chartview_qbase_drop_event(void* self, void* event);
+void q_chartview_super_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4677,6 +4745,10 @@ void q_chartview_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_focus_in_event` instead
+///
+#define q_chartview_qbase_focus_in_event q_chartview_super_focus_in_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#focusInEvent)
@@ -4686,7 +4758,7 @@ void q_chartview_focus_in_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QFocusEvent*
 ///
-void q_chartview_qbase_focus_in_event(void* self, void* event);
+void q_chartview_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4710,6 +4782,10 @@ void q_chartview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_chartview_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_chartview_super_focus_next_prev_child` instead
+///
+#define q_chartview_qbase_focus_next_prev_child q_chartview_super_focus_next_prev_child
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#focusNextPrevChild)
@@ -4719,7 +4795,7 @@ bool q_chartview_focus_next_prev_child(void* self, bool next);
 /// @param self QChartView*
 /// @param next bool
 ///
-bool q_chartview_qbase_focus_next_prev_child(void* self, bool next);
+bool q_chartview_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsView
 ///
@@ -4743,6 +4819,10 @@ void q_chartview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bo
 ///
 void q_chartview_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_focus_out_event` instead
+///
+#define q_chartview_qbase_focus_out_event q_chartview_super_focus_out_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#focusOutEvent)
@@ -4752,7 +4832,7 @@ void q_chartview_focus_out_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QFocusEvent*
 ///
-void q_chartview_qbase_focus_out_event(void* self, void* event);
+void q_chartview_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4776,6 +4856,10 @@ void q_chartview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_key_press_event` instead
+///
+#define q_chartview_qbase_key_press_event q_chartview_super_key_press_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#keyPressEvent)
@@ -4785,7 +4869,7 @@ void q_chartview_key_press_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QKeyEvent*
 ///
-void q_chartview_qbase_key_press_event(void* self, void* event);
+void q_chartview_super_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4809,6 +4893,10 @@ void q_chartview_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_key_release_event` instead
+///
+#define q_chartview_qbase_key_release_event q_chartview_super_key_release_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#keyReleaseEvent)
@@ -4818,7 +4906,7 @@ void q_chartview_key_release_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QKeyEvent*
 ///
-void q_chartview_qbase_key_release_event(void* self, void* event);
+void q_chartview_super_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4842,6 +4930,10 @@ void q_chartview_on_key_release_event(void* self, void (*callback)(void*, void*)
 ///
 void q_chartview_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_mouse_double_click_event` instead
+///
+#define q_chartview_qbase_mouse_double_click_event q_chartview_super_mouse_double_click_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mouseDoubleClickEvent)
@@ -4851,7 +4943,7 @@ void q_chartview_mouse_double_click_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QMouseEvent*
 ///
-void q_chartview_qbase_mouse_double_click_event(void* self, void* event);
+void q_chartview_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4875,6 +4967,10 @@ void q_chartview_on_mouse_double_click_event(void* self, void (*callback)(void*,
 ///
 void q_chartview_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_wheel_event` instead
+///
+#define q_chartview_qbase_wheel_event q_chartview_super_wheel_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#wheelEvent)
@@ -4884,7 +4980,7 @@ void q_chartview_wheel_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QWheelEvent*
 ///
-void q_chartview_qbase_wheel_event(void* self, void* event);
+void q_chartview_super_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4908,6 +5004,10 @@ void q_chartview_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_paint_event` instead
+///
+#define q_chartview_qbase_paint_event q_chartview_super_paint_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#paintEvent)
@@ -4917,7 +5017,7 @@ void q_chartview_paint_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QPaintEvent*
 ///
-void q_chartview_qbase_paint_event(void* self, void* event);
+void q_chartview_super_paint_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -4942,6 +5042,10 @@ void q_chartview_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_scroll_contents_by(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `q_chartview_super_scroll_contents_by` instead
+///
+#define q_chartview_qbase_scroll_contents_by q_chartview_super_scroll_contents_by
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#scrollContentsBy)
@@ -4952,7 +5056,7 @@ void q_chartview_scroll_contents_by(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void q_chartview_qbase_scroll_contents_by(void* self, int dx, int dy);
+void q_chartview_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QGraphicsView
 ///
@@ -4976,6 +5080,10 @@ void q_chartview_on_scroll_contents_by(void* self, void (*callback)(void*, int, 
 ///
 void q_chartview_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_show_event` instead
+///
+#define q_chartview_qbase_show_event q_chartview_super_show_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#showEvent)
@@ -4985,7 +5093,7 @@ void q_chartview_show_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QShowEvent*
 ///
-void q_chartview_qbase_show_event(void* self, void* event);
+void q_chartview_super_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -5009,6 +5117,10 @@ void q_chartview_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_input_method_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_input_method_event` instead
+///
+#define q_chartview_qbase_input_method_event q_chartview_super_input_method_event
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#inputMethodEvent)
@@ -5018,7 +5130,7 @@ void q_chartview_input_method_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QInputMethodEvent*
 ///
-void q_chartview_qbase_input_method_event(void* self, void* event);
+void q_chartview_super_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsView
 ///
@@ -5043,6 +5155,10 @@ void q_chartview_on_input_method_event(void* self, void (*callback)(void*, void*
 ///
 void q_chartview_draw_background(void* self, void* painter, void* rect);
 
+/// @warning DEPRECATED: Use `q_chartview_super_draw_background` instead
+///
+#define q_chartview_qbase_draw_background q_chartview_super_draw_background
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawBackground)
@@ -5053,7 +5169,7 @@ void q_chartview_draw_background(void* self, void* painter, void* rect);
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_chartview_qbase_draw_background(void* self, void* painter, void* rect);
+void q_chartview_super_draw_background(void* self, void* painter, void* rect);
 
 /// Inherited from QGraphicsView
 ///
@@ -5078,6 +5194,10 @@ void q_chartview_on_draw_background(void* self, void (*callback)(void*, void*, v
 ///
 void q_chartview_draw_foreground(void* self, void* painter, void* rect);
 
+/// @warning DEPRECATED: Use `q_chartview_super_draw_foreground` instead
+///
+#define q_chartview_qbase_draw_foreground q_chartview_super_draw_foreground
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawForeground)
@@ -5088,7 +5208,7 @@ void q_chartview_draw_foreground(void* self, void* painter, void* rect);
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_chartview_qbase_draw_foreground(void* self, void* painter, void* rect);
+void q_chartview_super_draw_foreground(void* self, void* painter, void* rect);
 
 /// Inherited from QGraphicsView
 ///
@@ -5115,6 +5235,10 @@ void q_chartview_on_draw_foreground(void* self, void (*callback)(void*, void*, v
 ///
 void q_chartview_draw_items(void* self, void* painter, int numItems, void** items, void* options);
 
+/// @warning DEPRECATED: Use `q_chartview_super_draw_items` instead
+///
+#define q_chartview_qbase_draw_items q_chartview_super_draw_items
+
 /// Inherited from QGraphicsView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawItems)
@@ -5127,7 +5251,7 @@ void q_chartview_draw_items(void* self, void* painter, int numItems, void** item
 /// @param items QGraphicsItem**
 /// @param options QStyleOptionGraphicsItem*
 ///
-void q_chartview_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options);
+void q_chartview_super_draw_items(void* self, void* painter, int numItems, void** items, void* options);
 
 /// Inherited from QGraphicsView
 ///
@@ -5150,6 +5274,10 @@ void q_chartview_on_draw_items(void* self, void (*callback)(void*, void*, int, v
 ///
 QSize* q_chartview_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_minimum_size_hint` instead
+///
+#define q_chartview_qbase_minimum_size_hint q_chartview_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -5158,7 +5286,7 @@ QSize* q_chartview_minimum_size_hint(void* self);
 ///
 /// @param self QChartView*
 ///
-QSize* q_chartview_qbase_minimum_size_hint(void* self);
+QSize* q_chartview_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5183,6 +5311,10 @@ void q_chartview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 bool q_chartview_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_chartview_super_event_filter` instead
+///
+#define q_chartview_qbase_event_filter q_chartview_super_event_filter
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
@@ -5193,7 +5325,7 @@ bool q_chartview_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_chartview_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_chartview_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5216,6 +5348,10 @@ void q_chartview_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 QSize* q_chartview_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_viewport_size_hint` instead
+///
+#define q_chartview_qbase_viewport_size_hint q_chartview_super_viewport_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -5224,7 +5360,7 @@ QSize* q_chartview_viewport_size_hint(void* self);
 ///
 /// @param self QChartView*
 ///
-QSize* q_chartview_qbase_viewport_size_hint(void* self);
+QSize* q_chartview_super_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5248,6 +5384,10 @@ void q_chartview_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_chartview_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_chartview_super_change_event` instead
+///
+#define q_chartview_qbase_change_event q_chartview_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -5257,7 +5397,7 @@ void q_chartview_change_event(void* self, void* param1);
 /// @param self QChartView*
 /// @param param1 QEvent*
 ///
-void q_chartview_qbase_change_event(void* self, void* param1);
+void q_chartview_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -5281,6 +5421,10 @@ void q_chartview_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_chartview_super_init_style_option` instead
+///
+#define q_chartview_qbase_init_style_option q_chartview_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -5290,7 +5434,7 @@ void q_chartview_init_style_option(void* self, void* option);
 /// @param self QChartView*
 /// @param option QStyleOptionFrame*
 ///
-void q_chartview_qbase_init_style_option(void* self, void* option);
+void q_chartview_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -5313,6 +5457,10 @@ void q_chartview_on_init_style_option(void* self, void (*callback)(void*, void*)
 ///
 int32_t q_chartview_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_dev_type` instead
+///
+#define q_chartview_qbase_dev_type q_chartview_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5321,7 +5469,7 @@ int32_t q_chartview_dev_type(void* self);
 ///
 /// @param self QChartView*
 ///
-int32_t q_chartview_qbase_dev_type(void* self);
+int32_t q_chartview_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5345,6 +5493,10 @@ void q_chartview_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_chartview_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_chartview_super_set_visible` instead
+///
+#define q_chartview_qbase_set_visible q_chartview_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5354,7 +5506,7 @@ void q_chartview_set_visible(void* self, bool visible);
 /// @param self QChartView*
 /// @param visible bool
 ///
-void q_chartview_qbase_set_visible(void* self, bool visible);
+void q_chartview_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -5378,6 +5530,10 @@ void q_chartview_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_chartview_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_chartview_super_height_for_width` instead
+///
+#define q_chartview_qbase_height_for_width q_chartview_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5387,7 +5543,7 @@ int32_t q_chartview_height_for_width(void* self, int param1);
 /// @param self QChartView*
 /// @param param1 int
 ///
-int32_t q_chartview_qbase_height_for_width(void* self, int param1);
+int32_t q_chartview_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5410,6 +5566,10 @@ void q_chartview_on_height_for_width(void* self, int32_t (*callback)(void*, int)
 ///
 bool q_chartview_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_has_height_for_width` instead
+///
+#define q_chartview_qbase_has_height_for_width q_chartview_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5418,7 +5578,7 @@ bool q_chartview_has_height_for_width(void* self);
 ///
 /// @param self QChartView*
 ///
-bool q_chartview_qbase_has_height_for_width(void* self);
+bool q_chartview_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5441,6 +5601,10 @@ void q_chartview_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_chartview_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_paint_engine` instead
+///
+#define q_chartview_qbase_paint_engine q_chartview_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5449,7 +5613,7 @@ QPaintEngine* q_chartview_paint_engine(void* self);
 ///
 /// @param self QChartView*
 ///
-QPaintEngine* q_chartview_qbase_paint_engine(void* self);
+QPaintEngine* q_chartview_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5473,6 +5637,10 @@ void q_chartview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_chartview_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_enter_event` instead
+///
+#define q_chartview_qbase_enter_event q_chartview_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5482,7 +5650,7 @@ void q_chartview_enter_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QEnterEvent*
 ///
-void q_chartview_qbase_enter_event(void* self, void* event);
+void q_chartview_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5506,6 +5674,10 @@ void q_chartview_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_leave_event` instead
+///
+#define q_chartview_qbase_leave_event q_chartview_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5515,7 +5687,7 @@ void q_chartview_leave_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QEvent*
 ///
-void q_chartview_qbase_leave_event(void* self, void* event);
+void q_chartview_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5539,6 +5711,10 @@ void q_chartview_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_move_event` instead
+///
+#define q_chartview_qbase_move_event q_chartview_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5548,7 +5724,7 @@ void q_chartview_move_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QMoveEvent*
 ///
-void q_chartview_qbase_move_event(void* self, void* event);
+void q_chartview_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5572,6 +5748,10 @@ void q_chartview_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_close_event` instead
+///
+#define q_chartview_qbase_close_event q_chartview_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5581,7 +5761,7 @@ void q_chartview_close_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QCloseEvent*
 ///
-void q_chartview_qbase_close_event(void* self, void* event);
+void q_chartview_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5605,6 +5785,10 @@ void q_chartview_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_tablet_event` instead
+///
+#define q_chartview_qbase_tablet_event q_chartview_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5614,7 +5798,7 @@ void q_chartview_tablet_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QTabletEvent*
 ///
-void q_chartview_qbase_tablet_event(void* self, void* event);
+void q_chartview_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5638,6 +5822,10 @@ void q_chartview_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_action_event` instead
+///
+#define q_chartview_qbase_action_event q_chartview_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5647,7 +5835,7 @@ void q_chartview_action_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QActionEvent*
 ///
-void q_chartview_qbase_action_event(void* self, void* event);
+void q_chartview_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5671,6 +5859,10 @@ void q_chartview_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_hide_event` instead
+///
+#define q_chartview_qbase_hide_event q_chartview_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -5680,7 +5872,7 @@ void q_chartview_hide_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QHideEvent*
 ///
-void q_chartview_qbase_hide_event(void* self, void* event);
+void q_chartview_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5706,6 +5898,10 @@ void q_chartview_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_chartview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_chartview_super_native_event` instead
+///
+#define q_chartview_qbase_native_event q_chartview_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5717,7 +5913,7 @@ bool q_chartview_native_event(void* self, char* eventType, void* message, intptr
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_chartview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_chartview_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5741,6 +5937,10 @@ void q_chartview_on_native_event(void* self, bool (*callback)(void*, libqt_strin
 ///
 int32_t q_chartview_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_chartview_super_metric` instead
+///
+#define q_chartview_qbase_metric q_chartview_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5750,7 +5950,7 @@ int32_t q_chartview_metric(void* self, int32_t param1);
 /// @param self QChartView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_chartview_qbase_metric(void* self, int32_t param1);
+int32_t q_chartview_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5774,6 +5974,10 @@ void q_chartview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_chartview_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_chartview_super_init_painter` instead
+///
+#define q_chartview_qbase_init_painter q_chartview_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5783,7 +5987,7 @@ void q_chartview_init_painter(void* self, void* painter);
 /// @param self QChartView*
 /// @param painter QPainter*
 ///
-void q_chartview_qbase_init_painter(void* self, void* painter);
+void q_chartview_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5807,6 +6011,10 @@ void q_chartview_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_chartview_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_chartview_super_redirected` instead
+///
+#define q_chartview_qbase_redirected q_chartview_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5816,7 +6024,7 @@ QPaintDevice* q_chartview_redirected(void* self, void* offset);
 /// @param self QChartView*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_chartview_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_chartview_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5839,6 +6047,10 @@ void q_chartview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 QPainter* q_chartview_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_shared_painter` instead
+///
+#define q_chartview_qbase_shared_painter q_chartview_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5847,7 +6059,7 @@ QPainter* q_chartview_shared_painter(void* self);
 ///
 /// @param self QChartView*
 ///
-QPainter* q_chartview_qbase_shared_painter(void* self);
+QPainter* q_chartview_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5871,6 +6083,10 @@ void q_chartview_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_chartview_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_timer_event` instead
+///
+#define q_chartview_qbase_timer_event q_chartview_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5880,7 +6096,7 @@ void q_chartview_timer_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QTimerEvent*
 ///
-void q_chartview_qbase_timer_event(void* self, void* event);
+void q_chartview_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5904,6 +6120,10 @@ void q_chartview_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_child_event` instead
+///
+#define q_chartview_qbase_child_event q_chartview_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5913,7 +6133,7 @@ void q_chartview_child_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QChildEvent*
 ///
-void q_chartview_qbase_child_event(void* self, void* event);
+void q_chartview_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5937,6 +6157,10 @@ void q_chartview_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_chartview_super_custom_event` instead
+///
+#define q_chartview_qbase_custom_event q_chartview_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5946,7 +6170,7 @@ void q_chartview_custom_event(void* self, void* event);
 /// @param self QChartView*
 /// @param event QEvent*
 ///
-void q_chartview_qbase_custom_event(void* self, void* event);
+void q_chartview_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5970,6 +6194,10 @@ void q_chartview_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_chartview_super_connect_notify` instead
+///
+#define q_chartview_qbase_connect_notify q_chartview_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5979,7 +6207,7 @@ void q_chartview_connect_notify(void* self, void* signal);
 /// @param self QChartView*
 /// @param signal QMetaMethod*
 ///
-void q_chartview_qbase_connect_notify(void* self, void* signal);
+void q_chartview_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6003,6 +6231,10 @@ void q_chartview_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_chartview_super_disconnect_notify` instead
+///
+#define q_chartview_qbase_disconnect_notify q_chartview_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6012,7 +6244,7 @@ void q_chartview_disconnect_notify(void* self, void* signal);
 /// @param self QChartView*
 /// @param signal QMetaMethod*
 ///
-void q_chartview_qbase_disconnect_notify(void* self, void* signal);
+void q_chartview_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6039,6 +6271,10 @@ void q_chartview_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_chartview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `q_chartview_super_set_viewport_margins` instead
+///
+#define q_chartview_qbase_set_viewport_margins q_chartview_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -6051,7 +6287,7 @@ void q_chartview_set_viewport_margins(void* self, int left, int top, int right, 
 /// @param right int
 /// @param bottom int
 ///
-void q_chartview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void q_chartview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6074,6 +6310,10 @@ void q_chartview_on_set_viewport_margins(void* self, void (*callback)(void*, int
 ///
 QMargins* q_chartview_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_viewport_margins` instead
+///
+#define q_chartview_qbase_viewport_margins q_chartview_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -6082,7 +6322,7 @@ QMargins* q_chartview_viewport_margins(void* self);
 ///
 /// @param self QChartView*
 ///
-QMargins* q_chartview_qbase_viewport_margins(void* self);
+QMargins* q_chartview_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6106,6 +6346,10 @@ void q_chartview_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_chartview_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_chartview_super_draw_frame` instead
+///
+#define q_chartview_qbase_draw_frame q_chartview_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -6115,7 +6359,7 @@ void q_chartview_draw_frame(void* self, void* param1);
 /// @param self QChartView*
 /// @param param1 QPainter*
 ///
-void q_chartview_qbase_draw_frame(void* self, void* param1);
+void q_chartview_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -6138,6 +6382,10 @@ void q_chartview_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_chartview_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_update_micro_focus` instead
+///
+#define q_chartview_qbase_update_micro_focus q_chartview_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6146,7 +6394,7 @@ void q_chartview_update_micro_focus(void* self);
 ///
 /// @param self QChartView*
 ///
-void q_chartview_qbase_update_micro_focus(void* self);
+void q_chartview_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6169,6 +6417,10 @@ void q_chartview_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_chartview_create(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_create` instead
+///
+#define q_chartview_qbase_create q_chartview_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -6177,7 +6429,7 @@ void q_chartview_create(void* self);
 ///
 /// @param self QChartView*
 ///
-void q_chartview_qbase_create(void* self);
+void q_chartview_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6200,6 +6452,10 @@ void q_chartview_on_create(void* self, void (*callback)());
 ///
 void q_chartview_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_destroy` instead
+///
+#define q_chartview_qbase_destroy q_chartview_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6208,7 +6464,7 @@ void q_chartview_destroy(void* self);
 ///
 /// @param self QChartView*
 ///
-void q_chartview_qbase_destroy(void* self);
+void q_chartview_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6231,6 +6487,10 @@ void q_chartview_on_destroy(void* self, void (*callback)());
 ///
 bool q_chartview_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_focus_next_child` instead
+///
+#define q_chartview_qbase_focus_next_child q_chartview_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -6239,7 +6499,7 @@ bool q_chartview_focus_next_child(void* self);
 ///
 /// @param self QChartView*
 ///
-bool q_chartview_qbase_focus_next_child(void* self);
+bool q_chartview_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6262,6 +6522,10 @@ void q_chartview_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_chartview_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_focus_previous_child` instead
+///
+#define q_chartview_qbase_focus_previous_child q_chartview_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6270,7 +6534,7 @@ bool q_chartview_focus_previous_child(void* self);
 ///
 /// @param self QChartView*
 ///
-bool q_chartview_qbase_focus_previous_child(void* self);
+bool q_chartview_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6293,6 +6557,10 @@ void q_chartview_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_chartview_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_sender` instead
+///
+#define q_chartview_qbase_sender q_chartview_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6301,7 +6569,7 @@ QObject* q_chartview_sender(void* self);
 ///
 /// @param self QChartView*
 ///
-QObject* q_chartview_qbase_sender(void* self);
+QObject* q_chartview_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6324,6 +6592,10 @@ void q_chartview_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_chartview_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_chartview_super_sender_signal_index` instead
+///
+#define q_chartview_qbase_sender_signal_index q_chartview_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6332,7 +6604,7 @@ int32_t q_chartview_sender_signal_index(void* self);
 ///
 /// @param self QChartView*
 ///
-int32_t q_chartview_qbase_sender_signal_index(void* self);
+int32_t q_chartview_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6356,6 +6628,10 @@ void q_chartview_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_chartview_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_chartview_super_receivers` instead
+///
+#define q_chartview_qbase_receivers q_chartview_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6365,7 +6641,7 @@ int32_t q_chartview_receivers(void* self, const char* signal);
 /// @param self QChartView*
 /// @param signal const char*
 ///
-int32_t q_chartview_qbase_receivers(void* self, const char* signal);
+int32_t q_chartview_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6389,6 +6665,10 @@ void q_chartview_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_chartview_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_chartview_super_is_signal_connected` instead
+///
+#define q_chartview_qbase_is_signal_connected q_chartview_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6398,7 +6678,7 @@ bool q_chartview_is_signal_connected(void* self, void* signal);
 /// @param self QChartView*
 /// @param signal QMetaMethod*
 ///
-bool q_chartview_qbase_is_signal_connected(void* self, void* signal);
+bool q_chartview_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6423,6 +6703,10 @@ void q_chartview_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 double q_chartview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_chartview_super_get_decoded_metric_f` instead
+///
+#define q_chartview_qbase_get_decoded_metric_f q_chartview_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -6433,7 +6717,7 @@ double q_chartview_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_chartview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_chartview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

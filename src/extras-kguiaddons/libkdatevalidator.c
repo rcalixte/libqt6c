@@ -23,8 +23,8 @@ void k_datevalidator_on_meta_object(void* self, const QMetaObject* (*callback)()
     KDateValidator_OnMetaObject((KDateValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_datevalidator_qbase_meta_object(void* self) {
-    return KDateValidator_QBaseMetaObject((KDateValidator*)self);
+const QMetaObject* k_datevalidator_super_meta_object(void* self) {
+    return KDateValidator_SuperMetaObject((KDateValidator*)self);
 }
 
 void* k_datevalidator_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_datevalidator_on_metacast(void* self, void* (*callback)(void*, const char
     KDateValidator_OnMetacast((KDateValidator*)self, (intptr_t)callback);
 }
 
-void* k_datevalidator_qbase_metacast(void* self, const char* param1) {
-    return KDateValidator_QBaseMetacast((KDateValidator*)self, param1);
+void* k_datevalidator_super_metacast(void* self, const char* param1) {
+    return KDateValidator_SuperMetacast((KDateValidator*)self, param1);
 }
 
 int32_t k_datevalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_datevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KDateValidator_OnMetacall((KDateValidator*)self, (intptr_t)callback);
 }
 
-int32_t k_datevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDateValidator_QBaseMetacall((KDateValidator*)self, param1, param2, param3);
+int32_t k_datevalidator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDateValidator_SuperMetacall((KDateValidator*)self, param1, param2, param3);
 }
 
 const char* k_datevalidator_tr(const char* s) {
@@ -66,8 +66,8 @@ void k_datevalidator_on_validate(void* self, int32_t (*callback)(void*, const ch
     KDateValidator_OnValidate((KDateValidator*)self, (intptr_t)callback);
 }
 
-int32_t k_datevalidator_qbase_validate(void* self, const char* text, int* e) {
-    return KDateValidator_QBaseValidate((KDateValidator*)self, qstring(text), e);
+int32_t k_datevalidator_super_validate(void* self, const char* text, int* e) {
+    return KDateValidator_SuperValidate((KDateValidator*)self, qstring(text), e);
 }
 
 void k_datevalidator_fixup(void* self, const char* input) {
@@ -78,8 +78,8 @@ void k_datevalidator_on_fixup(void* self, void (*callback)(void*, const char*)) 
     KDateValidator_OnFixup((KDateValidator*)self, (intptr_t)callback);
 }
 
-void k_datevalidator_qbase_fixup(void* self, const char* input) {
-    KDateValidator_QBaseFixup((KDateValidator*)self, qstring(input));
+void k_datevalidator_super_fixup(void* self, const char* input) {
+    KDateValidator_SuperFixup((KDateValidator*)self, qstring(input));
 }
 
 int32_t k_datevalidator_date(void* self, const char* text, void* date) {
@@ -331,8 +331,8 @@ bool k_datevalidator_event(void* self, void* event) {
     return KDateValidator_Event((KDateValidator*)self, (QEvent*)event);
 }
 
-bool k_datevalidator_qbase_event(void* self, void* event) {
-    return KDateValidator_QBaseEvent((KDateValidator*)self, (QEvent*)event);
+bool k_datevalidator_super_event(void* self, void* event) {
+    return KDateValidator_SuperEvent((KDateValidator*)self, (QEvent*)event);
 }
 
 void k_datevalidator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -343,8 +343,8 @@ bool k_datevalidator_event_filter(void* self, void* watched, void* event) {
     return KDateValidator_EventFilter((KDateValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_datevalidator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDateValidator_QBaseEventFilter((KDateValidator*)self, (QObject*)watched, (QEvent*)event);
+bool k_datevalidator_super_event_filter(void* self, void* watched, void* event) {
+    return KDateValidator_SuperEventFilter((KDateValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_datevalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -355,8 +355,8 @@ void k_datevalidator_timer_event(void* self, void* event) {
     KDateValidator_TimerEvent((KDateValidator*)self, (QTimerEvent*)event);
 }
 
-void k_datevalidator_qbase_timer_event(void* self, void* event) {
-    KDateValidator_QBaseTimerEvent((KDateValidator*)self, (QTimerEvent*)event);
+void k_datevalidator_super_timer_event(void* self, void* event) {
+    KDateValidator_SuperTimerEvent((KDateValidator*)self, (QTimerEvent*)event);
 }
 
 void k_datevalidator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -367,8 +367,8 @@ void k_datevalidator_child_event(void* self, void* event) {
     KDateValidator_ChildEvent((KDateValidator*)self, (QChildEvent*)event);
 }
 
-void k_datevalidator_qbase_child_event(void* self, void* event) {
-    KDateValidator_QBaseChildEvent((KDateValidator*)self, (QChildEvent*)event);
+void k_datevalidator_super_child_event(void* self, void* event) {
+    KDateValidator_SuperChildEvent((KDateValidator*)self, (QChildEvent*)event);
 }
 
 void k_datevalidator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ void k_datevalidator_custom_event(void* self, void* event) {
     KDateValidator_CustomEvent((KDateValidator*)self, (QEvent*)event);
 }
 
-void k_datevalidator_qbase_custom_event(void* self, void* event) {
-    KDateValidator_QBaseCustomEvent((KDateValidator*)self, (QEvent*)event);
+void k_datevalidator_super_custom_event(void* self, void* event) {
+    KDateValidator_SuperCustomEvent((KDateValidator*)self, (QEvent*)event);
 }
 
 void k_datevalidator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -391,8 +391,8 @@ void k_datevalidator_connect_notify(void* self, void* signal) {
     KDateValidator_ConnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
-void k_datevalidator_qbase_connect_notify(void* self, void* signal) {
-    KDateValidator_QBaseConnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
+void k_datevalidator_super_connect_notify(void* self, void* signal) {
+    KDateValidator_SuperConnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_datevalidator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ void k_datevalidator_disconnect_notify(void* self, void* signal) {
     KDateValidator_DisconnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
-void k_datevalidator_qbase_disconnect_notify(void* self, void* signal) {
-    KDateValidator_QBaseDisconnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
+void k_datevalidator_super_disconnect_notify(void* self, void* signal) {
+    KDateValidator_SuperDisconnectNotify((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_datevalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ QObject* k_datevalidator_sender(void* self) {
     return KDateValidator_Sender((KDateValidator*)self);
 }
 
-QObject* k_datevalidator_qbase_sender(void* self) {
-    return KDateValidator_QBaseSender((KDateValidator*)self);
+QObject* k_datevalidator_super_sender(void* self) {
+    return KDateValidator_SuperSender((KDateValidator*)self);
 }
 
 void k_datevalidator_on_sender(void* self, QObject* (*callback)()) {
@@ -427,8 +427,8 @@ int32_t k_datevalidator_sender_signal_index(void* self) {
     return KDateValidator_SenderSignalIndex((KDateValidator*)self);
 }
 
-int32_t k_datevalidator_qbase_sender_signal_index(void* self) {
-    return KDateValidator_QBaseSenderSignalIndex((KDateValidator*)self);
+int32_t k_datevalidator_super_sender_signal_index(void* self) {
+    return KDateValidator_SuperSenderSignalIndex((KDateValidator*)self);
 }
 
 void k_datevalidator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -439,8 +439,8 @@ int32_t k_datevalidator_receivers(void* self, const char* signal) {
     return KDateValidator_Receivers((KDateValidator*)self, signal);
 }
 
-int32_t k_datevalidator_qbase_receivers(void* self, const char* signal) {
-    return KDateValidator_QBaseReceivers((KDateValidator*)self, signal);
+int32_t k_datevalidator_super_receivers(void* self, const char* signal) {
+    return KDateValidator_SuperReceivers((KDateValidator*)self, signal);
 }
 
 void k_datevalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -451,8 +451,8 @@ bool k_datevalidator_is_signal_connected(void* self, void* signal) {
     return KDateValidator_IsSignalConnected((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
-bool k_datevalidator_qbase_is_signal_connected(void* self, void* signal) {
-    return KDateValidator_QBaseIsSignalConnected((KDateValidator*)self, (QMetaMethod*)signal);
+bool k_datevalidator_super_is_signal_connected(void* self, void* signal) {
+    return KDateValidator_SuperIsSignalConnected((KDateValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -140,8 +140,8 @@ void k_acl_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     KACL_OnVirtualHook((KACL*)self, (intptr_t)callback);
 }
 
-void k_acl_qbase_virtual_hook(void* self, int id, void* data) {
-    KACL_QBaseVirtualHook((KACL*)self, id, data);
+void k_acl_super_virtual_hook(void* self, int id, void* data) {
+    KACL_SuperVirtualHook((KACL*)self, id, data);
 }
 
 void k_acl_delete(void* self) {

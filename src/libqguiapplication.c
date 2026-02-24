@@ -33,8 +33,8 @@ void q_guiapplication_on_meta_object(void* self, const QMetaObject* (*callback)(
     QGuiApplication_OnMetaObject((QGuiApplication*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_guiapplication_qbase_meta_object(void* self) {
-    return QGuiApplication_QBaseMetaObject((QGuiApplication*)self);
+const QMetaObject* q_guiapplication_super_meta_object(void* self) {
+    return QGuiApplication_SuperMetaObject((QGuiApplication*)self);
 }
 
 void* q_guiapplication_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_guiapplication_on_metacast(void* self, void* (*callback)(void*, const cha
     QGuiApplication_OnMetacast((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void* q_guiapplication_qbase_metacast(void* self, const char* param1) {
-    return QGuiApplication_QBaseMetacast((QGuiApplication*)self, param1);
+void* q_guiapplication_super_metacast(void* self, const char* param1) {
+    return QGuiApplication_SuperMetacast((QGuiApplication*)self, param1);
 }
 
 int32_t q_guiapplication_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_guiapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QGuiApplication_OnMetacall((QGuiApplication*)self, (intptr_t)callback);
 }
 
-int32_t q_guiapplication_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGuiApplication_QBaseMetacall((QGuiApplication*)self, param1, param2, param3);
+int32_t q_guiapplication_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGuiApplication_SuperMetacall((QGuiApplication*)self, param1, param2, param3);
 }
 
 const char* q_guiapplication_tr(const char* s) {
@@ -264,8 +264,8 @@ void q_guiapplication_on_notify(void* self, bool (*callback)(void*, void*, void*
     QGuiApplication_OnNotify((QGuiApplication*)self, (intptr_t)callback);
 }
 
-bool q_guiapplication_qbase_notify(void* self, void* param1, void* param2) {
-    return QGuiApplication_QBaseNotify((QGuiApplication*)self, (QObject*)param1, (QEvent*)param2);
+bool q_guiapplication_super_notify(void* self, void* param1, void* param2) {
+    return QGuiApplication_SuperNotify((QGuiApplication*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 bool q_guiapplication_is_session_restored(void* self) {
@@ -298,8 +298,8 @@ void q_guiapplication_on_resolve_interface(void* self, void* (*callback)(void*, 
     QGuiApplication_OnResolveInterface((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void* q_guiapplication_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QGuiApplication_QBaseResolveInterface((QGuiApplication*)self, name, revision);
+void* q_guiapplication_super_resolve_interface(void* self, const char* name, int revision) {
+    return QGuiApplication_SuperResolveInterface((QGuiApplication*)self, name, revision);
 }
 
 void q_guiapplication_sync() {
@@ -426,8 +426,8 @@ void q_guiapplication_on_event(void* self, bool (*callback)(void*, void*)) {
     QGuiApplication_OnEvent((QGuiApplication*)self, (intptr_t)callback);
 }
 
-bool q_guiapplication_qbase_event(void* self, void* param1) {
-    return QGuiApplication_QBaseEvent((QGuiApplication*)self, (QEvent*)param1);
+bool q_guiapplication_super_event(void* self, void* param1) {
+    return QGuiApplication_SuperEvent((QGuiApplication*)self, (QEvent*)param1);
 }
 
 const char* q_guiapplication_tr2(const char* s, const char* c) {
@@ -971,8 +971,8 @@ bool q_guiapplication_event_filter(void* self, void* watched, void* event) {
     return QGuiApplication_EventFilter((QGuiApplication*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_guiapplication_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGuiApplication_QBaseEventFilter((QGuiApplication*)self, (QObject*)watched, (QEvent*)event);
+bool q_guiapplication_super_event_filter(void* self, void* watched, void* event) {
+    return QGuiApplication_SuperEventFilter((QGuiApplication*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_guiapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -983,8 +983,8 @@ void q_guiapplication_timer_event(void* self, void* event) {
     QGuiApplication_TimerEvent((QGuiApplication*)self, (QTimerEvent*)event);
 }
 
-void q_guiapplication_qbase_timer_event(void* self, void* event) {
-    QGuiApplication_QBaseTimerEvent((QGuiApplication*)self, (QTimerEvent*)event);
+void q_guiapplication_super_timer_event(void* self, void* event) {
+    QGuiApplication_SuperTimerEvent((QGuiApplication*)self, (QTimerEvent*)event);
 }
 
 void q_guiapplication_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -995,8 +995,8 @@ void q_guiapplication_child_event(void* self, void* event) {
     QGuiApplication_ChildEvent((QGuiApplication*)self, (QChildEvent*)event);
 }
 
-void q_guiapplication_qbase_child_event(void* self, void* event) {
-    QGuiApplication_QBaseChildEvent((QGuiApplication*)self, (QChildEvent*)event);
+void q_guiapplication_super_child_event(void* self, void* event) {
+    QGuiApplication_SuperChildEvent((QGuiApplication*)self, (QChildEvent*)event);
 }
 
 void q_guiapplication_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1007,8 +1007,8 @@ void q_guiapplication_custom_event(void* self, void* event) {
     QGuiApplication_CustomEvent((QGuiApplication*)self, (QEvent*)event);
 }
 
-void q_guiapplication_qbase_custom_event(void* self, void* event) {
-    QGuiApplication_QBaseCustomEvent((QGuiApplication*)self, (QEvent*)event);
+void q_guiapplication_super_custom_event(void* self, void* event) {
+    QGuiApplication_SuperCustomEvent((QGuiApplication*)self, (QEvent*)event);
 }
 
 void q_guiapplication_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1019,8 +1019,8 @@ void q_guiapplication_connect_notify(void* self, void* signal) {
     QGuiApplication_ConnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_guiapplication_qbase_connect_notify(void* self, void* signal) {
-    QGuiApplication_QBaseConnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
+void q_guiapplication_super_connect_notify(void* self, void* signal) {
+    QGuiApplication_SuperConnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_guiapplication_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1031,8 +1031,8 @@ void q_guiapplication_disconnect_notify(void* self, void* signal) {
     QGuiApplication_DisconnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_guiapplication_qbase_disconnect_notify(void* self, void* signal) {
-    QGuiApplication_QBaseDisconnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
+void q_guiapplication_super_disconnect_notify(void* self, void* signal) {
+    QGuiApplication_SuperDisconnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_guiapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1043,8 +1043,8 @@ QObject* q_guiapplication_sender(void* self) {
     return QGuiApplication_Sender((QGuiApplication*)self);
 }
 
-QObject* q_guiapplication_qbase_sender(void* self) {
-    return QGuiApplication_QBaseSender((QGuiApplication*)self);
+QObject* q_guiapplication_super_sender(void* self) {
+    return QGuiApplication_SuperSender((QGuiApplication*)self);
 }
 
 void q_guiapplication_on_sender(void* self, QObject* (*callback)()) {
@@ -1055,8 +1055,8 @@ int32_t q_guiapplication_sender_signal_index(void* self) {
     return QGuiApplication_SenderSignalIndex((QGuiApplication*)self);
 }
 
-int32_t q_guiapplication_qbase_sender_signal_index(void* self) {
-    return QGuiApplication_QBaseSenderSignalIndex((QGuiApplication*)self);
+int32_t q_guiapplication_super_sender_signal_index(void* self) {
+    return QGuiApplication_SuperSenderSignalIndex((QGuiApplication*)self);
 }
 
 void q_guiapplication_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1067,8 +1067,8 @@ int32_t q_guiapplication_receivers(void* self, const char* signal) {
     return QGuiApplication_Receivers((QGuiApplication*)self, signal);
 }
 
-int32_t q_guiapplication_qbase_receivers(void* self, const char* signal) {
-    return QGuiApplication_QBaseReceivers((QGuiApplication*)self, signal);
+int32_t q_guiapplication_super_receivers(void* self, const char* signal) {
+    return QGuiApplication_SuperReceivers((QGuiApplication*)self, signal);
 }
 
 void q_guiapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1079,8 +1079,8 @@ bool q_guiapplication_is_signal_connected(void* self, void* signal) {
     return QGuiApplication_IsSignalConnected((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-bool q_guiapplication_qbase_is_signal_connected(void* self, void* signal) {
-    return QGuiApplication_QBaseIsSignalConnected((QGuiApplication*)self, (QMetaMethod*)signal);
+bool q_guiapplication_super_is_signal_connected(void* self, void* signal) {
+    return QGuiApplication_SuperIsSignalConnected((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_guiapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

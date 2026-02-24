@@ -25,8 +25,8 @@ void q_accounts__accountservice_on_meta_object(void* self, const QMetaObject* (*
     Accounts__AccountService_OnMetaObject((Accounts__AccountService*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_accounts__accountservice_qbase_meta_object(void* self) {
-    return Accounts__AccountService_QBaseMetaObject((Accounts__AccountService*)self);
+const QMetaObject* q_accounts__accountservice_super_meta_object(void* self) {
+    return Accounts__AccountService_SuperMetaObject((Accounts__AccountService*)self);
 }
 
 void* q_accounts__accountservice_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_accounts__accountservice_on_metacast(void* self, void* (*callback)(void*,
     Accounts__AccountService_OnMetacast((Accounts__AccountService*)self, (intptr_t)callback);
 }
 
-void* q_accounts__accountservice_qbase_metacast(void* self, const char* param1) {
-    return Accounts__AccountService_QBaseMetacast((Accounts__AccountService*)self, param1);
+void* q_accounts__accountservice_super_metacast(void* self, const char* param1) {
+    return Accounts__AccountService_SuperMetacast((Accounts__AccountService*)self, param1);
 }
 
 int32_t q_accounts__accountservice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_accounts__accountservice_on_metacall(void* self, int32_t (*callback)(void
     Accounts__AccountService_OnMetacall((Accounts__AccountService*)self, (intptr_t)callback);
 }
 
-int32_t q_accounts__accountservice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Accounts__AccountService_QBaseMetacall((Accounts__AccountService*)self, param1, param2, param3);
+int32_t q_accounts__accountservice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Accounts__AccountService_SuperMetacall((Accounts__AccountService*)self, param1, param2, param3);
 }
 
 const char* q_accounts__accountservice_tr(const char* s) {
@@ -452,8 +452,8 @@ bool q_accounts__accountservice_event(void* self, void* event) {
     return Accounts__AccountService_Event((Accounts__AccountService*)self, (QEvent*)event);
 }
 
-bool q_accounts__accountservice_qbase_event(void* self, void* event) {
-    return Accounts__AccountService_QBaseEvent((Accounts__AccountService*)self, (QEvent*)event);
+bool q_accounts__accountservice_super_event(void* self, void* event) {
+    return Accounts__AccountService_SuperEvent((Accounts__AccountService*)self, (QEvent*)event);
 }
 
 void q_accounts__accountservice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -464,8 +464,8 @@ bool q_accounts__accountservice_event_filter(void* self, void* watched, void* ev
     return Accounts__AccountService_EventFilter((Accounts__AccountService*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_accounts__accountservice_qbase_event_filter(void* self, void* watched, void* event) {
-    return Accounts__AccountService_QBaseEventFilter((Accounts__AccountService*)self, (QObject*)watched, (QEvent*)event);
+bool q_accounts__accountservice_super_event_filter(void* self, void* watched, void* event) {
+    return Accounts__AccountService_SuperEventFilter((Accounts__AccountService*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_accounts__accountservice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -476,8 +476,8 @@ void q_accounts__accountservice_timer_event(void* self, void* event) {
     Accounts__AccountService_TimerEvent((Accounts__AccountService*)self, (QTimerEvent*)event);
 }
 
-void q_accounts__accountservice_qbase_timer_event(void* self, void* event) {
-    Accounts__AccountService_QBaseTimerEvent((Accounts__AccountService*)self, (QTimerEvent*)event);
+void q_accounts__accountservice_super_timer_event(void* self, void* event) {
+    Accounts__AccountService_SuperTimerEvent((Accounts__AccountService*)self, (QTimerEvent*)event);
 }
 
 void q_accounts__accountservice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -488,8 +488,8 @@ void q_accounts__accountservice_child_event(void* self, void* event) {
     Accounts__AccountService_ChildEvent((Accounts__AccountService*)self, (QChildEvent*)event);
 }
 
-void q_accounts__accountservice_qbase_child_event(void* self, void* event) {
-    Accounts__AccountService_QBaseChildEvent((Accounts__AccountService*)self, (QChildEvent*)event);
+void q_accounts__accountservice_super_child_event(void* self, void* event) {
+    Accounts__AccountService_SuperChildEvent((Accounts__AccountService*)self, (QChildEvent*)event);
 }
 
 void q_accounts__accountservice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -500,8 +500,8 @@ void q_accounts__accountservice_custom_event(void* self, void* event) {
     Accounts__AccountService_CustomEvent((Accounts__AccountService*)self, (QEvent*)event);
 }
 
-void q_accounts__accountservice_qbase_custom_event(void* self, void* event) {
-    Accounts__AccountService_QBaseCustomEvent((Accounts__AccountService*)self, (QEvent*)event);
+void q_accounts__accountservice_super_custom_event(void* self, void* event) {
+    Accounts__AccountService_SuperCustomEvent((Accounts__AccountService*)self, (QEvent*)event);
 }
 
 void q_accounts__accountservice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -512,8 +512,8 @@ void q_accounts__accountservice_connect_notify(void* self, void* signal) {
     Accounts__AccountService_ConnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__accountservice_qbase_connect_notify(void* self, void* signal) {
-    Accounts__AccountService_QBaseConnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
+void q_accounts__accountservice_super_connect_notify(void* self, void* signal) {
+    Accounts__AccountService_SuperConnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__accountservice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -524,8 +524,8 @@ void q_accounts__accountservice_disconnect_notify(void* self, void* signal) {
     Accounts__AccountService_DisconnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__accountservice_qbase_disconnect_notify(void* self, void* signal) {
-    Accounts__AccountService_QBaseDisconnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
+void q_accounts__accountservice_super_disconnect_notify(void* self, void* signal) {
+    Accounts__AccountService_SuperDisconnectNotify((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__accountservice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -536,8 +536,8 @@ QObject* q_accounts__accountservice_sender(void* self) {
     return Accounts__AccountService_Sender((Accounts__AccountService*)self);
 }
 
-QObject* q_accounts__accountservice_qbase_sender(void* self) {
-    return Accounts__AccountService_QBaseSender((Accounts__AccountService*)self);
+QObject* q_accounts__accountservice_super_sender(void* self) {
+    return Accounts__AccountService_SuperSender((Accounts__AccountService*)self);
 }
 
 void q_accounts__accountservice_on_sender(void* self, QObject* (*callback)()) {
@@ -548,8 +548,8 @@ int32_t q_accounts__accountservice_sender_signal_index(void* self) {
     return Accounts__AccountService_SenderSignalIndex((Accounts__AccountService*)self);
 }
 
-int32_t q_accounts__accountservice_qbase_sender_signal_index(void* self) {
-    return Accounts__AccountService_QBaseSenderSignalIndex((Accounts__AccountService*)self);
+int32_t q_accounts__accountservice_super_sender_signal_index(void* self) {
+    return Accounts__AccountService_SuperSenderSignalIndex((Accounts__AccountService*)self);
 }
 
 void q_accounts__accountservice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -560,8 +560,8 @@ int32_t q_accounts__accountservice_receivers(void* self, const char* signal) {
     return Accounts__AccountService_Receivers((Accounts__AccountService*)self, signal);
 }
 
-int32_t q_accounts__accountservice_qbase_receivers(void* self, const char* signal) {
-    return Accounts__AccountService_QBaseReceivers((Accounts__AccountService*)self, signal);
+int32_t q_accounts__accountservice_super_receivers(void* self, const char* signal) {
+    return Accounts__AccountService_SuperReceivers((Accounts__AccountService*)self, signal);
 }
 
 void q_accounts__accountservice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -572,8 +572,8 @@ bool q_accounts__accountservice_is_signal_connected(void* self, void* signal) {
     return Accounts__AccountService_IsSignalConnected((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
-bool q_accounts__accountservice_qbase_is_signal_connected(void* self, void* signal) {
-    return Accounts__AccountService_QBaseIsSignalConnected((Accounts__AccountService*)self, (QMetaMethod*)signal);
+bool q_accounts__accountservice_super_is_signal_connected(void* self, void* signal) {
+    return Accounts__AccountService_SuperIsSignalConnected((Accounts__AccountService*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__accountservice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -40,13 +40,17 @@ const QMetaObject* q_textbrowser_meta_object(void* self);
 ///
 void q_textbrowser_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_meta_object` instead
+///
+#define q_textbrowser_qbase_meta_object q_textbrowser_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 ///
-const QMetaObject* q_textbrowser_qbase_meta_object(void* self);
+const QMetaObject* q_textbrowser_super_meta_object(void* self);
 
 /// @param self QTextBrowser*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_textbrowser_metacast(void* self, const char* param1);
 ///
 void q_textbrowser_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_metacast` instead
+///
+#define q_textbrowser_qbase_metacast q_textbrowser_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 /// @param param1 const char*
 ///
-void* q_textbrowser_qbase_metacast(void* self, const char* param1);
+void* q_textbrowser_super_metacast(void* self, const char* param1);
 
 /// @param self QTextBrowser*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_textbrowser_metacall(void* self, int32_t param1, int param2, void* par
 ///
 void q_textbrowser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_metacall` instead
+///
+#define q_textbrowser_qbase_metacall q_textbrowser_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
@@ -88,7 +100,7 @@ void q_textbrowser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_textbrowser_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_textbrowser_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -144,6 +156,10 @@ QVariant* q_textbrowser_load_resource(void* self, int type, void* name);
 ///
 void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_load_resource` instead
+///
+#define q_textbrowser_qbase_load_resource q_textbrowser_super_load_resource
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
 ///
 /// Base class method implementation
@@ -152,7 +168,7 @@ void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int
 /// @param type int
 /// @param name QUrl*
 ///
-QVariant* q_textbrowser_qbase_load_resource(void* self, int type, void* name);
+QVariant* q_textbrowser_super_load_resource(void* self, int type, void* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#isBackwardAvailable)
 ///
@@ -248,13 +264,17 @@ void q_textbrowser_backward(void* self);
 ///
 void q_textbrowser_on_backward(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_backward` instead
+///
+#define q_textbrowser_qbase_backward q_textbrowser_super_backward
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
 ///
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_backward(void* self);
+void q_textbrowser_super_backward(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
 ///
@@ -271,13 +291,17 @@ void q_textbrowser_forward(void* self);
 ///
 void q_textbrowser_on_forward(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_forward` instead
+///
+#define q_textbrowser_qbase_forward q_textbrowser_super_forward
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
 ///
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_forward(void* self);
+void q_textbrowser_super_forward(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#home)
 ///
@@ -294,13 +318,17 @@ void q_textbrowser_home(void* self);
 ///
 void q_textbrowser_on_home(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_home` instead
+///
+#define q_textbrowser_qbase_home q_textbrowser_super_home
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#home)
 ///
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_home(void* self);
+void q_textbrowser_super_home(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
 ///
@@ -317,13 +345,17 @@ void q_textbrowser_reload(void* self);
 ///
 void q_textbrowser_on_reload(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_reload` instead
+///
+#define q_textbrowser_qbase_reload q_textbrowser_super_reload
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
 ///
 /// Base class method implementation
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_reload(void* self);
+void q_textbrowser_super_reload(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#backwardAvailable)
 ///
@@ -424,6 +456,10 @@ bool q_textbrowser_event(void* self, void* e);
 ///
 void q_textbrowser_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_event` instead
+///
+#define q_textbrowser_qbase_event q_textbrowser_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#event)
 ///
 /// Base class method implementation
@@ -431,7 +467,7 @@ void q_textbrowser_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QTextBrowser*
 /// @param e QEvent*
 ///
-bool q_textbrowser_qbase_event(void* self, void* e);
+bool q_textbrowser_super_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
 ///
@@ -449,6 +485,10 @@ void q_textbrowser_key_press_event(void* self, void* ev);
 ///
 void q_textbrowser_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_key_press_event` instead
+///
+#define q_textbrowser_qbase_key_press_event q_textbrowser_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -456,7 +496,7 @@ void q_textbrowser_on_key_press_event(void* self, void (*callback)(void*, void*)
 /// @param self QTextBrowser*
 /// @param ev QKeyEvent*
 ///
-void q_textbrowser_qbase_key_press_event(void* self, void* ev);
+void q_textbrowser_super_key_press_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
 ///
@@ -474,6 +514,10 @@ void q_textbrowser_mouse_move_event(void* self, void* ev);
 ///
 void q_textbrowser_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_mouse_move_event` instead
+///
+#define q_textbrowser_qbase_mouse_move_event q_textbrowser_super_mouse_move_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -481,7 +525,7 @@ void q_textbrowser_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param self QTextBrowser*
 /// @param ev QMouseEvent*
 ///
-void q_textbrowser_qbase_mouse_move_event(void* self, void* ev);
+void q_textbrowser_super_mouse_move_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
 ///
@@ -499,6 +543,10 @@ void q_textbrowser_mouse_press_event(void* self, void* ev);
 ///
 void q_textbrowser_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_mouse_press_event` instead
+///
+#define q_textbrowser_qbase_mouse_press_event q_textbrowser_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -506,7 +554,7 @@ void q_textbrowser_on_mouse_press_event(void* self, void (*callback)(void*, void
 /// @param self QTextBrowser*
 /// @param ev QMouseEvent*
 ///
-void q_textbrowser_qbase_mouse_press_event(void* self, void* ev);
+void q_textbrowser_super_mouse_press_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
 ///
@@ -524,6 +572,10 @@ void q_textbrowser_mouse_release_event(void* self, void* ev);
 ///
 void q_textbrowser_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_mouse_release_event` instead
+///
+#define q_textbrowser_qbase_mouse_release_event q_textbrowser_super_mouse_release_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -531,7 +583,7 @@ void q_textbrowser_on_mouse_release_event(void* self, void (*callback)(void*, vo
 /// @param self QTextBrowser*
 /// @param ev QMouseEvent*
 ///
-void q_textbrowser_qbase_mouse_release_event(void* self, void* ev);
+void q_textbrowser_super_mouse_release_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
 ///
@@ -549,6 +601,10 @@ void q_textbrowser_focus_out_event(void* self, void* ev);
 ///
 void q_textbrowser_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_focus_out_event` instead
+///
+#define q_textbrowser_qbase_focus_out_event q_textbrowser_super_focus_out_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
 ///
 /// Base class method implementation
@@ -556,7 +612,7 @@ void q_textbrowser_on_focus_out_event(void* self, void (*callback)(void*, void*)
 /// @param self QTextBrowser*
 /// @param ev QFocusEvent*
 ///
-void q_textbrowser_qbase_focus_out_event(void* self, void* ev);
+void q_textbrowser_super_focus_out_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
 ///
@@ -574,6 +630,10 @@ bool q_textbrowser_focus_next_prev_child(void* self, bool next);
 ///
 void q_textbrowser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_focus_next_prev_child` instead
+///
+#define q_textbrowser_qbase_focus_next_prev_child q_textbrowser_super_focus_next_prev_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
 ///
 /// Base class method implementation
@@ -581,7 +641,7 @@ void q_textbrowser_on_focus_next_prev_child(void* self, bool (*callback)(void*, 
 /// @param self QTextBrowser*
 /// @param next bool
 ///
-bool q_textbrowser_qbase_focus_next_prev_child(void* self, bool next);
+bool q_textbrowser_super_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
 ///
@@ -599,6 +659,10 @@ void q_textbrowser_paint_event(void* self, void* e);
 ///
 void q_textbrowser_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_paint_event` instead
+///
+#define q_textbrowser_qbase_paint_event q_textbrowser_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
 ///
 /// Base class method implementation
@@ -606,7 +670,7 @@ void q_textbrowser_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param self QTextBrowser*
 /// @param e QPaintEvent*
 ///
-void q_textbrowser_qbase_paint_event(void* self, void* e);
+void q_textbrowser_super_paint_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
 ///
@@ -625,6 +689,10 @@ void q_textbrowser_do_set_source(void* self, void* name, int32_t type);
 ///
 void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_do_set_source` instead
+///
+#define q_textbrowser_qbase_do_set_source q_textbrowser_super_do_set_source
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
 ///
 /// Base class method implementation
@@ -633,7 +701,7 @@ void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, i
 /// @param name QUrl*
 /// @param type enum QTextDocument__ResourceType
 ///
-void q_textbrowser_qbase_do_set_source(void* self, void* name, int32_t type);
+void q_textbrowser_super_do_set_source(void* self, void* name, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4848,6 +4916,10 @@ int32_t q_textbrowser_encode_metric_f(int32_t metric, double value);
 ///
 QVariant* q_textbrowser_input_method_query(void* self, int32_t property);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_input_method_query` instead
+///
+#define q_textbrowser_qbase_input_method_query q_textbrowser_super_input_method_query
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
@@ -4857,7 +4929,7 @@ QVariant* q_textbrowser_input_method_query(void* self, int32_t property);
 /// @param self QTextBrowser*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_textbrowser_qbase_input_method_query(void* self, int32_t property);
+QVariant* q_textbrowser_super_input_method_query(void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -4881,6 +4953,10 @@ void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*
 ///
 void q_textbrowser_timer_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_timer_event` instead
+///
+#define q_textbrowser_qbase_timer_event q_textbrowser_super_timer_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#timerEvent)
@@ -4890,7 +4966,7 @@ void q_textbrowser_timer_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QTimerEvent*
 ///
-void q_textbrowser_qbase_timer_event(void* self, void* e);
+void q_textbrowser_super_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -4914,6 +4990,10 @@ void q_textbrowser_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_key_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_key_release_event` instead
+///
+#define q_textbrowser_qbase_key_release_event q_textbrowser_super_key_release_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#keyReleaseEvent)
@@ -4923,7 +5003,7 @@ void q_textbrowser_key_release_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QKeyEvent*
 ///
-void q_textbrowser_qbase_key_release_event(void* self, void* e);
+void q_textbrowser_super_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -4947,6 +5027,10 @@ void q_textbrowser_on_key_release_event(void* self, void (*callback)(void*, void
 ///
 void q_textbrowser_resize_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_resize_event` instead
+///
+#define q_textbrowser_qbase_resize_event q_textbrowser_super_resize_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#resizeEvent)
@@ -4956,7 +5040,7 @@ void q_textbrowser_resize_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QResizeEvent*
 ///
-void q_textbrowser_qbase_resize_event(void* self, void* e);
+void q_textbrowser_super_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -4980,6 +5064,10 @@ void q_textbrowser_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_mouse_double_click_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_mouse_double_click_event` instead
+///
+#define q_textbrowser_qbase_mouse_double_click_event q_textbrowser_super_mouse_double_click_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#mouseDoubleClickEvent)
@@ -4989,7 +5077,7 @@ void q_textbrowser_mouse_double_click_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QMouseEvent*
 ///
-void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e);
+void q_textbrowser_super_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5013,6 +5101,10 @@ void q_textbrowser_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 void q_textbrowser_context_menu_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_context_menu_event` instead
+///
+#define q_textbrowser_qbase_context_menu_event q_textbrowser_super_context_menu_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#contextMenuEvent)
@@ -5022,7 +5114,7 @@ void q_textbrowser_context_menu_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QContextMenuEvent*
 ///
-void q_textbrowser_qbase_context_menu_event(void* self, void* e);
+void q_textbrowser_super_context_menu_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5046,6 +5138,10 @@ void q_textbrowser_on_context_menu_event(void* self, void (*callback)(void*, voi
 ///
 void q_textbrowser_drag_enter_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_drag_enter_event` instead
+///
+#define q_textbrowser_qbase_drag_enter_event q_textbrowser_super_drag_enter_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#dragEnterEvent)
@@ -5055,7 +5151,7 @@ void q_textbrowser_drag_enter_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QDragEnterEvent*
 ///
-void q_textbrowser_qbase_drag_enter_event(void* self, void* e);
+void q_textbrowser_super_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5079,6 +5175,10 @@ void q_textbrowser_on_drag_enter_event(void* self, void (*callback)(void*, void*
 ///
 void q_textbrowser_drag_leave_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_drag_leave_event` instead
+///
+#define q_textbrowser_qbase_drag_leave_event q_textbrowser_super_drag_leave_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#dragLeaveEvent)
@@ -5088,7 +5188,7 @@ void q_textbrowser_drag_leave_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QDragLeaveEvent*
 ///
-void q_textbrowser_qbase_drag_leave_event(void* self, void* e);
+void q_textbrowser_super_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5112,6 +5212,10 @@ void q_textbrowser_on_drag_leave_event(void* self, void (*callback)(void*, void*
 ///
 void q_textbrowser_drag_move_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_drag_move_event` instead
+///
+#define q_textbrowser_qbase_drag_move_event q_textbrowser_super_drag_move_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#dragMoveEvent)
@@ -5121,7 +5225,7 @@ void q_textbrowser_drag_move_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QDragMoveEvent*
 ///
-void q_textbrowser_qbase_drag_move_event(void* self, void* e);
+void q_textbrowser_super_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5145,6 +5249,10 @@ void q_textbrowser_on_drag_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_textbrowser_drop_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_drop_event` instead
+///
+#define q_textbrowser_qbase_drop_event q_textbrowser_super_drop_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#dropEvent)
@@ -5154,7 +5262,7 @@ void q_textbrowser_drop_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QDropEvent*
 ///
-void q_textbrowser_qbase_drop_event(void* self, void* e);
+void q_textbrowser_super_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5178,6 +5286,10 @@ void q_textbrowser_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_focus_in_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_focus_in_event` instead
+///
+#define q_textbrowser_qbase_focus_in_event q_textbrowser_super_focus_in_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#focusInEvent)
@@ -5187,7 +5299,7 @@ void q_textbrowser_focus_in_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QFocusEvent*
 ///
-void q_textbrowser_qbase_focus_in_event(void* self, void* e);
+void q_textbrowser_super_focus_in_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5211,6 +5323,10 @@ void q_textbrowser_on_focus_in_event(void* self, void (*callback)(void*, void*))
 ///
 void q_textbrowser_show_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_show_event` instead
+///
+#define q_textbrowser_qbase_show_event q_textbrowser_super_show_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#showEvent)
@@ -5220,7 +5336,7 @@ void q_textbrowser_show_event(void* self, void* param1);
 /// @param self QTextBrowser*
 /// @param param1 QShowEvent*
 ///
-void q_textbrowser_qbase_show_event(void* self, void* param1);
+void q_textbrowser_super_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
 ///
@@ -5244,6 +5360,10 @@ void q_textbrowser_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_change_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_change_event` instead
+///
+#define q_textbrowser_qbase_change_event q_textbrowser_super_change_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#changeEvent)
@@ -5253,7 +5373,7 @@ void q_textbrowser_change_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QEvent*
 ///
-void q_textbrowser_qbase_change_event(void* self, void* e);
+void q_textbrowser_super_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5277,6 +5397,10 @@ void q_textbrowser_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_wheel_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_wheel_event` instead
+///
+#define q_textbrowser_qbase_wheel_event q_textbrowser_super_wheel_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#wheelEvent)
@@ -5286,7 +5410,7 @@ void q_textbrowser_wheel_event(void* self, void* e);
 /// @param self QTextBrowser*
 /// @param e QWheelEvent*
 ///
-void q_textbrowser_qbase_wheel_event(void* self, void* e);
+void q_textbrowser_super_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
@@ -5309,6 +5433,10 @@ void q_textbrowser_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 QMimeData* q_textbrowser_create_mime_data_from_selection(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_create_mime_data_from_selection` instead
+///
+#define q_textbrowser_qbase_create_mime_data_from_selection q_textbrowser_super_create_mime_data_from_selection
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#createMimeDataFromSelection)
@@ -5317,7 +5445,7 @@ QMimeData* q_textbrowser_create_mime_data_from_selection(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self);
+QMimeData* q_textbrowser_super_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -5341,6 +5469,10 @@ void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*c
 ///
 bool q_textbrowser_can_insert_from_mime_data(void* self, void* source);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_can_insert_from_mime_data` instead
+///
+#define q_textbrowser_qbase_can_insert_from_mime_data q_textbrowser_super_can_insert_from_mime_data
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#canInsertFromMimeData)
@@ -5350,7 +5482,7 @@ bool q_textbrowser_can_insert_from_mime_data(void* self, void* source);
 /// @param self QTextBrowser*
 /// @param source QMimeData*
 ///
-bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source);
+bool q_textbrowser_super_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5374,6 +5506,10 @@ void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*callback)(voi
 ///
 void q_textbrowser_insert_from_mime_data(void* self, void* source);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_insert_from_mime_data` instead
+///
+#define q_textbrowser_qbase_insert_from_mime_data q_textbrowser_super_insert_from_mime_data
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#insertFromMimeData)
@@ -5383,7 +5519,7 @@ void q_textbrowser_insert_from_mime_data(void* self, void* source);
 /// @param self QTextBrowser*
 /// @param source QMimeData*
 ///
-void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source);
+void q_textbrowser_super_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
 ///
@@ -5407,6 +5543,10 @@ void q_textbrowser_on_insert_from_mime_data(void* self, void (*callback)(void*, 
 ///
 void q_textbrowser_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_input_method_event` instead
+///
+#define q_textbrowser_qbase_input_method_event q_textbrowser_super_input_method_event
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#inputMethodEvent)
@@ -5416,7 +5556,7 @@ void q_textbrowser_input_method_event(void* self, void* param1);
 /// @param self QTextBrowser*
 /// @param param1 QInputMethodEvent*
 ///
-void q_textbrowser_qbase_input_method_event(void* self, void* param1);
+void q_textbrowser_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
 ///
@@ -5441,6 +5581,10 @@ void q_textbrowser_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 void q_textbrowser_scroll_contents_by(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_scroll_contents_by` instead
+///
+#define q_textbrowser_qbase_scroll_contents_by q_textbrowser_super_scroll_contents_by
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#scrollContentsBy)
@@ -5451,7 +5595,7 @@ void q_textbrowser_scroll_contents_by(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy);
+void q_textbrowser_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
 ///
@@ -5475,6 +5619,10 @@ void q_textbrowser_on_scroll_contents_by(void* self, void (*callback)(void*, int
 ///
 void q_textbrowser_do_set_text_cursor(void* self, void* cursor);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_do_set_text_cursor` instead
+///
+#define q_textbrowser_qbase_do_set_text_cursor q_textbrowser_super_do_set_text_cursor
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#doSetTextCursor)
@@ -5484,7 +5632,7 @@ void q_textbrowser_do_set_text_cursor(void* self, void* cursor);
 /// @param self QTextBrowser*
 /// @param cursor QTextCursor*
 ///
-void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor);
+void q_textbrowser_super_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
 ///
@@ -5507,6 +5655,10 @@ void q_textbrowser_on_do_set_text_cursor(void* self, void (*callback)(void*, voi
 ///
 QSize* q_textbrowser_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_minimum_size_hint` instead
+///
+#define q_textbrowser_qbase_minimum_size_hint q_textbrowser_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -5515,7 +5667,7 @@ QSize* q_textbrowser_minimum_size_hint(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QSize* q_textbrowser_qbase_minimum_size_hint(void* self);
+QSize* q_textbrowser_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5538,6 +5690,10 @@ void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* q_textbrowser_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_size_hint` instead
+///
+#define q_textbrowser_qbase_size_hint q_textbrowser_super_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
@@ -5546,7 +5702,7 @@ QSize* q_textbrowser_size_hint(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QSize* q_textbrowser_qbase_size_hint(void* self);
+QSize* q_textbrowser_super_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5570,6 +5726,10 @@ void q_textbrowser_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_textbrowser_setup_viewport(void* self, void* viewport);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_setup_viewport` instead
+///
+#define q_textbrowser_qbase_setup_viewport q_textbrowser_super_setup_viewport
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -5579,7 +5739,7 @@ void q_textbrowser_setup_viewport(void* self, void* viewport);
 /// @param self QTextBrowser*
 /// @param viewport QWidget*
 ///
-void q_textbrowser_qbase_setup_viewport(void* self, void* viewport);
+void q_textbrowser_super_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5604,6 +5764,10 @@ void q_textbrowser_on_setup_viewport(void* self, void (*callback)(void*, void*))
 ///
 bool q_textbrowser_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_event_filter` instead
+///
+#define q_textbrowser_qbase_event_filter q_textbrowser_super_event_filter
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
@@ -5614,7 +5778,7 @@ bool q_textbrowser_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_textbrowser_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5638,6 +5802,10 @@ void q_textbrowser_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 bool q_textbrowser_viewport_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_viewport_event` instead
+///
+#define q_textbrowser_qbase_viewport_event q_textbrowser_super_viewport_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -5647,7 +5815,7 @@ bool q_textbrowser_viewport_event(void* self, void* param1);
 /// @param self QTextBrowser*
 /// @param param1 QEvent*
 ///
-bool q_textbrowser_qbase_viewport_event(void* self, void* param1);
+bool q_textbrowser_super_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5670,6 +5838,10 @@ void q_textbrowser_on_viewport_event(void* self, bool (*callback)(void*, void*))
 ///
 QSize* q_textbrowser_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_viewport_size_hint` instead
+///
+#define q_textbrowser_qbase_viewport_size_hint q_textbrowser_super_viewport_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -5678,7 +5850,7 @@ QSize* q_textbrowser_viewport_size_hint(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QSize* q_textbrowser_qbase_viewport_size_hint(void* self);
+QSize* q_textbrowser_super_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5702,6 +5874,10 @@ void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_textbrowser_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_init_style_option` instead
+///
+#define q_textbrowser_qbase_init_style_option q_textbrowser_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -5711,7 +5887,7 @@ void q_textbrowser_init_style_option(void* self, void* option);
 /// @param self QTextBrowser*
 /// @param option QStyleOptionFrame*
 ///
-void q_textbrowser_qbase_init_style_option(void* self, void* option);
+void q_textbrowser_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -5734,6 +5910,10 @@ void q_textbrowser_on_init_style_option(void* self, void (*callback)(void*, void
 ///
 int32_t q_textbrowser_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_dev_type` instead
+///
+#define q_textbrowser_qbase_dev_type q_textbrowser_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5742,7 +5922,7 @@ int32_t q_textbrowser_dev_type(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-int32_t q_textbrowser_qbase_dev_type(void* self);
+int32_t q_textbrowser_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5766,6 +5946,10 @@ void q_textbrowser_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_textbrowser_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_set_visible` instead
+///
+#define q_textbrowser_qbase_set_visible q_textbrowser_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5775,7 +5959,7 @@ void q_textbrowser_set_visible(void* self, bool visible);
 /// @param self QTextBrowser*
 /// @param visible bool
 ///
-void q_textbrowser_qbase_set_visible(void* self, bool visible);
+void q_textbrowser_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -5799,6 +5983,10 @@ void q_textbrowser_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_textbrowser_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_height_for_width` instead
+///
+#define q_textbrowser_qbase_height_for_width q_textbrowser_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5808,7 +5996,7 @@ int32_t q_textbrowser_height_for_width(void* self, int param1);
 /// @param self QTextBrowser*
 /// @param param1 int
 ///
-int32_t q_textbrowser_qbase_height_for_width(void* self, int param1);
+int32_t q_textbrowser_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5831,6 +6019,10 @@ void q_textbrowser_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 bool q_textbrowser_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_has_height_for_width` instead
+///
+#define q_textbrowser_qbase_has_height_for_width q_textbrowser_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5839,7 +6031,7 @@ bool q_textbrowser_has_height_for_width(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-bool q_textbrowser_qbase_has_height_for_width(void* self);
+bool q_textbrowser_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5862,6 +6054,10 @@ void q_textbrowser_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_textbrowser_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_paint_engine` instead
+///
+#define q_textbrowser_qbase_paint_engine q_textbrowser_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5870,7 +6066,7 @@ QPaintEngine* q_textbrowser_paint_engine(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QPaintEngine* q_textbrowser_qbase_paint_engine(void* self);
+QPaintEngine* q_textbrowser_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5894,6 +6090,10 @@ void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_textbrowser_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_enter_event` instead
+///
+#define q_textbrowser_qbase_enter_event q_textbrowser_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5903,7 +6103,7 @@ void q_textbrowser_enter_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QEnterEvent*
 ///
-void q_textbrowser_qbase_enter_event(void* self, void* event);
+void q_textbrowser_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5927,6 +6127,10 @@ void q_textbrowser_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_leave_event` instead
+///
+#define q_textbrowser_qbase_leave_event q_textbrowser_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5936,7 +6140,7 @@ void q_textbrowser_leave_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QEvent*
 ///
-void q_textbrowser_qbase_leave_event(void* self, void* event);
+void q_textbrowser_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5960,6 +6164,10 @@ void q_textbrowser_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_move_event` instead
+///
+#define q_textbrowser_qbase_move_event q_textbrowser_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5969,7 +6177,7 @@ void q_textbrowser_move_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QMoveEvent*
 ///
-void q_textbrowser_qbase_move_event(void* self, void* event);
+void q_textbrowser_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5993,6 +6201,10 @@ void q_textbrowser_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_close_event` instead
+///
+#define q_textbrowser_qbase_close_event q_textbrowser_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -6002,7 +6214,7 @@ void q_textbrowser_close_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QCloseEvent*
 ///
-void q_textbrowser_qbase_close_event(void* self, void* event);
+void q_textbrowser_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6026,6 +6238,10 @@ void q_textbrowser_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_tablet_event` instead
+///
+#define q_textbrowser_qbase_tablet_event q_textbrowser_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -6035,7 +6251,7 @@ void q_textbrowser_tablet_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QTabletEvent*
 ///
-void q_textbrowser_qbase_tablet_event(void* self, void* event);
+void q_textbrowser_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6059,6 +6275,10 @@ void q_textbrowser_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_action_event` instead
+///
+#define q_textbrowser_qbase_action_event q_textbrowser_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -6068,7 +6288,7 @@ void q_textbrowser_action_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QActionEvent*
 ///
-void q_textbrowser_qbase_action_event(void* self, void* event);
+void q_textbrowser_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6092,6 +6312,10 @@ void q_textbrowser_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_hide_event` instead
+///
+#define q_textbrowser_qbase_hide_event q_textbrowser_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -6101,7 +6325,7 @@ void q_textbrowser_hide_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QHideEvent*
 ///
-void q_textbrowser_qbase_hide_event(void* self, void* event);
+void q_textbrowser_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6127,6 +6351,10 @@ void q_textbrowser_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_textbrowser_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_native_event` instead
+///
+#define q_textbrowser_qbase_native_event q_textbrowser_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -6138,7 +6366,7 @@ bool q_textbrowser_native_event(void* self, char* eventType, void* message, intp
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_textbrowser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_textbrowser_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -6162,6 +6390,10 @@ void q_textbrowser_on_native_event(void* self, bool (*callback)(void*, libqt_str
 ///
 int32_t q_textbrowser_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_metric` instead
+///
+#define q_textbrowser_qbase_metric q_textbrowser_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -6171,7 +6403,7 @@ int32_t q_textbrowser_metric(void* self, int32_t param1);
 /// @param self QTextBrowser*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_textbrowser_qbase_metric(void* self, int32_t param1);
+int32_t q_textbrowser_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6195,6 +6427,10 @@ void q_textbrowser_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_textbrowser_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_init_painter` instead
+///
+#define q_textbrowser_qbase_init_painter q_textbrowser_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -6204,7 +6440,7 @@ void q_textbrowser_init_painter(void* self, void* painter);
 /// @param self QTextBrowser*
 /// @param painter QPainter*
 ///
-void q_textbrowser_qbase_init_painter(void* self, void* painter);
+void q_textbrowser_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -6228,6 +6464,10 @@ void q_textbrowser_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_textbrowser_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_redirected` instead
+///
+#define q_textbrowser_qbase_redirected q_textbrowser_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -6237,7 +6477,7 @@ QPaintDevice* q_textbrowser_redirected(void* self, void* offset);
 /// @param self QTextBrowser*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_textbrowser_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -6260,6 +6500,10 @@ void q_textbrowser_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 ///
 QPainter* q_textbrowser_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_shared_painter` instead
+///
+#define q_textbrowser_qbase_shared_painter q_textbrowser_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -6268,7 +6512,7 @@ QPainter* q_textbrowser_shared_painter(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QPainter* q_textbrowser_qbase_shared_painter(void* self);
+QPainter* q_textbrowser_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6292,6 +6536,10 @@ void q_textbrowser_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_textbrowser_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_child_event` instead
+///
+#define q_textbrowser_qbase_child_event q_textbrowser_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6301,7 +6549,7 @@ void q_textbrowser_child_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QChildEvent*
 ///
-void q_textbrowser_qbase_child_event(void* self, void* event);
+void q_textbrowser_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6325,6 +6573,10 @@ void q_textbrowser_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_custom_event` instead
+///
+#define q_textbrowser_qbase_custom_event q_textbrowser_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6334,7 +6586,7 @@ void q_textbrowser_custom_event(void* self, void* event);
 /// @param self QTextBrowser*
 /// @param event QEvent*
 ///
-void q_textbrowser_qbase_custom_event(void* self, void* event);
+void q_textbrowser_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6358,6 +6610,10 @@ void q_textbrowser_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_connect_notify` instead
+///
+#define q_textbrowser_qbase_connect_notify q_textbrowser_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6367,7 +6623,7 @@ void q_textbrowser_connect_notify(void* self, void* signal);
 /// @param self QTextBrowser*
 /// @param signal QMetaMethod*
 ///
-void q_textbrowser_qbase_connect_notify(void* self, void* signal);
+void q_textbrowser_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6391,6 +6647,10 @@ void q_textbrowser_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_textbrowser_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_disconnect_notify` instead
+///
+#define q_textbrowser_qbase_disconnect_notify q_textbrowser_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6400,7 +6660,7 @@ void q_textbrowser_disconnect_notify(void* self, void* signal);
 /// @param self QTextBrowser*
 /// @param signal QMetaMethod*
 ///
-void q_textbrowser_qbase_disconnect_notify(void* self, void* signal);
+void q_textbrowser_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6424,6 +6684,10 @@ void q_textbrowser_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 void q_textbrowser_zoom_in_f(void* self, float range);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_zoom_in_f` instead
+///
+#define q_textbrowser_qbase_zoom_in_f q_textbrowser_super_zoom_in_f
+
 /// Inherited from QTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#zoomInF)
@@ -6433,7 +6697,7 @@ void q_textbrowser_zoom_in_f(void* self, float range);
 /// @param self QTextBrowser*
 /// @param range float
 ///
-void q_textbrowser_qbase_zoom_in_f(void* self, float range);
+void q_textbrowser_super_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
 ///
@@ -6460,6 +6724,10 @@ void q_textbrowser_on_zoom_in_f(void* self, void (*callback)(void*, float));
 ///
 void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_set_viewport_margins` instead
+///
+#define q_textbrowser_qbase_set_viewport_margins q_textbrowser_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -6472,7 +6740,7 @@ void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right
 /// @param right int
 /// @param bottom int
 ///
-void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void q_textbrowser_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6495,6 +6763,10 @@ void q_textbrowser_on_set_viewport_margins(void* self, void (*callback)(void*, i
 ///
 QMargins* q_textbrowser_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_viewport_margins` instead
+///
+#define q_textbrowser_qbase_viewport_margins q_textbrowser_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -6503,7 +6775,7 @@ QMargins* q_textbrowser_viewport_margins(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QMargins* q_textbrowser_qbase_viewport_margins(void* self);
+QMargins* q_textbrowser_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6527,6 +6799,10 @@ void q_textbrowser_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_textbrowser_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_draw_frame` instead
+///
+#define q_textbrowser_qbase_draw_frame q_textbrowser_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -6536,7 +6812,7 @@ void q_textbrowser_draw_frame(void* self, void* param1);
 /// @param self QTextBrowser*
 /// @param param1 QPainter*
 ///
-void q_textbrowser_qbase_draw_frame(void* self, void* param1);
+void q_textbrowser_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -6559,6 +6835,10 @@ void q_textbrowser_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_textbrowser_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_update_micro_focus` instead
+///
+#define q_textbrowser_qbase_update_micro_focus q_textbrowser_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6567,7 +6847,7 @@ void q_textbrowser_update_micro_focus(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_update_micro_focus(void* self);
+void q_textbrowser_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6590,6 +6870,10 @@ void q_textbrowser_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_textbrowser_create(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_create` instead
+///
+#define q_textbrowser_qbase_create q_textbrowser_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -6598,7 +6882,7 @@ void q_textbrowser_create(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_create(void* self);
+void q_textbrowser_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6621,6 +6905,10 @@ void q_textbrowser_on_create(void* self, void (*callback)());
 ///
 void q_textbrowser_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_destroy` instead
+///
+#define q_textbrowser_qbase_destroy q_textbrowser_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6629,7 +6917,7 @@ void q_textbrowser_destroy(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-void q_textbrowser_qbase_destroy(void* self);
+void q_textbrowser_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6652,6 +6940,10 @@ void q_textbrowser_on_destroy(void* self, void (*callback)());
 ///
 bool q_textbrowser_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_focus_next_child` instead
+///
+#define q_textbrowser_qbase_focus_next_child q_textbrowser_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -6660,7 +6952,7 @@ bool q_textbrowser_focus_next_child(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-bool q_textbrowser_qbase_focus_next_child(void* self);
+bool q_textbrowser_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6683,6 +6975,10 @@ void q_textbrowser_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_textbrowser_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_focus_previous_child` instead
+///
+#define q_textbrowser_qbase_focus_previous_child q_textbrowser_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6691,7 +6987,7 @@ bool q_textbrowser_focus_previous_child(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-bool q_textbrowser_qbase_focus_previous_child(void* self);
+bool q_textbrowser_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6714,6 +7010,10 @@ void q_textbrowser_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_textbrowser_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_sender` instead
+///
+#define q_textbrowser_qbase_sender q_textbrowser_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6722,7 +7022,7 @@ QObject* q_textbrowser_sender(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-QObject* q_textbrowser_qbase_sender(void* self);
+QObject* q_textbrowser_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6745,6 +7045,10 @@ void q_textbrowser_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_textbrowser_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_sender_signal_index` instead
+///
+#define q_textbrowser_qbase_sender_signal_index q_textbrowser_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6753,7 +7057,7 @@ int32_t q_textbrowser_sender_signal_index(void* self);
 ///
 /// @param self QTextBrowser*
 ///
-int32_t q_textbrowser_qbase_sender_signal_index(void* self);
+int32_t q_textbrowser_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6777,6 +7081,10 @@ void q_textbrowser_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_textbrowser_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_receivers` instead
+///
+#define q_textbrowser_qbase_receivers q_textbrowser_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6786,7 +7094,7 @@ int32_t q_textbrowser_receivers(void* self, const char* signal);
 /// @param self QTextBrowser*
 /// @param signal const char*
 ///
-int32_t q_textbrowser_qbase_receivers(void* self, const char* signal);
+int32_t q_textbrowser_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6810,6 +7118,10 @@ void q_textbrowser_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 bool q_textbrowser_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_is_signal_connected` instead
+///
+#define q_textbrowser_qbase_is_signal_connected q_textbrowser_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6819,7 +7131,7 @@ bool q_textbrowser_is_signal_connected(void* self, void* signal);
 /// @param self QTextBrowser*
 /// @param signal QMetaMethod*
 ///
-bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal);
+bool q_textbrowser_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6844,6 +7156,10 @@ void q_textbrowser_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 double q_textbrowser_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_textbrowser_super_get_decoded_metric_f` instead
+///
+#define q_textbrowser_qbase_get_decoded_metric_f q_textbrowser_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -6854,7 +7170,7 @@ double q_textbrowser_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_textbrowser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_textbrowser_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

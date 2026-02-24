@@ -29,8 +29,8 @@ void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEv
     QTest__QTouchEventWidgetSequence_OnStationary((QTest__QTouchEventWidgetSequence*)self, (intptr_t)callback);
 }
 
-QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_qbase_stationary(void* self, int touchId) {
-    return QTest__QTouchEventWidgetSequence_QBaseStationary((QTest__QTouchEventWidgetSequence*)self, touchId);
+QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_super_stationary(void* self, int touchId) {
+    return QTest__QTouchEventWidgetSequence_SuperStationary((QTest__QTouchEventWidgetSequence*)self, touchId);
 }
 
 bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents) {
@@ -41,8 +41,8 @@ void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(vo
     QTest__QTouchEventWidgetSequence_OnCommit((QTest__QTouchEventWidgetSequence*)self, (intptr_t)callback);
 }
 
-bool q_test__qtoucheventwidgetsequence_qbase_commit(void* self, bool processEvents) {
-    return QTest__QTouchEventWidgetSequence_QBaseCommit((QTest__QTouchEventWidgetSequence*)self, processEvents);
+bool q_test__qtoucheventwidgetsequence_super_commit(void* self, bool processEvents) {
+    return QTest__QTouchEventWidgetSequence_SuperCommit((QTest__QTouchEventWidgetSequence*)self, processEvents);
 }
 
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void* self, int touchId, void* pt, void* widget) {
@@ -61,8 +61,8 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point(void* self, int touchId) {
     return QTest__QTouchEventWidgetSequence_Point((QTest__QTouchEventWidgetSequence*)self, touchId);
 }
 
-QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point(void* self, int touchId) {
-    return QTest__QTouchEventWidgetSequence_QBasePoint((QTest__QTouchEventWidgetSequence*)self, touchId);
+QEventPoint* q_test__qtoucheventwidgetsequence_super_point(void* self, int touchId) {
+    return QTest__QTouchEventWidgetSequence_SuperPoint((QTest__QTouchEventWidgetSequence*)self, touchId);
 }
 
 void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callback)(void*, int)) {
@@ -73,8 +73,8 @@ QEventPoint* q_test__qtoucheventwidgetsequence_point_or_previous_point(void* sel
     return QTest__QTouchEventWidgetSequence_PointOrPreviousPoint((QTest__QTouchEventWidgetSequence*)self, touchId);
 }
 
-QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point(void* self, int touchId) {
-    return QTest__QTouchEventWidgetSequence_QBasePointOrPreviousPoint((QTest__QTouchEventWidgetSequence*)self, touchId);
+QEventPoint* q_test__qtoucheventwidgetsequence_super_point_or_previous_point(void* self, int touchId) {
+    return QTest__QTouchEventWidgetSequence_SuperPointOrPreviousPoint((QTest__QTouchEventWidgetSequence*)self, touchId);
 }
 
 void q_test__qtoucheventwidgetsequence_on_point_or_previous_point(void* self, QEventPoint* (*callback)(void*, int)) {

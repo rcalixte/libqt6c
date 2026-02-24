@@ -37,8 +37,8 @@ void k_sonnet__highlighter_on_meta_object(void* self, const QMetaObject* (*callb
     Sonnet__Highlighter_OnMetaObject((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sonnet__highlighter_qbase_meta_object(void* self) {
-    return Sonnet__Highlighter_QBaseMetaObject((Sonnet__Highlighter*)self);
+const QMetaObject* k_sonnet__highlighter_super_meta_object(void* self) {
+    return Sonnet__Highlighter_SuperMetaObject((Sonnet__Highlighter*)self);
 }
 
 void* k_sonnet__highlighter_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void k_sonnet__highlighter_on_metacast(void* self, void* (*callback)(void*, cons
     Sonnet__Highlighter_OnMetacast((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-void* k_sonnet__highlighter_qbase_metacast(void* self, const char* param1) {
-    return Sonnet__Highlighter_QBaseMetacast((Sonnet__Highlighter*)self, param1);
+void* k_sonnet__highlighter_super_metacast(void* self, const char* param1) {
+    return Sonnet__Highlighter_SuperMetacast((Sonnet__Highlighter*)self, param1);
 }
 
 int32_t k_sonnet__highlighter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void k_sonnet__highlighter_on_metacall(void* self, int32_t (*callback)(void*, in
     Sonnet__Highlighter_OnMetacall((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-int32_t k_sonnet__highlighter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Sonnet__Highlighter_QBaseMetacall((Sonnet__Highlighter*)self, param1, param2, param3);
+int32_t k_sonnet__highlighter_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Sonnet__Highlighter_SuperMetacall((Sonnet__Highlighter*)self, param1, param2, param3);
 }
 
 const char* k_sonnet__highlighter_tr(const char* s) {
@@ -185,8 +185,8 @@ void k_sonnet__highlighter_on_highlight_block(void* self, void (*callback)(void*
     Sonnet__Highlighter_OnHighlightBlock((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-void k_sonnet__highlighter_qbase_highlight_block(void* self, const char* text) {
-    Sonnet__Highlighter_QBaseHighlightBlock((Sonnet__Highlighter*)self, qstring(text));
+void k_sonnet__highlighter_super_highlight_block(void* self, const char* text) {
+    Sonnet__Highlighter_SuperHighlightBlock((Sonnet__Highlighter*)self, qstring(text));
 }
 
 void k_sonnet__highlighter_set_misspelled(void* self, int start, int count) {
@@ -197,8 +197,8 @@ void k_sonnet__highlighter_on_set_misspelled(void* self, void (*callback)(void*,
     Sonnet__Highlighter_OnSetMisspelled((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-void k_sonnet__highlighter_qbase_set_misspelled(void* self, int start, int count) {
-    Sonnet__Highlighter_QBaseSetMisspelled((Sonnet__Highlighter*)self, start, count);
+void k_sonnet__highlighter_super_set_misspelled(void* self, int start, int count) {
+    Sonnet__Highlighter_SuperSetMisspelled((Sonnet__Highlighter*)self, start, count);
 }
 
 void k_sonnet__highlighter_unset_misspelled(void* self, int start, int count) {
@@ -209,8 +209,8 @@ void k_sonnet__highlighter_on_unset_misspelled(void* self, void (*callback)(void
     Sonnet__Highlighter_OnUnsetMisspelled((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-void k_sonnet__highlighter_qbase_unset_misspelled(void* self, int start, int count) {
-    Sonnet__Highlighter_QBaseUnsetMisspelled((Sonnet__Highlighter*)self, start, count);
+void k_sonnet__highlighter_super_unset_misspelled(void* self, int start, int count) {
+    Sonnet__Highlighter_SuperUnsetMisspelled((Sonnet__Highlighter*)self, start, count);
 }
 
 bool k_sonnet__highlighter_event_filter(void* self, void* o, void* e) {
@@ -221,8 +221,8 @@ void k_sonnet__highlighter_on_event_filter(void* self, bool (*callback)(void*, v
     Sonnet__Highlighter_OnEventFilter((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-bool k_sonnet__highlighter_qbase_event_filter(void* self, void* o, void* e) {
-    return Sonnet__Highlighter_QBaseEventFilter((Sonnet__Highlighter*)self, (QObject*)o, (QEvent*)e);
+bool k_sonnet__highlighter_super_event_filter(void* self, void* o, void* e) {
+    return Sonnet__Highlighter_SuperEventFilter((Sonnet__Highlighter*)self, (QObject*)o, (QEvent*)e);
 }
 
 bool k_sonnet__highlighter_intra_word_editing(void* self) {
@@ -233,8 +233,8 @@ void k_sonnet__highlighter_on_intra_word_editing(void* self, bool (*callback)())
     Sonnet__Highlighter_OnIntraWordEditing((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-bool k_sonnet__highlighter_qbase_intra_word_editing(void* self) {
-    return Sonnet__Highlighter_QBaseIntraWordEditing((Sonnet__Highlighter*)self);
+bool k_sonnet__highlighter_super_intra_word_editing(void* self) {
+    return Sonnet__Highlighter_SuperIntraWordEditing((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_set_intra_word_editing(void* self, bool editing) {
@@ -245,8 +245,8 @@ void k_sonnet__highlighter_on_set_intra_word_editing(void* self, void (*callback
     Sonnet__Highlighter_OnSetIntraWordEditing((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 
-void k_sonnet__highlighter_qbase_set_intra_word_editing(void* self, bool editing) {
-    Sonnet__Highlighter_QBaseSetIntraWordEditing((Sonnet__Highlighter*)self, editing);
+void k_sonnet__highlighter_super_set_intra_word_editing(void* self, bool editing) {
+    Sonnet__Highlighter_SuperSetIntraWordEditing((Sonnet__Highlighter*)self, editing);
 }
 
 void k_sonnet__highlighter_set_current_language(void* self, const char* language) {
@@ -540,8 +540,8 @@ bool k_sonnet__highlighter_event(void* self, void* event) {
     return Sonnet__Highlighter_Event((Sonnet__Highlighter*)self, (QEvent*)event);
 }
 
-bool k_sonnet__highlighter_qbase_event(void* self, void* event) {
-    return Sonnet__Highlighter_QBaseEvent((Sonnet__Highlighter*)self, (QEvent*)event);
+bool k_sonnet__highlighter_super_event(void* self, void* event) {
+    return Sonnet__Highlighter_SuperEvent((Sonnet__Highlighter*)self, (QEvent*)event);
 }
 
 void k_sonnet__highlighter_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -552,8 +552,8 @@ void k_sonnet__highlighter_timer_event(void* self, void* event) {
     Sonnet__Highlighter_TimerEvent((Sonnet__Highlighter*)self, (QTimerEvent*)event);
 }
 
-void k_sonnet__highlighter_qbase_timer_event(void* self, void* event) {
-    Sonnet__Highlighter_QBaseTimerEvent((Sonnet__Highlighter*)self, (QTimerEvent*)event);
+void k_sonnet__highlighter_super_timer_event(void* self, void* event) {
+    Sonnet__Highlighter_SuperTimerEvent((Sonnet__Highlighter*)self, (QTimerEvent*)event);
 }
 
 void k_sonnet__highlighter_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -564,8 +564,8 @@ void k_sonnet__highlighter_child_event(void* self, void* event) {
     Sonnet__Highlighter_ChildEvent((Sonnet__Highlighter*)self, (QChildEvent*)event);
 }
 
-void k_sonnet__highlighter_qbase_child_event(void* self, void* event) {
-    Sonnet__Highlighter_QBaseChildEvent((Sonnet__Highlighter*)self, (QChildEvent*)event);
+void k_sonnet__highlighter_super_child_event(void* self, void* event) {
+    Sonnet__Highlighter_SuperChildEvent((Sonnet__Highlighter*)self, (QChildEvent*)event);
 }
 
 void k_sonnet__highlighter_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -576,8 +576,8 @@ void k_sonnet__highlighter_custom_event(void* self, void* event) {
     Sonnet__Highlighter_CustomEvent((Sonnet__Highlighter*)self, (QEvent*)event);
 }
 
-void k_sonnet__highlighter_qbase_custom_event(void* self, void* event) {
-    Sonnet__Highlighter_QBaseCustomEvent((Sonnet__Highlighter*)self, (QEvent*)event);
+void k_sonnet__highlighter_super_custom_event(void* self, void* event) {
+    Sonnet__Highlighter_SuperCustomEvent((Sonnet__Highlighter*)self, (QEvent*)event);
 }
 
 void k_sonnet__highlighter_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -588,8 +588,8 @@ void k_sonnet__highlighter_connect_notify(void* self, void* signal) {
     Sonnet__Highlighter_ConnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__highlighter_qbase_connect_notify(void* self, void* signal) {
-    Sonnet__Highlighter_QBaseConnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
+void k_sonnet__highlighter_super_connect_notify(void* self, void* signal) {
+    Sonnet__Highlighter_SuperConnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__highlighter_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -600,8 +600,8 @@ void k_sonnet__highlighter_disconnect_notify(void* self, void* signal) {
     Sonnet__Highlighter_DisconnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__highlighter_qbase_disconnect_notify(void* self, void* signal) {
-    Sonnet__Highlighter_QBaseDisconnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
+void k_sonnet__highlighter_super_disconnect_notify(void* self, void* signal) {
+    Sonnet__Highlighter_SuperDisconnectNotify((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__highlighter_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -612,8 +612,8 @@ void k_sonnet__highlighter_set_format(void* self, int start, int count, void* fo
     Sonnet__Highlighter_SetFormat((Sonnet__Highlighter*)self, start, count, (QTextCharFormat*)format);
 }
 
-void k_sonnet__highlighter_qbase_set_format(void* self, int start, int count, void* format) {
-    Sonnet__Highlighter_QBaseSetFormat((Sonnet__Highlighter*)self, start, count, (QTextCharFormat*)format);
+void k_sonnet__highlighter_super_set_format(void* self, int start, int count, void* format) {
+    Sonnet__Highlighter_SuperSetFormat((Sonnet__Highlighter*)self, start, count, (QTextCharFormat*)format);
 }
 
 void k_sonnet__highlighter_on_set_format(void* self, void (*callback)(void*, int, int, void*)) {
@@ -624,8 +624,8 @@ QTextCharFormat* k_sonnet__highlighter_format(void* self, int pos) {
     return Sonnet__Highlighter_Format((Sonnet__Highlighter*)self, pos);
 }
 
-QTextCharFormat* k_sonnet__highlighter_qbase_format(void* self, int pos) {
-    return Sonnet__Highlighter_QBaseFormat((Sonnet__Highlighter*)self, pos);
+QTextCharFormat* k_sonnet__highlighter_super_format(void* self, int pos) {
+    return Sonnet__Highlighter_SuperFormat((Sonnet__Highlighter*)self, pos);
 }
 
 void k_sonnet__highlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int)) {
@@ -636,8 +636,8 @@ int32_t k_sonnet__highlighter_previous_block_state(void* self) {
     return Sonnet__Highlighter_PreviousBlockState((Sonnet__Highlighter*)self);
 }
 
-int32_t k_sonnet__highlighter_qbase_previous_block_state(void* self) {
-    return Sonnet__Highlighter_QBasePreviousBlockState((Sonnet__Highlighter*)self);
+int32_t k_sonnet__highlighter_super_previous_block_state(void* self) {
+    return Sonnet__Highlighter_SuperPreviousBlockState((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_previous_block_state(void* self, int32_t (*callback)()) {
@@ -648,8 +648,8 @@ int32_t k_sonnet__highlighter_current_block_state(void* self) {
     return Sonnet__Highlighter_CurrentBlockState((Sonnet__Highlighter*)self);
 }
 
-int32_t k_sonnet__highlighter_qbase_current_block_state(void* self) {
-    return Sonnet__Highlighter_QBaseCurrentBlockState((Sonnet__Highlighter*)self);
+int32_t k_sonnet__highlighter_super_current_block_state(void* self) {
+    return Sonnet__Highlighter_SuperCurrentBlockState((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_current_block_state(void* self, int32_t (*callback)()) {
@@ -660,8 +660,8 @@ void k_sonnet__highlighter_set_current_block_state(void* self, int newState) {
     Sonnet__Highlighter_SetCurrentBlockState((Sonnet__Highlighter*)self, newState);
 }
 
-void k_sonnet__highlighter_qbase_set_current_block_state(void* self, int newState) {
-    Sonnet__Highlighter_QBaseSetCurrentBlockState((Sonnet__Highlighter*)self, newState);
+void k_sonnet__highlighter_super_set_current_block_state(void* self, int newState) {
+    Sonnet__Highlighter_SuperSetCurrentBlockState((Sonnet__Highlighter*)self, newState);
 }
 
 void k_sonnet__highlighter_on_set_current_block_state(void* self, void (*callback)(void*, int)) {
@@ -672,8 +672,8 @@ void k_sonnet__highlighter_set_current_block_user_data(void* self, void* data) {
     Sonnet__Highlighter_SetCurrentBlockUserData((Sonnet__Highlighter*)self, (QTextBlockUserData*)data);
 }
 
-void k_sonnet__highlighter_qbase_set_current_block_user_data(void* self, void* data) {
-    Sonnet__Highlighter_QBaseSetCurrentBlockUserData((Sonnet__Highlighter*)self, (QTextBlockUserData*)data);
+void k_sonnet__highlighter_super_set_current_block_user_data(void* self, void* data) {
+    Sonnet__Highlighter_SuperSetCurrentBlockUserData((Sonnet__Highlighter*)self, (QTextBlockUserData*)data);
 }
 
 void k_sonnet__highlighter_on_set_current_block_user_data(void* self, void (*callback)(void*, void*)) {
@@ -684,8 +684,8 @@ QTextBlockUserData* k_sonnet__highlighter_current_block_user_data(void* self) {
     return Sonnet__Highlighter_CurrentBlockUserData((Sonnet__Highlighter*)self);
 }
 
-QTextBlockUserData* k_sonnet__highlighter_qbase_current_block_user_data(void* self) {
-    return Sonnet__Highlighter_QBaseCurrentBlockUserData((Sonnet__Highlighter*)self);
+QTextBlockUserData* k_sonnet__highlighter_super_current_block_user_data(void* self) {
+    return Sonnet__Highlighter_SuperCurrentBlockUserData((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_current_block_user_data(void* self, QTextBlockUserData* (*callback)()) {
@@ -696,8 +696,8 @@ QTextBlock* k_sonnet__highlighter_current_block(void* self) {
     return Sonnet__Highlighter_CurrentBlock((Sonnet__Highlighter*)self);
 }
 
-QTextBlock* k_sonnet__highlighter_qbase_current_block(void* self) {
-    return Sonnet__Highlighter_QBaseCurrentBlock((Sonnet__Highlighter*)self);
+QTextBlock* k_sonnet__highlighter_super_current_block(void* self) {
+    return Sonnet__Highlighter_SuperCurrentBlock((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_current_block(void* self, QTextBlock* (*callback)()) {
@@ -708,8 +708,8 @@ QObject* k_sonnet__highlighter_sender(void* self) {
     return Sonnet__Highlighter_Sender((Sonnet__Highlighter*)self);
 }
 
-QObject* k_sonnet__highlighter_qbase_sender(void* self) {
-    return Sonnet__Highlighter_QBaseSender((Sonnet__Highlighter*)self);
+QObject* k_sonnet__highlighter_super_sender(void* self) {
+    return Sonnet__Highlighter_SuperSender((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_sender(void* self, QObject* (*callback)()) {
@@ -720,8 +720,8 @@ int32_t k_sonnet__highlighter_sender_signal_index(void* self) {
     return Sonnet__Highlighter_SenderSignalIndex((Sonnet__Highlighter*)self);
 }
 
-int32_t k_sonnet__highlighter_qbase_sender_signal_index(void* self) {
-    return Sonnet__Highlighter_QBaseSenderSignalIndex((Sonnet__Highlighter*)self);
+int32_t k_sonnet__highlighter_super_sender_signal_index(void* self) {
+    return Sonnet__Highlighter_SuperSenderSignalIndex((Sonnet__Highlighter*)self);
 }
 
 void k_sonnet__highlighter_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -732,8 +732,8 @@ int32_t k_sonnet__highlighter_receivers(void* self, const char* signal) {
     return Sonnet__Highlighter_Receivers((Sonnet__Highlighter*)self, signal);
 }
 
-int32_t k_sonnet__highlighter_qbase_receivers(void* self, const char* signal) {
-    return Sonnet__Highlighter_QBaseReceivers((Sonnet__Highlighter*)self, signal);
+int32_t k_sonnet__highlighter_super_receivers(void* self, const char* signal) {
+    return Sonnet__Highlighter_SuperReceivers((Sonnet__Highlighter*)self, signal);
 }
 
 void k_sonnet__highlighter_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -744,8 +744,8 @@ bool k_sonnet__highlighter_is_signal_connected(void* self, void* signal) {
     return Sonnet__Highlighter_IsSignalConnected((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
-bool k_sonnet__highlighter_qbase_is_signal_connected(void* self, void* signal) {
-    return Sonnet__Highlighter_QBaseIsSignalConnected((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
+bool k_sonnet__highlighter_super_is_signal_connected(void* self, void* signal) {
+    return Sonnet__Highlighter_SuperIsSignalConnected((Sonnet__Highlighter*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__highlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

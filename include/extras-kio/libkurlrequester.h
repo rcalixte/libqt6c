@@ -66,13 +66,17 @@ const QMetaObject* k_urlrequester_meta_object(void* self);
 ///
 void k_urlrequester_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_meta_object` instead
+///
+#define k_urlrequester_qbase_meta_object k_urlrequester_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KUrlRequester*
 ///
-const QMetaObject* k_urlrequester_qbase_meta_object(void* self);
+const QMetaObject* k_urlrequester_super_meta_object(void* self);
 
 /// @param self KUrlRequester*
 /// @param param1 const char*
@@ -86,12 +90,16 @@ void* k_urlrequester_metacast(void* self, const char* param1);
 ///
 void k_urlrequester_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_metacast` instead
+///
+#define k_urlrequester_qbase_metacast k_urlrequester_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KUrlRequester*
 /// @param param1 const char*
 ///
-void* k_urlrequester_qbase_metacast(void* self, const char* param1);
+void* k_urlrequester_super_metacast(void* self, const char* param1);
 
 /// @param self KUrlRequester*
 /// @param param1 enum QMetaObject__Call
@@ -107,6 +115,10 @@ int32_t k_urlrequester_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_urlrequester_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_metacall` instead
+///
+#define k_urlrequester_qbase_metacall k_urlrequester_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KUrlRequester*
@@ -114,7 +126,7 @@ void k_urlrequester_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_urlrequester_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_urlrequester_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -226,13 +238,17 @@ QFileDialog* k_urlrequester_file_dialog(void* self);
 ///
 void k_urlrequester_on_file_dialog(void* self, QFileDialog* (*callback)());
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_file_dialog` instead
+///
+#define k_urlrequester_qbase_file_dialog k_urlrequester_super_file_dialog
+
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialog)
 ///
 /// Base class method implementation
 ///
 /// @param self KUrlRequester*
 ///
-QFileDialog* k_urlrequester_qbase_file_dialog(void* self);
+QFileDialog* k_urlrequester_super_file_dialog(void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#lineEdit)
 ///
@@ -407,6 +423,10 @@ void k_urlrequester_change_event(void* self, void* e);
 ///
 void k_urlrequester_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_change_event` instead
+///
+#define k_urlrequester_qbase_change_event k_urlrequester_super_change_event
+
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#changeEvent)
 ///
 /// Base class method implementation
@@ -414,7 +434,7 @@ void k_urlrequester_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param self KUrlRequester*
 /// @param e QEvent*
 ///
-void k_urlrequester_qbase_change_event(void* self, void* e);
+void k_urlrequester_super_change_event(void* self, void* e);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#eventFilter)
 ///
@@ -433,6 +453,10 @@ bool k_urlrequester_event_filter(void* self, void* obj, void* ev);
 ///
 void k_urlrequester_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_event_filter` instead
+///
+#define k_urlrequester_qbase_event_filter k_urlrequester_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#eventFilter)
 ///
 /// Base class method implementation
@@ -441,7 +465,7 @@ void k_urlrequester_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param obj QObject*
 /// @param ev QEvent*
 ///
-bool k_urlrequester_qbase_event_filter(void* self, void* obj, void* ev);
+bool k_urlrequester_super_event_filter(void* self, void* obj, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3429,6 +3453,10 @@ int32_t k_urlrequester_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_urlrequester_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_dev_type` instead
+///
+#define k_urlrequester_qbase_dev_type k_urlrequester_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3437,7 +3465,7 @@ int32_t k_urlrequester_dev_type(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-int32_t k_urlrequester_qbase_dev_type(void* self);
+int32_t k_urlrequester_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3461,6 +3489,10 @@ void k_urlrequester_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_urlrequester_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_set_visible` instead
+///
+#define k_urlrequester_qbase_set_visible k_urlrequester_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3470,7 +3502,7 @@ void k_urlrequester_set_visible(void* self, bool visible);
 /// @param self KUrlRequester*
 /// @param visible bool
 ///
-void k_urlrequester_qbase_set_visible(void* self, bool visible);
+void k_urlrequester_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -3493,6 +3525,10 @@ void k_urlrequester_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_urlrequester_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_size_hint` instead
+///
+#define k_urlrequester_qbase_size_hint k_urlrequester_super_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3501,7 +3537,7 @@ QSize* k_urlrequester_size_hint(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-QSize* k_urlrequester_qbase_size_hint(void* self);
+QSize* k_urlrequester_super_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3524,6 +3560,10 @@ void k_urlrequester_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_urlrequester_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_minimum_size_hint` instead
+///
+#define k_urlrequester_qbase_minimum_size_hint k_urlrequester_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -3532,7 +3572,7 @@ QSize* k_urlrequester_minimum_size_hint(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-QSize* k_urlrequester_qbase_minimum_size_hint(void* self);
+QSize* k_urlrequester_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3556,6 +3596,10 @@ void k_urlrequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_urlrequester_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_height_for_width` instead
+///
+#define k_urlrequester_qbase_height_for_width k_urlrequester_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3565,7 +3609,7 @@ int32_t k_urlrequester_height_for_width(void* self, int param1);
 /// @param self KUrlRequester*
 /// @param param1 int
 ///
-int32_t k_urlrequester_qbase_height_for_width(void* self, int param1);
+int32_t k_urlrequester_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3588,6 +3632,10 @@ void k_urlrequester_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool k_urlrequester_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_has_height_for_width` instead
+///
+#define k_urlrequester_qbase_has_height_for_width k_urlrequester_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3596,7 +3644,7 @@ bool k_urlrequester_has_height_for_width(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-bool k_urlrequester_qbase_has_height_for_width(void* self);
+bool k_urlrequester_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3619,6 +3667,10 @@ void k_urlrequester_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_urlrequester_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_paint_engine` instead
+///
+#define k_urlrequester_qbase_paint_engine k_urlrequester_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3627,7 +3679,7 @@ QPaintEngine* k_urlrequester_paint_engine(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-QPaintEngine* k_urlrequester_qbase_paint_engine(void* self);
+QPaintEngine* k_urlrequester_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3651,6 +3703,10 @@ void k_urlrequester_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 bool k_urlrequester_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_event` instead
+///
+#define k_urlrequester_qbase_event k_urlrequester_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -3660,7 +3716,7 @@ bool k_urlrequester_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QEvent*
 ///
-bool k_urlrequester_qbase_event(void* self, void* event);
+bool k_urlrequester_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3684,6 +3740,10 @@ void k_urlrequester_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_urlrequester_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_mouse_press_event` instead
+///
+#define k_urlrequester_qbase_mouse_press_event k_urlrequester_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3693,7 +3753,7 @@ void k_urlrequester_mouse_press_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlrequester_qbase_mouse_press_event(void* self, void* event);
+void k_urlrequester_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3717,6 +3777,10 @@ void k_urlrequester_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlrequester_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_mouse_release_event` instead
+///
+#define k_urlrequester_qbase_mouse_release_event k_urlrequester_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3726,7 +3790,7 @@ void k_urlrequester_mouse_release_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlrequester_qbase_mouse_release_event(void* self, void* event);
+void k_urlrequester_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3750,6 +3814,10 @@ void k_urlrequester_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void k_urlrequester_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_mouse_double_click_event` instead
+///
+#define k_urlrequester_qbase_mouse_double_click_event k_urlrequester_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3759,7 +3827,7 @@ void k_urlrequester_mouse_double_click_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlrequester_qbase_mouse_double_click_event(void* self, void* event);
+void k_urlrequester_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3783,6 +3851,10 @@ void k_urlrequester_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void k_urlrequester_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_mouse_move_event` instead
+///
+#define k_urlrequester_qbase_mouse_move_event k_urlrequester_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3792,7 +3864,7 @@ void k_urlrequester_mouse_move_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlrequester_qbase_mouse_move_event(void* self, void* event);
+void k_urlrequester_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3816,6 +3888,10 @@ void k_urlrequester_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void k_urlrequester_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_wheel_event` instead
+///
+#define k_urlrequester_qbase_wheel_event k_urlrequester_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3825,7 +3901,7 @@ void k_urlrequester_wheel_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QWheelEvent*
 ///
-void k_urlrequester_qbase_wheel_event(void* self, void* event);
+void k_urlrequester_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3849,6 +3925,10 @@ void k_urlrequester_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_key_press_event` instead
+///
+#define k_urlrequester_qbase_key_press_event k_urlrequester_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3858,7 +3938,7 @@ void k_urlrequester_key_press_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QKeyEvent*
 ///
-void k_urlrequester_qbase_key_press_event(void* self, void* event);
+void k_urlrequester_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3882,6 +3962,10 @@ void k_urlrequester_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlrequester_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_key_release_event` instead
+///
+#define k_urlrequester_qbase_key_release_event k_urlrequester_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3891,7 +3975,7 @@ void k_urlrequester_key_release_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QKeyEvent*
 ///
-void k_urlrequester_qbase_key_release_event(void* self, void* event);
+void k_urlrequester_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3915,6 +3999,10 @@ void k_urlrequester_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlrequester_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_focus_in_event` instead
+///
+#define k_urlrequester_qbase_focus_in_event k_urlrequester_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3924,7 +4012,7 @@ void k_urlrequester_focus_in_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QFocusEvent*
 ///
-void k_urlrequester_qbase_focus_in_event(void* self, void* event);
+void k_urlrequester_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3948,6 +4036,10 @@ void k_urlrequester_on_focus_in_event(void* self, void (*callback)(void*, void*)
 ///
 void k_urlrequester_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_focus_out_event` instead
+///
+#define k_urlrequester_qbase_focus_out_event k_urlrequester_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3957,7 +4049,7 @@ void k_urlrequester_focus_out_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QFocusEvent*
 ///
-void k_urlrequester_qbase_focus_out_event(void* self, void* event);
+void k_urlrequester_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3981,6 +4073,10 @@ void k_urlrequester_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlrequester_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_enter_event` instead
+///
+#define k_urlrequester_qbase_enter_event k_urlrequester_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -3990,7 +4086,7 @@ void k_urlrequester_enter_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QEnterEvent*
 ///
-void k_urlrequester_qbase_enter_event(void* self, void* event);
+void k_urlrequester_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4014,6 +4110,10 @@ void k_urlrequester_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_leave_event` instead
+///
+#define k_urlrequester_qbase_leave_event k_urlrequester_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4023,7 +4123,7 @@ void k_urlrequester_leave_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QEvent*
 ///
-void k_urlrequester_qbase_leave_event(void* self, void* event);
+void k_urlrequester_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4047,6 +4147,10 @@ void k_urlrequester_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_paint_event` instead
+///
+#define k_urlrequester_qbase_paint_event k_urlrequester_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4056,7 +4160,7 @@ void k_urlrequester_paint_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QPaintEvent*
 ///
-void k_urlrequester_qbase_paint_event(void* self, void* event);
+void k_urlrequester_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4080,6 +4184,10 @@ void k_urlrequester_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_move_event` instead
+///
+#define k_urlrequester_qbase_move_event k_urlrequester_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4089,7 +4197,7 @@ void k_urlrequester_move_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QMoveEvent*
 ///
-void k_urlrequester_qbase_move_event(void* self, void* event);
+void k_urlrequester_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4113,6 +4221,10 @@ void k_urlrequester_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_resize_event` instead
+///
+#define k_urlrequester_qbase_resize_event k_urlrequester_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4122,7 +4234,7 @@ void k_urlrequester_resize_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QResizeEvent*
 ///
-void k_urlrequester_qbase_resize_event(void* self, void* event);
+void k_urlrequester_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4146,6 +4258,10 @@ void k_urlrequester_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_close_event` instead
+///
+#define k_urlrequester_qbase_close_event k_urlrequester_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4155,7 +4271,7 @@ void k_urlrequester_close_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QCloseEvent*
 ///
-void k_urlrequester_qbase_close_event(void* self, void* event);
+void k_urlrequester_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4179,6 +4295,10 @@ void k_urlrequester_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_context_menu_event` instead
+///
+#define k_urlrequester_qbase_context_menu_event k_urlrequester_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4188,7 +4308,7 @@ void k_urlrequester_context_menu_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QContextMenuEvent*
 ///
-void k_urlrequester_qbase_context_menu_event(void* self, void* event);
+void k_urlrequester_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4212,6 +4332,10 @@ void k_urlrequester_on_context_menu_event(void* self, void (*callback)(void*, vo
 ///
 void k_urlrequester_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_tablet_event` instead
+///
+#define k_urlrequester_qbase_tablet_event k_urlrequester_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4221,7 +4345,7 @@ void k_urlrequester_tablet_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QTabletEvent*
 ///
-void k_urlrequester_qbase_tablet_event(void* self, void* event);
+void k_urlrequester_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4245,6 +4369,10 @@ void k_urlrequester_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_action_event` instead
+///
+#define k_urlrequester_qbase_action_event k_urlrequester_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4254,7 +4382,7 @@ void k_urlrequester_action_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QActionEvent*
 ///
-void k_urlrequester_qbase_action_event(void* self, void* event);
+void k_urlrequester_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4278,6 +4406,10 @@ void k_urlrequester_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_drag_enter_event` instead
+///
+#define k_urlrequester_qbase_drag_enter_event k_urlrequester_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4287,7 +4419,7 @@ void k_urlrequester_drag_enter_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QDragEnterEvent*
 ///
-void k_urlrequester_qbase_drag_enter_event(void* self, void* event);
+void k_urlrequester_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4311,6 +4443,10 @@ void k_urlrequester_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_urlrequester_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_drag_move_event` instead
+///
+#define k_urlrequester_qbase_drag_move_event k_urlrequester_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4320,7 +4456,7 @@ void k_urlrequester_drag_move_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QDragMoveEvent*
 ///
-void k_urlrequester_qbase_drag_move_event(void* self, void* event);
+void k_urlrequester_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4344,6 +4480,10 @@ void k_urlrequester_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlrequester_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_drag_leave_event` instead
+///
+#define k_urlrequester_qbase_drag_leave_event k_urlrequester_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4353,7 +4493,7 @@ void k_urlrequester_drag_leave_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QDragLeaveEvent*
 ///
-void k_urlrequester_qbase_drag_leave_event(void* self, void* event);
+void k_urlrequester_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4377,6 +4517,10 @@ void k_urlrequester_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void k_urlrequester_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_drop_event` instead
+///
+#define k_urlrequester_qbase_drop_event k_urlrequester_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4386,7 +4530,7 @@ void k_urlrequester_drop_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QDropEvent*
 ///
-void k_urlrequester_qbase_drop_event(void* self, void* event);
+void k_urlrequester_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4410,6 +4554,10 @@ void k_urlrequester_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_show_event` instead
+///
+#define k_urlrequester_qbase_show_event k_urlrequester_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4419,7 +4567,7 @@ void k_urlrequester_show_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QShowEvent*
 ///
-void k_urlrequester_qbase_show_event(void* self, void* event);
+void k_urlrequester_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4443,6 +4591,10 @@ void k_urlrequester_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_hide_event` instead
+///
+#define k_urlrequester_qbase_hide_event k_urlrequester_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4452,7 +4604,7 @@ void k_urlrequester_hide_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QHideEvent*
 ///
-void k_urlrequester_qbase_hide_event(void* self, void* event);
+void k_urlrequester_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4478,6 +4630,10 @@ void k_urlrequester_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_urlrequester_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_native_event` instead
+///
+#define k_urlrequester_qbase_native_event k_urlrequester_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4489,7 +4645,7 @@ bool k_urlrequester_native_event(void* self, char* eventType, void* message, int
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlrequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urlrequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4513,6 +4669,10 @@ void k_urlrequester_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 int32_t k_urlrequester_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_metric` instead
+///
+#define k_urlrequester_qbase_metric k_urlrequester_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4522,7 +4682,7 @@ int32_t k_urlrequester_metric(void* self, int32_t param1);
 /// @param self KUrlRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlrequester_qbase_metric(void* self, int32_t param1);
+int32_t k_urlrequester_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4546,6 +4706,10 @@ void k_urlrequester_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_urlrequester_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_init_painter` instead
+///
+#define k_urlrequester_qbase_init_painter k_urlrequester_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4555,7 +4719,7 @@ void k_urlrequester_init_painter(void* self, void* painter);
 /// @param self KUrlRequester*
 /// @param painter QPainter*
 ///
-void k_urlrequester_qbase_init_painter(void* self, void* painter);
+void k_urlrequester_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4579,6 +4743,10 @@ void k_urlrequester_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_urlrequester_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_redirected` instead
+///
+#define k_urlrequester_qbase_redirected k_urlrequester_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4588,7 +4756,7 @@ QPaintDevice* k_urlrequester_redirected(void* self, void* offset);
 /// @param self KUrlRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlrequester_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_urlrequester_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4611,6 +4779,10 @@ void k_urlrequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* k_urlrequester_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_shared_painter` instead
+///
+#define k_urlrequester_qbase_shared_painter k_urlrequester_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4619,7 +4791,7 @@ QPainter* k_urlrequester_shared_painter(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-QPainter* k_urlrequester_qbase_shared_painter(void* self);
+QPainter* k_urlrequester_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4643,6 +4815,10 @@ void k_urlrequester_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_urlrequester_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_input_method_event` instead
+///
+#define k_urlrequester_qbase_input_method_event k_urlrequester_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4652,7 +4828,7 @@ void k_urlrequester_input_method_event(void* self, void* param1);
 /// @param self KUrlRequester*
 /// @param param1 QInputMethodEvent*
 ///
-void k_urlrequester_qbase_input_method_event(void* self, void* param1);
+void k_urlrequester_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4676,6 +4852,10 @@ void k_urlrequester_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 QVariant* k_urlrequester_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_input_method_query` instead
+///
+#define k_urlrequester_qbase_input_method_query k_urlrequester_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4685,7 +4865,7 @@ QVariant* k_urlrequester_input_method_query(void* self, int32_t param1);
 /// @param self KUrlRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlrequester_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_urlrequester_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4709,6 +4889,10 @@ void k_urlrequester_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 bool k_urlrequester_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_focus_next_prev_child` instead
+///
+#define k_urlrequester_qbase_focus_next_prev_child k_urlrequester_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4718,7 +4902,7 @@ bool k_urlrequester_focus_next_prev_child(void* self, bool next);
 /// @param self KUrlRequester*
 /// @param next bool
 ///
-bool k_urlrequester_qbase_focus_next_prev_child(void* self, bool next);
+bool k_urlrequester_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4742,6 +4926,10 @@ void k_urlrequester_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 ///
 void k_urlrequester_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_timer_event` instead
+///
+#define k_urlrequester_qbase_timer_event k_urlrequester_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4751,7 +4939,7 @@ void k_urlrequester_timer_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QTimerEvent*
 ///
-void k_urlrequester_qbase_timer_event(void* self, void* event);
+void k_urlrequester_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4775,6 +4963,10 @@ void k_urlrequester_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_child_event` instead
+///
+#define k_urlrequester_qbase_child_event k_urlrequester_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4784,7 +4976,7 @@ void k_urlrequester_child_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QChildEvent*
 ///
-void k_urlrequester_qbase_child_event(void* self, void* event);
+void k_urlrequester_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4808,6 +5000,10 @@ void k_urlrequester_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_custom_event` instead
+///
+#define k_urlrequester_qbase_custom_event k_urlrequester_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4817,7 +5013,7 @@ void k_urlrequester_custom_event(void* self, void* event);
 /// @param self KUrlRequester*
 /// @param event QEvent*
 ///
-void k_urlrequester_qbase_custom_event(void* self, void* event);
+void k_urlrequester_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4841,6 +5037,10 @@ void k_urlrequester_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlrequester_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_connect_notify` instead
+///
+#define k_urlrequester_qbase_connect_notify k_urlrequester_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4850,7 +5050,7 @@ void k_urlrequester_connect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_qbase_connect_notify(void* self, void* signal);
+void k_urlrequester_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4874,6 +5074,10 @@ void k_urlrequester_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_urlrequester_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_disconnect_notify` instead
+///
+#define k_urlrequester_qbase_disconnect_notify k_urlrequester_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4883,7 +5087,7 @@ void k_urlrequester_disconnect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_qbase_disconnect_notify(void* self, void* signal);
+void k_urlrequester_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4906,6 +5110,10 @@ void k_urlrequester_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_urlrequester_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_update_micro_focus` instead
+///
+#define k_urlrequester_qbase_update_micro_focus k_urlrequester_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4914,7 +5122,7 @@ void k_urlrequester_update_micro_focus(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-void k_urlrequester_qbase_update_micro_focus(void* self);
+void k_urlrequester_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4937,6 +5145,10 @@ void k_urlrequester_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_urlrequester_create(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_create` instead
+///
+#define k_urlrequester_qbase_create k_urlrequester_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4945,7 +5157,7 @@ void k_urlrequester_create(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-void k_urlrequester_qbase_create(void* self);
+void k_urlrequester_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4968,6 +5180,10 @@ void k_urlrequester_on_create(void* self, void (*callback)());
 ///
 void k_urlrequester_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_destroy` instead
+///
+#define k_urlrequester_qbase_destroy k_urlrequester_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4976,7 +5192,7 @@ void k_urlrequester_destroy(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-void k_urlrequester_qbase_destroy(void* self);
+void k_urlrequester_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4999,6 +5215,10 @@ void k_urlrequester_on_destroy(void* self, void (*callback)());
 ///
 bool k_urlrequester_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_focus_next_child` instead
+///
+#define k_urlrequester_qbase_focus_next_child k_urlrequester_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5007,7 +5227,7 @@ bool k_urlrequester_focus_next_child(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-bool k_urlrequester_qbase_focus_next_child(void* self);
+bool k_urlrequester_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5030,6 +5250,10 @@ void k_urlrequester_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_urlrequester_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_focus_previous_child` instead
+///
+#define k_urlrequester_qbase_focus_previous_child k_urlrequester_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5038,7 +5262,7 @@ bool k_urlrequester_focus_previous_child(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-bool k_urlrequester_qbase_focus_previous_child(void* self);
+bool k_urlrequester_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5061,6 +5285,10 @@ void k_urlrequester_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_urlrequester_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_sender` instead
+///
+#define k_urlrequester_qbase_sender k_urlrequester_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5069,7 +5297,7 @@ QObject* k_urlrequester_sender(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-QObject* k_urlrequester_qbase_sender(void* self);
+QObject* k_urlrequester_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5092,6 +5320,10 @@ void k_urlrequester_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_urlrequester_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_sender_signal_index` instead
+///
+#define k_urlrequester_qbase_sender_signal_index k_urlrequester_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5100,7 +5332,7 @@ int32_t k_urlrequester_sender_signal_index(void* self);
 ///
 /// @param self KUrlRequester*
 ///
-int32_t k_urlrequester_qbase_sender_signal_index(void* self);
+int32_t k_urlrequester_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5124,6 +5356,10 @@ void k_urlrequester_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_urlrequester_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_receivers` instead
+///
+#define k_urlrequester_qbase_receivers k_urlrequester_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5133,7 +5369,7 @@ int32_t k_urlrequester_receivers(void* self, const char* signal);
 /// @param self KUrlRequester*
 /// @param signal const char*
 ///
-int32_t k_urlrequester_qbase_receivers(void* self, const char* signal);
+int32_t k_urlrequester_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5157,6 +5393,10 @@ void k_urlrequester_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_urlrequester_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_is_signal_connected` instead
+///
+#define k_urlrequester_qbase_is_signal_connected k_urlrequester_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5166,7 +5406,7 @@ bool k_urlrequester_is_signal_connected(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlrequester_qbase_is_signal_connected(void* self, void* signal);
+bool k_urlrequester_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5191,6 +5431,10 @@ void k_urlrequester_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 double k_urlrequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_urlrequester_super_get_decoded_metric_f` instead
+///
+#define k_urlrequester_qbase_get_decoded_metric_f k_urlrequester_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5201,7 +5445,7 @@ double k_urlrequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlrequester_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlrequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5262,13 +5506,17 @@ const QMetaObject* k_urlcomborequester_meta_object(void* self);
 ///
 void k_urlcomborequester_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_meta_object` instead
+///
+#define k_urlcomborequester_qbase_meta_object k_urlcomborequester_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KUrlComboRequester*
 ///
-const QMetaObject* k_urlcomborequester_qbase_meta_object(void* self);
+const QMetaObject* k_urlcomborequester_super_meta_object(void* self);
 
 /// @param self KUrlComboRequester*
 /// @param param1 const char*
@@ -5282,12 +5530,16 @@ void* k_urlcomborequester_metacast(void* self, const char* param1);
 ///
 void k_urlcomborequester_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_metacast` instead
+///
+#define k_urlcomborequester_qbase_metacast k_urlcomborequester_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KUrlComboRequester*
 /// @param param1 const char*
 ///
-void* k_urlcomborequester_qbase_metacast(void* self, const char* param1);
+void* k_urlcomborequester_super_metacast(void* self, const char* param1);
 
 /// @param self KUrlComboRequester*
 /// @param param1 enum QMetaObject__Call
@@ -5303,6 +5555,10 @@ int32_t k_urlcomborequester_metacall(void* self, int32_t param1, int param2, voi
 ///
 void k_urlcomborequester_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_metacall` instead
+///
+#define k_urlcomborequester_qbase_metacall k_urlcomborequester_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KUrlComboRequester*
@@ -5310,7 +5566,7 @@ void k_urlcomborequester_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_urlcomborequester_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_urlcomborequester_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -8620,6 +8876,10 @@ int32_t k_urlcomborequester_encode_metric_f(int32_t metric, double value);
 ///
 QFileDialog* k_urlcomborequester_file_dialog(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_file_dialog` instead
+///
+#define k_urlcomborequester_qbase_file_dialog k_urlcomborequester_super_file_dialog
+
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialog)
@@ -8628,7 +8888,7 @@ QFileDialog* k_urlcomborequester_file_dialog(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QFileDialog* k_urlcomborequester_qbase_file_dialog(void* self);
+QFileDialog* k_urlcomborequester_super_file_dialog(void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -8652,6 +8912,10 @@ void k_urlcomborequester_on_file_dialog(void* self, QFileDialog* (*callback)());
 ///
 void k_urlcomborequester_change_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_change_event` instead
+///
+#define k_urlcomborequester_qbase_change_event k_urlcomborequester_super_change_event
+
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#changeEvent)
@@ -8661,7 +8925,7 @@ void k_urlcomborequester_change_event(void* self, void* e);
 /// @param self KUrlComboRequester*
 /// @param e QEvent*
 ///
-void k_urlcomborequester_qbase_change_event(void* self, void* e);
+void k_urlcomborequester_super_change_event(void* self, void* e);
 
 /// Inherited from KUrlRequester
 ///
@@ -8686,6 +8950,10 @@ void k_urlcomborequester_on_change_event(void* self, void (*callback)(void*, voi
 ///
 bool k_urlcomborequester_event_filter(void* self, void* obj, void* ev);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_event_filter` instead
+///
+#define k_urlcomborequester_qbase_event_filter k_urlcomborequester_super_event_filter
+
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#eventFilter)
@@ -8696,7 +8964,7 @@ bool k_urlcomborequester_event_filter(void* self, void* obj, void* ev);
 /// @param obj QObject*
 /// @param ev QEvent*
 ///
-bool k_urlcomborequester_qbase_event_filter(void* self, void* obj, void* ev);
+bool k_urlcomborequester_super_event_filter(void* self, void* obj, void* ev);
 
 /// Inherited from KUrlRequester
 ///
@@ -8719,6 +8987,10 @@ void k_urlcomborequester_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 int32_t k_urlcomborequester_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_dev_type` instead
+///
+#define k_urlcomborequester_qbase_dev_type k_urlcomborequester_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -8727,7 +8999,7 @@ int32_t k_urlcomborequester_dev_type(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_qbase_dev_type(void* self);
+int32_t k_urlcomborequester_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8751,6 +9023,10 @@ void k_urlcomborequester_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_urlcomborequester_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_set_visible` instead
+///
+#define k_urlcomborequester_qbase_set_visible k_urlcomborequester_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -8760,7 +9036,7 @@ void k_urlcomborequester_set_visible(void* self, bool visible);
 /// @param self KUrlComboRequester*
 /// @param visible bool
 ///
-void k_urlcomborequester_qbase_set_visible(void* self, bool visible);
+void k_urlcomborequester_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -8783,6 +9059,10 @@ void k_urlcomborequester_on_set_visible(void* self, void (*callback)(void*, bool
 ///
 QSize* k_urlcomborequester_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_size_hint` instead
+///
+#define k_urlcomborequester_qbase_size_hint k_urlcomborequester_super_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -8791,7 +9071,7 @@ QSize* k_urlcomborequester_size_hint(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_qbase_size_hint(void* self);
+QSize* k_urlcomborequester_super_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8814,6 +9094,10 @@ void k_urlcomborequester_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_urlcomborequester_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_minimum_size_hint` instead
+///
+#define k_urlcomborequester_qbase_minimum_size_hint k_urlcomborequester_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -8822,7 +9106,7 @@ QSize* k_urlcomborequester_minimum_size_hint(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_qbase_minimum_size_hint(void* self);
+QSize* k_urlcomborequester_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8846,6 +9130,10 @@ void k_urlcomborequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_urlcomborequester_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_height_for_width` instead
+///
+#define k_urlcomborequester_qbase_height_for_width k_urlcomborequester_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -8855,7 +9143,7 @@ int32_t k_urlcomborequester_height_for_width(void* self, int param1);
 /// @param self KUrlComboRequester*
 /// @param param1 int
 ///
-int32_t k_urlcomborequester_qbase_height_for_width(void* self, int param1);
+int32_t k_urlcomborequester_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -8878,6 +9166,10 @@ void k_urlcomborequester_on_height_for_width(void* self, int32_t (*callback)(voi
 ///
 bool k_urlcomborequester_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_has_height_for_width` instead
+///
+#define k_urlcomborequester_qbase_has_height_for_width k_urlcomborequester_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -8886,7 +9178,7 @@ bool k_urlcomborequester_has_height_for_width(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-bool k_urlcomborequester_qbase_has_height_for_width(void* self);
+bool k_urlcomborequester_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8909,6 +9201,10 @@ void k_urlcomborequester_on_has_height_for_width(void* self, bool (*callback)())
 ///
 QPaintEngine* k_urlcomborequester_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_paint_engine` instead
+///
+#define k_urlcomborequester_qbase_paint_engine k_urlcomborequester_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -8917,7 +9213,7 @@ QPaintEngine* k_urlcomborequester_paint_engine(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QPaintEngine* k_urlcomborequester_qbase_paint_engine(void* self);
+QPaintEngine* k_urlcomborequester_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8941,6 +9237,10 @@ void k_urlcomborequester_on_paint_engine(void* self, QPaintEngine* (*callback)()
 ///
 bool k_urlcomborequester_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_event` instead
+///
+#define k_urlcomborequester_qbase_event k_urlcomborequester_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -8950,7 +9250,7 @@ bool k_urlcomborequester_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QEvent*
 ///
-bool k_urlcomborequester_qbase_event(void* self, void* event);
+bool k_urlcomborequester_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -8974,6 +9274,10 @@ void k_urlcomborequester_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_urlcomborequester_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_mouse_press_event` instead
+///
+#define k_urlcomborequester_qbase_mouse_press_event k_urlcomborequester_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -8983,7 +9287,7 @@ void k_urlcomborequester_mouse_press_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlcomborequester_qbase_mouse_press_event(void* self, void* event);
+void k_urlcomborequester_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9007,6 +9311,10 @@ void k_urlcomborequester_on_mouse_press_event(void* self, void (*callback)(void*
 ///
 void k_urlcomborequester_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_mouse_release_event` instead
+///
+#define k_urlcomborequester_qbase_mouse_release_event k_urlcomborequester_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -9016,7 +9324,7 @@ void k_urlcomborequester_mouse_release_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlcomborequester_qbase_mouse_release_event(void* self, void* event);
+void k_urlcomborequester_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9040,6 +9348,10 @@ void k_urlcomborequester_on_mouse_release_event(void* self, void (*callback)(voi
 ///
 void k_urlcomborequester_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_mouse_double_click_event` instead
+///
+#define k_urlcomborequester_qbase_mouse_double_click_event k_urlcomborequester_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -9049,7 +9361,7 @@ void k_urlcomborequester_mouse_double_click_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlcomborequester_qbase_mouse_double_click_event(void* self, void* event);
+void k_urlcomborequester_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9073,6 +9385,10 @@ void k_urlcomborequester_on_mouse_double_click_event(void* self, void (*callback
 ///
 void k_urlcomborequester_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_mouse_move_event` instead
+///
+#define k_urlcomborequester_qbase_mouse_move_event k_urlcomborequester_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -9082,7 +9398,7 @@ void k_urlcomborequester_mouse_move_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QMouseEvent*
 ///
-void k_urlcomborequester_qbase_mouse_move_event(void* self, void* event);
+void k_urlcomborequester_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9106,6 +9422,10 @@ void k_urlcomborequester_on_mouse_move_event(void* self, void (*callback)(void*,
 ///
 void k_urlcomborequester_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_wheel_event` instead
+///
+#define k_urlcomborequester_qbase_wheel_event k_urlcomborequester_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -9115,7 +9435,7 @@ void k_urlcomborequester_wheel_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QWheelEvent*
 ///
-void k_urlcomborequester_qbase_wheel_event(void* self, void* event);
+void k_urlcomborequester_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9139,6 +9459,10 @@ void k_urlcomborequester_on_wheel_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_key_press_event` instead
+///
+#define k_urlcomborequester_qbase_key_press_event k_urlcomborequester_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -9148,7 +9472,7 @@ void k_urlcomborequester_key_press_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QKeyEvent*
 ///
-void k_urlcomborequester_qbase_key_press_event(void* self, void* event);
+void k_urlcomborequester_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9172,6 +9496,10 @@ void k_urlcomborequester_on_key_press_event(void* self, void (*callback)(void*, 
 ///
 void k_urlcomborequester_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_key_release_event` instead
+///
+#define k_urlcomborequester_qbase_key_release_event k_urlcomborequester_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -9181,7 +9509,7 @@ void k_urlcomborequester_key_release_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QKeyEvent*
 ///
-void k_urlcomborequester_qbase_key_release_event(void* self, void* event);
+void k_urlcomborequester_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9205,6 +9533,10 @@ void k_urlcomborequester_on_key_release_event(void* self, void (*callback)(void*
 ///
 void k_urlcomborequester_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_focus_in_event` instead
+///
+#define k_urlcomborequester_qbase_focus_in_event k_urlcomborequester_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -9214,7 +9546,7 @@ void k_urlcomborequester_focus_in_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QFocusEvent*
 ///
-void k_urlcomborequester_qbase_focus_in_event(void* self, void* event);
+void k_urlcomborequester_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9238,6 +9570,10 @@ void k_urlcomborequester_on_focus_in_event(void* self, void (*callback)(void*, v
 ///
 void k_urlcomborequester_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_focus_out_event` instead
+///
+#define k_urlcomborequester_qbase_focus_out_event k_urlcomborequester_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -9247,7 +9583,7 @@ void k_urlcomborequester_focus_out_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QFocusEvent*
 ///
-void k_urlcomborequester_qbase_focus_out_event(void* self, void* event);
+void k_urlcomborequester_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9271,6 +9607,10 @@ void k_urlcomborequester_on_focus_out_event(void* self, void (*callback)(void*, 
 ///
 void k_urlcomborequester_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_enter_event` instead
+///
+#define k_urlcomborequester_qbase_enter_event k_urlcomborequester_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -9280,7 +9620,7 @@ void k_urlcomborequester_enter_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QEnterEvent*
 ///
-void k_urlcomborequester_qbase_enter_event(void* self, void* event);
+void k_urlcomborequester_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9304,6 +9644,10 @@ void k_urlcomborequester_on_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_leave_event` instead
+///
+#define k_urlcomborequester_qbase_leave_event k_urlcomborequester_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -9313,7 +9657,7 @@ void k_urlcomborequester_leave_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QEvent*
 ///
-void k_urlcomborequester_qbase_leave_event(void* self, void* event);
+void k_urlcomborequester_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9337,6 +9681,10 @@ void k_urlcomborequester_on_leave_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_paint_event` instead
+///
+#define k_urlcomborequester_qbase_paint_event k_urlcomborequester_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -9346,7 +9694,7 @@ void k_urlcomborequester_paint_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QPaintEvent*
 ///
-void k_urlcomborequester_qbase_paint_event(void* self, void* event);
+void k_urlcomborequester_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9370,6 +9718,10 @@ void k_urlcomborequester_on_paint_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_move_event` instead
+///
+#define k_urlcomborequester_qbase_move_event k_urlcomborequester_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -9379,7 +9731,7 @@ void k_urlcomborequester_move_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QMoveEvent*
 ///
-void k_urlcomborequester_qbase_move_event(void* self, void* event);
+void k_urlcomborequester_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9403,6 +9755,10 @@ void k_urlcomborequester_on_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlcomborequester_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_resize_event` instead
+///
+#define k_urlcomborequester_qbase_resize_event k_urlcomborequester_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -9412,7 +9768,7 @@ void k_urlcomborequester_resize_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QResizeEvent*
 ///
-void k_urlcomborequester_qbase_resize_event(void* self, void* event);
+void k_urlcomborequester_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9436,6 +9792,10 @@ void k_urlcomborequester_on_resize_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlcomborequester_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_close_event` instead
+///
+#define k_urlcomborequester_qbase_close_event k_urlcomborequester_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -9445,7 +9805,7 @@ void k_urlcomborequester_close_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QCloseEvent*
 ///
-void k_urlcomborequester_qbase_close_event(void* self, void* event);
+void k_urlcomborequester_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9469,6 +9829,10 @@ void k_urlcomborequester_on_close_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_context_menu_event` instead
+///
+#define k_urlcomborequester_qbase_context_menu_event k_urlcomborequester_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -9478,7 +9842,7 @@ void k_urlcomborequester_context_menu_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QContextMenuEvent*
 ///
-void k_urlcomborequester_qbase_context_menu_event(void* self, void* event);
+void k_urlcomborequester_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9502,6 +9866,10 @@ void k_urlcomborequester_on_context_menu_event(void* self, void (*callback)(void
 ///
 void k_urlcomborequester_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_tablet_event` instead
+///
+#define k_urlcomborequester_qbase_tablet_event k_urlcomborequester_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -9511,7 +9879,7 @@ void k_urlcomborequester_tablet_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QTabletEvent*
 ///
-void k_urlcomborequester_qbase_tablet_event(void* self, void* event);
+void k_urlcomborequester_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9535,6 +9903,10 @@ void k_urlcomborequester_on_tablet_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlcomborequester_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_action_event` instead
+///
+#define k_urlcomborequester_qbase_action_event k_urlcomborequester_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -9544,7 +9916,7 @@ void k_urlcomborequester_action_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QActionEvent*
 ///
-void k_urlcomborequester_qbase_action_event(void* self, void* event);
+void k_urlcomborequester_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9568,6 +9940,10 @@ void k_urlcomborequester_on_action_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlcomborequester_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_drag_enter_event` instead
+///
+#define k_urlcomborequester_qbase_drag_enter_event k_urlcomborequester_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -9577,7 +9953,7 @@ void k_urlcomborequester_drag_enter_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QDragEnterEvent*
 ///
-void k_urlcomborequester_qbase_drag_enter_event(void* self, void* event);
+void k_urlcomborequester_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9601,6 +9977,10 @@ void k_urlcomborequester_on_drag_enter_event(void* self, void (*callback)(void*,
 ///
 void k_urlcomborequester_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_drag_move_event` instead
+///
+#define k_urlcomborequester_qbase_drag_move_event k_urlcomborequester_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -9610,7 +9990,7 @@ void k_urlcomborequester_drag_move_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QDragMoveEvent*
 ///
-void k_urlcomborequester_qbase_drag_move_event(void* self, void* event);
+void k_urlcomborequester_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9634,6 +10014,10 @@ void k_urlcomborequester_on_drag_move_event(void* self, void (*callback)(void*, 
 ///
 void k_urlcomborequester_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_drag_leave_event` instead
+///
+#define k_urlcomborequester_qbase_drag_leave_event k_urlcomborequester_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -9643,7 +10027,7 @@ void k_urlcomborequester_drag_leave_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QDragLeaveEvent*
 ///
-void k_urlcomborequester_qbase_drag_leave_event(void* self, void* event);
+void k_urlcomborequester_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9667,6 +10051,10 @@ void k_urlcomborequester_on_drag_leave_event(void* self, void (*callback)(void*,
 ///
 void k_urlcomborequester_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_drop_event` instead
+///
+#define k_urlcomborequester_qbase_drop_event k_urlcomborequester_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -9676,7 +10064,7 @@ void k_urlcomborequester_drop_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QDropEvent*
 ///
-void k_urlcomborequester_qbase_drop_event(void* self, void* event);
+void k_urlcomborequester_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9700,6 +10088,10 @@ void k_urlcomborequester_on_drop_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlcomborequester_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_show_event` instead
+///
+#define k_urlcomborequester_qbase_show_event k_urlcomborequester_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -9709,7 +10101,7 @@ void k_urlcomborequester_show_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QShowEvent*
 ///
-void k_urlcomborequester_qbase_show_event(void* self, void* event);
+void k_urlcomborequester_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9733,6 +10125,10 @@ void k_urlcomborequester_on_show_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlcomborequester_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_hide_event` instead
+///
+#define k_urlcomborequester_qbase_hide_event k_urlcomborequester_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -9742,7 +10138,7 @@ void k_urlcomborequester_hide_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QHideEvent*
 ///
-void k_urlcomborequester_qbase_hide_event(void* self, void* event);
+void k_urlcomborequester_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -9768,6 +10164,10 @@ void k_urlcomborequester_on_hide_event(void* self, void (*callback)(void*, void*
 ///
 bool k_urlcomborequester_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_native_event` instead
+///
+#define k_urlcomborequester_qbase_native_event k_urlcomborequester_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -9779,7 +10179,7 @@ bool k_urlcomborequester_native_event(void* self, char* eventType, void* message
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlcomborequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urlcomborequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -9803,6 +10203,10 @@ void k_urlcomborequester_on_native_event(void* self, bool (*callback)(void*, lib
 ///
 int32_t k_urlcomborequester_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_metric` instead
+///
+#define k_urlcomborequester_qbase_metric k_urlcomborequester_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -9812,7 +10216,7 @@ int32_t k_urlcomborequester_metric(void* self, int32_t param1);
 /// @param self KUrlComboRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlcomborequester_qbase_metric(void* self, int32_t param1);
+int32_t k_urlcomborequester_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9836,6 +10240,10 @@ void k_urlcomborequester_on_metric(void* self, int32_t (*callback)(void*, int32_
 ///
 void k_urlcomborequester_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_init_painter` instead
+///
+#define k_urlcomborequester_qbase_init_painter k_urlcomborequester_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -9845,7 +10253,7 @@ void k_urlcomborequester_init_painter(void* self, void* painter);
 /// @param self KUrlComboRequester*
 /// @param painter QPainter*
 ///
-void k_urlcomborequester_qbase_init_painter(void* self, void* painter);
+void k_urlcomborequester_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -9869,6 +10277,10 @@ void k_urlcomborequester_on_init_painter(void* self, void (*callback)(void*, voi
 ///
 QPaintDevice* k_urlcomborequester_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_redirected` instead
+///
+#define k_urlcomborequester_qbase_redirected k_urlcomborequester_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -9878,7 +10290,7 @@ QPaintDevice* k_urlcomborequester_redirected(void* self, void* offset);
 /// @param self KUrlComboRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlcomborequester_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_urlcomborequester_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -9901,6 +10313,10 @@ void k_urlcomborequester_on_redirected(void* self, QPaintDevice* (*callback)(voi
 ///
 QPainter* k_urlcomborequester_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_shared_painter` instead
+///
+#define k_urlcomborequester_qbase_shared_painter k_urlcomborequester_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -9909,7 +10325,7 @@ QPainter* k_urlcomborequester_shared_painter(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QPainter* k_urlcomborequester_qbase_shared_painter(void* self);
+QPainter* k_urlcomborequester_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9933,6 +10349,10 @@ void k_urlcomborequester_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_urlcomborequester_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_input_method_event` instead
+///
+#define k_urlcomborequester_qbase_input_method_event k_urlcomborequester_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -9942,7 +10362,7 @@ void k_urlcomborequester_input_method_event(void* self, void* param1);
 /// @param self KUrlComboRequester*
 /// @param param1 QInputMethodEvent*
 ///
-void k_urlcomborequester_qbase_input_method_event(void* self, void* param1);
+void k_urlcomborequester_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -9966,6 +10386,10 @@ void k_urlcomborequester_on_input_method_event(void* self, void (*callback)(void
 ///
 QVariant* k_urlcomborequester_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_input_method_query` instead
+///
+#define k_urlcomborequester_qbase_input_method_query k_urlcomborequester_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -9975,7 +10399,7 @@ QVariant* k_urlcomborequester_input_method_query(void* self, int32_t param1);
 /// @param self KUrlComboRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlcomborequester_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_urlcomborequester_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9999,6 +10423,10 @@ void k_urlcomborequester_on_input_method_query(void* self, QVariant* (*callback)
 ///
 bool k_urlcomborequester_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_focus_next_prev_child` instead
+///
+#define k_urlcomborequester_qbase_focus_next_prev_child k_urlcomborequester_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -10008,7 +10436,7 @@ bool k_urlcomborequester_focus_next_prev_child(void* self, bool next);
 /// @param self KUrlComboRequester*
 /// @param next bool
 ///
-bool k_urlcomborequester_qbase_focus_next_prev_child(void* self, bool next);
+bool k_urlcomborequester_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -10032,6 +10460,10 @@ void k_urlcomborequester_on_focus_next_prev_child(void* self, bool (*callback)(v
 ///
 void k_urlcomborequester_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_timer_event` instead
+///
+#define k_urlcomborequester_qbase_timer_event k_urlcomborequester_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -10041,7 +10473,7 @@ void k_urlcomborequester_timer_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QTimerEvent*
 ///
-void k_urlcomborequester_qbase_timer_event(void* self, void* event);
+void k_urlcomborequester_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -10065,6 +10497,10 @@ void k_urlcomborequester_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_child_event` instead
+///
+#define k_urlcomborequester_qbase_child_event k_urlcomborequester_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -10074,7 +10510,7 @@ void k_urlcomborequester_child_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QChildEvent*
 ///
-void k_urlcomborequester_qbase_child_event(void* self, void* event);
+void k_urlcomborequester_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -10098,6 +10534,10 @@ void k_urlcomborequester_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_urlcomborequester_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_custom_event` instead
+///
+#define k_urlcomborequester_qbase_custom_event k_urlcomborequester_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -10107,7 +10547,7 @@ void k_urlcomborequester_custom_event(void* self, void* event);
 /// @param self KUrlComboRequester*
 /// @param event QEvent*
 ///
-void k_urlcomborequester_qbase_custom_event(void* self, void* event);
+void k_urlcomborequester_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -10131,6 +10571,10 @@ void k_urlcomborequester_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void k_urlcomborequester_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_connect_notify` instead
+///
+#define k_urlcomborequester_qbase_connect_notify k_urlcomborequester_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -10140,7 +10584,7 @@ void k_urlcomborequester_connect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_qbase_connect_notify(void* self, void* signal);
+void k_urlcomborequester_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -10164,6 +10608,10 @@ void k_urlcomborequester_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_urlcomborequester_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_disconnect_notify` instead
+///
+#define k_urlcomborequester_qbase_disconnect_notify k_urlcomborequester_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -10173,7 +10621,7 @@ void k_urlcomborequester_disconnect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_qbase_disconnect_notify(void* self, void* signal);
+void k_urlcomborequester_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -10196,6 +10644,10 @@ void k_urlcomborequester_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 void k_urlcomborequester_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_update_micro_focus` instead
+///
+#define k_urlcomborequester_qbase_update_micro_focus k_urlcomborequester_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -10204,7 +10656,7 @@ void k_urlcomborequester_update_micro_focus(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-void k_urlcomborequester_qbase_update_micro_focus(void* self);
+void k_urlcomborequester_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10227,6 +10679,10 @@ void k_urlcomborequester_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_urlcomborequester_create(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_create` instead
+///
+#define k_urlcomborequester_qbase_create k_urlcomborequester_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -10235,7 +10691,7 @@ void k_urlcomborequester_create(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-void k_urlcomborequester_qbase_create(void* self);
+void k_urlcomborequester_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10258,6 +10714,10 @@ void k_urlcomborequester_on_create(void* self, void (*callback)());
 ///
 void k_urlcomborequester_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_destroy` instead
+///
+#define k_urlcomborequester_qbase_destroy k_urlcomborequester_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -10266,7 +10726,7 @@ void k_urlcomborequester_destroy(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-void k_urlcomborequester_qbase_destroy(void* self);
+void k_urlcomborequester_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10289,6 +10749,10 @@ void k_urlcomborequester_on_destroy(void* self, void (*callback)());
 ///
 bool k_urlcomborequester_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_focus_next_child` instead
+///
+#define k_urlcomborequester_qbase_focus_next_child k_urlcomborequester_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -10297,7 +10761,7 @@ bool k_urlcomborequester_focus_next_child(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-bool k_urlcomborequester_qbase_focus_next_child(void* self);
+bool k_urlcomborequester_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10320,6 +10784,10 @@ void k_urlcomborequester_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_urlcomborequester_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_focus_previous_child` instead
+///
+#define k_urlcomborequester_qbase_focus_previous_child k_urlcomborequester_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -10328,7 +10796,7 @@ bool k_urlcomborequester_focus_previous_child(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-bool k_urlcomborequester_qbase_focus_previous_child(void* self);
+bool k_urlcomborequester_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10351,6 +10819,10 @@ void k_urlcomborequester_on_focus_previous_child(void* self, bool (*callback)())
 ///
 QObject* k_urlcomborequester_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_sender` instead
+///
+#define k_urlcomborequester_qbase_sender k_urlcomborequester_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -10359,7 +10831,7 @@ QObject* k_urlcomborequester_sender(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-QObject* k_urlcomborequester_qbase_sender(void* self);
+QObject* k_urlcomborequester_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -10382,6 +10854,10 @@ void k_urlcomborequester_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_urlcomborequester_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_sender_signal_index` instead
+///
+#define k_urlcomborequester_qbase_sender_signal_index k_urlcomborequester_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -10390,7 +10866,7 @@ int32_t k_urlcomborequester_sender_signal_index(void* self);
 ///
 /// @param self KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_qbase_sender_signal_index(void* self);
+int32_t k_urlcomborequester_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -10414,6 +10890,10 @@ void k_urlcomborequester_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_urlcomborequester_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_receivers` instead
+///
+#define k_urlcomborequester_qbase_receivers k_urlcomborequester_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -10423,7 +10903,7 @@ int32_t k_urlcomborequester_receivers(void* self, const char* signal);
 /// @param self KUrlComboRequester*
 /// @param signal const char*
 ///
-int32_t k_urlcomborequester_qbase_receivers(void* self, const char* signal);
+int32_t k_urlcomborequester_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -10447,6 +10927,10 @@ void k_urlcomborequester_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool k_urlcomborequester_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_is_signal_connected` instead
+///
+#define k_urlcomborequester_qbase_is_signal_connected k_urlcomborequester_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -10456,7 +10940,7 @@ bool k_urlcomborequester_is_signal_connected(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlcomborequester_qbase_is_signal_connected(void* self, void* signal);
+bool k_urlcomborequester_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -10481,6 +10965,10 @@ void k_urlcomborequester_on_is_signal_connected(void* self, bool (*callback)(voi
 ///
 double k_urlcomborequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_urlcomborequester_super_get_decoded_metric_f` instead
+///
+#define k_urlcomborequester_qbase_get_decoded_metric_f k_urlcomborequester_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -10491,7 +10979,7 @@ double k_urlcomborequester_get_decoded_metric_f(void* self, int32_t metricA, int
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlcomborequester_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlcomborequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

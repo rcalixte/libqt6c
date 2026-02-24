@@ -31,8 +31,8 @@ void q_rubberband_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QRubberBand_OnMetaObject((QRubberBand*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_rubberband_qbase_meta_object(void* self) {
-    return QRubberBand_QBaseMetaObject((QRubberBand*)self);
+const QMetaObject* q_rubberband_super_meta_object(void* self) {
+    return QRubberBand_SuperMetaObject((QRubberBand*)self);
 }
 
 void* q_rubberband_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_rubberband_on_metacast(void* self, void* (*callback)(void*, const char*))
     QRubberBand_OnMetacast((QRubberBand*)self, (intptr_t)callback);
 }
 
-void* q_rubberband_qbase_metacast(void* self, const char* param1) {
-    return QRubberBand_QBaseMetacast((QRubberBand*)self, param1);
+void* q_rubberband_super_metacast(void* self, const char* param1) {
+    return QRubberBand_SuperMetacast((QRubberBand*)self, param1);
 }
 
 int32_t q_rubberband_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_rubberband_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QRubberBand_OnMetacall((QRubberBand*)self, (intptr_t)callback);
 }
 
-int32_t q_rubberband_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QRubberBand_QBaseMetacall((QRubberBand*)self, param1, param2, param3);
+int32_t q_rubberband_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QRubberBand_SuperMetacall((QRubberBand*)self, param1, param2, param3);
 }
 
 const char* q_rubberband_tr(const char* s) {
@@ -102,8 +102,8 @@ void q_rubberband_on_event(void* self, bool (*callback)(void*, void*)) {
     QRubberBand_OnEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-bool q_rubberband_qbase_event(void* self, void* e) {
-    return QRubberBand_QBaseEvent((QRubberBand*)self, (QEvent*)e);
+bool q_rubberband_super_event(void* self, void* e) {
+    return QRubberBand_SuperEvent((QRubberBand*)self, (QEvent*)e);
 }
 
 void q_rubberband_paint_event(void* self, void* param1) {
@@ -114,8 +114,8 @@ void q_rubberband_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QRubberBand_OnPaintEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_paint_event(void* self, void* param1) {
-    QRubberBand_QBasePaintEvent((QRubberBand*)self, (QPaintEvent*)param1);
+void q_rubberband_super_paint_event(void* self, void* param1) {
+    QRubberBand_SuperPaintEvent((QRubberBand*)self, (QPaintEvent*)param1);
 }
 
 void q_rubberband_change_event(void* self, void* param1) {
@@ -126,8 +126,8 @@ void q_rubberband_on_change_event(void* self, void (*callback)(void*, void*)) {
     QRubberBand_OnChangeEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_change_event(void* self, void* param1) {
-    QRubberBand_QBaseChangeEvent((QRubberBand*)self, (QEvent*)param1);
+void q_rubberband_super_change_event(void* self, void* param1) {
+    QRubberBand_SuperChangeEvent((QRubberBand*)self, (QEvent*)param1);
 }
 
 void q_rubberband_show_event(void* self, void* param1) {
@@ -138,8 +138,8 @@ void q_rubberband_on_show_event(void* self, void (*callback)(void*, void*)) {
     QRubberBand_OnShowEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_show_event(void* self, void* param1) {
-    QRubberBand_QBaseShowEvent((QRubberBand*)self, (QShowEvent*)param1);
+void q_rubberband_super_show_event(void* self, void* param1) {
+    QRubberBand_SuperShowEvent((QRubberBand*)self, (QShowEvent*)param1);
 }
 
 void q_rubberband_resize_event(void* self, void* param1) {
@@ -150,8 +150,8 @@ void q_rubberband_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QRubberBand_OnResizeEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_resize_event(void* self, void* param1) {
-    QRubberBand_QBaseResizeEvent((QRubberBand*)self, (QResizeEvent*)param1);
+void q_rubberband_super_resize_event(void* self, void* param1) {
+    QRubberBand_SuperResizeEvent((QRubberBand*)self, (QResizeEvent*)param1);
 }
 
 void q_rubberband_move_event(void* self, void* param1) {
@@ -162,8 +162,8 @@ void q_rubberband_on_move_event(void* self, void (*callback)(void*, void*)) {
     QRubberBand_OnMoveEvent((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_move_event(void* self, void* param1) {
-    QRubberBand_QBaseMoveEvent((QRubberBand*)self, (QMoveEvent*)param1);
+void q_rubberband_super_move_event(void* self, void* param1) {
+    QRubberBand_SuperMoveEvent((QRubberBand*)self, (QMoveEvent*)param1);
 }
 
 void q_rubberband_init_style_option(void* self, void* option) {
@@ -174,8 +174,8 @@ void q_rubberband_on_init_style_option(void* self, void (*callback)(void*, void*
     QRubberBand_OnInitStyleOption((QRubberBand*)self, (intptr_t)callback);
 }
 
-void q_rubberband_qbase_init_style_option(void* self, void* option) {
-    QRubberBand_QBaseInitStyleOption((QRubberBand*)self, (QStyleOptionRubberBand*)option);
+void q_rubberband_super_init_style_option(void* self, void* option) {
+    QRubberBand_SuperInitStyleOption((QRubberBand*)self, (QStyleOptionRubberBand*)option);
 }
 
 const char* q_rubberband_tr2(const char* s, const char* c) {
@@ -1553,8 +1553,8 @@ int32_t q_rubberband_dev_type(void* self) {
     return QRubberBand_DevType((QRubberBand*)self);
 }
 
-int32_t q_rubberband_qbase_dev_type(void* self) {
-    return QRubberBand_QBaseDevType((QRubberBand*)self);
+int32_t q_rubberband_super_dev_type(void* self) {
+    return QRubberBand_SuperDevType((QRubberBand*)self);
 }
 
 void q_rubberband_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1565,8 +1565,8 @@ void q_rubberband_set_visible(void* self, bool visible) {
     QRubberBand_SetVisible((QRubberBand*)self, visible);
 }
 
-void q_rubberband_qbase_set_visible(void* self, bool visible) {
-    QRubberBand_QBaseSetVisible((QRubberBand*)self, visible);
+void q_rubberband_super_set_visible(void* self, bool visible) {
+    QRubberBand_SuperSetVisible((QRubberBand*)self, visible);
 }
 
 void q_rubberband_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1577,8 +1577,8 @@ QSize* q_rubberband_size_hint(void* self) {
     return QRubberBand_SizeHint((QRubberBand*)self);
 }
 
-QSize* q_rubberband_qbase_size_hint(void* self) {
-    return QRubberBand_QBaseSizeHint((QRubberBand*)self);
+QSize* q_rubberband_super_size_hint(void* self) {
+    return QRubberBand_SuperSizeHint((QRubberBand*)self);
 }
 
 void q_rubberband_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1589,8 +1589,8 @@ QSize* q_rubberband_minimum_size_hint(void* self) {
     return QRubberBand_MinimumSizeHint((QRubberBand*)self);
 }
 
-QSize* q_rubberband_qbase_minimum_size_hint(void* self) {
-    return QRubberBand_QBaseMinimumSizeHint((QRubberBand*)self);
+QSize* q_rubberband_super_minimum_size_hint(void* self) {
+    return QRubberBand_SuperMinimumSizeHint((QRubberBand*)self);
 }
 
 void q_rubberband_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1601,8 +1601,8 @@ int32_t q_rubberband_height_for_width(void* self, int param1) {
     return QRubberBand_HeightForWidth((QRubberBand*)self, param1);
 }
 
-int32_t q_rubberband_qbase_height_for_width(void* self, int param1) {
-    return QRubberBand_QBaseHeightForWidth((QRubberBand*)self, param1);
+int32_t q_rubberband_super_height_for_width(void* self, int param1) {
+    return QRubberBand_SuperHeightForWidth((QRubberBand*)self, param1);
 }
 
 void q_rubberband_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1613,8 +1613,8 @@ bool q_rubberband_has_height_for_width(void* self) {
     return QRubberBand_HasHeightForWidth((QRubberBand*)self);
 }
 
-bool q_rubberband_qbase_has_height_for_width(void* self) {
-    return QRubberBand_QBaseHasHeightForWidth((QRubberBand*)self);
+bool q_rubberband_super_has_height_for_width(void* self) {
+    return QRubberBand_SuperHasHeightForWidth((QRubberBand*)self);
 }
 
 void q_rubberband_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1625,8 +1625,8 @@ QPaintEngine* q_rubberband_paint_engine(void* self) {
     return QRubberBand_PaintEngine((QRubberBand*)self);
 }
 
-QPaintEngine* q_rubberband_qbase_paint_engine(void* self) {
-    return QRubberBand_QBasePaintEngine((QRubberBand*)self);
+QPaintEngine* q_rubberband_super_paint_engine(void* self) {
+    return QRubberBand_SuperPaintEngine((QRubberBand*)self);
 }
 
 void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1637,8 +1637,8 @@ void q_rubberband_mouse_press_event(void* self, void* event) {
     QRubberBand_MousePressEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
-void q_rubberband_qbase_mouse_press_event(void* self, void* event) {
-    QRubberBand_QBaseMousePressEvent((QRubberBand*)self, (QMouseEvent*)event);
+void q_rubberband_super_mouse_press_event(void* self, void* event) {
+    QRubberBand_SuperMousePressEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
 void q_rubberband_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1649,8 +1649,8 @@ void q_rubberband_mouse_release_event(void* self, void* event) {
     QRubberBand_MouseReleaseEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
-void q_rubberband_qbase_mouse_release_event(void* self, void* event) {
-    QRubberBand_QBaseMouseReleaseEvent((QRubberBand*)self, (QMouseEvent*)event);
+void q_rubberband_super_mouse_release_event(void* self, void* event) {
+    QRubberBand_SuperMouseReleaseEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
 void q_rubberband_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1661,8 +1661,8 @@ void q_rubberband_mouse_double_click_event(void* self, void* event) {
     QRubberBand_MouseDoubleClickEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
-void q_rubberband_qbase_mouse_double_click_event(void* self, void* event) {
-    QRubberBand_QBaseMouseDoubleClickEvent((QRubberBand*)self, (QMouseEvent*)event);
+void q_rubberband_super_mouse_double_click_event(void* self, void* event) {
+    QRubberBand_SuperMouseDoubleClickEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
 void q_rubberband_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1673,8 +1673,8 @@ void q_rubberband_mouse_move_event(void* self, void* event) {
     QRubberBand_MouseMoveEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
-void q_rubberband_qbase_mouse_move_event(void* self, void* event) {
-    QRubberBand_QBaseMouseMoveEvent((QRubberBand*)self, (QMouseEvent*)event);
+void q_rubberband_super_mouse_move_event(void* self, void* event) {
+    QRubberBand_SuperMouseMoveEvent((QRubberBand*)self, (QMouseEvent*)event);
 }
 
 void q_rubberband_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1685,8 +1685,8 @@ void q_rubberband_wheel_event(void* self, void* event) {
     QRubberBand_WheelEvent((QRubberBand*)self, (QWheelEvent*)event);
 }
 
-void q_rubberband_qbase_wheel_event(void* self, void* event) {
-    QRubberBand_QBaseWheelEvent((QRubberBand*)self, (QWheelEvent*)event);
+void q_rubberband_super_wheel_event(void* self, void* event) {
+    QRubberBand_SuperWheelEvent((QRubberBand*)self, (QWheelEvent*)event);
 }
 
 void q_rubberband_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1697,8 +1697,8 @@ void q_rubberband_key_press_event(void* self, void* event) {
     QRubberBand_KeyPressEvent((QRubberBand*)self, (QKeyEvent*)event);
 }
 
-void q_rubberband_qbase_key_press_event(void* self, void* event) {
-    QRubberBand_QBaseKeyPressEvent((QRubberBand*)self, (QKeyEvent*)event);
+void q_rubberband_super_key_press_event(void* self, void* event) {
+    QRubberBand_SuperKeyPressEvent((QRubberBand*)self, (QKeyEvent*)event);
 }
 
 void q_rubberband_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1709,8 +1709,8 @@ void q_rubberband_key_release_event(void* self, void* event) {
     QRubberBand_KeyReleaseEvent((QRubberBand*)self, (QKeyEvent*)event);
 }
 
-void q_rubberband_qbase_key_release_event(void* self, void* event) {
-    QRubberBand_QBaseKeyReleaseEvent((QRubberBand*)self, (QKeyEvent*)event);
+void q_rubberband_super_key_release_event(void* self, void* event) {
+    QRubberBand_SuperKeyReleaseEvent((QRubberBand*)self, (QKeyEvent*)event);
 }
 
 void q_rubberband_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1721,8 +1721,8 @@ void q_rubberband_focus_in_event(void* self, void* event) {
     QRubberBand_FocusInEvent((QRubberBand*)self, (QFocusEvent*)event);
 }
 
-void q_rubberband_qbase_focus_in_event(void* self, void* event) {
-    QRubberBand_QBaseFocusInEvent((QRubberBand*)self, (QFocusEvent*)event);
+void q_rubberband_super_focus_in_event(void* self, void* event) {
+    QRubberBand_SuperFocusInEvent((QRubberBand*)self, (QFocusEvent*)event);
 }
 
 void q_rubberband_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1733,8 +1733,8 @@ void q_rubberband_focus_out_event(void* self, void* event) {
     QRubberBand_FocusOutEvent((QRubberBand*)self, (QFocusEvent*)event);
 }
 
-void q_rubberband_qbase_focus_out_event(void* self, void* event) {
-    QRubberBand_QBaseFocusOutEvent((QRubberBand*)self, (QFocusEvent*)event);
+void q_rubberband_super_focus_out_event(void* self, void* event) {
+    QRubberBand_SuperFocusOutEvent((QRubberBand*)self, (QFocusEvent*)event);
 }
 
 void q_rubberband_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1745,8 +1745,8 @@ void q_rubberband_enter_event(void* self, void* event) {
     QRubberBand_EnterEvent((QRubberBand*)self, (QEnterEvent*)event);
 }
 
-void q_rubberband_qbase_enter_event(void* self, void* event) {
-    QRubberBand_QBaseEnterEvent((QRubberBand*)self, (QEnterEvent*)event);
+void q_rubberband_super_enter_event(void* self, void* event) {
+    QRubberBand_SuperEnterEvent((QRubberBand*)self, (QEnterEvent*)event);
 }
 
 void q_rubberband_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void q_rubberband_leave_event(void* self, void* event) {
     QRubberBand_LeaveEvent((QRubberBand*)self, (QEvent*)event);
 }
 
-void q_rubberband_qbase_leave_event(void* self, void* event) {
-    QRubberBand_QBaseLeaveEvent((QRubberBand*)self, (QEvent*)event);
+void q_rubberband_super_leave_event(void* self, void* event) {
+    QRubberBand_SuperLeaveEvent((QRubberBand*)self, (QEvent*)event);
 }
 
 void q_rubberband_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void q_rubberband_close_event(void* self, void* event) {
     QRubberBand_CloseEvent((QRubberBand*)self, (QCloseEvent*)event);
 }
 
-void q_rubberband_qbase_close_event(void* self, void* event) {
-    QRubberBand_QBaseCloseEvent((QRubberBand*)self, (QCloseEvent*)event);
+void q_rubberband_super_close_event(void* self, void* event) {
+    QRubberBand_SuperCloseEvent((QRubberBand*)self, (QCloseEvent*)event);
 }
 
 void q_rubberband_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ void q_rubberband_context_menu_event(void* self, void* event) {
     QRubberBand_ContextMenuEvent((QRubberBand*)self, (QContextMenuEvent*)event);
 }
 
-void q_rubberband_qbase_context_menu_event(void* self, void* event) {
-    QRubberBand_QBaseContextMenuEvent((QRubberBand*)self, (QContextMenuEvent*)event);
+void q_rubberband_super_context_menu_event(void* self, void* event) {
+    QRubberBand_SuperContextMenuEvent((QRubberBand*)self, (QContextMenuEvent*)event);
 }
 
 void q_rubberband_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1793,8 +1793,8 @@ void q_rubberband_tablet_event(void* self, void* event) {
     QRubberBand_TabletEvent((QRubberBand*)self, (QTabletEvent*)event);
 }
 
-void q_rubberband_qbase_tablet_event(void* self, void* event) {
-    QRubberBand_QBaseTabletEvent((QRubberBand*)self, (QTabletEvent*)event);
+void q_rubberband_super_tablet_event(void* self, void* event) {
+    QRubberBand_SuperTabletEvent((QRubberBand*)self, (QTabletEvent*)event);
 }
 
 void q_rubberband_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1805,8 +1805,8 @@ void q_rubberband_action_event(void* self, void* event) {
     QRubberBand_ActionEvent((QRubberBand*)self, (QActionEvent*)event);
 }
 
-void q_rubberband_qbase_action_event(void* self, void* event) {
-    QRubberBand_QBaseActionEvent((QRubberBand*)self, (QActionEvent*)event);
+void q_rubberband_super_action_event(void* self, void* event) {
+    QRubberBand_SuperActionEvent((QRubberBand*)self, (QActionEvent*)event);
 }
 
 void q_rubberband_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1817,8 +1817,8 @@ void q_rubberband_drag_enter_event(void* self, void* event) {
     QRubberBand_DragEnterEvent((QRubberBand*)self, (QDragEnterEvent*)event);
 }
 
-void q_rubberband_qbase_drag_enter_event(void* self, void* event) {
-    QRubberBand_QBaseDragEnterEvent((QRubberBand*)self, (QDragEnterEvent*)event);
+void q_rubberband_super_drag_enter_event(void* self, void* event) {
+    QRubberBand_SuperDragEnterEvent((QRubberBand*)self, (QDragEnterEvent*)event);
 }
 
 void q_rubberband_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1829,8 +1829,8 @@ void q_rubberband_drag_move_event(void* self, void* event) {
     QRubberBand_DragMoveEvent((QRubberBand*)self, (QDragMoveEvent*)event);
 }
 
-void q_rubberband_qbase_drag_move_event(void* self, void* event) {
-    QRubberBand_QBaseDragMoveEvent((QRubberBand*)self, (QDragMoveEvent*)event);
+void q_rubberband_super_drag_move_event(void* self, void* event) {
+    QRubberBand_SuperDragMoveEvent((QRubberBand*)self, (QDragMoveEvent*)event);
 }
 
 void q_rubberband_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1841,8 +1841,8 @@ void q_rubberband_drag_leave_event(void* self, void* event) {
     QRubberBand_DragLeaveEvent((QRubberBand*)self, (QDragLeaveEvent*)event);
 }
 
-void q_rubberband_qbase_drag_leave_event(void* self, void* event) {
-    QRubberBand_QBaseDragLeaveEvent((QRubberBand*)self, (QDragLeaveEvent*)event);
+void q_rubberband_super_drag_leave_event(void* self, void* event) {
+    QRubberBand_SuperDragLeaveEvent((QRubberBand*)self, (QDragLeaveEvent*)event);
 }
 
 void q_rubberband_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void q_rubberband_drop_event(void* self, void* event) {
     QRubberBand_DropEvent((QRubberBand*)self, (QDropEvent*)event);
 }
 
-void q_rubberband_qbase_drop_event(void* self, void* event) {
-    QRubberBand_QBaseDropEvent((QRubberBand*)self, (QDropEvent*)event);
+void q_rubberband_super_drop_event(void* self, void* event) {
+    QRubberBand_SuperDropEvent((QRubberBand*)self, (QDropEvent*)event);
 }
 
 void q_rubberband_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void q_rubberband_hide_event(void* self, void* event) {
     QRubberBand_HideEvent((QRubberBand*)self, (QHideEvent*)event);
 }
 
-void q_rubberband_qbase_hide_event(void* self, void* event) {
-    QRubberBand_QBaseHideEvent((QRubberBand*)self, (QHideEvent*)event);
+void q_rubberband_super_hide_event(void* self, void* event) {
+    QRubberBand_SuperHideEvent((QRubberBand*)self, (QHideEvent*)event);
 }
 
 void q_rubberband_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ bool q_rubberband_native_event(void* self, char* eventType, void* message, intpt
     return QRubberBand_NativeEvent((QRubberBand*)self, qstring(eventType), message, result);
 }
 
-bool q_rubberband_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QRubberBand_QBaseNativeEvent((QRubberBand*)self, qstring(eventType), message, result);
+bool q_rubberband_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QRubberBand_SuperNativeEvent((QRubberBand*)self, qstring(eventType), message, result);
 }
 
 void q_rubberband_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1889,8 +1889,8 @@ int32_t q_rubberband_metric(void* self, int32_t param1) {
     return QRubberBand_Metric((QRubberBand*)self, param1);
 }
 
-int32_t q_rubberband_qbase_metric(void* self, int32_t param1) {
-    return QRubberBand_QBaseMetric((QRubberBand*)self, param1);
+int32_t q_rubberband_super_metric(void* self, int32_t param1) {
+    return QRubberBand_SuperMetric((QRubberBand*)self, param1);
 }
 
 void q_rubberband_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1901,8 +1901,8 @@ void q_rubberband_init_painter(void* self, void* painter) {
     QRubberBand_InitPainter((QRubberBand*)self, (QPainter*)painter);
 }
 
-void q_rubberband_qbase_init_painter(void* self, void* painter) {
-    QRubberBand_QBaseInitPainter((QRubberBand*)self, (QPainter*)painter);
+void q_rubberband_super_init_painter(void* self, void* painter) {
+    QRubberBand_SuperInitPainter((QRubberBand*)self, (QPainter*)painter);
 }
 
 void q_rubberband_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ QPaintDevice* q_rubberband_redirected(void* self, void* offset) {
     return QRubberBand_Redirected((QRubberBand*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_rubberband_qbase_redirected(void* self, void* offset) {
-    return QRubberBand_QBaseRedirected((QRubberBand*)self, (QPoint*)offset);
+QPaintDevice* q_rubberband_super_redirected(void* self, void* offset) {
+    return QRubberBand_SuperRedirected((QRubberBand*)self, (QPoint*)offset);
 }
 
 void q_rubberband_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ QPainter* q_rubberband_shared_painter(void* self) {
     return QRubberBand_SharedPainter((QRubberBand*)self);
 }
 
-QPainter* q_rubberband_qbase_shared_painter(void* self) {
-    return QRubberBand_QBaseSharedPainter((QRubberBand*)self);
+QPainter* q_rubberband_super_shared_painter(void* self) {
+    return QRubberBand_SuperSharedPainter((QRubberBand*)self);
 }
 
 void q_rubberband_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1937,8 +1937,8 @@ void q_rubberband_input_method_event(void* self, void* param1) {
     QRubberBand_InputMethodEvent((QRubberBand*)self, (QInputMethodEvent*)param1);
 }
 
-void q_rubberband_qbase_input_method_event(void* self, void* param1) {
-    QRubberBand_QBaseInputMethodEvent((QRubberBand*)self, (QInputMethodEvent*)param1);
+void q_rubberband_super_input_method_event(void* self, void* param1) {
+    QRubberBand_SuperInputMethodEvent((QRubberBand*)self, (QInputMethodEvent*)param1);
 }
 
 void q_rubberband_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ QVariant* q_rubberband_input_method_query(void* self, int32_t param1) {
     return QRubberBand_InputMethodQuery((QRubberBand*)self, param1);
 }
 
-QVariant* q_rubberband_qbase_input_method_query(void* self, int32_t param1) {
-    return QRubberBand_QBaseInputMethodQuery((QRubberBand*)self, param1);
+QVariant* q_rubberband_super_input_method_query(void* self, int32_t param1) {
+    return QRubberBand_SuperInputMethodQuery((QRubberBand*)self, param1);
 }
 
 void q_rubberband_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1961,8 +1961,8 @@ bool q_rubberband_focus_next_prev_child(void* self, bool next) {
     return QRubberBand_FocusNextPrevChild((QRubberBand*)self, next);
 }
 
-bool q_rubberband_qbase_focus_next_prev_child(void* self, bool next) {
-    return QRubberBand_QBaseFocusNextPrevChild((QRubberBand*)self, next);
+bool q_rubberband_super_focus_next_prev_child(void* self, bool next) {
+    return QRubberBand_SuperFocusNextPrevChild((QRubberBand*)self, next);
 }
 
 void q_rubberband_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1973,8 +1973,8 @@ bool q_rubberband_event_filter(void* self, void* watched, void* event) {
     return QRubberBand_EventFilter((QRubberBand*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_rubberband_qbase_event_filter(void* self, void* watched, void* event) {
-    return QRubberBand_QBaseEventFilter((QRubberBand*)self, (QObject*)watched, (QEvent*)event);
+bool q_rubberband_super_event_filter(void* self, void* watched, void* event) {
+    return QRubberBand_SuperEventFilter((QRubberBand*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_rubberband_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1985,8 +1985,8 @@ void q_rubberband_timer_event(void* self, void* event) {
     QRubberBand_TimerEvent((QRubberBand*)self, (QTimerEvent*)event);
 }
 
-void q_rubberband_qbase_timer_event(void* self, void* event) {
-    QRubberBand_QBaseTimerEvent((QRubberBand*)self, (QTimerEvent*)event);
+void q_rubberband_super_timer_event(void* self, void* event) {
+    QRubberBand_SuperTimerEvent((QRubberBand*)self, (QTimerEvent*)event);
 }
 
 void q_rubberband_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void q_rubberband_child_event(void* self, void* event) {
     QRubberBand_ChildEvent((QRubberBand*)self, (QChildEvent*)event);
 }
 
-void q_rubberband_qbase_child_event(void* self, void* event) {
-    QRubberBand_QBaseChildEvent((QRubberBand*)self, (QChildEvent*)event);
+void q_rubberband_super_child_event(void* self, void* event) {
+    QRubberBand_SuperChildEvent((QRubberBand*)self, (QChildEvent*)event);
 }
 
 void q_rubberband_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void q_rubberband_custom_event(void* self, void* event) {
     QRubberBand_CustomEvent((QRubberBand*)self, (QEvent*)event);
 }
 
-void q_rubberband_qbase_custom_event(void* self, void* event) {
-    QRubberBand_QBaseCustomEvent((QRubberBand*)self, (QEvent*)event);
+void q_rubberband_super_custom_event(void* self, void* event) {
+    QRubberBand_SuperCustomEvent((QRubberBand*)self, (QEvent*)event);
 }
 
 void q_rubberband_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void q_rubberband_connect_notify(void* self, void* signal) {
     QRubberBand_ConnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
-void q_rubberband_qbase_connect_notify(void* self, void* signal) {
-    QRubberBand_QBaseConnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
+void q_rubberband_super_connect_notify(void* self, void* signal) {
+    QRubberBand_SuperConnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
 void q_rubberband_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void q_rubberband_disconnect_notify(void* self, void* signal) {
     QRubberBand_DisconnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
-void q_rubberband_qbase_disconnect_notify(void* self, void* signal) {
-    QRubberBand_QBaseDisconnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
+void q_rubberband_super_disconnect_notify(void* self, void* signal) {
+    QRubberBand_SuperDisconnectNotify((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
 void q_rubberband_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void q_rubberband_update_micro_focus(void* self) {
     QRubberBand_UpdateMicroFocus((QRubberBand*)self);
 }
 
-void q_rubberband_qbase_update_micro_focus(void* self) {
-    QRubberBand_QBaseUpdateMicroFocus((QRubberBand*)self);
+void q_rubberband_super_update_micro_focus(void* self) {
+    QRubberBand_SuperUpdateMicroFocus((QRubberBand*)self);
 }
 
 void q_rubberband_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2057,8 +2057,8 @@ void q_rubberband_create(void* self) {
     QRubberBand_Create((QRubberBand*)self);
 }
 
-void q_rubberband_qbase_create(void* self) {
-    QRubberBand_QBaseCreate((QRubberBand*)self);
+void q_rubberband_super_create(void* self) {
+    QRubberBand_SuperCreate((QRubberBand*)self);
 }
 
 void q_rubberband_on_create(void* self, void (*callback)()) {
@@ -2069,8 +2069,8 @@ void q_rubberband_destroy(void* self) {
     QRubberBand_Destroy((QRubberBand*)self);
 }
 
-void q_rubberband_qbase_destroy(void* self) {
-    QRubberBand_QBaseDestroy((QRubberBand*)self);
+void q_rubberband_super_destroy(void* self) {
+    QRubberBand_SuperDestroy((QRubberBand*)self);
 }
 
 void q_rubberband_on_destroy(void* self, void (*callback)()) {
@@ -2081,8 +2081,8 @@ bool q_rubberband_focus_next_child(void* self) {
     return QRubberBand_FocusNextChild((QRubberBand*)self);
 }
 
-bool q_rubberband_qbase_focus_next_child(void* self) {
-    return QRubberBand_QBaseFocusNextChild((QRubberBand*)self);
+bool q_rubberband_super_focus_next_child(void* self) {
+    return QRubberBand_SuperFocusNextChild((QRubberBand*)self);
 }
 
 void q_rubberband_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2093,8 +2093,8 @@ bool q_rubberband_focus_previous_child(void* self) {
     return QRubberBand_FocusPreviousChild((QRubberBand*)self);
 }
 
-bool q_rubberband_qbase_focus_previous_child(void* self) {
-    return QRubberBand_QBaseFocusPreviousChild((QRubberBand*)self);
+bool q_rubberband_super_focus_previous_child(void* self) {
+    return QRubberBand_SuperFocusPreviousChild((QRubberBand*)self);
 }
 
 void q_rubberband_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2105,8 +2105,8 @@ QObject* q_rubberband_sender(void* self) {
     return QRubberBand_Sender((QRubberBand*)self);
 }
 
-QObject* q_rubberband_qbase_sender(void* self) {
-    return QRubberBand_QBaseSender((QRubberBand*)self);
+QObject* q_rubberband_super_sender(void* self) {
+    return QRubberBand_SuperSender((QRubberBand*)self);
 }
 
 void q_rubberband_on_sender(void* self, QObject* (*callback)()) {
@@ -2117,8 +2117,8 @@ int32_t q_rubberband_sender_signal_index(void* self) {
     return QRubberBand_SenderSignalIndex((QRubberBand*)self);
 }
 
-int32_t q_rubberband_qbase_sender_signal_index(void* self) {
-    return QRubberBand_QBaseSenderSignalIndex((QRubberBand*)self);
+int32_t q_rubberband_super_sender_signal_index(void* self) {
+    return QRubberBand_SuperSenderSignalIndex((QRubberBand*)self);
 }
 
 void q_rubberband_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2129,8 +2129,8 @@ int32_t q_rubberband_receivers(void* self, const char* signal) {
     return QRubberBand_Receivers((QRubberBand*)self, signal);
 }
 
-int32_t q_rubberband_qbase_receivers(void* self, const char* signal) {
-    return QRubberBand_QBaseReceivers((QRubberBand*)self, signal);
+int32_t q_rubberband_super_receivers(void* self, const char* signal) {
+    return QRubberBand_SuperReceivers((QRubberBand*)self, signal);
 }
 
 void q_rubberband_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2141,8 +2141,8 @@ bool q_rubberband_is_signal_connected(void* self, void* signal) {
     return QRubberBand_IsSignalConnected((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
-bool q_rubberband_qbase_is_signal_connected(void* self, void* signal) {
-    return QRubberBand_QBaseIsSignalConnected((QRubberBand*)self, (QMetaMethod*)signal);
+bool q_rubberband_super_is_signal_connected(void* self, void* signal) {
+    return QRubberBand_SuperIsSignalConnected((QRubberBand*)self, (QMetaMethod*)signal);
 }
 
 void q_rubberband_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2153,8 +2153,8 @@ double q_rubberband_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QRubberBand_GetDecodedMetricF((QRubberBand*)self, metricA, metricB);
 }
 
-double q_rubberband_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QRubberBand_QBaseGetDecodedMetricF((QRubberBand*)self, metricA, metricB);
+double q_rubberband_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QRubberBand_SuperGetDecodedMetricF((QRubberBand*)self, metricA, metricB);
 }
 
 void q_rubberband_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

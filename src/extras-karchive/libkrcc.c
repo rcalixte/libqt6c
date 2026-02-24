@@ -29,8 +29,8 @@ void k_rcc_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
     KRcc_OnDoPrepareWriting((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KRcc_QBaseDoPrepareWriting((KRcc*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_rcc_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KRcc_SuperDoPrepareWriting((KRcc*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_rcc_do_finish_writing(void* self, long long size) {
@@ -41,8 +41,8 @@ void k_rcc_on_do_finish_writing(void* self, bool (*callback)(void*, long long)) 
     KRcc_OnDoFinishWriting((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_do_finish_writing(void* self, long long size) {
-    return KRcc_QBaseDoFinishWriting((KRcc*)self, size);
+bool k_rcc_super_do_finish_writing(void* self, long long size) {
+    return KRcc_SuperDoFinishWriting((KRcc*)self, size);
 }
 
 bool k_rcc_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -53,8 +53,8 @@ void k_rcc_on_do_write_dir(void* self, bool (*callback)(void*, const char*, cons
     KRcc_OnDoWriteDir((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KRcc_QBaseDoWriteDir((KRcc*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_rcc_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KRcc_SuperDoWriteDir((KRcc*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_rcc_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -65,8 +65,8 @@ void k_rcc_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*,
     KRcc_OnDoWriteSymLink((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KRcc_QBaseDoWriteSymLink((KRcc*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_rcc_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KRcc_SuperDoWriteSymLink((KRcc*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_rcc_open_archive(void* self, int32_t mode) {
@@ -77,8 +77,8 @@ void k_rcc_on_open_archive(void* self, bool (*callback)(void*, int32_t)) {
     KRcc_OnOpenArchive((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_open_archive(void* self, int32_t mode) {
-    return KRcc_QBaseOpenArchive((KRcc*)self, mode);
+bool k_rcc_super_open_archive(void* self, int32_t mode) {
+    return KRcc_SuperOpenArchive((KRcc*)self, mode);
 }
 
 bool k_rcc_close_archive(void* self) {
@@ -89,8 +89,8 @@ void k_rcc_on_close_archive(void* self, bool (*callback)()) {
     KRcc_OnCloseArchive((KRcc*)self, (intptr_t)callback);
 }
 
-bool k_rcc_qbase_close_archive(void* self) {
-    return KRcc_QBaseCloseArchive((KRcc*)self);
+bool k_rcc_super_close_archive(void* self) {
+    return KRcc_SuperCloseArchive((KRcc*)self);
 }
 
 void k_rcc_virtual_hook(void* self, int id, void* data) {
@@ -101,8 +101,8 @@ void k_rcc_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     KRcc_OnVirtualHook((KRcc*)self, (intptr_t)callback);
 }
 
-void k_rcc_qbase_virtual_hook(void* self, int id, void* data) {
-    KRcc_QBaseVirtualHook((KRcc*)self, id, data);
+void k_rcc_super_virtual_hook(void* self, int id, void* data) {
+    KRcc_SuperVirtualHook((KRcc*)self, id, data);
 }
 
 const char* k_rcc_tr2(const char* sourceText, const char* disambiguation) {
@@ -277,8 +277,8 @@ bool k_rcc_open(void* self, int32_t mode) {
     return KRcc_Open((KRcc*)self, mode);
 }
 
-bool k_rcc_qbase_open(void* self, int32_t mode) {
-    return KRcc_QBaseOpen((KRcc*)self, mode);
+bool k_rcc_super_open(void* self, int32_t mode) {
+    return KRcc_SuperOpen((KRcc*)self, mode);
 }
 
 void k_rcc_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -289,8 +289,8 @@ bool k_rcc_close(void* self) {
     return KRcc_Close((KRcc*)self);
 }
 
-bool k_rcc_qbase_close(void* self) {
-    return KRcc_QBaseClose((KRcc*)self);
+bool k_rcc_super_close(void* self) {
+    return KRcc_SuperClose((KRcc*)self);
 }
 
 void k_rcc_on_close(void* self, bool (*callback)()) {
@@ -301,8 +301,8 @@ KArchiveDirectory* k_rcc_root_dir(void* self) {
     return KRcc_RootDir((KRcc*)self);
 }
 
-KArchiveDirectory* k_rcc_qbase_root_dir(void* self) {
-    return KRcc_QBaseRootDir((KRcc*)self);
+KArchiveDirectory* k_rcc_super_root_dir(void* self) {
+    return KRcc_SuperRootDir((KRcc*)self);
 }
 
 void k_rcc_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
@@ -313,8 +313,8 @@ bool k_rcc_do_write_data(void* self, const char* data, long long size) {
     return KRcc_DoWriteData((KRcc*)self, data, size);
 }
 
-bool k_rcc_qbase_do_write_data(void* self, const char* data, long long size) {
-    return KRcc_QBaseDoWriteData((KRcc*)self, data, size);
+bool k_rcc_super_do_write_data(void* self, const char* data, long long size) {
+    return KRcc_SuperDoWriteData((KRcc*)self, data, size);
 }
 
 void k_rcc_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long)) {
@@ -325,8 +325,8 @@ bool k_rcc_create_device(void* self, int32_t mode) {
     return KRcc_CreateDevice((KRcc*)self, mode);
 }
 
-bool k_rcc_qbase_create_device(void* self, int32_t mode) {
-    return KRcc_QBaseCreateDevice((KRcc*)self, mode);
+bool k_rcc_super_create_device(void* self, int32_t mode) {
+    return KRcc_SuperCreateDevice((KRcc*)self, mode);
 }
 
 void k_rcc_on_create_device(void* self, bool (*callback)(void*, int32_t)) {
@@ -337,8 +337,8 @@ void k_rcc_set_error_string(void* self, const char* errorStr) {
     KRcc_SetErrorString((KRcc*)self, qstring(errorStr));
 }
 
-void k_rcc_qbase_set_error_string(void* self, const char* errorStr) {
-    KRcc_QBaseSetErrorString((KRcc*)self, qstring(errorStr));
+void k_rcc_super_set_error_string(void* self, const char* errorStr) {
+    KRcc_SuperSetErrorString((KRcc*)self, qstring(errorStr));
 }
 
 void k_rcc_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -349,8 +349,8 @@ KArchiveDirectory* k_rcc_find_or_create(void* self, const char* path) {
     return KRcc_FindOrCreate((KRcc*)self, qstring(path));
 }
 
-KArchiveDirectory* k_rcc_qbase_find_or_create(void* self, const char* path) {
-    return KRcc_QBaseFindOrCreate((KRcc*)self, qstring(path));
+KArchiveDirectory* k_rcc_super_find_or_create(void* self, const char* path) {
+    return KRcc_SuperFindOrCreate((KRcc*)self, qstring(path));
 }
 
 void k_rcc_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
@@ -361,8 +361,8 @@ void k_rcc_set_device(void* self, void* dev) {
     KRcc_SetDevice((KRcc*)self, (QIODevice*)dev);
 }
 
-void k_rcc_qbase_set_device(void* self, void* dev) {
-    KRcc_QBaseSetDevice((KRcc*)self, (QIODevice*)dev);
+void k_rcc_super_set_device(void* self, void* dev) {
+    KRcc_SuperSetDevice((KRcc*)self, (QIODevice*)dev);
 }
 
 void k_rcc_on_set_device(void* self, void (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ void k_rcc_set_root_dir(void* self, void* rootDir) {
     KRcc_SetRootDir((KRcc*)self, (KArchiveDirectory*)rootDir);
 }
 
-void k_rcc_qbase_set_root_dir(void* self, void* rootDir) {
-    KRcc_QBaseSetRootDir((KRcc*)self, (KArchiveDirectory*)rootDir);
+void k_rcc_super_set_root_dir(void* self, void* rootDir) {
+    KRcc_SuperSetRootDir((KRcc*)self, (KArchiveDirectory*)rootDir);
 }
 
 void k_rcc_on_set_root_dir(void* self, void (*callback)(void*, void*)) {

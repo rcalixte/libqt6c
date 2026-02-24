@@ -34,8 +34,8 @@ void q_inputdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QInputDialog_OnMetaObject((QInputDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_inputdialog_qbase_meta_object(void* self) {
-    return QInputDialog_QBaseMetaObject((QInputDialog*)self);
+const QMetaObject* q_inputdialog_super_meta_object(void* self) {
+    return QInputDialog_SuperMetaObject((QInputDialog*)self);
 }
 
 void* q_inputdialog_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void q_inputdialog_on_metacast(void* self, void* (*callback)(void*, const char*)
     QInputDialog_OnMetacast((QInputDialog*)self, (intptr_t)callback);
 }
 
-void* q_inputdialog_qbase_metacast(void* self, const char* param1) {
-    return QInputDialog_QBaseMetacast((QInputDialog*)self, param1);
+void* q_inputdialog_super_metacast(void* self, const char* param1) {
+    return QInputDialog_SuperMetacast((QInputDialog*)self, param1);
 }
 
 int32_t q_inputdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_inputdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QInputDialog_OnMetacall((QInputDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QInputDialog_QBaseMetacall((QInputDialog*)self, param1, param2, param3);
+int32_t q_inputdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QInputDialog_SuperMetacall((QInputDialog*)self, param1, param2, param3);
 }
 
 const char* q_inputdialog_tr(const char* s) {
@@ -267,8 +267,8 @@ void q_inputdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QInputDialog_OnMinimumSizeHint((QInputDialog*)self, (intptr_t)callback);
 }
 
-QSize* q_inputdialog_qbase_minimum_size_hint(void* self) {
-    return QInputDialog_QBaseMinimumSizeHint((QInputDialog*)self);
+QSize* q_inputdialog_super_minimum_size_hint(void* self) {
+    return QInputDialog_SuperMinimumSizeHint((QInputDialog*)self);
 }
 
 QSize* q_inputdialog_size_hint(void* self) {
@@ -279,8 +279,8 @@ void q_inputdialog_on_size_hint(void* self, QSize* (*callback)()) {
     QInputDialog_OnSizeHint((QInputDialog*)self, (intptr_t)callback);
 }
 
-QSize* q_inputdialog_qbase_size_hint(void* self) {
-    return QInputDialog_QBaseSizeHint((QInputDialog*)self);
+QSize* q_inputdialog_super_size_hint(void* self) {
+    return QInputDialog_SuperSizeHint((QInputDialog*)self);
 }
 
 void q_inputdialog_set_visible(void* self, bool visible) {
@@ -291,8 +291,8 @@ void q_inputdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
     QInputDialog_OnSetVisible((QInputDialog*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_qbase_set_visible(void* self, bool visible) {
-    QInputDialog_QBaseSetVisible((QInputDialog*)self, visible);
+void q_inputdialog_super_set_visible(void* self, bool visible) {
+    QInputDialog_SuperSetVisible((QInputDialog*)self, visible);
 }
 
 const char* q_inputdialog_get_text(void* parent, const char* title, const char* label) {
@@ -399,8 +399,8 @@ void q_inputdialog_on_done(void* self, void (*callback)(void*, int)) {
     QInputDialog_OnDone((QInputDialog*)self, (intptr_t)callback);
 }
 
-void q_inputdialog_qbase_done(void* self, int result) {
-    QInputDialog_QBaseDone((QInputDialog*)self, result);
+void q_inputdialog_super_done(void* self, int result) {
+    QInputDialog_SuperDone((QInputDialog*)self, result);
 }
 
 const char* q_inputdialog_tr2(const char* s, const char* c) {
@@ -2055,8 +2055,8 @@ void q_inputdialog_open(void* self) {
     QInputDialog_Open((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_open(void* self) {
-    QInputDialog_QBaseOpen((QInputDialog*)self);
+void q_inputdialog_super_open(void* self) {
+    QInputDialog_SuperOpen((QInputDialog*)self);
 }
 
 void q_inputdialog_on_open(void* self, void (*callback)()) {
@@ -2067,8 +2067,8 @@ int32_t q_inputdialog_exec(void* self) {
     return QInputDialog_Exec((QInputDialog*)self);
 }
 
-int32_t q_inputdialog_qbase_exec(void* self) {
-    return QInputDialog_QBaseExec((QInputDialog*)self);
+int32_t q_inputdialog_super_exec(void* self) {
+    return QInputDialog_SuperExec((QInputDialog*)self);
 }
 
 void q_inputdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -2079,8 +2079,8 @@ void q_inputdialog_accept(void* self) {
     QInputDialog_Accept((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_accept(void* self) {
-    QInputDialog_QBaseAccept((QInputDialog*)self);
+void q_inputdialog_super_accept(void* self) {
+    QInputDialog_SuperAccept((QInputDialog*)self);
 }
 
 void q_inputdialog_on_accept(void* self, void (*callback)()) {
@@ -2091,8 +2091,8 @@ void q_inputdialog_reject(void* self) {
     QInputDialog_Reject((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_reject(void* self) {
-    QInputDialog_QBaseReject((QInputDialog*)self);
+void q_inputdialog_super_reject(void* self) {
+    QInputDialog_SuperReject((QInputDialog*)self);
 }
 
 void q_inputdialog_on_reject(void* self, void (*callback)()) {
@@ -2103,8 +2103,8 @@ void q_inputdialog_key_press_event(void* self, void* param1) {
     QInputDialog_KeyPressEvent((QInputDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_inputdialog_qbase_key_press_event(void* self, void* param1) {
-    QInputDialog_QBaseKeyPressEvent((QInputDialog*)self, (QKeyEvent*)param1);
+void q_inputdialog_super_key_press_event(void* self, void* param1) {
+    QInputDialog_SuperKeyPressEvent((QInputDialog*)self, (QKeyEvent*)param1);
 }
 
 void q_inputdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2115,8 +2115,8 @@ void q_inputdialog_close_event(void* self, void* param1) {
     QInputDialog_CloseEvent((QInputDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_inputdialog_qbase_close_event(void* self, void* param1) {
-    QInputDialog_QBaseCloseEvent((QInputDialog*)self, (QCloseEvent*)param1);
+void q_inputdialog_super_close_event(void* self, void* param1) {
+    QInputDialog_SuperCloseEvent((QInputDialog*)self, (QCloseEvent*)param1);
 }
 
 void q_inputdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ void q_inputdialog_show_event(void* self, void* param1) {
     QInputDialog_ShowEvent((QInputDialog*)self, (QShowEvent*)param1);
 }
 
-void q_inputdialog_qbase_show_event(void* self, void* param1) {
-    QInputDialog_QBaseShowEvent((QInputDialog*)self, (QShowEvent*)param1);
+void q_inputdialog_super_show_event(void* self, void* param1) {
+    QInputDialog_SuperShowEvent((QInputDialog*)self, (QShowEvent*)param1);
 }
 
 void q_inputdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2139,8 +2139,8 @@ void q_inputdialog_resize_event(void* self, void* param1) {
     QInputDialog_ResizeEvent((QInputDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_inputdialog_qbase_resize_event(void* self, void* param1) {
-    QInputDialog_QBaseResizeEvent((QInputDialog*)self, (QResizeEvent*)param1);
+void q_inputdialog_super_resize_event(void* self, void* param1) {
+    QInputDialog_SuperResizeEvent((QInputDialog*)self, (QResizeEvent*)param1);
 }
 
 void q_inputdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2151,8 +2151,8 @@ void q_inputdialog_context_menu_event(void* self, void* param1) {
     QInputDialog_ContextMenuEvent((QInputDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_inputdialog_qbase_context_menu_event(void* self, void* param1) {
-    QInputDialog_QBaseContextMenuEvent((QInputDialog*)self, (QContextMenuEvent*)param1);
+void q_inputdialog_super_context_menu_event(void* self, void* param1) {
+    QInputDialog_SuperContextMenuEvent((QInputDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void q_inputdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2163,8 +2163,8 @@ bool q_inputdialog_event_filter(void* self, void* param1, void* param2) {
     return QInputDialog_EventFilter((QInputDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_inputdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QInputDialog_QBaseEventFilter((QInputDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool q_inputdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return QInputDialog_SuperEventFilter((QInputDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_inputdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2175,8 +2175,8 @@ int32_t q_inputdialog_dev_type(void* self) {
     return QInputDialog_DevType((QInputDialog*)self);
 }
 
-int32_t q_inputdialog_qbase_dev_type(void* self) {
-    return QInputDialog_QBaseDevType((QInputDialog*)self);
+int32_t q_inputdialog_super_dev_type(void* self) {
+    return QInputDialog_SuperDevType((QInputDialog*)self);
 }
 
 void q_inputdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2187,8 +2187,8 @@ int32_t q_inputdialog_height_for_width(void* self, int param1) {
     return QInputDialog_HeightForWidth((QInputDialog*)self, param1);
 }
 
-int32_t q_inputdialog_qbase_height_for_width(void* self, int param1) {
-    return QInputDialog_QBaseHeightForWidth((QInputDialog*)self, param1);
+int32_t q_inputdialog_super_height_for_width(void* self, int param1) {
+    return QInputDialog_SuperHeightForWidth((QInputDialog*)self, param1);
 }
 
 void q_inputdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2199,8 +2199,8 @@ bool q_inputdialog_has_height_for_width(void* self) {
     return QInputDialog_HasHeightForWidth((QInputDialog*)self);
 }
 
-bool q_inputdialog_qbase_has_height_for_width(void* self) {
-    return QInputDialog_QBaseHasHeightForWidth((QInputDialog*)self);
+bool q_inputdialog_super_has_height_for_width(void* self) {
+    return QInputDialog_SuperHasHeightForWidth((QInputDialog*)self);
 }
 
 void q_inputdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2211,8 +2211,8 @@ QPaintEngine* q_inputdialog_paint_engine(void* self) {
     return QInputDialog_PaintEngine((QInputDialog*)self);
 }
 
-QPaintEngine* q_inputdialog_qbase_paint_engine(void* self) {
-    return QInputDialog_QBasePaintEngine((QInputDialog*)self);
+QPaintEngine* q_inputdialog_super_paint_engine(void* self) {
+    return QInputDialog_SuperPaintEngine((QInputDialog*)self);
 }
 
 void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2223,8 +2223,8 @@ bool q_inputdialog_event(void* self, void* event) {
     return QInputDialog_Event((QInputDialog*)self, (QEvent*)event);
 }
 
-bool q_inputdialog_qbase_event(void* self, void* event) {
-    return QInputDialog_QBaseEvent((QInputDialog*)self, (QEvent*)event);
+bool q_inputdialog_super_event(void* self, void* event) {
+    return QInputDialog_SuperEvent((QInputDialog*)self, (QEvent*)event);
 }
 
 void q_inputdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2235,8 +2235,8 @@ void q_inputdialog_mouse_press_event(void* self, void* event) {
     QInputDialog_MousePressEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
-void q_inputdialog_qbase_mouse_press_event(void* self, void* event) {
-    QInputDialog_QBaseMousePressEvent((QInputDialog*)self, (QMouseEvent*)event);
+void q_inputdialog_super_mouse_press_event(void* self, void* event) {
+    QInputDialog_SuperMousePressEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
 void q_inputdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2247,8 +2247,8 @@ void q_inputdialog_mouse_release_event(void* self, void* event) {
     QInputDialog_MouseReleaseEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
-void q_inputdialog_qbase_mouse_release_event(void* self, void* event) {
-    QInputDialog_QBaseMouseReleaseEvent((QInputDialog*)self, (QMouseEvent*)event);
+void q_inputdialog_super_mouse_release_event(void* self, void* event) {
+    QInputDialog_SuperMouseReleaseEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
 void q_inputdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2259,8 +2259,8 @@ void q_inputdialog_mouse_double_click_event(void* self, void* event) {
     QInputDialog_MouseDoubleClickEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
-void q_inputdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    QInputDialog_QBaseMouseDoubleClickEvent((QInputDialog*)self, (QMouseEvent*)event);
+void q_inputdialog_super_mouse_double_click_event(void* self, void* event) {
+    QInputDialog_SuperMouseDoubleClickEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
 void q_inputdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2271,8 +2271,8 @@ void q_inputdialog_mouse_move_event(void* self, void* event) {
     QInputDialog_MouseMoveEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
-void q_inputdialog_qbase_mouse_move_event(void* self, void* event) {
-    QInputDialog_QBaseMouseMoveEvent((QInputDialog*)self, (QMouseEvent*)event);
+void q_inputdialog_super_mouse_move_event(void* self, void* event) {
+    QInputDialog_SuperMouseMoveEvent((QInputDialog*)self, (QMouseEvent*)event);
 }
 
 void q_inputdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2283,8 +2283,8 @@ void q_inputdialog_wheel_event(void* self, void* event) {
     QInputDialog_WheelEvent((QInputDialog*)self, (QWheelEvent*)event);
 }
 
-void q_inputdialog_qbase_wheel_event(void* self, void* event) {
-    QInputDialog_QBaseWheelEvent((QInputDialog*)self, (QWheelEvent*)event);
+void q_inputdialog_super_wheel_event(void* self, void* event) {
+    QInputDialog_SuperWheelEvent((QInputDialog*)self, (QWheelEvent*)event);
 }
 
 void q_inputdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2295,8 +2295,8 @@ void q_inputdialog_key_release_event(void* self, void* event) {
     QInputDialog_KeyReleaseEvent((QInputDialog*)self, (QKeyEvent*)event);
 }
 
-void q_inputdialog_qbase_key_release_event(void* self, void* event) {
-    QInputDialog_QBaseKeyReleaseEvent((QInputDialog*)self, (QKeyEvent*)event);
+void q_inputdialog_super_key_release_event(void* self, void* event) {
+    QInputDialog_SuperKeyReleaseEvent((QInputDialog*)self, (QKeyEvent*)event);
 }
 
 void q_inputdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2307,8 +2307,8 @@ void q_inputdialog_focus_in_event(void* self, void* event) {
     QInputDialog_FocusInEvent((QInputDialog*)self, (QFocusEvent*)event);
 }
 
-void q_inputdialog_qbase_focus_in_event(void* self, void* event) {
-    QInputDialog_QBaseFocusInEvent((QInputDialog*)self, (QFocusEvent*)event);
+void q_inputdialog_super_focus_in_event(void* self, void* event) {
+    QInputDialog_SuperFocusInEvent((QInputDialog*)self, (QFocusEvent*)event);
 }
 
 void q_inputdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2319,8 +2319,8 @@ void q_inputdialog_focus_out_event(void* self, void* event) {
     QInputDialog_FocusOutEvent((QInputDialog*)self, (QFocusEvent*)event);
 }
 
-void q_inputdialog_qbase_focus_out_event(void* self, void* event) {
-    QInputDialog_QBaseFocusOutEvent((QInputDialog*)self, (QFocusEvent*)event);
+void q_inputdialog_super_focus_out_event(void* self, void* event) {
+    QInputDialog_SuperFocusOutEvent((QInputDialog*)self, (QFocusEvent*)event);
 }
 
 void q_inputdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2331,8 +2331,8 @@ void q_inputdialog_enter_event(void* self, void* event) {
     QInputDialog_EnterEvent((QInputDialog*)self, (QEnterEvent*)event);
 }
 
-void q_inputdialog_qbase_enter_event(void* self, void* event) {
-    QInputDialog_QBaseEnterEvent((QInputDialog*)self, (QEnterEvent*)event);
+void q_inputdialog_super_enter_event(void* self, void* event) {
+    QInputDialog_SuperEnterEvent((QInputDialog*)self, (QEnterEvent*)event);
 }
 
 void q_inputdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2343,8 +2343,8 @@ void q_inputdialog_leave_event(void* self, void* event) {
     QInputDialog_LeaveEvent((QInputDialog*)self, (QEvent*)event);
 }
 
-void q_inputdialog_qbase_leave_event(void* self, void* event) {
-    QInputDialog_QBaseLeaveEvent((QInputDialog*)self, (QEvent*)event);
+void q_inputdialog_super_leave_event(void* self, void* event) {
+    QInputDialog_SuperLeaveEvent((QInputDialog*)self, (QEvent*)event);
 }
 
 void q_inputdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2355,8 +2355,8 @@ void q_inputdialog_paint_event(void* self, void* event) {
     QInputDialog_PaintEvent((QInputDialog*)self, (QPaintEvent*)event);
 }
 
-void q_inputdialog_qbase_paint_event(void* self, void* event) {
-    QInputDialog_QBasePaintEvent((QInputDialog*)self, (QPaintEvent*)event);
+void q_inputdialog_super_paint_event(void* self, void* event) {
+    QInputDialog_SuperPaintEvent((QInputDialog*)self, (QPaintEvent*)event);
 }
 
 void q_inputdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2367,8 +2367,8 @@ void q_inputdialog_move_event(void* self, void* event) {
     QInputDialog_MoveEvent((QInputDialog*)self, (QMoveEvent*)event);
 }
 
-void q_inputdialog_qbase_move_event(void* self, void* event) {
-    QInputDialog_QBaseMoveEvent((QInputDialog*)self, (QMoveEvent*)event);
+void q_inputdialog_super_move_event(void* self, void* event) {
+    QInputDialog_SuperMoveEvent((QInputDialog*)self, (QMoveEvent*)event);
 }
 
 void q_inputdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2379,8 +2379,8 @@ void q_inputdialog_tablet_event(void* self, void* event) {
     QInputDialog_TabletEvent((QInputDialog*)self, (QTabletEvent*)event);
 }
 
-void q_inputdialog_qbase_tablet_event(void* self, void* event) {
-    QInputDialog_QBaseTabletEvent((QInputDialog*)self, (QTabletEvent*)event);
+void q_inputdialog_super_tablet_event(void* self, void* event) {
+    QInputDialog_SuperTabletEvent((QInputDialog*)self, (QTabletEvent*)event);
 }
 
 void q_inputdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2391,8 +2391,8 @@ void q_inputdialog_action_event(void* self, void* event) {
     QInputDialog_ActionEvent((QInputDialog*)self, (QActionEvent*)event);
 }
 
-void q_inputdialog_qbase_action_event(void* self, void* event) {
-    QInputDialog_QBaseActionEvent((QInputDialog*)self, (QActionEvent*)event);
+void q_inputdialog_super_action_event(void* self, void* event) {
+    QInputDialog_SuperActionEvent((QInputDialog*)self, (QActionEvent*)event);
 }
 
 void q_inputdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2403,8 +2403,8 @@ void q_inputdialog_drag_enter_event(void* self, void* event) {
     QInputDialog_DragEnterEvent((QInputDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_inputdialog_qbase_drag_enter_event(void* self, void* event) {
-    QInputDialog_QBaseDragEnterEvent((QInputDialog*)self, (QDragEnterEvent*)event);
+void q_inputdialog_super_drag_enter_event(void* self, void* event) {
+    QInputDialog_SuperDragEnterEvent((QInputDialog*)self, (QDragEnterEvent*)event);
 }
 
 void q_inputdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2415,8 +2415,8 @@ void q_inputdialog_drag_move_event(void* self, void* event) {
     QInputDialog_DragMoveEvent((QInputDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_inputdialog_qbase_drag_move_event(void* self, void* event) {
-    QInputDialog_QBaseDragMoveEvent((QInputDialog*)self, (QDragMoveEvent*)event);
+void q_inputdialog_super_drag_move_event(void* self, void* event) {
+    QInputDialog_SuperDragMoveEvent((QInputDialog*)self, (QDragMoveEvent*)event);
 }
 
 void q_inputdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2427,8 +2427,8 @@ void q_inputdialog_drag_leave_event(void* self, void* event) {
     QInputDialog_DragLeaveEvent((QInputDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_inputdialog_qbase_drag_leave_event(void* self, void* event) {
-    QInputDialog_QBaseDragLeaveEvent((QInputDialog*)self, (QDragLeaveEvent*)event);
+void q_inputdialog_super_drag_leave_event(void* self, void* event) {
+    QInputDialog_SuperDragLeaveEvent((QInputDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void q_inputdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2439,8 +2439,8 @@ void q_inputdialog_drop_event(void* self, void* event) {
     QInputDialog_DropEvent((QInputDialog*)self, (QDropEvent*)event);
 }
 
-void q_inputdialog_qbase_drop_event(void* self, void* event) {
-    QInputDialog_QBaseDropEvent((QInputDialog*)self, (QDropEvent*)event);
+void q_inputdialog_super_drop_event(void* self, void* event) {
+    QInputDialog_SuperDropEvent((QInputDialog*)self, (QDropEvent*)event);
 }
 
 void q_inputdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2451,8 +2451,8 @@ void q_inputdialog_hide_event(void* self, void* event) {
     QInputDialog_HideEvent((QInputDialog*)self, (QHideEvent*)event);
 }
 
-void q_inputdialog_qbase_hide_event(void* self, void* event) {
-    QInputDialog_QBaseHideEvent((QInputDialog*)self, (QHideEvent*)event);
+void q_inputdialog_super_hide_event(void* self, void* event) {
+    QInputDialog_SuperHideEvent((QInputDialog*)self, (QHideEvent*)event);
 }
 
 void q_inputdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2463,8 +2463,8 @@ bool q_inputdialog_native_event(void* self, char* eventType, void* message, intp
     return QInputDialog_NativeEvent((QInputDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_inputdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QInputDialog_QBaseNativeEvent((QInputDialog*)self, qstring(eventType), message, result);
+bool q_inputdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QInputDialog_SuperNativeEvent((QInputDialog*)self, qstring(eventType), message, result);
 }
 
 void q_inputdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2475,8 +2475,8 @@ void q_inputdialog_change_event(void* self, void* param1) {
     QInputDialog_ChangeEvent((QInputDialog*)self, (QEvent*)param1);
 }
 
-void q_inputdialog_qbase_change_event(void* self, void* param1) {
-    QInputDialog_QBaseChangeEvent((QInputDialog*)self, (QEvent*)param1);
+void q_inputdialog_super_change_event(void* self, void* param1) {
+    QInputDialog_SuperChangeEvent((QInputDialog*)self, (QEvent*)param1);
 }
 
 void q_inputdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2487,8 +2487,8 @@ int32_t q_inputdialog_metric(void* self, int32_t param1) {
     return QInputDialog_Metric((QInputDialog*)self, param1);
 }
 
-int32_t q_inputdialog_qbase_metric(void* self, int32_t param1) {
-    return QInputDialog_QBaseMetric((QInputDialog*)self, param1);
+int32_t q_inputdialog_super_metric(void* self, int32_t param1) {
+    return QInputDialog_SuperMetric((QInputDialog*)self, param1);
 }
 
 void q_inputdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2499,8 +2499,8 @@ void q_inputdialog_init_painter(void* self, void* painter) {
     QInputDialog_InitPainter((QInputDialog*)self, (QPainter*)painter);
 }
 
-void q_inputdialog_qbase_init_painter(void* self, void* painter) {
-    QInputDialog_QBaseInitPainter((QInputDialog*)self, (QPainter*)painter);
+void q_inputdialog_super_init_painter(void* self, void* painter) {
+    QInputDialog_SuperInitPainter((QInputDialog*)self, (QPainter*)painter);
 }
 
 void q_inputdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2511,8 +2511,8 @@ QPaintDevice* q_inputdialog_redirected(void* self, void* offset) {
     return QInputDialog_Redirected((QInputDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_inputdialog_qbase_redirected(void* self, void* offset) {
-    return QInputDialog_QBaseRedirected((QInputDialog*)self, (QPoint*)offset);
+QPaintDevice* q_inputdialog_super_redirected(void* self, void* offset) {
+    return QInputDialog_SuperRedirected((QInputDialog*)self, (QPoint*)offset);
 }
 
 void q_inputdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2523,8 +2523,8 @@ QPainter* q_inputdialog_shared_painter(void* self) {
     return QInputDialog_SharedPainter((QInputDialog*)self);
 }
 
-QPainter* q_inputdialog_qbase_shared_painter(void* self) {
-    return QInputDialog_QBaseSharedPainter((QInputDialog*)self);
+QPainter* q_inputdialog_super_shared_painter(void* self) {
+    return QInputDialog_SuperSharedPainter((QInputDialog*)self);
 }
 
 void q_inputdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2535,8 +2535,8 @@ void q_inputdialog_input_method_event(void* self, void* param1) {
     QInputDialog_InputMethodEvent((QInputDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_inputdialog_qbase_input_method_event(void* self, void* param1) {
-    QInputDialog_QBaseInputMethodEvent((QInputDialog*)self, (QInputMethodEvent*)param1);
+void q_inputdialog_super_input_method_event(void* self, void* param1) {
+    QInputDialog_SuperInputMethodEvent((QInputDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void q_inputdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2547,8 +2547,8 @@ QVariant* q_inputdialog_input_method_query(void* self, int32_t param1) {
     return QInputDialog_InputMethodQuery((QInputDialog*)self, param1);
 }
 
-QVariant* q_inputdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return QInputDialog_QBaseInputMethodQuery((QInputDialog*)self, param1);
+QVariant* q_inputdialog_super_input_method_query(void* self, int32_t param1) {
+    return QInputDialog_SuperInputMethodQuery((QInputDialog*)self, param1);
 }
 
 void q_inputdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2559,8 +2559,8 @@ bool q_inputdialog_focus_next_prev_child(void* self, bool next) {
     return QInputDialog_FocusNextPrevChild((QInputDialog*)self, next);
 }
 
-bool q_inputdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return QInputDialog_QBaseFocusNextPrevChild((QInputDialog*)self, next);
+bool q_inputdialog_super_focus_next_prev_child(void* self, bool next) {
+    return QInputDialog_SuperFocusNextPrevChild((QInputDialog*)self, next);
 }
 
 void q_inputdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2571,8 +2571,8 @@ void q_inputdialog_timer_event(void* self, void* event) {
     QInputDialog_TimerEvent((QInputDialog*)self, (QTimerEvent*)event);
 }
 
-void q_inputdialog_qbase_timer_event(void* self, void* event) {
-    QInputDialog_QBaseTimerEvent((QInputDialog*)self, (QTimerEvent*)event);
+void q_inputdialog_super_timer_event(void* self, void* event) {
+    QInputDialog_SuperTimerEvent((QInputDialog*)self, (QTimerEvent*)event);
 }
 
 void q_inputdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2583,8 +2583,8 @@ void q_inputdialog_child_event(void* self, void* event) {
     QInputDialog_ChildEvent((QInputDialog*)self, (QChildEvent*)event);
 }
 
-void q_inputdialog_qbase_child_event(void* self, void* event) {
-    QInputDialog_QBaseChildEvent((QInputDialog*)self, (QChildEvent*)event);
+void q_inputdialog_super_child_event(void* self, void* event) {
+    QInputDialog_SuperChildEvent((QInputDialog*)self, (QChildEvent*)event);
 }
 
 void q_inputdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2595,8 +2595,8 @@ void q_inputdialog_custom_event(void* self, void* event) {
     QInputDialog_CustomEvent((QInputDialog*)self, (QEvent*)event);
 }
 
-void q_inputdialog_qbase_custom_event(void* self, void* event) {
-    QInputDialog_QBaseCustomEvent((QInputDialog*)self, (QEvent*)event);
+void q_inputdialog_super_custom_event(void* self, void* event) {
+    QInputDialog_SuperCustomEvent((QInputDialog*)self, (QEvent*)event);
 }
 
 void q_inputdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2607,8 +2607,8 @@ void q_inputdialog_connect_notify(void* self, void* signal) {
     QInputDialog_ConnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_qbase_connect_notify(void* self, void* signal) {
-    QInputDialog_QBaseConnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
+void q_inputdialog_super_connect_notify(void* self, void* signal) {
+    QInputDialog_SuperConnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2619,8 +2619,8 @@ void q_inputdialog_disconnect_notify(void* self, void* signal) {
     QInputDialog_DisconnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdialog_qbase_disconnect_notify(void* self, void* signal) {
-    QInputDialog_QBaseDisconnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
+void q_inputdialog_super_disconnect_notify(void* self, void* signal) {
+    QInputDialog_SuperDisconnectNotify((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2631,8 +2631,8 @@ void q_inputdialog_adjust_position(void* self, void* param1) {
     QInputDialog_AdjustPosition((QInputDialog*)self, (QWidget*)param1);
 }
 
-void q_inputdialog_qbase_adjust_position(void* self, void* param1) {
-    QInputDialog_QBaseAdjustPosition((QInputDialog*)self, (QWidget*)param1);
+void q_inputdialog_super_adjust_position(void* self, void* param1) {
+    QInputDialog_SuperAdjustPosition((QInputDialog*)self, (QWidget*)param1);
 }
 
 void q_inputdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2643,8 +2643,8 @@ void q_inputdialog_update_micro_focus(void* self) {
     QInputDialog_UpdateMicroFocus((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_update_micro_focus(void* self) {
-    QInputDialog_QBaseUpdateMicroFocus((QInputDialog*)self);
+void q_inputdialog_super_update_micro_focus(void* self) {
+    QInputDialog_SuperUpdateMicroFocus((QInputDialog*)self);
 }
 
 void q_inputdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2655,8 +2655,8 @@ void q_inputdialog_create(void* self) {
     QInputDialog_Create((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_create(void* self) {
-    QInputDialog_QBaseCreate((QInputDialog*)self);
+void q_inputdialog_super_create(void* self) {
+    QInputDialog_SuperCreate((QInputDialog*)self);
 }
 
 void q_inputdialog_on_create(void* self, void (*callback)()) {
@@ -2667,8 +2667,8 @@ void q_inputdialog_destroy(void* self) {
     QInputDialog_Destroy((QInputDialog*)self);
 }
 
-void q_inputdialog_qbase_destroy(void* self) {
-    QInputDialog_QBaseDestroy((QInputDialog*)self);
+void q_inputdialog_super_destroy(void* self) {
+    QInputDialog_SuperDestroy((QInputDialog*)self);
 }
 
 void q_inputdialog_on_destroy(void* self, void (*callback)()) {
@@ -2679,8 +2679,8 @@ bool q_inputdialog_focus_next_child(void* self) {
     return QInputDialog_FocusNextChild((QInputDialog*)self);
 }
 
-bool q_inputdialog_qbase_focus_next_child(void* self) {
-    return QInputDialog_QBaseFocusNextChild((QInputDialog*)self);
+bool q_inputdialog_super_focus_next_child(void* self) {
+    return QInputDialog_SuperFocusNextChild((QInputDialog*)self);
 }
 
 void q_inputdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2691,8 +2691,8 @@ bool q_inputdialog_focus_previous_child(void* self) {
     return QInputDialog_FocusPreviousChild((QInputDialog*)self);
 }
 
-bool q_inputdialog_qbase_focus_previous_child(void* self) {
-    return QInputDialog_QBaseFocusPreviousChild((QInputDialog*)self);
+bool q_inputdialog_super_focus_previous_child(void* self) {
+    return QInputDialog_SuperFocusPreviousChild((QInputDialog*)self);
 }
 
 void q_inputdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2703,8 +2703,8 @@ QObject* q_inputdialog_sender(void* self) {
     return QInputDialog_Sender((QInputDialog*)self);
 }
 
-QObject* q_inputdialog_qbase_sender(void* self) {
-    return QInputDialog_QBaseSender((QInputDialog*)self);
+QObject* q_inputdialog_super_sender(void* self) {
+    return QInputDialog_SuperSender((QInputDialog*)self);
 }
 
 void q_inputdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2715,8 +2715,8 @@ int32_t q_inputdialog_sender_signal_index(void* self) {
     return QInputDialog_SenderSignalIndex((QInputDialog*)self);
 }
 
-int32_t q_inputdialog_qbase_sender_signal_index(void* self) {
-    return QInputDialog_QBaseSenderSignalIndex((QInputDialog*)self);
+int32_t q_inputdialog_super_sender_signal_index(void* self) {
+    return QInputDialog_SuperSenderSignalIndex((QInputDialog*)self);
 }
 
 void q_inputdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2727,8 +2727,8 @@ int32_t q_inputdialog_receivers(void* self, const char* signal) {
     return QInputDialog_Receivers((QInputDialog*)self, signal);
 }
 
-int32_t q_inputdialog_qbase_receivers(void* self, const char* signal) {
-    return QInputDialog_QBaseReceivers((QInputDialog*)self, signal);
+int32_t q_inputdialog_super_receivers(void* self, const char* signal) {
+    return QInputDialog_SuperReceivers((QInputDialog*)self, signal);
 }
 
 void q_inputdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2739,8 +2739,8 @@ bool q_inputdialog_is_signal_connected(void* self, void* signal) {
     return QInputDialog_IsSignalConnected((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_inputdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return QInputDialog_QBaseIsSignalConnected((QInputDialog*)self, (QMetaMethod*)signal);
+bool q_inputdialog_super_is_signal_connected(void* self, void* signal) {
+    return QInputDialog_SuperIsSignalConnected((QInputDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2751,8 +2751,8 @@ double q_inputdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return QInputDialog_GetDecodedMetricF((QInputDialog*)self, metricA, metricB);
 }
 
-double q_inputdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QInputDialog_QBaseGetDecodedMetricF((QInputDialog*)self, metricA, metricB);
+double q_inputdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QInputDialog_SuperGetDecodedMetricF((QInputDialog*)self, metricA, metricB);
 }
 
 void q_inputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

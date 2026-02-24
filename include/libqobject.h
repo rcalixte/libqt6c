@@ -40,13 +40,17 @@ const QMetaObject* q_object_meta_object(void* self);
 ///
 void q_object_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_object_super_meta_object` instead
+///
+#define q_object_qbase_meta_object q_object_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QObject*
 ///
-const QMetaObject* q_object_qbase_meta_object(void* self);
+const QMetaObject* q_object_super_meta_object(void* self);
 
 /// @param self QObject*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_object_metacast(void* self, const char* param1);
 ///
 void q_object_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_object_super_metacast` instead
+///
+#define q_object_qbase_metacast q_object_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QObject*
 /// @param param1 const char*
 ///
-void* q_object_qbase_metacast(void* self, const char* param1);
+void* q_object_super_metacast(void* self, const char* param1);
 
 /// @param self QObject*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_object_metacall(void* self, int32_t param1, int param2, void* param3);
 ///
 void q_object_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_metacall` instead
+///
+#define q_object_qbase_metacall q_object_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QObject*
@@ -88,7 +100,7 @@ void q_object_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_object_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_object_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ bool q_object_event(void* self, void* event);
 ///
 void q_object_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_event` instead
+///
+#define q_object_qbase_event q_object_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_object_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QObject*
 /// @param event QEvent*
 ///
-bool q_object_qbase_event(void* self, void* event);
+bool q_object_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
@@ -140,6 +156,10 @@ bool q_object_event_filter(void* self, void* watched, void* event);
 ///
 void q_object_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_event_filter` instead
+///
+#define q_object_qbase_event_filter q_object_super_event_filter
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Base class method implementation
@@ -148,7 +168,7 @@ void q_object_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_object_qbase_event_filter(void* self, void* watched, void* event);
+bool q_object_super_event_filter(void* self, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
@@ -424,13 +444,17 @@ QObject* q_object_sender(void* self);
 ///
 void q_object_on_sender(void* self, QObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_object_super_sender` instead
+///
+#define q_object_qbase_sender q_object_super_sender
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Base class method implementation
 ///
 /// @param self QObject*
 ///
-QObject* q_object_qbase_sender(void* self);
+QObject* q_object_super_sender(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
@@ -447,13 +471,17 @@ int32_t q_object_sender_signal_index(void* self);
 ///
 void q_object_on_sender_signal_index(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_object_super_sender_signal_index` instead
+///
+#define q_object_qbase_sender_signal_index q_object_super_sender_signal_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Base class method implementation
 ///
 /// @param self QObject*
 ///
-int32_t q_object_qbase_sender_signal_index(void* self);
+int32_t q_object_super_sender_signal_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
@@ -471,6 +499,10 @@ int32_t q_object_receivers(void* self, const char* signal);
 ///
 void q_object_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_object_super_receivers` instead
+///
+#define q_object_qbase_receivers q_object_super_receivers
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Base class method implementation
@@ -478,7 +510,7 @@ void q_object_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 /// @param self QObject*
 /// @param signal const char*
 ///
-int32_t q_object_qbase_receivers(void* self, const char* signal);
+int32_t q_object_super_receivers(void* self, const char* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
@@ -496,6 +528,10 @@ bool q_object_is_signal_connected(void* self, void* signal);
 ///
 void q_object_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_is_signal_connected` instead
+///
+#define q_object_qbase_is_signal_connected q_object_super_is_signal_connected
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Base class method implementation
@@ -503,7 +539,7 @@ void q_object_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// @param self QObject*
 /// @param signal QMetaMethod*
 ///
-bool q_object_qbase_is_signal_connected(void* self, void* signal);
+bool q_object_super_is_signal_connected(void* self, void* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
@@ -521,6 +557,10 @@ void q_object_timer_event(void* self, void* event);
 ///
 void q_object_on_timer_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_timer_event` instead
+///
+#define q_object_qbase_timer_event q_object_super_timer_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Base class method implementation
@@ -528,7 +568,7 @@ void q_object_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param self QObject*
 /// @param event QTimerEvent*
 ///
-void q_object_qbase_timer_event(void* self, void* event);
+void q_object_super_timer_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
@@ -546,6 +586,10 @@ void q_object_child_event(void* self, void* event);
 ///
 void q_object_on_child_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_child_event` instead
+///
+#define q_object_qbase_child_event q_object_super_child_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Base class method implementation
@@ -553,7 +597,7 @@ void q_object_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param self QObject*
 /// @param event QChildEvent*
 ///
-void q_object_qbase_child_event(void* self, void* event);
+void q_object_super_child_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
@@ -571,6 +615,10 @@ void q_object_custom_event(void* self, void* event);
 ///
 void q_object_on_custom_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_custom_event` instead
+///
+#define q_object_qbase_custom_event q_object_super_custom_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Base class method implementation
@@ -578,7 +626,7 @@ void q_object_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QObject*
 /// @param event QEvent*
 ///
-void q_object_qbase_custom_event(void* self, void* event);
+void q_object_super_custom_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
@@ -596,6 +644,10 @@ void q_object_connect_notify(void* self, void* signal);
 ///
 void q_object_on_connect_notify(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_connect_notify` instead
+///
+#define q_object_qbase_connect_notify q_object_super_connect_notify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Base class method implementation
@@ -603,7 +655,7 @@ void q_object_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QObject*
 /// @param signal QMetaMethod*
 ///
-void q_object_qbase_connect_notify(void* self, void* signal);
+void q_object_super_connect_notify(void* self, void* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
@@ -621,6 +673,10 @@ void q_object_disconnect_notify(void* self, void* signal);
 ///
 void q_object_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_object_super_disconnect_notify` instead
+///
+#define q_object_qbase_disconnect_notify q_object_super_disconnect_notify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Base class method implementation
@@ -628,7 +684,7 @@ void q_object_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QObject*
 /// @param signal QMetaMethod*
 ///
-void q_object_qbase_disconnect_notify(void* self, void* signal);
+void q_object_super_disconnect_notify(void* self, void* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

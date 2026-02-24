@@ -40,13 +40,17 @@ const QMetaObject* q_lineseries_meta_object(void* self);
 ///
 void q_lineseries_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_lineseries_super_meta_object` instead
+///
+#define q_lineseries_qbase_meta_object q_lineseries_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QLineSeries*
 ///
-const QMetaObject* q_lineseries_qbase_meta_object(void* self);
+const QMetaObject* q_lineseries_super_meta_object(void* self);
 
 /// @param self QLineSeries*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_lineseries_metacast(void* self, const char* param1);
 ///
 void q_lineseries_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_lineseries_super_metacast` instead
+///
+#define q_lineseries_qbase_metacast q_lineseries_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QLineSeries*
 /// @param param1 const char*
 ///
-void* q_lineseries_qbase_metacast(void* self, const char* param1);
+void* q_lineseries_super_metacast(void* self, const char* param1);
 
 /// @param self QLineSeries*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_lineseries_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_lineseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_lineseries_super_metacall` instead
+///
+#define q_lineseries_qbase_metacall q_lineseries_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QLineSeries*
@@ -88,7 +100,7 @@ void q_lineseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_lineseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_lineseries_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -115,6 +127,10 @@ int32_t q_lineseries_type(void* self);
 ///
 void q_lineseries_on_type(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_lineseries_super_type` instead
+///
+#define q_lineseries_qbase_type q_lineseries_super_type
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlineseries-qtcharts.html#type)
 ///
 /// Base class method implementation
@@ -123,7 +139,7 @@ void q_lineseries_on_type(void* self, int32_t (*callback)());
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_lineseries_qbase_type(void* self);
+int32_t q_lineseries_super_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1979,6 +1995,10 @@ void q_lineseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_set_pen(void* self, void* pen);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_set_pen` instead
+///
+#define q_lineseries_qbase_set_pen q_lineseries_super_set_pen
+
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#setPen)
@@ -1988,7 +2008,7 @@ void q_lineseries_set_pen(void* self, void* pen);
 /// @param self QLineSeries*
 /// @param pen QPen*
 ///
-void q_lineseries_qbase_set_pen(void* self, void* pen);
+void q_lineseries_super_set_pen(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
@@ -2012,6 +2032,10 @@ void q_lineseries_on_set_pen(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_set_brush(void* self, void* brush);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_set_brush` instead
+///
+#define q_lineseries_qbase_set_brush q_lineseries_super_set_brush
+
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#setBrush)
@@ -2021,7 +2045,7 @@ void q_lineseries_set_brush(void* self, void* brush);
 /// @param self QLineSeries*
 /// @param brush QBrush*
 ///
-void q_lineseries_qbase_set_brush(void* self, void* brush);
+void q_lineseries_super_set_brush(void* self, void* brush);
 
 /// Inherited from QXYSeries
 ///
@@ -2045,6 +2069,10 @@ void q_lineseries_on_set_brush(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_set_color(void* self, void* color);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_set_color` instead
+///
+#define q_lineseries_qbase_set_color q_lineseries_super_set_color
+
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#setColor)
@@ -2054,7 +2082,7 @@ void q_lineseries_set_color(void* self, void* color);
 /// @param self QLineSeries*
 /// @param color QColor*
 ///
-void q_lineseries_qbase_set_color(void* self, void* color);
+void q_lineseries_super_set_color(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
@@ -2077,6 +2105,10 @@ void q_lineseries_on_set_color(void* self, void (*callback)(void*, void*));
 ///
 QColor* q_lineseries_color(void* self);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_color` instead
+///
+#define q_lineseries_qbase_color q_lineseries_super_color
+
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#color)
@@ -2085,7 +2117,7 @@ QColor* q_lineseries_color(void* self);
 ///
 /// @param self QLineSeries*
 ///
-QColor* q_lineseries_qbase_color(void* self);
+QColor* q_lineseries_super_color(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -2109,6 +2141,10 @@ void q_lineseries_on_color(void* self, QColor* (*callback)());
 ///
 bool q_lineseries_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_event` instead
+///
+#define q_lineseries_qbase_event q_lineseries_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2118,7 +2154,7 @@ bool q_lineseries_event(void* self, void* event);
 /// @param self QLineSeries*
 /// @param event QEvent*
 ///
-bool q_lineseries_qbase_event(void* self, void* event);
+bool q_lineseries_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2143,6 +2179,10 @@ void q_lineseries_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_lineseries_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_event_filter` instead
+///
+#define q_lineseries_qbase_event_filter q_lineseries_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2153,7 +2193,7 @@ bool q_lineseries_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_lineseries_qbase_event_filter(void* self, void* watched, void* event);
+bool q_lineseries_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2177,6 +2217,10 @@ void q_lineseries_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_lineseries_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_timer_event` instead
+///
+#define q_lineseries_qbase_timer_event q_lineseries_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2186,7 +2230,7 @@ void q_lineseries_timer_event(void* self, void* event);
 /// @param self QLineSeries*
 /// @param event QTimerEvent*
 ///
-void q_lineseries_qbase_timer_event(void* self, void* event);
+void q_lineseries_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2210,6 +2254,10 @@ void q_lineseries_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_child_event` instead
+///
+#define q_lineseries_qbase_child_event q_lineseries_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2219,7 +2267,7 @@ void q_lineseries_child_event(void* self, void* event);
 /// @param self QLineSeries*
 /// @param event QChildEvent*
 ///
-void q_lineseries_qbase_child_event(void* self, void* event);
+void q_lineseries_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2243,6 +2291,10 @@ void q_lineseries_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_custom_event` instead
+///
+#define q_lineseries_qbase_custom_event q_lineseries_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2252,7 +2304,7 @@ void q_lineseries_custom_event(void* self, void* event);
 /// @param self QLineSeries*
 /// @param event QEvent*
 ///
-void q_lineseries_qbase_custom_event(void* self, void* event);
+void q_lineseries_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2276,6 +2328,10 @@ void q_lineseries_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_connect_notify` instead
+///
+#define q_lineseries_qbase_connect_notify q_lineseries_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2285,7 +2341,7 @@ void q_lineseries_connect_notify(void* self, void* signal);
 /// @param self QLineSeries*
 /// @param signal QMetaMethod*
 ///
-void q_lineseries_qbase_connect_notify(void* self, void* signal);
+void q_lineseries_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2309,6 +2365,10 @@ void q_lineseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_lineseries_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_disconnect_notify` instead
+///
+#define q_lineseries_qbase_disconnect_notify q_lineseries_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2318,7 +2378,7 @@ void q_lineseries_disconnect_notify(void* self, void* signal);
 /// @param self QLineSeries*
 /// @param signal QMetaMethod*
 ///
-void q_lineseries_qbase_disconnect_notify(void* self, void* signal);
+void q_lineseries_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2341,6 +2401,10 @@ void q_lineseries_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_lineseries_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_sender` instead
+///
+#define q_lineseries_qbase_sender q_lineseries_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2349,7 +2413,7 @@ QObject* q_lineseries_sender(void* self);
 ///
 /// @param self QLineSeries*
 ///
-QObject* q_lineseries_qbase_sender(void* self);
+QObject* q_lineseries_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2372,6 +2436,10 @@ void q_lineseries_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_lineseries_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_sender_signal_index` instead
+///
+#define q_lineseries_qbase_sender_signal_index q_lineseries_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2380,7 +2448,7 @@ int32_t q_lineseries_sender_signal_index(void* self);
 ///
 /// @param self QLineSeries*
 ///
-int32_t q_lineseries_qbase_sender_signal_index(void* self);
+int32_t q_lineseries_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2404,6 +2472,10 @@ void q_lineseries_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_lineseries_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_receivers` instead
+///
+#define q_lineseries_qbase_receivers q_lineseries_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2413,7 +2485,7 @@ int32_t q_lineseries_receivers(void* self, const char* signal);
 /// @param self QLineSeries*
 /// @param signal const char*
 ///
-int32_t q_lineseries_qbase_receivers(void* self, const char* signal);
+int32_t q_lineseries_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2437,6 +2509,10 @@ void q_lineseries_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_lineseries_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_lineseries_super_is_signal_connected` instead
+///
+#define q_lineseries_qbase_is_signal_connected q_lineseries_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2446,7 +2522,7 @@ bool q_lineseries_is_signal_connected(void* self, void* signal);
 /// @param self QLineSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_lineseries_qbase_is_signal_connected(void* self, void* signal);
+bool q_lineseries_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -26,8 +26,8 @@ void q_scilexermatlab_on_meta_object(void* self, const QMetaObject* (*callback)(
     QsciLexerMatlab_OnMetaObject((QsciLexerMatlab*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scilexermatlab_qbase_meta_object(void* self) {
-    return QsciLexerMatlab_QBaseMetaObject((QsciLexerMatlab*)self);
+const QMetaObject* q_scilexermatlab_super_meta_object(void* self) {
+    return QsciLexerMatlab_SuperMetaObject((QsciLexerMatlab*)self);
 }
 
 void* q_scilexermatlab_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_scilexermatlab_on_metacast(void* self, void* (*callback)(void*, const cha
     QsciLexerMatlab_OnMetacast((QsciLexerMatlab*)self, (intptr_t)callback);
 }
 
-void* q_scilexermatlab_qbase_metacast(void* self, const char* param1) {
-    return QsciLexerMatlab_QBaseMetacast((QsciLexerMatlab*)self, param1);
+void* q_scilexermatlab_super_metacast(void* self, const char* param1) {
+    return QsciLexerMatlab_SuperMetacast((QsciLexerMatlab*)self, param1);
 }
 
 int32_t q_scilexermatlab_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_scilexermatlab_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QsciLexerMatlab_OnMetacall((QsciLexerMatlab*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexermatlab_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciLexerMatlab_QBaseMetacall((QsciLexerMatlab*)self, param1, param2, param3);
+int32_t q_scilexermatlab_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciLexerMatlab_SuperMetacall((QsciLexerMatlab*)self, param1, param2, param3);
 }
 
 const char* q_scilexermatlab_tr(const char* s) {
@@ -405,8 +405,8 @@ int32_t q_scilexermatlab_lexer_id(void* self) {
     return QsciLexerMatlab_LexerId((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_lexer_id(void* self) {
-    return QsciLexerMatlab_QBaseLexerId((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_lexer_id(void* self) {
+    return QsciLexerMatlab_SuperLexerId((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_lexer_id(void* self, int32_t (*callback)()) {
@@ -417,8 +417,8 @@ const char* q_scilexermatlab_auto_completion_fillups(void* self) {
     return QsciLexerMatlab_AutoCompletionFillups((QsciLexerMatlab*)self);
 }
 
-const char* q_scilexermatlab_qbase_auto_completion_fillups(void* self) {
-    return QsciLexerMatlab_QBaseAutoCompletionFillups((QsciLexerMatlab*)self);
+const char* q_scilexermatlab_super_auto_completion_fillups(void* self) {
+    return QsciLexerMatlab_SuperAutoCompletionFillups((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_auto_completion_fillups(void* self, const char* (*callback)()) {
@@ -444,8 +444,8 @@ const char** q_scilexermatlab_auto_completion_word_separators(void* self) {
     return _ret;
 }
 
-const char** q_scilexermatlab_qbase_auto_completion_word_separators(void* self) {
-    libqt_list _arr = QsciLexerMatlab_QBaseAutoCompletionWordSeparators((QsciLexerMatlab*)self);
+const char** q_scilexermatlab_super_auto_completion_word_separators(void* self) {
+    libqt_list _arr = QsciLexerMatlab_SuperAutoCompletionWordSeparators((QsciLexerMatlab*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -471,8 +471,8 @@ const char* q_scilexermatlab_block_end(void* self, int* style) {
     return QsciLexerMatlab_BlockEnd((QsciLexerMatlab*)self, style);
 }
 
-const char* q_scilexermatlab_qbase_block_end(void* self, int* style) {
-    return QsciLexerMatlab_QBaseBlockEnd((QsciLexerMatlab*)self, style);
+const char* q_scilexermatlab_super_block_end(void* self, int* style) {
+    return QsciLexerMatlab_SuperBlockEnd((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_block_end(void* self, const char* (*callback)(void*, int*)) {
@@ -483,8 +483,8 @@ int32_t q_scilexermatlab_block_lookback(void* self) {
     return QsciLexerMatlab_BlockLookback((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_block_lookback(void* self) {
-    return QsciLexerMatlab_QBaseBlockLookback((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_block_lookback(void* self) {
+    return QsciLexerMatlab_SuperBlockLookback((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_block_lookback(void* self, int32_t (*callback)()) {
@@ -495,8 +495,8 @@ const char* q_scilexermatlab_block_start(void* self, int* style) {
     return QsciLexerMatlab_BlockStart((QsciLexerMatlab*)self, style);
 }
 
-const char* q_scilexermatlab_qbase_block_start(void* self, int* style) {
-    return QsciLexerMatlab_QBaseBlockStart((QsciLexerMatlab*)self, style);
+const char* q_scilexermatlab_super_block_start(void* self, int* style) {
+    return QsciLexerMatlab_SuperBlockStart((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_block_start(void* self, const char* (*callback)(void*, int*)) {
@@ -507,8 +507,8 @@ const char* q_scilexermatlab_block_start_keyword(void* self, int* style) {
     return QsciLexerMatlab_BlockStartKeyword((QsciLexerMatlab*)self, style);
 }
 
-const char* q_scilexermatlab_qbase_block_start_keyword(void* self, int* style) {
-    return QsciLexerMatlab_QBaseBlockStartKeyword((QsciLexerMatlab*)self, style);
+const char* q_scilexermatlab_super_block_start_keyword(void* self, int* style) {
+    return QsciLexerMatlab_SuperBlockStartKeyword((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
@@ -519,8 +519,8 @@ int32_t q_scilexermatlab_brace_style(void* self) {
     return QsciLexerMatlab_BraceStyle((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_brace_style(void* self) {
-    return QsciLexerMatlab_QBaseBraceStyle((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_brace_style(void* self) {
+    return QsciLexerMatlab_SuperBraceStyle((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_brace_style(void* self, int32_t (*callback)()) {
@@ -531,8 +531,8 @@ bool q_scilexermatlab_case_sensitive(void* self) {
     return QsciLexerMatlab_CaseSensitive((QsciLexerMatlab*)self);
 }
 
-bool q_scilexermatlab_qbase_case_sensitive(void* self) {
-    return QsciLexerMatlab_QBaseCaseSensitive((QsciLexerMatlab*)self);
+bool q_scilexermatlab_super_case_sensitive(void* self) {
+    return QsciLexerMatlab_SuperCaseSensitive((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_case_sensitive(void* self, bool (*callback)()) {
@@ -543,8 +543,8 @@ QColor* q_scilexermatlab_color(void* self, int style) {
     return QsciLexerMatlab_Color((QsciLexerMatlab*)self, style);
 }
 
-QColor* q_scilexermatlab_qbase_color(void* self, int style) {
-    return QsciLexerMatlab_QBaseColor((QsciLexerMatlab*)self, style);
+QColor* q_scilexermatlab_super_color(void* self, int style) {
+    return QsciLexerMatlab_SuperColor((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_color(void* self, QColor* (*callback)(void*, int)) {
@@ -555,8 +555,8 @@ bool q_scilexermatlab_eol_fill(void* self, int style) {
     return QsciLexerMatlab_EolFill((QsciLexerMatlab*)self, style);
 }
 
-bool q_scilexermatlab_qbase_eol_fill(void* self, int style) {
-    return QsciLexerMatlab_QBaseEolFill((QsciLexerMatlab*)self, style);
+bool q_scilexermatlab_super_eol_fill(void* self, int style) {
+    return QsciLexerMatlab_SuperEolFill((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -567,8 +567,8 @@ QFont* q_scilexermatlab_font(void* self, int style) {
     return QsciLexerMatlab_Font((QsciLexerMatlab*)self, style);
 }
 
-QFont* q_scilexermatlab_qbase_font(void* self, int style) {
-    return QsciLexerMatlab_QBaseFont((QsciLexerMatlab*)self, style);
+QFont* q_scilexermatlab_super_font(void* self, int style) {
+    return QsciLexerMatlab_SuperFont((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_font(void* self, QFont* (*callback)(void*, int)) {
@@ -579,8 +579,8 @@ int32_t q_scilexermatlab_indentation_guide_view(void* self) {
     return QsciLexerMatlab_IndentationGuideView((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_indentation_guide_view(void* self) {
-    return QsciLexerMatlab_QBaseIndentationGuideView((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_indentation_guide_view(void* self) {
+    return QsciLexerMatlab_SuperIndentationGuideView((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_indentation_guide_view(void* self, int32_t (*callback)()) {
@@ -591,8 +591,8 @@ int32_t q_scilexermatlab_default_style(void* self) {
     return QsciLexerMatlab_DefaultStyle((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_default_style(void* self) {
-    return QsciLexerMatlab_QBaseDefaultStyle((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_default_style(void* self) {
+    return QsciLexerMatlab_SuperDefaultStyle((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_default_style(void* self, int32_t (*callback)()) {
@@ -603,8 +603,8 @@ QColor* q_scilexermatlab_paper(void* self, int style) {
     return QsciLexerMatlab_Paper((QsciLexerMatlab*)self, style);
 }
 
-QColor* q_scilexermatlab_qbase_paper(void* self, int style) {
-    return QsciLexerMatlab_QBasePaper((QsciLexerMatlab*)self, style);
+QColor* q_scilexermatlab_super_paper(void* self, int style) {
+    return QsciLexerMatlab_SuperPaper((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_paper(void* self, QColor* (*callback)(void*, int)) {
@@ -615,8 +615,8 @@ QColor* q_scilexermatlab_default_color2(void* self, int style) {
     return QsciLexerMatlab_DefaultColor2((QsciLexerMatlab*)self, style);
 }
 
-QColor* q_scilexermatlab_qbase_default_color2(void* self, int style) {
-    return QsciLexerMatlab_QBaseDefaultColor2((QsciLexerMatlab*)self, style);
+QColor* q_scilexermatlab_super_default_color2(void* self, int style) {
+    return QsciLexerMatlab_SuperDefaultColor2((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
@@ -627,8 +627,8 @@ bool q_scilexermatlab_default_eol_fill(void* self, int style) {
     return QsciLexerMatlab_DefaultEolFill((QsciLexerMatlab*)self, style);
 }
 
-bool q_scilexermatlab_qbase_default_eol_fill(void* self, int style) {
-    return QsciLexerMatlab_QBaseDefaultEolFill((QsciLexerMatlab*)self, style);
+bool q_scilexermatlab_super_default_eol_fill(void* self, int style) {
+    return QsciLexerMatlab_SuperDefaultEolFill((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_default_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -639,8 +639,8 @@ QFont* q_scilexermatlab_default_font2(void* self, int style) {
     return QsciLexerMatlab_DefaultFont2((QsciLexerMatlab*)self, style);
 }
 
-QFont* q_scilexermatlab_qbase_default_font2(void* self, int style) {
-    return QsciLexerMatlab_QBaseDefaultFont2((QsciLexerMatlab*)self, style);
+QFont* q_scilexermatlab_super_default_font2(void* self, int style) {
+    return QsciLexerMatlab_SuperDefaultFont2((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
@@ -651,8 +651,8 @@ QColor* q_scilexermatlab_default_paper2(void* self, int style) {
     return QsciLexerMatlab_DefaultPaper2((QsciLexerMatlab*)self, style);
 }
 
-QColor* q_scilexermatlab_qbase_default_paper2(void* self, int style) {
-    return QsciLexerMatlab_QBaseDefaultPaper2((QsciLexerMatlab*)self, style);
+QColor* q_scilexermatlab_super_default_paper2(void* self, int style) {
+    return QsciLexerMatlab_SuperDefaultPaper2((QsciLexerMatlab*)self, style);
 }
 
 void q_scilexermatlab_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
@@ -663,8 +663,8 @@ void q_scilexermatlab_set_editor(void* self, void* editor) {
     QsciLexerMatlab_SetEditor((QsciLexerMatlab*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexermatlab_qbase_set_editor(void* self, void* editor) {
-    QsciLexerMatlab_QBaseSetEditor((QsciLexerMatlab*)self, (QsciScintilla*)editor);
+void q_scilexermatlab_super_set_editor(void* self, void* editor) {
+    QsciLexerMatlab_SuperSetEditor((QsciLexerMatlab*)self, (QsciScintilla*)editor);
 }
 
 void q_scilexermatlab_on_set_editor(void* self, void (*callback)(void*, void*)) {
@@ -675,8 +675,8 @@ void q_scilexermatlab_refresh_properties(void* self) {
     QsciLexerMatlab_RefreshProperties((QsciLexerMatlab*)self);
 }
 
-void q_scilexermatlab_qbase_refresh_properties(void* self) {
-    QsciLexerMatlab_QBaseRefreshProperties((QsciLexerMatlab*)self);
+void q_scilexermatlab_super_refresh_properties(void* self) {
+    QsciLexerMatlab_SuperRefreshProperties((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_refresh_properties(void* self, void (*callback)()) {
@@ -687,8 +687,8 @@ int32_t q_scilexermatlab_style_bits_needed(void* self) {
     return QsciLexerMatlab_StyleBitsNeeded((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_style_bits_needed(void* self) {
-    return QsciLexerMatlab_QBaseStyleBitsNeeded((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_style_bits_needed(void* self) {
+    return QsciLexerMatlab_SuperStyleBitsNeeded((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_style_bits_needed(void* self, int32_t (*callback)()) {
@@ -699,8 +699,8 @@ const char* q_scilexermatlab_word_characters(void* self) {
     return QsciLexerMatlab_WordCharacters((QsciLexerMatlab*)self);
 }
 
-const char* q_scilexermatlab_qbase_word_characters(void* self) {
-    return QsciLexerMatlab_QBaseWordCharacters((QsciLexerMatlab*)self);
+const char* q_scilexermatlab_super_word_characters(void* self) {
+    return QsciLexerMatlab_SuperWordCharacters((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_word_characters(void* self, const char* (*callback)()) {
@@ -711,8 +711,8 @@ void q_scilexermatlab_set_auto_indent_style(void* self, int autoindentstyle) {
     QsciLexerMatlab_SetAutoIndentStyle((QsciLexerMatlab*)self, autoindentstyle);
 }
 
-void q_scilexermatlab_qbase_set_auto_indent_style(void* self, int autoindentstyle) {
-    QsciLexerMatlab_QBaseSetAutoIndentStyle((QsciLexerMatlab*)self, autoindentstyle);
+void q_scilexermatlab_super_set_auto_indent_style(void* self, int autoindentstyle) {
+    QsciLexerMatlab_SuperSetAutoIndentStyle((QsciLexerMatlab*)self, autoindentstyle);
 }
 
 void q_scilexermatlab_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
@@ -723,8 +723,8 @@ void q_scilexermatlab_set_color(void* self, void* c, int style) {
     QsciLexerMatlab_SetColor((QsciLexerMatlab*)self, (QColor*)c, style);
 }
 
-void q_scilexermatlab_qbase_set_color(void* self, void* c, int style) {
-    QsciLexerMatlab_QBaseSetColor((QsciLexerMatlab*)self, (QColor*)c, style);
+void q_scilexermatlab_super_set_color(void* self, void* c, int style) {
+    QsciLexerMatlab_SuperSetColor((QsciLexerMatlab*)self, (QColor*)c, style);
 }
 
 void q_scilexermatlab_on_set_color(void* self, void (*callback)(void*, void*, int)) {
@@ -735,8 +735,8 @@ void q_scilexermatlab_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerMatlab_SetEolFill((QsciLexerMatlab*)self, eoffill, style);
 }
 
-void q_scilexermatlab_qbase_set_eol_fill(void* self, bool eoffill, int style) {
-    QsciLexerMatlab_QBaseSetEolFill((QsciLexerMatlab*)self, eoffill, style);
+void q_scilexermatlab_super_set_eol_fill(void* self, bool eoffill, int style) {
+    QsciLexerMatlab_SuperSetEolFill((QsciLexerMatlab*)self, eoffill, style);
 }
 
 void q_scilexermatlab_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
@@ -747,8 +747,8 @@ void q_scilexermatlab_set_font(void* self, void* f, int style) {
     QsciLexerMatlab_SetFont((QsciLexerMatlab*)self, (QFont*)f, style);
 }
 
-void q_scilexermatlab_qbase_set_font(void* self, void* f, int style) {
-    QsciLexerMatlab_QBaseSetFont((QsciLexerMatlab*)self, (QFont*)f, style);
+void q_scilexermatlab_super_set_font(void* self, void* f, int style) {
+    QsciLexerMatlab_SuperSetFont((QsciLexerMatlab*)self, (QFont*)f, style);
 }
 
 void q_scilexermatlab_on_set_font(void* self, void (*callback)(void*, void*, int)) {
@@ -759,8 +759,8 @@ void q_scilexermatlab_set_paper(void* self, void* c, int style) {
     QsciLexerMatlab_SetPaper((QsciLexerMatlab*)self, (QColor*)c, style);
 }
 
-void q_scilexermatlab_qbase_set_paper(void* self, void* c, int style) {
-    QsciLexerMatlab_QBaseSetPaper((QsciLexerMatlab*)self, (QColor*)c, style);
+void q_scilexermatlab_super_set_paper(void* self, void* c, int style) {
+    QsciLexerMatlab_SuperSetPaper((QsciLexerMatlab*)self, (QColor*)c, style);
 }
 
 void q_scilexermatlab_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
@@ -771,8 +771,8 @@ bool q_scilexermatlab_read_properties(void* self, void* qs, const char* prefix) 
     return QsciLexerMatlab_ReadProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexermatlab_qbase_read_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerMatlab_QBaseReadProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexermatlab_super_read_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerMatlab_SuperReadProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexermatlab_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -783,8 +783,8 @@ bool q_scilexermatlab_write_properties(void* self, void* qs, const char* prefix)
     return QsciLexerMatlab_WriteProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexermatlab_qbase_write_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerMatlab_QBaseWriteProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexermatlab_super_write_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerMatlab_SuperWriteProperties((QsciLexerMatlab*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexermatlab_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -795,8 +795,8 @@ bool q_scilexermatlab_event(void* self, void* event) {
     return QsciLexerMatlab_Event((QsciLexerMatlab*)self, (QEvent*)event);
 }
 
-bool q_scilexermatlab_qbase_event(void* self, void* event) {
-    return QsciLexerMatlab_QBaseEvent((QsciLexerMatlab*)self, (QEvent*)event);
+bool q_scilexermatlab_super_event(void* self, void* event) {
+    return QsciLexerMatlab_SuperEvent((QsciLexerMatlab*)self, (QEvent*)event);
 }
 
 void q_scilexermatlab_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -807,8 +807,8 @@ bool q_scilexermatlab_event_filter(void* self, void* watched, void* event) {
     return QsciLexerMatlab_EventFilter((QsciLexerMatlab*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scilexermatlab_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciLexerMatlab_QBaseEventFilter((QsciLexerMatlab*)self, (QObject*)watched, (QEvent*)event);
+bool q_scilexermatlab_super_event_filter(void* self, void* watched, void* event) {
+    return QsciLexerMatlab_SuperEventFilter((QsciLexerMatlab*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scilexermatlab_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -819,8 +819,8 @@ void q_scilexermatlab_timer_event(void* self, void* event) {
     QsciLexerMatlab_TimerEvent((QsciLexerMatlab*)self, (QTimerEvent*)event);
 }
 
-void q_scilexermatlab_qbase_timer_event(void* self, void* event) {
-    QsciLexerMatlab_QBaseTimerEvent((QsciLexerMatlab*)self, (QTimerEvent*)event);
+void q_scilexermatlab_super_timer_event(void* self, void* event) {
+    QsciLexerMatlab_SuperTimerEvent((QsciLexerMatlab*)self, (QTimerEvent*)event);
 }
 
 void q_scilexermatlab_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -831,8 +831,8 @@ void q_scilexermatlab_child_event(void* self, void* event) {
     QsciLexerMatlab_ChildEvent((QsciLexerMatlab*)self, (QChildEvent*)event);
 }
 
-void q_scilexermatlab_qbase_child_event(void* self, void* event) {
-    QsciLexerMatlab_QBaseChildEvent((QsciLexerMatlab*)self, (QChildEvent*)event);
+void q_scilexermatlab_super_child_event(void* self, void* event) {
+    QsciLexerMatlab_SuperChildEvent((QsciLexerMatlab*)self, (QChildEvent*)event);
 }
 
 void q_scilexermatlab_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -843,8 +843,8 @@ void q_scilexermatlab_custom_event(void* self, void* event) {
     QsciLexerMatlab_CustomEvent((QsciLexerMatlab*)self, (QEvent*)event);
 }
 
-void q_scilexermatlab_qbase_custom_event(void* self, void* event) {
-    QsciLexerMatlab_QBaseCustomEvent((QsciLexerMatlab*)self, (QEvent*)event);
+void q_scilexermatlab_super_custom_event(void* self, void* event) {
+    QsciLexerMatlab_SuperCustomEvent((QsciLexerMatlab*)self, (QEvent*)event);
 }
 
 void q_scilexermatlab_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -855,8 +855,8 @@ void q_scilexermatlab_connect_notify(void* self, void* signal) {
     QsciLexerMatlab_ConnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexermatlab_qbase_connect_notify(void* self, void* signal) {
-    QsciLexerMatlab_QBaseConnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
+void q_scilexermatlab_super_connect_notify(void* self, void* signal) {
+    QsciLexerMatlab_SuperConnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexermatlab_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -867,8 +867,8 @@ void q_scilexermatlab_disconnect_notify(void* self, void* signal) {
     QsciLexerMatlab_DisconnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexermatlab_qbase_disconnect_notify(void* self, void* signal) {
-    QsciLexerMatlab_QBaseDisconnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
+void q_scilexermatlab_super_disconnect_notify(void* self, void* signal) {
+    QsciLexerMatlab_SuperDisconnectNotify((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexermatlab_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -882,8 +882,8 @@ char* q_scilexermatlab_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-char* q_scilexermatlab_qbase_text_as_bytes(void* self, const char* text) {
-    libqt_string _str = QsciLexerMatlab_QBaseTextAsBytes((QsciLexerMatlab*)self, qstring(text));
+char* q_scilexermatlab_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerMatlab_SuperTextAsBytes((QsciLexerMatlab*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -900,8 +900,8 @@ const char* q_scilexermatlab_bytes_as_text(void* self, const char* bytes, int si
     return _ret;
 }
 
-const char* q_scilexermatlab_qbase_bytes_as_text(void* self, const char* bytes, int size) {
-    libqt_string _str = QsciLexerMatlab_QBaseBytesAsText((QsciLexerMatlab*)self, bytes, size);
+const char* q_scilexermatlab_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerMatlab_SuperBytesAsText((QsciLexerMatlab*)self, bytes, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -915,8 +915,8 @@ QObject* q_scilexermatlab_sender(void* self) {
     return QsciLexerMatlab_Sender((QsciLexerMatlab*)self);
 }
 
-QObject* q_scilexermatlab_qbase_sender(void* self) {
-    return QsciLexerMatlab_QBaseSender((QsciLexerMatlab*)self);
+QObject* q_scilexermatlab_super_sender(void* self) {
+    return QsciLexerMatlab_SuperSender((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_sender(void* self, QObject* (*callback)()) {
@@ -927,8 +927,8 @@ int32_t q_scilexermatlab_sender_signal_index(void* self) {
     return QsciLexerMatlab_SenderSignalIndex((QsciLexerMatlab*)self);
 }
 
-int32_t q_scilexermatlab_qbase_sender_signal_index(void* self) {
-    return QsciLexerMatlab_QBaseSenderSignalIndex((QsciLexerMatlab*)self);
+int32_t q_scilexermatlab_super_sender_signal_index(void* self) {
+    return QsciLexerMatlab_SuperSenderSignalIndex((QsciLexerMatlab*)self);
 }
 
 void q_scilexermatlab_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -939,8 +939,8 @@ int32_t q_scilexermatlab_receivers(void* self, const char* signal) {
     return QsciLexerMatlab_Receivers((QsciLexerMatlab*)self, signal);
 }
 
-int32_t q_scilexermatlab_qbase_receivers(void* self, const char* signal) {
-    return QsciLexerMatlab_QBaseReceivers((QsciLexerMatlab*)self, signal);
+int32_t q_scilexermatlab_super_receivers(void* self, const char* signal) {
+    return QsciLexerMatlab_SuperReceivers((QsciLexerMatlab*)self, signal);
 }
 
 void q_scilexermatlab_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -951,8 +951,8 @@ bool q_scilexermatlab_is_signal_connected(void* self, void* signal) {
     return QsciLexerMatlab_IsSignalConnected((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
-bool q_scilexermatlab_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciLexerMatlab_QBaseIsSignalConnected((QsciLexerMatlab*)self, (QMetaMethod*)signal);
+bool q_scilexermatlab_super_is_signal_connected(void* self, void* signal) {
+    return QsciLexerMatlab_SuperIsSignalConnected((QsciLexerMatlab*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexermatlab_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

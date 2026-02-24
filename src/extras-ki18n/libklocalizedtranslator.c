@@ -22,8 +22,8 @@ void k_localizedtranslator_on_meta_object(void* self, const QMetaObject* (*callb
     KLocalizedTranslator_OnMetaObject((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_localizedtranslator_qbase_meta_object(void* self) {
-    return KLocalizedTranslator_QBaseMetaObject((KLocalizedTranslator*)self);
+const QMetaObject* k_localizedtranslator_super_meta_object(void* self) {
+    return KLocalizedTranslator_SuperMetaObject((KLocalizedTranslator*)self);
 }
 
 void* k_localizedtranslator_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_localizedtranslator_on_metacast(void* self, void* (*callback)(void*, cons
     KLocalizedTranslator_OnMetacast((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-void* k_localizedtranslator_qbase_metacast(void* self, const char* param1) {
-    return KLocalizedTranslator_QBaseMetacast((KLocalizedTranslator*)self, param1);
+void* k_localizedtranslator_super_metacast(void* self, const char* param1) {
+    return KLocalizedTranslator_SuperMetacast((KLocalizedTranslator*)self, param1);
 }
 
 int32_t k_localizedtranslator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_localizedtranslator_on_metacall(void* self, int32_t (*callback)(void*, in
     KLocalizedTranslator_OnMetacall((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-int32_t k_localizedtranslator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLocalizedTranslator_QBaseMetacall((KLocalizedTranslator*)self, param1, param2, param3);
+int32_t k_localizedtranslator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLocalizedTranslator_SuperMetacall((KLocalizedTranslator*)self, param1, param2, param3);
 }
 
 const char* k_localizedtranslator_tr(const char* s) {
@@ -68,8 +68,8 @@ void k_localizedtranslator_on_translate(void* self, const char* (*callback)(void
     KLocalizedTranslator_OnTranslate((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
-const char* k_localizedtranslator_qbase_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = KLocalizedTranslator_QBaseTranslate((KLocalizedTranslator*)self, context, sourceText, disambiguation, n);
+const char* k_localizedtranslator_super_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
+    libqt_string _str = KLocalizedTranslator_SuperTranslate((KLocalizedTranslator*)self, context, sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -370,8 +370,8 @@ bool k_localizedtranslator_is_empty(void* self) {
     return KLocalizedTranslator_IsEmpty((KLocalizedTranslator*)self);
 }
 
-bool k_localizedtranslator_qbase_is_empty(void* self) {
-    return KLocalizedTranslator_QBaseIsEmpty((KLocalizedTranslator*)self);
+bool k_localizedtranslator_super_is_empty(void* self) {
+    return KLocalizedTranslator_SuperIsEmpty((KLocalizedTranslator*)self);
 }
 
 void k_localizedtranslator_on_is_empty(void* self, bool (*callback)()) {
@@ -382,8 +382,8 @@ bool k_localizedtranslator_event(void* self, void* event) {
     return KLocalizedTranslator_Event((KLocalizedTranslator*)self, (QEvent*)event);
 }
 
-bool k_localizedtranslator_qbase_event(void* self, void* event) {
-    return KLocalizedTranslator_QBaseEvent((KLocalizedTranslator*)self, (QEvent*)event);
+bool k_localizedtranslator_super_event(void* self, void* event) {
+    return KLocalizedTranslator_SuperEvent((KLocalizedTranslator*)self, (QEvent*)event);
 }
 
 void k_localizedtranslator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ bool k_localizedtranslator_event_filter(void* self, void* watched, void* event) 
     return KLocalizedTranslator_EventFilter((KLocalizedTranslator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_localizedtranslator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KLocalizedTranslator_QBaseEventFilter((KLocalizedTranslator*)self, (QObject*)watched, (QEvent*)event);
+bool k_localizedtranslator_super_event_filter(void* self, void* watched, void* event) {
+    return KLocalizedTranslator_SuperEventFilter((KLocalizedTranslator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_localizedtranslator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -406,8 +406,8 @@ void k_localizedtranslator_timer_event(void* self, void* event) {
     KLocalizedTranslator_TimerEvent((KLocalizedTranslator*)self, (QTimerEvent*)event);
 }
 
-void k_localizedtranslator_qbase_timer_event(void* self, void* event) {
-    KLocalizedTranslator_QBaseTimerEvent((KLocalizedTranslator*)self, (QTimerEvent*)event);
+void k_localizedtranslator_super_timer_event(void* self, void* event) {
+    KLocalizedTranslator_SuperTimerEvent((KLocalizedTranslator*)self, (QTimerEvent*)event);
 }
 
 void k_localizedtranslator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ void k_localizedtranslator_child_event(void* self, void* event) {
     KLocalizedTranslator_ChildEvent((KLocalizedTranslator*)self, (QChildEvent*)event);
 }
 
-void k_localizedtranslator_qbase_child_event(void* self, void* event) {
-    KLocalizedTranslator_QBaseChildEvent((KLocalizedTranslator*)self, (QChildEvent*)event);
+void k_localizedtranslator_super_child_event(void* self, void* event) {
+    KLocalizedTranslator_SuperChildEvent((KLocalizedTranslator*)self, (QChildEvent*)event);
 }
 
 void k_localizedtranslator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ void k_localizedtranslator_custom_event(void* self, void* event) {
     KLocalizedTranslator_CustomEvent((KLocalizedTranslator*)self, (QEvent*)event);
 }
 
-void k_localizedtranslator_qbase_custom_event(void* self, void* event) {
-    KLocalizedTranslator_QBaseCustomEvent((KLocalizedTranslator*)self, (QEvent*)event);
+void k_localizedtranslator_super_custom_event(void* self, void* event) {
+    KLocalizedTranslator_SuperCustomEvent((KLocalizedTranslator*)self, (QEvent*)event);
 }
 
 void k_localizedtranslator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -442,8 +442,8 @@ void k_localizedtranslator_connect_notify(void* self, void* signal) {
     KLocalizedTranslator_ConnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_qbase_connect_notify(void* self, void* signal) {
-    KLocalizedTranslator_QBaseConnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
+void k_localizedtranslator_super_connect_notify(void* self, void* signal) {
+    KLocalizedTranslator_SuperConnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedtranslator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -454,8 +454,8 @@ void k_localizedtranslator_disconnect_notify(void* self, void* signal) {
     KLocalizedTranslator_DisconnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedtranslator_qbase_disconnect_notify(void* self, void* signal) {
-    KLocalizedTranslator_QBaseDisconnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
+void k_localizedtranslator_super_disconnect_notify(void* self, void* signal) {
+    KLocalizedTranslator_SuperDisconnectNotify((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedtranslator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -466,8 +466,8 @@ QObject* k_localizedtranslator_sender(void* self) {
     return KLocalizedTranslator_Sender((KLocalizedTranslator*)self);
 }
 
-QObject* k_localizedtranslator_qbase_sender(void* self) {
-    return KLocalizedTranslator_QBaseSender((KLocalizedTranslator*)self);
+QObject* k_localizedtranslator_super_sender(void* self) {
+    return KLocalizedTranslator_SuperSender((KLocalizedTranslator*)self);
 }
 
 void k_localizedtranslator_on_sender(void* self, QObject* (*callback)()) {
@@ -478,8 +478,8 @@ int32_t k_localizedtranslator_sender_signal_index(void* self) {
     return KLocalizedTranslator_SenderSignalIndex((KLocalizedTranslator*)self);
 }
 
-int32_t k_localizedtranslator_qbase_sender_signal_index(void* self) {
-    return KLocalizedTranslator_QBaseSenderSignalIndex((KLocalizedTranslator*)self);
+int32_t k_localizedtranslator_super_sender_signal_index(void* self) {
+    return KLocalizedTranslator_SuperSenderSignalIndex((KLocalizedTranslator*)self);
 }
 
 void k_localizedtranslator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -490,8 +490,8 @@ int32_t k_localizedtranslator_receivers(void* self, const char* signal) {
     return KLocalizedTranslator_Receivers((KLocalizedTranslator*)self, signal);
 }
 
-int32_t k_localizedtranslator_qbase_receivers(void* self, const char* signal) {
-    return KLocalizedTranslator_QBaseReceivers((KLocalizedTranslator*)self, signal);
+int32_t k_localizedtranslator_super_receivers(void* self, const char* signal) {
+    return KLocalizedTranslator_SuperReceivers((KLocalizedTranslator*)self, signal);
 }
 
 void k_localizedtranslator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -502,8 +502,8 @@ bool k_localizedtranslator_is_signal_connected(void* self, void* signal) {
     return KLocalizedTranslator_IsSignalConnected((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
-bool k_localizedtranslator_qbase_is_signal_connected(void* self, void* signal) {
-    return KLocalizedTranslator_QBaseIsSignalConnected((KLocalizedTranslator*)self, (QMetaMethod*)signal);
+bool k_localizedtranslator_super_is_signal_connected(void* self, void* signal) {
+    return KLocalizedTranslator_SuperIsSignalConnected((KLocalizedTranslator*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedtranslator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

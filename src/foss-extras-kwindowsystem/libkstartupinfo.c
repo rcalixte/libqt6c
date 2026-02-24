@@ -22,8 +22,8 @@ void k_startupinfo_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KStartupInfo_OnMetaObject((KStartupInfo*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_startupinfo_qbase_meta_object(void* self) {
-    return KStartupInfo_QBaseMetaObject((KStartupInfo*)self);
+const QMetaObject* k_startupinfo_super_meta_object(void* self) {
+    return KStartupInfo_SuperMetaObject((KStartupInfo*)self);
 }
 
 void* k_startupinfo_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_startupinfo_on_metacast(void* self, void* (*callback)(void*, const char*)
     KStartupInfo_OnMetacast((KStartupInfo*)self, (intptr_t)callback);
 }
 
-void* k_startupinfo_qbase_metacast(void* self, const char* param1) {
-    return KStartupInfo_QBaseMetacast((KStartupInfo*)self, param1);
+void* k_startupinfo_super_metacast(void* self, const char* param1) {
+    return KStartupInfo_SuperMetacast((KStartupInfo*)self, param1);
 }
 
 int32_t k_startupinfo_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_startupinfo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KStartupInfo_OnMetacall((KStartupInfo*)self, (intptr_t)callback);
 }
 
-int32_t k_startupinfo_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KStartupInfo_QBaseMetacall((KStartupInfo*)self, param1, param2, param3);
+int32_t k_startupinfo_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KStartupInfo_SuperMetacall((KStartupInfo*)self, param1, param2, param3);
 }
 
 const char* k_startupinfo_tr(const char* s) {
@@ -190,8 +190,8 @@ void k_startupinfo_on_custom_event(void* self, void (*callback)(void*, void*)) {
     KStartupInfo_OnCustomEvent((KStartupInfo*)self, (intptr_t)callback);
 }
 
-void k_startupinfo_qbase_custom_event(void* self, void* e_P) {
-    KStartupInfo_QBaseCustomEvent((KStartupInfo*)self, (QEvent*)e_P);
+void k_startupinfo_super_custom_event(void* self, void* e_P) {
+    KStartupInfo_SuperCustomEvent((KStartupInfo*)self, (QEvent*)e_P);
 }
 
 const char* k_startupinfo_tr2(const char* s, const char* c) {
@@ -423,8 +423,8 @@ bool k_startupinfo_event(void* self, void* event) {
     return KStartupInfo_Event((KStartupInfo*)self, (QEvent*)event);
 }
 
-bool k_startupinfo_qbase_event(void* self, void* event) {
-    return KStartupInfo_QBaseEvent((KStartupInfo*)self, (QEvent*)event);
+bool k_startupinfo_super_event(void* self, void* event) {
+    return KStartupInfo_SuperEvent((KStartupInfo*)self, (QEvent*)event);
 }
 
 void k_startupinfo_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ bool k_startupinfo_event_filter(void* self, void* watched, void* event) {
     return KStartupInfo_EventFilter((KStartupInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_startupinfo_qbase_event_filter(void* self, void* watched, void* event) {
-    return KStartupInfo_QBaseEventFilter((KStartupInfo*)self, (QObject*)watched, (QEvent*)event);
+bool k_startupinfo_super_event_filter(void* self, void* watched, void* event) {
+    return KStartupInfo_SuperEventFilter((KStartupInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_startupinfo_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -447,8 +447,8 @@ void k_startupinfo_timer_event(void* self, void* event) {
     KStartupInfo_TimerEvent((KStartupInfo*)self, (QTimerEvent*)event);
 }
 
-void k_startupinfo_qbase_timer_event(void* self, void* event) {
-    KStartupInfo_QBaseTimerEvent((KStartupInfo*)self, (QTimerEvent*)event);
+void k_startupinfo_super_timer_event(void* self, void* event) {
+    KStartupInfo_SuperTimerEvent((KStartupInfo*)self, (QTimerEvent*)event);
 }
 
 void k_startupinfo_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void k_startupinfo_child_event(void* self, void* event) {
     KStartupInfo_ChildEvent((KStartupInfo*)self, (QChildEvent*)event);
 }
 
-void k_startupinfo_qbase_child_event(void* self, void* event) {
-    KStartupInfo_QBaseChildEvent((KStartupInfo*)self, (QChildEvent*)event);
+void k_startupinfo_super_child_event(void* self, void* event) {
+    KStartupInfo_SuperChildEvent((KStartupInfo*)self, (QChildEvent*)event);
 }
 
 void k_startupinfo_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ void k_startupinfo_connect_notify(void* self, void* signal) {
     KStartupInfo_ConnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_startupinfo_qbase_connect_notify(void* self, void* signal) {
-    KStartupInfo_QBaseConnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
+void k_startupinfo_super_connect_notify(void* self, void* signal) {
+    KStartupInfo_SuperConnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_startupinfo_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -483,8 +483,8 @@ void k_startupinfo_disconnect_notify(void* self, void* signal) {
     KStartupInfo_DisconnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_startupinfo_qbase_disconnect_notify(void* self, void* signal) {
-    KStartupInfo_QBaseDisconnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
+void k_startupinfo_super_disconnect_notify(void* self, void* signal) {
+    KStartupInfo_SuperDisconnectNotify((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_startupinfo_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -495,8 +495,8 @@ QObject* k_startupinfo_sender(void* self) {
     return KStartupInfo_Sender((KStartupInfo*)self);
 }
 
-QObject* k_startupinfo_qbase_sender(void* self) {
-    return KStartupInfo_QBaseSender((KStartupInfo*)self);
+QObject* k_startupinfo_super_sender(void* self) {
+    return KStartupInfo_SuperSender((KStartupInfo*)self);
 }
 
 void k_startupinfo_on_sender(void* self, QObject* (*callback)()) {
@@ -507,8 +507,8 @@ int32_t k_startupinfo_sender_signal_index(void* self) {
     return KStartupInfo_SenderSignalIndex((KStartupInfo*)self);
 }
 
-int32_t k_startupinfo_qbase_sender_signal_index(void* self) {
-    return KStartupInfo_QBaseSenderSignalIndex((KStartupInfo*)self);
+int32_t k_startupinfo_super_sender_signal_index(void* self) {
+    return KStartupInfo_SuperSenderSignalIndex((KStartupInfo*)self);
 }
 
 void k_startupinfo_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -519,8 +519,8 @@ int32_t k_startupinfo_receivers(void* self, const char* signal) {
     return KStartupInfo_Receivers((KStartupInfo*)self, signal);
 }
 
-int32_t k_startupinfo_qbase_receivers(void* self, const char* signal) {
-    return KStartupInfo_QBaseReceivers((KStartupInfo*)self, signal);
+int32_t k_startupinfo_super_receivers(void* self, const char* signal) {
+    return KStartupInfo_SuperReceivers((KStartupInfo*)self, signal);
 }
 
 void k_startupinfo_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -531,8 +531,8 @@ bool k_startupinfo_is_signal_connected(void* self, void* signal) {
     return KStartupInfo_IsSignalConnected((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
-bool k_startupinfo_qbase_is_signal_connected(void* self, void* signal) {
-    return KStartupInfo_QBaseIsSignalConnected((KStartupInfo*)self, (QMetaMethod*)signal);
+bool k_startupinfo_super_is_signal_connected(void* self, void* signal) {
+    return KStartupInfo_SuperIsSignalConnected((KStartupInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_startupinfo_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -23,8 +23,8 @@ void q_categoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)())
     QCategoryAxis_OnMetaObject((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_categoryaxis_qbase_meta_object(void* self) {
-    return QCategoryAxis_QBaseMetaObject((QCategoryAxis*)self);
+const QMetaObject* q_categoryaxis_super_meta_object(void* self) {
+    return QCategoryAxis_SuperMetaObject((QCategoryAxis*)self);
 }
 
 void* q_categoryaxis_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_categoryaxis_on_metacast(void* self, void* (*callback)(void*, const char*
     QCategoryAxis_OnMetacast((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-void* q_categoryaxis_qbase_metacast(void* self, const char* param1) {
-    return QCategoryAxis_QBaseMetacast((QCategoryAxis*)self, param1);
+void* q_categoryaxis_super_metacast(void* self, const char* param1) {
+    return QCategoryAxis_SuperMetacast((QCategoryAxis*)self, param1);
 }
 
 int32_t q_categoryaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QCategoryAxis_OnMetacall((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_categoryaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCategoryAxis_QBaseMetacall((QCategoryAxis*)self, param1, param2, param3);
+int32_t q_categoryaxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCategoryAxis_SuperMetacall((QCategoryAxis*)self, param1, param2, param3);
 }
 
 const char* q_categoryaxis_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_categoryaxis_on_type(void* self, int32_t (*callback)()) {
     QCategoryAxis_OnType((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_categoryaxis_qbase_type(void* self) {
-    return QCategoryAxis_QBaseType((QCategoryAxis*)self);
+int32_t q_categoryaxis_super_type(void* self) {
+    return QCategoryAxis_SuperType((QCategoryAxis*)self);
 }
 
 void q_categoryaxis_append(void* self, const char* label, double categoryEndValue) {
@@ -1024,8 +1024,8 @@ bool q_categoryaxis_event(void* self, void* event) {
     return QCategoryAxis_Event((QCategoryAxis*)self, (QEvent*)event);
 }
 
-bool q_categoryaxis_qbase_event(void* self, void* event) {
-    return QCategoryAxis_QBaseEvent((QCategoryAxis*)self, (QEvent*)event);
+bool q_categoryaxis_super_event(void* self, void* event) {
+    return QCategoryAxis_SuperEvent((QCategoryAxis*)self, (QEvent*)event);
 }
 
 void q_categoryaxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1036,8 +1036,8 @@ bool q_categoryaxis_event_filter(void* self, void* watched, void* event) {
     return QCategoryAxis_EventFilter((QCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_categoryaxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCategoryAxis_QBaseEventFilter((QCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_categoryaxis_super_event_filter(void* self, void* watched, void* event) {
+    return QCategoryAxis_SuperEventFilter((QCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_categoryaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1048,8 +1048,8 @@ void q_categoryaxis_timer_event(void* self, void* event) {
     QCategoryAxis_TimerEvent((QCategoryAxis*)self, (QTimerEvent*)event);
 }
 
-void q_categoryaxis_qbase_timer_event(void* self, void* event) {
-    QCategoryAxis_QBaseTimerEvent((QCategoryAxis*)self, (QTimerEvent*)event);
+void q_categoryaxis_super_timer_event(void* self, void* event) {
+    QCategoryAxis_SuperTimerEvent((QCategoryAxis*)self, (QTimerEvent*)event);
 }
 
 void q_categoryaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1060,8 +1060,8 @@ void q_categoryaxis_child_event(void* self, void* event) {
     QCategoryAxis_ChildEvent((QCategoryAxis*)self, (QChildEvent*)event);
 }
 
-void q_categoryaxis_qbase_child_event(void* self, void* event) {
-    QCategoryAxis_QBaseChildEvent((QCategoryAxis*)self, (QChildEvent*)event);
+void q_categoryaxis_super_child_event(void* self, void* event) {
+    QCategoryAxis_SuperChildEvent((QCategoryAxis*)self, (QChildEvent*)event);
 }
 
 void q_categoryaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1072,8 +1072,8 @@ void q_categoryaxis_custom_event(void* self, void* event) {
     QCategoryAxis_CustomEvent((QCategoryAxis*)self, (QEvent*)event);
 }
 
-void q_categoryaxis_qbase_custom_event(void* self, void* event) {
-    QCategoryAxis_QBaseCustomEvent((QCategoryAxis*)self, (QEvent*)event);
+void q_categoryaxis_super_custom_event(void* self, void* event) {
+    QCategoryAxis_SuperCustomEvent((QCategoryAxis*)self, (QEvent*)event);
 }
 
 void q_categoryaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1084,8 +1084,8 @@ void q_categoryaxis_connect_notify(void* self, void* signal) {
     QCategoryAxis_ConnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_categoryaxis_qbase_connect_notify(void* self, void* signal) {
-    QCategoryAxis_QBaseConnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
+void q_categoryaxis_super_connect_notify(void* self, void* signal) {
+    QCategoryAxis_SuperConnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_categoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1096,8 +1096,8 @@ void q_categoryaxis_disconnect_notify(void* self, void* signal) {
     QCategoryAxis_DisconnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_categoryaxis_qbase_disconnect_notify(void* self, void* signal) {
-    QCategoryAxis_QBaseDisconnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
+void q_categoryaxis_super_disconnect_notify(void* self, void* signal) {
+    QCategoryAxis_SuperDisconnectNotify((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_categoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1108,8 +1108,8 @@ QObject* q_categoryaxis_sender(void* self) {
     return QCategoryAxis_Sender((QCategoryAxis*)self);
 }
 
-QObject* q_categoryaxis_qbase_sender(void* self) {
-    return QCategoryAxis_QBaseSender((QCategoryAxis*)self);
+QObject* q_categoryaxis_super_sender(void* self) {
+    return QCategoryAxis_SuperSender((QCategoryAxis*)self);
 }
 
 void q_categoryaxis_on_sender(void* self, QObject* (*callback)()) {
@@ -1120,8 +1120,8 @@ int32_t q_categoryaxis_sender_signal_index(void* self) {
     return QCategoryAxis_SenderSignalIndex((QCategoryAxis*)self);
 }
 
-int32_t q_categoryaxis_qbase_sender_signal_index(void* self) {
-    return QCategoryAxis_QBaseSenderSignalIndex((QCategoryAxis*)self);
+int32_t q_categoryaxis_super_sender_signal_index(void* self) {
+    return QCategoryAxis_SuperSenderSignalIndex((QCategoryAxis*)self);
 }
 
 void q_categoryaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1132,8 +1132,8 @@ int32_t q_categoryaxis_receivers(void* self, const char* signal) {
     return QCategoryAxis_Receivers((QCategoryAxis*)self, signal);
 }
 
-int32_t q_categoryaxis_qbase_receivers(void* self, const char* signal) {
-    return QCategoryAxis_QBaseReceivers((QCategoryAxis*)self, signal);
+int32_t q_categoryaxis_super_receivers(void* self, const char* signal) {
+    return QCategoryAxis_SuperReceivers((QCategoryAxis*)self, signal);
 }
 
 void q_categoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1144,8 +1144,8 @@ bool q_categoryaxis_is_signal_connected(void* self, void* signal) {
     return QCategoryAxis_IsSignalConnected((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_categoryaxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QCategoryAxis_QBaseIsSignalConnected((QCategoryAxis*)self, (QMetaMethod*)signal);
+bool q_categoryaxis_super_is_signal_connected(void* self, void* signal) {
+    return QCategoryAxis_SuperIsSignalConnected((QCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_categoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

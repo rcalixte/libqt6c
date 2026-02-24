@@ -32,13 +32,17 @@ bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(void* se
 ///
 void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed` instead
+///
+#define q_designerdynamicpropertysheetextension_qbase_dynamic_properties_allowed q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#dynamicPropertiesAllowed)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerDynamicPropertySheetExtension*
 ///
-bool q_designerdynamicpropertysheetextension_qbase_dynamic_properties_allowed(void* self);
+bool q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#addDynamicProperty)
 ///
@@ -57,6 +61,10 @@ int32_t q_designerdynamicpropertysheetextension_add_dynamic_property(void* self,
 ///
 void q_designerdynamicpropertysheetextension_on_add_dynamic_property(void* self, int32_t (*callback)(void*, const char*, void*));
 
+/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_add_dynamic_property` instead
+///
+#define q_designerdynamicpropertysheetextension_qbase_add_dynamic_property q_designerdynamicpropertysheetextension_super_add_dynamic_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#addDynamicProperty)
 ///
 /// Base class method implementation
@@ -65,7 +73,7 @@ void q_designerdynamicpropertysheetextension_on_add_dynamic_property(void* self,
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-int32_t q_designerdynamicpropertysheetextension_qbase_add_dynamic_property(void* self, const char* propertyName, void* value);
+int32_t q_designerdynamicpropertysheetextension_super_add_dynamic_property(void* self, const char* propertyName, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#removeDynamicProperty)
 ///
@@ -83,6 +91,10 @@ bool q_designerdynamicpropertysheetextension_remove_dynamic_property(void* self,
 ///
 void q_designerdynamicpropertysheetextension_on_remove_dynamic_property(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_remove_dynamic_property` instead
+///
+#define q_designerdynamicpropertysheetextension_qbase_remove_dynamic_property q_designerdynamicpropertysheetextension_super_remove_dynamic_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#removeDynamicProperty)
 ///
 /// Base class method implementation
@@ -90,7 +102,7 @@ void q_designerdynamicpropertysheetextension_on_remove_dynamic_property(void* se
 /// @param self QDesignerDynamicPropertySheetExtension*
 /// @param index int
 ///
-bool q_designerdynamicpropertysheetextension_qbase_remove_dynamic_property(void* self, int index);
+bool q_designerdynamicpropertysheetextension_super_remove_dynamic_property(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#isDynamicProperty)
 ///
@@ -108,6 +120,10 @@ bool q_designerdynamicpropertysheetextension_is_dynamic_property(void* self, int
 ///
 void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_is_dynamic_property` instead
+///
+#define q_designerdynamicpropertysheetextension_qbase_is_dynamic_property q_designerdynamicpropertysheetextension_super_is_dynamic_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#isDynamicProperty)
 ///
 /// Base class method implementation
@@ -115,7 +131,7 @@ void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, 
 /// @param self QDesignerDynamicPropertySheetExtension*
 /// @param index int
 ///
-bool q_designerdynamicpropertysheetextension_qbase_is_dynamic_property(void* self, int index);
+bool q_designerdynamicpropertysheetextension_super_is_dynamic_property(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#canAddDynamicProperty)
 ///
@@ -133,6 +149,10 @@ bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(void* self
 ///
 void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_can_add_dynamic_property` instead
+///
+#define q_designerdynamicpropertysheetextension_qbase_can_add_dynamic_property q_designerdynamicpropertysheetextension_super_can_add_dynamic_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#canAddDynamicProperty)
 ///
 /// Base class method implementation
@@ -140,7 +160,7 @@ void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* s
 /// @param self QDesignerDynamicPropertySheetExtension*
 /// @param propertyName const char*
 ///
-bool q_designerdynamicpropertysheetextension_qbase_can_add_dynamic_property(void* self, const char* propertyName);
+bool q_designerdynamicpropertysheetextension_super_can_add_dynamic_property(void* self, const char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#dtor.QDesignerDynamicPropertySheetExtension)
 ///

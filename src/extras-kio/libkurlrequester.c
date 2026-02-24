@@ -48,8 +48,8 @@ void k_urlrequester_on_meta_object(void* self, const QMetaObject* (*callback)())
     KUrlRequester_OnMetaObject((KUrlRequester*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urlrequester_qbase_meta_object(void* self) {
-    return KUrlRequester_QBaseMetaObject((KUrlRequester*)self);
+const QMetaObject* k_urlrequester_super_meta_object(void* self) {
+    return KUrlRequester_SuperMetaObject((KUrlRequester*)self);
 }
 
 void* k_urlrequester_metacast(void* self, const char* param1) {
@@ -60,8 +60,8 @@ void k_urlrequester_on_metacast(void* self, void* (*callback)(void*, const char*
     KUrlRequester_OnMetacast((KUrlRequester*)self, (intptr_t)callback);
 }
 
-void* k_urlrequester_qbase_metacast(void* self, const char* param1) {
-    return KUrlRequester_QBaseMetacast((KUrlRequester*)self, param1);
+void* k_urlrequester_super_metacast(void* self, const char* param1) {
+    return KUrlRequester_SuperMetacast((KUrlRequester*)self, param1);
 }
 
 int32_t k_urlrequester_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -72,8 +72,8 @@ void k_urlrequester_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KUrlRequester_OnMetacall((KUrlRequester*)self, (intptr_t)callback);
 }
 
-int32_t k_urlrequester_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlRequester_QBaseMetacall((KUrlRequester*)self, param1, param2, param3);
+int32_t k_urlrequester_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlRequester_SuperMetacall((KUrlRequester*)self, param1, param2, param3);
 }
 
 const char* k_urlrequester_tr(const char* s) {
@@ -194,8 +194,8 @@ void k_urlrequester_on_file_dialog(void* self, QFileDialog* (*callback)()) {
     KUrlRequester_OnFileDialog((KUrlRequester*)self, (intptr_t)callback);
 }
 
-QFileDialog* k_urlrequester_qbase_file_dialog(void* self) {
-    return KUrlRequester_QBaseFileDialog((KUrlRequester*)self);
+QFileDialog* k_urlrequester_super_file_dialog(void* self) {
+    return KUrlRequester_SuperFileDialog((KUrlRequester*)self);
 }
 
 KLineEdit* k_urlrequester_line_edit(void* self) {
@@ -301,8 +301,8 @@ void k_urlrequester_on_change_event(void* self, void (*callback)(void*, void*)) 
     KUrlRequester_OnChangeEvent((KUrlRequester*)self, (intptr_t)callback);
 }
 
-void k_urlrequester_qbase_change_event(void* self, void* e) {
-    KUrlRequester_QBaseChangeEvent((KUrlRequester*)self, (QEvent*)e);
+void k_urlrequester_super_change_event(void* self, void* e) {
+    KUrlRequester_SuperChangeEvent((KUrlRequester*)self, (QEvent*)e);
 }
 
 bool k_urlrequester_event_filter(void* self, void* obj, void* ev) {
@@ -313,8 +313,8 @@ void k_urlrequester_on_event_filter(void* self, bool (*callback)(void*, void*, v
     KUrlRequester_OnEventFilter((KUrlRequester*)self, (intptr_t)callback);
 }
 
-bool k_urlrequester_qbase_event_filter(void* self, void* obj, void* ev) {
-    return KUrlRequester_QBaseEventFilter((KUrlRequester*)self, (QObject*)obj, (QEvent*)ev);
+bool k_urlrequester_super_event_filter(void* self, void* obj, void* ev) {
+    return KUrlRequester_SuperEventFilter((KUrlRequester*)self, (QObject*)obj, (QEvent*)ev);
 }
 
 const char* k_urlrequester_tr2(const char* s, const char* c) {
@@ -1716,8 +1716,8 @@ int32_t k_urlrequester_dev_type(void* self) {
     return KUrlRequester_DevType((KUrlRequester*)self);
 }
 
-int32_t k_urlrequester_qbase_dev_type(void* self) {
-    return KUrlRequester_QBaseDevType((KUrlRequester*)self);
+int32_t k_urlrequester_super_dev_type(void* self) {
+    return KUrlRequester_SuperDevType((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1728,8 +1728,8 @@ void k_urlrequester_set_visible(void* self, bool visible) {
     KUrlRequester_SetVisible((KUrlRequester*)self, visible);
 }
 
-void k_urlrequester_qbase_set_visible(void* self, bool visible) {
-    KUrlRequester_QBaseSetVisible((KUrlRequester*)self, visible);
+void k_urlrequester_super_set_visible(void* self, bool visible) {
+    KUrlRequester_SuperSetVisible((KUrlRequester*)self, visible);
 }
 
 void k_urlrequester_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1740,8 +1740,8 @@ QSize* k_urlrequester_size_hint(void* self) {
     return KUrlRequester_SizeHint((KUrlRequester*)self);
 }
 
-QSize* k_urlrequester_qbase_size_hint(void* self) {
-    return KUrlRequester_QBaseSizeHint((KUrlRequester*)self);
+QSize* k_urlrequester_super_size_hint(void* self) {
+    return KUrlRequester_SuperSizeHint((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1752,8 +1752,8 @@ QSize* k_urlrequester_minimum_size_hint(void* self) {
     return KUrlRequester_MinimumSizeHint((KUrlRequester*)self);
 }
 
-QSize* k_urlrequester_qbase_minimum_size_hint(void* self) {
-    return KUrlRequester_QBaseMinimumSizeHint((KUrlRequester*)self);
+QSize* k_urlrequester_super_minimum_size_hint(void* self) {
+    return KUrlRequester_SuperMinimumSizeHint((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1764,8 +1764,8 @@ int32_t k_urlrequester_height_for_width(void* self, int param1) {
     return KUrlRequester_HeightForWidth((KUrlRequester*)self, param1);
 }
 
-int32_t k_urlrequester_qbase_height_for_width(void* self, int param1) {
-    return KUrlRequester_QBaseHeightForWidth((KUrlRequester*)self, param1);
+int32_t k_urlrequester_super_height_for_width(void* self, int param1) {
+    return KUrlRequester_SuperHeightForWidth((KUrlRequester*)self, param1);
 }
 
 void k_urlrequester_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1776,8 +1776,8 @@ bool k_urlrequester_has_height_for_width(void* self) {
     return KUrlRequester_HasHeightForWidth((KUrlRequester*)self);
 }
 
-bool k_urlrequester_qbase_has_height_for_width(void* self) {
-    return KUrlRequester_QBaseHasHeightForWidth((KUrlRequester*)self);
+bool k_urlrequester_super_has_height_for_width(void* self) {
+    return KUrlRequester_SuperHasHeightForWidth((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1788,8 +1788,8 @@ QPaintEngine* k_urlrequester_paint_engine(void* self) {
     return KUrlRequester_PaintEngine((KUrlRequester*)self);
 }
 
-QPaintEngine* k_urlrequester_qbase_paint_engine(void* self) {
-    return KUrlRequester_QBasePaintEngine((KUrlRequester*)self);
+QPaintEngine* k_urlrequester_super_paint_engine(void* self) {
+    return KUrlRequester_SuperPaintEngine((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1800,8 +1800,8 @@ bool k_urlrequester_event(void* self, void* event) {
     return KUrlRequester_Event((KUrlRequester*)self, (QEvent*)event);
 }
 
-bool k_urlrequester_qbase_event(void* self, void* event) {
-    return KUrlRequester_QBaseEvent((KUrlRequester*)self, (QEvent*)event);
+bool k_urlrequester_super_event(void* self, void* event) {
+    return KUrlRequester_SuperEvent((KUrlRequester*)self, (QEvent*)event);
 }
 
 void k_urlrequester_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_urlrequester_mouse_press_event(void* self, void* event) {
     KUrlRequester_MousePressEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlrequester_qbase_mouse_press_event(void* self, void* event) {
-    KUrlRequester_QBaseMousePressEvent((KUrlRequester*)self, (QMouseEvent*)event);
+void k_urlrequester_super_mouse_press_event(void* self, void* event) {
+    KUrlRequester_SuperMousePressEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlrequester_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ void k_urlrequester_mouse_release_event(void* self, void* event) {
     KUrlRequester_MouseReleaseEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlrequester_qbase_mouse_release_event(void* self, void* event) {
-    KUrlRequester_QBaseMouseReleaseEvent((KUrlRequester*)self, (QMouseEvent*)event);
+void k_urlrequester_super_mouse_release_event(void* self, void* event) {
+    KUrlRequester_SuperMouseReleaseEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlrequester_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_urlrequester_mouse_double_click_event(void* self, void* event) {
     KUrlRequester_MouseDoubleClickEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlrequester_qbase_mouse_double_click_event(void* self, void* event) {
-    KUrlRequester_QBaseMouseDoubleClickEvent((KUrlRequester*)self, (QMouseEvent*)event);
+void k_urlrequester_super_mouse_double_click_event(void* self, void* event) {
+    KUrlRequester_SuperMouseDoubleClickEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlrequester_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_urlrequester_mouse_move_event(void* self, void* event) {
     KUrlRequester_MouseMoveEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlrequester_qbase_mouse_move_event(void* self, void* event) {
-    KUrlRequester_QBaseMouseMoveEvent((KUrlRequester*)self, (QMouseEvent*)event);
+void k_urlrequester_super_mouse_move_event(void* self, void* event) {
+    KUrlRequester_SuperMouseMoveEvent((KUrlRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlrequester_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_urlrequester_wheel_event(void* self, void* event) {
     KUrlRequester_WheelEvent((KUrlRequester*)self, (QWheelEvent*)event);
 }
 
-void k_urlrequester_qbase_wheel_event(void* self, void* event) {
-    KUrlRequester_QBaseWheelEvent((KUrlRequester*)self, (QWheelEvent*)event);
+void k_urlrequester_super_wheel_event(void* self, void* event) {
+    KUrlRequester_SuperWheelEvent((KUrlRequester*)self, (QWheelEvent*)event);
 }
 
 void k_urlrequester_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_urlrequester_key_press_event(void* self, void* event) {
     KUrlRequester_KeyPressEvent((KUrlRequester*)self, (QKeyEvent*)event);
 }
 
-void k_urlrequester_qbase_key_press_event(void* self, void* event) {
-    KUrlRequester_QBaseKeyPressEvent((KUrlRequester*)self, (QKeyEvent*)event);
+void k_urlrequester_super_key_press_event(void* self, void* event) {
+    KUrlRequester_SuperKeyPressEvent((KUrlRequester*)self, (QKeyEvent*)event);
 }
 
 void k_urlrequester_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_urlrequester_key_release_event(void* self, void* event) {
     KUrlRequester_KeyReleaseEvent((KUrlRequester*)self, (QKeyEvent*)event);
 }
 
-void k_urlrequester_qbase_key_release_event(void* self, void* event) {
-    KUrlRequester_QBaseKeyReleaseEvent((KUrlRequester*)self, (QKeyEvent*)event);
+void k_urlrequester_super_key_release_event(void* self, void* event) {
+    KUrlRequester_SuperKeyReleaseEvent((KUrlRequester*)self, (QKeyEvent*)event);
 }
 
 void k_urlrequester_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_urlrequester_focus_in_event(void* self, void* event) {
     KUrlRequester_FocusInEvent((KUrlRequester*)self, (QFocusEvent*)event);
 }
 
-void k_urlrequester_qbase_focus_in_event(void* self, void* event) {
-    KUrlRequester_QBaseFocusInEvent((KUrlRequester*)self, (QFocusEvent*)event);
+void k_urlrequester_super_focus_in_event(void* self, void* event) {
+    KUrlRequester_SuperFocusInEvent((KUrlRequester*)self, (QFocusEvent*)event);
 }
 
 void k_urlrequester_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ void k_urlrequester_focus_out_event(void* self, void* event) {
     KUrlRequester_FocusOutEvent((KUrlRequester*)self, (QFocusEvent*)event);
 }
 
-void k_urlrequester_qbase_focus_out_event(void* self, void* event) {
-    KUrlRequester_QBaseFocusOutEvent((KUrlRequester*)self, (QFocusEvent*)event);
+void k_urlrequester_super_focus_out_event(void* self, void* event) {
+    KUrlRequester_SuperFocusOutEvent((KUrlRequester*)self, (QFocusEvent*)event);
 }
 
 void k_urlrequester_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ void k_urlrequester_enter_event(void* self, void* event) {
     KUrlRequester_EnterEvent((KUrlRequester*)self, (QEnterEvent*)event);
 }
 
-void k_urlrequester_qbase_enter_event(void* self, void* event) {
-    KUrlRequester_QBaseEnterEvent((KUrlRequester*)self, (QEnterEvent*)event);
+void k_urlrequester_super_enter_event(void* self, void* event) {
+    KUrlRequester_SuperEnterEvent((KUrlRequester*)self, (QEnterEvent*)event);
 }
 
 void k_urlrequester_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ void k_urlrequester_leave_event(void* self, void* event) {
     KUrlRequester_LeaveEvent((KUrlRequester*)self, (QEvent*)event);
 }
 
-void k_urlrequester_qbase_leave_event(void* self, void* event) {
-    KUrlRequester_QBaseLeaveEvent((KUrlRequester*)self, (QEvent*)event);
+void k_urlrequester_super_leave_event(void* self, void* event) {
+    KUrlRequester_SuperLeaveEvent((KUrlRequester*)self, (QEvent*)event);
 }
 
 void k_urlrequester_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1944,8 +1944,8 @@ void k_urlrequester_paint_event(void* self, void* event) {
     KUrlRequester_PaintEvent((KUrlRequester*)self, (QPaintEvent*)event);
 }
 
-void k_urlrequester_qbase_paint_event(void* self, void* event) {
-    KUrlRequester_QBasePaintEvent((KUrlRequester*)self, (QPaintEvent*)event);
+void k_urlrequester_super_paint_event(void* self, void* event) {
+    KUrlRequester_SuperPaintEvent((KUrlRequester*)self, (QPaintEvent*)event);
 }
 
 void k_urlrequester_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ void k_urlrequester_move_event(void* self, void* event) {
     KUrlRequester_MoveEvent((KUrlRequester*)self, (QMoveEvent*)event);
 }
 
-void k_urlrequester_qbase_move_event(void* self, void* event) {
-    KUrlRequester_QBaseMoveEvent((KUrlRequester*)self, (QMoveEvent*)event);
+void k_urlrequester_super_move_event(void* self, void* event) {
+    KUrlRequester_SuperMoveEvent((KUrlRequester*)self, (QMoveEvent*)event);
 }
 
 void k_urlrequester_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1968,8 +1968,8 @@ void k_urlrequester_resize_event(void* self, void* event) {
     KUrlRequester_ResizeEvent((KUrlRequester*)self, (QResizeEvent*)event);
 }
 
-void k_urlrequester_qbase_resize_event(void* self, void* event) {
-    KUrlRequester_QBaseResizeEvent((KUrlRequester*)self, (QResizeEvent*)event);
+void k_urlrequester_super_resize_event(void* self, void* event) {
+    KUrlRequester_SuperResizeEvent((KUrlRequester*)self, (QResizeEvent*)event);
 }
 
 void k_urlrequester_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ void k_urlrequester_close_event(void* self, void* event) {
     KUrlRequester_CloseEvent((KUrlRequester*)self, (QCloseEvent*)event);
 }
 
-void k_urlrequester_qbase_close_event(void* self, void* event) {
-    KUrlRequester_QBaseCloseEvent((KUrlRequester*)self, (QCloseEvent*)event);
+void k_urlrequester_super_close_event(void* self, void* event) {
+    KUrlRequester_SuperCloseEvent((KUrlRequester*)self, (QCloseEvent*)event);
 }
 
 void k_urlrequester_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_urlrequester_context_menu_event(void* self, void* event) {
     KUrlRequester_ContextMenuEvent((KUrlRequester*)self, (QContextMenuEvent*)event);
 }
 
-void k_urlrequester_qbase_context_menu_event(void* self, void* event) {
-    KUrlRequester_QBaseContextMenuEvent((KUrlRequester*)self, (QContextMenuEvent*)event);
+void k_urlrequester_super_context_menu_event(void* self, void* event) {
+    KUrlRequester_SuperContextMenuEvent((KUrlRequester*)self, (QContextMenuEvent*)event);
 }
 
 void k_urlrequester_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ void k_urlrequester_tablet_event(void* self, void* event) {
     KUrlRequester_TabletEvent((KUrlRequester*)self, (QTabletEvent*)event);
 }
 
-void k_urlrequester_qbase_tablet_event(void* self, void* event) {
-    KUrlRequester_QBaseTabletEvent((KUrlRequester*)self, (QTabletEvent*)event);
+void k_urlrequester_super_tablet_event(void* self, void* event) {
+    KUrlRequester_SuperTabletEvent((KUrlRequester*)self, (QTabletEvent*)event);
 }
 
 void k_urlrequester_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2016,8 +2016,8 @@ void k_urlrequester_action_event(void* self, void* event) {
     KUrlRequester_ActionEvent((KUrlRequester*)self, (QActionEvent*)event);
 }
 
-void k_urlrequester_qbase_action_event(void* self, void* event) {
-    KUrlRequester_QBaseActionEvent((KUrlRequester*)self, (QActionEvent*)event);
+void k_urlrequester_super_action_event(void* self, void* event) {
+    KUrlRequester_SuperActionEvent((KUrlRequester*)self, (QActionEvent*)event);
 }
 
 void k_urlrequester_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_urlrequester_drag_enter_event(void* self, void* event) {
     KUrlRequester_DragEnterEvent((KUrlRequester*)self, (QDragEnterEvent*)event);
 }
 
-void k_urlrequester_qbase_drag_enter_event(void* self, void* event) {
-    KUrlRequester_QBaseDragEnterEvent((KUrlRequester*)self, (QDragEnterEvent*)event);
+void k_urlrequester_super_drag_enter_event(void* self, void* event) {
+    KUrlRequester_SuperDragEnterEvent((KUrlRequester*)self, (QDragEnterEvent*)event);
 }
 
 void k_urlrequester_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_urlrequester_drag_move_event(void* self, void* event) {
     KUrlRequester_DragMoveEvent((KUrlRequester*)self, (QDragMoveEvent*)event);
 }
 
-void k_urlrequester_qbase_drag_move_event(void* self, void* event) {
-    KUrlRequester_QBaseDragMoveEvent((KUrlRequester*)self, (QDragMoveEvent*)event);
+void k_urlrequester_super_drag_move_event(void* self, void* event) {
+    KUrlRequester_SuperDragMoveEvent((KUrlRequester*)self, (QDragMoveEvent*)event);
 }
 
 void k_urlrequester_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_urlrequester_drag_leave_event(void* self, void* event) {
     KUrlRequester_DragLeaveEvent((KUrlRequester*)self, (QDragLeaveEvent*)event);
 }
 
-void k_urlrequester_qbase_drag_leave_event(void* self, void* event) {
-    KUrlRequester_QBaseDragLeaveEvent((KUrlRequester*)self, (QDragLeaveEvent*)event);
+void k_urlrequester_super_drag_leave_event(void* self, void* event) {
+    KUrlRequester_SuperDragLeaveEvent((KUrlRequester*)self, (QDragLeaveEvent*)event);
 }
 
 void k_urlrequester_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ void k_urlrequester_drop_event(void* self, void* event) {
     KUrlRequester_DropEvent((KUrlRequester*)self, (QDropEvent*)event);
 }
 
-void k_urlrequester_qbase_drop_event(void* self, void* event) {
-    KUrlRequester_QBaseDropEvent((KUrlRequester*)self, (QDropEvent*)event);
+void k_urlrequester_super_drop_event(void* self, void* event) {
+    KUrlRequester_SuperDropEvent((KUrlRequester*)self, (QDropEvent*)event);
 }
 
 void k_urlrequester_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2076,8 +2076,8 @@ void k_urlrequester_show_event(void* self, void* event) {
     KUrlRequester_ShowEvent((KUrlRequester*)self, (QShowEvent*)event);
 }
 
-void k_urlrequester_qbase_show_event(void* self, void* event) {
-    KUrlRequester_QBaseShowEvent((KUrlRequester*)self, (QShowEvent*)event);
+void k_urlrequester_super_show_event(void* self, void* event) {
+    KUrlRequester_SuperShowEvent((KUrlRequester*)self, (QShowEvent*)event);
 }
 
 void k_urlrequester_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_urlrequester_hide_event(void* self, void* event) {
     KUrlRequester_HideEvent((KUrlRequester*)self, (QHideEvent*)event);
 }
 
-void k_urlrequester_qbase_hide_event(void* self, void* event) {
-    KUrlRequester_QBaseHideEvent((KUrlRequester*)self, (QHideEvent*)event);
+void k_urlrequester_super_hide_event(void* self, void* event) {
+    KUrlRequester_SuperHideEvent((KUrlRequester*)self, (QHideEvent*)event);
 }
 
 void k_urlrequester_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2100,8 +2100,8 @@ bool k_urlrequester_native_event(void* self, char* eventType, void* message, int
     return KUrlRequester_NativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlrequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KUrlRequester_QBaseNativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
+bool k_urlrequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KUrlRequester_SuperNativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
 void k_urlrequester_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2112,8 +2112,8 @@ int32_t k_urlrequester_metric(void* self, int32_t param1) {
     return KUrlRequester_Metric((KUrlRequester*)self, param1);
 }
 
-int32_t k_urlrequester_qbase_metric(void* self, int32_t param1) {
-    return KUrlRequester_QBaseMetric((KUrlRequester*)self, param1);
+int32_t k_urlrequester_super_metric(void* self, int32_t param1) {
+    return KUrlRequester_SuperMetric((KUrlRequester*)self, param1);
 }
 
 void k_urlrequester_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2124,8 +2124,8 @@ void k_urlrequester_init_painter(void* self, void* painter) {
     KUrlRequester_InitPainter((KUrlRequester*)self, (QPainter*)painter);
 }
 
-void k_urlrequester_qbase_init_painter(void* self, void* painter) {
-    KUrlRequester_QBaseInitPainter((KUrlRequester*)self, (QPainter*)painter);
+void k_urlrequester_super_init_painter(void* self, void* painter) {
+    KUrlRequester_SuperInitPainter((KUrlRequester*)self, (QPainter*)painter);
 }
 
 void k_urlrequester_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2136,8 +2136,8 @@ QPaintDevice* k_urlrequester_redirected(void* self, void* offset) {
     return KUrlRequester_Redirected((KUrlRequester*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_urlrequester_qbase_redirected(void* self, void* offset) {
-    return KUrlRequester_QBaseRedirected((KUrlRequester*)self, (QPoint*)offset);
+QPaintDevice* k_urlrequester_super_redirected(void* self, void* offset) {
+    return KUrlRequester_SuperRedirected((KUrlRequester*)self, (QPoint*)offset);
 }
 
 void k_urlrequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ QPainter* k_urlrequester_shared_painter(void* self) {
     return KUrlRequester_SharedPainter((KUrlRequester*)self);
 }
 
-QPainter* k_urlrequester_qbase_shared_painter(void* self) {
-    return KUrlRequester_QBaseSharedPainter((KUrlRequester*)self);
+QPainter* k_urlrequester_super_shared_painter(void* self) {
+    return KUrlRequester_SuperSharedPainter((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2160,8 +2160,8 @@ void k_urlrequester_input_method_event(void* self, void* param1) {
     KUrlRequester_InputMethodEvent((KUrlRequester*)self, (QInputMethodEvent*)param1);
 }
 
-void k_urlrequester_qbase_input_method_event(void* self, void* param1) {
-    KUrlRequester_QBaseInputMethodEvent((KUrlRequester*)self, (QInputMethodEvent*)param1);
+void k_urlrequester_super_input_method_event(void* self, void* param1) {
+    KUrlRequester_SuperInputMethodEvent((KUrlRequester*)self, (QInputMethodEvent*)param1);
 }
 
 void k_urlrequester_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2172,8 +2172,8 @@ QVariant* k_urlrequester_input_method_query(void* self, int32_t param1) {
     return KUrlRequester_InputMethodQuery((KUrlRequester*)self, param1);
 }
 
-QVariant* k_urlrequester_qbase_input_method_query(void* self, int32_t param1) {
-    return KUrlRequester_QBaseInputMethodQuery((KUrlRequester*)self, param1);
+QVariant* k_urlrequester_super_input_method_query(void* self, int32_t param1) {
+    return KUrlRequester_SuperInputMethodQuery((KUrlRequester*)self, param1);
 }
 
 void k_urlrequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2184,8 +2184,8 @@ bool k_urlrequester_focus_next_prev_child(void* self, bool next) {
     return KUrlRequester_FocusNextPrevChild((KUrlRequester*)self, next);
 }
 
-bool k_urlrequester_qbase_focus_next_prev_child(void* self, bool next) {
-    return KUrlRequester_QBaseFocusNextPrevChild((KUrlRequester*)self, next);
+bool k_urlrequester_super_focus_next_prev_child(void* self, bool next) {
+    return KUrlRequester_SuperFocusNextPrevChild((KUrlRequester*)self, next);
 }
 
 void k_urlrequester_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2196,8 +2196,8 @@ void k_urlrequester_timer_event(void* self, void* event) {
     KUrlRequester_TimerEvent((KUrlRequester*)self, (QTimerEvent*)event);
 }
 
-void k_urlrequester_qbase_timer_event(void* self, void* event) {
-    KUrlRequester_QBaseTimerEvent((KUrlRequester*)self, (QTimerEvent*)event);
+void k_urlrequester_super_timer_event(void* self, void* event) {
+    KUrlRequester_SuperTimerEvent((KUrlRequester*)self, (QTimerEvent*)event);
 }
 
 void k_urlrequester_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2208,8 +2208,8 @@ void k_urlrequester_child_event(void* self, void* event) {
     KUrlRequester_ChildEvent((KUrlRequester*)self, (QChildEvent*)event);
 }
 
-void k_urlrequester_qbase_child_event(void* self, void* event) {
-    KUrlRequester_QBaseChildEvent((KUrlRequester*)self, (QChildEvent*)event);
+void k_urlrequester_super_child_event(void* self, void* event) {
+    KUrlRequester_SuperChildEvent((KUrlRequester*)self, (QChildEvent*)event);
 }
 
 void k_urlrequester_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2220,8 +2220,8 @@ void k_urlrequester_custom_event(void* self, void* event) {
     KUrlRequester_CustomEvent((KUrlRequester*)self, (QEvent*)event);
 }
 
-void k_urlrequester_qbase_custom_event(void* self, void* event) {
-    KUrlRequester_QBaseCustomEvent((KUrlRequester*)self, (QEvent*)event);
+void k_urlrequester_super_custom_event(void* self, void* event) {
+    KUrlRequester_SuperCustomEvent((KUrlRequester*)self, (QEvent*)event);
 }
 
 void k_urlrequester_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2232,8 +2232,8 @@ void k_urlrequester_connect_notify(void* self, void* signal) {
     KUrlRequester_ConnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
-void k_urlrequester_qbase_connect_notify(void* self, void* signal) {
-    KUrlRequester_QBaseConnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
+void k_urlrequester_super_connect_notify(void* self, void* signal) {
+    KUrlRequester_SuperConnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlrequester_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2244,8 +2244,8 @@ void k_urlrequester_disconnect_notify(void* self, void* signal) {
     KUrlRequester_DisconnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
-void k_urlrequester_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlRequester_QBaseDisconnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
+void k_urlrequester_super_disconnect_notify(void* self, void* signal) {
+    KUrlRequester_SuperDisconnectNotify((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlrequester_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2256,8 +2256,8 @@ void k_urlrequester_update_micro_focus(void* self) {
     KUrlRequester_UpdateMicroFocus((KUrlRequester*)self);
 }
 
-void k_urlrequester_qbase_update_micro_focus(void* self) {
-    KUrlRequester_QBaseUpdateMicroFocus((KUrlRequester*)self);
+void k_urlrequester_super_update_micro_focus(void* self) {
+    KUrlRequester_SuperUpdateMicroFocus((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2268,8 +2268,8 @@ void k_urlrequester_create(void* self) {
     KUrlRequester_Create((KUrlRequester*)self);
 }
 
-void k_urlrequester_qbase_create(void* self) {
-    KUrlRequester_QBaseCreate((KUrlRequester*)self);
+void k_urlrequester_super_create(void* self) {
+    KUrlRequester_SuperCreate((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_create(void* self, void (*callback)()) {
@@ -2280,8 +2280,8 @@ void k_urlrequester_destroy(void* self) {
     KUrlRequester_Destroy((KUrlRequester*)self);
 }
 
-void k_urlrequester_qbase_destroy(void* self) {
-    KUrlRequester_QBaseDestroy((KUrlRequester*)self);
+void k_urlrequester_super_destroy(void* self) {
+    KUrlRequester_SuperDestroy((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_destroy(void* self, void (*callback)()) {
@@ -2292,8 +2292,8 @@ bool k_urlrequester_focus_next_child(void* self) {
     return KUrlRequester_FocusNextChild((KUrlRequester*)self);
 }
 
-bool k_urlrequester_qbase_focus_next_child(void* self) {
-    return KUrlRequester_QBaseFocusNextChild((KUrlRequester*)self);
+bool k_urlrequester_super_focus_next_child(void* self) {
+    return KUrlRequester_SuperFocusNextChild((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2304,8 +2304,8 @@ bool k_urlrequester_focus_previous_child(void* self) {
     return KUrlRequester_FocusPreviousChild((KUrlRequester*)self);
 }
 
-bool k_urlrequester_qbase_focus_previous_child(void* self) {
-    return KUrlRequester_QBaseFocusPreviousChild((KUrlRequester*)self);
+bool k_urlrequester_super_focus_previous_child(void* self) {
+    return KUrlRequester_SuperFocusPreviousChild((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2316,8 +2316,8 @@ QObject* k_urlrequester_sender(void* self) {
     return KUrlRequester_Sender((KUrlRequester*)self);
 }
 
-QObject* k_urlrequester_qbase_sender(void* self) {
-    return KUrlRequester_QBaseSender((KUrlRequester*)self);
+QObject* k_urlrequester_super_sender(void* self) {
+    return KUrlRequester_SuperSender((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_sender(void* self, QObject* (*callback)()) {
@@ -2328,8 +2328,8 @@ int32_t k_urlrequester_sender_signal_index(void* self) {
     return KUrlRequester_SenderSignalIndex((KUrlRequester*)self);
 }
 
-int32_t k_urlrequester_qbase_sender_signal_index(void* self) {
-    return KUrlRequester_QBaseSenderSignalIndex((KUrlRequester*)self);
+int32_t k_urlrequester_super_sender_signal_index(void* self) {
+    return KUrlRequester_SuperSenderSignalIndex((KUrlRequester*)self);
 }
 
 void k_urlrequester_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2340,8 +2340,8 @@ int32_t k_urlrequester_receivers(void* self, const char* signal) {
     return KUrlRequester_Receivers((KUrlRequester*)self, signal);
 }
 
-int32_t k_urlrequester_qbase_receivers(void* self, const char* signal) {
-    return KUrlRequester_QBaseReceivers((KUrlRequester*)self, signal);
+int32_t k_urlrequester_super_receivers(void* self, const char* signal) {
+    return KUrlRequester_SuperReceivers((KUrlRequester*)self, signal);
 }
 
 void k_urlrequester_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2352,8 +2352,8 @@ bool k_urlrequester_is_signal_connected(void* self, void* signal) {
     return KUrlRequester_IsSignalConnected((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
-bool k_urlrequester_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlRequester_QBaseIsSignalConnected((KUrlRequester*)self, (QMetaMethod*)signal);
+bool k_urlrequester_super_is_signal_connected(void* self, void* signal) {
+    return KUrlRequester_SuperIsSignalConnected((KUrlRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlrequester_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2364,8 +2364,8 @@ double k_urlrequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return KUrlRequester_GetDecodedMetricF((KUrlRequester*)self, metricA, metricB);
 }
 
-double k_urlrequester_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KUrlRequester_QBaseGetDecodedMetricF((KUrlRequester*)self, metricA, metricB);
+double k_urlrequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KUrlRequester_SuperGetDecodedMetricF((KUrlRequester*)self, metricA, metricB);
 }
 
 void k_urlrequester_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2396,8 +2396,8 @@ void k_urlcomborequester_on_meta_object(void* self, const QMetaObject* (*callbac
     KUrlComboRequester_OnMetaObject((KUrlComboRequester*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urlcomborequester_qbase_meta_object(void* self) {
-    return KUrlComboRequester_QBaseMetaObject((KUrlComboRequester*)self);
+const QMetaObject* k_urlcomborequester_super_meta_object(void* self) {
+    return KUrlComboRequester_SuperMetaObject((KUrlComboRequester*)self);
 }
 
 void* k_urlcomborequester_metacast(void* self, const char* param1) {
@@ -2408,8 +2408,8 @@ void k_urlcomborequester_on_metacast(void* self, void* (*callback)(void*, const 
     KUrlComboRequester_OnMetacast((KUrlComboRequester*)self, (intptr_t)callback);
 }
 
-void* k_urlcomborequester_qbase_metacast(void* self, const char* param1) {
-    return KUrlComboRequester_QBaseMetacast((KUrlComboRequester*)self, param1);
+void* k_urlcomborequester_super_metacast(void* self, const char* param1) {
+    return KUrlComboRequester_SuperMetacast((KUrlComboRequester*)self, param1);
 }
 
 int32_t k_urlcomborequester_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2420,8 +2420,8 @@ void k_urlcomborequester_on_metacall(void* self, int32_t (*callback)(void*, int3
     KUrlComboRequester_OnMetacall((KUrlComboRequester*)self, (intptr_t)callback);
 }
 
-int32_t k_urlcomborequester_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlComboRequester_QBaseMetacall((KUrlComboRequester*)self, param1, param2, param3);
+int32_t k_urlcomborequester_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlComboRequester_SuperMetacall((KUrlComboRequester*)self, param1, param2, param3);
 }
 
 const char* k_urlcomborequester_tr(const char* s) {
@@ -4028,8 +4028,8 @@ QFileDialog* k_urlcomborequester_file_dialog(void* self) {
     return KUrlComboRequester_FileDialog((KUrlComboRequester*)self);
 }
 
-QFileDialog* k_urlcomborequester_qbase_file_dialog(void* self) {
-    return KUrlComboRequester_QBaseFileDialog((KUrlComboRequester*)self);
+QFileDialog* k_urlcomborequester_super_file_dialog(void* self) {
+    return KUrlComboRequester_SuperFileDialog((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_file_dialog(void* self, QFileDialog* (*callback)()) {
@@ -4040,8 +4040,8 @@ void k_urlcomborequester_change_event(void* self, void* e) {
     KUrlComboRequester_ChangeEvent((KUrlComboRequester*)self, (QEvent*)e);
 }
 
-void k_urlcomborequester_qbase_change_event(void* self, void* e) {
-    KUrlComboRequester_QBaseChangeEvent((KUrlComboRequester*)self, (QEvent*)e);
+void k_urlcomborequester_super_change_event(void* self, void* e) {
+    KUrlComboRequester_SuperChangeEvent((KUrlComboRequester*)self, (QEvent*)e);
 }
 
 void k_urlcomborequester_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -4052,8 +4052,8 @@ bool k_urlcomborequester_event_filter(void* self, void* obj, void* ev) {
     return KUrlComboRequester_EventFilter((KUrlComboRequester*)self, (QObject*)obj, (QEvent*)ev);
 }
 
-bool k_urlcomborequester_qbase_event_filter(void* self, void* obj, void* ev) {
-    return KUrlComboRequester_QBaseEventFilter((KUrlComboRequester*)self, (QObject*)obj, (QEvent*)ev);
+bool k_urlcomborequester_super_event_filter(void* self, void* obj, void* ev) {
+    return KUrlComboRequester_SuperEventFilter((KUrlComboRequester*)self, (QObject*)obj, (QEvent*)ev);
 }
 
 void k_urlcomborequester_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -4064,8 +4064,8 @@ int32_t k_urlcomborequester_dev_type(void* self) {
     return KUrlComboRequester_DevType((KUrlComboRequester*)self);
 }
 
-int32_t k_urlcomborequester_qbase_dev_type(void* self) {
-    return KUrlComboRequester_QBaseDevType((KUrlComboRequester*)self);
+int32_t k_urlcomborequester_super_dev_type(void* self) {
+    return KUrlComboRequester_SuperDevType((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_dev_type(void* self, int32_t (*callback)()) {
@@ -4076,8 +4076,8 @@ void k_urlcomborequester_set_visible(void* self, bool visible) {
     KUrlComboRequester_SetVisible((KUrlComboRequester*)self, visible);
 }
 
-void k_urlcomborequester_qbase_set_visible(void* self, bool visible) {
-    KUrlComboRequester_QBaseSetVisible((KUrlComboRequester*)self, visible);
+void k_urlcomborequester_super_set_visible(void* self, bool visible) {
+    KUrlComboRequester_SuperSetVisible((KUrlComboRequester*)self, visible);
 }
 
 void k_urlcomborequester_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -4088,8 +4088,8 @@ QSize* k_urlcomborequester_size_hint(void* self) {
     return KUrlComboRequester_SizeHint((KUrlComboRequester*)self);
 }
 
-QSize* k_urlcomborequester_qbase_size_hint(void* self) {
-    return KUrlComboRequester_QBaseSizeHint((KUrlComboRequester*)self);
+QSize* k_urlcomborequester_super_size_hint(void* self) {
+    return KUrlComboRequester_SuperSizeHint((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_size_hint(void* self, QSize* (*callback)()) {
@@ -4100,8 +4100,8 @@ QSize* k_urlcomborequester_minimum_size_hint(void* self) {
     return KUrlComboRequester_MinimumSizeHint((KUrlComboRequester*)self);
 }
 
-QSize* k_urlcomborequester_qbase_minimum_size_hint(void* self) {
-    return KUrlComboRequester_QBaseMinimumSizeHint((KUrlComboRequester*)self);
+QSize* k_urlcomborequester_super_minimum_size_hint(void* self) {
+    return KUrlComboRequester_SuperMinimumSizeHint((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -4112,8 +4112,8 @@ int32_t k_urlcomborequester_height_for_width(void* self, int param1) {
     return KUrlComboRequester_HeightForWidth((KUrlComboRequester*)self, param1);
 }
 
-int32_t k_urlcomborequester_qbase_height_for_width(void* self, int param1) {
-    return KUrlComboRequester_QBaseHeightForWidth((KUrlComboRequester*)self, param1);
+int32_t k_urlcomborequester_super_height_for_width(void* self, int param1) {
+    return KUrlComboRequester_SuperHeightForWidth((KUrlComboRequester*)self, param1);
 }
 
 void k_urlcomborequester_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -4124,8 +4124,8 @@ bool k_urlcomborequester_has_height_for_width(void* self) {
     return KUrlComboRequester_HasHeightForWidth((KUrlComboRequester*)self);
 }
 
-bool k_urlcomborequester_qbase_has_height_for_width(void* self) {
-    return KUrlComboRequester_QBaseHasHeightForWidth((KUrlComboRequester*)self);
+bool k_urlcomborequester_super_has_height_for_width(void* self) {
+    return KUrlComboRequester_SuperHasHeightForWidth((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -4136,8 +4136,8 @@ QPaintEngine* k_urlcomborequester_paint_engine(void* self) {
     return KUrlComboRequester_PaintEngine((KUrlComboRequester*)self);
 }
 
-QPaintEngine* k_urlcomborequester_qbase_paint_engine(void* self) {
-    return KUrlComboRequester_QBasePaintEngine((KUrlComboRequester*)self);
+QPaintEngine* k_urlcomborequester_super_paint_engine(void* self) {
+    return KUrlComboRequester_SuperPaintEngine((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -4148,8 +4148,8 @@ bool k_urlcomborequester_event(void* self, void* event) {
     return KUrlComboRequester_Event((KUrlComboRequester*)self, (QEvent*)event);
 }
 
-bool k_urlcomborequester_qbase_event(void* self, void* event) {
-    return KUrlComboRequester_QBaseEvent((KUrlComboRequester*)self, (QEvent*)event);
+bool k_urlcomborequester_super_event(void* self, void* event) {
+    return KUrlComboRequester_SuperEvent((KUrlComboRequester*)self, (QEvent*)event);
 }
 
 void k_urlcomborequester_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -4160,8 +4160,8 @@ void k_urlcomborequester_mouse_press_event(void* self, void* event) {
     KUrlComboRequester_MousePressEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlcomborequester_qbase_mouse_press_event(void* self, void* event) {
-    KUrlComboRequester_QBaseMousePressEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
+void k_urlcomborequester_super_mouse_press_event(void* self, void* event) {
+    KUrlComboRequester_SuperMousePressEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlcomborequester_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4172,8 +4172,8 @@ void k_urlcomborequester_mouse_release_event(void* self, void* event) {
     KUrlComboRequester_MouseReleaseEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlcomborequester_qbase_mouse_release_event(void* self, void* event) {
-    KUrlComboRequester_QBaseMouseReleaseEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
+void k_urlcomborequester_super_mouse_release_event(void* self, void* event) {
+    KUrlComboRequester_SuperMouseReleaseEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlcomborequester_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4184,8 +4184,8 @@ void k_urlcomborequester_mouse_double_click_event(void* self, void* event) {
     KUrlComboRequester_MouseDoubleClickEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlcomborequester_qbase_mouse_double_click_event(void* self, void* event) {
-    KUrlComboRequester_QBaseMouseDoubleClickEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
+void k_urlcomborequester_super_mouse_double_click_event(void* self, void* event) {
+    KUrlComboRequester_SuperMouseDoubleClickEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlcomborequester_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -4196,8 +4196,8 @@ void k_urlcomborequester_mouse_move_event(void* self, void* event) {
     KUrlComboRequester_MouseMoveEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
-void k_urlcomborequester_qbase_mouse_move_event(void* self, void* event) {
-    KUrlComboRequester_QBaseMouseMoveEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
+void k_urlcomborequester_super_mouse_move_event(void* self, void* event) {
+    KUrlComboRequester_SuperMouseMoveEvent((KUrlComboRequester*)self, (QMouseEvent*)event);
 }
 
 void k_urlcomborequester_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4208,8 +4208,8 @@ void k_urlcomborequester_wheel_event(void* self, void* event) {
     KUrlComboRequester_WheelEvent((KUrlComboRequester*)self, (QWheelEvent*)event);
 }
 
-void k_urlcomborequester_qbase_wheel_event(void* self, void* event) {
-    KUrlComboRequester_QBaseWheelEvent((KUrlComboRequester*)self, (QWheelEvent*)event);
+void k_urlcomborequester_super_wheel_event(void* self, void* event) {
+    KUrlComboRequester_SuperWheelEvent((KUrlComboRequester*)self, (QWheelEvent*)event);
 }
 
 void k_urlcomborequester_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -4220,8 +4220,8 @@ void k_urlcomborequester_key_press_event(void* self, void* event) {
     KUrlComboRequester_KeyPressEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
 }
 
-void k_urlcomborequester_qbase_key_press_event(void* self, void* event) {
-    KUrlComboRequester_QBaseKeyPressEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
+void k_urlcomborequester_super_key_press_event(void* self, void* event) {
+    KUrlComboRequester_SuperKeyPressEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
 }
 
 void k_urlcomborequester_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4232,8 +4232,8 @@ void k_urlcomborequester_key_release_event(void* self, void* event) {
     KUrlComboRequester_KeyReleaseEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
 }
 
-void k_urlcomborequester_qbase_key_release_event(void* self, void* event) {
-    KUrlComboRequester_QBaseKeyReleaseEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
+void k_urlcomborequester_super_key_release_event(void* self, void* event) {
+    KUrlComboRequester_SuperKeyReleaseEvent((KUrlComboRequester*)self, (QKeyEvent*)event);
 }
 
 void k_urlcomborequester_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4244,8 +4244,8 @@ void k_urlcomborequester_focus_in_event(void* self, void* event) {
     KUrlComboRequester_FocusInEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
 }
 
-void k_urlcomborequester_qbase_focus_in_event(void* self, void* event) {
-    KUrlComboRequester_QBaseFocusInEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
+void k_urlcomborequester_super_focus_in_event(void* self, void* event) {
+    KUrlComboRequester_SuperFocusInEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
 }
 
 void k_urlcomborequester_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -4256,8 +4256,8 @@ void k_urlcomborequester_focus_out_event(void* self, void* event) {
     KUrlComboRequester_FocusOutEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
 }
 
-void k_urlcomborequester_qbase_focus_out_event(void* self, void* event) {
-    KUrlComboRequester_QBaseFocusOutEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
+void k_urlcomborequester_super_focus_out_event(void* self, void* event) {
+    KUrlComboRequester_SuperFocusOutEvent((KUrlComboRequester*)self, (QFocusEvent*)event);
 }
 
 void k_urlcomborequester_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -4268,8 +4268,8 @@ void k_urlcomborequester_enter_event(void* self, void* event) {
     KUrlComboRequester_EnterEvent((KUrlComboRequester*)self, (QEnterEvent*)event);
 }
 
-void k_urlcomborequester_qbase_enter_event(void* self, void* event) {
-    KUrlComboRequester_QBaseEnterEvent((KUrlComboRequester*)self, (QEnterEvent*)event);
+void k_urlcomborequester_super_enter_event(void* self, void* event) {
+    KUrlComboRequester_SuperEnterEvent((KUrlComboRequester*)self, (QEnterEvent*)event);
 }
 
 void k_urlcomborequester_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4280,8 +4280,8 @@ void k_urlcomborequester_leave_event(void* self, void* event) {
     KUrlComboRequester_LeaveEvent((KUrlComboRequester*)self, (QEvent*)event);
 }
 
-void k_urlcomborequester_qbase_leave_event(void* self, void* event) {
-    KUrlComboRequester_QBaseLeaveEvent((KUrlComboRequester*)self, (QEvent*)event);
+void k_urlcomborequester_super_leave_event(void* self, void* event) {
+    KUrlComboRequester_SuperLeaveEvent((KUrlComboRequester*)self, (QEvent*)event);
 }
 
 void k_urlcomborequester_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4292,8 +4292,8 @@ void k_urlcomborequester_paint_event(void* self, void* event) {
     KUrlComboRequester_PaintEvent((KUrlComboRequester*)self, (QPaintEvent*)event);
 }
 
-void k_urlcomborequester_qbase_paint_event(void* self, void* event) {
-    KUrlComboRequester_QBasePaintEvent((KUrlComboRequester*)self, (QPaintEvent*)event);
+void k_urlcomborequester_super_paint_event(void* self, void* event) {
+    KUrlComboRequester_SuperPaintEvent((KUrlComboRequester*)self, (QPaintEvent*)event);
 }
 
 void k_urlcomborequester_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -4304,8 +4304,8 @@ void k_urlcomborequester_move_event(void* self, void* event) {
     KUrlComboRequester_MoveEvent((KUrlComboRequester*)self, (QMoveEvent*)event);
 }
 
-void k_urlcomborequester_qbase_move_event(void* self, void* event) {
-    KUrlComboRequester_QBaseMoveEvent((KUrlComboRequester*)self, (QMoveEvent*)event);
+void k_urlcomborequester_super_move_event(void* self, void* event) {
+    KUrlComboRequester_SuperMoveEvent((KUrlComboRequester*)self, (QMoveEvent*)event);
 }
 
 void k_urlcomborequester_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4316,8 +4316,8 @@ void k_urlcomborequester_resize_event(void* self, void* event) {
     KUrlComboRequester_ResizeEvent((KUrlComboRequester*)self, (QResizeEvent*)event);
 }
 
-void k_urlcomborequester_qbase_resize_event(void* self, void* event) {
-    KUrlComboRequester_QBaseResizeEvent((KUrlComboRequester*)self, (QResizeEvent*)event);
+void k_urlcomborequester_super_resize_event(void* self, void* event) {
+    KUrlComboRequester_SuperResizeEvent((KUrlComboRequester*)self, (QResizeEvent*)event);
 }
 
 void k_urlcomborequester_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -4328,8 +4328,8 @@ void k_urlcomborequester_close_event(void* self, void* event) {
     KUrlComboRequester_CloseEvent((KUrlComboRequester*)self, (QCloseEvent*)event);
 }
 
-void k_urlcomborequester_qbase_close_event(void* self, void* event) {
-    KUrlComboRequester_QBaseCloseEvent((KUrlComboRequester*)self, (QCloseEvent*)event);
+void k_urlcomborequester_super_close_event(void* self, void* event) {
+    KUrlComboRequester_SuperCloseEvent((KUrlComboRequester*)self, (QCloseEvent*)event);
 }
 
 void k_urlcomborequester_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -4340,8 +4340,8 @@ void k_urlcomborequester_context_menu_event(void* self, void* event) {
     KUrlComboRequester_ContextMenuEvent((KUrlComboRequester*)self, (QContextMenuEvent*)event);
 }
 
-void k_urlcomborequester_qbase_context_menu_event(void* self, void* event) {
-    KUrlComboRequester_QBaseContextMenuEvent((KUrlComboRequester*)self, (QContextMenuEvent*)event);
+void k_urlcomborequester_super_context_menu_event(void* self, void* event) {
+    KUrlComboRequester_SuperContextMenuEvent((KUrlComboRequester*)self, (QContextMenuEvent*)event);
 }
 
 void k_urlcomborequester_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -4352,8 +4352,8 @@ void k_urlcomborequester_tablet_event(void* self, void* event) {
     KUrlComboRequester_TabletEvent((KUrlComboRequester*)self, (QTabletEvent*)event);
 }
 
-void k_urlcomborequester_qbase_tablet_event(void* self, void* event) {
-    KUrlComboRequester_QBaseTabletEvent((KUrlComboRequester*)self, (QTabletEvent*)event);
+void k_urlcomborequester_super_tablet_event(void* self, void* event) {
+    KUrlComboRequester_SuperTabletEvent((KUrlComboRequester*)self, (QTabletEvent*)event);
 }
 
 void k_urlcomborequester_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -4364,8 +4364,8 @@ void k_urlcomborequester_action_event(void* self, void* event) {
     KUrlComboRequester_ActionEvent((KUrlComboRequester*)self, (QActionEvent*)event);
 }
 
-void k_urlcomborequester_qbase_action_event(void* self, void* event) {
-    KUrlComboRequester_QBaseActionEvent((KUrlComboRequester*)self, (QActionEvent*)event);
+void k_urlcomborequester_super_action_event(void* self, void* event) {
+    KUrlComboRequester_SuperActionEvent((KUrlComboRequester*)self, (QActionEvent*)event);
 }
 
 void k_urlcomborequester_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -4376,8 +4376,8 @@ void k_urlcomborequester_drag_enter_event(void* self, void* event) {
     KUrlComboRequester_DragEnterEvent((KUrlComboRequester*)self, (QDragEnterEvent*)event);
 }
 
-void k_urlcomborequester_qbase_drag_enter_event(void* self, void* event) {
-    KUrlComboRequester_QBaseDragEnterEvent((KUrlComboRequester*)self, (QDragEnterEvent*)event);
+void k_urlcomborequester_super_drag_enter_event(void* self, void* event) {
+    KUrlComboRequester_SuperDragEnterEvent((KUrlComboRequester*)self, (QDragEnterEvent*)event);
 }
 
 void k_urlcomborequester_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4388,8 +4388,8 @@ void k_urlcomborequester_drag_move_event(void* self, void* event) {
     KUrlComboRequester_DragMoveEvent((KUrlComboRequester*)self, (QDragMoveEvent*)event);
 }
 
-void k_urlcomborequester_qbase_drag_move_event(void* self, void* event) {
-    KUrlComboRequester_QBaseDragMoveEvent((KUrlComboRequester*)self, (QDragMoveEvent*)event);
+void k_urlcomborequester_super_drag_move_event(void* self, void* event) {
+    KUrlComboRequester_SuperDragMoveEvent((KUrlComboRequester*)self, (QDragMoveEvent*)event);
 }
 
 void k_urlcomborequester_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4400,8 +4400,8 @@ void k_urlcomborequester_drag_leave_event(void* self, void* event) {
     KUrlComboRequester_DragLeaveEvent((KUrlComboRequester*)self, (QDragLeaveEvent*)event);
 }
 
-void k_urlcomborequester_qbase_drag_leave_event(void* self, void* event) {
-    KUrlComboRequester_QBaseDragLeaveEvent((KUrlComboRequester*)self, (QDragLeaveEvent*)event);
+void k_urlcomborequester_super_drag_leave_event(void* self, void* event) {
+    KUrlComboRequester_SuperDragLeaveEvent((KUrlComboRequester*)self, (QDragLeaveEvent*)event);
 }
 
 void k_urlcomborequester_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4412,8 +4412,8 @@ void k_urlcomborequester_drop_event(void* self, void* event) {
     KUrlComboRequester_DropEvent((KUrlComboRequester*)self, (QDropEvent*)event);
 }
 
-void k_urlcomborequester_qbase_drop_event(void* self, void* event) {
-    KUrlComboRequester_QBaseDropEvent((KUrlComboRequester*)self, (QDropEvent*)event);
+void k_urlcomborequester_super_drop_event(void* self, void* event) {
+    KUrlComboRequester_SuperDropEvent((KUrlComboRequester*)self, (QDropEvent*)event);
 }
 
 void k_urlcomborequester_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -4424,8 +4424,8 @@ void k_urlcomborequester_show_event(void* self, void* event) {
     KUrlComboRequester_ShowEvent((KUrlComboRequester*)self, (QShowEvent*)event);
 }
 
-void k_urlcomborequester_qbase_show_event(void* self, void* event) {
-    KUrlComboRequester_QBaseShowEvent((KUrlComboRequester*)self, (QShowEvent*)event);
+void k_urlcomborequester_super_show_event(void* self, void* event) {
+    KUrlComboRequester_SuperShowEvent((KUrlComboRequester*)self, (QShowEvent*)event);
 }
 
 void k_urlcomborequester_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -4436,8 +4436,8 @@ void k_urlcomborequester_hide_event(void* self, void* event) {
     KUrlComboRequester_HideEvent((KUrlComboRequester*)self, (QHideEvent*)event);
 }
 
-void k_urlcomborequester_qbase_hide_event(void* self, void* event) {
-    KUrlComboRequester_QBaseHideEvent((KUrlComboRequester*)self, (QHideEvent*)event);
+void k_urlcomborequester_super_hide_event(void* self, void* event) {
+    KUrlComboRequester_SuperHideEvent((KUrlComboRequester*)self, (QHideEvent*)event);
 }
 
 void k_urlcomborequester_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -4448,8 +4448,8 @@ bool k_urlcomborequester_native_event(void* self, char* eventType, void* message
     return KUrlComboRequester_NativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlcomborequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KUrlComboRequester_QBaseNativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
+bool k_urlcomborequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KUrlComboRequester_SuperNativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 
 void k_urlcomborequester_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -4460,8 +4460,8 @@ int32_t k_urlcomborequester_metric(void* self, int32_t param1) {
     return KUrlComboRequester_Metric((KUrlComboRequester*)self, param1);
 }
 
-int32_t k_urlcomborequester_qbase_metric(void* self, int32_t param1) {
-    return KUrlComboRequester_QBaseMetric((KUrlComboRequester*)self, param1);
+int32_t k_urlcomborequester_super_metric(void* self, int32_t param1) {
+    return KUrlComboRequester_SuperMetric((KUrlComboRequester*)self, param1);
 }
 
 void k_urlcomborequester_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -4472,8 +4472,8 @@ void k_urlcomborequester_init_painter(void* self, void* painter) {
     KUrlComboRequester_InitPainter((KUrlComboRequester*)self, (QPainter*)painter);
 }
 
-void k_urlcomborequester_qbase_init_painter(void* self, void* painter) {
-    KUrlComboRequester_QBaseInitPainter((KUrlComboRequester*)self, (QPainter*)painter);
+void k_urlcomborequester_super_init_painter(void* self, void* painter) {
+    KUrlComboRequester_SuperInitPainter((KUrlComboRequester*)self, (QPainter*)painter);
 }
 
 void k_urlcomborequester_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -4484,8 +4484,8 @@ QPaintDevice* k_urlcomborequester_redirected(void* self, void* offset) {
     return KUrlComboRequester_Redirected((KUrlComboRequester*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_urlcomborequester_qbase_redirected(void* self, void* offset) {
-    return KUrlComboRequester_QBaseRedirected((KUrlComboRequester*)self, (QPoint*)offset);
+QPaintDevice* k_urlcomborequester_super_redirected(void* self, void* offset) {
+    return KUrlComboRequester_SuperRedirected((KUrlComboRequester*)self, (QPoint*)offset);
 }
 
 void k_urlcomborequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -4496,8 +4496,8 @@ QPainter* k_urlcomborequester_shared_painter(void* self) {
     return KUrlComboRequester_SharedPainter((KUrlComboRequester*)self);
 }
 
-QPainter* k_urlcomborequester_qbase_shared_painter(void* self) {
-    return KUrlComboRequester_QBaseSharedPainter((KUrlComboRequester*)self);
+QPainter* k_urlcomborequester_super_shared_painter(void* self) {
+    return KUrlComboRequester_SuperSharedPainter((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -4508,8 +4508,8 @@ void k_urlcomborequester_input_method_event(void* self, void* param1) {
     KUrlComboRequester_InputMethodEvent((KUrlComboRequester*)self, (QInputMethodEvent*)param1);
 }
 
-void k_urlcomborequester_qbase_input_method_event(void* self, void* param1) {
-    KUrlComboRequester_QBaseInputMethodEvent((KUrlComboRequester*)self, (QInputMethodEvent*)param1);
+void k_urlcomborequester_super_input_method_event(void* self, void* param1) {
+    KUrlComboRequester_SuperInputMethodEvent((KUrlComboRequester*)self, (QInputMethodEvent*)param1);
 }
 
 void k_urlcomborequester_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -4520,8 +4520,8 @@ QVariant* k_urlcomborequester_input_method_query(void* self, int32_t param1) {
     return KUrlComboRequester_InputMethodQuery((KUrlComboRequester*)self, param1);
 }
 
-QVariant* k_urlcomborequester_qbase_input_method_query(void* self, int32_t param1) {
-    return KUrlComboRequester_QBaseInputMethodQuery((KUrlComboRequester*)self, param1);
+QVariant* k_urlcomborequester_super_input_method_query(void* self, int32_t param1) {
+    return KUrlComboRequester_SuperInputMethodQuery((KUrlComboRequester*)self, param1);
 }
 
 void k_urlcomborequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -4532,8 +4532,8 @@ bool k_urlcomborequester_focus_next_prev_child(void* self, bool next) {
     return KUrlComboRequester_FocusNextPrevChild((KUrlComboRequester*)self, next);
 }
 
-bool k_urlcomborequester_qbase_focus_next_prev_child(void* self, bool next) {
-    return KUrlComboRequester_QBaseFocusNextPrevChild((KUrlComboRequester*)self, next);
+bool k_urlcomborequester_super_focus_next_prev_child(void* self, bool next) {
+    return KUrlComboRequester_SuperFocusNextPrevChild((KUrlComboRequester*)self, next);
 }
 
 void k_urlcomborequester_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -4544,8 +4544,8 @@ void k_urlcomborequester_timer_event(void* self, void* event) {
     KUrlComboRequester_TimerEvent((KUrlComboRequester*)self, (QTimerEvent*)event);
 }
 
-void k_urlcomborequester_qbase_timer_event(void* self, void* event) {
-    KUrlComboRequester_QBaseTimerEvent((KUrlComboRequester*)self, (QTimerEvent*)event);
+void k_urlcomborequester_super_timer_event(void* self, void* event) {
+    KUrlComboRequester_SuperTimerEvent((KUrlComboRequester*)self, (QTimerEvent*)event);
 }
 
 void k_urlcomborequester_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -4556,8 +4556,8 @@ void k_urlcomborequester_child_event(void* self, void* event) {
     KUrlComboRequester_ChildEvent((KUrlComboRequester*)self, (QChildEvent*)event);
 }
 
-void k_urlcomborequester_qbase_child_event(void* self, void* event) {
-    KUrlComboRequester_QBaseChildEvent((KUrlComboRequester*)self, (QChildEvent*)event);
+void k_urlcomborequester_super_child_event(void* self, void* event) {
+    KUrlComboRequester_SuperChildEvent((KUrlComboRequester*)self, (QChildEvent*)event);
 }
 
 void k_urlcomborequester_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -4568,8 +4568,8 @@ void k_urlcomborequester_custom_event(void* self, void* event) {
     KUrlComboRequester_CustomEvent((KUrlComboRequester*)self, (QEvent*)event);
 }
 
-void k_urlcomborequester_qbase_custom_event(void* self, void* event) {
-    KUrlComboRequester_QBaseCustomEvent((KUrlComboRequester*)self, (QEvent*)event);
+void k_urlcomborequester_super_custom_event(void* self, void* event) {
+    KUrlComboRequester_SuperCustomEvent((KUrlComboRequester*)self, (QEvent*)event);
 }
 
 void k_urlcomborequester_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -4580,8 +4580,8 @@ void k_urlcomborequester_connect_notify(void* self, void* signal) {
     KUrlComboRequester_ConnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcomborequester_qbase_connect_notify(void* self, void* signal) {
-    KUrlComboRequester_QBaseConnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
+void k_urlcomborequester_super_connect_notify(void* self, void* signal) {
+    KUrlComboRequester_SuperConnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcomborequester_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4592,8 +4592,8 @@ void k_urlcomborequester_disconnect_notify(void* self, void* signal) {
     KUrlComboRequester_DisconnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcomborequester_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlComboRequester_QBaseDisconnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
+void k_urlcomborequester_super_disconnect_notify(void* self, void* signal) {
+    KUrlComboRequester_SuperDisconnectNotify((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcomborequester_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4604,8 +4604,8 @@ void k_urlcomborequester_update_micro_focus(void* self) {
     KUrlComboRequester_UpdateMicroFocus((KUrlComboRequester*)self);
 }
 
-void k_urlcomborequester_qbase_update_micro_focus(void* self) {
-    KUrlComboRequester_QBaseUpdateMicroFocus((KUrlComboRequester*)self);
+void k_urlcomborequester_super_update_micro_focus(void* self) {
+    KUrlComboRequester_SuperUpdateMicroFocus((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_update_micro_focus(void* self, void (*callback)()) {
@@ -4616,8 +4616,8 @@ void k_urlcomborequester_create(void* self) {
     KUrlComboRequester_Create((KUrlComboRequester*)self);
 }
 
-void k_urlcomborequester_qbase_create(void* self) {
-    KUrlComboRequester_QBaseCreate((KUrlComboRequester*)self);
+void k_urlcomborequester_super_create(void* self) {
+    KUrlComboRequester_SuperCreate((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_create(void* self, void (*callback)()) {
@@ -4628,8 +4628,8 @@ void k_urlcomborequester_destroy(void* self) {
     KUrlComboRequester_Destroy((KUrlComboRequester*)self);
 }
 
-void k_urlcomborequester_qbase_destroy(void* self) {
-    KUrlComboRequester_QBaseDestroy((KUrlComboRequester*)self);
+void k_urlcomborequester_super_destroy(void* self) {
+    KUrlComboRequester_SuperDestroy((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_destroy(void* self, void (*callback)()) {
@@ -4640,8 +4640,8 @@ bool k_urlcomborequester_focus_next_child(void* self) {
     return KUrlComboRequester_FocusNextChild((KUrlComboRequester*)self);
 }
 
-bool k_urlcomborequester_qbase_focus_next_child(void* self) {
-    return KUrlComboRequester_QBaseFocusNextChild((KUrlComboRequester*)self);
+bool k_urlcomborequester_super_focus_next_child(void* self) {
+    return KUrlComboRequester_SuperFocusNextChild((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_focus_next_child(void* self, bool (*callback)()) {
@@ -4652,8 +4652,8 @@ bool k_urlcomborequester_focus_previous_child(void* self) {
     return KUrlComboRequester_FocusPreviousChild((KUrlComboRequester*)self);
 }
 
-bool k_urlcomborequester_qbase_focus_previous_child(void* self) {
-    return KUrlComboRequester_QBaseFocusPreviousChild((KUrlComboRequester*)self);
+bool k_urlcomborequester_super_focus_previous_child(void* self) {
+    return KUrlComboRequester_SuperFocusPreviousChild((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -4664,8 +4664,8 @@ QObject* k_urlcomborequester_sender(void* self) {
     return KUrlComboRequester_Sender((KUrlComboRequester*)self);
 }
 
-QObject* k_urlcomborequester_qbase_sender(void* self) {
-    return KUrlComboRequester_QBaseSender((KUrlComboRequester*)self);
+QObject* k_urlcomborequester_super_sender(void* self) {
+    return KUrlComboRequester_SuperSender((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_sender(void* self, QObject* (*callback)()) {
@@ -4676,8 +4676,8 @@ int32_t k_urlcomborequester_sender_signal_index(void* self) {
     return KUrlComboRequester_SenderSignalIndex((KUrlComboRequester*)self);
 }
 
-int32_t k_urlcomborequester_qbase_sender_signal_index(void* self) {
-    return KUrlComboRequester_QBaseSenderSignalIndex((KUrlComboRequester*)self);
+int32_t k_urlcomborequester_super_sender_signal_index(void* self) {
+    return KUrlComboRequester_SuperSenderSignalIndex((KUrlComboRequester*)self);
 }
 
 void k_urlcomborequester_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -4688,8 +4688,8 @@ int32_t k_urlcomborequester_receivers(void* self, const char* signal) {
     return KUrlComboRequester_Receivers((KUrlComboRequester*)self, signal);
 }
 
-int32_t k_urlcomborequester_qbase_receivers(void* self, const char* signal) {
-    return KUrlComboRequester_QBaseReceivers((KUrlComboRequester*)self, signal);
+int32_t k_urlcomborequester_super_receivers(void* self, const char* signal) {
+    return KUrlComboRequester_SuperReceivers((KUrlComboRequester*)self, signal);
 }
 
 void k_urlcomborequester_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -4700,8 +4700,8 @@ bool k_urlcomborequester_is_signal_connected(void* self, void* signal) {
     return KUrlComboRequester_IsSignalConnected((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
-bool k_urlcomborequester_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlComboRequester_QBaseIsSignalConnected((KUrlComboRequester*)self, (QMetaMethod*)signal);
+bool k_urlcomborequester_super_is_signal_connected(void* self, void* signal) {
+    return KUrlComboRequester_SuperIsSignalConnected((KUrlComboRequester*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcomborequester_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -4712,8 +4712,8 @@ double k_urlcomborequester_get_decoded_metric_f(void* self, int32_t metricA, int
     return KUrlComboRequester_GetDecodedMetricF((KUrlComboRequester*)self, metricA, metricB);
 }
 
-double k_urlcomborequester_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KUrlComboRequester_QBaseGetDecodedMetricF((KUrlComboRequester*)self, metricA, metricB);
+double k_urlcomborequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KUrlComboRequester_SuperGetDecodedMetricF((KUrlComboRequester*)self, metricA, metricB);
 }
 
 void k_urlcomborequester_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

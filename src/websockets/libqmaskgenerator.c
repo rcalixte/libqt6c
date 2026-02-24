@@ -21,8 +21,8 @@ void q_maskgenerator_on_seed(void* self, bool (*callback)()) {
     QMaskGenerator_OnSeed((QMaskGenerator*)self, (intptr_t)callback);
 }
 
-bool q_maskgenerator_qbase_seed(void* self) {
-    return QMaskGenerator_QBaseSeed((QMaskGenerator*)self);
+bool q_maskgenerator_super_seed(void* self) {
+    return QMaskGenerator_SuperSeed((QMaskGenerator*)self);
 }
 
 uint32_t q_maskgenerator_next_mask(void* self) {
@@ -33,8 +33,8 @@ void q_maskgenerator_on_next_mask(void* self, uint32_t (*callback)()) {
     QMaskGenerator_OnNextMask((QMaskGenerator*)self, (intptr_t)callback);
 }
 
-uint32_t q_maskgenerator_qbase_next_mask(void* self) {
-    return QMaskGenerator_QBaseNextMask((QMaskGenerator*)self);
+uint32_t q_maskgenerator_super_next_mask(void* self) {
+    return QMaskGenerator_SuperNextMask((QMaskGenerator*)self);
 }
 
 const char* q_maskgenerator_tr(const char* s) {
@@ -273,8 +273,8 @@ const QMetaObject* q_maskgenerator_meta_object(void* self) {
     return QMaskGenerator_MetaObject((QMaskGenerator*)self);
 }
 
-const QMetaObject* q_maskgenerator_qbase_meta_object(void* self) {
-    return QMaskGenerator_QBaseMetaObject((QMaskGenerator*)self);
+const QMetaObject* q_maskgenerator_super_meta_object(void* self) {
+    return QMaskGenerator_SuperMetaObject((QMaskGenerator*)self);
 }
 
 void q_maskgenerator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -285,8 +285,8 @@ void* q_maskgenerator_metacast(void* self, const char* param1) {
     return QMaskGenerator_Metacast((QMaskGenerator*)self, param1);
 }
 
-void* q_maskgenerator_qbase_metacast(void* self, const char* param1) {
-    return QMaskGenerator_QBaseMetacast((QMaskGenerator*)self, param1);
+void* q_maskgenerator_super_metacast(void* self, const char* param1) {
+    return QMaskGenerator_SuperMetacast((QMaskGenerator*)self, param1);
 }
 
 void q_maskgenerator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -297,8 +297,8 @@ int32_t q_maskgenerator_metacall(void* self, int32_t param1, int param2, void* p
     return QMaskGenerator_Metacall((QMaskGenerator*)self, param1, param2, param3);
 }
 
-int32_t q_maskgenerator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMaskGenerator_QBaseMetacall((QMaskGenerator*)self, param1, param2, param3);
+int32_t q_maskgenerator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMaskGenerator_SuperMetacall((QMaskGenerator*)self, param1, param2, param3);
 }
 
 void q_maskgenerator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -309,8 +309,8 @@ bool q_maskgenerator_event(void* self, void* event) {
     return QMaskGenerator_Event((QMaskGenerator*)self, (QEvent*)event);
 }
 
-bool q_maskgenerator_qbase_event(void* self, void* event) {
-    return QMaskGenerator_QBaseEvent((QMaskGenerator*)self, (QEvent*)event);
+bool q_maskgenerator_super_event(void* self, void* event) {
+    return QMaskGenerator_SuperEvent((QMaskGenerator*)self, (QEvent*)event);
 }
 
 void q_maskgenerator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -321,8 +321,8 @@ bool q_maskgenerator_event_filter(void* self, void* watched, void* event) {
     return QMaskGenerator_EventFilter((QMaskGenerator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_maskgenerator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QMaskGenerator_QBaseEventFilter((QMaskGenerator*)self, (QObject*)watched, (QEvent*)event);
+bool q_maskgenerator_super_event_filter(void* self, void* watched, void* event) {
+    return QMaskGenerator_SuperEventFilter((QMaskGenerator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_maskgenerator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -333,8 +333,8 @@ void q_maskgenerator_timer_event(void* self, void* event) {
     QMaskGenerator_TimerEvent((QMaskGenerator*)self, (QTimerEvent*)event);
 }
 
-void q_maskgenerator_qbase_timer_event(void* self, void* event) {
-    QMaskGenerator_QBaseTimerEvent((QMaskGenerator*)self, (QTimerEvent*)event);
+void q_maskgenerator_super_timer_event(void* self, void* event) {
+    QMaskGenerator_SuperTimerEvent((QMaskGenerator*)self, (QTimerEvent*)event);
 }
 
 void q_maskgenerator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -345,8 +345,8 @@ void q_maskgenerator_child_event(void* self, void* event) {
     QMaskGenerator_ChildEvent((QMaskGenerator*)self, (QChildEvent*)event);
 }
 
-void q_maskgenerator_qbase_child_event(void* self, void* event) {
-    QMaskGenerator_QBaseChildEvent((QMaskGenerator*)self, (QChildEvent*)event);
+void q_maskgenerator_super_child_event(void* self, void* event) {
+    QMaskGenerator_SuperChildEvent((QMaskGenerator*)self, (QChildEvent*)event);
 }
 
 void q_maskgenerator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void q_maskgenerator_custom_event(void* self, void* event) {
     QMaskGenerator_CustomEvent((QMaskGenerator*)self, (QEvent*)event);
 }
 
-void q_maskgenerator_qbase_custom_event(void* self, void* event) {
-    QMaskGenerator_QBaseCustomEvent((QMaskGenerator*)self, (QEvent*)event);
+void q_maskgenerator_super_custom_event(void* self, void* event) {
+    QMaskGenerator_SuperCustomEvent((QMaskGenerator*)self, (QEvent*)event);
 }
 
 void q_maskgenerator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ void q_maskgenerator_connect_notify(void* self, void* signal) {
     QMaskGenerator_ConnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
-void q_maskgenerator_qbase_connect_notify(void* self, void* signal) {
-    QMaskGenerator_QBaseConnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
+void q_maskgenerator_super_connect_notify(void* self, void* signal) {
+    QMaskGenerator_SuperConnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
 void q_maskgenerator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ void q_maskgenerator_disconnect_notify(void* self, void* signal) {
     QMaskGenerator_DisconnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
-void q_maskgenerator_qbase_disconnect_notify(void* self, void* signal) {
-    QMaskGenerator_QBaseDisconnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
+void q_maskgenerator_super_disconnect_notify(void* self, void* signal) {
+    QMaskGenerator_SuperDisconnectNotify((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
 void q_maskgenerator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ QObject* q_maskgenerator_sender(void* self) {
     return QMaskGenerator_Sender((QMaskGenerator*)self);
 }
 
-QObject* q_maskgenerator_qbase_sender(void* self) {
-    return QMaskGenerator_QBaseSender((QMaskGenerator*)self);
+QObject* q_maskgenerator_super_sender(void* self) {
+    return QMaskGenerator_SuperSender((QMaskGenerator*)self);
 }
 
 void q_maskgenerator_on_sender(void* self, QObject* (*callback)()) {
@@ -405,8 +405,8 @@ int32_t q_maskgenerator_sender_signal_index(void* self) {
     return QMaskGenerator_SenderSignalIndex((QMaskGenerator*)self);
 }
 
-int32_t q_maskgenerator_qbase_sender_signal_index(void* self) {
-    return QMaskGenerator_QBaseSenderSignalIndex((QMaskGenerator*)self);
+int32_t q_maskgenerator_super_sender_signal_index(void* self) {
+    return QMaskGenerator_SuperSenderSignalIndex((QMaskGenerator*)self);
 }
 
 void q_maskgenerator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -417,8 +417,8 @@ int32_t q_maskgenerator_receivers(void* self, const char* signal) {
     return QMaskGenerator_Receivers((QMaskGenerator*)self, signal);
 }
 
-int32_t q_maskgenerator_qbase_receivers(void* self, const char* signal) {
-    return QMaskGenerator_QBaseReceivers((QMaskGenerator*)self, signal);
+int32_t q_maskgenerator_super_receivers(void* self, const char* signal) {
+    return QMaskGenerator_SuperReceivers((QMaskGenerator*)self, signal);
 }
 
 void q_maskgenerator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -429,8 +429,8 @@ bool q_maskgenerator_is_signal_connected(void* self, void* signal) {
     return QMaskGenerator_IsSignalConnected((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
-bool q_maskgenerator_qbase_is_signal_connected(void* self, void* signal) {
-    return QMaskGenerator_QBaseIsSignalConnected((QMaskGenerator*)self, (QMetaMethod*)signal);
+bool q_maskgenerator_super_is_signal_connected(void* self, void* signal) {
+    return QMaskGenerator_SuperIsSignalConnected((QMaskGenerator*)self, (QMetaMethod*)signal);
 }
 
 void q_maskgenerator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

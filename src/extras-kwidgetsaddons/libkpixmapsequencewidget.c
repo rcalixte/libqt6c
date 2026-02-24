@@ -38,8 +38,8 @@ void k_pixmapsequencewidget_on_meta_object(void* self, const QMetaObject* (*call
     KPixmapSequenceWidget_OnMetaObject((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pixmapsequencewidget_qbase_meta_object(void* self) {
-    return KPixmapSequenceWidget_QBaseMetaObject((KPixmapSequenceWidget*)self);
+const QMetaObject* k_pixmapsequencewidget_super_meta_object(void* self) {
+    return KPixmapSequenceWidget_SuperMetaObject((KPixmapSequenceWidget*)self);
 }
 
 void* k_pixmapsequencewidget_metacast(void* self, const char* param1) {
@@ -50,8 +50,8 @@ void k_pixmapsequencewidget_on_metacast(void* self, void* (*callback)(void*, con
     KPixmapSequenceWidget_OnMetacast((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
-void* k_pixmapsequencewidget_qbase_metacast(void* self, const char* param1) {
-    return KPixmapSequenceWidget_QBaseMetacast((KPixmapSequenceWidget*)self, param1);
+void* k_pixmapsequencewidget_super_metacast(void* self, const char* param1) {
+    return KPixmapSequenceWidget_SuperMetacast((KPixmapSequenceWidget*)self, param1);
 }
 
 int32_t k_pixmapsequencewidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ void k_pixmapsequencewidget_on_metacall(void* self, int32_t (*callback)(void*, i
     KPixmapSequenceWidget_OnMetacall((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_pixmapsequencewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPixmapSequenceWidget_QBaseMetacall((KPixmapSequenceWidget*)self, param1, param2, param3);
+int32_t k_pixmapsequencewidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPixmapSequenceWidget_SuperMetacall((KPixmapSequenceWidget*)self, param1, param2, param3);
 }
 
 const char* k_pixmapsequencewidget_tr(const char* s) {
@@ -89,8 +89,8 @@ void k_pixmapsequencewidget_on_size_hint(void* self, QSize* (*callback)()) {
     KPixmapSequenceWidget_OnSizeHint((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_pixmapsequencewidget_qbase_size_hint(void* self) {
-    return KPixmapSequenceWidget_QBaseSizeHint((KPixmapSequenceWidget*)self);
+QSize* k_pixmapsequencewidget_super_size_hint(void* self) {
+    return KPixmapSequenceWidget_SuperSizeHint((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_set_sequence(void* self, void* seq) {
@@ -1500,8 +1500,8 @@ int32_t k_pixmapsequencewidget_dev_type(void* self) {
     return KPixmapSequenceWidget_DevType((KPixmapSequenceWidget*)self);
 }
 
-int32_t k_pixmapsequencewidget_qbase_dev_type(void* self) {
-    return KPixmapSequenceWidget_QBaseDevType((KPixmapSequenceWidget*)self);
+int32_t k_pixmapsequencewidget_super_dev_type(void* self) {
+    return KPixmapSequenceWidget_SuperDevType((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1512,8 +1512,8 @@ void k_pixmapsequencewidget_set_visible(void* self, bool visible) {
     KPixmapSequenceWidget_SetVisible((KPixmapSequenceWidget*)self, visible);
 }
 
-void k_pixmapsequencewidget_qbase_set_visible(void* self, bool visible) {
-    KPixmapSequenceWidget_QBaseSetVisible((KPixmapSequenceWidget*)self, visible);
+void k_pixmapsequencewidget_super_set_visible(void* self, bool visible) {
+    KPixmapSequenceWidget_SuperSetVisible((KPixmapSequenceWidget*)self, visible);
 }
 
 void k_pixmapsequencewidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1524,8 +1524,8 @@ QSize* k_pixmapsequencewidget_minimum_size_hint(void* self) {
     return KPixmapSequenceWidget_MinimumSizeHint((KPixmapSequenceWidget*)self);
 }
 
-QSize* k_pixmapsequencewidget_qbase_minimum_size_hint(void* self) {
-    return KPixmapSequenceWidget_QBaseMinimumSizeHint((KPixmapSequenceWidget*)self);
+QSize* k_pixmapsequencewidget_super_minimum_size_hint(void* self) {
+    return KPixmapSequenceWidget_SuperMinimumSizeHint((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1536,8 +1536,8 @@ int32_t k_pixmapsequencewidget_height_for_width(void* self, int param1) {
     return KPixmapSequenceWidget_HeightForWidth((KPixmapSequenceWidget*)self, param1);
 }
 
-int32_t k_pixmapsequencewidget_qbase_height_for_width(void* self, int param1) {
-    return KPixmapSequenceWidget_QBaseHeightForWidth((KPixmapSequenceWidget*)self, param1);
+int32_t k_pixmapsequencewidget_super_height_for_width(void* self, int param1) {
+    return KPixmapSequenceWidget_SuperHeightForWidth((KPixmapSequenceWidget*)self, param1);
 }
 
 void k_pixmapsequencewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1548,8 +1548,8 @@ bool k_pixmapsequencewidget_has_height_for_width(void* self) {
     return KPixmapSequenceWidget_HasHeightForWidth((KPixmapSequenceWidget*)self);
 }
 
-bool k_pixmapsequencewidget_qbase_has_height_for_width(void* self) {
-    return KPixmapSequenceWidget_QBaseHasHeightForWidth((KPixmapSequenceWidget*)self);
+bool k_pixmapsequencewidget_super_has_height_for_width(void* self) {
+    return KPixmapSequenceWidget_SuperHasHeightForWidth((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1560,8 +1560,8 @@ QPaintEngine* k_pixmapsequencewidget_paint_engine(void* self) {
     return KPixmapSequenceWidget_PaintEngine((KPixmapSequenceWidget*)self);
 }
 
-QPaintEngine* k_pixmapsequencewidget_qbase_paint_engine(void* self) {
-    return KPixmapSequenceWidget_QBasePaintEngine((KPixmapSequenceWidget*)self);
+QPaintEngine* k_pixmapsequencewidget_super_paint_engine(void* self) {
+    return KPixmapSequenceWidget_SuperPaintEngine((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1572,8 +1572,8 @@ bool k_pixmapsequencewidget_event(void* self, void* event) {
     return KPixmapSequenceWidget_Event((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
-bool k_pixmapsequencewidget_qbase_event(void* self, void* event) {
-    return KPixmapSequenceWidget_QBaseEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
+bool k_pixmapsequencewidget_super_event(void* self, void* event) {
+    return KPixmapSequenceWidget_SuperEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1584,8 +1584,8 @@ void k_pixmapsequencewidget_mouse_press_event(void* self, void* event) {
     KPixmapSequenceWidget_MousePressEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_mouse_press_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseMousePressEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
+void k_pixmapsequencewidget_super_mouse_press_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperMousePressEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1596,8 +1596,8 @@ void k_pixmapsequencewidget_mouse_release_event(void* self, void* event) {
     KPixmapSequenceWidget_MouseReleaseEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_mouse_release_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseMouseReleaseEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
+void k_pixmapsequencewidget_super_mouse_release_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperMouseReleaseEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1608,8 +1608,8 @@ void k_pixmapsequencewidget_mouse_double_click_event(void* self, void* event) {
     KPixmapSequenceWidget_MouseDoubleClickEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseMouseDoubleClickEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
+void k_pixmapsequencewidget_super_mouse_double_click_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperMouseDoubleClickEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1620,8 +1620,8 @@ void k_pixmapsequencewidget_mouse_move_event(void* self, void* event) {
     KPixmapSequenceWidget_MouseMoveEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_mouse_move_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseMouseMoveEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
+void k_pixmapsequencewidget_super_mouse_move_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperMouseMoveEvent((KPixmapSequenceWidget*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1632,8 +1632,8 @@ void k_pixmapsequencewidget_wheel_event(void* self, void* event) {
     KPixmapSequenceWidget_WheelEvent((KPixmapSequenceWidget*)self, (QWheelEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_wheel_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseWheelEvent((KPixmapSequenceWidget*)self, (QWheelEvent*)event);
+void k_pixmapsequencewidget_super_wheel_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperWheelEvent((KPixmapSequenceWidget*)self, (QWheelEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1644,8 +1644,8 @@ void k_pixmapsequencewidget_key_press_event(void* self, void* event) {
     KPixmapSequenceWidget_KeyPressEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_key_press_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseKeyPressEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
+void k_pixmapsequencewidget_super_key_press_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperKeyPressEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1656,8 +1656,8 @@ void k_pixmapsequencewidget_key_release_event(void* self, void* event) {
     KPixmapSequenceWidget_KeyReleaseEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_key_release_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseKeyReleaseEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
+void k_pixmapsequencewidget_super_key_release_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperKeyReleaseEvent((KPixmapSequenceWidget*)self, (QKeyEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1668,8 +1668,8 @@ void k_pixmapsequencewidget_focus_in_event(void* self, void* event) {
     KPixmapSequenceWidget_FocusInEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_focus_in_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseFocusInEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
+void k_pixmapsequencewidget_super_focus_in_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperFocusInEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1680,8 +1680,8 @@ void k_pixmapsequencewidget_focus_out_event(void* self, void* event) {
     KPixmapSequenceWidget_FocusOutEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_focus_out_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseFocusOutEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
+void k_pixmapsequencewidget_super_focus_out_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperFocusOutEvent((KPixmapSequenceWidget*)self, (QFocusEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1692,8 +1692,8 @@ void k_pixmapsequencewidget_enter_event(void* self, void* event) {
     KPixmapSequenceWidget_EnterEvent((KPixmapSequenceWidget*)self, (QEnterEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_enter_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseEnterEvent((KPixmapSequenceWidget*)self, (QEnterEvent*)event);
+void k_pixmapsequencewidget_super_enter_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperEnterEvent((KPixmapSequenceWidget*)self, (QEnterEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1704,8 +1704,8 @@ void k_pixmapsequencewidget_leave_event(void* self, void* event) {
     KPixmapSequenceWidget_LeaveEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_leave_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseLeaveEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
+void k_pixmapsequencewidget_super_leave_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperLeaveEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1716,8 +1716,8 @@ void k_pixmapsequencewidget_paint_event(void* self, void* event) {
     KPixmapSequenceWidget_PaintEvent((KPixmapSequenceWidget*)self, (QPaintEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_paint_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBasePaintEvent((KPixmapSequenceWidget*)self, (QPaintEvent*)event);
+void k_pixmapsequencewidget_super_paint_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperPaintEvent((KPixmapSequenceWidget*)self, (QPaintEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1728,8 +1728,8 @@ void k_pixmapsequencewidget_move_event(void* self, void* event) {
     KPixmapSequenceWidget_MoveEvent((KPixmapSequenceWidget*)self, (QMoveEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_move_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseMoveEvent((KPixmapSequenceWidget*)self, (QMoveEvent*)event);
+void k_pixmapsequencewidget_super_move_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperMoveEvent((KPixmapSequenceWidget*)self, (QMoveEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1740,8 +1740,8 @@ void k_pixmapsequencewidget_resize_event(void* self, void* event) {
     KPixmapSequenceWidget_ResizeEvent((KPixmapSequenceWidget*)self, (QResizeEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_resize_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseResizeEvent((KPixmapSequenceWidget*)self, (QResizeEvent*)event);
+void k_pixmapsequencewidget_super_resize_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperResizeEvent((KPixmapSequenceWidget*)self, (QResizeEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1752,8 +1752,8 @@ void k_pixmapsequencewidget_close_event(void* self, void* event) {
     KPixmapSequenceWidget_CloseEvent((KPixmapSequenceWidget*)self, (QCloseEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_close_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseCloseEvent((KPixmapSequenceWidget*)self, (QCloseEvent*)event);
+void k_pixmapsequencewidget_super_close_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperCloseEvent((KPixmapSequenceWidget*)self, (QCloseEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1764,8 +1764,8 @@ void k_pixmapsequencewidget_context_menu_event(void* self, void* event) {
     KPixmapSequenceWidget_ContextMenuEvent((KPixmapSequenceWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_context_menu_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseContextMenuEvent((KPixmapSequenceWidget*)self, (QContextMenuEvent*)event);
+void k_pixmapsequencewidget_super_context_menu_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperContextMenuEvent((KPixmapSequenceWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1776,8 +1776,8 @@ void k_pixmapsequencewidget_tablet_event(void* self, void* event) {
     KPixmapSequenceWidget_TabletEvent((KPixmapSequenceWidget*)self, (QTabletEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_tablet_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseTabletEvent((KPixmapSequenceWidget*)self, (QTabletEvent*)event);
+void k_pixmapsequencewidget_super_tablet_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperTabletEvent((KPixmapSequenceWidget*)self, (QTabletEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1788,8 +1788,8 @@ void k_pixmapsequencewidget_action_event(void* self, void* event) {
     KPixmapSequenceWidget_ActionEvent((KPixmapSequenceWidget*)self, (QActionEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_action_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseActionEvent((KPixmapSequenceWidget*)self, (QActionEvent*)event);
+void k_pixmapsequencewidget_super_action_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperActionEvent((KPixmapSequenceWidget*)self, (QActionEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1800,8 +1800,8 @@ void k_pixmapsequencewidget_drag_enter_event(void* self, void* event) {
     KPixmapSequenceWidget_DragEnterEvent((KPixmapSequenceWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_drag_enter_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseDragEnterEvent((KPixmapSequenceWidget*)self, (QDragEnterEvent*)event);
+void k_pixmapsequencewidget_super_drag_enter_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperDragEnterEvent((KPixmapSequenceWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_pixmapsequencewidget_drag_move_event(void* self, void* event) {
     KPixmapSequenceWidget_DragMoveEvent((KPixmapSequenceWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_drag_move_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseDragMoveEvent((KPixmapSequenceWidget*)self, (QDragMoveEvent*)event);
+void k_pixmapsequencewidget_super_drag_move_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperDragMoveEvent((KPixmapSequenceWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ void k_pixmapsequencewidget_drag_leave_event(void* self, void* event) {
     KPixmapSequenceWidget_DragLeaveEvent((KPixmapSequenceWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_drag_leave_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseDragLeaveEvent((KPixmapSequenceWidget*)self, (QDragLeaveEvent*)event);
+void k_pixmapsequencewidget_super_drag_leave_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperDragLeaveEvent((KPixmapSequenceWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_pixmapsequencewidget_drop_event(void* self, void* event) {
     KPixmapSequenceWidget_DropEvent((KPixmapSequenceWidget*)self, (QDropEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_drop_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseDropEvent((KPixmapSequenceWidget*)self, (QDropEvent*)event);
+void k_pixmapsequencewidget_super_drop_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperDropEvent((KPixmapSequenceWidget*)self, (QDropEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_pixmapsequencewidget_show_event(void* self, void* event) {
     KPixmapSequenceWidget_ShowEvent((KPixmapSequenceWidget*)self, (QShowEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_show_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseShowEvent((KPixmapSequenceWidget*)self, (QShowEvent*)event);
+void k_pixmapsequencewidget_super_show_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperShowEvent((KPixmapSequenceWidget*)self, (QShowEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_pixmapsequencewidget_hide_event(void* self, void* event) {
     KPixmapSequenceWidget_HideEvent((KPixmapSequenceWidget*)self, (QHideEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_hide_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseHideEvent((KPixmapSequenceWidget*)self, (QHideEvent*)event);
+void k_pixmapsequencewidget_super_hide_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperHideEvent((KPixmapSequenceWidget*)self, (QHideEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ bool k_pixmapsequencewidget_native_event(void* self, char* eventType, void* mess
     return KPixmapSequenceWidget_NativeEvent((KPixmapSequenceWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_pixmapsequencewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPixmapSequenceWidget_QBaseNativeEvent((KPixmapSequenceWidget*)self, qstring(eventType), message, result);
+bool k_pixmapsequencewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPixmapSequenceWidget_SuperNativeEvent((KPixmapSequenceWidget*)self, qstring(eventType), message, result);
 }
 
 void k_pixmapsequencewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1884,8 +1884,8 @@ void k_pixmapsequencewidget_change_event(void* self, void* param1) {
     KPixmapSequenceWidget_ChangeEvent((KPixmapSequenceWidget*)self, (QEvent*)param1);
 }
 
-void k_pixmapsequencewidget_qbase_change_event(void* self, void* param1) {
-    KPixmapSequenceWidget_QBaseChangeEvent((KPixmapSequenceWidget*)self, (QEvent*)param1);
+void k_pixmapsequencewidget_super_change_event(void* self, void* param1) {
+    KPixmapSequenceWidget_SuperChangeEvent((KPixmapSequenceWidget*)self, (QEvent*)param1);
 }
 
 void k_pixmapsequencewidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ int32_t k_pixmapsequencewidget_metric(void* self, int32_t param1) {
     return KPixmapSequenceWidget_Metric((KPixmapSequenceWidget*)self, param1);
 }
 
-int32_t k_pixmapsequencewidget_qbase_metric(void* self, int32_t param1) {
-    return KPixmapSequenceWidget_QBaseMetric((KPixmapSequenceWidget*)self, param1);
+int32_t k_pixmapsequencewidget_super_metric(void* self, int32_t param1) {
+    return KPixmapSequenceWidget_SuperMetric((KPixmapSequenceWidget*)self, param1);
 }
 
 void k_pixmapsequencewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1908,8 +1908,8 @@ void k_pixmapsequencewidget_init_painter(void* self, void* painter) {
     KPixmapSequenceWidget_InitPainter((KPixmapSequenceWidget*)self, (QPainter*)painter);
 }
 
-void k_pixmapsequencewidget_qbase_init_painter(void* self, void* painter) {
-    KPixmapSequenceWidget_QBaseInitPainter((KPixmapSequenceWidget*)self, (QPainter*)painter);
+void k_pixmapsequencewidget_super_init_painter(void* self, void* painter) {
+    KPixmapSequenceWidget_SuperInitPainter((KPixmapSequenceWidget*)self, (QPainter*)painter);
 }
 
 void k_pixmapsequencewidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ QPaintDevice* k_pixmapsequencewidget_redirected(void* self, void* offset) {
     return KPixmapSequenceWidget_Redirected((KPixmapSequenceWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_pixmapsequencewidget_qbase_redirected(void* self, void* offset) {
-    return KPixmapSequenceWidget_QBaseRedirected((KPixmapSequenceWidget*)self, (QPoint*)offset);
+QPaintDevice* k_pixmapsequencewidget_super_redirected(void* self, void* offset) {
+    return KPixmapSequenceWidget_SuperRedirected((KPixmapSequenceWidget*)self, (QPoint*)offset);
 }
 
 void k_pixmapsequencewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ QPainter* k_pixmapsequencewidget_shared_painter(void* self) {
     return KPixmapSequenceWidget_SharedPainter((KPixmapSequenceWidget*)self);
 }
 
-QPainter* k_pixmapsequencewidget_qbase_shared_painter(void* self) {
-    return KPixmapSequenceWidget_QBaseSharedPainter((KPixmapSequenceWidget*)self);
+QPainter* k_pixmapsequencewidget_super_shared_painter(void* self) {
+    return KPixmapSequenceWidget_SuperSharedPainter((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1944,8 +1944,8 @@ void k_pixmapsequencewidget_input_method_event(void* self, void* param1) {
     KPixmapSequenceWidget_InputMethodEvent((KPixmapSequenceWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_pixmapsequencewidget_qbase_input_method_event(void* self, void* param1) {
-    KPixmapSequenceWidget_QBaseInputMethodEvent((KPixmapSequenceWidget*)self, (QInputMethodEvent*)param1);
+void k_pixmapsequencewidget_super_input_method_event(void* self, void* param1) {
+    KPixmapSequenceWidget_SuperInputMethodEvent((KPixmapSequenceWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_pixmapsequencewidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ QVariant* k_pixmapsequencewidget_input_method_query(void* self, int32_t param1) 
     return KPixmapSequenceWidget_InputMethodQuery((KPixmapSequenceWidget*)self, param1);
 }
 
-QVariant* k_pixmapsequencewidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KPixmapSequenceWidget_QBaseInputMethodQuery((KPixmapSequenceWidget*)self, param1);
+QVariant* k_pixmapsequencewidget_super_input_method_query(void* self, int32_t param1) {
+    return KPixmapSequenceWidget_SuperInputMethodQuery((KPixmapSequenceWidget*)self, param1);
 }
 
 void k_pixmapsequencewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1968,8 +1968,8 @@ bool k_pixmapsequencewidget_focus_next_prev_child(void* self, bool next) {
     return KPixmapSequenceWidget_FocusNextPrevChild((KPixmapSequenceWidget*)self, next);
 }
 
-bool k_pixmapsequencewidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPixmapSequenceWidget_QBaseFocusNextPrevChild((KPixmapSequenceWidget*)self, next);
+bool k_pixmapsequencewidget_super_focus_next_prev_child(void* self, bool next) {
+    return KPixmapSequenceWidget_SuperFocusNextPrevChild((KPixmapSequenceWidget*)self, next);
 }
 
 void k_pixmapsequencewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1980,8 +1980,8 @@ bool k_pixmapsequencewidget_event_filter(void* self, void* watched, void* event)
     return KPixmapSequenceWidget_EventFilter((KPixmapSequenceWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_pixmapsequencewidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPixmapSequenceWidget_QBaseEventFilter((KPixmapSequenceWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_pixmapsequencewidget_super_event_filter(void* self, void* watched, void* event) {
+    return KPixmapSequenceWidget_SuperEventFilter((KPixmapSequenceWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_pixmapsequencewidget_timer_event(void* self, void* event) {
     KPixmapSequenceWidget_TimerEvent((KPixmapSequenceWidget*)self, (QTimerEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_timer_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseTimerEvent((KPixmapSequenceWidget*)self, (QTimerEvent*)event);
+void k_pixmapsequencewidget_super_timer_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperTimerEvent((KPixmapSequenceWidget*)self, (QTimerEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ void k_pixmapsequencewidget_child_event(void* self, void* event) {
     KPixmapSequenceWidget_ChildEvent((KPixmapSequenceWidget*)self, (QChildEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_child_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseChildEvent((KPixmapSequenceWidget*)self, (QChildEvent*)event);
+void k_pixmapsequencewidget_super_child_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperChildEvent((KPixmapSequenceWidget*)self, (QChildEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2016,8 +2016,8 @@ void k_pixmapsequencewidget_custom_event(void* self, void* event) {
     KPixmapSequenceWidget_CustomEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
-void k_pixmapsequencewidget_qbase_custom_event(void* self, void* event) {
-    KPixmapSequenceWidget_QBaseCustomEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
+void k_pixmapsequencewidget_super_custom_event(void* self, void* event) {
+    KPixmapSequenceWidget_SuperCustomEvent((KPixmapSequenceWidget*)self, (QEvent*)event);
 }
 
 void k_pixmapsequencewidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_pixmapsequencewidget_connect_notify(void* self, void* signal) {
     KPixmapSequenceWidget_ConnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapsequencewidget_qbase_connect_notify(void* self, void* signal) {
-    KPixmapSequenceWidget_QBaseConnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
+void k_pixmapsequencewidget_super_connect_notify(void* self, void* signal) {
+    KPixmapSequenceWidget_SuperConnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequencewidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_pixmapsequencewidget_disconnect_notify(void* self, void* signal) {
     KPixmapSequenceWidget_DisconnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapsequencewidget_qbase_disconnect_notify(void* self, void* signal) {
-    KPixmapSequenceWidget_QBaseDisconnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
+void k_pixmapsequencewidget_super_disconnect_notify(void* self, void* signal) {
+    KPixmapSequenceWidget_SuperDisconnectNotify((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequencewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_pixmapsequencewidget_update_micro_focus(void* self) {
     KPixmapSequenceWidget_UpdateMicroFocus((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_qbase_update_micro_focus(void* self) {
-    KPixmapSequenceWidget_QBaseUpdateMicroFocus((KPixmapSequenceWidget*)self);
+void k_pixmapsequencewidget_super_update_micro_focus(void* self) {
+    KPixmapSequenceWidget_SuperUpdateMicroFocus((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2064,8 +2064,8 @@ void k_pixmapsequencewidget_create(void* self) {
     KPixmapSequenceWidget_Create((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_qbase_create(void* self) {
-    KPixmapSequenceWidget_QBaseCreate((KPixmapSequenceWidget*)self);
+void k_pixmapsequencewidget_super_create(void* self) {
+    KPixmapSequenceWidget_SuperCreate((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_create(void* self, void (*callback)()) {
@@ -2076,8 +2076,8 @@ void k_pixmapsequencewidget_destroy(void* self) {
     KPixmapSequenceWidget_Destroy((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_qbase_destroy(void* self) {
-    KPixmapSequenceWidget_QBaseDestroy((KPixmapSequenceWidget*)self);
+void k_pixmapsequencewidget_super_destroy(void* self) {
+    KPixmapSequenceWidget_SuperDestroy((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_destroy(void* self, void (*callback)()) {
@@ -2088,8 +2088,8 @@ bool k_pixmapsequencewidget_focus_next_child(void* self) {
     return KPixmapSequenceWidget_FocusNextChild((KPixmapSequenceWidget*)self);
 }
 
-bool k_pixmapsequencewidget_qbase_focus_next_child(void* self) {
-    return KPixmapSequenceWidget_QBaseFocusNextChild((KPixmapSequenceWidget*)self);
+bool k_pixmapsequencewidget_super_focus_next_child(void* self) {
+    return KPixmapSequenceWidget_SuperFocusNextChild((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2100,8 +2100,8 @@ bool k_pixmapsequencewidget_focus_previous_child(void* self) {
     return KPixmapSequenceWidget_FocusPreviousChild((KPixmapSequenceWidget*)self);
 }
 
-bool k_pixmapsequencewidget_qbase_focus_previous_child(void* self) {
-    return KPixmapSequenceWidget_QBaseFocusPreviousChild((KPixmapSequenceWidget*)self);
+bool k_pixmapsequencewidget_super_focus_previous_child(void* self) {
+    return KPixmapSequenceWidget_SuperFocusPreviousChild((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2112,8 +2112,8 @@ QObject* k_pixmapsequencewidget_sender(void* self) {
     return KPixmapSequenceWidget_Sender((KPixmapSequenceWidget*)self);
 }
 
-QObject* k_pixmapsequencewidget_qbase_sender(void* self) {
-    return KPixmapSequenceWidget_QBaseSender((KPixmapSequenceWidget*)self);
+QObject* k_pixmapsequencewidget_super_sender(void* self) {
+    return KPixmapSequenceWidget_SuperSender((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2124,8 +2124,8 @@ int32_t k_pixmapsequencewidget_sender_signal_index(void* self) {
     return KPixmapSequenceWidget_SenderSignalIndex((KPixmapSequenceWidget*)self);
 }
 
-int32_t k_pixmapsequencewidget_qbase_sender_signal_index(void* self) {
-    return KPixmapSequenceWidget_QBaseSenderSignalIndex((KPixmapSequenceWidget*)self);
+int32_t k_pixmapsequencewidget_super_sender_signal_index(void* self) {
+    return KPixmapSequenceWidget_SuperSenderSignalIndex((KPixmapSequenceWidget*)self);
 }
 
 void k_pixmapsequencewidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2136,8 +2136,8 @@ int32_t k_pixmapsequencewidget_receivers(void* self, const char* signal) {
     return KPixmapSequenceWidget_Receivers((KPixmapSequenceWidget*)self, signal);
 }
 
-int32_t k_pixmapsequencewidget_qbase_receivers(void* self, const char* signal) {
-    return KPixmapSequenceWidget_QBaseReceivers((KPixmapSequenceWidget*)self, signal);
+int32_t k_pixmapsequencewidget_super_receivers(void* self, const char* signal) {
+    return KPixmapSequenceWidget_SuperReceivers((KPixmapSequenceWidget*)self, signal);
 }
 
 void k_pixmapsequencewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2148,8 +2148,8 @@ bool k_pixmapsequencewidget_is_signal_connected(void* self, void* signal) {
     return KPixmapSequenceWidget_IsSignalConnected((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_pixmapsequencewidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KPixmapSequenceWidget_QBaseIsSignalConnected((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
+bool k_pixmapsequencewidget_super_is_signal_connected(void* self, void* signal) {
+    return KPixmapSequenceWidget_SuperIsSignalConnected((KPixmapSequenceWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapsequencewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2160,8 +2160,8 @@ double k_pixmapsequencewidget_get_decoded_metric_f(void* self, int32_t metricA, 
     return KPixmapSequenceWidget_GetDecodedMetricF((KPixmapSequenceWidget*)self, metricA, metricB);
 }
 
-double k_pixmapsequencewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPixmapSequenceWidget_QBaseGetDecodedMetricF((KPixmapSequenceWidget*)self, metricA, metricB);
+double k_pixmapsequencewidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPixmapSequenceWidget_SuperGetDecodedMetricF((KPixmapSequenceWidget*)self, metricA, metricB);
 }
 
 void k_pixmapsequencewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

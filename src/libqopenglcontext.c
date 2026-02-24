@@ -295,8 +295,8 @@ void q_openglcontext_on_meta_object(void* self, const QMetaObject* (*callback)()
     QOpenGLContext_OnMetaObject((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglcontext_qbase_meta_object(void* self) {
-    return QOpenGLContext_QBaseMetaObject((QOpenGLContext*)self);
+const QMetaObject* q_openglcontext_super_meta_object(void* self) {
+    return QOpenGLContext_SuperMetaObject((QOpenGLContext*)self);
 }
 
 void* q_openglcontext_metacast(void* self, const char* param1) {
@@ -307,8 +307,8 @@ void q_openglcontext_on_metacast(void* self, void* (*callback)(void*, const char
     QOpenGLContext_OnMetacast((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-void* q_openglcontext_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLContext_QBaseMetacast((QOpenGLContext*)self, param1);
+void* q_openglcontext_super_metacast(void* self, const char* param1) {
+    return QOpenGLContext_SuperMetacast((QOpenGLContext*)self, param1);
 }
 
 int32_t q_openglcontext_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -319,8 +319,8 @@ void q_openglcontext_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QOpenGLContext_OnMetacall((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-int32_t q_openglcontext_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLContext_QBaseMetacall((QOpenGLContext*)self, param1, param2, param3);
+int32_t q_openglcontext_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLContext_SuperMetacall((QOpenGLContext*)self, param1, param2, param3);
 }
 
 const char* q_openglcontext_tr(const char* s) {
@@ -434,8 +434,8 @@ void q_openglcontext_on_resolve_interface(void* self, void* (*callback)(void*, c
     QOpenGLContext_OnResolveInterface((QOpenGLContext*)self, (intptr_t)callback);
 }
 
-void* q_openglcontext_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QOpenGLContext_QBaseResolveInterface((QOpenGLContext*)self, name, revision);
+void* q_openglcontext_super_resolve_interface(void* self, const char* name, int revision) {
+    return QOpenGLContext_SuperResolveInterface((QOpenGLContext*)self, name, revision);
 }
 
 void q_openglcontext_about_to_be_destroyed(void* self) {
@@ -675,8 +675,8 @@ bool q_openglcontext_event(void* self, void* event) {
     return QOpenGLContext_Event((QOpenGLContext*)self, (QEvent*)event);
 }
 
-bool q_openglcontext_qbase_event(void* self, void* event) {
-    return QOpenGLContext_QBaseEvent((QOpenGLContext*)self, (QEvent*)event);
+bool q_openglcontext_super_event(void* self, void* event) {
+    return QOpenGLContext_SuperEvent((QOpenGLContext*)self, (QEvent*)event);
 }
 
 void q_openglcontext_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -687,8 +687,8 @@ bool q_openglcontext_event_filter(void* self, void* watched, void* event) {
     return QOpenGLContext_EventFilter((QOpenGLContext*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_openglcontext_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLContext_QBaseEventFilter((QOpenGLContext*)self, (QObject*)watched, (QEvent*)event);
+bool q_openglcontext_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLContext_SuperEventFilter((QOpenGLContext*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_openglcontext_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -699,8 +699,8 @@ void q_openglcontext_timer_event(void* self, void* event) {
     QOpenGLContext_TimerEvent((QOpenGLContext*)self, (QTimerEvent*)event);
 }
 
-void q_openglcontext_qbase_timer_event(void* self, void* event) {
-    QOpenGLContext_QBaseTimerEvent((QOpenGLContext*)self, (QTimerEvent*)event);
+void q_openglcontext_super_timer_event(void* self, void* event) {
+    QOpenGLContext_SuperTimerEvent((QOpenGLContext*)self, (QTimerEvent*)event);
 }
 
 void q_openglcontext_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -711,8 +711,8 @@ void q_openglcontext_child_event(void* self, void* event) {
     QOpenGLContext_ChildEvent((QOpenGLContext*)self, (QChildEvent*)event);
 }
 
-void q_openglcontext_qbase_child_event(void* self, void* event) {
-    QOpenGLContext_QBaseChildEvent((QOpenGLContext*)self, (QChildEvent*)event);
+void q_openglcontext_super_child_event(void* self, void* event) {
+    QOpenGLContext_SuperChildEvent((QOpenGLContext*)self, (QChildEvent*)event);
 }
 
 void q_openglcontext_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -723,8 +723,8 @@ void q_openglcontext_custom_event(void* self, void* event) {
     QOpenGLContext_CustomEvent((QOpenGLContext*)self, (QEvent*)event);
 }
 
-void q_openglcontext_qbase_custom_event(void* self, void* event) {
-    QOpenGLContext_QBaseCustomEvent((QOpenGLContext*)self, (QEvent*)event);
+void q_openglcontext_super_custom_event(void* self, void* event) {
+    QOpenGLContext_SuperCustomEvent((QOpenGLContext*)self, (QEvent*)event);
 }
 
 void q_openglcontext_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -735,8 +735,8 @@ void q_openglcontext_connect_notify(void* self, void* signal) {
     QOpenGLContext_ConnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLContext_QBaseConnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
+void q_openglcontext_super_connect_notify(void* self, void* signal) {
+    QOpenGLContext_SuperConnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
 void q_openglcontext_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -747,8 +747,8 @@ void q_openglcontext_disconnect_notify(void* self, void* signal) {
     QOpenGLContext_DisconnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-void q_openglcontext_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLContext_QBaseDisconnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
+void q_openglcontext_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLContext_SuperDisconnectNotify((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
 void q_openglcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -759,8 +759,8 @@ QObject* q_openglcontext_sender(void* self) {
     return QOpenGLContext_Sender((QOpenGLContext*)self);
 }
 
-QObject* q_openglcontext_qbase_sender(void* self) {
-    return QOpenGLContext_QBaseSender((QOpenGLContext*)self);
+QObject* q_openglcontext_super_sender(void* self) {
+    return QOpenGLContext_SuperSender((QOpenGLContext*)self);
 }
 
 void q_openglcontext_on_sender(void* self, QObject* (*callback)()) {
@@ -771,8 +771,8 @@ int32_t q_openglcontext_sender_signal_index(void* self) {
     return QOpenGLContext_SenderSignalIndex((QOpenGLContext*)self);
 }
 
-int32_t q_openglcontext_qbase_sender_signal_index(void* self) {
-    return QOpenGLContext_QBaseSenderSignalIndex((QOpenGLContext*)self);
+int32_t q_openglcontext_super_sender_signal_index(void* self) {
+    return QOpenGLContext_SuperSenderSignalIndex((QOpenGLContext*)self);
 }
 
 void q_openglcontext_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -783,8 +783,8 @@ int32_t q_openglcontext_receivers(void* self, const char* signal) {
     return QOpenGLContext_Receivers((QOpenGLContext*)self, signal);
 }
 
-int32_t q_openglcontext_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLContext_QBaseReceivers((QOpenGLContext*)self, signal);
+int32_t q_openglcontext_super_receivers(void* self, const char* signal) {
+    return QOpenGLContext_SuperReceivers((QOpenGLContext*)self, signal);
 }
 
 void q_openglcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -795,8 +795,8 @@ bool q_openglcontext_is_signal_connected(void* self, void* signal) {
     return QOpenGLContext_IsSignalConnected((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
-bool q_openglcontext_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLContext_QBaseIsSignalConnected((QOpenGLContext*)self, (QMetaMethod*)signal);
+bool q_openglcontext_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLContext_SuperIsSignalConnected((QOpenGLContext*)self, (QMetaMethod*)signal);
 }
 
 void q_openglcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

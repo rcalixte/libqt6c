@@ -23,8 +23,8 @@ void k_viewstatemaintainerbase_on_meta_object(void* self, const QMetaObject* (*c
     KViewStateMaintainerBase_OnMetaObject((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_viewstatemaintainerbase_qbase_meta_object(void* self) {
-    return KViewStateMaintainerBase_QBaseMetaObject((KViewStateMaintainerBase*)self);
+const QMetaObject* k_viewstatemaintainerbase_super_meta_object(void* self) {
+    return KViewStateMaintainerBase_SuperMetaObject((KViewStateMaintainerBase*)self);
 }
 
 void* k_viewstatemaintainerbase_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_viewstatemaintainerbase_on_metacast(void* self, void* (*callback)(void*, 
     KViewStateMaintainerBase_OnMetacast((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 
-void* k_viewstatemaintainerbase_qbase_metacast(void* self, const char* param1) {
-    return KViewStateMaintainerBase_QBaseMetacast((KViewStateMaintainerBase*)self, param1);
+void* k_viewstatemaintainerbase_super_metacast(void* self, const char* param1) {
+    return KViewStateMaintainerBase_SuperMetacast((KViewStateMaintainerBase*)self, param1);
 }
 
 int32_t k_viewstatemaintainerbase_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_viewstatemaintainerbase_on_metacall(void* self, int32_t (*callback)(void*
     KViewStateMaintainerBase_OnMetacall((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 
-int32_t k_viewstatemaintainerbase_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KViewStateMaintainerBase_QBaseMetacall((KViewStateMaintainerBase*)self, param1, param2, param3);
+int32_t k_viewstatemaintainerbase_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KViewStateMaintainerBase_SuperMetacall((KViewStateMaintainerBase*)self, param1, param2, param3);
 }
 
 const char* k_viewstatemaintainerbase_tr(const char* s) {
@@ -82,8 +82,8 @@ void k_viewstatemaintainerbase_on_save_state(void* self, void (*callback)()) {
     KViewStateMaintainerBase_OnSaveState((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 
-void k_viewstatemaintainerbase_qbase_save_state(void* self) {
-    KViewStateMaintainerBase_QBaseSaveState((KViewStateMaintainerBase*)self);
+void k_viewstatemaintainerbase_super_save_state(void* self) {
+    KViewStateMaintainerBase_SuperSaveState((KViewStateMaintainerBase*)self);
 }
 
 void k_viewstatemaintainerbase_restore_state(void* self) {
@@ -94,8 +94,8 @@ void k_viewstatemaintainerbase_on_restore_state(void* self, void (*callback)()) 
     KViewStateMaintainerBase_OnRestoreState((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 
-void k_viewstatemaintainerbase_qbase_restore_state(void* self) {
-    KViewStateMaintainerBase_QBaseRestoreState((KViewStateMaintainerBase*)self);
+void k_viewstatemaintainerbase_super_restore_state(void* self) {
+    KViewStateMaintainerBase_SuperRestoreState((KViewStateMaintainerBase*)self);
 }
 
 const char* k_viewstatemaintainerbase_tr2(const char* s, const char* c) {
@@ -327,8 +327,8 @@ bool k_viewstatemaintainerbase_event(void* self, void* event) {
     return KViewStateMaintainerBase_Event((KViewStateMaintainerBase*)self, (QEvent*)event);
 }
 
-bool k_viewstatemaintainerbase_qbase_event(void* self, void* event) {
-    return KViewStateMaintainerBase_QBaseEvent((KViewStateMaintainerBase*)self, (QEvent*)event);
+bool k_viewstatemaintainerbase_super_event(void* self, void* event) {
+    return KViewStateMaintainerBase_SuperEvent((KViewStateMaintainerBase*)self, (QEvent*)event);
 }
 
 void k_viewstatemaintainerbase_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -339,8 +339,8 @@ bool k_viewstatemaintainerbase_event_filter(void* self, void* watched, void* eve
     return KViewStateMaintainerBase_EventFilter((KViewStateMaintainerBase*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_viewstatemaintainerbase_qbase_event_filter(void* self, void* watched, void* event) {
-    return KViewStateMaintainerBase_QBaseEventFilter((KViewStateMaintainerBase*)self, (QObject*)watched, (QEvent*)event);
+bool k_viewstatemaintainerbase_super_event_filter(void* self, void* watched, void* event) {
+    return KViewStateMaintainerBase_SuperEventFilter((KViewStateMaintainerBase*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_viewstatemaintainerbase_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -351,8 +351,8 @@ void k_viewstatemaintainerbase_timer_event(void* self, void* event) {
     KViewStateMaintainerBase_TimerEvent((KViewStateMaintainerBase*)self, (QTimerEvent*)event);
 }
 
-void k_viewstatemaintainerbase_qbase_timer_event(void* self, void* event) {
-    KViewStateMaintainerBase_QBaseTimerEvent((KViewStateMaintainerBase*)self, (QTimerEvent*)event);
+void k_viewstatemaintainerbase_super_timer_event(void* self, void* event) {
+    KViewStateMaintainerBase_SuperTimerEvent((KViewStateMaintainerBase*)self, (QTimerEvent*)event);
 }
 
 void k_viewstatemaintainerbase_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ void k_viewstatemaintainerbase_child_event(void* self, void* event) {
     KViewStateMaintainerBase_ChildEvent((KViewStateMaintainerBase*)self, (QChildEvent*)event);
 }
 
-void k_viewstatemaintainerbase_qbase_child_event(void* self, void* event) {
-    KViewStateMaintainerBase_QBaseChildEvent((KViewStateMaintainerBase*)self, (QChildEvent*)event);
+void k_viewstatemaintainerbase_super_child_event(void* self, void* event) {
+    KViewStateMaintainerBase_SuperChildEvent((KViewStateMaintainerBase*)self, (QChildEvent*)event);
 }
 
 void k_viewstatemaintainerbase_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ void k_viewstatemaintainerbase_custom_event(void* self, void* event) {
     KViewStateMaintainerBase_CustomEvent((KViewStateMaintainerBase*)self, (QEvent*)event);
 }
 
-void k_viewstatemaintainerbase_qbase_custom_event(void* self, void* event) {
-    KViewStateMaintainerBase_QBaseCustomEvent((KViewStateMaintainerBase*)self, (QEvent*)event);
+void k_viewstatemaintainerbase_super_custom_event(void* self, void* event) {
+    KViewStateMaintainerBase_SuperCustomEvent((KViewStateMaintainerBase*)self, (QEvent*)event);
 }
 
 void k_viewstatemaintainerbase_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ void k_viewstatemaintainerbase_connect_notify(void* self, void* signal) {
     KViewStateMaintainerBase_ConnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstatemaintainerbase_qbase_connect_notify(void* self, void* signal) {
-    KViewStateMaintainerBase_QBaseConnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
+void k_viewstatemaintainerbase_super_connect_notify(void* self, void* signal) {
+    KViewStateMaintainerBase_SuperConnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstatemaintainerbase_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void k_viewstatemaintainerbase_disconnect_notify(void* self, void* signal) {
     KViewStateMaintainerBase_DisconnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstatemaintainerbase_qbase_disconnect_notify(void* self, void* signal) {
-    KViewStateMaintainerBase_QBaseDisconnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
+void k_viewstatemaintainerbase_super_disconnect_notify(void* self, void* signal) {
+    KViewStateMaintainerBase_SuperDisconnectNotify((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstatemaintainerbase_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ QObject* k_viewstatemaintainerbase_sender(void* self) {
     return KViewStateMaintainerBase_Sender((KViewStateMaintainerBase*)self);
 }
 
-QObject* k_viewstatemaintainerbase_qbase_sender(void* self) {
-    return KViewStateMaintainerBase_QBaseSender((KViewStateMaintainerBase*)self);
+QObject* k_viewstatemaintainerbase_super_sender(void* self) {
+    return KViewStateMaintainerBase_SuperSender((KViewStateMaintainerBase*)self);
 }
 
 void k_viewstatemaintainerbase_on_sender(void* self, QObject* (*callback)()) {
@@ -423,8 +423,8 @@ int32_t k_viewstatemaintainerbase_sender_signal_index(void* self) {
     return KViewStateMaintainerBase_SenderSignalIndex((KViewStateMaintainerBase*)self);
 }
 
-int32_t k_viewstatemaintainerbase_qbase_sender_signal_index(void* self) {
-    return KViewStateMaintainerBase_QBaseSenderSignalIndex((KViewStateMaintainerBase*)self);
+int32_t k_viewstatemaintainerbase_super_sender_signal_index(void* self) {
+    return KViewStateMaintainerBase_SuperSenderSignalIndex((KViewStateMaintainerBase*)self);
 }
 
 void k_viewstatemaintainerbase_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -435,8 +435,8 @@ int32_t k_viewstatemaintainerbase_receivers(void* self, const char* signal) {
     return KViewStateMaintainerBase_Receivers((KViewStateMaintainerBase*)self, signal);
 }
 
-int32_t k_viewstatemaintainerbase_qbase_receivers(void* self, const char* signal) {
-    return KViewStateMaintainerBase_QBaseReceivers((KViewStateMaintainerBase*)self, signal);
+int32_t k_viewstatemaintainerbase_super_receivers(void* self, const char* signal) {
+    return KViewStateMaintainerBase_SuperReceivers((KViewStateMaintainerBase*)self, signal);
 }
 
 void k_viewstatemaintainerbase_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -447,8 +447,8 @@ bool k_viewstatemaintainerbase_is_signal_connected(void* self, void* signal) {
     return KViewStateMaintainerBase_IsSignalConnected((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
-bool k_viewstatemaintainerbase_qbase_is_signal_connected(void* self, void* signal) {
-    return KViewStateMaintainerBase_QBaseIsSignalConnected((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
+bool k_viewstatemaintainerbase_super_is_signal_connected(void* self, void* signal) {
+    return KViewStateMaintainerBase_SuperIsSignalConnected((KViewStateMaintainerBase*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstatemaintainerbase_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

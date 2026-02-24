@@ -26,8 +26,8 @@ void k_nscore__providersmodel_on_meta_object(void* self, const QMetaObject* (*ca
     KNSCore__ProvidersModel_OnMetaObject((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__providersmodel_qbase_meta_object(void* self) {
-    return KNSCore__ProvidersModel_QBaseMetaObject((KNSCore__ProvidersModel*)self);
+const QMetaObject* k_nscore__providersmodel_super_meta_object(void* self) {
+    return KNSCore__ProvidersModel_SuperMetaObject((KNSCore__ProvidersModel*)self);
 }
 
 void* k_nscore__providersmodel_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_nscore__providersmodel_on_metacast(void* self, void* (*callback)(void*, c
     KNSCore__ProvidersModel_OnMetacast((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-void* k_nscore__providersmodel_qbase_metacast(void* self, const char* param1) {
-    return KNSCore__ProvidersModel_QBaseMetacast((KNSCore__ProvidersModel*)self, param1);
+void* k_nscore__providersmodel_super_metacast(void* self, const char* param1) {
+    return KNSCore__ProvidersModel_SuperMetacast((KNSCore__ProvidersModel*)self, param1);
 }
 
 int32_t k_nscore__providersmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_nscore__providersmodel_on_metacall(void* self, int32_t (*callback)(void*,
     KNSCore__ProvidersModel_OnMetacall((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__providersmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSCore__ProvidersModel_QBaseMetacall((KNSCore__ProvidersModel*)self, param1, param2, param3);
+int32_t k_nscore__providersmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSCore__ProvidersModel_SuperMetacall((KNSCore__ProvidersModel*)self, param1, param2, param3);
 }
 
 const char* k_nscore__providersmodel_tr(const char* s) {
@@ -98,9 +98,9 @@ void k_nscore__providersmodel_on_role_names(void* self, libqt_map /* of int to c
     KNSCore__ProvidersModel_OnRoleNames((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_nscore__providersmodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_nscore__providersmodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KNSCore__ProvidersModel_QBaseRoleNames((KNSCore__ProvidersModel*)self);
+    libqt_map _out = KNSCore__ProvidersModel_SuperRoleNames((KNSCore__ProvidersModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -139,8 +139,8 @@ void k_nscore__providersmodel_on_data(void* self, QVariant* (*callback)(void*, v
     KNSCore__ProvidersModel_OnData((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_nscore__providersmodel_qbase_data(void* self, void* index, int role) {
-    return KNSCore__ProvidersModel_QBaseData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, role);
+QVariant* k_nscore__providersmodel_super_data(void* self, void* index, int role) {
+    return KNSCore__ProvidersModel_SuperData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, role);
 }
 
 int32_t k_nscore__providersmodel_row_count(void* self, void* parent) {
@@ -151,8 +151,8 @@ void k_nscore__providersmodel_on_row_count(void* self, int32_t (*callback)(void*
     KNSCore__ProvidersModel_OnRowCount((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__providersmodel_qbase_row_count(void* self, void* parent) {
-    return KNSCore__ProvidersModel_QBaseRowCount((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
+int32_t k_nscore__providersmodel_super_row_count(void* self, void* parent) {
+    return KNSCore__ProvidersModel_SuperRowCount((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
 }
 
 QObject* k_nscore__providersmodel_engine(void* self) {
@@ -193,8 +193,8 @@ void k_nscore__providersmodel_on_parent(void* self, QModelIndex* (*callback)(voi
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_nscore__providersmodel_qbase_parent(void* self, void* child) {
-    return QAbstractItemModel_QBaseParent((QAbstractItemModel*)self, (QModelIndex*)child);
+QModelIndex* k_nscore__providersmodel_super_parent(void* self, void* child) {
+    return QAbstractItemModel_SuperParent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
 int32_t k_nscore__providersmodel_column_count(void* self, void* parent) {
@@ -205,8 +205,8 @@ void k_nscore__providersmodel_on_column_count(void* self, int32_t (*callback)(vo
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__providersmodel_qbase_column_count(void* self, void* parent) {
-    return QAbstractItemModel_QBaseColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
+int32_t k_nscore__providersmodel_super_column_count(void* self, void* parent) {
+    return QAbstractItemModel_SuperColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_nscore__providersmodel_has_children(void* self, void* parent) {
@@ -217,8 +217,8 @@ void k_nscore__providersmodel_on_has_children(void* self, bool (*callback)(void*
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_nscore__providersmodel_qbase_has_children(void* self, void* parent) {
-    return QAbstractItemModel_QBaseHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_has_children(void* self, void* parent) {
+    return QAbstractItemModel_SuperHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_nscore__providersmodel_insert_row(void* self, int row) {
@@ -556,8 +556,8 @@ QModelIndex* k_nscore__providersmodel_index(void* self, int row, int column, voi
     return KNSCore__ProvidersModel_Index((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_nscore__providersmodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KNSCore__ProvidersModel_QBaseIndex((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_nscore__providersmodel_super_index(void* self, int row, int column, void* parent) {
+    return KNSCore__ProvidersModel_SuperIndex((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -568,8 +568,8 @@ QModelIndex* k_nscore__providersmodel_sibling(void* self, int row, int column, v
     return KNSCore__ProvidersModel_Sibling((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_nscore__providersmodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KNSCore__ProvidersModel_QBaseSibling((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_nscore__providersmodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KNSCore__ProvidersModel_SuperSibling((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_nscore__providersmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -580,8 +580,8 @@ bool k_nscore__providersmodel_drop_mime_data(void* self, void* data, int32_t act
     return KNSCore__ProvidersModel_DropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KNSCore__ProvidersModel_QBaseDropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KNSCore__ProvidersModel_SuperDropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -592,8 +592,8 @@ int32_t k_nscore__providersmodel_flags(void* self, void* index) {
     return KNSCore__ProvidersModel_Flags((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_nscore__providersmodel_qbase_flags(void* self, void* index) {
-    return KNSCore__ProvidersModel_QBaseFlags((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
+int32_t k_nscore__providersmodel_super_flags(void* self, void* index) {
+    return KNSCore__ProvidersModel_SuperFlags((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
 void k_nscore__providersmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -604,8 +604,8 @@ bool k_nscore__providersmodel_set_data(void* self, void* index, void* value, int
     return KNSCore__ProvidersModel_SetData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_nscore__providersmodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KNSCore__ProvidersModel_QBaseSetData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_nscore__providersmodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KNSCore__ProvidersModel_SuperSetData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_nscore__providersmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -616,8 +616,8 @@ QVariant* k_nscore__providersmodel_header_data(void* self, int section, int32_t 
     return KNSCore__ProvidersModel_HeaderData((KNSCore__ProvidersModel*)self, section, orientation, role);
 }
 
-QVariant* k_nscore__providersmodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KNSCore__ProvidersModel_QBaseHeaderData((KNSCore__ProvidersModel*)self, section, orientation, role);
+QVariant* k_nscore__providersmodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KNSCore__ProvidersModel_SuperHeaderData((KNSCore__ProvidersModel*)self, section, orientation, role);
 }
 
 void k_nscore__providersmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -628,8 +628,8 @@ bool k_nscore__providersmodel_set_header_data(void* self, int section, int32_t o
     return KNSCore__ProvidersModel_SetHeaderData((KNSCore__ProvidersModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_nscore__providersmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KNSCore__ProvidersModel_QBaseSetHeaderData((KNSCore__ProvidersModel*)self, section, orientation, (QVariant*)value, role);
+bool k_nscore__providersmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KNSCore__ProvidersModel_SuperSetHeaderData((KNSCore__ProvidersModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_nscore__providersmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -646,9 +646,9 @@ libqt_map /* of int to QVariant* */ k_nscore__providersmodel_item_data(void* sel
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_nscore__providersmodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_nscore__providersmodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KNSCore__ProvidersModel_QBaseItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
+    libqt_map _out = KNSCore__ProvidersModel_SuperItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -689,7 +689,7 @@ bool k_nscore__providersmodel_set_item_data(void* self, void* index, libqt_map /
     return _out;
 }
 
-bool k_nscore__providersmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_nscore__providersmodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -712,7 +712,7 @@ bool k_nscore__providersmodel_qbase_set_item_data(void* self, void* index, libqt
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KNSCore__ProvidersModel_QBaseSetItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KNSCore__ProvidersModel_SuperSetItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -726,8 +726,8 @@ bool k_nscore__providersmodel_clear_item_data(void* self, void* index) {
     return KNSCore__ProvidersModel_ClearItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
-bool k_nscore__providersmodel_qbase_clear_item_data(void* self, void* index) {
-    return KNSCore__ProvidersModel_QBaseClearItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
+bool k_nscore__providersmodel_super_clear_item_data(void* self, void* index) {
+    return KNSCore__ProvidersModel_SuperClearItemData((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
 void k_nscore__providersmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -753,8 +753,8 @@ const char** k_nscore__providersmodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_nscore__providersmodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KNSCore__ProvidersModel_QBaseMimeTypes((KNSCore__ProvidersModel*)self);
+const char** k_nscore__providersmodel_super_mime_types(void* self) {
+    libqt_list _arr = KNSCore__ProvidersModel_SuperMimeTypes((KNSCore__ProvidersModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -780,8 +780,8 @@ QMimeData* k_nscore__providersmodel_mime_data(void* self, libqt_list /* of QMode
     return KNSCore__ProvidersModel_MimeData((KNSCore__ProvidersModel*)self, indexes);
 }
 
-QMimeData* k_nscore__providersmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KNSCore__ProvidersModel_QBaseMimeData((KNSCore__ProvidersModel*)self, indexes);
+QMimeData* k_nscore__providersmodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KNSCore__ProvidersModel_SuperMimeData((KNSCore__ProvidersModel*)self, indexes);
 }
 
 void k_nscore__providersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -792,8 +792,8 @@ bool k_nscore__providersmodel_can_drop_mime_data(void* self, void* data, int32_t
     return KNSCore__ProvidersModel_CanDropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KNSCore__ProvidersModel_QBaseCanDropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KNSCore__ProvidersModel_SuperCanDropMimeData((KNSCore__ProvidersModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -804,8 +804,8 @@ int32_t k_nscore__providersmodel_supported_drop_actions(void* self) {
     return KNSCore__ProvidersModel_SupportedDropActions((KNSCore__ProvidersModel*)self);
 }
 
-int32_t k_nscore__providersmodel_qbase_supported_drop_actions(void* self) {
-    return KNSCore__ProvidersModel_QBaseSupportedDropActions((KNSCore__ProvidersModel*)self);
+int32_t k_nscore__providersmodel_super_supported_drop_actions(void* self) {
+    return KNSCore__ProvidersModel_SuperSupportedDropActions((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -816,8 +816,8 @@ int32_t k_nscore__providersmodel_supported_drag_actions(void* self) {
     return KNSCore__ProvidersModel_SupportedDragActions((KNSCore__ProvidersModel*)self);
 }
 
-int32_t k_nscore__providersmodel_qbase_supported_drag_actions(void* self) {
-    return KNSCore__ProvidersModel_QBaseSupportedDragActions((KNSCore__ProvidersModel*)self);
+int32_t k_nscore__providersmodel_super_supported_drag_actions(void* self) {
+    return KNSCore__ProvidersModel_SuperSupportedDragActions((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -828,8 +828,8 @@ bool k_nscore__providersmodel_insert_rows(void* self, int row, int count, void* 
     return KNSCore__ProvidersModel_InsertRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KNSCore__ProvidersModel_QBaseInsertRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KNSCore__ProvidersModel_SuperInsertRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -840,8 +840,8 @@ bool k_nscore__providersmodel_insert_columns(void* self, int column, int count, 
     return KNSCore__ProvidersModel_InsertColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KNSCore__ProvidersModel_QBaseInsertColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KNSCore__ProvidersModel_SuperInsertColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -852,8 +852,8 @@ bool k_nscore__providersmodel_remove_rows(void* self, int row, int count, void* 
     return KNSCore__ProvidersModel_RemoveRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KNSCore__ProvidersModel_QBaseRemoveRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KNSCore__ProvidersModel_SuperRemoveRows((KNSCore__ProvidersModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -864,8 +864,8 @@ bool k_nscore__providersmodel_remove_columns(void* self, int column, int count, 
     return KNSCore__ProvidersModel_RemoveColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KNSCore__ProvidersModel_QBaseRemoveColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KNSCore__ProvidersModel_SuperRemoveColumns((KNSCore__ProvidersModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -876,8 +876,8 @@ bool k_nscore__providersmodel_move_rows(void* self, void* sourceParent, int sour
     return KNSCore__ProvidersModel_MoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_nscore__providersmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KNSCore__ProvidersModel_QBaseMoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_nscore__providersmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KNSCore__ProvidersModel_SuperMoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_nscore__providersmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -888,8 +888,8 @@ bool k_nscore__providersmodel_move_columns(void* self, void* sourceParent, int s
     return KNSCore__ProvidersModel_MoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_nscore__providersmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KNSCore__ProvidersModel_QBaseMoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_nscore__providersmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KNSCore__ProvidersModel_SuperMoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_nscore__providersmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -900,8 +900,8 @@ void k_nscore__providersmodel_fetch_more(void* self, void* parent) {
     KNSCore__ProvidersModel_FetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
 }
 
-void k_nscore__providersmodel_qbase_fetch_more(void* self, void* parent) {
-    KNSCore__ProvidersModel_QBaseFetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
+void k_nscore__providersmodel_super_fetch_more(void* self, void* parent) {
+    KNSCore__ProvidersModel_SuperFetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -912,8 +912,8 @@ bool k_nscore__providersmodel_can_fetch_more(void* self, void* parent) {
     return KNSCore__ProvidersModel_CanFetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
 }
 
-bool k_nscore__providersmodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KNSCore__ProvidersModel_QBaseCanFetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
+bool k_nscore__providersmodel_super_can_fetch_more(void* self, void* parent) {
+    return KNSCore__ProvidersModel_SuperCanFetchMore((KNSCore__ProvidersModel*)self, (QModelIndex*)parent);
 }
 
 void k_nscore__providersmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -924,8 +924,8 @@ void k_nscore__providersmodel_sort(void* self, int column, int32_t order) {
     KNSCore__ProvidersModel_Sort((KNSCore__ProvidersModel*)self, column, order);
 }
 
-void k_nscore__providersmodel_qbase_sort(void* self, int column, int32_t order) {
-    KNSCore__ProvidersModel_QBaseSort((KNSCore__ProvidersModel*)self, column, order);
+void k_nscore__providersmodel_super_sort(void* self, int column, int32_t order) {
+    KNSCore__ProvidersModel_SuperSort((KNSCore__ProvidersModel*)self, column, order);
 }
 
 void k_nscore__providersmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -936,8 +936,8 @@ QModelIndex* k_nscore__providersmodel_buddy(void* self, void* index) {
     return KNSCore__ProvidersModel_Buddy((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_nscore__providersmodel_qbase_buddy(void* self, void* index) {
-    return KNSCore__ProvidersModel_QBaseBuddy((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
+QModelIndex* k_nscore__providersmodel_super_buddy(void* self, void* index) {
+    return KNSCore__ProvidersModel_SuperBuddy((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
 void k_nscore__providersmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -949,8 +949,8 @@ libqt_list /* of QModelIndex* */ k_nscore__providersmodel_match(void* self, void
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KNSCore__ProvidersModel_QBaseMatch((KNSCore__ProvidersModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_nscore__providersmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KNSCore__ProvidersModel_SuperMatch((KNSCore__ProvidersModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -962,8 +962,8 @@ QSize* k_nscore__providersmodel_span(void* self, void* index) {
     return KNSCore__ProvidersModel_Span((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_nscore__providersmodel_qbase_span(void* self, void* index) {
-    return KNSCore__ProvidersModel_QBaseSpan((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
+QSize* k_nscore__providersmodel_super_span(void* self, void* index) {
+    return KNSCore__ProvidersModel_SuperSpan((KNSCore__ProvidersModel*)self, (QModelIndex*)index);
 }
 
 void k_nscore__providersmodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -974,8 +974,8 @@ void k_nscore__providersmodel_multi_data(void* self, void* index, void* roleData
     KNSCore__ProvidersModel_MultiData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_nscore__providersmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KNSCore__ProvidersModel_QBaseMultiData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_nscore__providersmodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KNSCore__ProvidersModel_SuperMultiData((KNSCore__ProvidersModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_nscore__providersmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -986,8 +986,8 @@ bool k_nscore__providersmodel_submit(void* self) {
     return KNSCore__ProvidersModel_Submit((KNSCore__ProvidersModel*)self);
 }
 
-bool k_nscore__providersmodel_qbase_submit(void* self) {
-    return KNSCore__ProvidersModel_QBaseSubmit((KNSCore__ProvidersModel*)self);
+bool k_nscore__providersmodel_super_submit(void* self) {
+    return KNSCore__ProvidersModel_SuperSubmit((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_submit(void* self, bool (*callback)()) {
@@ -998,8 +998,8 @@ void k_nscore__providersmodel_revert(void* self) {
     KNSCore__ProvidersModel_Revert((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_revert(void* self) {
-    KNSCore__ProvidersModel_QBaseRevert((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_revert(void* self) {
+    KNSCore__ProvidersModel_SuperRevert((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_revert(void* self, void (*callback)()) {
@@ -1010,8 +1010,8 @@ void k_nscore__providersmodel_reset_internal_data(void* self) {
     KNSCore__ProvidersModel_ResetInternalData((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_reset_internal_data(void* self) {
-    KNSCore__ProvidersModel_QBaseResetInternalData((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_reset_internal_data(void* self) {
+    KNSCore__ProvidersModel_SuperResetInternalData((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1022,8 +1022,8 @@ bool k_nscore__providersmodel_event(void* self, void* event) {
     return KNSCore__ProvidersModel_Event((KNSCore__ProvidersModel*)self, (QEvent*)event);
 }
 
-bool k_nscore__providersmodel_qbase_event(void* self, void* event) {
-    return KNSCore__ProvidersModel_QBaseEvent((KNSCore__ProvidersModel*)self, (QEvent*)event);
+bool k_nscore__providersmodel_super_event(void* self, void* event) {
+    return KNSCore__ProvidersModel_SuperEvent((KNSCore__ProvidersModel*)self, (QEvent*)event);
 }
 
 void k_nscore__providersmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1034,8 +1034,8 @@ bool k_nscore__providersmodel_event_filter(void* self, void* watched, void* even
     return KNSCore__ProvidersModel_EventFilter((KNSCore__ProvidersModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nscore__providersmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSCore__ProvidersModel_QBaseEventFilter((KNSCore__ProvidersModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_nscore__providersmodel_super_event_filter(void* self, void* watched, void* event) {
+    return KNSCore__ProvidersModel_SuperEventFilter((KNSCore__ProvidersModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nscore__providersmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1046,8 +1046,8 @@ void k_nscore__providersmodel_timer_event(void* self, void* event) {
     KNSCore__ProvidersModel_TimerEvent((KNSCore__ProvidersModel*)self, (QTimerEvent*)event);
 }
 
-void k_nscore__providersmodel_qbase_timer_event(void* self, void* event) {
-    KNSCore__ProvidersModel_QBaseTimerEvent((KNSCore__ProvidersModel*)self, (QTimerEvent*)event);
+void k_nscore__providersmodel_super_timer_event(void* self, void* event) {
+    KNSCore__ProvidersModel_SuperTimerEvent((KNSCore__ProvidersModel*)self, (QTimerEvent*)event);
 }
 
 void k_nscore__providersmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1058,8 +1058,8 @@ void k_nscore__providersmodel_child_event(void* self, void* event) {
     KNSCore__ProvidersModel_ChildEvent((KNSCore__ProvidersModel*)self, (QChildEvent*)event);
 }
 
-void k_nscore__providersmodel_qbase_child_event(void* self, void* event) {
-    KNSCore__ProvidersModel_QBaseChildEvent((KNSCore__ProvidersModel*)self, (QChildEvent*)event);
+void k_nscore__providersmodel_super_child_event(void* self, void* event) {
+    KNSCore__ProvidersModel_SuperChildEvent((KNSCore__ProvidersModel*)self, (QChildEvent*)event);
 }
 
 void k_nscore__providersmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1070,8 +1070,8 @@ void k_nscore__providersmodel_custom_event(void* self, void* event) {
     KNSCore__ProvidersModel_CustomEvent((KNSCore__ProvidersModel*)self, (QEvent*)event);
 }
 
-void k_nscore__providersmodel_qbase_custom_event(void* self, void* event) {
-    KNSCore__ProvidersModel_QBaseCustomEvent((KNSCore__ProvidersModel*)self, (QEvent*)event);
+void k_nscore__providersmodel_super_custom_event(void* self, void* event) {
+    KNSCore__ProvidersModel_SuperCustomEvent((KNSCore__ProvidersModel*)self, (QEvent*)event);
 }
 
 void k_nscore__providersmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1082,8 +1082,8 @@ void k_nscore__providersmodel_connect_notify(void* self, void* signal) {
     KNSCore__ProvidersModel_ConnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__providersmodel_qbase_connect_notify(void* self, void* signal) {
-    KNSCore__ProvidersModel_QBaseConnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
+void k_nscore__providersmodel_super_connect_notify(void* self, void* signal) {
+    KNSCore__ProvidersModel_SuperConnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__providersmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1094,8 +1094,8 @@ void k_nscore__providersmodel_disconnect_notify(void* self, void* signal) {
     KNSCore__ProvidersModel_DisconnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__providersmodel_qbase_disconnect_notify(void* self, void* signal) {
-    KNSCore__ProvidersModel_QBaseDisconnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
+void k_nscore__providersmodel_super_disconnect_notify(void* self, void* signal) {
+    KNSCore__ProvidersModel_SuperDisconnectNotify((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__providersmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1106,8 +1106,8 @@ QModelIndex* k_nscore__providersmodel_create_index(void* self, int row, int colu
     return KNSCore__ProvidersModel_CreateIndex((KNSCore__ProvidersModel*)self, row, column);
 }
 
-QModelIndex* k_nscore__providersmodel_qbase_create_index(void* self, int row, int column) {
-    return KNSCore__ProvidersModel_QBaseCreateIndex((KNSCore__ProvidersModel*)self, row, column);
+QModelIndex* k_nscore__providersmodel_super_create_index(void* self, int row, int column) {
+    return KNSCore__ProvidersModel_SuperCreateIndex((KNSCore__ProvidersModel*)self, row, column);
 }
 
 void k_nscore__providersmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1118,8 +1118,8 @@ void k_nscore__providersmodel_encode_data(void* self, libqt_list /* of QModelInd
     KNSCore__ProvidersModel_EncodeData((KNSCore__ProvidersModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_nscore__providersmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KNSCore__ProvidersModel_QBaseEncodeData((KNSCore__ProvidersModel*)self, indexes, (QDataStream*)stream);
+void k_nscore__providersmodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KNSCore__ProvidersModel_SuperEncodeData((KNSCore__ProvidersModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_nscore__providersmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1130,8 +1130,8 @@ bool k_nscore__providersmodel_decode_data(void* self, int row, int column, void*
     return KNSCore__ProvidersModel_DecodeData((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_nscore__providersmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KNSCore__ProvidersModel_QBaseDecodeData((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_nscore__providersmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KNSCore__ProvidersModel_SuperDecodeData((KNSCore__ProvidersModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_nscore__providersmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1142,8 +1142,8 @@ void k_nscore__providersmodel_begin_insert_rows(void* self, void* parent, int fi
     KNSCore__ProvidersModel_BeginInsertRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_nscore__providersmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KNSCore__ProvidersModel_QBaseBeginInsertRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
+void k_nscore__providersmodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KNSCore__ProvidersModel_SuperBeginInsertRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_nscore__providersmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1154,8 +1154,8 @@ void k_nscore__providersmodel_end_insert_rows(void* self) {
     KNSCore__ProvidersModel_EndInsertRows((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_insert_rows(void* self) {
-    KNSCore__ProvidersModel_QBaseEndInsertRows((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_insert_rows(void* self) {
+    KNSCore__ProvidersModel_SuperEndInsertRows((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1166,8 +1166,8 @@ void k_nscore__providersmodel_begin_remove_rows(void* self, void* parent, int fi
     KNSCore__ProvidersModel_BeginRemoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_nscore__providersmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KNSCore__ProvidersModel_QBaseBeginRemoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
+void k_nscore__providersmodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KNSCore__ProvidersModel_SuperBeginRemoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_nscore__providersmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1178,8 +1178,8 @@ void k_nscore__providersmodel_end_remove_rows(void* self) {
     KNSCore__ProvidersModel_EndRemoveRows((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_remove_rows(void* self) {
-    KNSCore__ProvidersModel_QBaseEndRemoveRows((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_remove_rows(void* self) {
+    KNSCore__ProvidersModel_SuperEndRemoveRows((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1190,8 +1190,8 @@ bool k_nscore__providersmodel_begin_move_rows(void* self, void* sourceParent, in
     return KNSCore__ProvidersModel_BeginMoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_nscore__providersmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KNSCore__ProvidersModel_QBaseBeginMoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_nscore__providersmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KNSCore__ProvidersModel_SuperBeginMoveRows((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_nscore__providersmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1202,8 +1202,8 @@ void k_nscore__providersmodel_end_move_rows(void* self) {
     KNSCore__ProvidersModel_EndMoveRows((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_move_rows(void* self) {
-    KNSCore__ProvidersModel_QBaseEndMoveRows((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_move_rows(void* self) {
+    KNSCore__ProvidersModel_SuperEndMoveRows((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1214,8 +1214,8 @@ void k_nscore__providersmodel_begin_insert_columns(void* self, void* parent, int
     KNSCore__ProvidersModel_BeginInsertColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_nscore__providersmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KNSCore__ProvidersModel_QBaseBeginInsertColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
+void k_nscore__providersmodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KNSCore__ProvidersModel_SuperBeginInsertColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_nscore__providersmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1226,8 +1226,8 @@ void k_nscore__providersmodel_end_insert_columns(void* self) {
     KNSCore__ProvidersModel_EndInsertColumns((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_insert_columns(void* self) {
-    KNSCore__ProvidersModel_QBaseEndInsertColumns((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_insert_columns(void* self) {
+    KNSCore__ProvidersModel_SuperEndInsertColumns((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1238,8 +1238,8 @@ void k_nscore__providersmodel_begin_remove_columns(void* self, void* parent, int
     KNSCore__ProvidersModel_BeginRemoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_nscore__providersmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KNSCore__ProvidersModel_QBaseBeginRemoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
+void k_nscore__providersmodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KNSCore__ProvidersModel_SuperBeginRemoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_nscore__providersmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1250,8 +1250,8 @@ void k_nscore__providersmodel_end_remove_columns(void* self) {
     KNSCore__ProvidersModel_EndRemoveColumns((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_remove_columns(void* self) {
-    KNSCore__ProvidersModel_QBaseEndRemoveColumns((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_remove_columns(void* self) {
+    KNSCore__ProvidersModel_SuperEndRemoveColumns((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1262,8 +1262,8 @@ bool k_nscore__providersmodel_begin_move_columns(void* self, void* sourceParent,
     return KNSCore__ProvidersModel_BeginMoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_nscore__providersmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KNSCore__ProvidersModel_QBaseBeginMoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_nscore__providersmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KNSCore__ProvidersModel_SuperBeginMoveColumns((KNSCore__ProvidersModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_nscore__providersmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1274,8 +1274,8 @@ void k_nscore__providersmodel_end_move_columns(void* self) {
     KNSCore__ProvidersModel_EndMoveColumns((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_move_columns(void* self) {
-    KNSCore__ProvidersModel_QBaseEndMoveColumns((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_move_columns(void* self) {
+    KNSCore__ProvidersModel_SuperEndMoveColumns((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1286,8 +1286,8 @@ void k_nscore__providersmodel_begin_reset_model(void* self) {
     KNSCore__ProvidersModel_BeginResetModel((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_begin_reset_model(void* self) {
-    KNSCore__ProvidersModel_QBaseBeginResetModel((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_begin_reset_model(void* self) {
+    KNSCore__ProvidersModel_SuperBeginResetModel((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1298,8 +1298,8 @@ void k_nscore__providersmodel_end_reset_model(void* self) {
     KNSCore__ProvidersModel_EndResetModel((KNSCore__ProvidersModel*)self);
 }
 
-void k_nscore__providersmodel_qbase_end_reset_model(void* self) {
-    KNSCore__ProvidersModel_QBaseEndResetModel((KNSCore__ProvidersModel*)self);
+void k_nscore__providersmodel_super_end_reset_model(void* self) {
+    KNSCore__ProvidersModel_SuperEndResetModel((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1310,8 +1310,8 @@ void k_nscore__providersmodel_change_persistent_index(void* self, void* from, vo
     KNSCore__ProvidersModel_ChangePersistentIndex((KNSCore__ProvidersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_nscore__providersmodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KNSCore__ProvidersModel_QBaseChangePersistentIndex((KNSCore__ProvidersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_nscore__providersmodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KNSCore__ProvidersModel_SuperChangePersistentIndex((KNSCore__ProvidersModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_nscore__providersmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1322,8 +1322,8 @@ void k_nscore__providersmodel_change_persistent_index_list(void* self, libqt_lis
     KNSCore__ProvidersModel_ChangePersistentIndexList((KNSCore__ProvidersModel*)self, from, to);
 }
 
-void k_nscore__providersmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KNSCore__ProvidersModel_QBaseChangePersistentIndexList((KNSCore__ProvidersModel*)self, from, to);
+void k_nscore__providersmodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KNSCore__ProvidersModel_SuperChangePersistentIndexList((KNSCore__ProvidersModel*)self, from, to);
 }
 
 void k_nscore__providersmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1335,8 +1335,8 @@ libqt_list /* of QModelIndex* */ k_nscore__providersmodel_persistent_index_list(
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KNSCore__ProvidersModel_QBasePersistentIndexList((KNSCore__ProvidersModel*)self);
+libqt_list /* of QModelIndex* */ k_nscore__providersmodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KNSCore__ProvidersModel_SuperPersistentIndexList((KNSCore__ProvidersModel*)self);
     return _arr;
 }
 
@@ -1348,8 +1348,8 @@ QObject* k_nscore__providersmodel_sender(void* self) {
     return KNSCore__ProvidersModel_Sender((KNSCore__ProvidersModel*)self);
 }
 
-QObject* k_nscore__providersmodel_qbase_sender(void* self) {
-    return KNSCore__ProvidersModel_QBaseSender((KNSCore__ProvidersModel*)self);
+QObject* k_nscore__providersmodel_super_sender(void* self) {
+    return KNSCore__ProvidersModel_SuperSender((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1360,8 +1360,8 @@ int32_t k_nscore__providersmodel_sender_signal_index(void* self) {
     return KNSCore__ProvidersModel_SenderSignalIndex((KNSCore__ProvidersModel*)self);
 }
 
-int32_t k_nscore__providersmodel_qbase_sender_signal_index(void* self) {
-    return KNSCore__ProvidersModel_QBaseSenderSignalIndex((KNSCore__ProvidersModel*)self);
+int32_t k_nscore__providersmodel_super_sender_signal_index(void* self) {
+    return KNSCore__ProvidersModel_SuperSenderSignalIndex((KNSCore__ProvidersModel*)self);
 }
 
 void k_nscore__providersmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1372,8 +1372,8 @@ int32_t k_nscore__providersmodel_receivers(void* self, const char* signal) {
     return KNSCore__ProvidersModel_Receivers((KNSCore__ProvidersModel*)self, signal);
 }
 
-int32_t k_nscore__providersmodel_qbase_receivers(void* self, const char* signal) {
-    return KNSCore__ProvidersModel_QBaseReceivers((KNSCore__ProvidersModel*)self, signal);
+int32_t k_nscore__providersmodel_super_receivers(void* self, const char* signal) {
+    return KNSCore__ProvidersModel_SuperReceivers((KNSCore__ProvidersModel*)self, signal);
 }
 
 void k_nscore__providersmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1384,8 +1384,8 @@ bool k_nscore__providersmodel_is_signal_connected(void* self, void* signal) {
     return KNSCore__ProvidersModel_IsSignalConnected((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_nscore__providersmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSCore__ProvidersModel_QBaseIsSignalConnected((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
+bool k_nscore__providersmodel_super_is_signal_connected(void* self, void* signal) {
+    return KNSCore__ProvidersModel_SuperIsSignalConnected((KNSCore__ProvidersModel*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__providersmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

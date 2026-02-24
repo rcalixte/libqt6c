@@ -23,8 +23,8 @@ void q_horizontalbarseries_on_meta_object(void* self, const QMetaObject* (*callb
     QHorizontalBarSeries_OnMetaObject((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_horizontalbarseries_qbase_meta_object(void* self) {
-    return QHorizontalBarSeries_QBaseMetaObject((QHorizontalBarSeries*)self);
+const QMetaObject* q_horizontalbarseries_super_meta_object(void* self) {
+    return QHorizontalBarSeries_SuperMetaObject((QHorizontalBarSeries*)self);
 }
 
 void* q_horizontalbarseries_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_horizontalbarseries_on_metacast(void* self, void* (*callback)(void*, cons
     QHorizontalBarSeries_OnMetacast((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 
-void* q_horizontalbarseries_qbase_metacast(void* self, const char* param1) {
-    return QHorizontalBarSeries_QBaseMetacast((QHorizontalBarSeries*)self, param1);
+void* q_horizontalbarseries_super_metacast(void* self, const char* param1) {
+    return QHorizontalBarSeries_SuperMetacast((QHorizontalBarSeries*)self, param1);
 }
 
 int32_t q_horizontalbarseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_horizontalbarseries_on_metacall(void* self, int32_t (*callback)(void*, in
     QHorizontalBarSeries_OnMetacall((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_horizontalbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QHorizontalBarSeries_QBaseMetacall((QHorizontalBarSeries*)self, param1, param2, param3);
+int32_t q_horizontalbarseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QHorizontalBarSeries_SuperMetacall((QHorizontalBarSeries*)self, param1, param2, param3);
 }
 
 const char* q_horizontalbarseries_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_horizontalbarseries_on_type(void* self, int32_t (*callback)()) {
     QHorizontalBarSeries_OnType((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_horizontalbarseries_qbase_type(void* self) {
-    return QHorizontalBarSeries_QBaseType((QHorizontalBarSeries*)self);
+int32_t q_horizontalbarseries_super_type(void* self) {
+    return QHorizontalBarSeries_SuperType((QHorizontalBarSeries*)self);
 }
 
 const char* q_horizontalbarseries_tr2(const char* s, const char* c) {
@@ -591,8 +591,8 @@ bool q_horizontalbarseries_event(void* self, void* event) {
     return QHorizontalBarSeries_Event((QHorizontalBarSeries*)self, (QEvent*)event);
 }
 
-bool q_horizontalbarseries_qbase_event(void* self, void* event) {
-    return QHorizontalBarSeries_QBaseEvent((QHorizontalBarSeries*)self, (QEvent*)event);
+bool q_horizontalbarseries_super_event(void* self, void* event) {
+    return QHorizontalBarSeries_SuperEvent((QHorizontalBarSeries*)self, (QEvent*)event);
 }
 
 void q_horizontalbarseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ bool q_horizontalbarseries_event_filter(void* self, void* watched, void* event) 
     return QHorizontalBarSeries_EventFilter((QHorizontalBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_horizontalbarseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QHorizontalBarSeries_QBaseEventFilter((QHorizontalBarSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_horizontalbarseries_super_event_filter(void* self, void* watched, void* event) {
+    return QHorizontalBarSeries_SuperEventFilter((QHorizontalBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_horizontalbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -615,8 +615,8 @@ void q_horizontalbarseries_timer_event(void* self, void* event) {
     QHorizontalBarSeries_TimerEvent((QHorizontalBarSeries*)self, (QTimerEvent*)event);
 }
 
-void q_horizontalbarseries_qbase_timer_event(void* self, void* event) {
-    QHorizontalBarSeries_QBaseTimerEvent((QHorizontalBarSeries*)self, (QTimerEvent*)event);
+void q_horizontalbarseries_super_timer_event(void* self, void* event) {
+    QHorizontalBarSeries_SuperTimerEvent((QHorizontalBarSeries*)self, (QTimerEvent*)event);
 }
 
 void q_horizontalbarseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -627,8 +627,8 @@ void q_horizontalbarseries_child_event(void* self, void* event) {
     QHorizontalBarSeries_ChildEvent((QHorizontalBarSeries*)self, (QChildEvent*)event);
 }
 
-void q_horizontalbarseries_qbase_child_event(void* self, void* event) {
-    QHorizontalBarSeries_QBaseChildEvent((QHorizontalBarSeries*)self, (QChildEvent*)event);
+void q_horizontalbarseries_super_child_event(void* self, void* event) {
+    QHorizontalBarSeries_SuperChildEvent((QHorizontalBarSeries*)self, (QChildEvent*)event);
 }
 
 void q_horizontalbarseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -639,8 +639,8 @@ void q_horizontalbarseries_custom_event(void* self, void* event) {
     QHorizontalBarSeries_CustomEvent((QHorizontalBarSeries*)self, (QEvent*)event);
 }
 
-void q_horizontalbarseries_qbase_custom_event(void* self, void* event) {
-    QHorizontalBarSeries_QBaseCustomEvent((QHorizontalBarSeries*)self, (QEvent*)event);
+void q_horizontalbarseries_super_custom_event(void* self, void* event) {
+    QHorizontalBarSeries_SuperCustomEvent((QHorizontalBarSeries*)self, (QEvent*)event);
 }
 
 void q_horizontalbarseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -651,8 +651,8 @@ void q_horizontalbarseries_connect_notify(void* self, void* signal) {
     QHorizontalBarSeries_ConnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_horizontalbarseries_qbase_connect_notify(void* self, void* signal) {
-    QHorizontalBarSeries_QBaseConnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
+void q_horizontalbarseries_super_connect_notify(void* self, void* signal) {
+    QHorizontalBarSeries_SuperConnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_horizontalbarseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -663,8 +663,8 @@ void q_horizontalbarseries_disconnect_notify(void* self, void* signal) {
     QHorizontalBarSeries_DisconnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_horizontalbarseries_qbase_disconnect_notify(void* self, void* signal) {
-    QHorizontalBarSeries_QBaseDisconnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
+void q_horizontalbarseries_super_disconnect_notify(void* self, void* signal) {
+    QHorizontalBarSeries_SuperDisconnectNotify((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_horizontalbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -675,8 +675,8 @@ QObject* q_horizontalbarseries_sender(void* self) {
     return QHorizontalBarSeries_Sender((QHorizontalBarSeries*)self);
 }
 
-QObject* q_horizontalbarseries_qbase_sender(void* self) {
-    return QHorizontalBarSeries_QBaseSender((QHorizontalBarSeries*)self);
+QObject* q_horizontalbarseries_super_sender(void* self) {
+    return QHorizontalBarSeries_SuperSender((QHorizontalBarSeries*)self);
 }
 
 void q_horizontalbarseries_on_sender(void* self, QObject* (*callback)()) {
@@ -687,8 +687,8 @@ int32_t q_horizontalbarseries_sender_signal_index(void* self) {
     return QHorizontalBarSeries_SenderSignalIndex((QHorizontalBarSeries*)self);
 }
 
-int32_t q_horizontalbarseries_qbase_sender_signal_index(void* self) {
-    return QHorizontalBarSeries_QBaseSenderSignalIndex((QHorizontalBarSeries*)self);
+int32_t q_horizontalbarseries_super_sender_signal_index(void* self) {
+    return QHorizontalBarSeries_SuperSenderSignalIndex((QHorizontalBarSeries*)self);
 }
 
 void q_horizontalbarseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -699,8 +699,8 @@ int32_t q_horizontalbarseries_receivers(void* self, const char* signal) {
     return QHorizontalBarSeries_Receivers((QHorizontalBarSeries*)self, signal);
 }
 
-int32_t q_horizontalbarseries_qbase_receivers(void* self, const char* signal) {
-    return QHorizontalBarSeries_QBaseReceivers((QHorizontalBarSeries*)self, signal);
+int32_t q_horizontalbarseries_super_receivers(void* self, const char* signal) {
+    return QHorizontalBarSeries_SuperReceivers((QHorizontalBarSeries*)self, signal);
 }
 
 void q_horizontalbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -711,8 +711,8 @@ bool q_horizontalbarseries_is_signal_connected(void* self, void* signal) {
     return QHorizontalBarSeries_IsSignalConnected((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_horizontalbarseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QHorizontalBarSeries_QBaseIsSignalConnected((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
+bool q_horizontalbarseries_super_is_signal_connected(void* self, void* signal) {
+    return QHorizontalBarSeries_SuperIsSignalConnected((QHorizontalBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_horizontalbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

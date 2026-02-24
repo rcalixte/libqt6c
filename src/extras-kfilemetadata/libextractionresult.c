@@ -44,8 +44,8 @@ void k_filemetadata__extractionresult_on_append(void* self, void (*callback)(voi
     KFileMetaData__ExtractionResult_OnAppend((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractionresult_qbase_append(void* self, const char* text) {
-    KFileMetaData__ExtractionResult_QBaseAppend((KFileMetaData__ExtractionResult*)self, qstring(text));
+void k_filemetadata__extractionresult_super_append(void* self, const char* text) {
+    KFileMetaData__ExtractionResult_SuperAppend((KFileMetaData__ExtractionResult*)self, qstring(text));
 }
 
 void k_filemetadata__extractionresult_add(void* self, int32_t property, void* value) {
@@ -56,8 +56,8 @@ void k_filemetadata__extractionresult_on_add(void* self, void (*callback)(void*,
     KFileMetaData__ExtractionResult_OnAdd((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractionresult_qbase_add(void* self, int32_t property, void* value) {
-    KFileMetaData__ExtractionResult_QBaseAdd((KFileMetaData__ExtractionResult*)self, property, (QVariant*)value);
+void k_filemetadata__extractionresult_super_add(void* self, int32_t property, void* value) {
+    KFileMetaData__ExtractionResult_SuperAdd((KFileMetaData__ExtractionResult*)self, property, (QVariant*)value);
 }
 
 void k_filemetadata__extractionresult_add_type(void* self, int32_t type) {
@@ -68,8 +68,8 @@ void k_filemetadata__extractionresult_on_add_type(void* self, void (*callback)(v
     KFileMetaData__ExtractionResult_OnAddType((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractionresult_qbase_add_type(void* self, int32_t type) {
-    KFileMetaData__ExtractionResult_QBaseAddType((KFileMetaData__ExtractionResult*)self, type);
+void k_filemetadata__extractionresult_super_add_type(void* self, int32_t type) {
+    KFileMetaData__ExtractionResult_SuperAddType((KFileMetaData__ExtractionResult*)self, type);
 }
 
 libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__extractionresult_image_data(void* self) {

@@ -32,8 +32,8 @@ void q_historystate_on_meta_object(void* self, const QMetaObject* (*callback)())
     QHistoryState_OnMetaObject((QHistoryState*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_historystate_qbase_meta_object(void* self) {
-    return QHistoryState_QBaseMetaObject((QHistoryState*)self);
+const QMetaObject* q_historystate_super_meta_object(void* self) {
+    return QHistoryState_SuperMetaObject((QHistoryState*)self);
 }
 
 void* q_historystate_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_historystate_on_metacast(void* self, void* (*callback)(void*, const char*
     QHistoryState_OnMetacast((QHistoryState*)self, (intptr_t)callback);
 }
 
-void* q_historystate_qbase_metacast(void* self, const char* param1) {
-    return QHistoryState_QBaseMetacast((QHistoryState*)self, param1);
+void* q_historystate_super_metacast(void* self, const char* param1) {
+    return QHistoryState_SuperMetacast((QHistoryState*)self, param1);
 }
 
 int32_t q_historystate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_historystate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QHistoryState_OnMetacall((QHistoryState*)self, (intptr_t)callback);
 }
 
-int32_t q_historystate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QHistoryState_QBaseMetacall((QHistoryState*)self, param1, param2, param3);
+int32_t q_historystate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QHistoryState_SuperMetacall((QHistoryState*)self, param1, param2, param3);
 }
 
 const char* q_historystate_tr(const char* s) {
@@ -99,8 +99,8 @@ void q_historystate_on_on_entry(void* self, void (*callback)(void*, void*)) {
     QHistoryState_OnOnEntry((QHistoryState*)self, (intptr_t)callback);
 }
 
-void q_historystate_qbase_on_entry(void* self, void* event) {
-    QHistoryState_QBaseOnEntry((QHistoryState*)self, (QEvent*)event);
+void q_historystate_super_on_entry(void* self, void* event) {
+    QHistoryState_SuperOnEntry((QHistoryState*)self, (QEvent*)event);
 }
 
 void q_historystate_on_exit(void* self, void* event) {
@@ -111,8 +111,8 @@ void q_historystate_on_on_exit(void* self, void (*callback)(void*, void*)) {
     QHistoryState_OnOnExit((QHistoryState*)self, (intptr_t)callback);
 }
 
-void q_historystate_qbase_on_exit(void* self, void* event) {
-    QHistoryState_QBaseOnExit((QHistoryState*)self, (QEvent*)event);
+void q_historystate_super_on_exit(void* self, void* event) {
+    QHistoryState_SuperOnExit((QHistoryState*)self, (QEvent*)event);
 }
 
 bool q_historystate_event(void* self, void* e) {
@@ -123,8 +123,8 @@ void q_historystate_on_event(void* self, bool (*callback)(void*, void*)) {
     QHistoryState_OnEvent((QHistoryState*)self, (intptr_t)callback);
 }
 
-bool q_historystate_qbase_event(void* self, void* e) {
-    return QHistoryState_QBaseEvent((QHistoryState*)self, (QEvent*)e);
+bool q_historystate_super_event(void* self, void* e) {
+    return QHistoryState_SuperEvent((QHistoryState*)self, (QEvent*)e);
 }
 
 const char* q_historystate_tr2(const char* s, const char* c) {
@@ -376,8 +376,8 @@ bool q_historystate_event_filter(void* self, void* watched, void* event) {
     return QHistoryState_EventFilter((QHistoryState*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_historystate_qbase_event_filter(void* self, void* watched, void* event) {
-    return QHistoryState_QBaseEventFilter((QHistoryState*)self, (QObject*)watched, (QEvent*)event);
+bool q_historystate_super_event_filter(void* self, void* watched, void* event) {
+    return QHistoryState_SuperEventFilter((QHistoryState*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_historystate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -388,8 +388,8 @@ void q_historystate_timer_event(void* self, void* event) {
     QHistoryState_TimerEvent((QHistoryState*)self, (QTimerEvent*)event);
 }
 
-void q_historystate_qbase_timer_event(void* self, void* event) {
-    QHistoryState_QBaseTimerEvent((QHistoryState*)self, (QTimerEvent*)event);
+void q_historystate_super_timer_event(void* self, void* event) {
+    QHistoryState_SuperTimerEvent((QHistoryState*)self, (QTimerEvent*)event);
 }
 
 void q_historystate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ void q_historystate_child_event(void* self, void* event) {
     QHistoryState_ChildEvent((QHistoryState*)self, (QChildEvent*)event);
 }
 
-void q_historystate_qbase_child_event(void* self, void* event) {
-    QHistoryState_QBaseChildEvent((QHistoryState*)self, (QChildEvent*)event);
+void q_historystate_super_child_event(void* self, void* event) {
+    QHistoryState_SuperChildEvent((QHistoryState*)self, (QChildEvent*)event);
 }
 
 void q_historystate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void q_historystate_custom_event(void* self, void* event) {
     QHistoryState_CustomEvent((QHistoryState*)self, (QEvent*)event);
 }
 
-void q_historystate_qbase_custom_event(void* self, void* event) {
-    QHistoryState_QBaseCustomEvent((QHistoryState*)self, (QEvent*)event);
+void q_historystate_super_custom_event(void* self, void* event) {
+    QHistoryState_SuperCustomEvent((QHistoryState*)self, (QEvent*)event);
 }
 
 void q_historystate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void q_historystate_connect_notify(void* self, void* signal) {
     QHistoryState_ConnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
-void q_historystate_qbase_connect_notify(void* self, void* signal) {
-    QHistoryState_QBaseConnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
+void q_historystate_super_connect_notify(void* self, void* signal) {
+    QHistoryState_SuperConnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
 void q_historystate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ void q_historystate_disconnect_notify(void* self, void* signal) {
     QHistoryState_DisconnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
-void q_historystate_qbase_disconnect_notify(void* self, void* signal) {
-    QHistoryState_QBaseDisconnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
+void q_historystate_super_disconnect_notify(void* self, void* signal) {
+    QHistoryState_SuperDisconnectNotify((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
 void q_historystate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ QObject* q_historystate_sender(void* self) {
     return QHistoryState_Sender((QHistoryState*)self);
 }
 
-QObject* q_historystate_qbase_sender(void* self) {
-    return QHistoryState_QBaseSender((QHistoryState*)self);
+QObject* q_historystate_super_sender(void* self) {
+    return QHistoryState_SuperSender((QHistoryState*)self);
 }
 
 void q_historystate_on_sender(void* self, QObject* (*callback)()) {
@@ -460,8 +460,8 @@ int32_t q_historystate_sender_signal_index(void* self) {
     return QHistoryState_SenderSignalIndex((QHistoryState*)self);
 }
 
-int32_t q_historystate_qbase_sender_signal_index(void* self) {
-    return QHistoryState_QBaseSenderSignalIndex((QHistoryState*)self);
+int32_t q_historystate_super_sender_signal_index(void* self) {
+    return QHistoryState_SuperSenderSignalIndex((QHistoryState*)self);
 }
 
 void q_historystate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -472,8 +472,8 @@ int32_t q_historystate_receivers(void* self, const char* signal) {
     return QHistoryState_Receivers((QHistoryState*)self, signal);
 }
 
-int32_t q_historystate_qbase_receivers(void* self, const char* signal) {
-    return QHistoryState_QBaseReceivers((QHistoryState*)self, signal);
+int32_t q_historystate_super_receivers(void* self, const char* signal) {
+    return QHistoryState_SuperReceivers((QHistoryState*)self, signal);
 }
 
 void q_historystate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -484,8 +484,8 @@ bool q_historystate_is_signal_connected(void* self, void* signal) {
     return QHistoryState_IsSignalConnected((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
-bool q_historystate_qbase_is_signal_connected(void* self, void* signal) {
-    return QHistoryState_QBaseIsSignalConnected((QHistoryState*)self, (QMetaMethod*)signal);
+bool q_historystate_super_is_signal_connected(void* self, void* signal) {
+    return QHistoryState_SuperIsSignalConnected((QHistoryState*)self, (QMetaMethod*)signal);
 }
 
 void q_historystate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

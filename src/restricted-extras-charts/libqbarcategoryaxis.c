@@ -22,8 +22,8 @@ void q_barcategoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)
     QBarCategoryAxis_OnMetaObject((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_barcategoryaxis_qbase_meta_object(void* self) {
-    return QBarCategoryAxis_QBaseMetaObject((QBarCategoryAxis*)self);
+const QMetaObject* q_barcategoryaxis_super_meta_object(void* self) {
+    return QBarCategoryAxis_SuperMetaObject((QBarCategoryAxis*)self);
 }
 
 void* q_barcategoryaxis_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_barcategoryaxis_on_metacast(void* self, void* (*callback)(void*, const ch
     QBarCategoryAxis_OnMetacast((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
-void* q_barcategoryaxis_qbase_metacast(void* self, const char* param1) {
-    return QBarCategoryAxis_QBaseMetacast((QBarCategoryAxis*)self, param1);
+void* q_barcategoryaxis_super_metacast(void* self, const char* param1) {
+    return QBarCategoryAxis_SuperMetacast((QBarCategoryAxis*)self, param1);
 }
 
 int32_t q_barcategoryaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_barcategoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QBarCategoryAxis_OnMetacall((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_barcategoryaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QBarCategoryAxis_QBaseMetacall((QBarCategoryAxis*)self, param1, param2, param3);
+int32_t q_barcategoryaxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QBarCategoryAxis_SuperMetacall((QBarCategoryAxis*)self, param1, param2, param3);
 }
 
 const char* q_barcategoryaxis_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_barcategoryaxis_on_type(void* self, int32_t (*callback)()) {
     QBarCategoryAxis_OnType((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_barcategoryaxis_qbase_type(void* self) {
-    return QBarCategoryAxis_QBaseType((QBarCategoryAxis*)self);
+int32_t q_barcategoryaxis_super_type(void* self) {
+    return QBarCategoryAxis_SuperType((QBarCategoryAxis*)self);
 }
 
 void q_barcategoryaxis_append(void* self, const char* categories[static 1]) {
@@ -947,8 +947,8 @@ bool q_barcategoryaxis_event(void* self, void* event) {
     return QBarCategoryAxis_Event((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
-bool q_barcategoryaxis_qbase_event(void* self, void* event) {
-    return QBarCategoryAxis_QBaseEvent((QBarCategoryAxis*)self, (QEvent*)event);
+bool q_barcategoryaxis_super_event(void* self, void* event) {
+    return QBarCategoryAxis_SuperEvent((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
 void q_barcategoryaxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -959,8 +959,8 @@ bool q_barcategoryaxis_event_filter(void* self, void* watched, void* event) {
     return QBarCategoryAxis_EventFilter((QBarCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_barcategoryaxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QBarCategoryAxis_QBaseEventFilter((QBarCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_barcategoryaxis_super_event_filter(void* self, void* watched, void* event) {
+    return QBarCategoryAxis_SuperEventFilter((QBarCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_barcategoryaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -971,8 +971,8 @@ void q_barcategoryaxis_timer_event(void* self, void* event) {
     QBarCategoryAxis_TimerEvent((QBarCategoryAxis*)self, (QTimerEvent*)event);
 }
 
-void q_barcategoryaxis_qbase_timer_event(void* self, void* event) {
-    QBarCategoryAxis_QBaseTimerEvent((QBarCategoryAxis*)self, (QTimerEvent*)event);
+void q_barcategoryaxis_super_timer_event(void* self, void* event) {
+    QBarCategoryAxis_SuperTimerEvent((QBarCategoryAxis*)self, (QTimerEvent*)event);
 }
 
 void q_barcategoryaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -983,8 +983,8 @@ void q_barcategoryaxis_child_event(void* self, void* event) {
     QBarCategoryAxis_ChildEvent((QBarCategoryAxis*)self, (QChildEvent*)event);
 }
 
-void q_barcategoryaxis_qbase_child_event(void* self, void* event) {
-    QBarCategoryAxis_QBaseChildEvent((QBarCategoryAxis*)self, (QChildEvent*)event);
+void q_barcategoryaxis_super_child_event(void* self, void* event) {
+    QBarCategoryAxis_SuperChildEvent((QBarCategoryAxis*)self, (QChildEvent*)event);
 }
 
 void q_barcategoryaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -995,8 +995,8 @@ void q_barcategoryaxis_custom_event(void* self, void* event) {
     QBarCategoryAxis_CustomEvent((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
-void q_barcategoryaxis_qbase_custom_event(void* self, void* event) {
-    QBarCategoryAxis_QBaseCustomEvent((QBarCategoryAxis*)self, (QEvent*)event);
+void q_barcategoryaxis_super_custom_event(void* self, void* event) {
+    QBarCategoryAxis_SuperCustomEvent((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
 void q_barcategoryaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1007,8 +1007,8 @@ void q_barcategoryaxis_connect_notify(void* self, void* signal) {
     QBarCategoryAxis_ConnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_barcategoryaxis_qbase_connect_notify(void* self, void* signal) {
-    QBarCategoryAxis_QBaseConnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
+void q_barcategoryaxis_super_connect_notify(void* self, void* signal) {
+    QBarCategoryAxis_SuperConnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_barcategoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1019,8 +1019,8 @@ void q_barcategoryaxis_disconnect_notify(void* self, void* signal) {
     QBarCategoryAxis_DisconnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_barcategoryaxis_qbase_disconnect_notify(void* self, void* signal) {
-    QBarCategoryAxis_QBaseDisconnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
+void q_barcategoryaxis_super_disconnect_notify(void* self, void* signal) {
+    QBarCategoryAxis_SuperDisconnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_barcategoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1031,8 +1031,8 @@ QObject* q_barcategoryaxis_sender(void* self) {
     return QBarCategoryAxis_Sender((QBarCategoryAxis*)self);
 }
 
-QObject* q_barcategoryaxis_qbase_sender(void* self) {
-    return QBarCategoryAxis_QBaseSender((QBarCategoryAxis*)self);
+QObject* q_barcategoryaxis_super_sender(void* self) {
+    return QBarCategoryAxis_SuperSender((QBarCategoryAxis*)self);
 }
 
 void q_barcategoryaxis_on_sender(void* self, QObject* (*callback)()) {
@@ -1043,8 +1043,8 @@ int32_t q_barcategoryaxis_sender_signal_index(void* self) {
     return QBarCategoryAxis_SenderSignalIndex((QBarCategoryAxis*)self);
 }
 
-int32_t q_barcategoryaxis_qbase_sender_signal_index(void* self) {
-    return QBarCategoryAxis_QBaseSenderSignalIndex((QBarCategoryAxis*)self);
+int32_t q_barcategoryaxis_super_sender_signal_index(void* self) {
+    return QBarCategoryAxis_SuperSenderSignalIndex((QBarCategoryAxis*)self);
 }
 
 void q_barcategoryaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1055,8 +1055,8 @@ int32_t q_barcategoryaxis_receivers(void* self, const char* signal) {
     return QBarCategoryAxis_Receivers((QBarCategoryAxis*)self, signal);
 }
 
-int32_t q_barcategoryaxis_qbase_receivers(void* self, const char* signal) {
-    return QBarCategoryAxis_QBaseReceivers((QBarCategoryAxis*)self, signal);
+int32_t q_barcategoryaxis_super_receivers(void* self, const char* signal) {
+    return QBarCategoryAxis_SuperReceivers((QBarCategoryAxis*)self, signal);
 }
 
 void q_barcategoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1067,8 +1067,8 @@ bool q_barcategoryaxis_is_signal_connected(void* self, void* signal) {
     return QBarCategoryAxis_IsSignalConnected((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_barcategoryaxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QBarCategoryAxis_QBaseIsSignalConnected((QBarCategoryAxis*)self, (QMetaMethod*)signal);
+bool q_barcategoryaxis_super_is_signal_connected(void* self, void* signal) {
+    return QBarCategoryAxis_SuperIsSignalConnected((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

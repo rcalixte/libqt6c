@@ -62,13 +62,17 @@ const QMetaObject* k_fontaction_meta_object(void* self);
 ///
 void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_fontaction_super_meta_object` instead
+///
+#define k_fontaction_qbase_meta_object k_fontaction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KFontAction*
 ///
-const QMetaObject* k_fontaction_qbase_meta_object(void* self);
+const QMetaObject* k_fontaction_super_meta_object(void* self);
 
 /// @param self KFontAction*
 /// @param param1 const char*
@@ -82,12 +86,16 @@ void* k_fontaction_metacast(void* self, const char* param1);
 ///
 void k_fontaction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_fontaction_super_metacast` instead
+///
+#define k_fontaction_qbase_metacast k_fontaction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KFontAction*
 /// @param param1 const char*
 ///
-void* k_fontaction_qbase_metacast(void* self, const char* param1);
+void* k_fontaction_super_metacast(void* self, const char* param1);
 
 /// @param self KFontAction*
 /// @param param1 enum QMetaObject__Call
@@ -103,6 +111,10 @@ int32_t k_fontaction_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void k_fontaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_fontaction_super_metacall` instead
+///
+#define k_fontaction_qbase_metacall k_fontaction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KFontAction*
@@ -110,7 +122,7 @@ void k_fontaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_fontaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_fontaction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -151,6 +163,10 @@ QWidget* k_fontaction_create_widget(void* self, void* parent);
 ///
 void k_fontaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_fontaction_super_create_widget` instead
+///
+#define k_fontaction_qbase_create_widget k_fontaction_super_create_widget
+
 /// [Upstream resources](https://api.kde.org/kfontaction.html#createWidget)
 ///
 /// Base class method implementation
@@ -158,7 +174,7 @@ void k_fontaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*
 /// @param self KFontAction*
 /// @param parent QWidget*
 ///
-QWidget* k_fontaction_qbase_create_widget(void* self, void* parent);
+QWidget* k_fontaction_super_create_widget(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1607,6 +1623,10 @@ void k_fontaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QAction* k_fontaction_remove_action(void* self, void* action);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_remove_action` instead
+///
+#define k_fontaction_qbase_remove_action k_fontaction_super_remove_action
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#removeAction)
@@ -1616,7 +1636,7 @@ QAction* k_fontaction_remove_action(void* self, void* action);
 /// @param self KFontAction*
 /// @param action QAction*
 ///
-QAction* k_fontaction_qbase_remove_action(void* self, void* action);
+QAction* k_fontaction_super_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
@@ -1641,6 +1661,10 @@ void k_fontaction_on_remove_action(void* self, QAction* (*callback)(void*, void*
 ///
 void k_fontaction_insert_action(void* self, void* before, void* action);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_insert_action` instead
+///
+#define k_fontaction_qbase_insert_action k_fontaction_super_insert_action
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#insertAction)
@@ -1651,7 +1675,7 @@ void k_fontaction_insert_action(void* self, void* before, void* action);
 /// @param before QAction*
 /// @param action QAction*
 ///
-void k_fontaction_qbase_insert_action(void* self, void* before, void* action);
+void k_fontaction_super_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
@@ -1675,6 +1699,10 @@ void k_fontaction_on_insert_action(void* self, void (*callback)(void*, void*, vo
 ///
 void k_fontaction_slot_action_triggered(void* self, void* action);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_slot_action_triggered` instead
+///
+#define k_fontaction_qbase_slot_action_triggered k_fontaction_super_slot_action_triggered
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotActionTriggered)
@@ -1684,7 +1712,7 @@ void k_fontaction_slot_action_triggered(void* self, void* action);
 /// @param self KFontAction*
 /// @param action QAction*
 ///
-void k_fontaction_qbase_slot_action_triggered(void* self, void* action);
+void k_fontaction_super_slot_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
@@ -1708,6 +1736,10 @@ void k_fontaction_on_slot_action_triggered(void* self, void (*callback)(void*, v
 ///
 void k_fontaction_delete_widget(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_delete_widget` instead
+///
+#define k_fontaction_qbase_delete_widget k_fontaction_super_delete_widget
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#deleteWidget)
@@ -1717,7 +1749,7 @@ void k_fontaction_delete_widget(void* self, void* widget);
 /// @param self KFontAction*
 /// @param widget QWidget*
 ///
-void k_fontaction_qbase_delete_widget(void* self, void* widget);
+void k_fontaction_super_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
@@ -1741,6 +1773,10 @@ void k_fontaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 ///
 bool k_fontaction_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_event` instead
+///
+#define k_fontaction_qbase_event k_fontaction_super_event
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#event)
@@ -1750,7 +1786,7 @@ bool k_fontaction_event(void* self, void* event);
 /// @param self KFontAction*
 /// @param event QEvent*
 ///
-bool k_fontaction_qbase_event(void* self, void* event);
+bool k_fontaction_super_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
@@ -1775,6 +1811,10 @@ void k_fontaction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_fontaction_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_event_filter` instead
+///
+#define k_fontaction_qbase_event_filter k_fontaction_super_event_filter
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#eventFilter)
@@ -1785,7 +1825,7 @@ bool k_fontaction_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_fontaction_qbase_event_filter(void* self, void* watched, void* event);
+bool k_fontaction_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
@@ -1809,6 +1849,10 @@ void k_fontaction_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void k_fontaction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_timer_event` instead
+///
+#define k_fontaction_qbase_timer_event k_fontaction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1818,7 +1862,7 @@ void k_fontaction_timer_event(void* self, void* event);
 /// @param self KFontAction*
 /// @param event QTimerEvent*
 ///
-void k_fontaction_qbase_timer_event(void* self, void* event);
+void k_fontaction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1842,6 +1886,10 @@ void k_fontaction_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_fontaction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_child_event` instead
+///
+#define k_fontaction_qbase_child_event k_fontaction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1851,7 +1899,7 @@ void k_fontaction_child_event(void* self, void* event);
 /// @param self KFontAction*
 /// @param event QChildEvent*
 ///
-void k_fontaction_qbase_child_event(void* self, void* event);
+void k_fontaction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1875,6 +1923,10 @@ void k_fontaction_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_fontaction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_custom_event` instead
+///
+#define k_fontaction_qbase_custom_event k_fontaction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1884,7 +1936,7 @@ void k_fontaction_custom_event(void* self, void* event);
 /// @param self KFontAction*
 /// @param event QEvent*
 ///
-void k_fontaction_qbase_custom_event(void* self, void* event);
+void k_fontaction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1908,6 +1960,10 @@ void k_fontaction_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_fontaction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_connect_notify` instead
+///
+#define k_fontaction_qbase_connect_notify k_fontaction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1917,7 +1973,7 @@ void k_fontaction_connect_notify(void* self, void* signal);
 /// @param self KFontAction*
 /// @param signal QMetaMethod*
 ///
-void k_fontaction_qbase_connect_notify(void* self, void* signal);
+void k_fontaction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1941,6 +1997,10 @@ void k_fontaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_fontaction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_disconnect_notify` instead
+///
+#define k_fontaction_qbase_disconnect_notify k_fontaction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1950,7 +2010,7 @@ void k_fontaction_disconnect_notify(void* self, void* signal);
 /// @param self KFontAction*
 /// @param signal QMetaMethod*
 ///
-void k_fontaction_qbase_disconnect_notify(void* self, void* signal);
+void k_fontaction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1974,6 +2034,10 @@ void k_fontaction_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_fontaction_slot_toggled(void* self, bool param1);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_slot_toggled` instead
+///
+#define k_fontaction_qbase_slot_toggled k_fontaction_super_slot_toggled
+
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotToggled)
@@ -1983,7 +2047,7 @@ void k_fontaction_slot_toggled(void* self, bool param1);
 /// @param self KFontAction*
 /// @param param1 bool
 ///
-void k_fontaction_qbase_slot_toggled(void* self, bool param1);
+void k_fontaction_super_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
@@ -2008,6 +2072,10 @@ void k_fontaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 ///
 libqt_list k_fontaction_created_widgets(void* self);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_created_widgets` instead
+///
+#define k_fontaction_qbase_created_widgets k_fontaction_super_created_widgets
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -2018,7 +2086,7 @@ libqt_list k_fontaction_created_widgets(void* self);
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_fontaction_qbase_created_widgets(void* self);
+libqt_list k_fontaction_super_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -2041,6 +2109,10 @@ void k_fontaction_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 QObject* k_fontaction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_sender` instead
+///
+#define k_fontaction_qbase_sender k_fontaction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2049,7 +2121,7 @@ QObject* k_fontaction_sender(void* self);
 ///
 /// @param self KFontAction*
 ///
-QObject* k_fontaction_qbase_sender(void* self);
+QObject* k_fontaction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2072,6 +2144,10 @@ void k_fontaction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_fontaction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_sender_signal_index` instead
+///
+#define k_fontaction_qbase_sender_signal_index k_fontaction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2080,7 +2156,7 @@ int32_t k_fontaction_sender_signal_index(void* self);
 ///
 /// @param self KFontAction*
 ///
-int32_t k_fontaction_qbase_sender_signal_index(void* self);
+int32_t k_fontaction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2104,6 +2180,10 @@ void k_fontaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_fontaction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_receivers` instead
+///
+#define k_fontaction_qbase_receivers k_fontaction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2113,7 +2193,7 @@ int32_t k_fontaction_receivers(void* self, const char* signal);
 /// @param self KFontAction*
 /// @param signal const char*
 ///
-int32_t k_fontaction_qbase_receivers(void* self, const char* signal);
+int32_t k_fontaction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2137,6 +2217,10 @@ void k_fontaction_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_fontaction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_fontaction_super_is_signal_connected` instead
+///
+#define k_fontaction_qbase_is_signal_connected k_fontaction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2146,7 +2230,7 @@ bool k_fontaction_is_signal_connected(void* self, void* signal);
 /// @param self KFontAction*
 /// @param signal QMetaMethod*
 ///
-bool k_fontaction_qbase_is_signal_connected(void* self, void* signal);
+bool k_fontaction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

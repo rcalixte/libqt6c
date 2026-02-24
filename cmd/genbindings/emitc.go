@@ -2136,10 +2136,14 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 
-				qbaseDocComment := "\n/// Base class method implementation\n///"
-				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
+				superDocComment := "\n/// Base class method implementation\n///"
+				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_super"
+				qbasebaseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 
-				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + qbaseDocComment +
+				ret.WriteString(maybeMacro + "\n/// @warning DEPRECATED: Use `" + baseMethodName + safeMethodName + "` instead\n///\n" +
+					"#define " + qbasebaseMethodName + safeMethodName + " " + baseMethodName + safeMethodName + "\n" + maybeEndMacro + "\n\n")
+
+				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + superDocComment +
 					selfParam + cfs.emitCommentParametersC(m.Parameters, false) + maybeNewLine + "\n" + returnComment + maybeFinalNewLine +
 					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 			}
@@ -2237,9 +2241,12 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
 
+			ret.WriteString("\n/// @warning DEPRECATED: Use `" + cmdMethodName + "_super" + safeMethodName + "` instead\n///\n" +
+				"#define " + cmdMethodName + "_qbase" + safeMethodName + " " + cmdMethodName + "_super" + safeMethodName + "\n")
+
 			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
 				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
-				returnTypeDecl + " " + cmdMethodName + "_qbase" + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
+				returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
 
 			var maybeCommentStruct, maybeVoid string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
@@ -2828,8 +2835,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 
-				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
-				baseCallTarget := cmdStructName + "_QBase" + mSafeMethodName + "(" + forwarding + ")"
+				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_super"
+				baseCallTarget := cmdStructName + "_Super" + mSafeMethodName + "(" + forwarding + ")"
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 				cfs.checkAndClearAllocCleanups(true)
 
@@ -2917,10 +2924,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			preamble, forwarding = cfs.emitParametersC2CABIForwarding(m)
 			forwarding = strings.TrimPrefix(forwarding, "self")
-			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_QBase"+mSafeMethodName+"("+forwarding+")")
+			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_Super"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
 
-			ret.WriteString(maybeMacro + returnTypeDecl + " " + cmdMethodName + "_qbase" + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
+			ret.WriteString(maybeMacro + returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
 				preamble + returnFunc + "\n}\n" + maybeEndMacro + "\n\n")
 
 			var maybeVoid string

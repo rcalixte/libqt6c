@@ -40,13 +40,17 @@ const QMetaObject* q_vpiemodelmapper_meta_object(void* self);
 ///
 void q_vpiemodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_meta_object` instead
+///
+#define q_vpiemodelmapper_qbase_meta_object q_vpiemodelmapper_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QVPieModelMapper*
 ///
-const QMetaObject* q_vpiemodelmapper_qbase_meta_object(void* self);
+const QMetaObject* q_vpiemodelmapper_super_meta_object(void* self);
 
 /// @param self QVPieModelMapper*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_vpiemodelmapper_metacast(void* self, const char* param1);
 ///
 void q_vpiemodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_metacast` instead
+///
+#define q_vpiemodelmapper_qbase_metacast q_vpiemodelmapper_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QVPieModelMapper*
 /// @param param1 const char*
 ///
-void* q_vpiemodelmapper_qbase_metacast(void* self, const char* param1);
+void* q_vpiemodelmapper_super_metacast(void* self, const char* param1);
 
 /// @param self QVPieModelMapper*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_vpiemodelmapper_metacall(void* self, int32_t param1, int param2, void*
 ///
 void q_vpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_metacall` instead
+///
+#define q_vpiemodelmapper_qbase_metacall q_vpiemodelmapper_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QVPieModelMapper*
@@ -88,7 +100,7 @@ void q_vpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_vpiemodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_vpiemodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -731,6 +743,10 @@ void q_vpiemodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_vpiemodelmapper_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_event` instead
+///
+#define q_vpiemodelmapper_qbase_event q_vpiemodelmapper_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -740,7 +756,7 @@ bool q_vpiemodelmapper_event(void* self, void* event);
 /// @param self QVPieModelMapper*
 /// @param event QEvent*
 ///
-bool q_vpiemodelmapper_qbase_event(void* self, void* event);
+bool q_vpiemodelmapper_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -765,6 +781,10 @@ void q_vpiemodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_vpiemodelmapper_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_event_filter` instead
+///
+#define q_vpiemodelmapper_qbase_event_filter q_vpiemodelmapper_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -775,7 +795,7 @@ bool q_vpiemodelmapper_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_vpiemodelmapper_qbase_event_filter(void* self, void* watched, void* event);
+bool q_vpiemodelmapper_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -799,6 +819,10 @@ void q_vpiemodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_vpiemodelmapper_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_timer_event` instead
+///
+#define q_vpiemodelmapper_qbase_timer_event q_vpiemodelmapper_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -808,7 +832,7 @@ void q_vpiemodelmapper_timer_event(void* self, void* event);
 /// @param self QVPieModelMapper*
 /// @param event QTimerEvent*
 ///
-void q_vpiemodelmapper_qbase_timer_event(void* self, void* event);
+void q_vpiemodelmapper_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -832,6 +856,10 @@ void q_vpiemodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void q_vpiemodelmapper_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_child_event` instead
+///
+#define q_vpiemodelmapper_qbase_child_event q_vpiemodelmapper_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -841,7 +869,7 @@ void q_vpiemodelmapper_child_event(void* self, void* event);
 /// @param self QVPieModelMapper*
 /// @param event QChildEvent*
 ///
-void q_vpiemodelmapper_qbase_child_event(void* self, void* event);
+void q_vpiemodelmapper_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -865,6 +893,10 @@ void q_vpiemodelmapper_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_vpiemodelmapper_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_custom_event` instead
+///
+#define q_vpiemodelmapper_qbase_custom_event q_vpiemodelmapper_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -874,7 +906,7 @@ void q_vpiemodelmapper_custom_event(void* self, void* event);
 /// @param self QVPieModelMapper*
 /// @param event QEvent*
 ///
-void q_vpiemodelmapper_qbase_custom_event(void* self, void* event);
+void q_vpiemodelmapper_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -898,6 +930,10 @@ void q_vpiemodelmapper_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void q_vpiemodelmapper_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_connect_notify` instead
+///
+#define q_vpiemodelmapper_qbase_connect_notify q_vpiemodelmapper_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -907,7 +943,7 @@ void q_vpiemodelmapper_connect_notify(void* self, void* signal);
 /// @param self QVPieModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vpiemodelmapper_qbase_connect_notify(void* self, void* signal);
+void q_vpiemodelmapper_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,6 +967,10 @@ void q_vpiemodelmapper_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_vpiemodelmapper_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_disconnect_notify` instead
+///
+#define q_vpiemodelmapper_qbase_disconnect_notify q_vpiemodelmapper_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -940,7 +980,7 @@ void q_vpiemodelmapper_disconnect_notify(void* self, void* signal);
 /// @param self QVPieModelMapper*
 /// @param signal QMetaMethod*
 ///
-void q_vpiemodelmapper_qbase_disconnect_notify(void* self, void* signal);
+void q_vpiemodelmapper_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -963,6 +1003,10 @@ void q_vpiemodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 int32_t q_vpiemodelmapper_first(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_first` instead
+///
+#define q_vpiemodelmapper_qbase_first q_vpiemodelmapper_super_first
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#first)
@@ -971,7 +1015,7 @@ int32_t q_vpiemodelmapper_first(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-int32_t q_vpiemodelmapper_qbase_first(void* self);
+int32_t q_vpiemodelmapper_super_first(void* self);
 
 /// Inherited from QPieModelMapper
 ///
@@ -995,6 +1039,10 @@ void q_vpiemodelmapper_on_first(void* self, int32_t (*callback)());
 ///
 void q_vpiemodelmapper_set_first(void* self, int first);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_set_first` instead
+///
+#define q_vpiemodelmapper_qbase_set_first q_vpiemodelmapper_super_set_first
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#setFirst)
@@ -1004,7 +1052,7 @@ void q_vpiemodelmapper_set_first(void* self, int first);
 /// @param self QVPieModelMapper*
 /// @param first int
 ///
-void q_vpiemodelmapper_qbase_set_first(void* self, int first);
+void q_vpiemodelmapper_super_set_first(void* self, int first);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1027,6 +1075,10 @@ void q_vpiemodelmapper_on_set_first(void* self, void (*callback)(void*, int));
 ///
 int32_t q_vpiemodelmapper_count(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_count` instead
+///
+#define q_vpiemodelmapper_qbase_count q_vpiemodelmapper_super_count
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#count)
@@ -1035,7 +1087,7 @@ int32_t q_vpiemodelmapper_count(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-int32_t q_vpiemodelmapper_qbase_count(void* self);
+int32_t q_vpiemodelmapper_super_count(void* self);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1059,6 +1111,10 @@ void q_vpiemodelmapper_on_count(void* self, int32_t (*callback)());
 ///
 void q_vpiemodelmapper_set_count(void* self, int count);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_set_count` instead
+///
+#define q_vpiemodelmapper_qbase_set_count q_vpiemodelmapper_super_set_count
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#setCount)
@@ -1068,7 +1124,7 @@ void q_vpiemodelmapper_set_count(void* self, int count);
 /// @param self QVPieModelMapper*
 /// @param count int
 ///
-void q_vpiemodelmapper_qbase_set_count(void* self, int count);
+void q_vpiemodelmapper_super_set_count(void* self, int count);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1091,6 +1147,10 @@ void q_vpiemodelmapper_on_set_count(void* self, void (*callback)(void*, int));
 ///
 int32_t q_vpiemodelmapper_values_section(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_values_section` instead
+///
+#define q_vpiemodelmapper_qbase_values_section q_vpiemodelmapper_super_values_section
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#valuesSection)
@@ -1099,7 +1159,7 @@ int32_t q_vpiemodelmapper_values_section(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-int32_t q_vpiemodelmapper_qbase_values_section(void* self);
+int32_t q_vpiemodelmapper_super_values_section(void* self);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1123,6 +1183,10 @@ void q_vpiemodelmapper_on_values_section(void* self, int32_t (*callback)());
 ///
 void q_vpiemodelmapper_set_values_section(void* self, int valuesSection);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_set_values_section` instead
+///
+#define q_vpiemodelmapper_qbase_set_values_section q_vpiemodelmapper_super_set_values_section
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#setValuesSection)
@@ -1132,7 +1196,7 @@ void q_vpiemodelmapper_set_values_section(void* self, int valuesSection);
 /// @param self QVPieModelMapper*
 /// @param valuesSection int
 ///
-void q_vpiemodelmapper_qbase_set_values_section(void* self, int valuesSection);
+void q_vpiemodelmapper_super_set_values_section(void* self, int valuesSection);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1155,6 +1219,10 @@ void q_vpiemodelmapper_on_set_values_section(void* self, void (*callback)(void*,
 ///
 int32_t q_vpiemodelmapper_labels_section(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_labels_section` instead
+///
+#define q_vpiemodelmapper_qbase_labels_section q_vpiemodelmapper_super_labels_section
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#labelsSection)
@@ -1163,7 +1231,7 @@ int32_t q_vpiemodelmapper_labels_section(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-int32_t q_vpiemodelmapper_qbase_labels_section(void* self);
+int32_t q_vpiemodelmapper_super_labels_section(void* self);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1187,6 +1255,10 @@ void q_vpiemodelmapper_on_labels_section(void* self, int32_t (*callback)());
 ///
 void q_vpiemodelmapper_set_labels_section(void* self, int labelsSection);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_set_labels_section` instead
+///
+#define q_vpiemodelmapper_qbase_set_labels_section q_vpiemodelmapper_super_set_labels_section
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#setLabelsSection)
@@ -1196,7 +1268,7 @@ void q_vpiemodelmapper_set_labels_section(void* self, int labelsSection);
 /// @param self QVPieModelMapper*
 /// @param labelsSection int
 ///
-void q_vpiemodelmapper_qbase_set_labels_section(void* self, int labelsSection);
+void q_vpiemodelmapper_super_set_labels_section(void* self, int labelsSection);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1221,6 +1293,10 @@ void q_vpiemodelmapper_on_set_labels_section(void* self, void (*callback)(void*,
 ///
 int32_t q_vpiemodelmapper_orientation(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_orientation` instead
+///
+#define q_vpiemodelmapper_qbase_orientation q_vpiemodelmapper_super_orientation
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#orientation)
@@ -1231,7 +1307,7 @@ int32_t q_vpiemodelmapper_orientation(void* self);
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_vpiemodelmapper_qbase_orientation(void* self);
+int32_t q_vpiemodelmapper_super_orientation(void* self);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1255,6 +1331,10 @@ void q_vpiemodelmapper_on_orientation(void* self, int32_t (*callback)());
 ///
 void q_vpiemodelmapper_set_orientation(void* self, int32_t orientation);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_set_orientation` instead
+///
+#define q_vpiemodelmapper_qbase_set_orientation q_vpiemodelmapper_super_set_orientation
+
 /// Inherited from QPieModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpiemodelmapper.html#setOrientation)
@@ -1264,7 +1344,7 @@ void q_vpiemodelmapper_set_orientation(void* self, int32_t orientation);
 /// @param self QVPieModelMapper*
 /// @param orientation enum Qt__Orientation
 ///
-void q_vpiemodelmapper_qbase_set_orientation(void* self, int32_t orientation);
+void q_vpiemodelmapper_super_set_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPieModelMapper
 ///
@@ -1287,6 +1367,10 @@ void q_vpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, in
 ///
 QObject* q_vpiemodelmapper_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_sender` instead
+///
+#define q_vpiemodelmapper_qbase_sender q_vpiemodelmapper_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1295,7 +1379,7 @@ QObject* q_vpiemodelmapper_sender(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-QObject* q_vpiemodelmapper_qbase_sender(void* self);
+QObject* q_vpiemodelmapper_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1318,6 +1402,10 @@ void q_vpiemodelmapper_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_vpiemodelmapper_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_sender_signal_index` instead
+///
+#define q_vpiemodelmapper_qbase_sender_signal_index q_vpiemodelmapper_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1326,7 +1414,7 @@ int32_t q_vpiemodelmapper_sender_signal_index(void* self);
 ///
 /// @param self QVPieModelMapper*
 ///
-int32_t q_vpiemodelmapper_qbase_sender_signal_index(void* self);
+int32_t q_vpiemodelmapper_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1350,6 +1438,10 @@ void q_vpiemodelmapper_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_vpiemodelmapper_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_receivers` instead
+///
+#define q_vpiemodelmapper_qbase_receivers q_vpiemodelmapper_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1359,7 +1451,7 @@ int32_t q_vpiemodelmapper_receivers(void* self, const char* signal);
 /// @param self QVPieModelMapper*
 /// @param signal const char*
 ///
-int32_t q_vpiemodelmapper_qbase_receivers(void* self, const char* signal);
+int32_t q_vpiemodelmapper_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1383,6 +1475,10 @@ void q_vpiemodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool q_vpiemodelmapper_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_vpiemodelmapper_super_is_signal_connected` instead
+///
+#define q_vpiemodelmapper_qbase_is_signal_connected q_vpiemodelmapper_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1392,7 +1488,7 @@ bool q_vpiemodelmapper_is_signal_connected(void* self, void* signal);
 /// @param self QVPieModelMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_vpiemodelmapper_qbase_is_signal_connected(void* self, void* signal);
+bool q_vpiemodelmapper_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

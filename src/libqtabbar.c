@@ -33,8 +33,8 @@ void q_tabbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTabBar_OnMetaObject((QTabBar*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_tabbar_qbase_meta_object(void* self) {
-    return QTabBar_QBaseMetaObject((QTabBar*)self);
+const QMetaObject* q_tabbar_super_meta_object(void* self) {
+    return QTabBar_SuperMetaObject((QTabBar*)self);
 }
 
 void* q_tabbar_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_tabbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QTabBar_OnMetacast((QTabBar*)self, (intptr_t)callback);
 }
 
-void* q_tabbar_qbase_metacast(void* self, const char* param1) {
-    return QTabBar_QBaseMetacast((QTabBar*)self, param1);
+void* q_tabbar_super_metacast(void* self, const char* param1) {
+    return QTabBar_SuperMetacast((QTabBar*)self, param1);
 }
 
 int32_t q_tabbar_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_tabbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QTabBar_OnMetacall((QTabBar*)self, (intptr_t)callback);
 }
 
-int32_t q_tabbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTabBar_QBaseMetacall((QTabBar*)self, param1, param2, param3);
+int32_t q_tabbar_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTabBar_SuperMetacall((QTabBar*)self, param1, param2, param3);
 }
 
 const char* q_tabbar_tr(const char* s) {
@@ -205,8 +205,8 @@ void q_tabbar_on_size_hint(void* self, QSize* (*callback)()) {
     QTabBar_OnSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
-QSize* q_tabbar_qbase_size_hint(void* self) {
-    return QTabBar_QBaseSizeHint((QTabBar*)self);
+QSize* q_tabbar_super_size_hint(void* self) {
+    return QTabBar_SuperSizeHint((QTabBar*)self);
 }
 
 QSize* q_tabbar_minimum_size_hint(void* self) {
@@ -217,8 +217,8 @@ void q_tabbar_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QTabBar_OnMinimumSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
-QSize* q_tabbar_qbase_minimum_size_hint(void* self) {
-    return QTabBar_QBaseMinimumSizeHint((QTabBar*)self);
+QSize* q_tabbar_super_minimum_size_hint(void* self) {
+    return QTabBar_SuperMinimumSizeHint((QTabBar*)self);
 }
 
 void q_tabbar_set_draw_base(void* self, bool drawTheBase) {
@@ -372,8 +372,8 @@ void q_tabbar_on_tab_size_hint(void* self, QSize* (*callback)(void*, int)) {
     QTabBar_OnTabSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
-QSize* q_tabbar_qbase_tab_size_hint(void* self, int index) {
-    return QTabBar_QBaseTabSizeHint((QTabBar*)self, index);
+QSize* q_tabbar_super_tab_size_hint(void* self, int index) {
+    return QTabBar_SuperTabSizeHint((QTabBar*)self, index);
 }
 
 QSize* q_tabbar_minimum_tab_size_hint(void* self, int index) {
@@ -384,8 +384,8 @@ void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*callback)(void*, int
     QTabBar_OnMinimumTabSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
-QSize* q_tabbar_qbase_minimum_tab_size_hint(void* self, int index) {
-    return QTabBar_QBaseMinimumTabSizeHint((QTabBar*)self, index);
+QSize* q_tabbar_super_minimum_tab_size_hint(void* self, int index) {
+    return QTabBar_SuperMinimumTabSizeHint((QTabBar*)self, index);
 }
 
 void q_tabbar_tab_inserted(void* self, int index) {
@@ -396,8 +396,8 @@ void q_tabbar_on_tab_inserted(void* self, void (*callback)(void*, int)) {
     QTabBar_OnTabInserted((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_tab_inserted(void* self, int index) {
-    QTabBar_QBaseTabInserted((QTabBar*)self, index);
+void q_tabbar_super_tab_inserted(void* self, int index) {
+    QTabBar_SuperTabInserted((QTabBar*)self, index);
 }
 
 void q_tabbar_tab_removed(void* self, int index) {
@@ -408,8 +408,8 @@ void q_tabbar_on_tab_removed(void* self, void (*callback)(void*, int)) {
     QTabBar_OnTabRemoved((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_tab_removed(void* self, int index) {
-    QTabBar_QBaseTabRemoved((QTabBar*)self, index);
+void q_tabbar_super_tab_removed(void* self, int index) {
+    QTabBar_SuperTabRemoved((QTabBar*)self, index);
 }
 
 void q_tabbar_tab_layout_change(void* self) {
@@ -420,8 +420,8 @@ void q_tabbar_on_tab_layout_change(void* self, void (*callback)()) {
     QTabBar_OnTabLayoutChange((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_tab_layout_change(void* self) {
-    QTabBar_QBaseTabLayoutChange((QTabBar*)self);
+void q_tabbar_super_tab_layout_change(void* self) {
+    QTabBar_SuperTabLayoutChange((QTabBar*)self);
 }
 
 bool q_tabbar_event(void* self, void* param1) {
@@ -432,8 +432,8 @@ void q_tabbar_on_event(void* self, bool (*callback)(void*, void*)) {
     QTabBar_OnEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-bool q_tabbar_qbase_event(void* self, void* param1) {
-    return QTabBar_QBaseEvent((QTabBar*)self, (QEvent*)param1);
+bool q_tabbar_super_event(void* self, void* param1) {
+    return QTabBar_SuperEvent((QTabBar*)self, (QEvent*)param1);
 }
 
 void q_tabbar_resize_event(void* self, void* param1) {
@@ -444,8 +444,8 @@ void q_tabbar_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnResizeEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_resize_event(void* self, void* param1) {
-    QTabBar_QBaseResizeEvent((QTabBar*)self, (QResizeEvent*)param1);
+void q_tabbar_super_resize_event(void* self, void* param1) {
+    QTabBar_SuperResizeEvent((QTabBar*)self, (QResizeEvent*)param1);
 }
 
 void q_tabbar_show_event(void* self, void* param1) {
@@ -456,8 +456,8 @@ void q_tabbar_on_show_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnShowEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_show_event(void* self, void* param1) {
-    QTabBar_QBaseShowEvent((QTabBar*)self, (QShowEvent*)param1);
+void q_tabbar_super_show_event(void* self, void* param1) {
+    QTabBar_SuperShowEvent((QTabBar*)self, (QShowEvent*)param1);
 }
 
 void q_tabbar_hide_event(void* self, void* param1) {
@@ -468,8 +468,8 @@ void q_tabbar_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnHideEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_hide_event(void* self, void* param1) {
-    QTabBar_QBaseHideEvent((QTabBar*)self, (QHideEvent*)param1);
+void q_tabbar_super_hide_event(void* self, void* param1) {
+    QTabBar_SuperHideEvent((QTabBar*)self, (QHideEvent*)param1);
 }
 
 void q_tabbar_paint_event(void* self, void* param1) {
@@ -480,8 +480,8 @@ void q_tabbar_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnPaintEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_paint_event(void* self, void* param1) {
-    QTabBar_QBasePaintEvent((QTabBar*)self, (QPaintEvent*)param1);
+void q_tabbar_super_paint_event(void* self, void* param1) {
+    QTabBar_SuperPaintEvent((QTabBar*)self, (QPaintEvent*)param1);
 }
 
 void q_tabbar_mouse_press_event(void* self, void* param1) {
@@ -492,8 +492,8 @@ void q_tabbar_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnMousePressEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_mouse_press_event(void* self, void* param1) {
-    QTabBar_QBaseMousePressEvent((QTabBar*)self, (QMouseEvent*)param1);
+void q_tabbar_super_mouse_press_event(void* self, void* param1) {
+    QTabBar_SuperMousePressEvent((QTabBar*)self, (QMouseEvent*)param1);
 }
 
 void q_tabbar_mouse_move_event(void* self, void* param1) {
@@ -504,8 +504,8 @@ void q_tabbar_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnMouseMoveEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_mouse_move_event(void* self, void* param1) {
-    QTabBar_QBaseMouseMoveEvent((QTabBar*)self, (QMouseEvent*)param1);
+void q_tabbar_super_mouse_move_event(void* self, void* param1) {
+    QTabBar_SuperMouseMoveEvent((QTabBar*)self, (QMouseEvent*)param1);
 }
 
 void q_tabbar_mouse_release_event(void* self, void* param1) {
@@ -516,8 +516,8 @@ void q_tabbar_on_mouse_release_event(void* self, void (*callback)(void*, void*))
     QTabBar_OnMouseReleaseEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_mouse_release_event(void* self, void* param1) {
-    QTabBar_QBaseMouseReleaseEvent((QTabBar*)self, (QMouseEvent*)param1);
+void q_tabbar_super_mouse_release_event(void* self, void* param1) {
+    QTabBar_SuperMouseReleaseEvent((QTabBar*)self, (QMouseEvent*)param1);
 }
 
 void q_tabbar_mouse_double_click_event(void* self, void* param1) {
@@ -528,8 +528,8 @@ void q_tabbar_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
     QTabBar_OnMouseDoubleClickEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_mouse_double_click_event(void* self, void* param1) {
-    QTabBar_QBaseMouseDoubleClickEvent((QTabBar*)self, (QMouseEvent*)param1);
+void q_tabbar_super_mouse_double_click_event(void* self, void* param1) {
+    QTabBar_SuperMouseDoubleClickEvent((QTabBar*)self, (QMouseEvent*)param1);
 }
 
 void q_tabbar_wheel_event(void* self, void* event) {
@@ -540,8 +540,8 @@ void q_tabbar_on_wheel_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnWheelEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_wheel_event(void* self, void* event) {
-    QTabBar_QBaseWheelEvent((QTabBar*)self, (QWheelEvent*)event);
+void q_tabbar_super_wheel_event(void* self, void* event) {
+    QTabBar_SuperWheelEvent((QTabBar*)self, (QWheelEvent*)event);
 }
 
 void q_tabbar_key_press_event(void* self, void* param1) {
@@ -552,8 +552,8 @@ void q_tabbar_on_key_press_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnKeyPressEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_key_press_event(void* self, void* param1) {
-    QTabBar_QBaseKeyPressEvent((QTabBar*)self, (QKeyEvent*)param1);
+void q_tabbar_super_key_press_event(void* self, void* param1) {
+    QTabBar_SuperKeyPressEvent((QTabBar*)self, (QKeyEvent*)param1);
 }
 
 void q_tabbar_change_event(void* self, void* param1) {
@@ -564,8 +564,8 @@ void q_tabbar_on_change_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnChangeEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_change_event(void* self, void* param1) {
-    QTabBar_QBaseChangeEvent((QTabBar*)self, (QEvent*)param1);
+void q_tabbar_super_change_event(void* self, void* param1) {
+    QTabBar_SuperChangeEvent((QTabBar*)self, (QEvent*)param1);
 }
 
 void q_tabbar_timer_event(void* self, void* event) {
@@ -576,8 +576,8 @@ void q_tabbar_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QTabBar_OnTimerEvent((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_timer_event(void* self, void* event) {
-    QTabBar_QBaseTimerEvent((QTabBar*)self, (QTimerEvent*)event);
+void q_tabbar_super_timer_event(void* self, void* event) {
+    QTabBar_SuperTimerEvent((QTabBar*)self, (QTimerEvent*)event);
 }
 
 void q_tabbar_init_style_option(void* self, void* option, int tabIndex) {
@@ -588,8 +588,8 @@ void q_tabbar_on_init_style_option(void* self, void (*callback)(void*, void*, in
     QTabBar_OnInitStyleOption((QTabBar*)self, (intptr_t)callback);
 }
 
-void q_tabbar_qbase_init_style_option(void* self, void* option, int tabIndex) {
-    QTabBar_QBaseInitStyleOption((QTabBar*)self, (QStyleOptionTab*)option, tabIndex);
+void q_tabbar_super_init_style_option(void* self, void* option, int tabIndex) {
+    QTabBar_SuperInitStyleOption((QTabBar*)self, (QStyleOptionTab*)option, tabIndex);
 }
 
 const char* q_tabbar_tr2(const char* s, const char* c) {
@@ -1991,8 +1991,8 @@ int32_t q_tabbar_dev_type(void* self) {
     return QTabBar_DevType((QTabBar*)self);
 }
 
-int32_t q_tabbar_qbase_dev_type(void* self) {
-    return QTabBar_QBaseDevType((QTabBar*)self);
+int32_t q_tabbar_super_dev_type(void* self) {
+    return QTabBar_SuperDevType((QTabBar*)self);
 }
 
 void q_tabbar_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2003,8 +2003,8 @@ void q_tabbar_set_visible(void* self, bool visible) {
     QTabBar_SetVisible((QTabBar*)self, visible);
 }
 
-void q_tabbar_qbase_set_visible(void* self, bool visible) {
-    QTabBar_QBaseSetVisible((QTabBar*)self, visible);
+void q_tabbar_super_set_visible(void* self, bool visible) {
+    QTabBar_SuperSetVisible((QTabBar*)self, visible);
 }
 
 void q_tabbar_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2015,8 +2015,8 @@ int32_t q_tabbar_height_for_width(void* self, int param1) {
     return QTabBar_HeightForWidth((QTabBar*)self, param1);
 }
 
-int32_t q_tabbar_qbase_height_for_width(void* self, int param1) {
-    return QTabBar_QBaseHeightForWidth((QTabBar*)self, param1);
+int32_t q_tabbar_super_height_for_width(void* self, int param1) {
+    return QTabBar_SuperHeightForWidth((QTabBar*)self, param1);
 }
 
 void q_tabbar_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2027,8 +2027,8 @@ bool q_tabbar_has_height_for_width(void* self) {
     return QTabBar_HasHeightForWidth((QTabBar*)self);
 }
 
-bool q_tabbar_qbase_has_height_for_width(void* self) {
-    return QTabBar_QBaseHasHeightForWidth((QTabBar*)self);
+bool q_tabbar_super_has_height_for_width(void* self) {
+    return QTabBar_SuperHasHeightForWidth((QTabBar*)self);
 }
 
 void q_tabbar_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2039,8 +2039,8 @@ QPaintEngine* q_tabbar_paint_engine(void* self) {
     return QTabBar_PaintEngine((QTabBar*)self);
 }
 
-QPaintEngine* q_tabbar_qbase_paint_engine(void* self) {
-    return QTabBar_QBasePaintEngine((QTabBar*)self);
+QPaintEngine* q_tabbar_super_paint_engine(void* self) {
+    return QTabBar_SuperPaintEngine((QTabBar*)self);
 }
 
 void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2051,8 +2051,8 @@ void q_tabbar_key_release_event(void* self, void* event) {
     QTabBar_KeyReleaseEvent((QTabBar*)self, (QKeyEvent*)event);
 }
 
-void q_tabbar_qbase_key_release_event(void* self, void* event) {
-    QTabBar_QBaseKeyReleaseEvent((QTabBar*)self, (QKeyEvent*)event);
+void q_tabbar_super_key_release_event(void* self, void* event) {
+    QTabBar_SuperKeyReleaseEvent((QTabBar*)self, (QKeyEvent*)event);
 }
 
 void q_tabbar_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2063,8 +2063,8 @@ void q_tabbar_focus_in_event(void* self, void* event) {
     QTabBar_FocusInEvent((QTabBar*)self, (QFocusEvent*)event);
 }
 
-void q_tabbar_qbase_focus_in_event(void* self, void* event) {
-    QTabBar_QBaseFocusInEvent((QTabBar*)self, (QFocusEvent*)event);
+void q_tabbar_super_focus_in_event(void* self, void* event) {
+    QTabBar_SuperFocusInEvent((QTabBar*)self, (QFocusEvent*)event);
 }
 
 void q_tabbar_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2075,8 +2075,8 @@ void q_tabbar_focus_out_event(void* self, void* event) {
     QTabBar_FocusOutEvent((QTabBar*)self, (QFocusEvent*)event);
 }
 
-void q_tabbar_qbase_focus_out_event(void* self, void* event) {
-    QTabBar_QBaseFocusOutEvent((QTabBar*)self, (QFocusEvent*)event);
+void q_tabbar_super_focus_out_event(void* self, void* event) {
+    QTabBar_SuperFocusOutEvent((QTabBar*)self, (QFocusEvent*)event);
 }
 
 void q_tabbar_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2087,8 +2087,8 @@ void q_tabbar_enter_event(void* self, void* event) {
     QTabBar_EnterEvent((QTabBar*)self, (QEnterEvent*)event);
 }
 
-void q_tabbar_qbase_enter_event(void* self, void* event) {
-    QTabBar_QBaseEnterEvent((QTabBar*)self, (QEnterEvent*)event);
+void q_tabbar_super_enter_event(void* self, void* event) {
+    QTabBar_SuperEnterEvent((QTabBar*)self, (QEnterEvent*)event);
 }
 
 void q_tabbar_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2099,8 +2099,8 @@ void q_tabbar_leave_event(void* self, void* event) {
     QTabBar_LeaveEvent((QTabBar*)self, (QEvent*)event);
 }
 
-void q_tabbar_qbase_leave_event(void* self, void* event) {
-    QTabBar_QBaseLeaveEvent((QTabBar*)self, (QEvent*)event);
+void q_tabbar_super_leave_event(void* self, void* event) {
+    QTabBar_SuperLeaveEvent((QTabBar*)self, (QEvent*)event);
 }
 
 void q_tabbar_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2111,8 +2111,8 @@ void q_tabbar_move_event(void* self, void* event) {
     QTabBar_MoveEvent((QTabBar*)self, (QMoveEvent*)event);
 }
 
-void q_tabbar_qbase_move_event(void* self, void* event) {
-    QTabBar_QBaseMoveEvent((QTabBar*)self, (QMoveEvent*)event);
+void q_tabbar_super_move_event(void* self, void* event) {
+    QTabBar_SuperMoveEvent((QTabBar*)self, (QMoveEvent*)event);
 }
 
 void q_tabbar_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2123,8 +2123,8 @@ void q_tabbar_close_event(void* self, void* event) {
     QTabBar_CloseEvent((QTabBar*)self, (QCloseEvent*)event);
 }
 
-void q_tabbar_qbase_close_event(void* self, void* event) {
-    QTabBar_QBaseCloseEvent((QTabBar*)self, (QCloseEvent*)event);
+void q_tabbar_super_close_event(void* self, void* event) {
+    QTabBar_SuperCloseEvent((QTabBar*)self, (QCloseEvent*)event);
 }
 
 void q_tabbar_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2135,8 +2135,8 @@ void q_tabbar_context_menu_event(void* self, void* event) {
     QTabBar_ContextMenuEvent((QTabBar*)self, (QContextMenuEvent*)event);
 }
 
-void q_tabbar_qbase_context_menu_event(void* self, void* event) {
-    QTabBar_QBaseContextMenuEvent((QTabBar*)self, (QContextMenuEvent*)event);
+void q_tabbar_super_context_menu_event(void* self, void* event) {
+    QTabBar_SuperContextMenuEvent((QTabBar*)self, (QContextMenuEvent*)event);
 }
 
 void q_tabbar_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2147,8 +2147,8 @@ void q_tabbar_tablet_event(void* self, void* event) {
     QTabBar_TabletEvent((QTabBar*)self, (QTabletEvent*)event);
 }
 
-void q_tabbar_qbase_tablet_event(void* self, void* event) {
-    QTabBar_QBaseTabletEvent((QTabBar*)self, (QTabletEvent*)event);
+void q_tabbar_super_tablet_event(void* self, void* event) {
+    QTabBar_SuperTabletEvent((QTabBar*)self, (QTabletEvent*)event);
 }
 
 void q_tabbar_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2159,8 +2159,8 @@ void q_tabbar_action_event(void* self, void* event) {
     QTabBar_ActionEvent((QTabBar*)self, (QActionEvent*)event);
 }
 
-void q_tabbar_qbase_action_event(void* self, void* event) {
-    QTabBar_QBaseActionEvent((QTabBar*)self, (QActionEvent*)event);
+void q_tabbar_super_action_event(void* self, void* event) {
+    QTabBar_SuperActionEvent((QTabBar*)self, (QActionEvent*)event);
 }
 
 void q_tabbar_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2171,8 +2171,8 @@ void q_tabbar_drag_enter_event(void* self, void* event) {
     QTabBar_DragEnterEvent((QTabBar*)self, (QDragEnterEvent*)event);
 }
 
-void q_tabbar_qbase_drag_enter_event(void* self, void* event) {
-    QTabBar_QBaseDragEnterEvent((QTabBar*)self, (QDragEnterEvent*)event);
+void q_tabbar_super_drag_enter_event(void* self, void* event) {
+    QTabBar_SuperDragEnterEvent((QTabBar*)self, (QDragEnterEvent*)event);
 }
 
 void q_tabbar_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2183,8 +2183,8 @@ void q_tabbar_drag_move_event(void* self, void* event) {
     QTabBar_DragMoveEvent((QTabBar*)self, (QDragMoveEvent*)event);
 }
 
-void q_tabbar_qbase_drag_move_event(void* self, void* event) {
-    QTabBar_QBaseDragMoveEvent((QTabBar*)self, (QDragMoveEvent*)event);
+void q_tabbar_super_drag_move_event(void* self, void* event) {
+    QTabBar_SuperDragMoveEvent((QTabBar*)self, (QDragMoveEvent*)event);
 }
 
 void q_tabbar_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2195,8 +2195,8 @@ void q_tabbar_drag_leave_event(void* self, void* event) {
     QTabBar_DragLeaveEvent((QTabBar*)self, (QDragLeaveEvent*)event);
 }
 
-void q_tabbar_qbase_drag_leave_event(void* self, void* event) {
-    QTabBar_QBaseDragLeaveEvent((QTabBar*)self, (QDragLeaveEvent*)event);
+void q_tabbar_super_drag_leave_event(void* self, void* event) {
+    QTabBar_SuperDragLeaveEvent((QTabBar*)self, (QDragLeaveEvent*)event);
 }
 
 void q_tabbar_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2207,8 +2207,8 @@ void q_tabbar_drop_event(void* self, void* event) {
     QTabBar_DropEvent((QTabBar*)self, (QDropEvent*)event);
 }
 
-void q_tabbar_qbase_drop_event(void* self, void* event) {
-    QTabBar_QBaseDropEvent((QTabBar*)self, (QDropEvent*)event);
+void q_tabbar_super_drop_event(void* self, void* event) {
+    QTabBar_SuperDropEvent((QTabBar*)self, (QDropEvent*)event);
 }
 
 void q_tabbar_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2219,8 +2219,8 @@ bool q_tabbar_native_event(void* self, char* eventType, void* message, intptr_t*
     return QTabBar_NativeEvent((QTabBar*)self, qstring(eventType), message, result);
 }
 
-bool q_tabbar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QTabBar_QBaseNativeEvent((QTabBar*)self, qstring(eventType), message, result);
+bool q_tabbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QTabBar_SuperNativeEvent((QTabBar*)self, qstring(eventType), message, result);
 }
 
 void q_tabbar_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2231,8 +2231,8 @@ int32_t q_tabbar_metric(void* self, int32_t param1) {
     return QTabBar_Metric((QTabBar*)self, param1);
 }
 
-int32_t q_tabbar_qbase_metric(void* self, int32_t param1) {
-    return QTabBar_QBaseMetric((QTabBar*)self, param1);
+int32_t q_tabbar_super_metric(void* self, int32_t param1) {
+    return QTabBar_SuperMetric((QTabBar*)self, param1);
 }
 
 void q_tabbar_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2243,8 +2243,8 @@ void q_tabbar_init_painter(void* self, void* painter) {
     QTabBar_InitPainter((QTabBar*)self, (QPainter*)painter);
 }
 
-void q_tabbar_qbase_init_painter(void* self, void* painter) {
-    QTabBar_QBaseInitPainter((QTabBar*)self, (QPainter*)painter);
+void q_tabbar_super_init_painter(void* self, void* painter) {
+    QTabBar_SuperInitPainter((QTabBar*)self, (QPainter*)painter);
 }
 
 void q_tabbar_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2255,8 +2255,8 @@ QPaintDevice* q_tabbar_redirected(void* self, void* offset) {
     return QTabBar_Redirected((QTabBar*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_tabbar_qbase_redirected(void* self, void* offset) {
-    return QTabBar_QBaseRedirected((QTabBar*)self, (QPoint*)offset);
+QPaintDevice* q_tabbar_super_redirected(void* self, void* offset) {
+    return QTabBar_SuperRedirected((QTabBar*)self, (QPoint*)offset);
 }
 
 void q_tabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2267,8 +2267,8 @@ QPainter* q_tabbar_shared_painter(void* self) {
     return QTabBar_SharedPainter((QTabBar*)self);
 }
 
-QPainter* q_tabbar_qbase_shared_painter(void* self) {
-    return QTabBar_QBaseSharedPainter((QTabBar*)self);
+QPainter* q_tabbar_super_shared_painter(void* self) {
+    return QTabBar_SuperSharedPainter((QTabBar*)self);
 }
 
 void q_tabbar_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2279,8 +2279,8 @@ void q_tabbar_input_method_event(void* self, void* param1) {
     QTabBar_InputMethodEvent((QTabBar*)self, (QInputMethodEvent*)param1);
 }
 
-void q_tabbar_qbase_input_method_event(void* self, void* param1) {
-    QTabBar_QBaseInputMethodEvent((QTabBar*)self, (QInputMethodEvent*)param1);
+void q_tabbar_super_input_method_event(void* self, void* param1) {
+    QTabBar_SuperInputMethodEvent((QTabBar*)self, (QInputMethodEvent*)param1);
 }
 
 void q_tabbar_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2291,8 +2291,8 @@ QVariant* q_tabbar_input_method_query(void* self, int32_t param1) {
     return QTabBar_InputMethodQuery((QTabBar*)self, param1);
 }
 
-QVariant* q_tabbar_qbase_input_method_query(void* self, int32_t param1) {
-    return QTabBar_QBaseInputMethodQuery((QTabBar*)self, param1);
+QVariant* q_tabbar_super_input_method_query(void* self, int32_t param1) {
+    return QTabBar_SuperInputMethodQuery((QTabBar*)self, param1);
 }
 
 void q_tabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2303,8 +2303,8 @@ bool q_tabbar_focus_next_prev_child(void* self, bool next) {
     return QTabBar_FocusNextPrevChild((QTabBar*)self, next);
 }
 
-bool q_tabbar_qbase_focus_next_prev_child(void* self, bool next) {
-    return QTabBar_QBaseFocusNextPrevChild((QTabBar*)self, next);
+bool q_tabbar_super_focus_next_prev_child(void* self, bool next) {
+    return QTabBar_SuperFocusNextPrevChild((QTabBar*)self, next);
 }
 
 void q_tabbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2315,8 +2315,8 @@ bool q_tabbar_event_filter(void* self, void* watched, void* event) {
     return QTabBar_EventFilter((QTabBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_tabbar_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTabBar_QBaseEventFilter((QTabBar*)self, (QObject*)watched, (QEvent*)event);
+bool q_tabbar_super_event_filter(void* self, void* watched, void* event) {
+    return QTabBar_SuperEventFilter((QTabBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_tabbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2327,8 +2327,8 @@ void q_tabbar_child_event(void* self, void* event) {
     QTabBar_ChildEvent((QTabBar*)self, (QChildEvent*)event);
 }
 
-void q_tabbar_qbase_child_event(void* self, void* event) {
-    QTabBar_QBaseChildEvent((QTabBar*)self, (QChildEvent*)event);
+void q_tabbar_super_child_event(void* self, void* event) {
+    QTabBar_SuperChildEvent((QTabBar*)self, (QChildEvent*)event);
 }
 
 void q_tabbar_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2339,8 +2339,8 @@ void q_tabbar_custom_event(void* self, void* event) {
     QTabBar_CustomEvent((QTabBar*)self, (QEvent*)event);
 }
 
-void q_tabbar_qbase_custom_event(void* self, void* event) {
-    QTabBar_QBaseCustomEvent((QTabBar*)self, (QEvent*)event);
+void q_tabbar_super_custom_event(void* self, void* event) {
+    QTabBar_SuperCustomEvent((QTabBar*)self, (QEvent*)event);
 }
 
 void q_tabbar_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2351,8 +2351,8 @@ void q_tabbar_connect_notify(void* self, void* signal) {
     QTabBar_ConnectNotify((QTabBar*)self, (QMetaMethod*)signal);
 }
 
-void q_tabbar_qbase_connect_notify(void* self, void* signal) {
-    QTabBar_QBaseConnectNotify((QTabBar*)self, (QMetaMethod*)signal);
+void q_tabbar_super_connect_notify(void* self, void* signal) {
+    QTabBar_SuperConnectNotify((QTabBar*)self, (QMetaMethod*)signal);
 }
 
 void q_tabbar_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2363,8 +2363,8 @@ void q_tabbar_disconnect_notify(void* self, void* signal) {
     QTabBar_DisconnectNotify((QTabBar*)self, (QMetaMethod*)signal);
 }
 
-void q_tabbar_qbase_disconnect_notify(void* self, void* signal) {
-    QTabBar_QBaseDisconnectNotify((QTabBar*)self, (QMetaMethod*)signal);
+void q_tabbar_super_disconnect_notify(void* self, void* signal) {
+    QTabBar_SuperDisconnectNotify((QTabBar*)self, (QMetaMethod*)signal);
 }
 
 void q_tabbar_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2375,8 +2375,8 @@ void q_tabbar_update_micro_focus(void* self) {
     QTabBar_UpdateMicroFocus((QTabBar*)self);
 }
 
-void q_tabbar_qbase_update_micro_focus(void* self) {
-    QTabBar_QBaseUpdateMicroFocus((QTabBar*)self);
+void q_tabbar_super_update_micro_focus(void* self) {
+    QTabBar_SuperUpdateMicroFocus((QTabBar*)self);
 }
 
 void q_tabbar_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2387,8 +2387,8 @@ void q_tabbar_create(void* self) {
     QTabBar_Create((QTabBar*)self);
 }
 
-void q_tabbar_qbase_create(void* self) {
-    QTabBar_QBaseCreate((QTabBar*)self);
+void q_tabbar_super_create(void* self) {
+    QTabBar_SuperCreate((QTabBar*)self);
 }
 
 void q_tabbar_on_create(void* self, void (*callback)()) {
@@ -2399,8 +2399,8 @@ void q_tabbar_destroy(void* self) {
     QTabBar_Destroy((QTabBar*)self);
 }
 
-void q_tabbar_qbase_destroy(void* self) {
-    QTabBar_QBaseDestroy((QTabBar*)self);
+void q_tabbar_super_destroy(void* self) {
+    QTabBar_SuperDestroy((QTabBar*)self);
 }
 
 void q_tabbar_on_destroy(void* self, void (*callback)()) {
@@ -2411,8 +2411,8 @@ bool q_tabbar_focus_next_child(void* self) {
     return QTabBar_FocusNextChild((QTabBar*)self);
 }
 
-bool q_tabbar_qbase_focus_next_child(void* self) {
-    return QTabBar_QBaseFocusNextChild((QTabBar*)self);
+bool q_tabbar_super_focus_next_child(void* self) {
+    return QTabBar_SuperFocusNextChild((QTabBar*)self);
 }
 
 void q_tabbar_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2423,8 +2423,8 @@ bool q_tabbar_focus_previous_child(void* self) {
     return QTabBar_FocusPreviousChild((QTabBar*)self);
 }
 
-bool q_tabbar_qbase_focus_previous_child(void* self) {
-    return QTabBar_QBaseFocusPreviousChild((QTabBar*)self);
+bool q_tabbar_super_focus_previous_child(void* self) {
+    return QTabBar_SuperFocusPreviousChild((QTabBar*)self);
 }
 
 void q_tabbar_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2435,8 +2435,8 @@ QObject* q_tabbar_sender(void* self) {
     return QTabBar_Sender((QTabBar*)self);
 }
 
-QObject* q_tabbar_qbase_sender(void* self) {
-    return QTabBar_QBaseSender((QTabBar*)self);
+QObject* q_tabbar_super_sender(void* self) {
+    return QTabBar_SuperSender((QTabBar*)self);
 }
 
 void q_tabbar_on_sender(void* self, QObject* (*callback)()) {
@@ -2447,8 +2447,8 @@ int32_t q_tabbar_sender_signal_index(void* self) {
     return QTabBar_SenderSignalIndex((QTabBar*)self);
 }
 
-int32_t q_tabbar_qbase_sender_signal_index(void* self) {
-    return QTabBar_QBaseSenderSignalIndex((QTabBar*)self);
+int32_t q_tabbar_super_sender_signal_index(void* self) {
+    return QTabBar_SuperSenderSignalIndex((QTabBar*)self);
 }
 
 void q_tabbar_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2459,8 +2459,8 @@ int32_t q_tabbar_receivers(void* self, const char* signal) {
     return QTabBar_Receivers((QTabBar*)self, signal);
 }
 
-int32_t q_tabbar_qbase_receivers(void* self, const char* signal) {
-    return QTabBar_QBaseReceivers((QTabBar*)self, signal);
+int32_t q_tabbar_super_receivers(void* self, const char* signal) {
+    return QTabBar_SuperReceivers((QTabBar*)self, signal);
 }
 
 void q_tabbar_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2471,8 +2471,8 @@ bool q_tabbar_is_signal_connected(void* self, void* signal) {
     return QTabBar_IsSignalConnected((QTabBar*)self, (QMetaMethod*)signal);
 }
 
-bool q_tabbar_qbase_is_signal_connected(void* self, void* signal) {
-    return QTabBar_QBaseIsSignalConnected((QTabBar*)self, (QMetaMethod*)signal);
+bool q_tabbar_super_is_signal_connected(void* self, void* signal) {
+    return QTabBar_SuperIsSignalConnected((QTabBar*)self, (QMetaMethod*)signal);
 }
 
 void q_tabbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2483,8 +2483,8 @@ double q_tabbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metric
     return QTabBar_GetDecodedMetricF((QTabBar*)self, metricA, metricB);
 }
 
-double q_tabbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QTabBar_QBaseGetDecodedMetricF((QTabBar*)self, metricA, metricB);
+double q_tabbar_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QTabBar_SuperGetDecodedMetricF((QTabBar*)self, metricA, metricB);
 }
 
 void q_tabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

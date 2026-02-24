@@ -32,8 +32,8 @@ void k_sonnet__dictionarycombobox_on_meta_object(void* self, const QMetaObject* 
     Sonnet__DictionaryComboBox_OnMetaObject((Sonnet__DictionaryComboBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sonnet__dictionarycombobox_qbase_meta_object(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseMetaObject((Sonnet__DictionaryComboBox*)self);
+const QMetaObject* k_sonnet__dictionarycombobox_super_meta_object(void* self) {
+    return Sonnet__DictionaryComboBox_SuperMetaObject((Sonnet__DictionaryComboBox*)self);
 }
 
 void* k_sonnet__dictionarycombobox_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_sonnet__dictionarycombobox_on_metacast(void* self, void* (*callback)(void
     Sonnet__DictionaryComboBox_OnMetacast((Sonnet__DictionaryComboBox*)self, (intptr_t)callback);
 }
 
-void* k_sonnet__dictionarycombobox_qbase_metacast(void* self, const char* param1) {
-    return Sonnet__DictionaryComboBox_QBaseMetacast((Sonnet__DictionaryComboBox*)self, param1);
+void* k_sonnet__dictionarycombobox_super_metacast(void* self, const char* param1) {
+    return Sonnet__DictionaryComboBox_SuperMetacast((Sonnet__DictionaryComboBox*)self, param1);
 }
 
 int32_t k_sonnet__dictionarycombobox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_sonnet__dictionarycombobox_on_metacall(void* self, int32_t (*callback)(vo
     Sonnet__DictionaryComboBox_OnMetacall((Sonnet__DictionaryComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Sonnet__DictionaryComboBox_QBaseMetacall((Sonnet__DictionaryComboBox*)self, param1, param2, param3);
+int32_t k_sonnet__dictionarycombobox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Sonnet__DictionaryComboBox_SuperMetacall((Sonnet__DictionaryComboBox*)self, param1, param2, param3);
 }
 
 const char* k_sonnet__dictionarycombobox_tr(const char* s) {
@@ -1887,8 +1887,8 @@ void k_sonnet__dictionarycombobox_set_model(void* self, void* model) {
     Sonnet__DictionaryComboBox_SetModel((Sonnet__DictionaryComboBox*)self, (QAbstractItemModel*)model);
 }
 
-void k_sonnet__dictionarycombobox_qbase_set_model(void* self, void* model) {
-    Sonnet__DictionaryComboBox_QBaseSetModel((Sonnet__DictionaryComboBox*)self, (QAbstractItemModel*)model);
+void k_sonnet__dictionarycombobox_super_set_model(void* self, void* model) {
+    Sonnet__DictionaryComboBox_SuperSetModel((Sonnet__DictionaryComboBox*)self, (QAbstractItemModel*)model);
 }
 
 void k_sonnet__dictionarycombobox_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ QSize* k_sonnet__dictionarycombobox_size_hint(void* self) {
     return Sonnet__DictionaryComboBox_SizeHint((Sonnet__DictionaryComboBox*)self);
 }
 
-QSize* k_sonnet__dictionarycombobox_qbase_size_hint(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseSizeHint((Sonnet__DictionaryComboBox*)self);
+QSize* k_sonnet__dictionarycombobox_super_size_hint(void* self) {
+    return Sonnet__DictionaryComboBox_SuperSizeHint((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1911,8 +1911,8 @@ QSize* k_sonnet__dictionarycombobox_minimum_size_hint(void* self) {
     return Sonnet__DictionaryComboBox_MinimumSizeHint((Sonnet__DictionaryComboBox*)self);
 }
 
-QSize* k_sonnet__dictionarycombobox_qbase_minimum_size_hint(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseMinimumSizeHint((Sonnet__DictionaryComboBox*)self);
+QSize* k_sonnet__dictionarycombobox_super_minimum_size_hint(void* self) {
+    return Sonnet__DictionaryComboBox_SuperMinimumSizeHint((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1923,8 +1923,8 @@ void k_sonnet__dictionarycombobox_show_popup(void* self) {
     Sonnet__DictionaryComboBox_ShowPopup((Sonnet__DictionaryComboBox*)self);
 }
 
-void k_sonnet__dictionarycombobox_qbase_show_popup(void* self) {
-    Sonnet__DictionaryComboBox_QBaseShowPopup((Sonnet__DictionaryComboBox*)self);
+void k_sonnet__dictionarycombobox_super_show_popup(void* self) {
+    Sonnet__DictionaryComboBox_SuperShowPopup((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_show_popup(void* self, void (*callback)()) {
@@ -1935,8 +1935,8 @@ void k_sonnet__dictionarycombobox_hide_popup(void* self) {
     Sonnet__DictionaryComboBox_HidePopup((Sonnet__DictionaryComboBox*)self);
 }
 
-void k_sonnet__dictionarycombobox_qbase_hide_popup(void* self) {
-    Sonnet__DictionaryComboBox_QBaseHidePopup((Sonnet__DictionaryComboBox*)self);
+void k_sonnet__dictionarycombobox_super_hide_popup(void* self) {
+    Sonnet__DictionaryComboBox_SuperHidePopup((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_hide_popup(void* self, void (*callback)()) {
@@ -1947,8 +1947,8 @@ bool k_sonnet__dictionarycombobox_event(void* self, void* event) {
     return Sonnet__DictionaryComboBox_Event((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_event(void* self, void* event) {
-    return Sonnet__DictionaryComboBox_QBaseEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
+bool k_sonnet__dictionarycombobox_super_event(void* self, void* event) {
+    return Sonnet__DictionaryComboBox_SuperEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1959,8 +1959,8 @@ QVariant* k_sonnet__dictionarycombobox_input_method_query(void* self, int32_t pa
     return Sonnet__DictionaryComboBox_InputMethodQuery((Sonnet__DictionaryComboBox*)self, param1);
 }
 
-QVariant* k_sonnet__dictionarycombobox_qbase_input_method_query(void* self, int32_t param1) {
-    return Sonnet__DictionaryComboBox_QBaseInputMethodQuery((Sonnet__DictionaryComboBox*)self, param1);
+QVariant* k_sonnet__dictionarycombobox_super_input_method_query(void* self, int32_t param1) {
+    return Sonnet__DictionaryComboBox_SuperInputMethodQuery((Sonnet__DictionaryComboBox*)self, param1);
 }
 
 void k_sonnet__dictionarycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1971,8 +1971,8 @@ void k_sonnet__dictionarycombobox_focus_in_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_FocusInEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_focus_in_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseFocusInEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
+void k_sonnet__dictionarycombobox_super_focus_in_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperFocusInEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ void k_sonnet__dictionarycombobox_focus_out_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_FocusOutEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_focus_out_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseFocusOutEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
+void k_sonnet__dictionarycombobox_super_focus_out_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperFocusOutEvent((Sonnet__DictionaryComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1995,8 +1995,8 @@ void k_sonnet__dictionarycombobox_change_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_ChangeEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_change_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseChangeEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)e);
+void k_sonnet__dictionarycombobox_super_change_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperChangeEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ void k_sonnet__dictionarycombobox_resize_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_ResizeEvent((Sonnet__DictionaryComboBox*)self, (QResizeEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_resize_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseResizeEvent((Sonnet__DictionaryComboBox*)self, (QResizeEvent*)e);
+void k_sonnet__dictionarycombobox_super_resize_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperResizeEvent((Sonnet__DictionaryComboBox*)self, (QResizeEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2019,8 +2019,8 @@ void k_sonnet__dictionarycombobox_paint_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_PaintEvent((Sonnet__DictionaryComboBox*)self, (QPaintEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_paint_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBasePaintEvent((Sonnet__DictionaryComboBox*)self, (QPaintEvent*)e);
+void k_sonnet__dictionarycombobox_super_paint_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperPaintEvent((Sonnet__DictionaryComboBox*)self, (QPaintEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ void k_sonnet__dictionarycombobox_show_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_ShowEvent((Sonnet__DictionaryComboBox*)self, (QShowEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_show_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseShowEvent((Sonnet__DictionaryComboBox*)self, (QShowEvent*)e);
+void k_sonnet__dictionarycombobox_super_show_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperShowEvent((Sonnet__DictionaryComboBox*)self, (QShowEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2043,8 +2043,8 @@ void k_sonnet__dictionarycombobox_hide_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_HideEvent((Sonnet__DictionaryComboBox*)self, (QHideEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_hide_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseHideEvent((Sonnet__DictionaryComboBox*)self, (QHideEvent*)e);
+void k_sonnet__dictionarycombobox_super_hide_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperHideEvent((Sonnet__DictionaryComboBox*)self, (QHideEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2055,8 +2055,8 @@ void k_sonnet__dictionarycombobox_mouse_press_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_MousePressEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_mouse_press_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseMousePressEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
+void k_sonnet__dictionarycombobox_super_mouse_press_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperMousePressEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ void k_sonnet__dictionarycombobox_mouse_release_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_MouseReleaseEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_mouse_release_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseMouseReleaseEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
+void k_sonnet__dictionarycombobox_super_mouse_release_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperMouseReleaseEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2079,8 +2079,8 @@ void k_sonnet__dictionarycombobox_key_press_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_KeyPressEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_key_press_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseKeyPressEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
+void k_sonnet__dictionarycombobox_super_key_press_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperKeyPressEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ void k_sonnet__dictionarycombobox_key_release_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_KeyReleaseEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_key_release_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseKeyReleaseEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
+void k_sonnet__dictionarycombobox_super_key_release_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperKeyReleaseEvent((Sonnet__DictionaryComboBox*)self, (QKeyEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ void k_sonnet__dictionarycombobox_wheel_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_WheelEvent((Sonnet__DictionaryComboBox*)self, (QWheelEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_wheel_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseWheelEvent((Sonnet__DictionaryComboBox*)self, (QWheelEvent*)e);
+void k_sonnet__dictionarycombobox_super_wheel_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperWheelEvent((Sonnet__DictionaryComboBox*)self, (QWheelEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2115,8 +2115,8 @@ void k_sonnet__dictionarycombobox_context_menu_event(void* self, void* e) {
     Sonnet__DictionaryComboBox_ContextMenuEvent((Sonnet__DictionaryComboBox*)self, (QContextMenuEvent*)e);
 }
 
-void k_sonnet__dictionarycombobox_qbase_context_menu_event(void* self, void* e) {
-    Sonnet__DictionaryComboBox_QBaseContextMenuEvent((Sonnet__DictionaryComboBox*)self, (QContextMenuEvent*)e);
+void k_sonnet__dictionarycombobox_super_context_menu_event(void* self, void* e) {
+    Sonnet__DictionaryComboBox_SuperContextMenuEvent((Sonnet__DictionaryComboBox*)self, (QContextMenuEvent*)e);
 }
 
 void k_sonnet__dictionarycombobox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ void k_sonnet__dictionarycombobox_input_method_event(void* self, void* param1) {
     Sonnet__DictionaryComboBox_InputMethodEvent((Sonnet__DictionaryComboBox*)self, (QInputMethodEvent*)param1);
 }
 
-void k_sonnet__dictionarycombobox_qbase_input_method_event(void* self, void* param1) {
-    Sonnet__DictionaryComboBox_QBaseInputMethodEvent((Sonnet__DictionaryComboBox*)self, (QInputMethodEvent*)param1);
+void k_sonnet__dictionarycombobox_super_input_method_event(void* self, void* param1) {
+    Sonnet__DictionaryComboBox_SuperInputMethodEvent((Sonnet__DictionaryComboBox*)self, (QInputMethodEvent*)param1);
 }
 
 void k_sonnet__dictionarycombobox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2139,8 +2139,8 @@ void k_sonnet__dictionarycombobox_init_style_option(void* self, void* option) {
     Sonnet__DictionaryComboBox_InitStyleOption((Sonnet__DictionaryComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_sonnet__dictionarycombobox_qbase_init_style_option(void* self, void* option) {
-    Sonnet__DictionaryComboBox_QBaseInitStyleOption((Sonnet__DictionaryComboBox*)self, (QStyleOptionComboBox*)option);
+void k_sonnet__dictionarycombobox_super_init_style_option(void* self, void* option) {
+    Sonnet__DictionaryComboBox_SuperInitStyleOption((Sonnet__DictionaryComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
 void k_sonnet__dictionarycombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2151,8 +2151,8 @@ int32_t k_sonnet__dictionarycombobox_dev_type(void* self) {
     return Sonnet__DictionaryComboBox_DevType((Sonnet__DictionaryComboBox*)self);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_dev_type(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseDevType((Sonnet__DictionaryComboBox*)self);
+int32_t k_sonnet__dictionarycombobox_super_dev_type(void* self) {
+    return Sonnet__DictionaryComboBox_SuperDevType((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2163,8 +2163,8 @@ void k_sonnet__dictionarycombobox_set_visible(void* self, bool visible) {
     Sonnet__DictionaryComboBox_SetVisible((Sonnet__DictionaryComboBox*)self, visible);
 }
 
-void k_sonnet__dictionarycombobox_qbase_set_visible(void* self, bool visible) {
-    Sonnet__DictionaryComboBox_QBaseSetVisible((Sonnet__DictionaryComboBox*)self, visible);
+void k_sonnet__dictionarycombobox_super_set_visible(void* self, bool visible) {
+    Sonnet__DictionaryComboBox_SuperSetVisible((Sonnet__DictionaryComboBox*)self, visible);
 }
 
 void k_sonnet__dictionarycombobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2175,8 +2175,8 @@ int32_t k_sonnet__dictionarycombobox_height_for_width(void* self, int param1) {
     return Sonnet__DictionaryComboBox_HeightForWidth((Sonnet__DictionaryComboBox*)self, param1);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_height_for_width(void* self, int param1) {
-    return Sonnet__DictionaryComboBox_QBaseHeightForWidth((Sonnet__DictionaryComboBox*)self, param1);
+int32_t k_sonnet__dictionarycombobox_super_height_for_width(void* self, int param1) {
+    return Sonnet__DictionaryComboBox_SuperHeightForWidth((Sonnet__DictionaryComboBox*)self, param1);
 }
 
 void k_sonnet__dictionarycombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2187,8 +2187,8 @@ bool k_sonnet__dictionarycombobox_has_height_for_width(void* self) {
     return Sonnet__DictionaryComboBox_HasHeightForWidth((Sonnet__DictionaryComboBox*)self);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_has_height_for_width(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseHasHeightForWidth((Sonnet__DictionaryComboBox*)self);
+bool k_sonnet__dictionarycombobox_super_has_height_for_width(void* self) {
+    return Sonnet__DictionaryComboBox_SuperHasHeightForWidth((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2199,8 +2199,8 @@ QPaintEngine* k_sonnet__dictionarycombobox_paint_engine(void* self) {
     return Sonnet__DictionaryComboBox_PaintEngine((Sonnet__DictionaryComboBox*)self);
 }
 
-QPaintEngine* k_sonnet__dictionarycombobox_qbase_paint_engine(void* self) {
-    return Sonnet__DictionaryComboBox_QBasePaintEngine((Sonnet__DictionaryComboBox*)self);
+QPaintEngine* k_sonnet__dictionarycombobox_super_paint_engine(void* self) {
+    return Sonnet__DictionaryComboBox_SuperPaintEngine((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2211,8 +2211,8 @@ void k_sonnet__dictionarycombobox_mouse_double_click_event(void* self, void* eve
     Sonnet__DictionaryComboBox_MouseDoubleClickEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_mouse_double_click_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseMouseDoubleClickEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
+void k_sonnet__dictionarycombobox_super_mouse_double_click_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperMouseDoubleClickEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2223,8 +2223,8 @@ void k_sonnet__dictionarycombobox_mouse_move_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_MouseMoveEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_mouse_move_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseMouseMoveEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
+void k_sonnet__dictionarycombobox_super_mouse_move_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperMouseMoveEvent((Sonnet__DictionaryComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2235,8 +2235,8 @@ void k_sonnet__dictionarycombobox_enter_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_EnterEvent((Sonnet__DictionaryComboBox*)self, (QEnterEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_enter_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseEnterEvent((Sonnet__DictionaryComboBox*)self, (QEnterEvent*)event);
+void k_sonnet__dictionarycombobox_super_enter_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperEnterEvent((Sonnet__DictionaryComboBox*)self, (QEnterEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2247,8 +2247,8 @@ void k_sonnet__dictionarycombobox_leave_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_LeaveEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_leave_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseLeaveEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
+void k_sonnet__dictionarycombobox_super_leave_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperLeaveEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2259,8 +2259,8 @@ void k_sonnet__dictionarycombobox_move_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_MoveEvent((Sonnet__DictionaryComboBox*)self, (QMoveEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_move_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseMoveEvent((Sonnet__DictionaryComboBox*)self, (QMoveEvent*)event);
+void k_sonnet__dictionarycombobox_super_move_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperMoveEvent((Sonnet__DictionaryComboBox*)self, (QMoveEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2271,8 +2271,8 @@ void k_sonnet__dictionarycombobox_close_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_CloseEvent((Sonnet__DictionaryComboBox*)self, (QCloseEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_close_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseCloseEvent((Sonnet__DictionaryComboBox*)self, (QCloseEvent*)event);
+void k_sonnet__dictionarycombobox_super_close_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperCloseEvent((Sonnet__DictionaryComboBox*)self, (QCloseEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2283,8 +2283,8 @@ void k_sonnet__dictionarycombobox_tablet_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_TabletEvent((Sonnet__DictionaryComboBox*)self, (QTabletEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_tablet_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseTabletEvent((Sonnet__DictionaryComboBox*)self, (QTabletEvent*)event);
+void k_sonnet__dictionarycombobox_super_tablet_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperTabletEvent((Sonnet__DictionaryComboBox*)self, (QTabletEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2295,8 +2295,8 @@ void k_sonnet__dictionarycombobox_action_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_ActionEvent((Sonnet__DictionaryComboBox*)self, (QActionEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_action_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseActionEvent((Sonnet__DictionaryComboBox*)self, (QActionEvent*)event);
+void k_sonnet__dictionarycombobox_super_action_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperActionEvent((Sonnet__DictionaryComboBox*)self, (QActionEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2307,8 +2307,8 @@ void k_sonnet__dictionarycombobox_drag_enter_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_DragEnterEvent((Sonnet__DictionaryComboBox*)self, (QDragEnterEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_drag_enter_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseDragEnterEvent((Sonnet__DictionaryComboBox*)self, (QDragEnterEvent*)event);
+void k_sonnet__dictionarycombobox_super_drag_enter_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperDragEnterEvent((Sonnet__DictionaryComboBox*)self, (QDragEnterEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2319,8 +2319,8 @@ void k_sonnet__dictionarycombobox_drag_move_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_DragMoveEvent((Sonnet__DictionaryComboBox*)self, (QDragMoveEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_drag_move_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseDragMoveEvent((Sonnet__DictionaryComboBox*)self, (QDragMoveEvent*)event);
+void k_sonnet__dictionarycombobox_super_drag_move_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperDragMoveEvent((Sonnet__DictionaryComboBox*)self, (QDragMoveEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2331,8 +2331,8 @@ void k_sonnet__dictionarycombobox_drag_leave_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_DragLeaveEvent((Sonnet__DictionaryComboBox*)self, (QDragLeaveEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_drag_leave_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseDragLeaveEvent((Sonnet__DictionaryComboBox*)self, (QDragLeaveEvent*)event);
+void k_sonnet__dictionarycombobox_super_drag_leave_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperDragLeaveEvent((Sonnet__DictionaryComboBox*)self, (QDragLeaveEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2343,8 +2343,8 @@ void k_sonnet__dictionarycombobox_drop_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_DropEvent((Sonnet__DictionaryComboBox*)self, (QDropEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_drop_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseDropEvent((Sonnet__DictionaryComboBox*)self, (QDropEvent*)event);
+void k_sonnet__dictionarycombobox_super_drop_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperDropEvent((Sonnet__DictionaryComboBox*)self, (QDropEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2355,8 +2355,8 @@ bool k_sonnet__dictionarycombobox_native_event(void* self, char* eventType, void
     return Sonnet__DictionaryComboBox_NativeEvent((Sonnet__DictionaryComboBox*)self, qstring(eventType), message, result);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return Sonnet__DictionaryComboBox_QBaseNativeEvent((Sonnet__DictionaryComboBox*)self, qstring(eventType), message, result);
+bool k_sonnet__dictionarycombobox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return Sonnet__DictionaryComboBox_SuperNativeEvent((Sonnet__DictionaryComboBox*)self, qstring(eventType), message, result);
 }
 
 void k_sonnet__dictionarycombobox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2367,8 +2367,8 @@ int32_t k_sonnet__dictionarycombobox_metric(void* self, int32_t param1) {
     return Sonnet__DictionaryComboBox_Metric((Sonnet__DictionaryComboBox*)self, param1);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_metric(void* self, int32_t param1) {
-    return Sonnet__DictionaryComboBox_QBaseMetric((Sonnet__DictionaryComboBox*)self, param1);
+int32_t k_sonnet__dictionarycombobox_super_metric(void* self, int32_t param1) {
+    return Sonnet__DictionaryComboBox_SuperMetric((Sonnet__DictionaryComboBox*)self, param1);
 }
 
 void k_sonnet__dictionarycombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2379,8 +2379,8 @@ void k_sonnet__dictionarycombobox_init_painter(void* self, void* painter) {
     Sonnet__DictionaryComboBox_InitPainter((Sonnet__DictionaryComboBox*)self, (QPainter*)painter);
 }
 
-void k_sonnet__dictionarycombobox_qbase_init_painter(void* self, void* painter) {
-    Sonnet__DictionaryComboBox_QBaseInitPainter((Sonnet__DictionaryComboBox*)self, (QPainter*)painter);
+void k_sonnet__dictionarycombobox_super_init_painter(void* self, void* painter) {
+    Sonnet__DictionaryComboBox_SuperInitPainter((Sonnet__DictionaryComboBox*)self, (QPainter*)painter);
 }
 
 void k_sonnet__dictionarycombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2391,8 +2391,8 @@ QPaintDevice* k_sonnet__dictionarycombobox_redirected(void* self, void* offset) 
     return Sonnet__DictionaryComboBox_Redirected((Sonnet__DictionaryComboBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_sonnet__dictionarycombobox_qbase_redirected(void* self, void* offset) {
-    return Sonnet__DictionaryComboBox_QBaseRedirected((Sonnet__DictionaryComboBox*)self, (QPoint*)offset);
+QPaintDevice* k_sonnet__dictionarycombobox_super_redirected(void* self, void* offset) {
+    return Sonnet__DictionaryComboBox_SuperRedirected((Sonnet__DictionaryComboBox*)self, (QPoint*)offset);
 }
 
 void k_sonnet__dictionarycombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2403,8 +2403,8 @@ QPainter* k_sonnet__dictionarycombobox_shared_painter(void* self) {
     return Sonnet__DictionaryComboBox_SharedPainter((Sonnet__DictionaryComboBox*)self);
 }
 
-QPainter* k_sonnet__dictionarycombobox_qbase_shared_painter(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseSharedPainter((Sonnet__DictionaryComboBox*)self);
+QPainter* k_sonnet__dictionarycombobox_super_shared_painter(void* self) {
+    return Sonnet__DictionaryComboBox_SuperSharedPainter((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2415,8 +2415,8 @@ bool k_sonnet__dictionarycombobox_focus_next_prev_child(void* self, bool next) {
     return Sonnet__DictionaryComboBox_FocusNextPrevChild((Sonnet__DictionaryComboBox*)self, next);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_focus_next_prev_child(void* self, bool next) {
-    return Sonnet__DictionaryComboBox_QBaseFocusNextPrevChild((Sonnet__DictionaryComboBox*)self, next);
+bool k_sonnet__dictionarycombobox_super_focus_next_prev_child(void* self, bool next) {
+    return Sonnet__DictionaryComboBox_SuperFocusNextPrevChild((Sonnet__DictionaryComboBox*)self, next);
 }
 
 void k_sonnet__dictionarycombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2427,8 +2427,8 @@ bool k_sonnet__dictionarycombobox_event_filter(void* self, void* watched, void* 
     return Sonnet__DictionaryComboBox_EventFilter((Sonnet__DictionaryComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_event_filter(void* self, void* watched, void* event) {
-    return Sonnet__DictionaryComboBox_QBaseEventFilter((Sonnet__DictionaryComboBox*)self, (QObject*)watched, (QEvent*)event);
+bool k_sonnet__dictionarycombobox_super_event_filter(void* self, void* watched, void* event) {
+    return Sonnet__DictionaryComboBox_SuperEventFilter((Sonnet__DictionaryComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2439,8 +2439,8 @@ void k_sonnet__dictionarycombobox_timer_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_TimerEvent((Sonnet__DictionaryComboBox*)self, (QTimerEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_timer_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseTimerEvent((Sonnet__DictionaryComboBox*)self, (QTimerEvent*)event);
+void k_sonnet__dictionarycombobox_super_timer_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperTimerEvent((Sonnet__DictionaryComboBox*)self, (QTimerEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2451,8 +2451,8 @@ void k_sonnet__dictionarycombobox_child_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_ChildEvent((Sonnet__DictionaryComboBox*)self, (QChildEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_child_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseChildEvent((Sonnet__DictionaryComboBox*)self, (QChildEvent*)event);
+void k_sonnet__dictionarycombobox_super_child_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperChildEvent((Sonnet__DictionaryComboBox*)self, (QChildEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2463,8 +2463,8 @@ void k_sonnet__dictionarycombobox_custom_event(void* self, void* event) {
     Sonnet__DictionaryComboBox_CustomEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
-void k_sonnet__dictionarycombobox_qbase_custom_event(void* self, void* event) {
-    Sonnet__DictionaryComboBox_QBaseCustomEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
+void k_sonnet__dictionarycombobox_super_custom_event(void* self, void* event) {
+    Sonnet__DictionaryComboBox_SuperCustomEvent((Sonnet__DictionaryComboBox*)self, (QEvent*)event);
 }
 
 void k_sonnet__dictionarycombobox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2475,8 +2475,8 @@ void k_sonnet__dictionarycombobox_connect_notify(void* self, void* signal) {
     Sonnet__DictionaryComboBox_ConnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__dictionarycombobox_qbase_connect_notify(void* self, void* signal) {
-    Sonnet__DictionaryComboBox_QBaseConnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
+void k_sonnet__dictionarycombobox_super_connect_notify(void* self, void* signal) {
+    Sonnet__DictionaryComboBox_SuperConnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__dictionarycombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2487,8 +2487,8 @@ void k_sonnet__dictionarycombobox_disconnect_notify(void* self, void* signal) {
     Sonnet__DictionaryComboBox_DisconnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_sonnet__dictionarycombobox_qbase_disconnect_notify(void* self, void* signal) {
-    Sonnet__DictionaryComboBox_QBaseDisconnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
+void k_sonnet__dictionarycombobox_super_disconnect_notify(void* self, void* signal) {
+    Sonnet__DictionaryComboBox_SuperDisconnectNotify((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__dictionarycombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2499,8 +2499,8 @@ void k_sonnet__dictionarycombobox_update_micro_focus(void* self) {
     Sonnet__DictionaryComboBox_UpdateMicroFocus((Sonnet__DictionaryComboBox*)self);
 }
 
-void k_sonnet__dictionarycombobox_qbase_update_micro_focus(void* self) {
-    Sonnet__DictionaryComboBox_QBaseUpdateMicroFocus((Sonnet__DictionaryComboBox*)self);
+void k_sonnet__dictionarycombobox_super_update_micro_focus(void* self) {
+    Sonnet__DictionaryComboBox_SuperUpdateMicroFocus((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2511,8 +2511,8 @@ void k_sonnet__dictionarycombobox_create(void* self) {
     Sonnet__DictionaryComboBox_Create((Sonnet__DictionaryComboBox*)self);
 }
 
-void k_sonnet__dictionarycombobox_qbase_create(void* self) {
-    Sonnet__DictionaryComboBox_QBaseCreate((Sonnet__DictionaryComboBox*)self);
+void k_sonnet__dictionarycombobox_super_create(void* self) {
+    Sonnet__DictionaryComboBox_SuperCreate((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_create(void* self, void (*callback)()) {
@@ -2523,8 +2523,8 @@ void k_sonnet__dictionarycombobox_destroy(void* self) {
     Sonnet__DictionaryComboBox_Destroy((Sonnet__DictionaryComboBox*)self);
 }
 
-void k_sonnet__dictionarycombobox_qbase_destroy(void* self) {
-    Sonnet__DictionaryComboBox_QBaseDestroy((Sonnet__DictionaryComboBox*)self);
+void k_sonnet__dictionarycombobox_super_destroy(void* self) {
+    Sonnet__DictionaryComboBox_SuperDestroy((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_destroy(void* self, void (*callback)()) {
@@ -2535,8 +2535,8 @@ bool k_sonnet__dictionarycombobox_focus_next_child(void* self) {
     return Sonnet__DictionaryComboBox_FocusNextChild((Sonnet__DictionaryComboBox*)self);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_focus_next_child(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseFocusNextChild((Sonnet__DictionaryComboBox*)self);
+bool k_sonnet__dictionarycombobox_super_focus_next_child(void* self) {
+    return Sonnet__DictionaryComboBox_SuperFocusNextChild((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2547,8 +2547,8 @@ bool k_sonnet__dictionarycombobox_focus_previous_child(void* self) {
     return Sonnet__DictionaryComboBox_FocusPreviousChild((Sonnet__DictionaryComboBox*)self);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_focus_previous_child(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseFocusPreviousChild((Sonnet__DictionaryComboBox*)self);
+bool k_sonnet__dictionarycombobox_super_focus_previous_child(void* self) {
+    return Sonnet__DictionaryComboBox_SuperFocusPreviousChild((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2559,8 +2559,8 @@ QObject* k_sonnet__dictionarycombobox_sender(void* self) {
     return Sonnet__DictionaryComboBox_Sender((Sonnet__DictionaryComboBox*)self);
 }
 
-QObject* k_sonnet__dictionarycombobox_qbase_sender(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseSender((Sonnet__DictionaryComboBox*)self);
+QObject* k_sonnet__dictionarycombobox_super_sender(void* self) {
+    return Sonnet__DictionaryComboBox_SuperSender((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_sender(void* self, QObject* (*callback)()) {
@@ -2571,8 +2571,8 @@ int32_t k_sonnet__dictionarycombobox_sender_signal_index(void* self) {
     return Sonnet__DictionaryComboBox_SenderSignalIndex((Sonnet__DictionaryComboBox*)self);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_sender_signal_index(void* self) {
-    return Sonnet__DictionaryComboBox_QBaseSenderSignalIndex((Sonnet__DictionaryComboBox*)self);
+int32_t k_sonnet__dictionarycombobox_super_sender_signal_index(void* self) {
+    return Sonnet__DictionaryComboBox_SuperSenderSignalIndex((Sonnet__DictionaryComboBox*)self);
 }
 
 void k_sonnet__dictionarycombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2583,8 +2583,8 @@ int32_t k_sonnet__dictionarycombobox_receivers(void* self, const char* signal) {
     return Sonnet__DictionaryComboBox_Receivers((Sonnet__DictionaryComboBox*)self, signal);
 }
 
-int32_t k_sonnet__dictionarycombobox_qbase_receivers(void* self, const char* signal) {
-    return Sonnet__DictionaryComboBox_QBaseReceivers((Sonnet__DictionaryComboBox*)self, signal);
+int32_t k_sonnet__dictionarycombobox_super_receivers(void* self, const char* signal) {
+    return Sonnet__DictionaryComboBox_SuperReceivers((Sonnet__DictionaryComboBox*)self, signal);
 }
 
 void k_sonnet__dictionarycombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2595,8 +2595,8 @@ bool k_sonnet__dictionarycombobox_is_signal_connected(void* self, void* signal) 
     return Sonnet__DictionaryComboBox_IsSignalConnected((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_sonnet__dictionarycombobox_qbase_is_signal_connected(void* self, void* signal) {
-    return Sonnet__DictionaryComboBox_QBaseIsSignalConnected((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
+bool k_sonnet__dictionarycombobox_super_is_signal_connected(void* self, void* signal) {
+    return Sonnet__DictionaryComboBox_SuperIsSignalConnected((Sonnet__DictionaryComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sonnet__dictionarycombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2607,8 +2607,8 @@ double k_sonnet__dictionarycombobox_get_decoded_metric_f(void* self, int32_t met
     return Sonnet__DictionaryComboBox_GetDecodedMetricF((Sonnet__DictionaryComboBox*)self, metricA, metricB);
 }
 
-double k_sonnet__dictionarycombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return Sonnet__DictionaryComboBox_QBaseGetDecodedMetricF((Sonnet__DictionaryComboBox*)self, metricA, metricB);
+double k_sonnet__dictionarycombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return Sonnet__DictionaryComboBox_SuperGetDecodedMetricF((Sonnet__DictionaryComboBox*)self, metricA, metricB);
 }
 
 void k_sonnet__dictionarycombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

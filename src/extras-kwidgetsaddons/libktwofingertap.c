@@ -24,8 +24,8 @@ void k_twofingertap_on_meta_object(void* self, const QMetaObject* (*callback)())
     KTwoFingerTap_OnMetaObject((KTwoFingerTap*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_twofingertap_qbase_meta_object(void* self) {
-    return KTwoFingerTap_QBaseMetaObject((KTwoFingerTap*)self);
+const QMetaObject* k_twofingertap_super_meta_object(void* self) {
+    return KTwoFingerTap_SuperMetaObject((KTwoFingerTap*)self);
 }
 
 void* k_twofingertap_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_twofingertap_on_metacast(void* self, void* (*callback)(void*, const char*
     KTwoFingerTap_OnMetacast((KTwoFingerTap*)self, (intptr_t)callback);
 }
 
-void* k_twofingertap_qbase_metacast(void* self, const char* param1) {
-    return KTwoFingerTap_QBaseMetacast((KTwoFingerTap*)self, param1);
+void* k_twofingertap_super_metacast(void* self, const char* param1) {
+    return KTwoFingerTap_SuperMetacast((KTwoFingerTap*)self, param1);
 }
 
 int32_t k_twofingertap_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_twofingertap_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KTwoFingerTap_OnMetacall((KTwoFingerTap*)self, (intptr_t)callback);
 }
 
-int32_t k_twofingertap_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTwoFingerTap_QBaseMetacall((KTwoFingerTap*)self, param1, param2, param3);
+int32_t k_twofingertap_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTwoFingerTap_SuperMetacall((KTwoFingerTap*)self, param1, param2, param3);
 }
 
 const char* k_twofingertap_tr(const char* s) {
@@ -344,8 +344,8 @@ bool k_twofingertap_event(void* self, void* event) {
     return KTwoFingerTap_Event((KTwoFingerTap*)self, (QEvent*)event);
 }
 
-bool k_twofingertap_qbase_event(void* self, void* event) {
-    return KTwoFingerTap_QBaseEvent((KTwoFingerTap*)self, (QEvent*)event);
+bool k_twofingertap_super_event(void* self, void* event) {
+    return KTwoFingerTap_SuperEvent((KTwoFingerTap*)self, (QEvent*)event);
 }
 
 void k_twofingertap_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -356,8 +356,8 @@ bool k_twofingertap_event_filter(void* self, void* watched, void* event) {
     return KTwoFingerTap_EventFilter((KTwoFingerTap*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_twofingertap_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTwoFingerTap_QBaseEventFilter((KTwoFingerTap*)self, (QObject*)watched, (QEvent*)event);
+bool k_twofingertap_super_event_filter(void* self, void* watched, void* event) {
+    return KTwoFingerTap_SuperEventFilter((KTwoFingerTap*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_twofingertap_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -368,8 +368,8 @@ void k_twofingertap_timer_event(void* self, void* event) {
     KTwoFingerTap_TimerEvent((KTwoFingerTap*)self, (QTimerEvent*)event);
 }
 
-void k_twofingertap_qbase_timer_event(void* self, void* event) {
-    KTwoFingerTap_QBaseTimerEvent((KTwoFingerTap*)self, (QTimerEvent*)event);
+void k_twofingertap_super_timer_event(void* self, void* event) {
+    KTwoFingerTap_SuperTimerEvent((KTwoFingerTap*)self, (QTimerEvent*)event);
 }
 
 void k_twofingertap_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -380,8 +380,8 @@ void k_twofingertap_child_event(void* self, void* event) {
     KTwoFingerTap_ChildEvent((KTwoFingerTap*)self, (QChildEvent*)event);
 }
 
-void k_twofingertap_qbase_child_event(void* self, void* event) {
-    KTwoFingerTap_QBaseChildEvent((KTwoFingerTap*)self, (QChildEvent*)event);
+void k_twofingertap_super_child_event(void* self, void* event) {
+    KTwoFingerTap_SuperChildEvent((KTwoFingerTap*)self, (QChildEvent*)event);
 }
 
 void k_twofingertap_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -392,8 +392,8 @@ void k_twofingertap_custom_event(void* self, void* event) {
     KTwoFingerTap_CustomEvent((KTwoFingerTap*)self, (QEvent*)event);
 }
 
-void k_twofingertap_qbase_custom_event(void* self, void* event) {
-    KTwoFingerTap_QBaseCustomEvent((KTwoFingerTap*)self, (QEvent*)event);
+void k_twofingertap_super_custom_event(void* self, void* event) {
+    KTwoFingerTap_SuperCustomEvent((KTwoFingerTap*)self, (QEvent*)event);
 }
 
 void k_twofingertap_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -404,8 +404,8 @@ void k_twofingertap_connect_notify(void* self, void* signal) {
     KTwoFingerTap_ConnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
-void k_twofingertap_qbase_connect_notify(void* self, void* signal) {
-    KTwoFingerTap_QBaseConnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
+void k_twofingertap_super_connect_notify(void* self, void* signal) {
+    KTwoFingerTap_SuperConnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingertap_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -416,8 +416,8 @@ void k_twofingertap_disconnect_notify(void* self, void* signal) {
     KTwoFingerTap_DisconnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
-void k_twofingertap_qbase_disconnect_notify(void* self, void* signal) {
-    KTwoFingerTap_QBaseDisconnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
+void k_twofingertap_super_disconnect_notify(void* self, void* signal) {
+    KTwoFingerTap_SuperDisconnectNotify((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingertap_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -428,8 +428,8 @@ QObject* k_twofingertap_sender(void* self) {
     return KTwoFingerTap_Sender((KTwoFingerTap*)self);
 }
 
-QObject* k_twofingertap_qbase_sender(void* self) {
-    return KTwoFingerTap_QBaseSender((KTwoFingerTap*)self);
+QObject* k_twofingertap_super_sender(void* self) {
+    return KTwoFingerTap_SuperSender((KTwoFingerTap*)self);
 }
 
 void k_twofingertap_on_sender(void* self, QObject* (*callback)()) {
@@ -440,8 +440,8 @@ int32_t k_twofingertap_sender_signal_index(void* self) {
     return KTwoFingerTap_SenderSignalIndex((KTwoFingerTap*)self);
 }
 
-int32_t k_twofingertap_qbase_sender_signal_index(void* self) {
-    return KTwoFingerTap_QBaseSenderSignalIndex((KTwoFingerTap*)self);
+int32_t k_twofingertap_super_sender_signal_index(void* self) {
+    return KTwoFingerTap_SuperSenderSignalIndex((KTwoFingerTap*)self);
 }
 
 void k_twofingertap_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -452,8 +452,8 @@ int32_t k_twofingertap_receivers(void* self, const char* signal) {
     return KTwoFingerTap_Receivers((KTwoFingerTap*)self, signal);
 }
 
-int32_t k_twofingertap_qbase_receivers(void* self, const char* signal) {
-    return KTwoFingerTap_QBaseReceivers((KTwoFingerTap*)self, signal);
+int32_t k_twofingertap_super_receivers(void* self, const char* signal) {
+    return KTwoFingerTap_SuperReceivers((KTwoFingerTap*)self, signal);
 }
 
 void k_twofingertap_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -464,8 +464,8 @@ bool k_twofingertap_is_signal_connected(void* self, void* signal) {
     return KTwoFingerTap_IsSignalConnected((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
-bool k_twofingertap_qbase_is_signal_connected(void* self, void* signal) {
-    return KTwoFingerTap_QBaseIsSignalConnected((KTwoFingerTap*)self, (QMetaMethod*)signal);
+bool k_twofingertap_super_is_signal_connected(void* self, void* signal) {
+    return KTwoFingerTap_SuperIsSignalConnected((KTwoFingerTap*)self, (QMetaMethod*)signal);
 }
 
 void k_twofingertap_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -492,8 +492,8 @@ void k_twofingertaprecognizer_on_create(void* self, QGesture* (*callback)(void*,
     KTwoFingerTapRecognizer_OnCreate((KTwoFingerTapRecognizer*)self, (intptr_t)callback);
 }
 
-QGesture* k_twofingertaprecognizer_qbase_create(void* self, void* target) {
-    return KTwoFingerTapRecognizer_QBaseCreate((KTwoFingerTapRecognizer*)self, (QObject*)target);
+QGesture* k_twofingertaprecognizer_super_create(void* self, void* target) {
+    return KTwoFingerTapRecognizer_SuperCreate((KTwoFingerTapRecognizer*)self, (QObject*)target);
 }
 
 int32_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
@@ -504,8 +504,8 @@ void k_twofingertaprecognizer_on_recognize(void* self, int32_t (*callback)(void*
     KTwoFingerTapRecognizer_OnRecognize((KTwoFingerTapRecognizer*)self, (intptr_t)callback);
 }
 
-int32_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
-    return KTwoFingerTapRecognizer_QBaseRecognize((KTwoFingerTapRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
+int32_t k_twofingertaprecognizer_super_recognize(void* self, void* gesture, void* watched, void* event) {
+    return KTwoFingerTapRecognizer_SuperRecognize((KTwoFingerTapRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 
 int32_t k_twofingertaprecognizer_tap_radius(void* self) {
@@ -532,8 +532,8 @@ void k_twofingertaprecognizer_reset(void* self, void* state) {
     KTwoFingerTapRecognizer_Reset((KTwoFingerTapRecognizer*)self, (QGesture*)state);
 }
 
-void k_twofingertaprecognizer_qbase_reset(void* self, void* state) {
-    KTwoFingerTapRecognizer_QBaseReset((KTwoFingerTapRecognizer*)self, (QGesture*)state);
+void k_twofingertaprecognizer_super_reset(void* self, void* state) {
+    KTwoFingerTapRecognizer_SuperReset((KTwoFingerTapRecognizer*)self, (QGesture*)state);
 }
 
 void k_twofingertaprecognizer_on_reset(void* self, void (*callback)(void*, void*)) {

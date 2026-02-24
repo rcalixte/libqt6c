@@ -46,8 +46,8 @@ void k_lineedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KLineEdit_OnMetaObject((KLineEdit*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_lineedit_qbase_meta_object(void* self) {
-    return KLineEdit_QBaseMetaObject((KLineEdit*)self);
+const QMetaObject* k_lineedit_super_meta_object(void* self) {
+    return KLineEdit_SuperMetaObject((KLineEdit*)self);
 }
 
 void* k_lineedit_metacast(void* self, const char* param1) {
@@ -58,8 +58,8 @@ void k_lineedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KLineEdit_OnMetacast((KLineEdit*)self, (intptr_t)callback);
 }
 
-void* k_lineedit_qbase_metacast(void* self, const char* param1) {
-    return KLineEdit_QBaseMetacast((KLineEdit*)self, param1);
+void* k_lineedit_super_metacast(void* self, const char* param1) {
+    return KLineEdit_SuperMetacast((KLineEdit*)self, param1);
 }
 
 int32_t k_lineedit_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -70,8 +70,8 @@ void k_lineedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KLineEdit_OnMetacall((KLineEdit*)self, (intptr_t)callback);
 }
 
-int32_t k_lineedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLineEdit_QBaseMetacall((KLineEdit*)self, param1, param2, param3);
+int32_t k_lineedit_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLineEdit_SuperMetacall((KLineEdit*)self, param1, param2, param3);
 }
 
 const char* k_lineedit_tr(const char* s) {
@@ -93,8 +93,8 @@ void k_lineedit_on_set_completion_mode(void* self, void (*callback)(void*, int32
     KLineEdit_OnSetCompletionMode((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completion_mode(void* self, int32_t mode) {
-    KLineEdit_QBaseSetCompletionMode((KLineEdit*)self, mode);
+void k_lineedit_super_set_completion_mode(void* self, int32_t mode) {
+    KLineEdit_SuperSetCompletionMode((KLineEdit*)self, mode);
 }
 
 void k_lineedit_set_completion_mode_disabled(void* self, int32_t mode) {
@@ -121,8 +121,8 @@ void k_lineedit_on_completion_box(void* self, KCompletionBox* (*callback)(void*,
     KLineEdit_OnCompletionBox((KLineEdit*)self, (intptr_t)callback);
 }
 
-KCompletionBox* k_lineedit_qbase_completion_box(void* self, bool create) {
-    return KLineEdit_QBaseCompletionBox((KLineEdit*)self, create);
+KCompletionBox* k_lineedit_super_completion_box(void* self, bool create) {
+    return KLineEdit_SuperCompletionBox((KLineEdit*)self, create);
 }
 
 void k_lineedit_set_completion_object(void* self, void* param1, bool handle) {
@@ -133,8 +133,8 @@ void k_lineedit_on_set_completion_object(void* self, void (*callback)(void*, voi
     KLineEdit_OnSetCompletionObject((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completion_object(void* self, void* param1, bool handle) {
-    KLineEdit_QBaseSetCompletionObject((KLineEdit*)self, (KCompletion*)param1, handle);
+void k_lineedit_super_set_completion_object(void* self, void* param1, bool handle) {
+    KLineEdit_SuperSetCompletionObject((KLineEdit*)self, (KCompletion*)param1, handle);
 }
 
 void k_lineedit_copy(void* self) {
@@ -145,8 +145,8 @@ void k_lineedit_on_copy(void* self, void (*callback)()) {
     KLineEdit_OnCopy((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_copy(void* self) {
-    KLineEdit_QBaseCopy((KLineEdit*)self);
+void k_lineedit_super_copy(void* self) {
+    KLineEdit_SuperCopy((KLineEdit*)self);
 }
 
 void k_lineedit_set_squeezed_text_enabled(void* self, bool enable) {
@@ -255,8 +255,8 @@ void k_lineedit_on_set_read_only(void* self, void (*callback)(void*, bool)) {
     KLineEdit_OnSetReadOnly((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_read_only(void* self, bool readOnly) {
-    KLineEdit_QBaseSetReadOnly((KLineEdit*)self, readOnly);
+void k_lineedit_super_set_read_only(void* self, bool readOnly) {
+    KLineEdit_SuperSetReadOnly((KLineEdit*)self, readOnly);
 }
 
 void k_lineedit_rotate_text(void* self, int32_t type) {
@@ -271,8 +271,8 @@ void k_lineedit_on_set_completed_text(void* self, void (*callback)(void*, const 
     KLineEdit_OnSetCompletedText((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completed_text(void* self, const char* completedText) {
-    KLineEdit_QBaseSetCompletedText((KLineEdit*)self, qstring(completedText));
+void k_lineedit_super_set_completed_text(void* self, const char* completedText) {
+    KLineEdit_SuperSetCompletedText((KLineEdit*)self, qstring(completedText));
 }
 
 void k_lineedit_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
@@ -294,7 +294,7 @@ void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const
     KLineEdit_OnSetCompletedItems((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
+void k_lineedit_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -305,7 +305,7 @@ void k_lineedit_qbase_set_completed_items(void* self, const char* items[static 1
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KLineEdit_QBaseSetCompletedItems((KLineEdit*)self, items_list, autoSuggest);
+    KLineEdit_SuperSetCompletedItems((KLineEdit*)self, items_list, autoSuggest);
 }
 
 void k_lineedit_set_squeezed_text(void* self, const char* text) {
@@ -320,8 +320,8 @@ void k_lineedit_on_set_text(void* self, void (*callback)(void*, const char*)) {
     KLineEdit_OnSetText((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_text(void* self, const char* text) {
-    KLineEdit_QBaseSetText((KLineEdit*)self, qstring(text));
+void k_lineedit_super_set_text(void* self, const char* text) {
+    KLineEdit_SuperSetText((KLineEdit*)self, qstring(text));
 }
 
 void k_lineedit_make_completion(void* self, const char* param1) {
@@ -332,8 +332,8 @@ void k_lineedit_on_make_completion(void* self, void (*callback)(void*, const cha
     KLineEdit_OnMakeCompletion((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_make_completion(void* self, const char* param1) {
-    KLineEdit_QBaseMakeCompletion((KLineEdit*)self, qstring(param1));
+void k_lineedit_super_make_completion(void* self, const char* param1) {
+    KLineEdit_SuperMakeCompletion((KLineEdit*)self, qstring(param1));
 }
 
 void k_lineedit_user_cancelled(void* self, const char* cancelText) {
@@ -344,8 +344,8 @@ void k_lineedit_on_user_cancelled(void* self, void (*callback)(void*, const char
     KLineEdit_OnUserCancelled((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_user_cancelled(void* self, const char* cancelText) {
-    KLineEdit_QBaseUserCancelled((KLineEdit*)self, qstring(cancelText));
+void k_lineedit_super_user_cancelled(void* self, const char* cancelText) {
+    KLineEdit_SuperUserCancelled((KLineEdit*)self, qstring(cancelText));
 }
 
 bool k_lineedit_event(void* self, void* param1) {
@@ -356,8 +356,8 @@ void k_lineedit_on_event(void* self, bool (*callback)(void*, void*)) {
     KLineEdit_OnEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-bool k_lineedit_qbase_event(void* self, void* param1) {
-    return KLineEdit_QBaseEvent((KLineEdit*)self, (QEvent*)param1);
+bool k_lineedit_super_event(void* self, void* param1) {
+    return KLineEdit_SuperEvent((KLineEdit*)self, (QEvent*)param1);
 }
 
 void k_lineedit_resize_event(void* self, void* param1) {
@@ -368,8 +368,8 @@ void k_lineedit_on_resize_event(void* self, void (*callback)(void*, void*)) {
     KLineEdit_OnResizeEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_resize_event(void* self, void* param1) {
-    KLineEdit_QBaseResizeEvent((KLineEdit*)self, (QResizeEvent*)param1);
+void k_lineedit_super_resize_event(void* self, void* param1) {
+    KLineEdit_SuperResizeEvent((KLineEdit*)self, (QResizeEvent*)param1);
 }
 
 void k_lineedit_key_press_event(void* self, void* param1) {
@@ -380,8 +380,8 @@ void k_lineedit_on_key_press_event(void* self, void (*callback)(void*, void*)) {
     KLineEdit_OnKeyPressEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_key_press_event(void* self, void* param1) {
-    KLineEdit_QBaseKeyPressEvent((KLineEdit*)self, (QKeyEvent*)param1);
+void k_lineedit_super_key_press_event(void* self, void* param1) {
+    KLineEdit_SuperKeyPressEvent((KLineEdit*)self, (QKeyEvent*)param1);
 }
 
 void k_lineedit_mouse_press_event(void* self, void* param1) {
@@ -392,8 +392,8 @@ void k_lineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*))
     KLineEdit_OnMousePressEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_mouse_press_event(void* self, void* param1) {
-    KLineEdit_QBaseMousePressEvent((KLineEdit*)self, (QMouseEvent*)param1);
+void k_lineedit_super_mouse_press_event(void* self, void* param1) {
+    KLineEdit_SuperMousePressEvent((KLineEdit*)self, (QMouseEvent*)param1);
 }
 
 void k_lineedit_mouse_release_event(void* self, void* param1) {
@@ -404,8 +404,8 @@ void k_lineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*
     KLineEdit_OnMouseReleaseEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_mouse_release_event(void* self, void* param1) {
-    KLineEdit_QBaseMouseReleaseEvent((KLineEdit*)self, (QMouseEvent*)param1);
+void k_lineedit_super_mouse_release_event(void* self, void* param1) {
+    KLineEdit_SuperMouseReleaseEvent((KLineEdit*)self, (QMouseEvent*)param1);
 }
 
 void k_lineedit_mouse_double_click_event(void* self, void* param1) {
@@ -416,8 +416,8 @@ void k_lineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, 
     KLineEdit_OnMouseDoubleClickEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_mouse_double_click_event(void* self, void* param1) {
-    KLineEdit_QBaseMouseDoubleClickEvent((KLineEdit*)self, (QMouseEvent*)param1);
+void k_lineedit_super_mouse_double_click_event(void* self, void* param1) {
+    KLineEdit_SuperMouseDoubleClickEvent((KLineEdit*)self, (QMouseEvent*)param1);
 }
 
 void k_lineedit_context_menu_event(void* self, void* param1) {
@@ -428,8 +428,8 @@ void k_lineedit_on_context_menu_event(void* self, void (*callback)(void*, void*)
     KLineEdit_OnContextMenuEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_context_menu_event(void* self, void* param1) {
-    KLineEdit_QBaseContextMenuEvent((KLineEdit*)self, (QContextMenuEvent*)param1);
+void k_lineedit_super_context_menu_event(void* self, void* param1) {
+    KLineEdit_SuperContextMenuEvent((KLineEdit*)self, (QContextMenuEvent*)param1);
 }
 
 QMenu* k_lineedit_create_standard_context_menu(void* self) {
@@ -440,8 +440,8 @@ void k_lineedit_on_create_standard_context_menu(void* self, QMenu* (*callback)()
     KLineEdit_OnCreateStandardContextMenu((KLineEdit*)self, (intptr_t)callback);
 }
 
-QMenu* k_lineedit_qbase_create_standard_context_menu(void* self) {
-    return KLineEdit_QBaseCreateStandardContextMenu((KLineEdit*)self);
+QMenu* k_lineedit_super_create_standard_context_menu(void* self) {
+    return KLineEdit_SuperCreateStandardContextMenu((KLineEdit*)self);
 }
 
 void k_lineedit_set_completed_text2(void* self, const char* param1, bool param2) {
@@ -452,8 +452,8 @@ void k_lineedit_on_set_completed_text2(void* self, void (*callback)(void*, const
     KLineEdit_OnSetCompletedText2((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completed_text2(void* self, const char* param1, bool param2) {
-    KLineEdit_QBaseSetCompletedText2((KLineEdit*)self, qstring(param1), param2);
+void k_lineedit_super_set_completed_text2(void* self, const char* param1, bool param2) {
+    KLineEdit_SuperSetCompletedText2((KLineEdit*)self, qstring(param1), param2);
 }
 
 void k_lineedit_set_user_selection(void* self, bool userSelection) {
@@ -464,8 +464,8 @@ void k_lineedit_on_set_user_selection(void* self, void (*callback)(void*, bool))
     KLineEdit_OnSetUserSelection((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_user_selection(void* self, bool userSelection) {
-    KLineEdit_QBaseSetUserSelection((KLineEdit*)self, userSelection);
+void k_lineedit_super_set_user_selection(void* self, bool userSelection) {
+    KLineEdit_SuperSetUserSelection((KLineEdit*)self, userSelection);
 }
 
 bool k_lineedit_auto_suggest(void* self) {
@@ -476,8 +476,8 @@ void k_lineedit_on_auto_suggest(void* self, bool (*callback)()) {
     KLineEdit_OnAutoSuggest((KLineEdit*)self, (intptr_t)callback);
 }
 
-bool k_lineedit_qbase_auto_suggest(void* self) {
-    return KLineEdit_QBaseAutoSuggest((KLineEdit*)self);
+bool k_lineedit_super_auto_suggest(void* self) {
+    return KLineEdit_SuperAutoSuggest((KLineEdit*)self);
 }
 
 void k_lineedit_paint_event(void* self, void* ev) {
@@ -488,8 +488,8 @@ void k_lineedit_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KLineEdit_OnPaintEvent((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_paint_event(void* self, void* ev) {
-    KLineEdit_QBasePaintEvent((KLineEdit*)self, (QPaintEvent*)ev);
+void k_lineedit_super_paint_event(void* self, void* ev) {
+    KLineEdit_SuperPaintEvent((KLineEdit*)self, (QPaintEvent*)ev);
 }
 
 const char* k_lineedit_tr2(const char* s, const char* c) {
@@ -2263,8 +2263,8 @@ QSize* k_lineedit_size_hint(void* self) {
     return KLineEdit_SizeHint((KLineEdit*)self);
 }
 
-QSize* k_lineedit_qbase_size_hint(void* self) {
-    return KLineEdit_QBaseSizeHint((KLineEdit*)self);
+QSize* k_lineedit_super_size_hint(void* self) {
+    return KLineEdit_SuperSizeHint((KLineEdit*)self);
 }
 
 void k_lineedit_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2275,8 +2275,8 @@ QSize* k_lineedit_minimum_size_hint(void* self) {
     return KLineEdit_MinimumSizeHint((KLineEdit*)self);
 }
 
-QSize* k_lineedit_qbase_minimum_size_hint(void* self) {
-    return KLineEdit_QBaseMinimumSizeHint((KLineEdit*)self);
+QSize* k_lineedit_super_minimum_size_hint(void* self) {
+    return KLineEdit_SuperMinimumSizeHint((KLineEdit*)self);
 }
 
 void k_lineedit_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2287,8 +2287,8 @@ void k_lineedit_mouse_move_event(void* self, void* param1) {
     KLineEdit_MouseMoveEvent((KLineEdit*)self, (QMouseEvent*)param1);
 }
 
-void k_lineedit_qbase_mouse_move_event(void* self, void* param1) {
-    KLineEdit_QBaseMouseMoveEvent((KLineEdit*)self, (QMouseEvent*)param1);
+void k_lineedit_super_mouse_move_event(void* self, void* param1) {
+    KLineEdit_SuperMouseMoveEvent((KLineEdit*)self, (QMouseEvent*)param1);
 }
 
 void k_lineedit_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2299,8 +2299,8 @@ void k_lineedit_key_release_event(void* self, void* param1) {
     KLineEdit_KeyReleaseEvent((KLineEdit*)self, (QKeyEvent*)param1);
 }
 
-void k_lineedit_qbase_key_release_event(void* self, void* param1) {
-    KLineEdit_QBaseKeyReleaseEvent((KLineEdit*)self, (QKeyEvent*)param1);
+void k_lineedit_super_key_release_event(void* self, void* param1) {
+    KLineEdit_SuperKeyReleaseEvent((KLineEdit*)self, (QKeyEvent*)param1);
 }
 
 void k_lineedit_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2311,8 +2311,8 @@ void k_lineedit_focus_in_event(void* self, void* param1) {
     KLineEdit_FocusInEvent((KLineEdit*)self, (QFocusEvent*)param1);
 }
 
-void k_lineedit_qbase_focus_in_event(void* self, void* param1) {
-    KLineEdit_QBaseFocusInEvent((KLineEdit*)self, (QFocusEvent*)param1);
+void k_lineedit_super_focus_in_event(void* self, void* param1) {
+    KLineEdit_SuperFocusInEvent((KLineEdit*)self, (QFocusEvent*)param1);
 }
 
 void k_lineedit_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2323,8 +2323,8 @@ void k_lineedit_focus_out_event(void* self, void* param1) {
     KLineEdit_FocusOutEvent((KLineEdit*)self, (QFocusEvent*)param1);
 }
 
-void k_lineedit_qbase_focus_out_event(void* self, void* param1) {
-    KLineEdit_QBaseFocusOutEvent((KLineEdit*)self, (QFocusEvent*)param1);
+void k_lineedit_super_focus_out_event(void* self, void* param1) {
+    KLineEdit_SuperFocusOutEvent((KLineEdit*)self, (QFocusEvent*)param1);
 }
 
 void k_lineedit_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2335,8 +2335,8 @@ void k_lineedit_drag_enter_event(void* self, void* param1) {
     KLineEdit_DragEnterEvent((KLineEdit*)self, (QDragEnterEvent*)param1);
 }
 
-void k_lineedit_qbase_drag_enter_event(void* self, void* param1) {
-    KLineEdit_QBaseDragEnterEvent((KLineEdit*)self, (QDragEnterEvent*)param1);
+void k_lineedit_super_drag_enter_event(void* self, void* param1) {
+    KLineEdit_SuperDragEnterEvent((KLineEdit*)self, (QDragEnterEvent*)param1);
 }
 
 void k_lineedit_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2347,8 +2347,8 @@ void k_lineedit_drag_move_event(void* self, void* e) {
     KLineEdit_DragMoveEvent((KLineEdit*)self, (QDragMoveEvent*)e);
 }
 
-void k_lineedit_qbase_drag_move_event(void* self, void* e) {
-    KLineEdit_QBaseDragMoveEvent((KLineEdit*)self, (QDragMoveEvent*)e);
+void k_lineedit_super_drag_move_event(void* self, void* e) {
+    KLineEdit_SuperDragMoveEvent((KLineEdit*)self, (QDragMoveEvent*)e);
 }
 
 void k_lineedit_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2359,8 +2359,8 @@ void k_lineedit_drag_leave_event(void* self, void* e) {
     KLineEdit_DragLeaveEvent((KLineEdit*)self, (QDragLeaveEvent*)e);
 }
 
-void k_lineedit_qbase_drag_leave_event(void* self, void* e) {
-    KLineEdit_QBaseDragLeaveEvent((KLineEdit*)self, (QDragLeaveEvent*)e);
+void k_lineedit_super_drag_leave_event(void* self, void* e) {
+    KLineEdit_SuperDragLeaveEvent((KLineEdit*)self, (QDragLeaveEvent*)e);
 }
 
 void k_lineedit_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2371,8 +2371,8 @@ void k_lineedit_drop_event(void* self, void* param1) {
     KLineEdit_DropEvent((KLineEdit*)self, (QDropEvent*)param1);
 }
 
-void k_lineedit_qbase_drop_event(void* self, void* param1) {
-    KLineEdit_QBaseDropEvent((KLineEdit*)self, (QDropEvent*)param1);
+void k_lineedit_super_drop_event(void* self, void* param1) {
+    KLineEdit_SuperDropEvent((KLineEdit*)self, (QDropEvent*)param1);
 }
 
 void k_lineedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2383,8 +2383,8 @@ void k_lineedit_change_event(void* self, void* param1) {
     KLineEdit_ChangeEvent((KLineEdit*)self, (QEvent*)param1);
 }
 
-void k_lineedit_qbase_change_event(void* self, void* param1) {
-    KLineEdit_QBaseChangeEvent((KLineEdit*)self, (QEvent*)param1);
+void k_lineedit_super_change_event(void* self, void* param1) {
+    KLineEdit_SuperChangeEvent((KLineEdit*)self, (QEvent*)param1);
 }
 
 void k_lineedit_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2395,8 +2395,8 @@ void k_lineedit_input_method_event(void* self, void* param1) {
     KLineEdit_InputMethodEvent((KLineEdit*)self, (QInputMethodEvent*)param1);
 }
 
-void k_lineedit_qbase_input_method_event(void* self, void* param1) {
-    KLineEdit_QBaseInputMethodEvent((KLineEdit*)self, (QInputMethodEvent*)param1);
+void k_lineedit_super_input_method_event(void* self, void* param1) {
+    KLineEdit_SuperInputMethodEvent((KLineEdit*)self, (QInputMethodEvent*)param1);
 }
 
 void k_lineedit_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2407,8 +2407,8 @@ void k_lineedit_init_style_option(void* self, void* option) {
     KLineEdit_InitStyleOption((KLineEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_lineedit_qbase_init_style_option(void* self, void* option) {
-    KLineEdit_QBaseInitStyleOption((KLineEdit*)self, (QStyleOptionFrame*)option);
+void k_lineedit_super_init_style_option(void* self, void* option) {
+    KLineEdit_SuperInitStyleOption((KLineEdit*)self, (QStyleOptionFrame*)option);
 }
 
 void k_lineedit_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2419,8 +2419,8 @@ QVariant* k_lineedit_input_method_query(void* self, int32_t param1) {
     return KLineEdit_InputMethodQuery((KLineEdit*)self, param1);
 }
 
-QVariant* k_lineedit_qbase_input_method_query(void* self, int32_t param1) {
-    return KLineEdit_QBaseInputMethodQuery((KLineEdit*)self, param1);
+QVariant* k_lineedit_super_input_method_query(void* self, int32_t param1) {
+    return KLineEdit_SuperInputMethodQuery((KLineEdit*)self, param1);
 }
 
 void k_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2431,8 +2431,8 @@ void k_lineedit_timer_event(void* self, void* param1) {
     KLineEdit_TimerEvent((KLineEdit*)self, (QTimerEvent*)param1);
 }
 
-void k_lineedit_qbase_timer_event(void* self, void* param1) {
-    KLineEdit_QBaseTimerEvent((KLineEdit*)self, (QTimerEvent*)param1);
+void k_lineedit_super_timer_event(void* self, void* param1) {
+    KLineEdit_SuperTimerEvent((KLineEdit*)self, (QTimerEvent*)param1);
 }
 
 void k_lineedit_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2443,8 +2443,8 @@ int32_t k_lineedit_dev_type(void* self) {
     return KLineEdit_DevType((KLineEdit*)self);
 }
 
-int32_t k_lineedit_qbase_dev_type(void* self) {
-    return KLineEdit_QBaseDevType((KLineEdit*)self);
+int32_t k_lineedit_super_dev_type(void* self) {
+    return KLineEdit_SuperDevType((KLineEdit*)self);
 }
 
 void k_lineedit_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2455,8 +2455,8 @@ void k_lineedit_set_visible(void* self, bool visible) {
     KLineEdit_SetVisible((KLineEdit*)self, visible);
 }
 
-void k_lineedit_qbase_set_visible(void* self, bool visible) {
-    KLineEdit_QBaseSetVisible((KLineEdit*)self, visible);
+void k_lineedit_super_set_visible(void* self, bool visible) {
+    KLineEdit_SuperSetVisible((KLineEdit*)self, visible);
 }
 
 void k_lineedit_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2467,8 +2467,8 @@ int32_t k_lineedit_height_for_width(void* self, int param1) {
     return KLineEdit_HeightForWidth((KLineEdit*)self, param1);
 }
 
-int32_t k_lineedit_qbase_height_for_width(void* self, int param1) {
-    return KLineEdit_QBaseHeightForWidth((KLineEdit*)self, param1);
+int32_t k_lineedit_super_height_for_width(void* self, int param1) {
+    return KLineEdit_SuperHeightForWidth((KLineEdit*)self, param1);
 }
 
 void k_lineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2479,8 +2479,8 @@ bool k_lineedit_has_height_for_width(void* self) {
     return KLineEdit_HasHeightForWidth((KLineEdit*)self);
 }
 
-bool k_lineedit_qbase_has_height_for_width(void* self) {
-    return KLineEdit_QBaseHasHeightForWidth((KLineEdit*)self);
+bool k_lineedit_super_has_height_for_width(void* self) {
+    return KLineEdit_SuperHasHeightForWidth((KLineEdit*)self);
 }
 
 void k_lineedit_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2491,8 +2491,8 @@ QPaintEngine* k_lineedit_paint_engine(void* self) {
     return KLineEdit_PaintEngine((KLineEdit*)self);
 }
 
-QPaintEngine* k_lineedit_qbase_paint_engine(void* self) {
-    return KLineEdit_QBasePaintEngine((KLineEdit*)self);
+QPaintEngine* k_lineedit_super_paint_engine(void* self) {
+    return KLineEdit_SuperPaintEngine((KLineEdit*)self);
 }
 
 void k_lineedit_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2503,8 +2503,8 @@ void k_lineedit_wheel_event(void* self, void* event) {
     KLineEdit_WheelEvent((KLineEdit*)self, (QWheelEvent*)event);
 }
 
-void k_lineedit_qbase_wheel_event(void* self, void* event) {
-    KLineEdit_QBaseWheelEvent((KLineEdit*)self, (QWheelEvent*)event);
+void k_lineedit_super_wheel_event(void* self, void* event) {
+    KLineEdit_SuperWheelEvent((KLineEdit*)self, (QWheelEvent*)event);
 }
 
 void k_lineedit_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2515,8 +2515,8 @@ void k_lineedit_enter_event(void* self, void* event) {
     KLineEdit_EnterEvent((KLineEdit*)self, (QEnterEvent*)event);
 }
 
-void k_lineedit_qbase_enter_event(void* self, void* event) {
-    KLineEdit_QBaseEnterEvent((KLineEdit*)self, (QEnterEvent*)event);
+void k_lineedit_super_enter_event(void* self, void* event) {
+    KLineEdit_SuperEnterEvent((KLineEdit*)self, (QEnterEvent*)event);
 }
 
 void k_lineedit_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2527,8 +2527,8 @@ void k_lineedit_leave_event(void* self, void* event) {
     KLineEdit_LeaveEvent((KLineEdit*)self, (QEvent*)event);
 }
 
-void k_lineedit_qbase_leave_event(void* self, void* event) {
-    KLineEdit_QBaseLeaveEvent((KLineEdit*)self, (QEvent*)event);
+void k_lineedit_super_leave_event(void* self, void* event) {
+    KLineEdit_SuperLeaveEvent((KLineEdit*)self, (QEvent*)event);
 }
 
 void k_lineedit_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2539,8 +2539,8 @@ void k_lineedit_move_event(void* self, void* event) {
     KLineEdit_MoveEvent((KLineEdit*)self, (QMoveEvent*)event);
 }
 
-void k_lineedit_qbase_move_event(void* self, void* event) {
-    KLineEdit_QBaseMoveEvent((KLineEdit*)self, (QMoveEvent*)event);
+void k_lineedit_super_move_event(void* self, void* event) {
+    KLineEdit_SuperMoveEvent((KLineEdit*)self, (QMoveEvent*)event);
 }
 
 void k_lineedit_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2551,8 +2551,8 @@ void k_lineedit_close_event(void* self, void* event) {
     KLineEdit_CloseEvent((KLineEdit*)self, (QCloseEvent*)event);
 }
 
-void k_lineedit_qbase_close_event(void* self, void* event) {
-    KLineEdit_QBaseCloseEvent((KLineEdit*)self, (QCloseEvent*)event);
+void k_lineedit_super_close_event(void* self, void* event) {
+    KLineEdit_SuperCloseEvent((KLineEdit*)self, (QCloseEvent*)event);
 }
 
 void k_lineedit_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2563,8 +2563,8 @@ void k_lineedit_tablet_event(void* self, void* event) {
     KLineEdit_TabletEvent((KLineEdit*)self, (QTabletEvent*)event);
 }
 
-void k_lineedit_qbase_tablet_event(void* self, void* event) {
-    KLineEdit_QBaseTabletEvent((KLineEdit*)self, (QTabletEvent*)event);
+void k_lineedit_super_tablet_event(void* self, void* event) {
+    KLineEdit_SuperTabletEvent((KLineEdit*)self, (QTabletEvent*)event);
 }
 
 void k_lineedit_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2575,8 +2575,8 @@ void k_lineedit_action_event(void* self, void* event) {
     KLineEdit_ActionEvent((KLineEdit*)self, (QActionEvent*)event);
 }
 
-void k_lineedit_qbase_action_event(void* self, void* event) {
-    KLineEdit_QBaseActionEvent((KLineEdit*)self, (QActionEvent*)event);
+void k_lineedit_super_action_event(void* self, void* event) {
+    KLineEdit_SuperActionEvent((KLineEdit*)self, (QActionEvent*)event);
 }
 
 void k_lineedit_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2587,8 +2587,8 @@ void k_lineedit_show_event(void* self, void* event) {
     KLineEdit_ShowEvent((KLineEdit*)self, (QShowEvent*)event);
 }
 
-void k_lineedit_qbase_show_event(void* self, void* event) {
-    KLineEdit_QBaseShowEvent((KLineEdit*)self, (QShowEvent*)event);
+void k_lineedit_super_show_event(void* self, void* event) {
+    KLineEdit_SuperShowEvent((KLineEdit*)self, (QShowEvent*)event);
 }
 
 void k_lineedit_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2599,8 +2599,8 @@ void k_lineedit_hide_event(void* self, void* event) {
     KLineEdit_HideEvent((KLineEdit*)self, (QHideEvent*)event);
 }
 
-void k_lineedit_qbase_hide_event(void* self, void* event) {
-    KLineEdit_QBaseHideEvent((KLineEdit*)self, (QHideEvent*)event);
+void k_lineedit_super_hide_event(void* self, void* event) {
+    KLineEdit_SuperHideEvent((KLineEdit*)self, (QHideEvent*)event);
 }
 
 void k_lineedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2611,8 +2611,8 @@ bool k_lineedit_native_event(void* self, char* eventType, void* message, intptr_
     return KLineEdit_NativeEvent((KLineEdit*)self, qstring(eventType), message, result);
 }
 
-bool k_lineedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KLineEdit_QBaseNativeEvent((KLineEdit*)self, qstring(eventType), message, result);
+bool k_lineedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KLineEdit_SuperNativeEvent((KLineEdit*)self, qstring(eventType), message, result);
 }
 
 void k_lineedit_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2623,8 +2623,8 @@ int32_t k_lineedit_metric(void* self, int32_t param1) {
     return KLineEdit_Metric((KLineEdit*)self, param1);
 }
 
-int32_t k_lineedit_qbase_metric(void* self, int32_t param1) {
-    return KLineEdit_QBaseMetric((KLineEdit*)self, param1);
+int32_t k_lineedit_super_metric(void* self, int32_t param1) {
+    return KLineEdit_SuperMetric((KLineEdit*)self, param1);
 }
 
 void k_lineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2635,8 +2635,8 @@ void k_lineedit_init_painter(void* self, void* painter) {
     KLineEdit_InitPainter((KLineEdit*)self, (QPainter*)painter);
 }
 
-void k_lineedit_qbase_init_painter(void* self, void* painter) {
-    KLineEdit_QBaseInitPainter((KLineEdit*)self, (QPainter*)painter);
+void k_lineedit_super_init_painter(void* self, void* painter) {
+    KLineEdit_SuperInitPainter((KLineEdit*)self, (QPainter*)painter);
 }
 
 void k_lineedit_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2647,8 +2647,8 @@ QPaintDevice* k_lineedit_redirected(void* self, void* offset) {
     return KLineEdit_Redirected((KLineEdit*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_lineedit_qbase_redirected(void* self, void* offset) {
-    return KLineEdit_QBaseRedirected((KLineEdit*)self, (QPoint*)offset);
+QPaintDevice* k_lineedit_super_redirected(void* self, void* offset) {
+    return KLineEdit_SuperRedirected((KLineEdit*)self, (QPoint*)offset);
 }
 
 void k_lineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2659,8 +2659,8 @@ QPainter* k_lineedit_shared_painter(void* self) {
     return KLineEdit_SharedPainter((KLineEdit*)self);
 }
 
-QPainter* k_lineedit_qbase_shared_painter(void* self) {
-    return KLineEdit_QBaseSharedPainter((KLineEdit*)self);
+QPainter* k_lineedit_super_shared_painter(void* self) {
+    return KLineEdit_SuperSharedPainter((KLineEdit*)self);
 }
 
 void k_lineedit_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2671,8 +2671,8 @@ bool k_lineedit_focus_next_prev_child(void* self, bool next) {
     return KLineEdit_FocusNextPrevChild((KLineEdit*)self, next);
 }
 
-bool k_lineedit_qbase_focus_next_prev_child(void* self, bool next) {
-    return KLineEdit_QBaseFocusNextPrevChild((KLineEdit*)self, next);
+bool k_lineedit_super_focus_next_prev_child(void* self, bool next) {
+    return KLineEdit_SuperFocusNextPrevChild((KLineEdit*)self, next);
 }
 
 void k_lineedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2683,8 +2683,8 @@ bool k_lineedit_event_filter(void* self, void* watched, void* event) {
     return KLineEdit_EventFilter((KLineEdit*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_lineedit_qbase_event_filter(void* self, void* watched, void* event) {
-    return KLineEdit_QBaseEventFilter((KLineEdit*)self, (QObject*)watched, (QEvent*)event);
+bool k_lineedit_super_event_filter(void* self, void* watched, void* event) {
+    return KLineEdit_SuperEventFilter((KLineEdit*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_lineedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2695,8 +2695,8 @@ void k_lineedit_child_event(void* self, void* event) {
     KLineEdit_ChildEvent((KLineEdit*)self, (QChildEvent*)event);
 }
 
-void k_lineedit_qbase_child_event(void* self, void* event) {
-    KLineEdit_QBaseChildEvent((KLineEdit*)self, (QChildEvent*)event);
+void k_lineedit_super_child_event(void* self, void* event) {
+    KLineEdit_SuperChildEvent((KLineEdit*)self, (QChildEvent*)event);
 }
 
 void k_lineedit_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2707,8 +2707,8 @@ void k_lineedit_custom_event(void* self, void* event) {
     KLineEdit_CustomEvent((KLineEdit*)self, (QEvent*)event);
 }
 
-void k_lineedit_qbase_custom_event(void* self, void* event) {
-    KLineEdit_QBaseCustomEvent((KLineEdit*)self, (QEvent*)event);
+void k_lineedit_super_custom_event(void* self, void* event) {
+    KLineEdit_SuperCustomEvent((KLineEdit*)self, (QEvent*)event);
 }
 
 void k_lineedit_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2719,8 +2719,8 @@ void k_lineedit_connect_notify(void* self, void* signal) {
     KLineEdit_ConnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_lineedit_qbase_connect_notify(void* self, void* signal) {
-    KLineEdit_QBaseConnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
+void k_lineedit_super_connect_notify(void* self, void* signal) {
+    KLineEdit_SuperConnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_lineedit_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2731,8 +2731,8 @@ void k_lineedit_disconnect_notify(void* self, void* signal) {
     KLineEdit_DisconnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
-void k_lineedit_qbase_disconnect_notify(void* self, void* signal) {
-    KLineEdit_QBaseDisconnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
+void k_lineedit_super_disconnect_notify(void* self, void* signal) {
+    KLineEdit_SuperDisconnectNotify((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_lineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2743,8 +2743,8 @@ void k_lineedit_set_handle_signals(void* self, bool handle) {
     KLineEdit_SetHandleSignals((KLineEdit*)self, handle);
 }
 
-void k_lineedit_qbase_set_handle_signals(void* self, bool handle) {
-    KLineEdit_QBaseSetHandleSignals((KLineEdit*)self, handle);
+void k_lineedit_super_set_handle_signals(void* self, bool handle) {
+    KLineEdit_SuperSetHandleSignals((KLineEdit*)self, handle);
 }
 
 void k_lineedit_on_set_handle_signals(void* self, void (*callback)(void*, bool)) {
@@ -2755,8 +2755,8 @@ void k_lineedit_virtual_hook(void* self, int id, void* data) {
     KLineEdit_VirtualHook((KLineEdit*)self, id, data);
 }
 
-void k_lineedit_qbase_virtual_hook(void* self, int id, void* data) {
-    KLineEdit_QBaseVirtualHook((KLineEdit*)self, id, data);
+void k_lineedit_super_virtual_hook(void* self, int id, void* data) {
+    KLineEdit_SuperVirtualHook((KLineEdit*)self, id, data);
 }
 
 void k_lineedit_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
@@ -2767,8 +2767,8 @@ QRect* k_lineedit_cursor_rect(void* self) {
     return KLineEdit_CursorRect((KLineEdit*)self);
 }
 
-QRect* k_lineedit_qbase_cursor_rect(void* self) {
-    return KLineEdit_QBaseCursorRect((KLineEdit*)self);
+QRect* k_lineedit_super_cursor_rect(void* self) {
+    return KLineEdit_SuperCursorRect((KLineEdit*)self);
 }
 
 void k_lineedit_on_cursor_rect(void* self, QRect* (*callback)()) {
@@ -2779,8 +2779,8 @@ void k_lineedit_update_micro_focus(void* self) {
     KLineEdit_UpdateMicroFocus((KLineEdit*)self);
 }
 
-void k_lineedit_qbase_update_micro_focus(void* self) {
-    KLineEdit_QBaseUpdateMicroFocus((KLineEdit*)self);
+void k_lineedit_super_update_micro_focus(void* self) {
+    KLineEdit_SuperUpdateMicroFocus((KLineEdit*)self);
 }
 
 void k_lineedit_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2791,8 +2791,8 @@ void k_lineedit_create(void* self) {
     KLineEdit_Create((KLineEdit*)self);
 }
 
-void k_lineedit_qbase_create(void* self) {
-    KLineEdit_QBaseCreate((KLineEdit*)self);
+void k_lineedit_super_create(void* self) {
+    KLineEdit_SuperCreate((KLineEdit*)self);
 }
 
 void k_lineedit_on_create(void* self, void (*callback)()) {
@@ -2803,8 +2803,8 @@ void k_lineedit_destroy(void* self) {
     KLineEdit_Destroy((KLineEdit*)self);
 }
 
-void k_lineedit_qbase_destroy(void* self) {
-    KLineEdit_QBaseDestroy((KLineEdit*)self);
+void k_lineedit_super_destroy(void* self) {
+    KLineEdit_SuperDestroy((KLineEdit*)self);
 }
 
 void k_lineedit_on_destroy(void* self, void (*callback)()) {
@@ -2815,8 +2815,8 @@ bool k_lineedit_focus_next_child(void* self) {
     return KLineEdit_FocusNextChild((KLineEdit*)self);
 }
 
-bool k_lineedit_qbase_focus_next_child(void* self) {
-    return KLineEdit_QBaseFocusNextChild((KLineEdit*)self);
+bool k_lineedit_super_focus_next_child(void* self) {
+    return KLineEdit_SuperFocusNextChild((KLineEdit*)self);
 }
 
 void k_lineedit_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2827,8 +2827,8 @@ bool k_lineedit_focus_previous_child(void* self) {
     return KLineEdit_FocusPreviousChild((KLineEdit*)self);
 }
 
-bool k_lineedit_qbase_focus_previous_child(void* self) {
-    return KLineEdit_QBaseFocusPreviousChild((KLineEdit*)self);
+bool k_lineedit_super_focus_previous_child(void* self) {
+    return KLineEdit_SuperFocusPreviousChild((KLineEdit*)self);
 }
 
 void k_lineedit_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2839,8 +2839,8 @@ QObject* k_lineedit_sender(void* self) {
     return KLineEdit_Sender((KLineEdit*)self);
 }
 
-QObject* k_lineedit_qbase_sender(void* self) {
-    return KLineEdit_QBaseSender((KLineEdit*)self);
+QObject* k_lineedit_super_sender(void* self) {
+    return KLineEdit_SuperSender((KLineEdit*)self);
 }
 
 void k_lineedit_on_sender(void* self, QObject* (*callback)()) {
@@ -2851,8 +2851,8 @@ int32_t k_lineedit_sender_signal_index(void* self) {
     return KLineEdit_SenderSignalIndex((KLineEdit*)self);
 }
 
-int32_t k_lineedit_qbase_sender_signal_index(void* self) {
-    return KLineEdit_QBaseSenderSignalIndex((KLineEdit*)self);
+int32_t k_lineedit_super_sender_signal_index(void* self) {
+    return KLineEdit_SuperSenderSignalIndex((KLineEdit*)self);
 }
 
 void k_lineedit_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2863,8 +2863,8 @@ int32_t k_lineedit_receivers(void* self, const char* signal) {
     return KLineEdit_Receivers((KLineEdit*)self, signal);
 }
 
-int32_t k_lineedit_qbase_receivers(void* self, const char* signal) {
-    return KLineEdit_QBaseReceivers((KLineEdit*)self, signal);
+int32_t k_lineedit_super_receivers(void* self, const char* signal) {
+    return KLineEdit_SuperReceivers((KLineEdit*)self, signal);
 }
 
 void k_lineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2875,8 +2875,8 @@ bool k_lineedit_is_signal_connected(void* self, void* signal) {
     return KLineEdit_IsSignalConnected((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
-bool k_lineedit_qbase_is_signal_connected(void* self, void* signal) {
-    return KLineEdit_QBaseIsSignalConnected((KLineEdit*)self, (QMetaMethod*)signal);
+bool k_lineedit_super_is_signal_connected(void* self, void* signal) {
+    return KLineEdit_SuperIsSignalConnected((KLineEdit*)self, (QMetaMethod*)signal);
 }
 
 void k_lineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2887,8 +2887,8 @@ double k_lineedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return KLineEdit_GetDecodedMetricF((KLineEdit*)self, metricA, metricB);
 }
 
-double k_lineedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KLineEdit_QBaseGetDecodedMetricF((KLineEdit*)self, metricA, metricB);
+double k_lineedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KLineEdit_SuperGetDecodedMetricF((KLineEdit*)self, metricA, metricB);
 }
 
 void k_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2934,9 +2934,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     return _ret;
 }
 
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_lineedit_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_lineedit_super_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
-    libqt_map _out = KLineEdit_QBaseKeyBindingMap((KLineEdit*)self);
+    libqt_map _out = KLineEdit_SuperKeyBindingMap((KLineEdit*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -3010,7 +3010,7 @@ void k_lineedit_set_key_binding_map(void* self, libqt_map /* of enum KCompletion
     free(keyBindingMap_ret.values);
 }
 
-void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
+void k_lineedit_super_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
@@ -3038,7 +3038,7 @@ void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map /* of enum KComp
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
-    KLineEdit_QBaseSetKeyBindingMap((KLineEdit*)self, keyBindingMap_ret);
+    KLineEdit_SuperSetKeyBindingMap((KLineEdit*)self, keyBindingMap_ret);
     free(keyBindingMap_ret.keys);
     free(keyBindingMap_ret.values);
 }
@@ -3051,8 +3051,8 @@ void k_lineedit_set_delegate(void* self, void* delegate) {
     KLineEdit_SetDelegate((KLineEdit*)self, (KCompletionBase*)delegate);
 }
 
-void k_lineedit_qbase_set_delegate(void* self, void* delegate) {
-    KLineEdit_QBaseSetDelegate((KLineEdit*)self, (KCompletionBase*)delegate);
+void k_lineedit_super_set_delegate(void* self, void* delegate) {
+    KLineEdit_SuperSetDelegate((KLineEdit*)self, (KCompletionBase*)delegate);
 }
 
 void k_lineedit_on_set_delegate(void* self, void (*callback)(void*, void*)) {
@@ -3063,8 +3063,8 @@ KCompletionBase* k_lineedit_delegate(void* self) {
     return KLineEdit_Delegate((KLineEdit*)self);
 }
 
-KCompletionBase* k_lineedit_qbase_delegate(void* self) {
-    return KLineEdit_QBaseDelegate((KLineEdit*)self);
+KCompletionBase* k_lineedit_super_delegate(void* self) {
+    return KLineEdit_SuperDelegate((KLineEdit*)self);
 }
 
 void k_lineedit_on_delegate(void* self, KCompletionBase* (*callback)()) {

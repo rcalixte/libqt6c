@@ -23,8 +23,8 @@ void q_finalstate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QFinalState_OnMetaObject((QFinalState*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_finalstate_qbase_meta_object(void* self) {
-    return QFinalState_QBaseMetaObject((QFinalState*)self);
+const QMetaObject* q_finalstate_super_meta_object(void* self) {
+    return QFinalState_SuperMetaObject((QFinalState*)self);
 }
 
 void* q_finalstate_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_finalstate_on_metacast(void* self, void* (*callback)(void*, const char*))
     QFinalState_OnMetacast((QFinalState*)self, (intptr_t)callback);
 }
 
-void* q_finalstate_qbase_metacast(void* self, const char* param1) {
-    return QFinalState_QBaseMetacast((QFinalState*)self, param1);
+void* q_finalstate_super_metacast(void* self, const char* param1) {
+    return QFinalState_SuperMetacast((QFinalState*)self, param1);
 }
 
 int32_t q_finalstate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_finalstate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QFinalState_OnMetacall((QFinalState*)self, (intptr_t)callback);
 }
 
-int32_t q_finalstate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFinalState_QBaseMetacall((QFinalState*)self, param1, param2, param3);
+int32_t q_finalstate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFinalState_SuperMetacall((QFinalState*)self, param1, param2, param3);
 }
 
 const char* q_finalstate_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_finalstate_on_on_entry(void* self, void (*callback)(void*, void*)) {
     QFinalState_OnOnEntry((QFinalState*)self, (intptr_t)callback);
 }
 
-void q_finalstate_qbase_on_entry(void* self, void* event) {
-    QFinalState_QBaseOnEntry((QFinalState*)self, (QEvent*)event);
+void q_finalstate_super_on_entry(void* self, void* event) {
+    QFinalState_SuperOnEntry((QFinalState*)self, (QEvent*)event);
 }
 
 void q_finalstate_on_exit(void* self, void* event) {
@@ -78,8 +78,8 @@ void q_finalstate_on_on_exit(void* self, void (*callback)(void*, void*)) {
     QFinalState_OnOnExit((QFinalState*)self, (intptr_t)callback);
 }
 
-void q_finalstate_qbase_on_exit(void* self, void* event) {
-    QFinalState_QBaseOnExit((QFinalState*)self, (QEvent*)event);
+void q_finalstate_super_on_exit(void* self, void* event) {
+    QFinalState_SuperOnExit((QFinalState*)self, (QEvent*)event);
 }
 
 bool q_finalstate_event(void* self, void* e) {
@@ -90,8 +90,8 @@ void q_finalstate_on_event(void* self, bool (*callback)(void*, void*)) {
     QFinalState_OnEvent((QFinalState*)self, (intptr_t)callback);
 }
 
-bool q_finalstate_qbase_event(void* self, void* e) {
-    return QFinalState_QBaseEvent((QFinalState*)self, (QEvent*)e);
+bool q_finalstate_super_event(void* self, void* e) {
+    return QFinalState_SuperEvent((QFinalState*)self, (QEvent*)e);
 }
 
 const char* q_finalstate_tr2(const char* s, const char* c) {
@@ -343,8 +343,8 @@ bool q_finalstate_event_filter(void* self, void* watched, void* event) {
     return QFinalState_EventFilter((QFinalState*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_finalstate_qbase_event_filter(void* self, void* watched, void* event) {
-    return QFinalState_QBaseEventFilter((QFinalState*)self, (QObject*)watched, (QEvent*)event);
+bool q_finalstate_super_event_filter(void* self, void* watched, void* event) {
+    return QFinalState_SuperEventFilter((QFinalState*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_finalstate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -355,8 +355,8 @@ void q_finalstate_timer_event(void* self, void* event) {
     QFinalState_TimerEvent((QFinalState*)self, (QTimerEvent*)event);
 }
 
-void q_finalstate_qbase_timer_event(void* self, void* event) {
-    QFinalState_QBaseTimerEvent((QFinalState*)self, (QTimerEvent*)event);
+void q_finalstate_super_timer_event(void* self, void* event) {
+    QFinalState_SuperTimerEvent((QFinalState*)self, (QTimerEvent*)event);
 }
 
 void q_finalstate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -367,8 +367,8 @@ void q_finalstate_child_event(void* self, void* event) {
     QFinalState_ChildEvent((QFinalState*)self, (QChildEvent*)event);
 }
 
-void q_finalstate_qbase_child_event(void* self, void* event) {
-    QFinalState_QBaseChildEvent((QFinalState*)self, (QChildEvent*)event);
+void q_finalstate_super_child_event(void* self, void* event) {
+    QFinalState_SuperChildEvent((QFinalState*)self, (QChildEvent*)event);
 }
 
 void q_finalstate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ void q_finalstate_custom_event(void* self, void* event) {
     QFinalState_CustomEvent((QFinalState*)self, (QEvent*)event);
 }
 
-void q_finalstate_qbase_custom_event(void* self, void* event) {
-    QFinalState_QBaseCustomEvent((QFinalState*)self, (QEvent*)event);
+void q_finalstate_super_custom_event(void* self, void* event) {
+    QFinalState_SuperCustomEvent((QFinalState*)self, (QEvent*)event);
 }
 
 void q_finalstate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -391,8 +391,8 @@ void q_finalstate_connect_notify(void* self, void* signal) {
     QFinalState_ConnectNotify((QFinalState*)self, (QMetaMethod*)signal);
 }
 
-void q_finalstate_qbase_connect_notify(void* self, void* signal) {
-    QFinalState_QBaseConnectNotify((QFinalState*)self, (QMetaMethod*)signal);
+void q_finalstate_super_connect_notify(void* self, void* signal) {
+    QFinalState_SuperConnectNotify((QFinalState*)self, (QMetaMethod*)signal);
 }
 
 void q_finalstate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ void q_finalstate_disconnect_notify(void* self, void* signal) {
     QFinalState_DisconnectNotify((QFinalState*)self, (QMetaMethod*)signal);
 }
 
-void q_finalstate_qbase_disconnect_notify(void* self, void* signal) {
-    QFinalState_QBaseDisconnectNotify((QFinalState*)self, (QMetaMethod*)signal);
+void q_finalstate_super_disconnect_notify(void* self, void* signal) {
+    QFinalState_SuperDisconnectNotify((QFinalState*)self, (QMetaMethod*)signal);
 }
 
 void q_finalstate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ QObject* q_finalstate_sender(void* self) {
     return QFinalState_Sender((QFinalState*)self);
 }
 
-QObject* q_finalstate_qbase_sender(void* self) {
-    return QFinalState_QBaseSender((QFinalState*)self);
+QObject* q_finalstate_super_sender(void* self) {
+    return QFinalState_SuperSender((QFinalState*)self);
 }
 
 void q_finalstate_on_sender(void* self, QObject* (*callback)()) {
@@ -427,8 +427,8 @@ int32_t q_finalstate_sender_signal_index(void* self) {
     return QFinalState_SenderSignalIndex((QFinalState*)self);
 }
 
-int32_t q_finalstate_qbase_sender_signal_index(void* self) {
-    return QFinalState_QBaseSenderSignalIndex((QFinalState*)self);
+int32_t q_finalstate_super_sender_signal_index(void* self) {
+    return QFinalState_SuperSenderSignalIndex((QFinalState*)self);
 }
 
 void q_finalstate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -439,8 +439,8 @@ int32_t q_finalstate_receivers(void* self, const char* signal) {
     return QFinalState_Receivers((QFinalState*)self, signal);
 }
 
-int32_t q_finalstate_qbase_receivers(void* self, const char* signal) {
-    return QFinalState_QBaseReceivers((QFinalState*)self, signal);
+int32_t q_finalstate_super_receivers(void* self, const char* signal) {
+    return QFinalState_SuperReceivers((QFinalState*)self, signal);
 }
 
 void q_finalstate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -451,8 +451,8 @@ bool q_finalstate_is_signal_connected(void* self, void* signal) {
     return QFinalState_IsSignalConnected((QFinalState*)self, (QMetaMethod*)signal);
 }
 
-bool q_finalstate_qbase_is_signal_connected(void* self, void* signal) {
-    return QFinalState_QBaseIsSignalConnected((QFinalState*)self, (QMetaMethod*)signal);
+bool q_finalstate_super_is_signal_connected(void* self, void* signal) {
+    return QFinalState_SuperIsSignalConnected((QFinalState*)self, (QMetaMethod*)signal);
 }
 
 void q_finalstate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -32,8 +32,8 @@ void k_io__openurljob_on_meta_object(void* self, const QMetaObject* (*callback)(
     KIO__OpenUrlJob_OnMetaObject((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__openurljob_qbase_meta_object(void* self) {
-    return KIO__OpenUrlJob_QBaseMetaObject((KIO__OpenUrlJob*)self);
+const QMetaObject* k_io__openurljob_super_meta_object(void* self) {
+    return KIO__OpenUrlJob_SuperMetaObject((KIO__OpenUrlJob*)self);
 }
 
 void* k_io__openurljob_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_io__openurljob_on_metacast(void* self, void* (*callback)(void*, const cha
     KIO__OpenUrlJob_OnMetacast((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
-void* k_io__openurljob_qbase_metacast(void* self, const char* param1) {
-    return KIO__OpenUrlJob_QBaseMetacast((KIO__OpenUrlJob*)self, param1);
+void* k_io__openurljob_super_metacast(void* self, const char* param1) {
+    return KIO__OpenUrlJob_SuperMetacast((KIO__OpenUrlJob*)self, param1);
 }
 
 int32_t k_io__openurljob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_io__openurljob_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KIO__OpenUrlJob_OnMetacall((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__openurljob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__OpenUrlJob_QBaseMetacall((KIO__OpenUrlJob*)self, param1, param2, param3);
+int32_t k_io__openurljob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__OpenUrlJob_SuperMetacall((KIO__OpenUrlJob*)self, param1, param2, param3);
 }
 
 const char* k_io__openurljob_tr(const char* s) {
@@ -103,8 +103,8 @@ void k_io__openurljob_on_start(void* self, void (*callback)()) {
     KIO__OpenUrlJob_OnStart((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
-void k_io__openurljob_qbase_start(void* self) {
-    KIO__OpenUrlJob_QBaseStart((KIO__OpenUrlJob*)self);
+void k_io__openurljob_super_start(void* self) {
+    KIO__OpenUrlJob_SuperStart((KIO__OpenUrlJob*)self);
 }
 
 bool k_io__openurljob_is_executable_file(void* url, const char* mimetypeName) {
@@ -127,8 +127,8 @@ void k_io__openurljob_on_do_kill(void* self, bool (*callback)()) {
     KIO__OpenUrlJob_OnDoKill((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
-bool k_io__openurljob_qbase_do_kill(void* self) {
-    return KIO__OpenUrlJob_QBaseDoKill((KIO__OpenUrlJob*)self);
+bool k_io__openurljob_super_do_kill(void* self) {
+    return KIO__OpenUrlJob_SuperDoKill((KIO__OpenUrlJob*)self);
 }
 
 const char* k_io__openurljob_tr2(const char* s, const char* c) {
@@ -487,8 +487,8 @@ bool k_io__openurljob_add_subjob(void* self, void* job) {
     return KIO__OpenUrlJob_AddSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
 }
 
-bool k_io__openurljob_qbase_add_subjob(void* self, void* job) {
-    return KIO__OpenUrlJob_QBaseAddSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
+bool k_io__openurljob_super_add_subjob(void* self, void* job) {
+    return KIO__OpenUrlJob_SuperAddSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
 }
 
 void k_io__openurljob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -499,8 +499,8 @@ bool k_io__openurljob_remove_subjob(void* self, void* job) {
     return KIO__OpenUrlJob_RemoveSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
 }
 
-bool k_io__openurljob_qbase_remove_subjob(void* self, void* job) {
-    return KIO__OpenUrlJob_QBaseRemoveSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
+bool k_io__openurljob_super_remove_subjob(void* self, void* job) {
+    return KIO__OpenUrlJob_SuperRemoveSubjob((KIO__OpenUrlJob*)self, (KJob*)job);
 }
 
 void k_io__openurljob_on_remove_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -511,8 +511,8 @@ void k_io__openurljob_slot_info_message(void* self, void* job, const char* messa
     KIO__OpenUrlJob_SlotInfoMessage((KIO__OpenUrlJob*)self, (KJob*)job, qstring(message));
 }
 
-void k_io__openurljob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KIO__OpenUrlJob_QBaseSlotInfoMessage((KIO__OpenUrlJob*)self, (KJob*)job, qstring(message));
+void k_io__openurljob_super_slot_info_message(void* self, void* job, const char* message) {
+    KIO__OpenUrlJob_SuperSlotInfoMessage((KIO__OpenUrlJob*)self, (KJob*)job, qstring(message));
 }
 
 void k_io__openurljob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*)) {
@@ -523,8 +523,8 @@ bool k_io__openurljob_do_suspend(void* self) {
     return KIO__OpenUrlJob_DoSuspend((KIO__OpenUrlJob*)self);
 }
 
-bool k_io__openurljob_qbase_do_suspend(void* self) {
-    return KIO__OpenUrlJob_QBaseDoSuspend((KIO__OpenUrlJob*)self);
+bool k_io__openurljob_super_do_suspend(void* self) {
+    return KIO__OpenUrlJob_SuperDoSuspend((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_do_suspend(void* self, bool (*callback)()) {
@@ -535,8 +535,8 @@ bool k_io__openurljob_do_resume(void* self) {
     return KIO__OpenUrlJob_DoResume((KIO__OpenUrlJob*)self);
 }
 
-bool k_io__openurljob_qbase_do_resume(void* self) {
-    return KIO__OpenUrlJob_QBaseDoResume((KIO__OpenUrlJob*)self);
+bool k_io__openurljob_super_do_resume(void* self) {
+    return KIO__OpenUrlJob_SuperDoResume((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_do_resume(void* self, bool (*callback)()) {
@@ -550,8 +550,8 @@ const char* k_io__openurljob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__openurljob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__OpenUrlJob_QBaseErrorString((KIO__OpenUrlJob*)self);
+const char* k_io__openurljob_super_error_string(void* self) {
+    libqt_string _str = KIO__OpenUrlJob_SuperErrorString((KIO__OpenUrlJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -565,8 +565,8 @@ bool k_io__openurljob_event(void* self, void* event) {
     return KIO__OpenUrlJob_Event((KIO__OpenUrlJob*)self, (QEvent*)event);
 }
 
-bool k_io__openurljob_qbase_event(void* self, void* event) {
-    return KIO__OpenUrlJob_QBaseEvent((KIO__OpenUrlJob*)self, (QEvent*)event);
+bool k_io__openurljob_super_event(void* self, void* event) {
+    return KIO__OpenUrlJob_SuperEvent((KIO__OpenUrlJob*)self, (QEvent*)event);
 }
 
 void k_io__openurljob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ bool k_io__openurljob_event_filter(void* self, void* watched, void* event) {
     return KIO__OpenUrlJob_EventFilter((KIO__OpenUrlJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__openurljob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__OpenUrlJob_QBaseEventFilter((KIO__OpenUrlJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__openurljob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__OpenUrlJob_SuperEventFilter((KIO__OpenUrlJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__openurljob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -589,8 +589,8 @@ void k_io__openurljob_timer_event(void* self, void* event) {
     KIO__OpenUrlJob_TimerEvent((KIO__OpenUrlJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__openurljob_qbase_timer_event(void* self, void* event) {
-    KIO__OpenUrlJob_QBaseTimerEvent((KIO__OpenUrlJob*)self, (QTimerEvent*)event);
+void k_io__openurljob_super_timer_event(void* self, void* event) {
+    KIO__OpenUrlJob_SuperTimerEvent((KIO__OpenUrlJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__openurljob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -601,8 +601,8 @@ void k_io__openurljob_child_event(void* self, void* event) {
     KIO__OpenUrlJob_ChildEvent((KIO__OpenUrlJob*)self, (QChildEvent*)event);
 }
 
-void k_io__openurljob_qbase_child_event(void* self, void* event) {
-    KIO__OpenUrlJob_QBaseChildEvent((KIO__OpenUrlJob*)self, (QChildEvent*)event);
+void k_io__openurljob_super_child_event(void* self, void* event) {
+    KIO__OpenUrlJob_SuperChildEvent((KIO__OpenUrlJob*)self, (QChildEvent*)event);
 }
 
 void k_io__openurljob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void k_io__openurljob_custom_event(void* self, void* event) {
     KIO__OpenUrlJob_CustomEvent((KIO__OpenUrlJob*)self, (QEvent*)event);
 }
 
-void k_io__openurljob_qbase_custom_event(void* self, void* event) {
-    KIO__OpenUrlJob_QBaseCustomEvent((KIO__OpenUrlJob*)self, (QEvent*)event);
+void k_io__openurljob_super_custom_event(void* self, void* event) {
+    KIO__OpenUrlJob_SuperCustomEvent((KIO__OpenUrlJob*)self, (QEvent*)event);
 }
 
 void k_io__openurljob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ void k_io__openurljob_connect_notify(void* self, void* signal) {
     KIO__OpenUrlJob_ConnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__openurljob_qbase_connect_notify(void* self, void* signal) {
-    KIO__OpenUrlJob_QBaseConnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
+void k_io__openurljob_super_connect_notify(void* self, void* signal) {
+    KIO__OpenUrlJob_SuperConnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openurljob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -637,8 +637,8 @@ void k_io__openurljob_disconnect_notify(void* self, void* signal) {
     KIO__OpenUrlJob_DisconnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__openurljob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__OpenUrlJob_QBaseDisconnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
+void k_io__openurljob_super_disconnect_notify(void* self, void* signal) {
+    KIO__OpenUrlJob_SuperDisconnectNotify((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openurljob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -649,8 +649,8 @@ bool k_io__openurljob_has_subjobs(void* self) {
     return KIO__OpenUrlJob_HasSubjobs((KIO__OpenUrlJob*)self);
 }
 
-bool k_io__openurljob_qbase_has_subjobs(void* self) {
-    return KIO__OpenUrlJob_QBaseHasSubjobs((KIO__OpenUrlJob*)self);
+bool k_io__openurljob_super_has_subjobs(void* self) {
+    return KIO__OpenUrlJob_SuperHasSubjobs((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_has_subjobs(void* self, bool (*callback)()) {
@@ -662,8 +662,8 @@ libqt_list /* of KJob* */ k_io__openurljob_subjobs(void* self) {
     return _arr;
 }
 
-libqt_list /* of KJob* */ k_io__openurljob_qbase_subjobs(void* self) {
-    libqt_list _arr = KIO__OpenUrlJob_QBaseSubjobs((KIO__OpenUrlJob*)self);
+libqt_list /* of KJob* */ k_io__openurljob_super_subjobs(void* self) {
+    libqt_list _arr = KIO__OpenUrlJob_SuperSubjobs((KIO__OpenUrlJob*)self);
     return _arr;
 }
 
@@ -675,8 +675,8 @@ void k_io__openurljob_clear_subjobs(void* self) {
     KIO__OpenUrlJob_ClearSubjobs((KIO__OpenUrlJob*)self);
 }
 
-void k_io__openurljob_qbase_clear_subjobs(void* self) {
-    KIO__OpenUrlJob_QBaseClearSubjobs((KIO__OpenUrlJob*)self);
+void k_io__openurljob_super_clear_subjobs(void* self) {
+    KIO__OpenUrlJob_SuperClearSubjobs((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_clear_subjobs(void* self, void (*callback)()) {
@@ -687,8 +687,8 @@ void k_io__openurljob_set_capabilities(void* self, int32_t capabilities) {
     KIO__OpenUrlJob_SetCapabilities((KIO__OpenUrlJob*)self, capabilities);
 }
 
-void k_io__openurljob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__OpenUrlJob_QBaseSetCapabilities((KIO__OpenUrlJob*)self, capabilities);
+void k_io__openurljob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__OpenUrlJob_SuperSetCapabilities((KIO__OpenUrlJob*)self, capabilities);
 }
 
 void k_io__openurljob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -699,8 +699,8 @@ bool k_io__openurljob_is_finished(void* self) {
     return KIO__OpenUrlJob_IsFinished((KIO__OpenUrlJob*)self);
 }
 
-bool k_io__openurljob_qbase_is_finished(void* self) {
-    return KIO__OpenUrlJob_QBaseIsFinished((KIO__OpenUrlJob*)self);
+bool k_io__openurljob_super_is_finished(void* self) {
+    return KIO__OpenUrlJob_SuperIsFinished((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_is_finished(void* self, bool (*callback)()) {
@@ -711,8 +711,8 @@ void k_io__openurljob_set_error(void* self, int errorCode) {
     KIO__OpenUrlJob_SetError((KIO__OpenUrlJob*)self, errorCode);
 }
 
-void k_io__openurljob_qbase_set_error(void* self, int errorCode) {
-    KIO__OpenUrlJob_QBaseSetError((KIO__OpenUrlJob*)self, errorCode);
+void k_io__openurljob_super_set_error(void* self, int errorCode) {
+    KIO__OpenUrlJob_SuperSetError((KIO__OpenUrlJob*)self, errorCode);
 }
 
 void k_io__openurljob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -723,8 +723,8 @@ void k_io__openurljob_set_error_text(void* self, const char* errorText) {
     KIO__OpenUrlJob_SetErrorText((KIO__OpenUrlJob*)self, qstring(errorText));
 }
 
-void k_io__openurljob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__OpenUrlJob_QBaseSetErrorText((KIO__OpenUrlJob*)self, qstring(errorText));
+void k_io__openurljob_super_set_error_text(void* self, const char* errorText) {
+    KIO__OpenUrlJob_SuperSetErrorText((KIO__OpenUrlJob*)self, qstring(errorText));
 }
 
 void k_io__openurljob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -735,8 +735,8 @@ void k_io__openurljob_set_processed_amount(void* self, int32_t unit, uint64_t am
     KIO__OpenUrlJob_SetProcessedAmount((KIO__OpenUrlJob*)self, unit, amount);
 }
 
-void k_io__openurljob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__OpenUrlJob_QBaseSetProcessedAmount((KIO__OpenUrlJob*)self, unit, amount);
+void k_io__openurljob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__OpenUrlJob_SuperSetProcessedAmount((KIO__OpenUrlJob*)self, unit, amount);
 }
 
 void k_io__openurljob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -747,8 +747,8 @@ void k_io__openurljob_set_total_amount(void* self, int32_t unit, uint64_t amount
     KIO__OpenUrlJob_SetTotalAmount((KIO__OpenUrlJob*)self, unit, amount);
 }
 
-void k_io__openurljob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__OpenUrlJob_QBaseSetTotalAmount((KIO__OpenUrlJob*)self, unit, amount);
+void k_io__openurljob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__OpenUrlJob_SuperSetTotalAmount((KIO__OpenUrlJob*)self, unit, amount);
 }
 
 void k_io__openurljob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -759,8 +759,8 @@ void k_io__openurljob_set_progress_unit(void* self, int32_t unit) {
     KIO__OpenUrlJob_SetProgressUnit((KIO__OpenUrlJob*)self, unit);
 }
 
-void k_io__openurljob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__OpenUrlJob_QBaseSetProgressUnit((KIO__OpenUrlJob*)self, unit);
+void k_io__openurljob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__OpenUrlJob_SuperSetProgressUnit((KIO__OpenUrlJob*)self, unit);
 }
 
 void k_io__openurljob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -771,8 +771,8 @@ void k_io__openurljob_set_percent(void* self, uint64_t percentage) {
     KIO__OpenUrlJob_SetPercent((KIO__OpenUrlJob*)self, percentage);
 }
 
-void k_io__openurljob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__OpenUrlJob_QBaseSetPercent((KIO__OpenUrlJob*)self, percentage);
+void k_io__openurljob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__OpenUrlJob_SuperSetPercent((KIO__OpenUrlJob*)self, percentage);
 }
 
 void k_io__openurljob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -783,8 +783,8 @@ void k_io__openurljob_emit_result(void* self) {
     KIO__OpenUrlJob_EmitResult((KIO__OpenUrlJob*)self);
 }
 
-void k_io__openurljob_qbase_emit_result(void* self) {
-    KIO__OpenUrlJob_QBaseEmitResult((KIO__OpenUrlJob*)self);
+void k_io__openurljob_super_emit_result(void* self) {
+    KIO__OpenUrlJob_SuperEmitResult((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_emit_result(void* self, void (*callback)()) {
@@ -795,8 +795,8 @@ void k_io__openurljob_emit_percent(void* self, uint64_t processedAmount, uint64_
     KIO__OpenUrlJob_EmitPercent((KIO__OpenUrlJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__openurljob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__OpenUrlJob_QBaseEmitPercent((KIO__OpenUrlJob*)self, processedAmount, totalAmount);
+void k_io__openurljob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__OpenUrlJob_SuperEmitPercent((KIO__OpenUrlJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__openurljob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -807,8 +807,8 @@ void k_io__openurljob_emit_speed(void* self, uint64_t speed) {
     KIO__OpenUrlJob_EmitSpeed((KIO__OpenUrlJob*)self, speed);
 }
 
-void k_io__openurljob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__OpenUrlJob_QBaseEmitSpeed((KIO__OpenUrlJob*)self, speed);
+void k_io__openurljob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__OpenUrlJob_SuperEmitSpeed((KIO__OpenUrlJob*)self, speed);
 }
 
 void k_io__openurljob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -819,8 +819,8 @@ void k_io__openurljob_start_elapsed_timer(void* self) {
     KIO__OpenUrlJob_StartElapsedTimer((KIO__OpenUrlJob*)self);
 }
 
-void k_io__openurljob_qbase_start_elapsed_timer(void* self) {
-    KIO__OpenUrlJob_QBaseStartElapsedTimer((KIO__OpenUrlJob*)self);
+void k_io__openurljob_super_start_elapsed_timer(void* self) {
+    KIO__OpenUrlJob_SuperStartElapsedTimer((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -831,8 +831,8 @@ QObject* k_io__openurljob_sender(void* self) {
     return KIO__OpenUrlJob_Sender((KIO__OpenUrlJob*)self);
 }
 
-QObject* k_io__openurljob_qbase_sender(void* self) {
-    return KIO__OpenUrlJob_QBaseSender((KIO__OpenUrlJob*)self);
+QObject* k_io__openurljob_super_sender(void* self) {
+    return KIO__OpenUrlJob_SuperSender((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_sender(void* self, QObject* (*callback)()) {
@@ -843,8 +843,8 @@ int32_t k_io__openurljob_sender_signal_index(void* self) {
     return KIO__OpenUrlJob_SenderSignalIndex((KIO__OpenUrlJob*)self);
 }
 
-int32_t k_io__openurljob_qbase_sender_signal_index(void* self) {
-    return KIO__OpenUrlJob_QBaseSenderSignalIndex((KIO__OpenUrlJob*)self);
+int32_t k_io__openurljob_super_sender_signal_index(void* self) {
+    return KIO__OpenUrlJob_SuperSenderSignalIndex((KIO__OpenUrlJob*)self);
 }
 
 void k_io__openurljob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -855,8 +855,8 @@ int32_t k_io__openurljob_receivers(void* self, const char* signal) {
     return KIO__OpenUrlJob_Receivers((KIO__OpenUrlJob*)self, signal);
 }
 
-int32_t k_io__openurljob_qbase_receivers(void* self, const char* signal) {
-    return KIO__OpenUrlJob_QBaseReceivers((KIO__OpenUrlJob*)self, signal);
+int32_t k_io__openurljob_super_receivers(void* self, const char* signal) {
+    return KIO__OpenUrlJob_SuperReceivers((KIO__OpenUrlJob*)self, signal);
 }
 
 void k_io__openurljob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -867,8 +867,8 @@ bool k_io__openurljob_is_signal_connected(void* self, void* signal) {
     return KIO__OpenUrlJob_IsSignalConnected((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__openurljob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__OpenUrlJob_QBaseIsSignalConnected((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
+bool k_io__openurljob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__OpenUrlJob_SuperIsSignalConnected((KIO__OpenUrlJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openurljob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

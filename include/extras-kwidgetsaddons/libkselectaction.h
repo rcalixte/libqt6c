@@ -53,13 +53,17 @@ const QMetaObject* k_selectaction_meta_object(void* self);
 ///
 void k_selectaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_selectaction_super_meta_object` instead
+///
+#define k_selectaction_qbase_meta_object k_selectaction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KSelectAction*
 ///
-const QMetaObject* k_selectaction_qbase_meta_object(void* self);
+const QMetaObject* k_selectaction_super_meta_object(void* self);
 
 /// @param self KSelectAction*
 /// @param param1 const char*
@@ -73,12 +77,16 @@ void* k_selectaction_metacast(void* self, const char* param1);
 ///
 void k_selectaction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_metacast` instead
+///
+#define k_selectaction_qbase_metacast k_selectaction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KSelectAction*
 /// @param param1 const char*
 ///
-void* k_selectaction_qbase_metacast(void* self, const char* param1);
+void* k_selectaction_super_metacast(void* self, const char* param1);
 
 /// @param self KSelectAction*
 /// @param param1 enum QMetaObject__Call
@@ -94,6 +102,10 @@ int32_t k_selectaction_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_selectaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_metacall` instead
+///
+#define k_selectaction_qbase_metacall k_selectaction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KSelectAction*
@@ -101,7 +113,7 @@ void k_selectaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_selectaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_selectaction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -248,6 +260,10 @@ QAction* k_selectaction_remove_action(void* self, void* action);
 ///
 void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_remove_action` instead
+///
+#define k_selectaction_qbase_remove_action k_selectaction_super_remove_action
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Base class method implementation
@@ -255,7 +271,7 @@ void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, voi
 /// @param self KSelectAction*
 /// @param action QAction*
 ///
-QAction* k_selectaction_qbase_remove_action(void* self, void* action);
+QAction* k_selectaction_super_remove_action(void* self, void* action);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#insertAction)
 ///
@@ -274,6 +290,10 @@ void k_selectaction_insert_action(void* self, void* before, void* action);
 ///
 void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_insert_action` instead
+///
+#define k_selectaction_qbase_insert_action k_selectaction_super_insert_action
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Base class method implementation
@@ -282,7 +302,7 @@ void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, 
 /// @param before QAction*
 /// @param action QAction*
 ///
-void k_selectaction_qbase_insert_action(void* self, void* before, void* action);
+void k_selectaction_super_insert_action(void* self, void* before, void* action);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#setItems)
 ///
@@ -423,6 +443,10 @@ void k_selectaction_slot_action_triggered(void* self, void* action);
 ///
 void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_slot_action_triggered` instead
+///
+#define k_selectaction_qbase_slot_action_triggered k_selectaction_super_slot_action_triggered
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Base class method implementation
@@ -430,7 +454,7 @@ void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*,
 /// @param self KSelectAction*
 /// @param action QAction*
 ///
-void k_selectaction_qbase_slot_action_triggered(void* self, void* action);
+void k_selectaction_super_slot_action_triggered(void* self, void* action);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotToggled)
 ///
@@ -448,6 +472,10 @@ void k_selectaction_slot_toggled(void* self, bool param1);
 ///
 void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_slot_toggled` instead
+///
+#define k_selectaction_qbase_slot_toggled k_selectaction_super_slot_toggled
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Base class method implementation
@@ -455,7 +483,7 @@ void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 /// @param self KSelectAction*
 /// @param param1 bool
 ///
-void k_selectaction_qbase_slot_toggled(void* self, bool param1);
+void k_selectaction_super_slot_toggled(void* self, bool param1);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#createWidget)
 ///
@@ -473,6 +501,10 @@ QWidget* k_selectaction_create_widget(void* self, void* parent);
 ///
 void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_create_widget` instead
+///
+#define k_selectaction_qbase_create_widget k_selectaction_super_create_widget
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Base class method implementation
@@ -480,7 +512,7 @@ void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, voi
 /// @param self KSelectAction*
 /// @param parent QWidget*
 ///
-QWidget* k_selectaction_qbase_create_widget(void* self, void* parent);
+QWidget* k_selectaction_super_create_widget(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
@@ -498,6 +530,10 @@ void k_selectaction_delete_widget(void* self, void* widget);
 ///
 void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_delete_widget` instead
+///
+#define k_selectaction_qbase_delete_widget k_selectaction_super_delete_widget
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Base class method implementation
@@ -505,7 +541,7 @@ void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*))
 /// @param self KSelectAction*
 /// @param widget QWidget*
 ///
-void k_selectaction_qbase_delete_widget(void* self, void* widget);
+void k_selectaction_super_delete_widget(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#event)
 ///
@@ -523,6 +559,10 @@ bool k_selectaction_event(void* self, void* event);
 ///
 void k_selectaction_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_event` instead
+///
+#define k_selectaction_qbase_event k_selectaction_super_event
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#event)
 ///
 /// Base class method implementation
@@ -530,7 +570,7 @@ void k_selectaction_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KSelectAction*
 /// @param event QEvent*
 ///
-bool k_selectaction_qbase_event(void* self, void* event);
+bool k_selectaction_super_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kselectaction.html#eventFilter)
 ///
@@ -549,6 +589,10 @@ bool k_selectaction_event_filter(void* self, void* watched, void* event);
 ///
 void k_selectaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_selectaction_super_event_filter` instead
+///
+#define k_selectaction_qbase_event_filter k_selectaction_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Base class method implementation
@@ -557,7 +601,7 @@ void k_selectaction_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_selectaction_qbase_event_filter(void* self, void* watched, void* event);
+bool k_selectaction_super_event_filter(void* self, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1705,6 +1749,10 @@ void k_selectaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void k_selectaction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_timer_event` instead
+///
+#define k_selectaction_qbase_timer_event k_selectaction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1714,7 +1762,7 @@ void k_selectaction_timer_event(void* self, void* event);
 /// @param self KSelectAction*
 /// @param event QTimerEvent*
 ///
-void k_selectaction_qbase_timer_event(void* self, void* event);
+void k_selectaction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1738,6 +1786,10 @@ void k_selectaction_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selectaction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_child_event` instead
+///
+#define k_selectaction_qbase_child_event k_selectaction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1747,7 +1799,7 @@ void k_selectaction_child_event(void* self, void* event);
 /// @param self KSelectAction*
 /// @param event QChildEvent*
 ///
-void k_selectaction_qbase_child_event(void* self, void* event);
+void k_selectaction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1771,6 +1823,10 @@ void k_selectaction_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selectaction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_custom_event` instead
+///
+#define k_selectaction_qbase_custom_event k_selectaction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1780,7 +1836,7 @@ void k_selectaction_custom_event(void* self, void* event);
 /// @param self KSelectAction*
 /// @param event QEvent*
 ///
-void k_selectaction_qbase_custom_event(void* self, void* event);
+void k_selectaction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1804,6 +1860,10 @@ void k_selectaction_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selectaction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_connect_notify` instead
+///
+#define k_selectaction_qbase_connect_notify k_selectaction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1813,7 +1873,7 @@ void k_selectaction_connect_notify(void* self, void* signal);
 /// @param self KSelectAction*
 /// @param signal QMetaMethod*
 ///
-void k_selectaction_qbase_connect_notify(void* self, void* signal);
+void k_selectaction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1837,6 +1897,10 @@ void k_selectaction_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_selectaction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_disconnect_notify` instead
+///
+#define k_selectaction_qbase_disconnect_notify k_selectaction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1846,7 +1910,7 @@ void k_selectaction_disconnect_notify(void* self, void* signal);
 /// @param self KSelectAction*
 /// @param signal QMetaMethod*
 ///
-void k_selectaction_qbase_disconnect_notify(void* self, void* signal);
+void k_selectaction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1871,6 +1935,10 @@ void k_selectaction_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 libqt_list k_selectaction_created_widgets(void* self);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_created_widgets` instead
+///
+#define k_selectaction_qbase_created_widgets k_selectaction_super_created_widgets
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1881,7 +1949,7 @@ libqt_list k_selectaction_created_widgets(void* self);
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_selectaction_qbase_created_widgets(void* self);
+libqt_list k_selectaction_super_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1904,6 +1972,10 @@ void k_selectaction_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 QObject* k_selectaction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_sender` instead
+///
+#define k_selectaction_qbase_sender k_selectaction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1912,7 +1984,7 @@ QObject* k_selectaction_sender(void* self);
 ///
 /// @param self KSelectAction*
 ///
-QObject* k_selectaction_qbase_sender(void* self);
+QObject* k_selectaction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1935,6 +2007,10 @@ void k_selectaction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_selectaction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_sender_signal_index` instead
+///
+#define k_selectaction_qbase_sender_signal_index k_selectaction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1943,7 +2019,7 @@ int32_t k_selectaction_sender_signal_index(void* self);
 ///
 /// @param self KSelectAction*
 ///
-int32_t k_selectaction_qbase_sender_signal_index(void* self);
+int32_t k_selectaction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1967,6 +2043,10 @@ void k_selectaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_selectaction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_receivers` instead
+///
+#define k_selectaction_qbase_receivers k_selectaction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1976,7 +2056,7 @@ int32_t k_selectaction_receivers(void* self, const char* signal);
 /// @param self KSelectAction*
 /// @param signal const char*
 ///
-int32_t k_selectaction_qbase_receivers(void* self, const char* signal);
+int32_t k_selectaction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2000,6 +2080,10 @@ void k_selectaction_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_selectaction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_selectaction_super_is_signal_connected` instead
+///
+#define k_selectaction_qbase_is_signal_connected k_selectaction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2009,7 +2093,7 @@ bool k_selectaction_is_signal_connected(void* self, void* signal);
 /// @param self KSelectAction*
 /// @param signal QMetaMethod*
 ///
-bool k_selectaction_qbase_is_signal_connected(void* self, void* signal);
+bool k_selectaction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

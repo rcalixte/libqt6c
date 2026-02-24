@@ -48,6 +48,10 @@ QAction* k_xmlguiclient_action2(void* self, void* element);
 ///
 void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_action2` instead
+///
+#define k_xmlguiclient_qbase_action2 k_xmlguiclient_super_action2
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Base class method implementation
@@ -55,7 +59,7 @@ void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(void*, void*));
 /// @param self KXMLGUIClient*
 /// @param element QDomElement*
 ///
-QAction* k_xmlguiclient_qbase_action2(void* self, void* element);
+QAction* k_xmlguiclient_super_action2(void* self, void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
@@ -72,13 +76,17 @@ KActionCollection* k_xmlguiclient_action_collection(void* self);
 ///
 void k_xmlguiclient_on_action_collection(void* self, KActionCollection* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_action_collection` instead
+///
+#define k_xmlguiclient_qbase_action_collection k_xmlguiclient_super_action_collection
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-KActionCollection* k_xmlguiclient_qbase_action_collection(void* self);
+KActionCollection* k_xmlguiclient_super_action_collection(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
@@ -97,13 +105,17 @@ const char* k_xmlguiclient_component_name(void* self);
 ///
 void k_xmlguiclient_on_component_name(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_component_name` instead
+///
+#define k_xmlguiclient_qbase_component_name k_xmlguiclient_super_component_name
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-const char* k_xmlguiclient_qbase_component_name(void* self);
+const char* k_xmlguiclient_super_component_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
@@ -120,13 +132,17 @@ QDomDocument* k_xmlguiclient_dom_document(void* self);
 ///
 void k_xmlguiclient_on_dom_document(void* self, QDomDocument* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_dom_document` instead
+///
+#define k_xmlguiclient_qbase_dom_document k_xmlguiclient_super_dom_document
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-QDomDocument* k_xmlguiclient_qbase_dom_document(void* self);
+QDomDocument* k_xmlguiclient_super_dom_document(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
@@ -145,13 +161,17 @@ const char* k_xmlguiclient_xml_file(void* self);
 ///
 void k_xmlguiclient_on_xml_file(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_xml_file` instead
+///
+#define k_xmlguiclient_qbase_xml_file k_xmlguiclient_super_xml_file
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-const char* k_xmlguiclient_qbase_xml_file(void* self);
+const char* k_xmlguiclient_super_xml_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
@@ -170,13 +190,17 @@ const char* k_xmlguiclient_local_x_m_l_file(void* self);
 ///
 void k_xmlguiclient_on_local_x_m_l_file(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_local_x_m_l_file` instead
+///
+#define k_xmlguiclient_qbase_local_x_m_l_file k_xmlguiclient_super_local_x_m_l_file
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-const char* k_xmlguiclient_qbase_local_x_m_l_file(void* self);
+const char* k_xmlguiclient_super_local_x_m_l_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
@@ -351,6 +375,10 @@ void k_xmlguiclient_set_component_name(void* self, const char* componentName, co
 ///
 void k_xmlguiclient_on_set_component_name(void* self, void (*callback)(void*, const char*, const char*));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_set_component_name` instead
+///
+#define k_xmlguiclient_qbase_set_component_name k_xmlguiclient_super_set_component_name
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Base class method implementation
@@ -359,7 +387,7 @@ void k_xmlguiclient_on_set_component_name(void* self, void (*callback)(void*, co
 /// @param componentName const char*
 /// @param componentDisplayName const char*
 ///
-void k_xmlguiclient_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
+void k_xmlguiclient_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
@@ -379,6 +407,10 @@ void k_xmlguiclient_set_x_m_l_file(void* self, const char* file, bool merge, boo
 ///
 void k_xmlguiclient_on_set_x_m_l_file(void* self, void (*callback)(void*, const char*, bool, bool));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_set_x_m_l_file` instead
+///
+#define k_xmlguiclient_qbase_set_x_m_l_file k_xmlguiclient_super_set_x_m_l_file
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Base class method implementation
@@ -388,7 +420,7 @@ void k_xmlguiclient_on_set_x_m_l_file(void* self, void (*callback)(void*, const 
 /// @param merge bool
 /// @param setXMLDoc bool
 ///
-void k_xmlguiclient_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
+void k_xmlguiclient_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
@@ -407,13 +439,17 @@ const char* k_xmlguiclient_standards_xml_file_location(void* self);
 ///
 void k_xmlguiclient_on_standards_xml_file_location(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_standards_xml_file_location` instead
+///
+#define k_xmlguiclient_qbase_standards_xml_file_location k_xmlguiclient_super_standards_xml_file_location
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-const char* k_xmlguiclient_qbase_standards_xml_file_location(void* self);
+const char* k_xmlguiclient_super_standards_xml_file_location(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
@@ -430,13 +466,17 @@ void k_xmlguiclient_load_standards_xml_file(void* self);
 ///
 void k_xmlguiclient_on_load_standards_xml_file(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_load_standards_xml_file` instead
+///
+#define k_xmlguiclient_qbase_load_standards_xml_file k_xmlguiclient_super_load_standards_xml_file
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIClient*
 ///
-void k_xmlguiclient_qbase_load_standards_xml_file(void* self);
+void k_xmlguiclient_super_load_standards_xml_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
@@ -454,6 +494,10 @@ void k_xmlguiclient_set_local_x_m_l_file(void* self, const char* file);
 ///
 void k_xmlguiclient_on_set_local_x_m_l_file(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_set_local_x_m_l_file` instead
+///
+#define k_xmlguiclient_qbase_set_local_x_m_l_file k_xmlguiclient_super_set_local_x_m_l_file
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Base class method implementation
@@ -461,7 +505,7 @@ void k_xmlguiclient_on_set_local_x_m_l_file(void* self, void (*callback)(void*, 
 /// @param self KXMLGUIClient*
 /// @param file const char*
 ///
-void k_xmlguiclient_qbase_set_local_x_m_l_file(void* self, const char* file);
+void k_xmlguiclient_super_set_local_x_m_l_file(void* self, const char* file);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
@@ -480,6 +524,10 @@ void k_xmlguiclient_set_x_m_l(void* self, const char* document, bool merge);
 ///
 void k_xmlguiclient_on_set_x_m_l(void* self, void (*callback)(void*, const char*, bool));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_set_x_m_l` instead
+///
+#define k_xmlguiclient_qbase_set_x_m_l k_xmlguiclient_super_set_x_m_l
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Base class method implementation
@@ -488,7 +536,7 @@ void k_xmlguiclient_on_set_x_m_l(void* self, void (*callback)(void*, const char*
 /// @param document const char*
 /// @param merge bool
 ///
-void k_xmlguiclient_qbase_set_x_m_l(void* self, const char* document, bool merge);
+void k_xmlguiclient_super_set_x_m_l(void* self, const char* document, bool merge);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
@@ -507,6 +555,10 @@ void k_xmlguiclient_set_d_o_m_document(void* self, void* document, bool merge);
 ///
 void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_set_d_o_m_document` instead
+///
+#define k_xmlguiclient_qbase_set_d_o_m_document k_xmlguiclient_super_set_d_o_m_document
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Base class method implementation
@@ -515,7 +567,7 @@ void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, vo
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_xmlguiclient_qbase_set_d_o_m_document(void* self, void* document, bool merge);
+void k_xmlguiclient_super_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
@@ -534,6 +586,10 @@ void k_xmlguiclient_state_changed(void* self, const char* newstate, int32_t reve
 ///
 void k_xmlguiclient_on_state_changed(void* self, void (*callback)(void*, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `k_xmlguiclient_super_state_changed` instead
+///
+#define k_xmlguiclient_qbase_state_changed k_xmlguiclient_super_state_changed
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Base class method implementation
@@ -542,7 +598,7 @@ void k_xmlguiclient_on_state_changed(void* self, void (*callback)(void*, const c
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 ///
-void k_xmlguiclient_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
+void k_xmlguiclient_super_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///

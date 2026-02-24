@@ -26,8 +26,8 @@ void k_nscore__question_on_meta_object(void* self, const QMetaObject* (*callback
     KNSCore__Question_OnMetaObject((KNSCore__Question*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__question_qbase_meta_object(void* self) {
-    return KNSCore__Question_QBaseMetaObject((KNSCore__Question*)self);
+const QMetaObject* k_nscore__question_super_meta_object(void* self) {
+    return KNSCore__Question_SuperMetaObject((KNSCore__Question*)self);
 }
 
 void* k_nscore__question_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_nscore__question_on_metacast(void* self, void* (*callback)(void*, const c
     KNSCore__Question_OnMetacast((KNSCore__Question*)self, (intptr_t)callback);
 }
 
-void* k_nscore__question_qbase_metacast(void* self, const char* param1) {
-    return KNSCore__Question_QBaseMetacast((KNSCore__Question*)self, param1);
+void* k_nscore__question_super_metacast(void* self, const char* param1) {
+    return KNSCore__Question_SuperMetacast((KNSCore__Question*)self, param1);
 }
 
 int32_t k_nscore__question_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_nscore__question_on_metacall(void* self, int32_t (*callback)(void*, int32
     KNSCore__Question_OnMetacall((KNSCore__Question*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__question_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSCore__Question_QBaseMetacall((KNSCore__Question*)self, param1, param2, param3);
+int32_t k_nscore__question_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSCore__Question_SuperMetacall((KNSCore__Question*)self, param1, param2, param3);
 }
 
 const char* k_nscore__question_tr(const char* s) {
@@ -385,8 +385,8 @@ bool k_nscore__question_event(void* self, void* event) {
     return KNSCore__Question_Event((KNSCore__Question*)self, (QEvent*)event);
 }
 
-bool k_nscore__question_qbase_event(void* self, void* event) {
-    return KNSCore__Question_QBaseEvent((KNSCore__Question*)self, (QEvent*)event);
+bool k_nscore__question_super_event(void* self, void* event) {
+    return KNSCore__Question_SuperEvent((KNSCore__Question*)self, (QEvent*)event);
 }
 
 void k_nscore__question_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ bool k_nscore__question_event_filter(void* self, void* watched, void* event) {
     return KNSCore__Question_EventFilter((KNSCore__Question*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nscore__question_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSCore__Question_QBaseEventFilter((KNSCore__Question*)self, (QObject*)watched, (QEvent*)event);
+bool k_nscore__question_super_event_filter(void* self, void* watched, void* event) {
+    return KNSCore__Question_SuperEventFilter((KNSCore__Question*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nscore__question_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -409,8 +409,8 @@ void k_nscore__question_timer_event(void* self, void* event) {
     KNSCore__Question_TimerEvent((KNSCore__Question*)self, (QTimerEvent*)event);
 }
 
-void k_nscore__question_qbase_timer_event(void* self, void* event) {
-    KNSCore__Question_QBaseTimerEvent((KNSCore__Question*)self, (QTimerEvent*)event);
+void k_nscore__question_super_timer_event(void* self, void* event) {
+    KNSCore__Question_SuperTimerEvent((KNSCore__Question*)self, (QTimerEvent*)event);
 }
 
 void k_nscore__question_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -421,8 +421,8 @@ void k_nscore__question_child_event(void* self, void* event) {
     KNSCore__Question_ChildEvent((KNSCore__Question*)self, (QChildEvent*)event);
 }
 
-void k_nscore__question_qbase_child_event(void* self, void* event) {
-    KNSCore__Question_QBaseChildEvent((KNSCore__Question*)self, (QChildEvent*)event);
+void k_nscore__question_super_child_event(void* self, void* event) {
+    KNSCore__Question_SuperChildEvent((KNSCore__Question*)self, (QChildEvent*)event);
 }
 
 void k_nscore__question_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -433,8 +433,8 @@ void k_nscore__question_custom_event(void* self, void* event) {
     KNSCore__Question_CustomEvent((KNSCore__Question*)self, (QEvent*)event);
 }
 
-void k_nscore__question_qbase_custom_event(void* self, void* event) {
-    KNSCore__Question_QBaseCustomEvent((KNSCore__Question*)self, (QEvent*)event);
+void k_nscore__question_super_custom_event(void* self, void* event) {
+    KNSCore__Question_SuperCustomEvent((KNSCore__Question*)self, (QEvent*)event);
 }
 
 void k_nscore__question_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -445,8 +445,8 @@ void k_nscore__question_connect_notify(void* self, void* signal) {
     KNSCore__Question_ConnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__question_qbase_connect_notify(void* self, void* signal) {
-    KNSCore__Question_QBaseConnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
+void k_nscore__question_super_connect_notify(void* self, void* signal) {
+    KNSCore__Question_SuperConnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__question_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -457,8 +457,8 @@ void k_nscore__question_disconnect_notify(void* self, void* signal) {
     KNSCore__Question_DisconnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__question_qbase_disconnect_notify(void* self, void* signal) {
-    KNSCore__Question_QBaseDisconnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
+void k_nscore__question_super_disconnect_notify(void* self, void* signal) {
+    KNSCore__Question_SuperDisconnectNotify((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__question_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -469,8 +469,8 @@ QObject* k_nscore__question_sender(void* self) {
     return KNSCore__Question_Sender((KNSCore__Question*)self);
 }
 
-QObject* k_nscore__question_qbase_sender(void* self) {
-    return KNSCore__Question_QBaseSender((KNSCore__Question*)self);
+QObject* k_nscore__question_super_sender(void* self) {
+    return KNSCore__Question_SuperSender((KNSCore__Question*)self);
 }
 
 void k_nscore__question_on_sender(void* self, QObject* (*callback)()) {
@@ -481,8 +481,8 @@ int32_t k_nscore__question_sender_signal_index(void* self) {
     return KNSCore__Question_SenderSignalIndex((KNSCore__Question*)self);
 }
 
-int32_t k_nscore__question_qbase_sender_signal_index(void* self) {
-    return KNSCore__Question_QBaseSenderSignalIndex((KNSCore__Question*)self);
+int32_t k_nscore__question_super_sender_signal_index(void* self) {
+    return KNSCore__Question_SuperSenderSignalIndex((KNSCore__Question*)self);
 }
 
 void k_nscore__question_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -493,8 +493,8 @@ int32_t k_nscore__question_receivers(void* self, const char* signal) {
     return KNSCore__Question_Receivers((KNSCore__Question*)self, signal);
 }
 
-int32_t k_nscore__question_qbase_receivers(void* self, const char* signal) {
-    return KNSCore__Question_QBaseReceivers((KNSCore__Question*)self, signal);
+int32_t k_nscore__question_super_receivers(void* self, const char* signal) {
+    return KNSCore__Question_SuperReceivers((KNSCore__Question*)self, signal);
 }
 
 void k_nscore__question_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -505,8 +505,8 @@ bool k_nscore__question_is_signal_connected(void* self, void* signal) {
     return KNSCore__Question_IsSignalConnected((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
-bool k_nscore__question_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSCore__Question_QBaseIsSignalConnected((KNSCore__Question*)self, (QMetaMethod*)signal);
+bool k_nscore__question_super_is_signal_connected(void* self, void* signal) {
+    return KNSCore__Question_SuperIsSignalConnected((KNSCore__Question*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__question_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

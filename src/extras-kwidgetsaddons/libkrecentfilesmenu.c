@@ -41,8 +41,8 @@ void k_recentfilesmenu_on_meta_object(void* self, const QMetaObject* (*callback)
     KRecentFilesMenu_OnMetaObject((KRecentFilesMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_recentfilesmenu_qbase_meta_object(void* self) {
-    return KRecentFilesMenu_QBaseMetaObject((KRecentFilesMenu*)self);
+const QMetaObject* k_recentfilesmenu_super_meta_object(void* self) {
+    return KRecentFilesMenu_SuperMetaObject((KRecentFilesMenu*)self);
 }
 
 void* k_recentfilesmenu_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_recentfilesmenu_on_metacast(void* self, void* (*callback)(void*, const ch
     KRecentFilesMenu_OnMetacast((KRecentFilesMenu*)self, (intptr_t)callback);
 }
 
-void* k_recentfilesmenu_qbase_metacast(void* self, const char* param1) {
-    return KRecentFilesMenu_QBaseMetacast((KRecentFilesMenu*)self, param1);
+void* k_recentfilesmenu_super_metacast(void* self, const char* param1) {
+    return KRecentFilesMenu_SuperMetacast((KRecentFilesMenu*)self, param1);
 }
 
 int32_t k_recentfilesmenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_recentfilesmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KRecentFilesMenu_OnMetacall((KRecentFilesMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_recentfilesmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KRecentFilesMenu_QBaseMetacall((KRecentFilesMenu*)self, param1, param2, param3);
+int32_t k_recentfilesmenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KRecentFilesMenu_SuperMetacall((KRecentFilesMenu*)self, param1, param2, param3);
 }
 
 const char* k_recentfilesmenu_tr(const char* s) {
@@ -1738,8 +1738,8 @@ QSize* k_recentfilesmenu_size_hint(void* self) {
     return KRecentFilesMenu_SizeHint((KRecentFilesMenu*)self);
 }
 
-QSize* k_recentfilesmenu_qbase_size_hint(void* self) {
-    return KRecentFilesMenu_QBaseSizeHint((KRecentFilesMenu*)self);
+QSize* k_recentfilesmenu_super_size_hint(void* self) {
+    return KRecentFilesMenu_SuperSizeHint((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1750,8 +1750,8 @@ void k_recentfilesmenu_change_event(void* self, void* param1) {
     KRecentFilesMenu_ChangeEvent((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_change_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseChangeEvent((KRecentFilesMenu*)self, (QEvent*)param1);
+void k_recentfilesmenu_super_change_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperChangeEvent((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
 void k_recentfilesmenu_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1762,8 +1762,8 @@ void k_recentfilesmenu_key_press_event(void* self, void* param1) {
     KRecentFilesMenu_KeyPressEvent((KRecentFilesMenu*)self, (QKeyEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_key_press_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseKeyPressEvent((KRecentFilesMenu*)self, (QKeyEvent*)param1);
+void k_recentfilesmenu_super_key_press_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperKeyPressEvent((KRecentFilesMenu*)self, (QKeyEvent*)param1);
 }
 
 void k_recentfilesmenu_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1774,8 +1774,8 @@ void k_recentfilesmenu_mouse_release_event(void* self, void* param1) {
     KRecentFilesMenu_MouseReleaseEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_mouse_release_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseMouseReleaseEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
+void k_recentfilesmenu_super_mouse_release_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperMouseReleaseEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_recentfilesmenu_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1786,8 +1786,8 @@ void k_recentfilesmenu_mouse_press_event(void* self, void* param1) {
     KRecentFilesMenu_MousePressEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_mouse_press_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseMousePressEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
+void k_recentfilesmenu_super_mouse_press_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperMousePressEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_recentfilesmenu_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1798,8 +1798,8 @@ void k_recentfilesmenu_mouse_move_event(void* self, void* param1) {
     KRecentFilesMenu_MouseMoveEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_mouse_move_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseMouseMoveEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
+void k_recentfilesmenu_super_mouse_move_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperMouseMoveEvent((KRecentFilesMenu*)self, (QMouseEvent*)param1);
 }
 
 void k_recentfilesmenu_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1810,8 +1810,8 @@ void k_recentfilesmenu_wheel_event(void* self, void* param1) {
     KRecentFilesMenu_WheelEvent((KRecentFilesMenu*)self, (QWheelEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_wheel_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseWheelEvent((KRecentFilesMenu*)self, (QWheelEvent*)param1);
+void k_recentfilesmenu_super_wheel_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperWheelEvent((KRecentFilesMenu*)self, (QWheelEvent*)param1);
 }
 
 void k_recentfilesmenu_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1822,8 +1822,8 @@ void k_recentfilesmenu_enter_event(void* self, void* param1) {
     KRecentFilesMenu_EnterEvent((KRecentFilesMenu*)self, (QEnterEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_enter_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseEnterEvent((KRecentFilesMenu*)self, (QEnterEvent*)param1);
+void k_recentfilesmenu_super_enter_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperEnterEvent((KRecentFilesMenu*)self, (QEnterEvent*)param1);
 }
 
 void k_recentfilesmenu_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1834,8 +1834,8 @@ void k_recentfilesmenu_leave_event(void* self, void* param1) {
     KRecentFilesMenu_LeaveEvent((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_leave_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseLeaveEvent((KRecentFilesMenu*)self, (QEvent*)param1);
+void k_recentfilesmenu_super_leave_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperLeaveEvent((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
 void k_recentfilesmenu_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1846,8 +1846,8 @@ void k_recentfilesmenu_hide_event(void* self, void* param1) {
     KRecentFilesMenu_HideEvent((KRecentFilesMenu*)self, (QHideEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_hide_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseHideEvent((KRecentFilesMenu*)self, (QHideEvent*)param1);
+void k_recentfilesmenu_super_hide_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperHideEvent((KRecentFilesMenu*)self, (QHideEvent*)param1);
 }
 
 void k_recentfilesmenu_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1858,8 +1858,8 @@ void k_recentfilesmenu_paint_event(void* self, void* param1) {
     KRecentFilesMenu_PaintEvent((KRecentFilesMenu*)self, (QPaintEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_paint_event(void* self, void* param1) {
-    KRecentFilesMenu_QBasePaintEvent((KRecentFilesMenu*)self, (QPaintEvent*)param1);
+void k_recentfilesmenu_super_paint_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperPaintEvent((KRecentFilesMenu*)self, (QPaintEvent*)param1);
 }
 
 void k_recentfilesmenu_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1870,8 +1870,8 @@ void k_recentfilesmenu_action_event(void* self, void* param1) {
     KRecentFilesMenu_ActionEvent((KRecentFilesMenu*)self, (QActionEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_action_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseActionEvent((KRecentFilesMenu*)self, (QActionEvent*)param1);
+void k_recentfilesmenu_super_action_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperActionEvent((KRecentFilesMenu*)self, (QActionEvent*)param1);
 }
 
 void k_recentfilesmenu_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1882,8 +1882,8 @@ void k_recentfilesmenu_timer_event(void* self, void* param1) {
     KRecentFilesMenu_TimerEvent((KRecentFilesMenu*)self, (QTimerEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_timer_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseTimerEvent((KRecentFilesMenu*)self, (QTimerEvent*)param1);
+void k_recentfilesmenu_super_timer_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperTimerEvent((KRecentFilesMenu*)self, (QTimerEvent*)param1);
 }
 
 void k_recentfilesmenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1894,8 +1894,8 @@ bool k_recentfilesmenu_event(void* self, void* param1) {
     return KRecentFilesMenu_Event((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
-bool k_recentfilesmenu_qbase_event(void* self, void* param1) {
-    return KRecentFilesMenu_QBaseEvent((KRecentFilesMenu*)self, (QEvent*)param1);
+bool k_recentfilesmenu_super_event(void* self, void* param1) {
+    return KRecentFilesMenu_SuperEvent((KRecentFilesMenu*)self, (QEvent*)param1);
 }
 
 void k_recentfilesmenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1906,8 +1906,8 @@ bool k_recentfilesmenu_focus_next_prev_child(void* self, bool next) {
     return KRecentFilesMenu_FocusNextPrevChild((KRecentFilesMenu*)self, next);
 }
 
-bool k_recentfilesmenu_qbase_focus_next_prev_child(void* self, bool next) {
-    return KRecentFilesMenu_QBaseFocusNextPrevChild((KRecentFilesMenu*)self, next);
+bool k_recentfilesmenu_super_focus_next_prev_child(void* self, bool next) {
+    return KRecentFilesMenu_SuperFocusNextPrevChild((KRecentFilesMenu*)self, next);
 }
 
 void k_recentfilesmenu_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1918,8 +1918,8 @@ void k_recentfilesmenu_init_style_option(void* self, void* option, void* action)
     KRecentFilesMenu_InitStyleOption((KRecentFilesMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
-void k_recentfilesmenu_qbase_init_style_option(void* self, void* option, void* action) {
-    KRecentFilesMenu_QBaseInitStyleOption((KRecentFilesMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
+void k_recentfilesmenu_super_init_style_option(void* self, void* option, void* action) {
+    KRecentFilesMenu_SuperInitStyleOption((KRecentFilesMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
 void k_recentfilesmenu_on_init_style_option(void* self, void (*callback)(void*, void*, void*)) {
@@ -1930,8 +1930,8 @@ int32_t k_recentfilesmenu_dev_type(void* self) {
     return KRecentFilesMenu_DevType((KRecentFilesMenu*)self);
 }
 
-int32_t k_recentfilesmenu_qbase_dev_type(void* self) {
-    return KRecentFilesMenu_QBaseDevType((KRecentFilesMenu*)self);
+int32_t k_recentfilesmenu_super_dev_type(void* self) {
+    return KRecentFilesMenu_SuperDevType((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1942,8 +1942,8 @@ void k_recentfilesmenu_set_visible(void* self, bool visible) {
     KRecentFilesMenu_SetVisible((KRecentFilesMenu*)self, visible);
 }
 
-void k_recentfilesmenu_qbase_set_visible(void* self, bool visible) {
-    KRecentFilesMenu_QBaseSetVisible((KRecentFilesMenu*)self, visible);
+void k_recentfilesmenu_super_set_visible(void* self, bool visible) {
+    KRecentFilesMenu_SuperSetVisible((KRecentFilesMenu*)self, visible);
 }
 
 void k_recentfilesmenu_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1954,8 +1954,8 @@ QSize* k_recentfilesmenu_minimum_size_hint(void* self) {
     return KRecentFilesMenu_MinimumSizeHint((KRecentFilesMenu*)self);
 }
 
-QSize* k_recentfilesmenu_qbase_minimum_size_hint(void* self) {
-    return KRecentFilesMenu_QBaseMinimumSizeHint((KRecentFilesMenu*)self);
+QSize* k_recentfilesmenu_super_minimum_size_hint(void* self) {
+    return KRecentFilesMenu_SuperMinimumSizeHint((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1966,8 +1966,8 @@ int32_t k_recentfilesmenu_height_for_width(void* self, int param1) {
     return KRecentFilesMenu_HeightForWidth((KRecentFilesMenu*)self, param1);
 }
 
-int32_t k_recentfilesmenu_qbase_height_for_width(void* self, int param1) {
-    return KRecentFilesMenu_QBaseHeightForWidth((KRecentFilesMenu*)self, param1);
+int32_t k_recentfilesmenu_super_height_for_width(void* self, int param1) {
+    return KRecentFilesMenu_SuperHeightForWidth((KRecentFilesMenu*)self, param1);
 }
 
 void k_recentfilesmenu_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1978,8 +1978,8 @@ bool k_recentfilesmenu_has_height_for_width(void* self) {
     return KRecentFilesMenu_HasHeightForWidth((KRecentFilesMenu*)self);
 }
 
-bool k_recentfilesmenu_qbase_has_height_for_width(void* self) {
-    return KRecentFilesMenu_QBaseHasHeightForWidth((KRecentFilesMenu*)self);
+bool k_recentfilesmenu_super_has_height_for_width(void* self) {
+    return KRecentFilesMenu_SuperHasHeightForWidth((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1990,8 +1990,8 @@ QPaintEngine* k_recentfilesmenu_paint_engine(void* self) {
     return KRecentFilesMenu_PaintEngine((KRecentFilesMenu*)self);
 }
 
-QPaintEngine* k_recentfilesmenu_qbase_paint_engine(void* self) {
-    return KRecentFilesMenu_QBasePaintEngine((KRecentFilesMenu*)self);
+QPaintEngine* k_recentfilesmenu_super_paint_engine(void* self) {
+    return KRecentFilesMenu_SuperPaintEngine((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2002,8 +2002,8 @@ void k_recentfilesmenu_mouse_double_click_event(void* self, void* event) {
     KRecentFilesMenu_MouseDoubleClickEvent((KRecentFilesMenu*)self, (QMouseEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_mouse_double_click_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseMouseDoubleClickEvent((KRecentFilesMenu*)self, (QMouseEvent*)event);
+void k_recentfilesmenu_super_mouse_double_click_event(void* self, void* event) {
+    KRecentFilesMenu_SuperMouseDoubleClickEvent((KRecentFilesMenu*)self, (QMouseEvent*)event);
 }
 
 void k_recentfilesmenu_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2014,8 +2014,8 @@ void k_recentfilesmenu_key_release_event(void* self, void* event) {
     KRecentFilesMenu_KeyReleaseEvent((KRecentFilesMenu*)self, (QKeyEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_key_release_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseKeyReleaseEvent((KRecentFilesMenu*)self, (QKeyEvent*)event);
+void k_recentfilesmenu_super_key_release_event(void* self, void* event) {
+    KRecentFilesMenu_SuperKeyReleaseEvent((KRecentFilesMenu*)self, (QKeyEvent*)event);
 }
 
 void k_recentfilesmenu_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2026,8 +2026,8 @@ void k_recentfilesmenu_focus_in_event(void* self, void* event) {
     KRecentFilesMenu_FocusInEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_focus_in_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseFocusInEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
+void k_recentfilesmenu_super_focus_in_event(void* self, void* event) {
+    KRecentFilesMenu_SuperFocusInEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
 }
 
 void k_recentfilesmenu_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2038,8 +2038,8 @@ void k_recentfilesmenu_focus_out_event(void* self, void* event) {
     KRecentFilesMenu_FocusOutEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_focus_out_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseFocusOutEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
+void k_recentfilesmenu_super_focus_out_event(void* self, void* event) {
+    KRecentFilesMenu_SuperFocusOutEvent((KRecentFilesMenu*)self, (QFocusEvent*)event);
 }
 
 void k_recentfilesmenu_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2050,8 +2050,8 @@ void k_recentfilesmenu_move_event(void* self, void* event) {
     KRecentFilesMenu_MoveEvent((KRecentFilesMenu*)self, (QMoveEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_move_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseMoveEvent((KRecentFilesMenu*)self, (QMoveEvent*)event);
+void k_recentfilesmenu_super_move_event(void* self, void* event) {
+    KRecentFilesMenu_SuperMoveEvent((KRecentFilesMenu*)self, (QMoveEvent*)event);
 }
 
 void k_recentfilesmenu_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2062,8 +2062,8 @@ void k_recentfilesmenu_resize_event(void* self, void* event) {
     KRecentFilesMenu_ResizeEvent((KRecentFilesMenu*)self, (QResizeEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_resize_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseResizeEvent((KRecentFilesMenu*)self, (QResizeEvent*)event);
+void k_recentfilesmenu_super_resize_event(void* self, void* event) {
+    KRecentFilesMenu_SuperResizeEvent((KRecentFilesMenu*)self, (QResizeEvent*)event);
 }
 
 void k_recentfilesmenu_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2074,8 +2074,8 @@ void k_recentfilesmenu_close_event(void* self, void* event) {
     KRecentFilesMenu_CloseEvent((KRecentFilesMenu*)self, (QCloseEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_close_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseCloseEvent((KRecentFilesMenu*)self, (QCloseEvent*)event);
+void k_recentfilesmenu_super_close_event(void* self, void* event) {
+    KRecentFilesMenu_SuperCloseEvent((KRecentFilesMenu*)self, (QCloseEvent*)event);
 }
 
 void k_recentfilesmenu_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2086,8 +2086,8 @@ void k_recentfilesmenu_context_menu_event(void* self, void* event) {
     KRecentFilesMenu_ContextMenuEvent((KRecentFilesMenu*)self, (QContextMenuEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_context_menu_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseContextMenuEvent((KRecentFilesMenu*)self, (QContextMenuEvent*)event);
+void k_recentfilesmenu_super_context_menu_event(void* self, void* event) {
+    KRecentFilesMenu_SuperContextMenuEvent((KRecentFilesMenu*)self, (QContextMenuEvent*)event);
 }
 
 void k_recentfilesmenu_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2098,8 +2098,8 @@ void k_recentfilesmenu_tablet_event(void* self, void* event) {
     KRecentFilesMenu_TabletEvent((KRecentFilesMenu*)self, (QTabletEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_tablet_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseTabletEvent((KRecentFilesMenu*)self, (QTabletEvent*)event);
+void k_recentfilesmenu_super_tablet_event(void* self, void* event) {
+    KRecentFilesMenu_SuperTabletEvent((KRecentFilesMenu*)self, (QTabletEvent*)event);
 }
 
 void k_recentfilesmenu_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2110,8 +2110,8 @@ void k_recentfilesmenu_drag_enter_event(void* self, void* event) {
     KRecentFilesMenu_DragEnterEvent((KRecentFilesMenu*)self, (QDragEnterEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_drag_enter_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseDragEnterEvent((KRecentFilesMenu*)self, (QDragEnterEvent*)event);
+void k_recentfilesmenu_super_drag_enter_event(void* self, void* event) {
+    KRecentFilesMenu_SuperDragEnterEvent((KRecentFilesMenu*)self, (QDragEnterEvent*)event);
 }
 
 void k_recentfilesmenu_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2122,8 +2122,8 @@ void k_recentfilesmenu_drag_move_event(void* self, void* event) {
     KRecentFilesMenu_DragMoveEvent((KRecentFilesMenu*)self, (QDragMoveEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_drag_move_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseDragMoveEvent((KRecentFilesMenu*)self, (QDragMoveEvent*)event);
+void k_recentfilesmenu_super_drag_move_event(void* self, void* event) {
+    KRecentFilesMenu_SuperDragMoveEvent((KRecentFilesMenu*)self, (QDragMoveEvent*)event);
 }
 
 void k_recentfilesmenu_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2134,8 +2134,8 @@ void k_recentfilesmenu_drag_leave_event(void* self, void* event) {
     KRecentFilesMenu_DragLeaveEvent((KRecentFilesMenu*)self, (QDragLeaveEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_drag_leave_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseDragLeaveEvent((KRecentFilesMenu*)self, (QDragLeaveEvent*)event);
+void k_recentfilesmenu_super_drag_leave_event(void* self, void* event) {
+    KRecentFilesMenu_SuperDragLeaveEvent((KRecentFilesMenu*)self, (QDragLeaveEvent*)event);
 }
 
 void k_recentfilesmenu_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2146,8 +2146,8 @@ void k_recentfilesmenu_drop_event(void* self, void* event) {
     KRecentFilesMenu_DropEvent((KRecentFilesMenu*)self, (QDropEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_drop_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseDropEvent((KRecentFilesMenu*)self, (QDropEvent*)event);
+void k_recentfilesmenu_super_drop_event(void* self, void* event) {
+    KRecentFilesMenu_SuperDropEvent((KRecentFilesMenu*)self, (QDropEvent*)event);
 }
 
 void k_recentfilesmenu_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2158,8 +2158,8 @@ void k_recentfilesmenu_show_event(void* self, void* event) {
     KRecentFilesMenu_ShowEvent((KRecentFilesMenu*)self, (QShowEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_show_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseShowEvent((KRecentFilesMenu*)self, (QShowEvent*)event);
+void k_recentfilesmenu_super_show_event(void* self, void* event) {
+    KRecentFilesMenu_SuperShowEvent((KRecentFilesMenu*)self, (QShowEvent*)event);
 }
 
 void k_recentfilesmenu_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2170,8 +2170,8 @@ bool k_recentfilesmenu_native_event(void* self, char* eventType, void* message, 
     return KRecentFilesMenu_NativeEvent((KRecentFilesMenu*)self, qstring(eventType), message, result);
 }
 
-bool k_recentfilesmenu_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KRecentFilesMenu_QBaseNativeEvent((KRecentFilesMenu*)self, qstring(eventType), message, result);
+bool k_recentfilesmenu_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KRecentFilesMenu_SuperNativeEvent((KRecentFilesMenu*)self, qstring(eventType), message, result);
 }
 
 void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2182,8 +2182,8 @@ int32_t k_recentfilesmenu_metric(void* self, int32_t param1) {
     return KRecentFilesMenu_Metric((KRecentFilesMenu*)self, param1);
 }
 
-int32_t k_recentfilesmenu_qbase_metric(void* self, int32_t param1) {
-    return KRecentFilesMenu_QBaseMetric((KRecentFilesMenu*)self, param1);
+int32_t k_recentfilesmenu_super_metric(void* self, int32_t param1) {
+    return KRecentFilesMenu_SuperMetric((KRecentFilesMenu*)self, param1);
 }
 
 void k_recentfilesmenu_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2194,8 +2194,8 @@ void k_recentfilesmenu_init_painter(void* self, void* painter) {
     KRecentFilesMenu_InitPainter((KRecentFilesMenu*)self, (QPainter*)painter);
 }
 
-void k_recentfilesmenu_qbase_init_painter(void* self, void* painter) {
-    KRecentFilesMenu_QBaseInitPainter((KRecentFilesMenu*)self, (QPainter*)painter);
+void k_recentfilesmenu_super_init_painter(void* self, void* painter) {
+    KRecentFilesMenu_SuperInitPainter((KRecentFilesMenu*)self, (QPainter*)painter);
 }
 
 void k_recentfilesmenu_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2206,8 +2206,8 @@ QPaintDevice* k_recentfilesmenu_redirected(void* self, void* offset) {
     return KRecentFilesMenu_Redirected((KRecentFilesMenu*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_recentfilesmenu_qbase_redirected(void* self, void* offset) {
-    return KRecentFilesMenu_QBaseRedirected((KRecentFilesMenu*)self, (QPoint*)offset);
+QPaintDevice* k_recentfilesmenu_super_redirected(void* self, void* offset) {
+    return KRecentFilesMenu_SuperRedirected((KRecentFilesMenu*)self, (QPoint*)offset);
 }
 
 void k_recentfilesmenu_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2218,8 +2218,8 @@ QPainter* k_recentfilesmenu_shared_painter(void* self) {
     return KRecentFilesMenu_SharedPainter((KRecentFilesMenu*)self);
 }
 
-QPainter* k_recentfilesmenu_qbase_shared_painter(void* self) {
-    return KRecentFilesMenu_QBaseSharedPainter((KRecentFilesMenu*)self);
+QPainter* k_recentfilesmenu_super_shared_painter(void* self) {
+    return KRecentFilesMenu_SuperSharedPainter((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2230,8 +2230,8 @@ void k_recentfilesmenu_input_method_event(void* self, void* param1) {
     KRecentFilesMenu_InputMethodEvent((KRecentFilesMenu*)self, (QInputMethodEvent*)param1);
 }
 
-void k_recentfilesmenu_qbase_input_method_event(void* self, void* param1) {
-    KRecentFilesMenu_QBaseInputMethodEvent((KRecentFilesMenu*)self, (QInputMethodEvent*)param1);
+void k_recentfilesmenu_super_input_method_event(void* self, void* param1) {
+    KRecentFilesMenu_SuperInputMethodEvent((KRecentFilesMenu*)self, (QInputMethodEvent*)param1);
 }
 
 void k_recentfilesmenu_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2242,8 +2242,8 @@ QVariant* k_recentfilesmenu_input_method_query(void* self, int32_t param1) {
     return KRecentFilesMenu_InputMethodQuery((KRecentFilesMenu*)self, param1);
 }
 
-QVariant* k_recentfilesmenu_qbase_input_method_query(void* self, int32_t param1) {
-    return KRecentFilesMenu_QBaseInputMethodQuery((KRecentFilesMenu*)self, param1);
+QVariant* k_recentfilesmenu_super_input_method_query(void* self, int32_t param1) {
+    return KRecentFilesMenu_SuperInputMethodQuery((KRecentFilesMenu*)self, param1);
 }
 
 void k_recentfilesmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2254,8 +2254,8 @@ bool k_recentfilesmenu_event_filter(void* self, void* watched, void* event) {
     return KRecentFilesMenu_EventFilter((KRecentFilesMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_recentfilesmenu_qbase_event_filter(void* self, void* watched, void* event) {
-    return KRecentFilesMenu_QBaseEventFilter((KRecentFilesMenu*)self, (QObject*)watched, (QEvent*)event);
+bool k_recentfilesmenu_super_event_filter(void* self, void* watched, void* event) {
+    return KRecentFilesMenu_SuperEventFilter((KRecentFilesMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_recentfilesmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2266,8 +2266,8 @@ void k_recentfilesmenu_child_event(void* self, void* event) {
     KRecentFilesMenu_ChildEvent((KRecentFilesMenu*)self, (QChildEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_child_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseChildEvent((KRecentFilesMenu*)self, (QChildEvent*)event);
+void k_recentfilesmenu_super_child_event(void* self, void* event) {
+    KRecentFilesMenu_SuperChildEvent((KRecentFilesMenu*)self, (QChildEvent*)event);
 }
 
 void k_recentfilesmenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2278,8 +2278,8 @@ void k_recentfilesmenu_custom_event(void* self, void* event) {
     KRecentFilesMenu_CustomEvent((KRecentFilesMenu*)self, (QEvent*)event);
 }
 
-void k_recentfilesmenu_qbase_custom_event(void* self, void* event) {
-    KRecentFilesMenu_QBaseCustomEvent((KRecentFilesMenu*)self, (QEvent*)event);
+void k_recentfilesmenu_super_custom_event(void* self, void* event) {
+    KRecentFilesMenu_SuperCustomEvent((KRecentFilesMenu*)self, (QEvent*)event);
 }
 
 void k_recentfilesmenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2290,8 +2290,8 @@ void k_recentfilesmenu_connect_notify(void* self, void* signal) {
     KRecentFilesMenu_ConnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_recentfilesmenu_qbase_connect_notify(void* self, void* signal) {
-    KRecentFilesMenu_QBaseConnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
+void k_recentfilesmenu_super_connect_notify(void* self, void* signal) {
+    KRecentFilesMenu_SuperConnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesmenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2302,8 +2302,8 @@ void k_recentfilesmenu_disconnect_notify(void* self, void* signal) {
     KRecentFilesMenu_DisconnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_recentfilesmenu_qbase_disconnect_notify(void* self, void* signal) {
-    KRecentFilesMenu_QBaseDisconnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
+void k_recentfilesmenu_super_disconnect_notify(void* self, void* signal) {
+    KRecentFilesMenu_SuperDisconnectNotify((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2314,8 +2314,8 @@ int32_t k_recentfilesmenu_column_count(void* self) {
     return KRecentFilesMenu_ColumnCount((KRecentFilesMenu*)self);
 }
 
-int32_t k_recentfilesmenu_qbase_column_count(void* self) {
-    return KRecentFilesMenu_QBaseColumnCount((KRecentFilesMenu*)self);
+int32_t k_recentfilesmenu_super_column_count(void* self) {
+    return KRecentFilesMenu_SuperColumnCount((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_column_count(void* self, int32_t (*callback)()) {
@@ -2326,8 +2326,8 @@ void k_recentfilesmenu_update_micro_focus(void* self) {
     KRecentFilesMenu_UpdateMicroFocus((KRecentFilesMenu*)self);
 }
 
-void k_recentfilesmenu_qbase_update_micro_focus(void* self) {
-    KRecentFilesMenu_QBaseUpdateMicroFocus((KRecentFilesMenu*)self);
+void k_recentfilesmenu_super_update_micro_focus(void* self) {
+    KRecentFilesMenu_SuperUpdateMicroFocus((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2338,8 +2338,8 @@ void k_recentfilesmenu_create(void* self) {
     KRecentFilesMenu_Create((KRecentFilesMenu*)self);
 }
 
-void k_recentfilesmenu_qbase_create(void* self) {
-    KRecentFilesMenu_QBaseCreate((KRecentFilesMenu*)self);
+void k_recentfilesmenu_super_create(void* self) {
+    KRecentFilesMenu_SuperCreate((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_create(void* self, void (*callback)()) {
@@ -2350,8 +2350,8 @@ void k_recentfilesmenu_destroy(void* self) {
     KRecentFilesMenu_Destroy((KRecentFilesMenu*)self);
 }
 
-void k_recentfilesmenu_qbase_destroy(void* self) {
-    KRecentFilesMenu_QBaseDestroy((KRecentFilesMenu*)self);
+void k_recentfilesmenu_super_destroy(void* self) {
+    KRecentFilesMenu_SuperDestroy((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_destroy(void* self, void (*callback)()) {
@@ -2362,8 +2362,8 @@ bool k_recentfilesmenu_focus_next_child(void* self) {
     return KRecentFilesMenu_FocusNextChild((KRecentFilesMenu*)self);
 }
 
-bool k_recentfilesmenu_qbase_focus_next_child(void* self) {
-    return KRecentFilesMenu_QBaseFocusNextChild((KRecentFilesMenu*)self);
+bool k_recentfilesmenu_super_focus_next_child(void* self) {
+    return KRecentFilesMenu_SuperFocusNextChild((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2374,8 +2374,8 @@ bool k_recentfilesmenu_focus_previous_child(void* self) {
     return KRecentFilesMenu_FocusPreviousChild((KRecentFilesMenu*)self);
 }
 
-bool k_recentfilesmenu_qbase_focus_previous_child(void* self) {
-    return KRecentFilesMenu_QBaseFocusPreviousChild((KRecentFilesMenu*)self);
+bool k_recentfilesmenu_super_focus_previous_child(void* self) {
+    return KRecentFilesMenu_SuperFocusPreviousChild((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2386,8 +2386,8 @@ QObject* k_recentfilesmenu_sender(void* self) {
     return KRecentFilesMenu_Sender((KRecentFilesMenu*)self);
 }
 
-QObject* k_recentfilesmenu_qbase_sender(void* self) {
-    return KRecentFilesMenu_QBaseSender((KRecentFilesMenu*)self);
+QObject* k_recentfilesmenu_super_sender(void* self) {
+    return KRecentFilesMenu_SuperSender((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_sender(void* self, QObject* (*callback)()) {
@@ -2398,8 +2398,8 @@ int32_t k_recentfilesmenu_sender_signal_index(void* self) {
     return KRecentFilesMenu_SenderSignalIndex((KRecentFilesMenu*)self);
 }
 
-int32_t k_recentfilesmenu_qbase_sender_signal_index(void* self) {
-    return KRecentFilesMenu_QBaseSenderSignalIndex((KRecentFilesMenu*)self);
+int32_t k_recentfilesmenu_super_sender_signal_index(void* self) {
+    return KRecentFilesMenu_SuperSenderSignalIndex((KRecentFilesMenu*)self);
 }
 
 void k_recentfilesmenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2410,8 +2410,8 @@ int32_t k_recentfilesmenu_receivers(void* self, const char* signal) {
     return KRecentFilesMenu_Receivers((KRecentFilesMenu*)self, signal);
 }
 
-int32_t k_recentfilesmenu_qbase_receivers(void* self, const char* signal) {
-    return KRecentFilesMenu_QBaseReceivers((KRecentFilesMenu*)self, signal);
+int32_t k_recentfilesmenu_super_receivers(void* self, const char* signal) {
+    return KRecentFilesMenu_SuperReceivers((KRecentFilesMenu*)self, signal);
 }
 
 void k_recentfilesmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2422,8 +2422,8 @@ bool k_recentfilesmenu_is_signal_connected(void* self, void* signal) {
     return KRecentFilesMenu_IsSignalConnected((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_recentfilesmenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KRecentFilesMenu_QBaseIsSignalConnected((KRecentFilesMenu*)self, (QMetaMethod*)signal);
+bool k_recentfilesmenu_super_is_signal_connected(void* self, void* signal) {
+    return KRecentFilesMenu_SuperIsSignalConnected((KRecentFilesMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_recentfilesmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2434,8 +2434,8 @@ double k_recentfilesmenu_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KRecentFilesMenu_GetDecodedMetricF((KRecentFilesMenu*)self, metricA, metricB);
 }
 
-double k_recentfilesmenu_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KRecentFilesMenu_QBaseGetDecodedMetricF((KRecentFilesMenu*)self, metricA, metricB);
+double k_recentfilesmenu_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KRecentFilesMenu_SuperGetDecodedMetricF((KRecentFilesMenu*)self, metricA, metricB);
 }
 
 void k_recentfilesmenu_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

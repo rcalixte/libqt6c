@@ -23,8 +23,8 @@ void k_attica__providermanager_on_meta_object(void* self, const QMetaObject* (*c
     Attica__ProviderManager_OnMetaObject((Attica__ProviderManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_attica__providermanager_qbase_meta_object(void* self) {
-    return Attica__ProviderManager_QBaseMetaObject((Attica__ProviderManager*)self);
+const QMetaObject* k_attica__providermanager_super_meta_object(void* self) {
+    return Attica__ProviderManager_SuperMetaObject((Attica__ProviderManager*)self);
 }
 
 void* k_attica__providermanager_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_attica__providermanager_on_metacast(void* self, void* (*callback)(void*, 
     Attica__ProviderManager_OnMetacast((Attica__ProviderManager*)self, (intptr_t)callback);
 }
 
-void* k_attica__providermanager_qbase_metacast(void* self, const char* param1) {
-    return Attica__ProviderManager_QBaseMetacast((Attica__ProviderManager*)self, param1);
+void* k_attica__providermanager_super_metacast(void* self, const char* param1) {
+    return Attica__ProviderManager_SuperMetacast((Attica__ProviderManager*)self, param1);
 }
 
 int32_t k_attica__providermanager_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_attica__providermanager_on_metacall(void* self, int32_t (*callback)(void*
     Attica__ProviderManager_OnMetacall((Attica__ProviderManager*)self, (intptr_t)callback);
 }
 
-int32_t k_attica__providermanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Attica__ProviderManager_QBaseMetacall((Attica__ProviderManager*)self, param1, param2, param3);
+int32_t k_attica__providermanager_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Attica__ProviderManager_SuperMetacall((Attica__ProviderManager*)self, param1, param2, param3);
 }
 
 const char* k_attica__providermanager_tr(const char* s) {
@@ -374,8 +374,8 @@ bool k_attica__providermanager_event(void* self, void* event) {
     return Attica__ProviderManager_Event((Attica__ProviderManager*)self, (QEvent*)event);
 }
 
-bool k_attica__providermanager_qbase_event(void* self, void* event) {
-    return Attica__ProviderManager_QBaseEvent((Attica__ProviderManager*)self, (QEvent*)event);
+bool k_attica__providermanager_super_event(void* self, void* event) {
+    return Attica__ProviderManager_SuperEvent((Attica__ProviderManager*)self, (QEvent*)event);
 }
 
 void k_attica__providermanager_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ bool k_attica__providermanager_event_filter(void* self, void* watched, void* eve
     return Attica__ProviderManager_EventFilter((Attica__ProviderManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_attica__providermanager_qbase_event_filter(void* self, void* watched, void* event) {
-    return Attica__ProviderManager_QBaseEventFilter((Attica__ProviderManager*)self, (QObject*)watched, (QEvent*)event);
+bool k_attica__providermanager_super_event_filter(void* self, void* watched, void* event) {
+    return Attica__ProviderManager_SuperEventFilter((Attica__ProviderManager*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_attica__providermanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -398,8 +398,8 @@ void k_attica__providermanager_timer_event(void* self, void* event) {
     Attica__ProviderManager_TimerEvent((Attica__ProviderManager*)self, (QTimerEvent*)event);
 }
 
-void k_attica__providermanager_qbase_timer_event(void* self, void* event) {
-    Attica__ProviderManager_QBaseTimerEvent((Attica__ProviderManager*)self, (QTimerEvent*)event);
+void k_attica__providermanager_super_timer_event(void* self, void* event) {
+    Attica__ProviderManager_SuperTimerEvent((Attica__ProviderManager*)self, (QTimerEvent*)event);
 }
 
 void k_attica__providermanager_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ void k_attica__providermanager_child_event(void* self, void* event) {
     Attica__ProviderManager_ChildEvent((Attica__ProviderManager*)self, (QChildEvent*)event);
 }
 
-void k_attica__providermanager_qbase_child_event(void* self, void* event) {
-    Attica__ProviderManager_QBaseChildEvent((Attica__ProviderManager*)self, (QChildEvent*)event);
+void k_attica__providermanager_super_child_event(void* self, void* event) {
+    Attica__ProviderManager_SuperChildEvent((Attica__ProviderManager*)self, (QChildEvent*)event);
 }
 
 void k_attica__providermanager_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -422,8 +422,8 @@ void k_attica__providermanager_custom_event(void* self, void* event) {
     Attica__ProviderManager_CustomEvent((Attica__ProviderManager*)self, (QEvent*)event);
 }
 
-void k_attica__providermanager_qbase_custom_event(void* self, void* event) {
-    Attica__ProviderManager_QBaseCustomEvent((Attica__ProviderManager*)self, (QEvent*)event);
+void k_attica__providermanager_super_custom_event(void* self, void* event) {
+    Attica__ProviderManager_SuperCustomEvent((Attica__ProviderManager*)self, (QEvent*)event);
 }
 
 void k_attica__providermanager_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -434,8 +434,8 @@ void k_attica__providermanager_connect_notify(void* self, void* signal) {
     Attica__ProviderManager_ConnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
-void k_attica__providermanager_qbase_connect_notify(void* self, void* signal) {
-    Attica__ProviderManager_QBaseConnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
+void k_attica__providermanager_super_connect_notify(void* self, void* signal) {
+    Attica__ProviderManager_SuperConnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
 void k_attica__providermanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -446,8 +446,8 @@ void k_attica__providermanager_disconnect_notify(void* self, void* signal) {
     Attica__ProviderManager_DisconnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
-void k_attica__providermanager_qbase_disconnect_notify(void* self, void* signal) {
-    Attica__ProviderManager_QBaseDisconnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
+void k_attica__providermanager_super_disconnect_notify(void* self, void* signal) {
+    Attica__ProviderManager_SuperDisconnectNotify((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
 void k_attica__providermanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -458,8 +458,8 @@ QObject* k_attica__providermanager_sender(void* self) {
     return Attica__ProviderManager_Sender((Attica__ProviderManager*)self);
 }
 
-QObject* k_attica__providermanager_qbase_sender(void* self) {
-    return Attica__ProviderManager_QBaseSender((Attica__ProviderManager*)self);
+QObject* k_attica__providermanager_super_sender(void* self) {
+    return Attica__ProviderManager_SuperSender((Attica__ProviderManager*)self);
 }
 
 void k_attica__providermanager_on_sender(void* self, QObject* (*callback)()) {
@@ -470,8 +470,8 @@ int32_t k_attica__providermanager_sender_signal_index(void* self) {
     return Attica__ProviderManager_SenderSignalIndex((Attica__ProviderManager*)self);
 }
 
-int32_t k_attica__providermanager_qbase_sender_signal_index(void* self) {
-    return Attica__ProviderManager_QBaseSenderSignalIndex((Attica__ProviderManager*)self);
+int32_t k_attica__providermanager_super_sender_signal_index(void* self) {
+    return Attica__ProviderManager_SuperSenderSignalIndex((Attica__ProviderManager*)self);
 }
 
 void k_attica__providermanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -482,8 +482,8 @@ int32_t k_attica__providermanager_receivers(void* self, const char* signal) {
     return Attica__ProviderManager_Receivers((Attica__ProviderManager*)self, signal);
 }
 
-int32_t k_attica__providermanager_qbase_receivers(void* self, const char* signal) {
-    return Attica__ProviderManager_QBaseReceivers((Attica__ProviderManager*)self, signal);
+int32_t k_attica__providermanager_super_receivers(void* self, const char* signal) {
+    return Attica__ProviderManager_SuperReceivers((Attica__ProviderManager*)self, signal);
 }
 
 void k_attica__providermanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -494,8 +494,8 @@ bool k_attica__providermanager_is_signal_connected(void* self, void* signal) {
     return Attica__ProviderManager_IsSignalConnected((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
-bool k_attica__providermanager_qbase_is_signal_connected(void* self, void* signal) {
-    return Attica__ProviderManager_QBaseIsSignalConnected((Attica__ProviderManager*)self, (QMetaMethod*)signal);
+bool k_attica__providermanager_super_is_signal_connected(void* self, void* signal) {
+    return Attica__ProviderManager_SuperIsSignalConnected((Attica__ProviderManager*)self, (QMetaMethod*)signal);
 }
 
 void k_attica__providermanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

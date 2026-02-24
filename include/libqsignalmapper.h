@@ -40,13 +40,17 @@ const QMetaObject* q_signalmapper_meta_object(void* self);
 ///
 void q_signalmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_meta_object` instead
+///
+#define q_signalmapper_qbase_meta_object q_signalmapper_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QSignalMapper*
 ///
-const QMetaObject* q_signalmapper_qbase_meta_object(void* self);
+const QMetaObject* q_signalmapper_super_meta_object(void* self);
 
 /// @param self QSignalMapper*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_signalmapper_metacast(void* self, const char* param1);
 ///
 void q_signalmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_metacast` instead
+///
+#define q_signalmapper_qbase_metacast q_signalmapper_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QSignalMapper*
 /// @param param1 const char*
 ///
-void* q_signalmapper_qbase_metacast(void* self, const char* param1);
+void* q_signalmapper_super_metacast(void* self, const char* param1);
 
 /// @param self QSignalMapper*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_signalmapper_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_signalmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_metacall` instead
+///
+#define q_signalmapper_qbase_metacall q_signalmapper_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QSignalMapper*
@@ -88,7 +100,7 @@ void q_signalmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_signalmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_signalmapper_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -682,6 +694,10 @@ void q_signalmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_signalmapper_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_event` instead
+///
+#define q_signalmapper_qbase_event q_signalmapper_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -691,7 +707,7 @@ bool q_signalmapper_event(void* self, void* event);
 /// @param self QSignalMapper*
 /// @param event QEvent*
 ///
-bool q_signalmapper_qbase_event(void* self, void* event);
+bool q_signalmapper_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -716,6 +732,10 @@ void q_signalmapper_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_signalmapper_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_event_filter` instead
+///
+#define q_signalmapper_qbase_event_filter q_signalmapper_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -726,7 +746,7 @@ bool q_signalmapper_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_signalmapper_qbase_event_filter(void* self, void* watched, void* event);
+bool q_signalmapper_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -750,6 +770,10 @@ void q_signalmapper_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_signalmapper_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_timer_event` instead
+///
+#define q_signalmapper_qbase_timer_event q_signalmapper_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -759,7 +783,7 @@ void q_signalmapper_timer_event(void* self, void* event);
 /// @param self QSignalMapper*
 /// @param event QTimerEvent*
 ///
-void q_signalmapper_qbase_timer_event(void* self, void* event);
+void q_signalmapper_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -783,6 +807,10 @@ void q_signalmapper_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_signalmapper_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_child_event` instead
+///
+#define q_signalmapper_qbase_child_event q_signalmapper_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -792,7 +820,7 @@ void q_signalmapper_child_event(void* self, void* event);
 /// @param self QSignalMapper*
 /// @param event QChildEvent*
 ///
-void q_signalmapper_qbase_child_event(void* self, void* event);
+void q_signalmapper_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -816,6 +844,10 @@ void q_signalmapper_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_signalmapper_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_custom_event` instead
+///
+#define q_signalmapper_qbase_custom_event q_signalmapper_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -825,7 +857,7 @@ void q_signalmapper_custom_event(void* self, void* event);
 /// @param self QSignalMapper*
 /// @param event QEvent*
 ///
-void q_signalmapper_qbase_custom_event(void* self, void* event);
+void q_signalmapper_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -849,6 +881,10 @@ void q_signalmapper_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_signalmapper_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_connect_notify` instead
+///
+#define q_signalmapper_qbase_connect_notify q_signalmapper_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -858,7 +894,7 @@ void q_signalmapper_connect_notify(void* self, void* signal);
 /// @param self QSignalMapper*
 /// @param signal QMetaMethod*
 ///
-void q_signalmapper_qbase_connect_notify(void* self, void* signal);
+void q_signalmapper_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -882,6 +918,10 @@ void q_signalmapper_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_signalmapper_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_disconnect_notify` instead
+///
+#define q_signalmapper_qbase_disconnect_notify q_signalmapper_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -891,7 +931,7 @@ void q_signalmapper_disconnect_notify(void* self, void* signal);
 /// @param self QSignalMapper*
 /// @param signal QMetaMethod*
 ///
-void q_signalmapper_qbase_disconnect_notify(void* self, void* signal);
+void q_signalmapper_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -914,6 +954,10 @@ void q_signalmapper_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_signalmapper_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_sender` instead
+///
+#define q_signalmapper_qbase_sender q_signalmapper_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -922,7 +966,7 @@ QObject* q_signalmapper_sender(void* self);
 ///
 /// @param self QSignalMapper*
 ///
-QObject* q_signalmapper_qbase_sender(void* self);
+QObject* q_signalmapper_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -945,6 +989,10 @@ void q_signalmapper_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_signalmapper_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_sender_signal_index` instead
+///
+#define q_signalmapper_qbase_sender_signal_index q_signalmapper_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -953,7 +1001,7 @@ int32_t q_signalmapper_sender_signal_index(void* self);
 ///
 /// @param self QSignalMapper*
 ///
-int32_t q_signalmapper_qbase_sender_signal_index(void* self);
+int32_t q_signalmapper_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -977,6 +1025,10 @@ void q_signalmapper_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_signalmapper_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_receivers` instead
+///
+#define q_signalmapper_qbase_receivers q_signalmapper_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -986,7 +1038,7 @@ int32_t q_signalmapper_receivers(void* self, const char* signal);
 /// @param self QSignalMapper*
 /// @param signal const char*
 ///
-int32_t q_signalmapper_qbase_receivers(void* self, const char* signal);
+int32_t q_signalmapper_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1010,6 +1062,10 @@ void q_signalmapper_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_signalmapper_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_signalmapper_super_is_signal_connected` instead
+///
+#define q_signalmapper_qbase_is_signal_connected q_signalmapper_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1019,7 +1075,7 @@ bool q_signalmapper_is_signal_connected(void* self, void* signal);
 /// @param self QSignalMapper*
 /// @param signal QMetaMethod*
 ///
-bool q_signalmapper_qbase_is_signal_connected(void* self, void* signal);
+bool q_signalmapper_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

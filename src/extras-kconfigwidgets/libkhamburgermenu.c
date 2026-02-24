@@ -22,8 +22,8 @@ void k_hamburgermenu_on_meta_object(void* self, const QMetaObject* (*callback)()
     KHamburgerMenu_OnMetaObject((KHamburgerMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_hamburgermenu_qbase_meta_object(void* self) {
-    return KHamburgerMenu_QBaseMetaObject((KHamburgerMenu*)self);
+const QMetaObject* k_hamburgermenu_super_meta_object(void* self) {
+    return KHamburgerMenu_SuperMetaObject((KHamburgerMenu*)self);
 }
 
 void* k_hamburgermenu_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_hamburgermenu_on_metacast(void* self, void* (*callback)(void*, const char
     KHamburgerMenu_OnMetacast((KHamburgerMenu*)self, (intptr_t)callback);
 }
 
-void* k_hamburgermenu_qbase_metacast(void* self, const char* param1) {
-    return KHamburgerMenu_QBaseMetacast((KHamburgerMenu*)self, param1);
+void* k_hamburgermenu_super_metacast(void* self, const char* param1) {
+    return KHamburgerMenu_SuperMetacast((KHamburgerMenu*)self, param1);
 }
 
 int32_t k_hamburgermenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_hamburgermenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KHamburgerMenu_OnMetacall((KHamburgerMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_hamburgermenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KHamburgerMenu_QBaseMetacall((KHamburgerMenu*)self, param1, param2, param3);
+int32_t k_hamburgermenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KHamburgerMenu_SuperMetacall((KHamburgerMenu*)self, param1, param2, param3);
 }
 
 const char* k_hamburgermenu_tr(const char* s) {
@@ -109,8 +109,8 @@ void k_hamburgermenu_on_create_widget(void* self, QWidget* (*callback)(void*, vo
     KHamburgerMenu_OnCreateWidget((KHamburgerMenu*)self, (intptr_t)callback);
 }
 
-QWidget* k_hamburgermenu_qbase_create_widget(void* self, void* parent) {
-    return KHamburgerMenu_QBaseCreateWidget((KHamburgerMenu*)self, (QWidget*)parent);
+QWidget* k_hamburgermenu_super_create_widget(void* self, void* parent) {
+    return KHamburgerMenu_SuperCreateWidget((KHamburgerMenu*)self, (QWidget*)parent);
 }
 
 const char* k_hamburgermenu_tr2(const char* s, const char* c) {
@@ -655,8 +655,8 @@ bool k_hamburgermenu_event(void* self, void* param1) {
     return KHamburgerMenu_Event((KHamburgerMenu*)self, (QEvent*)param1);
 }
 
-bool k_hamburgermenu_qbase_event(void* self, void* param1) {
-    return KHamburgerMenu_QBaseEvent((KHamburgerMenu*)self, (QEvent*)param1);
+bool k_hamburgermenu_super_event(void* self, void* param1) {
+    return KHamburgerMenu_SuperEvent((KHamburgerMenu*)self, (QEvent*)param1);
 }
 
 void k_hamburgermenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -667,8 +667,8 @@ bool k_hamburgermenu_event_filter(void* self, void* param1, void* param2) {
     return KHamburgerMenu_EventFilter((KHamburgerMenu*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_hamburgermenu_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KHamburgerMenu_QBaseEventFilter((KHamburgerMenu*)self, (QObject*)param1, (QEvent*)param2);
+bool k_hamburgermenu_super_event_filter(void* self, void* param1, void* param2) {
+    return KHamburgerMenu_SuperEventFilter((KHamburgerMenu*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_hamburgermenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -679,8 +679,8 @@ void k_hamburgermenu_delete_widget(void* self, void* widget) {
     KHamburgerMenu_DeleteWidget((KHamburgerMenu*)self, (QWidget*)widget);
 }
 
-void k_hamburgermenu_qbase_delete_widget(void* self, void* widget) {
-    KHamburgerMenu_QBaseDeleteWidget((KHamburgerMenu*)self, (QWidget*)widget);
+void k_hamburgermenu_super_delete_widget(void* self, void* widget) {
+    KHamburgerMenu_SuperDeleteWidget((KHamburgerMenu*)self, (QWidget*)widget);
 }
 
 void k_hamburgermenu_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -691,8 +691,8 @@ void k_hamburgermenu_timer_event(void* self, void* event) {
     KHamburgerMenu_TimerEvent((KHamburgerMenu*)self, (QTimerEvent*)event);
 }
 
-void k_hamburgermenu_qbase_timer_event(void* self, void* event) {
-    KHamburgerMenu_QBaseTimerEvent((KHamburgerMenu*)self, (QTimerEvent*)event);
+void k_hamburgermenu_super_timer_event(void* self, void* event) {
+    KHamburgerMenu_SuperTimerEvent((KHamburgerMenu*)self, (QTimerEvent*)event);
 }
 
 void k_hamburgermenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -703,8 +703,8 @@ void k_hamburgermenu_child_event(void* self, void* event) {
     KHamburgerMenu_ChildEvent((KHamburgerMenu*)self, (QChildEvent*)event);
 }
 
-void k_hamburgermenu_qbase_child_event(void* self, void* event) {
-    KHamburgerMenu_QBaseChildEvent((KHamburgerMenu*)self, (QChildEvent*)event);
+void k_hamburgermenu_super_child_event(void* self, void* event) {
+    KHamburgerMenu_SuperChildEvent((KHamburgerMenu*)self, (QChildEvent*)event);
 }
 
 void k_hamburgermenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -715,8 +715,8 @@ void k_hamburgermenu_custom_event(void* self, void* event) {
     KHamburgerMenu_CustomEvent((KHamburgerMenu*)self, (QEvent*)event);
 }
 
-void k_hamburgermenu_qbase_custom_event(void* self, void* event) {
-    KHamburgerMenu_QBaseCustomEvent((KHamburgerMenu*)self, (QEvent*)event);
+void k_hamburgermenu_super_custom_event(void* self, void* event) {
+    KHamburgerMenu_SuperCustomEvent((KHamburgerMenu*)self, (QEvent*)event);
 }
 
 void k_hamburgermenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -727,8 +727,8 @@ void k_hamburgermenu_connect_notify(void* self, void* signal) {
     KHamburgerMenu_ConnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_hamburgermenu_qbase_connect_notify(void* self, void* signal) {
-    KHamburgerMenu_QBaseConnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
+void k_hamburgermenu_super_connect_notify(void* self, void* signal) {
+    KHamburgerMenu_SuperConnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_hamburgermenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -739,8 +739,8 @@ void k_hamburgermenu_disconnect_notify(void* self, void* signal) {
     KHamburgerMenu_DisconnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_hamburgermenu_qbase_disconnect_notify(void* self, void* signal) {
-    KHamburgerMenu_QBaseDisconnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
+void k_hamburgermenu_super_disconnect_notify(void* self, void* signal) {
+    KHamburgerMenu_SuperDisconnectNotify((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_hamburgermenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -752,8 +752,8 @@ libqt_list /* of QWidget* */ k_hamburgermenu_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_hamburgermenu_qbase_created_widgets(void* self) {
-    libqt_list _arr = KHamburgerMenu_QBaseCreatedWidgets((KHamburgerMenu*)self);
+libqt_list /* of QWidget* */ k_hamburgermenu_super_created_widgets(void* self) {
+    libqt_list _arr = KHamburgerMenu_SuperCreatedWidgets((KHamburgerMenu*)self);
     return _arr;
 }
 
@@ -765,8 +765,8 @@ QObject* k_hamburgermenu_sender(void* self) {
     return KHamburgerMenu_Sender((KHamburgerMenu*)self);
 }
 
-QObject* k_hamburgermenu_qbase_sender(void* self) {
-    return KHamburgerMenu_QBaseSender((KHamburgerMenu*)self);
+QObject* k_hamburgermenu_super_sender(void* self) {
+    return KHamburgerMenu_SuperSender((KHamburgerMenu*)self);
 }
 
 void k_hamburgermenu_on_sender(void* self, QObject* (*callback)()) {
@@ -777,8 +777,8 @@ int32_t k_hamburgermenu_sender_signal_index(void* self) {
     return KHamburgerMenu_SenderSignalIndex((KHamburgerMenu*)self);
 }
 
-int32_t k_hamburgermenu_qbase_sender_signal_index(void* self) {
-    return KHamburgerMenu_QBaseSenderSignalIndex((KHamburgerMenu*)self);
+int32_t k_hamburgermenu_super_sender_signal_index(void* self) {
+    return KHamburgerMenu_SuperSenderSignalIndex((KHamburgerMenu*)self);
 }
 
 void k_hamburgermenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -789,8 +789,8 @@ int32_t k_hamburgermenu_receivers(void* self, const char* signal) {
     return KHamburgerMenu_Receivers((KHamburgerMenu*)self, signal);
 }
 
-int32_t k_hamburgermenu_qbase_receivers(void* self, const char* signal) {
-    return KHamburgerMenu_QBaseReceivers((KHamburgerMenu*)self, signal);
+int32_t k_hamburgermenu_super_receivers(void* self, const char* signal) {
+    return KHamburgerMenu_SuperReceivers((KHamburgerMenu*)self, signal);
 }
 
 void k_hamburgermenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -801,8 +801,8 @@ bool k_hamburgermenu_is_signal_connected(void* self, void* signal) {
     return KHamburgerMenu_IsSignalConnected((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_hamburgermenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KHamburgerMenu_QBaseIsSignalConnected((KHamburgerMenu*)self, (QMetaMethod*)signal);
+bool k_hamburgermenu_super_is_signal_connected(void* self, void* signal) {
+    return KHamburgerMenu_SuperIsSignalConnected((KHamburgerMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_hamburgermenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -37,8 +37,8 @@ void k_colorpicker__kcolorpicker_on_meta_object(void* self, const QMetaObject* (
     kColorPicker__KColorPicker_OnMetaObject((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_colorpicker__kcolorpicker_qbase_meta_object(void* self) {
-    return kColorPicker__KColorPicker_QBaseMetaObject((kColorPicker__KColorPicker*)self);
+const QMetaObject* k_colorpicker__kcolorpicker_super_meta_object(void* self) {
+    return kColorPicker__KColorPicker_SuperMetaObject((kColorPicker__KColorPicker*)self);
 }
 
 void* k_colorpicker__kcolorpicker_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void k_colorpicker__kcolorpicker_on_metacast(void* self, void* (*callback)(void*
     kColorPicker__KColorPicker_OnMetacast((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
-void* k_colorpicker__kcolorpicker_qbase_metacast(void* self, const char* param1) {
-    return kColorPicker__KColorPicker_QBaseMetacast((kColorPicker__KColorPicker*)self, param1);
+void* k_colorpicker__kcolorpicker_super_metacast(void* self, const char* param1) {
+    return kColorPicker__KColorPicker_SuperMetacast((kColorPicker__KColorPicker*)self, param1);
 }
 
 int32_t k_colorpicker__kcolorpicker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void k_colorpicker__kcolorpicker_on_metacall(void* self, int32_t (*callback)(voi
     kColorPicker__KColorPicker_OnMetacall((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return kColorPicker__KColorPicker_QBaseMetacall((kColorPicker__KColorPicker*)self, param1, param2, param3);
+int32_t k_colorpicker__kcolorpicker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return kColorPicker__KColorPicker_SuperMetacall((kColorPicker__KColorPicker*)self, param1, param2, param3);
 }
 
 const char* k_colorpicker__kcolorpicker_tr(const char* s) {
@@ -1702,8 +1702,8 @@ QSize* k_colorpicker__kcolorpicker_size_hint(void* self) {
     return kColorPicker__KColorPicker_SizeHint((kColorPicker__KColorPicker*)self);
 }
 
-QSize* k_colorpicker__kcolorpicker_qbase_size_hint(void* self) {
-    return kColorPicker__KColorPicker_QBaseSizeHint((kColorPicker__KColorPicker*)self);
+QSize* k_colorpicker__kcolorpicker_super_size_hint(void* self) {
+    return kColorPicker__KColorPicker_SuperSizeHint((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1714,8 +1714,8 @@ QSize* k_colorpicker__kcolorpicker_minimum_size_hint(void* self) {
     return kColorPicker__KColorPicker_MinimumSizeHint((kColorPicker__KColorPicker*)self);
 }
 
-QSize* k_colorpicker__kcolorpicker_qbase_minimum_size_hint(void* self) {
-    return kColorPicker__KColorPicker_QBaseMinimumSizeHint((kColorPicker__KColorPicker*)self);
+QSize* k_colorpicker__kcolorpicker_super_minimum_size_hint(void* self) {
+    return kColorPicker__KColorPicker_SuperMinimumSizeHint((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1726,8 +1726,8 @@ bool k_colorpicker__kcolorpicker_event(void* self, void* e) {
     return kColorPicker__KColorPicker_Event((kColorPicker__KColorPicker*)self, (QEvent*)e);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_event(void* self, void* e) {
-    return kColorPicker__KColorPicker_QBaseEvent((kColorPicker__KColorPicker*)self, (QEvent*)e);
+bool k_colorpicker__kcolorpicker_super_event(void* self, void* e) {
+    return kColorPicker__KColorPicker_SuperEvent((kColorPicker__KColorPicker*)self, (QEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1738,8 +1738,8 @@ void k_colorpicker__kcolorpicker_mouse_press_event(void* self, void* param1) {
     kColorPicker__KColorPicker_MousePressEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_mouse_press_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseMousePressEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
+void k_colorpicker__kcolorpicker_super_mouse_press_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperMousePressEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1750,8 +1750,8 @@ void k_colorpicker__kcolorpicker_mouse_release_event(void* self, void* param1) {
     kColorPicker__KColorPicker_MouseReleaseEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_mouse_release_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseMouseReleaseEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
+void k_colorpicker__kcolorpicker_super_mouse_release_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperMouseReleaseEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1762,8 +1762,8 @@ void k_colorpicker__kcolorpicker_paint_event(void* self, void* param1) {
     kColorPicker__KColorPicker_PaintEvent((kColorPicker__KColorPicker*)self, (QPaintEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_paint_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBasePaintEvent((kColorPicker__KColorPicker*)self, (QPaintEvent*)param1);
+void k_colorpicker__kcolorpicker_super_paint_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperPaintEvent((kColorPicker__KColorPicker*)self, (QPaintEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1774,8 +1774,8 @@ void k_colorpicker__kcolorpicker_action_event(void* self, void* param1) {
     kColorPicker__KColorPicker_ActionEvent((kColorPicker__KColorPicker*)self, (QActionEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_action_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseActionEvent((kColorPicker__KColorPicker*)self, (QActionEvent*)param1);
+void k_colorpicker__kcolorpicker_super_action_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperActionEvent((kColorPicker__KColorPicker*)self, (QActionEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1786,8 +1786,8 @@ void k_colorpicker__kcolorpicker_enter_event(void* self, void* param1) {
     kColorPicker__KColorPicker_EnterEvent((kColorPicker__KColorPicker*)self, (QEnterEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_enter_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseEnterEvent((kColorPicker__KColorPicker*)self, (QEnterEvent*)param1);
+void k_colorpicker__kcolorpicker_super_enter_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperEnterEvent((kColorPicker__KColorPicker*)self, (QEnterEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1798,8 +1798,8 @@ void k_colorpicker__kcolorpicker_leave_event(void* self, void* param1) {
     kColorPicker__KColorPicker_LeaveEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_leave_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseLeaveEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
+void k_colorpicker__kcolorpicker_super_leave_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperLeaveEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1810,8 +1810,8 @@ void k_colorpicker__kcolorpicker_timer_event(void* self, void* param1) {
     kColorPicker__KColorPicker_TimerEvent((kColorPicker__KColorPicker*)self, (QTimerEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_timer_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseTimerEvent((kColorPicker__KColorPicker*)self, (QTimerEvent*)param1);
+void k_colorpicker__kcolorpicker_super_timer_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperTimerEvent((kColorPicker__KColorPicker*)self, (QTimerEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1822,8 +1822,8 @@ void k_colorpicker__kcolorpicker_change_event(void* self, void* param1) {
     kColorPicker__KColorPicker_ChangeEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_change_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseChangeEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
+void k_colorpicker__kcolorpicker_super_change_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperChangeEvent((kColorPicker__KColorPicker*)self, (QEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1834,8 +1834,8 @@ bool k_colorpicker__kcolorpicker_hit_button(void* self, void* pos) {
     return kColorPicker__KColorPicker_HitButton((kColorPicker__KColorPicker*)self, (QPoint*)pos);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_hit_button(void* self, void* pos) {
-    return kColorPicker__KColorPicker_QBaseHitButton((kColorPicker__KColorPicker*)self, (QPoint*)pos);
+bool k_colorpicker__kcolorpicker_super_hit_button(void* self, void* pos) {
+    return kColorPicker__KColorPicker_SuperHitButton((kColorPicker__KColorPicker*)self, (QPoint*)pos);
 }
 
 void k_colorpicker__kcolorpicker_on_hit_button(void* self, bool (*callback)(void*, void*)) {
@@ -1846,8 +1846,8 @@ void k_colorpicker__kcolorpicker_check_state_set(void* self) {
     kColorPicker__KColorPicker_CheckStateSet((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_qbase_check_state_set(void* self) {
-    kColorPicker__KColorPicker_QBaseCheckStateSet((kColorPicker__KColorPicker*)self);
+void k_colorpicker__kcolorpicker_super_check_state_set(void* self) {
+    kColorPicker__KColorPicker_SuperCheckStateSet((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_check_state_set(void* self, void (*callback)()) {
@@ -1858,8 +1858,8 @@ void k_colorpicker__kcolorpicker_next_check_state(void* self) {
     kColorPicker__KColorPicker_NextCheckState((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_qbase_next_check_state(void* self) {
-    kColorPicker__KColorPicker_QBaseNextCheckState((kColorPicker__KColorPicker*)self);
+void k_colorpicker__kcolorpicker_super_next_check_state(void* self) {
+    kColorPicker__KColorPicker_SuperNextCheckState((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_next_check_state(void* self, void (*callback)()) {
@@ -1870,8 +1870,8 @@ void k_colorpicker__kcolorpicker_init_style_option(void* self, void* option) {
     kColorPicker__KColorPicker_InitStyleOption((kColorPicker__KColorPicker*)self, (QStyleOptionToolButton*)option);
 }
 
-void k_colorpicker__kcolorpicker_qbase_init_style_option(void* self, void* option) {
-    kColorPicker__KColorPicker_QBaseInitStyleOption((kColorPicker__KColorPicker*)self, (QStyleOptionToolButton*)option);
+void k_colorpicker__kcolorpicker_super_init_style_option(void* self, void* option) {
+    kColorPicker__KColorPicker_SuperInitStyleOption((kColorPicker__KColorPicker*)self, (QStyleOptionToolButton*)option);
 }
 
 void k_colorpicker__kcolorpicker_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1882,8 +1882,8 @@ void k_colorpicker__kcolorpicker_key_press_event(void* self, void* e) {
     kColorPicker__KColorPicker_KeyPressEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
 }
 
-void k_colorpicker__kcolorpicker_qbase_key_press_event(void* self, void* e) {
-    kColorPicker__KColorPicker_QBaseKeyPressEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
+void k_colorpicker__kcolorpicker_super_key_press_event(void* self, void* e) {
+    kColorPicker__KColorPicker_SuperKeyPressEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1894,8 +1894,8 @@ void k_colorpicker__kcolorpicker_key_release_event(void* self, void* e) {
     kColorPicker__KColorPicker_KeyReleaseEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
 }
 
-void k_colorpicker__kcolorpicker_qbase_key_release_event(void* self, void* e) {
-    kColorPicker__KColorPicker_QBaseKeyReleaseEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
+void k_colorpicker__kcolorpicker_super_key_release_event(void* self, void* e) {
+    kColorPicker__KColorPicker_SuperKeyReleaseEvent((kColorPicker__KColorPicker*)self, (QKeyEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1906,8 +1906,8 @@ void k_colorpicker__kcolorpicker_mouse_move_event(void* self, void* e) {
     kColorPicker__KColorPicker_MouseMoveEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)e);
 }
 
-void k_colorpicker__kcolorpicker_qbase_mouse_move_event(void* self, void* e) {
-    kColorPicker__KColorPicker_QBaseMouseMoveEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)e);
+void k_colorpicker__kcolorpicker_super_mouse_move_event(void* self, void* e) {
+    kColorPicker__KColorPicker_SuperMouseMoveEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1918,8 +1918,8 @@ void k_colorpicker__kcolorpicker_focus_in_event(void* self, void* e) {
     kColorPicker__KColorPicker_FocusInEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
 }
 
-void k_colorpicker__kcolorpicker_qbase_focus_in_event(void* self, void* e) {
-    kColorPicker__KColorPicker_QBaseFocusInEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
+void k_colorpicker__kcolorpicker_super_focus_in_event(void* self, void* e) {
+    kColorPicker__KColorPicker_SuperFocusInEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1930,8 +1930,8 @@ void k_colorpicker__kcolorpicker_focus_out_event(void* self, void* e) {
     kColorPicker__KColorPicker_FocusOutEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
 }
 
-void k_colorpicker__kcolorpicker_qbase_focus_out_event(void* self, void* e) {
-    kColorPicker__KColorPicker_QBaseFocusOutEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
+void k_colorpicker__kcolorpicker_super_focus_out_event(void* self, void* e) {
+    kColorPicker__KColorPicker_SuperFocusOutEvent((kColorPicker__KColorPicker*)self, (QFocusEvent*)e);
 }
 
 void k_colorpicker__kcolorpicker_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1942,8 +1942,8 @@ int32_t k_colorpicker__kcolorpicker_dev_type(void* self) {
     return kColorPicker__KColorPicker_DevType((kColorPicker__KColorPicker*)self);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_dev_type(void* self) {
-    return kColorPicker__KColorPicker_QBaseDevType((kColorPicker__KColorPicker*)self);
+int32_t k_colorpicker__kcolorpicker_super_dev_type(void* self) {
+    return kColorPicker__KColorPicker_SuperDevType((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1954,8 +1954,8 @@ void k_colorpicker__kcolorpicker_set_visible(void* self, bool visible) {
     kColorPicker__KColorPicker_SetVisible((kColorPicker__KColorPicker*)self, visible);
 }
 
-void k_colorpicker__kcolorpicker_qbase_set_visible(void* self, bool visible) {
-    kColorPicker__KColorPicker_QBaseSetVisible((kColorPicker__KColorPicker*)self, visible);
+void k_colorpicker__kcolorpicker_super_set_visible(void* self, bool visible) {
+    kColorPicker__KColorPicker_SuperSetVisible((kColorPicker__KColorPicker*)self, visible);
 }
 
 void k_colorpicker__kcolorpicker_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1966,8 +1966,8 @@ int32_t k_colorpicker__kcolorpicker_height_for_width(void* self, int param1) {
     return kColorPicker__KColorPicker_HeightForWidth((kColorPicker__KColorPicker*)self, param1);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_height_for_width(void* self, int param1) {
-    return kColorPicker__KColorPicker_QBaseHeightForWidth((kColorPicker__KColorPicker*)self, param1);
+int32_t k_colorpicker__kcolorpicker_super_height_for_width(void* self, int param1) {
+    return kColorPicker__KColorPicker_SuperHeightForWidth((kColorPicker__KColorPicker*)self, param1);
 }
 
 void k_colorpicker__kcolorpicker_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1978,8 +1978,8 @@ bool k_colorpicker__kcolorpicker_has_height_for_width(void* self) {
     return kColorPicker__KColorPicker_HasHeightForWidth((kColorPicker__KColorPicker*)self);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_has_height_for_width(void* self) {
-    return kColorPicker__KColorPicker_QBaseHasHeightForWidth((kColorPicker__KColorPicker*)self);
+bool k_colorpicker__kcolorpicker_super_has_height_for_width(void* self) {
+    return kColorPicker__KColorPicker_SuperHasHeightForWidth((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1990,8 +1990,8 @@ QPaintEngine* k_colorpicker__kcolorpicker_paint_engine(void* self) {
     return kColorPicker__KColorPicker_PaintEngine((kColorPicker__KColorPicker*)self);
 }
 
-QPaintEngine* k_colorpicker__kcolorpicker_qbase_paint_engine(void* self) {
-    return kColorPicker__KColorPicker_QBasePaintEngine((kColorPicker__KColorPicker*)self);
+QPaintEngine* k_colorpicker__kcolorpicker_super_paint_engine(void* self) {
+    return kColorPicker__KColorPicker_SuperPaintEngine((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2002,8 +2002,8 @@ void k_colorpicker__kcolorpicker_mouse_double_click_event(void* self, void* even
     kColorPicker__KColorPicker_MouseDoubleClickEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_mouse_double_click_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseMouseDoubleClickEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)event);
+void k_colorpicker__kcolorpicker_super_mouse_double_click_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperMouseDoubleClickEvent((kColorPicker__KColorPicker*)self, (QMouseEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2014,8 +2014,8 @@ void k_colorpicker__kcolorpicker_wheel_event(void* self, void* event) {
     kColorPicker__KColorPicker_WheelEvent((kColorPicker__KColorPicker*)self, (QWheelEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_wheel_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseWheelEvent((kColorPicker__KColorPicker*)self, (QWheelEvent*)event);
+void k_colorpicker__kcolorpicker_super_wheel_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperWheelEvent((kColorPicker__KColorPicker*)self, (QWheelEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2026,8 +2026,8 @@ void k_colorpicker__kcolorpicker_move_event(void* self, void* event) {
     kColorPicker__KColorPicker_MoveEvent((kColorPicker__KColorPicker*)self, (QMoveEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_move_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseMoveEvent((kColorPicker__KColorPicker*)self, (QMoveEvent*)event);
+void k_colorpicker__kcolorpicker_super_move_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperMoveEvent((kColorPicker__KColorPicker*)self, (QMoveEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2038,8 +2038,8 @@ void k_colorpicker__kcolorpicker_resize_event(void* self, void* event) {
     kColorPicker__KColorPicker_ResizeEvent((kColorPicker__KColorPicker*)self, (QResizeEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_resize_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseResizeEvent((kColorPicker__KColorPicker*)self, (QResizeEvent*)event);
+void k_colorpicker__kcolorpicker_super_resize_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperResizeEvent((kColorPicker__KColorPicker*)self, (QResizeEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2050,8 +2050,8 @@ void k_colorpicker__kcolorpicker_close_event(void* self, void* event) {
     kColorPicker__KColorPicker_CloseEvent((kColorPicker__KColorPicker*)self, (QCloseEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_close_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseCloseEvent((kColorPicker__KColorPicker*)self, (QCloseEvent*)event);
+void k_colorpicker__kcolorpicker_super_close_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperCloseEvent((kColorPicker__KColorPicker*)self, (QCloseEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2062,8 +2062,8 @@ void k_colorpicker__kcolorpicker_context_menu_event(void* self, void* event) {
     kColorPicker__KColorPicker_ContextMenuEvent((kColorPicker__KColorPicker*)self, (QContextMenuEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_context_menu_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseContextMenuEvent((kColorPicker__KColorPicker*)self, (QContextMenuEvent*)event);
+void k_colorpicker__kcolorpicker_super_context_menu_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperContextMenuEvent((kColorPicker__KColorPicker*)self, (QContextMenuEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2074,8 +2074,8 @@ void k_colorpicker__kcolorpicker_tablet_event(void* self, void* event) {
     kColorPicker__KColorPicker_TabletEvent((kColorPicker__KColorPicker*)self, (QTabletEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_tablet_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseTabletEvent((kColorPicker__KColorPicker*)self, (QTabletEvent*)event);
+void k_colorpicker__kcolorpicker_super_tablet_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperTabletEvent((kColorPicker__KColorPicker*)self, (QTabletEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2086,8 +2086,8 @@ void k_colorpicker__kcolorpicker_drag_enter_event(void* self, void* event) {
     kColorPicker__KColorPicker_DragEnterEvent((kColorPicker__KColorPicker*)self, (QDragEnterEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_drag_enter_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseDragEnterEvent((kColorPicker__KColorPicker*)self, (QDragEnterEvent*)event);
+void k_colorpicker__kcolorpicker_super_drag_enter_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperDragEnterEvent((kColorPicker__KColorPicker*)self, (QDragEnterEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2098,8 +2098,8 @@ void k_colorpicker__kcolorpicker_drag_move_event(void* self, void* event) {
     kColorPicker__KColorPicker_DragMoveEvent((kColorPicker__KColorPicker*)self, (QDragMoveEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_drag_move_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseDragMoveEvent((kColorPicker__KColorPicker*)self, (QDragMoveEvent*)event);
+void k_colorpicker__kcolorpicker_super_drag_move_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperDragMoveEvent((kColorPicker__KColorPicker*)self, (QDragMoveEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2110,8 +2110,8 @@ void k_colorpicker__kcolorpicker_drag_leave_event(void* self, void* event) {
     kColorPicker__KColorPicker_DragLeaveEvent((kColorPicker__KColorPicker*)self, (QDragLeaveEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_drag_leave_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseDragLeaveEvent((kColorPicker__KColorPicker*)self, (QDragLeaveEvent*)event);
+void k_colorpicker__kcolorpicker_super_drag_leave_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperDragLeaveEvent((kColorPicker__KColorPicker*)self, (QDragLeaveEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2122,8 +2122,8 @@ void k_colorpicker__kcolorpicker_drop_event(void* self, void* event) {
     kColorPicker__KColorPicker_DropEvent((kColorPicker__KColorPicker*)self, (QDropEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_drop_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseDropEvent((kColorPicker__KColorPicker*)self, (QDropEvent*)event);
+void k_colorpicker__kcolorpicker_super_drop_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperDropEvent((kColorPicker__KColorPicker*)self, (QDropEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2134,8 +2134,8 @@ void k_colorpicker__kcolorpicker_show_event(void* self, void* event) {
     kColorPicker__KColorPicker_ShowEvent((kColorPicker__KColorPicker*)self, (QShowEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_show_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseShowEvent((kColorPicker__KColorPicker*)self, (QShowEvent*)event);
+void k_colorpicker__kcolorpicker_super_show_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperShowEvent((kColorPicker__KColorPicker*)self, (QShowEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2146,8 +2146,8 @@ void k_colorpicker__kcolorpicker_hide_event(void* self, void* event) {
     kColorPicker__KColorPicker_HideEvent((kColorPicker__KColorPicker*)self, (QHideEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_hide_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseHideEvent((kColorPicker__KColorPicker*)self, (QHideEvent*)event);
+void k_colorpicker__kcolorpicker_super_hide_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperHideEvent((kColorPicker__KColorPicker*)self, (QHideEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2158,8 +2158,8 @@ bool k_colorpicker__kcolorpicker_native_event(void* self, char* eventType, void*
     return kColorPicker__KColorPicker_NativeEvent((kColorPicker__KColorPicker*)self, qstring(eventType), message, result);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return kColorPicker__KColorPicker_QBaseNativeEvent((kColorPicker__KColorPicker*)self, qstring(eventType), message, result);
+bool k_colorpicker__kcolorpicker_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return kColorPicker__KColorPicker_SuperNativeEvent((kColorPicker__KColorPicker*)self, qstring(eventType), message, result);
 }
 
 void k_colorpicker__kcolorpicker_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2170,8 +2170,8 @@ int32_t k_colorpicker__kcolorpicker_metric(void* self, int32_t param1) {
     return kColorPicker__KColorPicker_Metric((kColorPicker__KColorPicker*)self, param1);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_metric(void* self, int32_t param1) {
-    return kColorPicker__KColorPicker_QBaseMetric((kColorPicker__KColorPicker*)self, param1);
+int32_t k_colorpicker__kcolorpicker_super_metric(void* self, int32_t param1) {
+    return kColorPicker__KColorPicker_SuperMetric((kColorPicker__KColorPicker*)self, param1);
 }
 
 void k_colorpicker__kcolorpicker_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2182,8 +2182,8 @@ void k_colorpicker__kcolorpicker_init_painter(void* self, void* painter) {
     kColorPicker__KColorPicker_InitPainter((kColorPicker__KColorPicker*)self, (QPainter*)painter);
 }
 
-void k_colorpicker__kcolorpicker_qbase_init_painter(void* self, void* painter) {
-    kColorPicker__KColorPicker_QBaseInitPainter((kColorPicker__KColorPicker*)self, (QPainter*)painter);
+void k_colorpicker__kcolorpicker_super_init_painter(void* self, void* painter) {
+    kColorPicker__KColorPicker_SuperInitPainter((kColorPicker__KColorPicker*)self, (QPainter*)painter);
 }
 
 void k_colorpicker__kcolorpicker_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2194,8 +2194,8 @@ QPaintDevice* k_colorpicker__kcolorpicker_redirected(void* self, void* offset) {
     return kColorPicker__KColorPicker_Redirected((kColorPicker__KColorPicker*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_colorpicker__kcolorpicker_qbase_redirected(void* self, void* offset) {
-    return kColorPicker__KColorPicker_QBaseRedirected((kColorPicker__KColorPicker*)self, (QPoint*)offset);
+QPaintDevice* k_colorpicker__kcolorpicker_super_redirected(void* self, void* offset) {
+    return kColorPicker__KColorPicker_SuperRedirected((kColorPicker__KColorPicker*)self, (QPoint*)offset);
 }
 
 void k_colorpicker__kcolorpicker_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2206,8 +2206,8 @@ QPainter* k_colorpicker__kcolorpicker_shared_painter(void* self) {
     return kColorPicker__KColorPicker_SharedPainter((kColorPicker__KColorPicker*)self);
 }
 
-QPainter* k_colorpicker__kcolorpicker_qbase_shared_painter(void* self) {
-    return kColorPicker__KColorPicker_QBaseSharedPainter((kColorPicker__KColorPicker*)self);
+QPainter* k_colorpicker__kcolorpicker_super_shared_painter(void* self) {
+    return kColorPicker__KColorPicker_SuperSharedPainter((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2218,8 +2218,8 @@ void k_colorpicker__kcolorpicker_input_method_event(void* self, void* param1) {
     kColorPicker__KColorPicker_InputMethodEvent((kColorPicker__KColorPicker*)self, (QInputMethodEvent*)param1);
 }
 
-void k_colorpicker__kcolorpicker_qbase_input_method_event(void* self, void* param1) {
-    kColorPicker__KColorPicker_QBaseInputMethodEvent((kColorPicker__KColorPicker*)self, (QInputMethodEvent*)param1);
+void k_colorpicker__kcolorpicker_super_input_method_event(void* self, void* param1) {
+    kColorPicker__KColorPicker_SuperInputMethodEvent((kColorPicker__KColorPicker*)self, (QInputMethodEvent*)param1);
 }
 
 void k_colorpicker__kcolorpicker_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2230,8 +2230,8 @@ QVariant* k_colorpicker__kcolorpicker_input_method_query(void* self, int32_t par
     return kColorPicker__KColorPicker_InputMethodQuery((kColorPicker__KColorPicker*)self, param1);
 }
 
-QVariant* k_colorpicker__kcolorpicker_qbase_input_method_query(void* self, int32_t param1) {
-    return kColorPicker__KColorPicker_QBaseInputMethodQuery((kColorPicker__KColorPicker*)self, param1);
+QVariant* k_colorpicker__kcolorpicker_super_input_method_query(void* self, int32_t param1) {
+    return kColorPicker__KColorPicker_SuperInputMethodQuery((kColorPicker__KColorPicker*)self, param1);
 }
 
 void k_colorpicker__kcolorpicker_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2242,8 +2242,8 @@ bool k_colorpicker__kcolorpicker_focus_next_prev_child(void* self, bool next) {
     return kColorPicker__KColorPicker_FocusNextPrevChild((kColorPicker__KColorPicker*)self, next);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_focus_next_prev_child(void* self, bool next) {
-    return kColorPicker__KColorPicker_QBaseFocusNextPrevChild((kColorPicker__KColorPicker*)self, next);
+bool k_colorpicker__kcolorpicker_super_focus_next_prev_child(void* self, bool next) {
+    return kColorPicker__KColorPicker_SuperFocusNextPrevChild((kColorPicker__KColorPicker*)self, next);
 }
 
 void k_colorpicker__kcolorpicker_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2254,8 +2254,8 @@ bool k_colorpicker__kcolorpicker_event_filter(void* self, void* watched, void* e
     return kColorPicker__KColorPicker_EventFilter((kColorPicker__KColorPicker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_event_filter(void* self, void* watched, void* event) {
-    return kColorPicker__KColorPicker_QBaseEventFilter((kColorPicker__KColorPicker*)self, (QObject*)watched, (QEvent*)event);
+bool k_colorpicker__kcolorpicker_super_event_filter(void* self, void* watched, void* event) {
+    return kColorPicker__KColorPicker_SuperEventFilter((kColorPicker__KColorPicker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2266,8 +2266,8 @@ void k_colorpicker__kcolorpicker_child_event(void* self, void* event) {
     kColorPicker__KColorPicker_ChildEvent((kColorPicker__KColorPicker*)self, (QChildEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_child_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseChildEvent((kColorPicker__KColorPicker*)self, (QChildEvent*)event);
+void k_colorpicker__kcolorpicker_super_child_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperChildEvent((kColorPicker__KColorPicker*)self, (QChildEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2278,8 +2278,8 @@ void k_colorpicker__kcolorpicker_custom_event(void* self, void* event) {
     kColorPicker__KColorPicker_CustomEvent((kColorPicker__KColorPicker*)self, (QEvent*)event);
 }
 
-void k_colorpicker__kcolorpicker_qbase_custom_event(void* self, void* event) {
-    kColorPicker__KColorPicker_QBaseCustomEvent((kColorPicker__KColorPicker*)self, (QEvent*)event);
+void k_colorpicker__kcolorpicker_super_custom_event(void* self, void* event) {
+    kColorPicker__KColorPicker_SuperCustomEvent((kColorPicker__KColorPicker*)self, (QEvent*)event);
 }
 
 void k_colorpicker__kcolorpicker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2290,8 +2290,8 @@ void k_colorpicker__kcolorpicker_connect_notify(void* self, void* signal) {
     kColorPicker__KColorPicker_ConnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
-void k_colorpicker__kcolorpicker_qbase_connect_notify(void* self, void* signal) {
-    kColorPicker__KColorPicker_QBaseConnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
+void k_colorpicker__kcolorpicker_super_connect_notify(void* self, void* signal) {
+    kColorPicker__KColorPicker_SuperConnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
 void k_colorpicker__kcolorpicker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2302,8 +2302,8 @@ void k_colorpicker__kcolorpicker_disconnect_notify(void* self, void* signal) {
     kColorPicker__KColorPicker_DisconnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
-void k_colorpicker__kcolorpicker_qbase_disconnect_notify(void* self, void* signal) {
-    kColorPicker__KColorPicker_QBaseDisconnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
+void k_colorpicker__kcolorpicker_super_disconnect_notify(void* self, void* signal) {
+    kColorPicker__KColorPicker_SuperDisconnectNotify((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
 void k_colorpicker__kcolorpicker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2314,8 +2314,8 @@ void k_colorpicker__kcolorpicker_update_micro_focus(void* self) {
     kColorPicker__KColorPicker_UpdateMicroFocus((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_qbase_update_micro_focus(void* self) {
-    kColorPicker__KColorPicker_QBaseUpdateMicroFocus((kColorPicker__KColorPicker*)self);
+void k_colorpicker__kcolorpicker_super_update_micro_focus(void* self) {
+    kColorPicker__KColorPicker_SuperUpdateMicroFocus((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2326,8 +2326,8 @@ void k_colorpicker__kcolorpicker_create(void* self) {
     kColorPicker__KColorPicker_Create((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_qbase_create(void* self) {
-    kColorPicker__KColorPicker_QBaseCreate((kColorPicker__KColorPicker*)self);
+void k_colorpicker__kcolorpicker_super_create(void* self) {
+    kColorPicker__KColorPicker_SuperCreate((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_create(void* self, void (*callback)()) {
@@ -2338,8 +2338,8 @@ void k_colorpicker__kcolorpicker_destroy(void* self) {
     kColorPicker__KColorPicker_Destroy((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_qbase_destroy(void* self) {
-    kColorPicker__KColorPicker_QBaseDestroy((kColorPicker__KColorPicker*)self);
+void k_colorpicker__kcolorpicker_super_destroy(void* self) {
+    kColorPicker__KColorPicker_SuperDestroy((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_destroy(void* self, void (*callback)()) {
@@ -2350,8 +2350,8 @@ bool k_colorpicker__kcolorpicker_focus_next_child(void* self) {
     return kColorPicker__KColorPicker_FocusNextChild((kColorPicker__KColorPicker*)self);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_focus_next_child(void* self) {
-    return kColorPicker__KColorPicker_QBaseFocusNextChild((kColorPicker__KColorPicker*)self);
+bool k_colorpicker__kcolorpicker_super_focus_next_child(void* self) {
+    return kColorPicker__KColorPicker_SuperFocusNextChild((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2362,8 +2362,8 @@ bool k_colorpicker__kcolorpicker_focus_previous_child(void* self) {
     return kColorPicker__KColorPicker_FocusPreviousChild((kColorPicker__KColorPicker*)self);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_focus_previous_child(void* self) {
-    return kColorPicker__KColorPicker_QBaseFocusPreviousChild((kColorPicker__KColorPicker*)self);
+bool k_colorpicker__kcolorpicker_super_focus_previous_child(void* self) {
+    return kColorPicker__KColorPicker_SuperFocusPreviousChild((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2374,8 +2374,8 @@ QObject* k_colorpicker__kcolorpicker_sender(void* self) {
     return kColorPicker__KColorPicker_Sender((kColorPicker__KColorPicker*)self);
 }
 
-QObject* k_colorpicker__kcolorpicker_qbase_sender(void* self) {
-    return kColorPicker__KColorPicker_QBaseSender((kColorPicker__KColorPicker*)self);
+QObject* k_colorpicker__kcolorpicker_super_sender(void* self) {
+    return kColorPicker__KColorPicker_SuperSender((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_sender(void* self, QObject* (*callback)()) {
@@ -2386,8 +2386,8 @@ int32_t k_colorpicker__kcolorpicker_sender_signal_index(void* self) {
     return kColorPicker__KColorPicker_SenderSignalIndex((kColorPicker__KColorPicker*)self);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_sender_signal_index(void* self) {
-    return kColorPicker__KColorPicker_QBaseSenderSignalIndex((kColorPicker__KColorPicker*)self);
+int32_t k_colorpicker__kcolorpicker_super_sender_signal_index(void* self) {
+    return kColorPicker__KColorPicker_SuperSenderSignalIndex((kColorPicker__KColorPicker*)self);
 }
 
 void k_colorpicker__kcolorpicker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2398,8 +2398,8 @@ int32_t k_colorpicker__kcolorpicker_receivers(void* self, const char* signal) {
     return kColorPicker__KColorPicker_Receivers((kColorPicker__KColorPicker*)self, signal);
 }
 
-int32_t k_colorpicker__kcolorpicker_qbase_receivers(void* self, const char* signal) {
-    return kColorPicker__KColorPicker_QBaseReceivers((kColorPicker__KColorPicker*)self, signal);
+int32_t k_colorpicker__kcolorpicker_super_receivers(void* self, const char* signal) {
+    return kColorPicker__KColorPicker_SuperReceivers((kColorPicker__KColorPicker*)self, signal);
 }
 
 void k_colorpicker__kcolorpicker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2410,8 +2410,8 @@ bool k_colorpicker__kcolorpicker_is_signal_connected(void* self, void* signal) {
     return kColorPicker__KColorPicker_IsSignalConnected((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_is_signal_connected(void* self, void* signal) {
-    return kColorPicker__KColorPicker_QBaseIsSignalConnected((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
+bool k_colorpicker__kcolorpicker_super_is_signal_connected(void* self, void* signal) {
+    return kColorPicker__KColorPicker_SuperIsSignalConnected((kColorPicker__KColorPicker*)self, (QMetaMethod*)signal);
 }
 
 void k_colorpicker__kcolorpicker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2422,8 +2422,8 @@ double k_colorpicker__kcolorpicker_get_decoded_metric_f(void* self, int32_t metr
     return kColorPicker__KColorPicker_GetDecodedMetricF((kColorPicker__KColorPicker*)self, metricA, metricB);
 }
 
-double k_colorpicker__kcolorpicker_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return kColorPicker__KColorPicker_QBaseGetDecodedMetricF((kColorPicker__KColorPicker*)self, metricA, metricB);
+double k_colorpicker__kcolorpicker_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return kColorPicker__KColorPicker_SuperGetDecodedMetricF((kColorPicker__KColorPicker*)self, metricA, metricB);
 }
 
 void k_colorpicker__kcolorpicker_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

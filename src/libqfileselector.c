@@ -22,8 +22,8 @@ void q_fileselector_on_meta_object(void* self, const QMetaObject* (*callback)())
     QFileSelector_OnMetaObject((QFileSelector*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_fileselector_qbase_meta_object(void* self) {
-    return QFileSelector_QBaseMetaObject((QFileSelector*)self);
+const QMetaObject* q_fileselector_super_meta_object(void* self) {
+    return QFileSelector_SuperMetaObject((QFileSelector*)self);
 }
 
 void* q_fileselector_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_fileselector_on_metacast(void* self, void* (*callback)(void*, const char*
     QFileSelector_OnMetacast((QFileSelector*)self, (intptr_t)callback);
 }
 
-void* q_fileselector_qbase_metacast(void* self, const char* param1) {
-    return QFileSelector_QBaseMetacast((QFileSelector*)self, param1);
+void* q_fileselector_super_metacast(void* self, const char* param1) {
+    return QFileSelector_SuperMetacast((QFileSelector*)self, param1);
 }
 
 int32_t q_fileselector_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_fileselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QFileSelector_OnMetacall((QFileSelector*)self, (intptr_t)callback);
 }
 
-int32_t q_fileselector_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFileSelector_QBaseMetacall((QFileSelector*)self, param1, param2, param3);
+int32_t q_fileselector_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFileSelector_SuperMetacall((QFileSelector*)self, param1, param2, param3);
 }
 
 const char* q_fileselector_tr(const char* s) {
@@ -350,8 +350,8 @@ bool q_fileselector_event(void* self, void* event) {
     return QFileSelector_Event((QFileSelector*)self, (QEvent*)event);
 }
 
-bool q_fileselector_qbase_event(void* self, void* event) {
-    return QFileSelector_QBaseEvent((QFileSelector*)self, (QEvent*)event);
+bool q_fileselector_super_event(void* self, void* event) {
+    return QFileSelector_SuperEvent((QFileSelector*)self, (QEvent*)event);
 }
 
 void q_fileselector_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -362,8 +362,8 @@ bool q_fileselector_event_filter(void* self, void* watched, void* event) {
     return QFileSelector_EventFilter((QFileSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_fileselector_qbase_event_filter(void* self, void* watched, void* event) {
-    return QFileSelector_QBaseEventFilter((QFileSelector*)self, (QObject*)watched, (QEvent*)event);
+bool q_fileselector_super_event_filter(void* self, void* watched, void* event) {
+    return QFileSelector_SuperEventFilter((QFileSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_fileselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -374,8 +374,8 @@ void q_fileselector_timer_event(void* self, void* event) {
     QFileSelector_TimerEvent((QFileSelector*)self, (QTimerEvent*)event);
 }
 
-void q_fileselector_qbase_timer_event(void* self, void* event) {
-    QFileSelector_QBaseTimerEvent((QFileSelector*)self, (QTimerEvent*)event);
+void q_fileselector_super_timer_event(void* self, void* event) {
+    QFileSelector_SuperTimerEvent((QFileSelector*)self, (QTimerEvent*)event);
 }
 
 void q_fileselector_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void q_fileselector_child_event(void* self, void* event) {
     QFileSelector_ChildEvent((QFileSelector*)self, (QChildEvent*)event);
 }
 
-void q_fileselector_qbase_child_event(void* self, void* event) {
-    QFileSelector_QBaseChildEvent((QFileSelector*)self, (QChildEvent*)event);
+void q_fileselector_super_child_event(void* self, void* event) {
+    QFileSelector_SuperChildEvent((QFileSelector*)self, (QChildEvent*)event);
 }
 
 void q_fileselector_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ void q_fileselector_custom_event(void* self, void* event) {
     QFileSelector_CustomEvent((QFileSelector*)self, (QEvent*)event);
 }
 
-void q_fileselector_qbase_custom_event(void* self, void* event) {
-    QFileSelector_QBaseCustomEvent((QFileSelector*)self, (QEvent*)event);
+void q_fileselector_super_custom_event(void* self, void* event) {
+    QFileSelector_SuperCustomEvent((QFileSelector*)self, (QEvent*)event);
 }
 
 void q_fileselector_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ void q_fileselector_connect_notify(void* self, void* signal) {
     QFileSelector_ConnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
-void q_fileselector_qbase_connect_notify(void* self, void* signal) {
-    QFileSelector_QBaseConnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
+void q_fileselector_super_connect_notify(void* self, void* signal) {
+    QFileSelector_SuperConnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
 void q_fileselector_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -422,8 +422,8 @@ void q_fileselector_disconnect_notify(void* self, void* signal) {
     QFileSelector_DisconnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
-void q_fileselector_qbase_disconnect_notify(void* self, void* signal) {
-    QFileSelector_QBaseDisconnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
+void q_fileselector_super_disconnect_notify(void* self, void* signal) {
+    QFileSelector_SuperDisconnectNotify((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
 void q_fileselector_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -434,8 +434,8 @@ QObject* q_fileselector_sender(void* self) {
     return QFileSelector_Sender((QFileSelector*)self);
 }
 
-QObject* q_fileselector_qbase_sender(void* self) {
-    return QFileSelector_QBaseSender((QFileSelector*)self);
+QObject* q_fileselector_super_sender(void* self) {
+    return QFileSelector_SuperSender((QFileSelector*)self);
 }
 
 void q_fileselector_on_sender(void* self, QObject* (*callback)()) {
@@ -446,8 +446,8 @@ int32_t q_fileselector_sender_signal_index(void* self) {
     return QFileSelector_SenderSignalIndex((QFileSelector*)self);
 }
 
-int32_t q_fileselector_qbase_sender_signal_index(void* self) {
-    return QFileSelector_QBaseSenderSignalIndex((QFileSelector*)self);
+int32_t q_fileselector_super_sender_signal_index(void* self) {
+    return QFileSelector_SuperSenderSignalIndex((QFileSelector*)self);
 }
 
 void q_fileselector_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -458,8 +458,8 @@ int32_t q_fileselector_receivers(void* self, const char* signal) {
     return QFileSelector_Receivers((QFileSelector*)self, signal);
 }
 
-int32_t q_fileselector_qbase_receivers(void* self, const char* signal) {
-    return QFileSelector_QBaseReceivers((QFileSelector*)self, signal);
+int32_t q_fileselector_super_receivers(void* self, const char* signal) {
+    return QFileSelector_SuperReceivers((QFileSelector*)self, signal);
 }
 
 void q_fileselector_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -470,8 +470,8 @@ bool q_fileselector_is_signal_connected(void* self, void* signal) {
     return QFileSelector_IsSignalConnected((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
-bool q_fileselector_qbase_is_signal_connected(void* self, void* signal) {
-    return QFileSelector_QBaseIsSignalConnected((QFileSelector*)self, (QMetaMethod*)signal);
+bool q_fileselector_super_is_signal_connected(void* self, void* signal) {
+    return QFileSelector_SuperIsSignalConnected((QFileSelector*)self, (QMetaMethod*)signal);
 }
 
 void q_fileselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

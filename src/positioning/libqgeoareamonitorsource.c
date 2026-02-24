@@ -22,8 +22,8 @@ void q_geoareamonitorsource_on_meta_object(void* self, const QMetaObject* (*call
     QGeoAreaMonitorSource_OnMetaObject((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_geoareamonitorsource_qbase_meta_object(void* self) {
-    return QGeoAreaMonitorSource_QBaseMetaObject((QGeoAreaMonitorSource*)self);
+const QMetaObject* q_geoareamonitorsource_super_meta_object(void* self) {
+    return QGeoAreaMonitorSource_SuperMetaObject((QGeoAreaMonitorSource*)self);
 }
 
 void* q_geoareamonitorsource_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_geoareamonitorsource_on_metacast(void* self, void* (*callback)(void*, con
     QGeoAreaMonitorSource_OnMetacast((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-void* q_geoareamonitorsource_qbase_metacast(void* self, const char* param1) {
-    return QGeoAreaMonitorSource_QBaseMetacast((QGeoAreaMonitorSource*)self, param1);
+void* q_geoareamonitorsource_super_metacast(void* self, const char* param1) {
+    return QGeoAreaMonitorSource_SuperMetacast((QGeoAreaMonitorSource*)self, param1);
 }
 
 int32_t q_geoareamonitorsource_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_geoareamonitorsource_on_metacall(void* self, int32_t (*callback)(void*, i
     QGeoAreaMonitorSource_OnMetacall((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geoareamonitorsource_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoAreaMonitorSource_QBaseMetacall((QGeoAreaMonitorSource*)self, param1, param2, param3);
+int32_t q_geoareamonitorsource_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoAreaMonitorSource_SuperMetacall((QGeoAreaMonitorSource*)self, param1, param2, param3);
 }
 
 const char* q_geoareamonitorsource_tr(const char* s) {
@@ -92,8 +92,8 @@ void q_geoareamonitorsource_on_set_position_info_source(void* self, void (*callb
     QGeoAreaMonitorSource_OnSetPositionInfoSource((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-void q_geoareamonitorsource_qbase_set_position_info_source(void* self, void* source) {
-    QGeoAreaMonitorSource_QBaseSetPositionInfoSource((QGeoAreaMonitorSource*)self, (QGeoPositionInfoSource*)source);
+void q_geoareamonitorsource_super_set_position_info_source(void* self, void* source) {
+    QGeoAreaMonitorSource_SuperSetPositionInfoSource((QGeoAreaMonitorSource*)self, (QGeoPositionInfoSource*)source);
 }
 
 QGeoPositionInfoSource* q_geoareamonitorsource_position_info_source(void* self) {
@@ -104,8 +104,8 @@ void q_geoareamonitorsource_on_position_info_source(void* self, QGeoPositionInfo
     QGeoAreaMonitorSource_OnPositionInfoSource((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-QGeoPositionInfoSource* q_geoareamonitorsource_qbase_position_info_source(void* self) {
-    return QGeoAreaMonitorSource_QBasePositionInfoSource((QGeoAreaMonitorSource*)self);
+QGeoPositionInfoSource* q_geoareamonitorsource_super_position_info_source(void* self) {
+    return QGeoAreaMonitorSource_SuperPositionInfoSource((QGeoAreaMonitorSource*)self);
 }
 
 const char* q_geoareamonitorsource_source_name(void* self) {
@@ -123,8 +123,8 @@ void q_geoareamonitorsource_on_error(void* self, int32_t (*callback)()) {
     QGeoAreaMonitorSource_OnError((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geoareamonitorsource_qbase_error(void* self) {
-    return QGeoAreaMonitorSource_QBaseError((QGeoAreaMonitorSource*)self);
+int32_t q_geoareamonitorsource_super_error(void* self) {
+    return QGeoAreaMonitorSource_SuperError((QGeoAreaMonitorSource*)self);
 }
 
 int32_t q_geoareamonitorsource_supported_area_monitor_features(void* self) {
@@ -135,8 +135,8 @@ void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int32
     QGeoAreaMonitorSource_OnSupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geoareamonitorsource_qbase_supported_area_monitor_features(void* self) {
-    return QGeoAreaMonitorSource_QBaseSupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self);
+int32_t q_geoareamonitorsource_super_supported_area_monitor_features(void* self) {
+    return QGeoAreaMonitorSource_SuperSupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self);
 }
 
 bool q_geoareamonitorsource_start_monitoring(void* self, void* monitor) {
@@ -147,8 +147,8 @@ void q_geoareamonitorsource_on_start_monitoring(void* self, bool (*callback)(voi
     QGeoAreaMonitorSource_OnStartMonitoring((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-bool q_geoareamonitorsource_qbase_start_monitoring(void* self, void* monitor) {
-    return QGeoAreaMonitorSource_QBaseStartMonitoring((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor);
+bool q_geoareamonitorsource_super_start_monitoring(void* self, void* monitor) {
+    return QGeoAreaMonitorSource_SuperStartMonitoring((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor);
 }
 
 bool q_geoareamonitorsource_stop_monitoring(void* self, void* monitor) {
@@ -159,8 +159,8 @@ void q_geoareamonitorsource_on_stop_monitoring(void* self, bool (*callback)(void
     QGeoAreaMonitorSource_OnStopMonitoring((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-bool q_geoareamonitorsource_qbase_stop_monitoring(void* self, void* monitor) {
-    return QGeoAreaMonitorSource_QBaseStopMonitoring((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor);
+bool q_geoareamonitorsource_super_stop_monitoring(void* self, void* monitor) {
+    return QGeoAreaMonitorSource_SuperStopMonitoring((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor);
 }
 
 bool q_geoareamonitorsource_request_update(void* self, void* monitor, const char* signal) {
@@ -171,8 +171,8 @@ void q_geoareamonitorsource_on_request_update(void* self, bool (*callback)(void*
     QGeoAreaMonitorSource_OnRequestUpdate((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-bool q_geoareamonitorsource_qbase_request_update(void* self, void* monitor, const char* signal) {
-    return QGeoAreaMonitorSource_QBaseRequestUpdate((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor, signal);
+bool q_geoareamonitorsource_super_request_update(void* self, void* monitor, const char* signal) {
+    return QGeoAreaMonitorSource_SuperRequestUpdate((QGeoAreaMonitorSource*)self, (QGeoAreaMonitorInfo*)monitor, signal);
 }
 
 libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_active_monitors(void* self) {
@@ -184,8 +184,8 @@ void q_geoareamonitorsource_on_active_monitors(void* self, libqt_list /* of QGeo
     QGeoAreaMonitorSource_OnActiveMonitors((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_qbase_active_monitors(void* self) {
-    libqt_list _arr = QGeoAreaMonitorSource_QBaseActiveMonitors((QGeoAreaMonitorSource*)self);
+libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_super_active_monitors(void* self) {
+    libqt_list _arr = QGeoAreaMonitorSource_SuperActiveMonitors((QGeoAreaMonitorSource*)self);
     return _arr;
 }
 
@@ -198,8 +198,8 @@ void q_geoareamonitorsource_on_active_monitors2(void* self, libqt_list /* of QGe
     QGeoAreaMonitorSource_OnActiveMonitors2((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_qbase_active_monitors2(void* self, void* lookupArea) {
-    libqt_list _arr = QGeoAreaMonitorSource_QBaseActiveMonitors2((QGeoAreaMonitorSource*)self, (QGeoShape*)lookupArea);
+libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_super_active_monitors2(void* self, void* lookupArea) {
+    libqt_list _arr = QGeoAreaMonitorSource_SuperActiveMonitors2((QGeoAreaMonitorSource*)self, (QGeoShape*)lookupArea);
     return _arr;
 }
 
@@ -211,8 +211,8 @@ void q_geoareamonitorsource_on_set_backend_property(void* self, bool (*callback)
     QGeoAreaMonitorSource_OnSetBackendProperty((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-bool q_geoareamonitorsource_qbase_set_backend_property(void* self, const char* name, void* value) {
-    return QGeoAreaMonitorSource_QBaseSetBackendProperty((QGeoAreaMonitorSource*)self, qstring(name), (QVariant*)value);
+bool q_geoareamonitorsource_super_set_backend_property(void* self, const char* name, void* value) {
+    return QGeoAreaMonitorSource_SuperSetBackendProperty((QGeoAreaMonitorSource*)self, qstring(name), (QVariant*)value);
 }
 
 QVariant* q_geoareamonitorsource_backend_property(void* self, const char* name) {
@@ -223,8 +223,8 @@ void q_geoareamonitorsource_on_backend_property(void* self, QVariant* (*callback
     QGeoAreaMonitorSource_OnBackendProperty((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-QVariant* q_geoareamonitorsource_qbase_backend_property(void* self, const char* name) {
-    return QGeoAreaMonitorSource_QBaseBackendProperty((QGeoAreaMonitorSource*)self, qstring(name));
+QVariant* q_geoareamonitorsource_super_backend_property(void* self, const char* name) {
+    return QGeoAreaMonitorSource_SuperBackendProperty((QGeoAreaMonitorSource*)self, qstring(name));
 }
 
 void q_geoareamonitorsource_area_entered(void* self, void* monitor, void* update) {
@@ -488,8 +488,8 @@ bool q_geoareamonitorsource_event(void* self, void* event) {
     return QGeoAreaMonitorSource_Event((QGeoAreaMonitorSource*)self, (QEvent*)event);
 }
 
-bool q_geoareamonitorsource_qbase_event(void* self, void* event) {
-    return QGeoAreaMonitorSource_QBaseEvent((QGeoAreaMonitorSource*)self, (QEvent*)event);
+bool q_geoareamonitorsource_super_event(void* self, void* event) {
+    return QGeoAreaMonitorSource_SuperEvent((QGeoAreaMonitorSource*)self, (QEvent*)event);
 }
 
 void q_geoareamonitorsource_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -500,8 +500,8 @@ bool q_geoareamonitorsource_event_filter(void* self, void* watched, void* event)
     return QGeoAreaMonitorSource_EventFilter((QGeoAreaMonitorSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_geoareamonitorsource_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoAreaMonitorSource_QBaseEventFilter((QGeoAreaMonitorSource*)self, (QObject*)watched, (QEvent*)event);
+bool q_geoareamonitorsource_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoAreaMonitorSource_SuperEventFilter((QGeoAreaMonitorSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_geoareamonitorsource_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -512,8 +512,8 @@ void q_geoareamonitorsource_timer_event(void* self, void* event) {
     QGeoAreaMonitorSource_TimerEvent((QGeoAreaMonitorSource*)self, (QTimerEvent*)event);
 }
 
-void q_geoareamonitorsource_qbase_timer_event(void* self, void* event) {
-    QGeoAreaMonitorSource_QBaseTimerEvent((QGeoAreaMonitorSource*)self, (QTimerEvent*)event);
+void q_geoareamonitorsource_super_timer_event(void* self, void* event) {
+    QGeoAreaMonitorSource_SuperTimerEvent((QGeoAreaMonitorSource*)self, (QTimerEvent*)event);
 }
 
 void q_geoareamonitorsource_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -524,8 +524,8 @@ void q_geoareamonitorsource_child_event(void* self, void* event) {
     QGeoAreaMonitorSource_ChildEvent((QGeoAreaMonitorSource*)self, (QChildEvent*)event);
 }
 
-void q_geoareamonitorsource_qbase_child_event(void* self, void* event) {
-    QGeoAreaMonitorSource_QBaseChildEvent((QGeoAreaMonitorSource*)self, (QChildEvent*)event);
+void q_geoareamonitorsource_super_child_event(void* self, void* event) {
+    QGeoAreaMonitorSource_SuperChildEvent((QGeoAreaMonitorSource*)self, (QChildEvent*)event);
 }
 
 void q_geoareamonitorsource_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -536,8 +536,8 @@ void q_geoareamonitorsource_custom_event(void* self, void* event) {
     QGeoAreaMonitorSource_CustomEvent((QGeoAreaMonitorSource*)self, (QEvent*)event);
 }
 
-void q_geoareamonitorsource_qbase_custom_event(void* self, void* event) {
-    QGeoAreaMonitorSource_QBaseCustomEvent((QGeoAreaMonitorSource*)self, (QEvent*)event);
+void q_geoareamonitorsource_super_custom_event(void* self, void* event) {
+    QGeoAreaMonitorSource_SuperCustomEvent((QGeoAreaMonitorSource*)self, (QEvent*)event);
 }
 
 void q_geoareamonitorsource_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -548,8 +548,8 @@ void q_geoareamonitorsource_connect_notify(void* self, void* signal) {
     QGeoAreaMonitorSource_ConnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
-void q_geoareamonitorsource_qbase_connect_notify(void* self, void* signal) {
-    QGeoAreaMonitorSource_QBaseConnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
+void q_geoareamonitorsource_super_connect_notify(void* self, void* signal) {
+    QGeoAreaMonitorSource_SuperConnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geoareamonitorsource_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -560,8 +560,8 @@ void q_geoareamonitorsource_disconnect_notify(void* self, void* signal) {
     QGeoAreaMonitorSource_DisconnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
-void q_geoareamonitorsource_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoAreaMonitorSource_QBaseDisconnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
+void q_geoareamonitorsource_super_disconnect_notify(void* self, void* signal) {
+    QGeoAreaMonitorSource_SuperDisconnectNotify((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geoareamonitorsource_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ QObject* q_geoareamonitorsource_sender(void* self) {
     return QGeoAreaMonitorSource_Sender((QGeoAreaMonitorSource*)self);
 }
 
-QObject* q_geoareamonitorsource_qbase_sender(void* self) {
-    return QGeoAreaMonitorSource_QBaseSender((QGeoAreaMonitorSource*)self);
+QObject* q_geoareamonitorsource_super_sender(void* self) {
+    return QGeoAreaMonitorSource_SuperSender((QGeoAreaMonitorSource*)self);
 }
 
 void q_geoareamonitorsource_on_sender(void* self, QObject* (*callback)()) {
@@ -584,8 +584,8 @@ int32_t q_geoareamonitorsource_sender_signal_index(void* self) {
     return QGeoAreaMonitorSource_SenderSignalIndex((QGeoAreaMonitorSource*)self);
 }
 
-int32_t q_geoareamonitorsource_qbase_sender_signal_index(void* self) {
-    return QGeoAreaMonitorSource_QBaseSenderSignalIndex((QGeoAreaMonitorSource*)self);
+int32_t q_geoareamonitorsource_super_sender_signal_index(void* self) {
+    return QGeoAreaMonitorSource_SuperSenderSignalIndex((QGeoAreaMonitorSource*)self);
 }
 
 void q_geoareamonitorsource_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -596,8 +596,8 @@ int32_t q_geoareamonitorsource_receivers(void* self, const char* signal) {
     return QGeoAreaMonitorSource_Receivers((QGeoAreaMonitorSource*)self, signal);
 }
 
-int32_t q_geoareamonitorsource_qbase_receivers(void* self, const char* signal) {
-    return QGeoAreaMonitorSource_QBaseReceivers((QGeoAreaMonitorSource*)self, signal);
+int32_t q_geoareamonitorsource_super_receivers(void* self, const char* signal) {
+    return QGeoAreaMonitorSource_SuperReceivers((QGeoAreaMonitorSource*)self, signal);
 }
 
 void q_geoareamonitorsource_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -608,8 +608,8 @@ bool q_geoareamonitorsource_is_signal_connected(void* self, void* signal) {
     return QGeoAreaMonitorSource_IsSignalConnected((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
-bool q_geoareamonitorsource_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoAreaMonitorSource_QBaseIsSignalConnected((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
+bool q_geoareamonitorsource_super_is_signal_connected(void* self, void* signal) {
+    return QGeoAreaMonitorSource_SuperIsSignalConnected((QGeoAreaMonitorSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geoareamonitorsource_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

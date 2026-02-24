@@ -67,8 +67,8 @@ void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QCompleter_OnMetaObject((QCompleter*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_completer_qbase_meta_object(void* self) {
-    return QCompleter_QBaseMetaObject((QCompleter*)self);
+const QMetaObject* q_completer_super_meta_object(void* self) {
+    return QCompleter_SuperMetaObject((QCompleter*)self);
 }
 
 void* q_completer_metacast(void* self, const char* param1) {
@@ -79,8 +79,8 @@ void q_completer_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QCompleter_OnMetacast((QCompleter*)self, (intptr_t)callback);
 }
 
-void* q_completer_qbase_metacast(void* self, const char* param1) {
-    return QCompleter_QBaseMetacast((QCompleter*)self, param1);
+void* q_completer_super_metacast(void* self, const char* param1) {
+    return QCompleter_SuperMetacast((QCompleter*)self, param1);
 }
 
 int32_t q_completer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -91,8 +91,8 @@ void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QCompleter_OnMetacall((QCompleter*)self, (intptr_t)callback);
 }
 
-int32_t q_completer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCompleter_QBaseMetacall((QCompleter*)self, param1, param2, param3);
+int32_t q_completer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCompleter_SuperMetacall((QCompleter*)self, param1, param2, param3);
 }
 
 const char* q_completer_tr(const char* s) {
@@ -243,8 +243,8 @@ void q_completer_on_path_from_index(void* self, const char* (*callback)(void*, v
     QCompleter_OnPathFromIndex((QCompleter*)self, (intptr_t)callback);
 }
 
-const char* q_completer_qbase_path_from_index(void* self, void* index) {
-    libqt_string _str = QCompleter_QBasePathFromIndex((QCompleter*)self, (QModelIndex*)index);
+const char* q_completer_super_path_from_index(void* self, void* index) {
+    libqt_string _str = QCompleter_SuperPathFromIndex((QCompleter*)self, (QModelIndex*)index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -273,8 +273,8 @@ void q_completer_on_split_path(void* self, const char** (*callback)(void*, const
     QCompleter_OnSplitPath((QCompleter*)self, (intptr_t)callback);
 }
 
-const char** q_completer_qbase_split_path(void* self, const char* path) {
-    libqt_list _arr = QCompleter_QBaseSplitPath((QCompleter*)self, qstring(path));
+const char** q_completer_super_split_path(void* self, const char* path) {
+    libqt_list _arr = QCompleter_SuperSplitPath((QCompleter*)self, qstring(path));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -300,8 +300,8 @@ void q_completer_on_event_filter(void* self, bool (*callback)(void*, void*, void
     QCompleter_OnEventFilter((QCompleter*)self, (intptr_t)callback);
 }
 
-bool q_completer_qbase_event_filter(void* self, void* o, void* e) {
-    return QCompleter_QBaseEventFilter((QCompleter*)self, (QObject*)o, (QEvent*)e);
+bool q_completer_super_event_filter(void* self, void* o, void* e) {
+    return QCompleter_SuperEventFilter((QCompleter*)self, (QObject*)o, (QEvent*)e);
 }
 
 bool q_completer_event(void* self, void* param1) {
@@ -312,8 +312,8 @@ void q_completer_on_event(void* self, bool (*callback)(void*, void*)) {
     QCompleter_OnEvent((QCompleter*)self, (intptr_t)callback);
 }
 
-bool q_completer_qbase_event(void* self, void* param1) {
-    return QCompleter_QBaseEvent((QCompleter*)self, (QEvent*)param1);
+bool q_completer_super_event(void* self, void* param1) {
+    return QCompleter_SuperEvent((QCompleter*)self, (QEvent*)param1);
 }
 
 void q_completer_activated(void* self, const char* text) {
@@ -565,8 +565,8 @@ void q_completer_timer_event(void* self, void* event) {
     QCompleter_TimerEvent((QCompleter*)self, (QTimerEvent*)event);
 }
 
-void q_completer_qbase_timer_event(void* self, void* event) {
-    QCompleter_QBaseTimerEvent((QCompleter*)self, (QTimerEvent*)event);
+void q_completer_super_timer_event(void* self, void* event) {
+    QCompleter_SuperTimerEvent((QCompleter*)self, (QTimerEvent*)event);
 }
 
 void q_completer_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ void q_completer_child_event(void* self, void* event) {
     QCompleter_ChildEvent((QCompleter*)self, (QChildEvent*)event);
 }
 
-void q_completer_qbase_child_event(void* self, void* event) {
-    QCompleter_QBaseChildEvent((QCompleter*)self, (QChildEvent*)event);
+void q_completer_super_child_event(void* self, void* event) {
+    QCompleter_SuperChildEvent((QCompleter*)self, (QChildEvent*)event);
 }
 
 void q_completer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -589,8 +589,8 @@ void q_completer_custom_event(void* self, void* event) {
     QCompleter_CustomEvent((QCompleter*)self, (QEvent*)event);
 }
 
-void q_completer_qbase_custom_event(void* self, void* event) {
-    QCompleter_QBaseCustomEvent((QCompleter*)self, (QEvent*)event);
+void q_completer_super_custom_event(void* self, void* event) {
+    QCompleter_SuperCustomEvent((QCompleter*)self, (QEvent*)event);
 }
 
 void q_completer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -601,8 +601,8 @@ void q_completer_connect_notify(void* self, void* signal) {
     QCompleter_ConnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-void q_completer_qbase_connect_notify(void* self, void* signal) {
-    QCompleter_QBaseConnectNotify((QCompleter*)self, (QMetaMethod*)signal);
+void q_completer_super_connect_notify(void* self, void* signal) {
+    QCompleter_SuperConnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
 void q_completer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void q_completer_disconnect_notify(void* self, void* signal) {
     QCompleter_DisconnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-void q_completer_qbase_disconnect_notify(void* self, void* signal) {
-    QCompleter_QBaseDisconnectNotify((QCompleter*)self, (QMetaMethod*)signal);
+void q_completer_super_disconnect_notify(void* self, void* signal) {
+    QCompleter_SuperDisconnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
 void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ QObject* q_completer_sender(void* self) {
     return QCompleter_Sender((QCompleter*)self);
 }
 
-QObject* q_completer_qbase_sender(void* self) {
-    return QCompleter_QBaseSender((QCompleter*)self);
+QObject* q_completer_super_sender(void* self) {
+    return QCompleter_SuperSender((QCompleter*)self);
 }
 
 void q_completer_on_sender(void* self, QObject* (*callback)()) {
@@ -637,8 +637,8 @@ int32_t q_completer_sender_signal_index(void* self) {
     return QCompleter_SenderSignalIndex((QCompleter*)self);
 }
 
-int32_t q_completer_qbase_sender_signal_index(void* self) {
-    return QCompleter_QBaseSenderSignalIndex((QCompleter*)self);
+int32_t q_completer_super_sender_signal_index(void* self) {
+    return QCompleter_SuperSenderSignalIndex((QCompleter*)self);
 }
 
 void q_completer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -649,8 +649,8 @@ int32_t q_completer_receivers(void* self, const char* signal) {
     return QCompleter_Receivers((QCompleter*)self, signal);
 }
 
-int32_t q_completer_qbase_receivers(void* self, const char* signal) {
-    return QCompleter_QBaseReceivers((QCompleter*)self, signal);
+int32_t q_completer_super_receivers(void* self, const char* signal) {
+    return QCompleter_SuperReceivers((QCompleter*)self, signal);
 }
 
 void q_completer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -661,8 +661,8 @@ bool q_completer_is_signal_connected(void* self, void* signal) {
     return QCompleter_IsSignalConnected((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-bool q_completer_qbase_is_signal_connected(void* self, void* signal) {
-    return QCompleter_QBaseIsSignalConnected((QCompleter*)self, (QMetaMethod*)signal);
+bool q_completer_super_is_signal_connected(void* self, void* signal) {
+    return QCompleter_SuperIsSignalConnected((QCompleter*)self, (QMetaMethod*)signal);
 }
 
 void q_completer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

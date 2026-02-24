@@ -33,8 +33,8 @@ void q_mouseeventtransition_on_meta_object(void* self, const QMetaObject* (*call
     QMouseEventTransition_OnMetaObject((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mouseeventtransition_qbase_meta_object(void* self) {
-    return QMouseEventTransition_QBaseMetaObject((QMouseEventTransition*)self);
+const QMetaObject* q_mouseeventtransition_super_meta_object(void* self) {
+    return QMouseEventTransition_SuperMetaObject((QMouseEventTransition*)self);
 }
 
 void* q_mouseeventtransition_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_mouseeventtransition_on_metacast(void* self, void* (*callback)(void*, con
     QMouseEventTransition_OnMetacast((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-void* q_mouseeventtransition_qbase_metacast(void* self, const char* param1) {
-    return QMouseEventTransition_QBaseMetacast((QMouseEventTransition*)self, param1);
+void* q_mouseeventtransition_super_metacast(void* self, const char* param1) {
+    return QMouseEventTransition_SuperMetacast((QMouseEventTransition*)self, param1);
 }
 
 int32_t q_mouseeventtransition_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_mouseeventtransition_on_metacall(void* self, int32_t (*callback)(void*, i
     QMouseEventTransition_OnMetacall((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-int32_t q_mouseeventtransition_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMouseEventTransition_QBaseMetacall((QMouseEventTransition*)self, param1, param2, param3);
+int32_t q_mouseeventtransition_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMouseEventTransition_SuperMetacall((QMouseEventTransition*)self, param1, param2, param3);
 }
 
 const char* q_mouseeventtransition_tr(const char* s) {
@@ -100,8 +100,8 @@ void q_mouseeventtransition_on_on_transition(void* self, void (*callback)(void*,
     QMouseEventTransition_OnOnTransition((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-void q_mouseeventtransition_qbase_on_transition(void* self, void* event) {
-    QMouseEventTransition_QBaseOnTransition((QMouseEventTransition*)self, (QEvent*)event);
+void q_mouseeventtransition_super_on_transition(void* self, void* event) {
+    QMouseEventTransition_SuperOnTransition((QMouseEventTransition*)self, (QEvent*)event);
 }
 
 bool q_mouseeventtransition_event_test(void* self, void* event) {
@@ -112,8 +112,8 @@ void q_mouseeventtransition_on_event_test(void* self, bool (*callback)(void*, vo
     QMouseEventTransition_OnEventTest((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-bool q_mouseeventtransition_qbase_event_test(void* self, void* event) {
-    return QMouseEventTransition_QBaseEventTest((QMouseEventTransition*)self, (QEvent*)event);
+bool q_mouseeventtransition_super_event_test(void* self, void* event) {
+    return QMouseEventTransition_SuperEventTest((QMouseEventTransition*)self, (QEvent*)event);
 }
 
 const char* q_mouseeventtransition_tr2(const char* s, const char* c) {
@@ -407,8 +407,8 @@ bool q_mouseeventtransition_event(void* self, void* e) {
     return QMouseEventTransition_Event((QMouseEventTransition*)self, (QEvent*)e);
 }
 
-bool q_mouseeventtransition_qbase_event(void* self, void* e) {
-    return QMouseEventTransition_QBaseEvent((QMouseEventTransition*)self, (QEvent*)e);
+bool q_mouseeventtransition_super_event(void* self, void* e) {
+    return QMouseEventTransition_SuperEvent((QMouseEventTransition*)self, (QEvent*)e);
 }
 
 void q_mouseeventtransition_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -419,8 +419,8 @@ bool q_mouseeventtransition_event_filter(void* self, void* watched, void* event)
     return QMouseEventTransition_EventFilter((QMouseEventTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_mouseeventtransition_qbase_event_filter(void* self, void* watched, void* event) {
-    return QMouseEventTransition_QBaseEventFilter((QMouseEventTransition*)self, (QObject*)watched, (QEvent*)event);
+bool q_mouseeventtransition_super_event_filter(void* self, void* watched, void* event) {
+    return QMouseEventTransition_SuperEventFilter((QMouseEventTransition*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_mouseeventtransition_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -431,8 +431,8 @@ void q_mouseeventtransition_timer_event(void* self, void* event) {
     QMouseEventTransition_TimerEvent((QMouseEventTransition*)self, (QTimerEvent*)event);
 }
 
-void q_mouseeventtransition_qbase_timer_event(void* self, void* event) {
-    QMouseEventTransition_QBaseTimerEvent((QMouseEventTransition*)self, (QTimerEvent*)event);
+void q_mouseeventtransition_super_timer_event(void* self, void* event) {
+    QMouseEventTransition_SuperTimerEvent((QMouseEventTransition*)self, (QTimerEvent*)event);
 }
 
 void q_mouseeventtransition_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ void q_mouseeventtransition_child_event(void* self, void* event) {
     QMouseEventTransition_ChildEvent((QMouseEventTransition*)self, (QChildEvent*)event);
 }
 
-void q_mouseeventtransition_qbase_child_event(void* self, void* event) {
-    QMouseEventTransition_QBaseChildEvent((QMouseEventTransition*)self, (QChildEvent*)event);
+void q_mouseeventtransition_super_child_event(void* self, void* event) {
+    QMouseEventTransition_SuperChildEvent((QMouseEventTransition*)self, (QChildEvent*)event);
 }
 
 void q_mouseeventtransition_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ void q_mouseeventtransition_custom_event(void* self, void* event) {
     QMouseEventTransition_CustomEvent((QMouseEventTransition*)self, (QEvent*)event);
 }
 
-void q_mouseeventtransition_qbase_custom_event(void* self, void* event) {
-    QMouseEventTransition_QBaseCustomEvent((QMouseEventTransition*)self, (QEvent*)event);
+void q_mouseeventtransition_super_custom_event(void* self, void* event) {
+    QMouseEventTransition_SuperCustomEvent((QMouseEventTransition*)self, (QEvent*)event);
 }
 
 void q_mouseeventtransition_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_mouseeventtransition_connect_notify(void* self, void* signal) {
     QMouseEventTransition_ConnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_qbase_connect_notify(void* self, void* signal) {
-    QMouseEventTransition_QBaseConnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
+void q_mouseeventtransition_super_connect_notify(void* self, void* signal) {
+    QMouseEventTransition_SuperConnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_mouseeventtransition_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_mouseeventtransition_disconnect_notify(void* self, void* signal) {
     QMouseEventTransition_DisconnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_qbase_disconnect_notify(void* self, void* signal) {
-    QMouseEventTransition_QBaseDisconnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
+void q_mouseeventtransition_super_disconnect_notify(void* self, void* signal) {
+    QMouseEventTransition_SuperDisconnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_mouseeventtransition_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ QObject* q_mouseeventtransition_sender(void* self) {
     return QMouseEventTransition_Sender((QMouseEventTransition*)self);
 }
 
-QObject* q_mouseeventtransition_qbase_sender(void* self) {
-    return QMouseEventTransition_QBaseSender((QMouseEventTransition*)self);
+QObject* q_mouseeventtransition_super_sender(void* self) {
+    return QMouseEventTransition_SuperSender((QMouseEventTransition*)self);
 }
 
 void q_mouseeventtransition_on_sender(void* self, QObject* (*callback)()) {
@@ -503,8 +503,8 @@ int32_t q_mouseeventtransition_sender_signal_index(void* self) {
     return QMouseEventTransition_SenderSignalIndex((QMouseEventTransition*)self);
 }
 
-int32_t q_mouseeventtransition_qbase_sender_signal_index(void* self) {
-    return QMouseEventTransition_QBaseSenderSignalIndex((QMouseEventTransition*)self);
+int32_t q_mouseeventtransition_super_sender_signal_index(void* self) {
+    return QMouseEventTransition_SuperSenderSignalIndex((QMouseEventTransition*)self);
 }
 
 void q_mouseeventtransition_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -515,8 +515,8 @@ int32_t q_mouseeventtransition_receivers(void* self, const char* signal) {
     return QMouseEventTransition_Receivers((QMouseEventTransition*)self, signal);
 }
 
-int32_t q_mouseeventtransition_qbase_receivers(void* self, const char* signal) {
-    return QMouseEventTransition_QBaseReceivers((QMouseEventTransition*)self, signal);
+int32_t q_mouseeventtransition_super_receivers(void* self, const char* signal) {
+    return QMouseEventTransition_SuperReceivers((QMouseEventTransition*)self, signal);
 }
 
 void q_mouseeventtransition_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -527,8 +527,8 @@ bool q_mouseeventtransition_is_signal_connected(void* self, void* signal) {
     return QMouseEventTransition_IsSignalConnected((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-bool q_mouseeventtransition_qbase_is_signal_connected(void* self, void* signal) {
-    return QMouseEventTransition_QBaseIsSignalConnected((QMouseEventTransition*)self, (QMetaMethod*)signal);
+bool q_mouseeventtransition_super_is_signal_connected(void* self, void* signal) {
+    return QMouseEventTransition_SuperIsSignalConnected((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
 void q_mouseeventtransition_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

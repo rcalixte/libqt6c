@@ -40,13 +40,17 @@ const QMetaObject* q_graphicseffect_meta_object(void* self);
 ///
 void q_graphicseffect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_meta_object` instead
+///
+#define q_graphicseffect_qbase_meta_object q_graphicseffect_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 ///
-const QMetaObject* q_graphicseffect_qbase_meta_object(void* self);
+const QMetaObject* q_graphicseffect_super_meta_object(void* self);
 
 /// @param self QGraphicsEffect*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_graphicseffect_metacast(void* self, const char* param1);
 ///
 void q_graphicseffect_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_metacast` instead
+///
+#define q_graphicseffect_qbase_metacast q_graphicseffect_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 /// @param param1 const char*
 ///
-void* q_graphicseffect_qbase_metacast(void* self, const char* param1);
+void* q_graphicseffect_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsEffect*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_graphicseffect_metacall(void* self, int32_t param1, int param2, void* 
 ///
 void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_metacall` instead
+///
+#define q_graphicseffect_qbase_metacall q_graphicseffect_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
@@ -88,7 +100,7 @@ void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicseffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicseffect_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ QRectF* q_graphicseffect_bounding_rect_for(void* self, void* sourceRect);
 ///
 void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_bounding_rect_for` instead
+///
+#define q_graphicseffect_qbase_bounding_rect_for q_graphicseffect_super_bounding_rect_for
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*
 /// @param self QGraphicsEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicseffect_qbase_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicseffect_super_bounding_rect_for(void* self, void* sourceRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
@@ -178,6 +194,10 @@ void q_graphicseffect_draw(void* self, void* painter);
 ///
 void q_graphicseffect_on_draw(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_draw` instead
+///
+#define q_graphicseffect_qbase_draw q_graphicseffect_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#draw)
 ///
 /// Base class method implementation
@@ -185,7 +205,7 @@ void q_graphicseffect_on_draw(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsEffect*
 /// @param painter QPainter*
 ///
-void q_graphicseffect_qbase_draw(void* self, void* painter);
+void q_graphicseffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
@@ -203,6 +223,10 @@ void q_graphicseffect_source_changed(void* self, int32_t flags);
 ///
 void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_changed` instead
+///
+#define q_graphicseffect_qbase_source_changed q_graphicseffect_super_source_changed
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
 /// Base class method implementation
@@ -210,7 +234,7 @@ void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int3
 /// @param self QGraphicsEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
 ///
-void q_graphicseffect_qbase_source_changed(void* self, int32_t flags);
+void q_graphicseffect_super_source_changed(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
@@ -227,13 +251,17 @@ void q_graphicseffect_update_bounding_rect(void* self);
 ///
 void q_graphicseffect_on_update_bounding_rect(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_update_bounding_rect` instead
+///
+#define q_graphicseffect_qbase_update_bounding_rect q_graphicseffect_super_update_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 ///
-void q_graphicseffect_qbase_update_bounding_rect(void* self);
+void q_graphicseffect_super_update_bounding_rect(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
@@ -250,13 +278,17 @@ bool q_graphicseffect_source_is_pixmap(void* self);
 ///
 void q_graphicseffect_on_source_is_pixmap(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_is_pixmap` instead
+///
+#define q_graphicseffect_qbase_source_is_pixmap q_graphicseffect_super_source_is_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 ///
-bool q_graphicseffect_qbase_source_is_pixmap(void* self);
+bool q_graphicseffect_super_source_is_pixmap(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
@@ -273,13 +305,17 @@ QRectF* q_graphicseffect_source_bounding_rect(void* self);
 ///
 void q_graphicseffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_bounding_rect` instead
+///
+#define q_graphicseffect_qbase_source_bounding_rect q_graphicseffect_super_source_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 ///
-QRectF* q_graphicseffect_qbase_source_bounding_rect(void* self);
+QRectF* q_graphicseffect_super_source_bounding_rect(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
@@ -297,6 +333,10 @@ void q_graphicseffect_draw_source(void* self, void* painter);
 ///
 void q_graphicseffect_on_draw_source(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_draw_source` instead
+///
+#define q_graphicseffect_qbase_draw_source q_graphicseffect_super_draw_source
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
 /// Base class method implementation
@@ -304,7 +344,7 @@ void q_graphicseffect_on_draw_source(void* self, void (*callback)(void*, void*))
 /// @param self QGraphicsEffect*
 /// @param painter QPainter*
 ///
-void q_graphicseffect_qbase_draw_source(void* self, void* painter);
+void q_graphicseffect_super_draw_source(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -321,13 +361,17 @@ QPixmap* q_graphicseffect_source_pixmap(void* self);
 ///
 void q_graphicseffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_pixmap` instead
+///
+#define q_graphicseffect_qbase_source_pixmap q_graphicseffect_super_source_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsEffect*
 ///
-QPixmap* q_graphicseffect_qbase_source_pixmap(void* self);
+QPixmap* q_graphicseffect_super_source_pixmap(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -364,6 +408,10 @@ QRectF* q_graphicseffect_source_bounding_rect1(void* self, int32_t system);
 ///
 void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_bounding_rect1` instead
+///
+#define q_graphicseffect_qbase_source_bounding_rect1 q_graphicseffect_super_source_bounding_rect1
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Base class method implementation
@@ -371,7 +419,7 @@ void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(v
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 ///
-QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int32_t system);
+QRectF* q_graphicseffect_super_source_bounding_rect1(void* self, int32_t system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -389,6 +437,10 @@ QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system);
 ///
 void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_pixmap1` instead
+///
+#define q_graphicseffect_qbase_source_pixmap1 q_graphicseffect_super_source_pixmap1
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Base class method implementation
@@ -396,7 +448,7 @@ void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, 
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 ///
-QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int32_t system);
+QPixmap* q_graphicseffect_super_source_pixmap1(void* self, int32_t system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -415,6 +467,10 @@ QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offse
 ///
 void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_pixmap2` instead
+///
+#define q_graphicseffect_qbase_source_pixmap2 q_graphicseffect_super_source_pixmap2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Base class method implementation
@@ -423,7 +479,7 @@ void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, 
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
 ///
-QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int32_t system, void* offset);
+QPixmap* q_graphicseffect_super_source_pixmap2(void* self, int32_t system, void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -443,6 +499,10 @@ QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offse
 ///
 void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int32_t, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_source_pixmap3` instead
+///
+#define q_graphicseffect_qbase_source_pixmap3 q_graphicseffect_super_source_pixmap3
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Base class method implementation
@@ -452,7 +512,7 @@ void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, 
 /// @param offset QPoint*
 /// @param mode enum QGraphicsEffect__PixmapPadMode
 ///
-QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
+QPixmap* q_graphicseffect_super_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -912,6 +972,10 @@ void q_graphicseffect_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_graphicseffect_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_event` instead
+///
+#define q_graphicseffect_qbase_event q_graphicseffect_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -921,7 +985,7 @@ bool q_graphicseffect_event(void* self, void* event);
 /// @param self QGraphicsEffect*
 /// @param event QEvent*
 ///
-bool q_graphicseffect_qbase_event(void* self, void* event);
+bool q_graphicseffect_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -946,6 +1010,10 @@ void q_graphicseffect_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_graphicseffect_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_event_filter` instead
+///
+#define q_graphicseffect_qbase_event_filter q_graphicseffect_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -956,7 +1024,7 @@ bool q_graphicseffect_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicseffect_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicseffect_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -980,6 +1048,10 @@ void q_graphicseffect_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_graphicseffect_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_timer_event` instead
+///
+#define q_graphicseffect_qbase_timer_event q_graphicseffect_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -989,7 +1061,7 @@ void q_graphicseffect_timer_event(void* self, void* event);
 /// @param self QGraphicsEffect*
 /// @param event QTimerEvent*
 ///
-void q_graphicseffect_qbase_timer_event(void* self, void* event);
+void q_graphicseffect_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1013,6 +1085,10 @@ void q_graphicseffect_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicseffect_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_child_event` instead
+///
+#define q_graphicseffect_qbase_child_event q_graphicseffect_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1022,7 +1098,7 @@ void q_graphicseffect_child_event(void* self, void* event);
 /// @param self QGraphicsEffect*
 /// @param event QChildEvent*
 ///
-void q_graphicseffect_qbase_child_event(void* self, void* event);
+void q_graphicseffect_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1046,6 +1122,10 @@ void q_graphicseffect_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicseffect_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_custom_event` instead
+///
+#define q_graphicseffect_qbase_custom_event q_graphicseffect_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1055,7 +1135,7 @@ void q_graphicseffect_custom_event(void* self, void* event);
 /// @param self QGraphicsEffect*
 /// @param event QEvent*
 ///
-void q_graphicseffect_qbase_custom_event(void* self, void* event);
+void q_graphicseffect_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1079,6 +1159,10 @@ void q_graphicseffect_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void q_graphicseffect_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_connect_notify` instead
+///
+#define q_graphicseffect_qbase_connect_notify q_graphicseffect_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1088,7 +1172,7 @@ void q_graphicseffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_qbase_connect_notify(void* self, void* signal);
+void q_graphicseffect_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1112,6 +1196,10 @@ void q_graphicseffect_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_graphicseffect_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_disconnect_notify` instead
+///
+#define q_graphicseffect_qbase_disconnect_notify q_graphicseffect_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1121,7 +1209,7 @@ void q_graphicseffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicseffect_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1144,6 +1232,10 @@ void q_graphicseffect_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* q_graphicseffect_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_sender` instead
+///
+#define q_graphicseffect_qbase_sender q_graphicseffect_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1152,7 +1244,7 @@ QObject* q_graphicseffect_sender(void* self);
 ///
 /// @param self QGraphicsEffect*
 ///
-QObject* q_graphicseffect_qbase_sender(void* self);
+QObject* q_graphicseffect_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1175,6 +1267,10 @@ void q_graphicseffect_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicseffect_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_sender_signal_index` instead
+///
+#define q_graphicseffect_qbase_sender_signal_index q_graphicseffect_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1183,7 +1279,7 @@ int32_t q_graphicseffect_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsEffect*
 ///
-int32_t q_graphicseffect_qbase_sender_signal_index(void* self);
+int32_t q_graphicseffect_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1207,6 +1303,10 @@ void q_graphicseffect_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_graphicseffect_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_receivers` instead
+///
+#define q_graphicseffect_qbase_receivers q_graphicseffect_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1216,7 +1316,7 @@ int32_t q_graphicseffect_receivers(void* self, const char* signal);
 /// @param self QGraphicsEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicseffect_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicseffect_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1240,6 +1340,10 @@ void q_graphicseffect_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_graphicseffect_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicseffect_super_is_signal_connected` instead
+///
+#define q_graphicseffect_qbase_is_signal_connected q_graphicseffect_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1249,7 +1353,7 @@ bool q_graphicseffect_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicseffect_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicseffect_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1310,13 +1414,17 @@ const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self);
 ///
 void q_graphicscolorizeeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_meta_object` instead
+///
+#define q_graphicscolorizeeffect_qbase_meta_object q_graphicscolorizeeffect_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-const QMetaObject* q_graphicscolorizeeffect_qbase_meta_object(void* self);
+const QMetaObject* q_graphicscolorizeeffect_super_meta_object(void* self);
 
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 const char*
@@ -1330,12 +1438,16 @@ void* q_graphicscolorizeeffect_metacast(void* self, const char* param1);
 ///
 void q_graphicscolorizeeffect_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_metacast` instead
+///
+#define q_graphicscolorizeeffect_qbase_metacast q_graphicscolorizeeffect_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 const char*
 ///
-void* q_graphicscolorizeeffect_qbase_metacast(void* self, const char* param1);
+void* q_graphicscolorizeeffect_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 enum QMetaObject__Call
@@ -1351,6 +1463,10 @@ int32_t q_graphicscolorizeeffect_metacall(void* self, int32_t param1, int param2
 ///
 void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_metacall` instead
+///
+#define q_graphicscolorizeeffect_qbase_metacall q_graphicscolorizeeffect_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsColorizeEffect*
@@ -1358,7 +1474,7 @@ void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicscolorizeeffect_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1438,6 +1554,10 @@ void q_graphicscolorizeeffect_draw(void* self, void* painter);
 ///
 void q_graphicscolorizeeffect_on_draw(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_draw` instead
+///
+#define q_graphicscolorizeeffect_qbase_draw q_graphicscolorizeeffect_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#draw)
 ///
 /// Base class method implementation
@@ -1445,7 +1565,7 @@ void q_graphicscolorizeeffect_on_draw(void* self, void (*callback)(void*, void*)
 /// @param self QGraphicsColorizeEffect*
 /// @param painter QPainter*
 ///
-void q_graphicscolorizeeffect_qbase_draw(void* self, void* painter);
+void q_graphicscolorizeeffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1975,6 +2095,10 @@ void q_graphicscolorizeeffect_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_bounding_rect_for` instead
+///
+#define q_graphicscolorizeeffect_qbase_bounding_rect_for q_graphicscolorizeeffect_super_bounding_rect_for
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
@@ -1984,7 +2108,7 @@ QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect)
 /// @param self QGraphicsColorizeEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicscolorizeeffect_qbase_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(void* self, void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2008,6 +2132,10 @@ void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callbac
 ///
 void q_graphicscolorizeeffect_source_changed(void* self, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_source_changed` instead
+///
+#define q_graphicscolorizeeffect_qbase_source_changed q_graphicscolorizeeffect_super_source_changed
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
@@ -2017,7 +2145,7 @@ void q_graphicscolorizeeffect_source_changed(void* self, int32_t flags);
 /// @param self QGraphicsColorizeEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
 ///
-void q_graphicscolorizeeffect_qbase_source_changed(void* self, int32_t flags);
+void q_graphicscolorizeeffect_super_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2041,6 +2169,10 @@ void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(voi
 ///
 bool q_graphicscolorizeeffect_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_event` instead
+///
+#define q_graphicscolorizeeffect_qbase_event q_graphicscolorizeeffect_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2050,7 +2182,7 @@ bool q_graphicscolorizeeffect_event(void* self, void* event);
 /// @param self QGraphicsColorizeEffect*
 /// @param event QEvent*
 ///
-bool q_graphicscolorizeeffect_qbase_event(void* self, void* event);
+bool q_graphicscolorizeeffect_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2075,6 +2207,10 @@ void q_graphicscolorizeeffect_on_event(void* self, bool (*callback)(void*, void*
 ///
 bool q_graphicscolorizeeffect_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_event_filter` instead
+///
+#define q_graphicscolorizeeffect_qbase_event_filter q_graphicscolorizeeffect_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2085,7 +2221,7 @@ bool q_graphicscolorizeeffect_event_filter(void* self, void* watched, void* even
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicscolorizeeffect_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicscolorizeeffect_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2109,6 +2245,10 @@ void q_graphicscolorizeeffect_on_event_filter(void* self, bool (*callback)(void*
 ///
 void q_graphicscolorizeeffect_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_timer_event` instead
+///
+#define q_graphicscolorizeeffect_qbase_timer_event q_graphicscolorizeeffect_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2118,7 +2258,7 @@ void q_graphicscolorizeeffect_timer_event(void* self, void* event);
 /// @param self QGraphicsColorizeEffect*
 /// @param event QTimerEvent*
 ///
-void q_graphicscolorizeeffect_qbase_timer_event(void* self, void* event);
+void q_graphicscolorizeeffect_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2142,6 +2282,10 @@ void q_graphicscolorizeeffect_on_timer_event(void* self, void (*callback)(void*,
 ///
 void q_graphicscolorizeeffect_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_child_event` instead
+///
+#define q_graphicscolorizeeffect_qbase_child_event q_graphicscolorizeeffect_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2151,7 +2295,7 @@ void q_graphicscolorizeeffect_child_event(void* self, void* event);
 /// @param self QGraphicsColorizeEffect*
 /// @param event QChildEvent*
 ///
-void q_graphicscolorizeeffect_qbase_child_event(void* self, void* event);
+void q_graphicscolorizeeffect_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2175,6 +2319,10 @@ void q_graphicscolorizeeffect_on_child_event(void* self, void (*callback)(void*,
 ///
 void q_graphicscolorizeeffect_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_custom_event` instead
+///
+#define q_graphicscolorizeeffect_qbase_custom_event q_graphicscolorizeeffect_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2184,7 +2332,7 @@ void q_graphicscolorizeeffect_custom_event(void* self, void* event);
 /// @param self QGraphicsColorizeEffect*
 /// @param event QEvent*
 ///
-void q_graphicscolorizeeffect_qbase_custom_event(void* self, void* event);
+void q_graphicscolorizeeffect_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2208,6 +2356,10 @@ void q_graphicscolorizeeffect_on_custom_event(void* self, void (*callback)(void*
 ///
 void q_graphicscolorizeeffect_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_connect_notify` instead
+///
+#define q_graphicscolorizeeffect_qbase_connect_notify q_graphicscolorizeeffect_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2217,7 +2369,7 @@ void q_graphicscolorizeeffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_qbase_connect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2241,6 +2393,10 @@ void q_graphicscolorizeeffect_on_connect_notify(void* self, void (*callback)(voi
 ///
 void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_disconnect_notify` instead
+///
+#define q_graphicscolorizeeffect_qbase_disconnect_notify q_graphicscolorizeeffect_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2250,7 +2406,7 @@ void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2273,6 +2429,10 @@ void q_graphicscolorizeeffect_on_disconnect_notify(void* self, void (*callback)(
 ///
 void q_graphicscolorizeeffect_update_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_update_bounding_rect` instead
+///
+#define q_graphicscolorizeeffect_qbase_update_bounding_rect q_graphicscolorizeeffect_super_update_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
@@ -2281,7 +2441,7 @@ void q_graphicscolorizeeffect_update_bounding_rect(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-void q_graphicscolorizeeffect_qbase_update_bounding_rect(void* self);
+void q_graphicscolorizeeffect_super_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2304,6 +2464,10 @@ void q_graphicscolorizeeffect_on_update_bounding_rect(void* self, void (*callbac
 ///
 bool q_graphicscolorizeeffect_source_is_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_source_is_pixmap` instead
+///
+#define q_graphicscolorizeeffect_qbase_source_is_pixmap q_graphicscolorizeeffect_super_source_is_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
@@ -2312,7 +2476,7 @@ bool q_graphicscolorizeeffect_source_is_pixmap(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_qbase_source_is_pixmap(void* self);
+bool q_graphicscolorizeeffect_super_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2335,6 +2499,10 @@ void q_graphicscolorizeeffect_on_source_is_pixmap(void* self, bool (*callback)()
 ///
 QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_source_bounding_rect` instead
+///
+#define q_graphicscolorizeeffect_qbase_source_bounding_rect q_graphicscolorizeeffect_super_source_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
@@ -2343,7 +2511,7 @@ QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-QRectF* q_graphicscolorizeeffect_qbase_source_bounding_rect(void* self);
+QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2367,6 +2535,10 @@ void q_graphicscolorizeeffect_on_source_bounding_rect(void* self, QRectF* (*call
 ///
 void q_graphicscolorizeeffect_draw_source(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_draw_source` instead
+///
+#define q_graphicscolorizeeffect_qbase_draw_source q_graphicscolorizeeffect_super_draw_source
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
@@ -2376,7 +2548,7 @@ void q_graphicscolorizeeffect_draw_source(void* self, void* painter);
 /// @param self QGraphicsColorizeEffect*
 /// @param painter QPainter*
 ///
-void q_graphicscolorizeeffect_qbase_draw_source(void* self, void* painter);
+void q_graphicscolorizeeffect_super_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2399,6 +2571,10 @@ void q_graphicscolorizeeffect_on_draw_source(void* self, void (*callback)(void*,
 ///
 QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_source_pixmap` instead
+///
+#define q_graphicscolorizeeffect_qbase_source_pixmap q_graphicscolorizeeffect_super_source_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
@@ -2407,7 +2583,7 @@ QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-QPixmap* q_graphicscolorizeeffect_qbase_source_pixmap(void* self);
+QPixmap* q_graphicscolorizeeffect_super_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2430,6 +2606,10 @@ void q_graphicscolorizeeffect_on_source_pixmap(void* self, QPixmap* (*callback)(
 ///
 QObject* q_graphicscolorizeeffect_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_sender` instead
+///
+#define q_graphicscolorizeeffect_qbase_sender q_graphicscolorizeeffect_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2438,7 +2618,7 @@ QObject* q_graphicscolorizeeffect_sender(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-QObject* q_graphicscolorizeeffect_qbase_sender(void* self);
+QObject* q_graphicscolorizeeffect_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2461,6 +2641,10 @@ void q_graphicscolorizeeffect_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicscolorizeeffect_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_sender_signal_index` instead
+///
+#define q_graphicscolorizeeffect_qbase_sender_signal_index q_graphicscolorizeeffect_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2469,7 +2653,7 @@ int32_t q_graphicscolorizeeffect_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-int32_t q_graphicscolorizeeffect_qbase_sender_signal_index(void* self);
+int32_t q_graphicscolorizeeffect_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2493,6 +2677,10 @@ void q_graphicscolorizeeffect_on_sender_signal_index(void* self, int32_t (*callb
 ///
 int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_receivers` instead
+///
+#define q_graphicscolorizeeffect_qbase_receivers q_graphicscolorizeeffect_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2502,7 +2690,7 @@ int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicscolorizeeffect_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicscolorizeeffect_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2526,6 +2714,10 @@ void q_graphicscolorizeeffect_on_receivers(void* self, int32_t (*callback)(void*
 ///
 bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicscolorizeeffect_super_is_signal_connected` instead
+///
+#define q_graphicscolorizeeffect_qbase_is_signal_connected q_graphicscolorizeeffect_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2535,7 +2727,7 @@ bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicscolorizeeffect_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicscolorizeeffect_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2596,13 +2788,17 @@ const QMetaObject* q_graphicsblureffect_meta_object(void* self);
 ///
 void q_graphicsblureffect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_meta_object` instead
+///
+#define q_graphicsblureffect_qbase_meta_object q_graphicsblureffect_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-const QMetaObject* q_graphicsblureffect_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsblureffect_super_meta_object(void* self);
 
 /// @param self QGraphicsBlurEffect*
 /// @param param1 const char*
@@ -2616,12 +2812,16 @@ void* q_graphicsblureffect_metacast(void* self, const char* param1);
 ///
 void q_graphicsblureffect_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_metacast` instead
+///
+#define q_graphicsblureffect_qbase_metacast q_graphicsblureffect_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param param1 const char*
 ///
-void* q_graphicsblureffect_qbase_metacast(void* self, const char* param1);
+void* q_graphicsblureffect_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsBlurEffect*
 /// @param param1 enum QMetaObject__Call
@@ -2637,6 +2837,10 @@ int32_t q_graphicsblureffect_metacall(void* self, int32_t param1, int param2, vo
 ///
 void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_metacall` instead
+///
+#define q_graphicsblureffect_qbase_metacall q_graphicsblureffect_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsBlurEffect*
@@ -2644,7 +2848,7 @@ void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsblureffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsblureffect_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2670,6 +2874,10 @@ QRectF* q_graphicsblureffect_bounding_rect_for(void* self, void* rect);
 ///
 void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_bounding_rect_for` instead
+///
+#define q_graphicsblureffect_qbase_bounding_rect_for q_graphicsblureffect_super_bounding_rect_for
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
 ///
 /// Base class method implementation
@@ -2677,7 +2885,7 @@ void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*callback)(v
 /// @param self QGraphicsBlurEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsblureffect_qbase_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsblureffect_super_bounding_rect_for(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurRadius)
 ///
@@ -2751,6 +2959,10 @@ void q_graphicsblureffect_draw(void* self, void* painter);
 ///
 void q_graphicsblureffect_on_draw(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_draw` instead
+///
+#define q_graphicsblureffect_qbase_draw q_graphicsblureffect_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#draw)
 ///
 /// Base class method implementation
@@ -2758,7 +2970,7 @@ void q_graphicsblureffect_on_draw(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsBlurEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsblureffect_qbase_draw(void* self, void* painter);
+void q_graphicsblureffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3288,6 +3500,10 @@ void q_graphicsblureffect_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 void q_graphicsblureffect_source_changed(void* self, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_source_changed` instead
+///
+#define q_graphicsblureffect_qbase_source_changed q_graphicsblureffect_super_source_changed
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
@@ -3297,7 +3513,7 @@ void q_graphicsblureffect_source_changed(void* self, int32_t flags);
 /// @param self QGraphicsBlurEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
 ///
-void q_graphicsblureffect_qbase_source_changed(void* self, int32_t flags);
+void q_graphicsblureffect_super_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3321,6 +3537,10 @@ void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, 
 ///
 bool q_graphicsblureffect_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_event` instead
+///
+#define q_graphicsblureffect_qbase_event q_graphicsblureffect_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -3330,7 +3550,7 @@ bool q_graphicsblureffect_event(void* self, void* event);
 /// @param self QGraphicsBlurEffect*
 /// @param event QEvent*
 ///
-bool q_graphicsblureffect_qbase_event(void* self, void* event);
+bool q_graphicsblureffect_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3355,6 +3575,10 @@ void q_graphicsblureffect_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_graphicsblureffect_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_event_filter` instead
+///
+#define q_graphicsblureffect_qbase_event_filter q_graphicsblureffect_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3365,7 +3589,7 @@ bool q_graphicsblureffect_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsblureffect_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsblureffect_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -3389,6 +3613,10 @@ void q_graphicsblureffect_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_graphicsblureffect_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_timer_event` instead
+///
+#define q_graphicsblureffect_qbase_timer_event q_graphicsblureffect_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3398,7 +3626,7 @@ void q_graphicsblureffect_timer_event(void* self, void* event);
 /// @param self QGraphicsBlurEffect*
 /// @param event QTimerEvent*
 ///
-void q_graphicsblureffect_qbase_timer_event(void* self, void* event);
+void q_graphicsblureffect_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3422,6 +3650,10 @@ void q_graphicsblureffect_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicsblureffect_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_child_event` instead
+///
+#define q_graphicsblureffect_qbase_child_event q_graphicsblureffect_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -3431,7 +3663,7 @@ void q_graphicsblureffect_child_event(void* self, void* event);
 /// @param self QGraphicsBlurEffect*
 /// @param event QChildEvent*
 ///
-void q_graphicsblureffect_qbase_child_event(void* self, void* event);
+void q_graphicsblureffect_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3455,6 +3687,10 @@ void q_graphicsblureffect_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicsblureffect_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_custom_event` instead
+///
+#define q_graphicsblureffect_qbase_custom_event q_graphicsblureffect_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3464,7 +3700,7 @@ void q_graphicsblureffect_custom_event(void* self, void* event);
 /// @param self QGraphicsBlurEffect*
 /// @param event QEvent*
 ///
-void q_graphicsblureffect_qbase_custom_event(void* self, void* event);
+void q_graphicsblureffect_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3488,6 +3724,10 @@ void q_graphicsblureffect_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsblureffect_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_connect_notify` instead
+///
+#define q_graphicsblureffect_qbase_connect_notify q_graphicsblureffect_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -3497,7 +3737,7 @@ void q_graphicsblureffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_qbase_connect_notify(void* self, void* signal);
+void q_graphicsblureffect_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3521,6 +3761,10 @@ void q_graphicsblureffect_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_graphicsblureffect_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_disconnect_notify` instead
+///
+#define q_graphicsblureffect_qbase_disconnect_notify q_graphicsblureffect_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3530,7 +3774,7 @@ void q_graphicsblureffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsblureffect_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3553,6 +3797,10 @@ void q_graphicsblureffect_on_disconnect_notify(void* self, void (*callback)(void
 ///
 void q_graphicsblureffect_update_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_update_bounding_rect` instead
+///
+#define q_graphicsblureffect_qbase_update_bounding_rect q_graphicsblureffect_super_update_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
@@ -3561,7 +3809,7 @@ void q_graphicsblureffect_update_bounding_rect(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-void q_graphicsblureffect_qbase_update_bounding_rect(void* self);
+void q_graphicsblureffect_super_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3584,6 +3832,10 @@ void q_graphicsblureffect_on_update_bounding_rect(void* self, void (*callback)()
 ///
 bool q_graphicsblureffect_source_is_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_source_is_pixmap` instead
+///
+#define q_graphicsblureffect_qbase_source_is_pixmap q_graphicsblureffect_super_source_is_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
@@ -3592,7 +3844,7 @@ bool q_graphicsblureffect_source_is_pixmap(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_qbase_source_is_pixmap(void* self);
+bool q_graphicsblureffect_super_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3615,6 +3867,10 @@ void q_graphicsblureffect_on_source_is_pixmap(void* self, bool (*callback)());
 ///
 QRectF* q_graphicsblureffect_source_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_source_bounding_rect` instead
+///
+#define q_graphicsblureffect_qbase_source_bounding_rect q_graphicsblureffect_super_source_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
@@ -3623,7 +3879,7 @@ QRectF* q_graphicsblureffect_source_bounding_rect(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-QRectF* q_graphicsblureffect_qbase_source_bounding_rect(void* self);
+QRectF* q_graphicsblureffect_super_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3647,6 +3903,10 @@ void q_graphicsblureffect_on_source_bounding_rect(void* self, QRectF* (*callback
 ///
 void q_graphicsblureffect_draw_source(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_draw_source` instead
+///
+#define q_graphicsblureffect_qbase_draw_source q_graphicsblureffect_super_draw_source
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
@@ -3656,7 +3916,7 @@ void q_graphicsblureffect_draw_source(void* self, void* painter);
 /// @param self QGraphicsBlurEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsblureffect_qbase_draw_source(void* self, void* painter);
+void q_graphicsblureffect_super_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3679,6 +3939,10 @@ void q_graphicsblureffect_on_draw_source(void* self, void (*callback)(void*, voi
 ///
 QPixmap* q_graphicsblureffect_source_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_source_pixmap` instead
+///
+#define q_graphicsblureffect_qbase_source_pixmap q_graphicsblureffect_super_source_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
@@ -3687,7 +3951,7 @@ QPixmap* q_graphicsblureffect_source_pixmap(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-QPixmap* q_graphicsblureffect_qbase_source_pixmap(void* self);
+QPixmap* q_graphicsblureffect_super_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3710,6 +3974,10 @@ void q_graphicsblureffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 ///
 QObject* q_graphicsblureffect_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_sender` instead
+///
+#define q_graphicsblureffect_qbase_sender q_graphicsblureffect_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3718,7 +3986,7 @@ QObject* q_graphicsblureffect_sender(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-QObject* q_graphicsblureffect_qbase_sender(void* self);
+QObject* q_graphicsblureffect_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3741,6 +4009,10 @@ void q_graphicsblureffect_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsblureffect_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_sender_signal_index` instead
+///
+#define q_graphicsblureffect_qbase_sender_signal_index q_graphicsblureffect_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3749,7 +4021,7 @@ int32_t q_graphicsblureffect_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-int32_t q_graphicsblureffect_qbase_sender_signal_index(void* self);
+int32_t q_graphicsblureffect_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3773,6 +4045,10 @@ void q_graphicsblureffect_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_graphicsblureffect_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_receivers` instead
+///
+#define q_graphicsblureffect_qbase_receivers q_graphicsblureffect_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3782,7 +4058,7 @@ int32_t q_graphicsblureffect_receivers(void* self, const char* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsblureffect_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsblureffect_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3806,6 +4082,10 @@ void q_graphicsblureffect_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 bool q_graphicsblureffect_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsblureffect_super_is_signal_connected` instead
+///
+#define q_graphicsblureffect_qbase_is_signal_connected q_graphicsblureffect_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3815,7 +4095,7 @@ bool q_graphicsblureffect_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsblureffect_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsblureffect_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3876,13 +4156,17 @@ const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self);
 ///
 void q_graphicsdropshadoweffect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_meta_object` instead
+///
+#define q_graphicsdropshadoweffect_qbase_meta_object q_graphicsdropshadoweffect_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-const QMetaObject* q_graphicsdropshadoweffect_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsdropshadoweffect_super_meta_object(void* self);
 
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 const char*
@@ -3896,12 +4180,16 @@ void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1);
 ///
 void q_graphicsdropshadoweffect_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_metacast` instead
+///
+#define q_graphicsdropshadoweffect_qbase_metacast q_graphicsdropshadoweffect_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 const char*
 ///
-void* q_graphicsdropshadoweffect_qbase_metacast(void* self, const char* param1);
+void* q_graphicsdropshadoweffect_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 enum QMetaObject__Call
@@ -3917,6 +4205,10 @@ int32_t q_graphicsdropshadoweffect_metacall(void* self, int32_t param1, int para
 ///
 void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_metacall` instead
+///
+#define q_graphicsdropshadoweffect_qbase_metacall q_graphicsdropshadoweffect_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsDropShadowEffect*
@@ -3924,7 +4216,7 @@ void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsdropshadoweffect_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3950,6 +4242,10 @@ QRectF* q_graphicsdropshadoweffect_bounding_rect_for(void* self, void* rect);
 ///
 void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_bounding_rect_for` instead
+///
+#define q_graphicsdropshadoweffect_qbase_bounding_rect_for q_graphicsdropshadoweffect_super_bounding_rect_for
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
 ///
 /// Base class method implementation
@@ -3957,7 +4253,7 @@ void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*callb
 /// @param self QGraphicsDropShadowEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsdropshadoweffect_qbase_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsdropshadoweffect_super_bounding_rect_for(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#offset)
 ///
@@ -4097,6 +4393,10 @@ void q_graphicsdropshadoweffect_draw(void* self, void* painter);
 ///
 void q_graphicsdropshadoweffect_on_draw(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_draw` instead
+///
+#define q_graphicsdropshadoweffect_qbase_draw q_graphicsdropshadoweffect_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#draw)
 ///
 /// Base class method implementation
@@ -4104,7 +4404,7 @@ void q_graphicsdropshadoweffect_on_draw(void* self, void (*callback)(void*, void
 /// @param self QGraphicsDropShadowEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsdropshadoweffect_qbase_draw(void* self, void* painter);
+void q_graphicsdropshadoweffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4634,6 +4934,10 @@ void q_graphicsdropshadoweffect_on_destroyed1(void* self, void (*callback)(void*
 ///
 void q_graphicsdropshadoweffect_source_changed(void* self, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_source_changed` instead
+///
+#define q_graphicsdropshadoweffect_qbase_source_changed q_graphicsdropshadoweffect_super_source_changed
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
@@ -4643,7 +4947,7 @@ void q_graphicsdropshadoweffect_source_changed(void* self, int32_t flags);
 /// @param self QGraphicsDropShadowEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
 ///
-void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int32_t flags);
+void q_graphicsdropshadoweffect_super_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4667,6 +4971,10 @@ void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(v
 ///
 bool q_graphicsdropshadoweffect_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_event` instead
+///
+#define q_graphicsdropshadoweffect_qbase_event q_graphicsdropshadoweffect_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -4676,7 +4984,7 @@ bool q_graphicsdropshadoweffect_event(void* self, void* event);
 /// @param self QGraphicsDropShadowEffect*
 /// @param event QEvent*
 ///
-bool q_graphicsdropshadoweffect_qbase_event(void* self, void* event);
+bool q_graphicsdropshadoweffect_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4701,6 +5009,10 @@ void q_graphicsdropshadoweffect_on_event(void* self, bool (*callback)(void*, voi
 ///
 bool q_graphicsdropshadoweffect_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_event_filter` instead
+///
+#define q_graphicsdropshadoweffect_qbase_event_filter q_graphicsdropshadoweffect_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4711,7 +5023,7 @@ bool q_graphicsdropshadoweffect_event_filter(void* self, void* watched, void* ev
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsdropshadoweffect_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsdropshadoweffect_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4735,6 +5047,10 @@ void q_graphicsdropshadoweffect_on_event_filter(void* self, bool (*callback)(voi
 ///
 void q_graphicsdropshadoweffect_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_timer_event` instead
+///
+#define q_graphicsdropshadoweffect_qbase_timer_event q_graphicsdropshadoweffect_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4744,7 +5060,7 @@ void q_graphicsdropshadoweffect_timer_event(void* self, void* event);
 /// @param self QGraphicsDropShadowEffect*
 /// @param event QTimerEvent*
 ///
-void q_graphicsdropshadoweffect_qbase_timer_event(void* self, void* event);
+void q_graphicsdropshadoweffect_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4768,6 +5084,10 @@ void q_graphicsdropshadoweffect_on_timer_event(void* self, void (*callback)(void
 ///
 void q_graphicsdropshadoweffect_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_child_event` instead
+///
+#define q_graphicsdropshadoweffect_qbase_child_event q_graphicsdropshadoweffect_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4777,7 +5097,7 @@ void q_graphicsdropshadoweffect_child_event(void* self, void* event);
 /// @param self QGraphicsDropShadowEffect*
 /// @param event QChildEvent*
 ///
-void q_graphicsdropshadoweffect_qbase_child_event(void* self, void* event);
+void q_graphicsdropshadoweffect_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4801,6 +5121,10 @@ void q_graphicsdropshadoweffect_on_child_event(void* self, void (*callback)(void
 ///
 void q_graphicsdropshadoweffect_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_custom_event` instead
+///
+#define q_graphicsdropshadoweffect_qbase_custom_event q_graphicsdropshadoweffect_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4810,7 +5134,7 @@ void q_graphicsdropshadoweffect_custom_event(void* self, void* event);
 /// @param self QGraphicsDropShadowEffect*
 /// @param event QEvent*
 ///
-void q_graphicsdropshadoweffect_qbase_custom_event(void* self, void* event);
+void q_graphicsdropshadoweffect_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4834,6 +5158,10 @@ void q_graphicsdropshadoweffect_on_custom_event(void* self, void (*callback)(voi
 ///
 void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_connect_notify` instead
+///
+#define q_graphicsdropshadoweffect_qbase_connect_notify q_graphicsdropshadoweffect_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4843,7 +5171,7 @@ void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_qbase_connect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4867,6 +5195,10 @@ void q_graphicsdropshadoweffect_on_connect_notify(void* self, void (*callback)(v
 ///
 void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_disconnect_notify` instead
+///
+#define q_graphicsdropshadoweffect_qbase_disconnect_notify q_graphicsdropshadoweffect_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4876,7 +5208,7 @@ void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4899,6 +5231,10 @@ void q_graphicsdropshadoweffect_on_disconnect_notify(void* self, void (*callback
 ///
 void q_graphicsdropshadoweffect_update_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_update_bounding_rect` instead
+///
+#define q_graphicsdropshadoweffect_qbase_update_bounding_rect q_graphicsdropshadoweffect_super_update_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
@@ -4907,7 +5243,7 @@ void q_graphicsdropshadoweffect_update_bounding_rect(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-void q_graphicsdropshadoweffect_qbase_update_bounding_rect(void* self);
+void q_graphicsdropshadoweffect_super_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4930,6 +5266,10 @@ void q_graphicsdropshadoweffect_on_update_bounding_rect(void* self, void (*callb
 ///
 bool q_graphicsdropshadoweffect_source_is_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_source_is_pixmap` instead
+///
+#define q_graphicsdropshadoweffect_qbase_source_is_pixmap q_graphicsdropshadoweffect_super_source_is_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
@@ -4938,7 +5278,7 @@ bool q_graphicsdropshadoweffect_source_is_pixmap(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_qbase_source_is_pixmap(void* self);
+bool q_graphicsdropshadoweffect_super_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4961,6 +5301,10 @@ void q_graphicsdropshadoweffect_on_source_is_pixmap(void* self, bool (*callback)
 ///
 QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_source_bounding_rect` instead
+///
+#define q_graphicsdropshadoweffect_qbase_source_bounding_rect q_graphicsdropshadoweffect_super_source_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
@@ -4969,7 +5313,7 @@ QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-QRectF* q_graphicsdropshadoweffect_qbase_source_bounding_rect(void* self);
+QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4993,6 +5337,10 @@ void q_graphicsdropshadoweffect_on_source_bounding_rect(void* self, QRectF* (*ca
 ///
 void q_graphicsdropshadoweffect_draw_source(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_draw_source` instead
+///
+#define q_graphicsdropshadoweffect_qbase_draw_source q_graphicsdropshadoweffect_super_draw_source
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
@@ -5002,7 +5350,7 @@ void q_graphicsdropshadoweffect_draw_source(void* self, void* painter);
 /// @param self QGraphicsDropShadowEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsdropshadoweffect_qbase_draw_source(void* self, void* painter);
+void q_graphicsdropshadoweffect_super_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5025,6 +5373,10 @@ void q_graphicsdropshadoweffect_on_draw_source(void* self, void (*callback)(void
 ///
 QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_source_pixmap` instead
+///
+#define q_graphicsdropshadoweffect_qbase_source_pixmap q_graphicsdropshadoweffect_super_source_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
@@ -5033,7 +5385,7 @@ QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-QPixmap* q_graphicsdropshadoweffect_qbase_source_pixmap(void* self);
+QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5056,6 +5408,10 @@ void q_graphicsdropshadoweffect_on_source_pixmap(void* self, QPixmap* (*callback
 ///
 QObject* q_graphicsdropshadoweffect_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_sender` instead
+///
+#define q_graphicsdropshadoweffect_qbase_sender q_graphicsdropshadoweffect_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5064,7 +5420,7 @@ QObject* q_graphicsdropshadoweffect_sender(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-QObject* q_graphicsdropshadoweffect_qbase_sender(void* self);
+QObject* q_graphicsdropshadoweffect_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5087,6 +5443,10 @@ void q_graphicsdropshadoweffect_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_sender_signal_index` instead
+///
+#define q_graphicsdropshadoweffect_qbase_sender_signal_index q_graphicsdropshadoweffect_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5095,7 +5455,7 @@ int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-int32_t q_graphicsdropshadoweffect_qbase_sender_signal_index(void* self);
+int32_t q_graphicsdropshadoweffect_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5119,6 +5479,10 @@ void q_graphicsdropshadoweffect_on_sender_signal_index(void* self, int32_t (*cal
 ///
 int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_receivers` instead
+///
+#define q_graphicsdropshadoweffect_qbase_receivers q_graphicsdropshadoweffect_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5128,7 +5492,7 @@ int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsdropshadoweffect_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsdropshadoweffect_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5152,6 +5516,10 @@ void q_graphicsdropshadoweffect_on_receivers(void* self, int32_t (*callback)(voi
 ///
 bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsdropshadoweffect_super_is_signal_connected` instead
+///
+#define q_graphicsdropshadoweffect_qbase_is_signal_connected q_graphicsdropshadoweffect_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5161,7 +5529,7 @@ bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsdropshadoweffect_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsdropshadoweffect_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5222,13 +5590,17 @@ const QMetaObject* q_graphicsopacityeffect_meta_object(void* self);
 ///
 void q_graphicsopacityeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_meta_object` instead
+///
+#define q_graphicsopacityeffect_qbase_meta_object q_graphicsopacityeffect_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-const QMetaObject* q_graphicsopacityeffect_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsopacityeffect_super_meta_object(void* self);
 
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 const char*
@@ -5242,12 +5614,16 @@ void* q_graphicsopacityeffect_metacast(void* self, const char* param1);
 ///
 void q_graphicsopacityeffect_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_metacast` instead
+///
+#define q_graphicsopacityeffect_qbase_metacast q_graphicsopacityeffect_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 const char*
 ///
-void* q_graphicsopacityeffect_qbase_metacast(void* self, const char* param1);
+void* q_graphicsopacityeffect_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 enum QMetaObject__Call
@@ -5263,6 +5639,10 @@ int32_t q_graphicsopacityeffect_metacall(void* self, int32_t param1, int param2,
 ///
 void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_metacall` instead
+///
+#define q_graphicsopacityeffect_qbase_metacall q_graphicsopacityeffect_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsOpacityEffect*
@@ -5270,7 +5650,7 @@ void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsopacityeffect_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -5350,6 +5730,10 @@ void q_graphicsopacityeffect_draw(void* self, void* painter);
 ///
 void q_graphicsopacityeffect_on_draw(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_draw` instead
+///
+#define q_graphicsopacityeffect_qbase_draw q_graphicsopacityeffect_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#draw)
 ///
 /// Base class method implementation
@@ -5357,7 +5741,7 @@ void q_graphicsopacityeffect_on_draw(void* self, void (*callback)(void*, void*))
 /// @param self QGraphicsOpacityEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsopacityeffect_qbase_draw(void* self, void* painter);
+void q_graphicsopacityeffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -5887,6 +6271,10 @@ void q_graphicsopacityeffect_on_destroyed1(void* self, void (*callback)(void*, v
 ///
 QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_bounding_rect_for` instead
+///
+#define q_graphicsopacityeffect_qbase_bounding_rect_for q_graphicsopacityeffect_super_bounding_rect_for
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
@@ -5896,7 +6284,7 @@ QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect);
 /// @param self QGraphicsOpacityEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicsopacityeffect_qbase_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicsopacityeffect_super_bounding_rect_for(void* self, void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5920,6 +6308,10 @@ void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback
 ///
 void q_graphicsopacityeffect_source_changed(void* self, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_source_changed` instead
+///
+#define q_graphicsopacityeffect_qbase_source_changed q_graphicsopacityeffect_super_source_changed
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
@@ -5929,7 +6321,7 @@ void q_graphicsopacityeffect_source_changed(void* self, int32_t flags);
 /// @param self QGraphicsOpacityEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
 ///
-void q_graphicsopacityeffect_qbase_source_changed(void* self, int32_t flags);
+void q_graphicsopacityeffect_super_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5953,6 +6345,10 @@ void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void
 ///
 bool q_graphicsopacityeffect_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_event` instead
+///
+#define q_graphicsopacityeffect_qbase_event q_graphicsopacityeffect_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -5962,7 +6358,7 @@ bool q_graphicsopacityeffect_event(void* self, void* event);
 /// @param self QGraphicsOpacityEffect*
 /// @param event QEvent*
 ///
-bool q_graphicsopacityeffect_qbase_event(void* self, void* event);
+bool q_graphicsopacityeffect_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5987,6 +6383,10 @@ void q_graphicsopacityeffect_on_event(void* self, bool (*callback)(void*, void*)
 ///
 bool q_graphicsopacityeffect_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_event_filter` instead
+///
+#define q_graphicsopacityeffect_qbase_event_filter q_graphicsopacityeffect_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5997,7 +6397,7 @@ bool q_graphicsopacityeffect_event_filter(void* self, void* watched, void* event
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsopacityeffect_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsopacityeffect_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -6021,6 +6421,10 @@ void q_graphicsopacityeffect_on_event_filter(void* self, bool (*callback)(void*,
 ///
 void q_graphicsopacityeffect_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_timer_event` instead
+///
+#define q_graphicsopacityeffect_qbase_timer_event q_graphicsopacityeffect_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6030,7 +6434,7 @@ void q_graphicsopacityeffect_timer_event(void* self, void* event);
 /// @param self QGraphicsOpacityEffect*
 /// @param event QTimerEvent*
 ///
-void q_graphicsopacityeffect_qbase_timer_event(void* self, void* event);
+void q_graphicsopacityeffect_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6054,6 +6458,10 @@ void q_graphicsopacityeffect_on_timer_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsopacityeffect_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_child_event` instead
+///
+#define q_graphicsopacityeffect_qbase_child_event q_graphicsopacityeffect_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6063,7 +6471,7 @@ void q_graphicsopacityeffect_child_event(void* self, void* event);
 /// @param self QGraphicsOpacityEffect*
 /// @param event QChildEvent*
 ///
-void q_graphicsopacityeffect_qbase_child_event(void* self, void* event);
+void q_graphicsopacityeffect_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6087,6 +6495,10 @@ void q_graphicsopacityeffect_on_child_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsopacityeffect_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_custom_event` instead
+///
+#define q_graphicsopacityeffect_qbase_custom_event q_graphicsopacityeffect_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6096,7 +6508,7 @@ void q_graphicsopacityeffect_custom_event(void* self, void* event);
 /// @param self QGraphicsOpacityEffect*
 /// @param event QEvent*
 ///
-void q_graphicsopacityeffect_qbase_custom_event(void* self, void* event);
+void q_graphicsopacityeffect_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6120,6 +6532,10 @@ void q_graphicsopacityeffect_on_custom_event(void* self, void (*callback)(void*,
 ///
 void q_graphicsopacityeffect_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_connect_notify` instead
+///
+#define q_graphicsopacityeffect_qbase_connect_notify q_graphicsopacityeffect_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6129,7 +6545,7 @@ void q_graphicsopacityeffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_qbase_connect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6153,6 +6569,10 @@ void q_graphicsopacityeffect_on_connect_notify(void* self, void (*callback)(void
 ///
 void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_disconnect_notify` instead
+///
+#define q_graphicsopacityeffect_qbase_disconnect_notify q_graphicsopacityeffect_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6162,7 +6582,7 @@ void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6185,6 +6605,10 @@ void q_graphicsopacityeffect_on_disconnect_notify(void* self, void (*callback)(v
 ///
 void q_graphicsopacityeffect_update_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_update_bounding_rect` instead
+///
+#define q_graphicsopacityeffect_qbase_update_bounding_rect q_graphicsopacityeffect_super_update_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
@@ -6193,7 +6617,7 @@ void q_graphicsopacityeffect_update_bounding_rect(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-void q_graphicsopacityeffect_qbase_update_bounding_rect(void* self);
+void q_graphicsopacityeffect_super_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6216,6 +6640,10 @@ void q_graphicsopacityeffect_on_update_bounding_rect(void* self, void (*callback
 ///
 bool q_graphicsopacityeffect_source_is_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_source_is_pixmap` instead
+///
+#define q_graphicsopacityeffect_qbase_source_is_pixmap q_graphicsopacityeffect_super_source_is_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
@@ -6224,7 +6652,7 @@ bool q_graphicsopacityeffect_source_is_pixmap(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_qbase_source_is_pixmap(void* self);
+bool q_graphicsopacityeffect_super_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6247,6 +6675,10 @@ void q_graphicsopacityeffect_on_source_is_pixmap(void* self, bool (*callback)())
 ///
 QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_source_bounding_rect` instead
+///
+#define q_graphicsopacityeffect_qbase_source_bounding_rect q_graphicsopacityeffect_super_source_bounding_rect
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
@@ -6255,7 +6687,7 @@ QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-QRectF* q_graphicsopacityeffect_qbase_source_bounding_rect(void* self);
+QRectF* q_graphicsopacityeffect_super_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6279,6 +6711,10 @@ void q_graphicsopacityeffect_on_source_bounding_rect(void* self, QRectF* (*callb
 ///
 void q_graphicsopacityeffect_draw_source(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_draw_source` instead
+///
+#define q_graphicsopacityeffect_qbase_draw_source q_graphicsopacityeffect_super_draw_source
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
@@ -6288,7 +6724,7 @@ void q_graphicsopacityeffect_draw_source(void* self, void* painter);
 /// @param self QGraphicsOpacityEffect*
 /// @param painter QPainter*
 ///
-void q_graphicsopacityeffect_qbase_draw_source(void* self, void* painter);
+void q_graphicsopacityeffect_super_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6311,6 +6747,10 @@ void q_graphicsopacityeffect_on_draw_source(void* self, void (*callback)(void*, 
 ///
 QPixmap* q_graphicsopacityeffect_source_pixmap(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_source_pixmap` instead
+///
+#define q_graphicsopacityeffect_qbase_source_pixmap q_graphicsopacityeffect_super_source_pixmap
+
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
@@ -6319,7 +6759,7 @@ QPixmap* q_graphicsopacityeffect_source_pixmap(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-QPixmap* q_graphicsopacityeffect_qbase_source_pixmap(void* self);
+QPixmap* q_graphicsopacityeffect_super_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6342,6 +6782,10 @@ void q_graphicsopacityeffect_on_source_pixmap(void* self, QPixmap* (*callback)()
 ///
 QObject* q_graphicsopacityeffect_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_sender` instead
+///
+#define q_graphicsopacityeffect_qbase_sender q_graphicsopacityeffect_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6350,7 +6794,7 @@ QObject* q_graphicsopacityeffect_sender(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-QObject* q_graphicsopacityeffect_qbase_sender(void* self);
+QObject* q_graphicsopacityeffect_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6373,6 +6817,10 @@ void q_graphicsopacityeffect_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsopacityeffect_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_sender_signal_index` instead
+///
+#define q_graphicsopacityeffect_qbase_sender_signal_index q_graphicsopacityeffect_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6381,7 +6829,7 @@ int32_t q_graphicsopacityeffect_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-int32_t q_graphicsopacityeffect_qbase_sender_signal_index(void* self);
+int32_t q_graphicsopacityeffect_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6405,6 +6853,10 @@ void q_graphicsopacityeffect_on_sender_signal_index(void* self, int32_t (*callba
 ///
 int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_receivers` instead
+///
+#define q_graphicsopacityeffect_qbase_receivers q_graphicsopacityeffect_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6414,7 +6866,7 @@ int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsopacityeffect_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsopacityeffect_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6438,6 +6890,10 @@ void q_graphicsopacityeffect_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsopacityeffect_super_is_signal_connected` instead
+///
+#define q_graphicsopacityeffect_qbase_is_signal_connected q_graphicsopacityeffect_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6447,7 +6903,7 @@ bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsopacityeffect_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsopacityeffect_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

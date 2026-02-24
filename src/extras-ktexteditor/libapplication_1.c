@@ -21,8 +21,8 @@ void k_texteditor__application_on_meta_object(void* self, const QMetaObject* (*c
     KTextEditor__Application_OnMetaObject((KTextEditor__Application*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_texteditor__application_qbase_meta_object(void* self) {
-    return KTextEditor__Application_QBaseMetaObject((KTextEditor__Application*)self);
+const QMetaObject* k_texteditor__application_super_meta_object(void* self) {
+    return KTextEditor__Application_SuperMetaObject((KTextEditor__Application*)self);
 }
 
 void* k_texteditor__application_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_texteditor__application_on_metacast(void* self, void* (*callback)(void*, 
     KTextEditor__Application_OnMetacast((KTextEditor__Application*)self, (intptr_t)callback);
 }
 
-void* k_texteditor__application_qbase_metacast(void* self, const char* param1) {
-    return KTextEditor__Application_QBaseMetacast((KTextEditor__Application*)self, param1);
+void* k_texteditor__application_super_metacast(void* self, const char* param1) {
+    return KTextEditor__Application_SuperMetacast((KTextEditor__Application*)self, param1);
 }
 
 int32_t k_texteditor__application_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_texteditor__application_on_metacall(void* self, int32_t (*callback)(void*
     KTextEditor__Application_OnMetacall((KTextEditor__Application*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__application_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTextEditor__Application_QBaseMetacall((KTextEditor__Application*)self, param1, param2, param3);
+int32_t k_texteditor__application_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTextEditor__Application_SuperMetacall((KTextEditor__Application*)self, param1, param2, param3);
 }
 
 const char* k_texteditor__application_tr(const char* s) {
@@ -367,8 +367,8 @@ bool k_texteditor__application_event(void* self, void* event) {
     return KTextEditor__Application_Event((KTextEditor__Application*)self, (QEvent*)event);
 }
 
-bool k_texteditor__application_qbase_event(void* self, void* event) {
-    return KTextEditor__Application_QBaseEvent((KTextEditor__Application*)self, (QEvent*)event);
+bool k_texteditor__application_super_event(void* self, void* event) {
+    return KTextEditor__Application_SuperEvent((KTextEditor__Application*)self, (QEvent*)event);
 }
 
 void k_texteditor__application_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ bool k_texteditor__application_event_filter(void* self, void* watched, void* eve
     return KTextEditor__Application_EventFilter((KTextEditor__Application*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_texteditor__application_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTextEditor__Application_QBaseEventFilter((KTextEditor__Application*)self, (QObject*)watched, (QEvent*)event);
+bool k_texteditor__application_super_event_filter(void* self, void* watched, void* event) {
+    return KTextEditor__Application_SuperEventFilter((KTextEditor__Application*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_texteditor__application_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -391,8 +391,8 @@ void k_texteditor__application_timer_event(void* self, void* event) {
     KTextEditor__Application_TimerEvent((KTextEditor__Application*)self, (QTimerEvent*)event);
 }
 
-void k_texteditor__application_qbase_timer_event(void* self, void* event) {
-    KTextEditor__Application_QBaseTimerEvent((KTextEditor__Application*)self, (QTimerEvent*)event);
+void k_texteditor__application_super_timer_event(void* self, void* event) {
+    KTextEditor__Application_SuperTimerEvent((KTextEditor__Application*)self, (QTimerEvent*)event);
 }
 
 void k_texteditor__application_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ void k_texteditor__application_child_event(void* self, void* event) {
     KTextEditor__Application_ChildEvent((KTextEditor__Application*)self, (QChildEvent*)event);
 }
 
-void k_texteditor__application_qbase_child_event(void* self, void* event) {
-    KTextEditor__Application_QBaseChildEvent((KTextEditor__Application*)self, (QChildEvent*)event);
+void k_texteditor__application_super_child_event(void* self, void* event) {
+    KTextEditor__Application_SuperChildEvent((KTextEditor__Application*)self, (QChildEvent*)event);
 }
 
 void k_texteditor__application_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ void k_texteditor__application_custom_event(void* self, void* event) {
     KTextEditor__Application_CustomEvent((KTextEditor__Application*)self, (QEvent*)event);
 }
 
-void k_texteditor__application_qbase_custom_event(void* self, void* event) {
-    KTextEditor__Application_QBaseCustomEvent((KTextEditor__Application*)self, (QEvent*)event);
+void k_texteditor__application_super_custom_event(void* self, void* event) {
+    KTextEditor__Application_SuperCustomEvent((KTextEditor__Application*)self, (QEvent*)event);
 }
 
 void k_texteditor__application_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -427,8 +427,8 @@ void k_texteditor__application_connect_notify(void* self, void* signal) {
     KTextEditor__Application_ConnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__application_qbase_connect_notify(void* self, void* signal) {
-    KTextEditor__Application_QBaseConnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
+void k_texteditor__application_super_connect_notify(void* self, void* signal) {
+    KTextEditor__Application_SuperConnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__application_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -439,8 +439,8 @@ void k_texteditor__application_disconnect_notify(void* self, void* signal) {
     KTextEditor__Application_DisconnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__application_qbase_disconnect_notify(void* self, void* signal) {
-    KTextEditor__Application_QBaseDisconnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
+void k_texteditor__application_super_disconnect_notify(void* self, void* signal) {
+    KTextEditor__Application_SuperDisconnectNotify((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__application_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ QObject* k_texteditor__application_sender(void* self) {
     return KTextEditor__Application_Sender((KTextEditor__Application*)self);
 }
 
-QObject* k_texteditor__application_qbase_sender(void* self) {
-    return KTextEditor__Application_QBaseSender((KTextEditor__Application*)self);
+QObject* k_texteditor__application_super_sender(void* self) {
+    return KTextEditor__Application_SuperSender((KTextEditor__Application*)self);
 }
 
 void k_texteditor__application_on_sender(void* self, QObject* (*callback)()) {
@@ -463,8 +463,8 @@ int32_t k_texteditor__application_sender_signal_index(void* self) {
     return KTextEditor__Application_SenderSignalIndex((KTextEditor__Application*)self);
 }
 
-int32_t k_texteditor__application_qbase_sender_signal_index(void* self) {
-    return KTextEditor__Application_QBaseSenderSignalIndex((KTextEditor__Application*)self);
+int32_t k_texteditor__application_super_sender_signal_index(void* self) {
+    return KTextEditor__Application_SuperSenderSignalIndex((KTextEditor__Application*)self);
 }
 
 void k_texteditor__application_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -475,8 +475,8 @@ int32_t k_texteditor__application_receivers(void* self, const char* signal) {
     return KTextEditor__Application_Receivers((KTextEditor__Application*)self, signal);
 }
 
-int32_t k_texteditor__application_qbase_receivers(void* self, const char* signal) {
-    return KTextEditor__Application_QBaseReceivers((KTextEditor__Application*)self, signal);
+int32_t k_texteditor__application_super_receivers(void* self, const char* signal) {
+    return KTextEditor__Application_SuperReceivers((KTextEditor__Application*)self, signal);
 }
 
 void k_texteditor__application_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -487,8 +487,8 @@ bool k_texteditor__application_is_signal_connected(void* self, void* signal) {
     return KTextEditor__Application_IsSignalConnected((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
-bool k_texteditor__application_qbase_is_signal_connected(void* self, void* signal) {
-    return KTextEditor__Application_QBaseIsSignalConnected((KTextEditor__Application*)self, (QMetaMethod*)signal);
+bool k_texteditor__application_super_is_signal_connected(void* self, void* signal) {
+    return KTextEditor__Application_SuperIsSignalConnected((KTextEditor__Application*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__application_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

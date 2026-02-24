@@ -50,8 +50,8 @@ void q_svgrenderer_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QSvgRenderer_OnMetaObject((QSvgRenderer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_svgrenderer_qbase_meta_object(void* self) {
-    return QSvgRenderer_QBaseMetaObject((QSvgRenderer*)self);
+const QMetaObject* q_svgrenderer_super_meta_object(void* self) {
+    return QSvgRenderer_SuperMetaObject((QSvgRenderer*)self);
 }
 
 void* q_svgrenderer_metacast(void* self, const char* param1) {
@@ -62,8 +62,8 @@ void q_svgrenderer_on_metacast(void* self, void* (*callback)(void*, const char*)
     QSvgRenderer_OnMetacast((QSvgRenderer*)self, (intptr_t)callback);
 }
 
-void* q_svgrenderer_qbase_metacast(void* self, const char* param1) {
-    return QSvgRenderer_QBaseMetacast((QSvgRenderer*)self, param1);
+void* q_svgrenderer_super_metacast(void* self, const char* param1) {
+    return QSvgRenderer_SuperMetacast((QSvgRenderer*)self, param1);
 }
 
 int32_t q_svgrenderer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -74,8 +74,8 @@ void q_svgrenderer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QSvgRenderer_OnMetacall((QSvgRenderer*)self, (intptr_t)callback);
 }
 
-int32_t q_svgrenderer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSvgRenderer_QBaseMetacall((QSvgRenderer*)self, param1, param2, param3);
+int32_t q_svgrenderer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSvgRenderer_SuperMetacall((QSvgRenderer*)self, param1, param2, param3);
 }
 
 const char* q_svgrenderer_tr(const char* s) {
@@ -438,8 +438,8 @@ bool q_svgrenderer_event(void* self, void* event) {
     return QSvgRenderer_Event((QSvgRenderer*)self, (QEvent*)event);
 }
 
-bool q_svgrenderer_qbase_event(void* self, void* event) {
-    return QSvgRenderer_QBaseEvent((QSvgRenderer*)self, (QEvent*)event);
+bool q_svgrenderer_super_event(void* self, void* event) {
+    return QSvgRenderer_SuperEvent((QSvgRenderer*)self, (QEvent*)event);
 }
 
 void q_svgrenderer_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ bool q_svgrenderer_event_filter(void* self, void* watched, void* event) {
     return QSvgRenderer_EventFilter((QSvgRenderer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_svgrenderer_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSvgRenderer_QBaseEventFilter((QSvgRenderer*)self, (QObject*)watched, (QEvent*)event);
+bool q_svgrenderer_super_event_filter(void* self, void* watched, void* event) {
+    return QSvgRenderer_SuperEventFilter((QSvgRenderer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_svgrenderer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -462,8 +462,8 @@ void q_svgrenderer_timer_event(void* self, void* event) {
     QSvgRenderer_TimerEvent((QSvgRenderer*)self, (QTimerEvent*)event);
 }
 
-void q_svgrenderer_qbase_timer_event(void* self, void* event) {
-    QSvgRenderer_QBaseTimerEvent((QSvgRenderer*)self, (QTimerEvent*)event);
+void q_svgrenderer_super_timer_event(void* self, void* event) {
+    QSvgRenderer_SuperTimerEvent((QSvgRenderer*)self, (QTimerEvent*)event);
 }
 
 void q_svgrenderer_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ void q_svgrenderer_child_event(void* self, void* event) {
     QSvgRenderer_ChildEvent((QSvgRenderer*)self, (QChildEvent*)event);
 }
 
-void q_svgrenderer_qbase_child_event(void* self, void* event) {
-    QSvgRenderer_QBaseChildEvent((QSvgRenderer*)self, (QChildEvent*)event);
+void q_svgrenderer_super_child_event(void* self, void* event) {
+    QSvgRenderer_SuperChildEvent((QSvgRenderer*)self, (QChildEvent*)event);
 }
 
 void q_svgrenderer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -486,8 +486,8 @@ void q_svgrenderer_custom_event(void* self, void* event) {
     QSvgRenderer_CustomEvent((QSvgRenderer*)self, (QEvent*)event);
 }
 
-void q_svgrenderer_qbase_custom_event(void* self, void* event) {
-    QSvgRenderer_QBaseCustomEvent((QSvgRenderer*)self, (QEvent*)event);
+void q_svgrenderer_super_custom_event(void* self, void* event) {
+    QSvgRenderer_SuperCustomEvent((QSvgRenderer*)self, (QEvent*)event);
 }
 
 void q_svgrenderer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -498,8 +498,8 @@ void q_svgrenderer_connect_notify(void* self, void* signal) {
     QSvgRenderer_ConnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
-void q_svgrenderer_qbase_connect_notify(void* self, void* signal) {
-    QSvgRenderer_QBaseConnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
+void q_svgrenderer_super_connect_notify(void* self, void* signal) {
+    QSvgRenderer_SuperConnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
 void q_svgrenderer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -510,8 +510,8 @@ void q_svgrenderer_disconnect_notify(void* self, void* signal) {
     QSvgRenderer_DisconnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
-void q_svgrenderer_qbase_disconnect_notify(void* self, void* signal) {
-    QSvgRenderer_QBaseDisconnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
+void q_svgrenderer_super_disconnect_notify(void* self, void* signal) {
+    QSvgRenderer_SuperDisconnectNotify((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
 void q_svgrenderer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -522,8 +522,8 @@ QObject* q_svgrenderer_sender(void* self) {
     return QSvgRenderer_Sender((QSvgRenderer*)self);
 }
 
-QObject* q_svgrenderer_qbase_sender(void* self) {
-    return QSvgRenderer_QBaseSender((QSvgRenderer*)self);
+QObject* q_svgrenderer_super_sender(void* self) {
+    return QSvgRenderer_SuperSender((QSvgRenderer*)self);
 }
 
 void q_svgrenderer_on_sender(void* self, QObject* (*callback)()) {
@@ -534,8 +534,8 @@ int32_t q_svgrenderer_sender_signal_index(void* self) {
     return QSvgRenderer_SenderSignalIndex((QSvgRenderer*)self);
 }
 
-int32_t q_svgrenderer_qbase_sender_signal_index(void* self) {
-    return QSvgRenderer_QBaseSenderSignalIndex((QSvgRenderer*)self);
+int32_t q_svgrenderer_super_sender_signal_index(void* self) {
+    return QSvgRenderer_SuperSenderSignalIndex((QSvgRenderer*)self);
 }
 
 void q_svgrenderer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -546,8 +546,8 @@ int32_t q_svgrenderer_receivers(void* self, const char* signal) {
     return QSvgRenderer_Receivers((QSvgRenderer*)self, signal);
 }
 
-int32_t q_svgrenderer_qbase_receivers(void* self, const char* signal) {
-    return QSvgRenderer_QBaseReceivers((QSvgRenderer*)self, signal);
+int32_t q_svgrenderer_super_receivers(void* self, const char* signal) {
+    return QSvgRenderer_SuperReceivers((QSvgRenderer*)self, signal);
 }
 
 void q_svgrenderer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -558,8 +558,8 @@ bool q_svgrenderer_is_signal_connected(void* self, void* signal) {
     return QSvgRenderer_IsSignalConnected((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
-bool q_svgrenderer_qbase_is_signal_connected(void* self, void* signal) {
-    return QSvgRenderer_QBaseIsSignalConnected((QSvgRenderer*)self, (QMetaMethod*)signal);
+bool q_svgrenderer_super_is_signal_connected(void* self, void* signal) {
+    return QSvgRenderer_SuperIsSignalConnected((QSvgRenderer*)self, (QMetaMethod*)signal);
 }
 
 void q_svgrenderer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

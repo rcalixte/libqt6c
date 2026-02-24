@@ -38,8 +38,8 @@ void k_capacitybar_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KCapacityBar_OnMetaObject((KCapacityBar*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_capacitybar_qbase_meta_object(void* self) {
-    return KCapacityBar_QBaseMetaObject((KCapacityBar*)self);
+const QMetaObject* k_capacitybar_super_meta_object(void* self) {
+    return KCapacityBar_SuperMetaObject((KCapacityBar*)self);
 }
 
 void* k_capacitybar_metacast(void* self, const char* param1) {
@@ -50,8 +50,8 @@ void k_capacitybar_on_metacast(void* self, void* (*callback)(void*, const char*)
     KCapacityBar_OnMetacast((KCapacityBar*)self, (intptr_t)callback);
 }
 
-void* k_capacitybar_qbase_metacast(void* self, const char* param1) {
-    return KCapacityBar_QBaseMetacast((KCapacityBar*)self, param1);
+void* k_capacitybar_super_metacast(void* self, const char* param1) {
+    return KCapacityBar_SuperMetacast((KCapacityBar*)self, param1);
 }
 
 int32_t k_capacitybar_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ void k_capacitybar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KCapacityBar_OnMetacall((KCapacityBar*)self, (intptr_t)callback);
 }
 
-int32_t k_capacitybar_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCapacityBar_QBaseMetacall((KCapacityBar*)self, param1, param2, param3);
+int32_t k_capacitybar_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCapacityBar_SuperMetacall((KCapacityBar*)self, param1, param2, param3);
 }
 
 const char* k_capacitybar_tr(const char* s) {
@@ -148,8 +148,8 @@ void k_capacitybar_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     KCapacityBar_OnMinimumSizeHint((KCapacityBar*)self, (intptr_t)callback);
 }
 
-QSize* k_capacitybar_qbase_minimum_size_hint(void* self) {
-    return KCapacityBar_QBaseMinimumSizeHint((KCapacityBar*)self);
+QSize* k_capacitybar_super_minimum_size_hint(void* self) {
+    return KCapacityBar_SuperMinimumSizeHint((KCapacityBar*)self);
 }
 
 void k_capacitybar_paint_event(void* self, void* event) {
@@ -160,8 +160,8 @@ void k_capacitybar_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KCapacityBar_OnPaintEvent((KCapacityBar*)self, (intptr_t)callback);
 }
 
-void k_capacitybar_qbase_paint_event(void* self, void* event) {
-    KCapacityBar_QBasePaintEvent((KCapacityBar*)self, (QPaintEvent*)event);
+void k_capacitybar_super_paint_event(void* self, void* event) {
+    KCapacityBar_SuperPaintEvent((KCapacityBar*)self, (QPaintEvent*)event);
 }
 
 void k_capacitybar_change_event(void* self, void* event) {
@@ -172,8 +172,8 @@ void k_capacitybar_on_change_event(void* self, void (*callback)(void*, void*)) {
     KCapacityBar_OnChangeEvent((KCapacityBar*)self, (intptr_t)callback);
 }
 
-void k_capacitybar_qbase_change_event(void* self, void* event) {
-    KCapacityBar_QBaseChangeEvent((KCapacityBar*)self, (QEvent*)event);
+void k_capacitybar_super_change_event(void* self, void* event) {
+    KCapacityBar_SuperChangeEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
 const char* k_capacitybar_tr2(const char* s, const char* c) {
@@ -1575,8 +1575,8 @@ int32_t k_capacitybar_dev_type(void* self) {
     return KCapacityBar_DevType((KCapacityBar*)self);
 }
 
-int32_t k_capacitybar_qbase_dev_type(void* self) {
-    return KCapacityBar_QBaseDevType((KCapacityBar*)self);
+int32_t k_capacitybar_super_dev_type(void* self) {
+    return KCapacityBar_SuperDevType((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1587,8 +1587,8 @@ void k_capacitybar_set_visible(void* self, bool visible) {
     KCapacityBar_SetVisible((KCapacityBar*)self, visible);
 }
 
-void k_capacitybar_qbase_set_visible(void* self, bool visible) {
-    KCapacityBar_QBaseSetVisible((KCapacityBar*)self, visible);
+void k_capacitybar_super_set_visible(void* self, bool visible) {
+    KCapacityBar_SuperSetVisible((KCapacityBar*)self, visible);
 }
 
 void k_capacitybar_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1599,8 +1599,8 @@ QSize* k_capacitybar_size_hint(void* self) {
     return KCapacityBar_SizeHint((KCapacityBar*)self);
 }
 
-QSize* k_capacitybar_qbase_size_hint(void* self) {
-    return KCapacityBar_QBaseSizeHint((KCapacityBar*)self);
+QSize* k_capacitybar_super_size_hint(void* self) {
+    return KCapacityBar_SuperSizeHint((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1611,8 +1611,8 @@ int32_t k_capacitybar_height_for_width(void* self, int param1) {
     return KCapacityBar_HeightForWidth((KCapacityBar*)self, param1);
 }
 
-int32_t k_capacitybar_qbase_height_for_width(void* self, int param1) {
-    return KCapacityBar_QBaseHeightForWidth((KCapacityBar*)self, param1);
+int32_t k_capacitybar_super_height_for_width(void* self, int param1) {
+    return KCapacityBar_SuperHeightForWidth((KCapacityBar*)self, param1);
 }
 
 void k_capacitybar_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1623,8 +1623,8 @@ bool k_capacitybar_has_height_for_width(void* self) {
     return KCapacityBar_HasHeightForWidth((KCapacityBar*)self);
 }
 
-bool k_capacitybar_qbase_has_height_for_width(void* self) {
-    return KCapacityBar_QBaseHasHeightForWidth((KCapacityBar*)self);
+bool k_capacitybar_super_has_height_for_width(void* self) {
+    return KCapacityBar_SuperHasHeightForWidth((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1635,8 +1635,8 @@ QPaintEngine* k_capacitybar_paint_engine(void* self) {
     return KCapacityBar_PaintEngine((KCapacityBar*)self);
 }
 
-QPaintEngine* k_capacitybar_qbase_paint_engine(void* self) {
-    return KCapacityBar_QBasePaintEngine((KCapacityBar*)self);
+QPaintEngine* k_capacitybar_super_paint_engine(void* self) {
+    return KCapacityBar_SuperPaintEngine((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1647,8 +1647,8 @@ bool k_capacitybar_event(void* self, void* event) {
     return KCapacityBar_Event((KCapacityBar*)self, (QEvent*)event);
 }
 
-bool k_capacitybar_qbase_event(void* self, void* event) {
-    return KCapacityBar_QBaseEvent((KCapacityBar*)self, (QEvent*)event);
+bool k_capacitybar_super_event(void* self, void* event) {
+    return KCapacityBar_SuperEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
 void k_capacitybar_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1659,8 +1659,8 @@ void k_capacitybar_mouse_press_event(void* self, void* event) {
     KCapacityBar_MousePressEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
-void k_capacitybar_qbase_mouse_press_event(void* self, void* event) {
-    KCapacityBar_QBaseMousePressEvent((KCapacityBar*)self, (QMouseEvent*)event);
+void k_capacitybar_super_mouse_press_event(void* self, void* event) {
+    KCapacityBar_SuperMousePressEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
 void k_capacitybar_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1671,8 +1671,8 @@ void k_capacitybar_mouse_release_event(void* self, void* event) {
     KCapacityBar_MouseReleaseEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
-void k_capacitybar_qbase_mouse_release_event(void* self, void* event) {
-    KCapacityBar_QBaseMouseReleaseEvent((KCapacityBar*)self, (QMouseEvent*)event);
+void k_capacitybar_super_mouse_release_event(void* self, void* event) {
+    KCapacityBar_SuperMouseReleaseEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
 void k_capacitybar_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1683,8 +1683,8 @@ void k_capacitybar_mouse_double_click_event(void* self, void* event) {
     KCapacityBar_MouseDoubleClickEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
-void k_capacitybar_qbase_mouse_double_click_event(void* self, void* event) {
-    KCapacityBar_QBaseMouseDoubleClickEvent((KCapacityBar*)self, (QMouseEvent*)event);
+void k_capacitybar_super_mouse_double_click_event(void* self, void* event) {
+    KCapacityBar_SuperMouseDoubleClickEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
 void k_capacitybar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1695,8 +1695,8 @@ void k_capacitybar_mouse_move_event(void* self, void* event) {
     KCapacityBar_MouseMoveEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
-void k_capacitybar_qbase_mouse_move_event(void* self, void* event) {
-    KCapacityBar_QBaseMouseMoveEvent((KCapacityBar*)self, (QMouseEvent*)event);
+void k_capacitybar_super_mouse_move_event(void* self, void* event) {
+    KCapacityBar_SuperMouseMoveEvent((KCapacityBar*)self, (QMouseEvent*)event);
 }
 
 void k_capacitybar_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1707,8 +1707,8 @@ void k_capacitybar_wheel_event(void* self, void* event) {
     KCapacityBar_WheelEvent((KCapacityBar*)self, (QWheelEvent*)event);
 }
 
-void k_capacitybar_qbase_wheel_event(void* self, void* event) {
-    KCapacityBar_QBaseWheelEvent((KCapacityBar*)self, (QWheelEvent*)event);
+void k_capacitybar_super_wheel_event(void* self, void* event) {
+    KCapacityBar_SuperWheelEvent((KCapacityBar*)self, (QWheelEvent*)event);
 }
 
 void k_capacitybar_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1719,8 +1719,8 @@ void k_capacitybar_key_press_event(void* self, void* event) {
     KCapacityBar_KeyPressEvent((KCapacityBar*)self, (QKeyEvent*)event);
 }
 
-void k_capacitybar_qbase_key_press_event(void* self, void* event) {
-    KCapacityBar_QBaseKeyPressEvent((KCapacityBar*)self, (QKeyEvent*)event);
+void k_capacitybar_super_key_press_event(void* self, void* event) {
+    KCapacityBar_SuperKeyPressEvent((KCapacityBar*)self, (QKeyEvent*)event);
 }
 
 void k_capacitybar_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1731,8 +1731,8 @@ void k_capacitybar_key_release_event(void* self, void* event) {
     KCapacityBar_KeyReleaseEvent((KCapacityBar*)self, (QKeyEvent*)event);
 }
 
-void k_capacitybar_qbase_key_release_event(void* self, void* event) {
-    KCapacityBar_QBaseKeyReleaseEvent((KCapacityBar*)self, (QKeyEvent*)event);
+void k_capacitybar_super_key_release_event(void* self, void* event) {
+    KCapacityBar_SuperKeyReleaseEvent((KCapacityBar*)self, (QKeyEvent*)event);
 }
 
 void k_capacitybar_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1743,8 +1743,8 @@ void k_capacitybar_focus_in_event(void* self, void* event) {
     KCapacityBar_FocusInEvent((KCapacityBar*)self, (QFocusEvent*)event);
 }
 
-void k_capacitybar_qbase_focus_in_event(void* self, void* event) {
-    KCapacityBar_QBaseFocusInEvent((KCapacityBar*)self, (QFocusEvent*)event);
+void k_capacitybar_super_focus_in_event(void* self, void* event) {
+    KCapacityBar_SuperFocusInEvent((KCapacityBar*)self, (QFocusEvent*)event);
 }
 
 void k_capacitybar_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1755,8 +1755,8 @@ void k_capacitybar_focus_out_event(void* self, void* event) {
     KCapacityBar_FocusOutEvent((KCapacityBar*)self, (QFocusEvent*)event);
 }
 
-void k_capacitybar_qbase_focus_out_event(void* self, void* event) {
-    KCapacityBar_QBaseFocusOutEvent((KCapacityBar*)self, (QFocusEvent*)event);
+void k_capacitybar_super_focus_out_event(void* self, void* event) {
+    KCapacityBar_SuperFocusOutEvent((KCapacityBar*)self, (QFocusEvent*)event);
 }
 
 void k_capacitybar_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1767,8 +1767,8 @@ void k_capacitybar_enter_event(void* self, void* event) {
     KCapacityBar_EnterEvent((KCapacityBar*)self, (QEnterEvent*)event);
 }
 
-void k_capacitybar_qbase_enter_event(void* self, void* event) {
-    KCapacityBar_QBaseEnterEvent((KCapacityBar*)self, (QEnterEvent*)event);
+void k_capacitybar_super_enter_event(void* self, void* event) {
+    KCapacityBar_SuperEnterEvent((KCapacityBar*)self, (QEnterEvent*)event);
 }
 
 void k_capacitybar_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1779,8 +1779,8 @@ void k_capacitybar_leave_event(void* self, void* event) {
     KCapacityBar_LeaveEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
-void k_capacitybar_qbase_leave_event(void* self, void* event) {
-    KCapacityBar_QBaseLeaveEvent((KCapacityBar*)self, (QEvent*)event);
+void k_capacitybar_super_leave_event(void* self, void* event) {
+    KCapacityBar_SuperLeaveEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
 void k_capacitybar_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1791,8 +1791,8 @@ void k_capacitybar_move_event(void* self, void* event) {
     KCapacityBar_MoveEvent((KCapacityBar*)self, (QMoveEvent*)event);
 }
 
-void k_capacitybar_qbase_move_event(void* self, void* event) {
-    KCapacityBar_QBaseMoveEvent((KCapacityBar*)self, (QMoveEvent*)event);
+void k_capacitybar_super_move_event(void* self, void* event) {
+    KCapacityBar_SuperMoveEvent((KCapacityBar*)self, (QMoveEvent*)event);
 }
 
 void k_capacitybar_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1803,8 +1803,8 @@ void k_capacitybar_resize_event(void* self, void* event) {
     KCapacityBar_ResizeEvent((KCapacityBar*)self, (QResizeEvent*)event);
 }
 
-void k_capacitybar_qbase_resize_event(void* self, void* event) {
-    KCapacityBar_QBaseResizeEvent((KCapacityBar*)self, (QResizeEvent*)event);
+void k_capacitybar_super_resize_event(void* self, void* event) {
+    KCapacityBar_SuperResizeEvent((KCapacityBar*)self, (QResizeEvent*)event);
 }
 
 void k_capacitybar_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1815,8 +1815,8 @@ void k_capacitybar_close_event(void* self, void* event) {
     KCapacityBar_CloseEvent((KCapacityBar*)self, (QCloseEvent*)event);
 }
 
-void k_capacitybar_qbase_close_event(void* self, void* event) {
-    KCapacityBar_QBaseCloseEvent((KCapacityBar*)self, (QCloseEvent*)event);
+void k_capacitybar_super_close_event(void* self, void* event) {
+    KCapacityBar_SuperCloseEvent((KCapacityBar*)self, (QCloseEvent*)event);
 }
 
 void k_capacitybar_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1827,8 +1827,8 @@ void k_capacitybar_context_menu_event(void* self, void* event) {
     KCapacityBar_ContextMenuEvent((KCapacityBar*)self, (QContextMenuEvent*)event);
 }
 
-void k_capacitybar_qbase_context_menu_event(void* self, void* event) {
-    KCapacityBar_QBaseContextMenuEvent((KCapacityBar*)self, (QContextMenuEvent*)event);
+void k_capacitybar_super_context_menu_event(void* self, void* event) {
+    KCapacityBar_SuperContextMenuEvent((KCapacityBar*)self, (QContextMenuEvent*)event);
 }
 
 void k_capacitybar_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1839,8 +1839,8 @@ void k_capacitybar_tablet_event(void* self, void* event) {
     KCapacityBar_TabletEvent((KCapacityBar*)self, (QTabletEvent*)event);
 }
 
-void k_capacitybar_qbase_tablet_event(void* self, void* event) {
-    KCapacityBar_QBaseTabletEvent((KCapacityBar*)self, (QTabletEvent*)event);
+void k_capacitybar_super_tablet_event(void* self, void* event) {
+    KCapacityBar_SuperTabletEvent((KCapacityBar*)self, (QTabletEvent*)event);
 }
 
 void k_capacitybar_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1851,8 +1851,8 @@ void k_capacitybar_action_event(void* self, void* event) {
     KCapacityBar_ActionEvent((KCapacityBar*)self, (QActionEvent*)event);
 }
 
-void k_capacitybar_qbase_action_event(void* self, void* event) {
-    KCapacityBar_QBaseActionEvent((KCapacityBar*)self, (QActionEvent*)event);
+void k_capacitybar_super_action_event(void* self, void* event) {
+    KCapacityBar_SuperActionEvent((KCapacityBar*)self, (QActionEvent*)event);
 }
 
 void k_capacitybar_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1863,8 +1863,8 @@ void k_capacitybar_drag_enter_event(void* self, void* event) {
     KCapacityBar_DragEnterEvent((KCapacityBar*)self, (QDragEnterEvent*)event);
 }
 
-void k_capacitybar_qbase_drag_enter_event(void* self, void* event) {
-    KCapacityBar_QBaseDragEnterEvent((KCapacityBar*)self, (QDragEnterEvent*)event);
+void k_capacitybar_super_drag_enter_event(void* self, void* event) {
+    KCapacityBar_SuperDragEnterEvent((KCapacityBar*)self, (QDragEnterEvent*)event);
 }
 
 void k_capacitybar_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1875,8 +1875,8 @@ void k_capacitybar_drag_move_event(void* self, void* event) {
     KCapacityBar_DragMoveEvent((KCapacityBar*)self, (QDragMoveEvent*)event);
 }
 
-void k_capacitybar_qbase_drag_move_event(void* self, void* event) {
-    KCapacityBar_QBaseDragMoveEvent((KCapacityBar*)self, (QDragMoveEvent*)event);
+void k_capacitybar_super_drag_move_event(void* self, void* event) {
+    KCapacityBar_SuperDragMoveEvent((KCapacityBar*)self, (QDragMoveEvent*)event);
 }
 
 void k_capacitybar_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ void k_capacitybar_drag_leave_event(void* self, void* event) {
     KCapacityBar_DragLeaveEvent((KCapacityBar*)self, (QDragLeaveEvent*)event);
 }
 
-void k_capacitybar_qbase_drag_leave_event(void* self, void* event) {
-    KCapacityBar_QBaseDragLeaveEvent((KCapacityBar*)self, (QDragLeaveEvent*)event);
+void k_capacitybar_super_drag_leave_event(void* self, void* event) {
+    KCapacityBar_SuperDragLeaveEvent((KCapacityBar*)self, (QDragLeaveEvent*)event);
 }
 
 void k_capacitybar_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ void k_capacitybar_drop_event(void* self, void* event) {
     KCapacityBar_DropEvent((KCapacityBar*)self, (QDropEvent*)event);
 }
 
-void k_capacitybar_qbase_drop_event(void* self, void* event) {
-    KCapacityBar_QBaseDropEvent((KCapacityBar*)self, (QDropEvent*)event);
+void k_capacitybar_super_drop_event(void* self, void* event) {
+    KCapacityBar_SuperDropEvent((KCapacityBar*)self, (QDropEvent*)event);
 }
 
 void k_capacitybar_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1911,8 +1911,8 @@ void k_capacitybar_show_event(void* self, void* event) {
     KCapacityBar_ShowEvent((KCapacityBar*)self, (QShowEvent*)event);
 }
 
-void k_capacitybar_qbase_show_event(void* self, void* event) {
-    KCapacityBar_QBaseShowEvent((KCapacityBar*)self, (QShowEvent*)event);
+void k_capacitybar_super_show_event(void* self, void* event) {
+    KCapacityBar_SuperShowEvent((KCapacityBar*)self, (QShowEvent*)event);
 }
 
 void k_capacitybar_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1923,8 +1923,8 @@ void k_capacitybar_hide_event(void* self, void* event) {
     KCapacityBar_HideEvent((KCapacityBar*)self, (QHideEvent*)event);
 }
 
-void k_capacitybar_qbase_hide_event(void* self, void* event) {
-    KCapacityBar_QBaseHideEvent((KCapacityBar*)self, (QHideEvent*)event);
+void k_capacitybar_super_hide_event(void* self, void* event) {
+    KCapacityBar_SuperHideEvent((KCapacityBar*)self, (QHideEvent*)event);
 }
 
 void k_capacitybar_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1935,8 +1935,8 @@ bool k_capacitybar_native_event(void* self, char* eventType, void* message, intp
     return KCapacityBar_NativeEvent((KCapacityBar*)self, qstring(eventType), message, result);
 }
 
-bool k_capacitybar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KCapacityBar_QBaseNativeEvent((KCapacityBar*)self, qstring(eventType), message, result);
+bool k_capacitybar_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KCapacityBar_SuperNativeEvent((KCapacityBar*)self, qstring(eventType), message, result);
 }
 
 void k_capacitybar_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1947,8 +1947,8 @@ int32_t k_capacitybar_metric(void* self, int32_t param1) {
     return KCapacityBar_Metric((KCapacityBar*)self, param1);
 }
 
-int32_t k_capacitybar_qbase_metric(void* self, int32_t param1) {
-    return KCapacityBar_QBaseMetric((KCapacityBar*)self, param1);
+int32_t k_capacitybar_super_metric(void* self, int32_t param1) {
+    return KCapacityBar_SuperMetric((KCapacityBar*)self, param1);
 }
 
 void k_capacitybar_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1959,8 +1959,8 @@ void k_capacitybar_init_painter(void* self, void* painter) {
     KCapacityBar_InitPainter((KCapacityBar*)self, (QPainter*)painter);
 }
 
-void k_capacitybar_qbase_init_painter(void* self, void* painter) {
-    KCapacityBar_QBaseInitPainter((KCapacityBar*)self, (QPainter*)painter);
+void k_capacitybar_super_init_painter(void* self, void* painter) {
+    KCapacityBar_SuperInitPainter((KCapacityBar*)self, (QPainter*)painter);
 }
 
 void k_capacitybar_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ QPaintDevice* k_capacitybar_redirected(void* self, void* offset) {
     return KCapacityBar_Redirected((KCapacityBar*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_capacitybar_qbase_redirected(void* self, void* offset) {
-    return KCapacityBar_QBaseRedirected((KCapacityBar*)self, (QPoint*)offset);
+QPaintDevice* k_capacitybar_super_redirected(void* self, void* offset) {
+    return KCapacityBar_SuperRedirected((KCapacityBar*)self, (QPoint*)offset);
 }
 
 void k_capacitybar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ QPainter* k_capacitybar_shared_painter(void* self) {
     return KCapacityBar_SharedPainter((KCapacityBar*)self);
 }
 
-QPainter* k_capacitybar_qbase_shared_painter(void* self) {
-    return KCapacityBar_QBaseSharedPainter((KCapacityBar*)self);
+QPainter* k_capacitybar_super_shared_painter(void* self) {
+    return KCapacityBar_SuperSharedPainter((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1995,8 +1995,8 @@ void k_capacitybar_input_method_event(void* self, void* param1) {
     KCapacityBar_InputMethodEvent((KCapacityBar*)self, (QInputMethodEvent*)param1);
 }
 
-void k_capacitybar_qbase_input_method_event(void* self, void* param1) {
-    KCapacityBar_QBaseInputMethodEvent((KCapacityBar*)self, (QInputMethodEvent*)param1);
+void k_capacitybar_super_input_method_event(void* self, void* param1) {
+    KCapacityBar_SuperInputMethodEvent((KCapacityBar*)self, (QInputMethodEvent*)param1);
 }
 
 void k_capacitybar_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ QVariant* k_capacitybar_input_method_query(void* self, int32_t param1) {
     return KCapacityBar_InputMethodQuery((KCapacityBar*)self, param1);
 }
 
-QVariant* k_capacitybar_qbase_input_method_query(void* self, int32_t param1) {
-    return KCapacityBar_QBaseInputMethodQuery((KCapacityBar*)self, param1);
+QVariant* k_capacitybar_super_input_method_query(void* self, int32_t param1) {
+    return KCapacityBar_SuperInputMethodQuery((KCapacityBar*)self, param1);
 }
 
 void k_capacitybar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2019,8 +2019,8 @@ bool k_capacitybar_focus_next_prev_child(void* self, bool next) {
     return KCapacityBar_FocusNextPrevChild((KCapacityBar*)self, next);
 }
 
-bool k_capacitybar_qbase_focus_next_prev_child(void* self, bool next) {
-    return KCapacityBar_QBaseFocusNextPrevChild((KCapacityBar*)self, next);
+bool k_capacitybar_super_focus_next_prev_child(void* self, bool next) {
+    return KCapacityBar_SuperFocusNextPrevChild((KCapacityBar*)self, next);
 }
 
 void k_capacitybar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2031,8 +2031,8 @@ bool k_capacitybar_event_filter(void* self, void* watched, void* event) {
     return KCapacityBar_EventFilter((KCapacityBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_capacitybar_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCapacityBar_QBaseEventFilter((KCapacityBar*)self, (QObject*)watched, (QEvent*)event);
+bool k_capacitybar_super_event_filter(void* self, void* watched, void* event) {
+    return KCapacityBar_SuperEventFilter((KCapacityBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_capacitybar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2043,8 +2043,8 @@ void k_capacitybar_timer_event(void* self, void* event) {
     KCapacityBar_TimerEvent((KCapacityBar*)self, (QTimerEvent*)event);
 }
 
-void k_capacitybar_qbase_timer_event(void* self, void* event) {
-    KCapacityBar_QBaseTimerEvent((KCapacityBar*)self, (QTimerEvent*)event);
+void k_capacitybar_super_timer_event(void* self, void* event) {
+    KCapacityBar_SuperTimerEvent((KCapacityBar*)self, (QTimerEvent*)event);
 }
 
 void k_capacitybar_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2055,8 +2055,8 @@ void k_capacitybar_child_event(void* self, void* event) {
     KCapacityBar_ChildEvent((KCapacityBar*)self, (QChildEvent*)event);
 }
 
-void k_capacitybar_qbase_child_event(void* self, void* event) {
-    KCapacityBar_QBaseChildEvent((KCapacityBar*)self, (QChildEvent*)event);
+void k_capacitybar_super_child_event(void* self, void* event) {
+    KCapacityBar_SuperChildEvent((KCapacityBar*)self, (QChildEvent*)event);
 }
 
 void k_capacitybar_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ void k_capacitybar_custom_event(void* self, void* event) {
     KCapacityBar_CustomEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
-void k_capacitybar_qbase_custom_event(void* self, void* event) {
-    KCapacityBar_QBaseCustomEvent((KCapacityBar*)self, (QEvent*)event);
+void k_capacitybar_super_custom_event(void* self, void* event) {
+    KCapacityBar_SuperCustomEvent((KCapacityBar*)self, (QEvent*)event);
 }
 
 void k_capacitybar_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2079,8 +2079,8 @@ void k_capacitybar_connect_notify(void* self, void* signal) {
     KCapacityBar_ConnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
-void k_capacitybar_qbase_connect_notify(void* self, void* signal) {
-    KCapacityBar_QBaseConnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
+void k_capacitybar_super_connect_notify(void* self, void* signal) {
+    KCapacityBar_SuperConnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
 void k_capacitybar_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ void k_capacitybar_disconnect_notify(void* self, void* signal) {
     KCapacityBar_DisconnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
-void k_capacitybar_qbase_disconnect_notify(void* self, void* signal) {
-    KCapacityBar_QBaseDisconnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
+void k_capacitybar_super_disconnect_notify(void* self, void* signal) {
+    KCapacityBar_SuperDisconnectNotify((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
 void k_capacitybar_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ void k_capacitybar_update_micro_focus(void* self) {
     KCapacityBar_UpdateMicroFocus((KCapacityBar*)self);
 }
 
-void k_capacitybar_qbase_update_micro_focus(void* self) {
-    KCapacityBar_QBaseUpdateMicroFocus((KCapacityBar*)self);
+void k_capacitybar_super_update_micro_focus(void* self) {
+    KCapacityBar_SuperUpdateMicroFocus((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2115,8 +2115,8 @@ void k_capacitybar_create(void* self) {
     KCapacityBar_Create((KCapacityBar*)self);
 }
 
-void k_capacitybar_qbase_create(void* self) {
-    KCapacityBar_QBaseCreate((KCapacityBar*)self);
+void k_capacitybar_super_create(void* self) {
+    KCapacityBar_SuperCreate((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_create(void* self, void (*callback)()) {
@@ -2127,8 +2127,8 @@ void k_capacitybar_destroy(void* self) {
     KCapacityBar_Destroy((KCapacityBar*)self);
 }
 
-void k_capacitybar_qbase_destroy(void* self) {
-    KCapacityBar_QBaseDestroy((KCapacityBar*)self);
+void k_capacitybar_super_destroy(void* self) {
+    KCapacityBar_SuperDestroy((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_destroy(void* self, void (*callback)()) {
@@ -2139,8 +2139,8 @@ bool k_capacitybar_focus_next_child(void* self) {
     return KCapacityBar_FocusNextChild((KCapacityBar*)self);
 }
 
-bool k_capacitybar_qbase_focus_next_child(void* self) {
-    return KCapacityBar_QBaseFocusNextChild((KCapacityBar*)self);
+bool k_capacitybar_super_focus_next_child(void* self) {
+    return KCapacityBar_SuperFocusNextChild((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2151,8 +2151,8 @@ bool k_capacitybar_focus_previous_child(void* self) {
     return KCapacityBar_FocusPreviousChild((KCapacityBar*)self);
 }
 
-bool k_capacitybar_qbase_focus_previous_child(void* self) {
-    return KCapacityBar_QBaseFocusPreviousChild((KCapacityBar*)self);
+bool k_capacitybar_super_focus_previous_child(void* self) {
+    return KCapacityBar_SuperFocusPreviousChild((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2163,8 +2163,8 @@ QObject* k_capacitybar_sender(void* self) {
     return KCapacityBar_Sender((KCapacityBar*)self);
 }
 
-QObject* k_capacitybar_qbase_sender(void* self) {
-    return KCapacityBar_QBaseSender((KCapacityBar*)self);
+QObject* k_capacitybar_super_sender(void* self) {
+    return KCapacityBar_SuperSender((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_sender(void* self, QObject* (*callback)()) {
@@ -2175,8 +2175,8 @@ int32_t k_capacitybar_sender_signal_index(void* self) {
     return KCapacityBar_SenderSignalIndex((KCapacityBar*)self);
 }
 
-int32_t k_capacitybar_qbase_sender_signal_index(void* self) {
-    return KCapacityBar_QBaseSenderSignalIndex((KCapacityBar*)self);
+int32_t k_capacitybar_super_sender_signal_index(void* self) {
+    return KCapacityBar_SuperSenderSignalIndex((KCapacityBar*)self);
 }
 
 void k_capacitybar_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2187,8 +2187,8 @@ int32_t k_capacitybar_receivers(void* self, const char* signal) {
     return KCapacityBar_Receivers((KCapacityBar*)self, signal);
 }
 
-int32_t k_capacitybar_qbase_receivers(void* self, const char* signal) {
-    return KCapacityBar_QBaseReceivers((KCapacityBar*)self, signal);
+int32_t k_capacitybar_super_receivers(void* self, const char* signal) {
+    return KCapacityBar_SuperReceivers((KCapacityBar*)self, signal);
 }
 
 void k_capacitybar_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2199,8 +2199,8 @@ bool k_capacitybar_is_signal_connected(void* self, void* signal) {
     return KCapacityBar_IsSignalConnected((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
-bool k_capacitybar_qbase_is_signal_connected(void* self, void* signal) {
-    return KCapacityBar_QBaseIsSignalConnected((KCapacityBar*)self, (QMetaMethod*)signal);
+bool k_capacitybar_super_is_signal_connected(void* self, void* signal) {
+    return KCapacityBar_SuperIsSignalConnected((KCapacityBar*)self, (QMetaMethod*)signal);
 }
 
 void k_capacitybar_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2211,8 +2211,8 @@ double k_capacitybar_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KCapacityBar_GetDecodedMetricF((KCapacityBar*)self, metricA, metricB);
 }
 
-double k_capacitybar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KCapacityBar_QBaseGetDecodedMetricF((KCapacityBar*)self, metricA, metricB);
+double k_capacitybar_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KCapacityBar_SuperGetDecodedMetricF((KCapacityBar*)self, metricA, metricB);
 }
 
 void k_capacitybar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

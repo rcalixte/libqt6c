@@ -32,13 +32,17 @@ const QMetaObject* k_shellcompletion_meta_object(void* self);
 ///
 void k_shellcompletion_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_meta_object` instead
+///
+#define k_shellcompletion_qbase_meta_object k_shellcompletion_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KShellCompletion*
 ///
-const QMetaObject* k_shellcompletion_qbase_meta_object(void* self);
+const QMetaObject* k_shellcompletion_super_meta_object(void* self);
 
 /// @param self KShellCompletion*
 /// @param param1 const char*
@@ -52,12 +56,16 @@ void* k_shellcompletion_metacast(void* self, const char* param1);
 ///
 void k_shellcompletion_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_metacast` instead
+///
+#define k_shellcompletion_qbase_metacast k_shellcompletion_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KShellCompletion*
 /// @param param1 const char*
 ///
-void* k_shellcompletion_qbase_metacast(void* self, const char* param1);
+void* k_shellcompletion_super_metacast(void* self, const char* param1);
 
 /// @param self KShellCompletion*
 /// @param param1 enum QMetaObject__Call
@@ -73,6 +81,10 @@ int32_t k_shellcompletion_metacall(void* self, int32_t param1, int param2, void*
 ///
 void k_shellcompletion_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_metacall` instead
+///
+#define k_shellcompletion_qbase_metacall k_shellcompletion_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KShellCompletion*
@@ -80,7 +92,7 @@ void k_shellcompletion_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_shellcompletion_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_shellcompletion_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -108,6 +120,10 @@ const char* k_shellcompletion_make_completion(void* self, const char* text);
 ///
 void k_shellcompletion_on_make_completion(void* self, const char* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_make_completion` instead
+///
+#define k_shellcompletion_qbase_make_completion k_shellcompletion_super_make_completion
+
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#makeCompletion)
 ///
 /// Base class method implementation
@@ -115,7 +131,7 @@ void k_shellcompletion_on_make_completion(void* self, const char* (*callback)(vo
 /// @param self KShellCompletion*
 /// @param text const char*
 ///
-const char* k_shellcompletion_qbase_make_completion(void* self, const char* text);
+const char* k_shellcompletion_super_make_completion(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -133,6 +149,10 @@ void k_shellcompletion_post_process_matches(void* self, const char* matches[stat
 ///
 void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_post_process_matches` instead
+///
+#define k_shellcompletion_qbase_post_process_matches k_shellcompletion_super_post_process_matches
+
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
@@ -140,7 +160,7 @@ void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void
 /// @param self KShellCompletion*
 /// @param matches const char**
 ///
-void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[static 1]);
+void k_shellcompletion_super_post_process_matches(void* self, const char* matches[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -158,6 +178,10 @@ void k_shellcompletion_post_process_matches2(void* self, void* matches);
 ///
 void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_post_process_matches2` instead
+///
+#define k_shellcompletion_qbase_post_process_matches2 k_shellcompletion_super_post_process_matches2
+
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
@@ -165,7 +189,7 @@ void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(voi
 /// @param self KShellCompletion*
 /// @param matches KCompletionMatches*
 ///
-void k_shellcompletion_qbase_post_process_matches2(void* self, void* matches);
+void k_shellcompletion_super_post_process_matches2(void* self, void* matches);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -926,6 +950,10 @@ void k_shellcompletion_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 void k_shellcompletion_set_dir(void* self, void* dir);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_dir` instead
+///
+#define k_shellcompletion_qbase_set_dir k_shellcompletion_super_set_dir
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setDir)
@@ -935,7 +963,7 @@ void k_shellcompletion_set_dir(void* self, void* dir);
 /// @param self KShellCompletion*
 /// @param dir QUrl*
 ///
-void k_shellcompletion_qbase_set_dir(void* self, void* dir);
+void k_shellcompletion_super_set_dir(void* self, void* dir);
 
 /// Inherited from KUrlCompletion
 ///
@@ -958,6 +986,10 @@ void k_shellcompletion_on_set_dir(void* self, void (*callback)(void*, void*));
 ///
 QUrl* k_shellcompletion_dir(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_dir` instead
+///
+#define k_shellcompletion_qbase_dir k_shellcompletion_super_dir
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#dir)
@@ -966,7 +998,7 @@ QUrl* k_shellcompletion_dir(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-QUrl* k_shellcompletion_qbase_dir(void* self);
+QUrl* k_shellcompletion_super_dir(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -989,6 +1021,10 @@ void k_shellcompletion_on_dir(void* self, QUrl* (*callback)());
 ///
 bool k_shellcompletion_is_running(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_is_running` instead
+///
+#define k_shellcompletion_qbase_is_running k_shellcompletion_super_is_running
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#isRunning)
@@ -997,7 +1033,7 @@ bool k_shellcompletion_is_running(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-bool k_shellcompletion_qbase_is_running(void* self);
+bool k_shellcompletion_super_is_running(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1020,6 +1056,10 @@ void k_shellcompletion_on_is_running(void* self, bool (*callback)());
 ///
 void k_shellcompletion_stop(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_stop` instead
+///
+#define k_shellcompletion_qbase_stop k_shellcompletion_super_stop
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#stop)
@@ -1028,7 +1068,7 @@ void k_shellcompletion_stop(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-void k_shellcompletion_qbase_stop(void* self);
+void k_shellcompletion_super_stop(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1053,6 +1093,10 @@ void k_shellcompletion_on_stop(void* self, void (*callback)());
 ///
 int32_t k_shellcompletion_mode(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_mode` instead
+///
+#define k_shellcompletion_qbase_mode k_shellcompletion_super_mode
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#mode)
@@ -1063,7 +1107,7 @@ int32_t k_shellcompletion_mode(void* self);
 ///
 /// @return enum KUrlCompletion__Mode
 ///
-int32_t k_shellcompletion_qbase_mode(void* self);
+int32_t k_shellcompletion_super_mode(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1087,6 +1131,10 @@ void k_shellcompletion_on_mode(void* self, int32_t (*callback)());
 ///
 void k_shellcompletion_set_mode(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_mode` instead
+///
+#define k_shellcompletion_qbase_set_mode k_shellcompletion_super_set_mode
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setMode)
@@ -1096,7 +1144,7 @@ void k_shellcompletion_set_mode(void* self, int32_t mode);
 /// @param self KShellCompletion*
 /// @param mode enum KUrlCompletion__Mode
 ///
-void k_shellcompletion_qbase_set_mode(void* self, int32_t mode);
+void k_shellcompletion_super_set_mode(void* self, int32_t mode);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1119,6 +1167,10 @@ void k_shellcompletion_on_set_mode(void* self, void (*callback)(void*, int32_t))
 ///
 bool k_shellcompletion_replace_env(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_replace_env` instead
+///
+#define k_shellcompletion_qbase_replace_env k_shellcompletion_super_replace_env
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceEnv)
@@ -1127,7 +1179,7 @@ bool k_shellcompletion_replace_env(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-bool k_shellcompletion_qbase_replace_env(void* self);
+bool k_shellcompletion_super_replace_env(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1151,6 +1203,10 @@ void k_shellcompletion_on_replace_env(void* self, bool (*callback)());
 ///
 void k_shellcompletion_set_replace_env(void* self, bool replace);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_replace_env` instead
+///
+#define k_shellcompletion_qbase_set_replace_env k_shellcompletion_super_set_replace_env
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setReplaceEnv)
@@ -1160,7 +1216,7 @@ void k_shellcompletion_set_replace_env(void* self, bool replace);
 /// @param self KShellCompletion*
 /// @param replace bool
 ///
-void k_shellcompletion_qbase_set_replace_env(void* self, bool replace);
+void k_shellcompletion_super_set_replace_env(void* self, bool replace);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1183,6 +1239,10 @@ void k_shellcompletion_on_set_replace_env(void* self, void (*callback)(void*, bo
 ///
 bool k_shellcompletion_replace_home(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_replace_home` instead
+///
+#define k_shellcompletion_qbase_replace_home k_shellcompletion_super_replace_home
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceHome)
@@ -1191,7 +1251,7 @@ bool k_shellcompletion_replace_home(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-bool k_shellcompletion_qbase_replace_home(void* self);
+bool k_shellcompletion_super_replace_home(void* self);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1215,6 +1275,10 @@ void k_shellcompletion_on_replace_home(void* self, bool (*callback)());
 ///
 void k_shellcompletion_set_replace_home(void* self, bool replace);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_replace_home` instead
+///
+#define k_shellcompletion_qbase_set_replace_home k_shellcompletion_super_set_replace_home
+
 /// Inherited from KUrlCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setReplaceHome)
@@ -1224,7 +1288,7 @@ void k_shellcompletion_set_replace_home(void* self, bool replace);
 /// @param self KShellCompletion*
 /// @param replace bool
 ///
-void k_shellcompletion_qbase_set_replace_home(void* self, bool replace);
+void k_shellcompletion_super_set_replace_home(void* self, bool replace);
 
 /// Inherited from KUrlCompletion
 ///
@@ -1249,6 +1313,10 @@ void k_shellcompletion_on_set_replace_home(void* self, void (*callback)(void*, b
 ///
 const char* k_shellcompletion_last_match(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_last_match` instead
+///
+#define k_shellcompletion_qbase_last_match k_shellcompletion_super_last_match
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
@@ -1259,7 +1327,7 @@ const char* k_shellcompletion_last_match(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-const char* k_shellcompletion_qbase_last_match(void* self);
+const char* k_shellcompletion_super_last_match(void* self);
 
 /// Inherited from KCompletion
 ///
@@ -1283,6 +1351,10 @@ void k_shellcompletion_on_last_match(void* self, const char* (*callback)());
 ///
 void k_shellcompletion_set_completion_mode(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_completion_mode` instead
+///
+#define k_shellcompletion_qbase_set_completion_mode k_shellcompletion_super_set_completion_mode
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setCompletionMode)
@@ -1292,7 +1364,7 @@ void k_shellcompletion_set_completion_mode(void* self, int32_t mode);
 /// @param self KShellCompletion*
 /// @param mode enum KCompletion__CompletionMode
 ///
-void k_shellcompletion_qbase_set_completion_mode(void* self, int32_t mode);
+void k_shellcompletion_super_set_completion_mode(void* self, int32_t mode);
 
 /// Inherited from KCompletion
 ///
@@ -1316,6 +1388,10 @@ void k_shellcompletion_on_set_completion_mode(void* self, void (*callback)(void*
 ///
 void k_shellcompletion_set_order(void* self, int32_t order);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_order` instead
+///
+#define k_shellcompletion_qbase_set_order k_shellcompletion_super_set_order
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setOrder)
@@ -1325,7 +1401,7 @@ void k_shellcompletion_set_order(void* self, int32_t order);
 /// @param self KShellCompletion*
 /// @param order enum KCompletion__CompOrder
 ///
-void k_shellcompletion_qbase_set_order(void* self, int32_t order);
+void k_shellcompletion_super_set_order(void* self, int32_t order);
 
 /// Inherited from KCompletion
 ///
@@ -1349,6 +1425,10 @@ void k_shellcompletion_on_set_order(void* self, void (*callback)(void*, int32_t)
 ///
 void k_shellcompletion_set_ignore_case(void* self, bool ignoreCase);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_ignore_case` instead
+///
+#define k_shellcompletion_qbase_set_ignore_case k_shellcompletion_super_set_ignore_case
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setIgnoreCase)
@@ -1358,7 +1438,7 @@ void k_shellcompletion_set_ignore_case(void* self, bool ignoreCase);
 /// @param self KShellCompletion*
 /// @param ignoreCase bool
 ///
-void k_shellcompletion_qbase_set_ignore_case(void* self, bool ignoreCase);
+void k_shellcompletion_super_set_ignore_case(void* self, bool ignoreCase);
 
 /// Inherited from KCompletion
 ///
@@ -1382,6 +1462,10 @@ void k_shellcompletion_on_set_ignore_case(void* self, void (*callback)(void*, bo
 ///
 void k_shellcompletion_set_sounds_enabled(void* self, bool enable);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_sounds_enabled` instead
+///
+#define k_shellcompletion_qbase_set_sounds_enabled k_shellcompletion_super_set_sounds_enabled
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setSoundsEnabled)
@@ -1391,7 +1475,7 @@ void k_shellcompletion_set_sounds_enabled(void* self, bool enable);
 /// @param self KShellCompletion*
 /// @param enable bool
 ///
-void k_shellcompletion_qbase_set_sounds_enabled(void* self, bool enable);
+void k_shellcompletion_super_set_sounds_enabled(void* self, bool enable);
 
 /// Inherited from KCompletion
 ///
@@ -1415,6 +1499,10 @@ void k_shellcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*,
 ///
 void k_shellcompletion_set_items(void* self, const char* itemList[static 1]);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_items` instead
+///
+#define k_shellcompletion_qbase_set_items k_shellcompletion_super_set_items
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
@@ -1424,7 +1512,7 @@ void k_shellcompletion_set_items(void* self, const char* itemList[static 1]);
 /// @param self KShellCompletion*
 /// @param itemList const char**
 ///
-void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1]);
+void k_shellcompletion_super_set_items(void* self, const char* itemList[static 1]);
 
 /// Inherited from KCompletion
 ///
@@ -1447,6 +1535,10 @@ void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const ch
 ///
 void k_shellcompletion_clear(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_clear` instead
+///
+#define k_shellcompletion_qbase_clear k_shellcompletion_super_clear
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#clear)
@@ -1455,7 +1547,7 @@ void k_shellcompletion_clear(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-void k_shellcompletion_qbase_clear(void* self);
+void k_shellcompletion_super_clear(void* self);
 
 /// Inherited from KCompletion
 ///
@@ -1479,6 +1571,10 @@ void k_shellcompletion_on_clear(void* self, void (*callback)());
 ///
 bool k_shellcompletion_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_event` instead
+///
+#define k_shellcompletion_qbase_event k_shellcompletion_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1488,7 +1584,7 @@ bool k_shellcompletion_event(void* self, void* event);
 /// @param self KShellCompletion*
 /// @param event QEvent*
 ///
-bool k_shellcompletion_qbase_event(void* self, void* event);
+bool k_shellcompletion_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1513,6 +1609,10 @@ void k_shellcompletion_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_shellcompletion_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_event_filter` instead
+///
+#define k_shellcompletion_qbase_event_filter k_shellcompletion_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1523,7 +1623,7 @@ bool k_shellcompletion_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_shellcompletion_qbase_event_filter(void* self, void* watched, void* event);
+bool k_shellcompletion_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1547,6 +1647,10 @@ void k_shellcompletion_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void k_shellcompletion_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_timer_event` instead
+///
+#define k_shellcompletion_qbase_timer_event k_shellcompletion_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1556,7 +1660,7 @@ void k_shellcompletion_timer_event(void* self, void* event);
 /// @param self KShellCompletion*
 /// @param event QTimerEvent*
 ///
-void k_shellcompletion_qbase_timer_event(void* self, void* event);
+void k_shellcompletion_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1580,6 +1684,10 @@ void k_shellcompletion_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void k_shellcompletion_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_child_event` instead
+///
+#define k_shellcompletion_qbase_child_event k_shellcompletion_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1589,7 +1697,7 @@ void k_shellcompletion_child_event(void* self, void* event);
 /// @param self KShellCompletion*
 /// @param event QChildEvent*
 ///
-void k_shellcompletion_qbase_child_event(void* self, void* event);
+void k_shellcompletion_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1613,6 +1721,10 @@ void k_shellcompletion_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_shellcompletion_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_custom_event` instead
+///
+#define k_shellcompletion_qbase_custom_event k_shellcompletion_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1622,7 +1734,7 @@ void k_shellcompletion_custom_event(void* self, void* event);
 /// @param self KShellCompletion*
 /// @param event QEvent*
 ///
-void k_shellcompletion_qbase_custom_event(void* self, void* event);
+void k_shellcompletion_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1646,6 +1758,10 @@ void k_shellcompletion_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void k_shellcompletion_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_connect_notify` instead
+///
+#define k_shellcompletion_qbase_connect_notify k_shellcompletion_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1655,7 +1771,7 @@ void k_shellcompletion_connect_notify(void* self, void* signal);
 /// @param self KShellCompletion*
 /// @param signal QMetaMethod*
 ///
-void k_shellcompletion_qbase_connect_notify(void* self, void* signal);
+void k_shellcompletion_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1679,6 +1795,10 @@ void k_shellcompletion_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_shellcompletion_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_disconnect_notify` instead
+///
+#define k_shellcompletion_qbase_disconnect_notify k_shellcompletion_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1688,7 +1808,7 @@ void k_shellcompletion_disconnect_notify(void* self, void* signal);
 /// @param self KShellCompletion*
 /// @param signal QMetaMethod*
 ///
-void k_shellcompletion_qbase_disconnect_notify(void* self, void* signal);
+void k_shellcompletion_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1712,6 +1832,10 @@ void k_shellcompletion_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void k_shellcompletion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_set_should_auto_suggest` instead
+///
+#define k_shellcompletion_qbase_set_should_auto_suggest k_shellcompletion_super_set_should_auto_suggest
+
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
@@ -1721,7 +1845,7 @@ void k_shellcompletion_set_should_auto_suggest(void* self, bool shouldAutosugges
 /// @param self KShellCompletion*
 /// @param shouldAutosuggest bool
 ///
-void k_shellcompletion_qbase_set_should_auto_suggest(void* self, bool shouldAutosuggest);
+void k_shellcompletion_super_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
 /// Inherited from KCompletion
 ///
@@ -1744,6 +1868,10 @@ void k_shellcompletion_on_set_should_auto_suggest(void* self, void (*callback)(v
 ///
 QObject* k_shellcompletion_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_sender` instead
+///
+#define k_shellcompletion_qbase_sender k_shellcompletion_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1752,7 +1880,7 @@ QObject* k_shellcompletion_sender(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-QObject* k_shellcompletion_qbase_sender(void* self);
+QObject* k_shellcompletion_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1775,6 +1903,10 @@ void k_shellcompletion_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_shellcompletion_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_sender_signal_index` instead
+///
+#define k_shellcompletion_qbase_sender_signal_index k_shellcompletion_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1783,7 +1915,7 @@ int32_t k_shellcompletion_sender_signal_index(void* self);
 ///
 /// @param self KShellCompletion*
 ///
-int32_t k_shellcompletion_qbase_sender_signal_index(void* self);
+int32_t k_shellcompletion_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1807,6 +1939,10 @@ void k_shellcompletion_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_shellcompletion_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_receivers` instead
+///
+#define k_shellcompletion_qbase_receivers k_shellcompletion_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1816,7 +1952,7 @@ int32_t k_shellcompletion_receivers(void* self, const char* signal);
 /// @param self KShellCompletion*
 /// @param signal const char*
 ///
-int32_t k_shellcompletion_qbase_receivers(void* self, const char* signal);
+int32_t k_shellcompletion_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1840,6 +1976,10 @@ void k_shellcompletion_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool k_shellcompletion_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_shellcompletion_super_is_signal_connected` instead
+///
+#define k_shellcompletion_qbase_is_signal_connected k_shellcompletion_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1849,7 +1989,7 @@ bool k_shellcompletion_is_signal_connected(void* self, void* signal);
 /// @param self KShellCompletion*
 /// @param signal QMetaMethod*
 ///
-bool k_shellcompletion_qbase_is_signal_connected(void* self, void* signal);
+bool k_shellcompletion_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

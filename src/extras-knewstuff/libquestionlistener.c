@@ -22,8 +22,8 @@ void k_nscore__questionlistener_on_meta_object(void* self, const QMetaObject* (*
     KNSCore__QuestionListener_OnMetaObject((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__questionlistener_qbase_meta_object(void* self) {
-    return KNSCore__QuestionListener_QBaseMetaObject((KNSCore__QuestionListener*)self);
+const QMetaObject* k_nscore__questionlistener_super_meta_object(void* self) {
+    return KNSCore__QuestionListener_SuperMetaObject((KNSCore__QuestionListener*)self);
 }
 
 void* k_nscore__questionlistener_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_nscore__questionlistener_on_metacast(void* self, void* (*callback)(void*,
     KNSCore__QuestionListener_OnMetacast((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-void* k_nscore__questionlistener_qbase_metacast(void* self, const char* param1) {
-    return KNSCore__QuestionListener_QBaseMetacast((KNSCore__QuestionListener*)self, param1);
+void* k_nscore__questionlistener_super_metacast(void* self, const char* param1) {
+    return KNSCore__QuestionListener_SuperMetacast((KNSCore__QuestionListener*)self, param1);
 }
 
 int32_t k_nscore__questionlistener_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_nscore__questionlistener_on_metacall(void* self, int32_t (*callback)(void
     KNSCore__QuestionListener_OnMetacall((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-int32_t k_nscore__questionlistener_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSCore__QuestionListener_QBaseMetacall((KNSCore__QuestionListener*)self, param1, param2, param3);
+int32_t k_nscore__questionlistener_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSCore__QuestionListener_SuperMetacall((KNSCore__QuestionListener*)self, param1, param2, param3);
 }
 
 const char* k_nscore__questionlistener_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_nscore__questionlistener_on_ask_question(void* self, void (*callback)(voi
     KNSCore__QuestionListener_OnAskQuestion((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-void k_nscore__questionlistener_qbase_ask_question(void* self, void* question) {
-    KNSCore__QuestionListener_QBaseAskQuestion((KNSCore__QuestionListener*)self, (KNSCore__Question*)question);
+void k_nscore__questionlistener_super_ask_question(void* self, void* question) {
+    KNSCore__QuestionListener_SuperAskQuestion((KNSCore__QuestionListener*)self, (KNSCore__Question*)question);
 }
 
 const char* k_nscore__questionlistener_tr2(const char* s, const char* c) {
@@ -298,8 +298,8 @@ bool k_nscore__questionlistener_event(void* self, void* event) {
     return KNSCore__QuestionListener_Event((KNSCore__QuestionListener*)self, (QEvent*)event);
 }
 
-bool k_nscore__questionlistener_qbase_event(void* self, void* event) {
-    return KNSCore__QuestionListener_QBaseEvent((KNSCore__QuestionListener*)self, (QEvent*)event);
+bool k_nscore__questionlistener_super_event(void* self, void* event) {
+    return KNSCore__QuestionListener_SuperEvent((KNSCore__QuestionListener*)self, (QEvent*)event);
 }
 
 void k_nscore__questionlistener_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -310,8 +310,8 @@ bool k_nscore__questionlistener_event_filter(void* self, void* watched, void* ev
     return KNSCore__QuestionListener_EventFilter((KNSCore__QuestionListener*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nscore__questionlistener_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSCore__QuestionListener_QBaseEventFilter((KNSCore__QuestionListener*)self, (QObject*)watched, (QEvent*)event);
+bool k_nscore__questionlistener_super_event_filter(void* self, void* watched, void* event) {
+    return KNSCore__QuestionListener_SuperEventFilter((KNSCore__QuestionListener*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nscore__questionlistener_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -322,8 +322,8 @@ void k_nscore__questionlistener_timer_event(void* self, void* event) {
     KNSCore__QuestionListener_TimerEvent((KNSCore__QuestionListener*)self, (QTimerEvent*)event);
 }
 
-void k_nscore__questionlistener_qbase_timer_event(void* self, void* event) {
-    KNSCore__QuestionListener_QBaseTimerEvent((KNSCore__QuestionListener*)self, (QTimerEvent*)event);
+void k_nscore__questionlistener_super_timer_event(void* self, void* event) {
+    KNSCore__QuestionListener_SuperTimerEvent((KNSCore__QuestionListener*)self, (QTimerEvent*)event);
 }
 
 void k_nscore__questionlistener_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ void k_nscore__questionlistener_child_event(void* self, void* event) {
     KNSCore__QuestionListener_ChildEvent((KNSCore__QuestionListener*)self, (QChildEvent*)event);
 }
 
-void k_nscore__questionlistener_qbase_child_event(void* self, void* event) {
-    KNSCore__QuestionListener_QBaseChildEvent((KNSCore__QuestionListener*)self, (QChildEvent*)event);
+void k_nscore__questionlistener_super_child_event(void* self, void* event) {
+    KNSCore__QuestionListener_SuperChildEvent((KNSCore__QuestionListener*)self, (QChildEvent*)event);
 }
 
 void k_nscore__questionlistener_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ void k_nscore__questionlistener_custom_event(void* self, void* event) {
     KNSCore__QuestionListener_CustomEvent((KNSCore__QuestionListener*)self, (QEvent*)event);
 }
 
-void k_nscore__questionlistener_qbase_custom_event(void* self, void* event) {
-    KNSCore__QuestionListener_QBaseCustomEvent((KNSCore__QuestionListener*)self, (QEvent*)event);
+void k_nscore__questionlistener_super_custom_event(void* self, void* event) {
+    KNSCore__QuestionListener_SuperCustomEvent((KNSCore__QuestionListener*)self, (QEvent*)event);
 }
 
 void k_nscore__questionlistener_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void k_nscore__questionlistener_connect_notify(void* self, void* signal) {
     KNSCore__QuestionListener_ConnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_qbase_connect_notify(void* self, void* signal) {
-    KNSCore__QuestionListener_QBaseConnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
+void k_nscore__questionlistener_super_connect_notify(void* self, void* signal) {
+    KNSCore__QuestionListener_SuperConnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void k_nscore__questionlistener_disconnect_notify(void* self, void* signal) {
     KNSCore__QuestionListener_DisconnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_qbase_disconnect_notify(void* self, void* signal) {
-    KNSCore__QuestionListener_QBaseDisconnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
+void k_nscore__questionlistener_super_disconnect_notify(void* self, void* signal) {
+    KNSCore__QuestionListener_SuperDisconnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ QObject* k_nscore__questionlistener_sender(void* self) {
     return KNSCore__QuestionListener_Sender((KNSCore__QuestionListener*)self);
 }
 
-QObject* k_nscore__questionlistener_qbase_sender(void* self) {
-    return KNSCore__QuestionListener_QBaseSender((KNSCore__QuestionListener*)self);
+QObject* k_nscore__questionlistener_super_sender(void* self) {
+    return KNSCore__QuestionListener_SuperSender((KNSCore__QuestionListener*)self);
 }
 
 void k_nscore__questionlistener_on_sender(void* self, QObject* (*callback)()) {
@@ -394,8 +394,8 @@ int32_t k_nscore__questionlistener_sender_signal_index(void* self) {
     return KNSCore__QuestionListener_SenderSignalIndex((KNSCore__QuestionListener*)self);
 }
 
-int32_t k_nscore__questionlistener_qbase_sender_signal_index(void* self) {
-    return KNSCore__QuestionListener_QBaseSenderSignalIndex((KNSCore__QuestionListener*)self);
+int32_t k_nscore__questionlistener_super_sender_signal_index(void* self) {
+    return KNSCore__QuestionListener_SuperSenderSignalIndex((KNSCore__QuestionListener*)self);
 }
 
 void k_nscore__questionlistener_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -406,8 +406,8 @@ int32_t k_nscore__questionlistener_receivers(void* self, const char* signal) {
     return KNSCore__QuestionListener_Receivers((KNSCore__QuestionListener*)self, signal);
 }
 
-int32_t k_nscore__questionlistener_qbase_receivers(void* self, const char* signal) {
-    return KNSCore__QuestionListener_QBaseReceivers((KNSCore__QuestionListener*)self, signal);
+int32_t k_nscore__questionlistener_super_receivers(void* self, const char* signal) {
+    return KNSCore__QuestionListener_SuperReceivers((KNSCore__QuestionListener*)self, signal);
 }
 
 void k_nscore__questionlistener_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -418,8 +418,8 @@ bool k_nscore__questionlistener_is_signal_connected(void* self, void* signal) {
     return KNSCore__QuestionListener_IsSignalConnected((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-bool k_nscore__questionlistener_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSCore__QuestionListener_QBaseIsSignalConnected((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
+bool k_nscore__questionlistener_super_is_signal_connected(void* self, void* signal) {
+    return KNSCore__QuestionListener_SuperIsSignalConnected((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
 void k_nscore__questionlistener_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -40,13 +40,17 @@ const QMetaObject* q_validator_meta_object(void* self);
 ///
 void q_validator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_validator_super_meta_object` instead
+///
+#define q_validator_qbase_meta_object q_validator_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QValidator*
 ///
-const QMetaObject* q_validator_qbase_meta_object(void* self);
+const QMetaObject* q_validator_super_meta_object(void* self);
 
 /// @param self QValidator*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_validator_metacast(void* self, const char* param1);
 ///
 void q_validator_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_validator_super_metacast` instead
+///
+#define q_validator_qbase_metacast q_validator_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QValidator*
 /// @param param1 const char*
 ///
-void* q_validator_qbase_metacast(void* self, const char* param1);
+void* q_validator_super_metacast(void* self, const char* param1);
 
 /// @param self QValidator*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_validator_metacall(void* self, int32_t param1, int param2, void* param
 ///
 void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_validator_super_metacall` instead
+///
+#define q_validator_qbase_metacall q_validator_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QValidator*
@@ -88,7 +100,7 @@ void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_validator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_validator_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -130,6 +142,10 @@ int32_t q_validator_validate(void* self, const char* param1, int* param2);
 ///
 void q_validator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_validator_super_validate` instead
+///
+#define q_validator_qbase_validate q_validator_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
 /// Base class method implementation
@@ -140,7 +156,7 @@ void q_validator_on_validate(void* self, int32_t (*callback)(void*, const char*,
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_validator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_validator_super_validate(void* self, const char* param1, int* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
@@ -158,6 +174,10 @@ void q_validator_fixup(void* self, const char* param1);
 ///
 void q_validator_on_fixup(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_validator_super_fixup` instead
+///
+#define q_validator_qbase_fixup q_validator_super_fixup
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
 /// Base class method implementation
@@ -165,7 +185,7 @@ void q_validator_on_fixup(void* self, void (*callback)(void*, const char*));
 /// @param self QValidator*
 /// @param param1 const char*
 ///
-void q_validator_qbase_fixup(void* self, const char* param1);
+void q_validator_super_fixup(void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
@@ -657,6 +677,10 @@ void q_validator_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_validator_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_validator_super_event` instead
+///
+#define q_validator_qbase_event q_validator_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -666,7 +690,7 @@ bool q_validator_event(void* self, void* event);
 /// @param self QValidator*
 /// @param event QEvent*
 ///
-bool q_validator_qbase_event(void* self, void* event);
+bool q_validator_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -691,6 +715,10 @@ void q_validator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_validator_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_validator_super_event_filter` instead
+///
+#define q_validator_qbase_event_filter q_validator_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -701,7 +729,7 @@ bool q_validator_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_validator_qbase_event_filter(void* self, void* watched, void* event);
+bool q_validator_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -725,6 +753,10 @@ void q_validator_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_validator_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_validator_super_timer_event` instead
+///
+#define q_validator_qbase_timer_event q_validator_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -734,7 +766,7 @@ void q_validator_timer_event(void* self, void* event);
 /// @param self QValidator*
 /// @param event QTimerEvent*
 ///
-void q_validator_qbase_timer_event(void* self, void* event);
+void q_validator_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -758,6 +790,10 @@ void q_validator_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_validator_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_validator_super_child_event` instead
+///
+#define q_validator_qbase_child_event q_validator_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -767,7 +803,7 @@ void q_validator_child_event(void* self, void* event);
 /// @param self QValidator*
 /// @param event QChildEvent*
 ///
-void q_validator_qbase_child_event(void* self, void* event);
+void q_validator_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -791,6 +827,10 @@ void q_validator_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_validator_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_validator_super_custom_event` instead
+///
+#define q_validator_qbase_custom_event q_validator_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -800,7 +840,7 @@ void q_validator_custom_event(void* self, void* event);
 /// @param self QValidator*
 /// @param event QEvent*
 ///
-void q_validator_qbase_custom_event(void* self, void* event);
+void q_validator_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -824,6 +864,10 @@ void q_validator_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_validator_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_validator_super_connect_notify` instead
+///
+#define q_validator_qbase_connect_notify q_validator_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -833,7 +877,7 @@ void q_validator_connect_notify(void* self, void* signal);
 /// @param self QValidator*
 /// @param signal QMetaMethod*
 ///
-void q_validator_qbase_connect_notify(void* self, void* signal);
+void q_validator_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -857,6 +901,10 @@ void q_validator_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_validator_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_validator_super_disconnect_notify` instead
+///
+#define q_validator_qbase_disconnect_notify q_validator_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -866,7 +914,7 @@ void q_validator_disconnect_notify(void* self, void* signal);
 /// @param self QValidator*
 /// @param signal QMetaMethod*
 ///
-void q_validator_qbase_disconnect_notify(void* self, void* signal);
+void q_validator_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -889,6 +937,10 @@ void q_validator_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 QObject* q_validator_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_validator_super_sender` instead
+///
+#define q_validator_qbase_sender q_validator_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -897,7 +949,7 @@ QObject* q_validator_sender(void* self);
 ///
 /// @param self QValidator*
 ///
-QObject* q_validator_qbase_sender(void* self);
+QObject* q_validator_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -920,6 +972,10 @@ void q_validator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_validator_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_validator_super_sender_signal_index` instead
+///
+#define q_validator_qbase_sender_signal_index q_validator_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -928,7 +984,7 @@ int32_t q_validator_sender_signal_index(void* self);
 ///
 /// @param self QValidator*
 ///
-int32_t q_validator_qbase_sender_signal_index(void* self);
+int32_t q_validator_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -952,6 +1008,10 @@ void q_validator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_validator_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_validator_super_receivers` instead
+///
+#define q_validator_qbase_receivers q_validator_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -961,7 +1021,7 @@ int32_t q_validator_receivers(void* self, const char* signal);
 /// @param self QValidator*
 /// @param signal const char*
 ///
-int32_t q_validator_qbase_receivers(void* self, const char* signal);
+int32_t q_validator_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -985,6 +1045,10 @@ void q_validator_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_validator_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_validator_super_is_signal_connected` instead
+///
+#define q_validator_qbase_is_signal_connected q_validator_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -994,7 +1058,7 @@ bool q_validator_is_signal_connected(void* self, void* signal);
 /// @param self QValidator*
 /// @param signal QMetaMethod*
 ///
-bool q_validator_qbase_is_signal_connected(void* self, void* signal);
+bool q_validator_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1074,13 +1138,17 @@ const QMetaObject* q_intvalidator_meta_object(void* self);
 ///
 void q_intvalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_meta_object` instead
+///
+#define q_intvalidator_qbase_meta_object q_intvalidator_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QIntValidator*
 ///
-const QMetaObject* q_intvalidator_qbase_meta_object(void* self);
+const QMetaObject* q_intvalidator_super_meta_object(void* self);
 
 /// @param self QIntValidator*
 /// @param param1 const char*
@@ -1094,12 +1162,16 @@ void* q_intvalidator_metacast(void* self, const char* param1);
 ///
 void q_intvalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_metacast` instead
+///
+#define q_intvalidator_qbase_metacast q_intvalidator_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QIntValidator*
 /// @param param1 const char*
 ///
-void* q_intvalidator_qbase_metacast(void* self, const char* param1);
+void* q_intvalidator_super_metacast(void* self, const char* param1);
 
 /// @param self QIntValidator*
 /// @param param1 enum QMetaObject__Call
@@ -1115,6 +1187,10 @@ int32_t q_intvalidator_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_metacall` instead
+///
+#define q_intvalidator_qbase_metacall q_intvalidator_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QIntValidator*
@@ -1122,7 +1198,7 @@ void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_intvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_intvalidator_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1151,6 +1227,10 @@ int32_t q_intvalidator_validate(void* self, const char* param1, int* param2);
 ///
 void q_intvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_validate` instead
+///
+#define q_intvalidator_qbase_validate q_intvalidator_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
 /// Base class method implementation
@@ -1161,7 +1241,7 @@ void q_intvalidator_on_validate(void* self, int32_t (*callback)(void*, const cha
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_intvalidator_super_validate(void* self, const char* param1, int* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
@@ -1179,6 +1259,10 @@ void q_intvalidator_fixup(void* self, const char* input);
 ///
 void q_intvalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_fixup` instead
+///
+#define q_intvalidator_qbase_fixup q_intvalidator_super_fixup
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
 /// Base class method implementation
@@ -1186,7 +1270,7 @@ void q_intvalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 /// @param self QIntValidator*
 /// @param input const char*
 ///
-void q_intvalidator_qbase_fixup(void* self, const char* input);
+void q_intvalidator_super_fixup(void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qintvalidator.html#setBottom)
 ///
@@ -1761,6 +1845,10 @@ void q_intvalidator_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_intvalidator_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_event` instead
+///
+#define q_intvalidator_qbase_event q_intvalidator_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1770,7 +1858,7 @@ bool q_intvalidator_event(void* self, void* event);
 /// @param self QIntValidator*
 /// @param event QEvent*
 ///
-bool q_intvalidator_qbase_event(void* self, void* event);
+bool q_intvalidator_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1795,6 +1883,10 @@ void q_intvalidator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_intvalidator_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_event_filter` instead
+///
+#define q_intvalidator_qbase_event_filter q_intvalidator_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1805,7 +1897,7 @@ bool q_intvalidator_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_intvalidator_qbase_event_filter(void* self, void* watched, void* event);
+bool q_intvalidator_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1829,6 +1921,10 @@ void q_intvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_intvalidator_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_timer_event` instead
+///
+#define q_intvalidator_qbase_timer_event q_intvalidator_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1838,7 +1934,7 @@ void q_intvalidator_timer_event(void* self, void* event);
 /// @param self QIntValidator*
 /// @param event QTimerEvent*
 ///
-void q_intvalidator_qbase_timer_event(void* self, void* event);
+void q_intvalidator_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1862,6 +1958,10 @@ void q_intvalidator_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_intvalidator_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_child_event` instead
+///
+#define q_intvalidator_qbase_child_event q_intvalidator_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1871,7 +1971,7 @@ void q_intvalidator_child_event(void* self, void* event);
 /// @param self QIntValidator*
 /// @param event QChildEvent*
 ///
-void q_intvalidator_qbase_child_event(void* self, void* event);
+void q_intvalidator_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1895,6 +1995,10 @@ void q_intvalidator_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_intvalidator_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_custom_event` instead
+///
+#define q_intvalidator_qbase_custom_event q_intvalidator_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1904,7 +2008,7 @@ void q_intvalidator_custom_event(void* self, void* event);
 /// @param self QIntValidator*
 /// @param event QEvent*
 ///
-void q_intvalidator_qbase_custom_event(void* self, void* event);
+void q_intvalidator_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1928,6 +2032,10 @@ void q_intvalidator_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_intvalidator_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_connect_notify` instead
+///
+#define q_intvalidator_qbase_connect_notify q_intvalidator_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1937,7 +2045,7 @@ void q_intvalidator_connect_notify(void* self, void* signal);
 /// @param self QIntValidator*
 /// @param signal QMetaMethod*
 ///
-void q_intvalidator_qbase_connect_notify(void* self, void* signal);
+void q_intvalidator_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1961,6 +2069,10 @@ void q_intvalidator_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_intvalidator_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_disconnect_notify` instead
+///
+#define q_intvalidator_qbase_disconnect_notify q_intvalidator_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1970,7 +2082,7 @@ void q_intvalidator_disconnect_notify(void* self, void* signal);
 /// @param self QIntValidator*
 /// @param signal QMetaMethod*
 ///
-void q_intvalidator_qbase_disconnect_notify(void* self, void* signal);
+void q_intvalidator_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1993,6 +2105,10 @@ void q_intvalidator_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_intvalidator_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_sender` instead
+///
+#define q_intvalidator_qbase_sender q_intvalidator_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2001,7 +2117,7 @@ QObject* q_intvalidator_sender(void* self);
 ///
 /// @param self QIntValidator*
 ///
-QObject* q_intvalidator_qbase_sender(void* self);
+QObject* q_intvalidator_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2024,6 +2140,10 @@ void q_intvalidator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_intvalidator_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_sender_signal_index` instead
+///
+#define q_intvalidator_qbase_sender_signal_index q_intvalidator_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2032,7 +2152,7 @@ int32_t q_intvalidator_sender_signal_index(void* self);
 ///
 /// @param self QIntValidator*
 ///
-int32_t q_intvalidator_qbase_sender_signal_index(void* self);
+int32_t q_intvalidator_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2056,6 +2176,10 @@ void q_intvalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_intvalidator_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_receivers` instead
+///
+#define q_intvalidator_qbase_receivers q_intvalidator_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2065,7 +2189,7 @@ int32_t q_intvalidator_receivers(void* self, const char* signal);
 /// @param self QIntValidator*
 /// @param signal const char*
 ///
-int32_t q_intvalidator_qbase_receivers(void* self, const char* signal);
+int32_t q_intvalidator_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2089,6 +2213,10 @@ void q_intvalidator_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_intvalidator_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_intvalidator_super_is_signal_connected` instead
+///
+#define q_intvalidator_qbase_is_signal_connected q_intvalidator_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2098,7 +2226,7 @@ bool q_intvalidator_is_signal_connected(void* self, void* signal);
 /// @param self QIntValidator*
 /// @param signal QMetaMethod*
 ///
-bool q_intvalidator_qbase_is_signal_connected(void* self, void* signal);
+bool q_intvalidator_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2180,13 +2308,17 @@ const QMetaObject* q_doublevalidator_meta_object(void* self);
 ///
 void q_doublevalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_meta_object` instead
+///
+#define q_doublevalidator_qbase_meta_object q_doublevalidator_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QDoubleValidator*
 ///
-const QMetaObject* q_doublevalidator_qbase_meta_object(void* self);
+const QMetaObject* q_doublevalidator_super_meta_object(void* self);
 
 /// @param self QDoubleValidator*
 /// @param param1 const char*
@@ -2200,12 +2332,16 @@ void* q_doublevalidator_metacast(void* self, const char* param1);
 ///
 void q_doublevalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_metacast` instead
+///
+#define q_doublevalidator_qbase_metacast q_doublevalidator_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QDoubleValidator*
 /// @param param1 const char*
 ///
-void* q_doublevalidator_qbase_metacast(void* self, const char* param1);
+void* q_doublevalidator_super_metacast(void* self, const char* param1);
 
 /// @param self QDoubleValidator*
 /// @param param1 enum QMetaObject__Call
@@ -2221,6 +2357,10 @@ int32_t q_doublevalidator_metacall(void* self, int32_t param1, int param2, void*
 ///
 void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_metacall` instead
+///
+#define q_doublevalidator_qbase_metacall q_doublevalidator_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QDoubleValidator*
@@ -2228,7 +2368,7 @@ void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_doublevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_doublevalidator_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2257,6 +2397,10 @@ int32_t q_doublevalidator_validate(void* self, const char* param1, int* param2);
 ///
 void q_doublevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_validate` instead
+///
+#define q_doublevalidator_qbase_validate q_doublevalidator_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
 /// Base class method implementation
@@ -2267,7 +2411,7 @@ void q_doublevalidator_on_validate(void* self, int32_t (*callback)(void*, const 
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_doublevalidator_super_validate(void* self, const char* param1, int* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
@@ -2285,6 +2429,10 @@ void q_doublevalidator_fixup(void* self, const char* input);
 ///
 void q_doublevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_fixup` instead
+///
+#define q_doublevalidator_qbase_fixup q_doublevalidator_super_fixup
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
 /// Base class method implementation
@@ -2292,7 +2440,7 @@ void q_doublevalidator_on_fixup(void* self, void (*callback)(void*, const char*)
 /// @param self QDoubleValidator*
 /// @param input const char*
 ///
-void q_doublevalidator_qbase_fixup(void* self, const char* input);
+void q_doublevalidator_super_fixup(void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublevalidator.html#setRange)
 ///
@@ -2932,6 +3080,10 @@ void q_doublevalidator_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_doublevalidator_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_event` instead
+///
+#define q_doublevalidator_qbase_event q_doublevalidator_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2941,7 +3093,7 @@ bool q_doublevalidator_event(void* self, void* event);
 /// @param self QDoubleValidator*
 /// @param event QEvent*
 ///
-bool q_doublevalidator_qbase_event(void* self, void* event);
+bool q_doublevalidator_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2966,6 +3118,10 @@ void q_doublevalidator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_doublevalidator_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_event_filter` instead
+///
+#define q_doublevalidator_qbase_event_filter q_doublevalidator_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2976,7 +3132,7 @@ bool q_doublevalidator_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_doublevalidator_qbase_event_filter(void* self, void* watched, void* event);
+bool q_doublevalidator_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -3000,6 +3156,10 @@ void q_doublevalidator_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_doublevalidator_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_timer_event` instead
+///
+#define q_doublevalidator_qbase_timer_event q_doublevalidator_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3009,7 +3169,7 @@ void q_doublevalidator_timer_event(void* self, void* event);
 /// @param self QDoubleValidator*
 /// @param event QTimerEvent*
 ///
-void q_doublevalidator_qbase_timer_event(void* self, void* event);
+void q_doublevalidator_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3033,6 +3193,10 @@ void q_doublevalidator_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void q_doublevalidator_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_child_event` instead
+///
+#define q_doublevalidator_qbase_child_event q_doublevalidator_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -3042,7 +3206,7 @@ void q_doublevalidator_child_event(void* self, void* event);
 /// @param self QDoubleValidator*
 /// @param event QChildEvent*
 ///
-void q_doublevalidator_qbase_child_event(void* self, void* event);
+void q_doublevalidator_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3066,6 +3230,10 @@ void q_doublevalidator_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_doublevalidator_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_custom_event` instead
+///
+#define q_doublevalidator_qbase_custom_event q_doublevalidator_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3075,7 +3243,7 @@ void q_doublevalidator_custom_event(void* self, void* event);
 /// @param self QDoubleValidator*
 /// @param event QEvent*
 ///
-void q_doublevalidator_qbase_custom_event(void* self, void* event);
+void q_doublevalidator_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -3099,6 +3267,10 @@ void q_doublevalidator_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void q_doublevalidator_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_connect_notify` instead
+///
+#define q_doublevalidator_qbase_connect_notify q_doublevalidator_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -3108,7 +3280,7 @@ void q_doublevalidator_connect_notify(void* self, void* signal);
 /// @param self QDoubleValidator*
 /// @param signal QMetaMethod*
 ///
-void q_doublevalidator_qbase_connect_notify(void* self, void* signal);
+void q_doublevalidator_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3132,6 +3304,10 @@ void q_doublevalidator_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_doublevalidator_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_disconnect_notify` instead
+///
+#define q_doublevalidator_qbase_disconnect_notify q_doublevalidator_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3141,7 +3317,7 @@ void q_doublevalidator_disconnect_notify(void* self, void* signal);
 /// @param self QDoubleValidator*
 /// @param signal QMetaMethod*
 ///
-void q_doublevalidator_qbase_disconnect_notify(void* self, void* signal);
+void q_doublevalidator_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3164,6 +3340,10 @@ void q_doublevalidator_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 QObject* q_doublevalidator_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_sender` instead
+///
+#define q_doublevalidator_qbase_sender q_doublevalidator_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3172,7 +3352,7 @@ QObject* q_doublevalidator_sender(void* self);
 ///
 /// @param self QDoubleValidator*
 ///
-QObject* q_doublevalidator_qbase_sender(void* self);
+QObject* q_doublevalidator_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3195,6 +3375,10 @@ void q_doublevalidator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_doublevalidator_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_sender_signal_index` instead
+///
+#define q_doublevalidator_qbase_sender_signal_index q_doublevalidator_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3203,7 +3387,7 @@ int32_t q_doublevalidator_sender_signal_index(void* self);
 ///
 /// @param self QDoubleValidator*
 ///
-int32_t q_doublevalidator_qbase_sender_signal_index(void* self);
+int32_t q_doublevalidator_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3227,6 +3411,10 @@ void q_doublevalidator_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_doublevalidator_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_receivers` instead
+///
+#define q_doublevalidator_qbase_receivers q_doublevalidator_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3236,7 +3424,7 @@ int32_t q_doublevalidator_receivers(void* self, const char* signal);
 /// @param self QDoubleValidator*
 /// @param signal const char*
 ///
-int32_t q_doublevalidator_qbase_receivers(void* self, const char* signal);
+int32_t q_doublevalidator_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3260,6 +3448,10 @@ void q_doublevalidator_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool q_doublevalidator_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_doublevalidator_super_is_signal_connected` instead
+///
+#define q_doublevalidator_qbase_is_signal_connected q_doublevalidator_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3269,7 +3461,7 @@ bool q_doublevalidator_is_signal_connected(void* self, void* signal);
 /// @param self QDoubleValidator*
 /// @param signal QMetaMethod*
 ///
-bool q_doublevalidator_qbase_is_signal_connected(void* self, void* signal);
+bool q_doublevalidator_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3347,13 +3539,17 @@ const QMetaObject* q_regularexpressionvalidator_meta_object(void* self);
 ///
 void q_regularexpressionvalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_meta_object` instead
+///
+#define q_regularexpressionvalidator_qbase_meta_object q_regularexpressionvalidator_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QRegularExpressionValidator*
 ///
-const QMetaObject* q_regularexpressionvalidator_qbase_meta_object(void* self);
+const QMetaObject* q_regularexpressionvalidator_super_meta_object(void* self);
 
 /// @param self QRegularExpressionValidator*
 /// @param param1 const char*
@@ -3367,12 +3563,16 @@ void* q_regularexpressionvalidator_metacast(void* self, const char* param1);
 ///
 void q_regularexpressionvalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_metacast` instead
+///
+#define q_regularexpressionvalidator_qbase_metacast q_regularexpressionvalidator_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QRegularExpressionValidator*
 /// @param param1 const char*
 ///
-void* q_regularexpressionvalidator_qbase_metacast(void* self, const char* param1);
+void* q_regularexpressionvalidator_super_metacast(void* self, const char* param1);
 
 /// @param self QRegularExpressionValidator*
 /// @param param1 enum QMetaObject__Call
@@ -3388,6 +3588,10 @@ int32_t q_regularexpressionvalidator_metacall(void* self, int32_t param1, int pa
 ///
 void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_metacall` instead
+///
+#define q_regularexpressionvalidator_qbase_metacall q_regularexpressionvalidator_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QRegularExpressionValidator*
@@ -3395,7 +3599,7 @@ void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_regularexpressionvalidator_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3424,6 +3628,10 @@ int32_t q_regularexpressionvalidator_validate(void* self, const char* input, int
 ///
 void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_validate` instead
+///
+#define q_regularexpressionvalidator_qbase_validate q_regularexpressionvalidator_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
 /// Base class method implementation
@@ -3434,7 +3642,7 @@ void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(vo
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_regularexpressionvalidator_super_validate(void* self, const char* input, int* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#regularExpression)
 ///
@@ -3974,6 +4182,10 @@ void q_regularexpressionvalidator_on_destroyed1(void* self, void (*callback)(voi
 ///
 void q_regularexpressionvalidator_fixup(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_fixup` instead
+///
+#define q_regularexpressionvalidator_qbase_fixup q_regularexpressionvalidator_super_fixup
+
 /// Inherited from QValidator
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalidator.html#fixup)
@@ -3983,7 +4195,7 @@ void q_regularexpressionvalidator_fixup(void* self, const char* param1);
 /// @param self QRegularExpressionValidator*
 /// @param param1 const char*
 ///
-void q_regularexpressionvalidator_qbase_fixup(void* self, const char* param1);
+void q_regularexpressionvalidator_super_fixup(void* self, const char* param1);
 
 /// Inherited from QValidator
 ///
@@ -4007,6 +4219,10 @@ void q_regularexpressionvalidator_on_fixup(void* self, void (*callback)(void*, c
 ///
 bool q_regularexpressionvalidator_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_event` instead
+///
+#define q_regularexpressionvalidator_qbase_event q_regularexpressionvalidator_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -4016,7 +4232,7 @@ bool q_regularexpressionvalidator_event(void* self, void* event);
 /// @param self QRegularExpressionValidator*
 /// @param event QEvent*
 ///
-bool q_regularexpressionvalidator_qbase_event(void* self, void* event);
+bool q_regularexpressionvalidator_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4041,6 +4257,10 @@ void q_regularexpressionvalidator_on_event(void* self, bool (*callback)(void*, v
 ///
 bool q_regularexpressionvalidator_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_event_filter` instead
+///
+#define q_regularexpressionvalidator_qbase_event_filter q_regularexpressionvalidator_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4051,7 +4271,7 @@ bool q_regularexpressionvalidator_event_filter(void* self, void* watched, void* 
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_regularexpressionvalidator_qbase_event_filter(void* self, void* watched, void* event);
+bool q_regularexpressionvalidator_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -4075,6 +4295,10 @@ void q_regularexpressionvalidator_on_event_filter(void* self, bool (*callback)(v
 ///
 void q_regularexpressionvalidator_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_timer_event` instead
+///
+#define q_regularexpressionvalidator_qbase_timer_event q_regularexpressionvalidator_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4084,7 +4308,7 @@ void q_regularexpressionvalidator_timer_event(void* self, void* event);
 /// @param self QRegularExpressionValidator*
 /// @param event QTimerEvent*
 ///
-void q_regularexpressionvalidator_qbase_timer_event(void* self, void* event);
+void q_regularexpressionvalidator_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4108,6 +4332,10 @@ void q_regularexpressionvalidator_on_timer_event(void* self, void (*callback)(vo
 ///
 void q_regularexpressionvalidator_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_child_event` instead
+///
+#define q_regularexpressionvalidator_qbase_child_event q_regularexpressionvalidator_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4117,7 +4345,7 @@ void q_regularexpressionvalidator_child_event(void* self, void* event);
 /// @param self QRegularExpressionValidator*
 /// @param event QChildEvent*
 ///
-void q_regularexpressionvalidator_qbase_child_event(void* self, void* event);
+void q_regularexpressionvalidator_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4141,6 +4369,10 @@ void q_regularexpressionvalidator_on_child_event(void* self, void (*callback)(vo
 ///
 void q_regularexpressionvalidator_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_custom_event` instead
+///
+#define q_regularexpressionvalidator_qbase_custom_event q_regularexpressionvalidator_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4150,7 +4382,7 @@ void q_regularexpressionvalidator_custom_event(void* self, void* event);
 /// @param self QRegularExpressionValidator*
 /// @param event QEvent*
 ///
-void q_regularexpressionvalidator_qbase_custom_event(void* self, void* event);
+void q_regularexpressionvalidator_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4174,6 +4406,10 @@ void q_regularexpressionvalidator_on_custom_event(void* self, void (*callback)(v
 ///
 void q_regularexpressionvalidator_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_connect_notify` instead
+///
+#define q_regularexpressionvalidator_qbase_connect_notify q_regularexpressionvalidator_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4183,7 +4419,7 @@ void q_regularexpressionvalidator_connect_notify(void* self, void* signal);
 /// @param self QRegularExpressionValidator*
 /// @param signal QMetaMethod*
 ///
-void q_regularexpressionvalidator_qbase_connect_notify(void* self, void* signal);
+void q_regularexpressionvalidator_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4207,6 +4443,10 @@ void q_regularexpressionvalidator_on_connect_notify(void* self, void (*callback)
 ///
 void q_regularexpressionvalidator_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_disconnect_notify` instead
+///
+#define q_regularexpressionvalidator_qbase_disconnect_notify q_regularexpressionvalidator_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4216,7 +4456,7 @@ void q_regularexpressionvalidator_disconnect_notify(void* self, void* signal);
 /// @param self QRegularExpressionValidator*
 /// @param signal QMetaMethod*
 ///
-void q_regularexpressionvalidator_qbase_disconnect_notify(void* self, void* signal);
+void q_regularexpressionvalidator_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4239,6 +4479,10 @@ void q_regularexpressionvalidator_on_disconnect_notify(void* self, void (*callba
 ///
 QObject* q_regularexpressionvalidator_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_sender` instead
+///
+#define q_regularexpressionvalidator_qbase_sender q_regularexpressionvalidator_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4247,7 +4491,7 @@ QObject* q_regularexpressionvalidator_sender(void* self);
 ///
 /// @param self QRegularExpressionValidator*
 ///
-QObject* q_regularexpressionvalidator_qbase_sender(void* self);
+QObject* q_regularexpressionvalidator_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -4270,6 +4514,10 @@ void q_regularexpressionvalidator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_regularexpressionvalidator_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_sender_signal_index` instead
+///
+#define q_regularexpressionvalidator_qbase_sender_signal_index q_regularexpressionvalidator_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -4278,7 +4526,7 @@ int32_t q_regularexpressionvalidator_sender_signal_index(void* self);
 ///
 /// @param self QRegularExpressionValidator*
 ///
-int32_t q_regularexpressionvalidator_qbase_sender_signal_index(void* self);
+int32_t q_regularexpressionvalidator_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -4302,6 +4550,10 @@ void q_regularexpressionvalidator_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t q_regularexpressionvalidator_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_receivers` instead
+///
+#define q_regularexpressionvalidator_qbase_receivers q_regularexpressionvalidator_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4311,7 +4563,7 @@ int32_t q_regularexpressionvalidator_receivers(void* self, const char* signal);
 /// @param self QRegularExpressionValidator*
 /// @param signal const char*
 ///
-int32_t q_regularexpressionvalidator_qbase_receivers(void* self, const char* signal);
+int32_t q_regularexpressionvalidator_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4335,6 +4587,10 @@ void q_regularexpressionvalidator_on_receivers(void* self, int32_t (*callback)(v
 ///
 bool q_regularexpressionvalidator_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_regularexpressionvalidator_super_is_signal_connected` instead
+///
+#define q_regularexpressionvalidator_qbase_is_signal_connected q_regularexpressionvalidator_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -4344,7 +4600,7 @@ bool q_regularexpressionvalidator_is_signal_connected(void* self, void* signal);
 /// @param self QRegularExpressionValidator*
 /// @param signal QMetaMethod*
 ///
-bool q_regularexpressionvalidator_qbase_is_signal_connected(void* self, void* signal);
+bool q_regularexpressionvalidator_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

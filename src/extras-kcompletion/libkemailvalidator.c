@@ -22,8 +22,8 @@ void k_emailvalidator_on_meta_object(void* self, const QMetaObject* (*callback)(
     KEmailValidator_OnMetaObject((KEmailValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_emailvalidator_qbase_meta_object(void* self) {
-    return KEmailValidator_QBaseMetaObject((KEmailValidator*)self);
+const QMetaObject* k_emailvalidator_super_meta_object(void* self) {
+    return KEmailValidator_SuperMetaObject((KEmailValidator*)self);
 }
 
 void* k_emailvalidator_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_emailvalidator_on_metacast(void* self, void* (*callback)(void*, const cha
     KEmailValidator_OnMetacast((KEmailValidator*)self, (intptr_t)callback);
 }
 
-void* k_emailvalidator_qbase_metacast(void* self, const char* param1) {
-    return KEmailValidator_QBaseMetacast((KEmailValidator*)self, param1);
+void* k_emailvalidator_super_metacast(void* self, const char* param1) {
+    return KEmailValidator_SuperMetacast((KEmailValidator*)self, param1);
 }
 
 int32_t k_emailvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_emailvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KEmailValidator_OnMetacall((KEmailValidator*)self, (intptr_t)callback);
 }
 
-int32_t k_emailvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KEmailValidator_QBaseMetacall((KEmailValidator*)self, param1, param2, param3);
+int32_t k_emailvalidator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KEmailValidator_SuperMetacall((KEmailValidator*)self, param1, param2, param3);
 }
 
 const char* k_emailvalidator_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_emailvalidator_on_validate(void* self, int32_t (*callback)(void*, const c
     KEmailValidator_OnValidate((KEmailValidator*)self, (intptr_t)callback);
 }
 
-int32_t k_emailvalidator_qbase_validate(void* self, const char* str, int* pos) {
-    return KEmailValidator_QBaseValidate((KEmailValidator*)self, qstring(str), pos);
+int32_t k_emailvalidator_super_validate(void* self, const char* str, int* pos) {
+    return KEmailValidator_SuperValidate((KEmailValidator*)self, qstring(str), pos);
 }
 
 void k_emailvalidator_fixup(void* self, const char* str) {
@@ -77,8 +77,8 @@ void k_emailvalidator_on_fixup(void* self, void (*callback)(void*, const char*))
     KEmailValidator_OnFixup((KEmailValidator*)self, (intptr_t)callback);
 }
 
-void k_emailvalidator_qbase_fixup(void* self, const char* str) {
-    KEmailValidator_QBaseFixup((KEmailValidator*)self, qstring(str));
+void k_emailvalidator_super_fixup(void* self, const char* str) {
+    KEmailValidator_SuperFixup((KEmailValidator*)self, qstring(str));
 }
 
 const char* k_emailvalidator_tr2(const char* s, const char* c) {
@@ -326,8 +326,8 @@ bool k_emailvalidator_event(void* self, void* event) {
     return KEmailValidator_Event((KEmailValidator*)self, (QEvent*)event);
 }
 
-bool k_emailvalidator_qbase_event(void* self, void* event) {
-    return KEmailValidator_QBaseEvent((KEmailValidator*)self, (QEvent*)event);
+bool k_emailvalidator_super_event(void* self, void* event) {
+    return KEmailValidator_SuperEvent((KEmailValidator*)self, (QEvent*)event);
 }
 
 void k_emailvalidator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -338,8 +338,8 @@ bool k_emailvalidator_event_filter(void* self, void* watched, void* event) {
     return KEmailValidator_EventFilter((KEmailValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_emailvalidator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KEmailValidator_QBaseEventFilter((KEmailValidator*)self, (QObject*)watched, (QEvent*)event);
+bool k_emailvalidator_super_event_filter(void* self, void* watched, void* event) {
+    return KEmailValidator_SuperEventFilter((KEmailValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_emailvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -350,8 +350,8 @@ void k_emailvalidator_timer_event(void* self, void* event) {
     KEmailValidator_TimerEvent((KEmailValidator*)self, (QTimerEvent*)event);
 }
 
-void k_emailvalidator_qbase_timer_event(void* self, void* event) {
-    KEmailValidator_QBaseTimerEvent((KEmailValidator*)self, (QTimerEvent*)event);
+void k_emailvalidator_super_timer_event(void* self, void* event) {
+    KEmailValidator_SuperTimerEvent((KEmailValidator*)self, (QTimerEvent*)event);
 }
 
 void k_emailvalidator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -362,8 +362,8 @@ void k_emailvalidator_child_event(void* self, void* event) {
     KEmailValidator_ChildEvent((KEmailValidator*)self, (QChildEvent*)event);
 }
 
-void k_emailvalidator_qbase_child_event(void* self, void* event) {
-    KEmailValidator_QBaseChildEvent((KEmailValidator*)self, (QChildEvent*)event);
+void k_emailvalidator_super_child_event(void* self, void* event) {
+    KEmailValidator_SuperChildEvent((KEmailValidator*)self, (QChildEvent*)event);
 }
 
 void k_emailvalidator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -374,8 +374,8 @@ void k_emailvalidator_custom_event(void* self, void* event) {
     KEmailValidator_CustomEvent((KEmailValidator*)self, (QEvent*)event);
 }
 
-void k_emailvalidator_qbase_custom_event(void* self, void* event) {
-    KEmailValidator_QBaseCustomEvent((KEmailValidator*)self, (QEvent*)event);
+void k_emailvalidator_super_custom_event(void* self, void* event) {
+    KEmailValidator_SuperCustomEvent((KEmailValidator*)self, (QEvent*)event);
 }
 
 void k_emailvalidator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void k_emailvalidator_connect_notify(void* self, void* signal) {
     KEmailValidator_ConnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
-void k_emailvalidator_qbase_connect_notify(void* self, void* signal) {
-    KEmailValidator_QBaseConnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
+void k_emailvalidator_super_connect_notify(void* self, void* signal) {
+    KEmailValidator_SuperConnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_emailvalidator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ void k_emailvalidator_disconnect_notify(void* self, void* signal) {
     KEmailValidator_DisconnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
-void k_emailvalidator_qbase_disconnect_notify(void* self, void* signal) {
-    KEmailValidator_QBaseDisconnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
+void k_emailvalidator_super_disconnect_notify(void* self, void* signal) {
+    KEmailValidator_SuperDisconnectNotify((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_emailvalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ QObject* k_emailvalidator_sender(void* self) {
     return KEmailValidator_Sender((KEmailValidator*)self);
 }
 
-QObject* k_emailvalidator_qbase_sender(void* self) {
-    return KEmailValidator_QBaseSender((KEmailValidator*)self);
+QObject* k_emailvalidator_super_sender(void* self) {
+    return KEmailValidator_SuperSender((KEmailValidator*)self);
 }
 
 void k_emailvalidator_on_sender(void* self, QObject* (*callback)()) {
@@ -422,8 +422,8 @@ int32_t k_emailvalidator_sender_signal_index(void* self) {
     return KEmailValidator_SenderSignalIndex((KEmailValidator*)self);
 }
 
-int32_t k_emailvalidator_qbase_sender_signal_index(void* self) {
-    return KEmailValidator_QBaseSenderSignalIndex((KEmailValidator*)self);
+int32_t k_emailvalidator_super_sender_signal_index(void* self) {
+    return KEmailValidator_SuperSenderSignalIndex((KEmailValidator*)self);
 }
 
 void k_emailvalidator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -434,8 +434,8 @@ int32_t k_emailvalidator_receivers(void* self, const char* signal) {
     return KEmailValidator_Receivers((KEmailValidator*)self, signal);
 }
 
-int32_t k_emailvalidator_qbase_receivers(void* self, const char* signal) {
-    return KEmailValidator_QBaseReceivers((KEmailValidator*)self, signal);
+int32_t k_emailvalidator_super_receivers(void* self, const char* signal) {
+    return KEmailValidator_SuperReceivers((KEmailValidator*)self, signal);
 }
 
 void k_emailvalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -446,8 +446,8 @@ bool k_emailvalidator_is_signal_connected(void* self, void* signal) {
     return KEmailValidator_IsSignalConnected((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
-bool k_emailvalidator_qbase_is_signal_connected(void* self, void* signal) {
-    return KEmailValidator_QBaseIsSignalConnected((KEmailValidator*)self, (QMetaMethod*)signal);
+bool k_emailvalidator_super_is_signal_connected(void* self, void* signal) {
+    return KEmailValidator_SuperIsSignalConnected((KEmailValidator*)self, (QMetaMethod*)signal);
 }
 
 void k_emailvalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

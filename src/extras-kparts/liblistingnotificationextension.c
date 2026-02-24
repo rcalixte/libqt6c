@@ -18,8 +18,8 @@ void k_parts__listingnotificationextension_on_meta_object(void* self, const QMet
     KParts__ListingNotificationExtension_OnMetaObject((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__listingnotificationextension_qbase_meta_object(void* self) {
-    return KParts__ListingNotificationExtension_QBaseMetaObject((KParts__ListingNotificationExtension*)self);
+const QMetaObject* k_parts__listingnotificationextension_super_meta_object(void* self) {
+    return KParts__ListingNotificationExtension_SuperMetaObject((KParts__ListingNotificationExtension*)self);
 }
 
 void* k_parts__listingnotificationextension_metacast(void* self, const char* param1) {
@@ -30,8 +30,8 @@ void k_parts__listingnotificationextension_on_metacast(void* self, void* (*callb
     KParts__ListingNotificationExtension_OnMetacast((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 
-void* k_parts__listingnotificationextension_qbase_metacast(void* self, const char* param1) {
-    return KParts__ListingNotificationExtension_QBaseMetacast((KParts__ListingNotificationExtension*)self, param1);
+void* k_parts__listingnotificationextension_super_metacast(void* self, const char* param1) {
+    return KParts__ListingNotificationExtension_SuperMetacast((KParts__ListingNotificationExtension*)self, param1);
 }
 
 int32_t k_parts__listingnotificationextension_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -42,8 +42,8 @@ void k_parts__listingnotificationextension_on_metacall(void* self, int32_t (*cal
     KParts__ListingNotificationExtension_OnMetacall((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__listingnotificationextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__ListingNotificationExtension_QBaseMetacall((KParts__ListingNotificationExtension*)self, param1, param2, param3);
+int32_t k_parts__listingnotificationextension_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__ListingNotificationExtension_SuperMetacall((KParts__ListingNotificationExtension*)self, param1, param2, param3);
 }
 
 const char* k_parts__listingnotificationextension_tr(const char* s) {
@@ -61,8 +61,8 @@ void k_parts__listingnotificationextension_on_supported_notification_event_types
     KParts__ListingNotificationExtension_OnSupportedNotificationEventTypes((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__listingnotificationextension_qbase_supported_notification_event_types(void* self) {
-    return KParts__ListingNotificationExtension_QBaseSupportedNotificationEventTypes((KParts__ListingNotificationExtension*)self);
+int32_t k_parts__listingnotificationextension_super_supported_notification_event_types(void* self) {
+    return KParts__ListingNotificationExtension_SuperSupportedNotificationEventTypes((KParts__ListingNotificationExtension*)self);
 }
 
 KParts__ListingNotificationExtension* k_parts__listingnotificationextension_child_object(void* obj) {
@@ -306,8 +306,8 @@ bool k_parts__listingnotificationextension_event(void* self, void* event) {
     return KParts__ListingNotificationExtension_Event((KParts__ListingNotificationExtension*)self, (QEvent*)event);
 }
 
-bool k_parts__listingnotificationextension_qbase_event(void* self, void* event) {
-    return KParts__ListingNotificationExtension_QBaseEvent((KParts__ListingNotificationExtension*)self, (QEvent*)event);
+bool k_parts__listingnotificationextension_super_event(void* self, void* event) {
+    return KParts__ListingNotificationExtension_SuperEvent((KParts__ListingNotificationExtension*)self, (QEvent*)event);
 }
 
 void k_parts__listingnotificationextension_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -318,8 +318,8 @@ bool k_parts__listingnotificationextension_event_filter(void* self, void* watche
     return KParts__ListingNotificationExtension_EventFilter((KParts__ListingNotificationExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_parts__listingnotificationextension_qbase_event_filter(void* self, void* watched, void* event) {
-    return KParts__ListingNotificationExtension_QBaseEventFilter((KParts__ListingNotificationExtension*)self, (QObject*)watched, (QEvent*)event);
+bool k_parts__listingnotificationextension_super_event_filter(void* self, void* watched, void* event) {
+    return KParts__ListingNotificationExtension_SuperEventFilter((KParts__ListingNotificationExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_parts__listingnotificationextension_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -330,8 +330,8 @@ void k_parts__listingnotificationextension_timer_event(void* self, void* event) 
     KParts__ListingNotificationExtension_TimerEvent((KParts__ListingNotificationExtension*)self, (QTimerEvent*)event);
 }
 
-void k_parts__listingnotificationextension_qbase_timer_event(void* self, void* event) {
-    KParts__ListingNotificationExtension_QBaseTimerEvent((KParts__ListingNotificationExtension*)self, (QTimerEvent*)event);
+void k_parts__listingnotificationextension_super_timer_event(void* self, void* event) {
+    KParts__ListingNotificationExtension_SuperTimerEvent((KParts__ListingNotificationExtension*)self, (QTimerEvent*)event);
 }
 
 void k_parts__listingnotificationextension_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -342,8 +342,8 @@ void k_parts__listingnotificationextension_child_event(void* self, void* event) 
     KParts__ListingNotificationExtension_ChildEvent((KParts__ListingNotificationExtension*)self, (QChildEvent*)event);
 }
 
-void k_parts__listingnotificationextension_qbase_child_event(void* self, void* event) {
-    KParts__ListingNotificationExtension_QBaseChildEvent((KParts__ListingNotificationExtension*)self, (QChildEvent*)event);
+void k_parts__listingnotificationextension_super_child_event(void* self, void* event) {
+    KParts__ListingNotificationExtension_SuperChildEvent((KParts__ListingNotificationExtension*)self, (QChildEvent*)event);
 }
 
 void k_parts__listingnotificationextension_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ void k_parts__listingnotificationextension_custom_event(void* self, void* event)
     KParts__ListingNotificationExtension_CustomEvent((KParts__ListingNotificationExtension*)self, (QEvent*)event);
 }
 
-void k_parts__listingnotificationextension_qbase_custom_event(void* self, void* event) {
-    KParts__ListingNotificationExtension_QBaseCustomEvent((KParts__ListingNotificationExtension*)self, (QEvent*)event);
+void k_parts__listingnotificationextension_super_custom_event(void* self, void* event) {
+    KParts__ListingNotificationExtension_SuperCustomEvent((KParts__ListingNotificationExtension*)self, (QEvent*)event);
 }
 
 void k_parts__listingnotificationextension_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -366,8 +366,8 @@ void k_parts__listingnotificationextension_connect_notify(void* self, void* sign
     KParts__ListingNotificationExtension_ConnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__listingnotificationextension_qbase_connect_notify(void* self, void* signal) {
-    KParts__ListingNotificationExtension_QBaseConnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
+void k_parts__listingnotificationextension_super_connect_notify(void* self, void* signal) {
+    KParts__ListingNotificationExtension_SuperConnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingnotificationextension_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void k_parts__listingnotificationextension_disconnect_notify(void* self, void* s
     KParts__ListingNotificationExtension_DisconnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__listingnotificationextension_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__ListingNotificationExtension_QBaseDisconnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
+void k_parts__listingnotificationextension_super_disconnect_notify(void* self, void* signal) {
+    KParts__ListingNotificationExtension_SuperDisconnectNotify((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingnotificationextension_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ QObject* k_parts__listingnotificationextension_sender(void* self) {
     return KParts__ListingNotificationExtension_Sender((KParts__ListingNotificationExtension*)self);
 }
 
-QObject* k_parts__listingnotificationextension_qbase_sender(void* self) {
-    return KParts__ListingNotificationExtension_QBaseSender((KParts__ListingNotificationExtension*)self);
+QObject* k_parts__listingnotificationextension_super_sender(void* self) {
+    return KParts__ListingNotificationExtension_SuperSender((KParts__ListingNotificationExtension*)self);
 }
 
 void k_parts__listingnotificationextension_on_sender(void* self, QObject* (*callback)()) {
@@ -402,8 +402,8 @@ int32_t k_parts__listingnotificationextension_sender_signal_index(void* self) {
     return KParts__ListingNotificationExtension_SenderSignalIndex((KParts__ListingNotificationExtension*)self);
 }
 
-int32_t k_parts__listingnotificationextension_qbase_sender_signal_index(void* self) {
-    return KParts__ListingNotificationExtension_QBaseSenderSignalIndex((KParts__ListingNotificationExtension*)self);
+int32_t k_parts__listingnotificationextension_super_sender_signal_index(void* self) {
+    return KParts__ListingNotificationExtension_SuperSenderSignalIndex((KParts__ListingNotificationExtension*)self);
 }
 
 void k_parts__listingnotificationextension_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -414,8 +414,8 @@ int32_t k_parts__listingnotificationextension_receivers(void* self, const char* 
     return KParts__ListingNotificationExtension_Receivers((KParts__ListingNotificationExtension*)self, signal);
 }
 
-int32_t k_parts__listingnotificationextension_qbase_receivers(void* self, const char* signal) {
-    return KParts__ListingNotificationExtension_QBaseReceivers((KParts__ListingNotificationExtension*)self, signal);
+int32_t k_parts__listingnotificationextension_super_receivers(void* self, const char* signal) {
+    return KParts__ListingNotificationExtension_SuperReceivers((KParts__ListingNotificationExtension*)self, signal);
 }
 
 void k_parts__listingnotificationextension_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -426,8 +426,8 @@ bool k_parts__listingnotificationextension_is_signal_connected(void* self, void*
     return KParts__ListingNotificationExtension_IsSignalConnected((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__listingnotificationextension_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__ListingNotificationExtension_QBaseIsSignalConnected((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
+bool k_parts__listingnotificationextension_super_is_signal_connected(void* self, void* signal) {
+    return KParts__ListingNotificationExtension_SuperIsSignalConnected((KParts__ListingNotificationExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__listingnotificationextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

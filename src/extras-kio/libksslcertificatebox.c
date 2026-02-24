@@ -30,8 +30,8 @@ void k_sslcertificatebox_on_meta_object(void* self, const QMetaObject* (*callbac
     KSslCertificateBox_OnMetaObject((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sslcertificatebox_qbase_meta_object(void* self) {
-    return KSslCertificateBox_QBaseMetaObject((KSslCertificateBox*)self);
+const QMetaObject* k_sslcertificatebox_super_meta_object(void* self) {
+    return KSslCertificateBox_SuperMetaObject((KSslCertificateBox*)self);
 }
 
 void* k_sslcertificatebox_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_sslcertificatebox_on_metacast(void* self, void* (*callback)(void*, const 
     KSslCertificateBox_OnMetacast((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
-void* k_sslcertificatebox_qbase_metacast(void* self, const char* param1) {
-    return KSslCertificateBox_QBaseMetacast((KSslCertificateBox*)self, param1);
+void* k_sslcertificatebox_super_metacast(void* self, const char* param1) {
+    return KSslCertificateBox_SuperMetacast((KSslCertificateBox*)self, param1);
 }
 
 int32_t k_sslcertificatebox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_sslcertificatebox_on_metacall(void* self, int32_t (*callback)(void*, int3
     KSslCertificateBox_OnMetacall((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
-int32_t k_sslcertificatebox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSslCertificateBox_QBaseMetacall((KSslCertificateBox*)self, param1, param2, param3);
+int32_t k_sslcertificatebox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSslCertificateBox_SuperMetacall((KSslCertificateBox*)self, param1, param2, param3);
 }
 
 const char* k_sslcertificatebox_tr(const char* s) {
@@ -1472,8 +1472,8 @@ int32_t k_sslcertificatebox_dev_type(void* self) {
     return KSslCertificateBox_DevType((KSslCertificateBox*)self);
 }
 
-int32_t k_sslcertificatebox_qbase_dev_type(void* self) {
-    return KSslCertificateBox_QBaseDevType((KSslCertificateBox*)self);
+int32_t k_sslcertificatebox_super_dev_type(void* self) {
+    return KSslCertificateBox_SuperDevType((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1484,8 +1484,8 @@ void k_sslcertificatebox_set_visible(void* self, bool visible) {
     KSslCertificateBox_SetVisible((KSslCertificateBox*)self, visible);
 }
 
-void k_sslcertificatebox_qbase_set_visible(void* self, bool visible) {
-    KSslCertificateBox_QBaseSetVisible((KSslCertificateBox*)self, visible);
+void k_sslcertificatebox_super_set_visible(void* self, bool visible) {
+    KSslCertificateBox_SuperSetVisible((KSslCertificateBox*)self, visible);
 }
 
 void k_sslcertificatebox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1496,8 +1496,8 @@ QSize* k_sslcertificatebox_size_hint(void* self) {
     return KSslCertificateBox_SizeHint((KSslCertificateBox*)self);
 }
 
-QSize* k_sslcertificatebox_qbase_size_hint(void* self) {
-    return KSslCertificateBox_QBaseSizeHint((KSslCertificateBox*)self);
+QSize* k_sslcertificatebox_super_size_hint(void* self) {
+    return KSslCertificateBox_SuperSizeHint((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1508,8 +1508,8 @@ QSize* k_sslcertificatebox_minimum_size_hint(void* self) {
     return KSslCertificateBox_MinimumSizeHint((KSslCertificateBox*)self);
 }
 
-QSize* k_sslcertificatebox_qbase_minimum_size_hint(void* self) {
-    return KSslCertificateBox_QBaseMinimumSizeHint((KSslCertificateBox*)self);
+QSize* k_sslcertificatebox_super_minimum_size_hint(void* self) {
+    return KSslCertificateBox_SuperMinimumSizeHint((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1520,8 +1520,8 @@ int32_t k_sslcertificatebox_height_for_width(void* self, int param1) {
     return KSslCertificateBox_HeightForWidth((KSslCertificateBox*)self, param1);
 }
 
-int32_t k_sslcertificatebox_qbase_height_for_width(void* self, int param1) {
-    return KSslCertificateBox_QBaseHeightForWidth((KSslCertificateBox*)self, param1);
+int32_t k_sslcertificatebox_super_height_for_width(void* self, int param1) {
+    return KSslCertificateBox_SuperHeightForWidth((KSslCertificateBox*)self, param1);
 }
 
 void k_sslcertificatebox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1532,8 +1532,8 @@ bool k_sslcertificatebox_has_height_for_width(void* self) {
     return KSslCertificateBox_HasHeightForWidth((KSslCertificateBox*)self);
 }
 
-bool k_sslcertificatebox_qbase_has_height_for_width(void* self) {
-    return KSslCertificateBox_QBaseHasHeightForWidth((KSslCertificateBox*)self);
+bool k_sslcertificatebox_super_has_height_for_width(void* self) {
+    return KSslCertificateBox_SuperHasHeightForWidth((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1544,8 +1544,8 @@ QPaintEngine* k_sslcertificatebox_paint_engine(void* self) {
     return KSslCertificateBox_PaintEngine((KSslCertificateBox*)self);
 }
 
-QPaintEngine* k_sslcertificatebox_qbase_paint_engine(void* self) {
-    return KSslCertificateBox_QBasePaintEngine((KSslCertificateBox*)self);
+QPaintEngine* k_sslcertificatebox_super_paint_engine(void* self) {
+    return KSslCertificateBox_SuperPaintEngine((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1556,8 +1556,8 @@ bool k_sslcertificatebox_event(void* self, void* event) {
     return KSslCertificateBox_Event((KSslCertificateBox*)self, (QEvent*)event);
 }
 
-bool k_sslcertificatebox_qbase_event(void* self, void* event) {
-    return KSslCertificateBox_QBaseEvent((KSslCertificateBox*)self, (QEvent*)event);
+bool k_sslcertificatebox_super_event(void* self, void* event) {
+    return KSslCertificateBox_SuperEvent((KSslCertificateBox*)self, (QEvent*)event);
 }
 
 void k_sslcertificatebox_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1568,8 +1568,8 @@ void k_sslcertificatebox_mouse_press_event(void* self, void* event) {
     KSslCertificateBox_MousePressEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_mouse_press_event(void* self, void* event) {
-    KSslCertificateBox_QBaseMousePressEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
+void k_sslcertificatebox_super_mouse_press_event(void* self, void* event) {
+    KSslCertificateBox_SuperMousePressEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
 void k_sslcertificatebox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1580,8 +1580,8 @@ void k_sslcertificatebox_mouse_release_event(void* self, void* event) {
     KSslCertificateBox_MouseReleaseEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_mouse_release_event(void* self, void* event) {
-    KSslCertificateBox_QBaseMouseReleaseEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
+void k_sslcertificatebox_super_mouse_release_event(void* self, void* event) {
+    KSslCertificateBox_SuperMouseReleaseEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
 void k_sslcertificatebox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1592,8 +1592,8 @@ void k_sslcertificatebox_mouse_double_click_event(void* self, void* event) {
     KSslCertificateBox_MouseDoubleClickEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_mouse_double_click_event(void* self, void* event) {
-    KSslCertificateBox_QBaseMouseDoubleClickEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
+void k_sslcertificatebox_super_mouse_double_click_event(void* self, void* event) {
+    KSslCertificateBox_SuperMouseDoubleClickEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
 void k_sslcertificatebox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1604,8 +1604,8 @@ void k_sslcertificatebox_mouse_move_event(void* self, void* event) {
     KSslCertificateBox_MouseMoveEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_mouse_move_event(void* self, void* event) {
-    KSslCertificateBox_QBaseMouseMoveEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
+void k_sslcertificatebox_super_mouse_move_event(void* self, void* event) {
+    KSslCertificateBox_SuperMouseMoveEvent((KSslCertificateBox*)self, (QMouseEvent*)event);
 }
 
 void k_sslcertificatebox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1616,8 +1616,8 @@ void k_sslcertificatebox_wheel_event(void* self, void* event) {
     KSslCertificateBox_WheelEvent((KSslCertificateBox*)self, (QWheelEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_wheel_event(void* self, void* event) {
-    KSslCertificateBox_QBaseWheelEvent((KSslCertificateBox*)self, (QWheelEvent*)event);
+void k_sslcertificatebox_super_wheel_event(void* self, void* event) {
+    KSslCertificateBox_SuperWheelEvent((KSslCertificateBox*)self, (QWheelEvent*)event);
 }
 
 void k_sslcertificatebox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1628,8 +1628,8 @@ void k_sslcertificatebox_key_press_event(void* self, void* event) {
     KSslCertificateBox_KeyPressEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_key_press_event(void* self, void* event) {
-    KSslCertificateBox_QBaseKeyPressEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
+void k_sslcertificatebox_super_key_press_event(void* self, void* event) {
+    KSslCertificateBox_SuperKeyPressEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
 }
 
 void k_sslcertificatebox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1640,8 +1640,8 @@ void k_sslcertificatebox_key_release_event(void* self, void* event) {
     KSslCertificateBox_KeyReleaseEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_key_release_event(void* self, void* event) {
-    KSslCertificateBox_QBaseKeyReleaseEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
+void k_sslcertificatebox_super_key_release_event(void* self, void* event) {
+    KSslCertificateBox_SuperKeyReleaseEvent((KSslCertificateBox*)self, (QKeyEvent*)event);
 }
 
 void k_sslcertificatebox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1652,8 +1652,8 @@ void k_sslcertificatebox_focus_in_event(void* self, void* event) {
     KSslCertificateBox_FocusInEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_focus_in_event(void* self, void* event) {
-    KSslCertificateBox_QBaseFocusInEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
+void k_sslcertificatebox_super_focus_in_event(void* self, void* event) {
+    KSslCertificateBox_SuperFocusInEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
 }
 
 void k_sslcertificatebox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1664,8 +1664,8 @@ void k_sslcertificatebox_focus_out_event(void* self, void* event) {
     KSslCertificateBox_FocusOutEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_focus_out_event(void* self, void* event) {
-    KSslCertificateBox_QBaseFocusOutEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
+void k_sslcertificatebox_super_focus_out_event(void* self, void* event) {
+    KSslCertificateBox_SuperFocusOutEvent((KSslCertificateBox*)self, (QFocusEvent*)event);
 }
 
 void k_sslcertificatebox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1676,8 +1676,8 @@ void k_sslcertificatebox_enter_event(void* self, void* event) {
     KSslCertificateBox_EnterEvent((KSslCertificateBox*)self, (QEnterEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_enter_event(void* self, void* event) {
-    KSslCertificateBox_QBaseEnterEvent((KSslCertificateBox*)self, (QEnterEvent*)event);
+void k_sslcertificatebox_super_enter_event(void* self, void* event) {
+    KSslCertificateBox_SuperEnterEvent((KSslCertificateBox*)self, (QEnterEvent*)event);
 }
 
 void k_sslcertificatebox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1688,8 +1688,8 @@ void k_sslcertificatebox_leave_event(void* self, void* event) {
     KSslCertificateBox_LeaveEvent((KSslCertificateBox*)self, (QEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_leave_event(void* self, void* event) {
-    KSslCertificateBox_QBaseLeaveEvent((KSslCertificateBox*)self, (QEvent*)event);
+void k_sslcertificatebox_super_leave_event(void* self, void* event) {
+    KSslCertificateBox_SuperLeaveEvent((KSslCertificateBox*)self, (QEvent*)event);
 }
 
 void k_sslcertificatebox_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1700,8 +1700,8 @@ void k_sslcertificatebox_paint_event(void* self, void* event) {
     KSslCertificateBox_PaintEvent((KSslCertificateBox*)self, (QPaintEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_paint_event(void* self, void* event) {
-    KSslCertificateBox_QBasePaintEvent((KSslCertificateBox*)self, (QPaintEvent*)event);
+void k_sslcertificatebox_super_paint_event(void* self, void* event) {
+    KSslCertificateBox_SuperPaintEvent((KSslCertificateBox*)self, (QPaintEvent*)event);
 }
 
 void k_sslcertificatebox_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1712,8 +1712,8 @@ void k_sslcertificatebox_move_event(void* self, void* event) {
     KSslCertificateBox_MoveEvent((KSslCertificateBox*)self, (QMoveEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_move_event(void* self, void* event) {
-    KSslCertificateBox_QBaseMoveEvent((KSslCertificateBox*)self, (QMoveEvent*)event);
+void k_sslcertificatebox_super_move_event(void* self, void* event) {
+    KSslCertificateBox_SuperMoveEvent((KSslCertificateBox*)self, (QMoveEvent*)event);
 }
 
 void k_sslcertificatebox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1724,8 +1724,8 @@ void k_sslcertificatebox_resize_event(void* self, void* event) {
     KSslCertificateBox_ResizeEvent((KSslCertificateBox*)self, (QResizeEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_resize_event(void* self, void* event) {
-    KSslCertificateBox_QBaseResizeEvent((KSslCertificateBox*)self, (QResizeEvent*)event);
+void k_sslcertificatebox_super_resize_event(void* self, void* event) {
+    KSslCertificateBox_SuperResizeEvent((KSslCertificateBox*)self, (QResizeEvent*)event);
 }
 
 void k_sslcertificatebox_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1736,8 +1736,8 @@ void k_sslcertificatebox_close_event(void* self, void* event) {
     KSslCertificateBox_CloseEvent((KSslCertificateBox*)self, (QCloseEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_close_event(void* self, void* event) {
-    KSslCertificateBox_QBaseCloseEvent((KSslCertificateBox*)self, (QCloseEvent*)event);
+void k_sslcertificatebox_super_close_event(void* self, void* event) {
+    KSslCertificateBox_SuperCloseEvent((KSslCertificateBox*)self, (QCloseEvent*)event);
 }
 
 void k_sslcertificatebox_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1748,8 +1748,8 @@ void k_sslcertificatebox_context_menu_event(void* self, void* event) {
     KSslCertificateBox_ContextMenuEvent((KSslCertificateBox*)self, (QContextMenuEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_context_menu_event(void* self, void* event) {
-    KSslCertificateBox_QBaseContextMenuEvent((KSslCertificateBox*)self, (QContextMenuEvent*)event);
+void k_sslcertificatebox_super_context_menu_event(void* self, void* event) {
+    KSslCertificateBox_SuperContextMenuEvent((KSslCertificateBox*)self, (QContextMenuEvent*)event);
 }
 
 void k_sslcertificatebox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1760,8 +1760,8 @@ void k_sslcertificatebox_tablet_event(void* self, void* event) {
     KSslCertificateBox_TabletEvent((KSslCertificateBox*)self, (QTabletEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_tablet_event(void* self, void* event) {
-    KSslCertificateBox_QBaseTabletEvent((KSslCertificateBox*)self, (QTabletEvent*)event);
+void k_sslcertificatebox_super_tablet_event(void* self, void* event) {
+    KSslCertificateBox_SuperTabletEvent((KSslCertificateBox*)self, (QTabletEvent*)event);
 }
 
 void k_sslcertificatebox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1772,8 +1772,8 @@ void k_sslcertificatebox_action_event(void* self, void* event) {
     KSslCertificateBox_ActionEvent((KSslCertificateBox*)self, (QActionEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_action_event(void* self, void* event) {
-    KSslCertificateBox_QBaseActionEvent((KSslCertificateBox*)self, (QActionEvent*)event);
+void k_sslcertificatebox_super_action_event(void* self, void* event) {
+    KSslCertificateBox_SuperActionEvent((KSslCertificateBox*)self, (QActionEvent*)event);
 }
 
 void k_sslcertificatebox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1784,8 +1784,8 @@ void k_sslcertificatebox_drag_enter_event(void* self, void* event) {
     KSslCertificateBox_DragEnterEvent((KSslCertificateBox*)self, (QDragEnterEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_drag_enter_event(void* self, void* event) {
-    KSslCertificateBox_QBaseDragEnterEvent((KSslCertificateBox*)self, (QDragEnterEvent*)event);
+void k_sslcertificatebox_super_drag_enter_event(void* self, void* event) {
+    KSslCertificateBox_SuperDragEnterEvent((KSslCertificateBox*)self, (QDragEnterEvent*)event);
 }
 
 void k_sslcertificatebox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1796,8 +1796,8 @@ void k_sslcertificatebox_drag_move_event(void* self, void* event) {
     KSslCertificateBox_DragMoveEvent((KSslCertificateBox*)self, (QDragMoveEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_drag_move_event(void* self, void* event) {
-    KSslCertificateBox_QBaseDragMoveEvent((KSslCertificateBox*)self, (QDragMoveEvent*)event);
+void k_sslcertificatebox_super_drag_move_event(void* self, void* event) {
+    KSslCertificateBox_SuperDragMoveEvent((KSslCertificateBox*)self, (QDragMoveEvent*)event);
 }
 
 void k_sslcertificatebox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1808,8 +1808,8 @@ void k_sslcertificatebox_drag_leave_event(void* self, void* event) {
     KSslCertificateBox_DragLeaveEvent((KSslCertificateBox*)self, (QDragLeaveEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_drag_leave_event(void* self, void* event) {
-    KSslCertificateBox_QBaseDragLeaveEvent((KSslCertificateBox*)self, (QDragLeaveEvent*)event);
+void k_sslcertificatebox_super_drag_leave_event(void* self, void* event) {
+    KSslCertificateBox_SuperDragLeaveEvent((KSslCertificateBox*)self, (QDragLeaveEvent*)event);
 }
 
 void k_sslcertificatebox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1820,8 +1820,8 @@ void k_sslcertificatebox_drop_event(void* self, void* event) {
     KSslCertificateBox_DropEvent((KSslCertificateBox*)self, (QDropEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_drop_event(void* self, void* event) {
-    KSslCertificateBox_QBaseDropEvent((KSslCertificateBox*)self, (QDropEvent*)event);
+void k_sslcertificatebox_super_drop_event(void* self, void* event) {
+    KSslCertificateBox_SuperDropEvent((KSslCertificateBox*)self, (QDropEvent*)event);
 }
 
 void k_sslcertificatebox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1832,8 +1832,8 @@ void k_sslcertificatebox_show_event(void* self, void* event) {
     KSslCertificateBox_ShowEvent((KSslCertificateBox*)self, (QShowEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_show_event(void* self, void* event) {
-    KSslCertificateBox_QBaseShowEvent((KSslCertificateBox*)self, (QShowEvent*)event);
+void k_sslcertificatebox_super_show_event(void* self, void* event) {
+    KSslCertificateBox_SuperShowEvent((KSslCertificateBox*)self, (QShowEvent*)event);
 }
 
 void k_sslcertificatebox_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1844,8 +1844,8 @@ void k_sslcertificatebox_hide_event(void* self, void* event) {
     KSslCertificateBox_HideEvent((KSslCertificateBox*)self, (QHideEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_hide_event(void* self, void* event) {
-    KSslCertificateBox_QBaseHideEvent((KSslCertificateBox*)self, (QHideEvent*)event);
+void k_sslcertificatebox_super_hide_event(void* self, void* event) {
+    KSslCertificateBox_SuperHideEvent((KSslCertificateBox*)self, (QHideEvent*)event);
 }
 
 void k_sslcertificatebox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1856,8 +1856,8 @@ bool k_sslcertificatebox_native_event(void* self, char* eventType, void* message
     return KSslCertificateBox_NativeEvent((KSslCertificateBox*)self, qstring(eventType), message, result);
 }
 
-bool k_sslcertificatebox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KSslCertificateBox_QBaseNativeEvent((KSslCertificateBox*)self, qstring(eventType), message, result);
+bool k_sslcertificatebox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KSslCertificateBox_SuperNativeEvent((KSslCertificateBox*)self, qstring(eventType), message, result);
 }
 
 void k_sslcertificatebox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1868,8 +1868,8 @@ void k_sslcertificatebox_change_event(void* self, void* param1) {
     KSslCertificateBox_ChangeEvent((KSslCertificateBox*)self, (QEvent*)param1);
 }
 
-void k_sslcertificatebox_qbase_change_event(void* self, void* param1) {
-    KSslCertificateBox_QBaseChangeEvent((KSslCertificateBox*)self, (QEvent*)param1);
+void k_sslcertificatebox_super_change_event(void* self, void* param1) {
+    KSslCertificateBox_SuperChangeEvent((KSslCertificateBox*)self, (QEvent*)param1);
 }
 
 void k_sslcertificatebox_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1880,8 +1880,8 @@ int32_t k_sslcertificatebox_metric(void* self, int32_t param1) {
     return KSslCertificateBox_Metric((KSslCertificateBox*)self, param1);
 }
 
-int32_t k_sslcertificatebox_qbase_metric(void* self, int32_t param1) {
-    return KSslCertificateBox_QBaseMetric((KSslCertificateBox*)self, param1);
+int32_t k_sslcertificatebox_super_metric(void* self, int32_t param1) {
+    return KSslCertificateBox_SuperMetric((KSslCertificateBox*)self, param1);
 }
 
 void k_sslcertificatebox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1892,8 +1892,8 @@ void k_sslcertificatebox_init_painter(void* self, void* painter) {
     KSslCertificateBox_InitPainter((KSslCertificateBox*)self, (QPainter*)painter);
 }
 
-void k_sslcertificatebox_qbase_init_painter(void* self, void* painter) {
-    KSslCertificateBox_QBaseInitPainter((KSslCertificateBox*)self, (QPainter*)painter);
+void k_sslcertificatebox_super_init_painter(void* self, void* painter) {
+    KSslCertificateBox_SuperInitPainter((KSslCertificateBox*)self, (QPainter*)painter);
 }
 
 void k_sslcertificatebox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1904,8 +1904,8 @@ QPaintDevice* k_sslcertificatebox_redirected(void* self, void* offset) {
     return KSslCertificateBox_Redirected((KSslCertificateBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_sslcertificatebox_qbase_redirected(void* self, void* offset) {
-    return KSslCertificateBox_QBaseRedirected((KSslCertificateBox*)self, (QPoint*)offset);
+QPaintDevice* k_sslcertificatebox_super_redirected(void* self, void* offset) {
+    return KSslCertificateBox_SuperRedirected((KSslCertificateBox*)self, (QPoint*)offset);
 }
 
 void k_sslcertificatebox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1916,8 +1916,8 @@ QPainter* k_sslcertificatebox_shared_painter(void* self) {
     return KSslCertificateBox_SharedPainter((KSslCertificateBox*)self);
 }
 
-QPainter* k_sslcertificatebox_qbase_shared_painter(void* self) {
-    return KSslCertificateBox_QBaseSharedPainter((KSslCertificateBox*)self);
+QPainter* k_sslcertificatebox_super_shared_painter(void* self) {
+    return KSslCertificateBox_SuperSharedPainter((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1928,8 +1928,8 @@ void k_sslcertificatebox_input_method_event(void* self, void* param1) {
     KSslCertificateBox_InputMethodEvent((KSslCertificateBox*)self, (QInputMethodEvent*)param1);
 }
 
-void k_sslcertificatebox_qbase_input_method_event(void* self, void* param1) {
-    KSslCertificateBox_QBaseInputMethodEvent((KSslCertificateBox*)self, (QInputMethodEvent*)param1);
+void k_sslcertificatebox_super_input_method_event(void* self, void* param1) {
+    KSslCertificateBox_SuperInputMethodEvent((KSslCertificateBox*)self, (QInputMethodEvent*)param1);
 }
 
 void k_sslcertificatebox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1940,8 +1940,8 @@ QVariant* k_sslcertificatebox_input_method_query(void* self, int32_t param1) {
     return KSslCertificateBox_InputMethodQuery((KSslCertificateBox*)self, param1);
 }
 
-QVariant* k_sslcertificatebox_qbase_input_method_query(void* self, int32_t param1) {
-    return KSslCertificateBox_QBaseInputMethodQuery((KSslCertificateBox*)self, param1);
+QVariant* k_sslcertificatebox_super_input_method_query(void* self, int32_t param1) {
+    return KSslCertificateBox_SuperInputMethodQuery((KSslCertificateBox*)self, param1);
 }
 
 void k_sslcertificatebox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1952,8 +1952,8 @@ bool k_sslcertificatebox_focus_next_prev_child(void* self, bool next) {
     return KSslCertificateBox_FocusNextPrevChild((KSslCertificateBox*)self, next);
 }
 
-bool k_sslcertificatebox_qbase_focus_next_prev_child(void* self, bool next) {
-    return KSslCertificateBox_QBaseFocusNextPrevChild((KSslCertificateBox*)self, next);
+bool k_sslcertificatebox_super_focus_next_prev_child(void* self, bool next) {
+    return KSslCertificateBox_SuperFocusNextPrevChild((KSslCertificateBox*)self, next);
 }
 
 void k_sslcertificatebox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1964,8 +1964,8 @@ bool k_sslcertificatebox_event_filter(void* self, void* watched, void* event) {
     return KSslCertificateBox_EventFilter((KSslCertificateBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_sslcertificatebox_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSslCertificateBox_QBaseEventFilter((KSslCertificateBox*)self, (QObject*)watched, (QEvent*)event);
+bool k_sslcertificatebox_super_event_filter(void* self, void* watched, void* event) {
+    return KSslCertificateBox_SuperEventFilter((KSslCertificateBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_sslcertificatebox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1976,8 +1976,8 @@ void k_sslcertificatebox_timer_event(void* self, void* event) {
     KSslCertificateBox_TimerEvent((KSslCertificateBox*)self, (QTimerEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_timer_event(void* self, void* event) {
-    KSslCertificateBox_QBaseTimerEvent((KSslCertificateBox*)self, (QTimerEvent*)event);
+void k_sslcertificatebox_super_timer_event(void* self, void* event) {
+    KSslCertificateBox_SuperTimerEvent((KSslCertificateBox*)self, (QTimerEvent*)event);
 }
 
 void k_sslcertificatebox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1988,8 +1988,8 @@ void k_sslcertificatebox_child_event(void* self, void* event) {
     KSslCertificateBox_ChildEvent((KSslCertificateBox*)self, (QChildEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_child_event(void* self, void* event) {
-    KSslCertificateBox_QBaseChildEvent((KSslCertificateBox*)self, (QChildEvent*)event);
+void k_sslcertificatebox_super_child_event(void* self, void* event) {
+    KSslCertificateBox_SuperChildEvent((KSslCertificateBox*)self, (QChildEvent*)event);
 }
 
 void k_sslcertificatebox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2000,8 +2000,8 @@ void k_sslcertificatebox_custom_event(void* self, void* event) {
     KSslCertificateBox_CustomEvent((KSslCertificateBox*)self, (QEvent*)event);
 }
 
-void k_sslcertificatebox_qbase_custom_event(void* self, void* event) {
-    KSslCertificateBox_QBaseCustomEvent((KSslCertificateBox*)self, (QEvent*)event);
+void k_sslcertificatebox_super_custom_event(void* self, void* event) {
+    KSslCertificateBox_SuperCustomEvent((KSslCertificateBox*)self, (QEvent*)event);
 }
 
 void k_sslcertificatebox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2012,8 +2012,8 @@ void k_sslcertificatebox_connect_notify(void* self, void* signal) {
     KSslCertificateBox_ConnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
-void k_sslcertificatebox_qbase_connect_notify(void* self, void* signal) {
-    KSslCertificateBox_QBaseConnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
+void k_sslcertificatebox_super_connect_notify(void* self, void* signal) {
+    KSslCertificateBox_SuperConnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sslcertificatebox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2024,8 +2024,8 @@ void k_sslcertificatebox_disconnect_notify(void* self, void* signal) {
     KSslCertificateBox_DisconnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
-void k_sslcertificatebox_qbase_disconnect_notify(void* self, void* signal) {
-    KSslCertificateBox_QBaseDisconnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
+void k_sslcertificatebox_super_disconnect_notify(void* self, void* signal) {
+    KSslCertificateBox_SuperDisconnectNotify((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sslcertificatebox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2036,8 +2036,8 @@ void k_sslcertificatebox_update_micro_focus(void* self) {
     KSslCertificateBox_UpdateMicroFocus((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_qbase_update_micro_focus(void* self) {
-    KSslCertificateBox_QBaseUpdateMicroFocus((KSslCertificateBox*)self);
+void k_sslcertificatebox_super_update_micro_focus(void* self) {
+    KSslCertificateBox_SuperUpdateMicroFocus((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2048,8 +2048,8 @@ void k_sslcertificatebox_create(void* self) {
     KSslCertificateBox_Create((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_qbase_create(void* self) {
-    KSslCertificateBox_QBaseCreate((KSslCertificateBox*)self);
+void k_sslcertificatebox_super_create(void* self) {
+    KSslCertificateBox_SuperCreate((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_create(void* self, void (*callback)()) {
@@ -2060,8 +2060,8 @@ void k_sslcertificatebox_destroy(void* self) {
     KSslCertificateBox_Destroy((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_qbase_destroy(void* self) {
-    KSslCertificateBox_QBaseDestroy((KSslCertificateBox*)self);
+void k_sslcertificatebox_super_destroy(void* self) {
+    KSslCertificateBox_SuperDestroy((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_destroy(void* self, void (*callback)()) {
@@ -2072,8 +2072,8 @@ bool k_sslcertificatebox_focus_next_child(void* self) {
     return KSslCertificateBox_FocusNextChild((KSslCertificateBox*)self);
 }
 
-bool k_sslcertificatebox_qbase_focus_next_child(void* self) {
-    return KSslCertificateBox_QBaseFocusNextChild((KSslCertificateBox*)self);
+bool k_sslcertificatebox_super_focus_next_child(void* self) {
+    return KSslCertificateBox_SuperFocusNextChild((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2084,8 +2084,8 @@ bool k_sslcertificatebox_focus_previous_child(void* self) {
     return KSslCertificateBox_FocusPreviousChild((KSslCertificateBox*)self);
 }
 
-bool k_sslcertificatebox_qbase_focus_previous_child(void* self) {
-    return KSslCertificateBox_QBaseFocusPreviousChild((KSslCertificateBox*)self);
+bool k_sslcertificatebox_super_focus_previous_child(void* self) {
+    return KSslCertificateBox_SuperFocusPreviousChild((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2096,8 +2096,8 @@ QObject* k_sslcertificatebox_sender(void* self) {
     return KSslCertificateBox_Sender((KSslCertificateBox*)self);
 }
 
-QObject* k_sslcertificatebox_qbase_sender(void* self) {
-    return KSslCertificateBox_QBaseSender((KSslCertificateBox*)self);
+QObject* k_sslcertificatebox_super_sender(void* self) {
+    return KSslCertificateBox_SuperSender((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_sender(void* self, QObject* (*callback)()) {
@@ -2108,8 +2108,8 @@ int32_t k_sslcertificatebox_sender_signal_index(void* self) {
     return KSslCertificateBox_SenderSignalIndex((KSslCertificateBox*)self);
 }
 
-int32_t k_sslcertificatebox_qbase_sender_signal_index(void* self) {
-    return KSslCertificateBox_QBaseSenderSignalIndex((KSslCertificateBox*)self);
+int32_t k_sslcertificatebox_super_sender_signal_index(void* self) {
+    return KSslCertificateBox_SuperSenderSignalIndex((KSslCertificateBox*)self);
 }
 
 void k_sslcertificatebox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2120,8 +2120,8 @@ int32_t k_sslcertificatebox_receivers(void* self, const char* signal) {
     return KSslCertificateBox_Receivers((KSslCertificateBox*)self, signal);
 }
 
-int32_t k_sslcertificatebox_qbase_receivers(void* self, const char* signal) {
-    return KSslCertificateBox_QBaseReceivers((KSslCertificateBox*)self, signal);
+int32_t k_sslcertificatebox_super_receivers(void* self, const char* signal) {
+    return KSslCertificateBox_SuperReceivers((KSslCertificateBox*)self, signal);
 }
 
 void k_sslcertificatebox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2132,8 +2132,8 @@ bool k_sslcertificatebox_is_signal_connected(void* self, void* signal) {
     return KSslCertificateBox_IsSignalConnected((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_sslcertificatebox_qbase_is_signal_connected(void* self, void* signal) {
-    return KSslCertificateBox_QBaseIsSignalConnected((KSslCertificateBox*)self, (QMetaMethod*)signal);
+bool k_sslcertificatebox_super_is_signal_connected(void* self, void* signal) {
+    return KSslCertificateBox_SuperIsSignalConnected((KSslCertificateBox*)self, (QMetaMethod*)signal);
 }
 
 void k_sslcertificatebox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2144,8 +2144,8 @@ double k_sslcertificatebox_get_decoded_metric_f(void* self, int32_t metricA, int
     return KSslCertificateBox_GetDecodedMetricF((KSslCertificateBox*)self, metricA, metricB);
 }
 
-double k_sslcertificatebox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KSslCertificateBox_QBaseGetDecodedMetricF((KSslCertificateBox*)self, metricA, metricB);
+double k_sslcertificatebox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KSslCertificateBox_SuperGetDecodedMetricF((KSslCertificateBox*)self, metricA, metricB);
 }
 
 void k_sslcertificatebox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

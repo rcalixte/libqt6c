@@ -20,8 +20,8 @@ void k_pluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)()
     KPluginFactory_OnMetaObject((KPluginFactory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pluginfactory_qbase_meta_object(void* self) {
-    return KPluginFactory_QBaseMetaObject((KPluginFactory*)self);
+const QMetaObject* k_pluginfactory_super_meta_object(void* self) {
+    return KPluginFactory_SuperMetaObject((KPluginFactory*)self);
 }
 
 void* k_pluginfactory_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_pluginfactory_on_metacast(void* self, void* (*callback)(void*, const char
     KPluginFactory_OnMetacast((KPluginFactory*)self, (intptr_t)callback);
 }
 
-void* k_pluginfactory_qbase_metacast(void* self, const char* param1) {
-    return KPluginFactory_QBaseMetacast((KPluginFactory*)self, param1);
+void* k_pluginfactory_super_metacast(void* self, const char* param1) {
+    return KPluginFactory_SuperMetacast((KPluginFactory*)self, param1);
 }
 
 int32_t k_pluginfactory_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_pluginfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KPluginFactory_OnMetacall((KPluginFactory*)self, (intptr_t)callback);
 }
 
-int32_t k_pluginfactory_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPluginFactory_QBaseMetacall((KPluginFactory*)self, param1, param2, param3);
+int32_t k_pluginfactory_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPluginFactory_SuperMetacall((KPluginFactory*)self, param1, param2, param3);
 }
 
 const char* k_pluginfactory_tr(const char* s) {
@@ -71,8 +71,8 @@ void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const cha
     KPluginFactory_OnCreate((KPluginFactory*)self, (intptr_t)callback);
 }
 
-QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args) {
-    return KPluginFactory_QBaseCreate((KPluginFactory*)self, iface, (QWidget*)parentWidget, (QObject*)parent, args);
+QObject* k_pluginfactory_super_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args) {
+    return KPluginFactory_SuperCreate((KPluginFactory*)self, iface, (QWidget*)parentWidget, (QObject*)parent, args);
 }
 
 const char* k_pluginfactory_tr2(const char* s, const char* c) {
@@ -304,8 +304,8 @@ bool k_pluginfactory_event(void* self, void* event) {
     return KPluginFactory_Event((KPluginFactory*)self, (QEvent*)event);
 }
 
-bool k_pluginfactory_qbase_event(void* self, void* event) {
-    return KPluginFactory_QBaseEvent((KPluginFactory*)self, (QEvent*)event);
+bool k_pluginfactory_super_event(void* self, void* event) {
+    return KPluginFactory_SuperEvent((KPluginFactory*)self, (QEvent*)event);
 }
 
 void k_pluginfactory_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -316,8 +316,8 @@ bool k_pluginfactory_event_filter(void* self, void* watched, void* event) {
     return KPluginFactory_EventFilter((KPluginFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_pluginfactory_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPluginFactory_QBaseEventFilter((KPluginFactory*)self, (QObject*)watched, (QEvent*)event);
+bool k_pluginfactory_super_event_filter(void* self, void* watched, void* event) {
+    return KPluginFactory_SuperEventFilter((KPluginFactory*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_pluginfactory_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -328,8 +328,8 @@ void k_pluginfactory_timer_event(void* self, void* event) {
     KPluginFactory_TimerEvent((KPluginFactory*)self, (QTimerEvent*)event);
 }
 
-void k_pluginfactory_qbase_timer_event(void* self, void* event) {
-    KPluginFactory_QBaseTimerEvent((KPluginFactory*)self, (QTimerEvent*)event);
+void k_pluginfactory_super_timer_event(void* self, void* event) {
+    KPluginFactory_SuperTimerEvent((KPluginFactory*)self, (QTimerEvent*)event);
 }
 
 void k_pluginfactory_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -340,8 +340,8 @@ void k_pluginfactory_child_event(void* self, void* event) {
     KPluginFactory_ChildEvent((KPluginFactory*)self, (QChildEvent*)event);
 }
 
-void k_pluginfactory_qbase_child_event(void* self, void* event) {
-    KPluginFactory_QBaseChildEvent((KPluginFactory*)self, (QChildEvent*)event);
+void k_pluginfactory_super_child_event(void* self, void* event) {
+    KPluginFactory_SuperChildEvent((KPluginFactory*)self, (QChildEvent*)event);
 }
 
 void k_pluginfactory_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -352,8 +352,8 @@ void k_pluginfactory_custom_event(void* self, void* event) {
     KPluginFactory_CustomEvent((KPluginFactory*)self, (QEvent*)event);
 }
 
-void k_pluginfactory_qbase_custom_event(void* self, void* event) {
-    KPluginFactory_QBaseCustomEvent((KPluginFactory*)self, (QEvent*)event);
+void k_pluginfactory_super_custom_event(void* self, void* event) {
+    KPluginFactory_SuperCustomEvent((KPluginFactory*)self, (QEvent*)event);
 }
 
 void k_pluginfactory_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -364,8 +364,8 @@ void k_pluginfactory_connect_notify(void* self, void* signal) {
     KPluginFactory_ConnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_pluginfactory_qbase_connect_notify(void* self, void* signal) {
-    KPluginFactory_QBaseConnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
+void k_pluginfactory_super_connect_notify(void* self, void* signal) {
+    KPluginFactory_SuperConnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_pluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ void k_pluginfactory_disconnect_notify(void* self, void* signal) {
     KPluginFactory_DisconnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-void k_pluginfactory_qbase_disconnect_notify(void* self, void* signal) {
-    KPluginFactory_QBaseDisconnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
+void k_pluginfactory_super_disconnect_notify(void* self, void* signal) {
+    KPluginFactory_SuperDisconnectNotify((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_pluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ QObject* k_pluginfactory_sender(void* self) {
     return KPluginFactory_Sender((KPluginFactory*)self);
 }
 
-QObject* k_pluginfactory_qbase_sender(void* self) {
-    return KPluginFactory_QBaseSender((KPluginFactory*)self);
+QObject* k_pluginfactory_super_sender(void* self) {
+    return KPluginFactory_SuperSender((KPluginFactory*)self);
 }
 
 void k_pluginfactory_on_sender(void* self, QObject* (*callback)()) {
@@ -400,8 +400,8 @@ int32_t k_pluginfactory_sender_signal_index(void* self) {
     return KPluginFactory_SenderSignalIndex((KPluginFactory*)self);
 }
 
-int32_t k_pluginfactory_qbase_sender_signal_index(void* self) {
-    return KPluginFactory_QBaseSenderSignalIndex((KPluginFactory*)self);
+int32_t k_pluginfactory_super_sender_signal_index(void* self) {
+    return KPluginFactory_SuperSenderSignalIndex((KPluginFactory*)self);
 }
 
 void k_pluginfactory_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -412,8 +412,8 @@ int32_t k_pluginfactory_receivers(void* self, const char* signal) {
     return KPluginFactory_Receivers((KPluginFactory*)self, signal);
 }
 
-int32_t k_pluginfactory_qbase_receivers(void* self, const char* signal) {
-    return KPluginFactory_QBaseReceivers((KPluginFactory*)self, signal);
+int32_t k_pluginfactory_super_receivers(void* self, const char* signal) {
+    return KPluginFactory_SuperReceivers((KPluginFactory*)self, signal);
 }
 
 void k_pluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -424,8 +424,8 @@ bool k_pluginfactory_is_signal_connected(void* self, void* signal) {
     return KPluginFactory_IsSignalConnected((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
-bool k_pluginfactory_qbase_is_signal_connected(void* self, void* signal) {
-    return KPluginFactory_QBaseIsSignalConnected((KPluginFactory*)self, (QMetaMethod*)signal);
+bool k_pluginfactory_super_is_signal_connected(void* self, void* signal) {
+    return KPluginFactory_SuperIsSignalConnected((KPluginFactory*)self, (QMetaMethod*)signal);
 }
 
 void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

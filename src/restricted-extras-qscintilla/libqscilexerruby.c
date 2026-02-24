@@ -26,8 +26,8 @@ void q_scilexerruby_on_meta_object(void* self, const QMetaObject* (*callback)())
     QsciLexerRuby_OnMetaObject((QsciLexerRuby*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scilexerruby_qbase_meta_object(void* self) {
-    return QsciLexerRuby_QBaseMetaObject((QsciLexerRuby*)self);
+const QMetaObject* q_scilexerruby_super_meta_object(void* self) {
+    return QsciLexerRuby_SuperMetaObject((QsciLexerRuby*)self);
 }
 
 void* q_scilexerruby_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_scilexerruby_on_metacast(void* self, void* (*callback)(void*, const char*
     QsciLexerRuby_OnMetacast((QsciLexerRuby*)self, (intptr_t)callback);
 }
 
-void* q_scilexerruby_qbase_metacast(void* self, const char* param1) {
-    return QsciLexerRuby_QBaseMetacast((QsciLexerRuby*)self, param1);
+void* q_scilexerruby_super_metacast(void* self, const char* param1) {
+    return QsciLexerRuby_SuperMetacast((QsciLexerRuby*)self, param1);
 }
 
 int32_t q_scilexerruby_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_scilexerruby_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QsciLexerRuby_OnMetacall((QsciLexerRuby*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexerruby_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciLexerRuby_QBaseMetacall((QsciLexerRuby*)self, param1, param2, param3);
+int32_t q_scilexerruby_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciLexerRuby_SuperMetacall((QsciLexerRuby*)self, param1, param2, param3);
 }
 
 const char* q_scilexerruby_tr(const char* s) {
@@ -140,8 +140,8 @@ void q_scilexerruby_on_read_properties(void* self, bool (*callback)(void*, void*
     QsciLexerRuby_OnReadProperties((QsciLexerRuby*)self, (intptr_t)callback);
 }
 
-bool q_scilexerruby_qbase_read_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerRuby_QBaseReadProperties((QsciLexerRuby*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerruby_super_read_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerRuby_SuperReadProperties((QsciLexerRuby*)self, (QSettings*)qs, qstring(prefix));
 }
 
 bool q_scilexerruby_write_properties(void* self, void* qs, const char* prefix) {
@@ -152,8 +152,8 @@ void q_scilexerruby_on_write_properties(void* self, bool (*callback)(void*, void
     QsciLexerRuby_OnWriteProperties((QsciLexerRuby*)self, (intptr_t)callback);
 }
 
-bool q_scilexerruby_qbase_write_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerRuby_QBaseWriteProperties((QsciLexerRuby*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerruby_super_write_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerRuby_SuperWriteProperties((QsciLexerRuby*)self, (QSettings*)qs, qstring(prefix));
 }
 
 const char* q_scilexerruby_tr2(const char* s, const char* c) {
@@ -481,8 +481,8 @@ int32_t q_scilexerruby_lexer_id(void* self) {
     return QsciLexerRuby_LexerId((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_lexer_id(void* self) {
-    return QsciLexerRuby_QBaseLexerId((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_lexer_id(void* self) {
+    return QsciLexerRuby_SuperLexerId((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_lexer_id(void* self, int32_t (*callback)()) {
@@ -493,8 +493,8 @@ const char* q_scilexerruby_auto_completion_fillups(void* self) {
     return QsciLexerRuby_AutoCompletionFillups((QsciLexerRuby*)self);
 }
 
-const char* q_scilexerruby_qbase_auto_completion_fillups(void* self) {
-    return QsciLexerRuby_QBaseAutoCompletionFillups((QsciLexerRuby*)self);
+const char* q_scilexerruby_super_auto_completion_fillups(void* self) {
+    return QsciLexerRuby_SuperAutoCompletionFillups((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_auto_completion_fillups(void* self, const char* (*callback)()) {
@@ -520,8 +520,8 @@ const char** q_scilexerruby_auto_completion_word_separators(void* self) {
     return _ret;
 }
 
-const char** q_scilexerruby_qbase_auto_completion_word_separators(void* self) {
-    libqt_list _arr = QsciLexerRuby_QBaseAutoCompletionWordSeparators((QsciLexerRuby*)self);
+const char** q_scilexerruby_super_auto_completion_word_separators(void* self) {
+    libqt_list _arr = QsciLexerRuby_SuperAutoCompletionWordSeparators((QsciLexerRuby*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -547,8 +547,8 @@ int32_t q_scilexerruby_block_lookback(void* self) {
     return QsciLexerRuby_BlockLookback((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_block_lookback(void* self) {
-    return QsciLexerRuby_QBaseBlockLookback((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_block_lookback(void* self) {
+    return QsciLexerRuby_SuperBlockLookback((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_block_lookback(void* self, int32_t (*callback)()) {
@@ -559,8 +559,8 @@ bool q_scilexerruby_case_sensitive(void* self) {
     return QsciLexerRuby_CaseSensitive((QsciLexerRuby*)self);
 }
 
-bool q_scilexerruby_qbase_case_sensitive(void* self) {
-    return QsciLexerRuby_QBaseCaseSensitive((QsciLexerRuby*)self);
+bool q_scilexerruby_super_case_sensitive(void* self) {
+    return QsciLexerRuby_SuperCaseSensitive((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_case_sensitive(void* self, bool (*callback)()) {
@@ -571,8 +571,8 @@ QColor* q_scilexerruby_color(void* self, int style) {
     return QsciLexerRuby_Color((QsciLexerRuby*)self, style);
 }
 
-QColor* q_scilexerruby_qbase_color(void* self, int style) {
-    return QsciLexerRuby_QBaseColor((QsciLexerRuby*)self, style);
+QColor* q_scilexerruby_super_color(void* self, int style) {
+    return QsciLexerRuby_SuperColor((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_color(void* self, QColor* (*callback)(void*, int)) {
@@ -583,8 +583,8 @@ bool q_scilexerruby_eol_fill(void* self, int style) {
     return QsciLexerRuby_EolFill((QsciLexerRuby*)self, style);
 }
 
-bool q_scilexerruby_qbase_eol_fill(void* self, int style) {
-    return QsciLexerRuby_QBaseEolFill((QsciLexerRuby*)self, style);
+bool q_scilexerruby_super_eol_fill(void* self, int style) {
+    return QsciLexerRuby_SuperEolFill((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -595,8 +595,8 @@ QFont* q_scilexerruby_font(void* self, int style) {
     return QsciLexerRuby_Font((QsciLexerRuby*)self, style);
 }
 
-QFont* q_scilexerruby_qbase_font(void* self, int style) {
-    return QsciLexerRuby_QBaseFont((QsciLexerRuby*)self, style);
+QFont* q_scilexerruby_super_font(void* self, int style) {
+    return QsciLexerRuby_SuperFont((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_font(void* self, QFont* (*callback)(void*, int)) {
@@ -607,8 +607,8 @@ int32_t q_scilexerruby_indentation_guide_view(void* self) {
     return QsciLexerRuby_IndentationGuideView((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_indentation_guide_view(void* self) {
-    return QsciLexerRuby_QBaseIndentationGuideView((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_indentation_guide_view(void* self) {
+    return QsciLexerRuby_SuperIndentationGuideView((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_indentation_guide_view(void* self, int32_t (*callback)()) {
@@ -619,8 +619,8 @@ int32_t q_scilexerruby_default_style(void* self) {
     return QsciLexerRuby_DefaultStyle((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_default_style(void* self) {
-    return QsciLexerRuby_QBaseDefaultStyle((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_default_style(void* self) {
+    return QsciLexerRuby_SuperDefaultStyle((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_default_style(void* self, int32_t (*callback)()) {
@@ -631,8 +631,8 @@ QColor* q_scilexerruby_paper(void* self, int style) {
     return QsciLexerRuby_Paper((QsciLexerRuby*)self, style);
 }
 
-QColor* q_scilexerruby_qbase_paper(void* self, int style) {
-    return QsciLexerRuby_QBasePaper((QsciLexerRuby*)self, style);
+QColor* q_scilexerruby_super_paper(void* self, int style) {
+    return QsciLexerRuby_SuperPaper((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_paper(void* self, QColor* (*callback)(void*, int)) {
@@ -643,8 +643,8 @@ QColor* q_scilexerruby_default_color2(void* self, int style) {
     return QsciLexerRuby_DefaultColor2((QsciLexerRuby*)self, style);
 }
 
-QColor* q_scilexerruby_qbase_default_color2(void* self, int style) {
-    return QsciLexerRuby_QBaseDefaultColor2((QsciLexerRuby*)self, style);
+QColor* q_scilexerruby_super_default_color2(void* self, int style) {
+    return QsciLexerRuby_SuperDefaultColor2((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
@@ -655,8 +655,8 @@ QFont* q_scilexerruby_default_font2(void* self, int style) {
     return QsciLexerRuby_DefaultFont2((QsciLexerRuby*)self, style);
 }
 
-QFont* q_scilexerruby_qbase_default_font2(void* self, int style) {
-    return QsciLexerRuby_QBaseDefaultFont2((QsciLexerRuby*)self, style);
+QFont* q_scilexerruby_super_default_font2(void* self, int style) {
+    return QsciLexerRuby_SuperDefaultFont2((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
@@ -667,8 +667,8 @@ QColor* q_scilexerruby_default_paper2(void* self, int style) {
     return QsciLexerRuby_DefaultPaper2((QsciLexerRuby*)self, style);
 }
 
-QColor* q_scilexerruby_qbase_default_paper2(void* self, int style) {
-    return QsciLexerRuby_QBaseDefaultPaper2((QsciLexerRuby*)self, style);
+QColor* q_scilexerruby_super_default_paper2(void* self, int style) {
+    return QsciLexerRuby_SuperDefaultPaper2((QsciLexerRuby*)self, style);
 }
 
 void q_scilexerruby_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
@@ -679,8 +679,8 @@ void q_scilexerruby_set_editor(void* self, void* editor) {
     QsciLexerRuby_SetEditor((QsciLexerRuby*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexerruby_qbase_set_editor(void* self, void* editor) {
-    QsciLexerRuby_QBaseSetEditor((QsciLexerRuby*)self, (QsciScintilla*)editor);
+void q_scilexerruby_super_set_editor(void* self, void* editor) {
+    QsciLexerRuby_SuperSetEditor((QsciLexerRuby*)self, (QsciScintilla*)editor);
 }
 
 void q_scilexerruby_on_set_editor(void* self, void (*callback)(void*, void*)) {
@@ -691,8 +691,8 @@ int32_t q_scilexerruby_style_bits_needed(void* self) {
     return QsciLexerRuby_StyleBitsNeeded((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_style_bits_needed(void* self) {
-    return QsciLexerRuby_QBaseStyleBitsNeeded((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_style_bits_needed(void* self) {
+    return QsciLexerRuby_SuperStyleBitsNeeded((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_style_bits_needed(void* self, int32_t (*callback)()) {
@@ -703,8 +703,8 @@ const char* q_scilexerruby_word_characters(void* self) {
     return QsciLexerRuby_WordCharacters((QsciLexerRuby*)self);
 }
 
-const char* q_scilexerruby_qbase_word_characters(void* self) {
-    return QsciLexerRuby_QBaseWordCharacters((QsciLexerRuby*)self);
+const char* q_scilexerruby_super_word_characters(void* self) {
+    return QsciLexerRuby_SuperWordCharacters((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_word_characters(void* self, const char* (*callback)()) {
@@ -715,8 +715,8 @@ void q_scilexerruby_set_auto_indent_style(void* self, int autoindentstyle) {
     QsciLexerRuby_SetAutoIndentStyle((QsciLexerRuby*)self, autoindentstyle);
 }
 
-void q_scilexerruby_qbase_set_auto_indent_style(void* self, int autoindentstyle) {
-    QsciLexerRuby_QBaseSetAutoIndentStyle((QsciLexerRuby*)self, autoindentstyle);
+void q_scilexerruby_super_set_auto_indent_style(void* self, int autoindentstyle) {
+    QsciLexerRuby_SuperSetAutoIndentStyle((QsciLexerRuby*)self, autoindentstyle);
 }
 
 void q_scilexerruby_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
@@ -727,8 +727,8 @@ void q_scilexerruby_set_color(void* self, void* c, int style) {
     QsciLexerRuby_SetColor((QsciLexerRuby*)self, (QColor*)c, style);
 }
 
-void q_scilexerruby_qbase_set_color(void* self, void* c, int style) {
-    QsciLexerRuby_QBaseSetColor((QsciLexerRuby*)self, (QColor*)c, style);
+void q_scilexerruby_super_set_color(void* self, void* c, int style) {
+    QsciLexerRuby_SuperSetColor((QsciLexerRuby*)self, (QColor*)c, style);
 }
 
 void q_scilexerruby_on_set_color(void* self, void (*callback)(void*, void*, int)) {
@@ -739,8 +739,8 @@ void q_scilexerruby_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerRuby_SetEolFill((QsciLexerRuby*)self, eoffill, style);
 }
 
-void q_scilexerruby_qbase_set_eol_fill(void* self, bool eoffill, int style) {
-    QsciLexerRuby_QBaseSetEolFill((QsciLexerRuby*)self, eoffill, style);
+void q_scilexerruby_super_set_eol_fill(void* self, bool eoffill, int style) {
+    QsciLexerRuby_SuperSetEolFill((QsciLexerRuby*)self, eoffill, style);
 }
 
 void q_scilexerruby_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
@@ -751,8 +751,8 @@ void q_scilexerruby_set_font(void* self, void* f, int style) {
     QsciLexerRuby_SetFont((QsciLexerRuby*)self, (QFont*)f, style);
 }
 
-void q_scilexerruby_qbase_set_font(void* self, void* f, int style) {
-    QsciLexerRuby_QBaseSetFont((QsciLexerRuby*)self, (QFont*)f, style);
+void q_scilexerruby_super_set_font(void* self, void* f, int style) {
+    QsciLexerRuby_SuperSetFont((QsciLexerRuby*)self, (QFont*)f, style);
 }
 
 void q_scilexerruby_on_set_font(void* self, void (*callback)(void*, void*, int)) {
@@ -763,8 +763,8 @@ void q_scilexerruby_set_paper(void* self, void* c, int style) {
     QsciLexerRuby_SetPaper((QsciLexerRuby*)self, (QColor*)c, style);
 }
 
-void q_scilexerruby_qbase_set_paper(void* self, void* c, int style) {
-    QsciLexerRuby_QBaseSetPaper((QsciLexerRuby*)self, (QColor*)c, style);
+void q_scilexerruby_super_set_paper(void* self, void* c, int style) {
+    QsciLexerRuby_SuperSetPaper((QsciLexerRuby*)self, (QColor*)c, style);
 }
 
 void q_scilexerruby_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
@@ -775,8 +775,8 @@ bool q_scilexerruby_event(void* self, void* event) {
     return QsciLexerRuby_Event((QsciLexerRuby*)self, (QEvent*)event);
 }
 
-bool q_scilexerruby_qbase_event(void* self, void* event) {
-    return QsciLexerRuby_QBaseEvent((QsciLexerRuby*)self, (QEvent*)event);
+bool q_scilexerruby_super_event(void* self, void* event) {
+    return QsciLexerRuby_SuperEvent((QsciLexerRuby*)self, (QEvent*)event);
 }
 
 void q_scilexerruby_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -787,8 +787,8 @@ bool q_scilexerruby_event_filter(void* self, void* watched, void* event) {
     return QsciLexerRuby_EventFilter((QsciLexerRuby*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scilexerruby_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciLexerRuby_QBaseEventFilter((QsciLexerRuby*)self, (QObject*)watched, (QEvent*)event);
+bool q_scilexerruby_super_event_filter(void* self, void* watched, void* event) {
+    return QsciLexerRuby_SuperEventFilter((QsciLexerRuby*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scilexerruby_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -799,8 +799,8 @@ void q_scilexerruby_timer_event(void* self, void* event) {
     QsciLexerRuby_TimerEvent((QsciLexerRuby*)self, (QTimerEvent*)event);
 }
 
-void q_scilexerruby_qbase_timer_event(void* self, void* event) {
-    QsciLexerRuby_QBaseTimerEvent((QsciLexerRuby*)self, (QTimerEvent*)event);
+void q_scilexerruby_super_timer_event(void* self, void* event) {
+    QsciLexerRuby_SuperTimerEvent((QsciLexerRuby*)self, (QTimerEvent*)event);
 }
 
 void q_scilexerruby_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -811,8 +811,8 @@ void q_scilexerruby_child_event(void* self, void* event) {
     QsciLexerRuby_ChildEvent((QsciLexerRuby*)self, (QChildEvent*)event);
 }
 
-void q_scilexerruby_qbase_child_event(void* self, void* event) {
-    QsciLexerRuby_QBaseChildEvent((QsciLexerRuby*)self, (QChildEvent*)event);
+void q_scilexerruby_super_child_event(void* self, void* event) {
+    QsciLexerRuby_SuperChildEvent((QsciLexerRuby*)self, (QChildEvent*)event);
 }
 
 void q_scilexerruby_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -823,8 +823,8 @@ void q_scilexerruby_custom_event(void* self, void* event) {
     QsciLexerRuby_CustomEvent((QsciLexerRuby*)self, (QEvent*)event);
 }
 
-void q_scilexerruby_qbase_custom_event(void* self, void* event) {
-    QsciLexerRuby_QBaseCustomEvent((QsciLexerRuby*)self, (QEvent*)event);
+void q_scilexerruby_super_custom_event(void* self, void* event) {
+    QsciLexerRuby_SuperCustomEvent((QsciLexerRuby*)self, (QEvent*)event);
 }
 
 void q_scilexerruby_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -835,8 +835,8 @@ void q_scilexerruby_connect_notify(void* self, void* signal) {
     QsciLexerRuby_ConnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerruby_qbase_connect_notify(void* self, void* signal) {
-    QsciLexerRuby_QBaseConnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
+void q_scilexerruby_super_connect_notify(void* self, void* signal) {
+    QsciLexerRuby_SuperConnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerruby_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -847,8 +847,8 @@ void q_scilexerruby_disconnect_notify(void* self, void* signal) {
     QsciLexerRuby_DisconnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerruby_qbase_disconnect_notify(void* self, void* signal) {
-    QsciLexerRuby_QBaseDisconnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
+void q_scilexerruby_super_disconnect_notify(void* self, void* signal) {
+    QsciLexerRuby_SuperDisconnectNotify((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerruby_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -862,8 +862,8 @@ char* q_scilexerruby_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-char* q_scilexerruby_qbase_text_as_bytes(void* self, const char* text) {
-    libqt_string _str = QsciLexerRuby_QBaseTextAsBytes((QsciLexerRuby*)self, qstring(text));
+char* q_scilexerruby_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerRuby_SuperTextAsBytes((QsciLexerRuby*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -880,8 +880,8 @@ const char* q_scilexerruby_bytes_as_text(void* self, const char* bytes, int size
     return _ret;
 }
 
-const char* q_scilexerruby_qbase_bytes_as_text(void* self, const char* bytes, int size) {
-    libqt_string _str = QsciLexerRuby_QBaseBytesAsText((QsciLexerRuby*)self, bytes, size);
+const char* q_scilexerruby_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerRuby_SuperBytesAsText((QsciLexerRuby*)self, bytes, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -895,8 +895,8 @@ QObject* q_scilexerruby_sender(void* self) {
     return QsciLexerRuby_Sender((QsciLexerRuby*)self);
 }
 
-QObject* q_scilexerruby_qbase_sender(void* self) {
-    return QsciLexerRuby_QBaseSender((QsciLexerRuby*)self);
+QObject* q_scilexerruby_super_sender(void* self) {
+    return QsciLexerRuby_SuperSender((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_sender(void* self, QObject* (*callback)()) {
@@ -907,8 +907,8 @@ int32_t q_scilexerruby_sender_signal_index(void* self) {
     return QsciLexerRuby_SenderSignalIndex((QsciLexerRuby*)self);
 }
 
-int32_t q_scilexerruby_qbase_sender_signal_index(void* self) {
-    return QsciLexerRuby_QBaseSenderSignalIndex((QsciLexerRuby*)self);
+int32_t q_scilexerruby_super_sender_signal_index(void* self) {
+    return QsciLexerRuby_SuperSenderSignalIndex((QsciLexerRuby*)self);
 }
 
 void q_scilexerruby_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -919,8 +919,8 @@ int32_t q_scilexerruby_receivers(void* self, const char* signal) {
     return QsciLexerRuby_Receivers((QsciLexerRuby*)self, signal);
 }
 
-int32_t q_scilexerruby_qbase_receivers(void* self, const char* signal) {
-    return QsciLexerRuby_QBaseReceivers((QsciLexerRuby*)self, signal);
+int32_t q_scilexerruby_super_receivers(void* self, const char* signal) {
+    return QsciLexerRuby_SuperReceivers((QsciLexerRuby*)self, signal);
 }
 
 void q_scilexerruby_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -931,8 +931,8 @@ bool q_scilexerruby_is_signal_connected(void* self, void* signal) {
     return QsciLexerRuby_IsSignalConnected((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
-bool q_scilexerruby_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciLexerRuby_QBaseIsSignalConnected((QsciLexerRuby*)self, (QMetaMethod*)signal);
+bool q_scilexerruby_super_is_signal_connected(void* self, void* signal) {
+    return QsciLexerRuby_SuperIsSignalConnected((QsciLexerRuby*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerruby_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

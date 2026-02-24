@@ -23,8 +23,8 @@ void q_datetimeaxis_on_meta_object(void* self, const QMetaObject* (*callback)())
     QDateTimeAxis_OnMetaObject((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_datetimeaxis_qbase_meta_object(void* self) {
-    return QDateTimeAxis_QBaseMetaObject((QDateTimeAxis*)self);
+const QMetaObject* q_datetimeaxis_super_meta_object(void* self) {
+    return QDateTimeAxis_SuperMetaObject((QDateTimeAxis*)self);
 }
 
 void* q_datetimeaxis_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_datetimeaxis_on_metacast(void* self, void* (*callback)(void*, const char*
     QDateTimeAxis_OnMetacast((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
-void* q_datetimeaxis_qbase_metacast(void* self, const char* param1) {
-    return QDateTimeAxis_QBaseMetacast((QDateTimeAxis*)self, param1);
+void* q_datetimeaxis_super_metacast(void* self, const char* param1) {
+    return QDateTimeAxis_SuperMetacast((QDateTimeAxis*)self, param1);
 }
 
 int32_t q_datetimeaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_datetimeaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QDateTimeAxis_OnMetacall((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_datetimeaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDateTimeAxis_QBaseMetacall((QDateTimeAxis*)self, param1, param2, param3);
+int32_t q_datetimeaxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDateTimeAxis_SuperMetacall((QDateTimeAxis*)self, param1, param2, param3);
 }
 
 const char* q_datetimeaxis_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_datetimeaxis_on_type(void* self, int32_t (*callback)()) {
     QDateTimeAxis_OnType((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_datetimeaxis_qbase_type(void* self) {
-    return QDateTimeAxis_QBaseType((QDateTimeAxis*)self);
+int32_t q_datetimeaxis_super_type(void* self) {
+    return QDateTimeAxis_SuperType((QDateTimeAxis*)self);
 }
 
 void q_datetimeaxis_set_min(void* self, void* min) {
@@ -881,8 +881,8 @@ bool q_datetimeaxis_event(void* self, void* event) {
     return QDateTimeAxis_Event((QDateTimeAxis*)self, (QEvent*)event);
 }
 
-bool q_datetimeaxis_qbase_event(void* self, void* event) {
-    return QDateTimeAxis_QBaseEvent((QDateTimeAxis*)self, (QEvent*)event);
+bool q_datetimeaxis_super_event(void* self, void* event) {
+    return QDateTimeAxis_SuperEvent((QDateTimeAxis*)self, (QEvent*)event);
 }
 
 void q_datetimeaxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -893,8 +893,8 @@ bool q_datetimeaxis_event_filter(void* self, void* watched, void* event) {
     return QDateTimeAxis_EventFilter((QDateTimeAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_datetimeaxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDateTimeAxis_QBaseEventFilter((QDateTimeAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_datetimeaxis_super_event_filter(void* self, void* watched, void* event) {
+    return QDateTimeAxis_SuperEventFilter((QDateTimeAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_datetimeaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -905,8 +905,8 @@ void q_datetimeaxis_timer_event(void* self, void* event) {
     QDateTimeAxis_TimerEvent((QDateTimeAxis*)self, (QTimerEvent*)event);
 }
 
-void q_datetimeaxis_qbase_timer_event(void* self, void* event) {
-    QDateTimeAxis_QBaseTimerEvent((QDateTimeAxis*)self, (QTimerEvent*)event);
+void q_datetimeaxis_super_timer_event(void* self, void* event) {
+    QDateTimeAxis_SuperTimerEvent((QDateTimeAxis*)self, (QTimerEvent*)event);
 }
 
 void q_datetimeaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -917,8 +917,8 @@ void q_datetimeaxis_child_event(void* self, void* event) {
     QDateTimeAxis_ChildEvent((QDateTimeAxis*)self, (QChildEvent*)event);
 }
 
-void q_datetimeaxis_qbase_child_event(void* self, void* event) {
-    QDateTimeAxis_QBaseChildEvent((QDateTimeAxis*)self, (QChildEvent*)event);
+void q_datetimeaxis_super_child_event(void* self, void* event) {
+    QDateTimeAxis_SuperChildEvent((QDateTimeAxis*)self, (QChildEvent*)event);
 }
 
 void q_datetimeaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -929,8 +929,8 @@ void q_datetimeaxis_custom_event(void* self, void* event) {
     QDateTimeAxis_CustomEvent((QDateTimeAxis*)self, (QEvent*)event);
 }
 
-void q_datetimeaxis_qbase_custom_event(void* self, void* event) {
-    QDateTimeAxis_QBaseCustomEvent((QDateTimeAxis*)self, (QEvent*)event);
+void q_datetimeaxis_super_custom_event(void* self, void* event) {
+    QDateTimeAxis_SuperCustomEvent((QDateTimeAxis*)self, (QEvent*)event);
 }
 
 void q_datetimeaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -941,8 +941,8 @@ void q_datetimeaxis_connect_notify(void* self, void* signal) {
     QDateTimeAxis_ConnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_datetimeaxis_qbase_connect_notify(void* self, void* signal) {
-    QDateTimeAxis_QBaseConnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
+void q_datetimeaxis_super_connect_notify(void* self, void* signal) {
+    QDateTimeAxis_SuperConnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_datetimeaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -953,8 +953,8 @@ void q_datetimeaxis_disconnect_notify(void* self, void* signal) {
     QDateTimeAxis_DisconnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_datetimeaxis_qbase_disconnect_notify(void* self, void* signal) {
-    QDateTimeAxis_QBaseDisconnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
+void q_datetimeaxis_super_disconnect_notify(void* self, void* signal) {
+    QDateTimeAxis_SuperDisconnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_datetimeaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -965,8 +965,8 @@ QObject* q_datetimeaxis_sender(void* self) {
     return QDateTimeAxis_Sender((QDateTimeAxis*)self);
 }
 
-QObject* q_datetimeaxis_qbase_sender(void* self) {
-    return QDateTimeAxis_QBaseSender((QDateTimeAxis*)self);
+QObject* q_datetimeaxis_super_sender(void* self) {
+    return QDateTimeAxis_SuperSender((QDateTimeAxis*)self);
 }
 
 void q_datetimeaxis_on_sender(void* self, QObject* (*callback)()) {
@@ -977,8 +977,8 @@ int32_t q_datetimeaxis_sender_signal_index(void* self) {
     return QDateTimeAxis_SenderSignalIndex((QDateTimeAxis*)self);
 }
 
-int32_t q_datetimeaxis_qbase_sender_signal_index(void* self) {
-    return QDateTimeAxis_QBaseSenderSignalIndex((QDateTimeAxis*)self);
+int32_t q_datetimeaxis_super_sender_signal_index(void* self) {
+    return QDateTimeAxis_SuperSenderSignalIndex((QDateTimeAxis*)self);
 }
 
 void q_datetimeaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -989,8 +989,8 @@ int32_t q_datetimeaxis_receivers(void* self, const char* signal) {
     return QDateTimeAxis_Receivers((QDateTimeAxis*)self, signal);
 }
 
-int32_t q_datetimeaxis_qbase_receivers(void* self, const char* signal) {
-    return QDateTimeAxis_QBaseReceivers((QDateTimeAxis*)self, signal);
+int32_t q_datetimeaxis_super_receivers(void* self, const char* signal) {
+    return QDateTimeAxis_SuperReceivers((QDateTimeAxis*)self, signal);
 }
 
 void q_datetimeaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1001,8 +1001,8 @@ bool q_datetimeaxis_is_signal_connected(void* self, void* signal) {
     return QDateTimeAxis_IsSignalConnected((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_datetimeaxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QDateTimeAxis_QBaseIsSignalConnected((QDateTimeAxis*)self, (QMetaMethod*)signal);
+bool q_datetimeaxis_super_is_signal_connected(void* self, void* signal) {
+    return QDateTimeAxis_SuperIsSignalConnected((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_datetimeaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

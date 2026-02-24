@@ -46,8 +46,8 @@ void k_diroperator_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KDirOperator_OnMetaObject((KDirOperator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_diroperator_qbase_meta_object(void* self) {
-    return KDirOperator_QBaseMetaObject((KDirOperator*)self);
+const QMetaObject* k_diroperator_super_meta_object(void* self) {
+    return KDirOperator_SuperMetaObject((KDirOperator*)self);
 }
 
 void* k_diroperator_metacast(void* self, const char* param1) {
@@ -58,8 +58,8 @@ void k_diroperator_on_metacast(void* self, void* (*callback)(void*, const char*)
     KDirOperator_OnMetacast((KDirOperator*)self, (intptr_t)callback);
 }
 
-void* k_diroperator_qbase_metacast(void* self, const char* param1) {
-    return KDirOperator_QBaseMetacast((KDirOperator*)self, param1);
+void* k_diroperator_super_metacast(void* self, const char* param1) {
+    return KDirOperator_SuperMetacast((KDirOperator*)self, param1);
 }
 
 int32_t k_diroperator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -70,8 +70,8 @@ void k_diroperator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KDirOperator_OnMetacall((KDirOperator*)self, (intptr_t)callback);
 }
 
-int32_t k_diroperator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDirOperator_QBaseMetacall((KDirOperator*)self, param1, param2, param3);
+int32_t k_diroperator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDirOperator_SuperMetacall((KDirOperator*)self, param1, param2, param3);
 }
 
 const char* k_diroperator_tr(const char* s) {
@@ -89,8 +89,8 @@ void k_diroperator_on_set_show_hidden_files(void* self, void (*callback)(void*, 
     KDirOperator_OnSetShowHiddenFiles((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_show_hidden_files(void* self, bool s) {
-    KDirOperator_QBaseSetShowHiddenFiles((KDirOperator*)self, s);
+void k_diroperator_super_set_show_hidden_files(void* self, bool s) {
+    KDirOperator_SuperSetShowHiddenFiles((KDirOperator*)self, s);
 }
 
 bool k_diroperator_show_hidden_files(void* self) {
@@ -200,8 +200,8 @@ void k_diroperator_on_set_url(void* self, void (*callback)(void*, void*, bool)) 
     KDirOperator_OnSetUrl((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_url(void* self, void* url, bool clearforward) {
-    KDirOperator_QBaseSetUrl((KDirOperator*)self, (QUrl*)url, clearforward);
+void k_diroperator_super_set_url(void* self, void* url, bool clearforward) {
+    KDirOperator_SuperSetUrl((KDirOperator*)self, (QUrl*)url, clearforward);
 }
 
 void k_diroperator_set_current_item(void* self, void* url) {
@@ -260,8 +260,8 @@ void k_diroperator_on_set_mode(void* self, void (*callback)(void*, int32_t)) {
     KDirOperator_OnSetMode((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_mode(void* self, int32_t m) {
-    KDirOperator_QBaseSetMode((KDirOperator*)self, m);
+void k_diroperator_super_set_mode(void* self, int32_t m) {
+    KDirOperator_SuperSetMode((KDirOperator*)self, m);
 }
 
 int32_t k_diroperator_mode(void* self) {
@@ -276,8 +276,8 @@ void k_diroperator_on_set_preview_widget(void* self, void (*callback)(void*, voi
     KDirOperator_OnSetPreviewWidget((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_preview_widget(void* self, void* w) {
-    KDirOperator_QBaseSetPreviewWidget((KDirOperator*)self, (KPreviewWidgetBase*)w);
+void k_diroperator_super_set_preview_widget(void* self, void* w) {
+    KDirOperator_SuperSetPreviewWidget((KDirOperator*)self, (KPreviewWidgetBase*)w);
 }
 
 KFileItemList* k_diroperator_selected_items(void* self) {
@@ -321,8 +321,8 @@ void k_diroperator_on_set_view_config(void* self, void (*callback)(void*, void*)
     KDirOperator_OnSetViewConfig((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_view_config(void* self, void* configGroup) {
-    KDirOperator_QBaseSetViewConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
+void k_diroperator_super_set_view_config(void* self, void* configGroup) {
+    KDirOperator_SuperSetViewConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
 KConfigGroup* k_diroperator_view_config_group(void* self) {
@@ -337,8 +337,8 @@ void k_diroperator_on_read_config(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnReadConfig((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_read_config(void* self, void* configGroup) {
-    KDirOperator_QBaseReadConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
+void k_diroperator_super_read_config(void* self, void* configGroup) {
+    KDirOperator_SuperReadConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
 void k_diroperator_write_config(void* self, void* configGroup) {
@@ -349,8 +349,8 @@ void k_diroperator_on_write_config(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnWriteConfig((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_write_config(void* self, void* configGroup) {
-    KDirOperator_QBaseWriteConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
+void k_diroperator_super_write_config(void* self, void* configGroup) {
+    KDirOperator_SuperWriteConfig((KDirOperator*)self, (KConfigGroup*)configGroup);
 }
 
 void k_diroperator_set_only_double_click_selects_files(void* self, bool enable) {
@@ -385,8 +385,8 @@ void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, void*, 
     KDirOperator_OnDel((KDirOperator*)self, (intptr_t)callback);
 }
 
-KIO__DeleteJob* k_diroperator_qbase_del(void* self, void* items, void* parent, bool ask, bool showProgress) {
-    return KDirOperator_QBaseDel((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
+KIO__DeleteJob* k_diroperator_super_del(void* self, void* items, void* parent, bool ask, bool showProgress) {
+    return KDirOperator_SuperDel((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
 void k_diroperator_clear_history(void* self) {
@@ -401,8 +401,8 @@ void k_diroperator_on_set_enable_dir_highlighting(void* self, void (*callback)(v
     KDirOperator_OnSetEnableDirHighlighting((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_enable_dir_highlighting(void* self, bool enable) {
-    KDirOperator_QBaseSetEnableDirHighlighting((KDirOperator*)self, enable);
+void k_diroperator_super_set_enable_dir_highlighting(void* self, bool enable) {
+    KDirOperator_SuperSetEnableDirHighlighting((KDirOperator*)self, enable);
 }
 
 bool k_diroperator_dir_highlighting(void* self) {
@@ -429,8 +429,8 @@ void k_diroperator_on_set_accept_drops(void* self, void (*callback)(void*, bool)
     KDirOperator_OnSetAcceptDrops((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_accept_drops(void* self, bool b) {
-    KDirOperator_QBaseSetAcceptDrops((KDirOperator*)self, b);
+void k_diroperator_super_set_accept_drops(void* self, bool b) {
+    KDirOperator_SuperSetAcceptDrops((KDirOperator*)self, b);
 }
 
 void k_diroperator_set_drop_options(void* self, int options) {
@@ -441,8 +441,8 @@ void k_diroperator_on_set_drop_options(void* self, void (*callback)(void*, int))
     KDirOperator_OnSetDropOptions((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_drop_options(void* self, int options) {
-    KDirOperator_QBaseSetDropOptions((KDirOperator*)self, options);
+void k_diroperator_super_set_drop_options(void* self, int options) {
+    KDirOperator_SuperSetDropOptions((KDirOperator*)self, options);
 }
 
 KIO__CopyJob* k_diroperator_trash(void* self, void* items, void* parent, bool ask, bool showProgress) {
@@ -453,8 +453,8 @@ void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, void*, 
     KDirOperator_OnTrash((KDirOperator*)self, (intptr_t)callback);
 }
 
-KIO__CopyJob* k_diroperator_qbase_trash(void* self, void* items, void* parent, bool ask, bool showProgress) {
-    return KDirOperator_QBaseTrash((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
+KIO__CopyJob* k_diroperator_super_trash(void* self, void* items, void* parent, bool ask, bool showProgress) {
+    return KDirOperator_SuperTrash((KDirOperator*)self, (KFileItemList*)items, (QWidget*)parent, ask, showProgress);
 }
 
 KFilePreviewGenerator* k_diroperator_preview_generator(void* self) {
@@ -524,8 +524,8 @@ void k_diroperator_on_create_view(void* self, QAbstractItemView* (*callback)(voi
     KDirOperator_OnCreateView((KDirOperator*)self, (intptr_t)callback);
 }
 
-QAbstractItemView* k_diroperator_qbase_create_view(void* self, void* parent, int32_t viewKind) {
-    return KDirOperator_QBaseCreateView((KDirOperator*)self, (QWidget*)parent, viewKind);
+QAbstractItemView* k_diroperator_super_create_view(void* self, void* parent, int32_t viewKind) {
+    return KDirOperator_SuperCreateView((KDirOperator*)self, (QWidget*)parent, viewKind);
 }
 
 void k_diroperator_set_dir_lister(void* self, void* lister) {
@@ -536,8 +536,8 @@ void k_diroperator_on_set_dir_lister(void* self, void (*callback)(void*, void*))
     KDirOperator_OnSetDirLister((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_set_dir_lister(void* self, void* lister) {
-    KDirOperator_QBaseSetDirLister((KDirOperator*)self, (KDirLister*)lister);
+void k_diroperator_super_set_dir_lister(void* self, void* lister) {
+    KDirOperator_SuperSetDirLister((KDirOperator*)self, (KDirLister*)lister);
 }
 
 void k_diroperator_resize_event(void* self, void* event) {
@@ -548,8 +548,8 @@ void k_diroperator_on_resize_event(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnResizeEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_resize_event(void* self, void* event) {
-    KDirOperator_QBaseResizeEvent((KDirOperator*)self, (QResizeEvent*)event);
+void k_diroperator_super_resize_event(void* self, void* event) {
+    KDirOperator_SuperResizeEvent((KDirOperator*)self, (QResizeEvent*)event);
 }
 
 void k_diroperator_setup_actions(void* self) {
@@ -560,8 +560,8 @@ void k_diroperator_on_setup_actions(void* self, void (*callback)()) {
     KDirOperator_OnSetupActions((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_setup_actions(void* self) {
-    KDirOperator_QBaseSetupActions((KDirOperator*)self);
+void k_diroperator_super_setup_actions(void* self) {
+    KDirOperator_SuperSetupActions((KDirOperator*)self);
 }
 
 void k_diroperator_update_sort_actions(void* self) {
@@ -572,8 +572,8 @@ void k_diroperator_on_update_sort_actions(void* self, void (*callback)()) {
     KDirOperator_OnUpdateSortActions((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_update_sort_actions(void* self) {
-    KDirOperator_QBaseUpdateSortActions((KDirOperator*)self);
+void k_diroperator_super_update_sort_actions(void* self) {
+    KDirOperator_SuperUpdateSortActions((KDirOperator*)self);
 }
 
 void k_diroperator_update_view_actions(void* self) {
@@ -584,8 +584,8 @@ void k_diroperator_on_update_view_actions(void* self, void (*callback)()) {
     KDirOperator_OnUpdateViewActions((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_update_view_actions(void* self) {
-    KDirOperator_QBaseUpdateViewActions((KDirOperator*)self);
+void k_diroperator_super_update_view_actions(void* self) {
+    KDirOperator_SuperUpdateViewActions((KDirOperator*)self);
 }
 
 void k_diroperator_setup_menu2(void* self) {
@@ -596,8 +596,8 @@ void k_diroperator_on_setup_menu2(void* self, void (*callback)()) {
     KDirOperator_OnSetupMenu2((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_setup_menu2(void* self) {
-    KDirOperator_QBaseSetupMenu2((KDirOperator*)self);
+void k_diroperator_super_setup_menu2(void* self) {
+    KDirOperator_SuperSetupMenu2((KDirOperator*)self);
 }
 
 void k_diroperator_prepare_completion_objects(void* self) {
@@ -608,8 +608,8 @@ void k_diroperator_on_prepare_completion_objects(void* self, void (*callback)())
     KDirOperator_OnPrepareCompletionObjects((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_prepare_completion_objects(void* self) {
-    KDirOperator_QBasePrepareCompletionObjects((KDirOperator*)self);
+void k_diroperator_super_prepare_completion_objects(void* self) {
+    KDirOperator_SuperPrepareCompletionObjects((KDirOperator*)self);
 }
 
 bool k_diroperator_check_preview_support(void* self) {
@@ -620,8 +620,8 @@ void k_diroperator_on_check_preview_support(void* self, bool (*callback)()) {
     KDirOperator_OnCheckPreviewSupport((KDirOperator*)self, (intptr_t)callback);
 }
 
-bool k_diroperator_qbase_check_preview_support(void* self) {
-    return KDirOperator_QBaseCheckPreviewSupport((KDirOperator*)self);
+bool k_diroperator_super_check_preview_support(void* self) {
+    return KDirOperator_SuperCheckPreviewSupport((KDirOperator*)self);
 }
 
 void k_diroperator_activated_menu(void* self, void* item, void* pos) {
@@ -632,8 +632,8 @@ void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, void*, 
     KDirOperator_OnActivatedMenu((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_activated_menu(void* self, void* item, void* pos) {
-    KDirOperator_QBaseActivatedMenu((KDirOperator*)self, (KFileItem*)item, (QPoint*)pos);
+void k_diroperator_super_activated_menu(void* self, void* item, void* pos) {
+    KDirOperator_SuperActivatedMenu((KDirOperator*)self, (KFileItem*)item, (QPoint*)pos);
 }
 
 void k_diroperator_change_event(void* self, void* event) {
@@ -644,8 +644,8 @@ void k_diroperator_on_change_event(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnChangeEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_change_event(void* self, void* event) {
-    KDirOperator_QBaseChangeEvent((KDirOperator*)self, (QEvent*)event);
+void k_diroperator_super_change_event(void* self, void* event) {
+    KDirOperator_SuperChangeEvent((KDirOperator*)self, (QEvent*)event);
 }
 
 bool k_diroperator_event_filter(void* self, void* watched, void* event) {
@@ -656,8 +656,8 @@ void k_diroperator_on_event_filter(void* self, bool (*callback)(void*, void*, vo
     KDirOperator_OnEventFilter((KDirOperator*)self, (intptr_t)callback);
 }
 
-bool k_diroperator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDirOperator_QBaseEventFilter((KDirOperator*)self, (QObject*)watched, (QEvent*)event);
+bool k_diroperator_super_event_filter(void* self, void* watched, void* event) {
+    return KDirOperator_SuperEventFilter((KDirOperator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_diroperator_back(void* self) {
@@ -668,8 +668,8 @@ void k_diroperator_on_back(void* self, void (*callback)()) {
     KDirOperator_OnBack((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_back(void* self) {
-    KDirOperator_QBaseBack((KDirOperator*)self);
+void k_diroperator_super_back(void* self) {
+    KDirOperator_SuperBack((KDirOperator*)self);
 }
 
 void k_diroperator_forward(void* self) {
@@ -680,8 +680,8 @@ void k_diroperator_on_forward(void* self, void (*callback)()) {
     KDirOperator_OnForward((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_forward(void* self) {
-    KDirOperator_QBaseForward((KDirOperator*)self);
+void k_diroperator_super_forward(void* self) {
+    KDirOperator_SuperForward((KDirOperator*)self);
 }
 
 void k_diroperator_home(void* self) {
@@ -692,8 +692,8 @@ void k_diroperator_on_home(void* self, void (*callback)()) {
     KDirOperator_OnHome((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_home(void* self) {
-    KDirOperator_QBaseHome((KDirOperator*)self);
+void k_diroperator_super_home(void* self) {
+    KDirOperator_SuperHome((KDirOperator*)self);
 }
 
 void k_diroperator_cd_up(void* self) {
@@ -704,8 +704,8 @@ void k_diroperator_on_cd_up(void* self, void (*callback)()) {
     KDirOperator_OnCdUp((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_cd_up(void* self) {
-    KDirOperator_QBaseCdUp((KDirOperator*)self);
+void k_diroperator_super_cd_up(void* self) {
+    KDirOperator_SuperCdUp((KDirOperator*)self);
 }
 
 void k_diroperator_update_dir(void* self) {
@@ -720,8 +720,8 @@ void k_diroperator_on_reread_dir(void* self, void (*callback)()) {
     KDirOperator_OnRereadDir((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_reread_dir(void* self) {
-    KDirOperator_QBaseRereadDir((KDirOperator*)self);
+void k_diroperator_super_reread_dir(void* self) {
+    KDirOperator_SuperRereadDir((KDirOperator*)self);
 }
 
 void k_diroperator_mkdir(void* self) {
@@ -732,8 +732,8 @@ void k_diroperator_on_mkdir(void* self, void (*callback)()) {
     KDirOperator_OnMkdir((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_mkdir(void* self) {
-    KDirOperator_QBaseMkdir((KDirOperator*)self);
+void k_diroperator_super_mkdir(void* self) {
+    KDirOperator_SuperMkdir((KDirOperator*)self);
 }
 
 void k_diroperator_delete_selected(void* self) {
@@ -744,8 +744,8 @@ void k_diroperator_on_delete_selected(void* self, void (*callback)()) {
     KDirOperator_OnDeleteSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_delete_selected(void* self) {
-    KDirOperator_QBaseDeleteSelected((KDirOperator*)self);
+void k_diroperator_super_delete_selected(void* self) {
+    KDirOperator_SuperDeleteSelected((KDirOperator*)self);
 }
 
 void k_diroperator_update_selection_dependent_actions(void* self) {
@@ -778,8 +778,8 @@ void k_diroperator_on_trash_selected(void* self, void (*callback)()) {
     KDirOperator_OnTrashSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_trash_selected(void* self) {
-    KDirOperator_QBaseTrashSelected((KDirOperator*)self);
+void k_diroperator_super_trash_selected(void* self) {
+    KDirOperator_SuperTrashSelected((KDirOperator*)self);
 }
 
 void k_diroperator_set_icon_size(void* self, int value) {
@@ -809,8 +809,8 @@ void k_diroperator_on_reset_cursor(void* self, void (*callback)()) {
     KDirOperator_OnResetCursor((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_reset_cursor(void* self) {
-    KDirOperator_QBaseResetCursor((KDirOperator*)self);
+void k_diroperator_super_reset_cursor(void* self) {
+    KDirOperator_SuperResetCursor((KDirOperator*)self);
 }
 
 void k_diroperator_path_changed(void* self) {
@@ -821,8 +821,8 @@ void k_diroperator_on_path_changed(void* self, void (*callback)()) {
     KDirOperator_OnPathChanged((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_path_changed(void* self) {
-    KDirOperator_QBasePathChanged((KDirOperator*)self);
+void k_diroperator_super_path_changed(void* self) {
+    KDirOperator_SuperPathChanged((KDirOperator*)self);
 }
 
 void k_diroperator_select_dir(void* self, void* item) {
@@ -833,8 +833,8 @@ void k_diroperator_on_select_dir(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnSelectDir((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_select_dir(void* self, void* item) {
-    KDirOperator_QBaseSelectDir((KDirOperator*)self, (KFileItem*)item);
+void k_diroperator_super_select_dir(void* self, void* item) {
+    KDirOperator_SuperSelectDir((KDirOperator*)self, (KFileItem*)item);
 }
 
 void k_diroperator_select_file(void* self, void* item) {
@@ -845,8 +845,8 @@ void k_diroperator_on_select_file(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnSelectFile((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_select_file(void* self, void* item) {
-    KDirOperator_QBaseSelectFile((KDirOperator*)self, (KFileItem*)item);
+void k_diroperator_super_select_file(void* self, void* item) {
+    KDirOperator_SuperSelectFile((KDirOperator*)self, (KFileItem*)item);
 }
 
 void k_diroperator_highlight_file(void* self, void* item) {
@@ -857,8 +857,8 @@ void k_diroperator_on_highlight_file(void* self, void (*callback)(void*, void*))
     KDirOperator_OnHighlightFile((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_highlight_file(void* self, void* item) {
-    KDirOperator_QBaseHighlightFile((KDirOperator*)self, (KFileItem*)item);
+void k_diroperator_super_highlight_file(void* self, void* item) {
+    KDirOperator_SuperHighlightFile((KDirOperator*)self, (KFileItem*)item);
 }
 
 void k_diroperator_sort_by_name(void* self) {
@@ -869,8 +869,8 @@ void k_diroperator_on_sort_by_name(void* self, void (*callback)()) {
     KDirOperator_OnSortByName((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_sort_by_name(void* self) {
-    KDirOperator_QBaseSortByName((KDirOperator*)self);
+void k_diroperator_super_sort_by_name(void* self) {
+    KDirOperator_SuperSortByName((KDirOperator*)self);
 }
 
 void k_diroperator_sort_by_size(void* self) {
@@ -881,8 +881,8 @@ void k_diroperator_on_sort_by_size(void* self, void (*callback)()) {
     KDirOperator_OnSortBySize((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_sort_by_size(void* self) {
-    KDirOperator_QBaseSortBySize((KDirOperator*)self);
+void k_diroperator_super_sort_by_size(void* self) {
+    KDirOperator_SuperSortBySize((KDirOperator*)self);
 }
 
 void k_diroperator_sort_by_date(void* self) {
@@ -893,8 +893,8 @@ void k_diroperator_on_sort_by_date(void* self, void (*callback)()) {
     KDirOperator_OnSortByDate((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_sort_by_date(void* self) {
-    KDirOperator_QBaseSortByDate((KDirOperator*)self);
+void k_diroperator_super_sort_by_date(void* self) {
+    KDirOperator_SuperSortByDate((KDirOperator*)self);
 }
 
 void k_diroperator_sort_by_type(void* self) {
@@ -905,8 +905,8 @@ void k_diroperator_on_sort_by_type(void* self, void (*callback)()) {
     KDirOperator_OnSortByType((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_sort_by_type(void* self) {
-    KDirOperator_QBaseSortByType((KDirOperator*)self);
+void k_diroperator_super_sort_by_type(void* self) {
+    KDirOperator_SuperSortByType((KDirOperator*)self);
 }
 
 void k_diroperator_sort_reversed(void* self) {
@@ -917,8 +917,8 @@ void k_diroperator_on_sort_reversed(void* self, void (*callback)()) {
     KDirOperator_OnSortReversed((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_sort_reversed(void* self) {
-    KDirOperator_QBaseSortReversed((KDirOperator*)self);
+void k_diroperator_super_sort_reversed(void* self) {
+    KDirOperator_SuperSortReversed((KDirOperator*)self);
 }
 
 void k_diroperator_toggle_dirs_first(void* self) {
@@ -929,8 +929,8 @@ void k_diroperator_on_toggle_dirs_first(void* self, void (*callback)()) {
     KDirOperator_OnToggleDirsFirst((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_toggle_dirs_first(void* self) {
-    KDirOperator_QBaseToggleDirsFirst((KDirOperator*)self);
+void k_diroperator_super_toggle_dirs_first(void* self) {
+    KDirOperator_SuperToggleDirsFirst((KDirOperator*)self);
 }
 
 void k_diroperator_toggle_ignore_case(void* self) {
@@ -941,8 +941,8 @@ void k_diroperator_on_toggle_ignore_case(void* self, void (*callback)()) {
     KDirOperator_OnToggleIgnoreCase((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_toggle_ignore_case(void* self) {
-    KDirOperator_QBaseToggleIgnoreCase((KDirOperator*)self);
+void k_diroperator_super_toggle_ignore_case(void* self) {
+    KDirOperator_SuperToggleIgnoreCase((KDirOperator*)self);
 }
 
 void k_diroperator_slot_completion_match(void* self, const char* match) {
@@ -953,8 +953,8 @@ void k_diroperator_on_slot_completion_match(void* self, void (*callback)(void*, 
     KDirOperator_OnSlotCompletionMatch((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_qbase_slot_completion_match(void* self, const char* match) {
-    KDirOperator_QBaseSlotCompletionMatch((KDirOperator*)self, qstring(match));
+void k_diroperator_super_slot_completion_match(void* self, const char* match) {
+    KDirOperator_SuperSlotCompletionMatch((KDirOperator*)self, qstring(match));
 }
 
 void k_diroperator_url_entered(void* self, void* param1) {
@@ -2452,8 +2452,8 @@ int32_t k_diroperator_dev_type(void* self) {
     return KDirOperator_DevType((KDirOperator*)self);
 }
 
-int32_t k_diroperator_qbase_dev_type(void* self) {
-    return KDirOperator_QBaseDevType((KDirOperator*)self);
+int32_t k_diroperator_super_dev_type(void* self) {
+    return KDirOperator_SuperDevType((KDirOperator*)self);
 }
 
 void k_diroperator_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2464,8 +2464,8 @@ void k_diroperator_set_visible(void* self, bool visible) {
     KDirOperator_SetVisible((KDirOperator*)self, visible);
 }
 
-void k_diroperator_qbase_set_visible(void* self, bool visible) {
-    KDirOperator_QBaseSetVisible((KDirOperator*)self, visible);
+void k_diroperator_super_set_visible(void* self, bool visible) {
+    KDirOperator_SuperSetVisible((KDirOperator*)self, visible);
 }
 
 void k_diroperator_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2476,8 +2476,8 @@ QSize* k_diroperator_size_hint(void* self) {
     return KDirOperator_SizeHint((KDirOperator*)self);
 }
 
-QSize* k_diroperator_qbase_size_hint(void* self) {
-    return KDirOperator_QBaseSizeHint((KDirOperator*)self);
+QSize* k_diroperator_super_size_hint(void* self) {
+    return KDirOperator_SuperSizeHint((KDirOperator*)self);
 }
 
 void k_diroperator_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2488,8 +2488,8 @@ QSize* k_diroperator_minimum_size_hint(void* self) {
     return KDirOperator_MinimumSizeHint((KDirOperator*)self);
 }
 
-QSize* k_diroperator_qbase_minimum_size_hint(void* self) {
-    return KDirOperator_QBaseMinimumSizeHint((KDirOperator*)self);
+QSize* k_diroperator_super_minimum_size_hint(void* self) {
+    return KDirOperator_SuperMinimumSizeHint((KDirOperator*)self);
 }
 
 void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2500,8 +2500,8 @@ int32_t k_diroperator_height_for_width(void* self, int param1) {
     return KDirOperator_HeightForWidth((KDirOperator*)self, param1);
 }
 
-int32_t k_diroperator_qbase_height_for_width(void* self, int param1) {
-    return KDirOperator_QBaseHeightForWidth((KDirOperator*)self, param1);
+int32_t k_diroperator_super_height_for_width(void* self, int param1) {
+    return KDirOperator_SuperHeightForWidth((KDirOperator*)self, param1);
 }
 
 void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2512,8 +2512,8 @@ bool k_diroperator_has_height_for_width(void* self) {
     return KDirOperator_HasHeightForWidth((KDirOperator*)self);
 }
 
-bool k_diroperator_qbase_has_height_for_width(void* self) {
-    return KDirOperator_QBaseHasHeightForWidth((KDirOperator*)self);
+bool k_diroperator_super_has_height_for_width(void* self) {
+    return KDirOperator_SuperHasHeightForWidth((KDirOperator*)self);
 }
 
 void k_diroperator_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2524,8 +2524,8 @@ QPaintEngine* k_diroperator_paint_engine(void* self) {
     return KDirOperator_PaintEngine((KDirOperator*)self);
 }
 
-QPaintEngine* k_diroperator_qbase_paint_engine(void* self) {
-    return KDirOperator_QBasePaintEngine((KDirOperator*)self);
+QPaintEngine* k_diroperator_super_paint_engine(void* self) {
+    return KDirOperator_SuperPaintEngine((KDirOperator*)self);
 }
 
 void k_diroperator_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2536,8 +2536,8 @@ bool k_diroperator_event(void* self, void* event) {
     return KDirOperator_Event((KDirOperator*)self, (QEvent*)event);
 }
 
-bool k_diroperator_qbase_event(void* self, void* event) {
-    return KDirOperator_QBaseEvent((KDirOperator*)self, (QEvent*)event);
+bool k_diroperator_super_event(void* self, void* event) {
+    return KDirOperator_SuperEvent((KDirOperator*)self, (QEvent*)event);
 }
 
 void k_diroperator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2548,8 +2548,8 @@ void k_diroperator_mouse_press_event(void* self, void* event) {
     KDirOperator_MousePressEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
-void k_diroperator_qbase_mouse_press_event(void* self, void* event) {
-    KDirOperator_QBaseMousePressEvent((KDirOperator*)self, (QMouseEvent*)event);
+void k_diroperator_super_mouse_press_event(void* self, void* event) {
+    KDirOperator_SuperMousePressEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
 void k_diroperator_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2560,8 +2560,8 @@ void k_diroperator_mouse_release_event(void* self, void* event) {
     KDirOperator_MouseReleaseEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
-void k_diroperator_qbase_mouse_release_event(void* self, void* event) {
-    KDirOperator_QBaseMouseReleaseEvent((KDirOperator*)self, (QMouseEvent*)event);
+void k_diroperator_super_mouse_release_event(void* self, void* event) {
+    KDirOperator_SuperMouseReleaseEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
 void k_diroperator_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2572,8 +2572,8 @@ void k_diroperator_mouse_double_click_event(void* self, void* event) {
     KDirOperator_MouseDoubleClickEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
-void k_diroperator_qbase_mouse_double_click_event(void* self, void* event) {
-    KDirOperator_QBaseMouseDoubleClickEvent((KDirOperator*)self, (QMouseEvent*)event);
+void k_diroperator_super_mouse_double_click_event(void* self, void* event) {
+    KDirOperator_SuperMouseDoubleClickEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
 void k_diroperator_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2584,8 +2584,8 @@ void k_diroperator_mouse_move_event(void* self, void* event) {
     KDirOperator_MouseMoveEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
-void k_diroperator_qbase_mouse_move_event(void* self, void* event) {
-    KDirOperator_QBaseMouseMoveEvent((KDirOperator*)self, (QMouseEvent*)event);
+void k_diroperator_super_mouse_move_event(void* self, void* event) {
+    KDirOperator_SuperMouseMoveEvent((KDirOperator*)self, (QMouseEvent*)event);
 }
 
 void k_diroperator_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2596,8 +2596,8 @@ void k_diroperator_wheel_event(void* self, void* event) {
     KDirOperator_WheelEvent((KDirOperator*)self, (QWheelEvent*)event);
 }
 
-void k_diroperator_qbase_wheel_event(void* self, void* event) {
-    KDirOperator_QBaseWheelEvent((KDirOperator*)self, (QWheelEvent*)event);
+void k_diroperator_super_wheel_event(void* self, void* event) {
+    KDirOperator_SuperWheelEvent((KDirOperator*)self, (QWheelEvent*)event);
 }
 
 void k_diroperator_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2608,8 +2608,8 @@ void k_diroperator_key_press_event(void* self, void* event) {
     KDirOperator_KeyPressEvent((KDirOperator*)self, (QKeyEvent*)event);
 }
 
-void k_diroperator_qbase_key_press_event(void* self, void* event) {
-    KDirOperator_QBaseKeyPressEvent((KDirOperator*)self, (QKeyEvent*)event);
+void k_diroperator_super_key_press_event(void* self, void* event) {
+    KDirOperator_SuperKeyPressEvent((KDirOperator*)self, (QKeyEvent*)event);
 }
 
 void k_diroperator_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2620,8 +2620,8 @@ void k_diroperator_key_release_event(void* self, void* event) {
     KDirOperator_KeyReleaseEvent((KDirOperator*)self, (QKeyEvent*)event);
 }
 
-void k_diroperator_qbase_key_release_event(void* self, void* event) {
-    KDirOperator_QBaseKeyReleaseEvent((KDirOperator*)self, (QKeyEvent*)event);
+void k_diroperator_super_key_release_event(void* self, void* event) {
+    KDirOperator_SuperKeyReleaseEvent((KDirOperator*)self, (QKeyEvent*)event);
 }
 
 void k_diroperator_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2632,8 +2632,8 @@ void k_diroperator_focus_in_event(void* self, void* event) {
     KDirOperator_FocusInEvent((KDirOperator*)self, (QFocusEvent*)event);
 }
 
-void k_diroperator_qbase_focus_in_event(void* self, void* event) {
-    KDirOperator_QBaseFocusInEvent((KDirOperator*)self, (QFocusEvent*)event);
+void k_diroperator_super_focus_in_event(void* self, void* event) {
+    KDirOperator_SuperFocusInEvent((KDirOperator*)self, (QFocusEvent*)event);
 }
 
 void k_diroperator_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2644,8 +2644,8 @@ void k_diroperator_focus_out_event(void* self, void* event) {
     KDirOperator_FocusOutEvent((KDirOperator*)self, (QFocusEvent*)event);
 }
 
-void k_diroperator_qbase_focus_out_event(void* self, void* event) {
-    KDirOperator_QBaseFocusOutEvent((KDirOperator*)self, (QFocusEvent*)event);
+void k_diroperator_super_focus_out_event(void* self, void* event) {
+    KDirOperator_SuperFocusOutEvent((KDirOperator*)self, (QFocusEvent*)event);
 }
 
 void k_diroperator_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2656,8 +2656,8 @@ void k_diroperator_enter_event(void* self, void* event) {
     KDirOperator_EnterEvent((KDirOperator*)self, (QEnterEvent*)event);
 }
 
-void k_diroperator_qbase_enter_event(void* self, void* event) {
-    KDirOperator_QBaseEnterEvent((KDirOperator*)self, (QEnterEvent*)event);
+void k_diroperator_super_enter_event(void* self, void* event) {
+    KDirOperator_SuperEnterEvent((KDirOperator*)self, (QEnterEvent*)event);
 }
 
 void k_diroperator_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2668,8 +2668,8 @@ void k_diroperator_leave_event(void* self, void* event) {
     KDirOperator_LeaveEvent((KDirOperator*)self, (QEvent*)event);
 }
 
-void k_diroperator_qbase_leave_event(void* self, void* event) {
-    KDirOperator_QBaseLeaveEvent((KDirOperator*)self, (QEvent*)event);
+void k_diroperator_super_leave_event(void* self, void* event) {
+    KDirOperator_SuperLeaveEvent((KDirOperator*)self, (QEvent*)event);
 }
 
 void k_diroperator_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2680,8 +2680,8 @@ void k_diroperator_paint_event(void* self, void* event) {
     KDirOperator_PaintEvent((KDirOperator*)self, (QPaintEvent*)event);
 }
 
-void k_diroperator_qbase_paint_event(void* self, void* event) {
-    KDirOperator_QBasePaintEvent((KDirOperator*)self, (QPaintEvent*)event);
+void k_diroperator_super_paint_event(void* self, void* event) {
+    KDirOperator_SuperPaintEvent((KDirOperator*)self, (QPaintEvent*)event);
 }
 
 void k_diroperator_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2692,8 +2692,8 @@ void k_diroperator_move_event(void* self, void* event) {
     KDirOperator_MoveEvent((KDirOperator*)self, (QMoveEvent*)event);
 }
 
-void k_diroperator_qbase_move_event(void* self, void* event) {
-    KDirOperator_QBaseMoveEvent((KDirOperator*)self, (QMoveEvent*)event);
+void k_diroperator_super_move_event(void* self, void* event) {
+    KDirOperator_SuperMoveEvent((KDirOperator*)self, (QMoveEvent*)event);
 }
 
 void k_diroperator_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2704,8 +2704,8 @@ void k_diroperator_close_event(void* self, void* event) {
     KDirOperator_CloseEvent((KDirOperator*)self, (QCloseEvent*)event);
 }
 
-void k_diroperator_qbase_close_event(void* self, void* event) {
-    KDirOperator_QBaseCloseEvent((KDirOperator*)self, (QCloseEvent*)event);
+void k_diroperator_super_close_event(void* self, void* event) {
+    KDirOperator_SuperCloseEvent((KDirOperator*)self, (QCloseEvent*)event);
 }
 
 void k_diroperator_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2716,8 +2716,8 @@ void k_diroperator_context_menu_event(void* self, void* event) {
     KDirOperator_ContextMenuEvent((KDirOperator*)self, (QContextMenuEvent*)event);
 }
 
-void k_diroperator_qbase_context_menu_event(void* self, void* event) {
-    KDirOperator_QBaseContextMenuEvent((KDirOperator*)self, (QContextMenuEvent*)event);
+void k_diroperator_super_context_menu_event(void* self, void* event) {
+    KDirOperator_SuperContextMenuEvent((KDirOperator*)self, (QContextMenuEvent*)event);
 }
 
 void k_diroperator_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2728,8 +2728,8 @@ void k_diroperator_tablet_event(void* self, void* event) {
     KDirOperator_TabletEvent((KDirOperator*)self, (QTabletEvent*)event);
 }
 
-void k_diroperator_qbase_tablet_event(void* self, void* event) {
-    KDirOperator_QBaseTabletEvent((KDirOperator*)self, (QTabletEvent*)event);
+void k_diroperator_super_tablet_event(void* self, void* event) {
+    KDirOperator_SuperTabletEvent((KDirOperator*)self, (QTabletEvent*)event);
 }
 
 void k_diroperator_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2740,8 +2740,8 @@ void k_diroperator_action_event(void* self, void* event) {
     KDirOperator_ActionEvent((KDirOperator*)self, (QActionEvent*)event);
 }
 
-void k_diroperator_qbase_action_event(void* self, void* event) {
-    KDirOperator_QBaseActionEvent((KDirOperator*)self, (QActionEvent*)event);
+void k_diroperator_super_action_event(void* self, void* event) {
+    KDirOperator_SuperActionEvent((KDirOperator*)self, (QActionEvent*)event);
 }
 
 void k_diroperator_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2752,8 +2752,8 @@ void k_diroperator_drag_enter_event(void* self, void* event) {
     KDirOperator_DragEnterEvent((KDirOperator*)self, (QDragEnterEvent*)event);
 }
 
-void k_diroperator_qbase_drag_enter_event(void* self, void* event) {
-    KDirOperator_QBaseDragEnterEvent((KDirOperator*)self, (QDragEnterEvent*)event);
+void k_diroperator_super_drag_enter_event(void* self, void* event) {
+    KDirOperator_SuperDragEnterEvent((KDirOperator*)self, (QDragEnterEvent*)event);
 }
 
 void k_diroperator_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2764,8 +2764,8 @@ void k_diroperator_drag_move_event(void* self, void* event) {
     KDirOperator_DragMoveEvent((KDirOperator*)self, (QDragMoveEvent*)event);
 }
 
-void k_diroperator_qbase_drag_move_event(void* self, void* event) {
-    KDirOperator_QBaseDragMoveEvent((KDirOperator*)self, (QDragMoveEvent*)event);
+void k_diroperator_super_drag_move_event(void* self, void* event) {
+    KDirOperator_SuperDragMoveEvent((KDirOperator*)self, (QDragMoveEvent*)event);
 }
 
 void k_diroperator_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2776,8 +2776,8 @@ void k_diroperator_drag_leave_event(void* self, void* event) {
     KDirOperator_DragLeaveEvent((KDirOperator*)self, (QDragLeaveEvent*)event);
 }
 
-void k_diroperator_qbase_drag_leave_event(void* self, void* event) {
-    KDirOperator_QBaseDragLeaveEvent((KDirOperator*)self, (QDragLeaveEvent*)event);
+void k_diroperator_super_drag_leave_event(void* self, void* event) {
+    KDirOperator_SuperDragLeaveEvent((KDirOperator*)self, (QDragLeaveEvent*)event);
 }
 
 void k_diroperator_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2788,8 +2788,8 @@ void k_diroperator_drop_event(void* self, void* event) {
     KDirOperator_DropEvent((KDirOperator*)self, (QDropEvent*)event);
 }
 
-void k_diroperator_qbase_drop_event(void* self, void* event) {
-    KDirOperator_QBaseDropEvent((KDirOperator*)self, (QDropEvent*)event);
+void k_diroperator_super_drop_event(void* self, void* event) {
+    KDirOperator_SuperDropEvent((KDirOperator*)self, (QDropEvent*)event);
 }
 
 void k_diroperator_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2800,8 +2800,8 @@ void k_diroperator_show_event(void* self, void* event) {
     KDirOperator_ShowEvent((KDirOperator*)self, (QShowEvent*)event);
 }
 
-void k_diroperator_qbase_show_event(void* self, void* event) {
-    KDirOperator_QBaseShowEvent((KDirOperator*)self, (QShowEvent*)event);
+void k_diroperator_super_show_event(void* self, void* event) {
+    KDirOperator_SuperShowEvent((KDirOperator*)self, (QShowEvent*)event);
 }
 
 void k_diroperator_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2812,8 +2812,8 @@ void k_diroperator_hide_event(void* self, void* event) {
     KDirOperator_HideEvent((KDirOperator*)self, (QHideEvent*)event);
 }
 
-void k_diroperator_qbase_hide_event(void* self, void* event) {
-    KDirOperator_QBaseHideEvent((KDirOperator*)self, (QHideEvent*)event);
+void k_diroperator_super_hide_event(void* self, void* event) {
+    KDirOperator_SuperHideEvent((KDirOperator*)self, (QHideEvent*)event);
 }
 
 void k_diroperator_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2824,8 +2824,8 @@ bool k_diroperator_native_event(void* self, char* eventType, void* message, intp
     return KDirOperator_NativeEvent((KDirOperator*)self, qstring(eventType), message, result);
 }
 
-bool k_diroperator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KDirOperator_QBaseNativeEvent((KDirOperator*)self, qstring(eventType), message, result);
+bool k_diroperator_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KDirOperator_SuperNativeEvent((KDirOperator*)self, qstring(eventType), message, result);
 }
 
 void k_diroperator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2836,8 +2836,8 @@ int32_t k_diroperator_metric(void* self, int32_t param1) {
     return KDirOperator_Metric((KDirOperator*)self, param1);
 }
 
-int32_t k_diroperator_qbase_metric(void* self, int32_t param1) {
-    return KDirOperator_QBaseMetric((KDirOperator*)self, param1);
+int32_t k_diroperator_super_metric(void* self, int32_t param1) {
+    return KDirOperator_SuperMetric((KDirOperator*)self, param1);
 }
 
 void k_diroperator_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2848,8 +2848,8 @@ void k_diroperator_init_painter(void* self, void* painter) {
     KDirOperator_InitPainter((KDirOperator*)self, (QPainter*)painter);
 }
 
-void k_diroperator_qbase_init_painter(void* self, void* painter) {
-    KDirOperator_QBaseInitPainter((KDirOperator*)self, (QPainter*)painter);
+void k_diroperator_super_init_painter(void* self, void* painter) {
+    KDirOperator_SuperInitPainter((KDirOperator*)self, (QPainter*)painter);
 }
 
 void k_diroperator_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2860,8 +2860,8 @@ QPaintDevice* k_diroperator_redirected(void* self, void* offset) {
     return KDirOperator_Redirected((KDirOperator*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_diroperator_qbase_redirected(void* self, void* offset) {
-    return KDirOperator_QBaseRedirected((KDirOperator*)self, (QPoint*)offset);
+QPaintDevice* k_diroperator_super_redirected(void* self, void* offset) {
+    return KDirOperator_SuperRedirected((KDirOperator*)self, (QPoint*)offset);
 }
 
 void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2872,8 +2872,8 @@ QPainter* k_diroperator_shared_painter(void* self) {
     return KDirOperator_SharedPainter((KDirOperator*)self);
 }
 
-QPainter* k_diroperator_qbase_shared_painter(void* self) {
-    return KDirOperator_QBaseSharedPainter((KDirOperator*)self);
+QPainter* k_diroperator_super_shared_painter(void* self) {
+    return KDirOperator_SuperSharedPainter((KDirOperator*)self);
 }
 
 void k_diroperator_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2884,8 +2884,8 @@ void k_diroperator_input_method_event(void* self, void* param1) {
     KDirOperator_InputMethodEvent((KDirOperator*)self, (QInputMethodEvent*)param1);
 }
 
-void k_diroperator_qbase_input_method_event(void* self, void* param1) {
-    KDirOperator_QBaseInputMethodEvent((KDirOperator*)self, (QInputMethodEvent*)param1);
+void k_diroperator_super_input_method_event(void* self, void* param1) {
+    KDirOperator_SuperInputMethodEvent((KDirOperator*)self, (QInputMethodEvent*)param1);
 }
 
 void k_diroperator_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2896,8 +2896,8 @@ QVariant* k_diroperator_input_method_query(void* self, int32_t param1) {
     return KDirOperator_InputMethodQuery((KDirOperator*)self, param1);
 }
 
-QVariant* k_diroperator_qbase_input_method_query(void* self, int32_t param1) {
-    return KDirOperator_QBaseInputMethodQuery((KDirOperator*)self, param1);
+QVariant* k_diroperator_super_input_method_query(void* self, int32_t param1) {
+    return KDirOperator_SuperInputMethodQuery((KDirOperator*)self, param1);
 }
 
 void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2908,8 +2908,8 @@ bool k_diroperator_focus_next_prev_child(void* self, bool next) {
     return KDirOperator_FocusNextPrevChild((KDirOperator*)self, next);
 }
 
-bool k_diroperator_qbase_focus_next_prev_child(void* self, bool next) {
-    return KDirOperator_QBaseFocusNextPrevChild((KDirOperator*)self, next);
+bool k_diroperator_super_focus_next_prev_child(void* self, bool next) {
+    return KDirOperator_SuperFocusNextPrevChild((KDirOperator*)self, next);
 }
 
 void k_diroperator_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2920,8 +2920,8 @@ void k_diroperator_timer_event(void* self, void* event) {
     KDirOperator_TimerEvent((KDirOperator*)self, (QTimerEvent*)event);
 }
 
-void k_diroperator_qbase_timer_event(void* self, void* event) {
-    KDirOperator_QBaseTimerEvent((KDirOperator*)self, (QTimerEvent*)event);
+void k_diroperator_super_timer_event(void* self, void* event) {
+    KDirOperator_SuperTimerEvent((KDirOperator*)self, (QTimerEvent*)event);
 }
 
 void k_diroperator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2932,8 +2932,8 @@ void k_diroperator_child_event(void* self, void* event) {
     KDirOperator_ChildEvent((KDirOperator*)self, (QChildEvent*)event);
 }
 
-void k_diroperator_qbase_child_event(void* self, void* event) {
-    KDirOperator_QBaseChildEvent((KDirOperator*)self, (QChildEvent*)event);
+void k_diroperator_super_child_event(void* self, void* event) {
+    KDirOperator_SuperChildEvent((KDirOperator*)self, (QChildEvent*)event);
 }
 
 void k_diroperator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2944,8 +2944,8 @@ void k_diroperator_custom_event(void* self, void* event) {
     KDirOperator_CustomEvent((KDirOperator*)self, (QEvent*)event);
 }
 
-void k_diroperator_qbase_custom_event(void* self, void* event) {
-    KDirOperator_QBaseCustomEvent((KDirOperator*)self, (QEvent*)event);
+void k_diroperator_super_custom_event(void* self, void* event) {
+    KDirOperator_SuperCustomEvent((KDirOperator*)self, (QEvent*)event);
 }
 
 void k_diroperator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2956,8 +2956,8 @@ void k_diroperator_connect_notify(void* self, void* signal) {
     KDirOperator_ConnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_qbase_connect_notify(void* self, void* signal) {
-    KDirOperator_QBaseConnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
+void k_diroperator_super_connect_notify(void* self, void* signal) {
+    KDirOperator_SuperConnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
 void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2968,8 +2968,8 @@ void k_diroperator_disconnect_notify(void* self, void* signal) {
     KDirOperator_DisconnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-void k_diroperator_qbase_disconnect_notify(void* self, void* signal) {
-    KDirOperator_QBaseDisconnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
+void k_diroperator_super_disconnect_notify(void* self, void* signal) {
+    KDirOperator_SuperDisconnectNotify((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
 void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2980,8 +2980,8 @@ void k_diroperator_update_micro_focus(void* self) {
     KDirOperator_UpdateMicroFocus((KDirOperator*)self);
 }
 
-void k_diroperator_qbase_update_micro_focus(void* self) {
-    KDirOperator_QBaseUpdateMicroFocus((KDirOperator*)self);
+void k_diroperator_super_update_micro_focus(void* self) {
+    KDirOperator_SuperUpdateMicroFocus((KDirOperator*)self);
 }
 
 void k_diroperator_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2992,8 +2992,8 @@ void k_diroperator_create(void* self) {
     KDirOperator_Create((KDirOperator*)self);
 }
 
-void k_diroperator_qbase_create(void* self) {
-    KDirOperator_QBaseCreate((KDirOperator*)self);
+void k_diroperator_super_create(void* self) {
+    KDirOperator_SuperCreate((KDirOperator*)self);
 }
 
 void k_diroperator_on_create(void* self, void (*callback)()) {
@@ -3004,8 +3004,8 @@ void k_diroperator_destroy(void* self) {
     KDirOperator_Destroy((KDirOperator*)self);
 }
 
-void k_diroperator_qbase_destroy(void* self) {
-    KDirOperator_QBaseDestroy((KDirOperator*)self);
+void k_diroperator_super_destroy(void* self) {
+    KDirOperator_SuperDestroy((KDirOperator*)self);
 }
 
 void k_diroperator_on_destroy(void* self, void (*callback)()) {
@@ -3016,8 +3016,8 @@ bool k_diroperator_focus_next_child(void* self) {
     return KDirOperator_FocusNextChild((KDirOperator*)self);
 }
 
-bool k_diroperator_qbase_focus_next_child(void* self) {
-    return KDirOperator_QBaseFocusNextChild((KDirOperator*)self);
+bool k_diroperator_super_focus_next_child(void* self) {
+    return KDirOperator_SuperFocusNextChild((KDirOperator*)self);
 }
 
 void k_diroperator_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3028,8 +3028,8 @@ bool k_diroperator_focus_previous_child(void* self) {
     return KDirOperator_FocusPreviousChild((KDirOperator*)self);
 }
 
-bool k_diroperator_qbase_focus_previous_child(void* self) {
-    return KDirOperator_QBaseFocusPreviousChild((KDirOperator*)self);
+bool k_diroperator_super_focus_previous_child(void* self) {
+    return KDirOperator_SuperFocusPreviousChild((KDirOperator*)self);
 }
 
 void k_diroperator_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3040,8 +3040,8 @@ QObject* k_diroperator_sender(void* self) {
     return KDirOperator_Sender((KDirOperator*)self);
 }
 
-QObject* k_diroperator_qbase_sender(void* self) {
-    return KDirOperator_QBaseSender((KDirOperator*)self);
+QObject* k_diroperator_super_sender(void* self) {
+    return KDirOperator_SuperSender((KDirOperator*)self);
 }
 
 void k_diroperator_on_sender(void* self, QObject* (*callback)()) {
@@ -3052,8 +3052,8 @@ int32_t k_diroperator_sender_signal_index(void* self) {
     return KDirOperator_SenderSignalIndex((KDirOperator*)self);
 }
 
-int32_t k_diroperator_qbase_sender_signal_index(void* self) {
-    return KDirOperator_QBaseSenderSignalIndex((KDirOperator*)self);
+int32_t k_diroperator_super_sender_signal_index(void* self) {
+    return KDirOperator_SuperSenderSignalIndex((KDirOperator*)self);
 }
 
 void k_diroperator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3064,8 +3064,8 @@ int32_t k_diroperator_receivers(void* self, const char* signal) {
     return KDirOperator_Receivers((KDirOperator*)self, signal);
 }
 
-int32_t k_diroperator_qbase_receivers(void* self, const char* signal) {
-    return KDirOperator_QBaseReceivers((KDirOperator*)self, signal);
+int32_t k_diroperator_super_receivers(void* self, const char* signal) {
+    return KDirOperator_SuperReceivers((KDirOperator*)self, signal);
 }
 
 void k_diroperator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3076,8 +3076,8 @@ bool k_diroperator_is_signal_connected(void* self, void* signal) {
     return KDirOperator_IsSignalConnected((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
-bool k_diroperator_qbase_is_signal_connected(void* self, void* signal) {
-    return KDirOperator_QBaseIsSignalConnected((KDirOperator*)self, (QMetaMethod*)signal);
+bool k_diroperator_super_is_signal_connected(void* self, void* signal) {
+    return KDirOperator_SuperIsSignalConnected((KDirOperator*)self, (QMetaMethod*)signal);
 }
 
 void k_diroperator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3088,8 +3088,8 @@ double k_diroperator_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KDirOperator_GetDecodedMetricF((KDirOperator*)self, metricA, metricB);
 }
 
-double k_diroperator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KDirOperator_QBaseGetDecodedMetricF((KDirOperator*)self, metricA, metricB);
+double k_diroperator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KDirOperator_SuperGetDecodedMetricF((KDirOperator*)self, metricA, metricB);
 }
 
 void k_diroperator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

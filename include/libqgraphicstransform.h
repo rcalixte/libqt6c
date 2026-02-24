@@ -40,13 +40,17 @@ const QMetaObject* q_graphicstransform_meta_object(void* self);
 ///
 void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_meta_object` instead
+///
+#define q_graphicstransform_qbase_meta_object q_graphicstransform_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsTransform*
 ///
-const QMetaObject* q_graphicstransform_qbase_meta_object(void* self);
+const QMetaObject* q_graphicstransform_super_meta_object(void* self);
 
 /// @param self QGraphicsTransform*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_graphicstransform_metacast(void* self, const char* param1);
 ///
 void q_graphicstransform_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_metacast` instead
+///
+#define q_graphicstransform_qbase_metacast q_graphicstransform_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsTransform*
 /// @param param1 const char*
 ///
-void* q_graphicstransform_qbase_metacast(void* self, const char* param1);
+void* q_graphicstransform_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsTransform*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_graphicstransform_metacall(void* self, int32_t param1, int param2, voi
 ///
 void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_metacall` instead
+///
+#define q_graphicstransform_qbase_metacall q_graphicstransform_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsTransform*
@@ -88,7 +100,7 @@ void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicstransform_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicstransform_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void q_graphicstransform_apply_to(void* self, void* matrix);
 ///
 void q_graphicstransform_on_apply_to(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_apply_to` instead
+///
+#define q_graphicstransform_qbase_apply_to q_graphicstransform_super_apply_to
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#applyTo)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_graphicstransform_on_apply_to(void* self, void (*callback)(void*, void*))
 /// @param self QGraphicsTransform*
 /// @param matrix QMatrix4x4*
 ///
-void q_graphicstransform_qbase_apply_to(void* self, void* matrix);
+void q_graphicstransform_super_apply_to(void* self, void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#update)
 ///
@@ -138,13 +154,17 @@ void q_graphicstransform_update(void* self);
 ///
 void q_graphicstransform_on_update(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_update` instead
+///
+#define q_graphicstransform_qbase_update q_graphicstransform_super_update
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#update)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsTransform*
 ///
-void q_graphicstransform_qbase_update(void* self);
+void q_graphicstransform_super_update(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -623,6 +643,10 @@ void q_graphicstransform_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool q_graphicstransform_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_event` instead
+///
+#define q_graphicstransform_qbase_event q_graphicstransform_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -632,7 +656,7 @@ bool q_graphicstransform_event(void* self, void* event);
 /// @param self QGraphicsTransform*
 /// @param event QEvent*
 ///
-bool q_graphicstransform_qbase_event(void* self, void* event);
+bool q_graphicstransform_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -657,6 +681,10 @@ void q_graphicstransform_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_graphicstransform_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_event_filter` instead
+///
+#define q_graphicstransform_qbase_event_filter q_graphicstransform_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -667,7 +695,7 @@ bool q_graphicstransform_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicstransform_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicstransform_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -691,6 +719,10 @@ void q_graphicstransform_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_graphicstransform_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_timer_event` instead
+///
+#define q_graphicstransform_qbase_timer_event q_graphicstransform_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -700,7 +732,7 @@ void q_graphicstransform_timer_event(void* self, void* event);
 /// @param self QGraphicsTransform*
 /// @param event QTimerEvent*
 ///
-void q_graphicstransform_qbase_timer_event(void* self, void* event);
+void q_graphicstransform_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -724,6 +756,10 @@ void q_graphicstransform_on_timer_event(void* self, void (*callback)(void*, void
 ///
 void q_graphicstransform_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_child_event` instead
+///
+#define q_graphicstransform_qbase_child_event q_graphicstransform_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -733,7 +769,7 @@ void q_graphicstransform_child_event(void* self, void* event);
 /// @param self QGraphicsTransform*
 /// @param event QChildEvent*
 ///
-void q_graphicstransform_qbase_child_event(void* self, void* event);
+void q_graphicstransform_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -757,6 +793,10 @@ void q_graphicstransform_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_graphicstransform_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_custom_event` instead
+///
+#define q_graphicstransform_qbase_custom_event q_graphicstransform_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -766,7 +806,7 @@ void q_graphicstransform_custom_event(void* self, void* event);
 /// @param self QGraphicsTransform*
 /// @param event QEvent*
 ///
-void q_graphicstransform_qbase_custom_event(void* self, void* event);
+void q_graphicstransform_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -790,6 +830,10 @@ void q_graphicstransform_on_custom_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicstransform_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_connect_notify` instead
+///
+#define q_graphicstransform_qbase_connect_notify q_graphicstransform_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -799,7 +843,7 @@ void q_graphicstransform_connect_notify(void* self, void* signal);
 /// @param self QGraphicsTransform*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstransform_qbase_connect_notify(void* self, void* signal);
+void q_graphicstransform_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -823,6 +867,10 @@ void q_graphicstransform_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_graphicstransform_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_disconnect_notify` instead
+///
+#define q_graphicstransform_qbase_disconnect_notify q_graphicstransform_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -832,7 +880,7 @@ void q_graphicstransform_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsTransform*
 /// @param signal QMetaMethod*
 ///
-void q_graphicstransform_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicstransform_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -855,6 +903,10 @@ void q_graphicstransform_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* q_graphicstransform_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_sender` instead
+///
+#define q_graphicstransform_qbase_sender q_graphicstransform_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -863,7 +915,7 @@ QObject* q_graphicstransform_sender(void* self);
 ///
 /// @param self QGraphicsTransform*
 ///
-QObject* q_graphicstransform_qbase_sender(void* self);
+QObject* q_graphicstransform_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -886,6 +938,10 @@ void q_graphicstransform_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicstransform_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_sender_signal_index` instead
+///
+#define q_graphicstransform_qbase_sender_signal_index q_graphicstransform_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -894,7 +950,7 @@ int32_t q_graphicstransform_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsTransform*
 ///
-int32_t q_graphicstransform_qbase_sender_signal_index(void* self);
+int32_t q_graphicstransform_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -918,6 +974,10 @@ void q_graphicstransform_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_graphicstransform_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_receivers` instead
+///
+#define q_graphicstransform_qbase_receivers q_graphicstransform_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -927,7 +987,7 @@ int32_t q_graphicstransform_receivers(void* self, const char* signal);
 /// @param self QGraphicsTransform*
 /// @param signal const char*
 ///
-int32_t q_graphicstransform_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicstransform_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -951,6 +1011,10 @@ void q_graphicstransform_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 bool q_graphicstransform_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicstransform_super_is_signal_connected` instead
+///
+#define q_graphicstransform_qbase_is_signal_connected q_graphicstransform_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -960,7 +1024,7 @@ bool q_graphicstransform_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsTransform*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicstransform_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicstransform_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1021,13 +1085,17 @@ const QMetaObject* q_graphicsscale_meta_object(void* self);
 ///
 void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_meta_object` instead
+///
+#define q_graphicsscale_qbase_meta_object q_graphicsscale_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsScale*
 ///
-const QMetaObject* q_graphicsscale_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsscale_super_meta_object(void* self);
 
 /// @param self QGraphicsScale*
 /// @param param1 const char*
@@ -1041,12 +1109,16 @@ void* q_graphicsscale_metacast(void* self, const char* param1);
 ///
 void q_graphicsscale_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_metacast` instead
+///
+#define q_graphicsscale_qbase_metacast q_graphicsscale_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsScale*
 /// @param param1 const char*
 ///
-void* q_graphicsscale_qbase_metacast(void* self, const char* param1);
+void* q_graphicsscale_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsScale*
 /// @param param1 enum QMetaObject__Call
@@ -1062,6 +1134,10 @@ int32_t q_graphicsscale_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_metacall` instead
+///
+#define q_graphicsscale_qbase_metacall q_graphicsscale_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsScale*
@@ -1069,7 +1145,7 @@ void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsscale_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsscale_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1147,6 +1223,10 @@ void q_graphicsscale_apply_to(void* self, void* matrix);
 ///
 void q_graphicsscale_on_apply_to(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_apply_to` instead
+///
+#define q_graphicsscale_qbase_apply_to q_graphicsscale_super_apply_to
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscale.html#applyTo)
 ///
 /// Base class method implementation
@@ -1154,7 +1234,7 @@ void q_graphicsscale_on_apply_to(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsScale*
 /// @param matrix QMatrix4x4*
 ///
-void q_graphicsscale_qbase_apply_to(void* self, void* matrix);
+void q_graphicsscale_super_apply_to(void* self, void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscale.html#originChanged)
 ///
@@ -1698,6 +1778,10 @@ void q_graphicsscale_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_graphicsscale_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_event` instead
+///
+#define q_graphicsscale_qbase_event q_graphicsscale_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1707,7 +1791,7 @@ bool q_graphicsscale_event(void* self, void* event);
 /// @param self QGraphicsScale*
 /// @param event QEvent*
 ///
-bool q_graphicsscale_qbase_event(void* self, void* event);
+bool q_graphicsscale_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1732,6 +1816,10 @@ void q_graphicsscale_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_graphicsscale_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_event_filter` instead
+///
+#define q_graphicsscale_qbase_event_filter q_graphicsscale_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1742,7 +1830,7 @@ bool q_graphicsscale_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsscale_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsscale_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1766,6 +1854,10 @@ void q_graphicsscale_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_graphicsscale_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_timer_event` instead
+///
+#define q_graphicsscale_qbase_timer_event q_graphicsscale_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1775,7 +1867,7 @@ void q_graphicsscale_timer_event(void* self, void* event);
 /// @param self QGraphicsScale*
 /// @param event QTimerEvent*
 ///
-void q_graphicsscale_qbase_timer_event(void* self, void* event);
+void q_graphicsscale_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1799,6 +1891,10 @@ void q_graphicsscale_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsscale_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_child_event` instead
+///
+#define q_graphicsscale_qbase_child_event q_graphicsscale_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1808,7 +1904,7 @@ void q_graphicsscale_child_event(void* self, void* event);
 /// @param self QGraphicsScale*
 /// @param event QChildEvent*
 ///
-void q_graphicsscale_qbase_child_event(void* self, void* event);
+void q_graphicsscale_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1832,6 +1928,10 @@ void q_graphicsscale_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsscale_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_custom_event` instead
+///
+#define q_graphicsscale_qbase_custom_event q_graphicsscale_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1841,7 +1941,7 @@ void q_graphicsscale_custom_event(void* self, void* event);
 /// @param self QGraphicsScale*
 /// @param event QEvent*
 ///
-void q_graphicsscale_qbase_custom_event(void* self, void* event);
+void q_graphicsscale_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1865,6 +1965,10 @@ void q_graphicsscale_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicsscale_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_connect_notify` instead
+///
+#define q_graphicsscale_qbase_connect_notify q_graphicsscale_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1874,7 +1978,7 @@ void q_graphicsscale_connect_notify(void* self, void* signal);
 /// @param self QGraphicsScale*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscale_qbase_connect_notify(void* self, void* signal);
+void q_graphicsscale_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1898,6 +2002,10 @@ void q_graphicsscale_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsscale_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_disconnect_notify` instead
+///
+#define q_graphicsscale_qbase_disconnect_notify q_graphicsscale_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1907,7 +2015,7 @@ void q_graphicsscale_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsScale*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscale_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsscale_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1930,6 +2038,10 @@ void q_graphicsscale_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsscale_update(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_update` instead
+///
+#define q_graphicsscale_qbase_update q_graphicsscale_super_update
+
 /// Inherited from QGraphicsTransform
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#update)
@@ -1938,7 +2050,7 @@ void q_graphicsscale_update(void* self);
 ///
 /// @param self QGraphicsScale*
 ///
-void q_graphicsscale_qbase_update(void* self);
+void q_graphicsscale_super_update(void* self);
 
 /// Inherited from QGraphicsTransform
 ///
@@ -1961,6 +2073,10 @@ void q_graphicsscale_on_update(void* self, void (*callback)());
 ///
 QObject* q_graphicsscale_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_sender` instead
+///
+#define q_graphicsscale_qbase_sender q_graphicsscale_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1969,7 +2085,7 @@ QObject* q_graphicsscale_sender(void* self);
 ///
 /// @param self QGraphicsScale*
 ///
-QObject* q_graphicsscale_qbase_sender(void* self);
+QObject* q_graphicsscale_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1992,6 +2108,10 @@ void q_graphicsscale_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsscale_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_sender_signal_index` instead
+///
+#define q_graphicsscale_qbase_sender_signal_index q_graphicsscale_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2000,7 +2120,7 @@ int32_t q_graphicsscale_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsScale*
 ///
-int32_t q_graphicsscale_qbase_sender_signal_index(void* self);
+int32_t q_graphicsscale_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2024,6 +2144,10 @@ void q_graphicsscale_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_graphicsscale_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_receivers` instead
+///
+#define q_graphicsscale_qbase_receivers q_graphicsscale_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2033,7 +2157,7 @@ int32_t q_graphicsscale_receivers(void* self, const char* signal);
 /// @param self QGraphicsScale*
 /// @param signal const char*
 ///
-int32_t q_graphicsscale_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsscale_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2057,6 +2181,10 @@ void q_graphicsscale_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_graphicsscale_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsscale_super_is_signal_connected` instead
+///
+#define q_graphicsscale_qbase_is_signal_connected q_graphicsscale_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2066,7 +2194,7 @@ bool q_graphicsscale_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsScale*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsscale_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsscale_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2127,13 +2255,17 @@ const QMetaObject* q_graphicsrotation_meta_object(void* self);
 ///
 void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_meta_object` instead
+///
+#define q_graphicsrotation_qbase_meta_object q_graphicsrotation_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsRotation*
 ///
-const QMetaObject* q_graphicsrotation_qbase_meta_object(void* self);
+const QMetaObject* q_graphicsrotation_super_meta_object(void* self);
 
 /// @param self QGraphicsRotation*
 /// @param param1 const char*
@@ -2147,12 +2279,16 @@ void* q_graphicsrotation_metacast(void* self, const char* param1);
 ///
 void q_graphicsrotation_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_metacast` instead
+///
+#define q_graphicsrotation_qbase_metacast q_graphicsrotation_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsRotation*
 /// @param param1 const char*
 ///
-void* q_graphicsrotation_qbase_metacast(void* self, const char* param1);
+void* q_graphicsrotation_super_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsRotation*
 /// @param param1 enum QMetaObject__Call
@@ -2168,6 +2304,10 @@ int32_t q_graphicsrotation_metacall(void* self, int32_t param1, int param2, void
 ///
 void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_metacall` instead
+///
+#define q_graphicsrotation_qbase_metacall q_graphicsrotation_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGraphicsRotation*
@@ -2175,7 +2315,7 @@ void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_graphicsrotation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_graphicsrotation_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2247,6 +2387,10 @@ void q_graphicsrotation_apply_to(void* self, void* matrix);
 ///
 void q_graphicsrotation_on_apply_to(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_apply_to` instead
+///
+#define q_graphicsrotation_qbase_apply_to q_graphicsrotation_super_apply_to
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrotation.html#applyTo)
 ///
 /// Base class method implementation
@@ -2254,7 +2398,7 @@ void q_graphicsrotation_on_apply_to(void* self, void (*callback)(void*, void*));
 /// @param self QGraphicsRotation*
 /// @param matrix QMatrix4x4*
 ///
-void q_graphicsrotation_qbase_apply_to(void* self, void* matrix);
+void q_graphicsrotation_super_apply_to(void* self, void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrotation.html#originChanged)
 ///
@@ -2772,6 +2916,10 @@ void q_graphicsrotation_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 bool q_graphicsrotation_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_event` instead
+///
+#define q_graphicsrotation_qbase_event q_graphicsrotation_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2781,7 +2929,7 @@ bool q_graphicsrotation_event(void* self, void* event);
 /// @param self QGraphicsRotation*
 /// @param event QEvent*
 ///
-bool q_graphicsrotation_qbase_event(void* self, void* event);
+bool q_graphicsrotation_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2806,6 +2954,10 @@ void q_graphicsrotation_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_graphicsrotation_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_event_filter` instead
+///
+#define q_graphicsrotation_qbase_event_filter q_graphicsrotation_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2816,7 +2968,7 @@ bool q_graphicsrotation_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_graphicsrotation_qbase_event_filter(void* self, void* watched, void* event);
+bool q_graphicsrotation_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2840,6 +2992,10 @@ void q_graphicsrotation_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_graphicsrotation_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_timer_event` instead
+///
+#define q_graphicsrotation_qbase_timer_event q_graphicsrotation_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2849,7 +3005,7 @@ void q_graphicsrotation_timer_event(void* self, void* event);
 /// @param self QGraphicsRotation*
 /// @param event QTimerEvent*
 ///
-void q_graphicsrotation_qbase_timer_event(void* self, void* event);
+void q_graphicsrotation_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2873,6 +3029,10 @@ void q_graphicsrotation_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsrotation_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_child_event` instead
+///
+#define q_graphicsrotation_qbase_child_event q_graphicsrotation_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2882,7 +3042,7 @@ void q_graphicsrotation_child_event(void* self, void* event);
 /// @param self QGraphicsRotation*
 /// @param event QChildEvent*
 ///
-void q_graphicsrotation_qbase_child_event(void* self, void* event);
+void q_graphicsrotation_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2906,6 +3066,10 @@ void q_graphicsrotation_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsrotation_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_custom_event` instead
+///
+#define q_graphicsrotation_qbase_custom_event q_graphicsrotation_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2915,7 +3079,7 @@ void q_graphicsrotation_custom_event(void* self, void* event);
 /// @param self QGraphicsRotation*
 /// @param event QEvent*
 ///
-void q_graphicsrotation_qbase_custom_event(void* self, void* event);
+void q_graphicsrotation_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2939,6 +3103,10 @@ void q_graphicsrotation_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void q_graphicsrotation_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_connect_notify` instead
+///
+#define q_graphicsrotation_qbase_connect_notify q_graphicsrotation_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2948,7 +3116,7 @@ void q_graphicsrotation_connect_notify(void* self, void* signal);
 /// @param self QGraphicsRotation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsrotation_qbase_connect_notify(void* self, void* signal);
+void q_graphicsrotation_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2972,6 +3140,10 @@ void q_graphicsrotation_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsrotation_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_disconnect_notify` instead
+///
+#define q_graphicsrotation_qbase_disconnect_notify q_graphicsrotation_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2981,7 +3153,7 @@ void q_graphicsrotation_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsRotation*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsrotation_qbase_disconnect_notify(void* self, void* signal);
+void q_graphicsrotation_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -3004,6 +3176,10 @@ void q_graphicsrotation_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 void q_graphicsrotation_update(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_update` instead
+///
+#define q_graphicsrotation_qbase_update q_graphicsrotation_super_update
+
 /// Inherited from QGraphicsTransform
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#update)
@@ -3012,7 +3188,7 @@ void q_graphicsrotation_update(void* self);
 ///
 /// @param self QGraphicsRotation*
 ///
-void q_graphicsrotation_qbase_update(void* self);
+void q_graphicsrotation_super_update(void* self);
 
 /// Inherited from QGraphicsTransform
 ///
@@ -3035,6 +3211,10 @@ void q_graphicsrotation_on_update(void* self, void (*callback)());
 ///
 QObject* q_graphicsrotation_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_sender` instead
+///
+#define q_graphicsrotation_qbase_sender q_graphicsrotation_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3043,7 +3223,7 @@ QObject* q_graphicsrotation_sender(void* self);
 ///
 /// @param self QGraphicsRotation*
 ///
-QObject* q_graphicsrotation_qbase_sender(void* self);
+QObject* q_graphicsrotation_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3066,6 +3246,10 @@ void q_graphicsrotation_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicsrotation_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_sender_signal_index` instead
+///
+#define q_graphicsrotation_qbase_sender_signal_index q_graphicsrotation_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3074,7 +3258,7 @@ int32_t q_graphicsrotation_sender_signal_index(void* self);
 ///
 /// @param self QGraphicsRotation*
 ///
-int32_t q_graphicsrotation_qbase_sender_signal_index(void* self);
+int32_t q_graphicsrotation_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3098,6 +3282,10 @@ void q_graphicsrotation_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_graphicsrotation_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_receivers` instead
+///
+#define q_graphicsrotation_qbase_receivers q_graphicsrotation_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3107,7 +3295,7 @@ int32_t q_graphicsrotation_receivers(void* self, const char* signal);
 /// @param self QGraphicsRotation*
 /// @param signal const char*
 ///
-int32_t q_graphicsrotation_qbase_receivers(void* self, const char* signal);
+int32_t q_graphicsrotation_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3131,6 +3319,10 @@ void q_graphicsrotation_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool q_graphicsrotation_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_graphicsrotation_super_is_signal_connected` instead
+///
+#define q_graphicsrotation_qbase_is_signal_connected q_graphicsrotation_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3140,7 +3332,7 @@ bool q_graphicsrotation_is_signal_connected(void* self, void* signal);
 /// @param self QGraphicsRotation*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsrotation_qbase_is_signal_connected(void* self, void* signal);
+bool q_graphicsrotation_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

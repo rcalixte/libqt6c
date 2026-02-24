@@ -31,8 +31,8 @@ void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*ca
     KLinkItemSelectionModel_OnMetaObject((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_linkitemselectionmodel_qbase_meta_object(void* self) {
-    return KLinkItemSelectionModel_QBaseMetaObject((KLinkItemSelectionModel*)self);
+const QMetaObject* k_linkitemselectionmodel_super_meta_object(void* self) {
+    return KLinkItemSelectionModel_SuperMetaObject((KLinkItemSelectionModel*)self);
 }
 
 void* k_linkitemselectionmodel_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_linkitemselectionmodel_on_metacast(void* self, void* (*callback)(void*, c
     KLinkItemSelectionModel_OnMetacast((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void* k_linkitemselectionmodel_qbase_metacast(void* self, const char* param1) {
-    return KLinkItemSelectionModel_QBaseMetacast((KLinkItemSelectionModel*)self, param1);
+void* k_linkitemselectionmodel_super_metacast(void* self, const char* param1) {
+    return KLinkItemSelectionModel_SuperMetacast((KLinkItemSelectionModel*)self, param1);
 }
 
 int32_t k_linkitemselectionmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_linkitemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*,
     KLinkItemSelectionModel_OnMetacall((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-int32_t k_linkitemselectionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLinkItemSelectionModel_QBaseMetacall((KLinkItemSelectionModel*)self, param1, param2, param3);
+int32_t k_linkitemselectionmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLinkItemSelectionModel_SuperMetacall((KLinkItemSelectionModel*)self, param1, param2, param3);
 }
 
 const char* k_linkitemselectionmodel_tr(const char* s) {
@@ -82,8 +82,8 @@ void k_linkitemselectionmodel_on_select(void* self, void (*callback)(void*, void
     KLinkItemSelectionModel_OnSelect((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_qbase_select(void* self, void* index, int32_t command) {
-    KLinkItemSelectionModel_QBaseSelect((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
+void k_linkitemselectionmodel_super_select(void* self, void* index, int32_t command) {
+    KLinkItemSelectionModel_SuperSelect((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
 void k_linkitemselectionmodel_select2(void* self, void* selection, int32_t command) {
@@ -94,8 +94,8 @@ void k_linkitemselectionmodel_on_select2(void* self, void (*callback)(void*, voi
     KLinkItemSelectionModel_OnSelect2((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_linkitemselectionmodel_qbase_select2(void* self, void* selection, int32_t command) {
-    KLinkItemSelectionModel_QBaseSelect2((KLinkItemSelectionModel*)self, (QItemSelection*)selection, command);
+void k_linkitemselectionmodel_super_select2(void* self, void* selection, int32_t command) {
+    KLinkItemSelectionModel_SuperSelect2((KLinkItemSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
 void k_linkitemselectionmodel_linked_item_selection_model_changed(void* self) {
@@ -464,8 +464,8 @@ void k_linkitemselectionmodel_set_current_index(void* self, void* index, int32_t
     KLinkItemSelectionModel_SetCurrentIndex((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_linkitemselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command) {
-    KLinkItemSelectionModel_QBaseSetCurrentIndex((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
+void k_linkitemselectionmodel_super_set_current_index(void* self, void* index, int32_t command) {
+    KLinkItemSelectionModel_SuperSetCurrentIndex((KLinkItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
 void k_linkitemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -476,8 +476,8 @@ void k_linkitemselectionmodel_clear(void* self) {
     KLinkItemSelectionModel_Clear((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_qbase_clear(void* self) {
-    KLinkItemSelectionModel_QBaseClear((KLinkItemSelectionModel*)self);
+void k_linkitemselectionmodel_super_clear(void* self) {
+    KLinkItemSelectionModel_SuperClear((KLinkItemSelectionModel*)self);
 }
 
 void k_linkitemselectionmodel_on_clear(void* self, void (*callback)()) {
@@ -488,8 +488,8 @@ void k_linkitemselectionmodel_reset(void* self) {
     KLinkItemSelectionModel_Reset((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_qbase_reset(void* self) {
-    KLinkItemSelectionModel_QBaseReset((KLinkItemSelectionModel*)self);
+void k_linkitemselectionmodel_super_reset(void* self) {
+    KLinkItemSelectionModel_SuperReset((KLinkItemSelectionModel*)self);
 }
 
 void k_linkitemselectionmodel_on_reset(void* self, void (*callback)()) {
@@ -500,8 +500,8 @@ void k_linkitemselectionmodel_clear_current_index(void* self) {
     KLinkItemSelectionModel_ClearCurrentIndex((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_qbase_clear_current_index(void* self) {
-    KLinkItemSelectionModel_QBaseClearCurrentIndex((KLinkItemSelectionModel*)self);
+void k_linkitemselectionmodel_super_clear_current_index(void* self) {
+    KLinkItemSelectionModel_SuperClearCurrentIndex((KLinkItemSelectionModel*)self);
 }
 
 void k_linkitemselectionmodel_on_clear_current_index(void* self, void (*callback)()) {
@@ -512,8 +512,8 @@ bool k_linkitemselectionmodel_event(void* self, void* event) {
     return KLinkItemSelectionModel_Event((KLinkItemSelectionModel*)self, (QEvent*)event);
 }
 
-bool k_linkitemselectionmodel_qbase_event(void* self, void* event) {
-    return KLinkItemSelectionModel_QBaseEvent((KLinkItemSelectionModel*)self, (QEvent*)event);
+bool k_linkitemselectionmodel_super_event(void* self, void* event) {
+    return KLinkItemSelectionModel_SuperEvent((KLinkItemSelectionModel*)self, (QEvent*)event);
 }
 
 void k_linkitemselectionmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -524,8 +524,8 @@ bool k_linkitemselectionmodel_event_filter(void* self, void* watched, void* even
     return KLinkItemSelectionModel_EventFilter((KLinkItemSelectionModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_linkitemselectionmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KLinkItemSelectionModel_QBaseEventFilter((KLinkItemSelectionModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_linkitemselectionmodel_super_event_filter(void* self, void* watched, void* event) {
+    return KLinkItemSelectionModel_SuperEventFilter((KLinkItemSelectionModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_linkitemselectionmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -536,8 +536,8 @@ void k_linkitemselectionmodel_timer_event(void* self, void* event) {
     KLinkItemSelectionModel_TimerEvent((KLinkItemSelectionModel*)self, (QTimerEvent*)event);
 }
 
-void k_linkitemselectionmodel_qbase_timer_event(void* self, void* event) {
-    KLinkItemSelectionModel_QBaseTimerEvent((KLinkItemSelectionModel*)self, (QTimerEvent*)event);
+void k_linkitemselectionmodel_super_timer_event(void* self, void* event) {
+    KLinkItemSelectionModel_SuperTimerEvent((KLinkItemSelectionModel*)self, (QTimerEvent*)event);
 }
 
 void k_linkitemselectionmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -548,8 +548,8 @@ void k_linkitemselectionmodel_child_event(void* self, void* event) {
     KLinkItemSelectionModel_ChildEvent((KLinkItemSelectionModel*)self, (QChildEvent*)event);
 }
 
-void k_linkitemselectionmodel_qbase_child_event(void* self, void* event) {
-    KLinkItemSelectionModel_QBaseChildEvent((KLinkItemSelectionModel*)self, (QChildEvent*)event);
+void k_linkitemselectionmodel_super_child_event(void* self, void* event) {
+    KLinkItemSelectionModel_SuperChildEvent((KLinkItemSelectionModel*)self, (QChildEvent*)event);
 }
 
 void k_linkitemselectionmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -560,8 +560,8 @@ void k_linkitemselectionmodel_custom_event(void* self, void* event) {
     KLinkItemSelectionModel_CustomEvent((KLinkItemSelectionModel*)self, (QEvent*)event);
 }
 
-void k_linkitemselectionmodel_qbase_custom_event(void* self, void* event) {
-    KLinkItemSelectionModel_QBaseCustomEvent((KLinkItemSelectionModel*)self, (QEvent*)event);
+void k_linkitemselectionmodel_super_custom_event(void* self, void* event) {
+    KLinkItemSelectionModel_SuperCustomEvent((KLinkItemSelectionModel*)self, (QEvent*)event);
 }
 
 void k_linkitemselectionmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ void k_linkitemselectionmodel_connect_notify(void* self, void* signal) {
     KLinkItemSelectionModel_ConnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_qbase_connect_notify(void* self, void* signal) {
-    KLinkItemSelectionModel_QBaseConnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
+void k_linkitemselectionmodel_super_connect_notify(void* self, void* signal) {
+    KLinkItemSelectionModel_SuperConnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_linkitemselectionmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -584,8 +584,8 @@ void k_linkitemselectionmodel_disconnect_notify(void* self, void* signal) {
     KLinkItemSelectionModel_DisconnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_linkitemselectionmodel_qbase_disconnect_notify(void* self, void* signal) {
-    KLinkItemSelectionModel_QBaseDisconnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
+void k_linkitemselectionmodel_super_disconnect_notify(void* self, void* signal) {
+    KLinkItemSelectionModel_SuperDisconnectNotify((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_linkitemselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -596,8 +596,8 @@ void k_linkitemselectionmodel_emit_selection_changed(void* self, void* newSelect
     KLinkItemSelectionModel_EmitSelectionChanged((KLinkItemSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
 }
 
-void k_linkitemselectionmodel_qbase_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
-    KLinkItemSelectionModel_QBaseEmitSelectionChanged((KLinkItemSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
+void k_linkitemselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
+    KLinkItemSelectionModel_SuperEmitSelectionChanged((KLinkItemSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
 }
 
 void k_linkitemselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -608,8 +608,8 @@ QObject* k_linkitemselectionmodel_sender(void* self) {
     return KLinkItemSelectionModel_Sender((KLinkItemSelectionModel*)self);
 }
 
-QObject* k_linkitemselectionmodel_qbase_sender(void* self) {
-    return KLinkItemSelectionModel_QBaseSender((KLinkItemSelectionModel*)self);
+QObject* k_linkitemselectionmodel_super_sender(void* self) {
+    return KLinkItemSelectionModel_SuperSender((KLinkItemSelectionModel*)self);
 }
 
 void k_linkitemselectionmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -620,8 +620,8 @@ int32_t k_linkitemselectionmodel_sender_signal_index(void* self) {
     return KLinkItemSelectionModel_SenderSignalIndex((KLinkItemSelectionModel*)self);
 }
 
-int32_t k_linkitemselectionmodel_qbase_sender_signal_index(void* self) {
-    return KLinkItemSelectionModel_QBaseSenderSignalIndex((KLinkItemSelectionModel*)self);
+int32_t k_linkitemselectionmodel_super_sender_signal_index(void* self) {
+    return KLinkItemSelectionModel_SuperSenderSignalIndex((KLinkItemSelectionModel*)self);
 }
 
 void k_linkitemselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -632,8 +632,8 @@ int32_t k_linkitemselectionmodel_receivers(void* self, const char* signal) {
     return KLinkItemSelectionModel_Receivers((KLinkItemSelectionModel*)self, signal);
 }
 
-int32_t k_linkitemselectionmodel_qbase_receivers(void* self, const char* signal) {
-    return KLinkItemSelectionModel_QBaseReceivers((KLinkItemSelectionModel*)self, signal);
+int32_t k_linkitemselectionmodel_super_receivers(void* self, const char* signal) {
+    return KLinkItemSelectionModel_SuperReceivers((KLinkItemSelectionModel*)self, signal);
 }
 
 void k_linkitemselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -644,8 +644,8 @@ bool k_linkitemselectionmodel_is_signal_connected(void* self, void* signal) {
     return KLinkItemSelectionModel_IsSignalConnected((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_linkitemselectionmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KLinkItemSelectionModel_QBaseIsSignalConnected((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
+bool k_linkitemselectionmodel_super_is_signal_connected(void* self, void* signal) {
+    return KLinkItemSelectionModel_SuperIsSignalConnected((KLinkItemSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_linkitemselectionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

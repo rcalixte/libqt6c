@@ -355,8 +355,8 @@ void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (
     QKeychain__ReadPasswordJob_OnMetaObject((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__readpasswordjob_qbase_meta_object(void* self) {
-    return QKeychain__ReadPasswordJob_QBaseMetaObject((QKeychain__ReadPasswordJob*)self);
+const QMetaObject* q_keychain__readpasswordjob_super_meta_object(void* self) {
+    return QKeychain__ReadPasswordJob_SuperMetaObject((QKeychain__ReadPasswordJob*)self);
 }
 
 void* q_keychain__readpasswordjob_metacast(void* self, const char* param1) {
@@ -367,8 +367,8 @@ void q_keychain__readpasswordjob_on_metacast(void* self, void* (*callback)(void*
     QKeychain__ReadPasswordJob_OnMetacast((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-void* q_keychain__readpasswordjob_qbase_metacast(void* self, const char* param1) {
-    return QKeychain__ReadPasswordJob_QBaseMetacast((QKeychain__ReadPasswordJob*)self, param1);
+void* q_keychain__readpasswordjob_super_metacast(void* self, const char* param1) {
+    return QKeychain__ReadPasswordJob_SuperMetacast((QKeychain__ReadPasswordJob*)self, param1);
 }
 
 int32_t q_keychain__readpasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -379,8 +379,8 @@ void q_keychain__readpasswordjob_on_metacall(void* self, int32_t (*callback)(voi
     QKeychain__ReadPasswordJob_OnMetacall((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-int32_t q_keychain__readpasswordjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QKeychain__ReadPasswordJob_QBaseMetacall((QKeychain__ReadPasswordJob*)self, param1, param2, param3);
+int32_t q_keychain__readpasswordjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QKeychain__ReadPasswordJob_SuperMetacall((QKeychain__ReadPasswordJob*)self, param1, param2, param3);
 }
 
 const char* q_keychain__readpasswordjob_tr(const char* s) {
@@ -706,8 +706,8 @@ bool q_keychain__readpasswordjob_event(void* self, void* event) {
     return QKeychain__ReadPasswordJob_Event((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
 }
 
-bool q_keychain__readpasswordjob_qbase_event(void* self, void* event) {
-    return QKeychain__ReadPasswordJob_QBaseEvent((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
+bool q_keychain__readpasswordjob_super_event(void* self, void* event) {
+    return QKeychain__ReadPasswordJob_SuperEvent((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__readpasswordjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -718,8 +718,8 @@ bool q_keychain__readpasswordjob_event_filter(void* self, void* watched, void* e
     return QKeychain__ReadPasswordJob_EventFilter((QKeychain__ReadPasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_keychain__readpasswordjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return QKeychain__ReadPasswordJob_QBaseEventFilter((QKeychain__ReadPasswordJob*)self, (QObject*)watched, (QEvent*)event);
+bool q_keychain__readpasswordjob_super_event_filter(void* self, void* watched, void* event) {
+    return QKeychain__ReadPasswordJob_SuperEventFilter((QKeychain__ReadPasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_keychain__readpasswordjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -730,8 +730,8 @@ void q_keychain__readpasswordjob_timer_event(void* self, void* event) {
     QKeychain__ReadPasswordJob_TimerEvent((QKeychain__ReadPasswordJob*)self, (QTimerEvent*)event);
 }
 
-void q_keychain__readpasswordjob_qbase_timer_event(void* self, void* event) {
-    QKeychain__ReadPasswordJob_QBaseTimerEvent((QKeychain__ReadPasswordJob*)self, (QTimerEvent*)event);
+void q_keychain__readpasswordjob_super_timer_event(void* self, void* event) {
+    QKeychain__ReadPasswordJob_SuperTimerEvent((QKeychain__ReadPasswordJob*)self, (QTimerEvent*)event);
 }
 
 void q_keychain__readpasswordjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -742,8 +742,8 @@ void q_keychain__readpasswordjob_child_event(void* self, void* event) {
     QKeychain__ReadPasswordJob_ChildEvent((QKeychain__ReadPasswordJob*)self, (QChildEvent*)event);
 }
 
-void q_keychain__readpasswordjob_qbase_child_event(void* self, void* event) {
-    QKeychain__ReadPasswordJob_QBaseChildEvent((QKeychain__ReadPasswordJob*)self, (QChildEvent*)event);
+void q_keychain__readpasswordjob_super_child_event(void* self, void* event) {
+    QKeychain__ReadPasswordJob_SuperChildEvent((QKeychain__ReadPasswordJob*)self, (QChildEvent*)event);
 }
 
 void q_keychain__readpasswordjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -754,8 +754,8 @@ void q_keychain__readpasswordjob_custom_event(void* self, void* event) {
     QKeychain__ReadPasswordJob_CustomEvent((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
 }
 
-void q_keychain__readpasswordjob_qbase_custom_event(void* self, void* event) {
-    QKeychain__ReadPasswordJob_QBaseCustomEvent((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
+void q_keychain__readpasswordjob_super_custom_event(void* self, void* event) {
+    QKeychain__ReadPasswordJob_SuperCustomEvent((QKeychain__ReadPasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__readpasswordjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -766,8 +766,8 @@ void q_keychain__readpasswordjob_connect_notify(void* self, void* signal) {
     QKeychain__ReadPasswordJob_ConnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_qbase_connect_notify(void* self, void* signal) {
-    QKeychain__ReadPasswordJob_QBaseConnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__readpasswordjob_super_connect_notify(void* self, void* signal) {
+    QKeychain__ReadPasswordJob_SuperConnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -778,8 +778,8 @@ void q_keychain__readpasswordjob_disconnect_notify(void* self, void* signal) {
     QKeychain__ReadPasswordJob_DisconnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_qbase_disconnect_notify(void* self, void* signal) {
-    QKeychain__ReadPasswordJob_QBaseDisconnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__readpasswordjob_super_disconnect_notify(void* self, void* signal) {
+    QKeychain__ReadPasswordJob_SuperDisconnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -790,8 +790,8 @@ void q_keychain__readpasswordjob_do_start(void* self) {
     QKeychain__ReadPasswordJob_DoStart((QKeychain__ReadPasswordJob*)self);
 }
 
-void q_keychain__readpasswordjob_qbase_do_start(void* self) {
-    QKeychain__ReadPasswordJob_QBaseDoStart((QKeychain__ReadPasswordJob*)self);
+void q_keychain__readpasswordjob_super_do_start(void* self) {
+    QKeychain__ReadPasswordJob_SuperDoStart((QKeychain__ReadPasswordJob*)self);
 }
 
 void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)()) {
@@ -802,8 +802,8 @@ QObject* q_keychain__readpasswordjob_sender(void* self) {
     return QKeychain__ReadPasswordJob_Sender((QKeychain__ReadPasswordJob*)self);
 }
 
-QObject* q_keychain__readpasswordjob_qbase_sender(void* self) {
-    return QKeychain__ReadPasswordJob_QBaseSender((QKeychain__ReadPasswordJob*)self);
+QObject* q_keychain__readpasswordjob_super_sender(void* self) {
+    return QKeychain__ReadPasswordJob_SuperSender((QKeychain__ReadPasswordJob*)self);
 }
 
 void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)()) {
@@ -814,8 +814,8 @@ int32_t q_keychain__readpasswordjob_sender_signal_index(void* self) {
     return QKeychain__ReadPasswordJob_SenderSignalIndex((QKeychain__ReadPasswordJob*)self);
 }
 
-int32_t q_keychain__readpasswordjob_qbase_sender_signal_index(void* self) {
-    return QKeychain__ReadPasswordJob_QBaseSenderSignalIndex((QKeychain__ReadPasswordJob*)self);
+int32_t q_keychain__readpasswordjob_super_sender_signal_index(void* self) {
+    return QKeychain__ReadPasswordJob_SuperSenderSignalIndex((QKeychain__ReadPasswordJob*)self);
 }
 
 void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -826,8 +826,8 @@ int32_t q_keychain__readpasswordjob_receivers(void* self, const char* signal) {
     return QKeychain__ReadPasswordJob_Receivers((QKeychain__ReadPasswordJob*)self, signal);
 }
 
-int32_t q_keychain__readpasswordjob_qbase_receivers(void* self, const char* signal) {
-    return QKeychain__ReadPasswordJob_QBaseReceivers((QKeychain__ReadPasswordJob*)self, signal);
+int32_t q_keychain__readpasswordjob_super_receivers(void* self, const char* signal) {
+    return QKeychain__ReadPasswordJob_SuperReceivers((QKeychain__ReadPasswordJob*)self, signal);
 }
 
 void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -838,8 +838,8 @@ bool q_keychain__readpasswordjob_is_signal_connected(void* self, void* signal) {
     return QKeychain__ReadPasswordJob_IsSignalConnected((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-bool q_keychain__readpasswordjob_qbase_is_signal_connected(void* self, void* signal) {
-    return QKeychain__ReadPasswordJob_QBaseIsSignalConnected((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
+bool q_keychain__readpasswordjob_super_is_signal_connected(void* self, void* signal) {
+    return QKeychain__ReadPasswordJob_SuperIsSignalConnected((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__readpasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -870,8 +870,8 @@ void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* 
     QKeychain__WritePasswordJob_OnMetaObject((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__writepasswordjob_qbase_meta_object(void* self) {
-    return QKeychain__WritePasswordJob_QBaseMetaObject((QKeychain__WritePasswordJob*)self);
+const QMetaObject* q_keychain__writepasswordjob_super_meta_object(void* self) {
+    return QKeychain__WritePasswordJob_SuperMetaObject((QKeychain__WritePasswordJob*)self);
 }
 
 void* q_keychain__writepasswordjob_metacast(void* self, const char* param1) {
@@ -882,8 +882,8 @@ void q_keychain__writepasswordjob_on_metacast(void* self, void* (*callback)(void
     QKeychain__WritePasswordJob_OnMetacast((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-void* q_keychain__writepasswordjob_qbase_metacast(void* self, const char* param1) {
-    return QKeychain__WritePasswordJob_QBaseMetacast((QKeychain__WritePasswordJob*)self, param1);
+void* q_keychain__writepasswordjob_super_metacast(void* self, const char* param1) {
+    return QKeychain__WritePasswordJob_SuperMetacast((QKeychain__WritePasswordJob*)self, param1);
 }
 
 int32_t q_keychain__writepasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -894,8 +894,8 @@ void q_keychain__writepasswordjob_on_metacall(void* self, int32_t (*callback)(vo
     QKeychain__WritePasswordJob_OnMetacall((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-int32_t q_keychain__writepasswordjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QKeychain__WritePasswordJob_QBaseMetacall((QKeychain__WritePasswordJob*)self, param1, param2, param3);
+int32_t q_keychain__writepasswordjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QKeychain__WritePasswordJob_SuperMetacall((QKeychain__WritePasswordJob*)self, param1, param2, param3);
 }
 
 const char* q_keychain__writepasswordjob_tr(const char* s) {
@@ -1215,8 +1215,8 @@ bool q_keychain__writepasswordjob_event(void* self, void* event) {
     return QKeychain__WritePasswordJob_Event((QKeychain__WritePasswordJob*)self, (QEvent*)event);
 }
 
-bool q_keychain__writepasswordjob_qbase_event(void* self, void* event) {
-    return QKeychain__WritePasswordJob_QBaseEvent((QKeychain__WritePasswordJob*)self, (QEvent*)event);
+bool q_keychain__writepasswordjob_super_event(void* self, void* event) {
+    return QKeychain__WritePasswordJob_SuperEvent((QKeychain__WritePasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__writepasswordjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1227,8 +1227,8 @@ bool q_keychain__writepasswordjob_event_filter(void* self, void* watched, void* 
     return QKeychain__WritePasswordJob_EventFilter((QKeychain__WritePasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_keychain__writepasswordjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return QKeychain__WritePasswordJob_QBaseEventFilter((QKeychain__WritePasswordJob*)self, (QObject*)watched, (QEvent*)event);
+bool q_keychain__writepasswordjob_super_event_filter(void* self, void* watched, void* event) {
+    return QKeychain__WritePasswordJob_SuperEventFilter((QKeychain__WritePasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_keychain__writepasswordjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1239,8 +1239,8 @@ void q_keychain__writepasswordjob_timer_event(void* self, void* event) {
     QKeychain__WritePasswordJob_TimerEvent((QKeychain__WritePasswordJob*)self, (QTimerEvent*)event);
 }
 
-void q_keychain__writepasswordjob_qbase_timer_event(void* self, void* event) {
-    QKeychain__WritePasswordJob_QBaseTimerEvent((QKeychain__WritePasswordJob*)self, (QTimerEvent*)event);
+void q_keychain__writepasswordjob_super_timer_event(void* self, void* event) {
+    QKeychain__WritePasswordJob_SuperTimerEvent((QKeychain__WritePasswordJob*)self, (QTimerEvent*)event);
 }
 
 void q_keychain__writepasswordjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1251,8 +1251,8 @@ void q_keychain__writepasswordjob_child_event(void* self, void* event) {
     QKeychain__WritePasswordJob_ChildEvent((QKeychain__WritePasswordJob*)self, (QChildEvent*)event);
 }
 
-void q_keychain__writepasswordjob_qbase_child_event(void* self, void* event) {
-    QKeychain__WritePasswordJob_QBaseChildEvent((QKeychain__WritePasswordJob*)self, (QChildEvent*)event);
+void q_keychain__writepasswordjob_super_child_event(void* self, void* event) {
+    QKeychain__WritePasswordJob_SuperChildEvent((QKeychain__WritePasswordJob*)self, (QChildEvent*)event);
 }
 
 void q_keychain__writepasswordjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1263,8 +1263,8 @@ void q_keychain__writepasswordjob_custom_event(void* self, void* event) {
     QKeychain__WritePasswordJob_CustomEvent((QKeychain__WritePasswordJob*)self, (QEvent*)event);
 }
 
-void q_keychain__writepasswordjob_qbase_custom_event(void* self, void* event) {
-    QKeychain__WritePasswordJob_QBaseCustomEvent((QKeychain__WritePasswordJob*)self, (QEvent*)event);
+void q_keychain__writepasswordjob_super_custom_event(void* self, void* event) {
+    QKeychain__WritePasswordJob_SuperCustomEvent((QKeychain__WritePasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__writepasswordjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1275,8 +1275,8 @@ void q_keychain__writepasswordjob_connect_notify(void* self, void* signal) {
     QKeychain__WritePasswordJob_ConnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_qbase_connect_notify(void* self, void* signal) {
-    QKeychain__WritePasswordJob_QBaseConnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__writepasswordjob_super_connect_notify(void* self, void* signal) {
+    QKeychain__WritePasswordJob_SuperConnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1287,8 +1287,8 @@ void q_keychain__writepasswordjob_disconnect_notify(void* self, void* signal) {
     QKeychain__WritePasswordJob_DisconnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_qbase_disconnect_notify(void* self, void* signal) {
-    QKeychain__WritePasswordJob_QBaseDisconnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__writepasswordjob_super_disconnect_notify(void* self, void* signal) {
+    QKeychain__WritePasswordJob_SuperDisconnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1299,8 +1299,8 @@ void q_keychain__writepasswordjob_do_start(void* self) {
     QKeychain__WritePasswordJob_DoStart((QKeychain__WritePasswordJob*)self);
 }
 
-void q_keychain__writepasswordjob_qbase_do_start(void* self) {
-    QKeychain__WritePasswordJob_QBaseDoStart((QKeychain__WritePasswordJob*)self);
+void q_keychain__writepasswordjob_super_do_start(void* self) {
+    QKeychain__WritePasswordJob_SuperDoStart((QKeychain__WritePasswordJob*)self);
 }
 
 void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)()) {
@@ -1311,8 +1311,8 @@ QObject* q_keychain__writepasswordjob_sender(void* self) {
     return QKeychain__WritePasswordJob_Sender((QKeychain__WritePasswordJob*)self);
 }
 
-QObject* q_keychain__writepasswordjob_qbase_sender(void* self) {
-    return QKeychain__WritePasswordJob_QBaseSender((QKeychain__WritePasswordJob*)self);
+QObject* q_keychain__writepasswordjob_super_sender(void* self) {
+    return QKeychain__WritePasswordJob_SuperSender((QKeychain__WritePasswordJob*)self);
 }
 
 void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)()) {
@@ -1323,8 +1323,8 @@ int32_t q_keychain__writepasswordjob_sender_signal_index(void* self) {
     return QKeychain__WritePasswordJob_SenderSignalIndex((QKeychain__WritePasswordJob*)self);
 }
 
-int32_t q_keychain__writepasswordjob_qbase_sender_signal_index(void* self) {
-    return QKeychain__WritePasswordJob_QBaseSenderSignalIndex((QKeychain__WritePasswordJob*)self);
+int32_t q_keychain__writepasswordjob_super_sender_signal_index(void* self) {
+    return QKeychain__WritePasswordJob_SuperSenderSignalIndex((QKeychain__WritePasswordJob*)self);
 }
 
 void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1335,8 +1335,8 @@ int32_t q_keychain__writepasswordjob_receivers(void* self, const char* signal) {
     return QKeychain__WritePasswordJob_Receivers((QKeychain__WritePasswordJob*)self, signal);
 }
 
-int32_t q_keychain__writepasswordjob_qbase_receivers(void* self, const char* signal) {
-    return QKeychain__WritePasswordJob_QBaseReceivers((QKeychain__WritePasswordJob*)self, signal);
+int32_t q_keychain__writepasswordjob_super_receivers(void* self, const char* signal) {
+    return QKeychain__WritePasswordJob_SuperReceivers((QKeychain__WritePasswordJob*)self, signal);
 }
 
 void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1347,8 +1347,8 @@ bool q_keychain__writepasswordjob_is_signal_connected(void* self, void* signal) 
     return QKeychain__WritePasswordJob_IsSignalConnected((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-bool q_keychain__writepasswordjob_qbase_is_signal_connected(void* self, void* signal) {
-    return QKeychain__WritePasswordJob_QBaseIsSignalConnected((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
+bool q_keychain__writepasswordjob_super_is_signal_connected(void* self, void* signal) {
+    return QKeychain__WritePasswordJob_SuperIsSignalConnected((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__writepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1379,8 +1379,8 @@ void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject*
     QKeychain__DeletePasswordJob_OnMetaObject((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__deletepasswordjob_qbase_meta_object(void* self) {
-    return QKeychain__DeletePasswordJob_QBaseMetaObject((QKeychain__DeletePasswordJob*)self);
+const QMetaObject* q_keychain__deletepasswordjob_super_meta_object(void* self) {
+    return QKeychain__DeletePasswordJob_SuperMetaObject((QKeychain__DeletePasswordJob*)self);
 }
 
 void* q_keychain__deletepasswordjob_metacast(void* self, const char* param1) {
@@ -1391,8 +1391,8 @@ void q_keychain__deletepasswordjob_on_metacast(void* self, void* (*callback)(voi
     QKeychain__DeletePasswordJob_OnMetacast((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-void* q_keychain__deletepasswordjob_qbase_metacast(void* self, const char* param1) {
-    return QKeychain__DeletePasswordJob_QBaseMetacast((QKeychain__DeletePasswordJob*)self, param1);
+void* q_keychain__deletepasswordjob_super_metacast(void* self, const char* param1) {
+    return QKeychain__DeletePasswordJob_SuperMetacast((QKeychain__DeletePasswordJob*)self, param1);
 }
 
 int32_t q_keychain__deletepasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1403,8 +1403,8 @@ void q_keychain__deletepasswordjob_on_metacall(void* self, int32_t (*callback)(v
     QKeychain__DeletePasswordJob_OnMetacall((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-int32_t q_keychain__deletepasswordjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QKeychain__DeletePasswordJob_QBaseMetacall((QKeychain__DeletePasswordJob*)self, param1, param2, param3);
+int32_t q_keychain__deletepasswordjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QKeychain__DeletePasswordJob_SuperMetacall((QKeychain__DeletePasswordJob*)self, param1, param2, param3);
 }
 
 const char* q_keychain__deletepasswordjob_tr(const char* s) {
@@ -1716,8 +1716,8 @@ bool q_keychain__deletepasswordjob_event(void* self, void* event) {
     return QKeychain__DeletePasswordJob_Event((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
 }
 
-bool q_keychain__deletepasswordjob_qbase_event(void* self, void* event) {
-    return QKeychain__DeletePasswordJob_QBaseEvent((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
+bool q_keychain__deletepasswordjob_super_event(void* self, void* event) {
+    return QKeychain__DeletePasswordJob_SuperEvent((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__deletepasswordjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1728,8 +1728,8 @@ bool q_keychain__deletepasswordjob_event_filter(void* self, void* watched, void*
     return QKeychain__DeletePasswordJob_EventFilter((QKeychain__DeletePasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_keychain__deletepasswordjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return QKeychain__DeletePasswordJob_QBaseEventFilter((QKeychain__DeletePasswordJob*)self, (QObject*)watched, (QEvent*)event);
+bool q_keychain__deletepasswordjob_super_event_filter(void* self, void* watched, void* event) {
+    return QKeychain__DeletePasswordJob_SuperEventFilter((QKeychain__DeletePasswordJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_keychain__deletepasswordjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1740,8 +1740,8 @@ void q_keychain__deletepasswordjob_timer_event(void* self, void* event) {
     QKeychain__DeletePasswordJob_TimerEvent((QKeychain__DeletePasswordJob*)self, (QTimerEvent*)event);
 }
 
-void q_keychain__deletepasswordjob_qbase_timer_event(void* self, void* event) {
-    QKeychain__DeletePasswordJob_QBaseTimerEvent((QKeychain__DeletePasswordJob*)self, (QTimerEvent*)event);
+void q_keychain__deletepasswordjob_super_timer_event(void* self, void* event) {
+    QKeychain__DeletePasswordJob_SuperTimerEvent((QKeychain__DeletePasswordJob*)self, (QTimerEvent*)event);
 }
 
 void q_keychain__deletepasswordjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1752,8 +1752,8 @@ void q_keychain__deletepasswordjob_child_event(void* self, void* event) {
     QKeychain__DeletePasswordJob_ChildEvent((QKeychain__DeletePasswordJob*)self, (QChildEvent*)event);
 }
 
-void q_keychain__deletepasswordjob_qbase_child_event(void* self, void* event) {
-    QKeychain__DeletePasswordJob_QBaseChildEvent((QKeychain__DeletePasswordJob*)self, (QChildEvent*)event);
+void q_keychain__deletepasswordjob_super_child_event(void* self, void* event) {
+    QKeychain__DeletePasswordJob_SuperChildEvent((QKeychain__DeletePasswordJob*)self, (QChildEvent*)event);
 }
 
 void q_keychain__deletepasswordjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1764,8 +1764,8 @@ void q_keychain__deletepasswordjob_custom_event(void* self, void* event) {
     QKeychain__DeletePasswordJob_CustomEvent((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
 }
 
-void q_keychain__deletepasswordjob_qbase_custom_event(void* self, void* event) {
-    QKeychain__DeletePasswordJob_QBaseCustomEvent((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
+void q_keychain__deletepasswordjob_super_custom_event(void* self, void* event) {
+    QKeychain__DeletePasswordJob_SuperCustomEvent((QKeychain__DeletePasswordJob*)self, (QEvent*)event);
 }
 
 void q_keychain__deletepasswordjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1776,8 +1776,8 @@ void q_keychain__deletepasswordjob_connect_notify(void* self, void* signal) {
     QKeychain__DeletePasswordJob_ConnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_qbase_connect_notify(void* self, void* signal) {
-    QKeychain__DeletePasswordJob_QBaseConnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__deletepasswordjob_super_connect_notify(void* self, void* signal) {
+    QKeychain__DeletePasswordJob_SuperConnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1788,8 +1788,8 @@ void q_keychain__deletepasswordjob_disconnect_notify(void* self, void* signal) {
     QKeychain__DeletePasswordJob_DisconnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_qbase_disconnect_notify(void* self, void* signal) {
-    QKeychain__DeletePasswordJob_QBaseDisconnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
+void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, void* signal) {
+    QKeychain__DeletePasswordJob_SuperDisconnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1800,8 +1800,8 @@ void q_keychain__deletepasswordjob_do_start(void* self) {
     QKeychain__DeletePasswordJob_DoStart((QKeychain__DeletePasswordJob*)self);
 }
 
-void q_keychain__deletepasswordjob_qbase_do_start(void* self) {
-    QKeychain__DeletePasswordJob_QBaseDoStart((QKeychain__DeletePasswordJob*)self);
+void q_keychain__deletepasswordjob_super_do_start(void* self) {
+    QKeychain__DeletePasswordJob_SuperDoStart((QKeychain__DeletePasswordJob*)self);
 }
 
 void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)()) {
@@ -1812,8 +1812,8 @@ QObject* q_keychain__deletepasswordjob_sender(void* self) {
     return QKeychain__DeletePasswordJob_Sender((QKeychain__DeletePasswordJob*)self);
 }
 
-QObject* q_keychain__deletepasswordjob_qbase_sender(void* self) {
-    return QKeychain__DeletePasswordJob_QBaseSender((QKeychain__DeletePasswordJob*)self);
+QObject* q_keychain__deletepasswordjob_super_sender(void* self) {
+    return QKeychain__DeletePasswordJob_SuperSender((QKeychain__DeletePasswordJob*)self);
 }
 
 void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)()) {
@@ -1824,8 +1824,8 @@ int32_t q_keychain__deletepasswordjob_sender_signal_index(void* self) {
     return QKeychain__DeletePasswordJob_SenderSignalIndex((QKeychain__DeletePasswordJob*)self);
 }
 
-int32_t q_keychain__deletepasswordjob_qbase_sender_signal_index(void* self) {
-    return QKeychain__DeletePasswordJob_QBaseSenderSignalIndex((QKeychain__DeletePasswordJob*)self);
+int32_t q_keychain__deletepasswordjob_super_sender_signal_index(void* self) {
+    return QKeychain__DeletePasswordJob_SuperSenderSignalIndex((QKeychain__DeletePasswordJob*)self);
 }
 
 void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1836,8 +1836,8 @@ int32_t q_keychain__deletepasswordjob_receivers(void* self, const char* signal) 
     return QKeychain__DeletePasswordJob_Receivers((QKeychain__DeletePasswordJob*)self, signal);
 }
 
-int32_t q_keychain__deletepasswordjob_qbase_receivers(void* self, const char* signal) {
-    return QKeychain__DeletePasswordJob_QBaseReceivers((QKeychain__DeletePasswordJob*)self, signal);
+int32_t q_keychain__deletepasswordjob_super_receivers(void* self, const char* signal) {
+    return QKeychain__DeletePasswordJob_SuperReceivers((QKeychain__DeletePasswordJob*)self, signal);
 }
 
 void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1848,8 +1848,8 @@ bool q_keychain__deletepasswordjob_is_signal_connected(void* self, void* signal)
     return QKeychain__DeletePasswordJob_IsSignalConnected((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-bool q_keychain__deletepasswordjob_qbase_is_signal_connected(void* self, void* signal) {
-    return QKeychain__DeletePasswordJob_QBaseIsSignalConnected((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
+bool q_keychain__deletepasswordjob_super_is_signal_connected(void* self, void* signal) {
+    return QKeychain__DeletePasswordJob_SuperIsSignalConnected((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
 void q_keychain__deletepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

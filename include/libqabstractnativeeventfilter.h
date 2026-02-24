@@ -35,6 +35,10 @@ bool q_abstractnativeeventfilter_native_event_filter(void* self, char* eventType
 ///
 void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
+/// @warning DEPRECATED: Use `q_abstractnativeeventfilter_super_native_event_filter` instead
+///
+#define q_abstractnativeeventfilter_qbase_native_event_filter q_abstractnativeeventfilter_super_native_event_filter
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
 ///
 /// Base class method implementation
@@ -44,7 +48,7 @@ void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callb
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstractnativeeventfilter_super_native_event_filter(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#dtor.QAbstractNativeEventFilter)
 ///

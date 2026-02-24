@@ -21,8 +21,8 @@ void q_placereply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPlaceReply_OnMetaObject((QPlaceReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_placereply_qbase_meta_object(void* self) {
-    return QPlaceReply_QBaseMetaObject((QPlaceReply*)self);
+const QMetaObject* q_placereply_super_meta_object(void* self) {
+    return QPlaceReply_SuperMetaObject((QPlaceReply*)self);
 }
 
 void* q_placereply_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_placereply_on_metacast(void* self, void* (*callback)(void*, const char*))
     QPlaceReply_OnMetacast((QPlaceReply*)self, (intptr_t)callback);
 }
 
-void* q_placereply_qbase_metacast(void* self, const char* param1) {
-    return QPlaceReply_QBaseMetacast((QPlaceReply*)self, param1);
+void* q_placereply_super_metacast(void* self, const char* param1) {
+    return QPlaceReply_SuperMetacast((QPlaceReply*)self, param1);
 }
 
 int32_t q_placereply_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_placereply_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QPlaceReply_OnMetacall((QPlaceReply*)self, (intptr_t)callback);
 }
 
-int32_t q_placereply_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPlaceReply_QBaseMetacall((QPlaceReply*)self, param1, param2, param3);
+int32_t q_placereply_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPlaceReply_SuperMetacall((QPlaceReply*)self, param1, param2, param3);
 }
 
 const char* q_placereply_tr(const char* s) {
@@ -68,8 +68,8 @@ void q_placereply_on_type(void* self, int32_t (*callback)()) {
     QPlaceReply_OnType((QPlaceReply*)self, (intptr_t)callback);
 }
 
-int32_t q_placereply_qbase_type(void* self) {
-    return QPlaceReply_QBaseType((QPlaceReply*)self);
+int32_t q_placereply_super_type(void* self) {
+    return QPlaceReply_SuperType((QPlaceReply*)self);
 }
 
 const char* q_placereply_error_string(void* self) {
@@ -91,8 +91,8 @@ void q_placereply_on_abort(void* self, void (*callback)()) {
     QPlaceReply_OnAbort((QPlaceReply*)self, (intptr_t)callback);
 }
 
-void q_placereply_qbase_abort(void* self) {
-    QPlaceReply_QBaseAbort((QPlaceReply*)self);
+void q_placereply_super_abort(void* self) {
+    QPlaceReply_SuperAbort((QPlaceReply*)self);
 }
 
 void q_placereply_finished(void* self) {
@@ -135,8 +135,8 @@ void q_placereply_on_set_finished(void* self, void (*callback)(void*, bool)) {
     QPlaceReply_OnSetFinished((QPlaceReply*)self, (intptr_t)callback);
 }
 
-void q_placereply_qbase_set_finished(void* self, bool finished) {
-    QPlaceReply_QBaseSetFinished((QPlaceReply*)self, finished);
+void q_placereply_super_set_finished(void* self, bool finished) {
+    QPlaceReply_SuperSetFinished((QPlaceReply*)self, finished);
 }
 
 void q_placereply_set_error(void* self, int32_t error, const char* errorString) {
@@ -147,8 +147,8 @@ void q_placereply_on_set_error(void* self, void (*callback)(void*, int32_t, cons
     QPlaceReply_OnSetError((QPlaceReply*)self, (intptr_t)callback);
 }
 
-void q_placereply_qbase_set_error(void* self, int32_t error, const char* errorString) {
-    QPlaceReply_QBaseSetError((QPlaceReply*)self, error, qstring(errorString));
+void q_placereply_super_set_error(void* self, int32_t error, const char* errorString) {
+    QPlaceReply_SuperSetError((QPlaceReply*)self, error, qstring(errorString));
 }
 
 const char* q_placereply_tr2(const char* s, const char* c) {
@@ -388,8 +388,8 @@ bool q_placereply_event(void* self, void* event) {
     return QPlaceReply_Event((QPlaceReply*)self, (QEvent*)event);
 }
 
-bool q_placereply_qbase_event(void* self, void* event) {
-    return QPlaceReply_QBaseEvent((QPlaceReply*)self, (QEvent*)event);
+bool q_placereply_super_event(void* self, void* event) {
+    return QPlaceReply_SuperEvent((QPlaceReply*)self, (QEvent*)event);
 }
 
 void q_placereply_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ bool q_placereply_event_filter(void* self, void* watched, void* event) {
     return QPlaceReply_EventFilter((QPlaceReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_placereply_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPlaceReply_QBaseEventFilter((QPlaceReply*)self, (QObject*)watched, (QEvent*)event);
+bool q_placereply_super_event_filter(void* self, void* watched, void* event) {
+    return QPlaceReply_SuperEventFilter((QPlaceReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_placereply_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -412,8 +412,8 @@ void q_placereply_timer_event(void* self, void* event) {
     QPlaceReply_TimerEvent((QPlaceReply*)self, (QTimerEvent*)event);
 }
 
-void q_placereply_qbase_timer_event(void* self, void* event) {
-    QPlaceReply_QBaseTimerEvent((QPlaceReply*)self, (QTimerEvent*)event);
+void q_placereply_super_timer_event(void* self, void* event) {
+    QPlaceReply_SuperTimerEvent((QPlaceReply*)self, (QTimerEvent*)event);
 }
 
 void q_placereply_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void q_placereply_child_event(void* self, void* event) {
     QPlaceReply_ChildEvent((QPlaceReply*)self, (QChildEvent*)event);
 }
 
-void q_placereply_qbase_child_event(void* self, void* event) {
-    QPlaceReply_QBaseChildEvent((QPlaceReply*)self, (QChildEvent*)event);
+void q_placereply_super_child_event(void* self, void* event) {
+    QPlaceReply_SuperChildEvent((QPlaceReply*)self, (QChildEvent*)event);
 }
 
 void q_placereply_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ void q_placereply_custom_event(void* self, void* event) {
     QPlaceReply_CustomEvent((QPlaceReply*)self, (QEvent*)event);
 }
 
-void q_placereply_qbase_custom_event(void* self, void* event) {
-    QPlaceReply_QBaseCustomEvent((QPlaceReply*)self, (QEvent*)event);
+void q_placereply_super_custom_event(void* self, void* event) {
+    QPlaceReply_SuperCustomEvent((QPlaceReply*)self, (QEvent*)event);
 }
 
 void q_placereply_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ void q_placereply_connect_notify(void* self, void* signal) {
     QPlaceReply_ConnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placereply_qbase_connect_notify(void* self, void* signal) {
-    QPlaceReply_QBaseConnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
+void q_placereply_super_connect_notify(void* self, void* signal) {
+    QPlaceReply_SuperConnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placereply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -460,8 +460,8 @@ void q_placereply_disconnect_notify(void* self, void* signal) {
     QPlaceReply_DisconnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placereply_qbase_disconnect_notify(void* self, void* signal) {
-    QPlaceReply_QBaseDisconnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
+void q_placereply_super_disconnect_notify(void* self, void* signal) {
+    QPlaceReply_SuperDisconnectNotify((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placereply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -472,8 +472,8 @@ QObject* q_placereply_sender(void* self) {
     return QPlaceReply_Sender((QPlaceReply*)self);
 }
 
-QObject* q_placereply_qbase_sender(void* self) {
-    return QPlaceReply_QBaseSender((QPlaceReply*)self);
+QObject* q_placereply_super_sender(void* self) {
+    return QPlaceReply_SuperSender((QPlaceReply*)self);
 }
 
 void q_placereply_on_sender(void* self, QObject* (*callback)()) {
@@ -484,8 +484,8 @@ int32_t q_placereply_sender_signal_index(void* self) {
     return QPlaceReply_SenderSignalIndex((QPlaceReply*)self);
 }
 
-int32_t q_placereply_qbase_sender_signal_index(void* self) {
-    return QPlaceReply_QBaseSenderSignalIndex((QPlaceReply*)self);
+int32_t q_placereply_super_sender_signal_index(void* self) {
+    return QPlaceReply_SuperSenderSignalIndex((QPlaceReply*)self);
 }
 
 void q_placereply_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -496,8 +496,8 @@ int32_t q_placereply_receivers(void* self, const char* signal) {
     return QPlaceReply_Receivers((QPlaceReply*)self, signal);
 }
 
-int32_t q_placereply_qbase_receivers(void* self, const char* signal) {
-    return QPlaceReply_QBaseReceivers((QPlaceReply*)self, signal);
+int32_t q_placereply_super_receivers(void* self, const char* signal) {
+    return QPlaceReply_SuperReceivers((QPlaceReply*)self, signal);
 }
 
 void q_placereply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -508,8 +508,8 @@ bool q_placereply_is_signal_connected(void* self, void* signal) {
     return QPlaceReply_IsSignalConnected((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
-bool q_placereply_qbase_is_signal_connected(void* self, void* signal) {
-    return QPlaceReply_QBaseIsSignalConnected((QPlaceReply*)self, (QMetaMethod*)signal);
+bool q_placereply_super_is_signal_connected(void* self, void* signal) {
+    return QPlaceReply_SuperIsSignalConnected((QPlaceReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -77,6 +77,10 @@ void k_filemetadata__simpleextractionresult_add(void* self, int32_t property, vo
 ///
 void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `k_filemetadata__simpleextractionresult_super_add` instead
+///
+#define k_filemetadata__simpleextractionresult_qbase_add k_filemetadata__simpleextractionresult_super_add
+
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#add)
 ///
 /// Base class method implementation
@@ -85,7 +89,7 @@ void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(
 /// @param property enum KFileMetaData__Property__Property
 /// @param value QVariant*
 ///
-void k_filemetadata__simpleextractionresult_qbase_add(void* self, int32_t property, void* value);
+void k_filemetadata__simpleextractionresult_super_add(void* self, int32_t property, void* value);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#addType)
 ///
@@ -103,6 +107,10 @@ void k_filemetadata__simpleextractionresult_add_type(void* self, int32_t type);
 ///
 void k_filemetadata__simpleextractionresult_on_add_type(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_filemetadata__simpleextractionresult_super_add_type` instead
+///
+#define k_filemetadata__simpleextractionresult_qbase_add_type k_filemetadata__simpleextractionresult_super_add_type
+
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#addType)
 ///
 /// Base class method implementation
@@ -110,7 +118,7 @@ void k_filemetadata__simpleextractionresult_on_add_type(void* self, void (*callb
 /// @param self KFileMetaData__SimpleExtractionResult*
 /// @param type enum KFileMetaData__Type__Type
 ///
-void k_filemetadata__simpleextractionresult_qbase_add_type(void* self, int32_t type);
+void k_filemetadata__simpleextractionresult_super_add_type(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#append)
 ///
@@ -128,6 +136,10 @@ void k_filemetadata__simpleextractionresult_append(void* self, const char* text)
 ///
 void k_filemetadata__simpleextractionresult_on_append(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_filemetadata__simpleextractionresult_super_append` instead
+///
+#define k_filemetadata__simpleextractionresult_qbase_append k_filemetadata__simpleextractionresult_super_append
+
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#append)
 ///
 /// Base class method implementation
@@ -135,7 +147,7 @@ void k_filemetadata__simpleextractionresult_on_append(void* self, void (*callbac
 /// @param self KFileMetaData__SimpleExtractionResult*
 /// @param text const char*
 ///
-void k_filemetadata__simpleextractionresult_qbase_append(void* self, const char* text);
+void k_filemetadata__simpleextractionresult_super_append(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#properties)
 ///
